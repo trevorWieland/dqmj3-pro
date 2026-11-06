@@ -1,0 +1,2335 @@
+{
+  "schemaVersion": 1,
+  "claimSha256": "37972ef4c963ad161333be826bcc8497fca068b977140de5da0d478d71b7adee",
+  "typesHeaderSha256": "1fb3d54a3798a20402666690081ceeda210b166afcd2681a2664ef36e133cb9d",
+  "layouts": [
+    {
+      "address": 1299768,
+      "pointerOffsets": [],
+      "fieldOffset": 2580,
+      "fieldWidth": 4,
+      "semanticModel": {
+        "kind": "dirty32",
+        "mask": 16,
+        "dataOffset": 28
+      },
+      "bytes": 28,
+      "endExclusive": 1299796,
+      "mode": "ARM",
+      "sha256": "c3c118dc9e7c468142d6686045a6c4c312c70187288cd25a198b7c3e4526f422",
+      "ghidraRanges": [
+        {
+          "start": 1299768,
+          "endExclusive": 1299796,
+          "bytes": 28
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 1219084,
+          "callsite": 1219152,
+          "callsiteSha256": "bad51605aef8489b3a663c2d68a4819e47b68e79b9a2a9a5055e9f4fff6c8ab7"
+        }
+      ],
+      "symbol": "fn_0013d538",
+      "source": "src/native/wave008/flags_00.c",
+      "header": "src/native/wave008/views_00.h",
+      "recordType": "FlagRecord_0013d538",
+      "rootType": "FlagRecord_0013d538",
+      "fieldName": "flags_0a14",
+      "returnType": "u32",
+      "parameterList": "FlagRecord_0013d538 *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 1299796,
+      "pointerOffsets": [],
+      "fieldOffset": 2580,
+      "fieldWidth": 4,
+      "semanticModel": {
+        "kind": "dirty16pair",
+        "mask": 2,
+        "dataOffsets": [
+          20,
+          22
+        ]
+      },
+      "bytes": 32,
+      "endExclusive": 1299828,
+      "mode": "ARM",
+      "sha256": "f4f05ad80be8a538de3e34084ba909d9020066ccc6094d7f272f7b1f4581f56b",
+      "ghidraRanges": [
+        {
+          "start": 1299796,
+          "endExclusive": 1299828,
+          "bytes": 32
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 1219084,
+          "callsite": 1219172,
+          "callsiteSha256": "99d642d3fe2a8edd9dd8cc6113e4255aa6c5d478d29ec6cc15938857c920efa9"
+        }
+      ],
+      "symbol": "fn_0013d554",
+      "source": "src/native/wave008/flags_00.c",
+      "header": "src/native/wave008/views_00.h",
+      "recordType": "FlagRecord_0013d554",
+      "rootType": "FlagRecord_0013d554",
+      "fieldName": "flags_0a14",
+      "returnType": "u32",
+      "parameterList": "FlagRecord_0013d554 *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 1485884,
+      "pointerOffsets": [
+        48
+      ],
+      "fieldOffset": 68,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "replace",
+        "clearMask": 1,
+        "shift": 0,
+        "argumentMask": 4294967295
+      },
+      "bytes": 24,
+      "endExclusive": 1485908,
+      "mode": "ARM",
+      "sha256": "d0b4bc2624f197c0d075f212c09ac47005063496cd0dd4e15b6a1c787550766f",
+      "ghidraRanges": [
+        {
+          "start": 1485884,
+          "endExclusive": 1485908,
+          "bytes": 24
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 1429256,
+          "callsite": 1429320,
+          "callsiteSha256": "a8c23be51e7f4dfbb679c30e50f4a4fec2894f9dced886e8f2233ccea1e0da1e"
+        }
+      ],
+      "symbol": "fn_0016ac3c",
+      "source": "src/native/wave008/flags_00.c",
+      "header": "src/native/wave008/views_00.h",
+      "recordType": "FlagRecord_0016ac3c",
+      "rootType": "FlagOwner_0016ac3c",
+      "fieldName": "flags_0044",
+      "returnType": "FlagRecord_0016ac3c *",
+      "parameterList": "FlagOwner_0016ac3c *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 1510292,
+      "pointerOffsets": [],
+      "fieldOffset": 54,
+      "fieldWidth": 2,
+      "semanticModel": {
+        "kind": "replace-return-old-bit",
+        "clearMask": 1,
+        "shift": 0,
+        "argumentMask": 1
+      },
+      "bytes": 32,
+      "endExclusive": 1510324,
+      "mode": "ARM",
+      "sha256": "000829fb1e7b4d102722fb8ca799cfe41bfefab410692d1b4d82de4f4a368823",
+      "ghidraRanges": [
+        {
+          "start": 1510292,
+          "endExclusive": 1510324,
+          "bytes": 32
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 1509848,
+          "callsite": 1509892,
+          "callsiteSha256": "3fd909f32b79441ef65683fb8cb43c218ad2d16e043ea8adfb0dbd2527c097cc"
+        }
+      ],
+      "symbol": "fn_00170b94",
+      "source": "src/native/wave008/flags_00.c",
+      "header": "src/native/wave008/views_00.h",
+      "recordType": "FlagRecord_00170b94",
+      "rootType": "FlagRecord_00170b94",
+      "fieldName": "flags_0036",
+      "returnType": "u32",
+      "parameterList": "FlagRecord_00170b94 *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 1571880,
+      "pointerOffsets": [
+        328
+      ],
+      "fieldOffset": 152,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "or-argument"
+      },
+      "bytes": 20,
+      "endExclusive": 1571900,
+      "mode": "ARM",
+      "sha256": "be90befd260f5bf7567a47ea984b8190dbb28339272ee2b1e2fb485b021a6622",
+      "ghidraRanges": [
+        {
+          "start": 1571880,
+          "endExclusive": 1571900,
+          "bytes": 20
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 1571900,
+          "callsite": 1572072,
+          "callsiteSha256": "47f42586ea90e1350650d431974b1ea173666e54aacc52ff5585bb4374b9f475"
+        },
+        {
+          "callerFunction": 1940424,
+          "callsite": 1940804,
+          "callsiteSha256": "33b257270f243cb2f745912da89d4d06fc16aea70e3c6be212edc8225679dcd6"
+        },
+        {
+          "callerFunction": 1943132,
+          "callsite": 1943164,
+          "callsiteSha256": "cdbd57ff50a5328daf46769fa616b703e15ab98604d3b45599036d9919c0d874"
+        },
+        {
+          "callerFunction": 1943356,
+          "callsite": 1943392,
+          "callsiteSha256": "deff6ef10e1841a0928dfeb768f850916018c51d38a8ec7b73417226ecd37989"
+        },
+        {
+          "callerFunction": 1970792,
+          "callsite": 1971004,
+          "callsiteSha256": "d35712e3de1cc55e025559e72275943acc8055e8c7c2e9fdd560714a587d2418"
+        },
+        {
+          "callerFunction": 1979992,
+          "callsite": 1980148,
+          "callsiteSha256": "e7f531c4596119dab9666413aacac74321a67d39cf2fe1c9c80ff4dee75cc317"
+        },
+        {
+          "callerFunction": 2006344,
+          "callsite": 2006576,
+          "callsiteSha256": "8af39921d97847b1743350d7ecc667afed5fc62303edb91a0b7f28bfb1bdb66b"
+        },
+        {
+          "callerFunction": 2008504,
+          "callsite": 2008796,
+          "callsiteSha256": "d6b0b395c774cb55c21af822d6432b619b175a14537fe28c93f49bb5d9d13f5b"
+        },
+        {
+          "callerFunction": 2119844,
+          "callsite": 2119880,
+          "callsiteSha256": "0d7770959b5cee7dfa9959226cf79f3f1b7bd56ffbf3119bf52d7291319338f7"
+        },
+        {
+          "callerFunction": 2241988,
+          "callsite": 2242292,
+          "callsiteSha256": "f9b2d11b65f61d9b897fed2dfd7db58af0958a156aa4b4bd3d0cd9b947dcff9e"
+        },
+        {
+          "callerFunction": 2245700,
+          "callsite": 2245856,
+          "callsiteSha256": "d41353153715f6a311be162a59c5526684406472ffdb0af804638bfc8b773ef2"
+        },
+        {
+          "callerFunction": 2253740,
+          "callsite": 2254148,
+          "callsiteSha256": "37316ebec91e4f29663ee2bc7882561e9136dfea11fb81d8c1e313fe9100d68c"
+        },
+        {
+          "callerFunction": 2306068,
+          "callsite": 2306524,
+          "callsiteSha256": "230a215df7a2c3efd3a5ef2de7543f660e53aa51ef2d4606609143b246e2412f"
+        },
+        {
+          "callerFunction": 2306604,
+          "callsite": 2306984,
+          "callsiteSha256": "8f42292d2c036521aa9ea547c97b325af5471e769112ba606c9f6c0083d925f5"
+        },
+        {
+          "callerFunction": 2361584,
+          "callsite": 2361740,
+          "callsiteSha256": "0443e897384efc85b819d5afa32669b77ce061b75c50dac3ee877f831823ee00"
+        },
+        {
+          "callerFunction": 2361584,
+          "callsite": 2362036,
+          "callsiteSha256": "26603bcd4666535dd1d9ecf602fbf3ff86e7836a90a74e86a40618f535020de1"
+        },
+        {
+          "callerFunction": 2948624,
+          "callsite": 2949132,
+          "callsiteSha256": "d37af0117e861028bd0ae4206dfae6b35371ff65ecf61657a312c502fd59b3a3"
+        },
+        {
+          "callerFunction": 2950160,
+          "callsite": 2950588,
+          "callsiteSha256": "a12627316d4df212979dee9703595321e01a9d8d1c826082232adc653b454bc3"
+        },
+        {
+          "callerFunction": 6937072,
+          "callsite": 6937100,
+          "callsiteSha256": "77c70a056648aff61ee25b4ea346f49a1d7b40a681df2fc617b539289c384c42"
+        },
+        {
+          "callerFunction": 6952624,
+          "callsite": 6952984,
+          "callsiteSha256": "9db1a702b1da2cf8624394773f317ba151200a8d089dbf8f1a5b35b8f28f293f"
+        },
+        {
+          "callerFunction": 6962644,
+          "callsite": 6963096,
+          "callsiteSha256": "510e5f0fac5b15c24fbdc2c482f00ca64d94f7c6bfa3319177ad5e2868b066ff"
+        }
+      ],
+      "symbol": "fn_0017fc28",
+      "source": "src/native/wave008/flags_00.c",
+      "header": "src/native/wave008/views_00.h",
+      "recordType": "FlagRecord_0017fc28",
+      "rootType": "FlagOwner_0017fc28",
+      "fieldName": "flags_0098",
+      "returnType": "FlagRecord_0017fc28 *",
+      "parameterList": "FlagOwner_0017fc28 *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 1572092,
+      "pointerOffsets": [
+        328
+      ],
+      "fieldOffset": 152,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "clear-argument"
+      },
+      "bytes": 20,
+      "endExclusive": 1572112,
+      "mode": "ARM",
+      "sha256": "96e333d8c7ba0b62d23fd493aa085a6d091b7710326635d3d203fca12445a19f",
+      "ghidraRanges": [
+        {
+          "start": 1572092,
+          "endExclusive": 1572112,
+          "bytes": 20
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 1886352,
+          "callsite": 1886996,
+          "callsiteSha256": "2e00367146bf72c44b8ebd8ddbe908234419eda0fc09c6ff66ab18efd489c233"
+        },
+        {
+          "callerFunction": 1940424,
+          "callsite": 1940828,
+          "callsiteSha256": "5fc743b237b014488076542a2ebba7e5d6b6d3b9d364b2f625da13deceac7d39"
+        },
+        {
+          "callerFunction": 1943132,
+          "callsite": 1943184,
+          "callsiteSha256": "51213c6079ed4c431b24ecca5c7011a5e91df1fce024bc3e51a9da0673569b92"
+        },
+        {
+          "callerFunction": 1943356,
+          "callsite": 1943412,
+          "callsiteSha256": "217550b323ad8d1879acbd77a436a8293cac832829ea9dbfb45e45d9888d05f1"
+        },
+        {
+          "callerFunction": 2119844,
+          "callsite": 2119900,
+          "callsiteSha256": "6a6948d347fb564545ebcf39c56f0589a7453c3c4c0e8dab989d40056b64aa77"
+        },
+        {
+          "callerFunction": 2307628,
+          "callsite": 2308272,
+          "callsiteSha256": "abd1c108c333a7baf59c0a8be937b0475fbf9b2890ad1aef9e36015f1ee1bf5a"
+        },
+        {
+          "callerFunction": 6937072,
+          "callsite": 6937120,
+          "callsiteSha256": "5de38c0c10f9466869201e32ae5ae71be3d73ca7c76a116ceeac97f9d1a9a833"
+        },
+        {
+          "callerFunction": 6968216,
+          "callsite": 6972424,
+          "callsiteSha256": "32a87761e688b41f9a3019a15b247b6103cec1f5c6e22c44296c2d4db66716ae"
+        },
+        {
+          "callerFunction": 6968216,
+          "callsite": 6972448,
+          "callsiteSha256": "4cced47586a8722ec990966f1becbf2cadfa85b3533603ce9b96f0dd74c44bd4"
+        }
+      ],
+      "symbol": "fn_0017fcfc",
+      "source": "src/native/wave008/flags_00.c",
+      "header": "src/native/wave008/views_00.h",
+      "recordType": "FlagRecord_0017fcfc",
+      "rootType": "FlagOwner_0017fcfc",
+      "fieldName": "flags_0098",
+      "returnType": "FlagRecord_0017fcfc *",
+      "parameterList": "FlagOwner_0017fcfc *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 1719892,
+      "pointerOffsets": [
+        104
+      ],
+      "fieldOffset": 30,
+      "fieldWidth": 2,
+      "semanticModel": {
+        "kind": "replace",
+        "clearMask": 16,
+        "shift": 4,
+        "argumentMask": 4294967295
+      },
+      "bytes": 28,
+      "endExclusive": 1719920,
+      "mode": "ARM",
+      "sha256": "fdd81578a097f7ee4fde56e7e5c6c06d360fc2632842ef032df21ca875dc314f",
+      "ghidraRanges": [
+        {
+          "start": 1719892,
+          "endExclusive": 1719920,
+          "bytes": 28
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 1662336,
+          "callsite": 1662376,
+          "callsiteSha256": "44657954965763ac01f2bb5b444a2d00ef21de8224a5baba984ad312c9710b32"
+        }
+      ],
+      "symbol": "fn_001a3e54",
+      "source": "src/native/wave008/flags_00.c",
+      "header": "src/native/wave008/views_00.h",
+      "recordType": "FlagRecord_001a3e54",
+      "rootType": "FlagOwner_001a3e54",
+      "fieldName": "flags_001e",
+      "returnType": "FlagRecord_001a3e54 *",
+      "parameterList": "FlagOwner_001a3e54 *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 1719920,
+      "pointerOffsets": [
+        104
+      ],
+      "fieldOffset": 30,
+      "fieldWidth": 2,
+      "semanticModel": {
+        "kind": "replace",
+        "clearMask": 64,
+        "shift": 6,
+        "argumentMask": 4294967295
+      },
+      "bytes": 28,
+      "endExclusive": 1719948,
+      "mode": "ARM",
+      "sha256": "fa5e78f4bdd8c8eacb09238ab433b27ddc8ea248674f96b56784cf2aeacf9146",
+      "ghidraRanges": [
+        {
+          "start": 1719920,
+          "endExclusive": 1719948,
+          "bytes": 28
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 1662404,
+          "callsite": 1662444,
+          "callsiteSha256": "d7b2f8932ad806b2f11818780a6406ad73b54251cc0213984d6ebea39dc7443d"
+        }
+      ],
+      "symbol": "fn_001a3e70",
+      "source": "src/native/wave008/flags_00.c",
+      "header": "src/native/wave008/views_00.h",
+      "recordType": "FlagRecord_001a3e70",
+      "rootType": "FlagOwner_001a3e70",
+      "fieldName": "flags_001e",
+      "returnType": "FlagRecord_001a3e70 *",
+      "parameterList": "FlagOwner_001a3e70 *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 2144668,
+      "pointerOffsets": [
+        4
+      ],
+      "fieldOffset": 64,
+      "fieldWidth": 4,
+      "semanticModel": {
+        "kind": "clear-constant",
+        "mask": 2
+      },
+      "bytes": 20,
+      "endExclusive": 2144688,
+      "mode": "ARM",
+      "sha256": "0eefff511e7de107c0538534d1d561cff45a9e2557e994b6c2228bae8352af00",
+      "ghidraRanges": [
+        {
+          "start": 2144668,
+          "endExclusive": 2144688,
+          "bytes": 20
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 2667004,
+          "callsite": 2667112,
+          "callsiteSha256": "2cf59f79eacc7390c29270e8b34ae3263d9bb69ce33c61c06c9099a7a1b38295"
+        },
+        {
+          "callerFunction": 2667004,
+          "callsite": 2667228,
+          "callsiteSha256": "758a18da5fdfdd22cc90a7f16b321742122d05c869d95d0e4b5e871d33fa5d82"
+        },
+        {
+          "callerFunction": 3670492,
+          "callsite": 3670668,
+          "callsiteSha256": "808e9d59153de9503c1aead8773653de5ab1de800f1edefa9f9d988bb5adaa62"
+        },
+        {
+          "callerFunction": 3670492,
+          "callsite": 3670760,
+          "callsiteSha256": "ac6d76408d0835246d9e2f16305fdeae3560f5264281d04eaa5de2d76202d87f"
+        },
+        {
+          "callerFunction": 6324088,
+          "callsite": 6324360,
+          "callsiteSha256": "0f2510740fd2bf36b875207d18bbe48efac08c00331e42ae62e3f3c98f70ded1"
+        }
+      ],
+      "symbol": "fn_0020b99c",
+      "source": "src/native/wave008/flags_00.c",
+      "header": "src/native/wave008/views_00.h",
+      "recordType": "FlagRecord_0020b99c",
+      "rootType": "FlagOwner_0020b99c",
+      "fieldName": "flags_0040",
+      "returnType": "FlagRecord_0020b99c *",
+      "parameterList": "FlagOwner_0020b99c *self",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 2144688,
+      "pointerOffsets": [
+        4
+      ],
+      "fieldOffset": 64,
+      "fieldWidth": 4,
+      "semanticModel": {
+        "kind": "set-constant",
+        "mask": 2
+      },
+      "bytes": 20,
+      "endExclusive": 2144708,
+      "mode": "ARM",
+      "sha256": "16beadb5efbdb7bb5a018e32bae106156fdcef8fc2b06633ad8495284d4d27e6",
+      "ghidraRanges": [
+        {
+          "start": 2144688,
+          "endExclusive": 2144708,
+          "bytes": 20
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 6324088,
+          "callsite": 6324380,
+          "callsiteSha256": "0f2510740fd2bf36b875207d18bbe48efac08c00331e42ae62e3f3c98f70ded1"
+        }
+      ],
+      "symbol": "fn_0020b9b0",
+      "source": "src/native/wave008/flags_00.c",
+      "header": "src/native/wave008/views_00.h",
+      "recordType": "FlagRecord_0020b9b0",
+      "rootType": "FlagOwner_0020b9b0",
+      "fieldName": "flags_0040",
+      "returnType": "FlagRecord_0020b9b0 *",
+      "parameterList": "FlagOwner_0020b9b0 *self",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 2212896,
+      "pointerOffsets": [
+        292
+      ],
+      "fieldOffset": 68,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "replace",
+        "clearMask": 1,
+        "shift": 0,
+        "argumentMask": 4294967295
+      },
+      "bytes": 24,
+      "endExclusive": 2212920,
+      "mode": "ARM",
+      "sha256": "789cbfc4b3e1fe94f87422a60825a16c6e75918678321aee8157acdb7966a79d",
+      "ghidraRanges": [
+        {
+          "start": 2212896,
+          "endExclusive": 2212920,
+          "bytes": 24
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 2797500,
+          "callsite": 2797636,
+          "callsiteSha256": "e3acde8ab7f4bdb21dfbd904ffb5c69ff915feb078c2a3db3ad2ea6201b12a52"
+        },
+        {
+          "callerFunction": 2812344,
+          "callsite": 2812636,
+          "callsiteSha256": "14b3dcbcbc1ad3a31439c45977e01d92e58ce1c50c6ff2a5dfec305557dbd2aa"
+        },
+        {
+          "callerFunction": 2816428,
+          "callsite": 2816520,
+          "callsiteSha256": "797cc02e2f78c5949b70e62896929d731450e74a03a997cfe1c3506474b19d61"
+        }
+      ],
+      "symbol": "fn_0021c420",
+      "source": "src/native/wave008/flags_01.c",
+      "header": "src/native/wave008/views_01.h",
+      "recordType": "FlagRecord_0021c420",
+      "rootType": "FlagOwner_0021c420",
+      "fieldName": "flags_0044",
+      "returnType": "FlagRecord_0021c420 *",
+      "parameterList": "FlagOwner_0021c420 *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 2217888,
+      "pointerOffsets": [
+        260
+      ],
+      "fieldOffset": 68,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "replace",
+        "clearMask": 1,
+        "shift": 0,
+        "argumentMask": 4294967295
+      },
+      "bytes": 24,
+      "endExclusive": 2217912,
+      "mode": "ARM",
+      "sha256": "5f716a19cf05016562f885dc66f1deb421a2523c4b12b5fe244c9c021645b23d",
+      "ghidraRanges": [
+        {
+          "start": 2217888,
+          "endExclusive": 2217912,
+          "bytes": 24
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 2797500,
+          "callsite": 2797784,
+          "callsiteSha256": "139533c566e7117b2a5f7e354e7aec006432cf3e8ba6497aa432b6848df08b44"
+        },
+        {
+          "callerFunction": 2812344,
+          "callsite": 2812612,
+          "callsiteSha256": "fc6004e07c9ba284f01ace36d50b532f3245d03fde97c8c741cd9f31052df7d5"
+        },
+        {
+          "callerFunction": 2816428,
+          "callsite": 2816504,
+          "callsiteSha256": "33a62c45208a3a8d73f4738a4d133c9feafdc052050677ad6c238cb0e2a6fee3"
+        }
+      ],
+      "symbol": "fn_0021d7a0",
+      "source": "src/native/wave008/flags_01.c",
+      "header": "src/native/wave008/views_01.h",
+      "recordType": "FlagRecord_0021d7a0",
+      "rootType": "FlagOwner_0021d7a0",
+      "fieldName": "flags_0044",
+      "returnType": "FlagRecord_0021d7a0 *",
+      "parameterList": "FlagOwner_0021d7a0 *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 2414444,
+      "pointerOffsets": [],
+      "fieldOffset": 4,
+      "fieldWidth": 4,
+      "semanticModel": {
+        "kind": "clear-constant",
+        "mask": 2147483648
+      },
+      "bytes": 16,
+      "endExclusive": 2414460,
+      "mode": "ARM",
+      "sha256": "f7a6c43d8f5b63fe8bc5553eb3df34fe45828df11d25f504d445935e1abd023d",
+      "ghidraRanges": [
+        {
+          "start": 2414444,
+          "endExclusive": 2414460,
+          "bytes": 16
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 2414588,
+          "callsite": 2414992,
+          "callsiteSha256": "02fc41db4bef5c698def36ae9dacc10905dc58e79edfa5287c9b0ea08ac88fb0"
+        }
+      ],
+      "symbol": "fn_0024d76c",
+      "source": "src/native/wave008/flags_01.c",
+      "header": "src/native/wave008/views_01.h",
+      "recordType": "FlagRecord_0024d76c",
+      "rootType": "FlagRecord_0024d76c",
+      "fieldName": "flags_0004",
+      "returnType": "FlagRecord_0024d76c *",
+      "parameterList": "FlagRecord_0024d76c *self",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 2686100,
+      "pointerOffsets": [
+        40
+      ],
+      "fieldOffset": 68,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "replace",
+        "clearMask": 1,
+        "shift": 0,
+        "argumentMask": 4294967295,
+        "nullable": true
+      },
+      "bytes": 32,
+      "endExclusive": 2686132,
+      "mode": "ARM",
+      "sha256": "5b675a63c51dff2d8b8849ef6c20ea96c4723b536f6a01760468fa2e4a3d6abc",
+      "ghidraRanges": [
+        {
+          "start": 2686100,
+          "endExclusive": 2686132,
+          "bytes": 32
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 2829500,
+          "callsite": 2829660,
+          "callsiteSha256": "4c99abd128b3fd62baee33c962b3314b3f59ad14b4b2875452b81334d5906816"
+        },
+        {
+          "callerFunction": 2829736,
+          "callsite": 2829772,
+          "callsiteSha256": "3231801fae9f24dcb7ce7e0653b72af2aaf419b9b5529c1d73e55bb27b9a4de9"
+        }
+      ],
+      "symbol": "fn_0028fc94",
+      "source": "src/native/wave008/flags_01.c",
+      "header": "src/native/wave008/views_01.h",
+      "recordType": "FlagRecord_0028fc94",
+      "rootType": "FlagOwner_0028fc94",
+      "fieldName": "flags_0044",
+      "returnType": "FlagRecord_0028fc94 *",
+      "parameterList": "FlagOwner_0028fc94 *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 3185676,
+      "pointerOffsets": [
+        388
+      ],
+      "fieldOffset": 68,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "clear-constant",
+        "mask": 1
+      },
+      "bytes": 20,
+      "endExclusive": 3185696,
+      "mode": "ARM",
+      "sha256": "d01344a07815925da09f3c1988cd948ad9167811649a2964eab50103b7a8fb5f",
+      "ghidraRanges": [
+        {
+          "start": 3185676,
+          "endExclusive": 3185696,
+          "bytes": 20
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 4002360,
+          "callsite": 4002536,
+          "callsiteSha256": "a9deb731a71aebe6b903401dc03ba9afef909d94c8b00c828d2a058d81c93397"
+        }
+      ],
+      "symbol": "fn_00309c0c",
+      "source": "src/native/wave008/flags_01.c",
+      "header": "src/native/wave008/views_01.h",
+      "recordType": "FlagRecord_00309c0c",
+      "rootType": "FlagOwner_00309c0c",
+      "fieldName": "flags_0044",
+      "returnType": "FlagRecord_00309c0c *",
+      "parameterList": "FlagOwner_00309c0c *self",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 3258212,
+      "pointerOffsets": [
+        60
+      ],
+      "fieldOffset": 68,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "replace",
+        "clearMask": 1,
+        "shift": 0,
+        "argumentMask": 4294967295
+      },
+      "bytes": 24,
+      "endExclusive": 3258236,
+      "mode": "ARM",
+      "sha256": "712d485920ea738d03476b249f90f23205d6971d9edc4ba1479d42f67b5ecdf9",
+      "ghidraRanges": [
+        {
+          "start": 3258212,
+          "endExclusive": 3258236,
+          "bytes": 24
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 2268120,
+          "callsite": 2268208,
+          "callsiteSha256": "e69a1836293b10f836ab4ec018657a5fa359600f47a6ac4b4a348c74bbdc990a"
+        },
+        {
+          "callerFunction": 4486432,
+          "callsite": 4486500,
+          "callsiteSha256": "ddc81d161612d97a5fa87429fbd1a9afe39b0f6a79dd1331efb7898b52099248"
+        }
+      ],
+      "symbol": "fn_0031b764",
+      "source": "src/native/wave008/flags_01.c",
+      "header": "src/native/wave008/views_01.h",
+      "recordType": "FlagRecord_0031b764",
+      "rootType": "FlagOwner_0031b764",
+      "fieldName": "flags_0044",
+      "returnType": "FlagRecord_0031b764 *",
+      "parameterList": "FlagOwner_0031b764 *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 3727232,
+      "pointerOffsets": [
+        104
+      ],
+      "fieldOffset": 68,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "replace",
+        "clearMask": 1,
+        "shift": 0,
+        "argumentMask": 4294967295
+      },
+      "bytes": 24,
+      "endExclusive": 3727256,
+      "mode": "ARM",
+      "sha256": "a07b64b609d721448857cee014d92e0e01c080c27bb86a985d89792feb7704e2",
+      "ghidraRanges": [
+        {
+          "start": 3727232,
+          "endExclusive": 3727256,
+          "bytes": 24
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 2437388,
+          "callsite": 2437432,
+          "callsiteSha256": "c02f5b3319c83cb1d849ff46760460cc3d1e2e42e8e8db44c3c841f7faadbc90"
+        }
+      ],
+      "symbol": "fn_0038df80",
+      "source": "src/native/wave008/flags_01.c",
+      "header": "src/native/wave008/views_01.h",
+      "recordType": "FlagRecord_0038df80",
+      "rootType": "FlagOwner_0038df80",
+      "fieldName": "flags_0044",
+      "returnType": "FlagRecord_0038df80 *",
+      "parameterList": "FlagOwner_0038df80 *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 3755460,
+      "pointerOffsets": [
+        24
+      ],
+      "fieldOffset": 68,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "replace",
+        "clearMask": 1,
+        "shift": 0,
+        "argumentMask": 4294967295
+      },
+      "bytes": 24,
+      "endExclusive": 3755484,
+      "mode": "ARM",
+      "sha256": "21c139e53174ccabb60dc4ac734e06b8b98b20a04f63bb6c4fdcb6fc37c5dec4",
+      "ghidraRanges": [
+        {
+          "start": 3755460,
+          "endExclusive": 3755484,
+          "bytes": 24
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 5888328,
+          "callsite": 5889588,
+          "callsiteSha256": "3a952df171c7c4de731fa43047408ba4589835ef7aa728fbb92a6611c8d3c555"
+        },
+        {
+          "callerFunction": 5890164,
+          "callsite": 5890228,
+          "callsiteSha256": "71b41250116a5d6def5e3c813bf48883b64963e2ea19fd30717f88c7c7f50936"
+        }
+      ],
+      "symbol": "fn_00394dc4",
+      "source": "src/native/wave008/flags_01.c",
+      "header": "src/native/wave008/views_01.h",
+      "recordType": "FlagRecord_00394dc4",
+      "rootType": "FlagOwner_00394dc4",
+      "fieldName": "flags_0044",
+      "returnType": "FlagRecord_00394dc4 *",
+      "parameterList": "FlagOwner_00394dc4 *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 3755484,
+      "pointerOffsets": [
+        28
+      ],
+      "fieldOffset": 68,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "replace",
+        "clearMask": 1,
+        "shift": 0,
+        "argumentMask": 4294967295
+      },
+      "bytes": 24,
+      "endExclusive": 3755508,
+      "mode": "ARM",
+      "sha256": "641cec071a211b63013dee5cba824cc885cc4f9614e4e12236d750c0465e0cb9",
+      "ghidraRanges": [
+        {
+          "start": 3755484,
+          "endExclusive": 3755508,
+          "bytes": 24
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 5888328,
+          "callsite": 5889548,
+          "callsiteSha256": "e86fb075f2e80896c5f82d42d7fc527217db9196d5b66a0d310b1178fdfdfbad"
+        },
+        {
+          "callerFunction": 5890164,
+          "callsite": 5890200,
+          "callsiteSha256": "ded9ce125c35e0f3f8ccf277a6637aa1ef0041930033434a55021206f674fc8b"
+        }
+      ],
+      "symbol": "fn_00394ddc",
+      "source": "src/native/wave008/flags_01.c",
+      "header": "src/native/wave008/views_01.h",
+      "recordType": "FlagRecord_00394ddc",
+      "rootType": "FlagOwner_00394ddc",
+      "fieldName": "flags_0044",
+      "returnType": "FlagRecord_00394ddc *",
+      "parameterList": "FlagOwner_00394ddc *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 4338176,
+      "pointerOffsets": [
+        4
+      ],
+      "fieldOffset": 68,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "replace",
+        "clearMask": 1,
+        "shift": 0,
+        "argumentMask": 4294967295
+      },
+      "bytes": 24,
+      "endExclusive": 4338200,
+      "mode": "ARM",
+      "sha256": "85cd7bc83d9653192c4ce22e40475e18fe37b984dad3d591d8108ff380013c21",
+      "ghidraRanges": [
+        {
+          "start": 4338176,
+          "endExclusive": 4338200,
+          "bytes": 24
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 4009808,
+          "callsite": 4009856,
+          "callsiteSha256": "b9caceabc04fc58fc5c8eaa57d2681c1a572fe14186909341e2ab1a068eece43"
+        },
+        {
+          "callerFunction": 4009892,
+          "callsite": 4010068,
+          "callsiteSha256": "432fc9126839dc998969d03a70dd2840a69cb22cbda3e468b50a9316bcaafa4b"
+        },
+        {
+          "callerFunction": 4009892,
+          "callsite": 4010104,
+          "callsiteSha256": "2b9303d533e5a4fed32ad6b8ff5c5f0ffbd06eaf801e1939b6519f752695e02a"
+        },
+        {
+          "callerFunction": 4010124,
+          "callsite": 4010332,
+          "callsiteSha256": "2d4771338444f794d1ea90e4567938bb1274f5d2005a40e990a87bcfefa66fe4"
+        },
+        {
+          "callerFunction": 4010124,
+          "callsite": 4010376,
+          "callsiteSha256": "6ee034f3884fa7112821b96fbda8ec3f18b89adcf1f5ec6248f5acc179550673"
+        },
+        {
+          "callerFunction": 4010124,
+          "callsite": 4010392,
+          "callsiteSha256": "7076b99471904088042db4694d3a72a5c76ad56f339390d4466ba81711ac7781"
+        },
+        {
+          "callerFunction": 4010416,
+          "callsite": 4011408,
+          "callsiteSha256": "fc7a7fed4469398951f410b96653e2fc127988275570ae0e1658f8762dc36f50"
+        }
+      ],
+      "symbol": "fn_00423200",
+      "source": "src/native/wave008/flags_01.c",
+      "header": "src/native/wave008/views_01.h",
+      "recordType": "FlagRecord_00423200",
+      "rootType": "FlagOwner_00423200",
+      "fieldName": "flags_0044",
+      "returnType": "FlagRecord_00423200 *",
+      "parameterList": "FlagOwner_00423200 *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 4959108,
+      "pointerOffsets": [],
+      "fieldOffset": 44,
+      "fieldWidth": 4,
+      "semanticModel": {
+        "kind": "or-argument"
+      },
+      "bytes": 16,
+      "endExclusive": 4959124,
+      "mode": "ARM",
+      "sha256": "e71efdccabca9b20a03676017d87c66500725ccaaed1ae27c2b6345cf36336ea",
+      "ghidraRanges": [
+        {
+          "start": 4959108,
+          "endExclusive": 4959124,
+          "bytes": 16
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 4574168,
+          "callsite": 4574496,
+          "callsiteSha256": "8772d01ccc470378203538e78f86bdf02d618ee37967831398d5d2e8f05cbe4f"
+        },
+        {
+          "callerFunction": 4669800,
+          "callsite": 4670068,
+          "callsiteSha256": "a8bd885426c9993dd1b91dc84107ed36a160a276fd71ecdbdfb88cbcbe2821d3"
+        },
+        {
+          "callerFunction": 4669800,
+          "callsite": 4670116,
+          "callsiteSha256": "54f5e6dc58bf101c83dfcdb146ff4b85cdc8e1c13440d9513c49b38c60c4d8fa"
+        },
+        {
+          "callerFunction": 4841404,
+          "callsite": 4841600,
+          "callsiteSha256": "b0989d8cf66a71e982c1265548eafe29e2cb106a9685f3d39c0ed3090fd01a86"
+        }
+      ],
+      "symbol": "fn_004bab84",
+      "source": "src/native/wave008/flags_02.c",
+      "header": "src/native/wave008/views_02.h",
+      "recordType": "FlagRecord_004bab84",
+      "rootType": "FlagRecord_004bab84",
+      "fieldName": "flags_002c",
+      "returnType": "FlagRecord_004bab84 *",
+      "parameterList": "FlagRecord_004bab84 *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 5123956,
+      "pointerOffsets": [],
+      "fieldOffset": 64,
+      "fieldWidth": 4,
+      "semanticModel": {
+        "kind": "clear-one-based-index",
+        "indexDomain": "1..32 or255-sentinel"
+      },
+      "bytes": 32,
+      "endExclusive": 5123988,
+      "mode": "ARM",
+      "sha256": "ac3f0688db0579d68edc0f0a18701227938f0821774c3f55a5145f20bd01b461",
+      "ghidraRanges": [
+        {
+          "start": 5123956,
+          "endExclusive": 5123988,
+          "bytes": 32
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 5113700,
+          "callsite": 5113936,
+          "callsiteSha256": "021812525d3242113790b0b98893901379bd670f7a750cb1a82a7572f8e04d1a"
+        }
+      ],
+      "symbol": "fn_004e2f74",
+      "source": "src/native/wave008/flags_02.c",
+      "header": "src/native/wave008/views_02.h",
+      "recordType": "FlagRecord_004e2f74",
+      "rootType": "FlagRecord_004e2f74",
+      "fieldName": "flags_0040",
+      "returnType": "FlagRecord_004e2f74 *",
+      "parameterList": "FlagRecord_004e2f74 *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 5366940,
+      "pointerOffsets": [
+        104
+      ],
+      "fieldOffset": 30,
+      "fieldWidth": 2,
+      "semanticModel": {
+        "kind": "replace",
+        "clearMask": 3,
+        "shift": 0,
+        "argumentMask": 3
+      },
+      "bytes": 32,
+      "endExclusive": 5366972,
+      "mode": "ARM",
+      "sha256": "d57478fb3415d8b679880b5ea181f41ffa2cd21bf2c4f33d387d1ad0b287762c",
+      "ghidraRanges": [
+        {
+          "start": 5366940,
+          "endExclusive": 5366972,
+          "bytes": 32
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 5611684,
+          "callsite": 5611744,
+          "callsiteSha256": "f3faf3a95c443ffca2d28c89c711bff7fec589a7678cc01ad3e65b833ae799ab"
+        }
+      ],
+      "symbol": "fn_0051e49c",
+      "source": "src/native/wave008/flags_02.c",
+      "header": "src/native/wave008/views_02.h",
+      "recordType": "FlagRecord_0051e49c",
+      "rootType": "FlagOwner_0051e49c",
+      "fieldName": "flags_001e",
+      "returnType": "FlagRecord_0051e49c *",
+      "parameterList": "FlagOwner_0051e49c *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 5366972,
+      "pointerOffsets": [
+        104
+      ],
+      "fieldOffset": 30,
+      "fieldWidth": 2,
+      "semanticModel": {
+        "kind": "replace",
+        "clearMask": 12,
+        "shift": 2,
+        "argumentMask": 3
+      },
+      "bytes": 36,
+      "endExclusive": 5367008,
+      "mode": "ARM",
+      "sha256": "f322e828dd9fddb92473d5f50844f4c77bd4a6e4ed27fd3afa505ff9f393cdc6",
+      "ghidraRanges": [
+        {
+          "start": 5366972,
+          "endExclusive": 5367008,
+          "bytes": 36
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 5611684,
+          "callsite": 5611800,
+          "callsiteSha256": "7944728e2f498cff91045e49ecf499c146dc78566f44b80c1262b53a1c53ad0d"
+        }
+      ],
+      "symbol": "fn_0051e4bc",
+      "source": "src/native/wave008/flags_02.c",
+      "header": "src/native/wave008/views_02.h",
+      "recordType": "FlagRecord_0051e4bc",
+      "rootType": "FlagOwner_0051e4bc",
+      "fieldName": "flags_001e",
+      "returnType": "FlagRecord_0051e4bc *",
+      "parameterList": "FlagOwner_0051e4bc *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 5770400,
+      "pointerOffsets": [
+        36
+      ],
+      "fieldOffset": 68,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "set-constant",
+        "mask": 1
+      },
+      "bytes": 24,
+      "endExclusive": 5770424,
+      "mode": "ARM",
+      "sha256": "1f01301e930049df42d89ecfc61d2f9ccb6d44d23e70b84ce6dd4fcaa7b374c2",
+      "ghidraRanges": [
+        {
+          "start": 5770400,
+          "endExclusive": 5770424,
+          "bytes": 24
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 3768308,
+          "callsite": 3768672,
+          "callsiteSha256": "6029c7b79024e4979e318cd116d14f6dfc6e73b607e983a4f88c9e952923d046"
+        }
+      ],
+      "symbol": "fn_00580ca0",
+      "source": "src/native/wave008/flags_02.c",
+      "header": "src/native/wave008/views_02.h",
+      "recordType": "FlagRecord_00580ca0",
+      "rootType": "FlagOwner_00580ca0",
+      "fieldName": "flags_0044",
+      "returnType": "FlagRecord_00580ca0 *",
+      "parameterList": "FlagOwner_00580ca0 *self",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 6141044,
+      "pointerOffsets": [],
+      "fieldOffset": 2284,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "conditional-index",
+        "indexDomain": "0..7",
+        "indexMask": 4294967295
+      },
+      "bytes": 32,
+      "endExclusive": 6141076,
+      "mode": "ARM",
+      "sha256": "ef13e15be293a16011bff7522d9b6960d3a9ad31b390779eae4bde7fd583347d",
+      "ghidraRanges": [
+        {
+          "start": 6141044,
+          "endExclusive": 6141076,
+          "bytes": 32
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 4116284,
+          "callsite": 4116304,
+          "callsiteSha256": "7479d7a92faee8126c5bc3e68f744301c70a04784fdb31ae734b36e4db191616"
+        },
+        {
+          "callerFunction": 4116284,
+          "callsite": 4116320,
+          "callsiteSha256": "17f1b16f473e2914735921e943c8ea2c2aa95811290c2257dc83e76fef3ba3c8"
+        },
+        {
+          "callerFunction": 4116284,
+          "callsite": 4116336,
+          "callsiteSha256": "89abad5a3c278edfbe415a99b04f8ada77968f30ec63c1a9d9fe0ac181de23d2"
+        },
+        {
+          "callerFunction": 4116284,
+          "callsite": 4116352,
+          "callsiteSha256": "b734aa4d7aa9d819e83b0c75c5a9fab35dc260b137ecf6f67dc5640a24674cf6"
+        },
+        {
+          "callerFunction": 4116284,
+          "callsite": 4116368,
+          "callsiteSha256": "d42863cc99f49d16e47e412ea80fd5bc17a2fbddb3ba1d448bf877152dcf3dc9"
+        },
+        {
+          "callerFunction": 4116284,
+          "callsite": 4116384,
+          "callsiteSha256": "a9cbdeb380a5a7b0b470d25a0981bd57f93a10b0f9fe0a1e5225c429f1ed02d9"
+        },
+        {
+          "callerFunction": 5857336,
+          "callsite": 5857356,
+          "callsiteSha256": "c0aa1f22087601e316bea8dde44794511048012e0b4ac28c9826591f9d3f4cb2"
+        },
+        {
+          "callerFunction": 5857336,
+          "callsite": 5857372,
+          "callsiteSha256": "3ac832fcbb3fef815c1f947e92c9585bfd9c748d33b237c876edad4b98e805ba"
+        },
+        {
+          "callerFunction": 5857336,
+          "callsite": 5857388,
+          "callsiteSha256": "fc2aae2f7e9d5dfd0b08c00269ffde3547f3fb389c43855a335a57e25bb6effb"
+        },
+        {
+          "callerFunction": 5857336,
+          "callsite": 5857404,
+          "callsiteSha256": "557e6473f9c651f1cdef0b2159debf71268a38d7582a18215f7cc93ce9308667"
+        },
+        {
+          "callerFunction": 5885200,
+          "callsite": 5885220,
+          "callsiteSha256": "fbcf09d6f36eae805e6be0f5a817850af70e8b783de7233a04f53f94eae4f816"
+        },
+        {
+          "callerFunction": 5885200,
+          "callsite": 5885236,
+          "callsiteSha256": "f226afc41f0a68dbc5a10713dcb1b82093ac2ad45cf4df468c7aff0b303bce37"
+        },
+        {
+          "callerFunction": 5885200,
+          "callsite": 5885252,
+          "callsiteSha256": "9fa12a577d76ad2450770b6bfc8620dde0425386166981a0518b91eb357aeb1b"
+        },
+        {
+          "callerFunction": 5885200,
+          "callsite": 5885268,
+          "callsiteSha256": "d0d0bb629ef57b698384aef4bae59a9b9b93d9f11669f3521a2294a0763d36bb"
+        },
+        {
+          "callerFunction": 6143212,
+          "callsite": 6143232,
+          "callsiteSha256": "238da2834054c0cdcff760859afa04c9dde64f04e7f3379a490cb38c9813b92c"
+        },
+        {
+          "callerFunction": 6143212,
+          "callsite": 6143248,
+          "callsiteSha256": "8f31cf536b3ed6bda836268a61ecbe71058490aac4ed9661cbe81e05d1eb5f88"
+        },
+        {
+          "callerFunction": 6143212,
+          "callsite": 6143264,
+          "callsiteSha256": "1d3dfa3797f67d0bb21be841b3f38ed4a4b338d05b75e0422a99dbfeea606493"
+        },
+        {
+          "callerFunction": 6143212,
+          "callsite": 6143280,
+          "callsiteSha256": "dd64101e532b7c405756f4bd1635608b4830a271601c7904b27b49993b506bac"
+        }
+      ],
+      "symbol": "fn_005db474",
+      "source": "src/native/wave008/flags_02.c",
+      "header": "src/native/wave008/views_02.h",
+      "recordType": "FlagRecord_005db474",
+      "rootType": "FlagRecord_005db474",
+      "fieldName": "flags_08ec",
+      "returnType": "FlagRecord_005db474 *",
+      "parameterList": "FlagRecord_005db474 *self, u32 value, u32 enabled",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 6384688,
+      "pointerOffsets": [],
+      "fieldOffset": 0,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "conditional-index",
+        "indexDomain": "0..7",
+        "indexMask": 4294967295
+      },
+      "bytes": 32,
+      "endExclusive": 6384720,
+      "mode": "ARM",
+      "sha256": "5803ceda7b4297ed7362560aade9af350be13c6ee488a3a64822f7e20e2c6d86",
+      "ghidraRanges": [
+        {
+          "start": 6384688,
+          "endExclusive": 6384720,
+          "bytes": 32
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 6460268,
+          "callsite": 6460760,
+          "callsiteSha256": "0beb7478c2e29285ae4a334f9c5f25b75f752639c530056be3cb3ad308e960e1"
+        },
+        {
+          "callerFunction": 6460268,
+          "callsite": 6460796,
+          "callsiteSha256": "0bb826714530990a8efef62ce887f484eae3627d50ffb0cef4da50a4898802d7"
+        },
+        {
+          "callerFunction": 6460268,
+          "callsite": 6460816,
+          "callsiteSha256": "7a7dab6ca41e75dc4826288e320df9c80fdaa8dfa83034e1f5b04dafcc3ebf4b"
+        },
+        {
+          "callerFunction": 6513448,
+          "callsite": 6515800,
+          "callsiteSha256": "5730bc913a3be66a7840b956afbb8a6c0b2c592848b0d49b6db09a6b14be7d89"
+        },
+        {
+          "callerFunction": 6513448,
+          "callsite": 6515816,
+          "callsiteSha256": "bc309a0cc67205d59a346a5dea5b3f758d8546e1620abfd4ecfd7c30faa12f46"
+        }
+      ],
+      "symbol": "fn_00616c30",
+      "source": "src/native/wave008/flags_02.c",
+      "header": "src/native/wave008/views_02.h",
+      "recordType": "FlagRecord_00616c30",
+      "rootType": "FlagRecord_00616c30",
+      "fieldName": "flags_0000",
+      "returnType": "FlagRecord_00616c30 *",
+      "parameterList": "FlagRecord_00616c30 *self, u32 value, u32 enabled",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 6411860,
+      "pointerOffsets": [],
+      "fieldOffset": 0,
+      "fieldWidth": 2,
+      "semanticModel": {
+        "kind": "conditional-mask"
+      },
+      "bytes": 24,
+      "endExclusive": 6411884,
+      "mode": "ARM",
+      "sha256": "1d8bd9abf2dde243364d4ae4d5404804c6678b695af8d75d894b1dc0002ca1c5",
+      "ghidraRanges": [
+        {
+          "start": 6411860,
+          "endExclusive": 6411884,
+          "bytes": 24
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 6460268,
+          "callsite": 6460368,
+          "callsiteSha256": "f40458a461579c0a66e283ee0d6ab981dcac775ec90f6376959638b2d4182528"
+        },
+        {
+          "callerFunction": 6460268,
+          "callsite": 6460384,
+          "callsiteSha256": "f1a5ca3e4f5252b8ffee7312322f9561525f5f075866aa3dfed779ca17561e80"
+        },
+        {
+          "callerFunction": 6460268,
+          "callsite": 6460400,
+          "callsiteSha256": "0359ddf579a8496b2604fad79749ea882a6c6da5483f44ffacfa3aad52f76a3d"
+        },
+        {
+          "callerFunction": 6460268,
+          "callsite": 6460416,
+          "callsiteSha256": "57882e68745e0ef1c91d10f59de7ca7e3e75ba26808fbb750903981cd81a74da"
+        },
+        {
+          "callerFunction": 6460268,
+          "callsite": 6460444,
+          "callsiteSha256": "6749a7ccde9967f7df74e31754aed4fa2d76ace61495051ce6af1c44ef2060ee"
+        },
+        {
+          "callerFunction": 6460268,
+          "callsite": 6460460,
+          "callsiteSha256": "70184d3bce7998bca03a614af76268b6e125a0eaaa5c223ce3f374d4e70d691d"
+        },
+        {
+          "callerFunction": 6460268,
+          "callsite": 6460476,
+          "callsiteSha256": "c4d94d4a942f4196e6da9c32add469dfc0528c29cfd61aa0036307c4c4ab4dc5"
+        },
+        {
+          "callerFunction": 6460268,
+          "callsite": 6460492,
+          "callsiteSha256": "8b3b355ed96c43cad158f4842fa8e68c3e2a0325e2cb13da25ea459dd790ec41"
+        },
+        {
+          "callerFunction": 6460268,
+          "callsite": 6460508,
+          "callsiteSha256": "401928105d1b0995e97414dcb3366bb49f7b9e9780c1ea59bf5c6054d5bcc1a0"
+        },
+        {
+          "callerFunction": 6460268,
+          "callsite": 6460524,
+          "callsiteSha256": "229821e2ded726d8f9418ebfec3f68669d9391194619a75d97dd8d0fc7a692b3"
+        },
+        {
+          "callerFunction": 6460268,
+          "callsite": 6460540,
+          "callsiteSha256": "4302cfe2df809a738c7cf45b75fe87fb517c7908e336a2f6a05615052c7e6a05"
+        },
+        {
+          "callerFunction": 6460268,
+          "callsite": 6460556,
+          "callsiteSha256": "aa90c488b487f21c4f22102bca99e55c8218d1c38634faf7e227cd6f5922e065"
+        },
+        {
+          "callerFunction": 6460268,
+          "callsite": 6460572,
+          "callsiteSha256": "b55457ae91c43451ffced9b1604c91bf158d785242c1c257e36b197d5239bc80"
+        },
+        {
+          "callerFunction": 6460268,
+          "callsite": 6460680,
+          "callsiteSha256": "75d61b0feb71fc73c97f388e2af66ea1ce43d81190136dff050558bb98a6b771"
+        }
+      ],
+      "symbol": "fn_0061d654",
+      "source": "src/native/wave008/flags_02.c",
+      "header": "src/native/wave008/views_02.h",
+      "recordType": "FlagRecord_0061d654",
+      "rootType": "FlagRecord_0061d654",
+      "fieldName": "flags_0000",
+      "returnType": "FlagRecord_0061d654 *",
+      "parameterList": "FlagRecord_0061d654 *self, u32 value, u32 enabled",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 6533336,
+      "pointerOffsets": [],
+      "fieldOffset": 2864,
+      "fieldWidth": 4,
+      "semanticModel": {
+        "kind": "conditional-index",
+        "indexDomain": "0..31",
+        "indexMask": 4294967295,
+        "embeddedOffset": 20480
+      },
+      "bytes": 36,
+      "endExclusive": 6533372,
+      "mode": "ARM",
+      "sha256": "cd60363e59d5bf4d0bdbd84b8fafd26c2686be46fa217db9d2f00726d5e11c78",
+      "ghidraRanges": [
+        {
+          "start": 6533336,
+          "endExclusive": 6533372,
+          "bytes": 36
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 6398112,
+          "callsite": 6398232,
+          "callsiteSha256": "765d8f6feb7abcc35b4571e9f3ac3f100cb590ed4a9542315619b34e0ea25897"
+        },
+        {
+          "callerFunction": 6398112,
+          "callsite": 6398272,
+          "callsiteSha256": "24b373a54d0454e8fa7cc15e22029574a88b1c5b2ef3e365839c1689f1c8f80a"
+        },
+        {
+          "callerFunction": 6398112,
+          "callsite": 6398336,
+          "callsiteSha256": "88156713e2936819179ee25078933c722e9bf4a712ddd27b972cbf5fdd572a99"
+        },
+        {
+          "callerFunction": 6533200,
+          "callsite": 6533256,
+          "callsiteSha256": "e8cf5e94ae4f5d282f9beb51fb49ea92e4e4fca215cb717b02fa3ff7ee98ac4d"
+        },
+        {
+          "callerFunction": 6533200,
+          "callsite": 6533284,
+          "callsiteSha256": "df31678051a39245b3dbf29444e83aad11b1abdab09705edab1f3ab4b6963933"
+        },
+        {
+          "callerFunction": 6533200,
+          "callsite": 6533312,
+          "callsiteSha256": "bcc2ec9f400fd75a60b353a1ab6a596fec1d8b3c409507e4eb4a6a18041422f3"
+        }
+      ],
+      "symbol": "fn_0063b0d8",
+      "source": "src/native/wave008/flags_02.c",
+      "header": "src/native/wave008/views_02.h",
+      "recordType": "FlagRecord_0063b0d8",
+      "rootType": "FlagOwner_0063b0d8",
+      "fieldName": "flags_0b30",
+      "returnType": "FlagRecord_0063b0d8 *",
+      "parameterList": "FlagOwner_0063b0d8 *self, u32 value, u32 enabled",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 6533448,
+      "pointerOffsets": [],
+      "fieldOffset": 4,
+      "fieldWidth": 2,
+      "semanticModel": {
+        "kind": "clear-relative-index",
+        "baseOffset": 6,
+        "indexDomain": "argument-baseField in0..15"
+      },
+      "bytes": 28,
+      "endExclusive": 6533476,
+      "mode": "ARM",
+      "sha256": "22c025bf94e4e532bdfd1adcb61df08de2c75e1cf4e119610771cb6c7f860478",
+      "ghidraRanges": [
+        {
+          "start": 6533448,
+          "endExclusive": 6533476,
+          "bytes": 28
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 6395740,
+          "callsite": 6396112,
+          "callsiteSha256": "0b349049bf960a255e42036255a41e978cf0a46818a50fccaa21e35d62459098"
+        },
+        {
+          "callerFunction": 6395740,
+          "callsite": 6396316,
+          "callsiteSha256": "585ece3375b26f6b9a11b74a663904a67d5f7d0d7988f3063a1d179d09cb935a"
+        },
+        {
+          "callerFunction": 6395740,
+          "callsite": 6396424,
+          "callsiteSha256": "c12a80c296812fa8e8d73dd975c9ce4c17ef1476165b4316b0321be13bf15197"
+        },
+        {
+          "callerFunction": 6395740,
+          "callsite": 6397588,
+          "callsiteSha256": "601d0280452b2f7d41163c226c6ae7d3efdf1835dbf4748cb9e84c63b467a8d4"
+        },
+        {
+          "callerFunction": 6596744,
+          "callsite": 6596908,
+          "callsiteSha256": "e9f025ec8e229d63b43374c4c6646c20d23582e708b5317379377d5e42a9750a"
+        },
+        {
+          "callerFunction": 6597004,
+          "callsite": 6597164,
+          "callsiteSha256": "b2f9bab05bd418cb36b5d2f861365a44fca44b869dc3d361ac7f1b1e0a426054"
+        },
+        {
+          "callerFunction": 6598016,
+          "callsite": 6598468,
+          "callsiteSha256": "f0b8ba03ac5fe489e34520e0f21929bf054080f6df9389322d739a137110a156"
+        },
+        {
+          "callerFunction": 6598644,
+          "callsite": 6599096,
+          "callsiteSha256": "542c8f5396cc36f5f70e866050fc81cb5d459b8c2f92e4db5cb3107badffcb6c"
+        },
+        {
+          "callerFunction": 6599272,
+          "callsite": 6599720,
+          "callsiteSha256": "b033704a4c783a4fb07ec2977f9239037830ef3f5ff35507b5383134e8e0c8ec"
+        },
+        {
+          "callerFunction": 6599976,
+          "callsite": 6600428,
+          "callsiteSha256": "213c4baec06462c1160989ec8c39942b5d53718cc9117d90538334f4d9368bbb"
+        },
+        {
+          "callerFunction": 6600572,
+          "callsite": 6601020,
+          "callsiteSha256": "be80152719a71dd501aa89831f839c0756e38975f76dfbf08ad7b1e4285042ac"
+        },
+        {
+          "callerFunction": 6601204,
+          "callsite": 6601656,
+          "callsiteSha256": "fbc2f2ad656c6e5da412a352ae334d1ec8f6558ce4e1e68f95ba8119910b1277"
+        },
+        {
+          "callerFunction": 6601800,
+          "callsite": 6602252,
+          "callsiteSha256": "1aa5c541ab677f55fa62151151545fbae91d222f0a9800449115ae9fc1c6b056"
+        },
+        {
+          "callerFunction": 6603200,
+          "callsite": 6603652,
+          "callsiteSha256": "e8051ba03b0f2263baa3b29964d678f08f8b8f13e58ad43cbf809a3da53a4094"
+        },
+        {
+          "callerFunction": 6603988,
+          "callsite": 6604440,
+          "callsiteSha256": "7eea54c042011837cc3bf35609bafcd56d25fd87b56c38e002896c4ae7465f1e"
+        },
+        {
+          "callerFunction": 6604688,
+          "callsite": 6605136,
+          "callsiteSha256": "32841d8cb0bb24120da60fcf6433bdf9dd7e8a55eabe6c7a8722b971b231680f"
+        },
+        {
+          "callerFunction": 6605300,
+          "callsite": 6605748,
+          "callsiteSha256": "68d4fa437b4f8f18bd8fe1579d96086dfe128dd5e3e651fab758f27b56d95b5a"
+        },
+        {
+          "callerFunction": 6605908,
+          "callsite": 6606356,
+          "callsiteSha256": "fd1ddc55f7b621cde2a88e69f84c2d33b8ca8e9c3a4e8f4f7346d56439a55330"
+        },
+        {
+          "callerFunction": 6606956,
+          "callsite": 6607124,
+          "callsiteSha256": "30af18e1cef24413e7724a73fd3aba668d6213b0c2f8b1d5dd8bad9a57b4f5d0"
+        },
+        {
+          "callerFunction": 7872032,
+          "callsite": 7872192,
+          "callsiteSha256": "81fdf0764fabb338e0c104f93c5fd93faa033765338d0bbc5fc7ce5b4e0155f1"
+        },
+        {
+          "callerFunction": 7872992,
+          "callsite": 7873152,
+          "callsiteSha256": "b3b699cd07d56aa5bcb3d2e4d2a953206679362514c1cb1210ccf4c7fc6f9fb9"
+        },
+        {
+          "callerFunction": 7873676,
+          "callsite": 7874128,
+          "callsiteSha256": "894ca06de5b7f7debf6c6300fadaed186d3c0fbbc0286274ea7cfd430ae68030"
+        },
+        {
+          "callerFunction": 7874900,
+          "callsite": 7875352,
+          "callsiteSha256": "3794e8369b0cf11b2eabda74ed45e3cef7a867977bd48a3e098f9450a7a20cf3"
+        },
+        {
+          "callerFunction": 7875512,
+          "callsite": 7875964,
+          "callsiteSha256": "e6565f5cd4e5dbb324313acfa8ffb6596be43651afcbda708b630c1fb34f3afd"
+        },
+        {
+          "callerFunction": 7876124,
+          "callsite": 7876576,
+          "callsiteSha256": "c2927d80c55768be5192e2902174fddf78618878d79177c47883f12c9c650c4d"
+        },
+        {
+          "callerFunction": 7876736,
+          "callsite": 7877188,
+          "callsiteSha256": "1f288b983bccacb6e98f1e18d3aaefa5c475bf982ac2120286feddd598792ccb"
+        },
+        {
+          "callerFunction": 7877968,
+          "callsite": 7878420,
+          "callsiteSha256": "a70724b4529695580a9bf0126df66c8acbbe758782b28d151154eff8f72f1566"
+        },
+        {
+          "callerFunction": 7878580,
+          "callsite": 7879032,
+          "callsiteSha256": "ae71b40c6c0b6deb964eada19b4537bbb49a86852b344795c8d9b9a334d9792a"
+        },
+        {
+          "callerFunction": 7879856,
+          "callsite": 7880308,
+          "callsiteSha256": "45cbcd3f5c24e7f15b4b4b4dffd8467c57ee8f92fb776879df8902b82d27a528"
+        },
+        {
+          "callerFunction": 7882384,
+          "callsite": 7882832,
+          "callsiteSha256": "fe558617c44fbeabb733766fa6bc506d3f4a4c0e7ecc0078ee7dbd92c02cfe1f"
+        },
+        {
+          "callerFunction": 7883636,
+          "callsite": 7884088,
+          "callsiteSha256": "01b5ecd780cdcb8f4c57dea386216ddab0bde3e1f9413f3ecb1db01063d9a611"
+        },
+        {
+          "callerFunction": 7884884,
+          "callsite": 7885336,
+          "callsiteSha256": "2711c3c453072c8b0e0a378e6ff078c12a5e9ed1968fcf9b700d2d6e5f6efa1f"
+        }
+      ],
+      "symbol": "fn_0063b148",
+      "source": "src/native/wave008/flags_02.c",
+      "header": "src/native/wave008/views_02.h",
+      "recordType": "FlagRecord_0063b148",
+      "rootType": "FlagRecord_0063b148",
+      "fieldName": "flags_0004",
+      "returnType": "FlagRecord_0063b148 *",
+      "parameterList": "FlagRecord_0063b148 *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 6638680,
+      "pointerOffsets": [],
+      "fieldOffset": 220,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "bitmap-set",
+        "indexDomain": "signed index0..511",
+        "bitmapBytes": 64
+      },
+      "bytes": 28,
+      "endExclusive": 6638708,
+      "mode": "ARM",
+      "sha256": "0f467c259b9c86d9619591fb13ec979b7259de8bd30a947f33c2dab4cc004ecc",
+      "ghidraRanges": [
+        {
+          "start": 6638680,
+          "endExclusive": 6638708,
+          "bytes": 28
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 6400012,
+          "callsite": 6400060,
+          "callsiteSha256": "073927bcc0e51c766bff8949f002330b503773594424e559126505e4c8fca464"
+        },
+        {
+          "callerFunction": 6433580,
+          "callsite": 6434444,
+          "callsiteSha256": "fd460027e17521fe60342a84bea9829c0cdbe94270aa01c399fdd474723a67c6"
+        },
+        {
+          "callerFunction": 6466524,
+          "callsite": 6466832,
+          "callsiteSha256": "39a1c9973000d2f882dc9e544604998226f4bd5bad06e0464a832cef51ba8384"
+        },
+        {
+          "callerFunction": 6466524,
+          "callsite": 6467016,
+          "callsiteSha256": "e748fe6424ceb60bc6202390cdf19aefb97c371d841aacb7731f4dd21efc4b1b"
+        }
+      ],
+      "symbol": "fn_00654c58",
+      "source": "src/native/wave008/flags_03.c",
+      "header": "src/native/wave008/views_03.h",
+      "recordType": "FlagRecord_00654c58",
+      "rootType": "FlagRecord_00654c58",
+      "fieldName": "flags_00dc",
+      "returnType": "u8 *",
+      "parameterList": "FlagRecord_00654c58 *self, s32 bit_index",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 6641504,
+      "pointerOffsets": [],
+      "fieldOffset": 0,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "conditional-index",
+        "indexDomain": "u32; low3bits selectflag",
+        "indexMask": 7
+      },
+      "bytes": 36,
+      "endExclusive": 6641540,
+      "mode": "ARM",
+      "sha256": "5e4f1f682c71192e1905fa840355c51debd34f061c2ac6bc1d2653edeffdf87c",
+      "ghidraRanges": [
+        {
+          "start": 6641504,
+          "endExclusive": 6641540,
+          "bytes": 36
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 6429320,
+          "callsite": 6431800,
+          "callsiteSha256": "8166046dbaffab1b8af5fcbaaab183723ba1bdc67b526858915071e8eb62bcbe"
+        },
+        {
+          "callerFunction": 6429320,
+          "callsite": 6431816,
+          "callsiteSha256": "243dfcf924bae5a7332793ab6b2c2ca64051e8e6c0027cc1a07c684f02a53be8"
+        },
+        {
+          "callerFunction": 6429320,
+          "callsite": 6431844,
+          "callsiteSha256": "4d92ef272b8e93520f172f1e37685956266f16d72f070598819a0bedba51b197"
+        },
+        {
+          "callerFunction": 6429320,
+          "callsite": 6431872,
+          "callsiteSha256": "e318272673241897993e73c4600edd72803cadcbbda1c9acc37af0ab321226fd"
+        },
+        {
+          "callerFunction": 6429320,
+          "callsite": 6431900,
+          "callsiteSha256": "0b2f0c9ff0c74ed5652025b070cb6d36a6e307352584f56638eae85d5c18703b"
+        },
+        {
+          "callerFunction": 6429320,
+          "callsite": 6431928,
+          "callsiteSha256": "0491202769174bf08fbf1d621492017f311c6001ca8906fdba733feef80e74d9"
+        },
+        {
+          "callerFunction": 6641208,
+          "callsite": 6641368,
+          "callsiteSha256": "c24fc90d419d9d3eb83b0e1612c3e5181df3aa5ade174b50f04c4bdaf82176ef"
+        },
+        {
+          "callerFunction": 6641208,
+          "callsite": 6641384,
+          "callsiteSha256": "24be9a0994e1fba3ff0b3f89a4ed51ecbf36c74530d9beaadd96093543d88073"
+        },
+        {
+          "callerFunction": 6641208,
+          "callsite": 6641412,
+          "callsiteSha256": "cb4d58fb5c551e6ec2b14544d2b2f49ee596b1ee9ca3b3b1e168ed8be73937fc"
+        },
+        {
+          "callerFunction": 6641208,
+          "callsite": 6641440,
+          "callsiteSha256": "9802e72377456e355c8ad24573be80dc4eadc989f9dc6b229306c2cf29408829"
+        },
+        {
+          "callerFunction": 6641208,
+          "callsite": 6641468,
+          "callsiteSha256": "e52a9a36b7dcab1da5e982c11b7a6e753d5dc0977b7e60eebbee81788a6bb279"
+        }
+      ],
+      "symbol": "fn_00655760",
+      "source": "src/native/wave008/flags_03.c",
+      "header": "src/native/wave008/views_03.h",
+      "recordType": "FlagRecord_00655760",
+      "rootType": "FlagRecord_00655760",
+      "fieldName": "flags_0000",
+      "returnType": "FlagRecord_00655760 *",
+      "parameterList": "FlagRecord_00655760 *self, u32 value, u32 enabled",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 6766876,
+      "pointerOffsets": [],
+      "fieldOffset": 76,
+      "fieldWidth": 4,
+      "semanticModel": {
+        "kind": "set-constant",
+        "mask": 128
+      },
+      "bytes": 16,
+      "endExclusive": 6766892,
+      "mode": "ARM",
+      "sha256": "36c94969e6d22462dbecda34cc2fc425f0bb8773107bb8410e32ff46e72d7f75",
+      "ghidraRanges": [
+        {
+          "start": 6766876,
+          "endExclusive": 6766892,
+          "bytes": 16
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 6744976,
+          "callsite": 6745000,
+          "callsiteSha256": "e9d64c8ed123e19f9834d61b678f17848f3e3adb23281e9e33dfc528f737bf9b"
+        }
+      ],
+      "symbol": "fn_0067411c",
+      "source": "src/native/wave008/flags_03.c",
+      "header": "src/native/wave008/views_03.h",
+      "recordType": "FlagRecord_0067411c",
+      "rootType": "FlagRecord_0067411c",
+      "fieldName": "flags_004c",
+      "returnType": "FlagRecord_0067411c *",
+      "parameterList": "FlagRecord_0067411c *self",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 6850584,
+      "pointerOffsets": [
+        8
+      ],
+      "fieldOffset": 68,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "publish-state-pair",
+        "stateOffset": 13,
+        "compareOffset": 12
+      },
+      "bytes": 44,
+      "endExclusive": 6850628,
+      "mode": "ARM",
+      "sha256": "6c8398653f86e1459a6184348d9e317472e55dfa921d26084add9ada39c9dc23",
+      "ghidraRanges": [
+        {
+          "start": 6850584,
+          "endExclusive": 6850628,
+          "bytes": 44
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 3255592,
+          "callsite": 3255604,
+          "callsiteSha256": "c175ac3f47e4027786c253a3a89d4d2cbe0e504ac40240563ae5b781ce13dc35"
+        }
+      ],
+      "symbol": "fn_00688818",
+      "source": "src/native/wave008/flags_03.c",
+      "header": "src/native/wave008/views_03.h",
+      "recordType": "FlagRecord_00688818",
+      "rootType": "FlagOwner_00688818",
+      "fieldName": "flags_0044",
+      "returnType": "void *",
+      "parameterList": "FlagOwner_00688818 *self, u32 force",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 6931204,
+      "pointerOffsets": [
+        24
+      ],
+      "fieldOffset": 68,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "replace",
+        "clearMask": 1,
+        "shift": 0,
+        "argumentMask": 4294967295,
+        "nullable": true
+      },
+      "bytes": 32,
+      "endExclusive": 6931236,
+      "mode": "ARM",
+      "sha256": "6ab6c974b6e3711968cdbcf5c845ba6ea227d710cf7aa6060a359fc0472ea2f9",
+      "ghidraRanges": [
+        {
+          "start": 6931204,
+          "endExclusive": 6931236,
+          "bytes": 32
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 2256868,
+          "callsite": 2257192,
+          "callsiteSha256": "61458cd71543b0ba3729d66ebc3f51ac321faf0d8339cd5a679f1161cd823c14"
+        },
+        {
+          "callerFunction": 2256868,
+          "callsite": 2257248,
+          "callsiteSha256": "105a5aa73305feaced3c6358ce602c48628203b61dc7d8d3efbf280107833669"
+        }
+      ],
+      "symbol": "fn_0069c304",
+      "source": "src/native/wave008/flags_03.c",
+      "header": "src/native/wave008/views_03.h",
+      "recordType": "FlagRecord_0069c304",
+      "rootType": "FlagOwner_0069c304",
+      "fieldName": "flags_0044",
+      "returnType": "FlagRecord_0069c304 *",
+      "parameterList": "FlagOwner_0069c304 *self, u32 value",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 6940432,
+      "pointerOffsets": [
+        8
+      ],
+      "fieldOffset": 68,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "publish-state-if-different",
+        "stateOffset": 12
+      },
+      "bytes": 44,
+      "endExclusive": 6940476,
+      "mode": "ARM",
+      "sha256": "eb0b9a4d89dc1526ff19a9064a16b5647ec66d546c1b0c5c04c15fb346c4d7be",
+      "ghidraRanges": [
+        {
+          "start": 6940432,
+          "endExclusive": 6940476,
+          "bytes": 44
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 2372628,
+          "callsite": 2372892,
+          "callsiteSha256": "97a1809c8d94cec8f35ae8b6e2f9811903c397d3aedebb2517bf40a417987054"
+        },
+        {
+          "callerFunction": 2828888,
+          "callsite": 2829436,
+          "callsiteSha256": "ce62e624ab489255ef40afc13f084ec77faabb12dea5e30dfab82fbaa750806b"
+        },
+        {
+          "callerFunction": 2838272,
+          "callsite": 2838448,
+          "callsiteSha256": "c2ff47d44bdfff955cc7d8482224e5fe0c8658c4e91b5252cb8f96e9daa2aeb5"
+        },
+        {
+          "callerFunction": 3168668,
+          "callsite": 3168676,
+          "callsiteSha256": "3df2feaaa9758ed2fc3952829c82979eea91bd5b4875664de262dfeaf92c1571"
+        },
+        {
+          "callerFunction": 3170408,
+          "callsite": 3170416,
+          "callsiteSha256": "ca4f775f86026f80c70152334275d5f05de7b31c86211927aa855504b5c925da"
+        },
+        {
+          "callerFunction": 3170408,
+          "callsite": 3170788,
+          "callsiteSha256": "7c79a35d3c94633499ac98762a8538c9e126cb8ba65d2f62029f67686b367465"
+        },
+        {
+          "callerFunction": 3171900,
+          "callsite": 3171960,
+          "callsiteSha256": "7f5e6dccc92754d4daaf486b6518b2d3ef7ad1a799650003e1f859f028912901"
+        },
+        {
+          "callerFunction": 3176704,
+          "callsite": 3176876,
+          "callsiteSha256": "8e0cb9276cc4b87885810d02573714b614dae0b8a0fdd3111996ce585db53664"
+        },
+        {
+          "callerFunction": 3256284,
+          "callsite": 3256628,
+          "callsiteSha256": "27d15b8647efd0365d8d950f5091fa51f8e157819f3539e0a4b94d5657535db2"
+        },
+        {
+          "callerFunction": 3264668,
+          "callsite": 3264964,
+          "callsiteSha256": "bba2cd4df47e0436084fc42c4c7d4dade990fcb735d294bcd99da14f60e98c1e"
+        },
+        {
+          "callerFunction": 3267276,
+          "callsite": 3267284,
+          "callsiteSha256": "abdf9a2601cd80ce017ae9063408a7b94b5b6f355dcc027b9515daa5f698b092"
+        },
+        {
+          "callerFunction": 3270648,
+          "callsite": 3271392,
+          "callsiteSha256": "270f6795f0682607a0973804aa701a38cbe0f4cc75e9c2abd850276891276304"
+        },
+        {
+          "callerFunction": 3656704,
+          "callsite": 3656992,
+          "callsiteSha256": "8838afda65e6d831a0b3705583727ff44ba9a930bbc78cc25b7bf392bcaa8c47"
+        },
+        {
+          "callerFunction": 3660740,
+          "callsite": 3660748,
+          "callsiteSha256": "aed5cab68cb6b63ec960eed61087b71f8bf9f2e7f35e20239e8f63862714e29c"
+        },
+        {
+          "callerFunction": 3660740,
+          "callsite": 3660968,
+          "callsiteSha256": "3d866d763f206f8483cedaa677c8698ac762a0fdb2c6091d7ba19154d740b995"
+        },
+        {
+          "callerFunction": 3751560,
+          "callsite": 3752020,
+          "callsiteSha256": "c7b7686a9767209931e0742f6f38346ab1bd4f4c7e4f3b296e0b5940c4af471e"
+        },
+        {
+          "callerFunction": 3753056,
+          "callsite": 3753064,
+          "callsiteSha256": "ff6b9c4c8757e221d7622877c8bb7bc4e6ebdc5913396af9b7b80988b19aabf4"
+        },
+        {
+          "callerFunction": 3753416,
+          "callsite": 3753684,
+          "callsiteSha256": "baa4bb55b83df55e6a64a390d82388d2f32b0b45aea0336db1b76c4ade7438e9"
+        },
+        {
+          "callerFunction": 3753944,
+          "callsite": 3754232,
+          "callsiteSha256": "095ce0e675bae938136873e28589f89eafecb74015eac0f447459ec77cd8277c"
+        },
+        {
+          "callerFunction": 4259304,
+          "callsite": 4259312,
+          "callsiteSha256": "c4cfc1b8044ccca80106aae25251e65f67b82225e2691c83397d4574bfa3f455"
+        }
+      ],
+      "symbol": "fn_0069e710",
+      "source": "src/native/wave008/flags_03.c",
+      "header": "src/native/wave008/views_03.h",
+      "recordType": "FlagRecord_0069e710",
+      "rootType": "FlagOwner_0069e710",
+      "fieldName": "flags_0044",
+      "returnType": "u32",
+      "parameterList": "FlagOwner_0069e710 *self",
+      "historicalSignatureKnown": false
+    },
+    {
+      "address": 6940488,
+      "pointerOffsets": [
+        8
+      ],
+      "fieldOffset": 68,
+      "fieldWidth": 1,
+      "semanticModel": {
+        "kind": "publish-state-if-different",
+        "stateOffset": 12
+      },
+      "bytes": 44,
+      "endExclusive": 6940532,
+      "mode": "ARM",
+      "sha256": "eb0b9a4d89dc1526ff19a9064a16b5647ec66d546c1b0c5c04c15fb346c4d7be",
+      "ghidraRanges": [
+        {
+          "start": 6940488,
+          "endExclusive": 6940532,
+          "bytes": 44
+        }
+      ],
+      "callerCandidates": [
+        {
+          "callerFunction": 2371300,
+          "callsite": 2371308,
+          "callsiteSha256": "7ffced0f83dd26ebadb8139b32bd3d0a8e3892e348ecf8e9ff19bf68a7f2b241"
+        },
+        {
+          "callerFunction": 2831092,
+          "callsite": 2831100,
+          "callsiteSha256": "77d03ed9a22853a6937201b69b5396d3d0173bb71a167d1a860aefada8ce5079"
+        },
+        {
+          "callerFunction": 3032180,
+          "callsite": 3032188,
+          "callsiteSha256": "cf2e216f1c88866398808224fd740a811c9a4b88af92d02ca10f4bee99cf85ba"
+        },
+        {
+          "callerFunction": 3169004,
+          "callsite": 3169012,
+          "callsiteSha256": "ea19f1bf350d1e2f77ac2393a7041391318b073eb5189afa826c9330ef08019d"
+        },
+        {
+          "callerFunction": 3171392,
+          "callsite": 3171400,
+          "callsiteSha256": "9855748d15e127b2653dc825383f2ea2eeeaf2e2515636c442c41a1c70490744"
+        },
+        {
+          "callerFunction": 3172440,
+          "callsite": 3172448,
+          "callsiteSha256": "9db1ecfc6a1a72c5361ba37665c47f313fdf99d83b0836d868db7545b756a09c"
+        },
+        {
+          "callerFunction": 3176088,
+          "callsite": 3176096,
+          "callsiteSha256": "babd96336a4b3c3eaa34d77778716d17e5078bf989feb4a4824d4dd260f4c7a2"
+        },
+        {
+          "callerFunction": 3177400,
+          "callsite": 3177408,
+          "callsiteSha256": "9932775b428b6100a15068dbfbf10b953b22f689d3f3213d2ca3ca3f13cbf9f0"
+        },
+        {
+          "callerFunction": 3265952,
+          "callsite": 3265964,
+          "callsiteSha256": "73c3c21c90343ae3570f8feaab2e075d34fa1d69f11f22c13d096686c81b9b28"
+        },
+        {
+          "callerFunction": 3268944,
+          "callsite": 3268952,
+          "callsiteSha256": "6de0068bb4cb070d5ec5de02d49abf54ce4ee27c88ebca30b82603c2ae7910d9"
+        },
+        {
+          "callerFunction": 3271564,
+          "callsite": 3271572,
+          "callsiteSha256": "03902e172fc94be5f19d51d33f6f5143ec79331f6afddcb3ef2a00061aab8b4c"
+        },
+        {
+          "callerFunction": 3438324,
+          "callsite": 3438332,
+          "callsiteSha256": "2e9c4b150c8b302dc2188bc2c657a4e770e5f960fa879fb37962115d9cf388bc"
+        },
+        {
+          "callerFunction": 3439760,
+          "callsite": 3439768,
+          "callsiteSha256": "c952f3c05f9fe47920035f65bebcebdfdc120f8f67940e2fac9604ac31e34242"
+        },
+        {
+          "callerFunction": 3441600,
+          "callsite": 3441608,
+          "callsiteSha256": "99ee57daae7085f3fb6102edfc866adcd7d419ecb871f8256eb05f2020475627"
+        },
+        {
+          "callerFunction": 3658384,
+          "callsite": 3658392,
+          "callsiteSha256": "27610c4f495647fe55f8cbbfc2f6bb83ba7463596e38f9fb4f2b07090aa78742"
+        },
+        {
+          "callerFunction": 3661644,
+          "callsite": 3661652,
+          "callsiteSha256": "5f452b4e11fd8344263eafc4a04c40dd1221975ce74fa60a1be13e3119a5c1fb"
+        },
+        {
+          "callerFunction": 3662360,
+          "callsite": 3662368,
+          "callsiteSha256": "908dda010b4e6bb637c18a89177af41d5805fcb403704b2cc0730184b50a8f2b"
+        },
+        {
+          "callerFunction": 4259668,
+          "callsite": 4259676,
+          "callsiteSha256": "c2a045ae62433d6c5da46fa86633c678bdf2f5659621cac41b8c50d8a22d6335"
+        }
+      ],
+      "symbol": "fn_0069e748",
+      "source": "src/native/wave008/flags_03.c",
+      "header": "src/native/wave008/views_03.h",
+      "recordType": "FlagRecord_0069e748",
+      "rootType": "FlagOwner_0069e748",
+      "fieldName": "flags_0044",
+      "returnType": "u32",
+      "parameterList": "FlagOwner_0069e748 *self",
+      "historicalSignatureKnown": false
+    }
+  ],
+  "units": [
+    {
+      "source": "src/native/wave008/flags_00.c",
+      "sourceSha256": "00d4e8f198f387f31ed3ff1700ce793f1c21440dd20d0d91be7ede3ea636c29a",
+      "header": "src/native/wave008/views_00.h",
+      "headerSha256": "55baba04086c821e800dd487fcf5cdc56a935cc95de9172fc93e7dc734cc6e1c"
+    },
+    {
+      "source": "src/native/wave008/flags_01.c",
+      "sourceSha256": "3f8bff07eb89f57d9d7a2dafe460fe6515ca84158d8d1cf1dd465f252f6b0881",
+      "header": "src/native/wave008/views_01.h",
+      "headerSha256": "f4fd66e8e288f8b88a06a969477824813569cd164edaa087084c6fa2e0f32881"
+    },
+    {
+      "source": "src/native/wave008/flags_02.c",
+      "sourceSha256": "76018cfe5fc5c5362d15eeceb8f1ca05040d18b9bb000ef2ca4ebdbd8bb410b3",
+      "header": "src/native/wave008/views_02.h",
+      "headerSha256": "8f055548655419d074cff8e09c332c522bf14abb7ff87c7e0090b69cae975958"
+    },
+    {
+      "source": "src/native/wave008/flags_03.c",
+      "sourceSha256": "1e969c5770f4bf94992211f49d485a9e956bd5c290b380db0fe702a07e5b1772",
+      "header": "src/native/wave008/views_03.h",
+      "headerSha256": "ba9e15e390e61c67559c5a243e1d3ba57c1053655e9e8d4e0586dcad92b601b5"
+    }
+  ],
+  "returnInterpretation": "Observed complete R0 behavior; historical C signatures and names remain unknown"
+}
