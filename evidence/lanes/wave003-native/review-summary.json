@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "lane": "wave003-native",
+  "status": "ready-for-independent-coordinator-review",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "packet": {
+    "path": "evidence\\lanes\\wave003-native\\packet.json",
+    "bytes": 272610,
+    "sha256": "689bc1e0435ac9c5b908bf5ba1c7f1a6f1b1e381dd02d053c16cecac5346a5cd"
+  },
+  "boundary": {
+    "path": "evidence\\lanes\\wave003-native\\boundary.json",
+    "bytes": 32629,
+    "sha256": "b08ba1b96a5db20aeb8f013e2957927816a9818bc7af31e7a4833b8a9524177f"
+  },
+  "source": {
+    "path": "src\\native\\wave003\\setters.c",
+    "bytes": 5372,
+    "sha256": "d3c9a708cc2c30d51978a1087ac5227c23e9ab096ee8b66dac38632ed20dd216"
+  },
+  "header": {
+    "path": "src\\native\\wave003\\views.h",
+    "bytes": 3352,
+    "sha256": "a9d418c5f30912ad903272d3a7ac03f4bc746c427d821252c67407e148bf03dd"
+  },
+  "producer": {
+    "path": "toolscripts\\native_wave003.py",
+    "bytes": 21005,
+    "sha256": "7520a90ee1a30e6b789ffd83ca0f08a5186fc3f1533d11d6b9248eb570f741dd"
+  },
+  "proposedFunctionCount": 58,
+  "proposedInstructionBytes": 696,
+  "exactDiagnosticFunctionCount": 61,
+  "exactDiagnosticInstructionBytes": 720,
+  "acceptedCredit": 0,
+  "pendingIndirectFunctions": [
+    {
+      "address": 5612392,
+      "bytes": 8,
+      "reason": "Indirect member-call target binding not independently proven"
+    },
+    {
+      "address": 5612400,
+      "bytes": 8,
+      "reason": "Indirect member-call target binding not independently proven"
+    },
+    {
+      "address": 5612888,
+      "bytes": 8,
+      "reason": "Indirect member-call target binding not independently proven"
+    }
+  ],
+  "behaviorCasesPerFunction": 61,
+  "totalBehaviorCases": 3721,
+  "negativeControls": 124,
+  "allNegativeControlsPassed": true,
+  "privateContext": {
+    "path": "work\\wave003-native\\contexts.txt",
+    "bytes": 45886,
+    "sha256": "7c5a26da766db5ebaccd1b0f9e199823b7c8aaa355b608f19500135c8c99ae3c"
+  },
+  "successLog": {
+    "path": "work\\wave003-native\\run.log",
+    "bytes": 119,
+    "sha256": "7ac97a93d4b30246aca5fef302c1903c0cec3f8e527d25018e2b962c29756aea"
+  },
+  "failedAttempts": [
+    {
+      "reason": "Direct-call witness assumption rejected three Ghidra indirect-call edges; retained unaccepted",
+      "log": {
+        "path": "work\\wave003-native\\initial-indirect-caller-failure.log",
+        "bytes": 651,
+        "sha256": "c188b403f37f340102f32a1cd8a2a7178ae0c2e439af66bdbccd785931b2df4d"
+      }
+    }
+  ],
+  "reproduction": "Invoke project tools/python/Scripts/python.exe with absolute toolscripts/native_wave003.py path from any cwd"
+}
