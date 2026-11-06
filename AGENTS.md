@@ -1,0 +1,15 @@
+# DQMJ3 Professional reconstruction
+
+This is a private local project. Do not create a remote, push, upload game content or send binaries to hosted decompilation services. Original archives, CIAs and saves are immutable. Write disposable game/save copies and emulator profiles only under work/. Do not alter DQMJ2 Pro or Monster Fieldnotes. Use project-local tools and dependencies; no global PATH, Java or policy changes. All temporary clones and independent replay roots belong under work/.
+
+The target identity is the measured owner archive and its separately identified base and update contents. Retail identity, translation status, compiler family/version, script formats and engine lineage require evidence. Never substitute community labels for measurement. Native executable inventory, script inventory and assets are separate.
+
+Use ordinary readable C/C++ for recovered game logic. Assembly requires evidence of original assembly or unavoidable low-level behavior. No instruction/register/object/relocation patching, embedded executable blobs or compiler-output generation receives source credit. Authored code has no comments and at most 500 physical lines per file; explanation belongs in docs/. Unmodified third-party code and generated reports are separate.
+
+Parallel agents may research or prepare independent packets with frozen input/tool hashes, canonical build/program/module/address/ARM-or-Thumb identity, complete instruction/pool extents, exclusive output paths, ABI and dependency closure, reproduction argv, negative attempts and unsupported paths. One coordinator owns shared schemas, registries, evidence publication and integration. Workers never edit another lane's files or run shared-output checks. Keep coupled routines together. Claims are explicit; a task result is not acceptance.
+
+Report exact object bytes and relocations, real source-linked bytes, bounded behavior, independent clean replay, platform execution and source-only executable/container status separately. Compiler similarity, heuristic function counts, original-byte roundtrips and retained gaps receive zero recovered-source credit. Missing artifacts or skipped modules fail completeness checks. A bounded test is not a universal equivalence proof. Preserve failures and effective tool identities, including package metadata/native-library discrepancies.
+
+Start with archive/container verification and loader mapping, then compiler identification and one completely closed leaf packet. Lock native denominators only after executable inventory review; inventory filenames alone do not prove executable completeness. Interpreted scripts retain their own denominator and original embedded source is not newly reconstructed source.
+
+Use docs/2026-11-06-project-charter.md and docs/2026-11-06-roadmap.md for intent and current next work. Joker 1 remake research is a separate future capability track. Never change original J3 mechanics merely to make a prospective Joker 1 scene work. Emulation must be silent and use isolated disposable profiles; qualify debugger behavior before capturing evidence.

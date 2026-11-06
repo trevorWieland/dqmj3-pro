@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "observedDate": "2026-11-06",
+  "python": "3.13.5",
+  "pythonExecutableSha256": "935016795f3e6908e75acbc2040a01e2e4cdb494a57c42f63a0d6eedb2372256",
+  "wheels": [
+    {
+      "name": "capstone",
+      "version": "5.0.9",
+      "filename": "capstone-5.0.9-py3-none-win_amd64.whl",
+      "sha256": "732cedbbb56d42e723f14d7af6387f1454194a820b4b96b56d1e53f865ef85d0",
+      "url": "https://files.pythonhosted.org/packages/50/e6/6f06fdb6a9ed32b2f7cd9c036b92d5324112c3ef7080f2c71efc367d40dd/capstone-5.0.9-py3-none-win_amd64.whl"
+    },
+    {
+      "name": "pycryptodomex",
+      "version": "3.24.2",
+      "filename": "pycryptodomex-3.24.2-cp37-abi3-win_amd64.whl",
+      "sha256": "6e912e3a21061bf8f4ce89223cb46f5e98a6b32420d08d770605891a2be266c6",
+      "url": "https://files.pythonhosted.org/packages/21/f9/4363334c762c2463d9d403894e83922959d9392e7cfa15bb1335e790851d/pycryptodomex-3.24.2-cp37-abi3-win_amd64.whl"
+    },
+    {
+      "name": "pyctr",
+      "version": "0.7.6",
+      "filename": "pyctr-0.7.6-py3-none-any.whl",
+      "sha256": "60fe1dfa2af9fc518a2e4b38e39f42e48eae1f27c594e677836fd04726bb2323",
+      "url": "https://files.pythonhosted.org/packages/e6/e4/94b7222b1bce462384cd30d9d2e73d56c060a38d2cd4b5efa1934dac4ac3/pyctr-0.7.6-py3-none-any.whl"
+    },
+    {
+      "name": "pyelftools",
+      "version": "0.33",
+      "filename": "pyelftools-0.33-py3-none-any.whl",
+      "sha256": "f215ad5f47d3f1373a21496a6c9e0707c622840d0622f23ff7ce08678b020036",
+      "url": "https://files.pythonhosted.org/packages/46/2a/f9697576603dae937727827505a6126a066affb227034e77e6f9068910da/pyelftools-0.33-py3-none-any.whl"
+    },
+    {
+      "name": "unicorn",
+      "version": "2.1.4",
+      "filename": "unicorn-2.1.4-cp37-abi3-win_amd64.whl",
+      "sha256": "d7107500c64ce5c168fbff6bef9485b5db1350050036f4cea568650cf8bdbdf5",
+      "url": "https://files.pythonhosted.org/packages/70/3d/de7be9bd1addabe6d8a1369381f8a080400c349850e978689c5e18287957/unicorn-2.1.4-cp37-abi3-win_amd64.whl"
+    }
+  ],
+  "files": [
+    {
+      "path": "tools/clang-21/clang.exe",
+      "size": 99559064,
+      "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+    },
+    {
+      "path": "tools/clang-21/ld.lld.exe",
+      "size": 69225112,
+      "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3"
+    },
+    {
+      "path": "tools/clang-21/libwinpthread-1.dll",
+      "size": 96408,
+      "sha256": "c9019ab753c2faa5e5da94e3fd4395f1d3d0e7d2509f5ed2d96cccff7f8b9357"
+    },
+    {
+      "path": "tools/clang-21/libxml2.dll",
+      "size": 1200792,
+      "sha256": "e15a377aa308e3f7ba948e6d6622a5dea2308256dbc65858074b61d867af6148"
+    },
+    {
+      "path": "tools/ctrtool-1.3.0/ctrtool.exe",
+      "size": 940032,
+      "sha256": "79021f283b2199950eb22cf3c459806b9c8aaaf68f65c80100107d3454a1c224"
+    },
+    {
+      "path": "tools/objdiff-3.8.3/objdiff-cli.exe",
+      "size": 7164416,
+      "sha256": "dd12dfb5e9e94a7f6c949a37e1815963cf2cffe4c87b4999b7ebc8c15b398a1f"
+    }
+  ],
+  "nativeLibraries": [
+    {
+      "path": "tools/python/Lib/site-packages/capstone/lib/capstone.dll",
+      "size": 7576576,
+      "sha256": "76958e18380023a68fd1714fa2e01c594cc6db1955a07ad6937b66e66dc5d6c3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/lib/unicorn.dll",
+      "size": 9598976,
+      "sha256": "010d85dce84b8f6ffaec3d5420f1b5f7768f859eb831be574c7da23e656ee8f1"
+    }
+  ],
+  "runtimeVersions": {
+    "capstoneMetadata": "5.0.9",
+    "capstoneNative": [
+      5,
+      0,
+      1280
+    ],
+    "unicornMetadata": "2.1.4",
+    "unicornNative": [
+      2,
+      1,
+      33621247
+    ]
+  },
+  "ctrtoolArchive": {
+    "url": "https://github.com/3DSGuy/Project_CTR/releases/download/ctrtool-v1.3.0/ctrtool-v1.3.0-win_x64.zip",
+    "sha256": "8031dff3be72d0adb250fae1f969f27627e12a89ebc6dd074a15a75f87ddc949"
+  },
+  "objdiffDistribution": {
+    "url": "https://github.com/encounter/objdiff/releases/download/v3.8.3/objdiff-cli-windows-x86_64.exe",
+    "sha256": "dd12dfb5e9e94a7f6c949a37e1815963cf2cffe4c87b4999b7ebc8c15b398a1f"
+  },
+  "clangProvenance": {
+    "distribution": "Android NDK r30, minimal local copy",
+    "matchingCompilerEstablished": false,
+    "version": "Android (16134705, based on r574158c) clang version 21.0.0 (https://android.googlesource.com/toolchain/llvm-project 9f872551d3c681d06fd303b36f16ed5c274735eb)",
+    "source": "https://android.googlesource.com/toolchain/llvm-project/+/9f872551d3c681d06fd303b36f16ed5c274735eb"
+  },
+  "compilerProfile": {
+    "originalCompilerFamily": null,
+    "originalCompilerVersion": null,
+    "status": "unidentified; clang is an infrastructure/behavior compiler"
+  }
+}
