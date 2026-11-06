@@ -73,7 +73,7 @@ def publish(replay_path):
         if lane not in LANES or digest(checkout / name) != artifacts.get(name) or artifacts[name] != packet['packetSha256']:
             raise ValueError('Replayed source packet changed')
         copies.append((name, 'replayed-' + lane + '-packet.json'))
-    platform = 'evidence/lanes/platform-memory-wave001/report.json'
+    platform = 'evidence/lanes/platform-memory-wave002/report.json'
     if digest(checkout / platform) != artifacts.get(platform):
         raise ValueError('Replayed native pointer portability proof changed')
     copies.append((platform, 'replayed-memory-platform-report.json'))

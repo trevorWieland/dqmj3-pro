@@ -1,0 +1,124 @@
+{
+  "status": "frozen-ready-for-coordinator-review",
+  "lane": "platform-memory-wave002",
+  "unitTests": 12,
+  "unitCommandExitCode": 0,
+  "observedUnitElapsedSeconds": 130.057,
+  "unitLog": {
+    "path": "work/platform-memory-wave002/fresh-venv-tests.log",
+    "sha256": "a56d7a7855502b8a1add385cacdf8afc74080373584fd33712259e89300e39e7",
+    "bytes": 2843
+  },
+  "freshVenvCreated": true,
+  "offlinePackagesInstalled": true,
+  "freshVenvPreflight": {
+    "effectiveToolPinsChecked": 130,
+    "venvStructure": {
+      "includeSystemSitePackages": false,
+      "version": "3.13.5",
+      "home": "C:\\Users\\trevo\\AppData\\Local\\Programs\\Python\\Python313",
+      "creatorExecutableSha256": "935016795f3e6908e75acbc2040a01e2e4cdb494a57c42f63a0d6eedb2372256",
+      "creatorChainDepth": 2
+    }
+  },
+  "existingColdVenvPreflight": {
+    "path": "evidence/lanes/platform-memory-wave002/fresh-venv-preflight.json",
+    "sha256": "488bba126ac8d5be779605246fc0610c1a980868534485d9fd3681f374deee7e",
+    "bytes": 634
+  },
+  "unitArgv": [
+    "tools/python/Scripts/python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_platform_memory_wave002.py",
+    "-v"
+  ],
+  "sourceDefinitions": 315,
+  "productionDefinitionsChanged": false,
+  "mainRootFreshOriginalReturns": 7560,
+  "mainRootWindowsReturns": 7560,
+  "mainRootWrongSourceReturnsThenRejected": 7560,
+  "isolatedFreshOriginalReturns": 7560,
+  "isolatedWindowsReturns": 7560,
+  "isolatedWrongSourceReturnsThenRejected": 7560,
+  "identicalFreshNativeCorpusSha256": "361accc46c552d6f9047a3bd0c76a7c4c08ee72c4a1293d54ba56c094ab92b22",
+  "inputManifestSha256": "eba2bd9f66695f0ae866897fccd14267ebb3a5ef575e2f34e6dd2e5fbae0b8df",
+  "changedRuntimeReceiptPins": [
+    {
+      "path": "evidence/lanes/wave002-native/packet.json",
+      "sourceSha256": "bd0614ba8e2c3b42ccbaf4c818ff0bbc26137a1edd49c0de42c13fc651ae2cfe",
+      "isolatedSha256": "28e94bbf7e200aad50795d6fd4062bb1d39b314099fd93877bd5816790fd4f3a"
+    },
+    {
+      "path": "evidence/lanes/wave003-abi/packet.json",
+      "sourceSha256": "272056db7b52a6073bb80539a0c8935a66c4675fe4ba7bca87f48b637b8d4da8",
+      "isolatedSha256": "c70b7fec7debcf2adb60567e2fb2afc141e7dddcaac02a300afeeaaf5e07e114"
+    }
+  ],
+  "pathPinsRefreshedForIsolatedRoot": false,
+  "projectToolRuntimePins": 130,
+  "externalInstalledCPythonPins": 1797,
+  "historicalLanePinsUnchanged": [
+    {
+      "path": "platform/memory-wave001/inputs.json",
+      "sha256": "c94f177675144b40eb15c390f467269c18bdaaf6b9bf40997f4225165bfdc86d"
+    },
+    {
+      "path": "platform/memory-wave001/kernel32.def",
+      "sha256": "aa5cbef0be18f800ec1c5425898cbded0ead3a14d81ffd82e19c6b2b0ffe873f"
+    },
+    {
+      "path": "platform/memory-wave001/memory_test.c",
+      "sha256": "6fa664cea041dee66ef1d42de1114663e47115d652a552db0fb750c453f15d05"
+    },
+    {
+      "path": "platform/memory-wave001/runner.c",
+      "sha256": "8ef576dd0b412537dec35557c09977a190ed15ddf8f09db048244bf491ad0d88"
+    },
+    {
+      "path": "platform/memory-wave001/test_api.h",
+      "sha256": "4235e955eda6753467161618d9bd53be1797117be061aa2be49a3aa4dd8ebf8f"
+    },
+    {
+      "path": "toolscripts/platform_memory_build.py",
+      "sha256": "0edc2aaf4f777297e85e459156db7483952a477642863f372fb83790603235cf"
+    },
+    {
+      "path": "evidence/lanes/platform-memory-wave001/corpus.json",
+      "sha256": "518f94789cfb350876f2cd77df0d5157162eb21ea5653abf6b28dfc38602e047"
+    }
+  ],
+  "androidQualifiedSymbols": 315,
+  "androidActuallyExecuted": false,
+  "fullGameBuild": false,
+  "acceptedSourceCredit": 0,
+  "report": {
+    "path": "evidence/lanes/platform-memory-wave002/report.json",
+    "sha256": "484988b8d4eb8365557f522437618f7377ea0effec9b2621ebe2a86f4adb3176",
+    "bytes": 46675
+  },
+  "corpus": {
+    "path": "evidence/lanes/platform-memory-wave002/corpus.json",
+    "sha256": "361accc46c552d6f9047a3bd0c76a7c4c08ee72c4a1293d54ba56c094ab92b22",
+    "bytes": 2635695
+  },
+  "isolatedReplay": {
+    "path": "evidence/lanes/platform-memory-wave002/isolated-replay.json",
+    "sha256": "39ffa0dd44846acc9e246a41dabf016732effae98db1faa753a72fc6a264687a",
+    "bytes": 11259
+  },
+  "producer": {
+    "path": "toolscripts/platform_memory_wave002.py",
+    "sha256": "2cffb452e7947fa991b0ce67b9cecffbe64d136fead2114d68e2b9134d11bfa2",
+    "bytes": 20006
+  },
+  "tests": {
+    "path": "tests/test_platform_memory_wave002.py",
+    "sha256": "3ccfe80491302384e254a989490a3a52f8de7ba7f7b4da99097dacab5c76884d",
+    "bytes": 8527
+  }
+}

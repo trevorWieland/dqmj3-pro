@@ -1,0 +1,612 @@
+{
+  "schemaVersion": 2,
+  "scope": "Stable canonical-source host64 memory component inputs; runtime packets excluded",
+  "modulePath": "generated/update-content0/code.bin",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "inputs": [
+    {
+      "path": "evidence/lanes/wave002-native/semantic-layouts.json",
+      "sha256": "0ba23ac500082b62e82b44db51ae7303fcf1340dcdfdd2f3299d9cf79f901849"
+    },
+    {
+      "path": "src/native/wave002/types.h",
+      "sha256": "f8e5367f0db62dae45801b2ab5660010eb719e9fd639f5ad29cd5efade96c7e2"
+    },
+    {
+      "path": "src/native/wave002/views_00.c",
+      "sha256": "25a202ce60ce38ffa51315f023cf7d010372169de8e57da579cbca995e74ede9"
+    },
+    {
+      "path": "src/native/wave002/views_00.h",
+      "sha256": "95bb78674a2a7c505d3bb9494a7b429ac1b5266489b3740da2455ffd7cc1f5ef"
+    },
+    {
+      "path": "src/native/wave002/views_01.c",
+      "sha256": "a3104cd081df2066a3c3b5f9207fb355f5b646ab2a8b9af33520a8894a752a21"
+    },
+    {
+      "path": "src/native/wave002/views_01.h",
+      "sha256": "960853e463b0bcd414b53775d1e84b8b815114640650029d34e6c4dd7bd4473f"
+    },
+    {
+      "path": "src/native/wave002/views_02.c",
+      "sha256": "1090fb5d2f3b094057269774c04b75636eaecc940da68f7cac89038b490e1098"
+    },
+    {
+      "path": "src/native/wave002/views_02.h",
+      "sha256": "bd64a0d88be9bc389eafd2dabcf38cee98b5aa38a5ac2d79d6dade832de57d32"
+    },
+    {
+      "path": "src/native/wave002/views_03.c",
+      "sha256": "b139506e0993f9fc52c65e3bd39777f132d1fe081159bbdcded7a127730e5384"
+    },
+    {
+      "path": "src/native/wave002/views_03.h",
+      "sha256": "72e103a184811d5d72a46fa3f2ea890d83ce3afc78366a2a1d93f111466caed2"
+    },
+    {
+      "path": "src/native/wave003/abi-qualified/setters.c",
+      "sha256": "30e6cc1826ae1ea934320405a214c2c1ba937192e723ef6e0a1f7289725fa94e"
+    },
+    {
+      "path": "src/native/wave003/abi-qualified/views.h",
+      "sha256": "a9d418c5f30912ad903272d3a7ac03f4bc746c427d821252c67407e148bf03dd"
+    },
+    {
+      "path": "toolscripts/native_wave002.py",
+      "sha256": "b905fa4cc179818117bf3564021772f2d288bf0c78603a50c6619be1c6f0d062"
+    },
+    {
+      "path": "toolscripts/native_wave003_abi.py",
+      "sha256": "832650a773da18f2dc926cba3ff4e10f26d4a629f5b8069d9f49380759900cce"
+    },
+    {
+      "path": "evidence/cohorts/bundle001/acceptance.json",
+      "sha256": "153544d664d389e63dd86f764c69e18e5a7c49e63f9490c3586b755cce78b75b"
+    },
+    {
+      "path": "evidence/lanes/wave003-abi/boundary.json",
+      "sha256": "e814f8bfb2a0ce55175a96116d5613971e11b7bb8b9276b11a215358f7c5a574"
+    },
+    {
+      "path": "platform/memory-wave002/contracts.py",
+      "sha256": "4e30f3fb424c4c41bc09ba916229a0d5b7bf123eabd55ca4301a30947b8ce819"
+    }
+  ],
+  "compiledUnqualifiedFunctions": [],
+  "setterReturnAbi": "typed record-pointer return; exact logical record identity checked after actual source invocation",
+  "toolPins": [
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/crtbegin_dynamic.o",
+      "sha256": "9087e4b58fd8aadc225d062e8750260079fce2f0a3cd4d0b46b8c2440eedb03a"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/crtend_android.o",
+      "sha256": "47cb49c3d286915f19287b94a7242f668fe62d0b2ae7c4256c7203ba0d179427"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/libc.so",
+      "sha256": "29a129043e28ba808e3bd69750242d71241a3e05581809551f0e371f4894b687"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/libdl.so",
+      "sha256": "b9d8f21c840570a4fe41b5a24c37651d1980fcda7d323003afcbd8483d3da51a"
+    },
+    {
+      "path": "tools/clang-21/clang.exe",
+      "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+    },
+    {
+      "path": "tools/clang-21/ld.lld.exe",
+      "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3"
+    },
+    {
+      "path": "tools/clang-21/libwinpthread-1.dll",
+      "sha256": "c9019ab753c2faa5e5da94e3fd4395f1d3d0e7d2509f5ed2d96cccff7f8b9357"
+    },
+    {
+      "path": "tools/clang-21/libxml2.dll",
+      "sha256": "e15a377aa308e3f7ba948e6d6622a5dea2308256dbc65858074b61d867af6148"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone-5.0.9.dist-info/METADATA",
+      "sha256": "be4a51b083e6175d370ab2d0cfac1a32d0ade1dfe9dd7525155f353a89ad3332"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone-5.0.9.dist-info/WHEEL",
+      "sha256": "954d2ebdda888c0e874734e98d9d47f8321f3929249066add906bbe074cb3439"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/__init__.py",
+      "sha256": "94571d1314355e261aff0ddfc94985fe8761232ddff6874181fd21efa9fab47f"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/arm.py",
+      "sha256": "00ea7442a1496d84aca469bfa3542290eafe22898b5be0dece9294865b9508ba"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/arm64.py",
+      "sha256": "834979e887315fae9a447698502f6866c246cb99b65c84b8b6fdef8087181284"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/arm64_const.py",
+      "sha256": "f358d461b1f45a8d91d8e308ca82e5b35c5d2e5c135d8ed07d8cdc86456a5418"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/arm_const.py",
+      "sha256": "1b00d7b48be4b72b730272486d4fd2057cb8019e67f1bd145bcabb1b988d1c67"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/bpf.py",
+      "sha256": "f879595fbc413bfa74600b4cbaa7a2cdd7200b2f92e718ad31fb36844e7c0f9d"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/bpf_const.py",
+      "sha256": "070717e28a68ee7e1e8b29cb9a299f5e462be81d9ad6c83dccce5f771fe22e7e"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/evm.py",
+      "sha256": "29f35d3953b2eeb976e02af3cdbf3a78066d4d5a750588da0672e48bc5aa0385"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/evm_const.py",
+      "sha256": "b3a60498c0ac455098d884574829875deb83a4176a052480249a9d3e93f42b6d"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/lib/capstone.dll",
+      "sha256": "76958e18380023a68fd1714fa2e01c594cc6db1955a07ad6937b66e66dc5d6c3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/m680x.py",
+      "sha256": "24d56b8f6e9c12d73f830f26de36d02461e4d73a3091943e6c90884181efe41d"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/m680x_const.py",
+      "sha256": "a8ceebe6e6213da834406e7a56c1f808fad554c5ed85a986b0ef8647db3718da"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/m68k.py",
+      "sha256": "0567bf26e32a274b086d296fdcc078dcbda2c66280f941e5986b30eecc647bc8"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/m68k_const.py",
+      "sha256": "79de0ea42977ad2875fd73a34ddb55fc2ace58dac45b0ee8aff0ae138c7a8faa"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/mips.py",
+      "sha256": "c23b6e5d5df2be6f728dda2da2a8f805d4d1500e383aebf555da1fa9650639e8"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/mips_const.py",
+      "sha256": "80a325c59a8a88918d1ebc55268e07461841ddde50d034a545d31cdf44668324"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/mos65xx.py",
+      "sha256": "f9b525569fcae4768ac4b2230a46468a571e934717f14d52910e243d0b279e9a"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/mos65xx_const.py",
+      "sha256": "22762e23dec6d011f75068cac995f4c05f6cf5c93c207502eeb11d0cd4a136f3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/ppc.py",
+      "sha256": "1ee21161d21902744379624d87048138272a99c6bd98623256baa065038bf03d"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/ppc_const.py",
+      "sha256": "4284db74b7db3a0e3eda043970096c047df81d9b0a81c13b3b5b70ca623d4b0b"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/riscv.py",
+      "sha256": "c40beee7bd99d3f1cc329203020def06140a786d17e2ec963feefb12e0c8e872"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/riscv_const.py",
+      "sha256": "6ac81243404207d74b3190c37180b6353a001191c7df5d04fd25f89b624abdd1"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/sh.py",
+      "sha256": "d50212075a918e94b41f1e67f838a3b70bc44d19941f33b6d502e5359c967592"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/sh_const.py",
+      "sha256": "a19a1837892a0eaa9bc3e5cd3638625471d705a35b08aa26994ad108928125be"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/sparc.py",
+      "sha256": "389867d194a7bef779466a5283953cb2b30d2e84368e80112677cfaa0334097c"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/sparc_const.py",
+      "sha256": "aef73803efe9a2e0e109fe05e0b791f33e62d41c54ed32cd2773837960d1ddae"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/systemz.py",
+      "sha256": "9e75611fb8930ef665b04a80e14ca0735953f69d2f0fdb608f96ea172cef7f2d"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/sysz_const.py",
+      "sha256": "98ad76240b48eff060f96fc0986933c904cbdfd654866eb49e7ee5879db2908e"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/tms320c64x.py",
+      "sha256": "597bf661d25e283c007c9ee76defb422f41e4279aae5bbd8b5736400109cf6b3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/tms320c64x_const.py",
+      "sha256": "643aeb59e96e2eb10f6ca4e9d27db9c00d83195cf442dea453418ac2df0cb94b"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/tricore.py",
+      "sha256": "6716ed4579dadec5c476a0a704c35421860cdaaf20796c7d9c5ebfceb5c4e3cb"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/tricore_const.py",
+      "sha256": "95d640cfc8d698f162edc68646c4829cd25289ee47d2869815b33b7839d32bae"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/wasm.py",
+      "sha256": "8fb19dfb59cd7175ab0e55b8b7c2d37e150c237ed6060862be6ec3e98bf21d6d"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/wasm_const.py",
+      "sha256": "e03e231892153456070055f39a53ed3205feeb24e7d768a2b193adcbe26cffc5"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/x86.py",
+      "sha256": "08cbb0a02ff152bcf1fbd7c4f8850b3ade38c25b9f0a6a9b900a55ee75e87c67"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/x86_const.py",
+      "sha256": "83cf4550d9256f5f9b8e218b9b732e46d83ef602b463a01d6eeb778deb28e040"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/xcore.py",
+      "sha256": "67a3bab5ec77998bf88f320b61be7110318454be2252ff2a02f42ca4aab56a8c"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/xcore_const.py",
+      "sha256": "34367710ee0501621fb8b325890cae740ff38075d3ef66b36de9b8b4dcec227f"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/__init__.py",
+      "sha256": "d8a071e9e68576ceab6ed200c5f4718119f7d61ee0fae337a867b095f1d5c5d9"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/common/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/common/construct_utils.py",
+      "sha256": "9529375fbb5a6662a482e8ff4b6c1eca486e9011624a3008a55af76b0c581eb6"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/common/exceptions.py",
+      "sha256": "ce89c2d8b856b6615f5dce6f5b6b6eeba9be278eaac34d1f2f854b23bb25abe1"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/common/utils.py",
+      "sha256": "3858dfe8156798e35f9502f4031acc2d76dce95dacf78f040719cc0e3934756f"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/__init__.py",
+      "sha256": "15104eb011a640e4268a9b9221d07201a0360ff0b1c8b49e252ef41fdfbb35de"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/adapters.py",
+      "sha256": "5745745b25eb849174ee5c3179b9867b03e0471633e9eac8276aa439fe4c8841"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/core.py",
+      "sha256": "86c7c9ef0303beb7bfe7b310c52e44697cc31b6cec7435eb33168216b70a965f"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/debug.py",
+      "sha256": "491486779e464e0f4a59cfd429d8e93c577a0f0d9b969847e69400a3c86acb1c"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/lib/__init__.py",
+      "sha256": "322a9b5b2cbe036a5ccf8e939dcbc3734203073db70fc4f2cb00f0f98ba107cf"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/lib/binary.py",
+      "sha256": "f18e4161a11bc95732bd01c577cbe98373081afd5b4112b02fec51a0e1df2e11"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/lib/bitstream.py",
+      "sha256": "ee8081769bed1d00a086399c8749a847c1a48b8d08637506bf7d1229b6e1808a"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/lib/container.py",
+      "sha256": "0385a420febf5bac714153ceaadd192ff9d09862bc7e17c203bf759aa18b2bb4"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/lib/hex.py",
+      "sha256": "55f82dc36f273347c08e9e469fd497368241453b7a63e69e167ad6b316e5e2c7"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/macros.py",
+      "sha256": "0244e84cf4f598ac8da7c3d8f1f09b06112a508e71fb8d381b377f1c0472a4e3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/abbrevtable.py",
+      "sha256": "cbe4a69fb4ced4ae87eb4694818ccf6c49302b8158bb8bb08b6e3864cee7aad4"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/aranges.py",
+      "sha256": "bbfa73cd13e89665b2b808c0c3b6dfc98978316e0f39a9b392768505f6263d36"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/callframe.py",
+      "sha256": "e5aae743714801ee80d5dc4b71c43007a8cb1638ed3cd0bf825dde2b298e70b0"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/compileunit.py",
+      "sha256": "bfff5b0da5a081390b0d0505f18d19ef5c70287b7ebd2fa094671a7139dfdef5"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/constants.py",
+      "sha256": "1b9b0e320c5cb7aa3a0117564431a73ce964d79a3a44ff0b74af7218e96f3f32"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/datatype_cpp.py",
+      "sha256": "d70081e2ee33a2cb7036dec99fa6fb9a2cf310c8d6b273994c2634d0ff254c10"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/descriptions.py",
+      "sha256": "735bc09c8ffec232df46a6c067947a0ec34667377d1fe13f37711e8d3f7befbd"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/die.py",
+      "sha256": "fe9f146dc9236a17b05376afbd1e4df901ad7735454cd699c8ce91277d3c0b8e"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/dwarf_expr.py",
+      "sha256": "0c217469f041aa7deb729b2d343323f05ad5b43e2a81b50fa980e61479f4f97b"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/dwarf_util.py",
+      "sha256": "4f0af20941ed2da56666b3c9fb42600d956c3b147017d1a57b2a3fe95e5ec8b0"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/dwarfinfo.py",
+      "sha256": "d8b16c376f3a3ccf2a41f86105df70e50368d03f973801e684185d315f357207"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/enums.py",
+      "sha256": "1e236370193e698513fafe29cd44afde8f9fc6b64d6dc6d5249bc6abdc8e6bf3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/lineprogram.py",
+      "sha256": "3e85191a28d2d61539f52569c314101a29a9cbaac7837760ae2bb42e7b72e0f8"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/locationlists.py",
+      "sha256": "9a9ea693f0a84f446e503e64b367702afd1ce81a80940710064b7f7d8fa33267"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/namelut.py",
+      "sha256": "cdb08d65cef4384f04f60d071b27bcdd5a76d7630e60579d85d59766171e6586"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/ranges.py",
+      "sha256": "44cf61af9ffa970646732cc17a1a806eb44a43176a9ca2ae9049e266031d5b65"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/structs.py",
+      "sha256": "6469b6d08f3a2628756ce7966c43fb13cdae74be2e034adc5daa5e9e5091515f"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/typeunit.py",
+      "sha256": "4b133343d9af443bb42302363ea32f0b6c576a93a3c1c28915ff9a47c26214a8"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/ehabi/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/ehabi/constants.py",
+      "sha256": "a386df95ebe53338db1cdfe498a06acf8e976007b5fab5c4eed2b8904932caa8"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/ehabi/decoder.py",
+      "sha256": "ab3bd609bd96582b44e507da614881b477491d3be235cd7d154516697e7c77f4"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/ehabi/ehabiinfo.py",
+      "sha256": "15a37115fb720208ae0daccd3d32447f0abb553a9ce9b3e6dab47c3f92e2747f"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/ehabi/structs.py",
+      "sha256": "cf381dc793d59cea78844f424b7a31dbf04513d9d7d318a962f6d25ef60f3e90"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/constants.py",
+      "sha256": "3a4a262a24a9ed7f796f80b6ddb54c31eba93e78293cb490b577dc8dcbca86b8"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/descriptions.py",
+      "sha256": "4f3e4e597828c1cdbfbb64e6230ba19c52ed32c978e7153f9ddb4edb7ff0c8cc"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/dynamic.py",
+      "sha256": "a31f7bd38236df432068feb81356e7245228491111b7e76d501fb5e107eda7ed"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/elffile.py",
+      "sha256": "2615f5052b79d8f5065f5739920b5f29aafd4831e4915a8983030ebe1cc978cf"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/enums.py",
+      "sha256": "4d975df4e75de4433cc673dfc7524a9a302792b1d2ec087a649dd24f120dad88"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/gnuversions.py",
+      "sha256": "0e553e59718df3d74d028aff795d9b44562dc648abfc787d75c27f0486cf8272"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/hash.py",
+      "sha256": "b8b10cd2c96814febc54bb122ccea5aef3ecf4270954ad661364a9368f2306d5"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/notes.py",
+      "sha256": "4c3f1bc337e3a808ae118cbebc92844dc1a1af74934659dfa14dd892376ce64a"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/relocation.py",
+      "sha256": "d9b4a0e47e5297bae9214f6ac40b9e2d779738777c8fe0cd1b31656cc605ed48"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/sections.py",
+      "sha256": "c90ce9f31e37cb714343256534e25603d2eefb732c0b41f1671ae7027abe4b36"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/segments.py",
+      "sha256": "8b808b2cee7976775e5ed8788970c2733f5dec859e2c0ef58aadcddcb2eef95a"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/structs.py",
+      "sha256": "114b209e3b7cdd471ca2875d554781cf4a174acf93c080d38da52c24fb2332be"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/pyelftools-0.33.dist-info/METADATA",
+      "sha256": "dbbb739509c795b8b7e700057880a88365218bb1c7216b198a22c97c8aedce62"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/pyelftools-0.33.dist-info/WHEEL",
+      "sha256": "69e6228a0d35958183cc1812f07c565ce837b95eb51bd8a33acba9fa4f68d6c9"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn-2.1.4.dist-info/METADATA",
+      "sha256": "6fcd483933e356688ad94de631e862787cd537b5b579769a485db676b89741eb"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn-2.1.4.dist-info/WHEEL",
+      "sha256": "f845f90d0ccd190128c8bf7d43ed0fd3e0fe0976dfa9a7de9da01e89243f51f9"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/__init__.py",
+      "sha256": "0e8ac7115c755994a968fa865bd1b2f2075edea715c17e91d62af2cc52c13392"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/arm64_const.py",
+      "sha256": "ddadd814eccd0a312bb43da7b4f2298690660bd5698c27edc306b1d981cff972"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/arm_const.py",
+      "sha256": "ace0c3e49f61649034a1bec4279576b67e064df146ea8062c67e68dc14e6eb7b"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/lib/unicorn.dll",
+      "sha256": "010d85dce84b8f6ffaec3d5420f1b5f7768f859eb831be574c7da23e656ee8f1"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/m68k_const.py",
+      "sha256": "af95f32f2810fe19888ac723db70c74c7fb1df2bc8ba3578ede0a28b8eca94a7"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/mips_const.py",
+      "sha256": "087925a25a128662e095bb861af3c38a2a6c522fc21e222e31b71aeacaaa63d3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/ppc_const.py",
+      "sha256": "11e0c52a1c137874352119fb3d1621639079feda6574ee575271ef683a0a8f17"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/riscv_const.py",
+      "sha256": "86e08d5f6327d154306d5d02899331892de6f44020ff86900a84d2b212205925"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/s390x_const.py",
+      "sha256": "4f6194d1697d8684921782a81f494458dc859f8ebf2f78e30f673bd5f7cd590f"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/sparc_const.py",
+      "sha256": "9dd58fa5aeab225a0f8186f653f5c8fc5fd161b75ccc6a541e5af79f36af2698"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/tricore_const.py",
+      "sha256": "88310f61e12b731b2550031eb6423fbf815e66428b483132d3df47614c9d53ae"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/unicorn.py",
+      "sha256": "2aed71e6d5bc60807198cdcc3ed43a485a7acae1f41f08d986137afc55df2029"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/unicorn_const.py",
+      "sha256": "c21d7c49f62296591a5f09ed0119ef95083b82f5f3f66b829578784c7b164368"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/unicorn_py2.py",
+      "sha256": "b82ccc7c00762e10f0326e8d8ad4381872cf531799d5e003ad52c9d7ac61ae42"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/unicorn_py3/__init__.py",
+      "sha256": "2cd4a0d95ef236b5b9e3efb68b20fb6a6d1fb4190db2e9cc0a6447eb2c0aa755"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/unicorn_py3/arch/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/unicorn_py3/arch/arm.py",
+      "sha256": "d486ff4a9c3f797e5e57a5201a1e2304b97a54b6bc61e320062f1290f4e3dc33"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/unicorn_py3/arch/arm64.py",
+      "sha256": "2e393f3f863da1576619e03abcbda2a2e2e54d673aac98979cf0b6caed8926b4"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/unicorn_py3/arch/intel.py",
+      "sha256": "b3b8338a85ac74623e7a67dfb4f44dc9933786a329e64d772987490dbf751637"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/unicorn_py3/arch/types.py",
+      "sha256": "525ed179db874a13291f9469bd6243e7293aba17454de9b10a9227106d093787"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/unicorn_py3/unicorn.py",
+      "sha256": "b4de7d560790a587157b17edd71c83b4f2d2bade2447d1a5433c497468ac8aeb"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/x86_const.py",
+      "sha256": "d7663db6425f52838f3e79e45a8fe22b6c02be7edb44367ea2118aec04ee5728"
+    },
+    {
+      "path": "tools/python/Scripts/python.exe",
+      "sha256": "935016795f3e6908e75acbc2040a01e2e4cdb494a57c42f63a0d6eedb2372256"
+    },
+    {
+      "path": "tools/wheels/capstone-5.0.9-py3-none-win_amd64.whl",
+      "sha256": "732cedbbb56d42e723f14d7af6387f1454194a820b4b96b56d1e53f865ef85d0"
+    },
+    {
+      "path": "tools/wheels/unicorn-2.1.4-cp37-abi3-win_amd64.whl",
+      "sha256": "d7107500c64ce5c168fbff6bef9485b5db1350050036f4cea568650cf8bdbdf5"
+    },
+    {
+      "path": "tools/wheels/pyelftools-0.33-py3-none-any.whl",
+      "sha256": "f215ad5f47d3f1373a21496a6c9e0707c622840d0622f23ff7ce08678b020036"
+    }
+  ],
+  "excludedDiagnosticFunctions": [
+    "fn_0055a368",
+    "fn_0055a370",
+    "fn_0055a558"
+  ],
+  "descriptorPath": "platform/memory-wave002/functions.json",
+  "descriptorSha256": "fad968d3605dc68e01c4d94aef9f8bbf9372edbecfd850e296f34f73bb3c46ac",
+  "runtimeDescriptor": {
+    "path": "platform/memory-wave002/runtime.json",
+    "sha256": "68465420b227d52eb91033ff8596d2d9dfd35363f5311557ac45134fb5747341"
+  },
+  "installerMetadataPolicy": "RECORD raw hashes excluded; pyvenv configuration structurally validates isolation/version/runtime/creator; effective code and wheels remain hashed"
+}

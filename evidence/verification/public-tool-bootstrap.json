@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "freshVenv": true,
+  "dependencyLinks": false,
+  "steps": [
+    {
+      "argv": [
+        "setup_tools.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "platform/app-shell/materialize_tools.py",
+        "--verify"
+      ],
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "toolscripts/app_shell_build.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "toolscripts/formal_equivalence_wave001.py"
+      ],
+      "returncode": 0
+    }
+  ],
+  "sourceRevision": "b978b8376c2a7ddb2b4ae336a99f7cd3ac2567ab",
+  "replayRoot": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\bootstrap-preflight001",
+  "originalModuleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "scope": "Fresh venv/offline pinned tool installation, public SDK verification, diagnostic Windows/Android build and formal research pilot; excludes full cohort/intake/game/device replay",
+  "reports": [
+    {
+      "path": "work\\bootstrap-preflight001\\evidence\\lanes\\app-shell-wave001\\report.json",
+      "sha256": "7f8f9af3e9a937b3e78d4bd6ab6ec325840c42a48b64dfa5c21a89954865d4bb"
+    },
+    {
+      "path": "work\\bootstrap-preflight001\\evidence\\lanes\\formal-equivalence-wave001\\packet.json",
+      "sha256": "0fbe2ecb1f47eed4e0d76e032882d2f9785b2a25a47ed557f0c1b7af3011ef32"
+    }
+  ]
+}
