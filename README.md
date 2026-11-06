@@ -1,6 +1,6 @@
 # DQMJ3 Professional decompilation
 
-Private reconstruction of the owner's measured Dragon Quest Monsters Joker 3 Professional base and update. The project begins on 6 November 2026. No remote is configured. Game archives, executable images, shipped scripts, assets, keys and saves remain outside Git.
+Reconstruction of the owner's measured Dragon Quest Monsters Joker 3 Professional base and update. The project begins on 6 November 2026. No remote is configured yet. The owner permits publishing reconstructed source, tooling and derived progress reports. Original game archives, executable images, shipped scripts/assets, keys, saves and hybrid builds containing retained original bytes remain outside publication.
 
 **The accepted source cohorts contain 356 native C functions and 4,164 instruction bytes.** Its ordinary C sources compile with the measured open Clang/LLVM profile, genuinely link at the original addresses, preserve the complete hybrid native image, pass bounded original/source tests and replay from an immutable committed tree. The executable inventory remains incomplete, so no overall source percentage is published. Original gaps, assets, embedded script text and unaccepted candidates receive zero reconstructed-source credit. `recovery.json` and finalized cohort receipts are authoritative.
 
