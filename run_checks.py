@@ -57,12 +57,14 @@ def main():
                                      '-p', 'test_oracle.py', '-v']),
         ('native-wave006', ['toolscripts/native_wave006.py']),
         ('native-bundle002', ['toolscripts/native_bundle002.py']),
-        ('native-memory-platforms', ['toolscripts/platform_memory_build.py']),
+        ('native-memory-platforms', ['toolscripts/platform_memory_build.py', '--capture-native']),
         ('tests', ['-m', 'unittest', 'discover', '-s', str(ROOT / 'tests'), '-v']),
     ]
     passed = True
     for name, args in commands:
-        command = [sys.executable, *[str(ROOT / arg) if arg.endswith('.py') else arg for arg in args]]
+        command = [sys.executable, *args]
+        if args[0].endswith('.py'):
+            command[1] = str(ROOT / args[0])
         try:
             completed = subprocess.run(command, cwd=output, capture_output=True, timeout=300)
         except subprocess.TimeoutExpired as error:
