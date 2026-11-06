@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "status": "semantic-proposals-validated",
+  "acceptedSourceFunctions": 356,
+  "documentedFunctionProposals": 3,
+  "acceptedFunctionsWithoutSemanticRecords": 353,
+  "sourceNamesChanged": false,
+  "sourceCreditChanged": false,
+  "understandingPercent": null,
+  "records": [
+    {
+      "canonicalIdentity": {
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1409012,
+        "mode": "ARM"
+      },
+      "canonicalSymbol": "fn_00157ff4",
+      "sourceSha256": "40225c220e8f6b2efe4cb8bcd58c047844807f25225e1b77db7fa6cb3a0f90b0",
+      "proposedName": "Vm_GetStackCountRelativeToBase",
+      "status": "supported-proposal",
+      "originalHistoricalNameKnown": false,
+      "sourceRenameApplied": false,
+      "operation": "Returns the signed difference between the observed top and stack-base indices.",
+      "parameters": [
+        {
+          "currentName": "vm",
+          "proposedName": "vm",
+          "role": "pointer to the measured partial VM stack layout"
+        }
+      ],
+      "fieldsInOriginalArm32Layout": [
+        {
+          "offset": 48,
+          "bytes": 4,
+          "proposedName": "topIndex"
+        },
+        {
+          "offset": 52,
+          "bytes": 4,
+          "proposedName": "stackBaseIndex"
+        }
+      ],
+      "evidenceReasons": [
+        "Complete original/native source acceptance and bounded behavior are recorded in the linked immutable cohort receipt.",
+        "VM candidates additionally agree with the measured public Squirrel2.2.5 configuration; the multiplication is directly represented by unchanged ordinary C."
+      ],
+      "remainingQuestions": [
+        "The complete original VM class and all caller contracts remain unreviewed.",
+        "sq_gettop is a supported upstream identity candidate, not a recovered historical symbol."
+      ]
+    },
+    {
+      "canonicalIdentity": {
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1523008,
+        "mode": "ARM"
+      },
+      "canonicalSymbol": "fn_00173d40",
+      "sourceSha256": "40225c220e8f6b2efe4cb8bcd58c047844807f25225e1b77db7fa6cb3a0f90b0",
+      "proposedName": "Vm_GetStackSlotPointer",
+      "status": "supported-proposal",
+      "originalHistoricalNameKnown": false,
+      "sourceRenameApplied": false,
+      "operation": "Returns a typed object pointer indexed from the stored stack pointer.",
+      "parameters": [
+        {
+          "currentName": "index",
+          "proposedName": "stackIndex",
+          "role": "index relative to the stored stack pointer, not implicitly the current frame"
+        }
+      ],
+      "fieldsInOriginalArm32Layout": [
+        {
+          "offset": 24,
+          "bytes": 4,
+          "proposedName": "stackStoragePointer"
+        }
+      ],
+      "evidenceReasons": [
+        "Complete original/native source acceptance and bounded behavior are recorded in the linked immutable cohort receipt.",
+        "VM candidates additionally agree with the measured public Squirrel2.2.5 configuration; the multiplication is directly represented by unchanged ordinary C."
+      ],
+      "remainingQuestions": [
+        "Full VM allocation, lifetime and allowed-index invariants are not established by the method fixtures.",
+        "SQVM::GetAt is a supported upstream identity candidate; the game fork remains unidentified."
+      ]
+    },
+    {
+      "canonicalIdentity": {
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 3429288,
+        "mode": "ARM"
+      },
+      "canonicalSymbol": "fn_003453a8",
+      "sourceSha256": "da2ca7a59e59d2126dfe9a3992453ccd112c335ccca2a4a0f7283d2d4e1e0efb",
+      "proposedName": "ScaleU32By500",
+      "status": "supported-proposal",
+      "originalHistoricalNameKnown": false,
+      "sourceRenameApplied": false,
+      "operation": "Multiplies an unsigned32-bit value by500 modulo2^32.",
+      "parameters": [
+        {
+          "currentName": "x",
+          "proposedName": "value",
+          "role": "unsigned input; gameplay meaning unknown"
+        }
+      ],
+      "fieldsInOriginalArm32Layout": [],
+      "evidenceReasons": [
+        "Complete original/native source acceptance and bounded behavior are recorded in the linked immutable cohort receipt.",
+        "VM candidates additionally agree with the measured public Squirrel2.2.5 configuration; the multiplication is directly represented by unchanged ordinary C."
+      ],
+      "remainingQuestions": [
+        "The operation is understood, but its gameplay or engine purpose is unknown.",
+        "No historical function or parameter name is claimed."
+      ]
+    }
+  ],
+  "limits": [
+    "Evidence hashes establish provenance, not semantic truth",
+    "Descriptive operation names do not establish original names or gameplay meaning",
+    "Naming counts are investigation leads, not completeness or understanding scores"
+  ]
+}
