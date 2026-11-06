@@ -50,6 +50,14 @@ def main():
         ('native-wave002', ['toolscripts/native_wave002.py', '--workers', '3']),
         ('native-module-link', ['toolscripts/native_bundle.py']),
         ('native-platforms', ['toolscripts/platform_build.py']),
+        ('native-wave003-abi', ['toolscripts/native_wave003_abi.py']),
+        ('native-wave004', ['toolscripts/native_wave004.py']),
+        ('native-wave005', ['toolscripts/native_wave005.py']),
+        ('native-wave005-controls', ['-m', 'unittest', 'discover', '-s', str(ROOT / 'src/native/wave005'),
+                                     '-p', 'test_oracle.py', '-v']),
+        ('native-wave006', ['toolscripts/native_wave006.py']),
+        ('native-bundle002', ['toolscripts/native_bundle002.py']),
+        ('native-memory-platforms', ['toolscripts/platform_memory_build.py']),
         ('tests', ['-m', 'unittest', 'discover', '-s', str(ROOT / 'tests'), '-v']),
     ]
     passed = True
@@ -81,7 +89,13 @@ def main():
                 'evidence/cohorts/wave001/verification.json',
                 'evidence/cohorts/bundle001/verification.json',
                 'evidence/lanes/wave002-native/packet.json',
-                'evidence/lanes/platform-wave001/report.json']
+                'evidence/lanes/platform-wave001/report.json',
+                'evidence/lanes/wave003-abi/packet.json',
+                'evidence/lanes/wave004-native/packet.json',
+                'evidence/lanes/wave005-native/packet.json',
+                'evidence/lanes/wave006-native/packet.json',
+                'evidence/cohorts/bundle002/verification.json',
+                'evidence/lanes/platform-memory-wave001/report.json']
     receipt['artifacts'] = []
     if passed:
         for name in expected:
