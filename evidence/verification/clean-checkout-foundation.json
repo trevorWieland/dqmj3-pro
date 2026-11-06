@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "sourceRevision": "dc486d2ed5d523c16adfdbbf4c4b1e1712d5eb31",
+  "sourceArchiveSha256": "823fc579bf01b2bcbdfd62d978b5e8d02a8fea7c3f5e9a8790a315db13c3754d",
+  "replayRoot": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity",
+  "materialized": [
+    {
+      "kind": "private-game-input",
+      "path": "inputs/archive/dqmj3pro/DQMJ3P.cia",
+      "sha256": "864d1c35ba6908bed94d9c5f09a148b3355c41794f1d126086dafe1876665f47"
+    },
+    {
+      "kind": "private-game-input",
+      "path": "inputs/archive/dqmj3pro/DQMJ3P_Update.cia",
+      "sha256": "e19f07d67165bf5bf5c3c226064433cf2e36e2cc489742c69b0c2efa28447c55"
+    },
+    {
+      "kind": "pinned-tool",
+      "path": "tools/clang-21/clang.exe",
+      "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+    },
+    {
+      "kind": "pinned-tool",
+      "path": "tools/clang-21/ld.lld.exe",
+      "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3"
+    },
+    {
+      "kind": "pinned-tool",
+      "path": "tools/clang-21/libwinpthread-1.dll",
+      "sha256": "c9019ab753c2faa5e5da94e3fd4395f1d3d0e7d2509f5ed2d96cccff7f8b9357"
+    },
+    {
+      "kind": "pinned-tool",
+      "path": "tools/clang-21/libxml2.dll",
+      "sha256": "e15a377aa308e3f7ba948e6d6622a5dea2308256dbc65858074b61d867af6148"
+    },
+    {
+      "kind": "pinned-tool",
+      "path": "tools/ctrtool-1.3.0/ctrtool.exe",
+      "sha256": "79021f283b2199950eb22cf3c459806b9c8aaaf68f65c80100107d3454a1c224"
+    },
+    {
+      "kind": "pinned-tool",
+      "path": "tools/objdiff-3.8.3/objdiff-cli.exe",
+      "sha256": "dd12dfb5e9e94a7f6c949a37e1815963cf2cffe4c87b4999b7ebc8c15b398a1f"
+    },
+    {
+      "kind": "pinned-wheel",
+      "path": "tools/wheels/capstone-5.0.9-py3-none-win_amd64.whl",
+      "sha256": "732cedbbb56d42e723f14d7af6387f1454194a820b4b96b56d1e53f865ef85d0"
+    },
+    {
+      "kind": "pinned-wheel",
+      "path": "tools/wheels/pycryptodomex-3.24.2-cp37-abi3-win_amd64.whl",
+      "sha256": "6e912e3a21061bf8f4ce89223cb46f5e98a6b32420d08d770605891a2be266c6"
+    },
+    {
+      "kind": "pinned-wheel",
+      "path": "tools/wheels/pyctr-0.7.6-py3-none-any.whl",
+      "sha256": "60fe1dfa2af9fc518a2e4b38e39f42e48eae1f27c594e677836fd04726bb2323"
+    },
+    {
+      "kind": "pinned-wheel",
+      "path": "tools/wheels/pyelftools-0.33-py3-none-any.whl",
+      "sha256": "f215ad5f47d3f1373a21496a6c9e0707c622840d0622f23ff7ce08678b020036"
+    },
+    {
+      "kind": "pinned-wheel",
+      "path": "tools/wheels/unicorn-2.1.4-cp37-abi3-win_amd64.whl",
+      "sha256": "d7107500c64ce5c168fbff6bef9485b5db1350050036f4cea568650cf8bdbdf5"
+    }
+  ],
+  "sharedGeneratedOrWorkInputs": false,
+  "sharedToolOrDependencyLinks": false,
+  "pythonRuntimeVersion": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "logs": [
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\setup_tools.py",
+        "--clang-source",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\tools\\clang-21"
+      ],
+      "returncode": 0,
+      "sha256": "3b1beb0a38f983459cb52a9a51b41d12017abab8396ed1f6436533c7352deb42"
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\run_checks.py"
+      ],
+      "returncode": 0,
+      "sha256": "4adc946121b250939bc18868fdf96e84822453f05e4fbae30ebaa51b4f7520ab"
+    }
+  ],
+  "scope": "Initial intake, surveys and bounded-validation pipeline; optional Ghidra diagnostic excluded",
+  "status": "passed",
+  "acceptedRecoveredFunctions": 0,
+  "acceptedRecoveredBytes": 0,
+  "wholeGameExecution": false,
+  "sourceOnlyExecutableProof": false,
+  "checksReceiptSha256": "22553ce7b25dc80f957cca0c4a96be2113bebb7ca2b4bd6f6044df23d0313a3a",
+  "checksReceipt": {
+    "schemaVersion": 1,
+    "startedUtc": "2026-11-06T19:51:32.879101+00:00",
+    "sourceHashes": {
+      "configure_inputs.py": "0ceea9ba7e517178892d2f6696a49dc79c34531bb9f3ac8440b9e54ff6082535",
+      "run_checks.py": "6a3324f3c76b34e0d695e170561b4fa2486b681fd33880a1e925a2091efcc80b",
+      "setup_tools.py": "bc5c87f6cd083ea2751aef0bbe03b1966f59e43303b7f5540a1c01efe75b88b2",
+      "tests/test_asset_survey.py": "18b541b4d405ca0558b3749d6cad9aa96e75b02892ea6a62dde8bdd03e22b559",
+      "tests/test_behavior_smoke.py": "c9ff1e3911c8c1bb7be1253dcc7598cf8c2d8e9a0dcebcceef0e8cb343e40420",
+      "tests/test_inventory.py": "aaae1834ac7895e14e68c9d75807243d75bd3e4a18e1d4d8da1dad8ad9fc2974",
+      "toolscripts/asset_survey.py": "d3c2f2327723a8a60b08aeaf45c41f01f13c1bdc86368ff3599862ddd349a2f8",
+      "toolscripts/behavior_smoke.py": "f3e141024a9b31302365d4c6c7cb21b9b1f661970e43138c771d03f0c435c978",
+      "toolscripts/ghidra/NativeLeafSurvey.java": "5411716b10543d2e0f5083665141eb33f94f13a969c11ea819f3bf1e1fcc7cb5",
+      "toolscripts/inventory.py": "32c3d637553cff27c10ffcf7142e3d1c33465bcff4338525fd6886e90e5d1cbd",
+      "toolscripts/lock_tools.py": "06feed4a873d7e7cdf150e07eda78a1e4361f03d820b3e56f26a263e9a55baca",
+      "toolscripts/native_survey.py": "6600fe54a35e47d49c0d77c4946236926ab35deb00b7bb7a4e932c612cb9495f",
+      "toolscripts/verify_intake.py": "446bf21dbfc8b7809337081ce0f6149a1b2693884ecf91a938acad50df1f27e6",
+      "validate_clean_checkout.py": "bd17357e13d95735fbdeab5ff06890756c3b22e19181742ad73a2b7f4fa4767f"
+    },
+    "toolLockSha256": "34b480a1be81a24063b114a3f6770fc330594e1a7b16c6c1b00414b09ccbd3ab",
+    "projectConfigSha256": "6cb21ab41783059da2b432e751938da0aef887f2773357b00c34c6a3ca6008cb",
+    "checks": [
+      {
+        "name": "tool-pins",
+        "argv": [
+          "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\tools\\python\\Scripts\\python.exe",
+          "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\setup_tools.py",
+          "--verify"
+        ],
+        "returncode": 0,
+        "logPath": "work/checks/tool-pins.log",
+        "logSha256": "188a37705ec8130ac9b929bf51d4c4b08790cfb849c4d94bff6418a872cb25c4"
+      },
+      {
+        "name": "intake",
+        "argv": [
+          "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\tools\\python\\Scripts\\python.exe",
+          "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\toolscripts\\inventory.py"
+        ],
+        "returncode": 0,
+        "logPath": "work/checks/intake.log",
+        "logSha256": "427bd8111f9923cb7dd28454b1644918fdea326d86c46c22c6190d62b6a3b580"
+      },
+      {
+        "name": "independent-extraction",
+        "argv": [
+          "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\tools\\python\\Scripts\\python.exe",
+          "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\toolscripts\\verify_intake.py"
+        ],
+        "returncode": 0,
+        "logPath": "work/checks/independent-extraction.log",
+        "logSha256": "1061e033ec98f1c94eb81205cdfae370a57994d3b02759655d832c8e176eeef5"
+      },
+      {
+        "name": "assets",
+        "argv": [
+          "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\tools\\python\\Scripts\\python.exe",
+          "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\toolscripts\\asset_survey.py"
+        ],
+        "returncode": 0,
+        "logPath": "work/checks/assets.log",
+        "logSha256": "1b4d3545f122662de45d743ed3f20ddc40fe6edb5a6a8f371f45a964c4ef9955"
+      },
+      {
+        "name": "native-candidates",
+        "argv": [
+          "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\tools\\python\\Scripts\\python.exe",
+          "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\toolscripts\\native_survey.py"
+        ],
+        "returncode": 0,
+        "logPath": "work/checks/native-candidates.log",
+        "logSha256": "748cc32f86dfbb2ff89a46cfbc3b1c3aaaf2493845d8afc68ece6a12d7d63cef"
+      },
+      {
+        "name": "native-boundary-controls",
+        "argv": [
+          "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\tools\\python\\Scripts\\python.exe",
+          "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\toolscripts\\native_survey.py",
+          "--self-test"
+        ],
+        "returncode": 0,
+        "logPath": "work/checks/native-boundary-controls.log",
+        "logSha256": "848250ac7192f0fcf84f079ffee1a44bfea99edb8c5767ebcfc867e5f47fa927"
+      },
+      {
+        "name": "tests",
+        "argv": [
+          "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\tools\\python\\Scripts\\python.exe",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-update-identity\\tests",
+          "-v"
+        ],
+        "returncode": 0,
+        "logPath": "work/checks/tests.log",
+        "logSha256": "1608c55afe273ea7efd5aa0a29e61c14c7a7e9ebc00f8c8ed15a1972938fac02"
+      }
+    ],
+    "acceptedRecoveredFunctions": 0,
+    "acceptedRecoveredBytes": 0,
+    "cleanIndependentReplay": false,
+    "wholeGameExecution": false,
+    "status": "passed",
+    "artifacts": [
+      {
+        "path": "evidence/inventory/summary.json",
+        "sha256": "427bd8111f9923cb7dd28454b1644918fdea326d86c46c22c6190d62b6a3b580"
+      },
+      {
+        "path": "evidence/verification/intake-independent.json",
+        "sha256": "2e3a6c2a5ab77bc6ed0b0a48b68e219950f8de241b753a3f806b30285db2eec9"
+      },
+      {
+        "path": "evidence/assets/summary.json",
+        "sha256": "1b4d3545f122662de45d743ed3f20ddc40fe6edb5a6a8f371f45a964c4ef9955"
+      },
+      {
+        "path": "evidence/native-survey/survey.json",
+        "sha256": "464d782d16172fef233f3e7d5942aa2ee0d0be9125dc6a460bb3351bac1d9170"
+      },
+      {
+        "path": "work/validation-smoke/unittest/report.json",
+        "sha256": "9f4c01d7fe29c332756f56a4861cbf690127734fb8ea7443ed4b69a57bed0fdd"
+      },
+      {
+        "path": "work/validation-smoke/game-leaf-unittest/report.json",
+        "sha256": "8abfe25d04b5851dbbe0cd7018911d3f3a915addfbcc132d7d9eef93c9cdbc1a"
+      }
+    ],
+    "finishedUtc": "2026-11-06T19:52:58.312405+00:00"
+  }
+}

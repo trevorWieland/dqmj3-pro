@@ -1,0 +1,232 @@
+{
+  "status": "native-subset-platform-builds-passed",
+  "fullGameBuild": false,
+  "acceptedSourceCredit": 0,
+  "sourceCreditOwner": "native lane and coordinator",
+  "manifestPath": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\platform\\native-inputs.json",
+  "manifestSha256": "8299f8ba3c9f8a7f59c002abf07046d1d3bdb68a24a7bb0b91397be2486e848d",
+  "packet": {
+    "sourcePath": "src/native/wave001/leaves.c",
+    "sourceSha256": "da2ca7a59e59d2126dfe9a3992453ccd112c335ccca2a4a0f7283d2d4e1e0efb",
+    "corpusPath": "evidence/lanes/wave001-native/corpus.json",
+    "corpusSha256": "6182f6b5846be3d3580e28072a5e5a878b85aa68e717474ed6e5f6d21b509980",
+    "modulePath": "generated/update-content0/code.bin",
+    "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+    "functionNames": [
+      "fn_001648cc",
+      "fn_001649dc",
+      "fn_0020ccc8",
+      "fn_00235c5c",
+      "fn_00235c74",
+      "fn_0028b3a0",
+      "fn_003453a8",
+      "fn_0041fe24",
+      "fn_004f0230",
+      "fn_0065d018",
+      "fn_0069180c",
+      "fn_0069ccf8",
+      "fn_006cd638",
+      "fn_006cd660",
+      "fn_006cd9d8",
+      "fn_006f25cc",
+      "fn_006f83f4"
+    ],
+    "nativeLaneExactArmFunctions": [
+      "fn_003453a8",
+      "fn_00235c5c",
+      "fn_00235c74"
+    ],
+    "sourceAcceptance": "native lane and coordinator own credit; platform adds no credit"
+  },
+  "functionNames": [
+    "fn_001648cc",
+    "fn_001649dc",
+    "fn_0020ccc8",
+    "fn_00235c5c",
+    "fn_00235c74",
+    "fn_0028b3a0",
+    "fn_003453a8",
+    "fn_0041fe24",
+    "fn_004f0230",
+    "fn_0065d018",
+    "fn_0069180c",
+    "fn_0069ccf8",
+    "fn_006cd638",
+    "fn_006cd660",
+    "fn_006cd9d8",
+    "fn_006f25cc",
+    "fn_006f83f4"
+  ],
+  "caseCount": 8772,
+  "windows": {
+    "actuallyExecuted": true,
+    "comparedCases": 8772,
+    "allOutputsEqual": true,
+    "comparison": "captured original ARM uint32 outputs in hash-pinned native corpus",
+    "outputSha256": "1016eb939974e48c980b299c193f786bebe0c7d5bf0c80add661ba7d63c9694f",
+    "guardControls": {
+      "unknownFunction": {
+        "exitCode": 2,
+        "stdoutBytes": 0
+      },
+      "truncatedRecord": {
+        "exitCode": 2,
+        "stdoutBytes": 0
+      }
+    },
+    "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\platform-wave001\\build\\windows-x64\\dqmj3_native_probe.exe",
+    "sha256": "1d155087ca3fbc9c2751ac8a290307682b1bfb6ec37ae0ac5db58fe36f5208c0",
+    "architecture": "x86_64"
+  },
+  "android": {
+    "executable": {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\platform-wave001\\build\\android-arm64\\dqmj3_native_probe",
+      "sha256": "47f6b5172cb669ffb0e51cef0ac445e01d9b0b8d170898317dd0c6ab0bbd076c",
+      "machine": "EM_AARCH64",
+      "type": "ET_DYN",
+      "loadAlignments": [
+        16384,
+        16384,
+        16384,
+        16384
+      ],
+      "interpreters": [
+        "/system/bin/linker64"
+      ],
+      "definedDynamicSymbols": []
+    },
+    "library": {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\platform-wave001\\build\\android-arm64\\libdqmj3_native_probe.so",
+      "sha256": "eb9f777ad633c2d6c785267c98489c2e5fa019148c32438724d6021b7e979f34",
+      "machine": "EM_AARCH64",
+      "type": "ET_DYN",
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "interpreters": [],
+      "definedDynamicSymbols": [
+        "fn_001648cc",
+        "fn_001649dc",
+        "fn_0020ccc8",
+        "fn_00235c5c",
+        "fn_00235c74",
+        "fn_0028b3a0",
+        "fn_003453a8",
+        "fn_0041fe24",
+        "fn_004f0230",
+        "fn_0065d018",
+        "fn_0069180c",
+        "fn_0069ccf8",
+        "fn_006cd638",
+        "fn_006cd660",
+        "fn_006cd9d8",
+        "fn_006f25cc",
+        "fn_006f83f4",
+        "platform_dispatch",
+        "platform_function_count"
+      ]
+    },
+    "actuallyExecuted": false,
+    "apkPackaged": false,
+    "abi": "arm64-v8a",
+    "minimumApi": 29
+  },
+  "adbDevices": {
+    "status": "queried",
+    "queried": true,
+    "listing": "List of devices attached\r\n\r\n"
+  },
+  "nativeLaneExactArmFunctions": [
+    "fn_003453a8",
+    "fn_00235c5c",
+    "fn_00235c74"
+  ],
+  "boundedBehaviorOnlyFunctions": [
+    "fn_001648cc",
+    "fn_001649dc",
+    "fn_0020ccc8",
+    "fn_0028b3a0",
+    "fn_0041fe24",
+    "fn_004f0230",
+    "fn_0065d018",
+    "fn_0069180c",
+    "fn_0069ccf8",
+    "fn_006cd638",
+    "fn_006cd660",
+    "fn_006cd9d8",
+    "fn_006f25cc",
+    "fn_006f83f4"
+  ],
+  "wrongSourceControl": {
+    "sourceSha256": "b9c8c64cd822977ff76f3cd99bc66121e359cd28edc6536cd081bfa448332ece",
+    "actuallyExecuted": true,
+    "completedCases": 8772,
+    "semanticRejections": 498
+  },
+  "toolPins": [
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\android-r30-minimal\\source.properties",
+      "sha256": "e73b7dc557cea2da9212c09ee1795434957d62e63b7550eef69fd1887a355d94"
+    },
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\android-r30-minimal\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\aarch64-linux-android\\29\\crtbegin_dynamic.o",
+      "sha256": "9087e4b58fd8aadc225d062e8750260079fce2f0a3cd4d0b46b8c2440eedb03a"
+    },
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\android-r30-minimal\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\aarch64-linux-android\\29\\crtend_android.o",
+      "sha256": "47cb49c3d286915f19287b94a7242f668fe62d0b2ae7c4256c7203ba0d179427"
+    },
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\android-r30-minimal\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\aarch64-linux-android\\29\\libc.so",
+      "sha256": "29a129043e28ba808e3bd69750242d71241a3e05581809551f0e371f4894b687"
+    },
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\android-r30-minimal\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\aarch64-linux-android\\29\\libdl.so",
+      "sha256": "b9d8f21c840570a4fe41b5a24c37651d1980fcda7d323003afcbd8483d3da51a"
+    },
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+      "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+    },
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+      "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3"
+    },
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\libwinpthread-1.dll",
+      "sha256": "c9019ab753c2faa5e5da94e3fd4395f1d3d0e7d2509f5ed2d96cccff7f8b9357"
+    },
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\libxml2.dll",
+      "sha256": "e15a377aa308e3f7ba948e6d6622a5dea2308256dbc65858074b61d867af6148"
+    }
+  ],
+  "harnessSha256": "bb49c7a7cc461ffa940afa5763d7f7edf0aca4430d8d726bc6c623c4ea8ad965",
+  "python": {
+    "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\python\\Scripts\\python.exe",
+    "sha256": "935016795f3e6908e75acbc2040a01e2e4cdb494a57c42f63a0d6eedb2372256",
+    "version": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "pyelftoolsVersion": "0.33",
+  "runnerSha256": "31a8d902a0976ea57aeeeb59aa622db5c1fa31b594e768f6bed01655a5b815e8",
+  "dispatchSha256": "1ec9ba06325ebfb7a6523fd1b4d248f88656864a0cae8f32faa333e32ec91b54",
+  "kernel32DefinitionSha256": "fa6cf4900e0b6f278b4cb8d535b9deba96036eb5f3c18071b6d65c5777f96625",
+  "reproductionArgv": [
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\python\\Scripts\\python.exe",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\toolscripts\\platform_build.py",
+    "--manifest",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\platform\\native-inputs.json",
+    "--output",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\platform-wave001\\build"
+  ],
+  "unsupported": [
+    "whole-game source build",
+    "graphics/audio/input/services port",
+    "Android device execution",
+    "APK activity/dual-display lifecycle behavior",
+    "AYN Thor hardware validation",
+    "universal equivalence beyond declared corpus"
+  ]
+}

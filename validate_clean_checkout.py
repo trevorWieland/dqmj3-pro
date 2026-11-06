@@ -71,7 +71,7 @@ def main():
         log = destination / f'clean-replay-{index}.log'
         with log.open('wb') as stream:
             completed = subprocess.run(command, cwd=destination.parent, stdout=stream,
-                                       stderr=subprocess.STDOUT, timeout=600)
+                                       stderr=subprocess.STDOUT, timeout=1800)
         logs.append({'argv': command, 'returncode': completed.returncode, 'sha256': digest(log)})
         print('clean-replay-' + str(index) + ': ' + ('passed' if completed.returncode == 0 else 'failed'), flush=True)
         if completed.returncode:
@@ -82,7 +82,7 @@ def main():
               'replayRoot': str(destination), 'materialized': materialized,
               'sharedGeneratedOrWorkInputs': False, 'sharedToolOrDependencyLinks': False,
               'pythonRuntimeVersion': sys.version, 'logs': logs,
-              'scope': 'Initial intake, surveys and bounded-validation pipeline; optional Ghidra diagnostic excluded',
+              'scope': 'Native wave001 source, genuine module link, bounded behavior and Windows/Android component pipeline; static boundary descriptors pinned, Ghidra analysis excluded',
               'status': 'passed' if passed else 'failed',
               'acceptedRecoveredFunctions': 0, 'acceptedRecoveredBytes': 0,
               'wholeGameExecution': False, 'sourceOnlyExecutableProof': False}

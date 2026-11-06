@@ -9,6 +9,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT / 'toolscripts'))
+from source_policy import policy as authored_policy
 
 
 def digest(path):
@@ -17,15 +19,7 @@ def digest(path):
 
 
 def policy():
-    files = [p for folder in ['toolscripts', 'tests'] for p in (ROOT / folder).rglob('*') if p.suffix in ('.py', '.java')]
-    files.extend(ROOT.glob('*.py'))
-    for path in files:
-        text = path.read_text(encoding='utf-8')
-        if len(text.splitlines()) > 500:
-            raise ValueError('Authored file exceeds 500 lines: ' + str(path))
-        if path.suffix == '.py' and any(token.type == tokenize.COMMENT for token in tokenize.generate_tokens(io.StringIO(text).readline)):
-            raise ValueError('Authored comments violate source policy: ' + str(path))
-    return {p.relative_to(ROOT).as_posix(): digest(p) for p in sorted(files)}
+    return authored_policy()
 
 
 def main():
@@ -50,6 +44,12 @@ def main():
         ('assets', ['toolscripts/asset_survey.py']),
         ('native-candidates', ['toolscripts/native_survey.py']),
         ('native-boundary-controls', ['toolscripts/native_survey.py', '--self-test']),
+        ('executable-inventory', ['toolscripts/executable_inventory.py']),
+        ('script-interfaces', ['toolscripts/script_interfaces.py']),
+        ('native-wave001', ['toolscripts/native_wave001.py']),
+        ('native-wave002', ['toolscripts/native_wave002.py', '--workers', '3']),
+        ('native-module-link', ['toolscripts/native_bundle.py']),
+        ('native-platforms', ['toolscripts/platform_build.py']),
         ('tests', ['-m', 'unittest', 'discover', '-s', str(ROOT / 'tests'), '-v']),
     ]
     passed = True
@@ -74,7 +74,14 @@ def main():
     expected = ['evidence/inventory/summary.json', 'evidence/verification/intake-independent.json',
                 'evidence/assets/summary.json', 'evidence/native-survey/survey.json',
                 'work/validation-smoke/unittest/report.json',
-                'work/validation-smoke/game-leaf-unittest/report.json']
+                'work/validation-smoke/game-leaf-unittest/report.json',
+                'evidence/lanes/inventory-wave001/executable-summary.json',
+                'evidence/lanes/inventory-wave001/script-summary.json',
+                'evidence/lanes/wave001-native/packet.json',
+                'evidence/cohorts/wave001/verification.json',
+                'evidence/cohorts/bundle001/verification.json',
+                'evidence/lanes/wave002-native/packet.json',
+                'evidence/lanes/platform-wave001/report.json']
     receipt['artifacts'] = []
     if passed:
         for name in expected:

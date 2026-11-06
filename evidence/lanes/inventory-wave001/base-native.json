@@ -1,0 +1,2746 @@
+{
+  "label": "base",
+  "codeSha256": "a9cbe1be5e860d6a3d72ceb7f2fba680169276ebf6d50f30586d589af3a89554",
+  "inventorySha256": "69fb853b35c8ad7e41b553f177ef10aa0bc78c34646599e548ce4d8628bd83d2",
+  "segments": [
+    {
+      "name": "text",
+      "address": 1048576,
+      "pages": 1720,
+      "initializedBytes": 7042136,
+      "codeBinOffset": 0,
+      "endExclusive": 8090712,
+      "pagePaddingBytes": 2984
+    },
+    {
+      "name": "rodata",
+      "address": 8093696,
+      "pages": 206,
+      "initializedBytes": 841652,
+      "codeBinOffset": 7045120,
+      "endExclusive": 8935348,
+      "pagePaddingBytes": 2124
+    },
+    {
+      "name": "data",
+      "address": 8937472,
+      "pages": 64,
+      "initializedBytes": 259996,
+      "codeBinOffset": 7888896,
+      "endExclusive": 9197468,
+      "pagePaddingBytes": 2148
+    }
+  ],
+  "initializedTextGrossBytes": 7042136,
+  "initializedMappedGrossBytes": 8143784,
+  "bssBytes": 219220,
+  "entryGraph": {
+    "blocks": [
+      {
+        "start": 1048576,
+        "endExclusive": 1048612,
+        "mode": "ARM",
+        "instructions": 9
+      },
+      {
+        "start": 1067980,
+        "endExclusive": 1067988,
+        "mode": "ARM",
+        "instructions": 2
+      }
+    ],
+    "directCalls": [
+      {
+        "callerAddress": 1048576,
+        "callerMode": "ARM",
+        "targetAddress": 1048612,
+        "targetMode": "ARM"
+      },
+      {
+        "callerAddress": 1048580,
+        "callerMode": "ARM",
+        "targetAddress": 1068120,
+        "targetMode": "ARM"
+      },
+      {
+        "callerAddress": 1048584,
+        "callerMode": "ARM",
+        "targetAddress": 1299968,
+        "targetMode": "ARM"
+      },
+      {
+        "callerAddress": 1048588,
+        "callerMode": "ARM",
+        "targetAddress": 1070088,
+        "targetMode": "ARM"
+      },
+      {
+        "callerAddress": 1048592,
+        "callerMode": "ARM",
+        "targetAddress": 1061248,
+        "targetMode": "Thumb"
+      },
+      {
+        "callerAddress": 1048596,
+        "callerMode": "ARM",
+        "targetAddress": 1068068,
+        "targetMode": "ARM"
+      },
+      {
+        "callerAddress": 1048600,
+        "callerMode": "ARM",
+        "targetAddress": 1068204,
+        "targetMode": "ARM"
+      },
+      {
+        "callerAddress": 1048604,
+        "callerMode": "ARM",
+        "targetAddress": 1067988,
+        "targetMode": "ARM"
+      }
+    ],
+    "unresolvedTransfers": [
+      {
+        "address": 1067984,
+        "mode": "ARM",
+        "reason": "indirect-transfer-or-return"
+      }
+    ],
+    "visitedInstructions": 11,
+    "budget": 4000,
+    "budgetExhausted": false,
+    "scope": "Entry intra-procedural CFG; callees listed, not traversed"
+  },
+  "unwindTableCandidates": [],
+  "nativeBindingTableCandidates": [
+    {
+      "address": 9180712,
+      "recordBytes": 16,
+      "entries": [
+        {
+          "tableAddress": 9180712,
+          "namePointer": 8844322,
+          "nameSha256": "edcc02f7ced7a038641a9d33e95d5494877a6cfd172ae050e9d3fb05be664ab4",
+          "nameBytes": 15,
+          "functionAddress": 1822736,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 0,
+          "recordSha256": "1f8411483b5a5f08952a2aa9cb2db742a2d3741280c0368aa25b8689bec2c43c"
+        },
+        {
+          "tableAddress": 9180728,
+          "namePointer": 8844290,
+          "nameSha256": "95458ea5c727d2a990a1e3c4524d2f9e18197e6491faceec154513372d2384c1",
+          "nameBytes": 12,
+          "functionAddress": 1810024,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 0,
+          "recordSha256": "07a0cf58198ca1399f2e14be88db7b97d5312e6347487c2e192d93bcf1f4d204"
+        },
+        {
+          "tableAddress": 9180744,
+          "namePointer": 8844306,
+          "nameSha256": "42b617f0d6adb280a0b256734788066a49a53e388b76722d669511d4d4cbc7a7",
+          "nameBytes": 15,
+          "functionAddress": 1822676,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 0,
+          "recordSha256": "85ba5f1e4c95488e624bb24e5fc4e720f9b97ede5f1c9736554ce4a167b8cce4"
+        },
+        {
+          "tableAddress": 9180760,
+          "namePointer": 8844338,
+          "nameSha256": "679216c1ee17787c5d8648af7b52970b4b07e35a27056427ce69afa077289ba2",
+          "nameBytes": 13,
+          "functionAddress": 1813028,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 8844303,
+          "recordSha256": "98986ad41464d395739a67d3acca4eda8b1f2e5e2faf3a3d1cb8a4080812a75d"
+        },
+        {
+          "tableAddress": 9180776,
+          "namePointer": 8844217,
+          "nameSha256": "1e0d29f63b21517e4aedf6f5faa5820a203bbc76bd4f67ce204ccc68957edc27",
+          "nameBytes": 12,
+          "functionAddress": 1810004,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 0,
+          "recordSha256": "bc6d90497fe538b27b7ebbe689b39cae3d26dc91565a6ecd4f948f498fab4535"
+        },
+        {
+          "tableAddress": 9180792,
+          "namePointer": 8844230,
+          "nameSha256": "16109fe35457c4e71f12c39e39dc3d2bb8e916a97f66f835679e8b0b2cd1e7dd",
+          "nameBytes": 12,
+          "functionAddress": 1810040,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 0,
+          "recordSha256": "becc822b9bd156fbc41abb9a3881e18ba44b12ff9eb50f97495a64998e3990ca"
+        },
+        {
+          "tableAddress": 9180808,
+          "namePointer": 8844243,
+          "nameSha256": "b4e9fe00690c54645d0d105048b8c54bdc1731eb957e38fd3feec2e400ebaeb2",
+          "nameBytes": 13,
+          "functionAddress": 1813004,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 0,
+          "recordSha256": "7af68160cc672cdf732e274f5c7c4c0f46b4ffa2d2ebb53796b032c80b11b9dc"
+        },
+        {
+          "tableAddress": 9180824,
+          "namePointer": 8844257,
+          "nameSha256": "487bc23a0a60f6ae3b1d0e3a7c859ede8bd7858c7d460ce5838b87ab005f8bd9",
+          "nameBytes": 13,
+          "functionAddress": 1813448,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 0,
+          "recordSha256": "e19b1f3e626dc4a35ac80b25623e2c87cc5dea822fef63726d81fa94aa5a35ca"
+        },
+        {
+          "tableAddress": 9180840,
+          "namePointer": 8844362,
+          "nameSha256": "25450689bdd44d014020b238021b313431cb1f7a86f24e29cecbd1e442edae0a",
+          "nameBytes": 6,
+          "functionAddress": 1783088,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 0,
+          "recordSha256": "62c305aa5ea07605daca811f6666fe7eecebc498ecaa0e3c5b2abd3105d0c687"
+        },
+        {
+          "tableAddress": 9180856,
+          "namePointer": 8844356,
+          "nameSha256": "ce953a0eb08246617b7f849486c4b26a7af37e9d2e8f0e13b3ae1bf0da8a70a2",
+          "nameBytes": 5,
+          "functionAddress": 1781640,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 0,
+          "recordSha256": "65db75ba736ad53f36aa5035206e8f7cd50950438477b48d0eb28de0b0cda5a3"
+        },
+        {
+          "tableAddress": 9180872,
+          "namePointer": 8844276,
+          "nameSha256": "026b7ea4945032b3d9ace1577f81a263cc783f59501a29ef6e2c15d539f1bea7",
+          "nameBytes": 13,
+          "functionAddress": 1812852,
+          "mode": "ARM",
+          "parameterCheck": -2,
+          "typeMaskPointer": 8844352,
+          "recordSha256": "ec85c3b1fcc90d6ddc2753401b64f6e068bb72cda6cdba1390fcf6a5e0a358c5"
+        },
+        {
+          "tableAddress": 9180888,
+          "namePointer": 8844184,
+          "nameSha256": "0b3afdd3327c3fb9d946c1aac8f4dfce4ae995575c5f6c8a929df1e393d30dc6",
+          "nameBytes": 9,
+          "functionAddress": 1789256,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 8844181,
+          "recordSha256": "f70ba500c8d597878360b5b122c85556be7621610e9def061440a12c519bb716"
+        },
+        {
+          "tableAddress": 9180904,
+          "namePointer": 8844194,
+          "nameSha256": "f516e6c26493093647485274a45fd4a485a04632be8924c2769f885ee58f9da8",
+          "nameBytes": 7,
+          "functionAddress": 1786208,
+          "mode": "ARM",
+          "parameterCheck": -1,
+          "typeMaskPointer": 0,
+          "recordSha256": "a9d1226e53a9922b271bad91c800bd67c5c8e5d54dc6b3966f8a27ff438d3628"
+        },
+        {
+          "tableAddress": 9180920,
+          "namePointer": 8844369,
+          "nameSha256": "dbe42cc09c16704aa3d60127c60b4e1646fc6da1d4764aa517de053e65a663d7",
+          "nameBytes": 5,
+          "functionAddress": 1781284,
+          "mode": "ARM",
+          "parameterCheck": -2,
+          "typeMaskPointer": 8844303,
+          "recordSha256": "39c9ceb2457a8a21d2f8090f8ea562b395bf76657c3295762ce24fd072376308"
+        },
+        {
+          "tableAddress": 9180936,
+          "namePointer": 8844271,
+          "nameSha256": "1303c06b0b014d0ce7b988ab173a13f31227d417058ff4bbe6f8c222b4ad913c",
+          "nameBytes": 4,
+          "functionAddress": 1839952,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 0,
+          "recordSha256": "31b67450e860bc97b5210abb64a446425d3972e037d8e77450f4d1d4ec87b7a2"
+        },
+        {
+          "tableAddress": 9180952,
+          "namePointer": 8844375,
+          "nameSha256": "b5a2c96250612366ea272ffac6d9744aaf4b45aacd96aa7cfcb931ee3b558259",
+          "nameBytes": 5,
+          "functionAddress": 1781632,
+          "mode": "ARM",
+          "parameterCheck": 0,
+          "typeMaskPointer": 0,
+          "recordSha256": "ddf7aa867a017272fc32418953b248cf027df9fe85a98375eed766f825f07e34"
+        },
+        {
+          "tableAddress": 9180968,
+          "namePointer": 8844202,
+          "nameSha256": "fd5edbe71f46d351b9061b3c5f5264e20f6285162faf709b637a0ee2daa17e93",
+          "nameBytes": 14,
+          "functionAddress": 1819328,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8762344,
+          "recordSha256": "a1c0f4722fb53db6e3d8a8deedc985ce32f038187f972ed9c12a0c99d2ae7cbc"
+        }
+      ],
+      "qualification": "SQRegFunction-layout-candidate-registration-xref-unproved"
+    },
+    {
+      "address": 9181000,
+      "recordBytes": 16,
+      "entries": [
+        {
+          "tableAddress": 9181000,
+          "namePointer": 8844408,
+          "nameSha256": "71fa9faaa6f884aa11f4cea21477b2204a48a4fa7f05cecad00a1250eeeffb4c",
+          "nameBytes": 3,
+          "functionAddress": 1822752,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8762344,
+          "recordSha256": "46df52838dff3b82b4dc586296d19b108071cedfae4770d0e1894a230904015a"
+        },
+        {
+          "tableAddress": 9181016,
+          "namePointer": 8844418,
+          "nameSha256": "1da665272948bc50e9d2361c703548fb5d9ffc69484577a861f228cfda0af98c",
+          "nameBytes": 6,
+          "functionAddress": 1787460,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 8762344,
+          "recordSha256": "c414617675276471f8e58f422e252d4700afa8b08521f405bdd3377113264679"
+        },
+        {
+          "tableAddress": 9181032,
+          "namePointer": 8844425,
+          "nameSha256": "2611a14099227298025a9c842840c7bd54032e5f3918b249e8f710f030107f29",
+          "nameBytes": 6,
+          "functionAddress": 7605856,
+          "mode": "ARM",
+          "parameterCheck": 3,
+          "typeMaskPointer": 8762344,
+          "recordSha256": "4d683c024d4c66358a3e4695439ceff869688ea51154ca1077486633065e9542"
+        },
+        {
+          "tableAddress": 9181048,
+          "namePointer": 8844381,
+          "nameSha256": "8d84ec3c03af3d9e2dca677fc528cbf748ede2696b3b5532222ad5301d80cf2a",
+          "nameBytes": 9,
+          "functionAddress": 1801952,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 8762344,
+          "recordSha256": "b5c5bb23e31d01ea82d94e915aa3d44bf7c3938874322e2526e8c5e1b30c512e"
+        },
+        {
+          "tableAddress": 9181064,
+          "namePointer": 8844412,
+          "nameSha256": "d255cb811ec6350f8a34b1859adf10db9f90a752fcbb1bb2659e22075a17d816",
+          "nameBytes": 5,
+          "functionAddress": 1820096,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 8762344,
+          "recordSha256": "dcb1fc31db6defd2e2e894de930b8e347e6c7f14478af8d7ba2f3ff93e63af3a"
+        },
+        {
+          "tableAddress": 9181080,
+          "namePointer": 8844391,
+          "nameSha256": "cfa314df5c2e8da437b8aa9a62e822550828daa5a20f6408d41a48717f68708f",
+          "nameBytes": 7,
+          "functionAddress": 1822868,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 0,
+          "recordSha256": "8301c3e2caaf8c3253e9a7bb54d40084d4613fe7031dc7f354237abeae56fe93"
+        },
+        {
+          "tableAddress": 9181096,
+          "namePointer": 8844399,
+          "nameSha256": "9c408c0292d9efe638d9282aec36f3475fafd254bbc5ebff1bd7c02bed83c5c4",
+          "nameBytes": 8,
+          "functionAddress": 1833604,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8844625,
+          "recordSha256": "cb46a0014f10c1bcb05fa8e75aa20c6f00fa23099d0015767aae22a0e2e89812"
+        },
+        {
+          "tableAddress": 9181112,
+          "namePointer": 8765202,
+          "nameSha256": "913a4cb91be20332f3559f8070255d7ac3e6228bb423f4441551d3f783e7d4f4",
+          "nameBytes": 5,
+          "functionAddress": 7602856,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8844625,
+          "recordSha256": "24f41ababb79652d3a76a39817f438c70b3f359bbc5f609b8393362f3f15d5d4"
+        }
+      ],
+      "qualification": "SQRegFunction-layout-candidate-registration-xref-unproved"
+    },
+    {
+      "address": 9181144,
+      "recordBytes": 16,
+      "entries": [
+        {
+          "tableAddress": 9181144,
+          "namePointer": 8844408,
+          "nameSha256": "71fa9faaa6f884aa11f4cea21477b2204a48a4fa7f05cecad00a1250eeeffb4c",
+          "nameBytes": 3,
+          "functionAddress": 1822752,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8798914,
+          "recordSha256": "816b3cd22f4a96c866265bf53fe916b265f966ede3699b8c39263a4ad39b39e8"
+        },
+        {
+          "tableAddress": 9181160,
+          "namePointer": 8844438,
+          "nameSha256": "ae524b54d9b5acbe3bbf0a4f4825bae82bca8b0a474878c2713394ea284ef929",
+          "nameBytes": 6,
+          "functionAddress": 7600152,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 8798914,
+          "recordSha256": "0c266bb9d922e59af2de08034397eb7ef54eee711cd793ada8bf8a70b78c093a"
+        },
+        {
+          "tableAddress": 9181176,
+          "namePointer": 8844445,
+          "nameSha256": "bf0bb4ee60e2cd5a1a5283c4858448a1b5582e8d1a14955a6ea3df5ca66d3820",
+          "nameBytes": 6,
+          "functionAddress": 1784668,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 8844432,
+          "recordSha256": "5668c2728b7e30ed1a357d7a108e3df0914e8b2858f58b650d96ff150d3e1f42"
+        },
+        {
+          "tableAddress": 9181192,
+          "namePointer": 8844480,
+          "nameSha256": "d107ea3629c326718876f07356a48dea26f123742f8bf44ce75f8f805cf9a37d",
+          "nameBytes": 4,
+          "functionAddress": 7600152,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 8798914,
+          "recordSha256": "fbba98aa8280ea6de7fff7f04fe9b38d6de0171ff4ec5cda92e2a1bd8f775781"
+        },
+        {
+          "tableAddress": 9181208,
+          "namePointer": 8763718,
+          "nameSha256": "de70fa60cac227cbc13270a26ccde291af94df086959f0958122aedf154d90b5",
+          "nameBytes": 3,
+          "functionAddress": 1839816,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8798914,
+          "recordSha256": "a23fd3c16a607090ddf09a4eaacd26bb3c8db8254a15c296c7153bffd7cb22c6"
+        },
+        {
+          "tableAddress": 9181224,
+          "namePointer": 8805487,
+          "nameSha256": "28720365c5e7476a011e4f43ac003ee5f16247a263b9d623aa85ed311d73bf39",
+          "nameBytes": 3,
+          "functionAddress": 1839848,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8798914,
+          "recordSha256": "db514a3cdb1235e28e3d53966c148f9c10acdc3dca88565028fe76f022ae074a"
+        },
+        {
+          "tableAddress": 9181240,
+          "namePointer": 8844489,
+          "nameSha256": "1e22560cee2c4b727c6a117792e04a6769efbe2395f8e2528c603a153a446477",
+          "nameBytes": 6,
+          "functionAddress": 1784728,
+          "mode": "ARM",
+          "parameterCheck": 3,
+          "typeMaskPointer": 8781622,
+          "recordSha256": "f1425268b3c81eab4436ecb106ddae47c5db2b9d9ab26a5f584c3e1e7676123b"
+        },
+        {
+          "tableAddress": 9181256,
+          "namePointer": 8844466,
+          "nameSha256": "7e5608ab610017afe6c1894fdd4f56848823dcb1d12302bd49751d16a290f774",
+          "nameBytes": 6,
+          "functionAddress": 1785228,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 8781622,
+          "recordSha256": "070b25ca521bacdd0088307c23f58fd98b8bfa213a0a9fdea19237f211bdcbf1"
+        },
+        {
+          "tableAddress": 9181272,
+          "namePointer": 8844473,
+          "nameSha256": "acd532d8913e66d436b38de9acba750f92f20e16c49dafb78b69363127a38c60",
+          "nameBytes": 6,
+          "functionAddress": 1785828,
+          "mode": "ARM",
+          "parameterCheck": -2,
+          "typeMaskPointer": 8781622,
+          "recordSha256": "1775eb8c8d02ec5d144fea08c137e0d56d261cdfcad07db7e7c9678982f9d7ba"
+        },
+        {
+          "tableAddress": 9181288,
+          "namePointer": 8844458,
+          "nameSha256": "b2d7f24e833051d5fc296d4a747281e9d155ecfb636b983cfd70b51ed9b45a32",
+          "nameBytes": 7,
+          "functionAddress": 7600796,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8798914,
+          "recordSha256": "92255cb31cb791c67f31d075e00cce9a6ac92ae025076bbea435707ce3a77506"
+        },
+        {
+          "tableAddress": 9181304,
+          "namePointer": 8788032,
+          "nameSha256": "646964943fd2271187dbe29287f57e0238491c029cc6d8ce76f25ae240474294",
+          "nameBytes": 4,
+          "functionAddress": 1781052,
+          "mode": "ARM",
+          "parameterCheck": -1,
+          "typeMaskPointer": 8844435,
+          "recordSha256": "af08c843bf27c6b61dd4a987e9f4bdba357fb977513a2f19461a232f15ba770d"
+        },
+        {
+          "tableAddress": 9181320,
+          "namePointer": 8844452,
+          "nameSha256": "03fdb065d956f3fb9ccd85da1b15398f00a9958b715145ebf916dd91fd7b6361",
+          "nameBytes": 5,
+          "functionAddress": 1782164,
+          "mode": "ARM",
+          "parameterCheck": -1,
+          "typeMaskPointer": 8844485,
+          "recordSha256": "be16ae47ef798ff02fc779c36252387bacf7cbbbfb53cf9675899228d73828ab"
+        },
+        {
+          "tableAddress": 9181336,
+          "namePointer": 8844391,
+          "nameSha256": "cfa314df5c2e8da437b8aa9a62e822550828daa5a20f6408d41a48717f68708f",
+          "nameBytes": 7,
+          "functionAddress": 1822868,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 0,
+          "recordSha256": "8301c3e2caaf8c3253e9a7bb54d40084d4613fe7031dc7f354237abeae56fe93"
+        },
+        {
+          "tableAddress": 9181352,
+          "namePointer": 8844399,
+          "nameSha256": "9c408c0292d9efe638d9282aec36f3475fafd254bbc5ebff1bd7c02bed83c5c4",
+          "nameBytes": 8,
+          "functionAddress": 1833604,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8844625,
+          "recordSha256": "cb46a0014f10c1bcb05fa8e75aa20c6f00fa23099d0015767aae22a0e2e89812"
+        },
+        {
+          "tableAddress": 9181368,
+          "namePointer": 8765202,
+          "nameSha256": "913a4cb91be20332f3559f8070255d7ac3e6228bb423f4441551d3f783e7d4f4",
+          "nameBytes": 5,
+          "functionAddress": 7602856,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8844625,
+          "recordSha256": "24f41ababb79652d3a76a39817f438c70b3f359bbc5f609b8393362f3f15d5d4"
+        }
+      ],
+      "qualification": "SQRegFunction-layout-candidate-registration-xref-unproved"
+    },
+    {
+      "address": 9181400,
+      "recordBytes": 16,
+      "entries": [
+        {
+          "tableAddress": 9181400,
+          "namePointer": 8844408,
+          "nameSha256": "71fa9faaa6f884aa11f4cea21477b2204a48a4fa7f05cecad00a1250eeeffb4c",
+          "nameBytes": 3,
+          "functionAddress": 1822752,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8762276,
+          "recordSha256": "8836d112557e0a2f1411817734c912cef1eb8e8aa0f412cf79ff532850014bda"
+        },
+        {
+          "tableAddress": 9181416,
+          "namePointer": 8844516,
+          "nameSha256": "abf6d60eb2a14ae652e3d8989031197aa021e2229a05ddcc3c8f7f86b54b1fa1",
+          "nameBytes": 9,
+          "functionAddress": 1835104,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8762276,
+          "recordSha256": "b18f7642530d01c907c595b380a9ec78b5c0d8467eeeeb52f28a49f7cd029a8f"
+        },
+        {
+          "tableAddress": 9181432,
+          "namePointer": 8844542,
+          "nameSha256": "75299dc360c10cb81f1a37642ddb5ae8faea45d77b5833b4d6b31997caac74a7",
+          "nameBytes": 7,
+          "functionAddress": 1831196,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8762276,
+          "recordSha256": "fad27c87c48278b9df366933f97b3435271d09f15ba3ca701b46cf50dc180282"
+        },
+        {
+          "tableAddress": 9181448,
+          "namePointer": 8844399,
+          "nameSha256": "9c408c0292d9efe638d9282aec36f3475fafd254bbc5ebff1bd7c02bed83c5c4",
+          "nameBytes": 8,
+          "functionAddress": 1833604,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8844625,
+          "recordSha256": "cb46a0014f10c1bcb05fa8e75aa20c6f00fa23099d0015767aae22a0e2e89812"
+        },
+        {
+          "tableAddress": 9181464,
+          "namePointer": 8844452,
+          "nameSha256": "03fdb065d956f3fb9ccd85da1b15398f00a9958b715145ebf916dd91fd7b6361",
+          "nameBytes": 5,
+          "functionAddress": 1786824,
+          "mode": "ARM",
+          "parameterCheck": -1,
+          "typeMaskPointer": 8844508,
+          "recordSha256": "0579cc5a29890a4aa6a62e78289317767439406431c8fd41493cab883760e9a1"
+        },
+        {
+          "tableAddress": 9181480,
+          "namePointer": 8844503,
+          "nameSha256": "e6640de835ad09fb0a7367ee2e0ba99d0142c139db0272146e35538bd07479fc",
+          "nameBytes": 4,
+          "functionAddress": 1783172,
+          "mode": "ARM",
+          "parameterCheck": -2,
+          "typeMaskPointer": 8844496,
+          "recordSha256": "f08dc1a5a4fff0bb382109d3a34adaf409aae5f3346fbf218d323fed2557a455"
+        },
+        {
+          "tableAddress": 9181496,
+          "namePointer": 8844534,
+          "nameSha256": "1ba64a12974c565389e26340233988533b4247e2ce3cd7ee5da8dcc3e1b6ef18",
+          "nameBytes": 7,
+          "functionAddress": 1791432,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8762276,
+          "recordSha256": "2bc58fd89b74ef8e6ec5d26a34d6c5a77e17f499353c04cabfbe2c333bd85a5b"
+        },
+        {
+          "tableAddress": 9181512,
+          "namePointer": 8844526,
+          "nameSha256": "0e3bf386fa07dc91aa811fc3bd9b1efed5ab7ec651d36475dab2679266ea4f4f",
+          "nameBytes": 7,
+          "functionAddress": 1791712,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8762276,
+          "recordSha256": "3b931da9d95797dec4421117f10e7eb51a8569c8a9f51ebd4279804eb7edee0d"
+        },
+        {
+          "tableAddress": 9181528,
+          "namePointer": 8844391,
+          "nameSha256": "cfa314df5c2e8da437b8aa9a62e822550828daa5a20f6408d41a48717f68708f",
+          "nameBytes": 7,
+          "functionAddress": 1822868,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 0,
+          "recordSha256": "8301c3e2caaf8c3253e9a7bb54d40084d4613fe7031dc7f354237abeae56fe93"
+        }
+      ],
+      "qualification": "SQRegFunction-layout-candidate-registration-xref-unproved"
+    },
+    {
+      "address": 9181560,
+      "recordBytes": 16,
+      "entries": [
+        {
+          "tableAddress": 9181560,
+          "namePointer": 8844516,
+          "nameSha256": "abf6d60eb2a14ae652e3d8989031197aa021e2229a05ddcc3c8f7f86b54b1fa1",
+          "nameBytes": 9,
+          "functionAddress": 1835104,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8844550,
+          "recordSha256": "ad4749390f63d912fbe9c8125063067cd9f880b7bf6ed3b8bc84ac9f98000e3b"
+        },
+        {
+          "tableAddress": 9181576,
+          "namePointer": 8844542,
+          "nameSha256": "75299dc360c10cb81f1a37642ddb5ae8faea45d77b5833b4d6b31997caac74a7",
+          "nameBytes": 7,
+          "functionAddress": 1831196,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8844550,
+          "recordSha256": "334a35c9062e93242f0e09c5e48577cb0f07a82fab0344f1342702519db0161a"
+        },
+        {
+          "tableAddress": 9181592,
+          "namePointer": 8844399,
+          "nameSha256": "9c408c0292d9efe638d9282aec36f3475fafd254bbc5ebff1bd7c02bed83c5c4",
+          "nameBytes": 8,
+          "functionAddress": 1833604,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8844625,
+          "recordSha256": "cb46a0014f10c1bcb05fa8e75aa20c6f00fa23099d0015767aae22a0e2e89812"
+        },
+        {
+          "tableAddress": 9181608,
+          "namePointer": 8844554,
+          "nameSha256": "aa7c109d7ff3fea1059b4000eded8ce3648e098be2639f12fcfbedc0a8cb2e16",
+          "nameBytes": 6,
+          "functionAddress": 1829452,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8844550,
+          "recordSha256": "6e2075bcfa2f064f62f47fa368237392e7e5783b8888718032854c62e9e6da7b"
+        },
+        {
+          "tableAddress": 9181624,
+          "namePointer": 8844391,
+          "nameSha256": "cfa314df5c2e8da437b8aa9a62e822550828daa5a20f6408d41a48717f68708f",
+          "nameBytes": 7,
+          "functionAddress": 1822868,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 0,
+          "recordSha256": "8301c3e2caaf8c3253e9a7bb54d40084d4613fe7031dc7f354237abeae56fe93"
+        }
+      ],
+      "qualification": "SQRegFunction-layout-candidate-registration-xref-unproved"
+    },
+    {
+      "address": 9181656,
+      "recordBytes": 16,
+      "entries": [
+        {
+          "tableAddress": 9181656,
+          "namePointer": 8844561,
+          "nameSha256": "503ff553e8d36b1c47de4a0d352741e53b928ee4f50daafa6bad432e2b7d9984",
+          "nameBytes": 9,
+          "functionAddress": 1820160,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8761580,
+          "recordSha256": "45c54cf3127b20da547d03ec3b09d246689194bfd1df829fa9f0f9b73d647f34"
+        },
+        {
+          "tableAddress": 9181672,
+          "namePointer": 8844391,
+          "nameSha256": "cfa314df5c2e8da437b8aa9a62e822550828daa5a20f6408d41a48717f68708f",
+          "nameBytes": 7,
+          "functionAddress": 1822868,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 0,
+          "recordSha256": "8301c3e2caaf8c3253e9a7bb54d40084d4613fe7031dc7f354237abeae56fe93"
+        },
+        {
+          "tableAddress": 9181688,
+          "namePointer": 8844399,
+          "nameSha256": "9c408c0292d9efe638d9282aec36f3475fafd254bbc5ebff1bd7c02bed83c5c4",
+          "nameBytes": 8,
+          "functionAddress": 1833604,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8844625,
+          "recordSha256": "cb46a0014f10c1bcb05fa8e75aa20c6f00fa23099d0015767aae22a0e2e89812"
+        }
+      ],
+      "qualification": "SQRegFunction-layout-candidate-registration-xref-unproved"
+    },
+    {
+      "address": 9181720,
+      "recordBytes": 16,
+      "entries": [
+        {
+          "tableAddress": 9181720,
+          "namePointer": 8844583,
+          "nameSha256": "7edb360f06acaef2cc80dba16cf563f199d347db4443da04da0c8173e3f9e4ed",
+          "nameBytes": 4,
+          "functionAddress": 1786212,
+          "mode": "ARM",
+          "parameterCheck": -1,
+          "typeMaskPointer": 8818236,
+          "recordSha256": "fda45198ebe90e556dc9a3d93ddf8ceb72d0ed799ea1e65f48ea9a2a496dd1d9"
+        },
+        {
+          "tableAddress": 9181736,
+          "namePointer": 8844582,
+          "nameSha256": "38e1e2be1b0b0fdc5586320250addeaad81e9b16a0f25f29d5711fd93a5eea92",
+          "nameBytes": 5,
+          "functionAddress": 1788200,
+          "mode": "ARM",
+          "parameterCheck": -1,
+          "typeMaskPointer": 8818236,
+          "recordSha256": "57f9813a34570245ed9193b15f9b6df56ecadf747a64cbb90cc03f8390cb8a12"
+        },
+        {
+          "tableAddress": 9181752,
+          "namePointer": 8844576,
+          "nameSha256": "743562d6744c224f009d7f8ff1fe6db7deb3b42c10dc288bc1f5ba0c798c60fd",
+          "nameBytes": 5,
+          "functionAddress": 1788064,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 8844572,
+          "recordSha256": "51f6c06572b89a4902df8715ca1c84795e379c4020c64aa75f9cc451ca6bdef6"
+        },
+        {
+          "tableAddress": 9181768,
+          "namePointer": 8844575,
+          "nameSha256": "03758234147ada1e18d33ff9c021078adaeae7e4a13e4dba4a9481ac97ed5938",
+          "nameBytes": 6,
+          "functionAddress": 1789364,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 8844572,
+          "recordSha256": "b80d8313a60fc93531c234ec2b004f5e7fdf197546b05f06e5516f4fc4d2ad2e"
+        },
+        {
+          "tableAddress": 9181784,
+          "namePointer": 8844391,
+          "nameSha256": "cfa314df5c2e8da437b8aa9a62e822550828daa5a20f6408d41a48717f68708f",
+          "nameBytes": 7,
+          "functionAddress": 1822868,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 0,
+          "recordSha256": "8301c3e2caaf8c3253e9a7bb54d40084d4613fe7031dc7f354237abeae56fe93"
+        },
+        {
+          "tableAddress": 9181800,
+          "namePointer": 8844399,
+          "nameSha256": "9c408c0292d9efe638d9282aec36f3475fafd254bbc5ebff1bd7c02bed83c5c4",
+          "nameBytes": 8,
+          "functionAddress": 1833604,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8844625,
+          "recordSha256": "cb46a0014f10c1bcb05fa8e75aa20c6f00fa23099d0015767aae22a0e2e89812"
+        },
+        {
+          "tableAddress": 9181816,
+          "namePointer": 8844605,
+          "nameSha256": "fcb759eebeca3bba66cf6a600691c6259c2d8ee8a13bfb222bd6cde7555b8ed8",
+          "nameBytes": 7,
+          "functionAddress": 1801572,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 8844597,
+          "recordSha256": "d29ae94b7d2f092519005d306d915975aa0444ae010691a008907875ff6d96c0"
+        },
+        {
+          "tableAddress": 9181832,
+          "namePointer": 8844588,
+          "nameSha256": "37de35909c6407a8f8513c5142b1e63fd2c2139413d537b84f03a343979365d7",
+          "nameBytes": 8,
+          "functionAddress": 1803188,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8818236,
+          "recordSha256": "c89cf38cc9f7457f78e63baadabd89390091b1a54025ba418486dd4992c7d183"
+        }
+      ],
+      "qualification": "SQRegFunction-layout-candidate-registration-xref-unproved"
+    },
+    {
+      "address": 9181864,
+      "recordBytes": 16,
+      "entries": [
+        {
+          "tableAddress": 9181864,
+          "namePointer": 8844583,
+          "nameSha256": "7edb360f06acaef2cc80dba16cf563f199d347db4443da04da0c8173e3f9e4ed",
+          "nameBytes": 4,
+          "functionAddress": 1783424,
+          "mode": "ARM",
+          "parameterCheck": -1,
+          "typeMaskPointer": 8844611,
+          "recordSha256": "a2d1cd1f90bbff6ab310a1af72c9ac6ad2842be5d42b51f09fb24c058669d2de"
+        },
+        {
+          "tableAddress": 9181880,
+          "namePointer": 8844613,
+          "nameSha256": "1041cb036ee9ba83df46fd5fa5daf2a7e17141748f5f8257baa05b3ecf033b64",
+          "nameBytes": 6,
+          "functionAddress": 1788480,
+          "mode": "ARM",
+          "parameterCheck": -1,
+          "typeMaskPointer": 8844611,
+          "recordSha256": "b7501b340c0a13e185b237d28c9838b18515da16c6a41f50400529e898e30f77"
+        },
+        {
+          "tableAddress": 9181896,
+          "namePointer": 8844561,
+          "nameSha256": "503ff553e8d36b1c47de4a0d352741e53b928ee4f50daafa6bad432e2b7d9984",
+          "nameBytes": 9,
+          "functionAddress": 1806684,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8844611,
+          "recordSha256": "77ebeffdf25056e111339e223c9910ad07ac0e452afc38c2107ed68e127e97a3"
+        },
+        {
+          "tableAddress": 9181912,
+          "namePointer": 8844391,
+          "nameSha256": "cfa314df5c2e8da437b8aa9a62e822550828daa5a20f6408d41a48717f68708f",
+          "nameBytes": 7,
+          "functionAddress": 1822868,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 0,
+          "recordSha256": "8301c3e2caaf8c3253e9a7bb54d40084d4613fe7031dc7f354237abeae56fe93"
+        },
+        {
+          "tableAddress": 9181928,
+          "namePointer": 8844399,
+          "nameSha256": "9c408c0292d9efe638d9282aec36f3475fafd254bbc5ebff1bd7c02bed83c5c4",
+          "nameBytes": 8,
+          "functionAddress": 1833604,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8844625,
+          "recordSha256": "cb46a0014f10c1bcb05fa8e75aa20c6f00fa23099d0015767aae22a0e2e89812"
+        }
+      ],
+      "qualification": "SQRegFunction-layout-candidate-registration-xref-unproved"
+    },
+    {
+      "address": 9181960,
+      "recordBytes": 16,
+      "entries": [
+        {
+          "tableAddress": 9181960,
+          "namePointer": 8844636,
+          "nameSha256": "d294fc29f096f99184452d03adda68f9ca8730794f3472eeec1b2e0ee571aa90",
+          "nameBytes": 13,
+          "functionAddress": 1820040,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 8844624,
+          "recordSha256": "5cec6f5d838e4aa7e5d23de532e6a77d599c5663f57fb542839afcf7b273b57b"
+        },
+        {
+          "tableAddress": 9181976,
+          "namePointer": 8844650,
+          "nameSha256": "5453241c8d5709aceae66a06665777c5cce0cc0f3645d5b89958d8e550acbafe",
+          "nameBytes": 13,
+          "functionAddress": 1820068,
+          "mode": "ARM",
+          "parameterCheck": 3,
+          "typeMaskPointer": 8844620,
+          "recordSha256": "15648edfd809749a55e14759d15bafba7342c02096102a8a091ee443d7069cad"
+        },
+        {
+          "tableAddress": 9181992,
+          "namePointer": 8844412,
+          "nameSha256": "d255cb811ec6350f8a34b1859adf10db9f90a752fcbb1bb2659e22075a17d816",
+          "nameBytes": 5,
+          "functionAddress": 1820096,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 8823737,
+          "recordSha256": "5a4851712f8afd485cd64223b2f2884ecc510bd563c178ddb6a69bc2a94f7adb"
+        },
+        {
+          "tableAddress": 9182008,
+          "namePointer": 8844391,
+          "nameSha256": "cfa314df5c2e8da437b8aa9a62e822550828daa5a20f6408d41a48717f68708f",
+          "nameBytes": 7,
+          "functionAddress": 1822868,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 0,
+          "recordSha256": "8301c3e2caaf8c3253e9a7bb54d40084d4613fe7031dc7f354237abeae56fe93"
+        },
+        {
+          "tableAddress": 9182024,
+          "namePointer": 8844399,
+          "nameSha256": "9c408c0292d9efe638d9282aec36f3475fafd254bbc5ebff1bd7c02bed83c5c4",
+          "nameBytes": 8,
+          "functionAddress": 1833604,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8844625,
+          "recordSha256": "cb46a0014f10c1bcb05fa8e75aa20c6f00fa23099d0015767aae22a0e2e89812"
+        },
+        {
+          "tableAddress": 9182040,
+          "namePointer": 8844627,
+          "nameSha256": "5e8c03a94c7835b87dd82c690f9f85c08592ef7433aa141ceaacb36a9f4da434",
+          "nameBytes": 8,
+          "functionAddress": 1789336,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8823737,
+          "recordSha256": "d6dd7ebec32e566f13c4a498ada8a24077cf2767cdc9201d34d29e38576206a6"
+        }
+      ],
+      "qualification": "SQRegFunction-layout-candidate-registration-xref-unproved"
+    },
+    {
+      "address": 9182072,
+      "recordBytes": 16,
+      "entries": [
+        {
+          "tableAddress": 9182072,
+          "namePointer": 8844664,
+          "nameSha256": "194e502453d6a4692838aad0c360e484a1f628a4a1e10143fafdde48e4253788",
+          "nameBytes": 8,
+          "functionAddress": 1810108,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8777049,
+          "recordSha256": "4cea0026d36622af536dd6e8e1e44c0663fc1c5bfabdc06f5920e8cfea026b27"
+        },
+        {
+          "tableAddress": 9182088,
+          "namePointer": 8844412,
+          "nameSha256": "d255cb811ec6350f8a34b1859adf10db9f90a752fcbb1bb2659e22075a17d816",
+          "nameBytes": 5,
+          "functionAddress": 1820096,
+          "mode": "ARM",
+          "parameterCheck": 2,
+          "typeMaskPointer": 8777049,
+          "recordSha256": "9a48f82cc8fa31e50667eca3526d002a3f7f948ba1c75a38e133f775f03ef89b"
+        },
+        {
+          "tableAddress": 9182104,
+          "namePointer": 8844391,
+          "nameSha256": "cfa314df5c2e8da437b8aa9a62e822550828daa5a20f6408d41a48717f68708f",
+          "nameBytes": 7,
+          "functionAddress": 1822868,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 0,
+          "recordSha256": "8301c3e2caaf8c3253e9a7bb54d40084d4613fe7031dc7f354237abeae56fe93"
+        },
+        {
+          "tableAddress": 9182120,
+          "namePointer": 8844399,
+          "nameSha256": "9c408c0292d9efe638d9282aec36f3475fafd254bbc5ebff1bd7c02bed83c5c4",
+          "nameBytes": 8,
+          "functionAddress": 1833604,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8844625,
+          "recordSha256": "cb46a0014f10c1bcb05fa8e75aa20c6f00fa23099d0015767aae22a0e2e89812"
+        }
+      ],
+      "qualification": "SQRegFunction-layout-candidate-registration-xref-unproved"
+    },
+    {
+      "address": 9182152,
+      "recordBytes": 16,
+      "entries": [
+        {
+          "tableAddress": 9182152,
+          "namePointer": 8844395,
+          "nameSha256": "3ff6c05723bb069d19953340320fa9512f0be584742703e60226ded28bb43861",
+          "nameBytes": 3,
+          "functionAddress": 1783804,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8842039,
+          "recordSha256": "379bd87500cc4470536e52a9e13526d4464c0d8b43a7d295e94a30935f578e1b"
+        },
+        {
+          "tableAddress": 9182168,
+          "namePointer": 8844391,
+          "nameSha256": "cfa314df5c2e8da437b8aa9a62e822550828daa5a20f6408d41a48717f68708f",
+          "nameBytes": 7,
+          "functionAddress": 1822868,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 0,
+          "recordSha256": "8301c3e2caaf8c3253e9a7bb54d40084d4613fe7031dc7f354237abeae56fe93"
+        },
+        {
+          "tableAddress": 9182184,
+          "namePointer": 8844399,
+          "nameSha256": "9c408c0292d9efe638d9282aec36f3475fafd254bbc5ebff1bd7c02bed83c5c4",
+          "nameBytes": 8,
+          "functionAddress": 1833604,
+          "mode": "ARM",
+          "parameterCheck": 1,
+          "typeMaskPointer": 8844625,
+          "recordSha256": "cb46a0014f10c1bcb05fa8e75aa20c6f00fa23099d0015767aae22a0e2e89812"
+        }
+      ],
+      "qualification": "SQRegFunction-layout-candidate-registration-xref-unproved"
+    }
+  ],
+  "unwindSearchUnqualifiedRuns": [
+    {
+      "address": 1626888,
+      "entries": [
+        {
+          "entryAddress": 1626888,
+          "functionPointer": 3254112,
+          "address": 3254112,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3254156
+        },
+        {
+          "entryAddress": 1626896,
+          "functionPointer": 3254240,
+          "address": 3254240,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3254328
+        },
+        {
+          "entryAddress": 1626904,
+          "functionPointer": 3254412,
+          "address": 3254412,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3254480
+        },
+        {
+          "entryAddress": 1626912,
+          "functionPointer": 3256728,
+          "address": 3256728,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3256732
+        },
+        {
+          "entryAddress": 1626920,
+          "functionPointer": 3257012,
+          "address": 3257012,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3257152
+        },
+        {
+          "entryAddress": 1626928,
+          "functionPointer": 3257188,
+          "address": 3257188,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3257308
+        },
+        {
+          "entryAddress": 1626936,
+          "functionPointer": 3257784,
+          "address": 3257784,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3257904
+        },
+        {
+          "entryAddress": 1626944,
+          "functionPointer": 3258020,
+          "address": 3258020,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3258232
+        },
+        {
+          "entryAddress": 1626952,
+          "functionPointer": 3258432,
+          "address": 3258432,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3258504
+        },
+        {
+          "entryAddress": 1626960,
+          "functionPointer": 3258812,
+          "address": 3258812,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3258972
+        },
+        {
+          "entryAddress": 1626968,
+          "functionPointer": 3259044,
+          "address": 3259044,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3259076
+        },
+        {
+          "entryAddress": 1626976,
+          "functionPointer": 3259116,
+          "address": 3259116,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3259192
+        },
+        {
+          "entryAddress": 1626984,
+          "functionPointer": 3259216,
+          "address": 3259216,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3259300
+        },
+        {
+          "entryAddress": 1626992,
+          "functionPointer": 3259404,
+          "address": 3259404,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3259432
+        },
+        {
+          "entryAddress": 1627000,
+          "functionPointer": 3259524,
+          "address": 3259524,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3259736
+        },
+        {
+          "entryAddress": 1627008,
+          "functionPointer": 3259892,
+          "address": 3259892,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3260324
+        },
+        {
+          "entryAddress": 1627016,
+          "functionPointer": 3260552,
+          "address": 3260552,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3260940
+        },
+        {
+          "entryAddress": 1627024,
+          "functionPointer": 3261044,
+          "address": 3261044,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3261132
+        },
+        {
+          "entryAddress": 1627032,
+          "functionPointer": 3261324,
+          "address": 3261324,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3261516
+        },
+        {
+          "entryAddress": 1627040,
+          "functionPointer": 3261744,
+          "address": 3261744,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3262108
+        },
+        {
+          "entryAddress": 1627048,
+          "functionPointer": 3262292,
+          "address": 3262292,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3262396
+        },
+        {
+          "entryAddress": 1627056,
+          "functionPointer": 3262592,
+          "address": 3262592,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3262676
+        },
+        {
+          "entryAddress": 1627064,
+          "functionPointer": 3262784,
+          "address": 3262784,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3263148
+        },
+        {
+          "entryAddress": 1627072,
+          "functionPointer": 3263336,
+          "address": 3263336,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3263508
+        },
+        {
+          "entryAddress": 1627080,
+          "functionPointer": 3263588,
+          "address": 3263588,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3263784
+        },
+        {
+          "entryAddress": 1627088,
+          "functionPointer": 3263924,
+          "address": 3263924,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3264048
+        },
+        {
+          "entryAddress": 1627096,
+          "functionPointer": 3264136,
+          "address": 3264136,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3264472
+        },
+        {
+          "entryAddress": 1627104,
+          "functionPointer": 3264580,
+          "address": 3264580,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3264848
+        },
+        {
+          "entryAddress": 1627112,
+          "functionPointer": 3265004,
+          "address": 3265004,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3265076
+        },
+        {
+          "entryAddress": 1627120,
+          "functionPointer": 3265120,
+          "address": 3265120,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3265176
+        }
+      ],
+      "qualification": "PREL31-structural-candidate-not-symbol-proof"
+    },
+    {
+      "address": 1626884,
+      "entries": [
+        {
+          "entryAddress": 1626884,
+          "functionPointer": 3254044,
+          "address": 3254044,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3254112
+        },
+        {
+          "entryAddress": 1626892,
+          "functionPointer": 3254156,
+          "address": 3254156,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3254240
+        },
+        {
+          "entryAddress": 1626900,
+          "functionPointer": 3254328,
+          "address": 3254328,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3254412
+        },
+        {
+          "entryAddress": 1626908,
+          "functionPointer": 3254480,
+          "address": 3254480,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3256728
+        },
+        {
+          "entryAddress": 1626916,
+          "functionPointer": 3256732,
+          "address": 3256732,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3257012
+        },
+        {
+          "entryAddress": 1626924,
+          "functionPointer": 3257152,
+          "address": 3257152,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3257188
+        },
+        {
+          "entryAddress": 1626932,
+          "functionPointer": 3257308,
+          "address": 3257308,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3257784
+        },
+        {
+          "entryAddress": 1626940,
+          "functionPointer": 3257904,
+          "address": 3257904,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3258020
+        },
+        {
+          "entryAddress": 1626948,
+          "functionPointer": 3258232,
+          "address": 3258232,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3258432
+        },
+        {
+          "entryAddress": 1626956,
+          "functionPointer": 3258504,
+          "address": 3258504,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3258812
+        },
+        {
+          "entryAddress": 1626964,
+          "functionPointer": 3258972,
+          "address": 3258972,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3259044
+        },
+        {
+          "entryAddress": 1626972,
+          "functionPointer": 3259076,
+          "address": 3259076,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3259116
+        },
+        {
+          "entryAddress": 1626980,
+          "functionPointer": 3259192,
+          "address": 3259192,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3259216
+        },
+        {
+          "entryAddress": 1626988,
+          "functionPointer": 3259300,
+          "address": 3259300,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3259404
+        },
+        {
+          "entryAddress": 1626996,
+          "functionPointer": 3259432,
+          "address": 3259432,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3259524
+        },
+        {
+          "entryAddress": 1627004,
+          "functionPointer": 3259736,
+          "address": 3259736,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3259892
+        },
+        {
+          "entryAddress": 1627012,
+          "functionPointer": 3260324,
+          "address": 3260324,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3260552
+        },
+        {
+          "entryAddress": 1627020,
+          "functionPointer": 3260940,
+          "address": 3260940,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3261044
+        },
+        {
+          "entryAddress": 1627028,
+          "functionPointer": 3261132,
+          "address": 3261132,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3261324
+        },
+        {
+          "entryAddress": 1627036,
+          "functionPointer": 3261516,
+          "address": 3261516,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3261744
+        },
+        {
+          "entryAddress": 1627044,
+          "functionPointer": 3262108,
+          "address": 3262108,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3262292
+        },
+        {
+          "entryAddress": 1627052,
+          "functionPointer": 3262396,
+          "address": 3262396,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3262592
+        },
+        {
+          "entryAddress": 1627060,
+          "functionPointer": 3262676,
+          "address": 3262676,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3262784
+        },
+        {
+          "entryAddress": 1627068,
+          "functionPointer": 3263148,
+          "address": 3263148,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3263336
+        },
+        {
+          "entryAddress": 1627076,
+          "functionPointer": 3263508,
+          "address": 3263508,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3263588
+        },
+        {
+          "entryAddress": 1627084,
+          "functionPointer": 3263784,
+          "address": 3263784,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3263924
+        },
+        {
+          "entryAddress": 1627092,
+          "functionPointer": 3264048,
+          "address": 3264048,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3264136
+        },
+        {
+          "entryAddress": 1627100,
+          "functionPointer": 3264472,
+          "address": 3264472,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3264580
+        },
+        {
+          "entryAddress": 1627108,
+          "functionPointer": 3264848,
+          "address": 3264848,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3265004
+        },
+        {
+          "entryAddress": 1627116,
+          "functionPointer": 3265076,
+          "address": 3265076,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3265120
+        }
+      ],
+      "qualification": "PREL31-structural-candidate-not-symbol-proof"
+    },
+    {
+      "address": 1563200,
+      "entries": [
+        {
+          "entryAddress": 1563200,
+          "functionPointer": 3126680,
+          "address": 3126680,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3126704
+        },
+        {
+          "entryAddress": 1563208,
+          "functionPointer": 3126752,
+          "address": 3126752,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3126828
+        },
+        {
+          "entryAddress": 1563216,
+          "functionPointer": 3126784,
+          "address": 3126784,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3126804
+        },
+        {
+          "entryAddress": 1563224,
+          "functionPointer": 3126824,
+          "address": 3126824,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3126968
+        },
+        {
+          "entryAddress": 1563232,
+          "functionPointer": 3126988,
+          "address": 3126988,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127056
+        },
+        {
+          "entryAddress": 1563240,
+          "functionPointer": 3127088,
+          "address": 3127088,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127116
+        },
+        {
+          "entryAddress": 1563248,
+          "functionPointer": 3127148,
+          "address": 3127148,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127176
+        },
+        {
+          "entryAddress": 1563256,
+          "functionPointer": 3127204,
+          "address": 3127204,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127240
+        },
+        {
+          "entryAddress": 1563264,
+          "functionPointer": 3127268,
+          "address": 3127268,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127320
+        },
+        {
+          "entryAddress": 1563272,
+          "functionPointer": 3127352,
+          "address": 3127352,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127384
+        },
+        {
+          "entryAddress": 1563280,
+          "functionPointer": 3127412,
+          "address": 3127412,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127440
+        },
+        {
+          "entryAddress": 1563288,
+          "functionPointer": 3127468,
+          "address": 3127468,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127496
+        },
+        {
+          "entryAddress": 1563296,
+          "functionPointer": 3127524,
+          "address": 3127524,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127556
+        },
+        {
+          "entryAddress": 1563304,
+          "functionPointer": 3127588,
+          "address": 3127588,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127616
+        },
+        {
+          "entryAddress": 1563312,
+          "functionPointer": 3127644,
+          "address": 3127644,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127672
+        },
+        {
+          "entryAddress": 1563320,
+          "functionPointer": 3127704,
+          "address": 3127704,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127736
+        },
+        {
+          "entryAddress": 1563328,
+          "functionPointer": 3127764,
+          "address": 3127764,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127804
+        },
+        {
+          "entryAddress": 1563336,
+          "functionPointer": 3127824,
+          "address": 3127824,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127852
+        },
+        {
+          "entryAddress": 1563344,
+          "functionPointer": 3127880,
+          "address": 3127880,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127908
+        },
+        {
+          "entryAddress": 1563352,
+          "functionPointer": 3127944,
+          "address": 3127944,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127976
+        },
+        {
+          "entryAddress": 1563360,
+          "functionPointer": 3127996,
+          "address": 3127996,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3128024
+        },
+        {
+          "entryAddress": 1563368,
+          "functionPointer": 3128052,
+          "address": 3128052,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3128080
+        },
+        {
+          "entryAddress": 1563376,
+          "functionPointer": 3128108,
+          "address": 3128108,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3128144
+        },
+        {
+          "entryAddress": 1563384,
+          "functionPointer": 3128180,
+          "address": 3128180,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3128216
+        },
+        {
+          "entryAddress": 1563392,
+          "functionPointer": 3128248,
+          "address": 3128248,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3128280
+        },
+        {
+          "entryAddress": 1563400,
+          "functionPointer": 3128312,
+          "address": 3128312,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3128348
+        },
+        {
+          "entryAddress": 1563408,
+          "functionPointer": 3128384,
+          "address": 3128384,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3128416
+        }
+      ],
+      "qualification": "PREL31-structural-candidate-not-symbol-proof"
+    },
+    {
+      "address": 1563228,
+      "entries": [
+        {
+          "entryAddress": 1563228,
+          "functionPointer": 3126968,
+          "address": 3126968,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3126988
+        },
+        {
+          "entryAddress": 1563236,
+          "functionPointer": 3127056,
+          "address": 3127056,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127088
+        },
+        {
+          "entryAddress": 1563244,
+          "functionPointer": 3127116,
+          "address": 3127116,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127148
+        },
+        {
+          "entryAddress": 1563252,
+          "functionPointer": 3127176,
+          "address": 3127176,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127204
+        },
+        {
+          "entryAddress": 1563260,
+          "functionPointer": 3127240,
+          "address": 3127240,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127268
+        },
+        {
+          "entryAddress": 1563268,
+          "functionPointer": 3127320,
+          "address": 3127320,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127352
+        },
+        {
+          "entryAddress": 1563276,
+          "functionPointer": 3127384,
+          "address": 3127384,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127412
+        },
+        {
+          "entryAddress": 1563284,
+          "functionPointer": 3127440,
+          "address": 3127440,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127468
+        },
+        {
+          "entryAddress": 1563292,
+          "functionPointer": 3127496,
+          "address": 3127496,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127524
+        },
+        {
+          "entryAddress": 1563300,
+          "functionPointer": 3127556,
+          "address": 3127556,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127588
+        },
+        {
+          "entryAddress": 1563308,
+          "functionPointer": 3127616,
+          "address": 3127616,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127644
+        },
+        {
+          "entryAddress": 1563316,
+          "functionPointer": 3127672,
+          "address": 3127672,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127704
+        },
+        {
+          "entryAddress": 1563324,
+          "functionPointer": 3127736,
+          "address": 3127736,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127764
+        },
+        {
+          "entryAddress": 1563332,
+          "functionPointer": 3127804,
+          "address": 3127804,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127824
+        },
+        {
+          "entryAddress": 1563340,
+          "functionPointer": 3127852,
+          "address": 3127852,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127880
+        },
+        {
+          "entryAddress": 1563348,
+          "functionPointer": 3127908,
+          "address": 3127908,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127944
+        },
+        {
+          "entryAddress": 1563356,
+          "functionPointer": 3127976,
+          "address": 3127976,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3127996
+        },
+        {
+          "entryAddress": 1563364,
+          "functionPointer": 3128024,
+          "address": 3128024,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3128052
+        },
+        {
+          "entryAddress": 1563372,
+          "functionPointer": 3128080,
+          "address": 3128080,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3128108
+        },
+        {
+          "entryAddress": 1563380,
+          "functionPointer": 3128144,
+          "address": 3128144,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3128180
+        },
+        {
+          "entryAddress": 1563388,
+          "functionPointer": 3128216,
+          "address": 3128216,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3128248
+        },
+        {
+          "entryAddress": 1563396,
+          "functionPointer": 3128280,
+          "address": 3128280,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3128312
+        },
+        {
+          "entryAddress": 1563404,
+          "functionPointer": 3128348,
+          "address": 3128348,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 3128384
+        }
+      ],
+      "qualification": "PREL31-structural-candidate-not-symbol-proof"
+    },
+    {
+      "address": 2176196,
+      "entries": [
+        {
+          "entryAddress": 2176196,
+          "functionPointer": 4352616,
+          "address": 4352616,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 4352664
+        },
+        {
+          "entryAddress": 2176204,
+          "functionPointer": 4352712,
+          "address": 4352712,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 4352760
+        },
+        {
+          "entryAddress": 2176212,
+          "functionPointer": 4352824,
+          "address": 4352824,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 4352872
+        },
+        {
+          "entryAddress": 2176220,
+          "functionPointer": 4352920,
+          "address": 4352920,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 4352984
+        },
+        {
+          "entryAddress": 2176228,
+          "functionPointer": 4353048,
+          "address": 4353048,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 4353140
+        },
+        {
+          "entryAddress": 2176236,
+          "functionPointer": 4353188,
+          "address": 4353188,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 4353236
+        },
+        {
+          "entryAddress": 2176244,
+          "functionPointer": 4353284,
+          "address": 4353284,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 4353348
+        },
+        {
+          "entryAddress": 2176252,
+          "functionPointer": 4353412,
+          "address": 4353412,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 4353476
+        },
+        {
+          "entryAddress": 2176260,
+          "functionPointer": 4353540,
+          "address": 4353540,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 4353588
+        },
+        {
+          "entryAddress": 2176268,
+          "functionPointer": 4353636,
+          "address": 4353636,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 4353684
+        },
+        {
+          "entryAddress": 2176276,
+          "functionPointer": 4353732,
+          "address": 4353732,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 4353144
+        },
+        {
+          "entryAddress": 2176284,
+          "functionPointer": 4353784,
+          "address": 4353784,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 4354712
+        },
+        {
+          "entryAddress": 2176292,
+          "functionPointer": 4353836,
+          "address": 4353836,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 4353884
+        },
+        {
+          "entryAddress": 2176300,
+          "functionPointer": 4353932,
+          "address": 4353932,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 4354728
+        },
+        {
+          "entryAddress": 2176308,
+          "functionPointer": 4353984,
+          "address": 4353984,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 4354032
+        },
+        {
+          "entryAddress": 2176316,
+          "functionPointer": 4354740,
+          "address": 4354740,
+          "mode": "ARM",
+          "unwindKind": "extab",
+          "extabAddress": 4354084
+        }
+      ],
+      "qualification": "PREL31-structural-candidate-not-symbol-proof"
+    }
+  ],
+  "unwindSearchLimits": "Structural runs only; forward-target/all-extab patterns excluded from seeds as uncorroborated collisions",
+  "functionSeeds": [
+    {
+      "address": 1048576,
+      "mode": "ARM",
+      "sources": [
+        "entry"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1048612,
+      "mode": "ARM",
+      "sources": [
+        "entry-direct-call"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1061248,
+      "mode": "Thumb",
+      "sources": [
+        "entry-direct-call"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1067988,
+      "mode": "ARM",
+      "sources": [
+        "entry-direct-call"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1068068,
+      "mode": "ARM",
+      "sources": [
+        "entry-direct-call"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1068120,
+      "mode": "ARM",
+      "sources": [
+        "entry-direct-call"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1068204,
+      "mode": "ARM",
+      "sources": [
+        "entry-direct-call"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1070088,
+      "mode": "ARM",
+      "sources": [
+        "entry-direct-call"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1299968,
+      "mode": "ARM",
+      "sources": [
+        "entry-direct-call"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1781052,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1781284,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1781632,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1781640,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1782164,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1783088,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1783172,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1783424,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1783804,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1784668,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1784728,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1785228,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1785828,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1786208,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1786212,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1786824,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1787460,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1788064,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1788200,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1788480,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1789256,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1789336,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1789364,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1791432,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1791712,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1801572,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1801952,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1803188,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1806684,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1810004,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1810024,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1810040,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1810108,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1812852,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1813004,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1813028,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1813448,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1819328,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1820040,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1820068,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1820096,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1820160,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1822676,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1822736,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1822752,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1822868,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1829452,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1831196,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1833604,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1835104,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1839816,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1839848,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 1839952,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 7600152,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 7600796,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 7602856,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    },
+    {
+      "address": 7605856,
+      "mode": "ARM",
+      "sources": [
+        "SQRegFunction-table-candidate"
+      ],
+      "acceptedSourceBytes": 0,
+      "requiresBoundaryReview": true
+    }
+  ],
+  "denominatorComplete": false,
+  "acceptedSourceBytes": 0
+}
