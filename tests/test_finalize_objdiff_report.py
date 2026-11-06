@@ -189,8 +189,11 @@ class ProductionObjectChecks(unittest.TestCase):
         mapped = finalize.verify_objects(ROOT, self.mapping)
         self.assertEqual(sum(row["code"] for row in mapped.values()), 7051280)
         self.assertEqual(sum(row["data"] for row in mapped.values()), 1313276)
-        self.assertEqual(sum(row["matched_code"] for row in mapped.values()), 4164)
-        self.assertEqual(sum(row["matched_functions"] for row in mapped.values()), 356)
+        import ci_native_build
+        accepted = ci_native_build.accepted_functions(ROOT)
+        self.assertEqual(sum(row["matched_code"] for row in mapped.values()),
+                         sum(row["instructionBytes"] for row in accepted))
+        self.assertEqual(sum(row["matched_functions"] for row in mapped.values()), len(accepted))
 
     def test_quoted_header_drift_rejects_saved_source_objects(self):
         import ci_native_build

@@ -12,7 +12,8 @@ import bootstrap_public_compiler as compiler
 
 
 ROOT = Path(__file__).resolve().parents[1]
-LANES = ("wave001-native", "wave002-native", "wave003-abi", "wave004-native", "wave005-native", "wave006-native")
+LANES = ("wave001-native", "wave002-native", "wave003-abi", "wave004-native", "wave005-native", "wave006-native",
+         "wave007-native", "wave008-native")
 FLAGS = {"--target=arm-none-eabi", "-mcpu=mpcore", "-marm", "-O2", "-ffreestanding", "-ffunction-sections",
          "-fno-unwind-tables", "-fno-asynchronous-unwind-tables", "-fomit-frame-pointer", "-fno-optimize-sibling-calls"}
 
