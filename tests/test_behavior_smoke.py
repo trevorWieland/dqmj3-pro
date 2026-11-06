@@ -1,4 +1,5 @@
 import importlib.util
+import json
 import unittest
 from pathlib import Path
 
@@ -53,6 +54,11 @@ class GameLeafBehaviorTests(unittest.TestCase):
     def test_bounded_candidate_is_not_accepted_source(self):
         self.assertEqual(self.report["acceptedSourceBytes"], 0)
         self.assertEqual(self.report["acceptedRecoveredFunctions"], 0)
+
+    def test_update_namespace_matches_measured_ncch_identity(self):
+        inventory = json.loads((ROOT / "evidence/inventory/update-content0.json").read_text())
+        self.assertEqual(self.report["identity"]["programId"], inventory["programId"])
+        self.assertEqual(self.report["identity"]["moduleSha256"], inventory["codeSha256"])
 
 
 if __name__ == "__main__":

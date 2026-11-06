@@ -41,6 +41,8 @@ def main():
                'projectConfigSha256': digest(ROOT / 'project.json'), 'checks': [],
                'acceptedRecoveredFunctions': 0, 'acceptedRecoveredBytes': 0,
                'cleanIndependentReplay': False, 'wholeGameExecution': False}
+    receipt['status'] = 'running'
+    target.write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
     commands = [
         ('tool-pins', ['setup_tools.py', '--verify']),
         ('intake', ['toolscripts/inventory.py']),
@@ -53,7 +55,11 @@ def main():
     passed = True
     for name, args in commands:
         command = [sys.executable, *[str(ROOT / arg) if arg.endswith('.py') else arg for arg in args]]
-        completed = subprocess.run(command, cwd=output, capture_output=True, timeout=300)
+        try:
+            completed = subprocess.run(command, cwd=output, capture_output=True, timeout=300)
+        except subprocess.TimeoutExpired as error:
+            completed = subprocess.CompletedProcess(command, 124, error.stdout or b'', error.stderr or b'')
+            receipt.setdefault('timeouts', []).append(name)
         log = output / (name + '.log')
         log.write_bytes(completed.stdout + completed.stderr)
         receipt['checks'].append({'name': name, 'argv': command, 'returncode': completed.returncode,
@@ -89,4 +95,12 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception as error:
+        target = ROOT / 'evidence/verification/checks.json'
+        target.parent.mkdir(parents=True, exist_ok=True)
+        record = json.loads(target.read_text()) if target.exists() else {}
+        record.update({'status': 'failed', 'exception': type(error).__name__, 'error': str(error)})
+        target.write_text(json.dumps(record, indent=2) + '\n', encoding='utf-8')
+        raise

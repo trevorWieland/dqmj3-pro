@@ -250,6 +250,10 @@ def run_game_leaf(clang=DEFAULT_CLANG, output=None):
     span_hash = "30f7485fe70c574e37434ee2f7d4f42ac7262881f4f302057c6440173b7a11b6"
     if digest(module) != module_hash:
         raise ValidationFailure("Game module identity mismatch")
+    inventory_path = ROOT / "evidence/inventory/update-content0.json"
+    inventory = json.loads(inventory_path.read_text(encoding="utf-8"))
+    if inventory["codeSha256"] != module_hash or inventory["programId"] != "0004000e001acb00":
+        raise ValidationFailure("Game inventory identity mismatch")
     original = module.read_bytes()[0x59180C:0x591820]
     if hashlib.sha256(original).hexdigest() != span_hash:
         raise ValidationFailure("Game span identity mismatch")
@@ -286,7 +290,8 @@ def run_game_leaf(clang=DEFAULT_CLANG, output=None):
     report = {
         "status": "bounded-behavior-candidate-passed", "acceptedSourceBytes": 0,
         "acceptedRecoveredFunctions": 0, "sourceAcceptance": "pending boundary review and coordinator gates",
-        "identity": {"label": "update-content0", "programId": "00040000001acb00",
+        "identity": {"label": "update-content0", "programId": inventory["programId"],
+            "inventorySha256": digest(inventory_path),
             "modulePath": str(module), "moduleSha256": module_hash,
             "address": "0x0069180c", "fileOffset": "0x0059180c", "mode": "ARM",
             "completeCandidateBytes": 20, "spanSha256": span_hash, "literalPoolBytes": 0},

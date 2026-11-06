@@ -16,4 +16,4 @@ See `evidence/verification/game-leaf-behavior.json`, `evidence/native-survey/ghi
 & .\tools\python\Scripts\python.exe toolscripts\behavior_smoke.py --game-leaf
 ```
 
-The separate synthetic harness tests 228 correct and wrong-source cases plus nonreturn and unexpected-write controls. Those probes validate the infrastructure and receive no game-source credit. The full supported test suite contains 19 unittest cases plus six native-survey boundary controls and independent extraction comparisons.
+The separate synthetic harness tests 228 correct and wrong-source cases plus nonreturn and unexpected-write controls. Those probes validate the infrastructure and receive no game-source credit. The full supported test suite contains 20 unittest cases plus six native-survey boundary controls and independent extraction comparisons. The game receipt derives its update program identity from the measured NCCH inventory, keeping it distinct from the base application namespace.
