@@ -1,0 +1,51 @@
+{
+  "status": "analysis-only-frozen-for-review",
+  "driver": {
+    "path": "toolscripts/ghidra_inventory_wave002.py",
+    "sha256": "b9a8fc62f9c620425b486afb74cee2ce1ad225ecdd053e7d4a9738c0c6dc4a18",
+    "bytes": 19149
+  },
+  "java": {
+    "path": "toolscripts/ghidra/InventoryWave002.java",
+    "sha256": "54b5bda073009a93a378ccfc9e7efc679bf66503cce2abe735db21e5f33878e1",
+    "bytes": 16847
+  },
+  "run": {
+    "path": "evidence/lanes/inventory-wave002/ghidra-run.json",
+    "sha256": "fcd3925ac3398cb24f4cd1861f4cda1335c72ac850805eefa1cd9231ccb92357",
+    "bytes": 10570
+  },
+  "seeds": {
+    "path": "evidence/lanes/inventory-wave002/seed-manifest.json",
+    "sha256": "576a1816bdfeac76be4afff70ed7bfdc8e258caa51a6db3de404798f3f0e371b",
+    "bytes": 523698
+  },
+  "preparation": {
+    "path": "evidence/lanes/inventory-wave002/preparation.json",
+    "sha256": "b6f052b835ac076e981ee3042ab7125674be25c9418eaed1c4f767008367cf24",
+    "bytes": 108785
+  },
+  "census": {
+    "path": "evidence/lanes/inventory-wave002/ghidra-functions.json",
+    "sha256": "bb0cdcd448541ff93d492b2133798d7a17c549b68d0ebaef4d6c13e4a40546e1",
+    "bytes": 15846028
+  },
+  "comparison": {
+    "path": "evidence/lanes/inventory-wave002/comparison.json",
+    "sha256": "0b3354c2376244cfb02f1556de85277e9f02a3aafaaa4bbbf7ea87cef72c7ea7",
+    "bytes": 490034
+  },
+  "oldInventory": {
+    "path": "evidence/lanes/inventory-wave001/ghidra-functions.json",
+    "sha256": "424ae7c002d030733468d4f8b583114ef2475fc10c26233fa0565ed31a0ce2d4",
+    "bytes": 12949749
+  },
+  "acceptedSourceBytes": 0,
+  "denominatorComplete": false,
+  "oldBoundaryAndSourceInputsReplaced": false,
+  "limitations": [
+    "Preparation success certifies context phase, not every seed function boundary",
+    "Analyzer mode/body coverage remains fallible; no executable denominator lock",
+    "Accepted/proposed cohort comparisons do not grant or revoke source acceptance"
+  ]
+}

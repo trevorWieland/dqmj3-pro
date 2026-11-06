@@ -1,0 +1,144 @@
+{
+  "status": "Frozen analysis-only additional census, zero source credit",
+  "files": [
+    {
+      "path": "evidence/lanes/inventory-wave002/packet.json",
+      "sha256": "ca1f4289e7e3f77c4dd4059505eff9cdeb56360f789968d57a0ed64395c86f13",
+      "bytes": 1974
+    },
+    {
+      "path": "evidence/lanes/inventory-wave002/ghidra-run.json",
+      "sha256": "fcd3925ac3398cb24f4cd1861f4cda1335c72ac850805eefa1cd9231ccb92357",
+      "bytes": 10570
+    },
+    {
+      "path": "evidence/lanes/inventory-wave002/preparation.json",
+      "sha256": "b6f052b835ac076e981ee3042ab7125674be25c9418eaed1c4f767008367cf24",
+      "bytes": 108785
+    },
+    {
+      "path": "evidence/lanes/inventory-wave002/ghidra-functions.json",
+      "sha256": "bb0cdcd448541ff93d492b2133798d7a17c549b68d0ebaef4d6c13e4a40546e1",
+      "bytes": 15846028
+    },
+    {
+      "path": "evidence/lanes/inventory-wave002/seed-manifest.json",
+      "sha256": "576a1816bdfeac76be4afff70ed7bfdc8e258caa51a6db3de404798f3f0e371b",
+      "bytes": 523698
+    },
+    {
+      "path": "evidence/lanes/inventory-wave002/seed-conflicts.json",
+      "sha256": "80b0abb0005fb248ea45f6b6228498d11173112c296f7b5f1b937253e56e1260",
+      "bytes": 218
+    },
+    {
+      "path": "evidence/lanes/inventory-wave002/comparison.json",
+      "sha256": "0b3354c2376244cfb02f1556de85277e9f02a3aafaaa4bbbf7ea87cef72c7ea7",
+      "bytes": 490034
+    },
+    {
+      "path": "evidence/lanes/inventory-wave002/analysis-status.json",
+      "sha256": "66210c37acae25b5ce01cc8fefff9d7cc30c4ea318ae7ea946a6d12d2d9726f9",
+      "bytes": 770
+    },
+    {
+      "path": "evidence/lanes/inventory-wave002/additional-census.json",
+      "sha256": "d2221b6ba7a7dab52c71457b5bf567835ada12a769aaf0a7adbe663f975fc6c7",
+      "bytes": 3951
+    },
+    {
+      "path": "evidence/lanes/inventory-wave002/warnings.json",
+      "sha256": "5fd91253b752c2c79944d8ac11fa8ce96fe92403ea930815c1907b3188649c76",
+      "bytes": 4774
+    },
+    {
+      "path": "evidence/lanes/inventory-wave002/tool-environment.json",
+      "sha256": "243235d75efe5c48e8ad71d74dc36bc3057a3bbd9f1ca647d1dabd17eec21403",
+      "bytes": 1052
+    },
+    {
+      "path": "evidence/lanes/inventory-wave002/python-conflict-negative.json",
+      "sha256": "7f12c9590488de190d865ba031023f470a37c3413cbb51eb40e63e9717d24d7d",
+      "bytes": 1802
+    },
+    {
+      "path": "evidence/lanes/inventory-wave002/java-conflict-negative.json",
+      "sha256": "5d8e1f42615bf6b0751bdf891261cf88e7bb058e6ec531e3fcc14463ae4756ec",
+      "bytes": 4498
+    },
+    {
+      "path": "evidence/lanes/inventory-wave002/interval-validation.json",
+      "sha256": "977297bfe3eeaf1c70edb5d89a8c9a0a4fe8fd571e4d455e0194f0b3691dd214",
+      "bytes": 400
+    },
+    {
+      "path": "evidence/lanes/inventory-wave002/README.md",
+      "sha256": "b51572be3e61feb01ec64f77efd191ccf092e5f86210bf72a96e37bec78314f6",
+      "bytes": 6983
+    }
+  ],
+  "authoredScripts": [
+    {
+      "path": "toolscripts/ghidra/InventoryWave002.java",
+      "sha256": "54b5bda073009a93a378ccfc9e7efc679bf66503cce2abe735db21e5f33878e1",
+      "bytes": 16847
+    },
+    {
+      "path": "toolscripts/ghidra_inventory_wave002.py",
+      "sha256": "b9a8fc62f9c620425b486afb74cee2ce1ad225ecdd053e7d4a9738c0c6dc4a18",
+      "bytes": 19149
+    }
+  ],
+  "privateNegativeScript": {
+    "path": "work/inventory-wave002/run_conflict_negative.py",
+    "sha256": "8724a9bb77f83f83cf39d818dbfa71e04efce762918a917406d7ae8f3e02b49a",
+    "bytes": 4124
+  },
+  "privateInstallationManifests": [
+    {
+      "path": "work/inventory-wave002/ghidra-installation-manifest.json",
+      "sha256": "84092a92eb6b7793fdf33bca0e009db02098e4fa27ce80819047baa8b8cab73d",
+      "bytes": 1033048
+    },
+    {
+      "path": "work/inventory-wave002/jdk-installation-manifest.json",
+      "sha256": "2883ba7e0539af374441744cb3e19e3ef96e165c7e4709d4744e812fdd75394f",
+      "bytes": 69026
+    }
+  ],
+  "preparationOnlyRun": {
+    "path": "work/inventory-wave002/run-001/run.json",
+    "sha256": "426920118f96f8920226de25eece3e94d3a4c07ac455625819ff332f78e04490",
+    "bytes": 7634
+  },
+  "qualifyingRun": "run-002",
+  "seedCount": 478,
+  "allContextsSetBeforeInstructions": true,
+  "postAnalysisSeedEntriesAndModesAgree": 478,
+  "functionCount": 25150,
+  "oldFunctionCount": 25091,
+  "coverageGainedBytes": 3428,
+  "coverageLostBytes": 0,
+  "changedCommonBoundaries": 28,
+  "changedCommonModes": 0,
+  "accepted267ExactAgreements": 267,
+  "proposed356ExactAgreements": 356,
+  "qualified412ExactAgreements": 412,
+  "analyzerSeconds": 315,
+  "wallSeconds": 346.47,
+  "analysisBudgetSeconds": 480,
+  "javaConflictNegative": {
+    "processExitCode": 0,
+    "preparationSucceeded": false,
+    "noContextsInstalled": true,
+    "noCensusExport": true,
+    "passed": true
+  },
+  "artifactIdentityErrors": [],
+  "oldInventoryUnchanged": true,
+  "frozenFormalAndNative007PacketsUnchanged": true,
+  "sourceCredit": 0,
+  "denominatorComplete": false,
+  "existingSourceBoundaryInputsReplaced": false,
+  "noSharedTreeCommit": true
+}

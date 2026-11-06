@@ -1,0 +1,91 @@
+{
+  "scope": "Deliberately conflicting duplicate modes in a fresh private raw program; no source credit",
+  "argv": [
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj2pro-decomp\\tools\\ghidra\\ghidra_12.2_PUBLIC\\support\\analyzeHeadless.bat",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\inventory-wave002\\negative-conflict-001\\project",
+    "J3ConflictingSeedNegative",
+    "-import",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\generated\\update-content0\\code.bin",
+    "-loader",
+    "BinaryLoader",
+    "-loader-baseAddr",
+    "0x100000",
+    "-processor",
+    "ARM:LE:32:v6",
+    "-cspec",
+    "default",
+    "-noanalysis",
+    "-scriptPath",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\inventory-wave002\\negative-conflict-001\\scripts",
+    "-preScript",
+    "InventoryWave002.java",
+    "prepare",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\inventory-wave002\\negative-conflict-001\\export",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\generated\\update-content0\\exheader.bin",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\generated\\update-content0\\code.bin",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\inventory-wave002\\negative-conflict-001\\conflicting-seeds.json",
+    "-postScript",
+    "InventoryWave002.java",
+    "export",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\inventory-wave002\\negative-conflict-001\\export",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\generated\\update-content0\\exheader.bin",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\generated\\update-content0\\code.bin",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\inventory-wave002\\negative-conflict-001\\conflicting-seeds.json",
+    "-max-cpu",
+    "2",
+    "-log",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\inventory-wave002\\negative-conflict-001\\analysis.log",
+    "-scriptlog",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\inventory-wave002\\negative-conflict-001\\script.log"
+  ],
+  "processExitCode": 0,
+  "preparationSucceeded": false,
+  "conflicts": [
+    {
+      "address": 1048576,
+      "firstMode": "ARM",
+      "secondMode": "Thumb"
+    }
+  ],
+  "initialInstructions": 0,
+  "contextsInstalled": 0,
+  "censusExportExists": false,
+  "passed": true,
+  "javaScript": {
+    "path": "work/inventory-wave002/negative-conflict-001/scripts/InventoryWave002.java",
+    "sha256": "54b5bda073009a93a378ccfc9e7efc679bf66503cce2abe735db21e5f33878e1",
+    "bytes": 16847
+  },
+  "manifest": {
+    "path": "work/inventory-wave002/negative-conflict-001/conflicting-seeds.json",
+    "sha256": "65b99f35e28139bfa26b4fdb8e9d51d76fc009fe7fce0f13992b3be640d93806",
+    "bytes": 524214
+  },
+  "preparationReceipt": {
+    "path": "work/inventory-wave002/negative-conflict-001/export/preparation.json",
+    "sha256": "2171d57d782cb9c2bdf48fabda3a2e3800579ff66286e3182a0cd39556203b0c",
+    "bytes": 627
+  },
+  "logs": [
+    {
+      "path": "work/inventory-wave002/negative-conflict-001/stdout.log",
+      "sha256": "f1ae0caae0c3b3eb3e428ec1585dc700cbe446d922328b5beef3d5e70801e14a",
+      "bytes": 14848
+    },
+    {
+      "path": "work/inventory-wave002/negative-conflict-001/analysis.log",
+      "sha256": "4403535a4e5f126d00923cc34208f2ff4733ce6b5e910282626bb05f281652e0",
+      "bytes": 14440
+    },
+    {
+      "path": "work/inventory-wave002/negative-conflict-001/script.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "environment": {
+    "JAVA_HOME": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\app-shell-jdk25",
+    "JAVA_TOOL_OPTIONS": "-Dapplication.settingsdir=C:/Users/trevo/Documents/RecProgramming/DQM/dqmj3pro-decomp/work/inventory-wave002/negative-conflict-001/settings -Dapplication.cachedir=C:/Users/trevo/Documents/RecProgramming/DQM/dqmj3pro-decomp/work/inventory-wave002/negative-conflict-001/cache -Duser.home=C:/Users/trevo/Documents/RecProgramming/DQM/dqmj3pro-decomp/work/inventory-wave002/negative-conflict-001/home -XX:ActiveProcessorCount=2"
+  },
+  "sourceCredit": 0
+}

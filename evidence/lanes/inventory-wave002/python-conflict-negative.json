@@ -1,0 +1,52 @@
+{
+  "scope": "Owned deliberately invalid metadata fixture; not a source proposal",
+  "allOriginalInputsUnchanged": true,
+  "conflictingDuplicateAddress": 1082664,
+  "firstMode": "ARM",
+  "secondMode": "Thumb",
+  "caughtException": "Conflicting or invalid seeds; no disassembly launched",
+  "conflicts": [
+    {
+      "address": 1082664,
+      "first": {
+        "address": 1082664,
+        "mode": "ARM",
+        "provenance": [
+          {
+            "address": 1082664,
+            "mode": "ARM",
+            "size": 12,
+            "lane": "wave002-native",
+            "originalSpanSha256": "56bdc98738bd41f6b4b4495cbb6090fa5107b47eda32eda64bb452da1231bba3",
+            "input": {
+              "path": "test-run/inputs/wave002-native.json",
+              "sha256": "27a106f48e76a6b4602309f17016b6c5ea444fee6dafb178dcbfea1e6b5508d3",
+              "bytes": 932022
+            },
+            "row": 0,
+            "kind": "exact-source-byte-proposal-analysis-hint-not-admission"
+          }
+        ],
+        "acceptedSourceBytes": 0
+      },
+      "secondMode": "Thumb",
+      "provenance": {
+        "address": 1082664,
+        "mode": "Thumb",
+        "size": 12,
+        "lane": "wave002-native",
+        "originalSpanSha256": "56bdc98738bd41f6b4b4495cbb6090fa5107b47eda32eda64bb452da1231bba3",
+        "input": {
+          "path": "test-run/inputs/wave002-native.json",
+          "sha256": "27a106f48e76a6b4602309f17016b6c5ea444fee6dafb178dcbfea1e6b5508d3",
+          "bytes": 932022
+        },
+        "row": 257,
+        "kind": "exact-source-byte-proposal-analysis-hint-not-admission"
+      }
+    }
+  ],
+  "ghidraLaunched": false,
+  "passed": true,
+  "driverSha256": "b9a8fc62f9c620425b486afb74cee2ce1ad225ecdd053e7d4a9738c0c6dc4a18"
+}
