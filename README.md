@@ -2,7 +2,7 @@
 
 Private reconstruction of the owner's measured Dragon Quest Monsters Joker 3 Professional base and update. The project begins on 6 November 2026. No remote is configured. Game archives, executable images, shipped scripts, assets, keys and saves remain outside Git.
 
-**The first accepted source cohort contains 267 native C functions and 3,208 instruction bytes.** Its ordinary C sources compile with the measured open Clang/LLVM profile, genuinely link at the original addresses, preserve the complete hybrid native image, pass bounded original/source tests and replay from an immutable committed tree. The executable inventory remains incomplete, so no overall source percentage is published. Original gaps, assets, embedded script text and unaccepted candidates receive zero reconstructed-source credit. `recovery.json` and finalized cohort receipts are authoritative.
+**The accepted source cohorts contain 356 native C functions and 4,164 instruction bytes.** Its ordinary C sources compile with the measured open Clang/LLVM profile, genuinely link at the original addresses, preserve the complete hybrid native image, pass bounded original/source tests and replay from an immutable committed tree. The executable inventory remains incomplete, so no overall source percentage is published. Original gaps, assets, embedded script text and unaccepted candidates receive zero reconstructed-source credit. `recovery.json` and finalized cohort receipts are authoritative.
 
 ## Established inputs
 
@@ -19,7 +19,7 @@ The update image is the initial native investigation target. Keep the base execu
 
 ## Run locally
 
-Use Python 3.13.5 on Windows. Tools and dependencies are repository-local. `tools.lock.json` pins wheel URLs and upstream hashes, native-library identities, CTRTool, objdiff and the minimal Clang distribution. Clang is a behavior-test compiler; the game's original compiler is unidentified.
+Use Python 3.13.5 on Windows. Tools and dependencies are repository-local. `tools.lock.json` pins wheel URLs and upstream hashes, native-library identities, CTRTool, objdiff and the minimal Clang distribution. The measured Clang/LLVM profiles build recovered sources and behavior candidates; the game's original compiler is unidentified.
 
 ```powershell
 & .\tools\python\Scripts\python.exe setup_tools.py --verify
@@ -28,7 +28,7 @@ Use Python 3.13.5 on Windows. Tools and dependencies are repository-local. `tool
 
 `run_checks.py` refreshes intake, compares independent extraction, inventories assets and native candidates, runs bounded behavior diagnostics and malformed-input controls, and records a source/tool/input-bound receipt. It does not assert a source-only build, complete decompilation, whole-game behavior or independent clean replay.
 
-The accepted native pipeline passed from immutable source snapshot `c78d393` with separately materialized tool, dependency and CIA copies: 48 unittest cases, fresh native packet production, six native-boundary controls, four independent code/ExHeader comparisons, real full-image source linking and Windows/Android component builds. `evidence/verification/clean-checkout.json` records that replay. Qualified Ghidra boundary/census descriptors are frozen source inputs; optional Ghidra analysis itself is excluded from the build replay. The earlier foundation receipt remains in `clean-checkout-foundation.json`.
+The expanded native pipeline passed from immutable source snapshot `eece4c5` with separately materialized tools, a new Python environment and private CIA copies: 86 unittest cases, fresh original ARM capture, six VM oracle controls, six native-boundary controls, independent extraction, full-image source linking, Windows/Android components, signed diagnostic APK construction and the research-only solver pilot. `evidence/verification/clean-checkout.json` records this replay. The first 267-function receipt is preserved in `clean-checkout-bundle001.json`; both failed expansion attempts are also retained. Ghidra census descriptors are frozen inputs; full Ghidra analysis itself is separate from build replay.
 
 The owner selected an independent public/open-toolchain route. Proprietary compiler or Nintendo SDK availability is not a prerequisite. Historical compiler identification remains separate from the exact measured Clang configurations that establish accepted source. The full objective is 95 percent confirmed validated source coverage and working native Windows and Android games; source-function runners and diagnostic application shells do not satisfy that full objective.
 

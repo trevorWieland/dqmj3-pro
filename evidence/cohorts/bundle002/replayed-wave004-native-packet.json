@@ -1,0 +1,3982 @@
+{
+  "schemaVersion": 1,
+  "lane": "wave004-native",
+  "status": "ready-for-coordinator-review",
+  "script": {
+    "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\toolscripts\\native_wave004.py",
+    "sha256": "802b4fb5735f44a6194f5cda305063c4d52f0d86cb9c22686f957fed78aafffe",
+    "bytes": 20276
+  },
+  "original": {
+    "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\generated\\update-content0\\code.bin",
+    "sha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+    "bytes": 8159232
+  },
+  "claim": {
+    "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\evidence\\lanes\\wave004-native\\claim.json",
+    "sha256": "9e0544095d4b5d9dddbb90e8be60a2ab14751de4a76c1c1526932c862ecefa09",
+    "bytes": 17481
+  },
+  "semanticLayouts": {
+    "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\evidence\\lanes\\wave004-native\\semantic-layouts.json",
+    "sha256": "7ecf190e1e60f894a47771618965df27bade139fa2503853ffa52bc190cd78b3",
+    "bytes": 22451
+  },
+  "boundaryCensus": {
+    "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\evidence\\lanes\\inventory-wave001\\ghidra-functions.json",
+    "sha256": "424ae7c002d030733468d4f8b583114ef2475fc10c26233fa0565ed31a0ce2d4",
+    "bytes": 12949749
+  },
+  "independentBoundaries": {
+    "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\evidence\\lanes\\wave004-native\\boundary.json",
+    "sha256": "8a3cb6d44fe2e05a81f49b7cc10878b2f901d0daa5b82d54ece6d86ae9bc0b95",
+    "bytes": 9713
+  },
+  "sourceInputs": [
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+      "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+      "bytes": 2194
+    },
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+      "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+      "bytes": 4616
+    },
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+      "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+      "bytes": 216
+    },
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\BoundarySurvey.java",
+      "sha256": "7a8af00932d4ab21af0df86efacae7d51ee38b30df601158a64d5596734f9ba6",
+      "bytes": 5240
+    }
+  ],
+  "compiler": {
+    "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\tools\\clang-21\\clang.exe",
+    "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc",
+    "bytes": 99559064
+  },
+  "linker": {
+    "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\tools\\clang-21\\ld.lld.exe",
+    "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3",
+    "bytes": 69225112
+  },
+  "configuration": [
+    "--target=arm-none-eabi",
+    "-mcpu=mpcore",
+    "-marm",
+    "-O2",
+    "-ffreestanding",
+    "-ffunction-sections",
+    "-fno-unwind-tables",
+    "-fno-asynchronous-unwind-tables"
+  ],
+  "historicalCompilerIdentified": false,
+  "functions": [
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1083656,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_00108908",
+      "objectSection": ".text.fn_00108908",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+      "originalSpanSha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 1083656,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 1083656,
+        "endExclusive": 1083664,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+        "load": "ldr",
+        "fieldOffset": 4,
+        "width": 4,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 1083616,
+            "callsite": 1083648,
+            "kind": "tail-branch",
+            "callsiteSha256": "55aa4a24971aef53d8fd257468c4761c924790459e0a721d6a2cb66567c42c7d"
+          }
+        ],
+        "symbol": "fn_00108908",
+        "view": "FieldView_u32_0004",
+        "field": "field_0004",
+        "fieldType": "u32",
+        "returnType": "u32",
+        "readOffset": 4,
+        "wrongFieldOffset": 20
+      },
+      "boundaryEvidence": {
+        "address": 1083656,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 1083656,
+            "endExclusive": 1083664
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 1083616,
+        "callsite": 1083648,
+        "callerFlowType": "UNCONDITIONAL_JUMP",
+        "callerFlowTarget": 1083656,
+        "callsiteSha256": "55aa4a24971aef53d8fd257468c4761c924790459e0a721d6a2cb66567c42c7d",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 1083656,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "38d16ceca90dc2fc6fc06fe6995690394b1cd46522a0ae8b9f6afdd3d56beccf",
+        "ownedInstructionAddresses": [
+          1083656,
+          1083660
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 4,
+          "width": 4
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1333504,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_00145900",
+      "objectSection": ".text.fn_00145900",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "fdc1710f100ccf2b13937a27e7f23ccda5a1973826c8d8f3b7db09e6988fe8a4",
+      "originalSpanSha256": "fdc1710f100ccf2b13937a27e7f23ccda5a1973826c8d8f3b7db09e6988fe8a4",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 1333504,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "fdc1710f100ccf2b13937a27e7f23ccda5a1973826c8d8f3b7db09e6988fe8a4",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 1333504,
+        "endExclusive": 1333512,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "fdc1710f100ccf2b13937a27e7f23ccda5a1973826c8d8f3b7db09e6988fe8a4",
+        "load": "ldr",
+        "fieldOffset": 8,
+        "width": 4,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 1333452,
+            "callsite": 1333468,
+            "kind": "tail-branch",
+            "callsiteSha256": "2bb8eff445d875c3781f64ae9a193e18f5f7e0929c4032079aa5f2699566c563"
+          },
+          {
+            "callerFunction": 1333452,
+            "callsite": 1333484,
+            "kind": "tail-branch",
+            "callsiteSha256": "f9c9ce5d13cf6c2c8a12bdfa2aadcc80379e7efa268f0e57ffbff2bbeee17de4"
+          }
+        ],
+        "symbol": "fn_00145900",
+        "view": "FieldView_u32_0008",
+        "field": "field_0008",
+        "fieldType": "u32",
+        "returnType": "u32",
+        "readOffset": 8,
+        "wrongFieldOffset": 24
+      },
+      "boundaryEvidence": {
+        "address": 1333504,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 1333504,
+            "endExclusive": 1333512
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 1333452,
+        "callsite": 1333468,
+        "callerFlowType": "CONDITIONAL_JUMP",
+        "callerFlowTarget": 1333504,
+        "callsiteSha256": "2bb8eff445d875c3781f64ae9a193e18f5f7e0929c4032079aa5f2699566c563",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 1333504,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "08bf68eb79ec6209e740f1ce505817fc02131b0fba6d92fbdd7bc37d45cb3268",
+        "ownedInstructionAddresses": [
+          1333504,
+          1333508
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 8,
+          "width": 4
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1333568,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_00145940",
+      "objectSection": ".text.fn_00145940",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+      "originalSpanSha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 1333568,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 1333568,
+        "endExclusive": 1333576,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+        "load": "ldr",
+        "fieldOffset": 4,
+        "width": 4,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 1333516,
+            "callsite": 1333532,
+            "kind": "tail-branch",
+            "callsiteSha256": "2bb8eff445d875c3781f64ae9a193e18f5f7e0929c4032079aa5f2699566c563"
+          },
+          {
+            "callerFunction": 1333516,
+            "callsite": 1333548,
+            "kind": "tail-branch",
+            "callsiteSha256": "f9c9ce5d13cf6c2c8a12bdfa2aadcc80379e7efa268f0e57ffbff2bbeee17de4"
+          }
+        ],
+        "symbol": "fn_00145940",
+        "view": "FieldView_u32_0004",
+        "field": "field_0004",
+        "fieldType": "u32",
+        "returnType": "u32",
+        "readOffset": 4,
+        "wrongFieldOffset": 20
+      },
+      "boundaryEvidence": {
+        "address": 1333568,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 1333568,
+            "endExclusive": 1333576
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 1333516,
+        "callsite": 1333532,
+        "callerFlowType": "CONDITIONAL_JUMP",
+        "callerFlowTarget": 1333568,
+        "callsiteSha256": "2bb8eff445d875c3781f64ae9a193e18f5f7e0929c4032079aa5f2699566c563",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 1333568,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "82a5c5648d0343599e0bbb8c8ca44bb1e86f1d276f97a184e992194f7f24f4bf",
+        "ownedInstructionAddresses": [
+          1333568,
+          1333572
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 4,
+          "width": 4
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1402444,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_0015664c",
+      "objectSection": ".text.fn_0015664c",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+      "originalSpanSha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 1402444,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 1402444,
+        "endExclusive": 1402452,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+        "load": "ldr",
+        "fieldOffset": 4,
+        "width": 4,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 1402392,
+            "callsite": 1402408,
+            "kind": "tail-branch",
+            "callsiteSha256": "2bb8eff445d875c3781f64ae9a193e18f5f7e0929c4032079aa5f2699566c563"
+          },
+          {
+            "callerFunction": 1402392,
+            "callsite": 1402424,
+            "kind": "tail-branch",
+            "callsiteSha256": "f9c9ce5d13cf6c2c8a12bdfa2aadcc80379e7efa268f0e57ffbff2bbeee17de4"
+          }
+        ],
+        "symbol": "fn_0015664c",
+        "view": "FieldView_u32_0004",
+        "field": "field_0004",
+        "fieldType": "u32",
+        "returnType": "u32",
+        "readOffset": 4,
+        "wrongFieldOffset": 20
+      },
+      "boundaryEvidence": {
+        "address": 1402444,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 1402444,
+            "endExclusive": 1402452
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 1402392,
+        "callsite": 1402408,
+        "callerFlowType": "CONDITIONAL_JUMP",
+        "callerFlowTarget": 1402444,
+        "callsiteSha256": "2bb8eff445d875c3781f64ae9a193e18f5f7e0929c4032079aa5f2699566c563",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 1402444,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "b3d1a0080fdf12596b2bff9344cd97e66e981ee92354eb56f98202c6011ec03d",
+        "ownedInstructionAddresses": [
+          1402444,
+          1402448
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 4,
+          "width": 4
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1438128,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_0015f1b0",
+      "objectSection": ".text.fn_0015f1b0",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "30dead0a058ce8c43d8b8664f69efa42d99b9937b21883ad80b344f56a4c8989",
+      "originalSpanSha256": "30dead0a058ce8c43d8b8664f69efa42d99b9937b21883ad80b344f56a4c8989",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 1438128,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "30dead0a058ce8c43d8b8664f69efa42d99b9937b21883ad80b344f56a4c8989",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 1438128,
+        "endExclusive": 1438136,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "30dead0a058ce8c43d8b8664f69efa42d99b9937b21883ad80b344f56a4c8989",
+        "load": "ldrb",
+        "fieldOffset": 3,
+        "width": 1,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 1375192,
+            "callsite": 1375196,
+            "kind": "tail-branch",
+            "callsiteSha256": "953aecb1bf63d11d6c95cbca6641d42ba06d3f9a0679cc26edb10dbf7e0c5de3"
+          }
+        ],
+        "symbol": "fn_0015f1b0",
+        "view": "FieldView_u8_0003",
+        "field": "field_0003",
+        "fieldType": "u8",
+        "returnType": "u32",
+        "readOffset": 3,
+        "wrongFieldOffset": 19
+      },
+      "boundaryEvidence": {
+        "address": 1438128,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 1438128,
+            "endExclusive": 1438136
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 1375192,
+        "callsite": 1375196,
+        "callerFlowType": "UNCONDITIONAL_JUMP",
+        "callerFlowTarget": 1438128,
+        "callsiteSha256": "953aecb1bf63d11d6c95cbca6641d42ba06d3f9a0679cc26edb10dbf7e0c5de3",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 1438128,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "d0e1dc37fb1aca1d5fa09c3e2d6bed43371824aef393881fa1c959d10f2862a8",
+        "ownedInstructionAddresses": [
+          1438128,
+          1438132
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 3,
+          "width": 1
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1534692,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_00176ae4",
+      "objectSection": ".text.fn_00176ae4",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+      "originalSpanSha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 1534692,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 1534692,
+        "endExclusive": 1534700,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+        "load": "ldr",
+        "fieldOffset": 4,
+        "width": 4,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 1534656,
+            "callsite": 1534672,
+            "kind": "tail-branch",
+            "callsiteSha256": "f9c9ce5d13cf6c2c8a12bdfa2aadcc80379e7efa268f0e57ffbff2bbeee17de4"
+          }
+        ],
+        "symbol": "fn_00176ae4",
+        "view": "FieldView_u32_0004",
+        "field": "field_0004",
+        "fieldType": "u32",
+        "returnType": "u32",
+        "readOffset": 4,
+        "wrongFieldOffset": 20
+      },
+      "boundaryEvidence": {
+        "address": 1534692,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 1534692,
+            "endExclusive": 1534700
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 1534656,
+        "callsite": 1534672,
+        "callerFlowType": "CONDITIONAL_JUMP",
+        "callerFlowTarget": 1534692,
+        "callsiteSha256": "f9c9ce5d13cf6c2c8a12bdfa2aadcc80379e7efa268f0e57ffbff2bbeee17de4",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 1534692,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "a0ed9fb6c02fc0c65c469227f4abc8cd45c9e6303212cbe137d2881696b23b03",
+        "ownedInstructionAddresses": [
+          1534692,
+          1534696
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 4,
+          "width": 4
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1534736,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_00176b10",
+      "objectSection": ".text.fn_00176b10",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+      "originalSpanSha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 1534736,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 1534736,
+        "endExclusive": 1534744,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "68a639b2dffac301817461b8b1e1e2fbca60e4b4db136a34b582411c8b7d17ba",
+        "load": "ldr",
+        "fieldOffset": 4,
+        "width": 4,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 1534704,
+            "callsite": 1534716,
+            "kind": "tail-branch",
+            "callsiteSha256": "f9c9ce5d13cf6c2c8a12bdfa2aadcc80379e7efa268f0e57ffbff2bbeee17de4"
+          }
+        ],
+        "symbol": "fn_00176b10",
+        "view": "FieldView_u32_0004",
+        "field": "field_0004",
+        "fieldType": "u32",
+        "returnType": "u32",
+        "readOffset": 4,
+        "wrongFieldOffset": 20
+      },
+      "boundaryEvidence": {
+        "address": 1534736,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 1534736,
+            "endExclusive": 1534744
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 1534704,
+        "callsite": 1534716,
+        "callerFlowType": "CONDITIONAL_JUMP",
+        "callerFlowTarget": 1534736,
+        "callsiteSha256": "f9c9ce5d13cf6c2c8a12bdfa2aadcc80379e7efa268f0e57ffbff2bbeee17de4",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 1534736,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "ebbe650616a49a40117f49e71eb42e6fbed42a028269989b3db30621390d25a3",
+        "ownedInstructionAddresses": [
+          1534736,
+          1534740
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 4,
+          "width": 4
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1594580,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_001854d4",
+      "objectSection": ".text.fn_001854d4",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "687b83fbb1b1084c4b61325547b5f8fadfb354f0d8aa39fcef5ecb6ba6b86ed1",
+      "originalSpanSha256": "687b83fbb1b1084c4b61325547b5f8fadfb354f0d8aa39fcef5ecb6ba6b86ed1",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 1594580,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "687b83fbb1b1084c4b61325547b5f8fadfb354f0d8aa39fcef5ecb6ba6b86ed1",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 1594580,
+        "endExclusive": 1594588,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "687b83fbb1b1084c4b61325547b5f8fadfb354f0d8aa39fcef5ecb6ba6b86ed1",
+        "load": "ldr",
+        "fieldOffset": 12,
+        "width": 4,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 1594540,
+            "callsite": 1594572,
+            "kind": "tail-branch",
+            "callsiteSha256": "55aa4a24971aef53d8fd257468c4761c924790459e0a721d6a2cb66567c42c7d"
+          }
+        ],
+        "symbol": "fn_001854d4",
+        "view": "FieldView_u32_000c",
+        "field": "field_000c",
+        "fieldType": "u32",
+        "returnType": "u32",
+        "readOffset": 12,
+        "wrongFieldOffset": 28
+      },
+      "boundaryEvidence": {
+        "address": 1594580,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 1594580,
+            "endExclusive": 1594588
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 1594540,
+        "callsite": 1594572,
+        "callerFlowType": "UNCONDITIONAL_JUMP",
+        "callerFlowTarget": 1594580,
+        "callsiteSha256": "55aa4a24971aef53d8fd257468c4761c924790459e0a721d6a2cb66567c42c7d",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 1594580,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "54eac5335a3508b49d34fafef3cad24fefaace700efc139651fd233c09378cd8",
+        "ownedInstructionAddresses": [
+          1594580,
+          1594584
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 12,
+          "width": 4
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1870516,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_001c8ab4",
+      "objectSection": ".text.fn_001c8ab4",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "fdc1710f100ccf2b13937a27e7f23ccda5a1973826c8d8f3b7db09e6988fe8a4",
+      "originalSpanSha256": "fdc1710f100ccf2b13937a27e7f23ccda5a1973826c8d8f3b7db09e6988fe8a4",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 1870516,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "fdc1710f100ccf2b13937a27e7f23ccda5a1973826c8d8f3b7db09e6988fe8a4",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 1870516,
+        "endExclusive": 1870524,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "fdc1710f100ccf2b13937a27e7f23ccda5a1973826c8d8f3b7db09e6988fe8a4",
+        "load": "ldr",
+        "fieldOffset": 8,
+        "width": 4,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 1870476,
+            "callsite": 1870508,
+            "kind": "tail-branch",
+            "callsiteSha256": "55aa4a24971aef53d8fd257468c4761c924790459e0a721d6a2cb66567c42c7d"
+          }
+        ],
+        "symbol": "fn_001c8ab4",
+        "view": "FieldView_u32_0008",
+        "field": "field_0008",
+        "fieldType": "u32",
+        "returnType": "u32",
+        "readOffset": 8,
+        "wrongFieldOffset": 24
+      },
+      "boundaryEvidence": {
+        "address": 1870516,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 1870516,
+            "endExclusive": 1870524
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 1870476,
+        "callsite": 1870508,
+        "callerFlowType": "UNCONDITIONAL_JUMP",
+        "callerFlowTarget": 1870516,
+        "callsiteSha256": "55aa4a24971aef53d8fd257468c4761c924790459e0a721d6a2cb66567c42c7d",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 1870516,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "3dbe24fc1fa89cd55e8f90d0889e5bbc9c4d99d16261668b6c57fb293cacff7b",
+        "ownedInstructionAddresses": [
+          1870516,
+          1870520
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 8,
+          "width": 4
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1872728,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_001c9358",
+      "objectSection": ".text.fn_001c9358",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "5937f5681703fda310710f789fa565735c616704195eedd8c407e1391812db5f",
+      "originalSpanSha256": "5937f5681703fda310710f789fa565735c616704195eedd8c407e1391812db5f",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 1872728,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "5937f5681703fda310710f789fa565735c616704195eedd8c407e1391812db5f",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 1872728,
+        "endExclusive": 1872736,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "5937f5681703fda310710f789fa565735c616704195eedd8c407e1391812db5f",
+        "load": "ldr",
+        "fieldOffset": 16,
+        "width": 4,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 1872688,
+            "callsite": 1872720,
+            "kind": "tail-branch",
+            "callsiteSha256": "55aa4a24971aef53d8fd257468c4761c924790459e0a721d6a2cb66567c42c7d"
+          }
+        ],
+        "symbol": "fn_001c9358",
+        "view": "FieldView_u32_0010",
+        "field": "field_0010",
+        "fieldType": "u32",
+        "returnType": "u32",
+        "readOffset": 16,
+        "wrongFieldOffset": 32
+      },
+      "boundaryEvidence": {
+        "address": 1872728,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 1872728,
+            "endExclusive": 1872736
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 1872688,
+        "callsite": 1872720,
+        "callerFlowType": "UNCONDITIONAL_JUMP",
+        "callerFlowTarget": 1872728,
+        "callsiteSha256": "55aa4a24971aef53d8fd257468c4761c924790459e0a721d6a2cb66567c42c7d",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 1872728,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "e6cafb9b787794a6de542441400986f6dd58e5b1201bf297c4bde64b8f019bc7",
+        "ownedInstructionAddresses": [
+          1872728,
+          1872732
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 16,
+          "width": 4
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 2489880,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_0025fe18",
+      "objectSection": ".text.fn_0025fe18",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "f093c26224b56c2d20493e97fc58f56d645007790fa138f990d74191441a65a6",
+      "originalSpanSha256": "f093c26224b56c2d20493e97fc58f56d645007790fa138f990d74191441a65a6",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 2489880,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "f093c26224b56c2d20493e97fc58f56d645007790fa138f990d74191441a65a6",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 2489880,
+        "endExclusive": 2489888,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "f093c26224b56c2d20493e97fc58f56d645007790fa138f990d74191441a65a6",
+        "load": "ldrsh",
+        "fieldOffset": 2,
+        "width": 2,
+        "signed": true,
+        "callerCandidates": [
+          {
+            "callerFunction": 2489828,
+            "callsite": 2489872,
+            "kind": "tail-branch",
+            "callsiteSha256": "e696a8ec6b7f294aa56059125664931f12997987bb52fffefc209d35492adc3c"
+          }
+        ],
+        "symbol": "fn_0025fe18",
+        "view": "FieldView_s16_0002",
+        "field": "field_0002",
+        "fieldType": "s16",
+        "returnType": "s32",
+        "readOffset": 2,
+        "wrongFieldOffset": 18
+      },
+      "boundaryEvidence": {
+        "address": 2489880,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 2489880,
+            "endExclusive": 2489888
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 2489828,
+        "callsite": 2489872,
+        "callerFlowType": "CONDITIONAL_JUMP",
+        "callerFlowTarget": 2489880,
+        "callsiteSha256": "e696a8ec6b7f294aa56059125664931f12997987bb52fffefc209d35492adc3c",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 2489880,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "b96d0e03c76f0e4074a6c1cd91e85fb4be2fed42dfcd83c5caaf0a25a41f8706",
+        "ownedInstructionAddresses": [
+          2489880,
+          2489884
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 2,
+          "width": 2
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 2839920,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_002b5570",
+      "objectSection": ".text.fn_002b5570",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "d5e0a3560a9daf53df4257b140587cc998a752727564999fe8af6abb0ef0d845",
+      "originalSpanSha256": "d5e0a3560a9daf53df4257b140587cc998a752727564999fe8af6abb0ef0d845",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 2839920,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "d5e0a3560a9daf53df4257b140587cc998a752727564999fe8af6abb0ef0d845",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 2839920,
+        "endExclusive": 2839928,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "d5e0a3560a9daf53df4257b140587cc998a752727564999fe8af6abb0ef0d845",
+        "load": "ldrsb",
+        "fieldOffset": 65,
+        "width": 1,
+        "signed": true,
+        "callerCandidates": [
+          {
+            "callerFunction": 2965684,
+            "callsite": 2965696,
+            "kind": "tail-branch",
+            "callsiteSha256": "42cca3fb358d2446cf650af28c2077b5c7e460fa1e65691571fa62a04b1d8b5d"
+          }
+        ],
+        "symbol": "fn_002b5570",
+        "view": "FieldView_s8_0041",
+        "field": "field_0041",
+        "fieldType": "s8",
+        "returnType": "s32",
+        "readOffset": 65,
+        "wrongFieldOffset": 81
+      },
+      "boundaryEvidence": {
+        "address": 2839920,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 2839920,
+            "endExclusive": 2839928
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 2965684,
+        "callsite": 2965696,
+        "callerFlowType": "UNCONDITIONAL_JUMP",
+        "callerFlowTarget": 2839920,
+        "callsiteSha256": "42cca3fb358d2446cf650af28c2077b5c7e460fa1e65691571fa62a04b1d8b5d",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 2839920,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "e8bfcdd1dc646fdc2421bd5bcd565d869e2abc765ad630a485d09fe2eb687c0c",
+        "ownedInstructionAddresses": [
+          2839920,
+          2839924
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 65,
+          "width": 1
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 5188096,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_004f2a00",
+      "objectSection": ".text.fn_004f2a00",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "d3c6cb51f0c0b2349b0bd3fcd9b29fe95a95ff4ef3a1182afa81a984e077459c",
+      "originalSpanSha256": "d3c6cb51f0c0b2349b0bd3fcd9b29fe95a95ff4ef3a1182afa81a984e077459c",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 5188096,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "d3c6cb51f0c0b2349b0bd3fcd9b29fe95a95ff4ef3a1182afa81a984e077459c",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 5188096,
+        "endExclusive": 5188104,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "d3c6cb51f0c0b2349b0bd3fcd9b29fe95a95ff4ef3a1182afa81a984e077459c",
+        "load": "ldrb",
+        "fieldOffset": 112,
+        "width": 1,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 5265856,
+            "callsite": 5265868,
+            "kind": "tail-branch",
+            "callsiteSha256": "9c93d50094fb7d16ddb5b0f5f512f74cd77e17bf5927bbbe31606a587a1116db"
+          }
+        ],
+        "symbol": "fn_004f2a00",
+        "view": "FieldView_u8_0070",
+        "field": "field_0070",
+        "fieldType": "u8",
+        "returnType": "u32",
+        "readOffset": 112,
+        "wrongFieldOffset": 128
+      },
+      "boundaryEvidence": {
+        "address": 5188096,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 5188096,
+            "endExclusive": 5188104
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 5265856,
+        "callsite": 5265868,
+        "callerFlowType": "UNCONDITIONAL_JUMP",
+        "callerFlowTarget": 5188096,
+        "callsiteSha256": "9c93d50094fb7d16ddb5b0f5f512f74cd77e17bf5927bbbe31606a587a1116db",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 5188096,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "72b23a34653e5b82a806a566ea9ea081243d69cc567e18d24ce68361b82ee116",
+        "ownedInstructionAddresses": [
+          5188096,
+          5188100
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 112,
+          "width": 1
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 5503776,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_0053fb20",
+      "objectSection": ".text.fn_0053fb20",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "46620b5a413e409277010fbfb8a99505471dc79b9d4a10b4a10b5395e4641fe6",
+      "originalSpanSha256": "46620b5a413e409277010fbfb8a99505471dc79b9d4a10b4a10b5395e4641fe6",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 5503776,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "46620b5a413e409277010fbfb8a99505471dc79b9d4a10b4a10b5395e4641fe6",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 5503776,
+        "endExclusive": 5503784,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "46620b5a413e409277010fbfb8a99505471dc79b9d4a10b4a10b5395e4641fe6",
+        "load": "ldr",
+        "fieldOffset": 1208,
+        "width": 4,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 5503756,
+            "callsite": 5503804,
+            "kind": "tail-branch",
+            "callsiteSha256": "57a0cd267d132b9711d887d667fb87931d3a884d21f9a14a345bff07379b0780"
+          }
+        ],
+        "symbol": "fn_0053fb20",
+        "view": "FieldView_u32_04b8",
+        "field": "field_04b8",
+        "fieldType": "u32",
+        "returnType": "u32",
+        "readOffset": 1208,
+        "wrongFieldOffset": 1224
+      },
+      "boundaryEvidence": {
+        "address": 5503776,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 5503776,
+            "endExclusive": 5503784
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 5503756,
+        "callsite": 5503804,
+        "callerFlowType": "CONDITIONAL_JUMP",
+        "callerFlowTarget": 5503776,
+        "callsiteSha256": "57a0cd267d132b9711d887d667fb87931d3a884d21f9a14a345bff07379b0780",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 5503776,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "f9602d2ea9dc8ca92bab2bba01597c62e63fd84449d96a4d2dd4513e68cc1be6",
+        "ownedInstructionAddresses": [
+          5503776,
+          5503780
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 1208,
+          "width": 4
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 6738120,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_0066d0c8",
+      "objectSection": ".text.fn_0066d0c8",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "8c312081b3b8bfcb611b7cd83219fd171ad625dd79b9dd7877cf3bac975685cb",
+      "originalSpanSha256": "8c312081b3b8bfcb611b7cd83219fd171ad625dd79b9dd7877cf3bac975685cb",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 6738120,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "8c312081b3b8bfcb611b7cd83219fd171ad625dd79b9dd7877cf3bac975685cb",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 6738120,
+        "endExclusive": 6738128,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "8c312081b3b8bfcb611b7cd83219fd171ad625dd79b9dd7877cf3bac975685cb",
+        "load": "ldr",
+        "fieldOffset": 224,
+        "width": 4,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 6756588,
+            "callsite": 6743728,
+            "kind": "tail-branch",
+            "callsiteSha256": "56b0423a2ef24b38ae6bfa15452c1620e1aaae1f2db0a34842b34ff2f9324de4"
+          }
+        ],
+        "symbol": "fn_0066d0c8",
+        "view": "FieldView_u32_00e0",
+        "field": "field_00e0",
+        "fieldType": "u32",
+        "returnType": "u32",
+        "readOffset": 224,
+        "wrongFieldOffset": 240
+      },
+      "boundaryEvidence": {
+        "address": 6738120,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 6738120,
+            "endExclusive": 6738128
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 6756588,
+        "callsite": 6743728,
+        "callerFlowType": "UNCONDITIONAL_JUMP",
+        "callerFlowTarget": 6738120,
+        "callsiteSha256": "56b0423a2ef24b38ae6bfa15452c1620e1aaae1f2db0a34842b34ff2f9324de4",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 6738120,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "d69c253746ba9ef79d7667483cd9d134c776fd1957ae8b6186bfcd8c57770821",
+        "ownedInstructionAddresses": [
+          6738120,
+          6738124
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 224,
+          "width": 4
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 6767040,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_006741c0",
+      "objectSection": ".text.fn_006741c0",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "64a7cadea82c6dfdf20d8ba7c681f39a628e5b1442835d051232e656593fcd2b",
+      "originalSpanSha256": "64a7cadea82c6dfdf20d8ba7c681f39a628e5b1442835d051232e656593fcd2b",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 6767040,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "64a7cadea82c6dfdf20d8ba7c681f39a628e5b1442835d051232e656593fcd2b",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 6767040,
+        "endExclusive": 6767048,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "64a7cadea82c6dfdf20d8ba7c681f39a628e5b1442835d051232e656593fcd2b",
+        "load": "ldrsb",
+        "fieldOffset": 120,
+        "width": 1,
+        "signed": true,
+        "callerCandidates": [
+          {
+            "callerFunction": 6743000,
+            "callsite": 6743020,
+            "kind": "tail-branch",
+            "callsiteSha256": "419c74bb983d17ab77441e6526d0f973e1fa9de230920a3e643493ddcee75266"
+          }
+        ],
+        "symbol": "fn_006741c0",
+        "view": "FieldView_s8_0078",
+        "field": "field_0078",
+        "fieldType": "s8",
+        "returnType": "s32",
+        "readOffset": 120,
+        "wrongFieldOffset": 136
+      },
+      "boundaryEvidence": {
+        "address": 6767040,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 6767040,
+            "endExclusive": 6767048
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 6743000,
+        "callsite": 6743020,
+        "callerFlowType": "UNCONDITIONAL_JUMP",
+        "callerFlowTarget": 6767040,
+        "callsiteSha256": "419c74bb983d17ab77441e6526d0f973e1fa9de230920a3e643493ddcee75266",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 6767040,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "20fadf6a696c6c808219cce7b319af03b1a063d49870625bbc03e29ebe22e2c3",
+        "ownedInstructionAddresses": [
+          6767040,
+          6767044
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 120,
+          "width": 1
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7061892,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_006bc184",
+      "objectSection": ".text.fn_006bc184",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "2b54da0d7becc2453f10a032f4f0b0c53ec3c9b24660ad9e5281eec5b9cbd55b",
+      "originalSpanSha256": "2b54da0d7becc2453f10a032f4f0b0c53ec3c9b24660ad9e5281eec5b9cbd55b",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 7061892,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "2b54da0d7becc2453f10a032f4f0b0c53ec3c9b24660ad9e5281eec5b9cbd55b",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 7061892,
+        "endExclusive": 7061900,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "2b54da0d7becc2453f10a032f4f0b0c53ec3c9b24660ad9e5281eec5b9cbd55b",
+        "load": "ldrsb",
+        "fieldOffset": 56,
+        "width": 1,
+        "signed": true,
+        "callerCandidates": [
+          {
+            "callerFunction": 2057340,
+            "callsite": 2057704,
+            "kind": "tail-branch",
+            "callsiteSha256": "3886ad1cdfd0cf0347b0d0cc39ce35eca0ab59f8e82184c44dca37e5a6b5288a"
+          }
+        ],
+        "symbol": "fn_006bc184",
+        "view": "FieldView_s8_0038",
+        "field": "field_0038",
+        "fieldType": "s8",
+        "returnType": "s32",
+        "readOffset": 56,
+        "wrongFieldOffset": 72
+      },
+      "boundaryEvidence": {
+        "address": 7061892,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 7061892,
+            "endExclusive": 7061900
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 2057340,
+        "callsite": 2057704,
+        "callerFlowType": "UNCONDITIONAL_JUMP",
+        "callerFlowTarget": 7061892,
+        "callsiteSha256": "3886ad1cdfd0cf0347b0d0cc39ce35eca0ab59f8e82184c44dca37e5a6b5288a",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 7061892,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "ff7aef089898198f3726dfa2712bf3bc03d947756f4c4d641dc4b2c8ddca5226",
+        "ownedInstructionAddresses": [
+          7061892,
+          7061896
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 56,
+          "width": 1
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7072320,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_006bea40",
+      "objectSection": ".text.fn_006bea40",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "30dead0a058ce8c43d8b8664f69efa42d99b9937b21883ad80b344f56a4c8989",
+      "originalSpanSha256": "30dead0a058ce8c43d8b8664f69efa42d99b9937b21883ad80b344f56a4c8989",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 7072320,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "30dead0a058ce8c43d8b8664f69efa42d99b9937b21883ad80b344f56a4c8989",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 7072320,
+        "endExclusive": 7072328,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "30dead0a058ce8c43d8b8664f69efa42d99b9937b21883ad80b344f56a4c8989",
+        "load": "ldrb",
+        "fieldOffset": 3,
+        "width": 1,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 7072292,
+            "callsite": 7072304,
+            "kind": "tail-branch",
+            "callsiteSha256": "810de8c4582a517e04dc0e0bafcbeda933cd7598007b015788d1f7239c3e1a1b"
+          }
+        ],
+        "symbol": "fn_006bea40",
+        "view": "FieldView_u8_0003",
+        "field": "field_0003",
+        "fieldType": "u8",
+        "returnType": "u32",
+        "readOffset": 3,
+        "wrongFieldOffset": 19
+      },
+      "boundaryEvidence": {
+        "address": 7072320,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 7072320,
+            "endExclusive": 7072328
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 7072292,
+        "callsite": 7072304,
+        "callerFlowType": "CONDITIONAL_JUMP",
+        "callerFlowTarget": 7072320,
+        "callsiteSha256": "810de8c4582a517e04dc0e0bafcbeda933cd7598007b015788d1f7239c3e1a1b",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 7072320,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "07730633a9fd7a9fb15bf68459b76e8752026db9b1dbba131e59455385ddb7d9",
+        "ownedInstructionAddresses": [
+          7072320,
+          7072324
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 3,
+          "width": 1
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7072356,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_006bea64",
+      "objectSection": ".text.fn_006bea64",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "6b8390ac0a61fe602bf9975e44bd9c6c835ebcaaa4114d4e9b0ccfd6a482e8a2",
+      "originalSpanSha256": "6b8390ac0a61fe602bf9975e44bd9c6c835ebcaaa4114d4e9b0ccfd6a482e8a2",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 7072356,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "6b8390ac0a61fe602bf9975e44bd9c6c835ebcaaa4114d4e9b0ccfd6a482e8a2",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 7072356,
+        "endExclusive": 7072364,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "6b8390ac0a61fe602bf9975e44bd9c6c835ebcaaa4114d4e9b0ccfd6a482e8a2",
+        "load": "ldrh",
+        "fieldOffset": 0,
+        "width": 2,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 7072328,
+            "callsite": 7072340,
+            "kind": "tail-branch",
+            "callsiteSha256": "810de8c4582a517e04dc0e0bafcbeda933cd7598007b015788d1f7239c3e1a1b"
+          }
+        ],
+        "symbol": "fn_006bea64",
+        "view": "FieldView_u16_0000",
+        "field": "field_0000",
+        "fieldType": "u16",
+        "returnType": "u32",
+        "readOffset": 0,
+        "wrongFieldOffset": 16
+      },
+      "boundaryEvidence": {
+        "address": 7072356,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 7072356,
+            "endExclusive": 7072364
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 7072328,
+        "callsite": 7072340,
+        "callerFlowType": "CONDITIONAL_JUMP",
+        "callerFlowTarget": 7072356,
+        "callsiteSha256": "810de8c4582a517e04dc0e0bafcbeda933cd7598007b015788d1f7239c3e1a1b",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 7072356,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "201807eb6562caa44577759f3ffdc31dab260e3fa125dbc56fd75a0668f5e59b",
+        "ownedInstructionAddresses": [
+          7072356,
+          7072360
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 0,
+          "width": 2
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7072392,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_006bea88",
+      "objectSection": ".text.fn_006bea88",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "3b1cfa38a061c53acc84c3cddaffe2c37ab4fa430656964fd3df96621c5b2091",
+      "originalSpanSha256": "3b1cfa38a061c53acc84c3cddaffe2c37ab4fa430656964fd3df96621c5b2091",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 7072392,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "3b1cfa38a061c53acc84c3cddaffe2c37ab4fa430656964fd3df96621c5b2091",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 7072392,
+        "endExclusive": 7072400,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "3b1cfa38a061c53acc84c3cddaffe2c37ab4fa430656964fd3df96621c5b2091",
+        "load": "ldrb",
+        "fieldOffset": 2,
+        "width": 1,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 7072364,
+            "callsite": 7072376,
+            "kind": "tail-branch",
+            "callsiteSha256": "810de8c4582a517e04dc0e0bafcbeda933cd7598007b015788d1f7239c3e1a1b"
+          }
+        ],
+        "symbol": "fn_006bea88",
+        "view": "FieldView_u8_0002",
+        "field": "field_0002",
+        "fieldType": "u8",
+        "returnType": "u32",
+        "readOffset": 2,
+        "wrongFieldOffset": 18
+      },
+      "boundaryEvidence": {
+        "address": 7072392,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 7072392,
+            "endExclusive": 7072400
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 7072364,
+        "callsite": 7072376,
+        "callerFlowType": "CONDITIONAL_JUMP",
+        "callerFlowTarget": 7072392,
+        "callsiteSha256": "810de8c4582a517e04dc0e0bafcbeda933cd7598007b015788d1f7239c3e1a1b",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 7072392,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "e0ce0737ffd04ee88f1ef9f1ad985c4e9a692e4b471251d384c7f557b1d6e407",
+        "ownedInstructionAddresses": [
+          7072392,
+          7072396
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 2,
+          "width": 1
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7072516,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_006beb04",
+      "objectSection": ".text.fn_006beb04",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "30dead0a058ce8c43d8b8664f69efa42d99b9937b21883ad80b344f56a4c8989",
+      "originalSpanSha256": "30dead0a058ce8c43d8b8664f69efa42d99b9937b21883ad80b344f56a4c8989",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 7072516,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "30dead0a058ce8c43d8b8664f69efa42d99b9937b21883ad80b344f56a4c8989",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 7072516,
+        "endExclusive": 7072524,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "30dead0a058ce8c43d8b8664f69efa42d99b9937b21883ad80b344f56a4c8989",
+        "load": "ldrb",
+        "fieldOffset": 3,
+        "width": 1,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 7072448,
+            "callsite": 7072472,
+            "kind": "tail-branch",
+            "callsiteSha256": "4eb5925cb508ccb6f1441cce855263e968fe959b2fb041ccea7d4eb13dad09eb"
+          },
+          {
+            "callerFunction": 7072448,
+            "callsite": 7072492,
+            "kind": "tail-branch",
+            "callsiteSha256": "edd173cc5a857b8a1eb32ea8d9513220ed06dd9002a11342d13bef11d496d534"
+          },
+          {
+            "callerFunction": 7072448,
+            "callsite": 7072508,
+            "kind": "tail-branch",
+            "callsiteSha256": "ae3c8b8d99a39542f78af83dbbb42c81cd94199ec1b5f60a0801063e95842570"
+          }
+        ],
+        "symbol": "fn_006beb04",
+        "view": "FieldView_u8_0003",
+        "field": "field_0003",
+        "fieldType": "u8",
+        "returnType": "u32",
+        "readOffset": 3,
+        "wrongFieldOffset": 19
+      },
+      "boundaryEvidence": {
+        "address": 7072516,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 7072516,
+            "endExclusive": 7072524
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 7072448,
+        "callsite": 7072472,
+        "callerFlowType": "CONDITIONAL_JUMP",
+        "callerFlowTarget": 7072516,
+        "callsiteSha256": "4eb5925cb508ccb6f1441cce855263e968fe959b2fb041ccea7d4eb13dad09eb",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 7072516,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "71c6266c52580cc49080781423454407fdca013b2c10c64c1a283c304318bedf",
+        "ownedInstructionAddresses": [
+          7072516,
+          7072520
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 3,
+          "width": 1
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7072604,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_006beb5c",
+      "objectSection": ".text.fn_006beb5c",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "6b8390ac0a61fe602bf9975e44bd9c6c835ebcaaa4114d4e9b0ccfd6a482e8a2",
+      "originalSpanSha256": "6b8390ac0a61fe602bf9975e44bd9c6c835ebcaaa4114d4e9b0ccfd6a482e8a2",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 7072604,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "6b8390ac0a61fe602bf9975e44bd9c6c835ebcaaa4114d4e9b0ccfd6a482e8a2",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 7072604,
+        "endExclusive": 7072612,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "6b8390ac0a61fe602bf9975e44bd9c6c835ebcaaa4114d4e9b0ccfd6a482e8a2",
+        "load": "ldrh",
+        "fieldOffset": 0,
+        "width": 2,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 7072536,
+            "callsite": 7072560,
+            "kind": "tail-branch",
+            "callsiteSha256": "4eb5925cb508ccb6f1441cce855263e968fe959b2fb041ccea7d4eb13dad09eb"
+          },
+          {
+            "callerFunction": 7072536,
+            "callsite": 7072580,
+            "kind": "tail-branch",
+            "callsiteSha256": "edd173cc5a857b8a1eb32ea8d9513220ed06dd9002a11342d13bef11d496d534"
+          },
+          {
+            "callerFunction": 7072536,
+            "callsite": 7072596,
+            "kind": "tail-branch",
+            "callsiteSha256": "ae3c8b8d99a39542f78af83dbbb42c81cd94199ec1b5f60a0801063e95842570"
+          }
+        ],
+        "symbol": "fn_006beb5c",
+        "view": "FieldView_u16_0000",
+        "field": "field_0000",
+        "fieldType": "u16",
+        "returnType": "u32",
+        "readOffset": 0,
+        "wrongFieldOffset": 16
+      },
+      "boundaryEvidence": {
+        "address": 7072604,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 7072604,
+            "endExclusive": 7072612
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 7072536,
+        "callsite": 7072560,
+        "callerFlowType": "CONDITIONAL_JUMP",
+        "callerFlowTarget": 7072604,
+        "callsiteSha256": "4eb5925cb508ccb6f1441cce855263e968fe959b2fb041ccea7d4eb13dad09eb",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 7072604,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "97498c01c06f08bf09bc108d2078dc928b6a9565f59460a70e90d35018b5763d",
+        "ownedInstructionAddresses": [
+          7072604,
+          7072608
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 0,
+          "width": 2
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7072692,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_006bebb4",
+      "objectSection": ".text.fn_006bebb4",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "3b1cfa38a061c53acc84c3cddaffe2c37ab4fa430656964fd3df96621c5b2091",
+      "originalSpanSha256": "3b1cfa38a061c53acc84c3cddaffe2c37ab4fa430656964fd3df96621c5b2091",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 7072692,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "3b1cfa38a061c53acc84c3cddaffe2c37ab4fa430656964fd3df96621c5b2091",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 7072692,
+        "endExclusive": 7072700,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "3b1cfa38a061c53acc84c3cddaffe2c37ab4fa430656964fd3df96621c5b2091",
+        "load": "ldrb",
+        "fieldOffset": 2,
+        "width": 1,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 7072624,
+            "callsite": 7072648,
+            "kind": "tail-branch",
+            "callsiteSha256": "4eb5925cb508ccb6f1441cce855263e968fe959b2fb041ccea7d4eb13dad09eb"
+          },
+          {
+            "callerFunction": 7072624,
+            "callsite": 7072668,
+            "kind": "tail-branch",
+            "callsiteSha256": "edd173cc5a857b8a1eb32ea8d9513220ed06dd9002a11342d13bef11d496d534"
+          },
+          {
+            "callerFunction": 7072624,
+            "callsite": 7072684,
+            "kind": "tail-branch",
+            "callsiteSha256": "ae3c8b8d99a39542f78af83dbbb42c81cd94199ec1b5f60a0801063e95842570"
+          }
+        ],
+        "symbol": "fn_006bebb4",
+        "view": "FieldView_u8_0002",
+        "field": "field_0002",
+        "fieldType": "u8",
+        "returnType": "u32",
+        "readOffset": 2,
+        "wrongFieldOffset": 18
+      },
+      "boundaryEvidence": {
+        "address": 7072692,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 7072692,
+            "endExclusive": 7072700
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 7072624,
+        "callsite": 7072648,
+        "callerFlowType": "CONDITIONAL_JUMP",
+        "callerFlowTarget": 7072692,
+        "callsiteSha256": "4eb5925cb508ccb6f1441cce855263e968fe959b2fb041ccea7d4eb13dad09eb",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 7072692,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "e1dd673a96ce7a4fb119d1ad696ee2599fb5a722485e5805b0321ba9a0ea94b0",
+        "ownedInstructionAddresses": [
+          7072692,
+          7072696
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 2,
+          "width": 1
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7111448,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_006c8318",
+      "objectSection": ".text.fn_006c8318",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "ca0e135128adc722ee081239ce7aeba4676aa4f36ddb9af3587b461c38c496ad",
+      "originalSpanSha256": "ca0e135128adc722ee081239ce7aeba4676aa4f36ddb9af3587b461c38c496ad",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 7111448,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "ca0e135128adc722ee081239ce7aeba4676aa4f36ddb9af3587b461c38c496ad",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 7111448,
+        "endExclusive": 7111456,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "ca0e135128adc722ee081239ce7aeba4676aa4f36ddb9af3587b461c38c496ad",
+        "load": "ldrsb",
+        "fieldOffset": 84,
+        "width": 1,
+        "signed": true,
+        "callerCandidates": [
+          {
+            "callerFunction": 3106604,
+            "callsite": 3106684,
+            "kind": "tail-branch",
+            "callsiteSha256": "37c93c59f83ef92c704ee8ae819adda2816eb0ff536aadf13852915c086bfd13"
+          }
+        ],
+        "symbol": "fn_006c8318",
+        "view": "FieldView_s8_0054",
+        "field": "field_0054",
+        "fieldType": "s8",
+        "returnType": "s32",
+        "readOffset": 84,
+        "wrongFieldOffset": 100
+      },
+      "boundaryEvidence": {
+        "address": 7111448,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 7111448,
+            "endExclusive": 7111456
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 3106604,
+        "callsite": 3106684,
+        "callerFlowType": "UNCONDITIONAL_JUMP",
+        "callerFlowTarget": 7111448,
+        "callsiteSha256": "37c93c59f83ef92c704ee8ae819adda2816eb0ff536aadf13852915c086bfd13",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 7111448,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "5803af06a54dace942876c1ce20050294e174f7bf1ddb497060aec7ef189f046",
+        "ownedInstructionAddresses": [
+          7111448,
+          7111452
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 84,
+          "width": 1
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7237208,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_006e6e58",
+      "objectSection": ".text.fn_006e6e58",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "c5bd4fdc6db8744b456f25d436159584f99ed90c62ea2ec69e7c87cb41db8a17",
+      "originalSpanSha256": "c5bd4fdc6db8744b456f25d436159584f99ed90c62ea2ec69e7c87cb41db8a17",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 7237208,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "c5bd4fdc6db8744b456f25d436159584f99ed90c62ea2ec69e7c87cb41db8a17",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 7237208,
+        "endExclusive": 7237216,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "c5bd4fdc6db8744b456f25d436159584f99ed90c62ea2ec69e7c87cb41db8a17",
+        "load": "ldr",
+        "fieldOffset": 72,
+        "width": 4,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 6353736,
+            "callsite": 6353820,
+            "kind": "tail-branch",
+            "callsiteSha256": "c2f66e9ea33ac00cdac40d2355d5906011bf68d31396d8a216ce68a3328841f7"
+          }
+        ],
+        "symbol": "fn_006e6e58",
+        "view": "FieldView_u32_0048",
+        "field": "field_0048",
+        "fieldType": "u32",
+        "returnType": "u32",
+        "readOffset": 72,
+        "wrongFieldOffset": 88
+      },
+      "boundaryEvidence": {
+        "address": 7237208,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 7237208,
+            "endExclusive": 7237216
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 6353736,
+        "callsite": 6353820,
+        "callerFlowType": "UNCONDITIONAL_JUMP",
+        "callerFlowTarget": 7237208,
+        "callsiteSha256": "c2f66e9ea33ac00cdac40d2355d5906011bf68d31396d8a216ce68a3328841f7",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 7237208,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "0ea97902a5500c135c4559eaad2315b585d276502e0ccdfdc102a046f5060190",
+        "ownedInstructionAddresses": [
+          7237208,
+          7237212
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 72,
+          "width": 4
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7237288,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "sha256": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+        "bytes": 2194
+      },
+      "header": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+        "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+        "bytes": 4616
+      },
+      "headers": [
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.h",
+          "sha256": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+          "bytes": 4616
+        },
+        {
+          "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\types.h",
+          "sha256": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+          "bytes": 216
+        }
+      ],
+      "object": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o",
+        "sha256": "83473da32a47337c9c0f87d311301818822f838893b295f5ead5f56f4a3e107d",
+        "bytes": 6544
+      },
+      "symbol": "fn_006e6ea8",
+      "objectSection": ".text.fn_006e6ea8",
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "e3f9adad1789ab53952170bbae36500711fc502d978612de9acb8f823dce7a14",
+      "originalSpanSha256": "e3f9adad1789ab53952170bbae36500711fc502d978612de9acb8f823dce7a14",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+        "bytes": 6192204
+      },
+      "linkedSymbolAddress": 7237288,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "e3f9adad1789ab53952170bbae36500711fc502d978612de9acb8f823dce7a14",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "semanticLayout": {
+        "address": 7237288,
+        "endExclusive": 7237296,
+        "bytes": 8,
+        "mode": "ARM",
+        "sha256": "e3f9adad1789ab53952170bbae36500711fc502d978612de9acb8f823dce7a14",
+        "load": "ldr",
+        "fieldOffset": 68,
+        "width": 4,
+        "signed": false,
+        "callerCandidates": [
+          {
+            "callerFunction": 6353736,
+            "callsite": 6353828,
+            "kind": "tail-branch",
+            "callsiteSha256": "bcdbccf7f8aa578f1818b389f6044d1bbc6b6f629597246244bdd14c8b2a8b8f"
+          }
+        ],
+        "symbol": "fn_006e6ea8",
+        "view": "FieldView_u32_0044",
+        "field": "field_0044",
+        "fieldType": "u32",
+        "returnType": "u32",
+        "readOffset": 68,
+        "wrongFieldOffset": 84
+      },
+      "boundaryEvidence": {
+        "address": 7237288,
+        "mode": "ARM",
+        "ranges": [
+          {
+            "bytes": 8,
+            "start": 7237288,
+            "endExclusive": 7237296
+          }
+        ],
+        "instructionCount": 2,
+        "callerFunction": 6353736,
+        "callsite": 6353828,
+        "callerFlowType": "UNCONDITIONAL_JUMP",
+        "callerFlowTarget": 7237288,
+        "callsiteSha256": "bcdbccf7f8aa578f1818b389f6044d1bbc6b6f629597246244bdd14c8b2a8b8f",
+        "poolBytes": 0,
+        "remaining": "Indirect entries and original historical class semantics not globally proved"
+      },
+      "behavior": {
+        "address": 7237288,
+        "cases": 56,
+        "allPassed": true,
+        "originalActualReturns": 56,
+        "sourceActualReturns": 56,
+        "caseDigest": "86c0b6cc11ab80dbd6249572ce640174e8b1346f452665633e32477ed88444a6",
+        "ownedInstructionAddresses": [
+          7237288,
+          7237292
+        ],
+        "calleeSavedSpLrPreserved": true,
+        "semanticModelAgreed": true,
+        "writes": [],
+        "readContract": {
+          "offset": 68,
+          "width": 4
+        },
+        "wrongSourceControl": {
+          "kind": "genuinely-compiled-wrong-field",
+          "returnedToSentinel": true,
+          "actualReturn": 90,
+          "expectedReturn": 53,
+          "semanticRejection": true
+        },
+        "invalidPointerControls": [
+          {
+            "artifact": "original",
+            "error": 6,
+            "actualReturns": 0
+          },
+          {
+            "artifact": "source",
+            "error": 6,
+            "actualReturns": 0
+          }
+        ]
+      },
+      "abi": "AAPCS32; aligned valid partial-record pointer r0; typed field promoted to u32/s32 return",
+      "status": "candidate-standalone-exact",
+      "fullModuleIntegrated": false,
+      "acceptedRecoveredSource": false
+    }
+  ],
+  "receipts": [
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-ffreestanding",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004\\views.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o"
+      ],
+      "exitCode": 0,
+      "log": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-ffreestanding",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\src\\native\\wave004",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views-wrong.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views-wrong.o"
+      ],
+      "exitCode": 0,
+      "log": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\wrong-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--build-id=none",
+        "-T",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.ld",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views.o"
+      ],
+      "exitCode": 0,
+      "log": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.log",
+        "sha256": "f137381a8754f0b9f3ce5e3cc158c2a24caa918e3082c938ffe41b5c881ac2eb",
+        "bytes": 77
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--build-id=none",
+        "-T",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\wrong-linked.ld",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\wrong-linked.elf",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\views-wrong.o"
+      ],
+      "exitCode": 0,
+      "log": {
+        "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\wrong-linked.log",
+        "sha256": "f137381a8754f0b9f3ce5e3cc158c2a24caa918e3082c938ffe41b5c881ac2eb",
+        "bytes": 77
+      }
+    }
+  ],
+  "unicorn": {
+    "version": "2.1.4",
+    "cpuModel": "ARM1176",
+    "nativeLibrary": {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\tools\\python\\Lib\\site-packages\\unicorn\\lib\\unicorn.dll",
+      "sha256": "010d85dce84b8f6ffaec3d5420f1b5f7768f859eb831be574c7da23e656ee8f1",
+      "bytes": 9598976
+    }
+  },
+  "linkedSourceElf": {
+    "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\source-linked.elf",
+    "sha256": "269fa79a9d21e46c87d74b12e396a5e4a0095ab74d244ce2bc93f6a360a8023c",
+    "bytes": 6192204
+  },
+  "wrongLinkedElf": {
+    "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build\\wrong-linked.elf",
+    "sha256": "c6fad952bdfc7ecdf43ac01ecf13fc83b5c9f616729413bf54cae4f83b332345",
+    "bytes": 70632
+  },
+  "standaloneExactFunctionCount": 26,
+  "standaloneExactInstructionBytes": 208,
+  "originalActualReturns": 1456,
+  "sourceActualReturns": 1456,
+  "compiledWrongSourceActualReturns": 26,
+  "compiledWrongSourceSemanticRejections": 26,
+  "acceptedRecoveredSourceFunctions": 0,
+  "instructionBudget": 16,
+  "executionTimeoutMicroseconds": 100000,
+  "limitations": [
+    "Fresh Ghidra entry/body/caller proof does not close all indirect aliases",
+    "Partial field views do not recover full class names or object lifetime",
+    "Bounded aligned memory fixtures are not universal equivalence",
+    "Coordinator owns module integration, independent replay and accepted coverage"
+  ],
+  "reproductionArgv": [
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\tools\\python\\Scripts\\python.exe",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\toolscripts\\native_wave004.py",
+    "--output",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\20261106-native-bundle002-portable\\work\\wave004-native\\build"
+  ]
+}

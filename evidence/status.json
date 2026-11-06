@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "observedDate": "2026-11-06",
   "phase": "accepted partial native reconstruction with open toolchain",
-  "verifiedSourceSnapshot": "c78d393",
+  "verifiedSourceSnapshot": "eece4c5436fea2466cc3888467633052caa41273",
   "foundationPipelineReplay": {
     "status": "passed",
     "receipt": "evidence/verification/clean-checkout.json",
@@ -29,26 +29,28 @@
     "runtimePrecedenceProved": false,
     "recoveredSourceCredit": 0
   },
-  "acceptedRecoveredFunctions": 267,
-  "acceptedRecoveredBytes": 3208,
+  "acceptedRecoveredFunctions": 356,
+  "acceptedRecoveredBytes": 4164,
   "originalCompilerIdentified": false,
   "executableInventoryComplete": false,
   "wholeGameExecution": false,
   "sourceOnlyExecutableProof": false,
   "sourceOnlyContainerProof": false,
-  "nextMilestone": "Close ABI-qualified setters/direct getter cohorts and advance native engine/platform services",
+  "nextMilestone": "Review pending predicate/mutator cohorts, extend independent semantic proof and public VM qualification, and close executable categories",
   "overallSourceCoveragePercent": null,
   "targetSourceCoveragePercent": 95,
   "currentReplay": {
     "status": "passed",
-    "receipt": "evidence/verification/clean-checkout-bundle001.json",
-    "unitTests": 48,
-    "sourceCohort": "evidence/cohorts/bundle001/acceptance.json"
+    "receipt": "evidence/verification/clean-checkout.json",
+    "unitTests": 86,
+    "sourceCohorts": [
+      "evidence/cohorts/bundle001/acceptance.json",
+      "evidence/cohorts/bundle002/acceptance.json"
+    ]
   },
   "latestProposalAttempt": {
-    "status": "failed-held-without-new-credit",
-    "sourceRevision": "522c07e",
-    "receipt": "evidence/verification/bundle002-runtime-pins-failed.json",
-    "reason": "Path-dependent runtime report pins in platform v1; portable v2 under separate verification"
+    "status": "accepted",
+    "sourceRevision": "eece4c5436fea2466cc3888467633052caa41273",
+    "receipt": "evidence/cohorts/bundle002/acceptance.json"
   }
 }
