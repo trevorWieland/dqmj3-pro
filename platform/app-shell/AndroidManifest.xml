@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.dqm.diagnostics" android:versionCode="1" android:versionName="0.1-diagnostic">
+    <uses-sdk android:minSdkVersion="29" android:targetSdkVersion="36" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.gamepad" android:required="false" />
+    <application android:label="DQM Diagnostic Shell" android:debuggable="true" android:extractNativeLibs="false" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:allowBackup="false">
+        <activity android:name=".ShellActivity" android:exported="true" android:resizeableActivity="true" android:configChanges="orientation|screenSize|smallestScreenSize|keyboardHidden|density" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

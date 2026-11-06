@@ -1,0 +1,2413 @@
+{
+  "schemaVersion": 1,
+  "diskFreeBefore": 263936405504,
+  "packages": [
+    {
+      "package": "platforms;android-36",
+      "url": "https://dl.google.com/android/repository/platform-36_r02.zip",
+      "bytes": 65878410,
+      "archiveSha1": "2c1a80dd4d9f7d0e6dd336ec603d9b5c55a6f576",
+      "archiveSha256": "37607369a28c5b640b3a7998868d45898ebcb777565a0e85f9acf36f29631d2e",
+      "targetRoot": "tools/app-shell-sdk36/platforms/android-36"
+    },
+    {
+      "package": "build-tools;36.0.0",
+      "url": "https://dl.google.com/android/repository/build-tools_r36_windows.zip",
+      "bytes": 58699878,
+      "archiveSha1": "f16ccffd34de8790dede813a6c7d8e2c11a27b50",
+      "archiveSha256": "aa1095cb14d83e483818a748a2c06faaeb8e601561b06a356a119a1b2ca280d3",
+      "targetRoot": "tools/app-shell-sdk36/build-tools/36.0.0"
+    },
+    {
+      "package": "Temurin25.0.5+8-windows-x64-JDK",
+      "url": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.5%2B8/OpenJDK25U-jdk_x64_windows_hotspot_25.0.5_8.zip",
+      "bytes": 141285173,
+      "archiveSha256": "636bdc13dc649ddc7d5921c5c7d23cca6e44fd19d662b45cc9c02135a6c96c42",
+      "targetRoot": "tools/app-shell-jdk25"
+    },
+    {
+      "package": "NDK-r30-public-Clang21-minimal",
+      "url": "https://dl.google.com/android/repository/android-ndk-r30-windows.zip",
+      "bytes": 727980788,
+      "archiveSha1": "9bf167a1985fa7d4a036186b78f702eab9179408",
+      "targetRoot": "tools/clang-21",
+      "archivePrefix": "android-ndk-r30/toolchains/llvm/prebuilt/windows-x86_64/bin/"
+    }
+  ],
+  "jdkSource": "read-only owned local Temurin25.0.5+8 distribution",
+  "jniHeaderSource": "read-only owned local official NDKr30",
+  "repositoryManifestSha256": "ebf0444b0ceabbeddae076894690d4fef4d5608954143e389a821866862000ab",
+  "files": [
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/aapt.exe",
+      "sha256": "c528418af0c5152650d9532485f371e8eed98e1436d1ab1a197580b97917b561",
+      "bytes": 2024544
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/aapt2.exe",
+      "sha256": "babf3122e515ddb954c5ac4669e085ce990536c035e3072de30127bddd6e3608",
+      "bytes": 5423200
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/aarch64-linux-android-ld.exe",
+      "sha256": "5c7847596d256c5baeb406d3dcdd70e50e45c059b81b01cb6b673369099d47d2",
+      "bytes": 343
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/aidl.exe",
+      "sha256": "266dcf772ad1791b43f1ec5702af2e152d1222b051d3676af4e47006dd47d359",
+      "bytes": 3512416
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/arm-linux-androideabi-ld.exe",
+      "sha256": "5c7847596d256c5baeb406d3dcdd70e50e45c059b81b01cb6b673369099d47d2",
+      "bytes": 343
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/bcc_compat.exe",
+      "sha256": "448524bf39c1c0d0f7538fff515e9e02e8b7ad6a53335008c198905ed37d057f",
+      "bytes": 292448
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/dexdump.exe",
+      "sha256": "87ba68f855b0961ea55b2078e4b2a106c45c6b84f006432f83266d5125364bc6",
+      "bytes": 1179744
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/i686-linux-android-ld.exe",
+      "sha256": "5c7847596d256c5baeb406d3dcdd70e50e45c059b81b01cb6b673369099d47d2",
+      "bytes": 343
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/lib/apksigner.jar",
+      "sha256": "3716d9311e55d2b0918a2fd9d54ba9e406c5f6abeea700b287f11259bc163dec",
+      "bytes": 1100545
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/lib/d8.jar",
+      "sha256": "4097ff9c46c185c6e7214da7fe9b1befb5adeea5cc9ca349270e0249904f9240",
+      "bytes": 17998582
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/lib64/libwinpthread-1.dll",
+      "sha256": "7fb117525565bf237793c9e8ace7919fec00181cfbf5c2097e70045dcf5584dd",
+      "bytes": 96352
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/libbcc.dll",
+      "sha256": "cc0abe4d716d0c7e84578245a49a41323512ac7123da12078aa0ff9759527c7c",
+      "bytes": 951392
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/libbcinfo.dll",
+      "sha256": "6c0c0f0aee2153d6928c1cd9c9f52b98c7c85fa8c42e494fb88808fd1f6ed599",
+      "bytes": 544864
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/libclang_android.dll",
+      "sha256": "8b0b8fc4d94c79cd847e4fcc97a56ab6294669086a435ebbb5fad06ffa2cc854",
+      "bytes": 14068320
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/libLLVM_android.dll",
+      "sha256": "5301683c76e0752d9cc7d923b7c9702259bd3730ffb3b686fad2dca178c15cbb",
+      "bytes": 25287264
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/libwinpthread-1.dll",
+      "sha256": "964c122cb964679961547254c470ad298c84037afa58bc9461f25197656d0544",
+      "bytes": 80992
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/lld.exe",
+      "sha256": "852f7af8fbc4dcdf05519ee2e42129b911e4fbc3f233e2dd66fe0c67d4544662",
+      "bytes": 277088
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/llvm-rs-cc.exe",
+      "sha256": "1a0851ddbaf7b566755180f77b8d967a87bee1fedc5a8e3a54d37728afc3abcb",
+      "bytes": 1156704
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/mipsel-linux-android-ld.exe",
+      "sha256": "5c7847596d256c5baeb406d3dcdd70e50e45c059b81b01cb6b673369099d47d2",
+      "bytes": 343
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/runtime.properties",
+      "sha256": "5c317bc7dfb52abf6e18b49ee439864869c1359f38c265fd7966b1e03578785d",
+      "bytes": 17
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/source.properties",
+      "sha256": "7dee6632e9ad6cb111da2bb99d747211e27927061b1276d040bb1d71fded5ebb",
+      "bytes": 62
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/split-select.exe",
+      "sha256": "dab274950d2bd427a2fa251901253a60d0955d9e982f876b9c44b67cb7350f52",
+      "bytes": 1968736
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/x86_64-linux-android-ld.exe",
+      "sha256": "5c7847596d256c5baeb406d3dcdd70e50e45c059b81b01cb6b673369099d47d2",
+      "bytes": 343
+    },
+    {
+      "path": "tools/app-shell-sdk36/build-tools/36.0.0/zipalign.exe",
+      "sha256": "c503c7da88bd4f6cddbcc8d3febd41e1e5022a525147f05f8caf4602353409c0",
+      "bytes": 895072
+    },
+    {
+      "path": "tools/app-shell-sdk36/native-includes/__stdarg___gnuc_va_list.h",
+      "sha256": "feca975bfdfb254d17458a8e3d51f8ad6d9bdc9fd6287727f0f8b2fb81fcb0b0",
+      "bytes": 467
+    },
+    {
+      "path": "tools/app-shell-sdk36/native-includes/__stdarg___va_copy.h",
+      "sha256": "f0a8d3c963338173f2d57b2cbc209dde38c90536107b15eb0cf78166d4caee1f",
+      "bytes": 445
+    },
+    {
+      "path": "tools/app-shell-sdk36/native-includes/__stdarg_header_macro.h",
+      "sha256": "7b3fbcc442af2508f36bb2dc98d9ad2b8a1f5c0f5333394fb2159c8bd5ecd5b8",
+      "bytes": 417
+    },
+    {
+      "path": "tools/app-shell-sdk36/native-includes/__stdarg_va_arg.h",
+      "sha256": "274c75a1db86f649439aa3bcc1dead4170725e6f803925c3fc38a2e93307afdc",
+      "bytes": 771
+    },
+    {
+      "path": "tools/app-shell-sdk36/native-includes/__stdarg_va_copy.h",
+      "sha256": "bb195f56cb08d4cee6a60bd9f62f34466e8ac4f89f6fed043b044cb2f7ead010",
+      "bytes": 451
+    },
+    {
+      "path": "tools/app-shell-sdk36/native-includes/__stdarg_va_list.h",
+      "sha256": "81c3055f7033e26e7f53705653bc9d69b5202f25c2692e03b3a4f77ff44a7d76",
+      "bytes": 448
+    },
+    {
+      "path": "tools/app-shell-sdk36/native-includes/jni.h",
+      "sha256": "5df9074457c041b372f2c68ff646d6e8600cd673a223885e8df21c44c94ec667",
+      "bytes": 52236
+    },
+    {
+      "path": "tools/app-shell-sdk36/native-includes/stdarg.h",
+      "sha256": "ce6e43d79dc89b50208ecf259b1ffd519f5a78cd3a2c7fcaac6386f376b89fef",
+      "bytes": 2497
+    },
+    {
+      "path": "tools/app-shell-sdk36/native-includes/stdint.h",
+      "sha256": "f43783466c93f77a6464274ebf18f9e4cc46f0d90770ddee2993c6cf39f7514f",
+      "bytes": 27519
+    },
+    {
+      "path": "tools/app-shell-sdk36/platforms/android-36/android.jar",
+      "sha256": "d9eb9da824d9e247a352f570f01e1169e725b2954bca9e283a71786c59b59f9a",
+      "bytes": 27768026
+    },
+    {
+      "path": "tools/app-shell-sdk36/platforms/android-36/source.properties",
+      "sha256": "72291ff6611dbfc46fdfb6de2821c4a62c87befa5200713847eda426e3a501c2",
+      "bytes": 257
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-console-l1-1-0.dll",
+      "sha256": "88ace577a9c51061cb7d1a36babbbefa48212fadc838ffde98fdfff60de18386",
+      "bytes": 22072
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-console-l1-2-0.dll",
+      "sha256": "c062477ad3bfdc57b0cc402179637a214dab5045c8d644592c7decca7d18aa50",
+      "bytes": 22056
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-datetime-l1-1-0.dll",
+      "sha256": "1bd81dfd19204b44662510d9054852fb77c9f25c1088d647881c9b976cc16818",
+      "bytes": 22056
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-debug-l1-1-0.dll",
+      "sha256": "591358eb4d1531e9563ee0813e4301c552ce364c912ce684d16576eabf195dc3",
+      "bytes": 21944
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-errorhandling-l1-1-0.dll",
+      "sha256": "d56ce7b1cd76108ad6c137326ec694a14c99d48c3d7b0ace8c3ff4d9bcee3ce8",
+      "bytes": 22096
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-fibers-l1-1-0.dll",
+      "sha256": "91d249d7bc0e38ef6bcb17158b1fdc6dd8888dc086615c9b8b750b87e52a5fb3",
+      "bytes": 22072
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-fibers-l1-1-1.dll",
+      "sha256": "fc9d86cec621383eab636ebc87ddd3f5c19a3cb2a33d97be112c051d0b275429",
+      "bytes": 22072
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-file-l1-1-0.dll",
+      "sha256": "1ca895aba4e7435563a6b43e85eba67a0f8c74aa6a6a94d0fc48fa35535e2585",
+      "bytes": 26152
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-file-l1-2-0.dll",
+      "sha256": "4cadbc0c39da7c6722206fdcebd670abe5b8d261e7b041dd94f9397a89d1990d",
+      "bytes": 22056
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-file-l2-1-0.dll",
+      "sha256": "93c624b366ba16c643fc8933070a26f03b073ad0cf7f80173266d67536c61989",
+      "bytes": 21960
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-handle-l1-1-0.dll",
+      "sha256": "39095f59c41d76ec81bb2723d646fde4c148e7cc3402f4980d2ade95cb9c84f9",
+      "bytes": 21944
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-heap-l1-1-0.dll",
+      "sha256": "8f105771b236dbcb859de271f0a6822ce1cb79c36988dd42c9e3f6f55c5f7eb9",
+      "bytes": 22072
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-interlocked-l1-1-0.dll",
+      "sha256": "53b25e753ca785bf8b695d89dde5818a318890211dc992a89146f16658f0b606",
+      "bytes": 22072
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-kernel32-legacy-l1-1-1.dll",
+      "sha256": "a9b13a1cd1b8c19b0c6b4afcd5bb0dd29c0e2288231ac9e6db8510094ce68ba6",
+      "bytes": 22080
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-libraryloader-l1-1-0.dll",
+      "sha256": "7f39ba298b41e4963047341288cab36b6a241835ee11ba4ad70f44dacd40906c",
+      "bytes": 22056
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-localization-l1-2-0.dll",
+      "sha256": "6ee44dd0d8510dc024c9f7c79b1b9fa88c987b26b6beb6653ddd11751c34e5dc",
+      "bytes": 22080
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-memory-l1-1-0.dll",
+      "sha256": "0512a35316ec9180437f86696a84c5c06a7e4e82e050055a656e5bf9fca206f9",
+      "bytes": 22056
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-namedpipe-l1-1-0.dll",
+      "sha256": "c05f1fffe3b5a2738ea54ce9485cca026fb9635f982626fba1e1dcc531897273",
+      "bytes": 22096
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-processenvironment-l1-1-0.dll",
+      "sha256": "c4eca98c3c67b6395d5b005b00ac1eb0318b86b23aa71035a44c2b1602befba9",
+      "bytes": 21968
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-processthreads-l1-1-0.dll",
+      "sha256": "5ccb89e93d67bc3288d4e84649c5346e66e15e3d7cd65d989daf3f4cb584be9a",
+      "bytes": 22096
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-processthreads-l1-1-1.dll",
+      "sha256": "4ad565a8ba3ef0ea8ab87221ad11f83ee0bc844ce236607958406663b407333e",
+      "bytes": 22072
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-profile-l1-1-0.dll",
+      "sha256": "7809160932f44e59b021699f5bc68799eb7293ee1fa926d6fcca3c3445302e61",
+      "bytes": 22080
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "sha256": "9dc1e91e71c7c054854bd1487cb4e6946d82c9f463430f1c4e8d1471005172b1",
+      "bytes": 21960
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-string-l1-1-0.dll",
+      "sha256": "60fc31d2a0c634412f529dba76af3b9bf991352877c6dae528186d3935704cfd",
+      "bytes": 22056
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-synch-l1-1-0.dll",
+      "sha256": "3a72b4f29f39a265d32ad12f0ce15dbf60129c840e10d84d427829ede45e78ad",
+      "bytes": 22056
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-synch-l1-2-0.dll",
+      "sha256": "efc1e4460984a73cf47a3def033af1c8f3b1dbc1a56cd27781d3aacf3e3330cb",
+      "bytes": 22080
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-sysinfo-l1-1-0.dll",
+      "sha256": "b203d862ddef1dd62bf623fc866c7f7a9c317c1c2ae30d1f52cb41f955b5698e",
+      "bytes": 22072
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-sysinfo-l1-2-0.dll",
+      "sha256": "2703635d835396afd0f138d7c73751afe7e33a24f4225d08c1690b0a371932c0",
+      "bytes": 22080
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-timezone-l1-1-0.dll",
+      "sha256": "33f4fddc181066fce06b2227bded813f95e94ed1f3d785e982c6b6b56c510c57",
+      "bytes": 22056
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-core-util-l1-1-0.dll",
+      "sha256": "6eda016742a6171205a387a14b3c0b331841567740376f56768f8c151724207d",
+      "bytes": 21944
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-crt-conio-l1-1-0.dll",
+      "sha256": "b762061b688aae679afe788904d2c9970f74a7dac98f3b42463d08f25e483d3f",
+      "bytes": 22056
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-crt-convert-l1-1-0.dll",
+      "sha256": "ebb2ae5535a64f65daeab8235585114fc9dd2cf1a49f5852d446250b998b6ae4",
+      "bytes": 26056
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-crt-environment-l1-1-0.dll",
+      "sha256": "17d63275d00bdd8670422b95bd264c532998e0a1b041079e54fce4b6b7a55819",
+      "bytes": 22080
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-crt-filesystem-l1-1-0.dll",
+      "sha256": "9a9e2a65a281644e368d0f272b95ba5f6b445d1c35910d06056c5ebeb77402db",
+      "bytes": 22056
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-crt-heap-l1-1-0.dll",
+      "sha256": "bab9ac3ec83e380ae51e4295ef3bf2c738627812d3a49d1e713661abbc8dc57a",
+      "bytes": 22096
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-crt-locale-l1-1-0.dll",
+      "sha256": "bd14c67ea28e21d6257ad780a37122c9b5773f69e693f5db6bffaee4d839526e",
+      "bytes": 22080
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-crt-math-l1-1-0.dll",
+      "sha256": "606d66d82db562ea7979179d06486a0f94d079941d26b80a1e2c49d29959df6f",
+      "bytes": 30248
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-crt-multibyte-l1-1-0.dll",
+      "sha256": "95f49efbe8107786733fa7c474025cf3fee0ac632f240367b296c736d06572aa",
+      "bytes": 30248
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-crt-private-l1-1-0.dll",
+      "sha256": "1bc82bed6143d2bf1b6b08a7809f4a5e29317d6fddd338a7da3c0223522e4bbf",
+      "bytes": 75328
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-crt-process-l1-1-0.dll",
+      "sha256": "f6156b1020380ec4f0e48577ebedaaef5fb1ab1f337d8b4e72e6a33a7567a9cc",
+      "bytes": 22096
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-crt-runtime-l1-1-0.dll",
+      "sha256": "c5902934d026d7e15fbe9917d474f3322846a41a25e66f4b2b1f758801879f4b",
+      "bytes": 26152
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-crt-stdio-l1-1-0.dll",
+      "sha256": "a9c5a153d8c0286f9b41a2b1c65854ad9e6471b8755b7de87bae4470e60bcab6",
+      "bytes": 26168
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-crt-string-l1-1-0.dll",
+      "sha256": "25b8f83a7767211b11132775a0e27a45aa4ec8ab4e6572599f9c172ae3606b40",
+      "bytes": 26176
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-crt-time-l1-1-0.dll",
+      "sha256": "7c7f6393f06de11750adb09cc5698ae55cd9fb27b2e51e207286feb1b5b2b156",
+      "bytes": 22096
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/api-ms-win-crt-utility-l1-1-0.dll",
+      "sha256": "d8ba5f17b9ffcbf3aeaf3fa1da226832d2fa90f81acce0cd669464e76ce434ac",
+      "bytes": 21952
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/attach.dll",
+      "sha256": "5a0dca9771dff4a9d6cb2e97f952c7d0eb41a104540c8bc6caaacbea90a2bf33",
+      "bytes": 30328
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/awt.dll",
+      "sha256": "813f06e1fef4fef3e4680e5a3c3f00ccef10553e8723ba457c7416b1044c1d54",
+      "bytes": 1420408
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/dt_shmem.dll",
+      "sha256": "eb8e3e3b7760158efcf9d83d2a0c31b0e57a5b263bea38ccf44d8c93308d64ad",
+      "bytes": 37496
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/dt_socket.dll",
+      "sha256": "4e6bee1534bc5e4cd497a89816e99fa7cbc6e60239d715b61d9df5c084e5a840",
+      "bytes": 36984
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/extnet.dll",
+      "sha256": "97e7721e017d50e0915d3220f2d042893764c64ad5295eb886d9c484b3064773",
+      "bytes": 24704
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/fontmanager.dll",
+      "sha256": "85312a006977142003ccbe8e2a1a2be83c5dee83a6e389a603fe19494b924870",
+      "bytes": 1018488
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/freetype.dll",
+      "sha256": "2f4c2f8d2e67391c64b81bf06e8af33c4ca2347ad8687878fbb7f031aee9210b",
+      "bytes": 560760
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/instrument.dll",
+      "sha256": "1f3bfddb9b0cc94c4dbb79a2636fef57337336bac13f1ab84e343847150e109e",
+      "bytes": 52352
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/j2gss.dll",
+      "sha256": "5b3c4981159161be73189d8fa21ae7f502deae33890c4143419dd2f182cf28af",
+      "bytes": 52352
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/j2pcsc.dll",
+      "sha256": "eb15237eaedb7bf8e7e64b5ddad1b2094c7743b5ba0f7311bca116b8e26a0105",
+      "bytes": 26744
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/j2pkcs11.dll",
+      "sha256": "63d0f8366f607ec14bc315257c75054fad0b200379b4c4d67d37438239b1b6e8",
+      "bytes": 82040
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jaas.dll",
+      "sha256": "a94aeb087f4faa9532f799f8c5e0fc98056854f16fde0b0bb994abffbc4c0a3e",
+      "bytes": 28800
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jabswitch.exe",
+      "sha256": "2de5deca0bec1aa2ac4e788e89cccdcca47c33f8fd03ad869b589a6523003c38",
+      "bytes": 45176
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jaccessinspector.exe",
+      "sha256": "e3417972aae78107da51e0404dbadf1beadb68326465ff3a1ab2905613a1e533",
+      "bytes": 105600
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jaccesswalker.exe",
+      "sha256": "9bf828bd7743f18c37c43bb167e96eefaa702113d84d30452f4fc8734950fcfa",
+      "bytes": 71288
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jar.exe",
+      "sha256": "b3de680571a8380a1ef5df175e23c458a812cdc29623c78b3654aa7a325f9f83",
+      "bytes": 24192
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jarsigner.exe",
+      "sha256": "16ce5d2ef2d346ad2a045f43104b79faf2fef2cfb82a93029acdd61d0d5a5e30",
+      "bytes": 24696
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/java.dll",
+      "sha256": "759146dec3f93dcfc34bc32532521f84773d93021ff02df60d862b390684cd2a",
+      "bytes": 116856
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/java.exe",
+      "sha256": "f961fb8db73c7c546821bc6d30fdaa8ce2458da460a5e75e2c39189cd107e6ba",
+      "bytes": 50304
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/javaaccessbridge.dll",
+      "sha256": "78631123ccedd614acf5f4340f3af5e0374ee25ce51507951cae3d2fa8e1a715",
+      "bytes": 309880
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/javac.exe",
+      "sha256": "02160baa324a6a778e01962f14c748155c3172c37821df201bb201df110985c0",
+      "bytes": 24696
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/javadoc.exe",
+      "sha256": "6464c28ce5c2035d9b8d09ba4e7ebebb8fc0f0ee4ec342f63312bb7481cbf6e5",
+      "bytes": 24696
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/javajpeg.dll",
+      "sha256": "30a47f6a106460701d86dbaa44b3b2aa90d175c74fc9b2bfb9ac34e8f75cd4c3",
+      "bytes": 180856
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/javap.exe",
+      "sha256": "ce873c51bf90af50ac9a9732386ea6d1c2094eae1cf11c827a691a6a08f4ea4b",
+      "bytes": 24696
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/javaw.exe",
+      "sha256": "65bf91b714222c5c7280b80863438d6fece2e675e8cfc9d9b98647d782802178",
+      "bytes": 50304
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jawt.dll",
+      "sha256": "af83a5dc269c616741e41ddccf293c8b70d8b8d933e48c44907e996353a0ec28",
+      "bytes": 21632
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jcmd.exe",
+      "sha256": "7e6ca74795b7c6c64b6ff7d5156dbe59f2cdeef8abb096a6dabf6275d24be31e",
+      "bytes": 24192
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jconsole.exe",
+      "sha256": "4364a885021e60f4d98f5f8728bc71a0601cb463d6910314144df3b13430ff8f",
+      "bytes": 24704
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jdb.exe",
+      "sha256": "9622422e7740c4d31d7c4d8cdffc8d7bcf742b143881e920cfe2b85c11f7ee14",
+      "bytes": 24184
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jdeprscan.exe",
+      "sha256": "acce3d579e2f184295aef4bd0cabe426fe98065ec7fed502f859f21279684b1d",
+      "bytes": 24696
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jdeps.exe",
+      "sha256": "1d7313bf655cdf1e72b826a2f1b0ea5bec77249b3f33b4560a0b9cdf49e77c20",
+      "bytes": 24696
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jdwp.dll",
+      "sha256": "9f1d9f92fd2b5f9e1bff17314d4ae441b55206fb2175f45e21a556bd77280d7d",
+      "bytes": 240256
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jfr.exe",
+      "sha256": "03b1f007be6826d1bc9ad6b453fc1f67e74e9a9145012724a5a186ad6cbccabe",
+      "bytes": 24184
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jhsdb.exe",
+      "sha256": "91ee7fbf42e278f3d6e274662e950a3ad3e686daaf5253493205e68b85912440",
+      "bytes": 24696
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jimage.dll",
+      "sha256": "82a1d576f2331ba92fb929fbea6dabb2d940caedf7e8921dffbf3c414ffe64cd",
+      "bytes": 34424
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jimage.exe",
+      "sha256": "9da678e332ed49f55ef6402834f05686a5a2cee19005b6ac0348e7facb9055e7",
+      "bytes": 24696
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jinfo.exe",
+      "sha256": "3ec437901da3e122a304fdaaad2ce3d0a5593acd1375100a6c38570427643c86",
+      "bytes": 24696
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jli.dll",
+      "sha256": "f71990b3282f8634b223ae546dee8c4fcc4b75736f1639b99908a84aaf8750b5",
+      "bytes": 84088
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jlink.exe",
+      "sha256": "adfa478567673d79693cd823235a68d9d2705128b20f9af83dae48fa36965c90",
+      "bytes": 24704
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jmap.exe",
+      "sha256": "3a02fb3ac940308905c9e8916e1686d3ef087110c62330fb11c34a38c55b379c",
+      "bytes": 24184
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jmod.exe",
+      "sha256": "660ef95e880bc6c23b7422018eafce27c435975857a1e8ab1bc4b2218f2b62cf",
+      "bytes": 24184
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jnativescan.exe",
+      "sha256": "38f92ed2ab728f7eaad8fea57a51fcb8ec96abf6db580ac825ff2df587d38bb9",
+      "bytes": 24704
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jpackage.dll",
+      "sha256": "592077940b7b202a6a5a147daac82a51e0bfc0c83bcaac11040ffb8e15d774d9",
+      "bytes": 137336
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jpackage.exe",
+      "sha256": "bec0f6c208fb76086a876a600057b1907770fe9d2873ff785f8095f35b5fe971",
+      "bytes": 24704
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jps.exe",
+      "sha256": "a4219c34dd774fe1267a39bd892c4bc91e9c2b914722878bd8f45c26e555a3d7",
+      "bytes": 24184
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jrunscript.exe",
+      "sha256": "ddc3c5fa51c0dc14d2ee1dabd61f439e4fe130c419679a025a07b82a41c9ebc3",
+      "bytes": 24704
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jshell.exe",
+      "sha256": "ca0e08ba3ff458c5c477035292be0dd9b41e0924bb8cbf50cf0ca8d689d8595f",
+      "bytes": 24696
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jsound.dll",
+      "sha256": "153733cf500f0ea98814bc5b9ff6abecc65ddd84a747f6fe8349d55087dc1552",
+      "bytes": 61048
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jstack.exe",
+      "sha256": "335339c7ae2eee9b46a51bd17d6e320e32a1b0740d1d0fe46237d348dec88a2e",
+      "bytes": 24696
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jstat.exe",
+      "sha256": "8f020d18c359d72abc48f94ff42f49df1704ecbb9fc1046a42e606e5774fde93",
+      "bytes": 24704
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jstatd.exe",
+      "sha256": "49ac23bbb81cd88846c82ae56a4dc577e26f85c0c19b2e15531fe175e3e0fbe4",
+      "bytes": 24696
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jsvml.dll",
+      "sha256": "5d7be76a898246526740c7fe1c57c443941bcec37f3a4f55d7cf0df902728bd9",
+      "bytes": 869496
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/jwebserver.exe",
+      "sha256": "921ed6c1513aa8cb568500cd952646e64c2b2b002906d18bd1b0dbac661f6885",
+      "bytes": 24696
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/keytool.exe",
+      "sha256": "91c101e3a41d9194584beb170edc08605add43a9d5436edd304db9ed67aec7bf",
+      "bytes": 24704
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/kinit.exe",
+      "sha256": "cb4a56a0dfbea6b0fd8ad6e45c3772e17ed579a88cae515a720174a3e0fbc838",
+      "bytes": 24704
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/klist.exe",
+      "sha256": "ac5f67b4f18c7614830898b233225410351fbfdc1cc490c24fc92afb8b26a061",
+      "bytes": 24704
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/ktab.exe",
+      "sha256": "a528c565b24000547e52bece7026398bab5f7e1a323cc3eb1a73df9b33259965",
+      "bytes": 24192
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/lcms.dll",
+      "sha256": "6b58247a1b9613a1e52d842364fb2bdeec6e1014994ebf24af647db4a02c1570",
+      "bytes": 260216
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/management.dll",
+      "sha256": "17ce00e07c9bd8efd43b2b40a83651ac2ce82d51b0bbbd06c77bee77959b4e5f",
+      "bytes": 29816
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/management_agent.dll",
+      "sha256": "60c12dc74cc2fd88e23f441eaccd3ccc52990a291df687647ca216c0651392b2",
+      "bytes": 25208
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/management_ext.dll",
+      "sha256": "d7403261a4c54560e2129242639a22df4ef6de19537b84fe5efbb0678a1bba81",
+      "bytes": 36480
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/mlib_image.dll",
+      "sha256": "676ce036dd0090abf32a3752ef2ef88cad72925003265238cc00cda68e0e2aed",
+      "bytes": 521336
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/msvcp140.dll",
+      "sha256": "a4c2229bdc2a2a630acdc095b4d86008e5c3e3bc7773174354f3da4f5beb9cde",
+      "bytes": 575056
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/net.dll",
+      "sha256": "c7bc13c1c90503976220c925e0ab8516491a043c5252858baf511214abad6642",
+      "bytes": 61056
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/nio.dll",
+      "sha256": "a5fb686e47f82114b690d8c6eea375907ce3921b513ad7e16fecdffa9b757cea",
+      "bytes": 81528
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/prefs.dll",
+      "sha256": "6bd7d8bea21c0119842959b4c6ecc308b6f4f5ea8caa0636309d7fcff8d13d49",
+      "bytes": 25720
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/rmi.dll",
+      "sha256": "92060034e9938db6442d92639c34317a960a3739496a895cef2c6665632a6191",
+      "bytes": 21112
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/rmiregistry.exe",
+      "sha256": "0bf45f2e0c9ae8dc5fc914081b596a073685cea47bacea2b6ab2c63bb3dc73e9",
+      "bytes": 24704
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/saproc.dll",
+      "sha256": "4e1e236e1b011baa8ab477b05a596a1b68f47fed6074e4cc359ead9cf464855b",
+      "bytes": 39032
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/serialver.exe",
+      "sha256": "beda1cda2e11c708290063df7fb6e212d913e0212d72c04f20318df78a3baad7",
+      "bytes": 24704
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/server/classes.jsa",
+      "sha256": "4976b1dabb14668b345ed7513f767de0c45ab8d1c38b8e9b460fd24da731da74",
+      "bytes": 15990784
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/server/classes_coh.jsa",
+      "sha256": "aaab2e7fd187e5ad6ca146f5c1e42cec5b9760fc35aa8de59cc00b9827e43a33",
+      "bytes": 16646144
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/server/classes_nocoops.jsa",
+      "sha256": "11765dd69dda3d4bc36312e8680b5f5750cb206d411ccd1f029a88d880460ad1",
+      "bytes": 16384000
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/server/classes_nocoops_coh.jsa",
+      "sha256": "1334116d266fa1fff19e0b87e08fb7b660be12e8d11e43e29290e019426ef3b7",
+      "bytes": 16973824
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/server/jvm.dll",
+      "sha256": "3db3f5cf8ea1a5798783731fb9ad36d8b425b9d69d676ef07d0b40d709cbde1c",
+      "bytes": 15489656
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/splashscreen.dll",
+      "sha256": "22d67014e1580523efef7aa7cf17f0e8194bd2371d73f6adef54de3e11fee395",
+      "bytes": 211584
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/sspi_bridge.dll",
+      "sha256": "a50443f9e95bbf61f33dc94584c4d4b6ccdac8e178713364264af0fe8d1753a5",
+      "bytes": 45176
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/sunmscapi.dll",
+      "sha256": "1bd50ba7c11a9569fa4a453eaf02eab59e891fb1de96c54c9781700bdd83422e",
+      "bytes": 49272
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/syslookup.dll",
+      "sha256": "96fd02663239e0311c34634ba97c61bc02197d494975549195dcd4978d7ea018",
+      "bytes": 28800
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/ucrtbase.dll",
+      "sha256": "2e5fb14b7bf8540278f3614a12f0226e56a7cc9e64b81cbd976c6fcf2f71cbfb",
+      "bytes": 1361448
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/vcruntime140.dll",
+      "sha256": "02c6aa0e6e624411a9f19b0360a7865ab15908e26024510e5c38a9c08362c35a",
+      "bytes": 119888
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/vcruntime140_1.dll",
+      "sha256": "7dd9aa02e271c68ca6d5f18d651d23a15d7259715af43326578f7dde27f37637",
+      "bytes": 49640
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/verify.dll",
+      "sha256": "403db0e56677a099b73bf04dace5a65cda6f33c306c8a12aebe9121362a49d88",
+      "bytes": 54904
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/w2k_lsa_auth.dll",
+      "sha256": "48f5e02fbe56f861d857d9944e9ca5cc33565a9c9e02acba92c2ac0950ed2d67",
+      "bytes": 32384
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/windowsaccessbridge-64.dll",
+      "sha256": "f3e2886f662d78312b5cc7f66505674cf8fb4478d55454634001c2136593559a",
+      "bytes": 72320
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/zip.dll",
+      "sha256": "6f97fd9d7ba4f69d9dad1affe3cb4dad08a7cd7bad698835e694c293173bc139",
+      "bytes": 82040
+    },
+    {
+      "path": "tools/app-shell-jdk25/conf/jaxp-strict.properties.template",
+      "sha256": "3cc9b87633769414b22c24c97ecded8a15df630fe5ab12abca2398d88e31b32b",
+      "bytes": 4937
+    },
+    {
+      "path": "tools/app-shell-jdk25/conf/jaxp.properties",
+      "sha256": "d4f45052a100e5aef02b6638a3b9c69b2bdd46155ceb58a52671e5d594c30100",
+      "bytes": 8222
+    },
+    {
+      "path": "tools/app-shell-jdk25/conf/logging.properties",
+      "sha256": "8590633e1e8a7d88ffe74cc04189c5c61b1ed4703180cbc851dcd5575efcce74",
+      "bytes": 2740
+    },
+    {
+      "path": "tools/app-shell-jdk25/conf/management/jmxremote.access",
+      "sha256": "0c25d26ee212ca1e8c33f67c3c460d43fe849c3a1d23dbe341148517602b280c",
+      "bytes": 3997
+    },
+    {
+      "path": "tools/app-shell-jdk25/conf/management/jmxremote.password.template",
+      "sha256": "0273b6a6b9e20e6ce54c5aee70164028e0395063b2b7d39060a40b6495543dbf",
+      "bytes": 5690
+    },
+    {
+      "path": "tools/app-shell-jdk25/conf/management/management.properties",
+      "sha256": "75e60327531d34d1ce5eb507db52711a1d926b9c77d14d6b3a392d747105488d",
+      "bytes": 15015
+    },
+    {
+      "path": "tools/app-shell-jdk25/conf/net.properties",
+      "sha256": "594bc40230a0bd7c441fe069989d66e534a6bae2ee5910f9f4bf64e59b583256",
+      "bytes": 7404
+    },
+    {
+      "path": "tools/app-shell-jdk25/conf/security/java.security",
+      "sha256": "273895ae9263b062803fa03ef635f47d311bb455eb2aadacbc57ab85469dfb6c",
+      "bytes": 75524
+    },
+    {
+      "path": "tools/app-shell-jdk25/conf/security/policy/limited/default_local.policy",
+      "sha256": "2b2627548e61316150d47ffc3e6cad465ca05b3cccd4785eb7d21aa7baa0f441",
+      "bytes": 647
+    },
+    {
+      "path": "tools/app-shell-jdk25/conf/security/policy/limited/default_US_export.policy",
+      "sha256": "758b930a526fc670ab7537f8c26321527050a31f5f42149a2dda623c56a0a1a9",
+      "bytes": 146
+    },
+    {
+      "path": "tools/app-shell-jdk25/conf/security/policy/limited/exempt_local.policy",
+      "sha256": "8c3d7648abcd95a272ce12db870082937f4d7f6878d730d83cb7fbb31eb8b2c9",
+      "bytes": 566
+    },
+    {
+      "path": "tools/app-shell-jdk25/conf/security/policy/README.txt",
+      "sha256": "6da0747334b0fea7592fd92614b2bbc8b126535e129b1fee483774d914e98eb5",
+      "bytes": 2390
+    },
+    {
+      "path": "tools/app-shell-jdk25/conf/security/policy/unlimited/default_local.policy",
+      "sha256": "8d8a318e6d90dfd7e26612d2b6385aa704f686ca6134c551f8928418d92b851a",
+      "bytes": 193
+    },
+    {
+      "path": "tools/app-shell-jdk25/conf/security/policy/unlimited/default_US_export.policy",
+      "sha256": "758b930a526fc670ab7537f8c26321527050a31f5f42149a2dda623c56a0a1a9",
+      "bytes": 146
+    },
+    {
+      "path": "tools/app-shell-jdk25/conf/sound.properties",
+      "sha256": "299c2360b6155eb28990ec49cd21753f97e43442fe8fab03e04f3e213df43a66",
+      "bytes": 1210
+    },
+    {
+      "path": "tools/app-shell-jdk25/include/classfile_constants.h",
+      "sha256": "8b6de72964eb1c95de92a0855b27b14428ffb7a076c7b0238b2380594033be5e",
+      "bytes": 22155
+    },
+    {
+      "path": "tools/app-shell-jdk25/include/jawt.h",
+      "sha256": "85101d07928a589accfef9d7c261850faa8d5afc8ef262af7ec9734008f6f2f5",
+      "bytes": 12458
+    },
+    {
+      "path": "tools/app-shell-jdk25/include/jdwpTransport.h",
+      "sha256": "c42256f8596cbf3b59aa25be54bbf2ece47a5dee75d4e6153791dc5620cff2c8",
+      "bytes": 8166
+    },
+    {
+      "path": "tools/app-shell-jdk25/include/jni.h",
+      "sha256": "1e03bd83d1662ac00647f7a06c11d32333767ee537803ec1d153e89888414520",
+      "bytes": 76300
+    },
+    {
+      "path": "tools/app-shell-jdk25/include/jvmti.h",
+      "sha256": "fc6e474d904d17993ab029a93bba3daaffaf7155549439d22ebca708fb835486",
+      "bytes": 85905
+    },
+    {
+      "path": "tools/app-shell-jdk25/include/jvmticmlr.h",
+      "sha256": "6ee3e52d24bdb4f4d0312dfbab3d47bd524cbdac5540a4d790cac0620c59b3c8",
+      "bytes": 4771
+    },
+    {
+      "path": "tools/app-shell-jdk25/include/win32/bridge/AccessBridgeCallbacks.h",
+      "sha256": "92ecc9dc75d30ebdd6ba6da032f567586d258cdd69ccb04621327b9d388f814f",
+      "bytes": 5518
+    },
+    {
+      "path": "tools/app-shell-jdk25/include/win32/bridge/AccessBridgeCalls.h",
+      "sha256": "77c5684dbf00c074ce36c6ca0b5a89e82a503bd23e09f29ec8d57db9239a6565",
+      "bytes": 36050
+    },
+    {
+      "path": "tools/app-shell-jdk25/include/win32/bridge/AccessBridgePackages.h",
+      "sha256": "08f29e6dfc01d32726605d29ff9111b3132dbed0ddecafe4480fcb2b8201b0af",
+      "bytes": 77659
+    },
+    {
+      "path": "tools/app-shell-jdk25/include/win32/jawt_md.h",
+      "sha256": "9c0f6287252019b77a1bac18b92f28153ad46709423fe2cc9e1fa5d16bca38e3",
+      "bytes": 1895
+    },
+    {
+      "path": "tools/app-shell-jdk25/include/win32/jni_md.h",
+      "sha256": "c989b8c6f03c26c6f170836df8531379eb5cb3f5891f5d53f3bd17c1fdb28938",
+      "bytes": 1484
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.base/ADDITIONAL_LICENSE_INFO",
+      "sha256": "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916",
+      "bytes": 2114
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.base/aes.md",
+      "sha256": "45c6d4da48325edfbff3dcf71c704e504c057904435ed23c6d57046d551eb69d",
+      "bytes": 1444
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.base/ASSEMBLY_EXCEPTION",
+      "sha256": "75292f03bf23d3db7c985aecc191029b93883200721ed23ed34a2e601463df33",
+      "bytes": 1514
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.base/c-libutl.md",
+      "sha256": "bef40679922d6fdfb7e4ddb223ad6722300f6054ba737bbf6188d60fcec517f9",
+      "bytes": 1556
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.base/cldr.md",
+      "sha256": "472e341c36efc1136860ed7a6461a2af4a53ae95d55d1126726340f5ba62b06a",
+      "bytes": 8790
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.base/icu.md",
+      "sha256": "be23ad20a8231d2241b37fcf401548febd8597de8373f89268882020cb7c8818",
+      "bytes": 4147
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.base/LICENSE",
+      "sha256": "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726",
+      "bytes": 19274
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.base/public_suffix.md",
+      "sha256": "861de1e4992a7d28f1de25c73cd50d26a94779ebd749c0643fecfa56442c3429",
+      "bytes": 17783
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.base/siphash.md",
+      "sha256": "5a792b5a74ad2a5f3d6a7ad8b7a841116e58a772c18bc6e392320a365b222c76",
+      "bytes": 8256
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.base/unicode.md",
+      "sha256": "5194d6760f2e7eccc07804196cc619f84e730fa9d10c0529b71416186f4d12dc",
+      "bytes": 15098
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.base/wepoll.md",
+      "sha256": "3ac2992770080453b98c42afa807ba4b2c1738ef756b92a55c645f55e7df48f0",
+      "bytes": 1454
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.base/zlib.md",
+      "sha256": "c9c70c36a1f0325e8788771906202d42ba6ab4205caca44ec0f665707e83226b",
+      "bytes": 1010
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.compiler/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.compiler/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.compiler/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.datatransfer/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.datatransfer/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.datatransfer/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.desktop/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.desktop/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.desktop/colorimaging.md",
+      "sha256": "04d61e3e8e71dd452ebe52008af5378d9f6640d14578aeb515dc5375973b0189",
+      "bytes": 167
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.desktop/freetype.md",
+      "sha256": "e1f43089a3d7f846ac72709ba3f5e3dfe4a07955cbb1f5b580c3c41cf93792dd",
+      "bytes": 30570
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.desktop/giflib.md",
+      "sha256": "206aab89ec75968e48a6a1ed6df7d8b9bfb7aea12cbe4c9345d93e5d97460a25",
+      "bytes": 1689
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.desktop/harfbuzz.md",
+      "sha256": "5ec7cba7f8e7fc3a089213140aab6fa1b3bd5bf8a91bf8bddb3b8d315fc5f7d0",
+      "bytes": 3629
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.desktop/jpeg.md",
+      "sha256": "c1dfb9719a71ad9f861f8728550542d681e25c8ef40e6393606e6e2a0c1d653a",
+      "bytes": 3474
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.desktop/lcms.md",
+      "sha256": "6d409e73a4ce3c25479b4fb01d05fe79c0458bcd1dccc07f72d3e211d64ac8ce",
+      "bytes": 2655
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.desktop/libpng.md",
+      "sha256": "f73afb394792f3aeecd959e89487603677a430e56b44eba596d8b572accfd540",
+      "bytes": 7519
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.desktop/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.desktop/mesa3d.md",
+      "sha256": "63f4e6f75caebbccb95d903fb43e46ac7111b3624d0a34f146b276d7d9e7b152",
+      "bytes": 5732
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.instrument/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.instrument/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.instrument/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.logging/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.logging/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.logging/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.management/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.management/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.management/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.management.rmi/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.management.rmi/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.management.rmi/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.naming/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.naming/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.naming/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.net.http/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.net.http/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.net.http/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.prefs/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.prefs/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.prefs/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.rmi/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.rmi/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.rmi/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.scripting/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.scripting/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.scripting/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.se/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.se/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.se/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.security.jgss/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.security.jgss/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.security.jgss/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.security.sasl/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.security.sasl/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.security.sasl/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.smartcardio/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.smartcardio/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.smartcardio/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.sql/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.sql/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.sql/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.sql.rowset/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.sql.rowset/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.sql.rowset/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.transaction.xa/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.transaction.xa/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.transaction.xa/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml/bcel.md",
+      "sha256": "cd578186ad93de46cca29ec8ace2b11f9da751987f3f140e6095c528596cc8c1",
+      "bytes": 11196
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml/dom.md",
+      "sha256": "6686e8877667584a3a7c07344baadca1a03e29f677162d87c3c0811e990d1148",
+      "bytes": 3761
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml/jcup.md",
+      "sha256": "8d5dcfdf50455a3c34c753a98f21e953248af200415a9084e3f102cb6c43b8bf",
+      "bytes": 1448
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml/schema10part1.md",
+      "sha256": "b220f891e5bfa3aa4b2a4b34dfab53a291553c2ae0fd0b15a4cb1116d4e97770",
+      "bytes": 2138
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml/schema10part2.md",
+      "sha256": "2350e35e91866d5ee5bd7ee7c303b3e424bbca335d36c71452588aac494eaa3e",
+      "bytes": 2136
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml/xalan.md",
+      "sha256": "02bd013fc3f438dbb8fa41fa57888177e015efa6431d37fce6e794c6f353a6a1",
+      "bytes": 13477
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml/xerces.md",
+      "sha256": "4a6bf6b367193ee68681cb2d9fed30ffc5d62dd2d477bd62e0271707d71b3244",
+      "bytes": 11848
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml/xhtml10.md",
+      "sha256": "9a5cde47073ca80cf59127891420f4aed603eb65070738ad027bb19e76fb9319",
+      "bytes": 2634
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml/xhtml10schema.md",
+      "sha256": "7bc51d884aaae6ef27551ee78d404ba3116356790da3d06b665679eb2e1cc002",
+      "bytes": 7521
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml/xhtml11.md",
+      "sha256": "4f99a390896f0f55a0b78376de89bfd2ac845713de85e67e37f884b77e0c3122",
+      "bytes": 3258
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml/xhtml11schema.md",
+      "sha256": "8cd69b1392e286538008f4cb003f85caea3a375c619e697813d820b69857cf74",
+      "bytes": 3224
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml/xmlspec.md",
+      "sha256": "afec263bf5dc67697ee33734ee243f86a878161335ef6298273e4041673b0544",
+      "bytes": 2719
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml/xmlxsd.md",
+      "sha256": "498a5fec63509a8f3949983bb6878ac5c95aaf1d5e3679272d93314371aa0211",
+      "bytes": 1951
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml.crypto/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml.crypto/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml.crypto/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/java.xml.crypto/santuario.md",
+      "sha256": "d08690d25f660f145c73365d260ed522cd0aace8a0e1396706551b7a1ae8c9a3",
+      "bytes": 11505
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.accessibility/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.accessibility/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.accessibility/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.attach/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.attach/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.attach/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.charsets/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.charsets/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.charsets/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.compiler/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.compiler/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.compiler/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.crypto.cryptoki/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.crypto.cryptoki/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.crypto.cryptoki/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.crypto.cryptoki/pkcs11cryptotoken.md",
+      "sha256": "1f36ff1342a581142c858f90064e20633d43529ac82adb85345bd902a14e18b2",
+      "bytes": 4095
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.crypto.cryptoki/pkcs11wrapper.md",
+      "sha256": "371974b1fca3744a3892c7ee1fcc593b8b4281fc218f4cafd2f709e9df5fd81d",
+      "bytes": 2131
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.crypto.ec/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.crypto.ec/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.crypto.ec/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.crypto.mscapi/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.crypto.mscapi/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.crypto.mscapi/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.dynalink/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.dynalink/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.dynalink/dynalink.md",
+      "sha256": "17312591cabee3ef6c34ed8897d92e4e361ba9cea41ec00dcd61a322a8fc2cdb",
+      "bytes": 1502
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.dynalink/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.editpad/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.editpad/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.editpad/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.graal.compiler/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.graal.compiler/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.graal.compiler/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.graal.compiler.management/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.graal.compiler.management/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.graal.compiler.management/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.hotspot.agent/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.hotspot.agent/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.hotspot.agent/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.httpserver/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.httpserver/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.httpserver/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.incubator.vector/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.incubator.vector/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.incubator.vector/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.ed/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.ed/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.ed/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.jvmstat/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.jvmstat/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.jvmstat/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.le/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.le/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.le/jline.md",
+      "sha256": "a6fb63a226b77b03cbd7559cce6cdc3e1ea8563af960b1dce2330c8e1dce1abf",
+      "bytes": 1579
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.le/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.md/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.md/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.md/commonmark.md",
+      "sha256": "23a6f08218b13b6dbe16410d11104d56d14861316dd3a064e1fbd5054b6f470c",
+      "bytes": 1354
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.md/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.opt/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.opt/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.opt/jopt-simple.md",
+      "sha256": "99bc67f93cf57d6d20e6047731c93fbb267d70fbdd4115d119e0f85c6efe5c05",
+      "bytes": 1122
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.opt/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.vm.ci/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.vm.ci/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.internal.vm.ci/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jartool/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jartool/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jartool/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.javadoc/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.javadoc/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.javadoc/dejavufonts.md",
+      "sha256": "bcec55913c89822a8292af4e97a5ad7a07aa920dbc49524439ff7c70638dd1e8",
+      "bytes": 8841
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.javadoc/highlightjs.md",
+      "sha256": "3e153ecf41179d31916d1e478e432541df8be58250624cab3a0e77c9b872e90d",
+      "bytes": 1573
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.javadoc/jquery.md",
+      "sha256": "b68f454c2bd58959c862d94bf0f16c3f78a2d537388ca060d354344db80ee695",
+      "bytes": 1157
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.javadoc/jqueryUI.md",
+      "sha256": "7854d2d568992ae25ff65867bd9021d655f70670142f0796b29a3b0621f19530",
+      "bytes": 1871
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.javadoc/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jcmd/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jcmd/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jcmd/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jconsole/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jconsole/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jconsole/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jdeps/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jdeps/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jdeps/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jdi/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jdi/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jdi/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jdwp.agent/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jdwp.agent/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jdwp.agent/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jfr/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jfr/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jfr/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jlink/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jlink/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jlink/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jpackage/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jpackage/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jpackage/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jshell/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jshell/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jshell/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jsobject/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jsobject/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jsobject/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jstatd/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jstatd/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.jstatd/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.localedata/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.localedata/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.localedata/cldr.md",
+      "sha256": "09972449731a1d1a0863af0384aeb7839f84cac74983c96856e6c305e31ed8b2",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.localedata/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.localedata/thaidict.md",
+      "sha256": "c326144a2351c9608fa708b5d7d3c5a3da03e82b66479b128e9db4969539824a",
+      "bytes": 1346
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.management/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.management/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.management/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.management.agent/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.management.agent/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.management.agent/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.management.jfr/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.management.jfr/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.management.jfr/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.naming.dns/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.naming.dns/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.naming.dns/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.naming.rmi/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.naming.rmi/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.naming.rmi/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.net/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.net/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.net/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.nio.mapmode/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.nio.mapmode/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.nio.mapmode/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.sctp/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.sctp/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.sctp/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.security.auth/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.security.auth/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.security.auth/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.security.jgss/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.security.jgss/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.security.jgss/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.unsupported/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.unsupported/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.unsupported/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.unsupported.desktop/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.unsupported.desktop/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.unsupported.desktop/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.xml.dom/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.xml.dom/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.xml.dom/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.zipfs/ADDITIONAL_LICENSE_INFO",
+      "sha256": "ebf9777bd307ed789ceabf282a9aca168c391c7f48e15a60939352efb3ea33f9",
+      "bytes": 49
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.zipfs/ASSEMBLY_EXCEPTION",
+      "sha256": "b998cda101e5a1ebcfb5ff9cddd76ed43a2f2169676592d428b7c0d780665f2a",
+      "bytes": 44
+    },
+    {
+      "path": "tools/app-shell-jdk25/legal/jdk.zipfs/LICENSE",
+      "sha256": "86e0516b888276a492b19f9a84f5a866ed36925fae1510b3a94a0b6213e69192",
+      "bytes": 33
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/classlist",
+      "sha256": "f1ab524ee31780f438d9f1337d367f6567be3dfbc4719290aa9a0273551bea5e",
+      "bytes": 86913
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/ct.sym",
+      "sha256": "656a645d28bbcf74dc6ab2ad5b4ed140538ad3dcc2465c159706a588b4048a72",
+      "bytes": 10875409
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/fontconfig.bfc",
+      "sha256": "c7e2e76b908cb6330823e698889943c162e9861a4575501cbb59c9b830158ab0",
+      "bytes": 4836
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/fontconfig.properties.src",
+      "sha256": "74e6c464ae1e63983ada241869fdc66ef8c28cef403ee2301e0a90db9555b00c",
+      "bytes": 12612
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/jawt.lib",
+      "sha256": "af64af138d14b9fd0849d7f66ad6b529a4e5ec9c25476557bf6b3d65a8ac6884",
+      "bytes": 1682
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/jfr/default.jfc",
+      "sha256": "26f2d7bf2f8473b3849f9480629eee695edf59fd667da838890a22919237718a",
+      "bytes": 40505
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/jfr/profile.jfc",
+      "sha256": "3e2c847608b1e7d182337f56bbf75b6a026ba4e9634b398bd92aec865e9ea8a7",
+      "bytes": 40387
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/jrt-fs.jar",
+      "sha256": "9db95684ba3dcd3ef5409df32a3f32388b0f59f502a437591f3cf5a7ba0fcf58",
+      "bytes": 109853
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/jvm.cfg",
+      "sha256": "aa9efb969444c1484e29adecab55a122458090616e766b2f1230ef05bc3867e0",
+      "bytes": 29
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/jvm.lib",
+      "sha256": "e02ddbe5a3195a6aa811ad32dae06f030e72144eb115747d5b6e4a4b25e6c6c9",
+      "bytes": 1220798
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/modules",
+      "sha256": "1cb0e9773730b32bf5929cdcb2a91a1ff54ba87ade9d26c508edc15cf5f264ba",
+      "bytes": 145102909
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/psfont.properties.ja",
+      "sha256": "5a4bd51b969bf187ff86d94f4a71fdfbfa602762975fa3c73d264b4575f7c78f",
+      "bytes": 3793
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/psfontj2d.properties",
+      "sha256": "cfb2f55fc4a22368567273c38f1afe3fc627ad56710a1d922ada68015710e53f",
+      "bytes": 11402
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/security/blocked.certs",
+      "sha256": "583500b76965eb54b03493372989ab4d3426f85462d1db232c5ae6706a4d6c58",
+      "bytes": 2527
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/security/cacerts",
+      "sha256": "628b436e6698c364c5498a32c5bff91806bea7a9b501f75e2289ddc60b4ca7ef",
+      "bytes": 154503
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/security/public_suffix_list.dat",
+      "sha256": "37e71e43c8605f29b9072f152d0ea4708735cdf335a5b68b2bc2f875760806c3",
+      "bytes": 229254
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/src.zip",
+      "sha256": "726ad631e289979e88688dc53ca8b4486f2296001525011313a548c8e55a3840",
+      "bytes": 52517292
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/tzdb.dat",
+      "sha256": "a02e3a23d67255782b11ab81070902235ab564080f0f65ffe2a989cdaa86fe89",
+      "bytes": 103876
+    },
+    {
+      "path": "tools/app-shell-jdk25/lib/tzmappings",
+      "sha256": "5dc295c7b256e51288e69f817a086db8a8cc0980d657b4b19e0ba0d0d7e5a40c",
+      "bytes": 16079
+    },
+    {
+      "path": "tools/app-shell-jdk25/NOTICE",
+      "sha256": "c02756bcd9fa8191bf0fda4451bc018414dd44ee35bf09922c24377a475e4b5a",
+      "bytes": 2400
+    },
+    {
+      "path": "tools/app-shell-jdk25/release",
+      "sha256": "0901bfa0f4a7675de11c8a2f518272a4698624073f074e32a0393c3f0fb3b3d1",
+      "bytes": 1639
+    },
+    {
+      "path": "tools/clang-21/clang.exe",
+      "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc",
+      "bytes": 99559064
+    },
+    {
+      "path": "tools/clang-21/ld.lld.exe",
+      "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3",
+      "bytes": 69225112
+    },
+    {
+      "path": "tools/clang-21/libwinpthread-1.dll",
+      "sha256": "c9019ab753c2faa5e5da94e3fd4395f1d3d0e7d2509f5ed2d96cccff7f8b9357",
+      "bytes": 96408
+    },
+    {
+      "path": "tools/clang-21/libxml2.dll",
+      "sha256": "e15a377aa308e3f7ba948e6d6622a5dea2308256dbc65858074b61d867af6148",
+      "bytes": 1200792
+    },
+    {
+      "path": "tools/app-shell-sdk36/native-includes/NOTICE",
+      "sha256": "a3c12eee897f63991da71464b690433a15d0d74a508ce0e275436279bdcaff58",
+      "bytes": 493924
+    },
+    {
+      "path": "tools/app-shell-sdk36/native-includes/NOTICE.toolchain",
+      "sha256": "6b8633011d874b75629180e60de13ebfd546a10e56dc7d0380a35f6609f30617",
+      "bytes": 777125
+    },
+    {
+      "path": "platform/app-shell/third-party-native-includes.zip",
+      "sha256": "256c494f3dc50c1744b8c700cd81adb724e82fabe60dd9348db054ea1c4a8925",
+      "bytes": 151286
+    }
+  ],
+  "bundledNativeIncludes": {
+    "path": "platform/app-shell/third-party-native-includes.zip",
+    "sha256": "256c494f3dc50c1744b8c700cd81adb724e82fabe60dd9348db054ea1c4a8925",
+    "targetRoot": "tools/app-shell-sdk36/native-includes",
+    "origin": "unmodified AOSP JNI and LLVM builtin headers from official NDKr30; original license notices included"
+  }
+}

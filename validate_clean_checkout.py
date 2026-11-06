@@ -56,6 +56,16 @@ def main():
     for item in lock['files']:
         copy_pinned(ROOT / item['path'], destination / item['path'], item['sha256'])
         materialized.append({'kind': 'pinned-tool', 'path': item['path'], 'sha256': item['sha256']})
+    app_manifest = destination / 'platform/app-shell/tool-inputs.json'
+    if app_manifest.is_file():
+        existing = {item['path']: item['sha256'] for item in materialized}
+        for item in json.loads(app_manifest.read_text())['files']:
+            if item['path'] in existing:
+                if existing[item['path']] != item['sha256']:
+                    raise ValueError('Conflicting app/tool file pins')
+                continue
+            copy_pinned(ROOT / item['path'], destination / item['path'], item['sha256'])
+            materialized.append({'kind': 'pinned-public-app-tool', 'path': item['path'], 'sha256': item['sha256']})
     for item in lock['wheels']:
         name = 'tools/wheels/' + item['filename']
         copy_pinned(ROOT / name, destination / name, item['sha256'])

@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "testsPassed": 10,
+  "headlessNativeChecks": 13,
+  "recoveredCFunction": "fn_003453a8",
+  "recoveredSmokeResult": 1000,
+  "canonicalReportSha256": "ebdce1d4e3779efafc6cd90c0037c648612bf1a2265e911cc37a4843ebd51b3e",
+  "unittestReportSha256": "10067747708a17ae09dc396eb01768a26edf01feddfb31cdddb4e65f6e3adedc",
+  "sameProjectIndependentOutputArtifactsEqual": {
+    "windowsExe": true,
+    "windowsCoreDll": true,
+    "androidNativeLibrary": true,
+    "signedApkSameDevelopmentKey": true
+  },
+  "isolatedReceiptIndependenceCodeArtifactsEqual": {
+    "windowsExe": true,
+    "windowsCoreDll": true,
+    "androidNativeLibrary": true
+  },
+  "receiptIndependence": {
+    "path": "evidence/lanes/app-shell-wave001/receipt-independence.json",
+    "sha256": "b2c0d4d72d4f1cfa9b6af878d5d0fe6793a90daa18e8283196bcb9b3057ef163"
+  },
+  "toolMaterializer": {
+    "path": "platform/app-shell/materialize_tools.py",
+    "sha256": "b651cfbfc07ace98f1867f1d4155818a181e50c788e3cf565b7bb88cfeb14a9e",
+    "verifyCommand": "python platform/app-shell/materialize_tools.py --verify",
+    "filesVerified": 473
+  },
+  "publicHeaderBundle": {
+    "path": "platform/app-shell/third-party-native-includes.zip",
+    "sha256": "256c494f3dc50c1744b8c700cd81adb724e82fabe60dd9348db054ea1c4a8925"
+  },
+  "immutableSmokeAcceptance": {
+    "sourcePath": "src/native/wave001/leaves.c",
+    "sourceSha256": "da2ca7a59e59d2126dfe9a3992453ccd112c335ccca2a4a0f7283d2d4e1e0efb",
+    "usedFunction": "fn_003453a8",
+    "declaredPurpose": "actual recovered C smoke only; no game-engine or source-credit claim",
+    "acceptancePath": "evidence/cohorts/bundle001/acceptance.json",
+    "acceptanceSha256": "153544d664d389e63dd86f764c69e18e5a7c49e63f9490c3586b755cce78b75b",
+    "acceptedFunction": {
+      "symbol": "fn_003453a8",
+      "address": 3429288,
+      "mode": "ARM",
+      "sourcePath": "src/native/wave001/leaves.c",
+      "sourceSha256": "da2ca7a59e59d2126dfe9a3992453ccd112c335ccca2a4a0f7283d2d4e1e0efb",
+      "originalSpanSha256": "97907aa4eb5afb43f2d03858906cb6823238c1ddc1b453d180d8ee259eb0b67c",
+      "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+    }
+  },
+  "androidDeviceExecuted": false,
+  "windowsGuiRenderingExecuted": false,
+  "privateDevelopmentKeyIgnored": "/work/ ignore rule verified; key not included in deliverables",
+  "fullGameBuild": false,
+  "acceptedSourceCredit": 0
+}
