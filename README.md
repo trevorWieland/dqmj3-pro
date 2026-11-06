@@ -2,7 +2,7 @@
 
 Private reconstruction of the owner's measured Dragon Quest Monsters Joker 3 Professional base and update. The project begins on 6 November 2026. No remote is configured. Game archives, executable images, shipped scripts, assets, keys and saves remain outside Git.
 
-**The decompilation is at its foundation stage. Accepted reconstructed functions and bytes are both zero.** Archive verification, extraction, asset parsing, original scripts and experimental C candidates have separate evidence and earn no accepted source credit. The complete executable inventory and original compiler profile remain open.
+**The first accepted source cohort contains 267 native C functions and 3,208 instruction bytes.** Its ordinary C sources compile with the measured open Clang/LLVM profile, genuinely link at the original addresses, preserve the complete hybrid native image, pass bounded original/source tests and replay from an immutable committed tree. The executable inventory remains incomplete, so no overall source percentage is published. Original gaps, assets, embedded script text and unaccepted candidates receive zero reconstructed-source credit. `recovery.json` and finalized cohort receipts are authoritative.
 
 ## Established inputs
 
@@ -28,7 +28,9 @@ Use Python 3.13.5 on Windows. Tools and dependencies are repository-local. `tool
 
 `run_checks.py` refreshes intake, compares independent extraction, inventories assets and native candidates, runs bounded behavior diagnostics and malformed-input controls, and records a source/tool/input-bound receipt. It does not assert a source-only build, complete decompilation, whole-game behavior or independent clean replay.
 
-The initial validation pipeline passed from an immutable source snapshot `dc486d2` with separately materialized tool, dependency and CIA copies: 20 unittest cases, six native-boundary controls and four independent code/ExHeader comparisons. `evidence/verification/clean-checkout.json` records that replay. Optional Ghidra diagnostics were qualified separately and were excluded from this pipeline replay. The full reconstructed-source acceptance flags in `project.json` remain false because no native source packet is accepted.
+The accepted native pipeline passed from immutable source snapshot `c78d393` with separately materialized tool, dependency and CIA copies: 48 unittest cases, fresh native packet production, six native-boundary controls, four independent code/ExHeader comparisons, real full-image source linking and Windows/Android component builds. `evidence/verification/clean-checkout.json` records that replay. Qualified Ghidra boundary/census descriptors are frozen source inputs; optional Ghidra analysis itself is excluded from the build replay. The earlier foundation receipt remains in `clean-checkout-foundation.json`.
+
+The owner selected an independent public/open-toolchain route. Proprietary compiler or Nintendo SDK availability is not a prerequisite. Historical compiler identification remains separate from the exact measured Clang configurations that establish accepted source. The full objective is 95 percent confirmed validated source coverage and working native Windows and Android games; source-function runners and diagnostic application shells do not satisfy that full objective.
 
 For a fresh source checkout, install with `python setup_tools.py --clang-source PATH_TO_PINNED_MINIMAL_CLANG_DIRECTORY`, then place verified private input copies at `inputs/archive/dqmj3pro/DQMJ3P.cia` and `DQMJ3P_Update.cia`. The Clang directory must contain every pinned Clang/LLD/DLL file. The original owner archive remains external and immutable. Installation verifies downloads before use and leaves global PATH and Java settings unchanged. See [tooling](docs/2026-11-06-tooling.md).
 
@@ -38,4 +40,4 @@ For a fresh source checkout, install with `python setup_tools.py --clang-source 
 
 Read [AGENTS.md](AGENTS.md), the [project charter](docs/2026-11-06-project-charter.md), [roadmap](docs/2026-11-06-roadmap.md) and [validation design](docs/research/validation.md). Workers prepare disjoint frozen packets; one coordinator publishes acceptance after all gates pass. Preserve exact matching, linked source, bounded behavior, full replay and platform execution as distinct states.
 
-The longer-term ambition is a Joker 1 remake using the understood J3 Professional engine. The roadmap tracks the necessary engine capabilities and an initial vertical slice separately from matching-source progress. No complete engine or remake is claimed.
+Windows source-function components execute against original ARM fixtures; Android ARM64 components compile with measured 16 KiB segment alignment. These are partial engine components. Native Windows game execution, packaged Android game execution, AYN Thor validation, source-only engine construction and a complete Joker 1 remake remain unproved. The roadmap keeps those requirements separate from native source acceptance.

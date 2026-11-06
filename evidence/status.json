@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "observedDate": "2026-11-06",
-  "phase": "verified foundation with one nonmatching behavior-tested native candidate",
-  "verifiedSourceSnapshot": "dc486d2",
+  "phase": "accepted partial native reconstruction with open toolchain",
+  "verifiedSourceSnapshot": "c78d393",
   "foundationPipelineReplay": {
     "status": "passed",
     "receipt": "evidence/verification/clean-checkout.json",
@@ -29,12 +29,20 @@
     "runtimePrecedenceProved": false,
     "recoveredSourceCredit": 0
   },
-  "acceptedRecoveredFunctions": 0,
-  "acceptedRecoveredBytes": 0,
+  "acceptedRecoveredFunctions": 267,
+  "acceptedRecoveredBytes": 3208,
   "originalCompilerIdentified": false,
   "executableInventoryComplete": false,
   "wholeGameExecution": false,
   "sourceOnlyExecutableProof": false,
   "sourceOnlyContainerProof": false,
-  "nextMilestone": "identify compiler profile and close one exact native source packet"
+  "nextMilestone": "Close ABI-qualified setters/direct getter cohorts and advance native engine/platform services",
+  "overallSourceCoveragePercent": null,
+  "targetSourceCoveragePercent": 95,
+  "currentReplay": {
+    "status": "passed",
+    "receipt": "evidence/verification/clean-checkout.json",
+    "unitTests": 48,
+    "sourceCohort": "evidence/cohorts/bundle001/acceptance.json"
+  }
 }
