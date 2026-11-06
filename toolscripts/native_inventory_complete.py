@@ -210,7 +210,7 @@ def launch_base(analysis_budget=480, process_budget=660):
                and not preparation.get('conflicts')
                and any('INVENTORY_WAVE002_PREPARATION_SUCCESS' in line for line in lines)
                and any('INVENTORY_WAVE002_EXPORT_SUCCESS' in line for line in lines)
-               and any('ANALYSIS SUCCESSFUL' in line for line in lines))
+               and any('REPORT: Analysis succeeded for file:' in line for line in lines))
     receipt.update({'status': 'qualified-analysis-for-review' if success else 'failed-analysis-preserved',
                     'elapsedSeconds': round(time.monotonic() - started, 3), 'processExitCode': exit_code,
                     'processTimedOut': timed_out, 'analysisTimeoutObserved': bool(timeout_lines),

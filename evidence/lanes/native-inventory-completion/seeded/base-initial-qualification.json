@@ -1,0 +1,134 @@
+{
+  "status": "failed-analysis-preserved",
+  "label": "base",
+  "command": [
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj2pro-decomp\\tools\\ghidra\\ghidra_12.2_PUBLIC\\support\\analyzeHeadless.bat",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\native-inventory-seeded\\base-20261106-170108\\project",
+    "J3SeededBase",
+    "-import",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\native-inventory-seeded\\base-20261106-170108\\inputs\\code.bin",
+    "-loader",
+    "BinaryLoader",
+    "-loader-baseAddr",
+    "0x100000",
+    "-processor",
+    "ARM:LE:32:v6",
+    "-cspec",
+    "default",
+    "-scriptPath",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\native-inventory-seeded\\base-20261106-170108\\scripts",
+    "-preScript",
+    "NativeInventoryDetail.java",
+    "prepare",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\native-inventory-seeded\\base-20261106-170108\\export",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\native-inventory-seeded\\base-20261106-170108\\inputs\\exheader.bin",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\native-inventory-seeded\\base-20261106-170108\\inputs\\code.bin",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\native-inventory-seeded\\base-20261106-170108\\inputs\\manifest.json",
+    "-postScript",
+    "NativeInventoryDetail.java",
+    "export",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\native-inventory-seeded\\base-20261106-170108\\export",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\native-inventory-seeded\\base-20261106-170108\\inputs\\exheader.bin",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\native-inventory-seeded\\base-20261106-170108\\inputs\\code.bin",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\native-inventory-seeded\\base-20261106-170108\\inputs\\manifest.json",
+    "-analysisTimeoutPerFile",
+    "1200",
+    "-max-cpu",
+    "2",
+    "-log",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\native-inventory-seeded\\base-20261106-170108\\analysis.log",
+    "-scriptlog",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\native-inventory-seeded\\base-20261106-170108\\script.log"
+  ],
+  "driver": {
+    "path": "toolscripts/native_inventory_seeded.py",
+    "sha256": "8c1db94199b42dadaca36dba40c005123c39e29553ec610b2de9f85da8cb1301",
+    "bytes": 13363
+  },
+  "java": {
+    "path": "work/native-inventory-seeded/base-20261106-170108/scripts/NativeInventoryDetail.java",
+    "sha256": "df14a0dd814773b6adece336968120763086a79015ae44e6a679b89b34f0bb2c",
+    "bytes": 17289
+  },
+  "manifest": {
+    "path": "work/native-inventory-seeded/base-20261106-170108/inputs/manifest.json",
+    "sha256": "1d48b5e72e3f4210487a166666bae8320bacc38bef3b028bfd9f0d4e563c8f0f",
+    "bytes": 90154
+  },
+  "tools": [
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj2pro-decomp\\tools\\ghidra\\ghidra_12.2_PUBLIC\\support\\analyzeHeadless.bat",
+      "sha256": "dd7b9d17d32ed70a71df82a43a21cdaed6c4ce67064e30f8642c149f81c2ae07",
+      "bytes": 2930,
+      "matchesPriorQualification": true,
+      "priorPath": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj2pro-decomp\\tools\\ghidra\\ghidra_12.2_PUBLIC\\support\\analyzeHeadless.bat"
+    },
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj2pro-decomp\\tools\\ghidra\\ghidra_12.2_PUBLIC\\Ghidra\\Features\\Decompiler\\lib\\Decompiler.jar",
+      "sha256": "74d7333e0461921b2abf4aaa5a40653540664589357469a17ef0d0fbb5c713c4",
+      "bytes": 845440,
+      "matchesPriorQualification": true,
+      "priorPath": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj2pro-decomp\\tools\\ghidra\\ghidra_12.2_PUBLIC\\Ghidra\\Features\\Decompiler\\lib\\Decompiler.jar"
+    },
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj2pro-decomp\\tools\\ghidra\\ghidra_12.2_PUBLIC\\Ghidra\\Features\\Decompiler\\os\\win_x86_64\\decompile.exe",
+      "sha256": "fddb1ad04e88917b7282e887054d30016bc3659894ec5006258c65eca09c6799",
+      "bytes": 2600960,
+      "matchesPriorQualification": true,
+      "priorPath": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj2pro-decomp\\tools\\ghidra\\ghidra_12.2_PUBLIC\\Ghidra\\Features\\Decompiler\\os\\win_x86_64\\decompile.exe"
+    },
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj2pro-decomp\\tools\\ghidra\\ghidra_12.2_PUBLIC\\Ghidra\\Framework\\SoftwareModeling\\lib\\SoftwareModeling.jar",
+      "sha256": "9bf753732d1bee51d0be655cbbfb55095a21b4d4ff9ddc965ee5c4c57faf50df",
+      "bytes": 4904165,
+      "matchesPriorQualification": true,
+      "priorPath": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj2pro-decomp\\tools\\ghidra\\ghidra_12.2_PUBLIC\\Ghidra\\Framework\\SoftwareModeling\\lib\\SoftwareModeling.jar"
+    },
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj2pro-decomp\\tools\\ghidra\\ghidra_12.2_PUBLIC\\Ghidra\\Processors\\ARM\\data\\languages\\ARM6_le.sla",
+      "sha256": "b18afec409b326f06f0d083ae3e7d4c2d732335a649d27eea3b52a11dd691022",
+      "bytes": 167173,
+      "matchesPriorQualification": true,
+      "priorPath": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj2pro-decomp\\tools\\ghidra\\ghidra_12.2_PUBLIC\\Ghidra\\Processors\\ARM\\data\\languages\\ARM6_le.sla"
+    },
+    {
+      "path": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj2pro-decomp\\tools\\ghidra\\ghidra_12.2_PUBLIC\\Ghidra\\Processors\\ARM\\data\\languages\\ARM_v45.cspec",
+      "sha256": "9b10d18dd46deb2b4e1c8d2a4fc53e61fc18a26dd0a2b59ffe9cefba04af3de8",
+      "bytes": 5756,
+      "matchesPriorQualification": true,
+      "priorPath": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj2pro-decomp\\tools\\ghidra\\ghidra_12.2_PUBLIC\\Ghidra\\Processors\\ARM\\data\\languages\\ARM_v45.cspec"
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/java.exe",
+      "sha256": "f961fb8db73c7c546821bc6d30fdaa8ce2458da460a5e75e2c39189cd107e6ba",
+      "bytes": 50304,
+      "matchesPriorQualification": true,
+      "priorPath": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj2pro-decomp\\tools\\jdk\\jdk-25.0.5+8\\bin\\java.exe"
+    },
+    {
+      "path": "tools/app-shell-jdk25/bin/server/jvm.dll",
+      "sha256": "3db3f5cf8ea1a5798783731fb9ad36d8b425b9d69d676ef07d0b40d709cbde1c",
+      "bytes": 15489656,
+      "matchesPriorQualification": true,
+      "priorPath": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj2pro-decomp\\tools\\jdk\\jdk-25.0.5+8\\bin\\server\\jvm.dll"
+    }
+  ],
+  "analysisBudgetSeconds": 1200,
+  "processBudgetSeconds": 1500,
+  "seedCount": 1414,
+  "sourceCredit": 0,
+  "processExitCode": 0,
+  "processTimedOut": false,
+  "analysisTimedOut": false,
+  "elapsedSeconds": 470.098,
+  "warningCount": 15,
+  "errorCount": 7,
+  "privateStdout": {
+    "path": "work/native-inventory-seeded/base-20261106-170108/stdout.log",
+    "sha256": "81ede9162b11a1a42566e261271ec8b397c17840dc556c79fc58a21055ad4468",
+    "bytes": 17878
+  },
+  "candidateFunctions": 26535,
+  "bodyBytes": 5934455,
+  "unclassifiedTextBytes": 405271
+}

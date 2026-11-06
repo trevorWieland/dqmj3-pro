@@ -1,11 +1,19 @@
 {
-  "schemaVersion": 1,
-  "readyForProgress": false,
-  "blockers": [
-    "The complete executable inventory and reporting denominator have not been reviewed.",
-    "Per-unit original target objects and source-built base objects are not configured."
+  "schemaVersion": 2,
+  "readyForProgress": true,
+  "blockers": [],
+  "versions": [
+    "update-content0"
   ],
-  "versions": ["update-content0"],
-  "reviewedInventory": null,
-  "units": []
+  "reportingBasis": "initialized-native-text",
+  "objectMap": "build/update-content0/objects/object-map.json",
+  "census": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+  "reviewedScope": {
+    "path": "evidence/lanes/executable-scope/scope.json",
+    "sha256": "c974e6ed9d999276452bc35588b703d52ba1061aa4ffee6b166cbdda6d060dcf"
+  },
+  "staticTextAccounting": {
+    "path": "evidence/lanes/native-inventory-completion/static-text/update.json",
+    "sha256": "ebe17802ab957420eef7a84f559b6813e2df192c262c3facdfb52806044b0459"
+  }
 }

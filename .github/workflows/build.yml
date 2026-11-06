@@ -49,12 +49,37 @@ jobs:
           if (-not $config.readyForProgress) {
             'Verified accepted native sources and exact hybrid integration. ByteMatch reporting is pending the reviewed executable inventory; no whole-game report was uploaded.' >> $env:GITHUB_STEP_SUMMARY
           }
+      - name: Build original and genuine source objdiff objects
+        if: steps.progress.outputs.ready == 'true'
+        shell: pwsh
+        run: |
+          $config = Get-Content -LiteralPath config/objdiff-units.json -Raw | ConvertFrom-Json
+          & tools/report-python/Scripts/python.exe -I toolscripts/objdiff_objects.py --census $config.census
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Test reporting objects and denominator controls
+        if: steps.progress.outputs.ready == 'true'
+        shell: pwsh
+        run: |
+          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_objdiff_objects.py -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_finalize_objdiff_report.py -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_static_report_configuration.py -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Configure reviewed objdiff project
         if: steps.progress.outputs.ready == 'true'
         run: tools/report-python/Scripts/python.exe -I toolscripts/configure_objdiff.py --version update-content0 --output objdiff.json
       - name: Generate progress report
         if: steps.progress.outputs.ready == 'true'
         run: tools/objdiff-3.8.3/objdiff-cli.exe report generate -o build/update-content0/report.json
+      - name: Account for every initialized native text byte
+        if: steps.progress.outputs.ready == 'true'
+        shell: pwsh
+        run: |
+          Copy-Item -LiteralPath build/update-content0/report.json -Destination build/update-content0/report.raw.json
+          & tools/report-python/Scripts/python.exe -I toolscripts/finalize_objdiff_report.py --input build/update-content0/report.raw.json
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          'ByteMatch code coverage uses every initialized main ARM text byte, including pools and unclassified regions. Function totals count discovered canonical entries. Only accepted exact source spans receive credit. See docs/bytematch.md.' >> $env:GITHUB_STEP_SUMMARY
       - name: Upload progress report
         if: steps.progress.outputs.ready == 'true'
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9

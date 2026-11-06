@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "status": "independent-gate-and-artifact-review-passed",
+  "tests": [
+    {
+      "path": "tests/test_objdiff_objects.py",
+      "sha256": "f86cbe8eaeb9a0451098588e88933235b883ca9ef559fd123b21ca9918ae6281",
+      "cases": 9,
+      "outcome": "passed"
+    },
+    {
+      "path": "tests/test_finalize_objdiff_report.py",
+      "sha256": "9479c4d2ac5d4dad5cc52dab91a428115a70e2368d775594ea271d72b3ec7bc9",
+      "cases": 20,
+      "outcome": "passed"
+    },
+    {
+      "path": "tests/test_static_report_configuration.py",
+      "sha256": "e8b4e4b2db813f5184343f707af4ccf0a535a5ff85c5b070bff8297c690d143f",
+      "cases": 16,
+      "outcome": "passed"
+    }
+  ],
+  "testCasesPassed": 45,
+  "normalizer": {
+    "path": "toolscripts/finalize_objdiff_report.py",
+    "sha256": "8e5d733fb2d9cabd1c37c0f761d6a0e744c5fadff65511ea81b3388cfb39b4ab"
+  },
+  "configurationProducer": {
+    "path": "toolscripts/configure_objdiff.py",
+    "sha256": "0f8bf0dbdb8d69cd23d010dba7d90f2cb09d6b238761972c5ba811bf59bf198c"
+  },
+  "finalReportSha256": "0ff0ce449c67036574ca5216830cc8bc9029e2bb1a98f3e37d7a7c6419b81e76",
+  "scopedTamperControls": [
+    "source candidate exclusion via genuine linker selection",
+    "target/base private work-copy byte corruption with recomputed hash",
+    "source-header freshness without changing frozen files",
+    "source or completion metadata changes",
+    "missing duplicated overlapping or reclassified original ranges",
+    "fabricated matching or partial fuzzy credit",
+    "swapped equal-size matched identities",
+    "counter corruption invalid integers booleans and nonfinite percentages",
+    "unknown nested payload fields excluded from public schema",
+    "incomplete scope old producer fake accounting and mismatched census",
+    "run labels flags timeout seed count mode preparation and qualification identity"
+  ],
+  "originalInputsModified": false,
+  "remoteIngestionOrSourceCheckerClaimed": false
+}

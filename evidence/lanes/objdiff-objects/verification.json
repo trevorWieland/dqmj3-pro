@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "status": "genuine-reference-and-source-objects-verified",
+  "producer": {
+    "path": "toolscripts/objdiff_objects.py",
+    "sha256": "f62ceb91c522b56c06ce8b4b28543dfa40633c66c07dbe3757bdbdeceef93b7d"
+  },
+  "testFile": {
+    "path": "tests/test_objdiff_objects.py",
+    "sha256": "f86cbe8eaeb9a0451098588e88933235b883ca9ef559fd123b21ca9918ae6281"
+  },
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "census": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55"
+  },
+  "objectMapSha256": "3946f6075966232f70c5070fe32d1f7df092f2e844f5d733c3bde6fb4ad228fa",
+  "initializedTextBytes": 7051280,
+  "initializedDataBytes": 1102288,
+  "bssBytes": 210988,
+  "matchedCodeBytes": 4164,
+  "matchedFunctions": 356,
+  "unitCount": 11,
+  "stockMeasures": {
+    "fuzzy_match_percent": 0.081267014,
+    "total_code": "5123850",
+    "matched_code": "4164",
+    "matched_code_percent": 0.081267014,
+    "total_data": "1313276",
+    "total_functions": 26573,
+    "matched_functions": 356,
+    "matched_functions_percent": 1.3397057,
+    "total_units": 11
+  },
+  "completeUnits": 0,
+  "sourceBuild": {
+    "status": "source-linked-hybrid-module-match",
+    "sourceLinkedFunctionCount": 356,
+    "sourceLinkedBytes": 4164,
+    "sourceOnlyModule": false,
+    "wholeGameExecution": false,
+    "boundedBehaviorRerun": false,
+    "compiledSourceUnits": 10
+  },
+  "targetTextPartitionConserved": true,
+  "sourceExecutableBytesOnlyAccepted": true,
+  "noFakeGapFunctionSymbols": true,
+  "denominatorNormalizerRequired": true,
+  "productionReadinessGranted": false,
+  "tests": {
+    "count": 9,
+    "outcome": "passed",
+    "syntheticOriginalsOnly": true
+  },
+  "limits": [
+    "Stock total_code excludes unsymbolized executable bytes; a separately reviewed denominator normalizer is required.",
+    "Function counts are discovered census entries; exact pool, cold-tail and overall game executable completeness remain separate reviews.",
+    "Reference target objects contain original bytes and must never be uploaded.",
+    "Base objects contain only genuine accepted source sections; candidates are discarded by LLD, never patched."
+  ]
+}

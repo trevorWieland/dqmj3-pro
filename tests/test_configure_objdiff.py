@@ -14,9 +14,15 @@ SPEC.loader.exec_module(EXPORT)
 
 
 class PendingConfiguration(unittest.TestCase):
-    def test_repository_configuration_is_explicitly_blocked(self):
-        with self.assertRaisesRegex(ValueError, "progress is blocked"):
-            EXPORT.configure(ROOT, "config/objdiff-units.json", "update-content0")
+    def test_disabled_configuration_cannot_publish_even_with_objects_present(self):
+        with tempfile.TemporaryDirectory(prefix="objdiff-disabled-", dir=ROOT / "work") as temporary:
+            root = Path(temporary)
+            (root / "config").mkdir()
+            data = {"schemaVersion": 2, "readyForProgress": False,
+                    "blockers": ["Synthetic unreviewed scope"], "versions": ["update-content0"]}
+            (root / "config/objdiff-units.json").write_text(json.dumps(data))
+            with self.assertRaisesRegex(ValueError, "progress is blocked"):
+                EXPORT.configure(root, "config/objdiff-units.json", "update-content0")
 
 
 class ObjectConfiguration(unittest.TestCase):

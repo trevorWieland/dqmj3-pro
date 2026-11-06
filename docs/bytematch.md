@@ -1,51 +1,59 @@
 # ByteMatch progress integration
 
-The measured base title version is 0 (`00040000001acb00`); the measured update title version is 3136 (`0004000e001acb00`). The initial reconstructed native module is `update-content0`. These are measured input identities, not an assertion of retail revision or translation provenance. The base executable remains a separate target with different addresses and bytes.
+The [project page](https://bytematch.dev/trevorWieland/dqmj3-pro) tracks the measured update main ARM image, `update-content0`. The measured base title version is 0 (`00040000001acb00`); the update title version is 3136 (`0004000e001acb00`). These identify the owner's actual inputs, without asserting unmodified retail or translation provenance. Base and update addresses remain separate.
 
-The reporting configuration is deliberately pending. `config/objdiff-units.json` has `readyForProgress: false` and no units. The executable inventory needs complete review and an explicit mapping to original/source object pairs before a report can represent the project. An accepted-only subset would produce a misleading 100-percent result and must not be uploaded as game progress. Source compilation and the 356 accepted functions do not resolve the whole-game denominator.
+## Complete byte denominator
 
-## Generate the project configuration
+The code denominator is every ExHeader-declared initialized main ARM text byte. It includes instructions, literal pools, internal alignment and unclassified text. Page-alignment padding outside the initialized extent is excluded. This is an exact, conservative native-text reconstruction baseline; it does not claim an instruction-only denominator or complete historical function boundaries.
 
-`objdiff.json` is generated; edit the manifest and generator rather than a generated file:
+| Measured image | Initialized ARM text bytes | Accepted source bytes | Native text reconstruction |
+| --- | ---: | ---: | ---: |
+| Base | 7,042,136 | 0 | 0% |
+| Update | 7,051,280 | 4,164 | 0.059053108% |
 
-```powershell
-python toolscripts/configure_objdiff.py --version update-content0
-```
+The base baseline is inventoried separately; only the update currently has admitted source and a supported ByteMatch report. The update's 842,252 initialized rodata bytes, 260,036 initialized data bytes and 210,988 BSS bytes give a separate 1,313,276-byte data denominator, with zero matched data. DSP firmware, PICA shader programs, original interpreted scripts, assets and system firmware do not enter the ARM text denominator. They retain their own inventories and receive no native source credit.
 
-Until readiness is reviewed, this exits unsuccessfully with the configured blockers. It does not create an empty project or substitute source-built objects for missing originals. A successful export requires all of the following:
+[Executable scope](executable-scope.md) records a fresh recursive audit of both measured CIAs and every supported archive member. It reconciles declared programs and structurally qualifying additional executable candidates. Permitted but unobserved loader services do not invent modules. [Static text accounting](../evidence/lanes/native-inventory-completion/static-text/update.json) independently partitions every initialized text byte into admitted source or unmatched original text. Missing, overlapping or reclassified ranges fail validation.
 
-- `readyForProgress` is explicitly true and the version is configured.
-- `reviewedInventory` references a JSON file by repository-relative `path` and `sha256`. That file states `complete: true`, `reviewed: true`, a named `reviewer`, nonempty `scope`, the exact `version`, and exhaustive `unitNames`. A reviewer must establish the inventory independently; setting these fields is not evidence of completeness.
-- Every inventory unit appears exactly once in the manifest for that version. Each unit names an existing public `source_path`, an explicit `complete` boolean, and separate `target` and `base` objects, each with `path` and `sha256`. Both objects must already exist as little-endian ARM32 ELF relocatables with symbol tables. Original target objects stay private.
-- A unit's `name` is its source-tree path without the file extension, or its source directory. This preserves folder grouping. Paths must remain inside the repository and cannot traverse symlinks or `..` components.
-- A true completion flag requires `completionEvidence` with `path` and `sha256`. Its JSON states `matched: true`, `sourceLinked: true`, the exact `version` and `unit`, and `targetSha256`/`baseSha256` matching the supplied objects. The review must establish these claims from real matching and linking; compilation alone cannot grant completion.
+Function totals count discovered canonical entry symbols from the qualified constructor-seeded census. They support navigation and matching, not a universal historical function total. Discontiguous cold tails, pools and unknown regions still count fully in the byte denominator. No fake gap functions are created. Complete static corpus/byte accounting does not assert complete semantic classification, whole-game behavior, runtime asset precedence or a source-only playable game.
 
-The generator emits `target_path`, `base_path`, `metadata.source_path` and `metadata.complete`. It emits no categories because this project has not defined a reviewed game/engine/library progress split. It disables objdiff's implicit builds: the existing project pipeline must first produce the actual objects. Other architectures, missing objects, stale hashes, incomplete inventories and absent source paths fail explicitly.
+## Original and source object mapping
 
-## CI reports and source links
+`objdiff.json` is generated. Edit `config/objdiff-units.json` and the generators, not their output. Each admitted C file has a hierarchical source-tree unit name, original target and genuinely compiled base object, and its actual repository-relative source path. LLD retains only accepted function sections; extra candidates never receive accidental matching credit. [Object production](objdiff-objects.md) documents this selection.
 
-The trusted `build.yml` workflow follows the public-source/private-original pattern in pokebw2. Public source lives in `trevorWieland/dqmj3-pro`; original CIA inputs live only in the private `trevorWieland/dqmj3-pro-inputs` repository. Its read-only SSH deploy key is stored as `INPUTS_DEPLOY_KEY` in the public repository's Actions secrets. This is input access for CI; ByteMatch needs no token. Fork pull requests run only the separate public source compilation workflow.
+The `src/native` unit owns every remaining text byte and all rodata/data/BSS. Its base is a genuinely compiled empty translation unit, representing the absence of admitted implementation. Its source path identifies the implementation folder; it does not assert that unwritten functions exist there. Original reference sections stay private. Every unit remains `complete: false`: admission of selected functions does not complete its whole source file. No game/engine/library categories are invented.
 
-The private repository stores ordered XZ parts below GitHub's per-file size limit. CI checks every part and the decompressed CIA hashes against the measured project identities. It extracts both executables, rebuilds the accepted source units with their frozen compiler profiles, compares complete function sections and verifies genuine source integration into the hybrid image. It does not rerun bounded behavior tests or claim a source-only game. Originals, retained gaps, hybrid images, private manifests and raw build logs are never public artifacts.
+The schema-2 configuration requires pinned scope and static byte-accounting reviews, a successfully completed seeded analysis and an object map built from that exact census. Configuration independently verifies object hashes, original bytes, complete range ownership, admitted source/header hashes and all discovered symbol identities before emitting the project file.
 
-The workflow runs on pushes to `main` and manual dispatch. While `readyForProgress` is false it verifies the accepted native build, explicitly records the inventory blocker in the Actions summary and uploads no progress report. [Inventory issue #1](https://github.com/trevorWieland/dqmj3-pro/issues/1) tracks the outstanding work. Both the reviewed denominator and the real per-unit object mapping must be finished before enabling reports.
+## CI and report normalization
 
-After a reviewed full mapping is available and the build succeeds, run:
+The trusted `build.yml` workflow follows pokebw2's public-source/private-original pattern. Public development is in `trevorWieland/dqmj3-pro`. Original CIA inputs live only in the private `trevorWieland/dqmj3-pro-inputs` repository. Its read-only SSH deploy key is stored as `INPUTS_DEPLOY_KEY` for private input access; ByteMatch needs no token. Fork pull requests run only public source compilation.
+
+The private repository stores ordered XZ parts. CI verifies every part, decompressed CIA hashes, TMD/ExeFS content and main-image identities. It rebuilds the admitted profiles, compares complete function sections and verifies genuine source integration into the hybrid image. It does not claim bounded behavior tests ran in that job or that the game is built entirely from source.
+
+After object production and configuration, CI runs:
 
 ```text
 objdiff-cli report generate -o build/update-content0/report.json
 ```
 
-Upload only that report in `update-content0_report` from a successful push run on the default branch. Keep original objects, retained-original gaps, hybrid images and private inputs out of artifacts. Add one separately configured report/artifact for any later supported executable version. ByteMatch downloads reports itself; no ByteMatch token is required. See its [CI artifact requirements](https://bytematch.dev/docs/getting-started).
+Stock objdiff sums code symbols and omits unsymbolized executable bytes. `toolscripts/finalize_objdiff_report.py` verifies the actual original/source ELF objects, preserves the CLI's exact matching identities and sizes, and replaces each unit's code denominator with its complete executable-section byte size. Overall counters and percentages are recomputed from those exhaustive units. Cold/unknown surroundings contribute unmatched bytes without becoming invented functions. Final JSON is reconstructed from a fixed safe schema so arbitrary payload fields cannot reach the public artifact.
 
-The reviewed accepted set currently uses exact canonical C symbols for 356 of 356 accepted functions, so a rename header is unnecessary. Future differing source/report symbols need a generated names mapping or another mechanism supported by [ByteMatch source linking](https://bytematch.dev/docs/source-linking). Do not change frozen C solely to satisfy source lookup. No maintained list currently certifies working but nonmatching functions, so no `functional.json` is invented from candidate or bounded-test status. If such a reviewed list is added, export it beside `report.json` with function names and explicit `high`, `medium` or `low` confidence.
+Only `build/update-content0/report.json` is uploaded as `update-content0_report` after a successful push build on `main`. No original objects, hybrid images, input parts, raw private logs, signing material, build directories or caches are uploaded. The report retains objdiff schema 2; ByteMatch preserves its explicit measures. Tests exercise real Clang/LLD/objdiff objects and the actual ByteMatch parser, protobuf round-trip and source lexer.
 
-Once ByteMatch has ingested a successful default-branch push report, run its [source-link checker](https://github.com/Veradictus/ByteMatch/blob/master/scripts/check-source-links.py) against `trevorWieland/dqmj3-pro`. A local configuration check or exact symbol inventory cannot substitute for that server-side result. Registration, ingestion and the checker remain unverified until that event occurs.
+## Source links and reproduction
 
-## Local checks
+All 356 admitted report symbols use their exact C definition names, so a rename header is unnecessary. Future renames need a generated mapping or another mechanism from [ByteMatch source linking](https://bytematch.dev/docs/source-linking). Virtual addresses are independently checked against original section mapping. Unwritten functions may correctly be absent from the public source. No reviewed working/nonmatching function registry exists, so no `functional.json` is invented from bounded candidate tests.
+
+With private inputs and pinned report tools available:
 
 ```powershell
-python -m unittest discover -s tests -p test_configure_objdiff.py -v
+python toolscripts/bootstrap_report_tools.py
+tools/report-python/Scripts/python.exe -I toolscripts/ci_native_build.py --private-inputs work/private-inputs
+tools/report-python/Scripts/python.exe -I toolscripts/objdiff_objects.py --census evidence/lanes/native-inventory-completion/seeded/update-census.json
+tools/report-python/Scripts/python.exe -I toolscripts/configure_objdiff.py
+tools/objdiff-3.8.3/objdiff-cli.exe report generate -o build/update-content0/report.raw.json
+tools/report-python/Scripts/python.exe -I toolscripts/finalize_objdiff_report.py
 ```
 
-The tests compile a small synthetic function using the pinned local Clang under ignored `work/`, then exercise successful configuration and failures for unbuilt objects, missing sources, traversal, stale hashes, wrong object format, missing source-link proof and an omitted inventory unit. They use no original game bytes. Genuine-object cases report a skip when the local compiler is unavailable; the pending production configuration must still fail explicitly.
+After ingestion, run the unmodified [ByteMatch source-link checker](https://github.com/Veradictus/ByteMatch/blob/master/scripts/check-source-links.py) against `trevorWieland/dqmj3-pro`, for example with `--version update-content0 --per-unit 3`. The hosted result is checked separately from local tests. The [inventory issue](https://github.com/trevorWieland/dqmj3-pro/issues/1) retains historical boundary/classification follow-up; that uncertainty does not drop bytes from the denominator.
