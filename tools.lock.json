@@ -38,6 +38,13 @@
       "filename": "unicorn-2.1.4-cp37-abi3-win_amd64.whl",
       "sha256": "d7107500c64ce5c168fbff6bef9485b5db1350050036f4cea568650cf8bdbdf5",
       "url": "https://files.pythonhosted.org/packages/70/3d/de7be9bd1addabe6d8a1369381f8a080400c349850e978689c5e18287957/unicorn-2.1.4-cp37-abi3-win_amd64.whl"
+    },
+    {
+      "name": "z3-solver",
+      "version": "5.3.3.0",
+      "filename": "z3_solver-5.3.3.0-py3-none-win_amd64.whl",
+      "sha256": "d189844a586242fe3d2a701c09751a80d518645931931a7c6bf29df679044215",
+      "url": "https://files.pythonhosted.org/packages/fd/e5/ae23ab342acb1a18adc893f633f24c0a227aa745888c162bbec7070e4a8e/z3_solver-5.3.3.0-py3-none-win_amd64.whl"
     }
   ],
   "files": [
@@ -100,6 +107,18 @@
       "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/libdl.so",
       "size": 12904,
       "sha256": "b9d8f21c840570a4fe41b5a24c37651d1980fcda7d323003afcbd8483d3da51a"
+    },
+    {
+      "path": "tools/formal-wave001/z3_solver-5.3.3.0-py3-none-win_amd64.whl",
+      "source": "tools/wheels/z3_solver-5.3.3.0-py3-none-win_amd64.whl",
+      "size": 16926690,
+      "sha256": "d189844a586242fe3d2a701c09751a80d518645931931a7c6bf29df679044215"
+    },
+    {
+      "path": "tools/formal-wave001/z3-wheel-provenance.json",
+      "source": "evidence/lanes/formal-equivalence-wave001/tool-provenance/z3-wheel-provenance.json",
+      "size": 11299,
+      "sha256": "0e8312981b2e5f3379a6edfb9d8ddd14ae83c20229393b0801258d0f8f7c16c0"
     }
   ],
   "nativeLibraries": [
@@ -112,6 +131,11 @@
       "path": "tools/python/Lib/site-packages/unicorn/lib/unicorn.dll",
       "size": 9598976,
       "sha256": "010d85dce84b8f6ffaec3d5420f1b5f7768f859eb831be574c7da23e656ee8f1"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/z3/lib/libz3.dll",
+      "size": 17490432,
+      "sha256": "b6a30c2922293c2a2cab4299637935302d8fb0427762b5a3d2dc16f392f27b8c"
     }
   ],
   "runtimeVersions": {

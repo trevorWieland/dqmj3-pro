@@ -1,0 +1,18 @@
+{
+  "attempts": [
+    {
+      "stage": "initial prototype whole-object relocation guard",
+      "outcome": "Rejected before any SMT result: unrelated object ARM.exidx relocation sections were included in a global relocation guard",
+      "resolution": "Target-body relocations remain forbidden; every remaining relocation in the genuinely linked executable remains forbidden. Other object functions and unwind metadata are outside the function proof.",
+      "initialSourceSnapshotCaptured": false,
+      "sourceCredit": 0
+    }
+  ],
+  "unsupportedFamiliesRejectedByTests": [
+    "compiled pointer load",
+    "compiled infinite branch",
+    "signed overflow expression domain",
+    "shift count potentially >=32",
+    "missing return/truncated or trailing instruction body"
+  ]
+}

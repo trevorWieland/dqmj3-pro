@@ -58,6 +58,20 @@ def install(lock, clang_source, android_source=None):
     subprocess.run([str(py), '-m', 'pip', 'install', '--no-index', '--find-links',
                     str(ROOT / 'tools/wheels'), *[f"{x['name']}=={x['version']}" for x in lock['wheels']]],
                    check=True)
+    for item in lock['files']:
+        if 'source' not in item:
+            continue
+        source = (ROOT / item['source']).resolve()
+        destination = (ROOT / item['path']).resolve()
+        if not source.is_relative_to(ROOT) or not destination.is_relative_to(ROOT / 'tools'):
+            raise ValueError('Pinned tool materialization escaped the project')
+        if not source.is_file() or digest(source) != item['sha256']:
+            raise ValueError('Pinned tool materialization source differs')
+        if destination.exists() and digest(destination) != item['sha256']:
+            raise ValueError('Existing materialized tool differs')
+        if not destination.exists():
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(source, destination)
     archive = lock['ctrtoolArchive']
     path = ROOT / 'tools/ctrtool-v1.3.0-win_x64.zip'
     download(archive['url'], path, archive['sha256'])

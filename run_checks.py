@@ -60,6 +60,7 @@ def main():
         ('native-memory-platforms', ['toolscripts/platform_memory_build.py', '--capture-native']),
         ('public-app-tools', ['platform/app-shell/materialize_tools.py', '--verify']),
         ('native-diagnostic-app', ['toolscripts/app_shell_build.py']),
+        ('formal-research-pilot', ['toolscripts/formal_equivalence_wave001.py']),
         ('tests', ['-m', 'unittest', 'discover', '-s', str(ROOT / 'tests'), '-v']),
     ]
     passed = True
@@ -100,7 +101,8 @@ def main():
                 'evidence/lanes/wave006-native/packet.json',
                 'evidence/cohorts/bundle002/verification.json',
                 'evidence/lanes/platform-memory-wave001/report.json',
-                'evidence/lanes/app-shell-wave001/report.json']
+                'evidence/lanes/app-shell-wave001/report.json',
+                'evidence/lanes/formal-equivalence-wave001/packet.json']
     receipt['artifacts'] = []
     if passed:
         for name in expected:
