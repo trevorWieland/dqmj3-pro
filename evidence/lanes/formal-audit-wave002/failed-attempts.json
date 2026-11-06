@@ -1,0 +1,21 @@
+[
+  {
+    "stage": "first fresh P-code/solver audit",
+    "failure": "cvc5 parser rejected duplicate set-logic from solver setup plus exported SMT-LIB file",
+    "outcome": "Fail-closed before publishing audit packet; fresh compiler/linker and P-code exports retained",
+    "failedDriver": {
+      "path": "work/formal-audit-wave002/run-001/failed-driver.py",
+      "sha256": "107c10699970f2402e9a92cc25a610d55edf7c2f307793881f80f1a8ed94968f"
+    },
+    "resolution": "Set API logic only for prior frozen queries which have no set-logic command; new audit queries declare their own logic",
+    "sourceCredit": 0
+  },
+  {
+    "stage": "explicit-context qualification and canonical userop argument guard",
+    "failure": "Conservative guard required simplifier alone to prove canonical 0/1 ITE; simplifier did not discharge the valid expression",
+    "outcome": "Failed before audit queries or publication; old complete attempt and raw exports preserved",
+    "failedModelSha256": "6456e715eb589af5a921ca144d32363fbbbc2d21580519101d45b332ee797df9",
+    "resolution": "Use a sound structural canonical-Boolean check for 0/1 constants and recursively canonical ITE branches, and add a noncanonical argument rejection test",
+    "sourceCredit": 0
+  }
+]

@@ -1,0 +1,128 @@
+{
+  "frozen": true,
+  "status": "Research-only audited P-code equivalence under declared contract; zero source credit",
+  "files": [
+    {
+      "path": "evidence/lanes/formal-audit-wave002/packet.json",
+      "sha256": "9c8023bf825716710f4f741c785847b9d2bfbef7f8f77673fc61f1f3fc8ff131",
+      "bytes": 34481
+    },
+    {
+      "path": "evidence/lanes/formal-audit-wave002/runtime.json",
+      "sha256": "7f69514e7681929b94fae6bf85a974c36cbd05e2371f25e4aebff9d935222ad7",
+      "bytes": 5150
+    },
+    {
+      "path": "evidence/lanes/formal-audit-wave002/tests.json",
+      "sha256": "b6f724829ea2356ff88f3e1fdb1cfe6997f262b202249ae19df6edd60f5008f1",
+      "bytes": 761
+    },
+    {
+      "path": "evidence/lanes/formal-audit-wave002/context-qualification.json",
+      "sha256": "5b5dc39e8ce5806bda39b5b756c227b4456f877feb039baaf238621a0d9152cd",
+      "bytes": 2027
+    },
+    {
+      "path": "evidence/lanes/formal-audit-wave002/sources.json",
+      "sha256": "d4e8983251dd367e82c0c58f2ab0169fca0ecf2459916dbbb53caecb575f21f3",
+      "bytes": 1315
+    },
+    {
+      "path": "evidence/lanes/formal-audit-wave002/failed-attempts.json",
+      "sha256": "d65c975a3a0db88dd3d91aa94d5e6d9e499e2772c8e0449905543e2eb8f27bce",
+      "bytes": 1269
+    },
+    {
+      "path": "evidence/lanes/formal-audit-wave002/README.md",
+      "sha256": "af70e9028b59aca35375b3e5d2b5a84d7c23e6b6a91c8897aa4e5818a6659e90",
+      "bytes": 9007
+    }
+  ],
+  "authoredFiles": [
+    {
+      "path": "toolscripts/formal_audit_wave002.py",
+      "sha256": "378584167e08fe7fa216825273beb835d11be5e39913363ab881e415e3543e9e",
+      "bytes": 21804
+    },
+    {
+      "path": "toolscripts/ghidra/FormalAuditWave002.java",
+      "sha256": "1fe313d9ec707537add94e43a1ab7d10a2f2bdc2f57d5199f94da62bb10e9c96",
+      "bytes": 6870
+    },
+    {
+      "path": "tests/test_formal_audit_wave002.py",
+      "sha256": "9ef9ad8209b19057d61f6caf356d47b385848a2106d8f920caad5c1467b95195",
+      "bytes": 7256
+    },
+    {
+      "path": "src/formal-audit-wave002/build_and_execute.py",
+      "sha256": "3f2d548944278ad1a49b470b5fa956afb6203080e36d31f8b9d34ca670f11dc9",
+      "bytes": 6624
+    },
+    {
+      "path": "src/formal-audit-wave002/pcode_model.py",
+      "sha256": "7ed0963b939771c34b664440b41ccde2cc2dc4c9aa339e548ffbca7105ad893b",
+      "bytes": 11363
+    },
+    {
+      "path": "src/formal-audit-wave002/wrong_range.c",
+      "sha256": "f4ec6f4b16a85a0b423450c3e0da3fe6e85571b2e913d4cfbc3f9e3d1e4d48e8",
+      "bytes": 82
+    }
+  ],
+  "qualifiedToolTree": {
+    "path": "evidence/lanes/inventory-wave002/tool-environment.json",
+    "sha256": "243235d75efe5c48e8ad71d74dc36bc3057a3bbd9f1ca647d1dabd17eec21403",
+    "bytes": 1052
+  },
+  "ordinarySourceAndPriorPacketsUnchanged": [
+    {
+      "path": "evidence/lanes/formal-equivalence-wave001/packet.json",
+      "sha256": "c5d94ef13bdcdc36fe5f6f608e3ef416e02bb0040021a45c28b357b513b73a06",
+      "bytes": 24318
+    },
+    {
+      "path": "evidence/lanes/wave007-native/packet.json",
+      "sha256": "e8f9f94aeb869b5780a490a3523b939679b25bd132c753d1db2524b20be415ab",
+      "bytes": 353148
+    },
+    {
+      "path": "evidence/lanes/inventory-wave002/packet.json",
+      "sha256": "ca1f4289e7e3f77c4dd4059505eff9cdeb56360f789968d57a0ed64395c86f13",
+      "bytes": 1974
+    },
+    {
+      "path": "src/native/wave001/leaves.c",
+      "sha256": "da2ca7a59e59d2126dfe9a3992453ccd112c335ccca2a4a0f7283d2d4e1e0efb",
+      "bytes": 978
+    }
+  ],
+  "originalFunction": {
+    "address": 6887436,
+    "mode": "ARM",
+    "bodyBytes": 20,
+    "literalPoolBytes": 0,
+    "sourceCompiledBytesMatch": false
+  },
+  "independentBinarySemanticsPath": "Actual Ghidra/SLEIGH raw P-code and new generic interpreter; prior handwritten ARM model neither imported nor called by audit",
+  "sharedFrontendTrust": "Frozen Clang typed-C AST contract and source definedness whitelist remains shared",
+  "solverScope": "Z3 and cvc5 independently solve identical exported formulas; solver agreement is not translator verification",
+  "universalUnsatChecksBothSolvers": 8,
+  "nonvacuousDomainWitnesses": 2,
+  "priorQueriesReplayedUnsatInCvc5": 5,
+  "argumentDomain": "all 2^32 unsigned int32 values, arbitrary canonical NZCV and other AAPCS registers under explicit environment/context premises",
+  "wrongCompiledSourceCounterexample": {
+    "z3X": 11,
+    "cvc5X": 11,
+    "actualReturningReproductions": 32
+  },
+  "concreteContexts": 480,
+  "actualExecutions": 1440,
+  "targetedTests": 10,
+  "allTestsPass": true,
+  "onlyAssumedUserop": "setISAMode(TB): copy canonical TB to Thumb mode only; no other effects; still trusted despite concrete qualification",
+  "sourceCredit": 0,
+  "admissionPolicyChanged": false,
+  "noIndependentlyCheckedProofCertificates": true,
+  "noFullIsaOrCOrGameClaim": true
+}
