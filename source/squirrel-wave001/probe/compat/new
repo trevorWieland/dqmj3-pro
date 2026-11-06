@@ -1,0 +1,6 @@
+#ifndef SQ_PROBE_NEW_H
+#define SQ_PROBE_NEW_H
+#include "common.h"
+inline void *operator new(size_t,void *p) noexcept{return p;}
+inline void operator delete(void *,void *) noexcept{}
+#endif

@@ -1,0 +1,149 @@
+{
+  "module": {
+    "path": "generated/update-content0/code.bin",
+    "sha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+  },
+  "helpers": [
+    {
+      "path": "src/native/wave005/oracle.py",
+      "bytes": 11076,
+      "sha256": "73b80f67f84970ba7d74d6ac8f74de432c21b5a1112450bbf20e171eb93444e4"
+    },
+    {
+      "path": "src/native/wave005/fixture.c",
+      "bytes": 187,
+      "sha256": "c2c9b1ff14a9df5819ad100d824bc63f411197a85b0075f46de5241cb57626b4"
+    },
+    {
+      "path": "src/native/wave005/vm_views.h",
+      "bytes": 1898,
+      "sha256": "1bf160e4679afbe5a59a244e78f9753684c93a109f7a703f78dff80d04f4840a"
+    }
+  ],
+  "intervals": [
+    {
+      "address": 1409012,
+      "mode": "ARM",
+      "bytes": 16,
+      "sha256": "ea81372cf335751ae07dcefa2ca94ffad4801e0bb537f4f7767c6564d0ef5450",
+      "boundaryEvidence": {
+        "ranges": [
+          {
+            "start": 1409012,
+            "endExclusive": 1409028,
+            "bytes": 16
+          }
+        ],
+        "caller": {
+          "function": 1326652,
+          "callsite": 1326748,
+          "callsiteSha256": "5343ce6b83fa15b90528681ce9113faf4adaa22b9cb45c7ad9c3f7f653bc894e"
+        },
+        "poolBytes": 0,
+        "directDependencies": [],
+        "dynamicCallback": false,
+        "callbackContract": "Caller-provided typed release callback when old reference reaches zero"
+      }
+    },
+    {
+      "address": 1523008,
+      "mode": "ARM",
+      "bytes": 12,
+      "sha256": "5a10d152b0b7e18996d334a83f1153c8904a0071e65ad7e2c8345d64361e34be",
+      "boundaryEvidence": {
+        "ranges": [
+          {
+            "start": 1523008,
+            "endExclusive": 1523020,
+            "bytes": 12
+          }
+        ],
+        "caller": {
+          "function": 1408500,
+          "callsite": 1408536,
+          "callsiteSha256": "89a2d01d6068c91b2a7f86db7289ebd538a23a904774ca011d2bfb5c31522967"
+        },
+        "poolBytes": 0,
+        "directDependencies": [],
+        "dynamicCallback": false,
+        "callbackContract": "Caller-provided typed release callback when old reference reaches zero"
+      }
+    },
+    {
+      "address": 1522972,
+      "mode": "ARM",
+      "bytes": 36,
+      "sha256": "c773da8d81d63d957a72186eb40c672510d6a362c0f0f4b028c449aef2ddaa80",
+      "boundaryEvidence": {
+        "ranges": [
+          {
+            "start": 1522972,
+            "endExclusive": 1523008,
+            "bytes": 36
+          }
+        ],
+        "caller": {
+          "function": 1408116,
+          "callsite": 1408260,
+          "callsiteSha256": "e80778cf400a5738042549db44bdba4e70963d0800491a1546866a06988f0067"
+        },
+        "poolBytes": 0,
+        "directDependencies": [
+          1697892
+        ],
+        "dynamicCallback": false,
+        "callbackContract": "Caller-provided typed release callback when old reference reaches zero"
+      }
+    },
+    {
+      "address": 1697892,
+      "mode": "ARM",
+      "bytes": 96,
+      "sha256": "e3650f0b1e617931826cfd530d1dd3d16849b1941baffce1dcd02102a32e9edd",
+      "boundaryEvidence": {
+        "ranges": [
+          {
+            "start": 1697892,
+            "endExclusive": 1697988,
+            "bytes": 96
+          }
+        ],
+        "caller": {
+          "function": 1337748,
+          "callsite": 1337844,
+          "callsiteSha256": "43921d83768b4e590c4dcc06ecd99b51a39e6a0befb5cf97567d1a1a4cda7ab2"
+        },
+        "poolBytes": 0,
+        "directDependencies": [],
+        "dynamicCallback": true,
+        "callbackContract": "Caller-provided typed release callback when old reference reaches zero"
+      }
+    },
+    {
+      "address": 1697988,
+      "mode": "ARM",
+      "bytes": 36,
+      "sha256": "d036601fb097c4fd11b49363fe8c25648d55998630522a4618d8fa9bebce6379",
+      "boundaryEvidence": {
+        "ranges": [
+          {
+            "start": 1697988,
+            "endExclusive": 1698024,
+            "bytes": 36
+          }
+        ],
+        "caller": {
+          "function": 1394300,
+          "callsite": 1394524,
+          "callsiteSha256": "fede05c6a97b34e6b3ba312b6cc80f679a4d3a47ea938ce526e41abcd87ae924"
+        },
+        "poolBytes": 0,
+        "directDependencies": [],
+        "dynamicCallback": false,
+        "callbackContract": "Caller-provided typed release callback when old reference reaches zero"
+      }
+    }
+  ],
+  "importedSourceCredit": 0,
+  "gameForkIdentity": "unknown"
+}
