@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 1,
+  "lane": "wave006-native",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "script": {
+    "path": "toolscripts\\native_wave006.py",
+    "sha256": "749c306beaa370784ab8f59fd5235753ab903cde458740d42e12e3d1ee264ceb",
+    "bytes": 12889
+  },
+  "helperDependency": {
+    "path": "toolscripts\\native_wave003.py",
+    "sha256": "7520a90ee1a30e6b789ffd83ca0f08a5186fc3f1533d11d6b9248eb570f741dd",
+    "bytes": 21005
+  },
+  "claim": {
+    "path": "evidence\\lanes\\wave006-native\\claim.json",
+    "sha256": "f1a6e81542d7dd8888f131be42b89be93aa54d212081d7e35d92df0e5081d530",
+    "bytes": 3652
+  },
+  "sources": [
+    {
+      "path": "src\\native\\wave006\\constants.c",
+      "sha256": "4e47d3b9cfc6d2741ed9a12fac46642f29c1818337336eb84400703f0090849f",
+      "bytes": 306
+    }
+  ],
+  "compiler": {
+    "path": "tools\\clang-21\\clang.exe",
+    "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc",
+    "bytes": 99559064
+  },
+  "linker": {
+    "path": "tools\\clang-21\\ld.lld.exe",
+    "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3",
+    "bytes": 69225112
+  },
+  "configuration": [
+    "--target=arm-none-eabi",
+    "-mcpu=mpcore",
+    "-marm",
+    "-O2",
+    "-ffreestanding",
+    "-ffunction-sections",
+    "-fno-unwind-tables",
+    "-fno-asynchronous-unwind-tables"
+  ],
+  "historicalCompilerIdentified": false,
+  "functions": [
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 3144128,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "src\\native\\wave006\\constants.c",
+        "sha256": "4e47d3b9cfc6d2741ed9a12fac46642f29c1818337336eb84400703f0090849f",
+        "bytes": 306
+      },
+      "object": {
+        "path": "work\\wave006-native\\constants.o",
+        "sha256": "012b290c4aea9287a2b43ecf2f2b2dcf3d084362e4e1e591f4e6b2ebd27ad6ae",
+        "bytes": 1396
+      },
+      "symbol": "fn_002ff9c0",
+      "objectSection": ".text.fn_002ff9c0",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "6dcd5e75586fe6683156c0d559d4827b73bd48d501fa5781a1c6099aacd7c877",
+      "originalSpanSha256": "6dcd5e75586fe6683156c0d559d4827b73bd48d501fa5781a1c6099aacd7c877",
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "work\\wave006-native\\fn_002ff9c0.elf",
+        "sha256": "7e379e3357075ed40e9052ab08a8f72c496838b20b6e7666a71bbedaa45ecd4b",
+        "bytes": 64816
+      },
+      "linkedSymbolAddress": 3144128,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "6dcd5e75586fe6683156c0d559d4827b73bd48d501fa5781a1c6099aacd7c877",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "directCallerQualified": true,
+      "scalarModel": {
+        "returnType": "u32",
+        "returnValueBitsU32": 0,
+        "inputsRead": [],
+        "sourceParameterList": "u32 ignored_value, u32 ignored_mask",
+        "historicalUnusedParametersIdentified": false,
+        "sourceInterfaceScope": "observed caller-compatible minimal slots; unused historical arity not identified"
+      },
+      "behavior": {
+        "cases": 256,
+        "allPassed": true,
+        "allSixteenInputFlagCombinations": true,
+        "ARMThumbReturnInterworkingTested": true,
+        "generalRegistersVaried": true,
+        "allOtherRegistersPreserved": true,
+        "noMemoryAccess": true,
+        "fullStackAndScratchSnapshotsCompared": true,
+        "caseDigest": "35789f0850e7eda9975e1ae22a36d3beccd45850b9417fbcc6edf204b340a992"
+      },
+      "status": "candidate-standalone-exact",
+      "acceptedRecoveredSource": false,
+      "fullModuleIntegrated": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 3154780,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "src\\native\\wave006\\constants.c",
+        "sha256": "4e47d3b9cfc6d2741ed9a12fac46642f29c1818337336eb84400703f0090849f",
+        "bytes": 306
+      },
+      "object": {
+        "path": "work\\wave006-native\\constants.o",
+        "sha256": "012b290c4aea9287a2b43ecf2f2b2dcf3d084362e4e1e591f4e6b2ebd27ad6ae",
+        "bytes": 1396
+      },
+      "symbol": "fn_0030235c",
+      "objectSection": ".text.fn_0030235c",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "6143299c415a779d14d46483b05772d81c6b595bc189b4499503e30275041932",
+      "originalSpanSha256": "6143299c415a779d14d46483b05772d81c6b595bc189b4499503e30275041932",
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "work\\wave006-native\\fn_0030235c.elf",
+        "sha256": "fdfe41c8ab7d54b9a422b4d85646e6df442dc88cd2a3e81b618caad57c6c0e30",
+        "bytes": 9932
+      },
+      "linkedSymbolAddress": 3154780,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "6143299c415a779d14d46483b05772d81c6b595bc189b4499503e30275041932",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "directCallerQualified": true,
+      "scalarModel": {
+        "returnType": "s32",
+        "returnValueBitsU32": 4294967295,
+        "inputsRead": [],
+        "sourceParameterList": "u32 ignored_handle",
+        "historicalUnusedParametersIdentified": false,
+        "sourceInterfaceScope": "observed caller-compatible minimal slots; unused historical arity not identified"
+      },
+      "behavior": {
+        "cases": 256,
+        "allPassed": true,
+        "allSixteenInputFlagCombinations": true,
+        "ARMThumbReturnInterworkingTested": true,
+        "generalRegistersVaried": true,
+        "allOtherRegistersPreserved": true,
+        "noMemoryAccess": true,
+        "fullStackAndScratchSnapshotsCompared": true,
+        "caseDigest": "855382b7b0dabc88b7a95197fdd95073b730ff2e26b2d1bf7ebbc8458359fdd8"
+      },
+      "status": "candidate-standalone-exact",
+      "acceptedRecoveredSource": false,
+      "fullModuleIntegrated": false
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 3154856,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "src\\native\\wave006\\constants.c",
+        "sha256": "4e47d3b9cfc6d2741ed9a12fac46642f29c1818337336eb84400703f0090849f",
+        "bytes": 306
+      },
+      "object": {
+        "path": "work\\wave006-native\\constants.o",
+        "sha256": "012b290c4aea9287a2b43ecf2f2b2dcf3d084362e4e1e591f4e6b2ebd27ad6ae",
+        "bytes": 1396
+      },
+      "symbol": "fn_003023a8",
+      "objectSection": ".text.fn_003023a8",
+      "instructionBytes": 8,
+      "poolBytes": 0,
+      "objectSymbolBytes": 8,
+      "objectSymbolSha256": "6143299c415a779d14d46483b05772d81c6b595bc189b4499503e30275041932",
+      "originalSpanSha256": "6143299c415a779d14d46483b05772d81c6b595bc189b4499503e30275041932",
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "linkedElf": {
+        "path": "work\\wave006-native\\fn_003023a8.elf",
+        "sha256": "000d5a77eb8fafb3fb99c342a131e39026a7fae29da79c54be4c3ce140a85c55",
+        "bytes": 10008
+      },
+      "linkedSymbolAddress": 3154856,
+      "linkedSymbolBytes": 8,
+      "linkedSymbolSha256": "6143299c415a779d14d46483b05772d81c6b595bc189b4499503e30275041932",
+      "exactObjectSpan": true,
+      "exactLinkedSpan": true,
+      "directCallerQualified": true,
+      "scalarModel": {
+        "returnType": "s32",
+        "returnValueBitsU32": 4294967295,
+        "inputsRead": [],
+        "sourceParameterList": "u32 ignored_handle",
+        "historicalUnusedParametersIdentified": false,
+        "sourceInterfaceScope": "observed caller-compatible minimal slots; unused historical arity not identified"
+      },
+      "behavior": {
+        "cases": 256,
+        "allPassed": true,
+        "allSixteenInputFlagCombinations": true,
+        "ARMThumbReturnInterworkingTested": true,
+        "generalRegistersVaried": true,
+        "allOtherRegistersPreserved": true,
+        "noMemoryAccess": true,
+        "fullStackAndScratchSnapshotsCompared": true,
+        "caseDigest": "515412b250fdb98599b325ec33bc9a64927d0aacbcb89412d93b764ecf0e0394"
+      },
+      "status": "candidate-standalone-exact",
+      "acceptedRecoveredSource": false,
+      "fullModuleIntegrated": false
+    }
+  ],
+  "negativeControls": [
+    {
+      "address": 3144128,
+      "kind": "compiled-wrong-constant",
+      "detected": true,
+      "failureClass": "ConstantMismatch",
+      "reason": "Returned to sentinel; constant 0x1 != 0x0",
+      "actualU32": 1,
+      "expectedU32": 0,
+      "returnedToSentinel": true,
+      "allMemoryAndOtherRegistersMatched": true
+    },
+    {
+      "address": 3154780,
+      "kind": "compiled-wrong-constant",
+      "detected": true,
+      "failureClass": "ConstantMismatch",
+      "reason": "Returned to sentinel; constant 0xfffffffe != 0xffffffff",
+      "actualU32": 4294967294,
+      "expectedU32": 4294967295,
+      "returnedToSentinel": true,
+      "allMemoryAndOtherRegistersMatched": true
+    },
+    {
+      "address": 3154856,
+      "kind": "compiled-wrong-constant",
+      "detected": true,
+      "failureClass": "ConstantMismatch",
+      "reason": "Returned to sentinel; constant 0xfffffffe != 0xffffffff",
+      "actualU32": 4294967294,
+      "expectedU32": 4294967295,
+      "returnedToSentinel": true,
+      "allMemoryAndOtherRegistersMatched": true
+    }
+  ],
+  "negativeArtifacts": [
+    {
+      "path": "work\\wave006-native\\wrong_constants.c",
+      "sha256": "7adc93bc3a506825a648d28532af64ff3f52a541c219f2d963cbb44142f8a392",
+      "bytes": 312
+    },
+    {
+      "path": "work\\wave006-native\\wrong_constants.o",
+      "sha256": "13101acdf580c874adcfd4668cf8d2c7e517d26723ad1a9dfe8ab24f90f56fd3",
+      "bytes": 1400
+    }
+  ],
+  "runtimeFiles": [
+    {
+      "path": "tools\\python\\Scripts\\python.exe",
+      "sha256": "935016795f3e6908e75acbc2040a01e2e4cdb494a57c42f63a0d6eedb2372256",
+      "bytes": 254800
+    },
+    {
+      "path": "tools\\python\\Lib\\site-packages\\unicorn\\lib\\unicorn.dll",
+      "sha256": "010d85dce84b8f6ffaec3d5420f1b5f7768f859eb831be574c7da23e656ee8f1",
+      "bytes": 9598976
+    }
+  ],
+  "receipts": [
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-ffreestanding",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave006\\constants.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave006-native\\constants.o"
+      ],
+      "exitCode": 0,
+      "log": {
+        "path": "work\\wave006-native\\compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-ffreestanding",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave006-native\\wrong_constants.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave006-native\\wrong_constants.o"
+      ],
+      "exitCode": 0,
+      "log": {
+        "path": "work\\wave006-native\\wrong-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--gc-sections",
+        "-Ttext=0x2ff9c0",
+        "--entry=fn_002ff9c0",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave006-native\\fn_002ff9c0.elf",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave006-native\\constants.o"
+      ],
+      "exitCode": 0,
+      "log": {
+        "path": "work\\wave006-native\\fn_002ff9c0-link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--gc-sections",
+        "-Ttext=0x30235c",
+        "--entry=fn_0030235c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave006-native\\fn_0030235c.elf",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave006-native\\constants.o"
+      ],
+      "exitCode": 0,
+      "log": {
+        "path": "work\\wave006-native\\fn_0030235c-link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--gc-sections",
+        "-Ttext=0x3023a8",
+        "--entry=fn_003023a8",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave006-native\\fn_003023a8.elf",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave006-native\\constants.o"
+      ],
+      "exitCode": 0,
+      "log": {
+        "path": "work\\wave006-native\\fn_003023a8-link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    }
+  ],
+  "standaloneExactFunctionCount": 3,
+  "standaloneExactInstructionBytes": 24,
+  "acceptedRecoveredSourceFunctions": 0,
+  "reproductionArgv": [
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\python\\Scripts\\python.exe",
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\toolscripts\\native_wave006.py"
+  ],
+  "sourceABIQualification": "Discovery claim used a u32 bit-pattern lens; current source preserves signed status use in observed callers",
+  "limitations": [
+    "Body reads no inputs; source argument slots preserve observed caller setup, original unused parameter list not identified",
+    "No original high-level purpose asserted",
+    "Bounded behavior is not universal proof",
+    "No complete game or platform execution established"
+  ]
+}

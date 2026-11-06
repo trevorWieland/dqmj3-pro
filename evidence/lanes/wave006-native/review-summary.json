@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "status": "ready-for-independent-review",
+  "packet": {
+    "path": "evidence\\lanes\\wave006-native\\packet.json",
+    "sha256": "9bc67eb59dd5dbdc28b30b1c75f8d5ac35294640786e2d2fb0a12adbe09ed9a3",
+    "bytes": 15855
+  },
+  "producer": {
+    "path": "toolscripts\\native_wave006.py",
+    "sha256": "749c306beaa370784ab8f59fd5235753ab903cde458740d42e12e3d1ee264ceb",
+    "bytes": 12889
+  },
+  "source": {
+    "path": "src\\native\\wave006\\constants.c",
+    "sha256": "4e47d3b9cfc6d2741ed9a12fac46642f29c1818337336eb84400703f0090849f",
+    "bytes": 306
+  },
+  "boundary": {
+    "path": "evidence\\lanes\\wave006-native\\boundary.json",
+    "sha256": "17e68fde611122065b781b44b91765aecdcf1ac867d6853325a3d9561f303b4a",
+    "bytes": 2727
+  },
+  "proposedFunctions": 3,
+  "proposedInstructionBytes": 24,
+  "acceptedCredit": 0,
+  "casesPerFunction": 256,
+  "negativeControls": 3,
+  "allCasesAndNegativesPassed": true,
+  "ARMThumbReturnInterworkingTested": true,
+  "opportunityScan": {
+    "rawConstantReturnPairs": 1315,
+    "directQualifiedPairs": 3,
+    "additionalCompleteConstantBuildups": 0,
+    "GhidraConstantsWithoutDirectCallsNotClaimed": 8
+  },
+  "sourceABI": "No input reads; observed unused argument slots retained; status return view signed to preserve caller signed comparison",
+  "signedStatusContextWitness": {
+    "calleeAddress": 3154856,
+    "callInstructionAddress": 3153548,
+    "comparisonAddress": 3153556,
+    "signedBranchAddress": 3153560
+  },
+  "privateCallerContext": {
+    "path": "work\\wave006-native\\caller-contexts.txt",
+    "sha256": "c644ce8eddcf493732a9bcf8cafcf6fbc2ca814903a32e4870e3c0939285c09d",
+    "bytes": 3802
+  },
+  "initialUnsignedDiagnostic": [
+    {
+      "path": "work\\wave006-native\\initial-u32\\constants.c",
+      "sha256": "dc5aad7aed21e944e34f4295018961b5c16b4177d7b1ccc5d4561320d6ede3d3",
+      "bytes": 156
+    },
+    {
+      "path": "work\\wave006-native\\initial-u32\\producer.py",
+      "sha256": "1f6ef58c4a2360ec74b4a90f523c7e1b0662af1eea4ceece67413c4b2c2efd5b",
+      "bytes": 12059
+    },
+    {
+      "path": "work\\wave006-native\\initial-u32\\packet.json",
+      "sha256": "b0b1e807efbaddd077edfd7e8bf45d7366e99cbab51f48e0aa8e1d43a072bb13",
+      "bytes": 15106
+    },
+    {
+      "path": "work\\wave006-native\\initial-u32\\constants.o",
+      "sha256": "012b290c4aea9287a2b43ecf2f2b2dcf3d084362e4e1e591f4e6b2ebd27ad6ae",
+      "bytes": 1396
+    },
+    {
+      "path": "work\\wave006-native\\initial-u32\\run.log",
+      "sha256": "d1c1bbe6993a03dfebb932f3b096d95c3dabb3f468b67abc933f391759f16728",
+      "bytes": 108
+    }
+  ],
+  "successfulRunLog": {
+    "path": "work\\wave006-native\\run.log",
+    "sha256": "f252ae56d6703b418dd73da57b50dfb5a37b8c2f6adaad95766eb273d4df3996",
+    "bytes": 108
+  },
+  "currentSourceFrozen": true
+}
