@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "scope": {
+    "root": "src/native",
+    "waves": [
+      "wave001",
+      "wave002",
+      "wave003",
+      "wave004",
+      "wave005",
+      "wave006",
+      "wave007",
+      "wave008"
+    ]
+  },
+  "units": [
+    {
+      "source": "src/native/wave001/leaves.c",
+      "headers": [],
+      "role": "recovered-and-candidate-native",
+      "allowedUnusedParameters": [
+        {
+          "function": "fn_006f25cc",
+          "parameter": "x"
+        },
+        {
+          "function": "fn_0028b3a0",
+          "parameter": "x"
+        },
+        {
+          "function": "fn_001648cc",
+          "parameter": "x"
+        },
+        {
+          "function": "fn_001649dc",
+          "parameter": "x"
+        }
+      ]
+    },
+    {
+      "source": "src/native/wave001/record_access.c",
+      "headers": [],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/wave002/views_00.c",
+      "headers": [
+        "src/native/wave002/types.h",
+        "src/native/wave002/views_00.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/wave002/views_01.c",
+      "headers": [
+        "src/native/wave002/types.h",
+        "src/native/wave002/views_01.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/wave002/views_02.c",
+      "headers": [
+        "src/native/wave002/types.h",
+        "src/native/wave002/views_02.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/wave002/views_03.c",
+      "headers": [
+        "src/native/wave002/types.h",
+        "src/native/wave002/views_03.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/wave003/abi-qualified/setters.c",
+      "headers": [
+        "src/native/wave003/abi-qualified/views.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/wave004/views.c",
+      "headers": [
+        "src/native/wave004/types.h",
+        "src/native/wave004/views.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/wave005/chain.c",
+      "headers": [
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/wave005/fixture.c",
+      "headers": [
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "fixture-support"
+    },
+    {
+      "source": "src/native/wave005/object.c",
+      "headers": [
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/wave005/push.c",
+      "headers": [
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/wave005/stack.c",
+      "headers": [
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/wave006/constants.c",
+      "headers": [],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/wave007/predicates.c",
+      "headers": [
+        "src/native/wave007/views.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/wave008/flags_00.c",
+      "headers": [
+        "src/native/wave008/types.h",
+        "src/native/wave008/views_00.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/wave008/flags_01.c",
+      "headers": [
+        "src/native/wave008/types.h",
+        "src/native/wave008/views_01.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/wave008/flags_02.c",
+      "headers": [
+        "src/native/wave008/types.h",
+        "src/native/wave008/views_02.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/wave008/flags_03.c",
+      "headers": [
+        "src/native/wave008/types.h",
+        "src/native/wave008/views_03.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    }
+  ],
+  "excludedSources": [
+    {
+      "source": "src/native/wave003/setters.c",
+      "reason": "Historical void-return setter packet retained as evidence; superseded by abi-qualified/setters.c and excluded from active linking.",
+      "replacement": "src/native/wave003/abi-qualified/setters.c",
+      "activeLinking": false
+    }
+  ],
+  "warningExceptionReason": "Four wave001 scalar functions preserve an observed incoming ABI parameter that is unused by their value-level C semantics. Only the listed function/parameter declarations may issue -Wunused-parameter; all other diagnostics fail."
+}

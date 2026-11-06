@@ -1,0 +1,34 @@
+{
+  "kind": "Authored synthetic ARM32 ELF denominator diagnostic",
+  "elfExecutableSectionBytesEach": 76,
+  "actualDifferingTextBytes": 64,
+  "objdiffTotalCodeBytes": 12,
+  "objdiffMatchedCodeBytes": 12,
+  "objdiffFunctions": 1,
+  "objdiffMatchedPercent": 100,
+  "objdiffSectionFuzzyPercent": 100,
+  "gapSymbolsInvented": false,
+  "originalGameFilesRead": false,
+  "gameSourceCredit": 0,
+  "tools": {
+    "clang": {
+      "path": "tools/clang-21/clang.exe",
+      "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+    },
+    "lld": {
+      "path": "tools/clang-21/ld.lld.exe",
+      "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3"
+    },
+    "objdiff": {
+      "path": "tools/objdiff-3.8.3/objdiff-cli.exe",
+      "sha256": "dd12dfb5e9e94a7f6c949a37e1815963cf2cffe4c87b4999b7ebc8c15b398a1f"
+    }
+  },
+  "inputs": {
+    "fixture.c": "c52431bb6f1127aef80a6ac4b44ae4f411668153cc41915e7f577a015bdfc300",
+    "target.ld": "216941e81d41f25b76a6ad0727050a89276e60cbb95879fd50e6ad5c46a18cf9",
+    "base.ld": "212dfc709944d17eda34d454dbd36ab92477a75b99fd40f07cd381389ced148d",
+    "objdiff.json": "e77bb949b0d5b770d2a3f98451e1e34e958e22e38bc5b7699e207a29164aa970",
+    "report.json": "f32f37aaedbe2c345b3ef2c586db934e988fa995b0b0d34c7df6af2fc48daab3"
+  }
+}

@@ -1,6 +1,8 @@
 # DQMJ3 Professional decompilation
 
-Reconstruction of the owner's measured Dragon Quest Monsters Joker 3 Professional base and update. The project begins on 6 November 2026. No remote is configured yet. The owner permits publishing reconstructed source, tooling and derived progress reports. Original game archives, executable images, shipped scripts/assets, keys, saves and hybrid builds containing retained original bytes remain outside publication.
+[![Progress](https://bytematch.dev/trevorWieland/dqmj3-pro.svg)](https://bytematch.dev/trevorWieland/dqmj3-pro)
+
+Reconstruction of the owner's measured Dragon Quest Monsters Joker 3 Professional base and update. The project begins on 6 November 2026. The owner permits publishing reconstructed source, tooling and derived progress reports. Original game archives, executable images, shipped scripts/assets, keys, saves and hybrid builds containing retained original bytes remain outside publication.
 
 **The accepted source cohorts contain 356 native C functions and 4,164 instruction bytes.** Its ordinary C sources compile with the measured open Clang/LLVM profile, genuinely link at the original addresses, preserve the complete hybrid native image, pass bounded original/source tests and replay from an immutable committed tree. The executable inventory remains incomplete, so no overall source percentage is published. Original gaps, assets, embedded script text and unaccepted candidates receive zero reconstructed-source credit. `recovery.json` and finalized cohort receipts are authoritative.
 
@@ -41,3 +43,7 @@ For a fresh source checkout, install with `python setup_tools.py --clang-source 
 Read [AGENTS.md](AGENTS.md), the [project charter](docs/2026-11-06-project-charter.md), [roadmap](docs/2026-11-06-roadmap.md) and [validation design](docs/research/validation.md). Workers prepare disjoint frozen packets; one coordinator publishes acceptance after all gates pass. Preserve exact matching, linked source, bounded behavior, full replay and platform execution as distinct states.
 
 Windows source-function components execute against original ARM fixtures; Android ARM64 components compile with measured 16 KiB segment alignment. These are partial engine components. Native Windows game execution, packaged Android game execution, AYN Thor validation, source-only engine construction and a complete Joker 1 remake remain unproved. The roadmap keeps those requirements separate from native source acceptance.
+
+## Contributing and progress
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before starting, claim a bounded task in the [issue queue](https://github.com/trevorWieland/dqmj3-pro/issues), and follow the [naming evidence rules](docs/semantic-understanding.md). [Public source compilation](docs/ci-source-builds.md) runs without game inputs. ByteMatch reporting setup is in progress: the badge requires project registration and an ingested report, and an overall percentage remains unavailable until the native inventory is reviewed.

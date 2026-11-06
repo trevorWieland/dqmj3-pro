@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "scope": "ByteMatch research/preparation for actual reconstruction repository",
+  "byteMatchCommit": "37153b5d1b30531d4410d5a595592080962ce883",
+  "objdiffCommit": "9aeec9cbab1a056ade7dc1f1625aacc41b0f8511",
+  "objdiffCliVersion": "3.8.3",
+  "reportSchemaVersion": 2,
+  "acceptedSnapshot": {
+    "functions": 356,
+    "instructionBytes": 4164,
+    "sourceCFiles": 10,
+    "sourceHeaders": 9
+  },
+  "nativeDenominator": null,
+  "wholeGamePercent": null,
+  "tests": {
+    "passed": 10,
+    "failed": 0
+  },
+  "sourceLinks": {
+    "found": 356,
+    "missing": 0,
+    "addressCommentsAdded": 0
+  },
+  "parserProbe": {
+    "actualUpstreamParser": true,
+    "protobufRoundTrip": true,
+    "futureVersionRejected": true
+  },
+  "denominatorProbe": {
+    "textBytes": 76,
+    "differentTextBytes": 64,
+    "objdiffTotalCode": 12,
+    "reportedMatchingPercent": 100
+  },
+  "uploadGateActuallyRejected": true,
+  "publicCompileWorkflowOwnedElsewhere": true,
+  "trustedPrivateWorkflowRunnable": false,
+  "siteRegistered": false,
+  "loggedIn": false,
+  "uploaded": false,
+  "gitRemoteChanged": false,
+  "publicSourcePublicationPerformedByThisLane": false,
+  "originalGameInputsReadByPreparation": false,
+  "sourceCreditAdded": 0,
+  "artifact": {
+    "path": "work/bytematch-research/bytematch-preparation.zip",
+    "sha256": "956c3581ba52205284fdf911590b6d5d1bf348105adc298223b669a352603ba4",
+    "bytes": 10279,
+    "files": [
+      {
+        "path": "progress/accepted-functions.json",
+        "bytes": 97200,
+        "sha256": "c7d29a71224a1bbf014a57265d28fe207059a7e5a253db950a5e880f552f5e69"
+      },
+      {
+        "path": "progress/qualified-progress.json",
+        "bytes": 3954,
+        "sha256": "86223af03a8a15b5cd2c37137675af8de736a9ee1f7d1f35dada77394b1b95ef"
+      },
+      {
+        "path": "README.md",
+        "bytes": 1842,
+        "sha256": "ecb0a2d72395098cadde5ac8e5c86d16fd34613d4d680a69d4e43bf0bcccb57f"
+      },
+      {
+        "path": "toolscripts/verify_accepted_progress.py",
+        "bytes": 4874,
+        "sha256": "383a08fa55f8576cc348876b57521b385e38c68e5057d3a692a964ceb5f620a6"
+      },
+      {
+        "path": "workflow-plan.json",
+        "bytes": 2901,
+        "sha256": "eecdce215982487ebf2e85f3d07184d14662940e7148ce7c51c0e724d5c4d670"
+      }
+    ],
+    "uploadToByteMatch": false
+  },
+  "attempts": [
+    {
+      "kind": "Node absolute Windows --import path",
+      "exitCode": 1,
+      "reason": "Needs a file URL or explicit relative import; corrected using owned working directory"
+    },
+    {
+      "kind": "protobuf standalone bundle initial path",
+      "exitCode": 1,
+      "reason": "Actual published bundle is dist/protobuf.js; corrected without changing package"
+    },
+    {
+      "kind": "actual upstream parser and source links",
+      "exitCode": 0
+    }
+  ]
+}

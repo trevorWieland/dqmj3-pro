@@ -1,0 +1,45 @@
+name: Compile public native sources
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: source-compile-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  compile:
+    name: ARM32, Windows x64 and Android ARM64
+    runs-on: windows-2025
+    timeout-minutes: 25
+    steps:
+      - name: Checkout public source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Set up portable Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - name: Materialize only pinned public compiler files
+        run: python -I -S toolscripts/bootstrap_public_compiler.py
+      - name: Check compile tooling
+        run: python -I -S -m unittest discover -s tests -p test_compile_sources.py -v
+      - name: Compile every active native source for all three targets
+        run: python -I -S toolscripts/compile_sources.py
+      - name: Upload compile diagnostics and manifests
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: source-compile-diagnostics
+          path: |
+            work/source-compile-ci/diagnostics/*.txt
+            work/source-compile-ci/manifests/*.json
+          if-no-files-found: warn
+          retention-days: 7

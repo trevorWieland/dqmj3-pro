@@ -1,0 +1,64 @@
+name: Verify native sources with private originals
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: native-verification-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.repository == 'trevorWieland/dqmj3-pro' && github.ref == 'refs/heads/main'
+    runs-on: windows-2025
+    timeout-minutes: 45
+    steps:
+      - name: Checkout reconstruction source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.13.5'
+      - name: Materialize frozen public report tools
+        run: python -I -S toolscripts/bootstrap_report_tools.py
+      - name: Test private intake and build guards
+        run: tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_ci_native_build.py -v
+      - name: Checkout owner-controlled private input parts
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: trevorWieland/dqmj3-pro-inputs
+          ssh-key: ${{ secrets.INPUTS_DEPLOY_KEY }}
+          persist-credentials: false
+          path: work/private-inputs
+      - name: Verify measured inputs and accepted native source integration
+        run: tools/report-python/Scripts/python.exe -I toolscripts/ci_native_build.py --private-inputs work/private-inputs
+      - name: Check reviewed progress inventory gate
+        id: progress
+        shell: pwsh
+        run: |
+          $config = Get-Content -LiteralPath config/objdiff-units.json -Raw | ConvertFrom-Json
+          if ($config.readyForProgress -isnot [bool]) { throw 'Missing explicit progress inventory readiness' }
+          "ready=$($config.readyForProgress.ToString().ToLowerInvariant())" >> $env:GITHUB_OUTPUT
+          if (-not $config.readyForProgress) {
+            'Verified accepted native sources and exact hybrid integration. ByteMatch reporting is pending the reviewed executable inventory; no whole-game report was uploaded.' >> $env:GITHUB_STEP_SUMMARY
+          }
+      - name: Configure reviewed objdiff project
+        if: steps.progress.outputs.ready == 'true'
+        run: tools/report-python/Scripts/python.exe -I toolscripts/configure_objdiff.py --version update-content0 --output objdiff.json
+      - name: Generate progress report
+        if: steps.progress.outputs.ready == 'true'
+        run: tools/objdiff-3.8.3/objdiff-cli.exe report generate -o build/update-content0/report.json
+      - name: Upload progress report
+        if: steps.progress.outputs.ready == 'true'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: update-content0_report
+          path: build/update-content0/report.json
+          if-no-files-found: error
