@@ -1,20 +1,21 @@
 {
   "schemaVersion": 1,
-  "startedUtc": "2026-11-06T19:44:51.688890+00:00",
+  "startedUtc": "2026-11-06T19:50:14.850746+00:00",
   "sourceHashes": {
     "configure_inputs.py": "0ceea9ba7e517178892d2f6696a49dc79c34531bb9f3ac8440b9e54ff6082535",
-    "run_checks.py": "924bad1a5c24129c9451aca88767a306c426623d5d3224674590fe8d3efe9dde",
+    "run_checks.py": "6a3324f3c76b34e0d695e170561b4fa2486b681fd33880a1e925a2091efcc80b",
     "setup_tools.py": "bc5c87f6cd083ea2751aef0bbe03b1966f59e43303b7f5540a1c01efe75b88b2",
     "tests/test_asset_survey.py": "18b541b4d405ca0558b3749d6cad9aa96e75b02892ea6a62dde8bdd03e22b559",
-    "tests/test_behavior_smoke.py": "8480252b2c7bc4387535d24b71a14cb82fcc6d61f173a83cbeca34a93a169a8a",
+    "tests/test_behavior_smoke.py": "c9ff1e3911c8c1bb7be1253dcc7598cf8c2d8e9a0dcebcceef0e8cb343e40420",
     "tests/test_inventory.py": "aaae1834ac7895e14e68c9d75807243d75bd3e4a18e1d4d8da1dad8ad9fc2974",
     "toolscripts/asset_survey.py": "d3c2f2327723a8a60b08aeaf45c41f01f13c1bdc86368ff3599862ddd349a2f8",
-    "toolscripts/behavior_smoke.py": "d5d571b01e41bf69b92c96f0ae7e0adb80fddbdb1438b37cebda51620a0b21e8",
+    "toolscripts/behavior_smoke.py": "f3e141024a9b31302365d4c6c7cb21b9b1f661970e43138c771d03f0c435c978",
     "toolscripts/ghidra/NativeLeafSurvey.java": "5411716b10543d2e0f5083665141eb33f94f13a969c11ea819f3bf1e1fcc7cb5",
     "toolscripts/inventory.py": "32c3d637553cff27c10ffcf7142e3d1c33465bcff4338525fd6886e90e5d1cbd",
     "toolscripts/lock_tools.py": "06feed4a873d7e7cdf150e07eda78a1e4361f03d820b3e56f26a263e9a55baca",
     "toolscripts/native_survey.py": "6600fe54a35e47d49c0d77c4946236926ab35deb00b7bb7a4e932c612cb9495f",
-    "toolscripts/verify_intake.py": "446bf21dbfc8b7809337081ce0f6149a1b2693884ecf91a938acad50df1f27e6"
+    "toolscripts/verify_intake.py": "446bf21dbfc8b7809337081ce0f6149a1b2693884ecf91a938acad50df1f27e6",
+    "validate_clean_checkout.py": "bd17357e13d95735fbdeab5ff06890756c3b22e19181742ad73a2b7f4fa4767f"
   },
   "toolLockSha256": "34b480a1be81a24063b114a3f6770fc330594e1a7b16c6c1b00414b09ccbd3ab",
   "projectConfigSha256": "6cb21ab41783059da2b432e751938da0aef887f2773357b00c34c6a3ca6008cb",
@@ -94,13 +95,14 @@
       ],
       "returncode": 0,
       "logPath": "work/checks/tests.log",
-      "logSha256": "b4c994f329f6eb3e9707bdc16b62c3e36e23d2ffa84545b4854ac59cf69c5010"
+      "logSha256": "0c379a79277cfd8c03859675899f7ae2fcfdcfe93b592fd4e563be96e1ae73b3"
     }
   ],
   "acceptedRecoveredFunctions": 0,
   "acceptedRecoveredBytes": 0,
   "cleanIndependentReplay": false,
   "wholeGameExecution": false,
+  "status": "passed",
   "artifacts": [
     {
       "path": "evidence/inventory/summary.json",
@@ -120,13 +122,12 @@
     },
     {
       "path": "work/validation-smoke/unittest/report.json",
-      "sha256": "e356cc28bd20b45952b43c88a242b83b8ae7d33cd71739bc948e96a0f8c32406"
+      "sha256": "01fa112076a30e6b38b31cbcd3cf497c5a8c31378dca26e3644519e4a6d56a28"
     },
     {
       "path": "work/validation-smoke/game-leaf-unittest/report.json",
-      "sha256": "6b38649fd8b32d0a6999ba8d0da029792cf6eb5044593fedb700ebcab8f77265"
+      "sha256": "f89a880d5868daa2debc983d0933caff2983aaf256a239a5643d0e2b4cc02689"
     }
   ],
-  "status": "passed",
-  "finishedUtc": "2026-11-06T19:45:40.801893+00:00"
+  "finishedUtc": "2026-11-06T19:51:54.484654+00:00"
 }

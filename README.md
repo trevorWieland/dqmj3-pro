@@ -28,7 +28,11 @@ Use Python 3.13.5 on Windows. Tools and dependencies are repository-local. `tool
 
 `run_checks.py` refreshes intake, compares independent extraction, inventories assets and native candidates, runs bounded behavior diagnostics and malformed-input controls, and records a source/tool/input-bound receipt. It does not assert a source-only build, complete decompilation, whole-game behavior or independent clean replay.
 
+The initial validation pipeline passed from an immutable source snapshot `dc486d2` with separately materialized tool, dependency and CIA copies: 20 unittest cases, six native-boundary controls and four independent code/ExHeader comparisons. `evidence/verification/clean-checkout.json` records that replay. Optional Ghidra diagnostics were qualified separately and were excluded from this pipeline replay. The full reconstructed-source acceptance flags in `project.json` remain false because no native source packet is accepted.
+
 For a fresh source checkout, install with `python setup_tools.py --clang-source PATH_TO_PINNED_MINIMAL_CLANG_DIRECTORY`, then place verified private input copies at `inputs/archive/dqmj3pro/DQMJ3P.cia` and `DQMJ3P_Update.cia`. The Clang directory must contain every pinned Clang/LLD/DLL file. The original owner archive remains external and immutable. Installation verifies downloads before use and leaves global PATH and Java settings unchanged. See [tooling](docs/2026-11-06-tooling.md).
+
+`configure_inputs.py --archive PATH_TO_OWNER_7Z` verifies the pinned archive and materializes only missing expected CIA files, without overwriting existing inputs. `validate_clean_checkout.py --destination work/clean-replay/NEW_NAME` replays a committed source snapshot with explicit private input/tool copies. It requires a new path and sufficient free space.
 
 ## Continue reconstruction
 

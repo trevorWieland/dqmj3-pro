@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "observedDate": "2026-11-06",
+  "phase": "verified foundation with one nonmatching behavior-tested native candidate",
+  "verifiedSourceSnapshot": "dc486d2",
+  "foundationPipelineReplay": {
+    "status": "passed",
+    "receipt": "evidence/verification/clean-checkout.json",
+    "unitTests": 20,
+    "nativeBoundaryControls": 6,
+    "independentExtractionComparisons": 4,
+    "optionalGhidraDiagnosticIncluded": false
+  },
+  "nativeCandidate": {
+    "build": "update-content0",
+    "programId": "0004000e001acb00",
+    "mode": "ARM",
+    "address": "0x0069180c",
+    "extentBytes": 20,
+    "boundedCases": 168,
+    "wrongSourceDetected": true,
+    "exactBytesMatch": false,
+    "ghidraBoundaryCorroborated": true
+  },
+  "originalScripts": {
+    "derivedUpdateFirstPaths": 753,
+    "cleanTextPaths": 752,
+    "textCandidatesWithControls": 1,
+    "runtimePrecedenceProved": false,
+    "recoveredSourceCredit": 0
+  },
+  "acceptedRecoveredFunctions": 0,
+  "acceptedRecoveredBytes": 0,
+  "originalCompilerIdentified": false,
+  "executableInventoryComplete": false,
+  "wholeGameExecution": false,
+  "sourceOnlyExecutableProof": false,
+  "sourceOnlyContainerProof": false,
+  "nextMilestone": "identify compiler profile and close one exact native source packet"
+}
