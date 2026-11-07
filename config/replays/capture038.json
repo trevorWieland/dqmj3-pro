@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "name": "capture038",
+  "producerSteps": [
+    {
+      "name": "capture038-positive",
+      "args": [
+        "toolscripts/squirrel_capture038_execute.py",
+        "--folder",
+        "work/squirrel-capture038/coordinator-positive"
+      ]
+    },
+    {
+      "name": "capture038-controls",
+      "args": [
+        "toolscripts/squirrel_capture038_controls.py",
+        "--baseline",
+        "work/squirrel-capture038/coordinator-positive",
+        "--folder",
+        "work/squirrel-capture038/coordinator-controls"
+      ]
+    }
+  ],
+  "tests": [
+    "squirrel_capture038",
+    "isolated_component_replay"
+  ],
+  "packets": [
+    "work/squirrel-capture038/coordinator-positive/execution.json",
+    "work/squirrel-capture038/coordinator-controls/controls.json"
+  ]
+}

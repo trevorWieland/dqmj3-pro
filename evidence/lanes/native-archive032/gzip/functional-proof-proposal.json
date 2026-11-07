@@ -1,0 +1,740 @@
+{
+  "schemaVersion": 1,
+  "programId": "0004000e001acb00",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "status": "proposed-functional-proof-pending-coordinator-review-and-replay",
+  "acceptedSourceCreditGranted": 0,
+  "functions": [
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 6250384,
+        "mode": "ARM"
+      },
+      "symbol": "fn_005f5f90",
+      "source": {
+        "path": "src/native/wave036/gzip_owner.c",
+        "sha256": "59ec241266f1037ddce9f489dc4bb034d68dd4e572dfc5754ac331674224f546",
+        "bytes": 1787
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 132,
+      "originalInstructionRanges": [
+        {
+          "start": 6250384,
+          "endExclusive": 6250516,
+          "bytes": 132
+        }
+      ],
+      "originalPoolRanges": [
+        {
+          "start": 6250516,
+          "endExclusive": 6250520,
+          "bytes": 4,
+          "sha256": "e0773a800b7d0d988409e951bb661fec8c472b3846154549d80137cdb409d8c4",
+          "loadInstruction": 6250392,
+          "resolvedWord": 8753020
+        },
+        {
+          "start": 6250520,
+          "endExclusive": 6250524,
+          "bytes": 4,
+          "sha256": "75ceae1c863f0acb0dace0d3a147748991ab6cb162275a5cd7a13cee13608f0e",
+          "loadInstruction": 6250404,
+          "resolvedWord": 8465548
+        }
+      ],
+      "reportEntryBytes": 132,
+      "originalSpanSha256": "ea78aff17b0b6b9d9c5da4d44f6bdc7157c540bcbb4a2b3c23dae12edcf1d0c5",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 2330604,
+          "address": 2330676,
+          "bytes": 4,
+          "sha256": "a5b77ddc5c7f758fd05329000259bada7b84b5cce1e69907e184a8f81db9cdf9"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/gzip-seal-v2/modern14/arm/gzip_owner.o",
+          "sha256": "af07512ba6b0a63fab530c40f2ba486d9b255d13a15537186ed47105ebc510da",
+          "bytes": 2616
+        },
+        "section": ".text.fn_005f5f90",
+        "bytes": 160,
+        "sha256": "93ba61c9d6160c8678ac69ebd6adda9b66b3dd69201a7e80e2a2246ea9013d8d",
+        "source": {
+          "path": "src/native/wave036/gzip_owner.c",
+          "sha256": "59ec241266f1037ddce9f489dc4bb034d68dd4e572dfc5754ac331674224f546",
+          "bytes": 1787
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_005f5f90",
+            "offset": 16,
+            "type": 28,
+            "symbol": "archive_services",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_005f5f90",
+            "offset": 92,
+            "type": 28,
+            "symbol": "archive_services",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_005f5f90",
+            "offset": 156,
+            "type": 2,
+            "symbol": "archive_gzip_operations",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 160,
+      "candidateLinkedSpanSha256": "8c820475189fab65ca0a96a6b32a56ab94e5a2b42dbce6a5f4cff3d0b77dafbb",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/gzip/packet.json",
+          "sha256": "494664dfdd7744e2248df69606f49557c83b6567965cd6882214799db67c1629",
+          "bytes": 1933073
+        },
+        "verifiedTests": 21,
+        "constructionAndRangeCases": 141,
+        "attemptedFixtureCases": 141,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 33,
+        "originalInstructionsReached": 33,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "Every final live owner field/output byte and nonprivate fixture byte is compared after typed ABI/pointer translation. Transient codec payloads are representation-private; unpublished codec allocations must be freed. Retired storage cannot be executed-read/written in instruction oracles; Windows uses final guards and ordered typed-provider observations. No SDK internals or universal memory equivalence is claimed.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Five whole canonical wrapper bodies only; existing getter and underlying SDK receive no new credit.",
+          "Initialized input length >=4, bounded accessible output and explicitly registered ownership; arbitrary corrupt game-input safety is not proved.",
+          "Independent output budgets in method fixtures are not all setter/game-caller pipelines.",
+          "Original SDK heap-ready/current-heap state is a supplied platform precondition, not recovered SDK startup.",
+          "Codec payloads and physical private allocation sizes may differ; final owner fields, output, nonprivate bytes and ordered cleanup phases are checked.",
+          "Allocator backing starts zeroed; fixture policy does not prove arbitrary native allocator contents or multithreaded binding safety.",
+          "Reference-only dynamic SDK instruction/data witnesses do not close historical SDK function boundaries or change the inventory.",
+          "Retired-storage execution guards apply to instruction oracles; Windows has real calls, final guards and typed-provider event observations.",
+          "Historical1.2.7 is a comparison profile with explicit legacy compiler/header limitations; modern1.4 is the independently locked port dependency.",
+          "No Android OS/device run, complete game caller, resource renderer, native game build, historical compiler identity or universal equivalence is claimed.",
+          "No independent clean replay or coordinator admission is claimed by this producer."
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 6249824,
+        "mode": "ARM"
+      },
+      "symbol": "fn_005f5d60",
+      "source": {
+        "path": "src/native/wave036/gzip_owner.c",
+        "sha256": "59ec241266f1037ddce9f489dc4bb034d68dd4e572dfc5754ac331674224f546",
+        "bytes": 1787
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 56,
+      "originalInstructionRanges": [
+        {
+          "start": 6249824,
+          "endExclusive": 6249880,
+          "bytes": 56
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 56,
+      "originalSpanSha256": "307f62d419c59e6c683ee57f3c021716c420f7dd413352a5b04fff0db1977a56",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 2330604,
+          "address": 2330712,
+          "bytes": 4,
+          "sha256": "e12ac2cc71ba39e80690cf650d2bf3bcb3339035ba00616b1b446eeb4718bab1"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/gzip-seal-v2/modern14/arm/gzip_owner.o",
+          "sha256": "af07512ba6b0a63fab530c40f2ba486d9b255d13a15537186ed47105ebc510da",
+          "bytes": 2616
+        },
+        "section": ".text.fn_005f5d60",
+        "bytes": 40,
+        "sha256": "da010c0746724ea1587847602c53c78754afa5007eea66f3c0c90e238befde48",
+        "source": {
+          "path": "src/native/wave036/gzip_owner.c",
+          "sha256": "59ec241266f1037ddce9f489dc4bb034d68dd4e572dfc5754ac331674224f546",
+          "bytes": 1787
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_005f5d60",
+            "offset": 24,
+            "type": 28,
+            "symbol": "archive_word",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 40,
+      "candidateLinkedSpanSha256": "d96d8d301a251df27e404ac02236a00dbf020f5ac735bb9eb70549c3c959097a",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/gzip/packet.json",
+          "sha256": "494664dfdd7744e2248df69606f49557c83b6567965cd6882214799db67c1629",
+          "bytes": 1933073
+        },
+        "verifiedTests": 21,
+        "constructionAndRangeCases": 141,
+        "attemptedFixtureCases": 141,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 14,
+        "originalInstructionsReached": 14,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "Every final live owner field/output byte and nonprivate fixture byte is compared after typed ABI/pointer translation. Transient codec payloads are representation-private; unpublished codec allocations must be freed. Retired storage cannot be executed-read/written in instruction oracles; Windows uses final guards and ordered typed-provider observations. No SDK internals or universal memory equivalence is claimed.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Five whole canonical wrapper bodies only; existing getter and underlying SDK receive no new credit.",
+          "Initialized input length >=4, bounded accessible output and explicitly registered ownership; arbitrary corrupt game-input safety is not proved.",
+          "Independent output budgets in method fixtures are not all setter/game-caller pipelines.",
+          "Original SDK heap-ready/current-heap state is a supplied platform precondition, not recovered SDK startup.",
+          "Codec payloads and physical private allocation sizes may differ; final owner fields, output, nonprivate bytes and ordered cleanup phases are checked.",
+          "Allocator backing starts zeroed; fixture policy does not prove arbitrary native allocator contents or multithreaded binding safety.",
+          "Reference-only dynamic SDK instruction/data witnesses do not close historical SDK function boundaries or change the inventory.",
+          "Retired-storage execution guards apply to instruction oracles; Windows has real calls, final guards and typed-provider event observations.",
+          "Historical1.2.7 is a comparison profile with explicit legacy compiler/header limitations; modern1.4 is the independently locked port dependency.",
+          "No Android OS/device run, complete game caller, resource renderer, native game build, historical compiler identity or universal equivalence is claimed.",
+          "No independent clean replay or coordinator admission is claimed by this producer."
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 6249880,
+        "mode": "ARM"
+      },
+      "symbol": "fn_005f5d98",
+      "source": {
+        "path": "src/native/wave036/gzip_owner.c",
+        "sha256": "59ec241266f1037ddce9f489dc4bb034d68dd4e572dfc5754ac331674224f546",
+        "bytes": 1787
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 24,
+      "originalInstructionRanges": [
+        {
+          "start": 6249880,
+          "endExclusive": 6249904,
+          "bytes": 24
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 24,
+      "originalSpanSha256": "1bdcbf5a18ad9715ed9591cd08a86b2b4fcac4a5c4e8cf108c653b095f98ab01",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 2330604,
+          "address": 2330748,
+          "bytes": 4,
+          "sha256": "f28dc084f0510ae869f308ee4fe6c1356eae3374e59af5c7be2a9e4ff08d52df"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/gzip-seal-v2/modern14/arm/gzip_owner.o",
+          "sha256": "af07512ba6b0a63fab530c40f2ba486d9b255d13a15537186ed47105ebc510da",
+          "bytes": 2616
+        },
+        "section": ".text.fn_005f5d98",
+        "bytes": 20,
+        "sha256": "8616bada1068980c5dc7131878a33190c441cb4c858fa2691212989d56d982bf",
+        "source": {
+          "path": "src/native/wave036/gzip_owner.c",
+          "sha256": "59ec241266f1037ddce9f489dc4bb034d68dd4e572dfc5754ac331674224f546",
+          "bytes": 1787
+        },
+        "relocations": []
+      },
+      "candidateInstructionAndPoolBytes": 20,
+      "candidateLinkedSpanSha256": "8616bada1068980c5dc7131878a33190c441cb4c858fa2691212989d56d982bf",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/gzip/packet.json",
+          "sha256": "494664dfdd7744e2248df69606f49557c83b6567965cd6882214799db67c1629",
+          "bytes": 1933073
+        },
+        "verifiedTests": 21,
+        "constructionAndRangeCases": 141,
+        "attemptedFixtureCases": 141,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 6,
+        "originalInstructionsReached": 6,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "Every final live owner field/output byte and nonprivate fixture byte is compared after typed ABI/pointer translation. Transient codec payloads are representation-private; unpublished codec allocations must be freed. Retired storage cannot be executed-read/written in instruction oracles; Windows uses final guards and ordered typed-provider observations. No SDK internals or universal memory equivalence is claimed.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Five whole canonical wrapper bodies only; existing getter and underlying SDK receive no new credit.",
+          "Initialized input length >=4, bounded accessible output and explicitly registered ownership; arbitrary corrupt game-input safety is not proved.",
+          "Independent output budgets in method fixtures are not all setter/game-caller pipelines.",
+          "Original SDK heap-ready/current-heap state is a supplied platform precondition, not recovered SDK startup.",
+          "Codec payloads and physical private allocation sizes may differ; final owner fields, output, nonprivate bytes and ordered cleanup phases are checked.",
+          "Allocator backing starts zeroed; fixture policy does not prove arbitrary native allocator contents or multithreaded binding safety.",
+          "Reference-only dynamic SDK instruction/data witnesses do not close historical SDK function boundaries or change the inventory.",
+          "Retired-storage execution guards apply to instruction oracles; Windows has real calls, final guards and typed-provider event observations.",
+          "Historical1.2.7 is a comparison profile with explicit legacy compiler/header limitations; modern1.4 is the independently locked port dependency.",
+          "No Android OS/device run, complete game caller, resource renderer, native game build, historical compiler identity or universal equivalence is claimed.",
+          "No independent clean replay or coordinator admission is claimed by this producer."
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 6250156,
+        "mode": "ARM"
+      },
+      "symbol": "fn_005f5eac",
+      "source": {
+        "path": "src/native/wave036/gzip_inflate.c",
+        "sha256": "2fc0a476c21493a045bd60546a70bf97417636454026d89350916285d408d025",
+        "bytes": 1649
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 224,
+      "originalInstructionRanges": [
+        {
+          "start": 6250156,
+          "endExclusive": 6250380,
+          "bytes": 224
+        }
+      ],
+      "originalPoolRanges": [
+        {
+          "start": 6250380,
+          "endExclusive": 6250384,
+          "bytes": 4,
+          "sha256": "9f26c2a6e2755f063a418711b4b646d10757cf1eec0ea6678881e49d5d975ff8",
+          "loadInstruction": 6250176,
+          "resolvedWord": 6250128
+        }
+      ],
+      "reportEntryBytes": 224,
+      "originalSpanSha256": "d91158180d21dc429df4ccd3d487b13a3b32a5a87836040cd47b8767ed0f497c",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 2330604,
+          "address": 2330740,
+          "bytes": 4,
+          "sha256": "419177277fee4eccb50329c3e28142fe0d7934704f8cd9e4d8ee7c22aad19130"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/gzip-seal-v2/modern14/arm/gzip_inflate.o",
+          "sha256": "fdab6b3b6b79ecac8b235574469da5c3a714298b630cfd2f0148b5a57c5f86e6",
+          "bytes": 2016
+        },
+        "section": ".text.fn_005f5eac",
+        "bytes": 248,
+        "sha256": "62550a3df0ba3394f5db6554ea01902769459aba10a35d2abac8bf623c1693de",
+        "source": {
+          "path": "src/native/wave036/gzip_inflate.c",
+          "sha256": "2fc0a476c21493a045bd60546a70bf97417636454026d89350916285d408d025",
+          "bytes": 1649
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_005f5eac",
+            "offset": 16,
+            "type": 28,
+            "symbol": "archive_services",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_005f5eac",
+            "offset": 68,
+            "type": 28,
+            "symbol": "inflateInit2_",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_005f5eac",
+            "offset": 152,
+            "type": 28,
+            "symbol": "inflate",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_005f5eac",
+            "offset": 164,
+            "type": 28,
+            "symbol": "inflate",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_005f5eac",
+            "offset": 220,
+            "type": 28,
+            "symbol": "inflateEnd",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_005f5eac",
+            "offset": 236,
+            "type": 2,
+            "symbol": "section:.text.gzip_release",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_005f5eac",
+            "offset": 240,
+            "type": 2,
+            "symbol": "section:.rodata.str1.1",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_005f5eac",
+            "offset": 244,
+            "type": 2,
+            "symbol": "section:.text.gzip_allocate",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 248,
+      "candidateLinkedSpanSha256": "2c8dcbc9405360b466a468847a4098b58f99a6cd075d52df5fc9fac5aaa9fbba",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/gzip/packet.json",
+          "sha256": "494664dfdd7744e2248df69606f49557c83b6567965cd6882214799db67c1629",
+          "bytes": 1933073
+        },
+        "verifiedTests": 21,
+        "constructionAndRangeCases": 141,
+        "attemptedFixtureCases": 141,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 56,
+        "originalInstructionsReached": 56,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "Every final live owner field/output byte and nonprivate fixture byte is compared after typed ABI/pointer translation. Transient codec payloads are representation-private; unpublished codec allocations must be freed. Retired storage cannot be executed-read/written in instruction oracles; Windows uses final guards and ordered typed-provider observations. No SDK internals or universal memory equivalence is claimed.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Five whole canonical wrapper bodies only; existing getter and underlying SDK receive no new credit.",
+          "Initialized input length >=4, bounded accessible output and explicitly registered ownership; arbitrary corrupt game-input safety is not proved.",
+          "Independent output budgets in method fixtures are not all setter/game-caller pipelines.",
+          "Original SDK heap-ready/current-heap state is a supplied platform precondition, not recovered SDK startup.",
+          "Codec payloads and physical private allocation sizes may differ; final owner fields, output, nonprivate bytes and ordered cleanup phases are checked.",
+          "Allocator backing starts zeroed; fixture policy does not prove arbitrary native allocator contents or multithreaded binding safety.",
+          "Reference-only dynamic SDK instruction/data witnesses do not close historical SDK function boundaries or change the inventory.",
+          "Retired-storage execution guards apply to instruction oracles; Windows has real calls, final guards and typed-provider event observations.",
+          "Historical1.2.7 is a comparison profile with explicit legacy compiler/header limitations; modern1.4 is the independently locked port dependency.",
+          "No Android OS/device run, complete game caller, resource renderer, native game build, historical compiler identity or universal equivalence is claimed.",
+          "No independent clean replay or coordinator admission is claimed by this producer."
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 6250524,
+        "mode": "ARM"
+      },
+      "symbol": "fn_005f601c",
+      "source": {
+        "path": "src/native/wave036/gzip_owner.c",
+        "sha256": "59ec241266f1037ddce9f489dc4bb034d68dd4e572dfc5754ac331674224f546",
+        "bytes": 1787
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 60,
+      "originalInstructionRanges": [
+        {
+          "start": 6250524,
+          "endExclusive": 6250584,
+          "bytes": 60
+        }
+      ],
+      "originalPoolRanges": [
+        {
+          "start": 6250584,
+          "endExclusive": 6250588,
+          "bytes": 4,
+          "sha256": "e0773a800b7d0d988409e951bb661fec8c472b3846154549d80137cdb409d8c4",
+          "loadInstruction": 6250524,
+          "resolvedWord": 8753020
+        }
+      ],
+      "reportEntryBytes": 60,
+      "originalSpanSha256": "1d6796f664a8e466ead4023deaea34f25415ab5aeef9c667689a6987246273df",
+      "callerWitnesses": [
+        {
+          "kind": "unadjusted-method-table",
+          "table": "gzip-view-measured-release-slot-only",
+          "tableStart": 8753020,
+          "tableSha256": "3946fe800b2dbfe8009669ca972d1c01bbd5913b47b41828f1958d0183434528",
+          "slotOffset": 0,
+          "target": 6250524
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2330604,
+          "address": 2330756,
+          "bytes": 4,
+          "sha256": "06f7563ca88345953940f3058138fce52d26963fb6a471e8ed4520f5785885a7"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/gzip-seal-v2/modern14/arm/gzip_owner.o",
+          "sha256": "af07512ba6b0a63fab530c40f2ba486d9b255d13a15537186ed47105ebc510da",
+          "bytes": 2616
+        },
+        "section": ".text.fn_005f601c",
+        "bytes": 92,
+        "sha256": "83f260fab2655d38e067da341476a4fb8257ae217c8272a7c9b17f1448586658",
+        "source": {
+          "path": "src/native/wave036/gzip_owner.c",
+          "sha256": "59ec241266f1037ddce9f489dc4bb034d68dd4e572dfc5754ac331674224f546",
+          "bytes": 1787
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_005f601c",
+            "offset": 28,
+            "type": 28,
+            "symbol": "archive_services",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_005f601c",
+            "offset": 88,
+            "type": 2,
+            "symbol": "archive_gzip_operations",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 92,
+      "candidateLinkedSpanSha256": "c5dd1257fc1908dcbc063a0020d1b40f5e35ebbaf06bb646607f2ece8c0ac2ea",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/gzip/packet.json",
+          "sha256": "494664dfdd7744e2248df69606f49557c83b6567965cd6882214799db67c1629",
+          "bytes": 1933073
+        },
+        "verifiedTests": 21,
+        "constructionAndRangeCases": 141,
+        "attemptedFixtureCases": 141,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 15,
+        "originalInstructionsReached": 15,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "Every final live owner field/output byte and nonprivate fixture byte is compared after typed ABI/pointer translation. Transient codec payloads are representation-private; unpublished codec allocations must be freed. Retired storage cannot be executed-read/written in instruction oracles; Windows uses final guards and ordered typed-provider observations. No SDK internals or universal memory equivalence is claimed.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Five whole canonical wrapper bodies only; existing getter and underlying SDK receive no new credit.",
+          "Initialized input length >=4, bounded accessible output and explicitly registered ownership; arbitrary corrupt game-input safety is not proved.",
+          "Independent output budgets in method fixtures are not all setter/game-caller pipelines.",
+          "Original SDK heap-ready/current-heap state is a supplied platform precondition, not recovered SDK startup.",
+          "Codec payloads and physical private allocation sizes may differ; final owner fields, output, nonprivate bytes and ordered cleanup phases are checked.",
+          "Allocator backing starts zeroed; fixture policy does not prove arbitrary native allocator contents or multithreaded binding safety.",
+          "Reference-only dynamic SDK instruction/data witnesses do not close historical SDK function boundaries or change the inventory.",
+          "Retired-storage execution guards apply to instruction oracles; Windows has real calls, final guards and typed-provider event observations.",
+          "Historical1.2.7 is a comparison profile with explicit legacy compiler/header limitations; modern1.4 is the independently locked port dependency.",
+          "No Android OS/device run, complete game caller, resource renderer, native game build, historical compiler identity or universal equivalence is claimed.",
+          "No independent clean replay or coordinator admission is claimed by this producer."
+        ]
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave002/types.h",
+      "sha256": "f8e5367f0db62dae45801b2ab5660010eb719e9fd639f5ad29cd5efade96c7e2",
+      "bytes": 439
+    },
+    {
+      "path": "src/native/wave002/views_03.h",
+      "sha256": "72e103a184811d5d72a46fa3f2ea890d83ce3afc78366a2a1d93f111466caed2",
+      "bytes": 6871
+    },
+    {
+      "path": "src/native/wave032/archive.h",
+      "sha256": "898228acad7e6c345af740679090ecfb27e05a15fcd8326c15c134a25099eb9c",
+      "bytes": 2058
+    },
+    {
+      "path": "src/native/wave032/third_party/zlib-1.2.7/zconf.h",
+      "sha256": "ed886c15c846d31d2f6e6f5a33d3f6547812d85ec2aff4c3d70e8781e45d0959",
+      "bytes": 15291
+    },
+    {
+      "path": "src/native/wave032/third_party/zlib-1.2.7/zlib.h",
+      "sha256": "31b7ed2b5bceea407626bdbcf16a1efa9770e91b646012906ac8303aa3f1f242",
+      "bytes": 86717
+    },
+    {
+      "path": "src/native/wave036/gzip.h",
+      "sha256": "990070e998e9078885ffadda3c18873d81b567cd4dbb58f466977d1c0fb57a49",
+      "bytes": 1390
+    },
+    {
+      "path": "src/native/wave036/third_party/zlib-1.4/zconf.h",
+      "sha256": "1e91041e94e3f13a12b770be849c4c674e37caddf94e37acddf853bb54a09adf",
+      "bytes": 17304
+    },
+    {
+      "path": "src/native/wave036/third_party/zlib-1.4/zlib.h",
+      "sha256": "2c404dcaa08709c2a129aea18f3dad4fb5acc5cb52ef12b6223bf8e78c195801",
+      "bytes": 104881
+    },
+    {
+      "path": "toolscripts/native_archive032_gzip_fixture.h",
+      "sha256": "64cb6ffd1c33c107355cc1b22f843cac9d061b2ddae8a9ca41f6163b137dd35e",
+      "bytes": 1497
+    }
+  ],
+  "originalPackets": [
+    {
+      "path": "evidence/lanes/native-archive032/gzip/packet.json",
+      "sha256": "494664dfdd7744e2248df69606f49557c83b6567965cd6882214799db67c1629",
+      "bytes": 1933073
+    },
+    {
+      "path": "evidence/lanes/native-archive032/gzip/verification.json",
+      "sha256": "99a3db73acd7496739c9dc17ba83fd31272ed98c9c9de33826e4fc5f7b3b4ff8",
+      "bytes": 465
+    }
+  ],
+  "producer": {
+    "path": "toolscripts/native_archive032_gzip_functional_proposal.py",
+    "sha256": "f6a31f26c57fb2fecc30d0880e1fcd9bb3218c6aba3ab58cd50354a83550b8b1",
+    "bytes": 5422
+  },
+  "census": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+    "bytes": 20574405
+  },
+  "supplementalInventory": [
+    {
+      "path": "evidence/lanes/wave013-native/method-dispatch-overlay.json",
+      "sha256": "ba4a6b8f633d62dc7ea2b9b8c473459215b7f5d62f42d79b849497900116c75e",
+      "bytes": 131026
+    },
+    {
+      "path": "evidence/verification/array007-function-overlay.json",
+      "sha256": "3f3121445869c567a8460efb59e97fe60d6b9073220ded6e593ae2e7acdcd7eb",
+      "bytes": 3339
+    },
+    {
+      "path": "evidence/verification/closure010-function-overlay.json",
+      "sha256": "3eb297926b78bcf312dc6a2bd2a06228a318de91bc4aebcda522d8a1605dd1a1",
+      "bytes": 4237
+    },
+    {
+      "path": "evidence/verification/prototype011-function-overlay.json",
+      "sha256": "6c9d4f364ed5b86f9c1a67699066e879214c57c0e159978200d53435d9b241c3",
+      "bytes": 3564
+    },
+    {
+      "path": "evidence/verification/native-closure013-function-overlay.json",
+      "sha256": "162506e5b52f798a2e41016b62f1be8c7bc38f9553b161b022fd4c1a7b64fcef",
+      "bytes": 4258
+    },
+    {
+      "path": "evidence/verification/weak014-function-overlay.json",
+      "sha256": "228f73f849e59725fcac20725adfddf69b7d14fedf2ccc1b2a8f4b766d4d06cd",
+      "bytes": 4882
+    },
+    {
+      "path": "evidence/verification/string015-function-overlay.json",
+      "sha256": "66ba81473f5175bb8bad57f0c954465b88e0fc9bc898bc6ceece05d7efda6c03",
+      "bytes": 5054
+    },
+    {
+      "path": "evidence/verification/lookup020-function-overlay.json",
+      "sha256": "859e76a286fba74b4484450674ac3b01178077bc967e4cda3dc0821146f1682a",
+      "bytes": 4450
+    }
+  ],
+  "originalInstructionBytes": 496,
+  "alreadyAcceptedGetterExcluded": "fn_006edec8",
+  "underlyingSdkCreditGranted": 0,
+  "independentCleanReplayClaimed": false,
+  "sharedRegistryChanged": false
+}

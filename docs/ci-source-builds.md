@@ -34,7 +34,7 @@ All builds use freestanding C11, `-O2`, function/data sections and `-Wall -Wextr
 
 ## Explicit source and warning policy
 
-`config/build-units.json` explicitly lists 19 compiled files: 18 files containing recovered/candidate native routines and the separate wave005 `fixture.c` test-support file. It records every quoted header dependency. A census over waves 001–008 rejects missing, duplicated, unlisted or conflicting C entries. A changed transitive header list, external header, system header or macro-based include requires an explicit build-tool update.
+`config/build-units.json` is the authoritative source census. The current configuration lists 355 translation units and 999 target compilations, including explicitly limited fixture targets. It records every quoted header dependency and every selected native wave and Squirrel component root. Missing, duplicated, unlisted or conflicting C entries fail validation. A changed transitive header list, external header, system header or macro-based include requires an explicit build-tool update.
 
 `src/native/wave003/setters.c` is the historical void-return setter packet. It stays excluded from the active source list and active linking; `src/native/wave003/abi-qualified/setters.c` provides the current interface. This classification does not grant acceptance to every candidate in any active file.
 
@@ -49,3 +49,5 @@ Checkout 7.0.1, setup-python 7.1.0 and upload-artifact 7.0.2 are pinned by immut
 Only `diagnostics/*.txt` and `manifests/*.json` directly under the source-compile work directory are uploaded, including failure diagnostics when available. Objects, download archives, original payloads, hybrid images, source archives, executable outputs and arbitrary work directories are excluded. Manifests contain source/header hashes, target flags, compiler pins/versions, warning dispositions, object hashes/architecture and process outcomes. They contain no original instruction bytes. Objects remain local disposable build products.
 
 The local evidence lane records the initial warning failures, successful target compilation and source-only clean-room replay. Remote GitHub execution is a separate result and must be observed after the coordinator publishes the actual repository.
+
+The explicit `zlib-solo` header profile adds `-DZ_SOLO` and accepts only four byte-identical upstream zlib headers from the separately locked 1.2.7 and 1.4 releases. The checked header graph contains only each release's `zlib.h` and `zconf.h`; other paths and changed bytes receive no exception. This permits wrapper compilation without a target C library. Codec linking and runtime behavior remain separate component qualifications.

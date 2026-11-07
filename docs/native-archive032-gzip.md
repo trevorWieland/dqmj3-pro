@@ -1,0 +1,60 @@
+# Gzip resource boundary and native codec profiles
+
+This disjoint continuation of issue [11](https://github.com/trevorWieland/dqmj3-pro/issues/11) measures the gzip owner used by the actual resource caller at update `0x00238fec`. New production code lives in `src/native/wave036`; all 60 frozen XBB inputs stay unchanged in wave032.
+
+The complete six-method boundary contains 508 instruction bytes. Five new canonical methods contain 496 bytes: constructor `5f5f90` (132), input setter `5f5d60` (56), input clear `5f5d98` (24), inflater wrapper `5f5eac` (224), and releasing destructor `5f601c` (60). The 12-byte getter `6edec8` already belongs to frozen wave002. It receives no new credit. `archive_gzip_output_size` is an explicitly named native adapter for its measured operation; it uses the widened typed state instead of reusing the old target-offset record type. Its ARM object identity is checked separately and does not reassign existing matching ownership.
+
+Canonical instruction ranges and PC-relative pool words are separate in `gzip-boundary-claim.json`. The constructor's 8 pool bytes, inflater's 4, and releasing destructor's 4 are not instruction credit. The measured operations prefix at `858f7c` contains one verified releasing-destructor slot. No second virtual slot or deleting destructor is invented. The separate XBB deleting-destructor candidate remains in the frozen XBB packet and is not admitted by this lane.
+
+The view contains an operations pointer and a buffer pointer. Its buffer has input pointer, input byte count, output pointer, output byte count, and an unsigned ownership byte. The target buffer is 20 bytes; native Windows and AArch64 buffers are 32. The output-byte field moves from target offset12 to native offset24. Pointer fields remain real typed pointers. Counts and raw allocation budgets remain unsigned32 values.
+
+Construction publishes the operations pointer, clears the owner pointer, allocates the physical typed buffer, initializes its fields individually, reloads the owner after the allocator returns, and disposes an intervening owner when required. A typed allocator callback supplies the explicit reentry fixtures. These fixtures do not establish that the game's registered heap reenters this constructor. Releasing destruction preserves the observed dangling buffer pointer; the destroyed view must not be used until reconstructed. Recorded post-return retired bytes are observer data, not executable dereferences of an expired object.
+
+The setter takes the last four initialized input bytes as a little-endian output size. The clear method clears only input pointer and input count. Inflating initializes a real `z_stream` with gzip window bits31, obtains output storage when no caller output is supplied, calls `inflate(Z_FINISH)` twice, accepts the second `Z_STREAM_END`, and ends the stream. Failed initialization leaves prior output metadata untouched and does not call `inflateEnd`. Subsequent failure releases output only when the retained ownership byte is nonzero, clears the output pointer, and ends the stream. Providing a new output pointer does not reset an earlier ownership byte. This behavior is preserved, not repaired.
+
+The ownership fixture registers an externally supplied block as valid heap storage when a retained nonzero ownership flag can cause it to be released. Arbitrary stack pointers or incompatible allocator objects are outside that contract. An initialized allocator prefix is supplied for the original SDK's actual prefix read during free. Prefix bytes remain immutable. Zero-byte allocation returns a distinct nonnull bounded fixture allocation. Allocator backing starts zeroed; allocated codec payloads are opaque, and unallocated bytes and prefixes remain checked.
+
+## Genuine reference and source dependencies
+
+The reference maps the hash-verified owner image, ExHeader-derived segments and BSS. It supplies an initialized SDK heap-ready/current-heap precondition and a genuine typed C heap implementation. The original allocation/free wrappers, original gzip initializer/inflater/end routines and original wrapper bodies execute normally. No SDK return register, compressed output or executable instruction is substituted. This is not proof of SDK startup initialization or of its internal allocator implementation.
+
+The census currently gives the three SDK entrypoints `733bfc`, `7321e0`, and `733bac` only leading four-byte NOP bodies. Further actual SDK instructions are therefore captured as reference-only dynamic instruction witnesses, with CPU mode, width, address and immutable-byte hash, inside the explicit `[730000,735000)` SDK discovery window. These observations do not invent function boundaries, change the census, increase a denominator or grant SDK source credit. Execution outside the explicit policy fails closed.
+
+Source execution maps authored C, the frozen authored XBB dependency, unmodified public zlib C and typed fixture services. It maps no original executable image or SDK helper. The public codec is an independently licensed dependency, not claimed recovered Nintendo SDK source.
+
+Two separately locked public profiles are exercised:
+
+| Profile | Upstream archive | Purpose |
+| --- | --- | --- |
+| `historical127` | [zlib1.2.7](https://zlib.net/fossils/zlib-1.2.7.tar.gz) | Historical ABI/behavior comparison; not the shipping dependency |
+| `modern14` | [zlib1.4](https://zlib.net/zlib-1.4.tar.gz) | Modern native port dependency |
+
+The historical lock is frozen XBB input `native_archive032_zlib.lock.json`. The new modern lock is `native_archive032_gzip_zlib14.lock.json`; both pin archive length/hash, each consumed source/header, and the complete upstream license-bearing header. Neither changes global `tools.lock.json`. The [upstream license](https://www.zlib.net/zlib_license.html) is retained in unmodified headers. Third-party comments and file lengths belong to the AGENTS exception.
+
+Both use `Z_SOLO` with explicit typed allocate/free callbacks and no CRT dependency. The historical Windows comparison alone disables `_WIN32`/`_WIN64` header platform wrappers in the freestanding profile because old Z_SOLO headers unconditionally include unavailable `stddef.h`. Its actual compiler target remains Windows x64, and actual Windows pointer, long and stream layouts are measured. Only historical vendor C suppresses the legacy negative-signed-shift diagnostic in optional `inflateMark`, which is outside the executed/qualified API. The modern profile builds with normal Windows platform macros and no such suppression. Historical `ptrdiff_t`/long assumptions are bounded to the exercised backing objects; no arbitrary multi-gigabyte pointer-difference claim follows.
+
+Actual compiler/linker binaries, arguments, complete ARM object sections, relocations, linked bodies, native `zlibVersion`, `z_stream` layouts and runtime package identities are recorded. `z_stream` is a real public-header object: target56 bytes, Windows88, AArch64112. No target-sized mirror is cast to a native library stream. No historical compiler or Nintendo fork identity follows from comparison with public1.2.7.
+
+Codec-private state sizes legitimately differ, including original7116 bytes versus modern ARM7128, Windows7168, and AArch647176 in the measured profile. The proof retains allocation/release records rather than requiring those byte layouts or all private allocation counts to agree. It compares wrapper-owned requests, live published ownership, release phases, output and state. Consecutive private-codec releases are one observed cleanup phase when comparing order with wrapper-owned releases. Every unpublished codec allocation must be released. The two pinned codec initializers each make one verified initial state-allocation attempt, which establishes the owned-output allocation ordinal in these profiles.
+
+## Bounded observations
+
+Generated streams exercise observed stored/fixed/dynamic DEFLATE blocks, empty output, optional gzip header fields/header CRC, invalid magic/CRC/length, truncated streams, trailing bytes and concatenated streams. Method-only metadata fixtures use an explicitly bounded independent output budget where indicated. They are not all setter-to-game-caller pipelines. The actual setter still reads the trailer without validating gzip first. Input length below4, inaccessible backing, unsupported invalid ownership, concurrent binding/lifetimes, and unbounded allocation budgets are excluded. These tests do not establish safe handling of arbitrary corrupt game resources.
+
+Persistent API sessions run constructor, setter, the existing-operation native getter adapter, inflate, clear and destruction against one live caller view and one platform binding. They cover success, initialization/output allocation failures and bad CRC with provided and owned outputs. Output hashes are observed while their storage is live; final retired snapshots are explicitly postmortem observer data. These sessions are driver-composed API calls, not a recovered outer game function.
+
+The private owner-supplied compressed XBB is extracted afresh with CIA/member hashes. Only metadata, hashes and generated synthetic fixtures are public. Expected bytes are independently checked without putting those bytes into authored execution. Output, wrapper fields, caller storage, allocation success/failure, live ownership and ordered release phases are compared against genuine original execution. Original SDK versus source codec API statuses and consumed/produced counts are recorded separately; Windows API internals are not instrumented or invented.
+
+ARM and high-address AArch64 execution restrict instruction ownership, initialized reads, live allocations, retired-storage reads/writes, caller stack and preserved registers. The real Windows DLL runs with pointers above4GiB, caller guards and post-return checks of all nonprivate bytes, including unallocated allocation backing. Windows instruction-level read traces are not claimed. Codec-private allocated payloads may differ. This is not whole-memory or universal equivalence.
+
+Normally returning mutations alter constructor state, footer choice, input clear, success status, owned output release, codec cleanup, and relative output/codec release order. The last control leaves final caller-visible fields/output and allocation liveness intact but is rejected for its actual release order. All controls must return normally with preserved immutable guards before semantic rejection counts.
+
+Android PIC libraries use API29 and 16KiB LOAD alignment. AArch64 instruction execution and linked PIC libraries do not constitute Android OS/device execution or a complete Windows/Android game.
+
+## Remaining resource path
+
+The actual `238fec` path obtains file bytes via `11c184`/`145ac0`, constructs/configures this gzip owner, gets the output size through existing `6edec8`, allocates caller output, inflates, clears/releases the gzip owner, constructs the frozen XBB view (`118624`), and performs named lookup (`176d74`). It ignores inflate failure before XBB construction; this packet grants no whole-caller credit or repaired error contract.
+
+Other measured callers include `26f918` formatting `%s_%c.bch` and queuing through `337680`, and `277e84` loading field-environment XBBs. BCH relocation/material construction (`13f638`, `15158c`, `151170`), resource job/cache ownership, startup, GPU uploads and rendering remain separate recovery work. SARC (`1517f0`) and LODD are distinct formats, not inferred gzip/XBB instances. Frozen portable file/session work may provide a native transport boundary; merely executing these codec wrappers grants no SDK/file-owner/helper credit.
+
+Reproduce with `tools/python/Scripts/python.exe toolscripts/native_archive032_gzip_packet.py --work work/native-archive032/gzip-replay --output evidence/lanes/native-archive032/gzip`. The stdlib verifier accepts an explicit snapshot root. Earlier exploratory guard failures and their actual input scope are preserved; a successful producer is not an independently replayed or coordinator-admitted proof.

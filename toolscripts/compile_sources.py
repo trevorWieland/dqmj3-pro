@@ -9,6 +9,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import bootstrap_public_compiler as public_compiler
+import public_zlib_headers
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -56,17 +57,21 @@ def read_config(root):
             raise RuntimeError("Invalid explicit unit targets")
         if not any(path.is_relative_to(folder) for folder in allowed):
             raise RuntimeError("Source unit escapes reviewed source trees")
+        profile = unit.get("publicHeaderProfile")
+        if profile not in (None, "zlib-solo"):
+            raise RuntimeError("Unknown public header profile")
         dependencies = set()
         pending = [path]
         while pending:
             item = pending.pop()
             text = item.read_text(encoding="utf-8")
             logical = re.sub(r"\\\r?\n", "", text)
-            if re.search(r"^\s*#\s*include\s*<", text, re.M):
+            trusted = public_zlib_headers.solo_includes(root, item, profile)
+            if trusted is None and re.search(r"^\s*#\s*include\s*<", text, re.M):
                 raise RuntimeError("System headers require a reviewed public header configuration")
             directives = re.findall(r"^\s*#\s*(include\w*|import)\s+([^\n]+)", logical, re.M)
-            includes = []
-            for directive, operand in directives:
+            includes = list(trusted or [])
+            for directive, operand in ([] if trusted is not None else directives):
                 literal = re.fullmatch(r'"([^"]+)"\s*', operand)
                 if directive != "include" or literal is None:
                     raise RuntimeError("Only explicit literal quoted header inputs are supported")
@@ -142,6 +147,8 @@ def run_unit(root, unit, target, output):
     object_path.parent.mkdir(parents=True, exist_ok=True)
     log_path.parent.mkdir(parents=True, exist_ok=True)
     argv = ["tools/clang-21/clang.exe", *TARGETS[target]["flags"], *FLAGS]
+    if unit.get("publicHeaderProfile") == "zlib-solo":
+        argv.append("-DZ_SOLO")
     if unit.get("layoutProfile") == "packed-4":
         argv.append("-fpack-struct=4")
     if unit.get("allowedUnusedParameters"):
@@ -182,7 +189,7 @@ def compile_all(root, targets, output):
     return {"schemaVersion": 1, "status": "compiled" if all(row["status"] == "compiled" for row in rows) else "failed",
             "purpose": "source-only target compilation; no linking, original comparison or game execution",
             "originalInputsRead": False, "sourceCredit": 0, "config": {"path": CONFIG, "sha256": public_compiler.digest(root / CONFIG)},
-            "producers": [{"path": item, "sha256": public_compiler.digest(root / item)} for item in ["toolscripts/compile_sources.py", "toolscripts/bootstrap_public_compiler.py"]],
+            "producers": [{"path": item, "sha256": public_compiler.digest(root / item)} for item in ["toolscripts/compile_sources.py", "toolscripts/bootstrap_public_compiler.py", "toolscripts/public_zlib_headers.py"]],
             "compiler": compiler, "toolVersions": versions, "targets": {target: TARGETS[target] for target in targets},
             "unitCount": len(config["units"]), "componentRoots": config.get("componentRoots", []),
             "platformSpecificUnits": [{"source": unit["source"], "targets": unit["targets"]}

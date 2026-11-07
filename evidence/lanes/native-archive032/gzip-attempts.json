@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 1,
+  "kind": "preserved-unfrozen-exploration-and-correction-history",
+  "attempts": [
+    {
+      "label": "legacy-vendor-shift-diagnostic",
+      "privateReceipt": {
+        "path": "work/native-archive032/gzip-build-first/arm/inflate.log",
+        "sha256": "c35248ab5e19edb4513a68f2de8840b444803eb84b21c067e4e2ec76bc98368f",
+        "bytes": 375
+      },
+      "noSourceOrSdkCreditGranted": true
+    },
+    {
+      "label": "aggregate-init-runtime-helper-unresolved",
+      "privateReceipt": {
+        "path": "work/native-archive032/gzip-build-second/arm/link.log",
+        "sha256": "49a71f7d39ce4581e9466d9b7e0e5ac7d440eade16e7737bb68b4e2cba6f03d9",
+        "bytes": 237
+      },
+      "noSourceOrSdkCreditGranted": true
+    },
+    {
+      "label": "historical-windows-header-unavailable",
+      "privateReceipt": {
+        "path": "work/native-archive032/gzip-build-third/windows/gzip_owner.log",
+        "sha256": "d37a4a32f831347e27dae8d823a47d1db2e534a42b5a8d7da6fcfe477e8ba017",
+        "bytes": 634
+      },
+      "noSourceOrSdkCreditGranted": true
+    },
+    {
+      "label": "original-external-free-prefix-precondition-missing",
+      "privateReceipt": {
+        "path": "work/native-archive032/gzip-exploratory/attempt001-stopped.private.json",
+        "sha256": "2c6cf19cb660248231f73b9d323ca68245fa284d68ccc6b153712ac52fd7f9cc",
+        "bytes": 1689247
+      },
+      "noSourceOrSdkCreditGranted": true
+    },
+    {
+      "label": "preseal107-success-with-duplicate-getter",
+      "privateReceipt": {
+        "path": "work/native-archive032/gzip-exploratory/success.private.json",
+        "sha256": "df8c70d607cc6092e8eb7d6a045f0564d65cd871a950246da6f1eba386120c35",
+        "bytes": 1672341
+      },
+      "noSourceOrSdkCreditGranted": true
+    },
+    {
+      "label": "preseal112-success-with-duplicate-getter",
+      "privateReceipt": {
+        "path": "work/native-archive032/gzip-exploratory-v3/success.private.json",
+        "sha256": "fc8539a5e14ebe7b24f00c0d7c58fe0f72532a8d4066171f13f5a8f790fa382a",
+        "bytes": 1806414
+      },
+      "noSourceOrSdkCreditGranted": true
+    },
+    {
+      "label": "seal-v1-input-collector-binary-as-text-before-build",
+      "privateReceipt": {
+        "path": "work/native-archive032/gzip-seal-v1/failure-receipt.json",
+        "sha256": "3025274dfc56cca55bbba2b60af937367c5f2238554818292f3945fa2daec86a",
+        "bytes": 496
+      },
+      "noSourceOrSdkCreditGranted": true
+    }
+  ],
+  "duplicateGetterCorrection": {
+    "address": 7265992,
+    "existingCanonicalSource": {
+      "path": "src/native/wave002/views_03.c",
+      "sha256": "b139506e0993f9fc52c65e3bd39777f132d1fe081159bbdcded7a127730e5384",
+      "bytes": 2975
+    },
+    "oldUnfrozenCanonicalDefinitionRemovedBeforeSeal": true,
+    "replacementNativeHelper": "archive_gzip_output_size",
+    "matchingOwnershipReassigned": false,
+    "newCreditGranted": 0,
+    "priorExplorationIsNotIndependentReplay": true
+  },
+  "byteAccountingCorrection": {
+    "earlierArithmeticEstimate": 608,
+    "measuredCompleteSixMethods": 508,
+    "existingAcceptedGetter": 12,
+    "newCanonicalFiveMethods": 496
+  },
+  "guardCorrection": "The original SDK free actually reads an initialized allocator prefix before a registered external output block. The first retained-ownership error attempt stopped; a fresh run supplied that explicit readable immutable prefix. No original instructions or output were changed.",
+  "legacyBuildCorrections": "Retained diagnostics led to scalar stream field initialization instead of an unresolved aggregate-clear runtime helper, and an explicit historical freestanding header profile. Modern1.4 has a separate lock and normal Windows macros.",
+  "frozenXbb60Modified": false,
+  "underlyingSdkCreditGranted": 0,
+  "acceptedSourceCreditGranted": 0,
+  "preseal112CapturedArtifacts": [
+    {
+      "profile": "modern14",
+      "privateCapturedGraph": {
+        "path": "work/native-archive032/gzip-exploratory-v3/modern14/graphs.private.pkl",
+        "sha256": "2924beb74c1f8fc5ff124a4d74031260a4104fd6d3fdc5a8ef8f9c711eca422d",
+        "bytes": 228636
+      },
+      "privateArmElf": {
+        "path": "work/native-archive032/gzip-exploratory-v3/modern14/arm/owner_full.elf",
+        "sha256": "b9fe0ecea84364c28a4d36052ba52b7ae7f5ed731ab2ef5fff66157c8a44bb66",
+        "bytes": 104108
+      },
+      "privateWindowsDll": {
+        "path": "work/native-archive032/gzip-exploratory-v3/modern14/windows/archive_gzip.dll",
+        "sha256": "cbb37b31d649b6d34ed6a31175ccfc9dc43b14781a355e4d2786135890df7258",
+        "bytes": 27136
+      },
+      "capturedHistoricalSources": [
+        {
+          "capturedSourcePath": "src/native/wave036/gzip_inflate.c",
+          "capturedSourceSha256": "2fc0a476c21493a045bd60546a70bf97417636454026d89350916285d408d025",
+          "capturedSourceBytes": 1649
+        },
+        {
+          "capturedSourcePath": "toolscripts/native_archive032_gzip_fixture.c",
+          "capturedSourceSha256": "ee1cc8a88a8874871fc7207adf22b2a215b4f6d8a4a0de1667fabfc207354e03",
+          "capturedSourceBytes": 4296
+        },
+        {
+          "capturedSourcePath": "work/native-archive032/public-zlib14/source/inflate.c",
+          "capturedSourceSha256": "c91ab7595ba8ef11030af76a614fc3138d0ec4cf995f171a9f435e19b1e6d7bc",
+          "capturedSourceBytes": 53162
+        },
+        {
+          "capturedSourcePath": "src/native/wave032/archive_lookup.c",
+          "capturedSourceSha256": "77447d1f84669ef96e98a0bdbf8974b33bf6d37fea2502c67ba84c1a198bcaae",
+          "capturedSourceBytes": 2147
+        },
+        {
+          "capturedSourcePath": "src/native/wave032/archive_members.c",
+          "capturedSourceSha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+          "capturedSourceBytes": 1657
+        },
+        {
+          "capturedSourcePath": "src/native/wave032/archive_owner.c",
+          "capturedSourceSha256": "5e8cba4615a2aa54073d1336d9bb4487d2db3f11cadf7f413c7212832e6d18c8",
+          "capturedSourceBytes": 1635
+        },
+        {
+          "capturedSourcePath": "src/native/wave036/gzip_owner.c",
+          "capturedSourceSha256": "81cd43ed1768c388ae9adf7a459fb1e6977f5877e2eafb63184ac768eebf9c4f",
+          "capturedSourceBytes": 1774
+        },
+        {
+          "capturedSourcePath": "work/native-archive032/public-zlib14/source/adler32.c",
+          "capturedSourceSha256": "9cd1443a24ff2a3053961695bd432035c58347386a420d3388232376ebabe211",
+          "capturedSourceBytes": 4964
+        },
+        {
+          "capturedSourcePath": "work/native-archive032/public-zlib14/source/crc32.c",
+          "capturedSourceSha256": "dd941a0a499a27517e3be0624c2e0dc683f0591bf29dd1ed54e65443cb19beb6",
+          "capturedSourceBytes": 29744
+        },
+        {
+          "capturedSourcePath": "work/native-archive032/public-zlib14/source/zutil.c",
+          "capturedSourceSha256": "c195fe0ff472545b231542ab6a633a97117710cea64f98c5d468775ed89eff55",
+          "capturedSourceBytes": 7485
+        },
+        {
+          "capturedSourcePath": "work/native-archive032/public-zlib14/source/inftrees.c",
+          "capturedSourceSha256": "7ab9c04acc2e9888c8c1fddefc730a850f69a3d80a7a702433a35383e36efa9c",
+          "capturedSourceBytes": 16669
+        },
+        {
+          "capturedSourcePath": "work/native-archive032/public-zlib14/source/inffast.c",
+          "capturedSourceSha256": "f96787a11bb7131ffd2221fb40db27f6a5a1dfb12f59c0bc388807010749c34a",
+          "capturedSourceBytes": 12982
+        }
+      ]
+    },
+    {
+      "profile": "historical127",
+      "privateCapturedGraph": {
+        "path": "work/native-archive032/gzip-exploratory-v3/historical127/graphs.private.pkl",
+        "sha256": "2e61306f2f3c2514acee6d1df3e6871f1a24f02aed8610fcbcb6e820cc7dd369",
+        "bytes": 215340
+      },
+      "privateArmElf": {
+        "path": "work/native-archive032/gzip-exploratory-v3/historical127/arm/owner_full.elf",
+        "sha256": "312401ea5fe6cb1b4f960b1863e85ca982519c11b5dc9e1404df5119611708f8",
+        "bytes": 99260
+      },
+      "privateWindowsDll": {
+        "path": "work/native-archive032/gzip-exploratory-v3/historical127/windows/archive_gzip.dll",
+        "sha256": "96c2f157b034d05b376d2955435acc28f4f8e677ed9482476caa9d852586b542",
+        "bytes": 24576
+      },
+      "capturedHistoricalSources": [
+        {
+          "capturedSourcePath": "src/native/wave036/gzip_inflate.c",
+          "capturedSourceSha256": "2fc0a476c21493a045bd60546a70bf97417636454026d89350916285d408d025",
+          "capturedSourceBytes": 1649
+        },
+        {
+          "capturedSourcePath": "toolscripts/native_archive032_gzip_fixture.c",
+          "capturedSourceSha256": "ee1cc8a88a8874871fc7207adf22b2a215b4f6d8a4a0de1667fabfc207354e03",
+          "capturedSourceBytes": 4296
+        },
+        {
+          "capturedSourcePath": "work/native-archive032/public-zlib/source/crc32.c",
+          "capturedSourceSha256": "3f3daca510273dda74eaf381c46d2551e3a3506891ae063ab451b87744a7a36c",
+          "capturedSourceBytes": 13174
+        },
+        {
+          "capturedSourcePath": "work/native-archive032/public-zlib/source/inflate.c",
+          "capturedSourceSha256": "1af516922a8ee15858f6fb2797c9c98f2f35a55259acd3801fa436dc28a02938",
+          "capturedSourceBytes": 52982
+        },
+        {
+          "capturedSourcePath": "src/native/wave032/archive_lookup.c",
+          "capturedSourceSha256": "77447d1f84669ef96e98a0bdbf8974b33bf6d37fea2502c67ba84c1a198bcaae",
+          "capturedSourceBytes": 2147
+        },
+        {
+          "capturedSourcePath": "src/native/wave032/archive_members.c",
+          "capturedSourceSha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+          "capturedSourceBytes": 1657
+        },
+        {
+          "capturedSourcePath": "src/native/wave032/archive_owner.c",
+          "capturedSourceSha256": "5e8cba4615a2aa54073d1336d9bb4487d2db3f11cadf7f413c7212832e6d18c8",
+          "capturedSourceBytes": 1635
+        },
+        {
+          "capturedSourcePath": "src/native/wave036/gzip_owner.c",
+          "capturedSourceSha256": "81cd43ed1768c388ae9adf7a459fb1e6977f5877e2eafb63184ac768eebf9c4f",
+          "capturedSourceBytes": 1774
+        },
+        {
+          "capturedSourcePath": "work/native-archive032/public-zlib/source/adler32.c",
+          "capturedSourceSha256": "341d49ae2703037d2d10c8486f1a1ca3b65e0f10cc9e5fead6bfbbc0b34564ba",
+          "capturedSourceBytes": 4968
+        },
+        {
+          "capturedSourcePath": "work/native-archive032/public-zlib/source/zutil.c",
+          "capturedSourceSha256": "2a04ea6d8cbd602ecc4eef49c4e8aff438ab9497f116cbe4d3bda5c7f3586551",
+          "capturedSourceBytes": 7412
+        },
+        {
+          "capturedSourcePath": "work/native-archive032/public-zlib/source/inftrees.c",
+          "capturedSourceSha256": "a8aafb94c5f816033bf2c449a28fcbc08c5e17a352dcfb04fa5ff90372aca3ca",
+          "capturedSourceBytes": 13032
+        },
+        {
+          "capturedSourcePath": "work/native-archive032/public-zlib/source/inffast.c",
+          "capturedSourceSha256": "f9439fbfad6112b155c1ede0b5c409a83c38096e741187f0ecb974f9babcac03",
+          "capturedSourceBytes": 13439
+        }
+      ]
+    }
+  ]
+}

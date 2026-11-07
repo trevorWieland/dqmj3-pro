@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "count": 7,
+  "allNormallyReturned": true,
+  "allRejected": true,
+  "nativeTargetNormalReturns": 14,
+  "controls": [
+    {
+      "name": "local-capture-reads-neighbour",
+      "variant": 1,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": false,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "nativeControls": [
+        {
+          "backend": "actualWindows",
+          "normallyReturned": true,
+          "rejectedByIndependentValueModel": true
+        },
+        {
+          "backend": "aarch64ObjectModel",
+          "normallyReturned": true,
+          "rejectedByIndependentValueModel": true
+        }
+      ],
+      "source": {
+        "path": "work/squirrel-capture038/controls-sealed/local-capture-reads-neighbour/script_create.c",
+        "bytes": 4345,
+        "sha256": "007f482e8ee51830d51ed315b4db098889258e2816a58940b2d6eee135bfa125"
+      },
+      "artifact": {
+        "path": "work/squirrel-capture038/controls-sealed/local-capture-reads-neighbour/arm/capture038.elf",
+        "bytes": 555680,
+        "sha256": "8f6a81b46f7ac6dfa23638202bc528172c93d796b3dd3efae6adbde32899fab9"
+      }
+    },
+    {
+      "name": "parent-outer-replaced-with-local-slot",
+      "variant": 24,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": false,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "nativeControls": [
+        {
+          "backend": "actualWindows",
+          "normallyReturned": true,
+          "rejectedByIndependentValueModel": true
+        },
+        {
+          "backend": "aarch64ObjectModel",
+          "normallyReturned": true,
+          "rejectedByIndependentValueModel": true
+        }
+      ],
+      "source": {
+        "path": "work/squirrel-capture038/controls-sealed/parent-outer-replaced-with-local-slot/bindings.c",
+        "bytes": 1408,
+        "sha256": "711347fe2e142a922a7ae508a6f65edbdc5158e96e1671bf540fb54f8970dbde"
+      },
+      "artifact": {
+        "path": "work/squirrel-capture038/controls-sealed/parent-outer-replaced-with-local-slot/arm/capture038.elf",
+        "bytes": 555680,
+        "sha256": "9b5427fac08b601c8d81267af69ba236ef28e3b55588edfef62da0359dac38ff"
+      }
+    },
+    {
+      "name": "default-value-reads-capture-slot",
+      "variant": 1,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": false,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "nativeControls": [
+        {
+          "backend": "actualWindows",
+          "normallyReturned": true,
+          "rejectedByIndependentValueModel": true
+        },
+        {
+          "backend": "aarch64ObjectModel",
+          "normallyReturned": true,
+          "rejectedByIndependentValueModel": true
+        }
+      ],
+      "source": {
+        "path": "work/squirrel-capture038/controls-sealed/default-value-reads-capture-slot/script_create.c",
+        "bytes": 4319,
+        "sha256": "7b4d5bff79f440cceac6487957af635afe7a15fde275f7e0f568ce8a26fa2eef"
+      },
+      "artifact": {
+        "path": "work/squirrel-capture038/controls-sealed/default-value-reads-capture-slot/arm/capture038.elf",
+        "bytes": 555680,
+        "sha256": "ff55d8f953303125fdbfab35fc8af72e4e3e7de373c9ce088194c34ff6d9fd1a"
+      }
+    },
+    {
+      "name": "defaults-initialized-before-observable-outer-lookup",
+      "variant": 37,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": false,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "nativeControls": [
+        {
+          "backend": "actualWindows",
+          "normallyReturned": true,
+          "rejectedByIndependentValueModel": true
+        },
+        {
+          "backend": "aarch64ObjectModel",
+          "normallyReturned": true,
+          "rejectedByIndependentValueModel": true
+        }
+      ],
+      "source": {
+        "path": "work/squirrel-capture038/controls-sealed/defaults-initialized-before-observable-outer-lookup/script_create.c",
+        "bytes": 4343,
+        "sha256": "d20ff0ebbabdc06bb2f2e1b58af956d0db05099e1299c30f279db2db287535d6"
+      },
+      "artifact": {
+        "path": "work/squirrel-capture038/controls-sealed/defaults-initialized-before-observable-outer-lookup/arm/capture038.elf",
+        "bytes": 555680,
+        "sha256": "c124a6d6350e0a2e4cbc2811a79835861ae5e7b68dca82a193f1bdbc13e065c1"
+      }
+    },
+    {
+      "name": "closure-linked-after-native-capture-callback",
+      "variant": 36,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": true,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "nativeControls": [
+        {
+          "backend": "actualWindows",
+          "normallyReturned": true,
+          "rejectedByIndependentValueModel": true
+        },
+        {
+          "backend": "aarch64ObjectModel",
+          "normallyReturned": true,
+          "rejectedByIndependentValueModel": true
+        }
+      ],
+      "source": {
+        "path": "work/squirrel-capture038/controls-sealed/closure-linked-after-native-capture-callback/script_create.c",
+        "bytes": 4339,
+        "sha256": "6a6b14da14338def4b9fd11c1d2603a5e4a2763d14bda26c3ccf5c439866596d"
+      },
+      "artifact": {
+        "path": "work/squirrel-capture038/controls-sealed/closure-linked-after-native-capture-callback/arm/capture038.elf",
+        "bytes": 555680,
+        "sha256": "a88d89f8019efc92172f5512a02650834b07580101b52b5f8886eec5377b71d7"
+      }
+    },
+    {
+      "name": "temporary-owner-leaked",
+      "variant": 0,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": false,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "nativeControls": [
+        {
+          "backend": "actualWindows",
+          "normallyReturned": true,
+          "rejectedByIndependentValueModel": true
+        },
+        {
+          "backend": "aarch64ObjectModel",
+          "normallyReturned": true,
+          "rejectedByIndependentValueModel": true
+        }
+      ],
+      "source": {
+        "path": "work/squirrel-capture038/controls-sealed/temporary-owner-leaked/script_create.c",
+        "bytes": 4286,
+        "sha256": "77b47f0ae2ddbf009c92469347ec5186e309161bd1f100300252e1091ea7b529"
+      },
+      "artifact": {
+        "path": "work/squirrel-capture038/controls-sealed/temporary-owner-leaked/arm/capture038.elf",
+        "bytes": 555680,
+        "sha256": "644659f0c6350e73e66dbfec907513a784c9a29e14c0a1ef2e70f6197ebf1a7e"
+      }
+    },
+    {
+      "name": "inactive-native-frame-read-with-same-result",
+      "variant": 36,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": true,
+      "sameFinalObservations": true,
+      "forbiddenNativeFrameReads": [
+        [
+          15801748,
+          177200,
+          1
+        ]
+      ],
+      "nativeControls": [
+        {
+          "backend": "actualWindows",
+          "normallyReturned": true,
+          "rejectedByIndependentValueModel": false
+        },
+        {
+          "backend": "aarch64ObjectModel",
+          "normallyReturned": true,
+          "rejectedByIndependentValueModel": false
+        }
+      ],
+      "source": {
+        "path": "work/squirrel-capture038/controls-sealed/inactive-native-frame-read-with-same-result/fixture_program.c",
+        "bytes": 7517,
+        "sha256": "31b41b49c0c4acc0a395d5fd5d8116ca62c5df25eed03f02409d7f824948400b"
+      },
+      "artifact": {
+        "path": "work/squirrel-capture038/controls-sealed/inactive-native-frame-read-with-same-result/arm/capture038.elf",
+        "bytes": 555680,
+        "sha256": "e5501c19c757e7fa0822e8eb96b879836fc6a8a95b14b1fe8de23e87591e3dda"
+      }
+    }
+  ],
+  "sameFinalSourceArenaControls": 2,
+  "producer": {
+    "path": "toolscripts/squirrel_capture038_controls.py",
+    "bytes": 5893,
+    "sha256": "5cfa29ed427731dc994abef12f0dfc9143efbd1a7480203ddedf1891b438940c"
+  }
+}

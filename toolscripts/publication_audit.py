@@ -191,6 +191,45 @@ print(json.dumps({"images":images,"cases":rows}))
         "sourceGeneratorSha256": source_sha, "encodedSyntheticPayloadSha256": sorted(images)}}
 
 
+def authored_gzip_fixture(root):
+    fixture_path = "evidence/lanes/native-archive032/gzip/synthetic-fixtures.json"
+    if not (root / fixture_path).exists():
+        return {}
+    pins = {
+        "toolscripts/native_archive032_gzip_cases.py": (3947, "a7c6c899358933e89f417cc4fbfcf83e3d77cec427bbe578a23e6cefd4536b7e"),
+        "toolscripts/native_archive032_gzip_packet.py": (14239, "01d7a33ca6d2c0eec54eaef5b39308b43b8974ee4f290b22067168523e05b59d"),
+        fixture_path: (66236, "ad3628c151315c8d893ebc51234b996c14f5e2696e1d93f777fe2683875cc0f2"),
+    }
+    values = {}
+    for path, (size, expected) in pins.items():
+        data = read_owned(root, path)
+        if len(data) != size or sha(data) != expected:
+            raise ValueError("Authored gzip generator or fixture identity changed")
+        values[path] = data
+    case_path, packet_path = list(pins)[:2]
+    generator = {"path": case_path, "bytes": pins[case_path][0], "sha256": pins[case_path][1]}
+    program = """import ast,hashlib,json,sys
+from pathlib import Path
+value=json.load(sys.stdin);scope={}
+exec(compile(value['cases'],'reviewed-gzip-cases','exec'),scope)
+scope.update(ROOT=Path('.'),record=lambda path:value['generator'],sha=lambda data:hashlib.sha256(data).hexdigest())
+node=next(item for item in ast.parse(value['packet']).body if isinstance(item,ast.FunctionDef) and item.name=='synthetic')
+exec(compile(ast.Module(body=[node],type_ignores=[]),'reviewed-gzip-fixture','exec'),scope)
+print(json.dumps(scope['synthetic']()))
+"""
+    child = subprocess.run([sys.executable, "-I", "-S", "-c", program],
+        input=json.dumps({"cases": values[case_path].decode("utf-8"), "packet": values[packet_path].decode("utf-8"),
+                          "generator": generator}), capture_output=True, text=True, timeout=30, check=True)
+    if len(child.stdout) > 1024 * 1024 or child.stderr:
+        raise ValueError("Unexpected authored gzip regeneration output")
+    expected = json.loads(child.stdout)
+    if json.loads(values[fixture_path]) != expected:
+        raise ValueError("Authored gzip fixtures do not reproduce from the reviewed generator")
+    return {fixture_path: {"sha256": pins[fixture_path][1], "size": pins[fixture_path][0],
+        "origin": "independently-regenerated-authored-synthetic-gzip", "sourceGeneratorSha256": pins[case_path][1],
+        "encodedSyntheticPayloadSha256": sorted(expected["images"])}}
+
+
 def public_allowlist(root):
     raw = read_owned(root, MANIFEST)
     if sha(raw) != MANIFEST_SHA:
@@ -226,6 +265,7 @@ def public_allowlist(root):
                 raise ValueError("Missing public header license notice")
     allowed[HEADER_PATH] = {"sha256": HEADER_SHA, "size": 151286, "origin": "verified-public-aosp-llvm-headers-with-notices"}
     allowed.update(authored_xbb_fixture(root))
+    allowed.update(authored_gzip_fixture(root))
     return allowed
 
 def private_hashes(root):

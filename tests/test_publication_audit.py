@@ -171,7 +171,7 @@ class PublicationAuditTests(unittest.TestCase):
 
     def test_actual_public_resources_have_exact_manifest_identities(self):
         allowed = AUDIT.public_allowlist(ROOT)
-        self.assertEqual(len(allowed), 82)
+        self.assertEqual(len(allowed), 83)
         for path in ("source/squirrel-wave001/upstream/doc/squirrel2.pdf",
                      "source/squirrel-wave001/upstream/etc/test.nut", AUDIT.HEADER_PATH):
             self.assertEqual(AUDIT.inspect(path, (ROOT / path).read_bytes(), allowed, set()), [])

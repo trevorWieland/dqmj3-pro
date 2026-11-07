@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "name": "gzip036",
+  "producerSteps": [
+    {
+      "name": "gzip036-execution-and-controls",
+      "args": [
+        "toolscripts/native_archive032_gzip_packet.py",
+        "--work",
+        "work/gzip036-independent",
+        "--output",
+        "work/gzip036-independent/packet"
+      ]
+    }
+  ],
+  "tests": [
+    "native_archive032_gzip",
+    "isolated_component_replay",
+    "public_zlib_headers",
+    "publication_synthetic_gzip"
+  ],
+  "packets": [
+    "work/gzip036-independent/packet/packet.json"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "kind": "lane-specific-public-source-dependency",
+  "name": "zlib",
+  "version": "1.4",
+  "upstreamArchive": {
+    "url": "https://zlib.net/zlib-1.4.tar.gz",
+    "sha256": "02dd159783677a749c04adbdd02b55b8a2bcc7e054f51b76b549199a916ad584",
+    "bytes": 1507140
+  },
+  "archivePrefix": "zlib-1.4/",
+  "license": {
+    "name": "zlib",
+    "source": "zlib.h",
+    "sourceSha256": "2c404dcaa08709c2a129aea18f3dad4fb5acc5cb52ef12b6223bf8e78c195801",
+    "primaryLicenseUrl": "https://www.zlib.net/zlib_license.html",
+    "unmodifiedPublicSources": true
+  },
+  "files": [
+    {
+      "path": "adler32.c",
+      "sha256": "9cd1443a24ff2a3053961695bd432035c58347386a420d3388232376ebabe211",
+      "bytes": 4964
+    },
+    {
+      "path": "crc32.c",
+      "sha256": "dd941a0a499a27517e3be0624c2e0dc683f0591bf29dd1ed54e65443cb19beb6",
+      "bytes": 29744
+    },
+    {
+      "path": "inflate.c",
+      "sha256": "c91ab7595ba8ef11030af76a614fc3138d0ec4cf995f171a9f435e19b1e6d7bc",
+      "bytes": 53162
+    },
+    {
+      "path": "inffast.c",
+      "sha256": "f96787a11bb7131ffd2221fb40db27f6a5a1dfb12f59c0bc388807010749c34a",
+      "bytes": 12982
+    },
+    {
+      "path": "inftrees.c",
+      "sha256": "7ab9c04acc2e9888c8c1fddefc730a850f69a3d80a7a702433a35383e36efa9c",
+      "bytes": 16669
+    },
+    {
+      "path": "zutil.c",
+      "sha256": "c195fe0ff472545b231542ab6a633a97117710cea64f98c5d468775ed89eff55",
+      "bytes": 7485
+    },
+    {
+      "path": "zlib.h",
+      "sha256": "2c404dcaa08709c2a129aea18f3dad4fb5acc5cb52ef12b6223bf8e78c195801",
+      "bytes": 104881
+    },
+    {
+      "path": "zconf.h",
+      "sha256": "1e91041e94e3f13a12b770be849c4c674e37caddf94e37acddf853bb54a09adf",
+      "bytes": 17304
+    },
+    {
+      "path": "zutil.h",
+      "sha256": "a12243cc6d338ffad0c8e3500fbc05bc7fdcdc25a469393b1c2f7e5df307fff3",
+      "bytes": 8512
+    },
+    {
+      "path": "inftrees.h",
+      "sha256": "97897f41e5d55b426b106c230111e99fec44cd5197a71e6a3750d2e7e17b16bc",
+      "bytes": 3180
+    },
+    {
+      "path": "inflate.h",
+      "sha256": "7c58a1d5b5bd553493d58431c4dac031f99fb4b6c9890cc11ceab22d08e6bc2e",
+      "bytes": 6808
+    },
+    {
+      "path": "inffast.h",
+      "sha256": "05cc5dc9ff1da7b8b52a4bd8bda0d8a5c236a2f39efe84b941516ea13857e6c5",
+      "bytes": 422
+    },
+    {
+      "path": "inffixed.h",
+      "sha256": "fd7c4b1dbdacb283421d0675744aaecda44e840e183b5131448bac94564f6adb",
+      "bytes": 5968
+    },
+    {
+      "path": "crc32.h",
+      "sha256": "9a2223575183ac2ee8a247f20bf3ac066e8bd0140369556bdbdffc777435749e",
+      "bytes": 591749
+    },
+    {
+      "path": "README",
+      "sha256": "5ba0fa00469b780503932c2967d34b857a15ba2354f4f86d6c747bc6646acb65",
+      "bytes": 5287
+    }
+  ],
+  "canonicalSdkSourceIdentityClaimed": false,
+  "sdkOrReconstructionCreditGranted": 0,
+  "observedOriginalCompatibilityLiteral": "1.2.7.f-NINTENDO-CTR-SDK-v1",
+  "scope": "portable decompression dependency; wrapper status, sizing and cleanup require separate original/source execution"
+}
