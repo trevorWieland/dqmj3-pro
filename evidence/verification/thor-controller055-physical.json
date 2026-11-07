@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "status": "physical-thor-source-controller055-corpus-verified",
+  "sourceRevision": "3542cc73b55b4227b15318dc75247cf81de15a71",
+  "canonicalEntry": 7320156,
+  "canonicalInstructionBytes": 14600,
+  "platform": {
+    "ro.product.model": "AYN Thor",
+    "ro.product.cpu.abilist": "arm64-v8a,armeabi-v7a,armeabi",
+    "ro.build.version.sdk": "33",
+    "ro.dalvik.vm.native.bridge": "0",
+    "ro.kernel.qemu": "",
+    "pageBytes": 4096
+  },
+  "originalGameImageOrAssetPackaged": false,
+  "sourceOnlyComponent": {
+    "name": "libcontroller055.so",
+    "sha256": "b74d845626a16a15a28457b59f06b86c478dcfee5f3aba215f334abcf6ef1263",
+    "loadAlignments": [
+      16384,
+      16384,
+      16384,
+      16384
+    ],
+    "needed": []
+  },
+  "jniAdapter": {
+    "name": "libdqm_controllerprobe055.so",
+    "sha256": "77a89b72b609e0aee250b3acafc7c6314ff6ff5e8549f3a38ca918ac85594ed9",
+    "loadAlignments": [
+      16384,
+      16384,
+      16384,
+      16384
+    ],
+    "needed": [
+      "libcontroller055.so"
+    ]
+  },
+  "apkSha256": "80cb99f998fb6358328fa5b85546f54d1af96601f55cf188e7bd03c9043e3c1e",
+  "programs": 569,
+  "nativeCalls": 596,
+  "nativePointerBytes": 8,
+  "actualCallerArenaAbove4GiB": true,
+  "fullCallerArenasEqualToIndependentPerProfileModel": true,
+  "fullControllerGlobalsEqualToIndependentModel": true,
+  "orderedStorageCallbacksAndContextObservationsEqual": true,
+  "calleeSourceReadonlyCodeMatchesBuiltLibrary": true,
+  "callerGuardsPreserved": true,
+  "floatingControlPreserved": true,
+  "rawFloatingStatusCaptured": true,
+  "crossBackendFloatingStatusEqualityClaimed": false,
+  "alignmentModelCorrection": {
+    "frozenModelsAndExecutedSourceUnchanged": true,
+    "actualBaseModulo256": 224,
+    "oldRelativeAlignmentAssumptionExposed": true,
+    "absoluteAlignmentUsed": true,
+    "oldFixedBaseComparisonsUnchanged": 1138,
+    "independentAlignmentChecks": 192,
+    "originalFailure": {
+      "path": "work/controller055-probe/first-hardware-mismatch.json",
+      "bytes": 59606,
+      "sha256": "49db7ddaa62acaca8872ab5a6c679a12fdae3d6c0bf994601ccc2e6e229f4426"
+    },
+    "modelProvenance": {
+      "path": "work/controller055-probe/model-v2/provenance.json",
+      "bytes": 1116,
+      "sha256": "cbb2095296879eb855bf5350798f595c629c4ee21c27c4af231d56b5960912f1"
+    },
+    "modelValidation": {
+      "path": "work/controller055-probe/model-v2/validation.json",
+      "bytes": 246,
+      "sha256": "e07f239ddf44fe809e6afe26d923af70cd83e0e3488a45c93648e96776d96c9d"
+    }
+  },
+  "validation": {
+    "path": "work/controller055-probe/validation-v2.json",
+    "bytes": 157333,
+    "sha256": "91ed0842f19c67272326dba551bb173afc143f9f8327db70968ea9d2f823a5ec"
+  },
+  "capture": {
+    "path": "work/controller055-probe/capture-archive.json",
+    "bytes": 295,
+    "sha256": "24901d0a252c3a27c86453e886ec1c314cd76da85620cd512a31fa03a5b6599e"
+  },
+  "captureCompressedBytes": 18738233,
+  "captureCompressedSha256": "4f37a863c6f425df353618238f7f369fec18704befa0223bdfe13b430db9d850",
+  "rawTarBytes": 521214464,
+  "rawTarSha256": "0d88b95272f796d88db94bf76e9db75d4fae5a939de96413c187a0d8b66faa55",
+  "sourceBuildReproducedByteIdentically": {
+    "path": "work/controller055-android-repeat/build.json",
+    "bytes": 28957,
+    "sha256": "99763ff9c0fe480e492aa392a88540c45f67de52ad4f8d20195a3e130cd4bc8c"
+  },
+  "publicDiagnosticSources": [
+    {
+      "path": "toolscripts/native_state055_controller/device/AndroidManifest.xml",
+      "bytes": 758,
+      "sha256": "1c6ac6b4087ecf0f38eef97e4fd4f55e017344d64ef9a5fb2b8b352252e21f4d"
+    },
+    {
+      "path": "toolscripts/native_state055_controller/device/build_probe.py",
+      "bytes": 4912,
+      "sha256": "9e14aade50445ab163233af902c4686cec3342444a086e09842249c7e5ccdd71"
+    },
+    {
+      "path": "toolscripts/native_state055_controller/device/check_model.py",
+      "bytes": 1976,
+      "sha256": "e54a5d8cc49c84310d94d0e8c7a9ed5c5309a8e14a7d211acc634723f2b19fdc"
+    },
+    {
+      "path": "toolscripts/native_state055_controller/device/controller_jni.c",
+      "bytes": 6516,
+      "sha256": "f03f706a6f47a4533053fdaaf025bf7ee8dd3faf1131d75fdf8d6206685ab6be"
+    },
+    {
+      "path": "toolscripts/native_state055_controller/device/MaterialActivity.java",
+      "bytes": 5921,
+      "sha256": "f4130f5bd1722554d6b8a9292e180450fd15544c1afd984ec788833b6913cdb5"
+    },
+    {
+      "path": "toolscripts/native_state055_controller/device/prepare_cases.py",
+      "bytes": 4283,
+      "sha256": "256f568c5aa937078a7e323685c0ce52f845986cf5d3c6ed8cbd0381cd665362"
+    },
+    {
+      "path": "toolscripts/native_state055_controller/device/program_native_v2.py",
+      "bytes": 20978,
+      "sha256": "6b8bd5a27b3596e6c1dfff7ad121bd630f11ca237ec0008e8baa63e66fb62455"
+    },
+    {
+      "path": "toolscripts/native_state055_controller/device/run_device.py",
+      "bytes": 3639,
+      "sha256": "ccb47d1a951bc42c9fd951d4cfeca8443256efaa6421e716adef09fe3b3cc10e"
+    },
+    {
+      "path": "toolscripts/native_state055_controller/device/segments055.h",
+      "bytes": 203,
+      "sha256": "6845344a5a0a7064baff864dded4c36c82bf24a575e08bd18aaa9d7fa33d50f3"
+    },
+    {
+      "path": "toolscripts/native_state055_controller/device/table_model_v2.py",
+      "bytes": 4904,
+      "sha256": "900ace0ee629eaccf677b3901e1887b81c16b86c494c9bb7e3ce316eff520069"
+    },
+    {
+      "path": "toolscripts/native_state055_controller/device/verify_device.py",
+      "bytes": 5470,
+      "sha256": "05566f34c878938c850dc59b7c32f653d5831b0e2964e5e331623a63f239b065"
+    }
+  ],
+  "cleanup": {
+    "status": "verified-device-capture-and-inputs-compacted",
+    "hostInputBytesPruned": 149619096,
+    "inputArchiveBytes": 1573683,
+    "inputArchiveSha256": "250c0591f042c1817c720d93949c413b02234950172b75aeeddbf2df3f182c16",
+    "devicePackageOnlyCleared": "org.dqm.controllerprobe055",
+    "otherAppsAndSavesUntouched": true,
+    "originalCaptureAndFailureRetained": true
+  },
+  "screenshotAppearanceClaimed": false,
+  "screenshotWasBlack": true,
+  "physical16KiBKernelTested": false,
+  "originalProductionWorldAllocatorOrOwnerInitializationQualified": false,
+  "gpuRenderingOrWholeGameBuildClaimed": false,
+  "overallConfirmedSourceCoverageClaimed": false,
+  "sourceOrExactMatchingCreditGranted": 0,
+  "publicApkRecipeRepeatedByteIdentically": {
+    "path": "work/controller055-public-apk-repeat/build.json",
+    "bytes": 979,
+    "sha256": "8d623872e91fc5b2b2adbc8b94726b6f8b7a7341d7fdb43d26390f95fd604766"
+  }
+}
