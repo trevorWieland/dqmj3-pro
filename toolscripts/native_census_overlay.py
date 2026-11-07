@@ -80,6 +80,12 @@ def validate(base, packet, image):
             slots.add(slot)
             target = struct.unpack_from('<I', image, slot - origin)[0]
             adjustment = struct.unpack_from('<I', image, slot - origin + 4)[0] if stride == 8 else 0
+            if entry.get('null') is True:
+                if (encoding != 'vtable-function-pointer' or target != 0 or entry['target'] != 0
+                        or entry['mode'] is not None or entry['virtual'] is not True
+                        or entry['thisAdjustmentBytes'] != 0):
+                    raise ValueError('Null vtable slot differs from its non-callable declaration')
+                continue
             if (entry['target'] != target or target not in known or target % 4 or adjustment != 0
                     or entry['mode'] != 'ARM' or entry['virtual'] is not (encoding == 'vtable-function-pointer')
                     or entry['thisAdjustmentBytes'] != 0):

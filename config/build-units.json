@@ -1602,6 +1602,55 @@
         "source/squirrel-wave013/native_closure_release.h"
       ],
       "role": "bounded-opaque-native-closure-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave014/fixture_observers.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave013/native_closure_release.h",
+        "source/squirrel-wave014/fixture_internal.h",
+        "source/squirrel-wave014/weak_reference.h"
+      ],
+      "role": "bounded-weak-reference-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave014/fixture_run.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave013/native_closure_release.h",
+        "source/squirrel-wave014/fixture_internal.h",
+        "source/squirrel-wave014/weak_reference.h"
+      ],
+      "role": "bounded-weak-reference-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave014/fixture_state.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave013/native_closure_release.h",
+        "source/squirrel-wave014/fixture_internal.h",
+        "source/squirrel-wave014/weak_reference.h"
+      ],
+      "role": "bounded-weak-reference-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave014/vtables.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave014/weak_reference.h"
+      ],
+      "role": "bounded-weak-reference-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave014/weak_reference.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave014/weak_reference.h"
+      ],
+      "role": "bounded-weak-reference-lifetime"
     }
   ],
   "excludedSources": [
@@ -1625,6 +1674,7 @@
     "source/squirrel-wave010",
     "source/squirrel-wave011",
     "source/squirrel-wave012",
-    "source/squirrel-wave013"
+    "source/squirrel-wave013",
+    "source/squirrel-wave014"
   ]
 }

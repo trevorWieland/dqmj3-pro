@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "status": "reviewed-weak-reference-function-ownership",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "overlay": {
+    "path": "evidence/verification/weak014-function-overlay.json",
+    "sha256": "228f73f849e59725fcac20725adfddf69b7d14fedf2ccc1b2a8f4b766d4d06cd",
+    "bytes": 4882
+  },
+  "producer": {
+    "path": "toolscripts/review_weak014_inventory.py",
+    "sha256": "623bd3462b5e3a2deb37d2a63c9a3305e5578b818be497534720079207dcdf02",
+    "bytes": 9186
+  },
+  "validator": {
+    "path": "toolscripts/native_census_overlay.py",
+    "sha256": "245bf9e4190eb4a61ee7adc9b8c377e38c0189139020584dc1c9eb12af72a159",
+    "bytes": 10433
+  },
+  "addedDiscoveredEntries": 2,
+  "instructionBytes": 108,
+  "literalPoolBytesNotCodeCredit": 8,
+  "getterAlreadyInventoried": true,
+  "getterLiteralPoolBytesNotNewCredit": 4,
+  "independentlyDecodedInstructions": 27,
+  "literalReads": [
+    {
+      "instruction": 6977472,
+      "literal": 6977516
+    },
+    {
+      "instruction": 6977492,
+      "literal": 6977520
+    }
+  ],
+  "callerReads": [
+    {
+      "owner": 7608400,
+      "site": 7608580,
+      "target": 2308988,
+      "instructionSha256": "ea2746be24497d74723dbd2b3d8d3d22a7c38d2fe9ff983c806e49182d5eb0c4"
+    },
+    {
+      "owner": 7616456,
+      "site": 7616528,
+      "target": 2308988,
+      "instructionSha256": "09473212b08c4560e1ae5edf8e166700a8a25ef3ba0fc40a858160f0864db259"
+    }
+  ],
+  "followingUnseededEntry": 6977524,
+  "followingUnseededEntryAdded": false,
+  "sourceCreditGranted": 0,
+  "historicalFunctionCompletenessClaim": false
+}

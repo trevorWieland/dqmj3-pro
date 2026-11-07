@@ -76,6 +76,26 @@ class OverlayGuards(unittest.TestCase):
         self.assertEqual([(row['address'], row['textBodyBytes']) for row in rows], [(0x665c60, 96)])
         self.assertEqual(rows[0]['calledFunctionAddresses'], [0x24d73c, 0x77f3f8])
 
+    def test_null_vtable_slot_is_not_an_approved_function_entry(self):
+        packet = json.loads((ROOT / 'evidence/verification/weak014-function-overlay.json').read_text())
+        rows = overlay.validate(self.base, packet, self.image)
+        self.assertEqual({row['address'] for row in rows}, {0x6a7780, 0x6a77c0})
+        self.assertEqual(sum(row['textBodyBytes'] for row in rows), 108)
+        self.assertTrue(all(row['acceptedSourceBytes'] == 0 for row in rows))
+
+    def test_callable_vtable_target_cannot_be_hidden_as_null(self):
+        packet = json.loads((ROOT / 'evidence/verification/weak014-function-overlay.json').read_text())
+        packet['tables'][0]['entries'][0]['null'] = True
+        packet['tables'][0]['entries'][0]['mode'] = None
+        with self.assertRaisesRegex(ValueError, 'Null vtable'):
+            overlay.validate(self.base, packet, self.image)
+
+    def test_null_vtable_slot_cannot_claim_a_function_identity(self):
+        packet = json.loads((ROOT / 'evidence/verification/weak014-function-overlay.json').read_text())
+        packet['tables'][0]['entries'][1]['target'] = 0x6a7780
+        with self.assertRaisesRegex(ValueError, 'Null vtable'):
+            overlay.validate(self.base, packet, self.image)
+
     def test_member_pair_cannot_be_reinterpreted_as_a_plain_vtable(self):
         packet = copy.deepcopy(self.packet)
         packet['tables'][0]['encoding'] = 'vtable-function-pointer'
