@@ -55,11 +55,11 @@ Only `build/update-content0/report.json` and its reviewed `functional.json` comp
 
 Admitted report symbols use their exact C definition names, so a rename header is unnecessary. Future renames need a generated mapping or another mechanism from [ByteMatch source linking](https://bytematch.dev/docs/source-linking). Virtual addresses are independently checked against original section mapping. Unwritten functions may correctly be absent from the public source.
 
-`config/functional-functions.json` approves 196 working nonmatching C functions in declared bounded domains. There are 182 medium-confidence entries and 14 low-confidence scalar recipes with uncertain original signatures. Their canonical instruction bodies total 35,386 bytes without interval overlap. This is a candidate catalog, not a confirmed whole-game source percentage; matching source remains 5,128 bytes and every unit remains incomplete.
+`config/functional-functions.json` approves 203 working nonmatching C functions in declared bounded domains. There are 189 medium-confidence entries and 14 low-confidence scalar recipes with uncertain original signatures. Their canonical instruction bodies total 36,990 bytes without interval overlap. This is a candidate catalog, not a confirmed whole-game source percentage; matching source remains 5,128 bytes and every unit remains incomplete.
 
 `functional_report.py` checks frozen packet and C/header hashes, confidence, canonical module/address/mode, the complete body, exclusion of already admitted exact functions and the actual report entry. Navigation symbols cover the contiguous entry range. A fragmented function, such as CallNative, needs its full canonical range proof and an explicit report-entry extent.
 
-Source lookup normally uses the report unit's source path. An explicitly reviewed `repository-function-index` policy also permits C outside that folder, following [ByteMatch's repository-wide lookup](https://bytematch.dev/docs/source-linking). It requires one unique canonical C definition in the reviewed source trees. The live API resolved every one of the 190 functional entries at `3ed7b52` to its expected file; the official checker separately found all 412 admitted C functions. Later catalog additions require a new hosted check after ingestion.
+Source lookup normally uses the report unit's source path. An explicitly reviewed `repository-function-index` policy also permits C outside that folder, following [ByteMatch's repository-wide lookup](https://bytematch.dev/docs/source-linking). It requires one unique canonical C definition in the reviewed source trees. The live API resolved every one of the 196 functional entries at `219d033` to its expected file; the official checker separately found all 412 admitted C functions. Later catalog additions require a new hosted check after ingestion.
 
 | Reviewed packet | Functions | Original instruction bytes |
 | --- | ---: | ---: |
@@ -82,6 +82,9 @@ Source lookup normally uses the report unit's source path. An explicitly reviewe
 | [weak014](../evidence/functional/weak014.json) | 3 | 196 |
 | [outer013](../evidence/functional/outer013.json) | 4 | 664 |
 | [file text013](../evidence/functional/file-text013.json) | 2 | 688 |
+| [string015](../evidence/functional/string015.json) | 5 | 716 |
+| [native create016](../evidence/functional/native-create016.json) | 1 | 396 |
+| [file IO013](../evidence/functional/file-io013.json) | 1 | 492 |
 
 The earlier leaf and expanded host types were reproduced in the isolated `eb8e1b6` and `420bcff` replays. State-compiler012 passed `7c3c12d`, UV/math014 reproduced all five qualification packets under `df0258d`, and the material/helper graph passed `05fb713` with 105 tests and 142 compilations. Control/tokenizer013 passed `a9c62a1` with 62 tests and 176 compilations; its eight-byte exact candidate remains excluded pending separate admission.
 
@@ -112,3 +115,7 @@ tools/report-python/Scripts/python.exe -I toolscripts/functional_report.py
 After ingestion, run the unmodified [ByteMatch source-link checker](https://github.com/Veradictus/ByteMatch/blob/master/scripts/check-source-links.py) against `trevorWieland/dqmj3-pro`, for example with `--version update-content0 --per-unit 3`. The hosted result is checked separately from local tests. The [inventory issue](https://github.com/trevorWieland/dqmj3-pro/issues/1) retains historical boundary/classification follow-up; that uncertainty does not drop bytes from the denominator.
 
 The text tables reproduce all 96 measured entries from pinned public Unicode17.0 data and measured selection rules. An independent public archive regenerates the exact header with no original game inputs. This establishes no historical Unicode version or additional data credit. The text replay checks every single u16 input for both helpers, 1,310 further string/capacity fixtures, all 172 original instruction addresses, and nine returning controls. Its committed-source build passes 66 tests and 457 compilations.
+
+The string table adds two reviewed entries: a 20-byte release prefix falling into the already-owned 144-byte Remove body, and a 44-byte destructor. The composed view therefore contains 26,625 entries; the 7,051,280-byte denominator stays unchanged. String progress counts the 716-byte physical union once, rather than the 860-byte sum of overlapping logical bodies. Its registered-target precondition leaves eight missing-registration error bytes unexecuted and that escaped dependency unqualified.
+
+Native closure creation qualifies the complete 396-byte API with actual objects, explicit measured VM field bindings and successful allocations. Its six domain-unreachable instruction addresses remain separate from the 93 executed addresses; callable invocation and the complete VM layout remain unqualified. Rule-file processing qualifies 492 bytes with all 123 original addresses, repeated arena epochs and persistent IO state, while canonical Windows scratch graphs remain outside the full caller-owned proof. These committed replays pass 59 and 70 tests with 485 and 488 compilations respectively.

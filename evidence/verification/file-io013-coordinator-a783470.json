@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-independent-committed-file-io-component",
+  "completeUnmodifiedBatchReplayPassed": true,
+  "independentSourceComponentReplayPassed": true,
+  "sourceRevision": "a783470a4a31039fc8f316974a3e5435890dc753",
+  "rawReplay": {
+    "path": "evidence/verification/file-io013-isolated-a783470.json",
+    "sha256": "b7c6945c47e24448806e1c5c812af7c57ecae79532628b84bf7bd6f80c567c4a",
+    "bytes": 12851
+  },
+  "executedDriver": {
+    "path": "evidence/verification/producers/file-io013-a783470-replay.py",
+    "sha256": "c7c005f9ef9b515b99fb3c299f7238ef93c5a577e54336ec796f3ec1b8412de3",
+    "bytes": 5192
+  },
+  "primaryPacket": {
+    "path": "evidence/lanes/wave013-native/file/io/packet.json",
+    "sha256": "ae3318459a0e92ef986af5dd74d8daba52630e3c2c5b1930fe7a88676b36a6f6",
+    "bytes": 1724739
+  },
+  "independentPacket": {
+    "path": "work/clean-replay/file-io013-a783470/evidence/lanes/wave013-native/file/io/independent-packet.json",
+    "sha256": "d5074c57135ccb84e96bfdec0f9192382f0a635ab6144f61a262cb0d869787f8",
+    "bytes": 1911306
+  },
+  "tests": 70,
+  "publicUnits": 170,
+  "publicCompilations": 488,
+  "newFunctions": 1,
+  "originalInstructionBytes": 492,
+  "qualifiedFixtureCases": 103,
+  "flagAndReturnCases": 64,
+  "originalSourceArmAndActualWindowsCompared": true,
+  "caseRowsIdenticalExceptProcessRelativeWindowsMemoryDigests": true,
+  "allArmObjectsAndLinkedElfIdentical": true,
+  "androidSharedLibraryIdentical": true,
+  "windowsDllDifferenceOffsets": [
+    128,
+    129
+  ],
+  "windowsCoffTimestampOffset": 128,
+  "windowsDllDifferencesConfinedToCoffTimestamp": true,
+  "binaryPatchingPerformed": false,
+  "nineReturningSemanticControlsRejected": true,
+  "originalInstructionsReached": 123,
+  "originalInstructions": 123,
+  "unhitInstructions": 0,
+  "canonicalArmArenaIdentityTracedAtConstructor": true,
+  "portableWindowsArenaIdentityIndependentlySupplied": true,
+  "canonicalWindowsPersistentBuffersFlagsAndIoStateCompared": true,
+  "canonicalWindowsFullScratchGraphClaimed": false,
+  "incomingArgumentIdempotentWritesRetainOriginalValues": true,
+  "candidateRawSlotBytes": 128,
+  "candidateCountDomain": [
+    0,
+    16
+  ],
+  "sourceAdmissionGranted": false,
+  "wholeGameOrAndroidDeviceExecuted": false,
+  "producer": {
+    "path": "evidence/verification/producers/review-file-io013-replay.py",
+    "sha256": "e6ef6b101c0e9d993dae563ea7c5e589e430d49522b0c39702432fe63e303cb8",
+    "bytes": 6843
+  }
+}

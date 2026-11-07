@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-functional-registered-byte-string-lifetime",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "acceptedSourceCreditGranted": 0,
+  "functions": [
+    {
+      "symbol": "fn_0016b5f0",
+      "canonicalIdentity": {
+        "address": 1488368,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave015/string.c",
+        "sha256": "cd10d0aaeb53701160428b626054ef770b4f7bbec918c0fa47bf6621010c8a96",
+        "bytes": 4148
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 484,
+      "logicalOriginalInstructionBytes": 484,
+      "originalInstructionRanges": [
+        {
+          "start": 1488368,
+          "endExclusive": 1488852,
+          "bytes": 484
+        }
+      ],
+      "reportEntryBytes": 484,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-string-lifetime015/execution.json",
+          "sha256": "c8eaaf2d112a8524d2afb48af0403396e4319eb371149be2435287e2cc13a445",
+          "bytes": 100184
+        },
+        "independentReplay": {
+          "path": "evidence/verification/string015-isolated-efb32b8.json",
+          "sha256": "972f7da8214ddc2d3371ac5e02ed2bb4c6d9fc2dc95adadf1bc159f02310b5ae",
+          "bytes": 13349
+        },
+        "familyCases": 112,
+        "comparisonsAgainstOriginal": 336,
+        "normallyReturningControlsRejected": 11,
+        "sameFinalHeapControlsRejected": 5,
+        "actualSmallDeclaredPrefixObjects": true,
+        "lengthReadBeforeVirtualDestructor": true,
+        "physicalSharedTailCountedOnce": true,
+        "registeredMembershipPrecondition": {
+          "precondition": "finite stable computed-hash bucket chain contains actual removal target; positive use count",
+          "preconditionCheckedIndependentlyBeforeArmExecution": true,
+          "lookupCallsOrTargetMutationBeforeFound": false,
+          "raceOrCycleProofClaimed": false,
+          "unexecutedInstructionAddresses": [
+            2415208,
+            2415212
+          ],
+          "unexecutedInstructionBytes": 8,
+          "originalMissingTargetAbortOrReturnBehaviorQualified": false,
+          "missingTargetDependency": 1336720,
+          "universalDeadCodeClaimed": false
+        },
+        "independentMembershipChecks": {
+          "originalArm": 80,
+          "sourceArm": 80
+        },
+        "fullSharedStateOrAdjacentFieldNonoverlapQualified": false,
+        "opaqueVtableExactCallbackTypesAndNativeAlignmentQualified": true,
+        "excludedDomains": [
+          "legacy collectable callback reinterpretation",
+          "original missing-registration escape behavior",
+          "allocation failure",
+          "full shared-state layout",
+          "original allocator recovery",
+          "GC",
+          "whole VM or game",
+          "Android OS or physical device"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_0019ba68",
+      "canonicalIdentity": {
+        "address": 1686120,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave015/string.c",
+        "sha256": "cd10d0aaeb53701160428b626054ef770b4f7bbec918c0fa47bf6621010c8a96",
+        "bytes": 4148
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 24,
+      "logicalOriginalInstructionBytes": 24,
+      "originalInstructionRanges": [
+        {
+          "start": 1686120,
+          "endExclusive": 1686144,
+          "bytes": 24
+        }
+      ],
+      "reportEntryBytes": 24,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-string-lifetime015/execution.json",
+          "sha256": "c8eaaf2d112a8524d2afb48af0403396e4319eb371149be2435287e2cc13a445",
+          "bytes": 100184
+        },
+        "independentReplay": {
+          "path": "evidence/verification/string015-isolated-efb32b8.json",
+          "sha256": "972f7da8214ddc2d3371ac5e02ed2bb4c6d9fc2dc95adadf1bc159f02310b5ae",
+          "bytes": 13349
+        },
+        "familyCases": 112,
+        "comparisonsAgainstOriginal": 336,
+        "normallyReturningControlsRejected": 11,
+        "sameFinalHeapControlsRejected": 5,
+        "actualSmallDeclaredPrefixObjects": true,
+        "lengthReadBeforeVirtualDestructor": true,
+        "physicalSharedTailCountedOnce": true,
+        "registeredMembershipPrecondition": {
+          "precondition": "finite stable computed-hash bucket chain contains actual removal target; positive use count",
+          "preconditionCheckedIndependentlyBeforeArmExecution": true,
+          "lookupCallsOrTargetMutationBeforeFound": false,
+          "raceOrCycleProofClaimed": false,
+          "unexecutedInstructionAddresses": [
+            2415208,
+            2415212
+          ],
+          "unexecutedInstructionBytes": 8,
+          "originalMissingTargetAbortOrReturnBehaviorQualified": false,
+          "missingTargetDependency": 1336720,
+          "universalDeadCodeClaimed": false
+        },
+        "independentMembershipChecks": {
+          "originalArm": 80,
+          "sourceArm": 80
+        },
+        "fullSharedStateOrAdjacentFieldNonoverlapQualified": false,
+        "opaqueVtableExactCallbackTypesAndNativeAlignmentQualified": true,
+        "excludedDomains": [
+          "legacy collectable callback reinterpretation",
+          "original missing-registration escape behavior",
+          "allocation failure",
+          "full shared-state layout",
+          "original allocator recovery",
+          "GC",
+          "whole VM or game",
+          "Android OS or physical device"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_0024d9e0",
+      "canonicalIdentity": {
+        "address": 2415072,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave015/string.c",
+        "sha256": "cd10d0aaeb53701160428b626054ef770b4f7bbec918c0fa47bf6621010c8a96",
+        "bytes": 4148
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 144,
+      "logicalOriginalInstructionBytes": 144,
+      "originalInstructionRanges": [
+        {
+          "start": 2415072,
+          "endExclusive": 2415216,
+          "bytes": 144
+        }
+      ],
+      "reportEntryBytes": 144,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-string-lifetime015/execution.json",
+          "sha256": "c8eaaf2d112a8524d2afb48af0403396e4319eb371149be2435287e2cc13a445",
+          "bytes": 100184
+        },
+        "independentReplay": {
+          "path": "evidence/verification/string015-isolated-efb32b8.json",
+          "sha256": "972f7da8214ddc2d3371ac5e02ed2bb4c6d9fc2dc95adadf1bc159f02310b5ae",
+          "bytes": 13349
+        },
+        "familyCases": 112,
+        "comparisonsAgainstOriginal": 336,
+        "normallyReturningControlsRejected": 11,
+        "sameFinalHeapControlsRejected": 5,
+        "actualSmallDeclaredPrefixObjects": true,
+        "lengthReadBeforeVirtualDestructor": true,
+        "physicalSharedTailCountedOnce": true,
+        "registeredMembershipPrecondition": {
+          "precondition": "finite stable computed-hash bucket chain contains actual removal target; positive use count",
+          "preconditionCheckedIndependentlyBeforeArmExecution": true,
+          "lookupCallsOrTargetMutationBeforeFound": false,
+          "raceOrCycleProofClaimed": false,
+          "unexecutedInstructionAddresses": [
+            2415208,
+            2415212
+          ],
+          "unexecutedInstructionBytes": 8,
+          "originalMissingTargetAbortOrReturnBehaviorQualified": false,
+          "missingTargetDependency": 1336720,
+          "universalDeadCodeClaimed": false
+        },
+        "independentMembershipChecks": {
+          "originalArm": 80,
+          "sourceArm": 80
+        },
+        "fullSharedStateOrAdjacentFieldNonoverlapQualified": false,
+        "opaqueVtableExactCallbackTypesAndNativeAlignmentQualified": true,
+        "excludedDomains": [
+          "legacy collectable callback reinterpretation",
+          "original missing-registration escape behavior",
+          "allocation failure",
+          "full shared-state layout",
+          "original allocator recovery",
+          "GC",
+          "whole VM or game",
+          "Android OS or physical device"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_0024d9cc",
+      "canonicalIdentity": {
+        "address": 2415052,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave015/string.c",
+        "sha256": "cd10d0aaeb53701160428b626054ef770b4f7bbec918c0fa47bf6621010c8a96",
+        "bytes": 4148
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 20,
+      "logicalOriginalInstructionBytes": 164,
+      "originalInstructionRanges": [
+        {
+          "start": 2415052,
+          "endExclusive": 2415072,
+          "bytes": 20
+        }
+      ],
+      "reportEntryBytes": 20,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-string-lifetime015/execution.json",
+          "sha256": "c8eaaf2d112a8524d2afb48af0403396e4319eb371149be2435287e2cc13a445",
+          "bytes": 100184
+        },
+        "independentReplay": {
+          "path": "evidence/verification/string015-isolated-efb32b8.json",
+          "sha256": "972f7da8214ddc2d3371ac5e02ed2bb4c6d9fc2dc95adadf1bc159f02310b5ae",
+          "bytes": 13349
+        },
+        "familyCases": 112,
+        "comparisonsAgainstOriginal": 336,
+        "normallyReturningControlsRejected": 11,
+        "sameFinalHeapControlsRejected": 5,
+        "actualSmallDeclaredPrefixObjects": true,
+        "lengthReadBeforeVirtualDestructor": true,
+        "physicalSharedTailCountedOnce": true,
+        "registeredMembershipPrecondition": {
+          "precondition": "finite stable computed-hash bucket chain contains actual removal target; positive use count",
+          "preconditionCheckedIndependentlyBeforeArmExecution": true,
+          "lookupCallsOrTargetMutationBeforeFound": false,
+          "raceOrCycleProofClaimed": false,
+          "unexecutedInstructionAddresses": [
+            2415208,
+            2415212
+          ],
+          "unexecutedInstructionBytes": 8,
+          "originalMissingTargetAbortOrReturnBehaviorQualified": false,
+          "missingTargetDependency": 1336720,
+          "universalDeadCodeClaimed": false
+        },
+        "independentMembershipChecks": {
+          "originalArm": 80,
+          "sourceArm": 80
+        },
+        "fullSharedStateOrAdjacentFieldNonoverlapQualified": false,
+        "opaqueVtableExactCallbackTypesAndNativeAlignmentQualified": true,
+        "excludedDomains": [
+          "legacy collectable callback reinterpretation",
+          "original missing-registration escape behavior",
+          "allocation failure",
+          "full shared-state layout",
+          "original allocator recovery",
+          "GC",
+          "whole VM or game",
+          "Android OS or physical device"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_0068f564",
+      "canonicalIdentity": {
+        "address": 6878564,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave015/string.c",
+        "sha256": "cd10d0aaeb53701160428b626054ef770b4f7bbec918c0fa47bf6621010c8a96",
+        "bytes": 4148
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 44,
+      "logicalOriginalInstructionBytes": 44,
+      "originalInstructionRanges": [
+        {
+          "start": 6878564,
+          "endExclusive": 6878608,
+          "bytes": 44
+        }
+      ],
+      "reportEntryBytes": 44,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-string-lifetime015/execution.json",
+          "sha256": "c8eaaf2d112a8524d2afb48af0403396e4319eb371149be2435287e2cc13a445",
+          "bytes": 100184
+        },
+        "independentReplay": {
+          "path": "evidence/verification/string015-isolated-efb32b8.json",
+          "sha256": "972f7da8214ddc2d3371ac5e02ed2bb4c6d9fc2dc95adadf1bc159f02310b5ae",
+          "bytes": 13349
+        },
+        "familyCases": 112,
+        "comparisonsAgainstOriginal": 336,
+        "normallyReturningControlsRejected": 11,
+        "sameFinalHeapControlsRejected": 5,
+        "actualSmallDeclaredPrefixObjects": true,
+        "lengthReadBeforeVirtualDestructor": true,
+        "physicalSharedTailCountedOnce": true,
+        "registeredMembershipPrecondition": {
+          "precondition": "finite stable computed-hash bucket chain contains actual removal target; positive use count",
+          "preconditionCheckedIndependentlyBeforeArmExecution": true,
+          "lookupCallsOrTargetMutationBeforeFound": false,
+          "raceOrCycleProofClaimed": false,
+          "unexecutedInstructionAddresses": [
+            2415208,
+            2415212
+          ],
+          "unexecutedInstructionBytes": 8,
+          "originalMissingTargetAbortOrReturnBehaviorQualified": false,
+          "missingTargetDependency": 1336720,
+          "universalDeadCodeClaimed": false
+        },
+        "independentMembershipChecks": {
+          "originalArm": 80,
+          "sourceArm": 80
+        },
+        "fullSharedStateOrAdjacentFieldNonoverlapQualified": false,
+        "opaqueVtableExactCallbackTypesAndNativeAlignmentQualified": true,
+        "excludedDomains": [
+          "legacy collectable callback reinterpretation",
+          "original missing-registration escape behavior",
+          "allocation failure",
+          "full shared-state layout",
+          "original allocator recovery",
+          "GC",
+          "whole VM or game",
+          "Android OS or physical device"
+        ]
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "source/squirrel-wave011/prototype_release.h",
+      "sha256": "33309e72078586399c1cf826ea13469541669a18dc17bc210bf23c3450391ba4",
+      "bytes": 3432
+    },
+    {
+      "path": "source/squirrel-wave012/reference_types.h",
+      "sha256": "64a44751454449783222f7a7c00654a56f569e8f91a10e0621740c8661c3fbae",
+      "bytes": 1360
+    },
+    {
+      "path": "source/squirrel-wave015/string.h",
+      "sha256": "bad2126f596b07a111c36c19742c4214acc3fa9bec77b72d3cc26566f8a31cee",
+      "bytes": 2497
+    }
+  ],
+  "frozenReady": {
+    "path": "evidence/lanes/squirrel-string-lifetime015/ready.json",
+    "sha256": "82e86302072925742becef9de94ccbc62cfd5fd76cfe51a6daa5fe62706f4ee4",
+    "bytes": 3733
+  },
+  "sharedBaseTailOrRuntimeAdditionalCredit": 0,
+  "producer": {
+    "path": "evidence/functional/producers/review-string015.py",
+    "sha256": "73e566441ebfdd87ab434926cfaa08072834ca20af13400ee51512e63ba92ae1",
+    "bytes": 5908
+  }
+}

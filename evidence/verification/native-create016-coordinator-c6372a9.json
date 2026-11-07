@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-independent-native-closure-creation",
+  "sourceRevision": "c6372a9e0dfb4b692e6ad82fc704d0e19c26182d",
+  "rawReplay": {
+    "path": "evidence/verification/native-create016-isolated-c6372a9.json",
+    "sha256": "d23b4aece9e4e85e6b7c233e3769a290256fca106200e9d3e64be92a93aa25dd",
+    "bytes": 12936
+  },
+  "executedDriver": {
+    "path": "evidence/verification/producers/native-create016-c6372a9-replay.py",
+    "sha256": "0bfacf3e2df53718de3bebdf41c674f8a71a55c5f4542cb439b13365874df8f3",
+    "bytes": 5181
+  },
+  "publicPacket": {
+    "path": "evidence/lanes/squirrel-native-create016/report.json",
+    "sha256": "26395f9435683905fb868c7cc8f43b2cbb2aeef0253bdd2f9d1ddf0d09b21923",
+    "bytes": 25537
+  },
+  "independentPacket": {
+    "path": "work/clean-replay/native-create016-c6372a9/work/squirrel-native-create016/committed/report.json",
+    "sha256": "12cf7d88c81a5f556e60af67cecccdfca389fd44a8c5f877c2c7df869d596b58",
+    "bytes": 3598048
+  },
+  "completeUnmodifiedBatchReplayPassed": true,
+  "independentSourceComponentReplayPassed": true,
+  "tests": 59,
+  "publicUnits": 169,
+  "publicCompilations": 485,
+  "originalSourceWindowsAndAndroidModelReturns": 112,
+  "newCanonicalInstructionBytes": 396,
+  "originalRootInstructionsVisited": 93,
+  "originalRootInstructions": 99,
+  "domainUnreachableInstructions": [
+    1536308,
+    1536312,
+    1536316,
+    1536320,
+    1536332,
+    1536336
+  ],
+  "allRootInstructionsExecutedClaimed": false,
+  "allPrimaryFieldsAndArtifactsIdenticalExceptNativeCommandPaths": true,
+  "failureEvidence": {
+    "nullAllocation": {
+      "originalOnly": true,
+      "faultPc": 1536084,
+      "outcome": "unmapped-null-write",
+      "sourceExecuted": false
+    },
+    "nullReallocation": {
+      "returned": true,
+      "invalidOuterVector": true,
+      "outerValues": 0,
+      "outerSize": 1,
+      "outerCapacity": 4,
+      "arenaSha256": "454c34bef58c004f6ff18a1e003389d47e615238bf07c141075fdb0b26c22ed6",
+      "sourceNotExecuted": true
+    },
+    "sourceFailureModesRejectedBeforeEntry": true,
+    "allocatorRecoveryClaimed": false
+  },
+  "limits": [
+    "successful aligned nonoverflow allocation and valid bounded active/spare VM stack storage",
+    "declared VM field binding only, no cast to frozen004 or complete native VM type claim",
+    "exact opaque 011 callback family and actual native013/prototype011 finalizers",
+    "prototype other compact vectors, names and weak links null in this composition",
+    "read-only logical disposal and explicitly selected allocator observation mutations",
+    "native callable storage only; no invocation bridge or string-provider assumption",
+    "AArch64 source-object model is not physical Android/game execution"
+  ],
+  "nullAllocationOrReallocationAdmittedForSource": false,
+  "wholeVmOrGameOrPhysicalDeviceClaimed": false,
+  "sourceByteCreditGranted": 0,
+  "producer": {
+    "path": "evidence/verification/producers/review-native-create016-replay.py",
+    "sha256": "4a5a3bf21e82f22497c082e1d264e6b8c7595f2355039b8fc86723a2b6e69ef6",
+    "bytes": 3385
+  }
+}
