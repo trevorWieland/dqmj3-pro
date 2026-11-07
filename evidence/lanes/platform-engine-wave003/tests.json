@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "testsRun": 11,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "testSource": {
+    "path": "tests/test_platform_engine_wave003.py",
+    "sha256": "57e4df376f0a7792f6a0ea82137947ef233bbe7247c405d542f01de59df2667b"
+  },
+  "cleanCoreRebuild": true,
+  "productionDllUsedByTests": false,
+  "productionAndReplayCoffComparisons": [
+    {
+      "sourcePath": "platform/engine-wave003/texture.c",
+      "productionObjectSha256": "c006c0a206be52d8a75657b316e147a8552315ad4cbb3e8f9192c6442b731f0a",
+      "replayObjectSha256": "cff6ee16649ab7f2f6155faec10c10a012b9be850b930bbd2119572567bf2a56",
+      "productionCoffTimestamp": 1794010668,
+      "replayCoffTimestamp": 1794010845,
+      "allBytesExceptCoffTimestampEqual": true,
+      "filesModifiedForComparison": false
+    },
+    {
+      "sourcePath": "platform/engine-wave003/archive.c",
+      "productionObjectSha256": "0f0a48cb5d5e941f441fcdcdb81059bfa87db1f5ab56f8ded477113b7666cc82",
+      "replayObjectSha256": "7cf5c3dbc965272c580b7937a6cb10cf5d3cfcfc97123d0e1af621390f516091",
+      "productionCoffTimestamp": 1794010668,
+      "replayCoffTimestamp": 1794010846,
+      "allBytesExceptCoffTimestampEqual": true,
+      "filesModifiedForComparison": false
+    },
+    {
+      "sourcePath": "platform/engine-wave003/scene.c",
+      "productionObjectSha256": "a69b5a7c24de57cd355ef464ed5d9091bdd4df930ae7574f03563391109b5a91",
+      "replayObjectSha256": "126c9effe7e4181716e1ecd5ed5bda888fbf374e9cfcba799ce260efa432dd77",
+      "productionCoffTimestamp": 1794010668,
+      "replayCoffTimestamp": 1794010846,
+      "allBytesExceptCoffTimestampEqual": true,
+      "filesModifiedForComparison": false
+    },
+    {
+      "sourcePath": "platform/engine-wave003/scene_render.c",
+      "productionObjectSha256": "1059c495f52adaf7b87a29b3aed63fc19d86d2ede18de80f5357c704ce4c089e",
+      "replayObjectSha256": "b8d8780660fb2e2823a478c164a5532039f9f8e035415f3a11627012aec25b48",
+      "productionCoffTimestamp": 1794010668,
+      "replayCoffTimestamp": 1794010846,
+      "allBytesExceptCoffTimestampEqual": true,
+      "filesModifiedForComparison": false
+    },
+    {
+      "sourcePath": "platform/engine-wave002/layout.c",
+      "productionObjectSha256": "838d070b86d725b38eb9e764c4dd3ed5b5f62b0a32f07b4f04d75a0f2b1fa9be",
+      "replayObjectSha256": "17feed789054864c4c3d062c3cbe9ea31aed4c32c84f915c437848d7d58584f5",
+      "productionCoffTimestamp": 1794010669,
+      "replayCoffTimestamp": 1794010846,
+      "allBytesExceptCoffTimestampEqual": true,
+      "filesModifiedForComparison": false
+    }
+  ],
+  "scope": "Native Windows decoder, archive, static compositing and atomic replacement; Android lifecycle unexecuted",
+  "preSealHarnessRepairs": [
+    "Initial APK allowlist omitted generated resources and signing records",
+    "Frame preservation harness initially serialized uint32 values through bytes(list), corrected to raw pointer bytes",
+    "Whole COFF comparison initially rejected compile timestamps; final check records both complete hashes and excludes only timestamp metadata without modifying files",
+    "Comment gate initially treated the Java MIME string literal as a comment; final gate removes quoted literals before checking"
+  ]
+}

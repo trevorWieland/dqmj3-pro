@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "status": "atomic-material-platform-components-built",
+  "windows": {
+    "executable": {
+      "path": "work/platform-engine-wave004/windows/dqm_atomic_material_views.exe",
+      "sha256": "09fff37adff95d160a0aee072d0046ce4165c733f6d38327bd010aa3e49332f0"
+    },
+    "coreLibrary": {
+      "path": "work/platform-engine-wave004/windows/dqm_atomic_views.dll",
+      "sha256": "06c6c673cf6faf2101600764036c1b3acb8368cc02b2a8df95b3393a14e443a2"
+    },
+    "missingPrivateAssetControl": true,
+    "guiCompiled": true,
+    "interactiveGuiExecuted": false,
+    "recoveredStackSourceLinked": true
+  },
+  "android": {
+    "apk": {
+      "path": "work/platform-engine-wave004/android/package/dqm-dual-view-materials.apk",
+      "sha256": "64ba0b71c17164d128cdd490881b18d3433d3e3f709f20b596f9382a6648deef"
+    },
+    "abi": "arm64-v8a",
+    "minimumApi": 29,
+    "targetApi": 36,
+    "signatureVerified": true,
+    "zipNativeOffset": 16384,
+    "uncompressedNativeLibrary": true,
+    "originalAssetsPackaged": false,
+    "deviceExecution": false,
+    "safImportImplemented": true,
+    "native": {
+      "library": {
+        "path": "work/platform-engine-wave004/android/native/libdqm_materials.so",
+        "sha256": "f2e5ff48f5a540937a597c5996c33efdbab173261406d2347550c12f862bdbfa"
+      },
+      "machine": "EM_AARCH64",
+      "jniSymbols": [
+        "Java_org_dqm_materials_MaterialActivity_axis",
+        "Java_org_dqm_materials_MaterialActivity_button",
+        "Java_org_dqm_materials_MaterialActivity_claim",
+        "Java_org_dqm_materials_MaterialActivity_complete",
+        "Java_org_dqm_materials_MaterialActivity_pixels",
+        "Java_org_dqm_materials_MaterialActivity_rect",
+        "Java_org_dqm_materials_MaterialActivity_request",
+        "Java_org_dqm_materials_MaterialActivity_reset",
+        "Java_org_dqm_materials_MaterialActivity_resumeEngine",
+        "Java_org_dqm_materials_MaterialActivity_sceneStat",
+        "Java_org_dqm_materials_MaterialActivity_state",
+        "Java_org_dqm_materials_MaterialActivity_step",
+        "Java_org_dqm_materials_MaterialActivity_surface",
+        "Java_org_dqm_materials_MaterialActivity_touch"
+      ],
+      "loadAlignments": [
+        16384,
+        16384,
+        16384,
+        16384
+      ]
+    }
+  },
+  "deviceProbe": {
+    "attachedDevices": 0,
+    "adb": {
+      "path": "tools/android-platform-tools-37.0.1/adb.exe",
+      "sha256": "b4a6b455702684652cccf7b46258b29e653538904359a58fd4931cf3ef286b3f"
+    },
+    "deviceExecution": false,
+    "aynThorExecution": false
+  },
+  "recoveredResourceInputs": {
+    "schemaVersion": 1,
+    "purpose": "Use two accepted recovered stack operations in the new portable resource job stack; no new recovered-source credit",
+    "acceptance": {
+      "path": "evidence/cohorts/bundle002/acceptance.json",
+      "sha256": "f1bd61390c233f43418bb03e1b27453c83aa26e96ba8d2a15c7eab47724ca663"
+    },
+    "source": {
+      "path": "src/native/wave005/stack.c",
+      "sha256": "40225c220e8f6b2efe4cb8bcd58c047844807f25225e1b77db7fa6cb3a0f90b0"
+    },
+    "header": {
+      "path": "src/native/wave005/vm_views.h",
+      "sha256": "1bf160e4679afbe5a59a244e78f9753684c93a109f7a703f78dff80d04f4840a"
+    },
+    "functions": [
+      {
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1409012,
+        "mode": "ARM",
+        "instructionBytes": 16,
+        "poolBytes": 0,
+        "symbol": "fn_00157ff4",
+        "sourcePath": "src/native/wave005/stack.c",
+        "sourceSha256": "40225c220e8f6b2efe4cb8bcd58c047844807f25225e1b77db7fa6cb3a0f90b0",
+        "originalSpanSha256": "ea81372cf335751ae07dcefa2ca94ffad4801e0bb537f4f7767c6564d0ef5450",
+        "boundedCases": 32,
+        "sourceRevision": "eece4c5436fea2466cc3888467633052caa41273",
+        "lane": "wave005-native"
+      },
+      {
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1523008,
+        "mode": "ARM",
+        "instructionBytes": 12,
+        "poolBytes": 0,
+        "symbol": "fn_00173d40",
+        "sourcePath": "src/native/wave005/stack.c",
+        "sourceSha256": "40225c220e8f6b2efe4cb8bcd58c047844807f25225e1b77db7fa6cb3a0f90b0",
+        "originalSpanSha256": "5a10d152b0b7e18996d334a83f1153c8904a0071e65ad7e2c8345d64361e34be",
+        "boundedCases": 9,
+        "sourceRevision": "eece4c5436fea2466cc3888467633052caa41273",
+        "lane": "wave005-native"
+      }
+    ]
+  },
+  "sourceInputs": [
+    {
+      "path": "platform/engine-wave004/AndroidManifest.xml",
+      "sha256": "22b0fda65e2b390d902d433a5234f799f01c411209b4682f06f46b930f46a1ba"
+    },
+    {
+      "path": "platform/engine-wave004/component.c",
+      "sha256": "d668542007452fb37afff0028dbb6be468be8b326c6750e799add60482d24504"
+    },
+    {
+      "path": "platform/engine-wave004/component.h",
+      "sha256": "765db3004f4bb05fdd1eb230cd8f233d6eada4a97b5ce7538b0a9ff22cd9f9bd"
+    },
+    {
+      "path": "platform/engine-wave004/component_windows.c",
+      "sha256": "8fd399161d540e06dc97316498005dcb4feb4c42221b02f584aa73ba28876087"
+    },
+    {
+      "path": "platform/engine-wave004/frozen-inputs.json",
+      "sha256": "7615c194fad914d7fe8c67b361eca85a89ae785691793c4cb317ba2b3944f592"
+    },
+    {
+      "path": "platform/engine-wave004/material_jni.c",
+      "sha256": "3f5611d42680ac1764e426143f2e7b5d228217e85075862b31f8a7d6f40ce894"
+    },
+    {
+      "path": "platform/engine-wave004/material_render.c",
+      "sha256": "6899c67cb245cdd1757a2557f7fc25f929cd49be60047be1945b42b96231b335"
+    },
+    {
+      "path": "platform/engine-wave004/material_sampling.c",
+      "sha256": "5dba174f263c6ce62c3435157ff21cfb02b92b51f1aa0c7172c2d903818d24b2"
+    },
+    {
+      "path": "platform/engine-wave004/MaterialActivity.java",
+      "sha256": "09506fb6ba611d7250f9dabf5b279c6d5936d81bb04a1cb2d117b2388f0ad8a6"
+    },
+    {
+      "path": "platform/engine-wave004/MaterialProbe.java",
+      "sha256": "f940eb08ee9d869ba44d336bcefea06a260c63993b5d30a047e5e1e542169848"
+    },
+    {
+      "path": "platform/engine-wave004/materials.c",
+      "sha256": "8cccd4d56bff44a9cb681155a63522b714bfd2cdf9716f4f280327ef598a08d0"
+    },
+    {
+      "path": "platform/engine-wave004/scene_internal.h",
+      "sha256": "438fa985fad3b46a36051b02e12af699d369795ba0e0fd434f3c5c23f6f4e177"
+    },
+    {
+      "path": "platform/engine-wave004/stage.c",
+      "sha256": "a6f5b4fa08e9f2af13b3b7def4e0f71c02aabffa46badfa0ede91ce293579f03"
+    }
+  ],
+  "sceneScope": "All17 measured picture materials; static map mirrored for dual-view service integration",
+  "recoveredSourceCreditBytes": 0,
+  "nativeGameBuild": false,
+  "originalAssetsPackaged": false
+}

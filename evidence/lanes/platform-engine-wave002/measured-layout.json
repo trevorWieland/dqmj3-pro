@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "status": "measured-game-layout-native-parser-and-render-passed",
+  "producer": {
+    "path": "toolscripts/platform_engine_asset_wave002.py",
+    "sha256": "2080c51dedba6691c98c8189abd8c1b086b7eb0bbac7dc1d808d4f8074992fa4"
+  },
+  "inputIdentity": {
+    "ownerCiaSha256": "864d1c35ba6908bed94d9c5f09a148b3355c41794f1d126086dafe1876665f47",
+    "romfsPath": "/data/Layout/NaviMap/A00_00.arc",
+    "containerSha256": "a56be941dd4e8b4f71abd12141efd47916ebcf50174379cc86735fd78b8a5099",
+    "containerBytes": 157992,
+    "memberIndex": 0,
+    "memberSha256": "d7e649606472a4e8fe2d006adb41cf33737d38a8b041507c4d21258589bb2d96",
+    "memberBytes": 6552
+  },
+  "geometryComparison": {
+    "paneCount": 35,
+    "visiblePaneCount": 27,
+    "geometryScalarCountCompared": 280,
+    "maximumPixelError": 0.0009731962771297731,
+    "nativeGeometrySha256": "453c2dc5f08e7fb2b9e3fb4667e6d5c2984daebbb813606a9e89a2b8ce28f87a",
+    "malformedOriginalHeaderRejected": true,
+    "reference": "independent Python double-precision matrix/trigonometric evaluation"
+  },
+  "nativeLibrary": {
+    "path": "work/platform-engine-wave002/build/windows/dqm_engine_core.dll",
+    "sha256": "ad9a20380e9c47d578696f2e6f06257057aaa55a4ee15faa8bbaeff3521e9657"
+  },
+  "nativeExecutable": {
+    "path": "work/platform-engine-wave002/private/windows/dqm_portable_engine.exe",
+    "sha256": "6a908f0a3144addfab9d1f10da6689f7db3408412e887c655082f8040d2963c2"
+  },
+  "layoutParser": {
+    "path": "platform/engine-wave002/layout.c",
+    "sha256": "9995e7ba9df480037032b40948cec2aa243bc8707a59021f367f047b0b224aca"
+  },
+  "androidPackage": {
+    "path": "work/platform-engine-wave002/build/android/package/dqm-portable-engine-components.apk",
+    "sha256": "f95981084bd6dea60712ad350d46e8b9f5f8afdb59115d25aa5b58e9494c4947"
+  },
+  "nativeWindows": {
+    "status": "measured-layout-rendered",
+    "workerIoExecuted": true,
+    "paneCount": 35,
+    "gdiOffscreenRendered": true,
+    "gameBuild": false
+  },
+  "originalPayloadsExportedToPublicTree": false,
+  "originalPayloadsRemainUnderIgnoredPrivateWork": true,
+  "androidLayoutParserAndCanvasPathPackaged": true,
+  "androidOriginalAssetPackaged": false,
+  "androidDeviceExecuted": false,
+  "gameplayExecuted": false,
+  "acceptedRecoveredSourceCredit": 0,
+  "limits": [
+    "Static planar, centered-origin FLYT7.2.1 pane geometry only",
+    "Textures, fonts, material behavior, parts expansion and animations are not rendered",
+    "Private measured layout must be supplied separately to Android application files",
+    "A native wireframe of a real map UI asset is not a running DQMJ3 game"
+  ]
+}

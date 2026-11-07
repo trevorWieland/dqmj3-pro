@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "frozenInputs": {
+    "path": "platform/engine-wave005/frozen-inputs.json",
+    "sha256": "51c59179bd82a739f39b54158a78a19241405a0b942d341405ed4e31545f0fd2"
+  },
+  "independentTools": {
+    "path": "platform/engine-wave005/oracle-inputs.json",
+    "sha256": "e7286387537d102d9ac944774e71a96f6e31149a739652837f138f1423f1eef8"
+  },
+  "sourceDerivedOnly": true,
+  "thirdPartyImplementationLinkedIntoApps": false,
+  "preservedAttempts": [
+    {
+      "issue": "Initial multi-file patch assumed a different header guard and was rejected atomically",
+      "resolution": "Read actual guard; no partial source edits occurred"
+    },
+    {
+      "issue": "Internal packing must not propagate into Win32/JNI ABI structures",
+      "resolution": "Boundary files compile with natural platform ABI; packed candidate helper exchanges only raw pointer/scalar arguments"
+    },
+    {
+      "issue": "A same-final-state allocator difference can escape through observers",
+      "resolution": "Frozen constructor contract retained; new lookup service reads only immutable bindings, conversion begins after return"
+    },
+    {
+      "issue": "Long initial Android audit replay invoked individual API reads",
+      "resolution": "Retained genuine public API execution and completed all material audit comparisons"
+    }
+  ],
+  "originalPayloadsPublished": false
+}

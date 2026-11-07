@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Use two accepted recovered stack operations in the new portable resource job stack; no new recovered-source credit",
+  "acceptance": {
+    "path": "evidence/cohorts/bundle002/acceptance.json",
+    "sha256": "f1bd61390c233f43418bb03e1b27453c83aa26e96ba8d2a15c7eab47724ca663"
+  },
+  "source": {
+    "path": "src/native/wave005/stack.c",
+    "sha256": "40225c220e8f6b2efe4cb8bcd58c047844807f25225e1b77db7fa6cb3a0f90b0"
+  },
+  "header": {
+    "path": "src/native/wave005/vm_views.h",
+    "sha256": "1bf160e4679afbe5a59a244e78f9753684c93a109f7a703f78dff80d04f4840a"
+  },
+  "functions": [
+    {
+      "programId": "0004000e001acb00",
+      "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+      "address": 1409012,
+      "mode": "ARM",
+      "instructionBytes": 16,
+      "poolBytes": 0,
+      "symbol": "fn_00157ff4",
+      "sourcePath": "src/native/wave005/stack.c",
+      "sourceSha256": "40225c220e8f6b2efe4cb8bcd58c047844807f25225e1b77db7fa6cb3a0f90b0",
+      "originalSpanSha256": "ea81372cf335751ae07dcefa2ca94ffad4801e0bb537f4f7767c6564d0ef5450",
+      "boundedCases": 32,
+      "sourceRevision": "eece4c5436fea2466cc3888467633052caa41273",
+      "lane": "wave005-native"
+    },
+    {
+      "programId": "0004000e001acb00",
+      "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+      "address": 1523008,
+      "mode": "ARM",
+      "instructionBytes": 12,
+      "poolBytes": 0,
+      "symbol": "fn_00173d40",
+      "sourcePath": "src/native/wave005/stack.c",
+      "sourceSha256": "40225c220e8f6b2efe4cb8bcd58c047844807f25225e1b77db7fa6cb3a0f90b0",
+      "originalSpanSha256": "5a10d152b0b7e18996d334a83f1153c8904a0071e65ad7e2c8345d64361e34be",
+      "boundedCases": 9,
+      "sourceRevision": "eece4c5436fea2466cc3888467633052caa41273",
+      "lane": "wave005-native"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+# Measured textured resource component
+
+This packet imports the owner's actual NaviMap SARC, resolves the FLYT texture list against archive paths, decodes BFLIM images in ordinary C and displays a static textured subset. It is a Windows/Android platform component. It contributes zero reconstructed game-source bytes and is not a source-only game build or emulator wrapper.
+
+The measured container is `/data/Layout/NaviMap/A00_00.arc`, SHA-256 `a56be941dd4e8b4f71abd12141efd47916ebcf50174379cc86735fd78b8a5099`. Its single layout is `d7e649606472a4e8fe2d006adb41cf33737d38a8b041507c4d21258589bb2d96`. All original and derived pixel payloads remain under `work/platform-engine-wave003/private/`. The public executable and APK contain none of those payloads.
+
+The archive contains twelve members: one layout, ten texture images and one ignored animation. All ten texture references resolve locally. The ten images contain 277,465 logical pixels. Native RGBA decoding agrees byte for byte with a separate Python reference; ETC1 color blocks additionally use the separately installed, hash-verified `texture2ddecoder` 1.0.6 native codec. Tests cover ETC individual/differential modes, both block orientations, alpha nibbles, Morton order, cropping and all three accepted image orientations.
+
+`texture.c` bounds the little-endian FLYT-era BFLIM 7.2.1 footer, dimensions, storage and output capacity. It implements the five measured formats: A8, A4, RGBA4, ETC1 and ETC1A4. Data is tiled in 8×8 groups. The declared descriptor dimensions are swapped before decoding for orientation 4/8; orientation 4 rotates counterclockwise and orientation 8 transposes. One measured image declares 128 additional encoded bytes beyond the padded texels addressed by its logical dimensions. Those bytes are counted, bounded and left uninterpreted. They are not called zero padding or extra decoded image content.
+
+`archive.c` validates the SARC tables, hash ordering, exact member-name hashes, names, bounds, duplicate names and overlapping member ranges. It resolves texture references by exact `timg/` path and basename, rather than assuming archive order. `scene.c` reads texture, material and picture bindings. It reuses frozen wave002's planar centered-origin pane service without modifying that packet.
+
+`scene_render.c` provides a **nearest-clamped static preview**, with bilinear corner UV/tint interpolation, color remapping and source-over blending. It supports identity UV material transforms with one ordinary UV mapping. It renders thirteen of seventeen picture panes. Four pictures remain outside this preview: three projection/multitexture materials and one nonidentity/repeating material. Six of nineteen material records are unsupported, including two unused texture-free materials. Eighteen non-picture panes, external parts/fonts and the animation remain unrendered. Nonopaque ancestor alpha is conservatively excluded; the measured nonopaque picture leaves are supported. This is not a claim of equivalence to the original GPU filtering, shader behavior, scene state, masking or animated game screen.
+
+Successful loads atomically publish a finished framebuffer and statistics. A malformed replacement preserves the previous displayed frame and generation, even after decoding replacement textures. The native loader has one serial owner. The Android adapter maintains one process-wide serial executor across Activity instances, copies the finished native framebuffer into a Bitmap, drops stale UI callbacks after pause/recreation and writes a validated import through `AtomicFile`. It uses the system document picker and app-private storage, requests no storage or network permission and packages no original resources. Android lifecycle and import execution require a device; this packet only compiles and inspects that path.
+
+The Windows executable loads `assets/scene.arc` relative to itself. The private measurement script creates an isolated executable copy with that owner asset, executes real Win32 file I/O and renders through GDI. It checks every offscreen RGB pixel against the native framebuffer after `GdiFlush`. The public executable's missing-asset control is also executed. Its interactive resizeable GUI is compiled; interactive GUI execution is not claimed.
+
+The signed development APK is `org.dqm.textures`, arm64-v8a, minimum API 29, target API 36. Both ELF load segments and the uncompressed APK library entry are checked for 16 KiB alignment. The Android import button accepts the extracted NaviMap `.arc`, validates it and saves it privately. No device was attached to the isolated ADB server on port 5043. Installation, Android rendering, document-provider behavior, rotation/pause callbacks, 16 KiB device execution and AYN Thor execution remain untested. Wave002 retains its separate dual-display/input services; this viewer does not claim to integrate them yet.
+
+On the native Windows development host:
+
+```powershell
+tools/python/Scripts/python.exe toolscripts/platform_engine_wave003.py
+tools/python/Scripts/python.exe -m unittest discover -s tests -p test_platform_engine_wave003.py -v
+tools/python/Scripts/python.exe toolscripts/platform_engine_wave003_measure.py
+tools/python/Scripts/python.exe toolscripts/platform_engine_wave003_seal.py
+```
+
+The build uses the pinned project-local Clang/LLD 21, SDK 36, JDK 25 and build tools. The inherited compiler helper and frozen pane source are pinned in `reused-inputs.json`. The tests build a fresh core DLL in their own directory and execute eleven parser/decoder/compositing test cases. Every replay COFF byte outside the four-byte compile timestamp agrees with production. Both complete object hashes and timestamp values are recorded; files are never modified to make that comparison. The measurement step rehashes the owner CIA, extracts just the measured SARC, compares all ten image decodes, runs the native GDI positive and corrupt-archive controls and emits metadata-only evidence. It stores a private PNG for visual inspection. Logs, development signing keys, private originals, decoded pixels and built binaries are not public evidence.
+
+The next measured milestone is the layout's projection/multitexture material and FLAN bindings, followed by integration of this resource loader with wave002's dual-view lifecycle and recovered resource-stack services. That work still requires real game-state and scene/render recovery before it can become a game build.
+
+## Protocol and license provenance
+
+The C implementation is independently authored. No upstream implementation is vendored, translated or linked into the application. Protocol facts and bit layouts came from these primary sources:
+
+- [Khronos ETC1 extension specification](https://registry.khronos.org/OpenGL/extensions/OES/OES_compressed_ETC1_RGB8_texture.txt), particularly block byte order, individual/differential color modes, selectors and modifier tables. The specification has Khronos's document copyright terms; it supplies format definitions rather than application code.
+- [3DSkit BFLYT format research](https://github.com/Tyulis/3DSkit/blob/2fb6077654c6aa77348fd0c7c3cd8c108da86a74/doc/BFLYT.md). Its author explicitly offers the document for unrestricted use and identifies it as incomplete research. That uncertainty is preserved in the restricted preview contract.
+- [3DSkit BFLIM reader](https://github.com/Tyulis/3DSkit/blob/2fb6077654c6aa77348fd0c7c3cd8c108da86a74/unpack/BFLIM.py) and [3DSkit graphics implementation](https://github.com/Tyulis/3DSkit/blob/2fb6077654c6aa77348fd0c7c3cd8c108da86a74/c3DSkit/graphics.c), inspected as format/orientation research. The repository's source code is GPL-3.0. It remains a research reference, outside the application and public packet.
+- [ObsidianX's BFLIM research implementation](https://github.com/ObsidianX/3dstools/blob/ccfe659e424f7f57a5ac84a48565a0c8e38508e8/bflim.py), inspected to cross-check tiled ETC storage. No source from it is included.
+- [texture2ddecoder](https://github.com/K0lb3/texture2ddecoder/tree/3ebc3b758bd6b1a3108b50148f7998ee34f058c6), development-only independent ETC1 oracle. Its wrapper and ETC codec are MIT licensed; its other bundled codecs retain their own licenses. The pinned wheel, effective loaded native module and license hashes are in `oracle-inputs.json`. The oracle stays in private work and is never linked into the DLL, executable, ELF library or APK.
+- [Android Storage Access Framework](https://developer.android.com/training/data-storage/shared/documents-files) for the user-selected document import, and [Android 16 KiB guidance](https://developer.android.com/guide/practices/page-sizes) for ELF and APK alignment checks. Reviewed 2026-11-06. Packaging alignment does not substitute for device execution.
+
+The public `evidence/lanes/platform-engine-wave003/` files carry hashes, measured counts, classifications and explicit claim limits. They contain no original names beyond the already measured container path, no texture/pixel payload and no game executable bytes.
