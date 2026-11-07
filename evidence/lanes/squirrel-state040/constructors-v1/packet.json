@@ -1,0 +1,4638 @@
+{
+  "schemaVersion": 1,
+  "status": "frozen-bounded-complete-constructor-candidate-stage-not-admission",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "producer": {
+    "path": "toolscripts/squirrel_state040_constructor_packet.py",
+    "sha256": "2af5997ddd2127a54ab0e735209107366a6f7663b5370a1273a7b76070afbc2e",
+    "bytes": 7559
+  },
+  "inputs": [
+    {
+      "path": "source/squirrel-wave002/array_views.h",
+      "sha256": "02e549c877765b7cbce879ec29e45c66dc46a1266bf630247775ec43bad2c0f4",
+      "bytes": 1492
+    },
+    {
+      "path": "source/squirrel-wave004/call_views.h",
+      "sha256": "4e8a0cc46d0aee9b72a8d0435d7efb19b8dd47cf9a4445a8007c4a44d916946e",
+      "bytes": 3085
+    },
+    {
+      "path": "source/squirrel-wave011/prototype_release.h",
+      "sha256": "33309e72078586399c1cf826ea13469541669a18dc17bc210bf23c3450391ba4",
+      "bytes": 3432
+    },
+    {
+      "path": "source/squirrel-wave012/array_reference.h",
+      "sha256": "f793588dc85d4b444cfbdff6a1d7ad5e660e14b09a370b617f09aa475e84cc03",
+      "bytes": 954
+    },
+    {
+      "path": "source/squirrel-wave012/reference_dispatch_opaque.c",
+      "sha256": "ca86896d8149d55f06cfdd92ddc2fc126fb35818b4dff9d955c25ee69f375906",
+      "bytes": 228
+    },
+    {
+      "path": "source/squirrel-wave012/reference_prefix.c",
+      "sha256": "09a4073e8e71f3f50769bc9058399cce666da47b157401af5915581134560408",
+      "bytes": 1693
+    },
+    {
+      "path": "source/squirrel-wave012/reference_prefix.h",
+      "sha256": "a1c5422925b54a994b500be6805e74e8b8c339fe18bbc57002a7d1807db22ad2",
+      "bytes": 1824
+    },
+    {
+      "path": "source/squirrel-wave012/reference_types.h",
+      "sha256": "64a44751454449783222f7a7c00654a56f569e8f91a10e0621740c8661c3fbae",
+      "bytes": 1360
+    },
+    {
+      "path": "source/squirrel-wave013/native_closure_release.h",
+      "sha256": "6723b66bce845aeb133508afb9cc1a8bc9299e5aee7a6d2c1c4b73418d26ef28",
+      "bytes": 1486
+    },
+    {
+      "path": "source/squirrel-wave014/weak_reference.h",
+      "sha256": "fc58b153a5b5801ed60078cb31c436a84fd33803bc0b71102dff70c81579f63e",
+      "bytes": 890
+    },
+    {
+      "path": "source/squirrel-wave015/string.h",
+      "sha256": "bad2126f596b07a111c36c19742c4214acc3fa9bec77b72d3cc26566f8a31cee",
+      "bytes": 2497
+    },
+    {
+      "path": "source/squirrel-wave016/native_create.h",
+      "sha256": "a3925277f8144daac617b475f70fafc515cd3ccdfa9e3a828c98ba331767763f",
+      "bytes": 1348
+    },
+    {
+      "path": "source/squirrel-wave017/script_closure.h",
+      "sha256": "4379d064694e17209c6f19dd7bb8d9ec26ca6fef3482cf4a51ae383def7b6b0f",
+      "bytes": 1360
+    },
+    {
+      "path": "source/squirrel-wave019/table.h",
+      "sha256": "a08e56e7071fdc75351bcb7cc366823938a7484963e88094d2d42ad9f4b73e83",
+      "bytes": 1877
+    },
+    {
+      "path": "source/squirrel-wave020/lookup.h",
+      "sha256": "37d79b9460b3206ca91ea800e0559abee8d1b294a5b9914c03790ba5a9c688ab",
+      "bytes": 4915
+    },
+    {
+      "path": "source/squirrel-wave020/metamethod.h",
+      "sha256": "2ea3fa8e6a46010a1d42b2324581caa8f851860e09802b656f9d966d2df2051b",
+      "bytes": 1644
+    },
+    {
+      "path": "source/squirrel-wave022/vm_call.h",
+      "sha256": "7e8e2240f89c6b466380d9f910fd4a29c9ac31a54e628c18e2903363158c1c36",
+      "bytes": 4008
+    },
+    {
+      "path": "source/squirrel-wave028/execute.h",
+      "sha256": "a2f7b65dfea548f26803580f5a98efc8e762352fa660e1546bd0f4e851ca12d1",
+      "bytes": 3340
+    },
+    {
+      "path": "source/squirrel-wave030/class_call.h",
+      "sha256": "1744a8a1a64961d6b9f5d010c35a097804a14b0050e273d5cb2bf0799e05741b",
+      "bytes": 3663
+    },
+    {
+      "path": "source/squirrel-wave034/class.h",
+      "sha256": "f5480c97b5d62dab0f2d3f328face6a47436eff07fb37043996e2f32a0c60d03",
+      "bytes": 1590
+    },
+    {
+      "path": "source/squirrel-wave040/bindings.c",
+      "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+      "bytes": 1605
+    },
+    {
+      "path": "source/squirrel-wave040/fixture.c",
+      "sha256": "57de3d786826e5acd854aa04badc91374b1cfc21de267906a35966791846d2c9",
+      "bytes": 1436
+    },
+    {
+      "path": "source/squirrel-wave040/fixture.h",
+      "sha256": "3b4adc87899a41c04ea5e7e7dda4e95440603cec8c2498d7c03f53315444de85",
+      "bytes": 1144
+    },
+    {
+      "path": "source/squirrel-wave040/layout.c",
+      "sha256": "618a01b6b6780b9606f4ff7da44e5f04b10045dd18191dc549e84ecb07434000",
+      "bytes": 2861
+    },
+    {
+      "path": "source/squirrel-wave040/shared_constructor.c",
+      "sha256": "7fe51d1aa77c3e4a551260e62c53983a8149633d522351f8e53d87523743a26f",
+      "bytes": 1594
+    },
+    {
+      "path": "source/squirrel-wave040/startup.h",
+      "sha256": "30f0119a2aaff343f8b74067c2befefe202eebddc3c6e92cd7590b7c5939e3f7",
+      "bytes": 5688
+    },
+    {
+      "path": "source/squirrel-wave040/vm_constructor.c",
+      "sha256": "f6f99619864aa7c81871fa2a0fbe9add94299f4942ca1ef9d6cdc48b86e466e7",
+      "bytes": 1525
+    },
+    {
+      "path": "src/native/wave005/vm_views.h",
+      "sha256": "1bf160e4679afbe5a59a244e78f9753684c93a109f7a703f78dff80d04f4840a",
+      "bytes": 1898
+    },
+    {
+      "path": "tests/test_squirrel_state040.py",
+      "sha256": "6f1d2fec4431718e0a5c61fd6bc4f758d6f0c16e0f454fae86384fe732eff6d4",
+      "bytes": 4781
+    },
+    {
+      "path": "toolscripts/bootstrap_public_compiler.py",
+      "sha256": "6782fdeecc42477e9a8a3cf65441313ce6e2ffef6c9f0ae38ad4b0823f6ff44d",
+      "bytes": 6371
+    },
+    {
+      "path": "toolscripts/inventory.py",
+      "sha256": "32c3d637553cff27c10ffcf7142e3d1c33465bcff4338525fd6886e90e5d1cbd",
+      "bytes": 9687
+    },
+    {
+      "path": "toolscripts/native_archive032_gzip_reference.py",
+      "sha256": "13092c13c8b92f1df88cea6f29062b2fc5cb82d30ac85f4e20e0526affdacd92",
+      "bytes": 2436
+    },
+    {
+      "path": "toolscripts/native_census_overlay.py",
+      "sha256": "1cc0fd82de21675e81981ecde7005a94858c1e085a675f39345f7bc66ee6ed4c",
+      "bytes": 11252
+    },
+    {
+      "path": "toolscripts/native_wave012_arena_model.py",
+      "sha256": "82151d24765b924a0204b50b838b5c87fa8a6ddf38c5e54ff04c4659d3f8139e",
+      "bytes": 3207
+    },
+    {
+      "path": "toolscripts/native_wave012_arena_oracle.py",
+      "sha256": "dcb3a5d09a9112190a0ff68950110b1a820cc763315b65c40ad2b34c60399096",
+      "bytes": 6350
+    },
+    {
+      "path": "toolscripts/native_wave012_ctor_model.py",
+      "sha256": "f6bc2b9598f9f4227e01fa9afa9e40fa028a31bde7f2b19fddda1b5d2cde2b18",
+      "bytes": 7611
+    },
+    {
+      "path": "toolscripts/native_wave012_ctor_runtime.py",
+      "sha256": "ad3c31d33c8a825c964a0405c9417b4e5ee50e4c6127020498ead70c867ffca0",
+      "bytes": 7197
+    },
+    {
+      "path": "toolscripts/native_wave013_common.py",
+      "sha256": "555c3a4aa9655925f4dc9288c8baa27ff894ba0446d4ad795901c6826a011961",
+      "bytes": 1350
+    },
+    {
+      "path": "toolscripts/native_wave013_file_owner_reference_image.py",
+      "sha256": "64b98ad65704fb769eaa3eaecedb53b30baea89b710a1331942446c46a89d378",
+      "bytes": 6556
+    },
+    {
+      "path": "toolscripts/squirrel_state040_a64.py",
+      "sha256": "56bfa1586567001e81674f0f1493892722125e3ded6626207d2ac5111f5bbc75",
+      "bytes": 5195
+    },
+    {
+      "path": "toolscripts/squirrel_state040_android.py",
+      "sha256": "0a7b6b439265c37a28dfe680ccd48b3767ce28313905c9a33ebccaba2daab850",
+      "bytes": 2027
+    },
+    {
+      "path": "toolscripts/squirrel_state040_build.py",
+      "sha256": "ccb19ef3c4381cb84626a0d3ecc1f2b2a71c86b80748891a228415f195f89cd5",
+      "bytes": 15824
+    },
+    {
+      "path": "toolscripts/squirrel_state040_constructor_packet.py",
+      "sha256": "2af5997ddd2127a54ab0e735209107366a6f7663b5370a1273a7b76070afbc2e",
+      "bytes": 7559
+    },
+    {
+      "path": "toolscripts/squirrel_state040_constructor_verify.py",
+      "sha256": "b35d2d213f47f7177284c1a69208617adc3401d918b385f0768f1a3fbd30fc63",
+      "bytes": 3357
+    },
+    {
+      "path": "toolscripts/squirrel_state040_constructors.py",
+      "sha256": "e2e46ba37c8030e09adc648b0a1ca06063f3801a573e8c178212871ac1fb4fa3",
+      "bytes": 3518
+    },
+    {
+      "path": "toolscripts/squirrel_state040_controls.py",
+      "sha256": "9b9bef2c18cfbdb511d051a2081e37f70beb0bf2de6e5924f99499414010f189",
+      "bytes": 3495
+    },
+    {
+      "path": "toolscripts/squirrel_state040_inputs.py",
+      "sha256": "1c5e4c26378b233723e9537cb2eb3c772c4eb8f4f59eb17b8b835d90cf42149c",
+      "bytes": 1412
+    },
+    {
+      "path": "toolscripts/squirrel_state040_model.py",
+      "sha256": "605d987de53c0ebd86edfc6c59e23fb179babb926b8ca081212c03e9a059b5aa",
+      "bytes": 9837
+    },
+    {
+      "path": "toolscripts/squirrel_state040_native.py",
+      "sha256": "c08f09f8d836fa046fb2937de5b336781587622ea69fe8be40837d671212d165",
+      "bytes": 2500
+    },
+    {
+      "path": "toolscripts/squirrel_state040_oracle.py",
+      "sha256": "9570e1737ff3b45b9b30c1b98773d176652c9e1bbed8d605c3419a8c052da2d4",
+      "bytes": 8153
+    },
+    {
+      "path": "docs/squirrel-state040-constructors.md",
+      "sha256": "f176a00be6e8e3430ed4335e5835e081c6540e21730e0cb5d8fa7a24068cf3a3",
+      "bytes": 6177
+    },
+    {
+      "path": "evidence/lanes/squirrel-state040/claim.json",
+      "sha256": "cc7bc1b9f2d691ca42ffc90d0deb9c38787f24375b4166319a7d1c5bcaa2cf5f",
+      "bytes": 31805
+    }
+  ],
+  "tools": {
+    "python": {
+      "version": "3.13.5",
+      "executable": {
+        "path": "tools/python/Scripts/python.exe",
+        "sha256": "935016795f3e6908e75acbc2040a01e2e4cdb494a57c42f63a0d6eedb2372256",
+        "bytes": 254800
+      }
+    },
+    "clang": {
+      "path": "tools/clang-21/clang.exe",
+      "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc",
+      "bytes": 99559064
+    },
+    "lld": {
+      "path": "tools/clang-21/ld.lld.exe",
+      "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3",
+      "bytes": 69225112
+    },
+    "unicorn": {
+      "distribution": "2.1.4",
+      "interface": "2.1.4",
+      "runtime": [
+        2,
+        1,
+        33621247
+      ]
+    },
+    "capstone": {
+      "distribution": "5.0.9",
+      "interface": "5.0.7",
+      "runtime": [
+        5,
+        0,
+        1280
+      ]
+    },
+    "pyelftools": "0.33"
+  },
+  "candidateFunctions": 2,
+  "candidateInstructionBytes": 516,
+  "functions": [
+    {
+      "entry": 1361096,
+      "mode": "ARM",
+      "role": "shared-state-constructor",
+      "instructionBytes": 280,
+      "instructionRanges": [
+        {
+          "start": 1361096,
+          "endExclusive": 1361376,
+          "bytes": 280,
+          "sha256": "400e9037f26559e30288232aa56eb24e4fa33fe7d306c86a5404ad5a0b8730c1"
+        }
+      ],
+      "literalReadWitnesses": [
+        {
+          "address": 1361376,
+          "bytes": 4,
+          "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+        }
+      ],
+      "calls": [
+        {
+          "pc": 1361128,
+          "target": 3140840,
+          "mnemonic": "bl"
+        }
+      ],
+      "knownCensusCallers": [
+        1337748
+      ],
+      "symbol": "fn_0014c4c8",
+      "observedInstructionBytes": 280,
+      "unobservedInstructionAddresses": [],
+      "source": {
+        "address": 9437352,
+        "bytes": 308,
+        "linkedSpanSha256": "43bb14efad57097c09d862883bb09481f7f669fb3823044934d2ac104ff27b0f",
+        "mappingSpans": [
+          [
+            9437352,
+            9437660,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": 1361096,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/shared_constructor.o",
+            "sha256": "a6511aeb5f11e7fde7ac73b2d3cfdbd10f71312fde4e097a0d0e10fadffa952a",
+            "bytes": 1776
+          },
+          "section": ".text.fn_0014c4c8",
+          "bytes": 308,
+          "sha256": "2b44ce98817acefe407c41a87b3063eebb633952272e3e5478e91c2389b09a7a",
+          "source": {
+            "path": "source/squirrel-wave040/shared_constructor.c",
+            "sha256": "7fe51d1aa77c3e4a551260e62c53983a8149633d522351f8e53d87523743a26f",
+            "bytes": 1594
+          },
+          "relocations": [
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 8,
+              "type": 28,
+              "symbol": "sq_startup_services040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 20,
+              "type": 28,
+              "symbol": "sq_shared_null_meta040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 64,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 84,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 104,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 124,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 140,
+              "type": 28,
+              "symbol": "sq_shared_references040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 168,
+              "type": 28,
+              "symbol": "sq_shared_registry040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 172,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 180,
+              "type": 28,
+              "symbol": "sq_shared_constants040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 184,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 192,
+              "type": 28,
+              "symbol": "sq_shared_special040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 196,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 204,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 212,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 220,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 228,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 236,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 244,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 252,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 260,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 268,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 276,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 284,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "entry": 1394300,
+      "mode": "ARM",
+      "role": "vm-constructor",
+      "instructionBytes": 236,
+      "instructionRanges": [
+        {
+          "start": 1394300,
+          "endExclusive": 1394536,
+          "bytes": 236,
+          "sha256": "80cfdc6a3fa75f12ea8566c6e92153aabad51a16e973a59f813f9bbfa684dc5d"
+        }
+      ],
+      "literalReadWitnesses": [
+        {
+          "address": 1394536,
+          "bytes": 4,
+          "sha256": "c176a9307ee40f1f859392b10a5761bf83e930747dd5e40f1c69a3fc0310390f"
+        },
+        {
+          "address": 1394540,
+          "bytes": 4,
+          "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+        },
+        {
+          "address": 1394544,
+          "bytes": 4,
+          "sha256": "3c9ba11c659ac11a8eacbf4e39da86a9ad7b3b3a9619bbeee21c07e86c65cf15"
+        }
+      ],
+      "calls": [
+        {
+          "pc": 1394472,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1394484,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1394496,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1394524,
+          "target": 1697988,
+          "mnemonic": "bl"
+        }
+      ],
+      "knownCensusCallers": [
+        1337748,
+        7611724
+      ],
+      "symbol": "fn_0015467c",
+      "observedInstructionBytes": 236,
+      "unobservedInstructionAddresses": [],
+      "source": {
+        "address": 9437660,
+        "bytes": 268,
+        "linkedSpanSha256": "34fbcc558f17b14e7db61fc0ec5d9a161b08d8373f7f6f3921b320a75947dc62",
+        "mappingSpans": [
+          [
+            9437660,
+            9437928,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": 1394300,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/vm_constructor.o",
+            "sha256": "f9232f866bde6f45d854d9dc9fa7823ac872d2cc98835981ef48e4193219db54",
+            "bytes": 1496
+          },
+          "section": ".text.fn_0015467c",
+          "bytes": 268,
+          "sha256": "483e83acaab5f8992a47e24d2ddcf646ade06ac81fe4468869f67a637df25304",
+          "source": {
+            "path": "source/squirrel-wave040/vm_constructor.c",
+            "sha256": "f6f99619864aa7c81871fa2a0fbe9add94299f4942ca1ef9d6cdc48b86e466e7",
+            "bytes": 1525
+          },
+          "relocations": [
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 16,
+              "type": 28,
+              "symbol": "sq_startup_services040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 68,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 80,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 92,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 104,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 112,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 184,
+              "type": 28,
+              "symbol": "sq_prefix_assign",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 196,
+              "type": 28,
+              "symbol": "sq_prefix_assign",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 208,
+              "type": 28,
+              "symbol": "sq_prefix_assign",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 232,
+              "type": 28,
+              "symbol": "sq_shared_prefix040",
+              "format": "SHT_REL"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "cases": 32,
+  "caseRows": {
+    "path": "evidence/lanes/squirrel-state040/constructors-v1/case-rows.json",
+    "sha256": "d3bcbc75309c6161c56f3e8f996e31f109f3f4222961f10d6cd39a25f8229c05",
+    "bytes": 1244957
+  },
+  "negativeControls": {
+    "path": "evidence/lanes/squirrel-state040/constructors-v1/returning-controls.json",
+    "sha256": "e4cd2d8a2aa541adb0a8cd4f88513fa80d977d3147d33b409afabe4d2343930d",
+    "bytes": 311953
+  },
+  "coreAbiHandoff": {
+    "path": "evidence/lanes/squirrel-state040/core-abi-v1/handoff.json",
+    "sha256": "b4dde1ded4ef928f85c21f72ff6039fd461475a131e07598fd6372f6463353e5",
+    "bytes": 11905
+  },
+  "coreAbiManifest": {
+    "path": "evidence/lanes/squirrel-state040/core-abi-v1/frozen-manifest.json",
+    "sha256": "23a38012b40a93aa1426a9fa08f424949d418a95c9cac939f7abdc2b237f2e28",
+    "bytes": 2537
+  },
+  "startupTemplateExecution": {
+    "path": "evidence/lanes/squirrel-state040/startup-template-execution.json",
+    "sha256": "2f79b9793d4b8e9af5e8ac524e45fa141883f039802e23654e22e599eabe63da",
+    "bytes": 10730
+  },
+  "originalInputIdentity": {
+    "path": "generated/update-content0/code.bin",
+    "sha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+    "bytes": 8159232
+  },
+  "armSourceGraph": {
+    "executableRanges": [
+      [
+        9438080,
+        9438232
+      ],
+      [
+        9438232,
+        9438236
+      ],
+      [
+        9438236,
+        9438240
+      ],
+      [
+        9437184,
+        9437248
+      ],
+      [
+        9437252,
+        9437264
+      ],
+      [
+        9437268,
+        9437272
+      ],
+      [
+        9437272,
+        9437280
+      ],
+      [
+        9437280,
+        9437288
+      ],
+      [
+        9437288,
+        9437296
+      ],
+      [
+        9437296,
+        9437304
+      ],
+      [
+        9437304,
+        9437328
+      ],
+      [
+        9437328,
+        9437352
+      ],
+      [
+        9437352,
+        9437660
+      ],
+      [
+        9437660,
+        9437928
+      ],
+      [
+        9438436,
+        9438640
+      ],
+      [
+        9437928,
+        9438080
+      ],
+      [
+        9438240,
+        9438272
+      ],
+      [
+        9438272,
+        9438344
+      ],
+      [
+        9438344,
+        9438436
+      ],
+      [
+        9438896,
+        9438936
+      ],
+      [
+        9438640,
+        9438760
+      ],
+      [
+        9438760,
+        9438896
+      ]
+    ],
+    "readonlyRanges": [
+      [
+        9441280,
+        9441608
+      ]
+    ],
+    "writableRanges": [
+      [
+        9445376,
+        9445380
+      ]
+    ],
+    "readonlyObjects": [
+      {
+        "symbol": "sq_startup_sdk_operations040",
+        "address": 9441280,
+        "bytes": 8
+      },
+      {
+        "symbol": "sq_startup_fixture_vm_operations040",
+        "address": 9441288,
+        "bytes": 12
+      },
+      {
+        "symbol": "sq_startup_fixture_null040",
+        "address": 9441300,
+        "bytes": 8
+      },
+      {
+        "symbol": "sq_startup_layout040",
+        "address": 9441308,
+        "bytes": 300
+      }
+    ],
+    "mutableSourceObjects": [
+      {
+        "symbol": "startup_services",
+        "address": 9445376,
+        "bytes": 4
+      }
+    ],
+    "objects": [
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/bindings.o",
+        "sha256": "e8f6f73eccb21e18c2905c0ad22bd6539c2ecc2e54c1a1342d75156c38ee1491",
+        "bytes": 3208,
+        "relocations": [
+          {
+            "section": ".text.sq_startup_bind040",
+            "offset": 64,
+            "type": 2,
+            "symbol": "section:.bss.startup_services",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.sq_startup_services040",
+            "offset": 12,
+            "type": 2,
+            "symbol": "section:.bss.startup_services",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/shared_constructor.o",
+        "sha256": "a6511aeb5f11e7fde7ac73b2d3cfdbd10f71312fde4e097a0d0e10fadffa952a",
+        "bytes": 1776,
+        "relocations": [
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 8,
+            "type": 28,
+            "symbol": "sq_startup_services040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 20,
+            "type": 28,
+            "symbol": "sq_shared_null_meta040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 64,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 84,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 104,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 124,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 140,
+            "type": 28,
+            "symbol": "sq_shared_references040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 168,
+            "type": 28,
+            "symbol": "sq_shared_registry040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 172,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 180,
+            "type": 28,
+            "symbol": "sq_shared_constants040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 184,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 192,
+            "type": 28,
+            "symbol": "sq_shared_special040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 196,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 204,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 212,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 220,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 228,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 236,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 244,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 252,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 260,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 268,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 276,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 284,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/vm_constructor.o",
+        "sha256": "f9232f866bde6f45d854d9dc9fa7823ac872d2cc98835981ef48e4193219db54",
+        "bytes": 1496,
+        "relocations": [
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 16,
+            "type": 28,
+            "symbol": "sq_startup_services040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 68,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 80,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 92,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 104,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 112,
+            "type": 28,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 184,
+            "type": 28,
+            "symbol": "sq_prefix_assign",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 196,
+            "type": 28,
+            "symbol": "sq_prefix_assign",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 208,
+            "type": 28,
+            "symbol": "sq_prefix_assign",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 232,
+            "type": 28,
+            "symbol": "sq_shared_prefix040",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/fixture.o",
+        "sha256": "3408492b5e2a9bafe8f42adaecf8368dbd9db4beb90879951adb51dfe79ff17b",
+        "bytes": 2400,
+        "relocations": [
+          {
+            "section": ".rodata.sq_startup_sdk_operations040",
+            "offset": 0,
+            "type": 2,
+            "symbol": "section:.text.sdk_allocate",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".rodata.sq_startup_sdk_operations040",
+            "offset": 4,
+            "type": 2,
+            "symbol": "section:.text.unlikely.uninvoked_sdk_release",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".rodata.sq_startup_fixture_vm_operations040",
+            "offset": 0,
+            "type": 2,
+            "symbol": "section:.text.unlikely.uninvoked_vm_operation",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".rodata.sq_startup_fixture_vm_operations040",
+            "offset": 4,
+            "type": 2,
+            "symbol": "section:.text.unlikely.uninvoked_vm_operation",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".rodata.sq_startup_fixture_vm_operations040",
+            "offset": 8,
+            "type": 2,
+            "symbol": "section:.text.unlikely.uninvoked_vm_operation",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/layout.o",
+        "sha256": "386075c23a5b7eee403c2bdd35a33a0cad005fab0a903959d5de6d306f5338d2",
+        "bytes": 1096,
+        "relocations": []
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/reference_prefix.o",
+        "sha256": "2e5d19e449a036b10098a4152c00af84f210025457baad5fd78a9de046267f33",
+        "bytes": 3048,
+        "relocations": [
+          {
+            "section": ".text.sq_prefix_release",
+            "offset": 88,
+            "type": 29,
+            "symbol": "sq_prefix_finalize012",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.sq_prefix_assign",
+            "offset": 192,
+            "type": 28,
+            "symbol": "sq_prefix_finalize012",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.sq_prefix_clear",
+            "offset": 116,
+            "type": 29,
+            "symbol": "sq_prefix_finalize012",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.sq_prefix_scalar",
+            "offset": 108,
+            "type": 28,
+            "symbol": "sq_prefix_finalize012",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/reference_dispatch_opaque.o",
+        "sha256": "7d7926d1b8fd3c88aa4ac4e0306fe2b3dbdd777e4952f5730cb76cdb65162f29",
+        "bytes": 1004,
+        "relocations": []
+      }
+    ],
+    "linkedElf": {
+      "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/owner_full.elf",
+      "sha256": "510b52a7f9156009246e0cdf5a352769d3cbdd2c19fad735d939893c34f9676f",
+      "bytes": 75868
+    },
+    "linkerScript": {
+      "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/owner_full.ld",
+      "sha256": "235efb91e53c7686a5f80b68e446353c0b4331ff77b1e6727832f9bf0222b24d",
+      "bytes": 276
+    },
+    "functions": {
+      "sdk_allocate": {
+        "address": 9438080,
+        "bytes": 152,
+        "linkedSpanSha256": "748df661decce975f89b0934c729b73a0a13202a8ada71fefcc9d9a0d45d0056",
+        "mappingSpans": [
+          [
+            9438080,
+            9438232,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/fixture.o",
+            "sha256": "3408492b5e2a9bafe8f42adaecf8368dbd9db4beb90879951adb51dfe79ff17b",
+            "bytes": 2400
+          },
+          "section": ".text.sdk_allocate",
+          "bytes": 152,
+          "sha256": "748df661decce975f89b0934c729b73a0a13202a8ada71fefcc9d9a0d45d0056",
+          "source": {
+            "path": "source/squirrel-wave040/fixture.c",
+            "sha256": "57de3d786826e5acd854aa04badc91374b1cfc21de267906a35966791846d2c9",
+            "bytes": 1436
+          },
+          "relocations": []
+        }
+      },
+      "uninvoked_sdk_release": {
+        "address": 9438232,
+        "bytes": 4,
+        "linkedSpanSha256": "4c8acd29a6b24da3b7aff6954e5d02e74096be800f5686557c4d7abd8e07f8e6",
+        "mappingSpans": [
+          [
+            9438232,
+            9438236,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/fixture.o",
+            "sha256": "3408492b5e2a9bafe8f42adaecf8368dbd9db4beb90879951adb51dfe79ff17b",
+            "bytes": 2400
+          },
+          "section": ".text.unlikely.uninvoked_sdk_release",
+          "bytes": 4,
+          "sha256": "4c8acd29a6b24da3b7aff6954e5d02e74096be800f5686557c4d7abd8e07f8e6",
+          "source": {
+            "path": "source/squirrel-wave040/fixture.c",
+            "sha256": "57de3d786826e5acd854aa04badc91374b1cfc21de267906a35966791846d2c9",
+            "bytes": 1436
+          },
+          "relocations": []
+        }
+      },
+      "uninvoked_vm_operation": {
+        "address": 9438236,
+        "bytes": 4,
+        "linkedSpanSha256": "4c8acd29a6b24da3b7aff6954e5d02e74096be800f5686557c4d7abd8e07f8e6",
+        "mappingSpans": [
+          [
+            9438236,
+            9438240,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/fixture.o",
+            "sha256": "3408492b5e2a9bafe8f42adaecf8368dbd9db4beb90879951adb51dfe79ff17b",
+            "bytes": 2400
+          },
+          "section": ".text.unlikely.uninvoked_vm_operation",
+          "bytes": 4,
+          "sha256": "4c8acd29a6b24da3b7aff6954e5d02e74096be800f5686557c4d7abd8e07f8e6",
+          "source": {
+            "path": "source/squirrel-wave040/fixture.c",
+            "sha256": "57de3d786826e5acd854aa04badc91374b1cfc21de267906a35966791846d2c9",
+            "bytes": 1436
+          },
+          "relocations": []
+        }
+      },
+      "sq_startup_bind040": {
+        "address": 9437184,
+        "bytes": 68,
+        "linkedSpanSha256": "da3b8e58ed62cd5037f309631580142abfcd1a84bc2b753e6fb254317d39abdc",
+        "mappingSpans": [
+          [
+            9437184,
+            9437248,
+            "$a"
+          ],
+          [
+            9437248,
+            9437252,
+            "$d"
+          ]
+        ],
+        "poolBytes": 4,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/bindings.o",
+            "sha256": "e8f6f73eccb21e18c2905c0ad22bd6539c2ecc2e54c1a1342d75156c38ee1491",
+            "bytes": 3208
+          },
+          "section": ".text.sq_startup_bind040",
+          "bytes": 68,
+          "sha256": "88c7a4702e67393421cd15634ac58056d64c883b35774a44fc8bd993a61242ef",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": [
+            {
+              "section": ".text.sq_startup_bind040",
+              "offset": 64,
+              "type": 2,
+              "symbol": "section:.bss.startup_services",
+              "format": "SHT_REL"
+            }
+          ]
+        }
+      },
+      "sq_startup_services040": {
+        "address": 9437252,
+        "bytes": 16,
+        "linkedSpanSha256": "cacb9c019d6d7eeddc97f08d4ad65d5ccc3db92edf35cbff8906bfe3a2caa1cd",
+        "mappingSpans": [
+          [
+            9437252,
+            9437264,
+            "$a"
+          ],
+          [
+            9437264,
+            9437268,
+            "$d"
+          ]
+        ],
+        "poolBytes": 4,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/bindings.o",
+            "sha256": "e8f6f73eccb21e18c2905c0ad22bd6539c2ecc2e54c1a1342d75156c38ee1491",
+            "bytes": 3208
+          },
+          "section": ".text.sq_startup_services040",
+          "bytes": 16,
+          "sha256": "ffc07f3ef34ae17f1b835675b708ee60474999a706e6d1d684e343e2764872ab",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": [
+            {
+              "section": ".text.sq_startup_services040",
+              "offset": 12,
+              "type": 2,
+              "symbol": "section:.bss.startup_services",
+              "format": "SHT_REL"
+            }
+          ]
+        }
+      },
+      "sq_shared_prefix040": {
+        "address": 9437268,
+        "bytes": 4,
+        "linkedSpanSha256": "379bec29dccd0a93c94826144d7ef6e42fab64ef195a3b8313a16926f66f388f",
+        "mappingSpans": [
+          [
+            9437268,
+            9437272,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/bindings.o",
+            "sha256": "e8f6f73eccb21e18c2905c0ad22bd6539c2ecc2e54c1a1342d75156c38ee1491",
+            "bytes": 3208
+          },
+          "section": ".text.sq_shared_prefix040",
+          "bytes": 4,
+          "sha256": "379bec29dccd0a93c94826144d7ef6e42fab64ef195a3b8313a16926f66f388f",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": []
+        }
+      },
+      "sq_shared_references040": {
+        "address": 9437272,
+        "bytes": 8,
+        "linkedSpanSha256": "8f29a8b2228890b63bbc9e75ff06b88af801c3f364a010e80a6ec6ba013b4f81",
+        "mappingSpans": [
+          [
+            9437272,
+            9437280,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/bindings.o",
+            "sha256": "e8f6f73eccb21e18c2905c0ad22bd6539c2ecc2e54c1a1342d75156c38ee1491",
+            "bytes": 3208
+          },
+          "section": ".text.sq_shared_references040",
+          "bytes": 8,
+          "sha256": "8f29a8b2228890b63bbc9e75ff06b88af801c3f364a010e80a6ec6ba013b4f81",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": []
+        }
+      },
+      "sq_shared_registry040": {
+        "address": 9437280,
+        "bytes": 8,
+        "linkedSpanSha256": "722de9e15bb562a0de63f58f7be8cb2c6b4575ed3c69231ceba4028b48e63342",
+        "mappingSpans": [
+          [
+            9437280,
+            9437288,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/bindings.o",
+            "sha256": "e8f6f73eccb21e18c2905c0ad22bd6539c2ecc2e54c1a1342d75156c38ee1491",
+            "bytes": 3208
+          },
+          "section": ".text.sq_shared_registry040",
+          "bytes": 8,
+          "sha256": "722de9e15bb562a0de63f58f7be8cb2c6b4575ed3c69231ceba4028b48e63342",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": []
+        }
+      },
+      "sq_shared_constants040": {
+        "address": 9437288,
+        "bytes": 8,
+        "linkedSpanSha256": "09f038d9bac1c9f41bf06b65de4ab9bf45a9e4ec1f920af0011e6a6cc4426c3b",
+        "mappingSpans": [
+          [
+            9437288,
+            9437296,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/bindings.o",
+            "sha256": "e8f6f73eccb21e18c2905c0ad22bd6539c2ecc2e54c1a1342d75156c38ee1491",
+            "bytes": 3208
+          },
+          "section": ".text.sq_shared_constants040",
+          "bytes": 8,
+          "sha256": "09f038d9bac1c9f41bf06b65de4ab9bf45a9e4ec1f920af0011e6a6cc4426c3b",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": []
+        }
+      },
+      "sq_shared_special040": {
+        "address": 9437296,
+        "bytes": 8,
+        "linkedSpanSha256": "403cd6b5ca0bfb178f87e11ec622a7cf167028b7ca2f2e62ef7816f9a1316fac",
+        "mappingSpans": [
+          [
+            9437296,
+            9437304,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/bindings.o",
+            "sha256": "e8f6f73eccb21e18c2905c0ad22bd6539c2ecc2e54c1a1342d75156c38ee1491",
+            "bytes": 3208
+          },
+          "section": ".text.sq_shared_special040",
+          "bytes": 8,
+          "sha256": "403cd6b5ca0bfb178f87e11ec622a7cf167028b7ca2f2e62ef7816f9a1316fac",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": []
+        }
+      },
+      "sq_shared_null_meta040": {
+        "address": 9437304,
+        "bytes": 24,
+        "linkedSpanSha256": "35a943fbb6a2237b2e8f37100c0ead6ef3f2defb43d3ff73424bc807d0870090",
+        "mappingSpans": [
+          [
+            9437304,
+            9437328,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/bindings.o",
+            "sha256": "e8f6f73eccb21e18c2905c0ad22bd6539c2ecc2e54c1a1342d75156c38ee1491",
+            "bytes": 3208
+          },
+          "section": ".text.sq_shared_null_meta040",
+          "bytes": 24,
+          "sha256": "35a943fbb6a2237b2e8f37100c0ead6ef3f2defb43d3ff73424bc807d0870090",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": []
+        }
+      },
+      "sq_startup_null040": {
+        "address": 9437328,
+        "bytes": 24,
+        "linkedSpanSha256": "b56fc7d850119347a470baf2f8a19cacecd229bd8c0b6da24fdca0448e70a481",
+        "mappingSpans": [
+          [
+            9437328,
+            9437352,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/bindings.o",
+            "sha256": "e8f6f73eccb21e18c2905c0ad22bd6539c2ecc2e54c1a1342d75156c38ee1491",
+            "bytes": 3208
+          },
+          "section": ".text.sq_startup_null040",
+          "bytes": 24,
+          "sha256": "b56fc7d850119347a470baf2f8a19cacecd229bd8c0b6da24fdca0448e70a481",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": []
+        }
+      },
+      "fn_0014c4c8": {
+        "address": 9437352,
+        "bytes": 308,
+        "linkedSpanSha256": "43bb14efad57097c09d862883bb09481f7f669fb3823044934d2ac104ff27b0f",
+        "mappingSpans": [
+          [
+            9437352,
+            9437660,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": 1361096,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/shared_constructor.o",
+            "sha256": "a6511aeb5f11e7fde7ac73b2d3cfdbd10f71312fde4e097a0d0e10fadffa952a",
+            "bytes": 1776
+          },
+          "section": ".text.fn_0014c4c8",
+          "bytes": 308,
+          "sha256": "2b44ce98817acefe407c41a87b3063eebb633952272e3e5478e91c2389b09a7a",
+          "source": {
+            "path": "source/squirrel-wave040/shared_constructor.c",
+            "sha256": "7fe51d1aa77c3e4a551260e62c53983a8149633d522351f8e53d87523743a26f",
+            "bytes": 1594
+          },
+          "relocations": [
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 8,
+              "type": 28,
+              "symbol": "sq_startup_services040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 20,
+              "type": 28,
+              "symbol": "sq_shared_null_meta040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 64,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 84,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 104,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 124,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 140,
+              "type": 28,
+              "symbol": "sq_shared_references040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 168,
+              "type": 28,
+              "symbol": "sq_shared_registry040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 172,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 180,
+              "type": 28,
+              "symbol": "sq_shared_constants040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 184,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 192,
+              "type": 28,
+              "symbol": "sq_shared_special040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 196,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 204,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 212,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 220,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 228,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 236,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 244,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 252,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 260,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 268,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 276,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 284,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            }
+          ]
+        }
+      },
+      "fn_0015467c": {
+        "address": 9437660,
+        "bytes": 268,
+        "linkedSpanSha256": "34fbcc558f17b14e7db61fc0ec5d9a161b08d8373f7f6f3921b320a75947dc62",
+        "mappingSpans": [
+          [
+            9437660,
+            9437928,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": 1394300,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/vm_constructor.o",
+            "sha256": "f9232f866bde6f45d854d9dc9fa7823ac872d2cc98835981ef48e4193219db54",
+            "bytes": 1496
+          },
+          "section": ".text.fn_0015467c",
+          "bytes": 268,
+          "sha256": "483e83acaab5f8992a47e24d2ddcf646ade06ac81fe4468869f67a637df25304",
+          "source": {
+            "path": "source/squirrel-wave040/vm_constructor.c",
+            "sha256": "f6f99619864aa7c81871fa2a0fbe9add94299f4942ca1ef9d6cdc48b86e466e7",
+            "bytes": 1525
+          },
+          "relocations": [
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 16,
+              "type": 28,
+              "symbol": "sq_startup_services040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 68,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 80,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 92,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 104,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 112,
+              "type": 28,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 184,
+              "type": 28,
+              "symbol": "sq_prefix_assign",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 196,
+              "type": 28,
+              "symbol": "sq_prefix_assign",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 208,
+              "type": 28,
+              "symbol": "sq_prefix_assign",
+              "format": "SHT_REL"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 232,
+              "type": 28,
+              "symbol": "sq_shared_prefix040",
+              "format": "SHT_REL"
+            }
+          ]
+        }
+      },
+      "sq_prefix_assign": {
+        "address": 9438436,
+        "bytes": 204,
+        "linkedSpanSha256": "a190d2724078c131e9fa30d16582f2c87e3878f5721f80fc02746186f2c5f3dd",
+        "mappingSpans": [
+          [
+            9438436,
+            9438640,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/reference_prefix.o",
+            "sha256": "2e5d19e449a036b10098a4152c00af84f210025457baad5fd78a9de046267f33",
+            "bytes": 3048
+          },
+          "section": ".text.sq_prefix_assign",
+          "bytes": 204,
+          "sha256": "6cccc73a977fed007aaaa231d4ace04db4580c64c3973f7ec6abcbc7b269c7d7",
+          "source": {
+            "path": "source/squirrel-wave012/reference_prefix.c",
+            "sha256": "09a4073e8e71f3f50769bc9058399cce666da47b157401af5915581134560408",
+            "bytes": 1693
+          },
+          "relocations": [
+            {
+              "section": ".text.sq_prefix_assign",
+              "offset": 192,
+              "type": 28,
+              "symbol": "sq_prefix_finalize012",
+              "format": "SHT_REL"
+            }
+          ]
+        }
+      },
+      "sq_startup_fixture_allocate040": {
+        "address": 9437928,
+        "bytes": 152,
+        "linkedSpanSha256": "9a9922d5950bfcad6f882a8802f50d1bafd4716f3ad5d52345a6e97e7f747ed0",
+        "mappingSpans": [
+          [
+            9437928,
+            9438080,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/fixture.o",
+            "sha256": "3408492b5e2a9bafe8f42adaecf8368dbd9db4beb90879951adb51dfe79ff17b",
+            "bytes": 2400
+          },
+          "section": ".text.sq_startup_fixture_allocate040",
+          "bytes": 152,
+          "sha256": "9a9922d5950bfcad6f882a8802f50d1bafd4716f3ad5d52345a6e97e7f747ed0",
+          "source": {
+            "path": "source/squirrel-wave040/fixture.c",
+            "sha256": "57de3d786826e5acd854aa04badc91374b1cfc21de267906a35966791846d2c9",
+            "bytes": 1436
+          },
+          "relocations": []
+        }
+      },
+      "sq_prefix_count": {
+        "address": 9438240,
+        "bytes": 32,
+        "linkedSpanSha256": "34c1488294a9d5db2db3b1ee5043d0a9b41e87f53396076376a47bc372032d93",
+        "mappingSpans": [
+          [
+            9438240,
+            9438272,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/reference_prefix.o",
+            "sha256": "2e5d19e449a036b10098a4152c00af84f210025457baad5fd78a9de046267f33",
+            "bytes": 3048
+          },
+          "section": ".text.sq_prefix_count",
+          "bytes": 32,
+          "sha256": "34c1488294a9d5db2db3b1ee5043d0a9b41e87f53396076376a47bc372032d93",
+          "source": {
+            "path": "source/squirrel-wave012/reference_prefix.c",
+            "sha256": "09a4073e8e71f3f50769bc9058399cce666da47b157401af5915581134560408",
+            "bytes": 1693
+          },
+          "relocations": []
+        }
+      },
+      "sq_prefix_retain": {
+        "address": 9438272,
+        "bytes": 72,
+        "linkedSpanSha256": "9ab8ef92f3066e31d37487ba73215255da8ab7c70580e5b93af0aa1e0e46ce69",
+        "mappingSpans": [
+          [
+            9438272,
+            9438344,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/reference_prefix.o",
+            "sha256": "2e5d19e449a036b10098a4152c00af84f210025457baad5fd78a9de046267f33",
+            "bytes": 3048
+          },
+          "section": ".text.sq_prefix_retain",
+          "bytes": 72,
+          "sha256": "9ab8ef92f3066e31d37487ba73215255da8ab7c70580e5b93af0aa1e0e46ce69",
+          "source": {
+            "path": "source/squirrel-wave012/reference_prefix.c",
+            "sha256": "09a4073e8e71f3f50769bc9058399cce666da47b157401af5915581134560408",
+            "bytes": 1693
+          },
+          "relocations": []
+        }
+      },
+      "sq_prefix_release": {
+        "address": 9438344,
+        "bytes": 92,
+        "linkedSpanSha256": "02db67494f398fcef7e99a99623b106ba6e1b0edcb90b95f4a6d937d4d5a9404",
+        "mappingSpans": [
+          [
+            9438344,
+            9438436,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/reference_prefix.o",
+            "sha256": "2e5d19e449a036b10098a4152c00af84f210025457baad5fd78a9de046267f33",
+            "bytes": 3048
+          },
+          "section": ".text.sq_prefix_release",
+          "bytes": 92,
+          "sha256": "f2a45ed08af283d36d849e98dbd334cea67f09068e3b39b17afabd2c89e52a12",
+          "source": {
+            "path": "source/squirrel-wave012/reference_prefix.c",
+            "sha256": "09a4073e8e71f3f50769bc9058399cce666da47b157401af5915581134560408",
+            "bytes": 1693
+          },
+          "relocations": [
+            {
+              "section": ".text.sq_prefix_release",
+              "offset": 88,
+              "type": 29,
+              "symbol": "sq_prefix_finalize012",
+              "format": "SHT_REL"
+            }
+          ]
+        }
+      },
+      "sq_prefix_finalize012": {
+        "address": 9438896,
+        "bytes": 40,
+        "linkedSpanSha256": "43d451d3b2df2eef53c947884d90633c13eea851b55e78d763bf483434eae3a4",
+        "mappingSpans": [
+          [
+            9438896,
+            9438936,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/reference_dispatch_opaque.o",
+            "sha256": "7d7926d1b8fd3c88aa4ac4e0306fe2b3dbdd777e4952f5730cb76cdb65162f29",
+            "bytes": 1004
+          },
+          "section": ".text.sq_prefix_finalize012",
+          "bytes": 40,
+          "sha256": "43d451d3b2df2eef53c947884d90633c13eea851b55e78d763bf483434eae3a4",
+          "source": {
+            "path": "source/squirrel-wave012/reference_dispatch_opaque.c",
+            "sha256": "ca86896d8149d55f06cfdd92ddc2fc126fb35818b4dff9d955c25ee69f375906",
+            "bytes": 228
+          },
+          "relocations": []
+        }
+      },
+      "sq_prefix_clear": {
+        "address": 9438640,
+        "bytes": 120,
+        "linkedSpanSha256": "d686ff88bfabde7e5141023089094f55068c4d8410f7a52506dc743242569428",
+        "mappingSpans": [
+          [
+            9438640,
+            9438760,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/reference_prefix.o",
+            "sha256": "2e5d19e449a036b10098a4152c00af84f210025457baad5fd78a9de046267f33",
+            "bytes": 3048
+          },
+          "section": ".text.sq_prefix_clear",
+          "bytes": 120,
+          "sha256": "0766eaa669341d306b8bdd7d0ab419487d311e26d475fcabe1170ea8aba04f45",
+          "source": {
+            "path": "source/squirrel-wave012/reference_prefix.c",
+            "sha256": "09a4073e8e71f3f50769bc9058399cce666da47b157401af5915581134560408",
+            "bytes": 1693
+          },
+          "relocations": [
+            {
+              "section": ".text.sq_prefix_clear",
+              "offset": 116,
+              "type": 29,
+              "symbol": "sq_prefix_finalize012",
+              "format": "SHT_REL"
+            }
+          ]
+        }
+      },
+      "sq_prefix_scalar": {
+        "address": 9438760,
+        "bytes": 136,
+        "linkedSpanSha256": "6b2451de975817ce79788ee03ad8308ebe4aedf972474e745762bac359a13f78",
+        "mappingSpans": [
+          [
+            9438760,
+            9438896,
+            "$a"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/reference_prefix.o",
+            "sha256": "2e5d19e449a036b10098a4152c00af84f210025457baad5fd78a9de046267f33",
+            "bytes": 3048
+          },
+          "section": ".text.sq_prefix_scalar",
+          "bytes": 136,
+          "sha256": "1c63c78aa9a90079e4a08041bda7fa19f55e4063dbd39313bf69e4411aae48c4",
+          "source": {
+            "path": "source/squirrel-wave012/reference_prefix.c",
+            "sha256": "09a4073e8e71f3f50769bc9058399cce666da47b157401af5915581134560408",
+            "bytes": 1693
+          },
+          "relocations": [
+            {
+              "section": ".text.sq_prefix_scalar",
+              "offset": 108,
+              "type": 28,
+              "symbol": "sq_prefix_finalize012",
+              "format": "SHT_REL"
+            }
+          ]
+        }
+      }
+    },
+    "retainedOriginalExecutableBytes": 0
+  },
+  "highAarch64SourceGraph": {
+    "executableRanges": [
+      [
+        4563403616,
+        4563403764
+      ],
+      [
+        4563403764,
+        4563403768
+      ],
+      [
+        4563403768,
+        4563403772
+      ],
+      [
+        4563402752,
+        4563402804
+      ],
+      [
+        4563402804,
+        4563402816
+      ],
+      [
+        4563402816,
+        4563402820
+      ],
+      [
+        4563402820,
+        4563402828
+      ],
+      [
+        4563402828,
+        4563402836
+      ],
+      [
+        4563402836,
+        4563402844
+      ],
+      [
+        4563402844,
+        4563402852
+      ],
+      [
+        4563402852,
+        4563402872
+      ],
+      [
+        4563402872,
+        4563402892
+      ],
+      [
+        4563402892,
+        4563403216
+      ],
+      [
+        4563403216,
+        4563403472
+      ],
+      [
+        4563403828,
+        4563403936
+      ],
+      [
+        4563403472,
+        4563403616
+      ],
+      [
+        4563403772,
+        4563403780
+      ],
+      [
+        4563403780,
+        4563403800
+      ],
+      [
+        4563403800,
+        4563403828
+      ],
+      [
+        4563404108,
+        4563404124
+      ],
+      [
+        4563403936,
+        4563403992
+      ],
+      [
+        4563403992,
+        4563404108
+      ]
+    ],
+    "readonlyRanges": [
+      [
+        4563419136,
+        4563419524
+      ]
+    ],
+    "writableRanges": [
+      [
+        4563435520,
+        4563435528
+      ]
+    ],
+    "readonlyObjects": [
+      {
+        "symbol": "sq_startup_sdk_operations040",
+        "address": 4563419168,
+        "bytes": 16
+      },
+      {
+        "symbol": "sq_startup_fixture_vm_operations040",
+        "address": 4563419184,
+        "bytes": 24
+      },
+      {
+        "symbol": "sq_startup_fixture_null040",
+        "address": 4563419208,
+        "bytes": 16
+      },
+      {
+        "symbol": "sq_startup_layout040",
+        "address": 4563419224,
+        "bytes": 300
+      }
+    ],
+    "mutableSourceObjects": [
+      {
+        "symbol": "startup_services",
+        "address": 4563435520,
+        "bytes": 8
+      }
+    ],
+    "objects": [
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/bindings.o",
+        "sha256": "b74ac49e6f17375f42d4568dca68f896741641197dadf045a8c88c4bcf2d54d6",
+        "bytes": 2544,
+        "relocations": [
+          {
+            "section": ".text.sq_startup_bind040",
+            "offset": 28,
+            "type": 275,
+            "symbol": "section:.bss",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.sq_startup_bind040",
+            "offset": 32,
+            "type": 286,
+            "symbol": "section:.bss",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.sq_startup_services040",
+            "offset": 0,
+            "type": 275,
+            "symbol": "section:.bss",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.sq_startup_services040",
+            "offset": 4,
+            "type": 286,
+            "symbol": "section:.bss",
+            "format": "SHT_RELA"
+          }
+        ]
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/shared_constructor.o",
+        "sha256": "8b7d9c8ed2a4d11d727a6fab2e3ed79ec4f2516fd66f425527c651cf70710f7b",
+        "bytes": 2368,
+        "relocations": [
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 20,
+            "type": 283,
+            "symbol": "sq_startup_services040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 32,
+            "type": 283,
+            "symbol": "sq_shared_null_meta040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 72,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 92,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 112,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 132,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 148,
+            "type": 283,
+            "symbol": "sq_shared_references040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 152,
+            "type": 275,
+            "symbol": "section:.rodata.cst8",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 160,
+            "type": 286,
+            "symbol": "section:.rodata.cst8",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 176,
+            "type": 283,
+            "symbol": "sq_shared_registry040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 180,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 188,
+            "type": 283,
+            "symbol": "sq_shared_constants040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 192,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 200,
+            "type": 283,
+            "symbol": "sq_shared_special040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 204,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 212,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 220,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 228,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 236,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 244,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 252,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 260,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 268,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 276,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 284,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0014c4c8",
+            "offset": 292,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          }
+        ]
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/vm_constructor.o",
+        "sha256": "c01fbdede33057ad5d210e36ddaaa2328a7a197c245fa1ef8d5fa2578696b951",
+        "bytes": 1816,
+        "relocations": [
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 28,
+            "type": 283,
+            "symbol": "sq_startup_services040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 72,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 80,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 88,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 96,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 104,
+            "type": 283,
+            "symbol": "sq_startup_null040",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 124,
+            "type": 275,
+            "symbol": "section:.rodata.cst16",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 140,
+            "type": 299,
+            "symbol": "section:.rodata.cst16",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 160,
+            "type": 283,
+            "symbol": "sq_prefix_assign",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 172,
+            "type": 283,
+            "symbol": "sq_prefix_assign",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 184,
+            "type": 283,
+            "symbol": "sq_prefix_assign",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.fn_0015467c",
+            "offset": 204,
+            "type": 283,
+            "symbol": "sq_shared_prefix040",
+            "format": "SHT_RELA"
+          }
+        ]
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/fixture.o",
+        "sha256": "9b3b62e7962c41c0bb275768f73161016648ca359be84a7daeb1b2394ece6732",
+        "bytes": 2208,
+        "relocations": [
+          {
+            "section": ".rodata",
+            "offset": 0,
+            "type": 257,
+            "symbol": "section:.text.sdk_allocate",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".rodata",
+            "offset": 8,
+            "type": 257,
+            "symbol": "section:.text.unlikely.uninvoked_sdk_release",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".rodata",
+            "offset": 16,
+            "type": 257,
+            "symbol": "section:.text.unlikely.uninvoked_vm_operation",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".rodata",
+            "offset": 24,
+            "type": 257,
+            "symbol": "section:.text.unlikely.uninvoked_vm_operation",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".rodata",
+            "offset": 32,
+            "type": 257,
+            "symbol": "section:.text.unlikely.uninvoked_vm_operation",
+            "format": "SHT_RELA"
+          }
+        ]
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/layout.o",
+        "sha256": "4694cb83acf77bc163e366d2eb7d465426e203d65e2ae0a5ed7e4d7d9bd0f65d",
+        "bytes": 1192,
+        "relocations": []
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/reference_prefix.o",
+        "sha256": "4f9caa34b8b197d50f6f3660e1ee32f61d23679736ef7eb0c5cf7f99f4be6f8a",
+        "bytes": 2320,
+        "relocations": [
+          {
+            "section": ".text.sq_prefix_release",
+            "offset": 24,
+            "type": 282,
+            "symbol": "sq_prefix_finalize012",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.sq_prefix_assign",
+            "offset": 88,
+            "type": 283,
+            "symbol": "sq_prefix_finalize012",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.sq_prefix_clear",
+            "offset": 52,
+            "type": 282,
+            "symbol": "sq_prefix_finalize012",
+            "format": "SHT_RELA"
+          },
+          {
+            "section": ".text.sq_prefix_scalar",
+            "offset": 76,
+            "type": 283,
+            "symbol": "sq_prefix_finalize012",
+            "format": "SHT_RELA"
+          }
+        ]
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/reference_dispatch_opaque.o",
+        "sha256": "2888910e217d28f3554ac70053b04378bb6577572d950a3ff0cad383c9a0bcfd",
+        "bytes": 920,
+        "relocations": []
+      }
+    ],
+    "linkedElf": {
+      "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/owner_session.elf",
+      "sha256": "32f17eb22221001d33a66991d5b952fa3104623b26d2f786290abc124dc8f80f",
+      "bytes": 101048
+    },
+    "linkerScript": {
+      "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/owner_session.ld",
+      "sha256": "e81f7575dc02e7db81192439a96d211331e6aa03e83bdeb9e73bb819a23bffa8",
+      "bytes": 266
+    },
+    "functions": {
+      "sdk_allocate": {
+        "address": 4563403616,
+        "bytes": 148,
+        "linkedSpanSha256": "bf210c85090823fd9366892f431815c315c337899ba4abf2cccb781d9948b354",
+        "mappingSpans": [
+          [
+            4563403616,
+            4563403764,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/fixture.o",
+            "sha256": "9b3b62e7962c41c0bb275768f73161016648ca359be84a7daeb1b2394ece6732",
+            "bytes": 2208
+          },
+          "section": ".text.sdk_allocate",
+          "bytes": 148,
+          "sha256": "bf210c85090823fd9366892f431815c315c337899ba4abf2cccb781d9948b354",
+          "source": {
+            "path": "source/squirrel-wave040/fixture.c",
+            "sha256": "57de3d786826e5acd854aa04badc91374b1cfc21de267906a35966791846d2c9",
+            "bytes": 1436
+          },
+          "relocations": []
+        }
+      },
+      "uninvoked_sdk_release": {
+        "address": 4563403764,
+        "bytes": 4,
+        "linkedSpanSha256": "a780185a19f25b3e6769923a2aa48d6f84eb01b39aab7c7099323c19df95c1de",
+        "mappingSpans": [
+          [
+            4563403764,
+            4563403768,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/fixture.o",
+            "sha256": "9b3b62e7962c41c0bb275768f73161016648ca359be84a7daeb1b2394ece6732",
+            "bytes": 2208
+          },
+          "section": ".text.unlikely.uninvoked_sdk_release",
+          "bytes": 4,
+          "sha256": "a780185a19f25b3e6769923a2aa48d6f84eb01b39aab7c7099323c19df95c1de",
+          "source": {
+            "path": "source/squirrel-wave040/fixture.c",
+            "sha256": "57de3d786826e5acd854aa04badc91374b1cfc21de267906a35966791846d2c9",
+            "bytes": 1436
+          },
+          "relocations": []
+        }
+      },
+      "uninvoked_vm_operation": {
+        "address": 4563403768,
+        "bytes": 4,
+        "linkedSpanSha256": "a780185a19f25b3e6769923a2aa48d6f84eb01b39aab7c7099323c19df95c1de",
+        "mappingSpans": [
+          [
+            4563403768,
+            4563403772,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/fixture.o",
+            "sha256": "9b3b62e7962c41c0bb275768f73161016648ca359be84a7daeb1b2394ece6732",
+            "bytes": 2208
+          },
+          "section": ".text.unlikely.uninvoked_vm_operation",
+          "bytes": 4,
+          "sha256": "a780185a19f25b3e6769923a2aa48d6f84eb01b39aab7c7099323c19df95c1de",
+          "source": {
+            "path": "source/squirrel-wave040/fixture.c",
+            "sha256": "57de3d786826e5acd854aa04badc91374b1cfc21de267906a35966791846d2c9",
+            "bytes": 1436
+          },
+          "relocations": []
+        }
+      },
+      "sq_startup_bind040": {
+        "address": 4563402752,
+        "bytes": 52,
+        "linkedSpanSha256": "b96d72d70b14a0b0d9622faeba682f8688fe8d066cb87104057e39be86ca87a2",
+        "mappingSpans": [
+          [
+            4563402752,
+            4563402804,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/bindings.o",
+            "sha256": "b74ac49e6f17375f42d4568dca68f896741641197dadf045a8c88c4bcf2d54d6",
+            "bytes": 2544
+          },
+          "section": ".text.sq_startup_bind040",
+          "bytes": 52,
+          "sha256": "3b655c7e8c116a74208225319e6723bfaea57d5edb21cd24ac54fb8598e6d136",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": [
+            {
+              "section": ".text.sq_startup_bind040",
+              "offset": 28,
+              "type": 275,
+              "symbol": "section:.bss",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.sq_startup_bind040",
+              "offset": 32,
+              "type": 286,
+              "symbol": "section:.bss",
+              "format": "SHT_RELA"
+            }
+          ]
+        }
+      },
+      "sq_startup_services040": {
+        "address": 4563402804,
+        "bytes": 12,
+        "linkedSpanSha256": "8d5aa05b340d518ff5c1e962f5fa8de1b23292426201b3262ea0c145c4acda53",
+        "mappingSpans": [
+          [
+            4563402804,
+            4563402816,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/bindings.o",
+            "sha256": "b74ac49e6f17375f42d4568dca68f896741641197dadf045a8c88c4bcf2d54d6",
+            "bytes": 2544
+          },
+          "section": ".text.sq_startup_services040",
+          "bytes": 12,
+          "sha256": "50a4f26e9b055c49a55aa7f40d154b8bac0d51e06ecc0b86eb4d0cf73ac263e7",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": [
+            {
+              "section": ".text.sq_startup_services040",
+              "offset": 0,
+              "type": 275,
+              "symbol": "section:.bss",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.sq_startup_services040",
+              "offset": 4,
+              "type": 286,
+              "symbol": "section:.bss",
+              "format": "SHT_RELA"
+            }
+          ]
+        }
+      },
+      "sq_shared_prefix040": {
+        "address": 4563402816,
+        "bytes": 4,
+        "linkedSpanSha256": "110f46b5b35c069160560c6ad6786f647dd44e8760a52a46fc22dbbcd7630b91",
+        "mappingSpans": [
+          [
+            4563402816,
+            4563402820,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/bindings.o",
+            "sha256": "b74ac49e6f17375f42d4568dca68f896741641197dadf045a8c88c4bcf2d54d6",
+            "bytes": 2544
+          },
+          "section": ".text.sq_shared_prefix040",
+          "bytes": 4,
+          "sha256": "110f46b5b35c069160560c6ad6786f647dd44e8760a52a46fc22dbbcd7630b91",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": []
+        }
+      },
+      "sq_shared_references040": {
+        "address": 4563402820,
+        "bytes": 8,
+        "linkedSpanSha256": "42452ca19516d7bc79bae5ba0f41a0ebf8fb7308966d7f9073415c8825f3913b",
+        "mappingSpans": [
+          [
+            4563402820,
+            4563402828,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/bindings.o",
+            "sha256": "b74ac49e6f17375f42d4568dca68f896741641197dadf045a8c88c4bcf2d54d6",
+            "bytes": 2544
+          },
+          "section": ".text.sq_shared_references040",
+          "bytes": 8,
+          "sha256": "42452ca19516d7bc79bae5ba0f41a0ebf8fb7308966d7f9073415c8825f3913b",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": []
+        }
+      },
+      "sq_shared_registry040": {
+        "address": 4563402828,
+        "bytes": 8,
+        "linkedSpanSha256": "d39870a8e5b25e0c11f0462427d34a8278d7e3631888c3a92f28728c17380547",
+        "mappingSpans": [
+          [
+            4563402828,
+            4563402836,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/bindings.o",
+            "sha256": "b74ac49e6f17375f42d4568dca68f896741641197dadf045a8c88c4bcf2d54d6",
+            "bytes": 2544
+          },
+          "section": ".text.sq_shared_registry040",
+          "bytes": 8,
+          "sha256": "d39870a8e5b25e0c11f0462427d34a8278d7e3631888c3a92f28728c17380547",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": []
+        }
+      },
+      "sq_shared_constants040": {
+        "address": 4563402836,
+        "bytes": 8,
+        "linkedSpanSha256": "2b7635f73dbb22bd8e94fe43216120952727802a3945ffeedde2f6894d6afdfe",
+        "mappingSpans": [
+          [
+            4563402836,
+            4563402844,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/bindings.o",
+            "sha256": "b74ac49e6f17375f42d4568dca68f896741641197dadf045a8c88c4bcf2d54d6",
+            "bytes": 2544
+          },
+          "section": ".text.sq_shared_constants040",
+          "bytes": 8,
+          "sha256": "2b7635f73dbb22bd8e94fe43216120952727802a3945ffeedde2f6894d6afdfe",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": []
+        }
+      },
+      "sq_shared_special040": {
+        "address": 4563402844,
+        "bytes": 8,
+        "linkedSpanSha256": "636a8b72b5c39a496c77086674261491e84feede8eecd22b9fd39b051182d727",
+        "mappingSpans": [
+          [
+            4563402844,
+            4563402852,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/bindings.o",
+            "sha256": "b74ac49e6f17375f42d4568dca68f896741641197dadf045a8c88c4bcf2d54d6",
+            "bytes": 2544
+          },
+          "section": ".text.sq_shared_special040",
+          "bytes": 8,
+          "sha256": "636a8b72b5c39a496c77086674261491e84feede8eecd22b9fd39b051182d727",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": []
+        }
+      },
+      "sq_shared_null_meta040": {
+        "address": 4563402852,
+        "bytes": 20,
+        "linkedSpanSha256": "66a64b4f435aac8e72dea703b5d36af3596fdd4a8aab2bee31f2aa14718caa8e",
+        "mappingSpans": [
+          [
+            4563402852,
+            4563402872,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/bindings.o",
+            "sha256": "b74ac49e6f17375f42d4568dca68f896741641197dadf045a8c88c4bcf2d54d6",
+            "bytes": 2544
+          },
+          "section": ".text.sq_shared_null_meta040",
+          "bytes": 20,
+          "sha256": "66a64b4f435aac8e72dea703b5d36af3596fdd4a8aab2bee31f2aa14718caa8e",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": []
+        }
+      },
+      "sq_startup_null040": {
+        "address": 4563402872,
+        "bytes": 20,
+        "linkedSpanSha256": "d1f8999ad1abe7f9cd34d66f80008d771c8c8786c535373482df619e50c6e52a",
+        "mappingSpans": [
+          [
+            4563402872,
+            4563402892,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/bindings.o",
+            "sha256": "b74ac49e6f17375f42d4568dca68f896741641197dadf045a8c88c4bcf2d54d6",
+            "bytes": 2544
+          },
+          "section": ".text.sq_startup_null040",
+          "bytes": 20,
+          "sha256": "d1f8999ad1abe7f9cd34d66f80008d771c8c8786c535373482df619e50c6e52a",
+          "source": {
+            "path": "source/squirrel-wave040/bindings.c",
+            "sha256": "bda162d159994ca1eba54725f28777a3fe9c6da384ccb9ef012bd59f83775154",
+            "bytes": 1605
+          },
+          "relocations": []
+        }
+      },
+      "fn_0014c4c8": {
+        "address": 4563402892,
+        "bytes": 324,
+        "linkedSpanSha256": "3e38da5d254505bb9cf23046892c2f67f34864fe520e4249f7daf23e4e4b6e67",
+        "mappingSpans": [
+          [
+            4563402892,
+            4563403216,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": 1361096,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/shared_constructor.o",
+            "sha256": "8b7d9c8ed2a4d11d727a6fab2e3ed79ec4f2516fd66f425527c651cf70710f7b",
+            "bytes": 2368
+          },
+          "section": ".text.fn_0014c4c8",
+          "bytes": 324,
+          "sha256": "060827c12475ce3eb67bc8e6a09a6268c262a97671c65fb249f65c6b8e2ed4ee",
+          "source": {
+            "path": "source/squirrel-wave040/shared_constructor.c",
+            "sha256": "7fe51d1aa77c3e4a551260e62c53983a8149633d522351f8e53d87523743a26f",
+            "bytes": 1594
+          },
+          "relocations": [
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 20,
+              "type": 283,
+              "symbol": "sq_startup_services040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 32,
+              "type": 283,
+              "symbol": "sq_shared_null_meta040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 72,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 92,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 112,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 132,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 148,
+              "type": 283,
+              "symbol": "sq_shared_references040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 152,
+              "type": 275,
+              "symbol": "section:.rodata.cst8",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 160,
+              "type": 286,
+              "symbol": "section:.rodata.cst8",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 176,
+              "type": 283,
+              "symbol": "sq_shared_registry040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 180,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 188,
+              "type": 283,
+              "symbol": "sq_shared_constants040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 192,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 200,
+              "type": 283,
+              "symbol": "sq_shared_special040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 204,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 212,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 220,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 228,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 236,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 244,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 252,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 260,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 268,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 276,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 284,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0014c4c8",
+              "offset": 292,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            }
+          ]
+        }
+      },
+      "fn_0015467c": {
+        "address": 4563403216,
+        "bytes": 256,
+        "linkedSpanSha256": "de18de782ec1cccb24c44c5237d9d4d6f33d3f5c2392a63e9c37fbabe77e7759",
+        "mappingSpans": [
+          [
+            4563403216,
+            4563403472,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": 1394300,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/vm_constructor.o",
+            "sha256": "c01fbdede33057ad5d210e36ddaaa2328a7a197c245fa1ef8d5fa2578696b951",
+            "bytes": 1816
+          },
+          "section": ".text.fn_0015467c",
+          "bytes": 256,
+          "sha256": "30aaa58ed03c65ecefba0ea570189fa6580bbaeeb797d001bf7e708fbd18bdec",
+          "source": {
+            "path": "source/squirrel-wave040/vm_constructor.c",
+            "sha256": "f6f99619864aa7c81871fa2a0fbe9add94299f4942ca1ef9d6cdc48b86e466e7",
+            "bytes": 1525
+          },
+          "relocations": [
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 28,
+              "type": 283,
+              "symbol": "sq_startup_services040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 72,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 80,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 88,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 96,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 104,
+              "type": 283,
+              "symbol": "sq_startup_null040",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 124,
+              "type": 275,
+              "symbol": "section:.rodata.cst16",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 140,
+              "type": 299,
+              "symbol": "section:.rodata.cst16",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 160,
+              "type": 283,
+              "symbol": "sq_prefix_assign",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 172,
+              "type": 283,
+              "symbol": "sq_prefix_assign",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 184,
+              "type": 283,
+              "symbol": "sq_prefix_assign",
+              "format": "SHT_RELA"
+            },
+            {
+              "section": ".text.fn_0015467c",
+              "offset": 204,
+              "type": 283,
+              "symbol": "sq_shared_prefix040",
+              "format": "SHT_RELA"
+            }
+          ]
+        }
+      },
+      "sq_prefix_assign": {
+        "address": 4563403828,
+        "bytes": 108,
+        "linkedSpanSha256": "b7b34a63a4553af91c6abad9125f557ccd7be8abe318056a08e3a9162196d291",
+        "mappingSpans": [
+          [
+            4563403828,
+            4563403936,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/reference_prefix.o",
+            "sha256": "4f9caa34b8b197d50f6f3660e1ee32f61d23679736ef7eb0c5cf7f99f4be6f8a",
+            "bytes": 2320
+          },
+          "section": ".text.sq_prefix_assign",
+          "bytes": 108,
+          "sha256": "1ac446f5792657a06b34192c8f8926ff3df7e82bfe5aec560f84c3bb0a908a81",
+          "source": {
+            "path": "source/squirrel-wave012/reference_prefix.c",
+            "sha256": "09a4073e8e71f3f50769bc9058399cce666da47b157401af5915581134560408",
+            "bytes": 1693
+          },
+          "relocations": [
+            {
+              "section": ".text.sq_prefix_assign",
+              "offset": 88,
+              "type": 283,
+              "symbol": "sq_prefix_finalize012",
+              "format": "SHT_RELA"
+            }
+          ]
+        }
+      },
+      "sq_startup_fixture_allocate040": {
+        "address": 4563403472,
+        "bytes": 144,
+        "linkedSpanSha256": "53849356474d5a6b45383cfb9abdad355997874dae93d5a460eb9d2ed1873be8",
+        "mappingSpans": [
+          [
+            4563403472,
+            4563403616,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/fixture.o",
+            "sha256": "9b3b62e7962c41c0bb275768f73161016648ca359be84a7daeb1b2394ece6732",
+            "bytes": 2208
+          },
+          "section": ".text.sq_startup_fixture_allocate040",
+          "bytes": 144,
+          "sha256": "53849356474d5a6b45383cfb9abdad355997874dae93d5a460eb9d2ed1873be8",
+          "source": {
+            "path": "source/squirrel-wave040/fixture.c",
+            "sha256": "57de3d786826e5acd854aa04badc91374b1cfc21de267906a35966791846d2c9",
+            "bytes": 1436
+          },
+          "relocations": []
+        }
+      },
+      "sq_prefix_count": {
+        "address": 4563403772,
+        "bytes": 8,
+        "linkedSpanSha256": "2f3b6f6686fd51e88030785bd4646403cb57ac71a5cbf077e500a85bdf0afab3",
+        "mappingSpans": [
+          [
+            4563403772,
+            4563403780,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/reference_prefix.o",
+            "sha256": "4f9caa34b8b197d50f6f3660e1ee32f61d23679736ef7eb0c5cf7f99f4be6f8a",
+            "bytes": 2320
+          },
+          "section": ".text.sq_prefix_count",
+          "bytes": 8,
+          "sha256": "2f3b6f6686fd51e88030785bd4646403cb57ac71a5cbf077e500a85bdf0afab3",
+          "source": {
+            "path": "source/squirrel-wave012/reference_prefix.c",
+            "sha256": "09a4073e8e71f3f50769bc9058399cce666da47b157401af5915581134560408",
+            "bytes": 1693
+          },
+          "relocations": []
+        }
+      },
+      "sq_prefix_retain": {
+        "address": 4563403780,
+        "bytes": 20,
+        "linkedSpanSha256": "5c14a73a06d8cbf579afdbc003ba7168319dbc4d68b81791772db2d27b52ddc8",
+        "mappingSpans": [
+          [
+            4563403780,
+            4563403800,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/reference_prefix.o",
+            "sha256": "4f9caa34b8b197d50f6f3660e1ee32f61d23679736ef7eb0c5cf7f99f4be6f8a",
+            "bytes": 2320
+          },
+          "section": ".text.sq_prefix_retain",
+          "bytes": 20,
+          "sha256": "5c14a73a06d8cbf579afdbc003ba7168319dbc4d68b81791772db2d27b52ddc8",
+          "source": {
+            "path": "source/squirrel-wave012/reference_prefix.c",
+            "sha256": "09a4073e8e71f3f50769bc9058399cce666da47b157401af5915581134560408",
+            "bytes": 1693
+          },
+          "relocations": []
+        }
+      },
+      "sq_prefix_release": {
+        "address": 4563403800,
+        "bytes": 28,
+        "linkedSpanSha256": "be71d74f506e20fb572417516f115633581c1d0b62c65fad9dc89811c1f99060",
+        "mappingSpans": [
+          [
+            4563403800,
+            4563403828,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/reference_prefix.o",
+            "sha256": "4f9caa34b8b197d50f6f3660e1ee32f61d23679736ef7eb0c5cf7f99f4be6f8a",
+            "bytes": 2320
+          },
+          "section": ".text.sq_prefix_release",
+          "bytes": 28,
+          "sha256": "97eb8a72215cc6ebf01442d57838aab33908abdc0d1d9f1d39b910e79b18301a",
+          "source": {
+            "path": "source/squirrel-wave012/reference_prefix.c",
+            "sha256": "09a4073e8e71f3f50769bc9058399cce666da47b157401af5915581134560408",
+            "bytes": 1693
+          },
+          "relocations": [
+            {
+              "section": ".text.sq_prefix_release",
+              "offset": 24,
+              "type": 282,
+              "symbol": "sq_prefix_finalize012",
+              "format": "SHT_RELA"
+            }
+          ]
+        }
+      },
+      "sq_prefix_finalize012": {
+        "address": 4563404108,
+        "bytes": 16,
+        "linkedSpanSha256": "0f3ad4c7d6e526f38c22060dfe08f6e1fe643d76eb201779d57efe0d507d5a62",
+        "mappingSpans": [
+          [
+            4563404108,
+            4563404124,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/reference_dispatch_opaque.o",
+            "sha256": "2888910e217d28f3554ac70053b04378bb6577572d950a3ff0cad383c9a0bcfd",
+            "bytes": 920
+          },
+          "section": ".text.sq_prefix_finalize012",
+          "bytes": 16,
+          "sha256": "0f3ad4c7d6e526f38c22060dfe08f6e1fe643d76eb201779d57efe0d507d5a62",
+          "source": {
+            "path": "source/squirrel-wave012/reference_dispatch_opaque.c",
+            "sha256": "ca86896d8149d55f06cfdd92ddc2fc126fb35818b4dff9d955c25ee69f375906",
+            "bytes": 228
+          },
+          "relocations": []
+        }
+      },
+      "sq_prefix_clear": {
+        "address": 4563403936,
+        "bytes": 56,
+        "linkedSpanSha256": "e23dfe9ee5c48767cf14861badb6f4c3c036506665dfc43c3b2b5a9896ba9c20",
+        "mappingSpans": [
+          [
+            4563403936,
+            4563403992,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/reference_prefix.o",
+            "sha256": "4f9caa34b8b197d50f6f3660e1ee32f61d23679736ef7eb0c5cf7f99f4be6f8a",
+            "bytes": 2320
+          },
+          "section": ".text.sq_prefix_clear",
+          "bytes": 56,
+          "sha256": "33475c71c61d36a93b0b1f2c5c08a15283c649a3a49eb57351a10be9dfb73a7d",
+          "source": {
+            "path": "source/squirrel-wave012/reference_prefix.c",
+            "sha256": "09a4073e8e71f3f50769bc9058399cce666da47b157401af5915581134560408",
+            "bytes": 1693
+          },
+          "relocations": [
+            {
+              "section": ".text.sq_prefix_clear",
+              "offset": 52,
+              "type": 282,
+              "symbol": "sq_prefix_finalize012",
+              "format": "SHT_RELA"
+            }
+          ]
+        }
+      },
+      "sq_prefix_scalar": {
+        "address": 4563403992,
+        "bytes": 116,
+        "linkedSpanSha256": "56aab0c888b32f8a6a2fd2b9a831a9a3cf83de70ab7440cb329044b9eb6fa140",
+        "mappingSpans": [
+          [
+            4563403992,
+            4563404108,
+            "$x"
+          ]
+        ],
+        "poolBytes": 0,
+        "canonicalOriginalAddress": null,
+        "objectOrigin": {
+          "object": {
+            "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/reference_prefix.o",
+            "sha256": "4f9caa34b8b197d50f6f3660e1ee32f61d23679736ef7eb0c5cf7f99f4be6f8a",
+            "bytes": 2320
+          },
+          "section": ".text.sq_prefix_scalar",
+          "bytes": 116,
+          "sha256": "c687686d293c70b228beb2ace5cda4a3f295a9340fd2efb144bbabe4318d8bd3",
+          "source": {
+            "path": "source/squirrel-wave012/reference_prefix.c",
+            "sha256": "09a4073e8e71f3f50769bc9058399cce666da47b157401af5915581134560408",
+            "bytes": 1693
+          },
+          "relocations": [
+            {
+              "section": ".text.sq_prefix_scalar",
+              "offset": 76,
+              "type": 283,
+              "symbol": "sq_prefix_finalize012",
+              "format": "SHT_RELA"
+            }
+          ]
+        }
+      }
+    },
+    "retainedOriginalExecutableBytes": 0
+  },
+  "androidPicComponent": {
+    "artifact": {
+      "path": "work/squirrel-state040/constructor-stage-v2/android-pic/startup040.so",
+      "sha256": "94cd9555bde86a4b8f27190dae138c023244af55274a5c6fd51784011ccc4561",
+      "bytes": 8824
+    },
+    "objects": [
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/android-pic/bindings.o",
+        "sha256": "b74ac49e6f17375f42d4568dca68f896741641197dadf045a8c88c4bcf2d54d6",
+        "bytes": 2544
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/android-pic/shared_constructor.o",
+        "sha256": "8b7d9c8ed2a4d11d727a6fab2e3ed79ec4f2516fd66f425527c651cf70710f7b",
+        "bytes": 2368
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/android-pic/vm_constructor.o",
+        "sha256": "c01fbdede33057ad5d210e36ddaaa2328a7a197c245fa1ef8d5fa2578696b951",
+        "bytes": 1816
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/android-pic/fixture.o",
+        "sha256": "41ceaccb271d332abf54adef0ee4a406ac2f2091e45172740a6d263b11d38e02",
+        "bytes": 2312
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/android-pic/layout.o",
+        "sha256": "4694cb83acf77bc163e366d2eb7d465426e203d65e2ae0a5ed7e4d7d9bd0f65d",
+        "bytes": 1192
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/android-pic/reference_prefix.o",
+        "sha256": "4f9caa34b8b197d50f6f3660e1ee32f61d23679736ef7eb0c5cf7f99f4be6f8a",
+        "bytes": 2320
+      },
+      {
+        "path": "work/squirrel-state040/constructor-stage-v2/android-pic/reference_dispatch_opaque.o",
+        "sha256": "2888910e217d28f3554ac70053b04378bb6577572d950a3ff0cad383c9a0bcfd",
+        "bytes": 920
+      }
+    ],
+    "loadSegments": [
+      {
+        "p_offset": 0,
+        "p_vaddr": 0,
+        "p_filesz": 2684,
+        "p_memsz": 2684,
+        "p_flags": 4,
+        "p_align": 16384
+      },
+      {
+        "p_offset": 2684,
+        "p_vaddr": 19068,
+        "p_filesz": 1572,
+        "p_memsz": 1572,
+        "p_flags": 5,
+        "p_align": 16384
+      },
+      {
+        "p_offset": 4256,
+        "p_vaddr": 37024,
+        "p_filesz": 280,
+        "p_memsz": 12128,
+        "p_flags": 6,
+        "p_align": 16384
+      },
+      {
+        "p_offset": 4536,
+        "p_vaddr": 53688,
+        "p_filesz": 104,
+        "p_memsz": 112,
+        "p_flags": 6,
+        "p_align": 16384
+      }
+    ],
+    "undefinedDynamicSymbols": [],
+    "androidOsExecuted": false,
+    "androidDeviceExecuted": false,
+    "gameExecutableClaimed": false
+  },
+  "compilerAndTestReceipts": [
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfpu=vfp",
+        "-mfloat-abi=softfp",
+        "-std=c11",
+        "-O3",
+        "-fstrict-aliasing",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040\\bindings.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-arm\\bindings.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/bindings.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfpu=vfp",
+        "-mfloat-abi=softfp",
+        "-std=c11",
+        "-O3",
+        "-fstrict-aliasing",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040\\shared_constructor.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-arm\\shared_constructor.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/shared_constructor.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfpu=vfp",
+        "-mfloat-abi=softfp",
+        "-std=c11",
+        "-O3",
+        "-fstrict-aliasing",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040\\vm_constructor.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-arm\\vm_constructor.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/vm_constructor.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfpu=vfp",
+        "-mfloat-abi=softfp",
+        "-std=c11",
+        "-O3",
+        "-fstrict-aliasing",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040\\fixture.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-arm\\fixture.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/fixture.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfpu=vfp",
+        "-mfloat-abi=softfp",
+        "-std=c11",
+        "-O3",
+        "-fstrict-aliasing",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040\\layout.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-arm\\layout.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/layout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfpu=vfp",
+        "-mfloat-abi=softfp",
+        "-std=c11",
+        "-O3",
+        "-fstrict-aliasing",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave012\\reference_prefix.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-arm\\reference_prefix.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/reference_prefix.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfpu=vfp",
+        "-mfloat-abi=softfp",
+        "-std=c11",
+        "-O3",
+        "-fstrict-aliasing",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave012\\reference_dispatch_opaque.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-arm\\reference_dispatch_opaque.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/reference_dispatch_opaque.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--entry=fn_0014c4c8",
+        "-T",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-arm\\owner_full.ld",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-arm\\bindings.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-arm\\shared_constructor.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-arm\\vm_constructor.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-arm\\fixture.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-arm\\layout.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-arm\\reference_prefix.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-arm\\reference_dispatch_opaque.o",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-arm\\owner_full.elf"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-arm/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-O3",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040\\bindings.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-a64\\bindings.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/bindings.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-O3",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040\\shared_constructor.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-a64\\shared_constructor.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/shared_constructor.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-O3",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040\\vm_constructor.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-a64\\vm_constructor.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/vm_constructor.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-O3",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040\\fixture.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-a64\\fixture.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/fixture.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-O3",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040\\layout.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-a64\\layout.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/layout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-O3",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave012\\reference_prefix.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-a64\\reference_prefix.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/reference_prefix.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-O3",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave012\\reference_dispatch_opaque.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-a64\\reference_dispatch_opaque.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/reference_dispatch_opaque.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "aarch64elf",
+        "--no-undefined",
+        "--build-id=none",
+        "--entry=fn_0014c4c8",
+        "-T",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-a64\\owner_session.ld",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-a64\\bindings.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-a64\\shared_constructor.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-a64\\vm_constructor.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-a64\\fixture.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-a64\\layout.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-a64\\reference_prefix.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-a64\\reference_dispatch_opaque.o",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\object-proof-a64\\owner_session.elf"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/object-proof-a64/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-std=c11",
+        "-O3",
+        "-fPIC",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040\\bindings.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\android-pic\\bindings.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/android-pic/bindings.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-std=c11",
+        "-O3",
+        "-fPIC",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040\\shared_constructor.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\android-pic\\shared_constructor.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/android-pic/shared_constructor.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-std=c11",
+        "-O3",
+        "-fPIC",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040\\vm_constructor.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\android-pic\\vm_constructor.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/android-pic/vm_constructor.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-std=c11",
+        "-O3",
+        "-fPIC",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040\\fixture.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\android-pic\\fixture.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/android-pic/fixture.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-std=c11",
+        "-O3",
+        "-fPIC",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave040\\layout.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\android-pic\\layout.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/android-pic/layout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-std=c11",
+        "-O3",
+        "-fPIC",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave012\\reference_prefix.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\android-pic\\reference_prefix.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/android-pic/reference_prefix.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-std=c11",
+        "-O3",
+        "-fPIC",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\source\\squirrel-wave012\\reference_dispatch_opaque.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\android-pic\\reference_dispatch_opaque.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/android-pic/reference_dispatch_opaque.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "aarch64elf",
+        "-shared",
+        "--no-undefined",
+        "--build-id=none",
+        "-z",
+        "max-page-size=16384",
+        "-z",
+        "common-page-size=16384",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\android-pic\\bindings.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\android-pic\\shared_constructor.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\android-pic\\vm_constructor.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\android-pic\\fixture.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\android-pic\\layout.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\android-pic\\reference_prefix.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\android-pic\\reference_dispatch_opaque.o",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\squirrel-state040\\constructor-stage-v2\\android-pic\\startup040.so"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/android-pic/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_squirrel_state040.py",
+        "-v"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/squirrel-state040/constructor-stage-v2/tests.log",
+        "sha256": "611d45c4af17ab31f8f02c8b5851622f7156e960937fafd4ad12228ff21b6347",
+        "bytes": 2044
+      },
+      "actualWindowsTestsPassed": 12,
+      "normalUnittestProgressOnStderrIsNotACompilerDiagnostic": true
+    }
+  ],
+  "elapsedSeconds": 40.34240139997564,
+  "actualWindowsExecution": true,
+  "originalSdkExecutionIsReferenceOnly": true,
+  "sourceExecutionMapsOriginalExecutableOrSdk": false,
+  "platformHeapRequestContract": {
+    "initialReferenceBlock": {
+      "targetBytes": 80,
+      "nativeBytes": 160,
+      "targetAlignment": 4,
+      "nativeAlignment": 8
+    },
+    "allocationFailureQualified": false,
+    "vmConstructorMakesAllocationRequests": false
+  },
+  "wholeMemoryEquivalenceClaimed": false,
+  "universalEquivalenceClaimed": false,
+  "engineCallbacksQualified": false,
+  "vmMethodsQualified": false,
+  "sharedInitializationQualified": false,
+  "vmInitializationQualified": false,
+  "factoryQualified": false,
+  "completeInterpreterOrGameQualified": false,
+  "androidOsOrDeviceExecuted": false,
+  "acceptedSourceCreditGranted": 0,
+  "exactMatchingCreditGranted": 0,
+  "sdkCreditGranted": 0,
+  "earlierAttempts": {
+    "initialCoalescedFlagStoreGuardRejection": {
+      "preservedLocation": "tool transcript and work/squirrel-state040/graphs-first",
+      "repair": "Merge adjacent declared writable byte intervals; no constructor C edit."
+    },
+    "preFinalAllocatorAndFloatingGuardsRuns": [
+      "work/squirrel-state040/constructors-first",
+      "work/squirrel-state040/controls-first"
+    ]
+  }
+}

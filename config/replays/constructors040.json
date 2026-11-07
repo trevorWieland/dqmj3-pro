@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "name": "constructors040",
+  "producerSteps": [
+    {
+      "name": "constructors040-execution-and-controls",
+      "args": [
+        "toolscripts/squirrel_state040_constructor_packet.py",
+        "--work",
+        "work/constructors040-independent",
+        "--output",
+        "work/constructors040-independent/packet"
+      ]
+    }
+  ],
+  "tests": [
+    "squirrel_state040",
+    "isolated_component_replay"
+  ],
+  "packets": [
+    "work/constructors040-independent/packet/packet.json",
+    "work/constructors040-independent/packet/verification.json"
+  ]
+}

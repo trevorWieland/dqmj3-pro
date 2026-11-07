@@ -1,0 +1,1377 @@
+{
+  "schemaVersion": 1,
+  "status": "pre-source-measured-root-vm-and-shared-state-initialization-family",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "census": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "bytes": 20574405,
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55"
+  },
+  "functions": [
+    {
+      "entry": 1337748,
+      "mode": "ARM",
+      "role": "public-new-root-vm-factory",
+      "instructionBytes": 232,
+      "instructionRanges": [
+        {
+          "start": 1337748,
+          "endExclusive": 1337980,
+          "bytes": 232,
+          "sha256": "3b6a87efcad06d5156710eaf48029c1c6a884b6b3cc721a14b336c6438eb52fc"
+        }
+      ],
+      "literalReadWitnesses": [
+        {
+          "address": 1337980,
+          "bytes": 4,
+          "sha256": "5581ec018e2ab9b9dc397aae1f722fcefebae8b7649e06bd73ec3e81b349f9b7"
+        }
+      ],
+      "calls": [
+        {
+          "pc": 1337764,
+          "target": 3140840,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1337772,
+          "target": 1361096,
+          "mnemonic": "blne"
+        },
+        {
+          "pc": 1337780,
+          "target": 1353376,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1337788,
+          "target": 3140840,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1337800,
+          "target": 1394300,
+          "mnemonic": "blne"
+        },
+        {
+          "pc": 1337844,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1337892,
+          "target": 1336720,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1337908,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1337924,
+          "target": 1393824,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1337952,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1337964,
+          "target": 1693312,
+          "mnemonic": "bl"
+        }
+      ],
+      "knownCensusCallers": [
+        1211384,
+        1216320
+      ]
+    },
+    {
+      "entry": 1361096,
+      "mode": "ARM",
+      "role": "shared-state-constructor",
+      "instructionBytes": 280,
+      "instructionRanges": [
+        {
+          "start": 1361096,
+          "endExclusive": 1361376,
+          "bytes": 280,
+          "sha256": "400e9037f26559e30288232aa56eb24e4fa33fe7d306c86a5404ad5a0b8730c1"
+        }
+      ],
+      "literalReadWitnesses": [
+        {
+          "address": 1361376,
+          "bytes": 4,
+          "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+        }
+      ],
+      "calls": [
+        {
+          "pc": 1361128,
+          "target": 3140840,
+          "mnemonic": "bl"
+        }
+      ],
+      "knownCensusCallers": [
+        1337748
+      ]
+    },
+    {
+      "entry": 1353376,
+      "mode": "ARM",
+      "role": "shared-state-postconstruction-initialization",
+      "instructionBytes": 7352,
+      "instructionRanges": [
+        {
+          "start": 1353376,
+          "endExclusive": 1354640,
+          "bytes": 1264,
+          "sha256": "41fb39acd853a025540cda1f5ab72bcfded2406c7f66b6451d9f7eaa02b7d8ab"
+        },
+        {
+          "start": 1354728,
+          "endExclusive": 1355744,
+          "bytes": 1016,
+          "sha256": "58b886407f539e13cac1163d895da862f28583afc8950fa2df841adbe9a475bc"
+        },
+        {
+          "start": 1355824,
+          "endExclusive": 1356932,
+          "bytes": 1108,
+          "sha256": "d40a527fba909ad3154622ed4995556cf7766707a8927bb7dfc13727d5e79044"
+        },
+        {
+          "start": 1356972,
+          "endExclusive": 1358036,
+          "bytes": 1064,
+          "sha256": "2986e5e385b8633a7804db37d0bcd0c37e3860cf5d04cda909d71981796e9f9e"
+        },
+        {
+          "start": 1358076,
+          "endExclusive": 1359140,
+          "bytes": 1064,
+          "sha256": "1aacf4b2e129e4b0b3efd66014949ce6a384f36753d1bc7953234d93d9607aa2"
+        },
+        {
+          "start": 1359196,
+          "endExclusive": 1360276,
+          "bytes": 1080,
+          "sha256": "f5fa228a00b546eed401976687d4bd7f2734725ada13a88b242cd984e2e3d329"
+        },
+        {
+          "start": 1360316,
+          "endExclusive": 1361072,
+          "bytes": 756,
+          "sha256": "b41e08bdc145ea5545ffdbc0bcfb4a816c5d8b77c2e61337442d0dbb80f73571"
+        }
+      ],
+      "literalReadWitnesses": [
+        {
+          "address": 1354640,
+          "bytes": 4,
+          "sha256": "9417ecfde8794c1cbb22b669ea586a96091f93d2dc7e8ace8b3258a29eac3199"
+        },
+        {
+          "address": 1354652,
+          "bytes": 4,
+          "sha256": "b6d6a7e37e23e7a65e964bc982979ceb94ab98a49fccf77cb888388fafa974eb"
+        },
+        {
+          "address": 1355812,
+          "bytes": 4,
+          "sha256": "2bfb5ed5897f29abbec666612dc847cb1cf2dfe4d3aa6a01dff2f282345d97d5"
+        },
+        {
+          "address": 1360300,
+          "bytes": 4,
+          "sha256": "9cca568bd71ef20ea948df660019a22477ff0f3a1718ef20b73b29195353fbc9"
+        },
+        {
+          "address": 1360304,
+          "bytes": 4,
+          "sha256": "87ed8c9e179043c1b41758b54f8c316d6c2639977cacbbea75cbc8761c5aaf3b"
+        },
+        {
+          "address": 1360308,
+          "bytes": 4,
+          "sha256": "5af980a17af8c429e326e7b60ab211ad9b68bcb1952c128a5cde695c472593d7"
+        },
+        {
+          "address": 1360312,
+          "bytes": 4,
+          "sha256": "d0ae02137dfbf1c4a94a9edb2321a1f8cb1b6cd3d66709ffd2943987af640bb0"
+        },
+        {
+          "address": 1361072,
+          "bytes": 4,
+          "sha256": "6b5bece16b1f72b72ec70e30cf9c2df6d5b97968f0a1e1bf5c64249ce594ffba"
+        },
+        {
+          "address": 1361076,
+          "bytes": 4,
+          "sha256": "32f655eb8fb5ae8897aed4527967865f2b850315713a1a55a24d24c55ebbca8d"
+        },
+        {
+          "address": 1361080,
+          "bytes": 4,
+          "sha256": "c83f9e010e5742ef76f33d6252890d7634fa8d14f20a6e46c8999485536fd09b"
+        },
+        {
+          "address": 1361084,
+          "bytes": 4,
+          "sha256": "a3f0dc7bbc6e5ab5ae91a9cdc04d6fc310296da88df1b9c0146f638b7ec2ec73"
+        },
+        {
+          "address": 1361088,
+          "bytes": 4,
+          "sha256": "c29110fc9ce283318264c3c5bde21f0edf66257625c9783eb5e3ef652c6278cf"
+        },
+        {
+          "address": 1361092,
+          "bytes": 4,
+          "sha256": "1f7c9df609b811013950fe9612450801fb8251450233a4bffa73b0a9d03123d4"
+        }
+      ],
+      "calls": [
+        {
+          "pc": 1353408,
+          "target": 3140840,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1353440,
+          "target": 3140840,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1353464,
+          "target": 3153744,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1353476,
+          "target": 3140840,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1353508,
+          "target": 3140840,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1353540,
+          "target": 3140840,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1353580,
+          "target": 3140840,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1353604,
+          "target": 1685912,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1353652,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1353704,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1353724,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1353768,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1353820,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1353840,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1353880,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1353932,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1353952,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1353992,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1354044,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1354064,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1354104,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1354156,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1354176,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1354216,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1354268,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1354288,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1354328,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1354380,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1354400,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1354440,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1354492,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1354512,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1354552,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1354604,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1354624,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1354756,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1354808,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1354828,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1354868,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1354920,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1354940,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1354980,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1355032,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1355052,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1355092,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1355144,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1355164,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1355204,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1355256,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1355276,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1355316,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1355368,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1355388,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1355428,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1355480,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1355500,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1355540,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1355592,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1355648,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1355700,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1355720,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1355844,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1355896,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1355944,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1355996,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1356016,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1356056,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1356108,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1356156,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1356208,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1356228,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1356268,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1356320,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1356368,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1356420,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1356440,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1356480,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1356532,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1356580,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1356632,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1356652,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1356692,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1356744,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1356792,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1356844,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1356864,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1356904,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1357000,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1357048,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1357100,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1357120,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1357160,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1357212,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1357260,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1357312,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1357332,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1357372,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1357424,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1357472,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1357524,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1357544,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1357584,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1357636,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1357684,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1357736,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1357756,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1357796,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1357848,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1357896,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1357948,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1357968,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1358008,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1358104,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1358152,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1358204,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1358224,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1358264,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1358316,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1358364,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1358416,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1358436,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1358476,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1358528,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1358576,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1358628,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1358648,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1358688,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1358740,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1358788,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1358840,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1358860,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1358900,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1358952,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1359000,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1359052,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1359072,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1359112,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1359224,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1359272,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1359324,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1359344,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1359384,
+          "target": 1476812,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1359436,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1359484,
+          "target": 1685288,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1359536,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1359556,
+          "target": 1686120,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1359596,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1359648,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1359664,
+          "target": 3140840,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1359688,
+          "target": 1685912,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1359732,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1359784,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1359800,
+          "target": 3140840,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1359824,
+          "target": 1685912,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1359868,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1359920,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1359936,
+          "target": 1413732,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1359976,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1360028,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1360044,
+          "target": 1413732,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1360084,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1360136,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1360152,
+          "target": 1413732,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1360192,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1360244,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1360260,
+          "target": 1413732,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1360352,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1360404,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1360420,
+          "target": 1413732,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1360460,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1360512,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1360528,
+          "target": 1413732,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1360568,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1360620,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1360636,
+          "target": 1413732,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1360676,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1360728,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1360744,
+          "target": 1413732,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1360784,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1360836,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1360852,
+          "target": 1413732,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1360892,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1360944,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1360960,
+          "target": 1413732,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1361000,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1361052,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1361068,
+          "target": 1336720,
+          "mnemonic": "bl"
+        }
+      ],
+      "knownCensusCallers": [
+        1337748
+      ]
+    },
+    {
+      "entry": 1394300,
+      "mode": "ARM",
+      "role": "vm-constructor",
+      "instructionBytes": 236,
+      "instructionRanges": [
+        {
+          "start": 1394300,
+          "endExclusive": 1394536,
+          "bytes": 236,
+          "sha256": "80cfdc6a3fa75f12ea8566c6e92153aabad51a16e973a59f813f9bbfa684dc5d"
+        }
+      ],
+      "literalReadWitnesses": [
+        {
+          "address": 1394536,
+          "bytes": 4,
+          "sha256": "c176a9307ee40f1f859392b10a5761bf83e930747dd5e40f1c69a3fc0310390f"
+        },
+        {
+          "address": 1394540,
+          "bytes": 4,
+          "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+        },
+        {
+          "address": 1394544,
+          "bytes": 4,
+          "sha256": "3c9ba11c659ac11a8eacbf4e39da86a9ad7b3b3a9619bbeee21c07e86c65cf15"
+        }
+      ],
+      "calls": [
+        {
+          "pc": 1394472,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1394484,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1394496,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1394524,
+          "target": 1697988,
+          "mnemonic": "bl"
+        }
+      ],
+      "knownCensusCallers": [
+        1337748,
+        7611724
+      ]
+    },
+    {
+      "entry": 1393824,
+      "mode": "ARM",
+      "role": "vm-postconstruction-initialization",
+      "instructionBytes": 468,
+      "instructionRanges": [
+        {
+          "start": 1393824,
+          "endExclusive": 1394292,
+          "bytes": 468,
+          "sha256": "42e946303d3d51f55b31e6df7e59c47bac2000309fe548f02a42ad038d2a90d4"
+        }
+      ],
+      "literalReadWitnesses": [
+        {
+          "address": 1394292,
+          "bytes": 4,
+          "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+        },
+        {
+          "address": 1394296,
+          "bytes": 4,
+          "sha256": "9417ecfde8794c1cbb22b669ea586a96091f93d2dc7e8ace8b3258a29eac3199"
+        }
+      ],
+      "calls": [
+        {
+          "pc": 1393864,
+          "target": 1692448,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1393916,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1393996,
+          "target": 1692680,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1394048,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1394088,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1394100,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1394112,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1394120,
+          "target": 1413072,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1394152,
+          "target": 3140840,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1394176,
+          "target": 1685912,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1394224,
+          "target": 1697892,
+          "mnemonic": "bl"
+        },
+        {
+          "pc": 1394276,
+          "target": null,
+          "mnemonic": "blx"
+        },
+        {
+          "pc": 1394288,
+          "target": 1336720,
+          "mnemonic": "bl"
+        }
+      ],
+      "knownCensusCallers": [
+        1337748,
+        7611724
+      ]
+    }
+  ],
+  "candidateInstructionBytes": 8568,
+  "factoryMeasuredAllocationRequests": {
+    "sharedStateBytes": 180,
+    "vmBytes": 168
+  },
+  "nonreturningPrefixes": [
+    {
+      "entry": 1336720,
+      "bytes": 4,
+      "firstInstructionSha256": "71b1548a3867fe8e62a860f8010becb36b0386c9e97d552809cebccb9d93881d",
+      "returnsOrClosesAllocatorAssertDependency": false,
+      "fallthroughOwnershipMustBeResolved": true
+    },
+    {
+      "entry": 3140840,
+      "bytes": 4,
+      "firstInstructionSha256": "71b1548a3867fe8e62a860f8010becb36b0386c9e97d552809cebccb9d93881d",
+      "returnsOrClosesAllocatorAssertDependency": false,
+      "fallthroughOwnershipMustBeResolved": true
+    }
+  ],
+  "knownSupportingDependencies": [
+    1413732,
+    1476812,
+    1685288,
+    1685912,
+    1686120,
+    1697892,
+    1697988,
+    3153744
+  ],
+  "partialFixtureStorageIsACompleteProductionStateClaimed": false,
+  "sourcePresentAtInitialMeasurement": false,
+  "sharedInitializationAndConstructorAreDistinct": true,
+  "originalPayloadPublished": false,
+  "sourceOrInventoryCreditGranted": 0,
+  "producer": {
+    "path": "toolscripts/squirrel_state040_measure.py",
+    "bytes": 4386,
+    "sha256": "cb2916d1218f6dc85c82823e1df56021e8a4a24a14b0defa249b9f0c2f35f9e3"
+  }
+}
