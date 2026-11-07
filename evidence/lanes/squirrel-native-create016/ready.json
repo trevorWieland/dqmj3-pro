@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "status": "frozen-bounded-native-closure-creation-for-coordinator-review",
+  "savedCopyRoot": "work/squirrel-native-create016/copied-112/copied-source",
+  "pins": [
+    {
+      "path": "evidence/lanes/squirrel-native-create016/report.json",
+      "sha256": "26395f9435683905fb868c7cc8f43b2cbb2aeef0253bdd2f9d1ddf0d09b21923",
+      "bytes": 25537
+    },
+    {
+      "path": "evidence/lanes/squirrel-native-create016/verification.json",
+      "sha256": "caa0d3714f3a3a7f980fc814092f2a401f8a19c63f37f2edd5ab2490754734d1",
+      "bytes": 24224
+    }
+  ],
+  "ownedFiles": [
+    {
+      "path": "source/squirrel-wave016/fixture.c",
+      "bytes": 8800,
+      "sha256": "577c987246b89d557cc2960190d0fb1f7b007c975d0cb3033cd3266f5e6b2cf2"
+    },
+    {
+      "path": "source/squirrel-wave016/fixture.h",
+      "bytes": 743,
+      "sha256": "fa77b73813d15ddf843115ec1c7bd820748dc31b178ca1ca9c6ad81e77fdb8a4"
+    },
+    {
+      "path": "source/squirrel-wave016/native_create.c",
+      "bytes": 2459,
+      "sha256": "c2fd06c9986a29b2625ff3787c03e1450bc6d7c5c854acc5c3763bdb21bbab22"
+    },
+    {
+      "path": "source/squirrel-wave016/native_create.h",
+      "bytes": 1348,
+      "sha256": "a3925277f8144daac617b475f70fafc515cd3ccdfa9e3a828c98ba331767763f"
+    },
+    {
+      "path": "source/squirrel-wave016/native_fixture.c",
+      "bytes": 1685,
+      "sha256": "b840f444317af55676b91ce9aa272907224bd38b25de9a6e3221d97904a6e131"
+    },
+    {
+      "path": "source/squirrel-wave016/README.md",
+      "bytes": 4759,
+      "sha256": "6c82ef58f117dfb2f1a32ff571f00dc9763c61e2635b1d69a2edbb87f48507e7"
+    },
+    {
+      "path": "source/squirrel-wave016/vm_storage.c",
+      "bytes": 1568,
+      "sha256": "2def7a8f618837aee3938d81480dd5eef6788abe237cac6ffbf757bf2f605a2e"
+    },
+    {
+      "path": "tests/test_squirrel_native_create016.py",
+      "bytes": 5313,
+      "sha256": "4a607e399473a8e2421fd1e25884040b7a1b39fc8bd1d89759eaca0b993aae71"
+    },
+    {
+      "path": "toolscripts/squirrel_native_create016.py",
+      "bytes": 11438,
+      "sha256": "2a6814e5ef7058cc2fd5d4142b9ba63b0d23f6b95ece59476aa3eda83a6bec8d"
+    },
+    {
+      "path": "toolscripts/squirrel_native_create016_android.py",
+      "bytes": 5259,
+      "sha256": "21d61b1a6eb3e30186c28accc4cc1192b158fd8c16a37e4d772a432171a58572"
+    },
+    {
+      "path": "toolscripts/squirrel_native_create016_build.py",
+      "bytes": 10167,
+      "sha256": "17e872517c697d52a97041ccbb39b0b8d1aad4e40f682e9220ff0208e84f1e8b"
+    },
+    {
+      "path": "toolscripts/squirrel_native_create016_model.py",
+      "bytes": 2671,
+      "sha256": "d77d7385369e756945e152bee98ae2fe0c722c5b351ce44776f821a9c4b4bb59"
+    },
+    {
+      "path": "toolscripts/squirrel_native_create016_oracle.py",
+      "bytes": 8367,
+      "sha256": "4bc82eca07298c19a7b016adc1194f2760cdfe4fd774bd3a555952a97fc6879a"
+    },
+    {
+      "path": "toolscripts/squirrel_native_create016_replay.py",
+      "bytes": 5297,
+      "sha256": "b7b2de570b2628dfe3f06f51da9b484245fd417e776d56f264837cdc57be2d36"
+    }
+  ],
+  "ownedFileCount": 14,
+  "originalReturns": 112,
+  "sourceReturns": 112,
+  "nativeReturns": 112,
+  "androidModelReturns": 112,
+  "testsPassed": 9,
+  "returningControls": 6,
+  "newCanonicalInstructionBytesProposedForReview": 396,
+  "requestedExactBytes": 0,
+  "duplicateCanonicalCreditGranted": 0,
+  "wholeVmCreditGranted": 0,
+  "fullTransitiveGraphClosed": false,
+  "committedSourceReplay": false,
+  "physicalAndroidOrGameExecution": false,
+  "providerSelection": "native_create.c plus explicit vm_storage.c, opaque core, actual prototype011 and native013 production pairs, ordinary compiler runtime, declared allocation/disposal services. Fixture files excluded; native_fixture.c is Windows-only and needs no generated header. Callable is stored, never invoked."
+}
