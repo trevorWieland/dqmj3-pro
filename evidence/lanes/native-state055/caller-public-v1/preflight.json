@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "status": "new-public-C-independent-compiler-preflight",
+  "compilations": 6,
+  "rows": [
+    {
+      "source": {
+        "path": "src/native/wave055/address055.c",
+        "bytes": 2515,
+        "sha256": "3db78c15e7629b8d10951f927f56866dee1591bd95f89b5b802a8a98ef358123"
+      },
+      "profile": "arm",
+      "compiler": {
+        "path": "tools/clang-21/clang.exe",
+        "bytes": 99559064,
+        "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+      },
+      "command": {
+        "argv": [
+          "<repo>\\tools\\clang-21\\clang.exe",
+          "--target=arm-none-eabi",
+          "-mcpu=mpcore",
+          "-marm",
+          "-mfpu=vfp",
+          "-mfloat-abi=softfp",
+          "-std=c11",
+          "-O2",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-ffp-contract=off",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-I",
+          "<repo>\\src\\native\\wave055",
+          "-c",
+          "<repo>\\src\\native\\wave055\\address055.c",
+          "-o",
+          "<repo>\\work\\native-state055-caller-public\\v1\\preflight\\arm-address055.c.o"
+        ],
+        "returncode": 0
+      },
+      "object": {
+        "path": "work/native-state055-caller-public/v1/preflight/arm-address055.c.o",
+        "bytes": 2964,
+        "sha256": "bcf060687385d286bdda19d1a0d657636031f6f7256e2ce11738f1dadaf00f4d"
+      }
+    },
+    {
+      "source": {
+        "path": "src/native/wave055/address055.c",
+        "bytes": 2515,
+        "sha256": "3db78c15e7629b8d10951f927f56866dee1591bd95f89b5b802a8a98ef358123"
+      },
+      "profile": "windows",
+      "compiler": {
+        "path": "tools/clang-21/clang.exe",
+        "bytes": 99559064,
+        "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+      },
+      "command": {
+        "argv": [
+          "<repo>\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-ffp-contract=off",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-I",
+          "<repo>\\src\\native\\wave055",
+          "-c",
+          "<repo>\\src\\native\\wave055\\address055.c",
+          "-o",
+          "<repo>\\work\\native-state055-caller-public\\v1\\preflight\\windows-address055.c.o"
+        ],
+        "returncode": 0
+      },
+      "object": {
+        "path": "work/native-state055-caller-public/v1/preflight/windows-address055.c.o",
+        "bytes": 2559,
+        "sha256": "90fc49cd4a03bc91cead5d025a8ba61d7ab97101f6ca24cb07069b1f1eff174f"
+      }
+    },
+    {
+      "source": {
+        "path": "src/native/wave055/address055.c",
+        "bytes": 2515,
+        "sha256": "3db78c15e7629b8d10951f927f56866dee1591bd95f89b5b802a8a98ef358123"
+      },
+      "profile": "a64",
+      "compiler": {
+        "path": "tools/clang-21/clang.exe",
+        "bytes": 99559064,
+        "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+      },
+      "command": {
+        "argv": [
+          "<repo>\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android21",
+          "-march=armv8-a",
+          "-mno-outline-atomics",
+          "-std=c11",
+          "-O2",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-ffp-contract=off",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-I",
+          "<repo>\\src\\native\\wave055",
+          "-c",
+          "<repo>\\src\\native\\wave055\\address055.c",
+          "-o",
+          "<repo>\\work\\native-state055-caller-public\\v1\\preflight\\a64-address055.c.o"
+        ],
+        "returncode": 0
+      },
+      "object": {
+        "path": "work/native-state055-caller-public/v1/preflight/a64-address055.c.o",
+        "bytes": 3552,
+        "sha256": "3f7bbd185403af2b79d5ace686bdee7278ae82f055c87e20f875665806732eac"
+      }
+    },
+    {
+      "source": {
+        "path": "src/native/wave055/selector055.c",
+        "bytes": 5767,
+        "sha256": "7ee06adb4db98fa1162355e783d6ab36a5c449b552f08c64195ed96380b0fd5b"
+      },
+      "profile": "arm",
+      "compiler": {
+        "path": "tools/clang-21/clang.exe",
+        "bytes": 99559064,
+        "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+      },
+      "command": {
+        "argv": [
+          "<repo>\\tools\\clang-21\\clang.exe",
+          "--target=arm-none-eabi",
+          "-mcpu=mpcore",
+          "-marm",
+          "-mfpu=vfp",
+          "-mfloat-abi=softfp",
+          "-std=c11",
+          "-O2",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-ffp-contract=off",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-I",
+          "<repo>\\src\\native\\wave055",
+          "-c",
+          "<repo>\\src\\native\\wave055\\selector055.c",
+          "-o",
+          "<repo>\\work\\native-state055-caller-public\\v1\\preflight\\arm-selector055.c.o"
+        ],
+        "returncode": 0
+      },
+      "object": {
+        "path": "work/native-state055-caller-public/v1/preflight/arm-selector055.c.o",
+        "bytes": 3024,
+        "sha256": "4293b19b8c20c8ada68a959792d4be498007a5835cc9c54c8ef13dbaf5d7450b"
+      }
+    },
+    {
+      "source": {
+        "path": "src/native/wave055/selector055.c",
+        "bytes": 5767,
+        "sha256": "7ee06adb4db98fa1162355e783d6ab36a5c449b552f08c64195ed96380b0fd5b"
+      },
+      "profile": "windows",
+      "compiler": {
+        "path": "tools/clang-21/clang.exe",
+        "bytes": 99559064,
+        "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+      },
+      "command": {
+        "argv": [
+          "<repo>\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-ffp-contract=off",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-I",
+          "<repo>\\src\\native\\wave055",
+          "-c",
+          "<repo>\\src\\native\\wave055\\selector055.c",
+          "-o",
+          "<repo>\\work\\native-state055-caller-public\\v1\\preflight\\windows-selector055.c.o"
+        ],
+        "returncode": 0
+      },
+      "object": {
+        "path": "work/native-state055-caller-public/v1/preflight/windows-selector055.c.o",
+        "bytes": 3372,
+        "sha256": "f452dd21f42133598c7c8f0467978f1722682b2a471aa389b0cb7ae90749ad6d"
+      }
+    },
+    {
+      "source": {
+        "path": "src/native/wave055/selector055.c",
+        "bytes": 5767,
+        "sha256": "7ee06adb4db98fa1162355e783d6ab36a5c449b552f08c64195ed96380b0fd5b"
+      },
+      "profile": "a64",
+      "compiler": {
+        "path": "tools/clang-21/clang.exe",
+        "bytes": 99559064,
+        "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+      },
+      "command": {
+        "argv": [
+          "<repo>\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android21",
+          "-march=armv8-a",
+          "-mno-outline-atomics",
+          "-std=c11",
+          "-O2",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-ffp-contract=off",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-I",
+          "<repo>\\src\\native\\wave055",
+          "-c",
+          "<repo>\\src\\native\\wave055\\selector055.c",
+          "-o",
+          "<repo>\\work\\native-state055-caller-public\\v1\\preflight\\a64-selector055.c.o"
+        ],
+        "returncode": 0
+      },
+      "object": {
+        "path": "work/native-state055-caller-public/v1/preflight/a64-selector055.c.o",
+        "bytes": 2952,
+        "sha256": "ebe10b29e446c78f7f82d731cf7c4fe6e4071260345a3ccdb8e0e36f2b15c058"
+      }
+    }
+  ],
+  "privateOriginalInputRequired": false,
+  "originalProgramExecuted": false,
+  "windowsOnlyNewProductionC": false,
+  "sourceCreditGranted": 0,
+  "producer": {
+    "path": "toolscripts/native_caller055_preflight.py",
+    "bytes": 1523,
+    "sha256": "f33cf4c06284b835e65f977075f6f75c0c0f10610f19c5e4667a4cd85fdc87ce"
+  }
+}

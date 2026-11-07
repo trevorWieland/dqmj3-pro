@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 1,
+  "normallyReturningControls": 4,
+  "platformExecutions": 12,
+  "cases": [
+    {
+      "label": "fixed-window-upper-end-exclusive",
+      "source": {
+        "path": "work/native-state055-caller-public/v1/address-controls/fixed-window-upper-end-exclusive/address055.c",
+        "bytes": 2559,
+        "sha256": "8401d9baead6863453a8b32b4c8f74b3bef45ad84d14d4c09fd446c63e51dc9f"
+      },
+      "build": {
+        "path": "work/native-state055-caller-public/v1/address-controls/fixed-window-upper-end-exclusive/build.json",
+        "bytes": 7341,
+        "sha256": "2752d011ccd715519018c000ce66969e78141fde569e6aac310b45e69b14a650"
+      },
+      "input": {
+        "label": "empty-0x1f600000",
+        "address": 526385152,
+        "first": {
+          "base": 0,
+          "length": 0,
+          "offset": 0
+        },
+        "second": {
+          "base": 0,
+          "length": 0,
+          "offset": 0
+        },
+        "objectAddress": 0,
+        "objectLength": 0
+      },
+      "actualOriginalValue": 408944640,
+      "authoredArm": {
+        "returned": 0,
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "savedIntegerVfpSpPreserved": true,
+        "regionPointer": 0,
+        "targetToken": 0,
+        "nativePointerTruncated": false,
+        "declaredPointerBytes": 4,
+        "compiledSourcePcsCount": 74,
+        "compiledSourcePcsSha256": "d4f3160ad94f6602a30f218b5512aef3d9bf8f9bd5faa68d390e9904b8e24c21"
+      },
+      "actualWindows": {
+        "returned": 0,
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualWindows": true,
+        "regionPointer": 0,
+        "targetToken": 0,
+        "declaredPointerBytes": 8,
+        "nativePointerTruncated": false,
+        "targetTokenDerivedFromNativePointer": false
+      },
+      "highAarch64": {
+        "returned": 0,
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "savedIntegerVfpSpPreserved": true,
+        "regionPointer": 0,
+        "targetToken": 0,
+        "nativePointerTruncated": false,
+        "declaredPointerBytes": 8,
+        "compiledSourcePcsCount": 76,
+        "compiledSourcePcsSha256": "57e63110aad4d81cf73acb5663741542baf2be6cb98f4c7bc7d9e3b9c58c70f8"
+      },
+      "allReturnedNormally": true,
+      "allRejectedByIndependentModel": true
+    },
+    {
+      "label": "first-window-end-inclusive",
+      "source": {
+        "path": "work/native-state055-caller-public/v1/address-controls/first-window-end-inclusive/address055.c",
+        "bytes": 2588,
+        "sha256": "e667b7e8591b0a290f633b8784e67ee7a73116bbd7d0f5e94f200aaaa0e58834"
+      },
+      "build": {
+        "path": "work/native-state055-caller-public/v1/address-controls/first-window-end-inclusive/build.json",
+        "bytes": 7233,
+        "sha256": "d16c86ef031d42c86cae84724a381510e5490ae21ce1b507da8d5d55e5a87aa5"
+      },
+      "input": {
+        "label": "first-converted-0x20000040",
+        "address": 536870976,
+        "first": {
+          "base": 536870912,
+          "length": 64,
+          "offset": 268435456
+        },
+        "second": {
+          "base": 0,
+          "length": 0,
+          "offset": 0
+        },
+        "objectAddress": 0,
+        "objectLength": 0
+      },
+      "actualOriginalValue": 0,
+      "authoredArm": {
+        "returned": 805306432,
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "savedIntegerVfpSpPreserved": true,
+        "regionPointer": 0,
+        "targetToken": 0,
+        "nativePointerTruncated": false,
+        "declaredPointerBytes": 4,
+        "compiledSourcePcsCount": 38,
+        "compiledSourcePcsSha256": "de32b3f0928182df92e45b803c9eecf81486277fc2c426fdc3f5f9c2632d63e7"
+      },
+      "actualWindows": {
+        "returned": 805306432,
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualWindows": true,
+        "regionPointer": 0,
+        "targetToken": 0,
+        "declaredPointerBytes": 8,
+        "nativePointerTruncated": false,
+        "targetTokenDerivedFromNativePointer": false
+      },
+      "highAarch64": {
+        "returned": 805306432,
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "savedIntegerVfpSpPreserved": true,
+        "regionPointer": 0,
+        "targetToken": 0,
+        "nativePointerTruncated": false,
+        "declaredPointerBytes": 8,
+        "compiledSourcePcsCount": 41,
+        "compiledSourcePcsSha256": "e67a8b490ce702672a20fe7c0357fc0db7137f210e55ea86525b50f1d040f089"
+      },
+      "allReturnedNormally": true,
+      "allRejectedByIndependentModel": true
+    },
+    {
+      "label": "wrong-first-offset",
+      "source": {
+        "path": "work/native-state055-caller-public/v1/address-controls/wrong-first-offset/address055.c",
+        "bytes": 2586,
+        "sha256": "3226826b32bff611623cde15df4d82de030789901d9e67d9bfd291052de1e53f"
+      },
+      "build": {
+        "path": "work/native-state055-caller-public/v1/address-controls/wrong-first-offset/build.json",
+        "bytes": 7089,
+        "sha256": "6e1bcc283431fdb21a8c2fa2f93c64cffb5eb33bf0dce64ace651034e207f375"
+      },
+      "input": {
+        "label": "first-converted-0x20000000",
+        "address": 536870912,
+        "first": {
+          "base": 536870912,
+          "length": 64,
+          "offset": 268435456
+        },
+        "second": {
+          "base": 0,
+          "length": 0,
+          "offset": 0
+        },
+        "objectAddress": 0,
+        "objectLength": 0
+      },
+      "actualOriginalValue": 805306368,
+      "authoredArm": {
+        "returned": 536870912,
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "savedIntegerVfpSpPreserved": true,
+        "regionPointer": 0,
+        "targetToken": 0,
+        "nativePointerTruncated": false,
+        "declaredPointerBytes": 4,
+        "compiledSourcePcsCount": 37,
+        "compiledSourcePcsSha256": "6945e37f75c7ff22180f070d1018b7c95d14c7eb0f13f955b3df3689b78585b8"
+      },
+      "actualWindows": {
+        "returned": 536870912,
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualWindows": true,
+        "regionPointer": 0,
+        "targetToken": 0,
+        "declaredPointerBytes": 8,
+        "nativePointerTruncated": false,
+        "targetTokenDerivedFromNativePointer": false
+      },
+      "highAarch64": {
+        "returned": 536870912,
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "savedIntegerVfpSpPreserved": true,
+        "regionPointer": 0,
+        "targetToken": 0,
+        "nativePointerTruncated": false,
+        "declaredPointerBytes": 8,
+        "compiledSourcePcsCount": 40,
+        "compiledSourcePcsSha256": "b3d859dc8f69c3d812fde5fa18c8eb7e74c4b3a4043bc212b755e79e6376d2e8"
+      },
+      "allReturnedNormally": true,
+      "allRejectedByIndependentModel": true
+    },
+    {
+      "label": "region-start-one-word-early",
+      "source": {
+        "path": "work/native-state055-caller-public/v1/address-controls/region-start-one-word-early/address055.c",
+        "bytes": 2585,
+        "sha256": "c1afda658490123dc8846cbd44b1c898606cb6788693e7c7951f162d546eab49"
+      },
+      "build": {
+        "path": "work/native-state055-caller-public/v1/address-controls/region-start-one-word-early/build.json",
+        "bytes": 7251,
+        "sha256": "f9ad48e95449d331d9ea8664c8f947901227c8c81614e8d87ff6fd4764524615"
+      },
+      "input": {
+        "label": "middle-object-0x1400017f",
+        "address": 335544703,
+        "first": {
+          "base": 0,
+          "length": 0,
+          "offset": 0
+        },
+        "second": {
+          "base": 0,
+          "length": 0,
+          "offset": 0
+        },
+        "objectAddress": 335544576,
+        "objectLength": 64
+      },
+      "actualOriginalValue": 0,
+      "authoredArm": {
+        "returned": 536871295,
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "savedIntegerVfpSpPreserved": true,
+        "regionPointer": 335544576,
+        "targetToken": 335544576,
+        "nativePointerTruncated": false,
+        "declaredPointerBytes": 4,
+        "compiledSourcePcsCount": 73,
+        "compiledSourcePcsSha256": "56791398c2452fbae9f4b7e45ca4afb3c7442011e94bf05418b72c376ae2146d"
+      },
+      "actualWindows": {
+        "returned": 536871295,
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualWindows": true,
+        "regionPointer": 4831838464,
+        "targetToken": 335544576,
+        "declaredPointerBytes": 8,
+        "nativePointerTruncated": false,
+        "targetTokenDerivedFromNativePointer": false
+      },
+      "highAarch64": {
+        "returned": 536871295,
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "savedIntegerVfpSpPreserved": true,
+        "regionPointer": 4563403008,
+        "targetToken": 335544576,
+        "nativePointerTruncated": false,
+        "declaredPointerBytes": 8,
+        "compiledSourcePcsCount": 76,
+        "compiledSourcePcsSha256": "a2c228897b39608ca46e5e9cde7640a8b3c498f3dd345865a797d667974b798d"
+      },
+      "allReturnedNormally": true,
+      "allRejectedByIndependentModel": true
+    }
+  ],
+  "originalAndProductionSourceUnchanged": true,
+  "producer": {
+    "path": "toolscripts/native_caller055_address_controls.py",
+    "bytes": 2497,
+    "sha256": "9aacc5f3bce5a5db8640c5abc8ce0831a1e4f3975c3561507c33fadcd6a16848"
+  }
+}

@@ -62,3 +62,16 @@
 #define fn_001a8604 sq_table_next043
 #define fn_001a178c sq_class_next043
 #define fn_00173d4c sq_startup_relative049
+#define fn_006f95a4 state_write055
+#define fn_007440bc state_select055
+#define fn_00166b28 address_convert_entry055
+#define fn_0015fa8c address_convert055
+#define fn_0019e94c address_first_map055
+#define fn_00170868 address_second_enabled055
+#define fn_00170880 address_second_map055
+#define fn_001708cc address_region_length055
+#define fn_001708e4 address_region_base055
+#define fn_0015e284 address_first_base055
+#define fn_0015e218 address_first_length055
+#define fn_0017ca70 address_second_base055
+#define fn_0017ca60 address_second_length055

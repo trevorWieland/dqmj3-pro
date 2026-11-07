@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "name": "state055",
+  "producerSteps": [
+    {
+      "name": "state055-leaf-complete-packet",
+      "args": [
+        "toolscripts/native_state055_packet.py"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "state055-caller-helper-complete-packet",
+      "args": [
+        "toolscripts/native_caller055_packet.py"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "isolated_component_replay",
+    "isolated_intake_cleanup",
+    "refresh_functional_source_names",
+    "refresh_functional_source_names_integration",
+    "native_state055",
+    "native_caller055"
+  ],
+  "packets": [
+    "evidence/lanes/native-state055/leaf-v1/ready.json",
+    "evidence/lanes/native-state055/caller-public-v1/ready.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

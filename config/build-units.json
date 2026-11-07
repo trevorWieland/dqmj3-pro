@@ -25,7 +25,8 @@
       "wave036",
       "wave054",
       "wave053",
-      "wave056"
+      "wave056",
+      "wave055"
     ]
   },
   "units": [
@@ -8534,6 +8535,29 @@
       "source": "src/native/wave056/stream056.c",
       "headers": [
         "src/native/wave056/stream056.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave055/state055.c",
+      "headers": [
+        "src/native/wave055/state055.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave055/selector055.c",
+      "headers": [
+        "src/native/wave055/selector055.h",
+        "src/native/wave055/state055.h",
+        "src/native/wave055/address055.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave055/address055.c",
+      "headers": [
+        "src/native/wave055/address055.h"
       ],
       "role": "bounded-component"
     }
