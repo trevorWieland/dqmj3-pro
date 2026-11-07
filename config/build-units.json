@@ -1666,6 +1666,84 @@
         "src/native/wave005/vm_views.h"
       ],
       "role": "provisional-squirrel-vm-checkpoint"
+    },
+    {
+      "source": "source/squirrel-wave012/native_record_fixture.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "source/squirrel-wave008/generator_release.h",
+        "source/squirrel-wave009/class_release.h",
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/prefix_fixture.h",
+        "source/squirrel-wave012/record_cases.h",
+        "source/squirrel-wave012/record_storage.h",
+        "source/squirrel-wave012/reference_prefix.h",
+        "source/squirrel-wave012/reference_types.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-reference-record-or-mixed-lifetime",
+      "targets": [
+        "windows-x64"
+      ]
+    },
+    {
+      "source": "source/squirrel-wave012/record_runtime.c",
+      "headers": [],
+      "role": "bounded-reference-record-or-mixed-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave012/record_storage.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "source/squirrel-wave008/generator_release.h",
+        "source/squirrel-wave009/class_release.h",
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/record_storage.h",
+        "source/squirrel-wave012/reference_prefix.h",
+        "source/squirrel-wave012/reference_types.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-reference-record-or-mixed-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave012/mixed_lifetime_fixture.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/mixed_lifetime_fixture.h",
+        "source/squirrel-wave012/reference_prefix.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave013/native_closure_release.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-reference-record-or-mixed-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave012/mixed_runtime.c",
+      "headers": [],
+      "role": "bounded-reference-record-or-mixed-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave012/native_mixed_fixture.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/mixed_lifetime_fixture.h",
+        "source/squirrel-wave012/reference_prefix.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave013/native_closure_release.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-reference-record-or-mixed-lifetime",
+      "targets": [
+        "windows-x64"
+      ]
     }
   ],
   "excludedSources": [
