@@ -18,6 +18,8 @@ def checked(memory, operation, context, input_offset, count, output):
         raise ValueError("Invalid MD5 caller context")
     if type(count) is not int or not 0 <= count <= 4096:
         raise ValueError("MD5 count exceeds backed caller memory")
+    if operation == "update" and input_offset is not None and (type(input_offset) is not int or not 0 <= input_offset <= 4096 - count):
+        raise ValueError("MD5 input pointer is outside its declared arena")
     if operation == "update" and count:
         if type(input_offset) is not int or not 0 <= input_offset <= 4096 - count:
             raise ValueError("MD5 input exceeds caller arena")

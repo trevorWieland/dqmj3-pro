@@ -1,0 +1,821 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-coercion-and-stack-string-api",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "acceptedSourceCreditGranted": 0,
+  "functions": [
+    {
+      "symbol": "fn_001a83dc",
+      "canonicalIdentity": {
+        "address": 1737692,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave026/coercion.c",
+        "bytes": 2430,
+        "sha256": "d57221db353b4b7c1fb422edf0672a662a8198d4c6d621c2babd4ed369ec9c59"
+      },
+      "sourceName": "sq_value_to_string026",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 1092,
+        "sha256": "da6577f9eb6baf3c08ac728e22c4b390462645a5e35ec093216af3260ca11025"
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 508,
+      "originalInstructionRanges": [
+        {
+          "start": 1737692,
+          "endExclusive": 1738200,
+          "bytes": 508
+        }
+      ],
+      "reportEntryBytes": 508,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-coercion026/execution.json",
+          "bytes": 2557113,
+          "sha256": "921e6a8cc53de04ef7a78002ee369dfccba55d638293b40dbc8de127a065c790"
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/coercion026-coordinator-58008cd.json",
+          "bytes": 2582,
+          "sha256": "e4c4e695ed31b18247ed53e2651d9f373d21ea0b019748e85f0145a31c331fe6"
+        },
+        "batchCases": 302,
+        "fourTargetObservations": 1208,
+        "returningControls": 14,
+        "originalInstructions": 127,
+        "originalInstructionsVisited": 125,
+        "unvisitedAllocationAssertionInstructions": [
+          1738192,
+          1738196
+        ],
+        "preAliasWholeArenaEqualSets": 0,
+        "postVerifiedCallbackAliasWholeArenaEqualSets": 286,
+        "definedMemoryEqualSets": 302,
+        "inactiveFrameDifferenceSets": 16,
+        "rawPreAliasHashesMismatchOffsetsAndTypedActualAliasesPreserved": true,
+        "callbackAddressAliasesOnlyInPostExecutionComparisonCopies": true,
+        "executedHeapObjectsRegistersCodeLiteralsOrTextPatched": false,
+        "excludedInactiveWordsObserved": false,
+        "nativePointerTextTruncatedOrNormalized": false,
+        "sourceOriginalModuleMapped": false,
+        "actualWindowsAndAarch64Model": true,
+        "wholeMemoryUniversalVmGameAndroidOsOrPhysicalDeviceClaimed": false,
+        "limits": {
+          "schemaVersion": 1,
+          "negativeIndexAccessor": {
+            "address": 1523020,
+            "endExclusive": 1523040,
+            "bytes": 20,
+            "sha256": "84b1ade88a31e4febaafeb566b9febe76fc34bd31dc1da3ee0f55656612de3ff",
+            "canonicalExistingEntry": true,
+            "newSourceOrInventoryCredit": 0
+          },
+          "sharedTypeNamePrefix": {
+            "address": 1646368,
+            "bytes": 8,
+            "fallthroughTail": 1646376,
+            "standaloneReturningFunction": false
+          },
+          "requiredReadyPins": [
+            {
+              "path": "evidence/lanes/squirrel-lookup023/ready.json",
+              "bytes": 6780,
+              "sha256": "2162f8e84ff2197cc443fb50e6bee268fb528ae37fe5e64034f23163c0685acf"
+            },
+            {
+              "path": "evidence/lanes/squirrel-vm-call022/ready.json",
+              "bytes": 15373,
+              "sha256": "64a08d949e507e59737db08356f5f45221ae18581bba315a2e58ce3036742202"
+            }
+          ],
+          "classFactoryUserdataVirtualProviderScriptExecuteGeneralAllocatorGcAndGameRemainExternal": true
+        }
+      }
+    },
+    {
+      "symbol": "fn_007434e8",
+      "canonicalIdentity": {
+        "address": 7615720,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave026/stack_string.c",
+        "bytes": 439,
+        "sha256": "2848716a76687763c80e7abf80096614b46a3bf42f7e65008dbc72dd11271191"
+      },
+      "sourceName": "sq_index_to_string026",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 1092,
+        "sha256": "da6577f9eb6baf3c08ac728e22c4b390462645a5e35ec093216af3260ca11025"
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 152,
+      "originalInstructionRanges": [
+        {
+          "start": 7615720,
+          "endExclusive": 7615872,
+          "bytes": 152
+        }
+      ],
+      "reportEntryBytes": 152,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-coercion026/execution.json",
+          "bytes": 2557113,
+          "sha256": "921e6a8cc53de04ef7a78002ee369dfccba55d638293b40dbc8de127a065c790"
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/coercion026-coordinator-58008cd.json",
+          "bytes": 2582,
+          "sha256": "e4c4e695ed31b18247ed53e2651d9f373d21ea0b019748e85f0145a31c331fe6"
+        },
+        "batchCases": 302,
+        "fourTargetObservations": 1208,
+        "returningControls": 14,
+        "originalInstructions": 38,
+        "originalInstructionsVisited": 38,
+        "unvisitedAllocationAssertionInstructions": [],
+        "preAliasWholeArenaEqualSets": 0,
+        "postVerifiedCallbackAliasWholeArenaEqualSets": 286,
+        "definedMemoryEqualSets": 302,
+        "inactiveFrameDifferenceSets": 16,
+        "rawPreAliasHashesMismatchOffsetsAndTypedActualAliasesPreserved": true,
+        "callbackAddressAliasesOnlyInPostExecutionComparisonCopies": true,
+        "executedHeapObjectsRegistersCodeLiteralsOrTextPatched": false,
+        "excludedInactiveWordsObserved": false,
+        "nativePointerTextTruncatedOrNormalized": false,
+        "sourceOriginalModuleMapped": false,
+        "actualWindowsAndAarch64Model": true,
+        "wholeMemoryUniversalVmGameAndroidOsOrPhysicalDeviceClaimed": false,
+        "limits": {
+          "schemaVersion": 1,
+          "negativeIndexAccessor": {
+            "address": 1523020,
+            "endExclusive": 1523040,
+            "bytes": 20,
+            "sha256": "84b1ade88a31e4febaafeb566b9febe76fc34bd31dc1da3ee0f55656612de3ff",
+            "canonicalExistingEntry": true,
+            "newSourceOrInventoryCredit": 0
+          },
+          "sharedTypeNamePrefix": {
+            "address": 1646368,
+            "bytes": 8,
+            "fallthroughTail": 1646376,
+            "standaloneReturningFunction": false
+          },
+          "requiredReadyPins": [
+            {
+              "path": "evidence/lanes/squirrel-lookup023/ready.json",
+              "bytes": 6780,
+              "sha256": "2162f8e84ff2197cc443fb50e6bee268fb528ae37fe5e64034f23163c0685acf"
+            },
+            {
+              "path": "evidence/lanes/squirrel-vm-call022/ready.json",
+              "bytes": 15373,
+              "sha256": "64a08d949e507e59737db08356f5f45221ae18581bba315a2e58ce3036742202"
+            }
+          ],
+          "classFactoryUserdataVirtualProviderScriptExecuteGeneralAllocatorGcAndGameRemainExternal": true
+        }
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "source/squirrel-wave002/array_views.h",
+      "bytes": 1492,
+      "sha256": "02e549c877765b7cbce879ec29e45c66dc46a1266bf630247775ec43bad2c0f4"
+    },
+    {
+      "path": "source/squirrel-wave004/call_views.h",
+      "bytes": 3085,
+      "sha256": "4e8a0cc46d0aee9b72a8d0435d7efb19b8dd47cf9a4445a8007c4a44d916946e"
+    },
+    {
+      "path": "source/squirrel-wave011/prototype_internal.h",
+      "bytes": 428,
+      "sha256": "83070a74a5644c30643a4b5ec41aed9e412658257bc2ab16535fb7867aefd558"
+    },
+    {
+      "path": "source/squirrel-wave011/prototype_release.h",
+      "bytes": 3432,
+      "sha256": "33309e72078586399c1cf826ea13469541669a18dc17bc210bf23c3450391ba4"
+    },
+    {
+      "path": "source/squirrel-wave012/array_reference.h",
+      "bytes": 954,
+      "sha256": "f793588dc85d4b444cfbdff6a1d7ad5e660e14b09a370b617f09aa475e84cc03"
+    },
+    {
+      "path": "source/squirrel-wave012/reference_prefix.h",
+      "bytes": 1824,
+      "sha256": "a1c5422925b54a994b500be6805e74e8b8c339fe18bbc57002a7d1807db22ad2"
+    },
+    {
+      "path": "source/squirrel-wave012/reference_types.h",
+      "bytes": 1360,
+      "sha256": "64a44751454449783222f7a7c00654a56f569e8f91a10e0621740c8661c3fbae"
+    },
+    {
+      "path": "source/squirrel-wave013/native_closure_release.h",
+      "bytes": 1486,
+      "sha256": "6723b66bce845aeb133508afb9cc1a8bc9299e5aee7a6d2c1c4b73418d26ef28"
+    },
+    {
+      "path": "source/squirrel-wave014/weak_reference.h",
+      "bytes": 890,
+      "sha256": "fc58b153a5b5801ed60078cb31c436a84fd33803bc0b71102dff70c81579f63e"
+    },
+    {
+      "path": "source/squirrel-wave015/string.h",
+      "bytes": 2497,
+      "sha256": "bad2126f596b07a111c36c19742c4214acc3fa9bec77b72d3cc26566f8a31cee"
+    },
+    {
+      "path": "source/squirrel-wave016/native_create.h",
+      "bytes": 1348,
+      "sha256": "a3925277f8144daac617b475f70fafc515cd3ccdfa9e3a828c98ba331767763f"
+    },
+    {
+      "path": "source/squirrel-wave017/script_closure.h",
+      "bytes": 1360,
+      "sha256": "4379d064694e17209c6f19dd7bb8d9ec26ca6fef3482cf4a51ae383def7b6b0f"
+    },
+    {
+      "path": "source/squirrel-wave019/fixture_internal.h",
+      "bytes": 2469,
+      "sha256": "3790f44c82dce65e8fd329c0f2a748a71bd8574cf775b1690db0f38befc42e5b"
+    },
+    {
+      "path": "source/squirrel-wave019/fixture_services.c",
+      "bytes": 3775,
+      "sha256": "837cc109e0e8032b4c479f0b72fe6cca171897b5d66e0a09d7041506c3715850"
+    },
+    {
+      "path": "source/squirrel-wave019/table.h",
+      "bytes": 1877,
+      "sha256": "a08e56e7071fdc75351bcb7cc366823938a7484963e88094d2d42ad9f4b73e83"
+    },
+    {
+      "path": "source/squirrel-wave019/table_internal.h",
+      "bytes": 815,
+      "sha256": "44d072b3b94518060ca578d294075e809afae433f1f33aa22cf1666fa4e058ac"
+    },
+    {
+      "path": "source/squirrel-wave020/fixture_internal.h",
+      "bytes": 1414,
+      "sha256": "a5b7a954c107840784b96a8b3f4105e576e4e3760c2af51853cf91e4bfedc295"
+    },
+    {
+      "path": "source/squirrel-wave020/fixture_services.c",
+      "bytes": 4383,
+      "sha256": "f279c4f5299930f84e6bd8adf2ba6cec4d67e649790451e4f4572dc802f1c50e"
+    },
+    {
+      "path": "source/squirrel-wave020/lookup.h",
+      "bytes": 4915,
+      "sha256": "37d79b9460b3206ca91ea800e0559abee8d1b294a5b9914c03790ba5a9c688ab"
+    },
+    {
+      "path": "source/squirrel-wave020/lookup_error.h",
+      "bytes": 929,
+      "sha256": "cd474c358623376746f6c9ef2b78a04af52aa00ca685cfcf6d0698f55761a188"
+    },
+    {
+      "path": "source/squirrel-wave020/metamethod.h",
+      "bytes": 1644,
+      "sha256": "2ea3fa8e6a46010a1d42b2324581caa8f851860e09802b656f9d966d2df2051b"
+    },
+    {
+      "path": "source/squirrel-wave022/vm_call.h",
+      "bytes": 4008,
+      "sha256": "7e8e2240f89c6b466380d9f910fd4a29c9ac31a54e628c18e2903363158c1c36"
+    },
+    {
+      "path": "source/squirrel-wave023/fixture_internal.h",
+      "bytes": 1826,
+      "sha256": "88718b1026e9b08ca915a3f99364d0e290c8579a1e8ff7bd35ca2cf4f025a8d7"
+    },
+    {
+      "path": "source/squirrel-wave023/fixture_services020.c",
+      "bytes": 1409,
+      "sha256": "7e07002906987cbf3bfe672815d79973882f2b379a8f2edb4ad5715ae971c675"
+    },
+    {
+      "path": "source/squirrel-wave023/float_text.h",
+      "bytes": 237,
+      "sha256": "5a278228ad9f74e97df447155bca5e6fdb891e9ced57f5bab9eab1c0d8224c6c"
+    },
+    {
+      "path": "source/squirrel-wave023/instance_meta.h",
+      "bytes": 300,
+      "sha256": "08eb4c442fa13eab8ff697206716d627caae04ea6f23e8bde6fa8cf834149fa8"
+    },
+    {
+      "path": "source/squirrel-wave026/coercion.h",
+      "bytes": 787,
+      "sha256": "5787e47d2659664e68a3cb9fe41ca11b549f5f25b435ed4719aadf09694cbb04"
+    },
+    {
+      "path": "source/squirrel-wave026/fixture_internal.h",
+      "bytes": 1086,
+      "sha256": "4dd07f44a240c8ead2e2f57e00fc3d097ffd89feee20135d8c6adcc751bb3ad8"
+    },
+    {
+      "path": "source/squirrel-wave026/float_text.h",
+      "bytes": 237,
+      "sha256": "6bde5622705928b7b4c26e2803bc893509df1a63b8b36b087dc869cb887dfb3e"
+    },
+    {
+      "path": "src/native/wave005/vm_views.h",
+      "bytes": 1898,
+      "sha256": "1bf160e4679afbe5a59a244e78f9753684c93a109f7a703f78dff80d04f4840a"
+    }
+  ],
+  "sourceDependencies": [
+    {
+      "path": "source/squirrel-wave020/fixture_run.c",
+      "bytes": 5647,
+      "sha256": "0631d8e7664f6aa4ecf1adef87fc2ea41097d70edfbaba8ce3e9dbef1072f935"
+    },
+    {
+      "path": "source/squirrel-wave020/fixture_state.c",
+      "bytes": 14154,
+      "sha256": "e1e1647ae2ce2a3ddccf76bce51c7eb5c29a26ce07c6b24548c4040fa193ac88"
+    },
+    {
+      "path": "source/squirrel-wave020/lookup_bindings.c",
+      "bytes": 1995,
+      "sha256": "081a40b761423a60538f79f5b0be319c5cffaabc1c37a5f252e072b55bde3d0a"
+    },
+    {
+      "path": "source/squirrel-wave020/lookup_error.c",
+      "bytes": 2608,
+      "sha256": "c103367fc4cf20f16773a4e42e5e1de9cedfa8f8be89c5549a1e3fe9270b49da"
+    },
+    {
+      "path": "source/squirrel-wave020/lookup_fallback.c",
+      "bytes": 3526,
+      "sha256": "3705f4395c18c6e8fac3b8af00353db0b94ce8b91db34cd96226a714c83248b2"
+    },
+    {
+      "path": "source/squirrel-wave020/lookup_get.c",
+      "bytes": 1896,
+      "sha256": "d3fe66cbd9343c52de07195e6f45c432cb15f18c067cebcc1ff11d2bd04720ce"
+    },
+    {
+      "path": "source/squirrel-wave020/lookup_scratch.c",
+      "bytes": 917,
+      "sha256": "2564bbb875fe60331e1709f74a364052196b984453802615ae1f9ff777073f1b"
+    },
+    {
+      "path": "source/squirrel-wave020/lookup_type_name.c",
+      "bytes": 778,
+      "sha256": "3587a532248eb4e78e1796094c3fb623ae407d9c81566051a998cce0a52e70e6"
+    },
+    {
+      "path": "source/squirrel-wave020/metamethod.c",
+      "bytes": 762,
+      "sha256": "097d2703b29e0f0e87404dc59b90807a36fb42560b353fc169482a8efc8e56ad"
+    },
+    {
+      "path": "source/squirrel-wave020/metamethod_call.c",
+      "bytes": 770,
+      "sha256": "ec1a49af1a16d175ddd0b198448c3c4b66470093d4b8f04cc3595e9bbea78344"
+    },
+    {
+      "path": "source/squirrel-wave020/metamethod_publication.c",
+      "bytes": 646,
+      "sha256": "02638eca50d622e39461acad5d160b90f2a91c62c632b78f16a2bfeef899110a"
+    },
+    {
+      "path": "source/squirrel-wave019/table_get.c",
+      "bytes": 2867,
+      "sha256": "3dac38e78a6485d0d2b0d0538cd165454307c06c0d973ac408b40bcb43f80af8"
+    },
+    {
+      "path": "source/squirrel-wave019/table_initialize.c",
+      "bytes": 1364,
+      "sha256": "f0db603ff1a23ee59505c6aa671bec46d8f87b0fddbfd887b83406ae102d49be"
+    },
+    {
+      "path": "source/squirrel-wave019/table_mutation.c",
+      "bytes": 3551,
+      "sha256": "bd1ae31ad44473762bbde83abf715b1d40fdf7eed52479452bfd5e5dbe22bc83"
+    },
+    {
+      "path": "source/squirrel-wave019/table_lifetime.c",
+      "bytes": 2015,
+      "sha256": "417229d22e067756ee7672fbf7032a4c011a6729f4486edee8aacd40356f9a94"
+    },
+    {
+      "path": "source/squirrel-wave019/table_vtables.c",
+      "bytes": 263,
+      "sha256": "44c58ef4d82c87300c0b5a6eb9f7c7ec672ba5300a66a346c1f99b472373a637"
+    },
+    {
+      "path": "source/squirrel-wave019/fixture_state.c",
+      "bytes": 8494,
+      "sha256": "56a02d725027f78f7135fee1f1f7a950b7e1639d43558e95f76e4432e8f805a6"
+    },
+    {
+      "path": "source/squirrel-wave012/reference_prefix.c",
+      "bytes": 1693,
+      "sha256": "09a4073e8e71f3f50769bc9058399cce666da47b157401af5915581134560408"
+    },
+    {
+      "path": "source/squirrel-wave012/reference_dispatch_opaque.c",
+      "bytes": 228,
+      "sha256": "ca86896d8149d55f06cfdd92ddc2fc126fb35818b4dff9d955c25ee69f375906"
+    },
+    {
+      "path": "source/squirrel-wave012/mixed_runtime.c",
+      "bytes": 1025,
+      "sha256": "ccc98d057681cd2a98cc8bf418dbf9fe9ca688b4e319331c0629e9c7501d5788"
+    },
+    {
+      "path": "source/squirrel-wave012/array_reference.c",
+      "bytes": 2154,
+      "sha256": "10e77d8b04fdb0edb124c2f03ca66a7ae49c59492fbfc57679fef97dd1f7b596"
+    },
+    {
+      "path": "source/squirrel-wave012/array_vtables.c",
+      "bytes": 303,
+      "sha256": "db7c722136137266112e7bb6a02c2d1a86a5224858b79a6ec389770f65deacf7"
+    },
+    {
+      "path": "source/squirrel-wave012/vector_values.c",
+      "bytes": 1337,
+      "sha256": "a709e879402de6747ad1bf9702d7170e11696b085dd3607d1b368d8d3235446d"
+    },
+    {
+      "path": "source/squirrel-wave016/vm_storage.c",
+      "bytes": 1568,
+      "sha256": "2def7a8f618837aee3938d81480dd5eef6788abe237cac6ffbf757bf2f605a2e"
+    },
+    {
+      "path": "source/squirrel-wave011/prototype_release.c",
+      "bytes": 2353,
+      "sha256": "f772017b62016f4f29765ab2ff3a70d94f335be869ba85b3f1e720df5ed4022f"
+    },
+    {
+      "path": "source/squirrel-wave011/vtables.c",
+      "bytes": 459,
+      "sha256": "e9097052e4dfe7538485bee7f1a54570b66937b2db49c9d69d6f23c84b0635a7"
+    },
+    {
+      "path": "source/squirrel-wave013/native_closure_release.c",
+      "bytes": 1704,
+      "sha256": "eb3f68ac72008a476873ad64801134f969d28449b2c457fb843d3cd51daa723f"
+    },
+    {
+      "path": "source/squirrel-wave013/vtables.c",
+      "bytes": 389,
+      "sha256": "e53c7a0adc645977ae0c3e140a8914fe5b107fc385a6ca5db8853778cd8a9eb5"
+    },
+    {
+      "path": "source/squirrel-wave014/weak_reference.c",
+      "bytes": 1095,
+      "sha256": "d9719bf30cb04dcffb6ae41b5772e879ef1329d081b1f4955f6128a3c39c9f9b"
+    },
+    {
+      "path": "source/squirrel-wave014/vtables.c",
+      "bytes": 345,
+      "sha256": "49a8f45840425adc5dd6433014d2b503722e98589f08a4a06f966b02252fb631"
+    },
+    {
+      "path": "source/squirrel-wave015/string.c",
+      "bytes": 4148,
+      "sha256": "cd10d0aaeb53701160428b626054ef770b4f7bbec918c0fa47bf6621010c8a96"
+    },
+    {
+      "path": "source/squirrel-wave015/bytes.c",
+      "bytes": 1343,
+      "sha256": "dd6c00224e775bade17253458cead7c2a26ec72217936d901e30a541036dcd90"
+    },
+    {
+      "path": "source/squirrel-wave015/vtables.c",
+      "bytes": 341,
+      "sha256": "1150299e779dc53d3259584e7197e063da501599c84b6fb410b553620944c404"
+    },
+    {
+      "path": "source/squirrel-wave017/script_closure.c",
+      "bytes": 1639,
+      "sha256": "af8470d0365b98e1af4d83c7269a56fd6d98305adfcd6006b75cbdbfb9220658"
+    },
+    {
+      "path": "source/squirrel-wave017/vtables.c",
+      "bytes": 409,
+      "sha256": "8581552ee7469d57be0ab5d66e8da0e44f65574433394c1031e840f445822a0f"
+    },
+    {
+      "path": "source/squirrel-wave022/vm_storage.c",
+      "bytes": 3516,
+      "sha256": "6fe073fb7997128f5a1bba21409333b400331446712fd09f0c79ed7685c9abdc"
+    },
+    {
+      "path": "source/squirrel-wave022/generic_call.c",
+      "bytes": 1196,
+      "sha256": "0c0fb372a35efa7df6949b01f15ecec463d6f09ec2c956afbdfb71b7a0772d08"
+    },
+    {
+      "path": "source/squirrel-wave022/native_call.c",
+      "bytes": 5246,
+      "sha256": "6700bf2960c7b2bda84c6a5b9cab5bafd62c6bb7dd16c3d0bb8653816bdd48ee"
+    },
+    {
+      "path": "source/squirrel-wave022/call_frames.c",
+      "bytes": 872,
+      "sha256": "1413a8deda79267a2ccadbc96250c0b1de7c372d42e55cfd69f06c84a37d41d1"
+    },
+    {
+      "path": "source/squirrel-wave022/array_native.c",
+      "bytes": 1360,
+      "sha256": "3567f0d1d7d27d085820370593295be383a5fd15f7531ed7d0eb7d7db5b8c3cc"
+    },
+    {
+      "path": "source/squirrel-wave022/error_service.c",
+      "bytes": 171,
+      "sha256": "c8bb738dc38c4ea87c2f7147bc638f7df55115e72d89be30000d5cb32d39c0df"
+    },
+    {
+      "path": "source/squirrel-wave023/fixture_call022.c",
+      "bytes": 7831,
+      "sha256": "47622648f447593c603c6e071067b94cbe543aafe1fd4ce2aaebf95cba314d6f"
+    },
+    {
+      "path": "source/squirrel-wave023/fixture_call_services.c",
+      "bytes": 2493,
+      "sha256": "04d2b6347e677d1e4ef9de38e2a33676d56cebd4504cfe4b334664689950663e"
+    },
+    {
+      "path": "source/squirrel-wave023/fixture_float.c",
+      "bytes": 1528,
+      "sha256": "ea2611bf64299496a48b3457084609fcfad5f81ddab751709bfb681b40ddeb52"
+    },
+    {
+      "path": "source/squirrel-wave023/fixture_instance.c",
+      "bytes": 652,
+      "sha256": "0cd6f1e6a6e19682b658ebc94ac8827bd6634aa2f4fbc5475208b070e6001f1d"
+    },
+    {
+      "path": "source/squirrel-wave023/fixture_run.c",
+      "bytes": 7025,
+      "sha256": "7efa026a379cbee03d8ab0d3d4e2571666e5952a847f42ca7dabf9a5fd0f304b"
+    },
+    {
+      "path": "source/squirrel-wave023/fixture_services019.c",
+      "bytes": 1454,
+      "sha256": "dcd657f0ede7d2e2ab900ab6f27a39a1883364af6ecaeae0cc157efb3b1f8ee8"
+    },
+    {
+      "path": "source/squirrel-wave023/float_text.c",
+      "bytes": 3606,
+      "sha256": "ccbdad1d60b9eb1098e465402688b812e468814f379b5a6d838a28575e3ed68c"
+    },
+    {
+      "path": "source/squirrel-wave023/instance_meta.c",
+      "bytes": 372,
+      "sha256": "76bf68bb65cdcc2c4859a3f4a62bb6df2820d3fa2f5af0f467b14a0ed4c2f1f4"
+    },
+    {
+      "path": "source/squirrel-wave026/coercion.c",
+      "bytes": 2430,
+      "sha256": "d57221db353b4b7c1fb422edf0672a662a8198d4c6d621c2babd4ed369ec9c59"
+    },
+    {
+      "path": "source/squirrel-wave026/fixture_checks.c",
+      "bytes": 2069,
+      "sha256": "55f9c2f1a1a00d3f857474c8c8973034c875dbc06bf8389e5c3574e61f63465d"
+    },
+    {
+      "path": "source/squirrel-wave026/fixture_meta.c",
+      "bytes": 2779,
+      "sha256": "c61356d74b96b4c67570d335d4e1b5c2c17009a23546c35ad76981343315eba9"
+    },
+    {
+      "path": "source/squirrel-wave026/fixture_observer.c",
+      "bytes": 1685,
+      "sha256": "ed4beb68e44e30f91c9ac67f71cce4946348337ff8ef9ca784b67711c8d45b65"
+    },
+    {
+      "path": "source/squirrel-wave026/fixture_pointer.c",
+      "bytes": 308,
+      "sha256": "8859a73d48f911806dc93e105c347e92eb9c34eb1ac1aa0c11d0c6d4ac351bbf"
+    },
+    {
+      "path": "source/squirrel-wave026/fixture_run.c",
+      "bytes": 7392,
+      "sha256": "556885f1ed129b20be6f56ef563fe72e3a6479eb3737307c6a4394b7d42e5c7b"
+    },
+    {
+      "path": "source/squirrel-wave026/fixture_scratch.c",
+      "bytes": 1094,
+      "sha256": "44871ef5545ad31e5167c64e7bcb313480ba52fcb60cd7fad3607964b4bb924e"
+    },
+    {
+      "path": "source/squirrel-wave026/fixture_services.c",
+      "bytes": 251,
+      "sha256": "b8909d536f3883c94e2c334bb96e19cac6a7f8fc9421f494a596c1638c0c5edf"
+    },
+    {
+      "path": "source/squirrel-wave026/float_text.c",
+      "bytes": 3672,
+      "sha256": "5866dd39126862285eb719a80ac5c1a8ee3b9441e03ce3d26d3b8e47e7687fb7"
+    },
+    {
+      "path": "source/squirrel-wave026/pointer_text.c",
+      "bytes": 635,
+      "sha256": "eb10e25d33303833afae44d995c285ef31f91e293e5b226f395fbb68b6aadaff"
+    },
+    {
+      "path": "source/squirrel-wave026/scalar_text.c",
+      "bytes": 1187,
+      "sha256": "a2e0b11a4de2c4d5d43f41d09d76f9a2519ebf7a0e8d68b37b64c8fe7e566897"
+    },
+    {
+      "path": "source/squirrel-wave026/stack_string.c",
+      "bytes": 439,
+      "sha256": "2848716a76687763c80e7abf80096614b46a3bf42f7e65008dbc72dd11271191"
+    },
+    {
+      "path": "source/squirrel-wave026/coercion.h",
+      "bytes": 787,
+      "sha256": "5787e47d2659664e68a3cb9fe41ca11b549f5f25b435ed4719aadf09694cbb04"
+    },
+    {
+      "path": "source/squirrel-wave022/vm_call.h",
+      "bytes": 4008,
+      "sha256": "7e8e2240f89c6b466380d9f910fd4a29c9ac31a54e628c18e2903363158c1c36"
+    },
+    {
+      "path": "source/squirrel-wave020/lookup_error.h",
+      "bytes": 929,
+      "sha256": "cd474c358623376746f6c9ef2b78a04af52aa00ca685cfcf6d0698f55761a188"
+    },
+    {
+      "path": "source/squirrel-wave020/lookup.h",
+      "bytes": 4915,
+      "sha256": "37d79b9460b3206ca91ea800e0559abee8d1b294a5b9914c03790ba5a9c688ab"
+    },
+    {
+      "path": "source/squirrel-wave020/metamethod.h",
+      "bytes": 1644,
+      "sha256": "2ea3fa8e6a46010a1d42b2324581caa8f851860e09802b656f9d966d2df2051b"
+    },
+    {
+      "path": "source/squirrel-wave012/array_reference.h",
+      "bytes": 954,
+      "sha256": "f793588dc85d4b444cfbdff6a1d7ad5e660e14b09a370b617f09aa475e84cc03"
+    },
+    {
+      "path": "source/squirrel-wave014/weak_reference.h",
+      "bytes": 890,
+      "sha256": "fc58b153a5b5801ed60078cb31c436a84fd33803bc0b71102dff70c81579f63e"
+    },
+    {
+      "path": "source/squirrel-wave015/string.h",
+      "bytes": 2497,
+      "sha256": "bad2126f596b07a111c36c19742c4214acc3fa9bec77b72d3cc26566f8a31cee"
+    },
+    {
+      "path": "source/squirrel-wave012/reference_types.h",
+      "bytes": 1360,
+      "sha256": "64a44751454449783222f7a7c00654a56f569e8f91a10e0621740c8661c3fbae"
+    },
+    {
+      "path": "source/squirrel-wave011/prototype_release.h",
+      "bytes": 3432,
+      "sha256": "33309e72078586399c1cf826ea13469541669a18dc17bc210bf23c3450391ba4"
+    },
+    {
+      "path": "source/squirrel-wave012/reference_prefix.h",
+      "bytes": 1824,
+      "sha256": "a1c5422925b54a994b500be6805e74e8b8c339fe18bbc57002a7d1807db22ad2"
+    },
+    {
+      "path": "source/squirrel-wave004/call_views.h",
+      "bytes": 3085,
+      "sha256": "4e8a0cc46d0aee9b72a8d0435d7efb19b8dd47cf9a4445a8007c4a44d916946e"
+    },
+    {
+      "path": "source/squirrel-wave002/array_views.h",
+      "bytes": 1492,
+      "sha256": "02e549c877765b7cbce879ec29e45c66dc46a1266bf630247775ec43bad2c0f4"
+    },
+    {
+      "path": "src/native/wave005/vm_views.h",
+      "bytes": 1898,
+      "sha256": "1bf160e4679afbe5a59a244e78f9753684c93a109f7a703f78dff80d04f4840a"
+    },
+    {
+      "path": "source/squirrel-wave019/table.h",
+      "bytes": 1877,
+      "sha256": "a08e56e7071fdc75351bcb7cc366823938a7484963e88094d2d42ad9f4b73e83"
+    },
+    {
+      "path": "source/squirrel-wave016/native_create.h",
+      "bytes": 1348,
+      "sha256": "a3925277f8144daac617b475f70fafc515cd3ccdfa9e3a828c98ba331767763f"
+    },
+    {
+      "path": "source/squirrel-wave013/native_closure_release.h",
+      "bytes": 1486,
+      "sha256": "6723b66bce845aeb133508afb9cc1a8bc9299e5aee7a6d2c1c4b73418d26ef28"
+    },
+    {
+      "path": "source/squirrel-wave017/script_closure.h",
+      "bytes": 1360,
+      "sha256": "4379d064694e17209c6f19dd7bb8d9ec26ca6fef3482cf4a51ae383def7b6b0f"
+    },
+    {
+      "path": "source/squirrel-wave026/float_text.h",
+      "bytes": 237,
+      "sha256": "6bde5622705928b7b4c26e2803bc893509df1a63b8b36b087dc869cb887dfb3e"
+    },
+    {
+      "path": "source/squirrel-wave026/fixture_internal.h",
+      "bytes": 1086,
+      "sha256": "4dd07f44a240c8ead2e2f57e00fc3d097ffd89feee20135d8c6adcc751bb3ad8"
+    },
+    {
+      "path": "source/squirrel-wave023/fixture_internal.h",
+      "bytes": 1826,
+      "sha256": "88718b1026e9b08ca915a3f99364d0e290c8579a1e8ff7bd35ca2cf4f025a8d7"
+    },
+    {
+      "path": "source/squirrel-wave023/instance_meta.h",
+      "bytes": 300,
+      "sha256": "08eb4c442fa13eab8ff697206716d627caae04ea6f23e8bde6fa8cf834149fa8"
+    },
+    {
+      "path": "source/squirrel-wave020/fixture_internal.h",
+      "bytes": 1414,
+      "sha256": "a5b7a954c107840784b96a8b3f4105e576e4e3760c2af51853cf91e4bfedc295"
+    },
+    {
+      "path": "source/squirrel-wave019/fixture_internal.h",
+      "bytes": 2469,
+      "sha256": "3790f44c82dce65e8fd329c0f2a748a71bd8574cf775b1690db0f38befc42e5b"
+    },
+    {
+      "path": "source/squirrel-wave019/table_internal.h",
+      "bytes": 815,
+      "sha256": "44d072b3b94518060ca578d294075e809afae433f1f33aa22cf1666fa4e058ac"
+    },
+    {
+      "path": "source/squirrel-wave023/fixture_services020.c",
+      "bytes": 1409,
+      "sha256": "7e07002906987cbf3bfe672815d79973882f2b379a8f2edb4ad5715ae971c675"
+    },
+    {
+      "path": "source/squirrel-wave020/fixture_services.c",
+      "bytes": 4383,
+      "sha256": "f279c4f5299930f84e6bd8adf2ba6cec4d67e649790451e4f4572dc802f1c50e"
+    },
+    {
+      "path": "source/squirrel-wave023/float_text.h",
+      "bytes": 237,
+      "sha256": "5a278228ad9f74e97df447155bca5e6fdb891e9ced57f5bab9eab1c0d8224c6c"
+    },
+    {
+      "path": "source/squirrel-wave019/fixture_services.c",
+      "bytes": 3775,
+      "sha256": "837cc109e0e8032b4c479f0b72fe6cca171897b5d66e0a09d7041506c3715850"
+    },
+    {
+      "path": "source/squirrel-wave011/prototype_internal.h",
+      "bytes": 428,
+      "sha256": "83070a74a5644c30643a4b5ec41aed9e412658257bc2ab16535fb7867aefd558"
+    }
+  ],
+  "frozenReady": {
+    "path": "evidence/lanes/squirrel-coercion026/ready.json",
+    "bytes": 9047,
+    "sha256": "fb4f593dd0d263ecbc9d1c38be9dbf559de7845b5127d56887c44f7ad3923ed3"
+  },
+  "recoveredPhysicalFunctionBytes": 660,
+  "grossCodeByteDenominatorChanged": false,
+  "wholeGameCreditGranted": 0,
+  "producer": {
+    "path": "evidence/functional/producers/review-coercion026.py",
+    "bytes": 4943,
+    "sha256": "ddb91d5bb7b2f0b85df2475a3449a7e2ef6a0020fe078aadb8174306b86ebc2b"
+  }
+}

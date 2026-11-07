@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "productFiles": [
+    "source/squirrel-wave028/execute.h",
+    "source/squirrel-wave028/storage.c",
+    "source/squirrel-wave028/start_call.c",
+    "source/squirrel-wave028/return.c",
+    "source/squirrel-wave028/arithmetic.c",
+    "source/squirrel-wave028/dispatch_call.c",
+    "source/squirrel-wave028/execute.c",
+    "source/squirrel-wave028/call_adapter.c"
+  ],
+  "windowsOnlyFixtureUnits": [
+    "source/squirrel-wave028/native_fixture.c"
+  ],
+  "syntheticInputHeader": "source/squirrel-wave028/fixture_cases.h",
+  "requiredFrozenProviders": [
+    "011actual compact prototypes",
+    "012opaque reference/vector/array/runtime",
+    "013native closure lifetime",
+    "014weak lifetime",
+    "015byte string lifetime",
+    "016native construction/shared bindings",
+    "017script closure lifetime",
+    "020bindings/raise-format/scratch/typename",
+    "022Call/CallNative/frame/storage/array/error",
+    "025literal/error backend"
+  ],
+  "excludeProviders": [
+    "all fixture translation units in production",
+    "other providers of sq_vm_execute022 when call_adapter.c selected",
+    "022literal_format.c when025format.c selected",
+    "legacy006/009 object/VM reinterpretations"
+  ],
+  "executeABI": "Bool(void*,constObject*,I32 target,I32 arguments,I32 base,Object* result,U32 raiseError,I32 executionType)",
+  "actualVMStorage": "SqExecuteStorage028 has exact SqVmCallStorage022 common first; target168/native296, not a standalone020/022 object",
+  "sourceCallRoute": [
+    "sq_vm_call022",
+    "sq_vm_execute022 adapter",
+    "sq_execute028",
+    "sq_execute_call028",
+    "sq_vm_call_native022",
+    "fixture callback at separate authored address",
+    "sq_vm_array_native022"
+  ],
+  "referenceRoute": [
+    "original0017ffac",
+    "original0018d65c",
+    "original00196f6c",
+    "same separate authored callback",
+    "unchanged original001b33dc"
+  ],
+  "literalErrors": "real020/025/015 depth/arity error strings; NULL error-handler guard only",
+  "externalServices": [
+    "platform allocation/reallocation/disposal contracts",
+    "debug callback",
+    "general error-handler callback",
+    "unsupported-domain termination",
+    "class/instance construction and other unrecovered opcode/provider paths"
+  ],
+  "multiplicationAuthoredButNotQualified": true,
+  "ordinaryScriptCallAuthoredButNotQualified": true,
+  "wholeExecuteQualified": false,
+  "acceptedSourceCreditGranted": 0
+}

@@ -21,3 +21,5 @@
 #define fn_0018d4fc sq_lookup_meta_call020
 #define fn_001cdaec sq_instance_get_meta023
 #define fn_001a1010 sq_native_type_error025
+#define fn_001a83dc sq_value_to_string026
+#define fn_007434e8 sq_index_to_string026

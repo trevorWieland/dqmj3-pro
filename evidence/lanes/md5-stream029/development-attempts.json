@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "attempts": [
+    {
+      "profile": "qualified-v1",
+      "status": "passed-superseded-to-decouple-readonly-android-scanner-import",
+      "cases": 954,
+      "nativeTests": 13,
+      "controls": 5,
+      "sourceCChanged": false,
+      "preservedExecutionSha256": "6fae03c8ce82ec63ecbbfcf761f1b425005c5b148fec0e049dc6011fd6d20548"
+    },
+    {
+      "profile": "initial-caller-abi-analysis",
+      "status": "guard-stopped-before-claim-output",
+      "reason": "Capstone spells conditional branches beq rather than b; switched to the actual ARM_INS_B instruction identity",
+      "sourceCChanged": false
+    }
+  ],
+  "sourceAdmissionGranted": false
+}
