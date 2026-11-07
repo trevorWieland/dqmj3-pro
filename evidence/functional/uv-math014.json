@@ -1,0 +1,460 @@
+{
+  "schemaVersion": 1,
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "programId": "0004000e001acb00",
+  "acceptedSourceCreditGranted": 0,
+  "functions": [
+    {
+      "symbol": "fn_0054befc",
+      "canonicalIdentity": {
+        "address": 5553916,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 1028,
+      "originalRange": {
+        "start": 5553916,
+        "endExclusive": 5554944,
+        "bytes": 1028,
+        "sha256": "9cf21fe0ea80b676483b7d621adce585811be2ebd804bc5dffe01bdad99433bd"
+      },
+      "poolBytesNotCodeCredit": 16,
+      "actualCallerWitnesses": [
+        {
+          "caller": 7217112,
+          "call": 7218404,
+          "instructionSha256": "090fe89e148a970f7498c7155e77b5f105cef8ec5e485d2c67f0c6c326db7059"
+        },
+        {
+          "caller": 7217112,
+          "call": 7218484,
+          "instructionSha256": "5751ff6796d0905e39fd639ece8ee24502667e2b3fb68f8dd31545f4e5324786"
+        },
+        {
+          "caller": 7217112,
+          "call": 7218712,
+          "instructionSha256": "eea8f4f146ecdec59ecf7e64d0627db46aebde53a3885f4f155a307d85483679"
+        }
+      ],
+      "source": {
+        "path": "src/native/wave014/projection.c",
+        "sha256": "3993208855b88050a736283b434314a864240f4437fff9448d86e38d05c4da63",
+        "bytes": 2994
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "candidateObjectSection": {
+        "section": ".text.fn_0054befc",
+        "size": 616,
+        "symbolBytes": 616,
+        "mode": "ARM",
+        "sectionSha256": "c3ee627ae619f1c51ba4bd35336e53cdf52f2b2d980d615a554bce7830aa6711",
+        "relocations": [
+          {
+            "offset": 456,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_001ad184",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 472,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_001ad06c",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 500,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_001ad06c",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 520,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0055492c",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 584,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_001ad06c",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateLinkedSymbolSha256": "8c280bd96fb1ba8c67d8830b633fbc6510ac53b122494a76bc2bd98b309e55f8",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "casesByOperation": {
+          "multiply": 64,
+          "inverse": 64,
+          "trig": 806,
+          "srt": 96,
+          "projection": 192
+        },
+        "allThreeOutputSha256": "67bea7998310138851e316f600c94f9243fd055ba6d75d8b9506fcc67037a64f",
+        "boundedDomain": [
+          "Finite initialized inputs with valid typed aligned spans",
+          "Positive nonzero selected dimensions and nonzero projection scales",
+          "Nonsingular pane world matrix whenever the inverse branch is selected",
+          "No conflicting callbacks or memory side effects; normal IEEE nearest-rounding context"
+        ],
+        "additionalLimits": [
+          "Finite binary32 angle normalization; nonfinite/TLS/errno paths excluded",
+          "Floating exception flags excluded; nearest rounding, gradual underflow and no contraction",
+          "Valid capacities, typed compatible storage and specified alias contracts",
+          "Original pane construction, GPU upload and game/device execution excluded"
+        ],
+        "independentSourceRevision": "df0258d6ec24be7d613282ea0711032b8512bfd8"
+      }
+    },
+    {
+      "symbol": "fn_001ad06c",
+      "canonicalIdentity": {
+        "address": 1757292,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 228,
+      "originalRange": {
+        "start": 1757292,
+        "endExclusive": 1757520,
+        "bytes": 228,
+        "sha256": "23cde98f86becfd1b3f919fa0b3e6f29b6ed3aae7bc184f32f1c808eeaa016f0"
+      },
+      "poolBytesNotCodeCredit": 0,
+      "actualCallerWitnesses": [
+        {
+          "caller": 5553916,
+          "call": 5554384,
+          "instructionSha256": "9c614d8301906bb84e815e9d6eba5e3ad56b0fa635ad7d9cc6ec1582273b3e14"
+        },
+        {
+          "caller": 5553916,
+          "call": 5554488,
+          "instructionSha256": "f548a1ee9b9e48551a3224dbdfd7c919db620da8b626b422f0d1d5ce83a606b5"
+        },
+        {
+          "caller": 5553916,
+          "call": 5554756,
+          "instructionSha256": "7e2cb9ed454c05ecca096b98b510334db0f35fae8b526b7022dd72adf43ace0c"
+        }
+      ],
+      "source": {
+        "path": "src/native/wave014/matrix.c",
+        "sha256": "f59e5cd1f705da3879c52ec5f2c20f2dc61b85b38d621bfddba64edad0a04632",
+        "bytes": 2138
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "candidateObjectSection": {
+        "section": ".text.fn_001ad06c",
+        "size": 408,
+        "symbolBytes": 408,
+        "mode": "ARM",
+        "sectionSha256": "049d86541c69d68efab9b2df0b5c17f569682f9c046ceb2ea0a64f05d0248157",
+        "relocations": []
+      },
+      "candidateLinkedSymbolSha256": "049d86541c69d68efab9b2df0b5c17f569682f9c046ceb2ea0a64f05d0248157",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "casesByOperation": {
+          "multiply": 64,
+          "inverse": 64,
+          "trig": 806,
+          "srt": 96,
+          "projection": 192
+        },
+        "allThreeOutputSha256": "67bea7998310138851e316f600c94f9243fd055ba6d75d8b9506fcc67037a64f",
+        "boundedDomain": [
+          "Finite initialized inputs with valid typed aligned spans",
+          "Positive nonzero selected dimensions and nonzero projection scales",
+          "Nonsingular pane world matrix whenever the inverse branch is selected",
+          "No conflicting callbacks or memory side effects; normal IEEE nearest-rounding context"
+        ],
+        "additionalLimits": [
+          "Finite binary32 angle normalization; nonfinite/TLS/errno paths excluded",
+          "Floating exception flags excluded; nearest rounding, gradual underflow and no contraction",
+          "Valid capacities, typed compatible storage and specified alias contracts",
+          "Original pane construction, GPU upload and game/device execution excluded"
+        ],
+        "independentSourceRevision": "df0258d6ec24be7d613282ea0711032b8512bfd8"
+      }
+    },
+    {
+      "symbol": "fn_001ad184",
+      "canonicalIdentity": {
+        "address": 1757572,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 280,
+      "originalRange": {
+        "start": 1757572,
+        "endExclusive": 1757852,
+        "bytes": 280,
+        "sha256": "2cb5e791521ffaf4351f29ccdc9556d9af9ab54b371c98764169bd3ed39fac18"
+      },
+      "poolBytesNotCodeCredit": 4,
+      "actualCallerWitnesses": [
+        {
+          "caller": 5553916,
+          "call": 5554740,
+          "instructionSha256": "f4e365c136e7e3aa9d502e08a64b9f6ae77100cde7e6d713597131db74465696"
+        }
+      ],
+      "source": {
+        "path": "src/native/wave014/matrix.c",
+        "sha256": "f59e5cd1f705da3879c52ec5f2c20f2dc61b85b38d621bfddba64edad0a04632",
+        "bytes": 2138
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "candidateObjectSection": {
+        "section": ".text.fn_001ad184",
+        "size": 392,
+        "symbolBytes": 392,
+        "mode": "ARM",
+        "sectionSha256": "3d5a90b508ea664cdc90fec71a2b0cb4c0d1ab39ff0ef20b6b8337eb9d9b5f8e",
+        "relocations": []
+      },
+      "candidateLinkedSymbolSha256": "3d5a90b508ea664cdc90fec71a2b0cb4c0d1ab39ff0ef20b6b8337eb9d9b5f8e",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "casesByOperation": {
+          "multiply": 64,
+          "inverse": 64,
+          "trig": 806,
+          "srt": 96,
+          "projection": 192
+        },
+        "allThreeOutputSha256": "67bea7998310138851e316f600c94f9243fd055ba6d75d8b9506fcc67037a64f",
+        "boundedDomain": [
+          "Finite initialized inputs with valid typed aligned spans",
+          "Positive nonzero selected dimensions and nonzero projection scales",
+          "Nonsingular pane world matrix whenever the inverse branch is selected",
+          "No conflicting callbacks or memory side effects; normal IEEE nearest-rounding context"
+        ],
+        "additionalLimits": [
+          "Finite binary32 angle normalization; nonfinite/TLS/errno paths excluded",
+          "Floating exception flags excluded; nearest rounding, gradual underflow and no contraction",
+          "Valid capacities, typed compatible storage and specified alias contracts",
+          "Original pane construction, GPU upload and game/device execution excluded"
+        ],
+        "independentSourceRevision": "df0258d6ec24be7d613282ea0711032b8512bfd8"
+      }
+    },
+    {
+      "symbol": "fn_0055492c",
+      "canonicalIdentity": {
+        "address": 5589292,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 184,
+      "originalRange": {
+        "start": 5589292,
+        "endExclusive": 5589476,
+        "bytes": 184,
+        "sha256": "877cf3b247a2353995c5d387085be2afd58ed9edcc61082f9f093376f2dffac0"
+      },
+      "poolBytesNotCodeCredit": 12,
+      "actualCallerWitnesses": [
+        {
+          "caller": 5553916,
+          "call": 5554400,
+          "instructionSha256": "469fd26e1cba7edb0f533ba822ea8021521b9ad7e499c068b441371ef6b1e8b6"
+        }
+      ],
+      "source": {
+        "path": "src/native/wave014/trigonometry.c",
+        "sha256": "02ded76401d3908101ca791e1dfaf7504eee63e375a1944b9c6b0b75d0edac62",
+        "bytes": 2141
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "candidateObjectSection": {
+        "section": ".text.fn_0055492c",
+        "size": 360,
+        "symbolBytes": 360,
+        "mode": "ARM",
+        "sectionSha256": "fd706f8d2e1677604e7a2300f3d83e0308d0a2693355bfa08ca50f0ca6251bf6",
+        "relocations": [
+          {
+            "offset": 348,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "derived_sine_cosine",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateLinkedSymbolSha256": "c4ab8cd8b4b5c3bfd7b7a4b92f5090f7ae415a2ff4fb830566ffa855a269b2fd",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "casesByOperation": {
+          "multiply": 64,
+          "inverse": 64,
+          "trig": 806,
+          "srt": 96,
+          "projection": 192
+        },
+        "allThreeOutputSha256": "67bea7998310138851e316f600c94f9243fd055ba6d75d8b9506fcc67037a64f",
+        "boundedDomain": [
+          "Finite initialized inputs with valid typed aligned spans",
+          "Positive nonzero selected dimensions and nonzero projection scales",
+          "Nonsingular pane world matrix whenever the inverse branch is selected",
+          "No conflicting callbacks or memory side effects; normal IEEE nearest-rounding context"
+        ],
+        "additionalLimits": [
+          "Finite binary32 angle normalization; nonfinite/TLS/errno paths excluded",
+          "Floating exception flags excluded; nearest rounding, gradual underflow and no contraction",
+          "Valid capacities, typed compatible storage and specified alias contracts",
+          "Original pane construction, GPU upload and game/device execution excluded"
+        ],
+        "independentSourceRevision": "df0258d6ec24be7d613282ea0711032b8512bfd8"
+      }
+    },
+    {
+      "symbol": "fn_0052534c",
+      "canonicalIdentity": {
+        "address": 5395276,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 136,
+      "originalRange": {
+        "start": 5395276,
+        "endExclusive": 5395412,
+        "bytes": 136,
+        "sha256": "99d581fde117e9f04215f7381b3a5f81be855d011000dd9252aa164e1c8b6042"
+      },
+      "poolBytesNotCodeCredit": 16,
+      "actualCallerWitnesses": [
+        {
+          "caller": 5589292,
+          "call": 5589336,
+          "instructionSha256": "c2b4369b08217b5a8c91bab2e004dd60f32ba0e16a85825861284eb5c6b7ee38"
+        }
+      ],
+      "source": {
+        "path": "src/native/wave014/trigonometry.c",
+        "sha256": "02ded76401d3908101ca791e1dfaf7504eee63e375a1944b9c6b0b75d0edac62",
+        "bytes": 2141
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "candidateObjectSection": {
+        "section": ".text.fn_0052534c",
+        "size": 212,
+        "symbolBytes": 212,
+        "mode": "ARM",
+        "sectionSha256": "c90a9617f207ec94a3544fbdf9d5adacc8631aebe8fb6db58fd041ca22887b44",
+        "relocations": [
+          {
+            "offset": 208,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "derived_sine_cosine",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateLinkedSymbolSha256": "00ae6d649a213532f96ca5125022308ead8f4cfe3edb3478a839e688342da9ea",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "casesByOperation": {
+          "multiply": 64,
+          "inverse": 64,
+          "trig": 806,
+          "srt": 96,
+          "projection": 192
+        },
+        "allThreeOutputSha256": "67bea7998310138851e316f600c94f9243fd055ba6d75d8b9506fcc67037a64f",
+        "boundedDomain": [
+          "Finite initialized inputs with valid typed aligned spans",
+          "Positive nonzero selected dimensions and nonzero projection scales",
+          "Nonsingular pane world matrix whenever the inverse branch is selected",
+          "No conflicting callbacks or memory side effects; normal IEEE nearest-rounding context"
+        ],
+        "additionalLimits": [
+          "Finite binary32 angle normalization; nonfinite/TLS/errno paths excluded",
+          "Floating exception flags excluded; nearest rounding, gradual underflow and no contraction",
+          "Valid capacities, typed compatible storage and specified alias contracts",
+          "Original pane construction, GPU upload and game/device execution excluded"
+        ],
+        "independentSourceRevision": "df0258d6ec24be7d613282ea0711032b8512bfd8"
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave014/projection.h",
+      "sha256": "d59876c891ef09de5041c0ce68da95ddf407d8dab57cb6cac5e2311d7b20e706",
+      "bytes": 1822
+    },
+    {
+      "path": "src/native/wave014/sine_table.inc",
+      "sha256": "b981b3e867eff6681043de516585ba1609301030833f704a9e151aa3f3a55996",
+      "bytes": 16158
+    },
+    {
+      "path": "src/native/wave011-material/material.h",
+      "sha256": "cbdf1f7c4bfd1dcf59efe1d240701212b544ae68c68746debb3986f8c8e4d6e0",
+      "bytes": 4300
+    }
+  ],
+  "originalPackets": [
+    {
+      "path": "evidence/lanes/wave014/claim.json",
+      "sha256": "3b4aa75528c51bb9edaef81b305c59adaab3d06a7d9af2d41c621ada7bd533d0",
+      "bytes": 8482
+    },
+    {
+      "path": "evidence/lanes/wave014/execution.json",
+      "sha256": "f8510f6576952eeb107dffe88f5e41bfb41d6d1a677ff4fa5365bf3b0b55a39c",
+      "bytes": 9887
+    },
+    {
+      "path": "evidence/lanes/wave014/semantic-controls.json",
+      "sha256": "7604bc4228c74f019dadda906df4c4340df3a03e1bc11e03c6a5513c8a7b5fc0",
+      "bytes": 6336
+    },
+    {
+      "path": "evidence/lanes/wave014/conversion-sanitizer.json",
+      "sha256": "cce6d807f221af844193d58886a8850aed5d861dc3240562651e76bf5f4a9ee3",
+      "bytes": 1090
+    },
+    {
+      "path": "evidence/lanes/wave014/derived-table.json",
+      "sha256": "5f9c41a81eeaa46c2d4374aff3aac9c6217e03580d62afece01900cbcee871f0",
+      "bytes": 1237
+    }
+  ],
+  "independentReplay": {
+    "path": "evidence/verification/wave014-isolated-df0258d.json",
+    "sha256": "8f1980fa3abd9af803e664309d405cf0add640cfe6d1f28985c5b6d2d2298364",
+    "bytes": 10008
+  },
+  "derivedNumericDataBytesNotCodeCredit": 4096
+}
