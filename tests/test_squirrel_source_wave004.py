@@ -11,6 +11,7 @@ import squirrel_wave004_boundaries as boundaries
 import squirrel_wave004_build as builder
 import squirrel_wave004_model as model
 import squirrel_wave004_oracle as oracle
+import squirrel_wave004_platform as platform_tools
 
 
 class NativeDispatch(unittest.TestCase):
@@ -18,6 +19,8 @@ class NativeDispatch(unittest.TestCase):
     def setUpClass(cls):
         cls.image = (ROOT / 'generated/update-content0/code.bin').read_bytes()
         cls.component = builder.build(ROOT / 'work/squirrel-source-wave004/tests')
+        cls.platform = platform_tools.build(ROOT, ROOT / 'source/squirrel-wave004',
+                                             ROOT / 'work/squirrel-source-wave004/test-platform')
         cls.report = json.loads((ROOT / 'evidence/lanes/squirrel-source-wave004/report.json').read_text())
 
     def run_case(self, fields):
@@ -135,7 +138,7 @@ class NativeDispatch(unittest.TestCase):
         self.assertEqual(0, self.report['sourceCodeCreditGranted'])
 
     def test_host_executables_run_and_android_compilation_is_qualified(self):
-        executable = next(row['argv'][0] for row in self.report['platform']['commands']
+        executable = next(row['argv'][0] for row in self.platform['commands']
                           if len(row['argv']) == 1 and row['argv'][0].endswith('native-dispatch.exe'))
         normal = Path(executable.replace('${ROOT}', str(ROOT)))
         wrong = normal.with_name('wrong-dispatch.exe')
@@ -143,8 +146,8 @@ class NativeDispatch(unittest.TestCase):
         self.assertEqual(0, observed.returncode)
         self.assertEqual(72, json.loads(observed.stdout)['frameBytes'])
         self.assertEqual(6, subprocess.run([str(wrong)], capture_output=True, timeout=20).returncode)
-        self.assertEqual(11, len(self.report['platform']['androidArm64Objects']))
-        self.assertFalse(self.report['platform']['androidDeviceExecution'])
+        self.assertEqual(11, len(self.platform['androidArm64Objects']))
+        self.assertFalse(self.platform['androidDeviceExecution'])
         self.assertFalse(self.report['wholeGameBuild'])
 
     def test_real_link_rejects_missing_frame_dependency(self):

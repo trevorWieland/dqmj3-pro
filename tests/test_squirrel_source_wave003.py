@@ -8,11 +8,14 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'toolscripts'))
 import squirrel_source_wave003 as lane
 import squirrel_wave003_oracle as oracle
+import squirrel_wave003_platform as platform_tools
 
 
 class ArrayBuiltinControllerTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        cls.platform = platform_tools.build(ROOT, ROOT / 'source/squirrel-wave003',
+                                             ROOT / 'work/squirrel-source-wave003/test-platform')
         cls.image = (ROOT / 'generated/update-content0/code.bin').read_bytes()
         if lane.prior.sha(cls.image) != lane.prior.MODULE_SHA:
             raise RuntimeError('Original update changed')
@@ -77,8 +80,7 @@ class ArrayBuiltinControllerTests(unittest.TestCase):
                     oracle.prepare({'count': 2, 'base': 0, 'length': value, 'seed': 3367})
 
     def test_actual_host_controller_normal_and_assertion_programs_execute(self):
-        report = json.loads((ROOT / 'evidence/lanes/squirrel-source-wave003/report.json').read_text())
-        platform = report['platformComponent']
+        platform = self.platform
         commands = [row['argv'] for row in platform['commands'] if len(row['argv']) == 1 and 'wrong-controller' not in row['argv'][0]]
         self.assertEqual(len(commands), 2)
         for command, expected in zip(commands, (0, 37)):
@@ -91,8 +93,8 @@ class ArrayBuiltinControllerTests(unittest.TestCase):
 
     def test_android_objects_do_not_become_a_device_or_game_claim(self):
         report = json.loads((ROOT / 'evidence/lanes/squirrel-source-wave003/report.json').read_text())
-        self.assertEqual(len(report['platformComponent']['androidArm64Objects']), 7)
-        self.assertFalse(report['platformComponent']['androidExecution'])
+        self.assertEqual(len(self.platform['androidArm64Objects']), 7)
+        self.assertFalse(self.platform['androidExecution'])
         self.assertFalse(report['wholeGameBuild'])
 
     def test_real_link_rejects_missing_assignment_dependency(self):

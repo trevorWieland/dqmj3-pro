@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'toolscripts'))
 import squirrel_source_wave002 as lane
 import squirrel_wave002_oracle as oracle
+import squirrel_wave002_platform as platform_tools
 
 
 class ArrayLifecycleTests(unittest.TestCase):
@@ -18,6 +19,8 @@ class ArrayLifecycleTests(unittest.TestCase):
         if lane.sha(cls.image) != lane.MODULE_SHA:
             raise RuntimeError('Original update identity differs')
         cls.component = lane.build(ROOT / 'work/squirrel-source-wave002/test-component')
+        cls.platform = platform_tools.build(ROOT, lane.SOURCE,
+                                             ROOT / 'work/squirrel-source-wave002/test-platform')
 
     def check_case(self, case):
         result = lane.verify_case(self.image, self.component, case)
@@ -105,8 +108,7 @@ class ArrayLifecycleTests(unittest.TestCase):
                             for profile in report['profiles'] for function in profile['functions']))
 
     def test_native_windows_component_really_executes_with_host_width_objects(self):
-        report = json.loads((ROOT / 'evidence/lanes/squirrel-source-wave002/report.json').read_text())
-        platform = report['platformComponent']
+        platform = self.platform
         command = next(row['argv'] for row in platform['commands']
                        if len(row['argv']) == 1 and row['argv'][0].endswith('array-lifecycle.exe')
                        and not row['argv'][0].endswith('wrong-array-lifecycle.exe'))
@@ -121,8 +123,7 @@ class ArrayLifecycleTests(unittest.TestCase):
         self.assertEqual(platform['windowsWrongSourceExitCode'], 5)
 
     def test_android_result_is_three_real_objects_without_device_execution_claim(self):
-        report = json.loads((ROOT / 'evidence/lanes/squirrel-source-wave002/report.json').read_text())
-        platform = report['platformComponent']
+        platform = self.platform
         self.assertEqual(len(platform['androidArm64Objects']), 3)
         self.assertFalse(platform['androidExecution'])
         self.assertFalse(platform['wholeGameBuild'])

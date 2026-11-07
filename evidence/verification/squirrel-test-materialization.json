@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "status": "local-successor-tests-pass",
+  "predecessorSourceRevision": "82287da78d5b751ea3e3067ef5eb4268ce929a1a",
+  "preservedFailure": {
+    "path": "evidence/verification/source-components-82287da-attempt001.json",
+    "sha256": "246b887ed348e928f48436577c1f502b13b8f172337e30624048308e2521d1c0",
+    "bytes": 10049
+  },
+  "failure": "The producers passed, but platform tests opened historical output paths that were absent in the fresh checkout.",
+  "fix": "Each test class now builds Windows and Android fixtures into its own test-platform directory; executable and object checks use those freshly produced artifacts.",
+  "frozenSourceAndReportsModified": false,
+  "checks": [
+    {
+      "component": 2,
+      "tests": 10,
+      "skipped": 0,
+      "test": {
+        "path": "tests/test_squirrel_source_wave002.py",
+        "sha256": "3d6f7f22492f5f19e196484a275203eaa012275456eab87a6affd6a6be7c00e4",
+        "bytes": 8363
+      },
+      "previousTestSha256": "73fa0bad85c2bc1dd82588fc7aa779d6eefbfe75afb9590709b6a0792fa3884b",
+      "log": {
+        "path": "work/component-coordinator-tests/squirrel002-fresh.log",
+        "sha256": "f29f682faaeadd65d6f3342c13433245730159815845d2f9f8f471d5c3b7bd90",
+        "bytes": 1984
+      }
+    },
+    {
+      "component": 3,
+      "tests": 11,
+      "skipped": 0,
+      "test": {
+        "path": "tests/test_squirrel_source_wave003.py",
+        "sha256": "8dd9f8eedc619f22d1dd24f49cf70ca375c12ca6b1dc20b0a078d474842656a6",
+        "bytes": 6949
+      },
+      "previousTestSha256": "4f9d819801e6112a53b221765ab63b011f4c57afb0e37a3b3cc83f65b1676acd",
+      "log": {
+        "path": "work/component-coordinator-tests/squirrel003-fresh.log",
+        "sha256": "bd6760ccaf9f8c4563da2efe206e950009f4c38318c1942cce4bbb21b4a4fb38",
+        "bytes": 2255
+      }
+    },
+    {
+      "component": 4,
+      "tests": 14,
+      "skipped": 0,
+      "test": {
+        "path": "tests/test_squirrel_source_wave004.py",
+        "sha256": "e42cf1d43927d8dc9e086638f29e6b8519129d18bc4a3acf49a6f2f420b44823",
+        "bytes": 9401
+      },
+      "previousTestSha256": "6508a58b2c7a8c8d49e6fea1d97dfc47ce59ca3b1465714547b2380be2baf666",
+      "log": {
+        "path": "work/component-coordinator-tests/squirrel004-fresh.log",
+        "sha256": "b4baee708457a0f961a264c4d16602e685560ed4c67186d70412c32e591bf142",
+        "bytes": 2496
+      }
+    },
+    {
+      "component": 5,
+      "tests": 15,
+      "skipped": 0,
+      "test": {
+        "path": "tests/test_squirrel_source_wave005.py",
+        "sha256": "d3e04579dbb43c0fe3dc302dfc5a6ceef0c8d1dbf4cb7d2bd780dd52c33d03f7",
+        "bytes": 10474
+      },
+      "previousTestSha256": "524d72df0216f936737f0c1bce773795e28eb4d06118471134dbb093259100bc",
+      "log": {
+        "path": "work/component-coordinator-tests/squirrel005-fresh.log",
+        "sha256": "f75079ae0886a5aa61bc31694cb03c3c7c7a8e5a9955dfb0e82740693e1ae1d4",
+        "bytes": 2703
+      }
+    }
+  ],
+  "totalTests": 50,
+  "skippedTests": 0,
+  "committedSuccessorReplay": "pending",
+  "matchingSourceCreditGranted": 0
+}

@@ -13,6 +13,7 @@ import squirrel_wave005_build as builder
 import squirrel_wave005_model as model
 import squirrel_wave005_oracle as oracle
 import squirrel_wave005_execute_inventory as execute_inventory
+import squirrel_wave005_platform as platform_tools
 
 
 class GenericDispatch(unittest.TestCase):
@@ -20,6 +21,8 @@ class GenericDispatch(unittest.TestCase):
     def setUpClass(cls):
         cls.image = (ROOT / 'generated/update-content0/code.bin').read_bytes()
         cls.component = builder.build(ROOT / 'work/squirrel-source-wave005/tests')
+        cls.platform = platform_tools.build(ROOT, ROOT / 'source/squirrel-wave005',
+                                             ROOT / 'work/squirrel-source-wave005/test-platform')
         cls.report = json.loads((ROOT / 'evidence/lanes/squirrel-source-wave005/report.json').read_text())
         cls.census = json.loads((ROOT / 'evidence/lanes/native-inventory-completion/seeded/update-census.json').read_text())
 
@@ -152,7 +155,7 @@ class GenericDispatch(unittest.TestCase):
         self.assertIn(b'fn_00196f6c', result.stderr)
 
     def test_platform_execution_and_qualified_android_objects(self):
-        executable = next(row['argv'][0] for row in self.report['platform']['commands']
+        executable = next(row['argv'][0] for row in self.platform['commands']
                           if len(row['argv']) == 1 and row['argv'][0].endswith('native-dispatch.exe'))
         normal = Path(executable.replace('${ROOT}', str(ROOT)))
         observed = subprocess.run([str(normal)], capture_output=True, timeout=20)
@@ -160,8 +163,8 @@ class GenericDispatch(unittest.TestCase):
         self.assertEqual(12, json.loads(observed.stdout)['cases'])
         wrong = subprocess.run([str(normal.with_name('wrong-dispatch.exe'))], capture_output=True, timeout=20)
         self.assertEqual(5, wrong.returncode)
-        self.assertEqual(13, len(self.report['platform']['androidArm64Objects']))
-        self.assertFalse(self.report['platform']['androidDeviceExecution'])
+        self.assertEqual(13, len(self.platform['androidArm64Objects']))
+        self.assertFalse(self.platform['androidDeviceExecution'])
         self.assertFalse(self.report['scriptBytecodeExecutionClaimed'])
         self.assertFalse(self.report['wholeGameBuild'])
 
