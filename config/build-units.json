@@ -14,7 +14,8 @@
       "wave009",
       "wave010",
       "wave011-material",
-      "wave012"
+      "wave012",
+      "wave014"
     ]
   },
   "units": [
@@ -476,6 +477,43 @@
       ],
       "role": "bounded-material-component",
       "layoutProfile": "packed-4"
+    },
+    {
+      "source": "src/native/wave014/matrix.c",
+      "headers": [
+        "src/native/wave011-material/material.h",
+        "src/native/wave014/projection.h"
+      ],
+      "role": "bounded-uv-math-component",
+      "layoutProfile": "packed-4"
+    },
+    {
+      "source": "src/native/wave014/projection.c",
+      "headers": [
+        "src/native/wave011-material/material.h",
+        "src/native/wave014/projection.h"
+      ],
+      "role": "bounded-uv-math-component",
+      "layoutProfile": "packed-4"
+    },
+    {
+      "source": "src/native/wave014/trigonometry.c",
+      "headers": [
+        "src/native/wave011-material/material.h",
+        "src/native/wave014/projection.h",
+        "src/native/wave014/sine_table.inc"
+      ],
+      "role": "bounded-uv-math-component",
+      "layoutProfile": "packed-4"
+    },
+    {
+      "source": "src/native/wave014/platform_marker.c",
+      "headers": [],
+      "role": "bounded-uv-math-component",
+      "layoutProfile": "packed-4",
+      "targets": [
+        "windows-x64"
+      ]
     }
   ],
   "excludedSources": [

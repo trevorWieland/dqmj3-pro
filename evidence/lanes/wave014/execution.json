@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "status": "complete-family-source-only-original-qualified",
+  "syntheticFixtureCount": 1222,
+  "caseCounts": {
+    "multiply": 64,
+    "inverse": 64,
+    "trig": 806,
+    "srt": 96,
+    "projection": 192
+  },
+  "fixtureSha256": "a618eefde0f29669ab5bfcee2e12fb0099b5ae4fd0b5d4c6cccd10df5f1cc767",
+  "allThreeOutputSha256": "67bea7998310138851e316f600c94f9243fd055ba6d75d8b9506fcc67037a64f",
+  "allBytewiseEqual": true,
+  "allCallsReturnedNormally": true,
+  "boundedWritesAndCalleeSavedState": true,
+  "allOriginalInstructionCoverage": [
+    {
+      "entry": 5553916,
+      "role": "projection",
+      "instructionBytes": 1028,
+      "instructionAddresses": 257,
+      "visitedOriginalInstructionAddresses": 257,
+      "missingOriginalInstructionAddresses": []
+    },
+    {
+      "entry": 1757292,
+      "role": "matrix-product",
+      "instructionBytes": 228,
+      "instructionAddresses": 57,
+      "visitedOriginalInstructionAddresses": 57,
+      "missingOriginalInstructionAddresses": []
+    },
+    {
+      "entry": 1757572,
+      "role": "matrix-inverse",
+      "instructionBytes": 280,
+      "instructionAddresses": 70,
+      "visitedOriginalInstructionAddresses": 70,
+      "missingOriginalInstructionAddresses": []
+    },
+    {
+      "entry": 5589292,
+      "role": "texture-srt",
+      "instructionBytes": 184,
+      "instructionAddresses": 46,
+      "visitedOriginalInstructionAddresses": 46,
+      "missingOriginalInstructionAddresses": []
+    },
+    {
+      "entry": 5395276,
+      "role": "indexed-sine-cosine",
+      "instructionBytes": 136,
+      "instructionAddresses": 34,
+      "visitedOriginalInstructionAddresses": 34,
+      "missingOriginalInstructionAddresses": []
+    }
+  ],
+  "originalLargeAngleWrapperEntered": true,
+  "originalGenericModulusCoreEntered": true,
+  "genericModulusHelperCodeCredit": 0,
+  "armBuild": {
+    "objects": [
+      {
+        "path": "work/wave014/build/source-0.o",
+        "bytes": 1972,
+        "sha256": "1613ec69e7bf8375c6aeb99aa360e2bbbc8b96fc8858b744e0eff54fd720ac3a"
+      },
+      {
+        "path": "work/wave014/build/source-1.o",
+        "bytes": 6084,
+        "sha256": "769e31925e29cabf9669f19282451d09b584b68fde6db00bdac807cdc860a1e6"
+      },
+      {
+        "path": "work/wave014/build/source-2.o",
+        "bytes": 1760,
+        "sha256": "001bbd3b0ade930461f37463c03e62ccfd529e6794e0e23a9e32466fee174e11"
+      }
+    ],
+    "linkedElf": {
+      "path": "work/wave014/build/family.elf",
+      "bytes": 103252,
+      "sha256": "c3f7eef0eee2113984b992819dd7fbd0a75a3f4845f16ca411fe8ad784b61128"
+    },
+    "linkerScript": {
+      "path": "work/wave014/build/family.ld",
+      "bytes": 166,
+      "sha256": "a6e1050ea1cd35064b52398ad1291d91701b59dc0de7825b58623c8b03f953af"
+    },
+    "sources": [
+      {
+        "path": "src/native/wave014/matrix.c",
+        "bytes": 2138,
+        "sha256": "f59e5cd1f705da3879c52ec5f2c20f2dc61b85b38d621bfddba64edad0a04632"
+      },
+      {
+        "path": "src/native/wave014/trigonometry.c",
+        "bytes": 2141,
+        "sha256": "02ded76401d3908101ca791e1dfaf7504eee63e375a1944b9c6b0b75d0edac62"
+      },
+      {
+        "path": "src/native/wave014/projection.c",
+        "bytes": 2994,
+        "sha256": "3993208855b88050a736283b434314a864240f4437fff9448d86e38d05c4da63"
+      }
+    ],
+    "header": {
+      "path": "src/native/wave014/projection.h",
+      "bytes": 1822,
+      "sha256": "d59876c891ef09de5041c0ce68da95ddf407d8dab57cb6cac5e2311d7b20e706"
+    },
+    "table": {
+      "path": "src/native/wave014/sine_table.inc",
+      "bytes": 16158,
+      "sha256": "b981b3e867eff6681043de516585ba1609301030833f704a9e151aa3f3a55996"
+    },
+    "flags": [
+      "--target=arm-none-eabi",
+      "-mcpu=mpcore",
+      "-mfpu=vfp",
+      "-mfloat-abi=softfp",
+      "-marm",
+      "-O2",
+      "-std=c11",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ffp-contract=off",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-unwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-fpack-struct=4",
+      "-Wall",
+      "-Wextra",
+      "-Werror"
+    ],
+    "symbols": {
+      "fn_001ad06c": 15728640,
+      "fn_001ad184": 15729048,
+      "fn_0052534c": 15729440,
+      "derived_sine_cosine": 15761408,
+      "fn_0055492c": 15729652,
+      "fn_0054befc": 15730012
+    },
+    "functions": {
+      "fn_001ad06c": {
+        "section": ".text.fn_001ad06c",
+        "size": 408,
+        "symbolBytes": 408,
+        "mode": "ARM",
+        "sectionSha256": "049d86541c69d68efab9b2df0b5c17f569682f9c046ceb2ea0a64f05d0248157",
+        "relocations": []
+      },
+      "fn_001ad184": {
+        "section": ".text.fn_001ad184",
+        "size": 392,
+        "symbolBytes": 392,
+        "mode": "ARM",
+        "sectionSha256": "3d5a90b508ea664cdc90fec71a2b0cb4c0d1ab39ff0ef20b6b8337eb9d9b5f8e",
+        "relocations": []
+      },
+      "fn_0052534c": {
+        "section": ".text.fn_0052534c",
+        "size": 212,
+        "symbolBytes": 212,
+        "mode": "ARM",
+        "sectionSha256": "c90a9617f207ec94a3544fbdf9d5adacc8631aebe8fb6db58fd041ca22887b44",
+        "relocations": [
+          {
+            "offset": 208,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "derived_sine_cosine",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_0055492c": {
+        "section": ".text.fn_0055492c",
+        "size": 360,
+        "symbolBytes": 360,
+        "mode": "ARM",
+        "sectionSha256": "fd706f8d2e1677604e7a2300f3d83e0308d0a2693355bfa08ca50f0ca6251bf6",
+        "relocations": [
+          {
+            "offset": 348,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "derived_sine_cosine",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_0054befc": {
+        "section": ".text.fn_0054befc",
+        "size": 616,
+        "symbolBytes": 616,
+        "mode": "ARM",
+        "sectionSha256": "c3ee627ae619f1c51ba4bd35336e53cdf52f2b2d980d615a554bce7830aa6711",
+        "relocations": [
+          {
+            "offset": 456,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_001ad184",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 472,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_001ad06c",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 500,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_001ad06c",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 520,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0055492c",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 584,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_001ad06c",
+            "format": "SHT_REL"
+          }
+        ]
+      }
+    },
+    "compiledDerivedTableSha256": "f2433a2419e313eb7d18fc5f2682c7be465840bf0f120094ab2b00c79dcca7a8",
+    "undefinedSymbols": [],
+    "originalInstructionDependencies": [],
+    "originalNumericTableRetained": false
+  },
+  "windowsDll": {
+    "path": "work/wave014/windows/projection-family.dll",
+    "bytes": 8704,
+    "sha256": "12543838e6f7ca859fa1c80c1086e1a60ce8dc2cef640c80d12adcd8b9ba62c9"
+  },
+  "androidBuild": {
+    "library": {
+      "path": "work/wave014/android/libprojection-family.so",
+      "bytes": 9440,
+      "sha256": "91abba6eee7d393ca19fe584a842243e80e62e85c1e19e9514a9be93afad80e2"
+    },
+    "objects": [
+      {
+        "path": "work/wave014/android/source-0.o",
+        "bytes": 1504,
+        "sha256": "8150a4b9d98234d08f414b03f250f55127cfdf21352902874921a7452fcb681b"
+      },
+      {
+        "path": "work/wave014/android/source-1.o",
+        "bytes": 5744,
+        "sha256": "a1dcbb4ac1a8125d3a6f5e15dd091b40cac69903c906967f8d5c615ffc783853"
+      },
+      {
+        "path": "work/wave014/android/source-2.o",
+        "bytes": 1920,
+        "sha256": "c55fb5dd1c630a345ae4a3f102a116139ccbfbc8627bc0f14f0f2dc859900db4"
+      }
+    ],
+    "deviceExecuted": false
+  },
+  "androidModel": {
+    "linkedElf": {
+      "path": "work/wave014/android-model/family.elf",
+      "bytes": 72376,
+      "sha256": "275db2b25faf83d342e18f42479a89941094fb31681cebbc9124bcd94f0b8698"
+    },
+    "linkerScript": {
+      "path": "work/wave014/android-model/family.ld",
+      "bytes": 204,
+      "sha256": "b2c2dd8eddeee5d614097d5e52fb63955a65d29f9a3ec1d77e396e933f44347d"
+    },
+    "actualAndroidObjects": [
+      {
+        "path": "work/wave014/android/source-0.o",
+        "bytes": 1504,
+        "sha256": "8150a4b9d98234d08f414b03f250f55127cfdf21352902874921a7452fcb681b"
+      },
+      {
+        "path": "work/wave014/android/source-1.o",
+        "bytes": 5744,
+        "sha256": "a1dcbb4ac1a8125d3a6f5e15dd091b40cac69903c906967f8d5c615ffc783853"
+      },
+      {
+        "path": "work/wave014/android/source-2.o",
+        "bytes": 1920,
+        "sha256": "c55fb5dd1c630a345ae4a3f102a116139ccbfbc8627bc0f14f0f2dc859900db4"
+      }
+    ],
+    "originalInstructionDependencies": []
+  },
+  "androidCpuModel": "Cortex-A72",
+  "androidOperatingSystemExecuted": false,
+  "androidDeviceExecuted": false,
+  "sourceArmOrAndroidMapsOriginalImage": false,
+  "sourceArmOrAndroidCallsOriginalCode": false,
+  "originalNonfiniteErrorPathsClaimed": false,
+  "originalPayloadsPublished": false,
+  "syntheticMathResultsPublishedOnlyAsDigests": true,
+  "requestedExactBytes": 0,
+  "coordinatorAdmissionRequired": true
+}

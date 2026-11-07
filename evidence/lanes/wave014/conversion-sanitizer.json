@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "finiteCases": 806,
+  "allFiniteCasesReturnedWithoutSanitizerTrap": true,
+  "allComparedBytesEqualOriginal": true,
+  "validBuild": {
+    "path": "work/wave014/conversion-sanitizer/valid/family.elf",
+    "bytes": 103252,
+    "sha256": "03aff7fbad9563fda98ffe95c4fb9c83ca3ad7e9fb7ad1e6fe7296a819ffbe23"
+  },
+  "sanitizerFlags": [
+    "-fsanitize=float-cast-overflow",
+    "-fsanitize-trap=float-cast-overflow"
+  ],
+  "unsafeControlSource": {
+    "path": "work/wave014/conversion-sanitizer/unsafe-trigonometry.c",
+    "bytes": 2238,
+    "sha256": "9dd0a10d0730c9a47f839ae83568bb0acac417a8f2d5f19eb78ff44366ef7df5"
+  },
+  "unsafeControlBuild": {
+    "path": "work/wave014/conversion-sanitizer/invalid/family.elf",
+    "bytes": 103260,
+    "sha256": "a42c354d8ec28ae9a29f20d69465cdba6b9b44af8768c59bd88695239d6390e7"
+  },
+  "unsafeControlCase": "trig-19",
+  "unsafeControlTrapped": true,
+  "finiteDomainIncludesSubnormalsSignedZerosAndFloatMax": true,
+  "nonfiniteInputsAdmitted": false,
+  "originalNonfiniteErrnoBehaviorClaimed": false
+}

@@ -54,7 +54,7 @@ class CompileSourcesTests(unittest.TestCase):
 
     def test_actual_source_census_and_historical_abi_exclusion(self):
         config = BUILD.read_config(ROOT)
-        self.assertEqual(len(config["units"]), 50)
+        self.assertEqual(len(config["units"]), 54)
         excluded = config["excludedSources"]
         self.assertEqual([item["source"] for item in excluded], ["src/native/wave003/setters.c"])
         self.assertIs(excluded[0]["activeLinking"], False)
@@ -134,7 +134,7 @@ class CompileSourcesTests(unittest.TestCase):
         self.assertEqual(set(config["componentRoots"]), expected)
         restricted = [unit for unit in config["units"] if "targets" in unit]
         self.assertEqual({unit["source"] for unit in restricted},
-                         {folder + "/host_runner.c" for folder in expected})
+                         {folder + "/host_runner.c" for folder in expected} | {"src/native/wave014/platform_marker.c"})
         self.assertTrue(all(unit["targets"] == ["windows-x64"] for unit in restricted))
 
     def test_duplicate_or_historical_active_conflicts_fail(self):
