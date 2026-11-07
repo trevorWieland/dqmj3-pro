@@ -1278,6 +1278,42 @@
         "src/native/wave005/vm_views.h"
       ],
       "role": "bounded-class-lifetime-component"
+    },
+    {
+      "source": "source/squirrel-wave010/closure_release.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "source/squirrel-wave008/generator_release.h",
+        "source/squirrel-wave010/closure_release.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-closure-lifetime-component"
+    },
+    {
+      "source": "source/squirrel-wave010/fixture.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "source/squirrel-wave008/generator_release.h",
+        "source/squirrel-wave010/closure_release.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-closure-lifetime-component"
+    },
+    {
+      "source": "source/squirrel-wave010/vtables.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "source/squirrel-wave008/generator_release.h",
+        "source/squirrel-wave010/closure_release.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-closure-lifetime-component"
     }
   ],
   "excludedSources": [
@@ -1297,6 +1333,7 @@
     "source/squirrel-wave006",
     "source/squirrel-wave007",
     "source/squirrel-wave008",
-    "source/squirrel-wave009"
+    "source/squirrel-wave009",
+    "source/squirrel-wave010"
   ]
 }

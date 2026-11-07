@@ -130,7 +130,7 @@ class CompileSourcesTests(unittest.TestCase):
     def test_component_census_and_platform_restrictions_are_explicit(self):
         config = BUILD.read_config(ROOT)
         expected = {f"source/squirrel-wave{wave:03d}" for wave in range(2, 7)}
-        self.assertEqual(set(config["componentRoots"]), expected | {"source/squirrel-wave007", "source/squirrel-wave008", "source/squirrel-wave009"})
+        self.assertEqual(set(config["componentRoots"]), expected | {"source/squirrel-wave007", "source/squirrel-wave008", "source/squirrel-wave009", "source/squirrel-wave010"})
         restricted = [unit for unit in config["units"] if "targets" in unit]
         self.assertEqual({unit["source"] for unit in restricted},
                          {folder + "/host_runner.c" for folder in expected} | {"src/native/wave014/platform_marker.c"})

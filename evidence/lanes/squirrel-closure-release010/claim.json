@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "status": "measured-closure-family-with-explicit-post-source-boundary-amendment",
+  "program": "dqmj3pro",
+  "version": "update-content0",
+  "module": "main",
+  "imageBase": 1048576,
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "censusSha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+  "functions": [
+    {
+      "role": "script-closure-final-release",
+      "entry": 6977040,
+      "mode": "ARM",
+      "endExclusive": 6977080,
+      "instructionBytes": 40,
+      "instructionSha256": "bcd7b2b2f7594201f7260c3c1bae066b8ff21277d897f1f66f829acc12a242d2",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "literalReferences": [],
+      "directCalleesOrTailCalls": [
+        1693312
+      ],
+      "frozenCensusEntryPresent": true
+    },
+    {
+      "role": "script-closure-destructor",
+      "entry": 6977180,
+      "mode": "ARM",
+      "endExclusive": 6977396,
+      "instructionBytes": 216,
+      "instructionSha256": "2ec188ddfea5b3e9b36892a6272dddc14be674ba6bde3ed4efe139b6eea3416f",
+      "poolBytes": 12,
+      "poolSha256": "68e4090775a7cf7313519799cb66133cff659af78ba3654916ff1a99a454429e",
+      "literalReferences": [
+        {
+          "instruction": 6977192,
+          "literalAddress": 6977396,
+          "literalSha256": "18af83d322f0e65a22599a7c7476d5687c0749e031a3d6679e113f31a428f411"
+        },
+        {
+          "instruction": 6977348,
+          "literalAddress": 6977400,
+          "literalSha256": "cb1c48ae0f7d4023fd5545fd9fd0d684d4a1ed145548dc49aeb92b98047345ab"
+        },
+        {
+          "instruction": 6977372,
+          "literalAddress": 6977404,
+          "literalSha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+        }
+      ],
+      "directCalleesOrTailCalls": [
+        2414396,
+        7861240
+      ],
+      "frozenCensusEntryPresent": false,
+      "newFunctionEvidence": {
+        "actualVtableSlotAddress": 8722128,
+        "actualVtableTarget": 6977180,
+        "terminalReturn": 6977392,
+        "followingPoolEndsAt": 6977408,
+        "followingEntry": 6977408,
+        "followingEntryVtableReleaseSlot": 8722164,
+        "followingEntryIsSeeded": false,
+        "nextSeededFunction": 6977812,
+        "requiresCoordinatorCensusReview": true
+      }
+    }
+  ],
+  "completeMeasuredInstructionBytes": 256,
+  "scalarPointerPoolBytes": 12,
+  "closureVtable": {
+    "address": 8722128,
+    "bytes": 12,
+    "sha256": "85c89b629b91b2397bdaa1e4398e6b211f08735f762d2208a0f00bb60138e5cc",
+    "destructorSlot": 8722128,
+    "releaseSlot": 8722136,
+    "additionalSlotsOutsideFinalOwnerScope": [
+      {
+        "slot": 8722140,
+        "target": 6976876
+      },
+      {
+        "slot": 8722144,
+        "target": 6977080
+      }
+    ]
+  },
+  "actualCallWitnesses": [
+    {
+      "call": 6977220,
+      "target": 2414396
+    },
+    {
+      "call": 6977228,
+      "target": 7861240
+    },
+    {
+      "call": 6977240,
+      "target": 7861240
+    }
+  ],
+  "targetAbi": {
+    "closureBytes": 64,
+    "referencePrefixBytes": 20,
+    "sharedPointerOffset": 20,
+    "environmentObjectOffset": 24,
+    "prototypeObjectOffset": 32,
+    "outerVectorOffset": 40,
+    "defaultVectorOffset": 52,
+    "objectStride": 8,
+    "sharedChainOffset": 68,
+    "destructorReturnsThisPointer": true
+  },
+  "readOrderContract": [
+    "Install script-closure identity before observer-visible cleanup",
+    "Skip unlink only when reference count high bit is set",
+    "Destroy default vector before outer vector with fresh pointer/size reads across callbacks",
+    "Release current prototype object before current environment object",
+    "Install base-prefix identity and clear current weak target before closure disposal"
+  ],
+  "sourceDependencies": [
+    {
+      "entry": 7861240,
+      "lane": "squirrel-array-release007",
+      "newCredit": 0
+    },
+    {
+      "entry": 2414396,
+      "lane": "squirrel-array-release007",
+      "newCredit": 0
+    }
+  ],
+  "ownership": {
+    "live006HasInlineSemanticDraft": true,
+    "live006AdmittedIntervalCredit": 0,
+    "standaloneFinalOwnerTransferredToWave010": true,
+    "prototypeFinalizationOrGcClaimed": false,
+    "actualPrototypeWeakPrefixBytes": 12,
+    "genericReferenceViewBytes": 20,
+    "prefixCompatibilityRequiresExplicitFutureIntegration": true
+  },
+  "adjacentUnseededCleanup": {
+    "start": 6977080,
+    "endExclusive": 6977176,
+    "poolBytes": 4,
+    "actualTableSlot": 8722144,
+    "calledByClaimedFamily": false,
+    "newSourceOrBoundaryCredit": 0
+  },
+  "externalServices": [
+    {
+      "originalThunk": 1693312,
+      "service": "typed C logical deallocation",
+      "allocatorRecoveredOrCredited": false
+    },
+    {
+      "service": "typed normally returning polymorphic reference callbacks"
+    }
+  ],
+  "sourceCodeWrittenAtMeasurement": true,
+  "requestedExactBytes": 0,
+  "coordinatorAdmissionRequired": true,
+  "originalPayloadsPublished": false,
+  "boundaryAmendment": {
+    "initialBodyAndPoolHashesUnchanged": true,
+    "initialClaimPrecededSource": true,
+    "correctionFollowedSourceCreation": true,
+    "initialClaimSha256": "6ce5a34fe053f66f248a71f2701675ebb9712d92a0724b146876e706a9ced68d",
+    "correction": "Following6a7780 entry has a neighboring vtable witness but is unseeded; nearest following seeded entry is6a7914",
+    "initialMetadataRetainedPrivately": true
+  }
+}

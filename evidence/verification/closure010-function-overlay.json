@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "frozenCensus": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+    "bytes": 20574405
+  },
+  "producer": {
+    "path": "toolscripts/review_closure010_inventory.py",
+    "sha256": "51d0c8b44e0b654a56c5943e9de1d3063b3628fe72e1d25d2ff287fd56626177",
+    "bytes": 7709
+  },
+  "boundaryProducer": {
+    "path": "toolscripts/squirrel_closure_release010.py",
+    "sha256": "d4856bb37123a2a8bdedf5f0c539a6f9dd45f2ed3b6727051bac1b001f4d0818",
+    "bytes": 8721
+  },
+  "boundaryEvidence": {
+    "path": "evidence/lanes/squirrel-closure-release010/claim.json",
+    "sha256": "33744d4848e76ce3002d0d15784f907d1bc45a6d2d355ea57864f8f6aeec334c",
+    "bytes": 5636
+  },
+  "tables": [
+    {
+      "name": "sq-script-closure-vtable-slot0",
+      "encoding": "vtable-function-pointer",
+      "readerFunction": 6977180,
+      "literalAddress": 6977396,
+      "literalBytes": 4,
+      "literalSha256": "18af83d322f0e65a22599a7c7476d5687c0749e031a3d6679e113f31a428f411",
+      "start": 8722128,
+      "bytes": 4,
+      "sha256": "f16de4fbc71dd617d6abe693834aaad551d21ff5b26401b2fe0b0c82ec43a9fd",
+      "entries": [
+        {
+          "key": 0,
+          "slot": 8722128,
+          "target": 6977180,
+          "mode": "ARM",
+          "virtual": true,
+          "thisAdjustmentBytes": 0
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "canonicalIdentity": {
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 6977180,
+        "mode": "ARM"
+      },
+      "instructionRanges": [
+        {
+          "start": 6977180,
+          "endExclusive": 6977396,
+          "bytes": 216,
+          "instructions": 54,
+          "sha256": "2ec188ddfea5b3e9b36892a6272dddc14be674ba6bde3ed4efe139b6eea3416f",
+          "originalMemorySha256": "2ec188ddfea5b3e9b36892a6272dddc14be674ba6bde3ed4efe139b6eea3416f"
+        }
+      ],
+      "literalPoolRanges": [
+        {
+          "start": 6977396,
+          "endExclusive": 6977408,
+          "bytes": 12,
+          "reader": 6977192,
+          "sha256": "68e4090775a7cf7313519799cb66133cff659af78ba3654916ff1a99a454429e"
+        }
+      ],
+      "tableWitnesses": [
+        {
+          "table": "sq-script-closure-vtable-slot0",
+          "slot": 8722128,
+          "target": 6977180
+        }
+      ],
+      "outgoingTransfers": [
+        {
+          "address": 6977220,
+          "target": 2414396,
+          "kind": "call",
+          "sha256": "ace5ed7ecc0e557fcb228e6d7a314972c0f1cd8335cd83a0753a1c3da91f7b43"
+        },
+        {
+          "address": 6977228,
+          "target": 7861240,
+          "kind": "call",
+          "sha256": "70b96fd206f7e960b5abb195dd26301800f1e16f3b4426041380889c3a93a310"
+        },
+        {
+          "address": 6977240,
+          "target": 7861240,
+          "kind": "call",
+          "sha256": "a507d5585f72287ed7e86e6de3a8afd13eef5bd9d09452c43034e92fdabff88e"
+        }
+      ],
+      "indirectTransfers": [
+        {
+          "address": 6977296,
+          "operand": "r1",
+          "kind": "call",
+          "sha256": "42977fbd480f9e810b7d03e9ac27f426b718118139df60c30c20fee5cb9ba8e7"
+        },
+        {
+          "address": 6977344,
+          "operand": "r1",
+          "kind": "call",
+          "sha256": "42977fbd480f9e810b7d03e9ac27f426b718118139df60c30c20fee5cb9ba8e7"
+        }
+      ],
+      "sourceCreditRequested": 0
+    }
+  ],
+  "sourceCreditGranted": 0,
+  "initializedTextByteDenominatorChanged": false,
+  "newCandidateFunctions": 1,
+  "newInstructionUnionBytes": 216,
+  "followingEntryWitness": {
+    "address": 6977408,
+    "vtableReleaseSlot": 8722164,
+    "isSeeded": false,
+    "slotSha256": "cdf40ba5e5da3efcc5b91f7e0b7d94e687f498e4b1c67e0a3178b9b42db31e1b",
+    "nearestFollowingSeededEntry": 6977812,
+    "newCredit": 0
+  },
+  "candidatePeerOverlaps": [],
+  "sharedTailAliases": []
+}
