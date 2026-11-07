@@ -9,6 +9,7 @@ import squirrel_wave004_build as previous
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'source/squirrel-wave006'
+LEGACY_NAME_DEFINES = ['-Dsq_legacy_table_get006=fn_001a1dc8']
 PLACEMENTS = {**previous.PLACEMENTS, 'fn_0018d65c': 0x18d65c, 'fn_001994c0': 0x1994c0,
               'fn_00199cb8': 0x199cb8, 'sq_execute_error_handler': 0x198320,
               'fn_001a0cc0': 0xa62000, 'sq_wave004_release': 0xa61000, '__aeabi_memcpy': 0xa63000,
@@ -129,7 +130,7 @@ def build(output, variant='normal'):
     commands, objects = [], []
     for path in inputs:
         target = output / (str(len(objects)) + '-' + path.stem + '.o')
-        commands.append(prior.command([ROOT / 'tools/clang-21/clang.exe', *prior.FLAGS, '-mfpu=vfp', '-mfloat-abi=softfp',
+        commands.append(prior.command([ROOT / 'tools/clang-21/clang.exe', *prior.FLAGS, *LEGACY_NAME_DEFINES, '-mfpu=vfp', '-mfloat-abi=softfp',
                                        '-std=c11', '-O2', '-I', SOURCE, '-I', ROOT / 'source/squirrel-wave007', '-I', ROOT / 'source/squirrel-wave008', '-c', path, '-o', target], output / (path.stem + '.log')))
         objects.append(target)
     script = output / 'component.ld'

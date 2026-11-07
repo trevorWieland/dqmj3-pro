@@ -50,7 +50,7 @@ void fn_0019b998(SqTable *table, SqState *shared, SqI32 requested)
     fn_0019e8c4(&shared->chain, &table->reference);
 }
 
-_Bool fn_001a1dc8(SqTable *table, const SqObject *key, SqObject *destination)
+_Bool sq_legacy_table_get006(SqTable *table, const SqObject *key, SqObject *destination)
 {
     if (key->type == 0x01000001u) return 0;
     SqHashNode *node = find(table, key, hash(key) & (SqU32)(table->node_count - 1));

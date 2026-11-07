@@ -294,3 +294,5 @@ compiled translation units; no Android device, AYN Thor execution, or whole-game
 build is claimed. The bytecode programs are authored test inputs, not newly
 reconstructed shipped-script source. A copied local replay is separate from an
 independent committed-source replay and from admission to the production ledger.
+
+The legacy table Get definition now uses the explicit C name `sq_legacy_table_get006`. Fixture compilers map it to the historical verification symbol through `LEGACY_NAME_DEFINES`; ARM ELF, both Windows executables and all 40 Android objects remain byte-for-byte identical. The original 1,001-case snapshots retain their original source. This name transition does not extend the legacy numeric-float or object-layout domain. ByteMatch can therefore name the actual-object019 provider independently.

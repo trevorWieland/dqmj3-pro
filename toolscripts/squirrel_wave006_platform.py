@@ -26,7 +26,7 @@ def build(root, source, output):
         library = output / (name + '.lib')
         run([linker, '-flavor', 'link', '/lib', '/machine:x64', '/def:' + str(definition), '/out:' + str(library)], name)
         libraries.append(library)
-    flags = ['--target=x86_64-pc-windows-msvc', '-std=c11', '-O2', '-Wall', '-Wextra', '-Werror',
+    flags = ['--target=x86_64-pc-windows-msvc', *builder.LEGACY_NAME_DEFINES, '-std=c11', '-O2', '-Wall', '-Wextra', '-Werror',
              '-ffreestanding', '-fno-builtin', '-fno-stack-protector', '-mno-incremental-linker-compatible', '-I', source]
     objects = []
     for number, path in enumerate(builder.sources() + [source / 'host_runner.c', source / 'host_generators.c']):
@@ -50,7 +50,7 @@ def build(root, source, output):
     android = []
     for number, path in enumerate(builder.sources()):
         obj = output / ('android-' + str(number) + '-' + path.stem + '.o')
-        run([compiler, '--target=aarch64-linux-android29', '-std=c11', '-O2', '-Wall', '-Wextra', '-Werror',
+        run([compiler, '--target=aarch64-linux-android29', *builder.LEGACY_NAME_DEFINES, '-std=c11', '-O2', '-Wall', '-Wextra', '-Werror',
              '-ffreestanding', '-fno-builtin', '-fPIC', '-I', source, '-c', path, '-o', obj], 'android-' + path.stem)
         content = obj.read_bytes()
         if content[:6] != b'\x7fELF\x02\x01' or int.from_bytes(content[18:20], 'little') != 183:

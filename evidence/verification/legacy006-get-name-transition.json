@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "status": "legacy-get-name-transition-with-identical-verification-binaries",
+  "checks": {
+    "armElfIdentical": true,
+    "windowsExeIdentical": true,
+    "wrongWindowsExeIdentical": true,
+    "all40AndroidObjectsIdentical": true,
+    "windows41CasesIdentical": true,
+    "wrongWindowsObservationIdentical": true
+  },
+  "baseline": {
+    "path": "evidence/verification/legacy006-get-name-baseline.json",
+    "sha256": "b5fd6cbf9955c478e87d26952e5d101afcfc380c3d3e2e29016142f7a935046e",
+    "bytes": 7139
+  },
+  "nameDefines": [
+    "-Dsq_legacy_table_get006=fn_001a1dc8"
+  ],
+  "sourceFiles": [
+    {
+      "path": "source/squirrel-wave006/table.c",
+      "sha256": "727b87c31bb945955835fad090b7dc6988058bb81783ab3e27cb28e701e28b8f",
+      "bytes": 5200
+    },
+    {
+      "path": "toolscripts/squirrel_wave006_build.py",
+      "sha256": "7e01fb8f720101d5e73b53c786a1038254f39696ca5bff1c10de3931242eea33",
+      "bytes": 14308
+    },
+    {
+      "path": "toolscripts/squirrel_wave006_platform.py",
+      "sha256": "be8308941ae63c1c89d03374e5242e2fbd90a3cb01bdd72e86bafbbc3ec84ebf",
+      "bytes": 4073
+    }
+  ],
+  "armElfSha256": "0fe8b72c8ac732d9aaa2c142de6d788c72401abce25fa028018dba2c5e700dc0",
+  "windowsExeSha256": "531200b212b5833db8bb3248ce8d80590f9fc82764a6928918118e9d27f7fdf2",
+  "androidObjects": [
+    {
+      "source": "source/squirrel-wave006/execute.c",
+      "sha256": "fe4e8e8d7e169f658c82c4062b71c3fc45cb9f8afcf062db9a3bd30672f9b6ff"
+    },
+    {
+      "source": "source/squirrel-wave006/objects.c",
+      "sha256": "fbcce636ab2eedb30c0b788b164302117473216abfede0568217441ee270d031"
+    },
+    {
+      "source": "source/squirrel-wave006/return.c",
+      "sha256": "05a74b860216d1f2fd800ffdf4b9eae00edc8aa42ecd04d412c20ef3aa3ddab7"
+    },
+    {
+      "source": "source/squirrel-wave006/start_call.c",
+      "sha256": "e2e10b25f0e5b1be5e7822253e5a4e138c68158c4a4fb67ae6d9be2f4671198d"
+    },
+    {
+      "source": "source/squirrel-wave006/execute_fixture.c",
+      "sha256": "d63529790fea3de14a2038d6ac51af6dbd03b4f32740c15f9769548c18034459"
+    },
+    {
+      "source": "source/squirrel-wave006/runtime.c",
+      "sha256": "b15357f80a4d45f5bf9531acb023a24fd19ac88cef691b39746ec9ae107dc3a4"
+    },
+    {
+      "source": "source/squirrel-wave006/exceptions.c",
+      "sha256": "8599d945009be575922dc0a65acbb6031dae57d088c44ccb8efc7cdbc722502a"
+    },
+    {
+      "source": "source/squirrel-wave006/type_names.c",
+      "sha256": "db89f3e4b7d88a63146301a7a9030f2fd9258e960e636144abcac25a911cf71f"
+    },
+    {
+      "source": "source/squirrel-wave006/numbers.c",
+      "sha256": "70f2666c1071f98088d0c6e33ee58f3571e8353d06a9b56112a41237556e226a"
+    },
+    {
+      "source": "source/squirrel-wave006/arithmetic.c",
+      "sha256": "f82893b677d13462f782e6f1c16cf11e40c9a20f4011d3a9912cce734dd101d5"
+    },
+    {
+      "source": "source/squirrel-wave006/comparison.c",
+      "sha256": "8c0908e78675f22b3667612b64f423b8f48f7a9e36ac2bcfca52bd51110aa122"
+    },
+    {
+      "source": "source/squirrel-wave006/array_ops.c",
+      "sha256": "d7e725228b2b3a4bff45056b734b99a002f88f6f980f21679b3bddd655b03224"
+    },
+    {
+      "source": "source/squirrel-wave006/closure.c",
+      "sha256": "468372f94be6257c19703abf6e8830b77482d21d35cd74a4d09b7d42534c0006"
+    },
+    {
+      "source": "source/squirrel-wave006/closure_release.c",
+      "sha256": "91609704c5ae0aec7fa629ae6c8feac3eb4085ffa2c10bf641bbe04b35117a25"
+    },
+    {
+      "source": "source/squirrel-wave006/indexed_get.c",
+      "sha256": "cebb703a34871731fdb867a35eb5e025478c3cc17b8bd064c7037dacd2a3ade8"
+    },
+    {
+      "source": "source/squirrel-wave006/table.c",
+      "sha256": "7a7a75b8aedfd906db950c6f68747b6809dd8afe96e24227e95f8dd149aad0b5"
+    },
+    {
+      "source": "source/squirrel-wave006/local_arithmetic.c",
+      "sha256": "143d6d031ff8b912df7cf8073f2cf9ab2193c7f6f4a893b174af0228faedd4e2"
+    },
+    {
+      "source": "source/squirrel-wave006/table_release.c",
+      "sha256": "fa741088822ce6ca27b4c50a7be44caf4ad8a49cfee989771072aa2b31cc1f92"
+    },
+    {
+      "source": "source/squirrel-wave006/delegate.c",
+      "sha256": "d13deac7e37b6f5e00963425fde5b22b6f912d168a47edbe0bde6add1e67efce"
+    },
+    {
+      "source": "source/squirrel-wave006/iteration.c",
+      "sha256": "675c9d655c7e1671a990559800929c7ffd16ad31394fe5405ca8ae0a059d81b9"
+    },
+    {
+      "source": "source/squirrel-wave006/delete.c",
+      "sha256": "3ce567e0dbb3ef5d4543bf9f6a22300317a09c25f4c56fa68c6e69043b6446e6"
+    },
+    {
+      "source": "source/squirrel-wave006/generator.c",
+      "sha256": "172bc7242298177b1e7ed20edd4b12e8403781f17482c5387d4d3c637e0684d2"
+    },
+    {
+      "source": "source/squirrel-wave006/generator_resume.c",
+      "sha256": "190193759f672859ebd8b94a55656d3d6030db45efdfa342d4211bb077dc40b1"
+    },
+    {
+      "source": "source/squirrel-wave004/native_call.c",
+      "sha256": "a149bc47ba18dd83c235a0c5808f20d2dc82a38f1fd4b66e6b3b861c89acbf96"
+    },
+    {
+      "source": "source/squirrel-wave004/frame_resize.c",
+      "sha256": "0aaa18a98a4820be95bcef62a3ff15f37baeb6ed68854928218ac2087c1bd56f"
+    },
+    {
+      "source": "source/squirrel-wave004/array_adapter.c",
+      "sha256": "f4eb5145b314ba2e2342fb7a5d5edc68ee1e5305d341807f606c010947285c27"
+    },
+    {
+      "source": "source/squirrel-wave004/call_fixture.c",
+      "sha256": "eb848f412122409a532192fbf86aea1d8e300a9f274038d00906af72c2f25abb"
+    },
+    {
+      "source": "source/squirrel-wave004/runtime.c",
+      "sha256": "4920c2d7fd4d163a71044347df102b1b84183ff9ef3b15f65b2dfd04494f3f26"
+    },
+    {
+      "source": "source/squirrel-wave002/vector_resize.c",
+      "sha256": "e0bb44e9e0d1f1acdfe81155a894057646cf2bc3c3a2cb4d37a17bc88aed1fe9"
+    },
+    {
+      "source": "source/squirrel-wave002/array_create.c",
+      "sha256": "69291ef3e9c22e580d1e63e6392617a5d86f1586e5753248dfb792f827dcec91"
+    },
+    {
+      "source": "src/native/wave005/chain.c",
+      "sha256": "8e43f39d93afaa8de09506af62bc5c115bfd640b1cce4403e76155731db3ef71"
+    },
+    {
+      "source": "src/native/wave005/stack.c",
+      "sha256": "cc4201f569698d8cf565ecb148bd16d538dedf445f22917cb77f92bfbc61b1f7"
+    },
+    {
+      "source": "src/native/wave005/push.c",
+      "sha256": "6af1e9b8b8455f622b9433738bd97212e6d42fab4072216ed429b94296978834"
+    },
+    {
+      "source": "src/native/wave005/object.c",
+      "sha256": "ed0874a68223187a203133298c6c93007a7031cc9a5438d0c9785783b590512b"
+    },
+    {
+      "source": "source/squirrel-wave007/array_release.c",
+      "sha256": "f9917b8e4f37d86977f329e23df8b03c49e1ce1a8633d858eb241079859f4685"
+    },
+    {
+      "source": "source/squirrel-wave007/vector_destroy.c",
+      "sha256": "187808c3b6b6d66712ed59015a03a7583dc9c9ecb5024cf1aaf2b1a89f862f85"
+    },
+    {
+      "source": "source/squirrel-wave007/chain_unlink.c",
+      "sha256": "ee59a3e0e0e212599a62f29a88c3b39ec289869942891df3ffcbfce2fe33b786"
+    },
+    {
+      "source": "source/squirrel-wave007/vtables.c",
+      "sha256": "0fccaad5171f83e5d213e78dd2a6d3013c41737d66af8334dac74b7d899aab9d"
+    },
+    {
+      "source": "source/squirrel-wave008/generator_release.c",
+      "sha256": "5033b411ed12a6bf839c7b0f8562ec851ac130931fcbfe4ffffdc36babfe141d"
+    },
+    {
+      "source": "source/squirrel-wave008/vtables.c",
+      "sha256": "49d57ee8b86d48351a9970079569940047b2acb8895d38dee01e6012c1a1cb5e"
+    }
+  ],
+  "oldNumericFloatEqualityDomainNotExpanded": true,
+  "historical1001SourceSnapshotsUnchanged": true,
+  "sourceCreditGranted": 0,
+  "wholeVmCreditGranted": 0,
+  "producer": {
+    "path": "evidence/verification/producers/review-legacy006-get-name-transition.py",
+    "sha256": "d80628ab937fcffa6a60797bb9c92766cf419a8a9d861d9077898cc00f5ec291",
+    "bytes": 2234
+  }
+}
