@@ -69,6 +69,17 @@ _Bool fn_0019b414(SqTable *table, const SqObject *key, const SqObject *value)
     return 1;
 }
 
+void fn_0019b650(SqTable *table, const SqObject *key)
+{
+    SqHashNode *node = find(table, key, hash(key) & (SqU32)(table->node_count - 1));
+    if (!node) return;
+    SqObject null = {0x01000001u, {.reference = 0}};
+    fn_0019e864(&node->key, &null);
+    fn_0019e864(&node->value, &node->key);
+    table->used--;
+    fn_0019b4ec(table, 0);
+}
+
 void fn_0019b4ec(SqTable *table, _Bool force)
 {
     SqI32 old_count = table->node_count < 4 ? 4 : table->node_count;

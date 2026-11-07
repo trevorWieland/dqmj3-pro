@@ -19,7 +19,7 @@ ORIGINAL_RANGES = [(0x1994c0, 0x1996ec), (0x199cb8, 0x19a1e0), (0x1a0cc0, 0x1a0d
                    (0x6a7610, 0x6a7638), (0x6a769c, 0x6a7774), (0x77f3f8, 0x77f478), (0x24d73c, 0x24d76c), (0x198578, 0x1987dc),
                    (0x19b390, 0x19b410), (0x19b998, 0x19ba00), (0x19b728, 0x19b98c), (0x19b4ec, 0x19b64c),
                    (0x1a1dc8, 0x1a1ee8), (0x173d60, 0x1740bc), (0x174194, 0x17419c), (0x197b18, 0x197fc8),
-                   (0x19b414, 0x19b4c4), (0x1987e4, 0x198b50), (0x198b70, 0x198c88), (0x666518, 0x666628), (0x19e2e8, 0x19e378), (0x233bd8, 0x233c04), (0x1975b0, 0x197ac4), (0x1a2b2c, 0x1a2b54), (0x1a8604, 0x1a8730)]
+                   (0x19b414, 0x19b4c4), (0x1987e4, 0x198b50), (0x198b70, 0x198c88), (0x666518, 0x666628), (0x19e2e8, 0x19e378), (0x233bd8, 0x233c04), (0x1975b0, 0x197ac4), (0x1a2b2c, 0x1a2b54), (0x1a8604, 0x1a8730), (0x19b650, 0x19b720), (0x192b9c, 0x192ca8), (0x19289c, 0x192b38), (0x19e378, 0x19e7a0), (0x19e7dc, 0x19e864), (0x665bd4, 0x665bfc), (0x665c60, 0x665cc0), (0x202dcc, 0x202df4), (0x202e68, 0x202f70)]
 
 
 import json
@@ -27,7 +27,7 @@ from pathlib import Path
 
 MILESTONE = json.loads((Path(__file__).resolve().parents[1] / 'evidence/lanes/squirrel-source-wave005/execute-milestone.json').read_text())
 EXECUTE_RANGES = MILESTONE['instructionRanges']
-DATA_RANGES = tuple((row['start'], row['endExclusive']) for row in MILESTONE['dataRanges']) + ((0x192014, 0x19204c), (0x1a158c, 0x1a15ec), (0x1994b8, 0x1994c0), (0x196f58, 0x196f6c), (0x6a7774, 0x6a7780), (0x8516d0, 0x8516e4), (0x1987dc, 0x1987e4), (0x19b410, 0x19b414), (0x19ba00, 0x19ba04), (0x19b98c, 0x19b998), (0x19b64c, 0x19b650), (0x1a1ee8, 0x1a1eec), (0x1740bc, 0x174194), (0x197fc8, 0x197fe0), (0x19b4c4, 0x19b4c8), (0x198b50, 0x198b70), (0x198c88, 0x198c9c), (0x666628, 0x66662c), (0x233c04, 0x233c0c), (0x850dac, 0x850dc0), (0x197ac4, 0x197b18), (0x1a8730, 0x1a8734))
+DATA_RANGES = tuple((row['start'], row['endExclusive']) for row in MILESTONE['dataRanges']) + ((0x192014, 0x19204c), (0x1a158c, 0x1a15ec), (0x1994b8, 0x1994c0), (0x196f58, 0x196f6c), (0x6a7774, 0x6a7780), (0x8516d0, 0x8516e4), (0x1987dc, 0x1987e4), (0x19b410, 0x19b414), (0x19ba00, 0x19ba04), (0x19b98c, 0x19b998), (0x19b64c, 0x19b650), (0x1a1ee8, 0x1a1eec), (0x1740bc, 0x174194), (0x197fc8, 0x197fe0), (0x19b4c4, 0x19b4c8), (0x198b50, 0x198b70), (0x198c88, 0x198c9c), (0x666628, 0x66662c), (0x233c04, 0x233c0c), (0x850dac, 0x850dc0), (0x197ac4, 0x197b18), (0x1a8730, 0x1a8734), (0x19b720, 0x19b728), (0x192ca8, 0x192cb4), (0x192b38, 0x192b9c), (0x19e7a0, 0x19e7dc), (0x665cc0, 0x665ccc), (0x850d74, 0x850d88), (0x202f70, 0x202f7c), (0x81c358, 0x81c364))
 
 
 def initialized_globals(image):
@@ -93,7 +93,6 @@ def execute(image, component, case, source=False):
             machine.mem_write(section['address'], section['data'])
     machine.mem_map(model.HEAP, model.HEAP_BYTES)
     machine.mem_write(model.HEAP, bytes(initial))
-    machine.mem_write(model.ARRAY_VTABLE + 8, struct.pack('<I', previous.RELEASE))
     machine.mem_map(STACK, 0x10000)
     stack = bytearray(previous.stack_bytes(case))
     struct.pack_into('<IIII', stack, 0xff00, case.get('frameBase', 4), model.RESULT, case.get('raiseError', 1), case.get('mode', 2))
@@ -165,7 +164,7 @@ def execute(image, component, case, source=False):
                              "division by zero": 0, "modulo by zero": 0,
                              "the function doesn't have var args": 0, "vargv index out of range": 0,
                              "indexing 'vargv' with %s": 1, "delegate cycle detected": 0,
-                             "delegating a '%s'": 1, "using '%s' as delegate": 1}
+                             "delegating a '%s'": 1, "using '%s' as delegate": 1, "attempt to delete a slot from a %s": 1, "resuming dead generator": 0, "resuming active generator": 0, "internal vm error, yielding dead generator": 0, "internal vm error, yielding a dead generator": 0, "trying to resume a '%s',only genenerator can be resumed": 1}
                 if message in arguments:
                     names = []
                     for register in (arm.UC_ARM_REG_R2, arm.UC_ARM_REG_R3)[:arguments[message]]:

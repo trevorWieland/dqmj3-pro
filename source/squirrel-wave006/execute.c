@@ -24,9 +24,19 @@ static SqI32 dispatch_call(SqExecuteVM *vm, const SqInstruction *instruction, Sq
     if (callable.type & 0x08000000u) callable.value.reference->references++;
     if (callable.type == 0x08000100u) {
         SqScriptClosure *script = (SqScriptClosure *)callable.value.reference;
+        SqI32 previous_top = base->frame.top;
         _Bool success = fn_00199cb8(vm, script, target, instruction->argument3, stack_base, tail);
         if (!success) fn_00198230(base, &base->last_error);
-        else if (((SqFunction *)script->function.value.reference)->generator) sq_execute_unsupported(vm, -6);
+        else if (((SqFunction *)script->function.value.reference)->generator) {
+            SqGenerator *generator = fn_00192b9c(base->shared, script);
+            if (!generator || !fn_0019289c(generator, vm)) sq_execute_unsupported(vm, -6);
+            fn_001994c0(vm, 1, target, &callable);
+            SqObject object = {0x08000400u, {.reference = &generator->reference}};
+            generator->reference.references++;
+            fn_0019e864(slot(vm, target), &object);
+            sq_execute_release(object.type, object.value);
+            sq_execute_clear_stack(vm, previous_top);
+        }
         sq_execute_release(callable.type, callable.value);
         return success ? 0 : -1;
     }
@@ -65,6 +75,7 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
     base->native_calls++;
     SqI32 traps = 0;
     if (execution_type == 0) {
+        SqI32 previous_top = base->frame.top;
         fn_0019e864(&base->temporary, closure);
         SqScriptClosure *script = (SqScriptClosure *)base->temporary.value.reference;
         if (!fn_00199cb8(vm, script, base->frame.top - arguments, arguments, stack_base, 0)) {
@@ -72,7 +83,18 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
             base->native_calls--;
             return 0;
         }
-        if (((SqFunction *)script->function.value.reference)->generator) sq_execute_unsupported(vm, -11);
+        if (((SqFunction *)script->function.value.reference)->generator) {
+            SqGenerator *generator = fn_00192b9c(base->shared, script);
+            if (!generator || !fn_0019289c(generator, vm)) sq_execute_unsupported(vm, -11);
+            fn_001994c0(vm, 1, base->current->target, &base->temporary);
+            SqObject object = {0x08000400u, {.reference = &generator->reference}};
+            generator->reference.references++;
+            fn_0019e864(result, &object);
+            sq_execute_release(object.type, object.value);
+            sq_execute_clear_stack(vm, previous_top);
+            base->native_calls--;
+            return 1;
+        }
         base->current->root = 1;
     } else if (execution_type == 2) {
         traps = vm->suspended_traps;
@@ -236,6 +258,47 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
             }
             break;
         }
+        case SQ_RESUME:
+            if (slot(vm, argument)->type != 0x08000400u) {
+                sq_execute_error(base, "trying to resume a '%s',only genenerator can be resumed", fn_00191f20(slot(vm, argument)));
+                if (sq_execute_unwind(vm, raise_error, &traps)) break;
+                base->native_calls--;
+                return 0;
+            }
+            if (!fn_0019e378((SqGenerator *)slot(vm, argument)->value.reference, vm, instruction->argument0)) {
+                fn_00198230(base, &base->last_error);
+                if (sq_execute_unwind(vm, raise_error, &traps)) break;
+                base->native_calls--;
+                return 0;
+            }
+            traps += base->current->traps;
+            break;
+        case SQ_YIELD:
+            if (!base->current->generator) sq_execute_unsupported(vm, -149);
+            if (argument != 255) fn_0019e864(&base->temporary, slot(vm, argument));
+            if (!fn_0019289c((SqGenerator *)base->current->generator, vm)) {
+                fn_00198230(base, &base->last_error);
+                if (sq_execute_unwind(vm, raise_error, &traps)) break;
+                base->native_calls--;
+                return 0;
+            }
+            traps -= base->current->traps;
+            if (argument != 255) fn_0019e864(slot(vm, argument), &base->temporary);
+            if (fn_001994c0(vm, instruction->argument0, argument, &base->temporary)) {
+                if (traps) sq_execute_unsupported(vm, -20);
+                fn_0019e864(result, &base->temporary);
+                base->native_calls--;
+                return 1;
+            }
+            break;
+        case SQ_DELETE:
+            if (!sq_execute_delete(vm, slot(vm, instruction->argument0), slot(vm, argument), slot(vm, instruction->argument2))) {
+                fn_00198230(base, &base->last_error);
+                if (sq_execute_unwind(vm, raise_error, &traps)) break;
+                base->native_calls--;
+                return 0;
+            }
+            break;
         case SQ_FOREACH: {
             SqObject *key = slot(vm, instruction->argument2);
             SqI32 jump = sq_execute_foreach(vm, slot(vm, instruction->argument0), key, key + 1, key + 2, argument);

@@ -2,6 +2,7 @@
 #define DQMJ3_SQUIRREL_WAVE006_EXECUTE_VIEWS_H
 
 #include "../squirrel-wave004/call_fixture.h"
+#include "../squirrel-wave008/generator_release.h"
 
 typedef struct {
     SqI32 argument1;
@@ -14,13 +15,13 @@ typedef struct {
 typedef enum {
     SQ_LINE = 0, SQ_LOAD = 1, SQ_LOADINT = 2, SQ_LOADFLOAT = 3, SQ_DLOAD = 4,
     SQ_TAILCALL = 5, SQ_CALL = 6, SQ_PREPCALL = 7, SQ_PREPCALLK = 8, SQ_GETK = 9,
-    SQ_MOVE = 10, SQ_NEWSLOT = 11, SQ_SET = 13, SQ_GET = 14, SQ_EQ = 15, SQ_NE = 16, SQ_ARITH = 17, SQ_BITW = 18, SQ_RETURN = 19, SQ_LOADNULLS = 20,
+    SQ_MOVE = 10, SQ_NEWSLOT = 11, SQ_DELETE = 12, SQ_SET = 13, SQ_GET = 14, SQ_EQ = 15, SQ_NE = 16, SQ_ARITH = 17, SQ_BITW = 18, SQ_RETURN = 19, SQ_LOADNULLS = 20,
     SQ_LOADROOT = 21, SQ_LOADBOOL = 22, SQ_DMOVE = 23, SQ_JUMP = 24,
     SQ_JNZ = 25, SQ_JZ = 26, SQ_LOADFREE = 27, SQ_VARGC = 28, SQ_GETVARGV = 29,
     SQ_NEWTABLE = 30, SQ_NEWARRAY = 31, SQ_APPENDARRAY = 32, SQ_CLOSURE = 48,
     SQ_COMPARITHL = 35, SQ_INCL = 37, SQ_PINCL = 39, SQ_CMP = 40, SQ_EXISTS = 41,
     SQ_AND = 43, SQ_OR = 44, SQ_NEG = 45, SQ_NOT = 46, SQ_BWNOT = 47,
-    SQ_FOREACH = 51, SQ_DELEGATE = 53, SQ_PUSHTRAP = 56, SQ_POPTRAP = 57, SQ_THROW = 58
+    SQ_YIELD = 49, SQ_RESUME = 50, SQ_FOREACH = 51, SQ_DELEGATE = 53, SQ_PUSHTRAP = 56, SQ_POPTRAP = 57, SQ_THROW = 58
 } SqMeasuredOpcode;
 
 typedef struct {
@@ -42,6 +43,8 @@ typedef struct {
     SqVector outers;
     SqVector defaults;
 } SqScriptClosure;
+
+typedef SqGenerator008 SqGenerator;
 
 typedef struct {
     SqU32 kind;
@@ -124,6 +127,8 @@ _Static_assert(sizeof(void *) != 4 || sizeof(SqTrap) == 16, "Original trap recor
 _Static_assert(sizeof(void *) != 4 || sizeof(SqOuterDescriptor) == 20, "Original outer descriptor stride");
 _Static_assert(sizeof(void *) != 4 || sizeof(SqHashNode) == 20, "Original hash node stride");
 _Static_assert(sizeof(void *) != 4 || sizeof(SqTable) == 44, "Original table allocation extent");
+_Static_assert(sizeof(void *) != 4 || sizeof(SqGenerator) == 120, "Original generator allocation extent");
+_Static_assert(sizeof(void *) != 4 || __builtin_offsetof(SqGenerator, state) == 116, "Original generator state byte");
 
 SqVector sq_execute_varargs(SqExecuteVM *vm);
 void sq_execute_publish_varargs(SqExecuteVM *vm, SqVector vector);
@@ -166,7 +171,13 @@ void fn_0019b390(SqTable *table, SqI32 count);
 void fn_0019b998(SqTable *table, SqState *shared, SqI32 requested);
 _Bool fn_001a1dc8(SqTable *table, const SqObject *key, SqObject *destination);
 _Bool fn_0019b414(SqTable *table, const SqObject *key, const SqObject *value);
+void fn_0019b650(SqTable *table, const SqObject *key);
+_Bool sq_execute_delete(SqExecuteVM *vm, SqObject *destination, const SqObject *self, const SqObject *key);
 void fn_00666518(SqRef *reference);
+extern const SqVTable sq_generator_vtable;
+SqGenerator *fn_00192b9c(SqState *shared, SqScriptClosure *closure);
+_Bool fn_0019289c(SqGenerator *generator, SqExecuteVM *vm);
+_Bool fn_0019e378(SqGenerator *generator, SqExecuteVM *vm, SqI32 target);
 _Bool fn_0019e2e8(SqTable *table, SqTable *delegate);
 _Bool sq_execute_delegate(SqExecuteVM *vm, SqObject *destination, const SqObject *self, const SqObject *delegate);
 _Bool fn_001987e4(SqExecuteVM *vm, const SqObject *self, const SqObject *key, const SqObject *value, SqU32 rooted);

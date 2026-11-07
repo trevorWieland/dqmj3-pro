@@ -37,7 +37,7 @@ def build(root, source, output):
     run([linker, '-flavor', 'link', '/timestamp:0', '/machine:x64', '/entry:mainCRTStartup', '/subsystem:console',
          '/nodefaultlib', '/out:' + str(exe), *objects, *libraries], 'link')
     observed = json.loads(run([exe], 'execution').stdout)
-    if observed['result'] or observed['cases'] != 30 or observed['pointerBytes'] != 8 or observed['objectBytes'] != 16:
+    if observed['result'] or observed['cases'] != 36 or observed['pointerBytes'] != 8 or observed['objectBytes'] != 16:
         raise ValueError('Unexpected native host typed frame layout/behavior')
     wrong = output / 'wrong-native-call.c'
     wrong.write_text((source / 'execute.c').read_text().replace('0x05000002u, (SqU32)argument', '0x05000004u, (SqU32)argument'))

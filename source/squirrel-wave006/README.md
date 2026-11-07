@@ -180,8 +180,64 @@ iterator starts as null or a valid nonnegative integer. Negative table positions
 other iterator types and string/class/generator iterators remain unqualified.
 Reaching PostForeach on a non-generator invokes an original assertion; no no-op
 implementation or ordinary-return credit is supplied for that path. Created
-arrays remain live at Return because their final-owner destructor is still a
-separate unresolved dependency.
+arrays in the earlier checkpoint remain live at Return; the successor integration
+below qualifies their final-owner lifetime dependency separately.
+
+Table Delete retains its removed value, clears key before value, decrements the
+live-node count and rehashes/shrinks through source. Repeated removals exercise
+collisions and storage shrinkage; a removed closure survives as the returned
+value. Invalid scalar receivers take the measured script-error return. A compiled
+missing-count decrement genuinely returns and fails. Missing-key stringification,
+delegate delete metamethods and instance/userdata Delete remain unqualified.
+
+Generator entry now allocates the measured120-byte object, retains its closure,
+snapshots the call frame, moves stack values into source storage, copies reversed
+variable arguments and returns a suspended generator through the actual Execute
+entry path. No script instruction executes during this initial freeze. Original
+and source compare the entire final owned heap without new exclusions, including
+the saved frame, retained callable temporary and reference counts. Constructor
+frame fields that the original leaves indeterminate are initialized in portable C;
+the initial Yield overwrites all saved-frame fields before any admitted observer
+uses them. Raw constructor-frame observers before that overwrite are outside the
+declared service contract. Generator traps/state errors remain unfinished; the
+later lifetime integration below qualifies final-owner destruction. A wrong source snapshot that omits its
+first slot must genuinely return and fail. Windows runs this same source creation
+and freeze path; it keeps the returned generator live.
+
+Generator calls now create and freeze child frames from source, resume their saved
+instruction stream, execute script operations and yield actual values back to
+their caller. Cases cover repeated resumes, defaults, variable arguments, null and
+reference yields, debug hooks and nested allocation; Windows executes the same
+source path. The original Resume clears saved slot zero on every copied-stack
+iteration. This measured retention behavior is preserved. Changing it to clear
+each current slot returns with identical final heap bytes but different live
+reference counts at nested allocation, which the observer rejects. Generator
+completion/kill, traps, state errors and entry modes1/3 remain
+unqualified; returned arrays keep these suspended generators live.
+
+The successor consumes frozen SQArray007 after coordinator review, pinning its
+ready packet and source. Real array identities now call the compiled destructor,
+vector cleanup, unlink and disposal path. VM programs return scalars after creating
+arrays and destroy nested arrays in original/source and native Windows execution.
+Generic fake input references retain a separate observer vtable and are never cast
+to arrays. The earlier oracle's release-slot substitution on the real array
+identity is removed; original execution now uses its actual finalizer and source
+execution uses the compiled frozen vtable. No original executable code, object or
+relocation is copied into the source path. Frozen007 remains unchanged and receives
+no duplicate interval credit from this integration. Disposal is the explicit
+fixture/host ownership service, not recovered allocator logic.
+
+The next successor consumes frozen SQGenerator008 after coordinator review and
+uses `SqGenerator008` as the single shared generator type, retaining target layout
+assertions. Original execution keeps its actual destructor and release bodies;
+source execution links the unchanged frozen production source and typed vtable.
+Programs dispose of suspended and resumed generators, including reverse-vararg
+and saved-stack storage, then return a scalar. Both the complete owned heap and
+ordered disposal observations must agree. Windows executes this path with real
+host allocation. A compiled skipped destructor must actually return and fail.
+This integration adds no duplicate lifetime interval credit, weak/marked observer
+domain, generator Kill or complete Execute claim. Fake generic references retain
+their separate observer identity. Frozen008 is unchanged.
 
 ## Replay and interpretation
 

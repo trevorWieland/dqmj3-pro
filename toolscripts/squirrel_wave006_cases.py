@@ -53,7 +53,7 @@ def corpus():
                   {'mode': mode, 'program': [op('LOAD', 1, 1), op('THROW', 1)]},
                   {'mode': mode, 'program': [*[op('PUSHTRAP', 4, 6 - index) for index in range(5)],
                                             op('POPTRAP', 5), op('RETURN', 255), op('RETURN', 255)]}]
-    cases += numerical_cases() + arithmetic_cases() + script_cases() + comparison_cases() + array_cases() + closure_cases() + indexed_cases() + table_cases() + local_cases() + setter_cases() + table_release_cases() + delegate_cases() + iteration_cases()
+    cases += numerical_cases() + arithmetic_cases() + script_cases() + comparison_cases() + array_cases() + closure_cases() + indexed_cases() + table_cases() + local_cases() + setter_cases() + table_release_cases() + delegate_cases() + iteration_cases() + delete_cases() + generator_cases() + resumed_generator_cases() + array_release_cases() + generator_release_cases()
     return [{'seed': 0x666200 + index, **case} for index, case in enumerate(cases)]
 
 
@@ -308,6 +308,89 @@ def iteration_cases():
     return cases
 
 
+def delete_cases():
+    cases = []
+    for mode in (0, 2):
+        for count in (1, 4, 8):
+            for reference in (False, True):
+                rows = [op('NEWTABLE', 5, 0)]
+                for index in range(count): rows += [op('LOADINT', 1, index * 4),
+                    op('LOAD' if reference else 'LOADINT', 2, 1 if reference else index + 7), op('NEWSLOT', 2, 5, 1, 2)]
+                for index in range(count): rows += [op('LOADINT', 1, index * 4), op('DELETE', 3, 5, 1)]
+                cases.append({'mode': mode, 'program': rows + [op('EXISTS', 4, 5, 1), op('RETURN', 1, 5)]})
+        cases.append({'mode': mode, 'createClosure': True, 'childProgram': [op('RETURN', 255)],
+            'program': [op('NEWTABLE', 5, 0), op('LOADINT', 1, 7), op('CLOSURE', 2, 0), op('NEWSLOT', 2, 5, 1, 2),
+                        op('DELETE', 3, 5, 1), op('RETURN', 1, 3)]})
+        cases.append({'mode': mode, 'program': [op('LOADINT', 1, 7), op('DELETE', 3, 1, 1), op('RETURN', 255)]})
+    return cases
+
+
+def generator_cases():
+    return [{'mode': 0, 'generatorFunction': True, **fields} for fields in ({}, {'defaults': 2, 'parameters': 3},
+            {'arguments': 3, 'parameters': 1, 'variableParameters': True}, {'debug': True}, {'growStack': True}, {'oldReference': True})]
+
+
+def resumed_generator_cases():
+    cases = []
+    for mode in (0, 2):
+        for debug in (False, True):
+            for twice in (False, True):
+                rows = [op('LOAD', 1, 0), op('CALL', 2, 1, 3, 1), op('RESUME', 4, 2), op('NEWARRAY', 5, 3),
+                        op('APPENDARRAY', 5, 2), op('APPENDARRAY', 5, 4)]
+                if twice: rows += [op('RESUME', 4, 2), op('APPENDARRAY', 5, 4)]
+                child = [op('LOADINT', 1, 42), op('YIELD', 1, 1), op('LOADINT', 1, 43), op('YIELD', 1, 1), op('RETURN', 255)]
+                cases.append({'mode': mode, 'debug': debug, 'childGenerator': True, 'childProgram': child,
+                              'program': rows + [op('RETURN', 1, 5)]})
+        for kind in ('varargs', 'defaults', 'reference', 'null', 'allocator'):
+            rows, fields, arguments = [op('LOAD', 1, 0)], {}, 1
+            if kind == 'varargs':
+                fields = {'childVariableParameters': True}
+                arguments = 3
+                rows += [op('LOADINT', 3, 7), op('LOADINT', 4, 8), op('LOADINT', 5, 9)]
+                child = [op('VARGC', 1), op('YIELD', 1, 1), op('LOADINT', 1, 0), op('GETVARGV', 1, 1), op('YIELD', 1, 1)]
+            elif kind == 'defaults':
+                fields = {'childParameters': 3, 'childDefaults': 2}
+                child = [op('YIELD', 1, 1), op('YIELD', 1, 2)]
+            elif kind == 'reference': child = [op('LOAD', 1, 1), op('YIELD', 1, 1), op('YIELD', 1, 1)]
+            elif kind == 'null': child = [op('YIELD', 255, 255), op('YIELD', 255, 255)]
+            else:
+                fields, arguments = {'childParameters': 2}, 2
+                rows += [op('LOADINT', 3, 7), op('LOAD', 4, 1)]
+                child = [op('NEWARRAY', 5, 1), op('YIELD', 1, 5), op('YIELD', 255, 255)]
+            rows += [op('CALL', 2, 1, 3, arguments), op('RESUME', 4, 2), op('NEWARRAY', 5, 3), op('APPENDARRAY', 5, 2),
+                     op('APPENDARRAY', 5, 4), op('RESUME', 4, 2), op('APPENDARRAY', 5, 4), op('RETURN', 1, 5)]
+            cases.append({'mode': mode, 'childGenerator': True, 'childProgram': child + [op('RETURN', 255)],
+                          'program': rows, **fields})
+    return cases
+
+
+def array_release_cases():
+    cases = []
+    for mode in (0, 2):
+        for count in (0, 1, 5):
+            rows = [op('NEWARRAY', 5, 8)]
+            for unused in range(count): rows += [op('LOAD', 1, 1), op('APPENDARRAY', 5, 1)]
+            cases.append({'mode': mode, 'program': rows + [op('LOADINT', 3, 33), op('RETURN', 1, 3)]})
+        cases.append({'mode': mode, 'program': [op('NEWARRAY', 5, 2), op('NEWARRAY', 4, 2), op('LOAD', 1, 1),
+            op('APPENDARRAY', 4, 1), op('APPENDARRAY', 5, 4), op('LOADNULLS', 4, 1), op('RETURN', 255)]})
+    return cases
+
+
+def generator_release_cases():
+    cases = []
+    for mode in (0, 2):
+        for resumed in (False, True):
+            for varargs in (False, True):
+                rows = [op('LOAD', 1, 0)]
+                if varargs: rows += [op('LOADINT', 3, 7), op('LOAD', 4, 1), op('LOADINT', 5, 9)]
+                rows += [op('CALL', 2, 1, 3, 3 if varargs else 1)]
+                if resumed: rows += [op('RESUME', 4, 2)]
+                cases.append({'mode': mode, 'childGenerator': True, 'childVariableParameters': varargs,
+                    'childProgram': [op('LOAD', 1, 1), op('YIELD', 1, 1), op('RETURN', 255)],
+                    'program': rows + [op('LOADINT', 3, 33), op('RETURN', 1, 3)]})
+    return cases
+
+
 def negative_inputs():
     return {'wrong-integer-tag': {'value': 42},
             'wrong-jump': {'program': [op('LOADINT', 1, 1), op('JUMP', 0, 1), op('LOADINT', 1, 2), op('LOADINT', 1, 3), op('RETURN', 1, 1)]},
@@ -334,6 +417,18 @@ def negative_inputs():
             'wrong-array-index': {'program': [op('NEWARRAY', 5, 3), op('LOADINT', 1, 7), op('APPENDARRAY', 5, 1),
                 op('LOADINT', 1, 9), op('APPENDARRAY', 5, 1), op('LOADINT', 4, 0), op('GET', 3, 5, 4),
                 op('APPENDARRAY', 5, 3), op('RETURN', 1, 5)]},
+            'skipped-real-generator-destruction': {'mode': 0, 'childGenerator': True,
+                'childProgram': [op('YIELD', 255, 255), op('RETURN', 255)],
+                'program': [op('LOAD', 1, 0), op('CALL', 2, 1, 3, 1), op('LOADINT', 3, 33), op('RETURN', 1, 3)]},
+            'skipped-real-array-destruction': {'program': [op('NEWARRAY', 5, 8), op('LOAD', 1, 1), op('APPENDARRAY', 5, 1),
+                op('LOADINT', 3, 33), op('RETURN', 1, 3)]},
+            'changed-generator-retention': {'mode': 0, 'childGenerator': True, 'childParameters': 2,
+                'childProgram': [op('NEWARRAY', 5, 1), op('YIELD', 1, 5), op('RETURN', 255)],
+                'program': [op('LOAD', 1, 0), op('LOADINT', 3, 7), op('LOAD', 4, 1), op('CALL', 2, 1, 3, 2),
+                    op('RESUME', 4, 2), op('NEWARRAY', 5, 2), op('APPENDARRAY', 5, 2), op('APPENDARRAY', 5, 4), op('RETURN', 1, 5)]},
+            'missing-generator-slot': {'mode': 0, 'generatorFunction': True},
+            'uncounted-table-deletion': {'program': [op('NEWTABLE', 5, 0), op('LOADINT', 1, 7), op('LOADINT', 2, 33),
+                op('NEWSLOT', 2, 5, 1, 2), op('DELETE', 3, 5, 1), op('RETURN', 1, 5)]},
             'skip-foreach-element': {'program': [op('NEWARRAY', 5, 4), op('LOADINT', 1, 7), op('APPENDARRAY', 5, 1),
                 op('LOADINT', 1, 8), op('APPENDARRAY', 5, 1), op('LOADINT', 1, 9), op('APPENDARRAY', 5, 1),
                 op('LOADNULLS', 0, 3), op('LOADINT', 3, 0), op('FOREACH', 5, 3, 0), op('LOADINT', 3, 123),

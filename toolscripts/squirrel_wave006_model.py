@@ -8,9 +8,11 @@ from squirrel_wave006_container_model import ContainerModel
 from squirrel_wave006_closure_model import ClosureModel
 from squirrel_wave006_table_model import TableModel
 from squirrel_wave006_iteration_model import IterationModel
+from squirrel_wave006_generator_model import GeneratorModel
+from squirrel_wave006_array_lifetime_model import ArrayLifetimeModel
 
 
-class State(IterationModel, TableModel, ClosureModel, ContainerModel, BaseState):
+class State(ArrayLifetimeModel, GeneratorModel, IterationModel, TableModel, ClosureModel, ContainerModel, BaseState):
     def compare_values(self, left, right):
         if left[0] == right[0]:
             if left[1] == right[1]: return 0
@@ -173,7 +175,9 @@ class State(IterationModel, TableModel, ClosureModel, ContainerModel, BaseState)
         arena = self.arena
         self.assign(VM + 88, *self.read(self.slot(a1)))
         stack_base = get(arena, VM + 52) + a2
-        if opcode == 5 and self.read(VM + 88)[0] == 0x08000100:
+        function = get(arena, self.read(VM + 88)[1] + 36) if self.read(VM + 88)[0] == 0x08000100 else 0
+        tail = opcode == 5 and function and not arena[function - HEAP + 32]
+        if tail:
             frame = get(arena, VM + 132)
             self.vararg_pop(frame)
             for index in range(a3): self.assign(self.slot(index), *self.read(self.slot(a2 + index)))
@@ -181,7 +185,9 @@ class State(IterationModel, TableModel, ClosureModel, ContainerModel, BaseState)
         callable = list(self.read(VM + 88))
         self.retain(*callable)
         if callable[0] == 0x08000100:
-            success = self.start_call(callable[1], a3, stack_base, a0, opcode == 5)
+            previous_top = get(arena, VM + 48)
+            success = self.start_call(callable[1], a3, stack_base, a0, tail)
+            if success and arena[function - HEAP + 32]: self.create_generator(previous_top, callable[1], a0)
             self.release(*callable)
             return 0 if success else -1
         saved = self.case
@@ -286,11 +292,16 @@ class State(IterationModel, TableModel, ClosureModel, ContainerModel, BaseState)
             return 0
         put(arena, VM + 144, depth + 1)
         if case.get('mode', 2) == 0:
+            previous_top = get(arena, VM + 48)
             self.assign(VM + 88, 0x08000100, SCRIPT)
             if not self.start_call():
                 if not get(arena, VM + 132): put(arena, FIXTURE + 728, 1, *self.read(VM + 64))
                 put(arena, VM + 144, depth)
                 return 0
+            if case.get('generatorFunction'):
+                self.create_generator(previous_top)
+                put(arena, VM + 144, depth)
+                return 1
             put(arena, get(arena, VM + 132) + 40, 1)
         else:
             frame = get(arena, VM + 132)
@@ -337,6 +348,30 @@ class State(IterationModel, TableModel, ClosureModel, ContainerModel, BaseState)
                 self.new_array(self.slot(a0), a1)
                 if self.terminal != 'returned': return None
             elif op == 30: self.table_new(self.slot(a0), a1)
+            elif op == 50:
+                value = self.read(self.slot(a1))
+                if value[0] != 0x08000400: raise ValueError('Invalid resume receiver formatting not admitted yet')
+                if not self.resume_generator(value[1], a0):
+                    if self.unwind(): continue
+                    put(arena, VM + 144, depth)
+                    return 0
+                self.traps += get(arena, get(arena, VM + 132) + 20)
+            elif op == 49:
+                generator = get(arena, frame + 16)
+                if not generator: raise ValueError('Yield assertion is not a normal return')
+                if a1 != 255: self.assign(VM + 88, *self.read(self.slot(a1)))
+                if not self.yield_generator(generator): raise ValueError('Yield state error not admitted yet')
+                self.traps -= get(arena, frame + 20)
+                if a1 != 255: self.assign(self.slot(a1), *self.read(VM + 88))
+                if self.return_frame(a0, a1):
+                    self.assign(RESULT, *self.read(VM + 88))
+                    put(arena, VM + 144, depth)
+                    return 1
+            elif op == 12:
+                if not self.delete_operation(self.slot(a0), self.read(self.slot(a1)), self.read(self.slot(a2))):
+                    if self.unwind(): continue
+                    put(arena, VM + 144, depth)
+                    return 0
             elif op == 51:
                 jump = self.foreach(self.read(self.slot(a0)), self.slot(a2), self.slot(a2 + 1), self.slot(a2 + 2), a1)
                 put(arena, frame, get(arena, frame) + jump * 8)

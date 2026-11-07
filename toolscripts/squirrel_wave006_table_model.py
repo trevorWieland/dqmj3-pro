@@ -5,6 +5,28 @@ from squirrel_wave004_model import HEAP, STATE, NULL, INTEGER, get, put
 
 
 class TableModel:
+    def delete_operation(self, destination, self_value, key):
+        if self_value[0] != 0x0a000020:
+            names = {1: 'null', 2: 'integer', 4: 'float', 8: 'bool', 64: 'array', 256: 'function', 512: 'function'}
+            if self_value[0] in (0x0a000080, 0x0a008000): raise ValueError('Delegable Delete remains unreconstructed')
+            self.services.append({'operation': 'formatted-error', 'format': 'attempt to delete a slot from a %s',
+                                  'typeNames': [names.get(self_value[0] & 0xffffff)]})
+            return False
+        table = self_value[1]
+        if get(self.arena, table + 24): raise ValueError('Delegate Delete metamethod remains unreconstructed')
+        node = self.table_find(table, key)
+        if not node: raise ValueError('Missing-key Delete formatting remains unreconstructed')
+        deleted = self.read(node)
+        if deleted[0] == 0x08010000: deleted = self.read(deleted[1] + 12)
+        self.retain(*deleted)
+        self.assign(node + 8, NULL, 0)
+        self.assign(node, NULL, 0)
+        put(self.arena, table + 40, get(self.arena, table + 40) - 1)
+        self.table_rehash(table, False)
+        self.assign(destination, *deleted)
+        self.release(*deleted)
+        return True
+
     def set_delegate(self, table, delegate):
         cursor = delegate
         while cursor:

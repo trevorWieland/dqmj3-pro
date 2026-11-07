@@ -7,7 +7,8 @@ OPCODES = {'LINE': 0, 'LOAD': 1, 'LOADINT': 2, 'LOADFLOAT': 3, 'DLOAD': 4, 'CALL
            'PUSHTRAP': 56, 'POPTRAP': 57, 'THROW': 58, 'BITW': 18, 'NEG': 45, 'BWNOT': 47, 'TAILCALL': 5, 'ARITH': 17,
            'EQ': 15, 'NE': 16, 'CMP': 40, 'GETVARGV': 29, 'NEWARRAY': 31, 'APPENDARRAY': 32, 'CLOSURE': 48,
            'GET': 14, 'GETK': 9, 'PREPCALL': 7, 'PREPCALLK': 8, 'NEWTABLE': 30, 'NEWSLOT': 11,
-           'COMPARITHL': 35, 'INCL': 37, 'PINCL': 39, 'EXISTS': 41, 'SET': 13, 'DELEGATE': 53, 'FOREACH': 51}
+           'COMPARITHL': 35, 'INCL': 37, 'PINCL': 39, 'EXISTS': 41, 'SET': 13, 'DELEGATE': 53, 'FOREACH': 51, 'DELETE': 12,
+           'YIELD': 49, 'RESUME': 50}
 
 
 def instruction(name, argument0=0, argument1=0, argument2=0, argument3=0):
@@ -42,9 +43,11 @@ def encode(rows, window=8):
             else: registers.append(a1)
         if opcode == 29: registers.append(a1)
         if opcode in (11, 13): registers.extend((a0, a1, a2, a3))
-        if opcode in (35, 37, 39, 41, 53):
+        if opcode in (12, 35, 37, 39, 41, 53):
             registers.extend((a0, a1))
-            if opcode in (35, 41, 53): registers.append(a2)
+            if opcode in (12, 35, 41, 53): registers.append(a2)
+        if opcode == 50: registers.extend((a0, a1))
+        if opcode == 49 and a1 != 255: registers.append(a1)
         if opcode == 51: registers.extend((a0, a2, a2 + 1, a2 + 2))
         if opcode == 30:
             registers.append(a0)

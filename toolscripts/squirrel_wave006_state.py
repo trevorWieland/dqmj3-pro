@@ -85,6 +85,8 @@ def prepare(case):
     put(arena, DEFAULTS, INTEGER, 17, INTEGER, 19)
     arena[FUNCTION - HEAP:CODE - HEAP + len(code)] = bytes(96 + len(code))
     put(arena, FUNCTION, VTABLE, 3, 0, NULL, 0, NULL, 0, window)
+    if case.get('generatorFunction') and mode != 0: raise ValueError('Generator creation requires measured entry mode zero')
+    arena[FUNCTION - HEAP + 32] = int(case.get('generatorFunction', False))
     arena[FUNCTION - HEAP + 33] = int(case.get('variableParameters', False))
     put(arena, FUNCTION + 52, 4, LITERALS, case.get('parameters', arguments), 0, 0, 0, 0, 0, case.get('defaults', 0), 0, len(rows))
     arena[CODE - HEAP:CODE - HEAP + len(code)] = code
@@ -94,6 +96,7 @@ def prepare(case):
         put(arena, CHILD_FUNCTION, VTABLE, 3, 0, NULL, 0, NULL, 0, case.get('childWindow', 8))
         put(arena, CHILD_FUNCTION + 52, 4, CHILD_LITERALS, case.get('childParameters', 1), 0, 0, 0, 0, 0,
             case.get('childDefaults', 0), 0, len(case['childProgram']))
+        arena[CHILD_FUNCTION - HEAP + 32] = int(case.get('childGenerator', False))
         arena[CHILD_FUNCTION - HEAP + 33] = int(case.get('childVariableParameters', False))
         arena[CHILD_CODE - HEAP:CHILD_CODE - HEAP + len(child)] = child
         put(arena, CHILD_SCRIPT, VTABLE, 7, FIXTURE, 0, 0, STATE, NULL, 0, 0x08002000, CHILD_FUNCTION,
@@ -144,6 +147,12 @@ class State(prior.State):
             return
         if get(self.arena, value) == 0x850dac:
             self.destroy_table(value)
+            return
+        if get(self.arena, value) == 0x850d74:
+            self.destroy_array(value)
+            return
+        if get(self.arena, value) == 0x81c358:
+            self.destroy_generator(value)
             return
         event = get(self.arena, FIXTURE + 72)
         probe = get(self.arena, FIXTURE + 4)

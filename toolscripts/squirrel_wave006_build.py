@@ -16,22 +16,33 @@ PLACEMENTS = {**previous.PLACEMENTS, 'fn_0018d65c': 0x18d65c, 'fn_001994c0': 0x1
               'fn_00199144': 0x199144, 'fn_00196b08': 0x196b08, '__aeabi_memclr4': 0xa65000, 'fn_006a7610': 0x6a7610,
               'fn_00198578': 0xa66000, 'fn_0019b390': 0xa67000, 'fn_0019b998': 0xa68000,
               'fn_001a1dc8': 0xa69000, 'fn_0019b728': 0xa6a000, 'fn_0019b4ec': 0xa6b000,
-              'fn_0019b414': 0xa6c000, 'fn_001987e4': 0xa6d000, 'fn_00666518': 0x666518, 'fn_0019e2e8': 0x19e2e8}
+              'fn_0019b414': 0xa6c000, 'fn_001987e4': 0xa6d000, 'fn_00666518': 0x666518, 'fn_0019e2e8': 0x19e2e8,
+              'fn_0019b650': 0xa6e000, 'fn_00192b9c': 0x192b9c, 'fn_0019289c': 0x19289c, 'fn_0019e378': 0xa6f000,
+              'fn_00665bd4': 0x665bd4, 'fn_00665c60': 0x665c60, 'fn_0077f3f8': 0x77f3f8, 'fn_0024d73c': 0x24d73c,
+              'fn_00202dcc': 0x202dcc, 'fn_00202e68': 0x202e68}
 SERVICES = {**previous.SERVICES, 'sq_execute_stop': 0xa80000, 'sq_execute_error': 0x19813c,
             'sq_script_closure_vtable': 0x8516d0, 'sq_weak_prefix_vtable': 0x81d020, 'sq_deallocate': 0x19d680,
-            'sq_table_vtable': 0x850dac, 'sq_execute_table_stop': 0xa80000}
+            'sq_table_vtable': 0x850dac, 'sq_execute_table_stop': 0xa80000, 'sq_generator_vtable': 0x81c358}
+SERVICES.pop('sq_array_vtable')
+SERVICES.pop('sq_generator_vtable')
 HELPERS = {'sq_execute_release', 'sq_execute_scalar', 'sq_execute_clear', 'sq_execute_false',
            'sq_execute_varargs', 'sq_execute_publish_varargs', 'sq_execute_clear_stack',
            'sq_execute_unsupported', 'sq_execute_unwind', 'sq_execute_push_trap', 'pop_frame', 'slot', 'dispatch_call', 'push_vararg',
            'sq_execute_bitwise', 'sq_execute_unary', 'shift', 'divide_integer', 'sq_execute_identical',
-           'sq_execute_vararg_get', 'sq_execute_array_new', 'sq_execute_array_append', 'reserve', 'append', 'destroy_vector', 'hash', 'find', 'sq_execute_local_arithmetic', 'sq_execute_delegate', 'sq_execute_foreach'}
+           'sq_execute_vararg_get', 'sq_execute_array_new', 'sq_execute_array_append', 'reserve', 'append', 'destroy_vector', 'hash', 'find', 'sq_execute_local_arithmetic', 'sq_execute_delegate', 'sq_execute_foreach', 'sq_execute_delete', 'push_generator_value', 'restore_generator_frame', 'array_destructor_entry', 'generator_destructor_entry', 'release_object'}
 
 
 def sources():
-    return [*[SOURCE / name for name in ('execute.c', 'objects.c', 'return.c', 'start_call.c', 'execute_fixture.c', 'runtime.c', 'exceptions.c', 'type_names.c', 'numbers.c', 'arithmetic.c', 'comparison.c', 'array_ops.c', 'closure.c', 'closure_release.c', 'indexed_get.c', 'table.c', 'local_arithmetic.c', 'table_release.c', 'delegate.c', 'iteration.c')], *previous.sources()]
+    return [*[SOURCE / name for name in ('execute.c', 'objects.c', 'return.c', 'start_call.c', 'execute_fixture.c', 'runtime.c', 'exceptions.c', 'type_names.c', 'numbers.c', 'arithmetic.c', 'comparison.c', 'array_ops.c', 'closure.c', 'closure_release.c', 'indexed_get.c', 'table.c', 'local_arithmetic.c', 'table_release.c', 'delegate.c', 'iteration.c', 'delete.c', 'generator.c', 'generator_resume.c')], *previous.sources(),
+            *[ROOT / 'source/squirrel-wave007' / name for name in ('array_release.c', 'vector_destroy.c', 'chain_unlink.c', 'vtables.c')],
+            *[ROOT / 'source/squirrel-wave008' / name for name in ('generator_release.c', 'vtables.c')]]
 
 
 def build(output, variant='normal'):
+    if prior.sha((ROOT / 'evidence/lanes/squirrel-array-release007/ready.json').read_bytes()) != 'b398aa788374c97994be97e6ea40bfed6ed4ab7461585c140f0c103adcd0adce':
+        raise ValueError('Frozen SQArray007 readiness packet changed')
+    if prior.sha((ROOT / 'evidence/lanes/squirrel-generator-release008/ready.json').read_bytes()) != 'b01a7f74775289ff41f27c3a273111a1fb34d7ac162992b3f75cffa07801d6ce':
+        raise ValueError('Frozen SQGenerator008 readiness packet changed')
     output.mkdir(parents=True, exist_ok=True)
     inputs = sources()
     if variant != 'normal':
@@ -40,7 +51,19 @@ def build(output, variant='normal'):
                                 'case SQ_JUMP:\n            base->current->instruction = (SqInstruction *)base->current->instruction + argument + 1;'),
                  'wrong-null-count': ('index < argument;', 'index <= argument;'),
                  'wrong-move': ('slot(vm, argument)); break;', 'slot(vm, argument + 1)); break;')}
-        if variant == 'skip-foreach-element':
+        if variant == 'skipped-real-generator-destruction':
+            index = next(index for index, path in enumerate(inputs) if path.parent.name == 'squirrel-wave008' and path.name == 'generator_release.c')
+            old, new = 'reference->vtable->unknown_0(reference);', '(void)reference;'
+        elif variant == 'skipped-real-array-destruction':
+            index = next(index for index, path in enumerate(inputs) if path.parent.name == 'squirrel-wave007' and path.name == 'array_release.c')
+            old, new = 'reference->vtable->unknown_0(reference);', '(void)reference;'
+        elif variant == 'changed-generator-retention':
+            index, old, new = 22, 'fn_0019e864(generator->stack.values, &null);', 'fn_0019e864(generator->stack.values + index, &null);'
+        elif variant == 'missing-generator-slot':
+            index, old, new = 21, 'for (SqI32 index = 0; index < size; index++)', 'for (SqI32 index = 1; index < size; index++)'
+        elif variant == 'uncounted-table-deletion':
+            index, old, new = 15, 'table->used--;', 'table->used += 0;'
+        elif variant == 'skip-foreach-element':
             index, old, new = 19, 'position + 1);', 'position + 2);'
         elif variant == 'accepted-delegate-cycle':
             index, old, new = 18, 'if (cursor == table) return 0;', 'if (cursor == table) return 1;'
@@ -103,11 +126,14 @@ def build(output, variant='normal'):
     for path in inputs:
         target = output / (str(len(objects)) + '-' + path.stem + '.o')
         commands.append(prior.command([ROOT / 'tools/clang-21/clang.exe', *prior.FLAGS, '-mfpu=vfp', '-mfloat-abi=softfp',
-                                       '-std=c11', '-O2', '-I', SOURCE, '-c', path, '-o', target], output / (path.stem + '.log')))
+                                       '-std=c11', '-O2', '-I', SOURCE, '-I', ROOT / 'source/squirrel-wave007', '-I', ROOT / 'source/squirrel-wave008', '-c', path, '-o', target], output / (path.stem + '.log')))
         objects.append(target)
     script = output / 'component.ld'
     sections = [(address, f'.text.{name} {hex(address)} : {{ KEEP(*(.text.{name})) }}') for name, address in PLACEMENTS.items()]
-    sections += [(0xa50000, '.text.support 0xa50000 : { *(.text.sq_execute*) *(.text.slot) *(.text.dispatch_call) *(.text.push_vararg) *(.text.pop_frame) *(.text.shift) *(.text.divide_integer) *(.text.reserve) *(.text.append) *(.text.destroy_vector) *(.text.hash) *(.text.find) }'),
+    sections += [(0x850d74, '.rodata.sq_array_vtable 0x850d74 : { KEEP(*(.rodata.sq_array_vtable)) }'),
+                 (0x81c358, '.rodata.sq_generator_vtable 0x81c358 : { KEEP(*(.rodata.sq_generator_vtable)) }'),
+                 (0x81d020, '.rodata.sq_release007_weak_vtable 0x81d020 : { KEEP(*(.rodata.sq_release007_weak_vtable)) }')]
+    sections += [(0xa50000, '.text.support 0xa50000 : { *(.text.sq_execute*) *(.text.slot) *(.text.dispatch_call) *(.text.push_vararg) *(.text.push_generator_value) *(.text.restore_generator_frame) *(.text.array_destructor_entry) *(.text.generator_destructor_entry) *(.text.release_object) *(.text.pop_frame) *(.text.shift) *(.text.divide_integer) *(.text.reserve) *(.text.append) *(.text.destroy_vector) *(.text.hash) *(.text.find) }'),
                  (0xa20000, '.rodata 0xa20000 : { *(.rodata*) }')]
     script.write_text('SECTIONS {\n' + '\n'.join(text for address, text in sorted(sections)) + '\n'
                       '/DISCARD/ : { *(.ARM.exidx*) *(.ARM.extab*) *(.text*) *(.comment) *(.note*) *(.llvm_addrsig) }\n}\n')

@@ -205,6 +205,58 @@ class ExecuteReconstruction(unittest.TestCase):
         self.assertTrue(trace['returned'])
         self.assertNotEqual(actual, expected)
 
+    def test_table_delete_shrinks_and_retains_removed_closure(self):
+        for fields in (cases.delete_cases()[5], cases.delete_cases()[6], cases.delete_cases()[7]): self.compare(fields)
+        wrong = builder.build(self.output / 'uncounted-table-deletion', 'uncounted-table-deletion')
+        case = {'seed': 0x666013, **cases.negative_inputs()['uncounted-table-deletion']}
+        actual, trace, unused, unused = oracle.execute(self.image, wrong, case, True)
+        expected, unused = model.model(case, True)
+        self.assertTrue(trace['returned'])
+        self.assertNotEqual(actual, expected)
+
+    def test_generator_creation_snapshots_source_frames(self):
+        for fields in cases.generator_cases():
+            row = self.compare(fields)
+            self.assertFalse(row['source']['actual']['executedInstructions'])
+        wrong = builder.build(self.output / 'missing-generator-slot', 'missing-generator-slot')
+        case = {'seed': 0x666014, **cases.negative_inputs()['missing-generator-slot']}
+        actual, trace, unused, unused = oracle.execute(self.image, wrong, case, True)
+        expected, unused = model.model(case, True)
+        self.assertTrue(trace['returned'])
+        self.assertNotEqual(actual, expected)
+
+    def test_resumed_script_yields_and_retains_original_storage(self):
+        for fields in (cases.resumed_generator_cases()[1], cases.resumed_generator_cases()[4], cases.resumed_generator_cases()[-1]): self.compare(fields)
+        wrong = builder.build(self.output / 'changed-generator-retention', 'changed-generator-retention')
+        case = {'seed': 0x666015, **cases.negative_inputs()['changed-generator-retention']}
+        actual, trace, unused, unused = oracle.execute(self.image, wrong, case, True)
+        baseline, baseline_trace, unused, unused = oracle.execute(self.image, self.component, case, True)
+        self.assertTrue(trace['returned'])
+        self.assertEqual(actual['arenaSha256'], baseline['arenaSha256'])
+        self.assertNotEqual(trace['allocationObservations'], baseline_trace['allocationObservations'])
+
+    def test_real_array_finalization_preserves_fake_observer_identity(self):
+        fields = {**cases.array_release_cases()[2], 'oldReference': True}
+        row = self.compare(fields)
+        self.assertTrue(any(service['operation'] == 'deallocate' and service['bytes'] == 36
+                            for service in row['source']['actual']['services']))
+        self.compare(cases.array_release_cases()[-1])
+        wrong = builder.build(self.output / 'skipped-real-array-destruction', 'skipped-real-array-destruction')
+        case = {'seed': 0x666016, **cases.negative_inputs()['skipped-real-array-destruction']}
+        actual, trace, unused, unused = oracle.execute(self.image, wrong, case, True)
+        expected, unused = model.model(case, True)
+        self.assertTrue(trace['returned'])
+        self.assertNotEqual(actual, expected)
+
+    def test_shared_generator_type_and_real_finalizer(self):
+        for fields in (cases.generator_release_cases()[0], cases.generator_release_cases()[-1]): self.compare(fields)
+        wrong = builder.build(self.output / 'skipped-real-generator-destruction', 'skipped-real-generator-destruction')
+        case = {'seed': 0x666017, **cases.negative_inputs()['skipped-real-generator-destruction']}
+        actual, trace, unused, unused = oracle.execute(self.image, wrong, case, True)
+        expected, unused = model.model(case, True)
+        self.assertTrue(trace['returned'])
+        self.assertNotEqual(actual, expected)
+
     def test_compiled_wrong_trap_handler_really_returns_and_differs(self):
         wrong = builder.build(self.output / 'wrong-trap-handler', 'wrong-trap-handler')
         case = {'seed': 0x666003, **cases.negative_inputs()['wrong-trap-handler']}

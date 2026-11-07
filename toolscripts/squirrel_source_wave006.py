@@ -55,6 +55,10 @@ def execute(output, publish=False):
     dependencies = sorted(path for path in (ROOT / 'source/squirrel-wave004').glob('*') if path.suffix in ('.c', '.h'))
     dependencies += [ROOT / 'source/squirrel-wave003' / name for name in ('array_controller.c', 'vm_controller.h')]
     dependencies += [ROOT / 'source/squirrel-wave002' / name for name in ('array_views.h', 'array_create.c', 'vector_resize.c')]
+    dependencies += [ROOT / 'source/squirrel-wave007' / name for name in ('array_release.h', 'array_release.c', 'vector_destroy.c', 'chain_unlink.c', 'vtables.c', 'README.md')]
+    dependencies += [ROOT / 'evidence/lanes/squirrel-array-release007/ready.json']
+    dependencies += [ROOT / 'source/squirrel-wave008' / name for name in ('generator_release.h', 'generator_release.c', 'vtables.c', 'README.md')]
+    dependencies += [ROOT / 'evidence/lanes/squirrel-generator-release008/ready.json']
     dependencies += [ROOT / 'src/native/wave005' / name for name in ('vm_views.h', 'chain.c', 'object.c', 'push.c', 'stack.c')]
     dependencies += [ROOT / 'toolscripts' / name for name in ('squirrel_wave004_build.py', 'squirrel_wave004_model.py',
                      'squirrel_wave005_model.py', 'squirrel_wave005_execute_inventory.py', 'squirrel_source_wave002.py',
@@ -125,12 +129,14 @@ def execute(output, publish=False):
               'pendingOpcodeEntries': sorted(set(range(61)) - observed), 'nativeCallOpcodeOtherCallableKindsPending': True,
               'generatorAndPositiveTrapPathsPending': True, 'wholeRootComplete': False,
               'additionalPendingSubpaths': ['arithmetic string/metamethod/float remainder', 'negation metamethod',
-                  'CALL class/metamethod/generator', 'general object/string comparison',
+                  'CALL class/metamethod and remaining generator cases', 'general object/string comparison',
                   'trap search across native frames and generator cleanup', 'entry modes 1 and 3',
                   'closure missing named-outer errors, allocation failure, prototype finalization and GC/weak-environment lifetimes',
                   'indexed lookup failures, default delegates, classes/instances and general object lookup',
                   'table marked/weak finalization, null keys, delegated new-slot/metamethod cases, allocation failure and complete string/pointer key lifetimes',
-                  'array final-owner destruction; string/class/generator iteration and iterator assertions'],
+                  'broader GC/weak/reentrant lifetime cases; string/class/generator iteration and iterator assertions',
+                  'Delete missing-key stringification, delegate metamethods and instance/userdata cases',
+                  'generator completion/kill, traps/state errors, entry modes1/3 and final-owner destruction; pre-freeze raw frame observers'],
               'floatingPointExceptionStatusEquivalenceClaimed': False,
               'floatingPointExceptionStatusDifferences': [index for index, row in enumerate(normal)
                   if row['original']['trace']['finalFPSCRExceptionStatus'] != row['source']['trace']['finalFPSCRExceptionStatus']],
