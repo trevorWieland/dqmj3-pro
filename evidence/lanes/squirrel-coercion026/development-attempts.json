@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "retainedPrivateAttempts": [
+    "work/squirrel-coercion026/native-basic",
+    "work/squirrel-coercion026/primary",
+    "work/squirrel-coercion026/primary-v2",
+    "work/squirrel-coercion026/primary-final/android/liblookup020.so"
+  ],
+  "diagnosticFailures": [
+    {
+      "cause": "initial Android wrapper passed two arguments to one-argument frozen023 wrapper",
+      "correction": "026 uses unchanged two-argument020 builder; later normal026 relink qualifies RELRO",
+      "predecessorChanged": false
+    },
+    {
+      "cause": "diagnostic final metadata writer used nonexistent locale-initialization.json",
+      "correction": "use frozen023 reference-locale-precondition.json; failed producer bytes retained privately"
+    },
+    {
+      "cause": "metadata-copy walk encountered explicit external system-runtime path",
+      "correction": "copy only in-repository inputs; external dependency runtimes remain explicit"
+    },
+    {
+      "cause": "initial RELRO predicate rejected any later writable LOAD rather than writable bytes sharing the protected trailing page",
+      "correction": "current official Android separate-LOAD exemption applied; intermediate is compliant; stronger normal linker successor retained",
+      "falsePositiveRetainedAt": "work/squirrel-coercion026/relro-false-positive-diagnostic.json",
+      "officialGuidance": "https://developer.android.com/guide/practices/page-sizes",
+      "oldRelroEnd": 102400,
+      "containingWritableLoad": [
+        101216,
+        102400
+      ],
+      "followingWritableLoadStart": 118368,
+      "protectedTrailingPageEnd": 114688,
+      "oldDeploymentFailureEstablished": false,
+      "falsePositiveReceipt": {
+        "path": "work/squirrel-coercion026/relro-false-positive-diagnostic.json",
+        "bytes": 3824,
+        "sha256": "99adb8feb1db079b96b46abe036e93135f5ead4af93facc434e268dc0b09e138"
+      },
+      "followingWritableLoad": [
+        118368,
+        132988
+      ]
+    }
+  ],
+  "observedInactiveFrameDifference": {
+    "targetOffsets": [
+      0,
+      4,
+      32,
+      40
+    ],
+    "frozen022ContractPreserved": true,
+    "bytesNotSilentlyMasked": true
+  },
+  "originalInputsAltered": false,
+  "sourceOrInventoryCreditGranted": 0
+}

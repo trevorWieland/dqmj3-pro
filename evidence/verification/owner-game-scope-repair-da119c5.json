@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "originalDriverPassed": false,
+  "originalRuntimeProducerAndNativeTestsAndPublicCompilationPassed": true,
+  "originalFailure": "Explicit Windows-only fixture allowlist lacked the newly registered025 fixture",
+  "repairChangesSourceOrOldSnapshot": false,
+  "externalTestSource": {
+    "path": "tests/test_compile_sources.py",
+    "sha256": "7679bfbdcff6c169188098685a198c8f01ec1a79b897e1caa1bdc477959043fe"
+  },
+  "externalTestSourceRevision": "9989f5dbe1f80be8b823eea556b7f0025744cc86",
+  "oldTestSourceSha256": "ee67c89b6e7fa6c8c403f62df648e82b0974773d7a55dac4e7876f65ac877595",
+  "onlyTestChangeIsOneAdditionalExplicitFixture": true,
+  "steps": [
+    {
+      "name": "corrected-explicit-fixture-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\owner-game-da119c5\\tools\\python\\Scripts\\python.exe",
+        "-c",
+        "import sys,types,unittest;from pathlib import Path;m=types.ModuleType('corrected_scope_tests');m.__file__=str(Path.cwd()/'tests/test_compile_sources.py');sys.modules[m.__name__]=m;exec(compile(sys.stdin.read(),m.__file__,'exec'),m.__dict__);r=unittest.TextTestRunner(stream=sys.stdout,verbosity=2).run(unittest.defaultTestLoader.loadTestsFromModule(m));raise SystemExit(not r.wasSuccessful())"
+      ],
+      "returncode": 0,
+      "log": "corrected-explicit-fixture-tests.scope-repair.log",
+      "logSha256": "c7de9dfb0477944ac912d94405bdc13fdc66fb25db3d0509def6f74cbc210660"
+    },
+    {
+      "name": "functional_report-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\owner-game-da119c5\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_functional_report.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "functional_report-tests.scope-repair.log",
+      "logSha256": "9ee0e9cfd83a8b7ece9ce899e46a83e6572319986b59fd99835b6b85f97ae2fc"
+    },
+    {
+      "name": "native_census_overlay-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\owner-game-da119c5\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_native_census_overlay.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "native_census_overlay-tests.scope-repair.log",
+      "logSha256": "ed38eb5e6c8970118c5599df9e58bfd737923cc721e22a0ecfb1dfc5b58d8ac7"
+    },
+    {
+      "name": "reporting-objects",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\owner-game-da119c5\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/objdiff_objects.py"
+      ],
+      "returncode": 0,
+      "log": "reporting-objects.scope-repair.log",
+      "logSha256": "36cea47f1a747e8a3bf533ed3757abf9bbcf58c8a06ea5fe082872b0206c6920"
+    },
+    {
+      "name": "report-configuration",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\owner-game-da119c5\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/configure_objdiff.py",
+        "--version",
+        "update-content0",
+        "--output",
+        "objdiff.json"
+      ],
+      "returncode": 0,
+      "log": "report-configuration.scope-repair.log",
+      "logSha256": "6fffbbac09a65c03dc7bb4ad936cb2acb01aadb8a9633b03b73d97d761fecd3b"
+    },
+    {
+      "name": "stock-report",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\owner-game-da119c5\\tools\\objdiff-3.8.3\\objdiff-cli.exe",
+        "report",
+        "generate",
+        "-o",
+        "build/update-content0/report.raw.json"
+      ],
+      "returncode": 0,
+      "log": "stock-report.scope-repair.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "normalized-report",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\owner-game-da119c5\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/finalize_objdiff_report.py",
+        "--input",
+        "build/update-content0/report.raw.json"
+      ],
+      "returncode": 0,
+      "log": "normalized-report.scope-repair.log",
+      "logSha256": "62ca7df49ba32929b49e716ccb716586f189a45d96afc08587eaab7fc6ff8dc6"
+    },
+    {
+      "name": "functional-companion",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\owner-game-da119c5\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/functional_report.py"
+      ],
+      "returncode": 0,
+      "log": "functional-companion.scope-repair.log",
+      "logSha256": "440ecf72b3222b5794cddf03d7916720516eb5cd17978a3b33fecc0f4878229f"
+    }
+  ],
+  "driverSha256": "69f659c44b3f635e57f072eaae29e45ff6a5a31d7ced90d0d827258f34123eb2",
+  "allFrozenInputsUnchangedBeforeAndAfter": true,
+  "twoRegeneratedRuntimeOutputsAlsoUnchangedDuringRepair": {
+    "evidence/lanes/wave013-native/file/owner/game/packet.json": "2593a2011515f0cd0377a1425a1432282d107ae5800778fcf9d712500add1856",
+    "evidence/lanes/wave013-native/file/owner/game/verification.json": "5fa776a77654fe4d9fc2ce477c0dd846f61da6187e0d3860dda5d0e20c9643ac"
+  },
+  "oldSnapshotTestFileUnchanged": true
+}

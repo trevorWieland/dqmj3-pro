@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "qualified": {
+    "artifact": {
+      "path": "work/squirrel-coercion026/primary-final-raw/android/libcoercion026.so",
+      "bytes": 97064,
+      "sha256": "c3c4b7c9e651815f6b19ae6ee22b504b19d0936b883b1907e36a8128fe6faee4"
+    },
+    "segments": [
+      {
+        "type": "PT_PHDR",
+        "address": 64,
+        "offset": 64,
+        "bytes": 448,
+        "alignment": 8,
+        "flags": 4
+      },
+      {
+        "type": "PT_LOAD",
+        "address": 0,
+        "offset": 0,
+        "bytes": 21296,
+        "alignment": 16384,
+        "flags": 4
+      },
+      {
+        "type": "PT_LOAD",
+        "address": 37680,
+        "offset": 21296,
+        "bytes": 47152,
+        "alignment": 16384,
+        "flags": 5
+      },
+      {
+        "type": "PT_LOAD",
+        "address": 101216,
+        "offset": 68448,
+        "bytes": 13472,
+        "alignment": 16384,
+        "flags": 6
+      },
+      {
+        "type": "PT_LOAD",
+        "address": 118368,
+        "offset": 69216,
+        "bytes": 14620,
+        "alignment": 16384,
+        "flags": 6
+      },
+      {
+        "type": "PT_DYNAMIC",
+        "address": 101560,
+        "offset": 68792,
+        "bytes": 256,
+        "alignment": 8,
+        "flags": 6
+      },
+      {
+        "type": "PT_GNU_RELRO",
+        "address": 101216,
+        "offset": 68448,
+        "bytes": 13472,
+        "alignment": 1,
+        "flags": 4
+      },
+      {
+        "type": "PT_GNU_STACK",
+        "address": 0,
+        "offset": 0,
+        "bytes": 0,
+        "alignment": 0,
+        "flags": 6
+      }
+    ],
+    "relroExtentChecks": [
+      {
+        "start": 101216,
+        "endExclusive": 114688,
+        "trailingPageEndExclusive": 114688,
+        "containingWritableLoads": [
+          [
+            101216,
+            114688
+          ]
+        ],
+        "writableLoadBytesSharingTrailingPage": []
+      }
+    ],
+    "sixteenKiBLoadAndRelroContractPassed": true,
+    "officialGuidance": "https://developer.android.com/guide/practices/page-sizes",
+    "error": null,
+    "operatingSystemOrPhysicalPageSizeExecutionClaimed": false
+  },
+  "inheritedMaxPageOnlyIntermediate": {
+    "artifact": {
+      "path": "work/squirrel-coercion026/primary-final-raw/android/liblookup020.so",
+      "bytes": 97064,
+      "sha256": "c5546d30ca675a7f0d1707b94a23d12ec1afe2355c9c029454fbb262bd2ffa19"
+    },
+    "segments": [
+      {
+        "type": "PT_PHDR",
+        "address": 64,
+        "offset": 64,
+        "bytes": 448,
+        "alignment": 8,
+        "flags": 4
+      },
+      {
+        "type": "PT_LOAD",
+        "address": 0,
+        "offset": 0,
+        "bytes": 21296,
+        "alignment": 16384,
+        "flags": 4
+      },
+      {
+        "type": "PT_LOAD",
+        "address": 37680,
+        "offset": 21296,
+        "bytes": 47152,
+        "alignment": 16384,
+        "flags": 5
+      },
+      {
+        "type": "PT_LOAD",
+        "address": 101216,
+        "offset": 68448,
+        "bytes": 1184,
+        "alignment": 16384,
+        "flags": 6
+      },
+      {
+        "type": "PT_LOAD",
+        "address": 118368,
+        "offset": 69216,
+        "bytes": 14620,
+        "alignment": 16384,
+        "flags": 6
+      },
+      {
+        "type": "PT_DYNAMIC",
+        "address": 101560,
+        "offset": 68792,
+        "bytes": 256,
+        "alignment": 8,
+        "flags": 6
+      },
+      {
+        "type": "PT_GNU_RELRO",
+        "address": 101216,
+        "offset": 68448,
+        "bytes": 1184,
+        "alignment": 1,
+        "flags": 4
+      },
+      {
+        "type": "PT_GNU_STACK",
+        "address": 0,
+        "offset": 0,
+        "bytes": 0,
+        "alignment": 0,
+        "flags": 6
+      }
+    ],
+    "relroExtentChecks": [
+      {
+        "start": 101216,
+        "endExclusive": 102400,
+        "trailingPageEndExclusive": 114688,
+        "containingWritableLoads": [
+          [
+            101216,
+            102400
+          ]
+        ],
+        "writableLoadBytesSharingTrailingPage": []
+      }
+    ],
+    "sixteenKiBLoadAndRelroContractPassed": true,
+    "officialGuidance": "https://developer.android.com/guide/practices/page-sizes",
+    "error": null,
+    "operatingSystemOrPhysicalPageSizeExecutionClaimed": false
+  },
+  "strongerSuccessorNormalLinkFlags": [
+    "-z",
+    "max-page-size=16384",
+    "-z",
+    "common-page-size=16384"
+  ],
+  "initialFalsePositiveDiagnostic": {
+    "path": "work/squirrel-coercion026/relro-false-positive-diagnostic.json",
+    "bytes": 3824,
+    "sha256": "99adb8feb1db079b96b46abe036e93135f5ead4af93facc434e268dc0b09e138"
+  },
+  "officialGuidance": "https://developer.android.com/guide/practices/page-sizes",
+  "sameTrailingProtectedPageRuleApplied": true,
+  "oldDeploymentFailureEstablished": false,
+  "predecessorFilesAltered": false,
+  "androidOperatingSystemDeviceOrPhysicalPageExecutionClaimed": false
+}

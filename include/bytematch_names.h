@@ -20,3 +20,4 @@
 #define fn_00191f28 sq_lookup_type_name020
 #define fn_0018d4fc sq_lookup_meta_call020
 #define fn_001cdaec sq_instance_get_meta023
+#define fn_001a1010 sq_native_type_error025

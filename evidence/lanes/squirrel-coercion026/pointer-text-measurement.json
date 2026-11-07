@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "measured-before-native-pointer-formatter-source",
+  "originalSpecifier": "(%s : 0x%p)",
+  "targetDigits": 8,
+  "targetAlphabet": "0123456789abcdef",
+  "nativeDigits": 16,
+  "nativePointerTruncated": false,
+  "targetNullText": "(null : 0x00000000)",
+  "targetFunctionExample": "(function : 0x02024800)",
+  "targetScratchRequest": 24,
+  "longestKnownDefaultTypeNameBytes": 9,
+  "targetMaximumTextBytesIncludingNull": 25,
+  "nativeMaximumTextBytesIncludingNull": 33,
+  "target24ByteCapacityPhysicalBackingLimitationExplicit": true,
+  "nativeRequestMustBeAtLeast33": true,
+  "probeBuild": {
+    "path": "work/squirrel-coercion026/first/arm/lookup.elf",
+    "bytes": 477648,
+    "sha256": "f3285eed0f8d88744341056341a3853c84dd22ce945d805a4eae9941244ebcf0"
+  },
+  "probeCode": [
+    {
+      "path": "source/squirrel-wave026/fixture_run.c",
+      "bytes": 3996,
+      "sha256": "64feaed044757c0809a03f34a8c3793b2a1652d36aee0e37e00712ee86a8569a"
+    }
+  ],
+  "originalPayloadsPublished": false,
+  "sourceOrInventoryCreditGranted": 0
+}
