@@ -1,0 +1,1605 @@
+{
+  "schemaVersion": 1,
+  "lane": "wave010-native",
+  "status": "bounded-validated-functional-nonmatching-C",
+  "programId": "0004000e001acb00",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "claim": {
+    "path": "evidence/lanes/wave010-native/claim.json",
+    "sha256": "5f775b4ae343d1a40c16b713d3b6cabd5d7be1b4f128b1c1d37e815a0d4693be",
+    "bytes": 3931
+  },
+  "sources": [
+    {
+      "path": "src/native/wave010/match_state.c",
+      "sha256": "21fc1e9fc7c61435f8a09a01e6e80d830945bde1ee96106aece5e26ce673f96b",
+      "bytes": 2377
+    },
+    {
+      "path": "src/native/wave009/interval_set.c",
+      "sha256": "09685db174892a8703da9a94c713a0c25735f7b352338777c9ce0cce2cb7dbd7",
+      "bytes": 946
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave010/match_state.h",
+      "sha256": "6a98b4fbdaaee51056753130ba6cd25d5ac2e7b445c73c151be05b65f890dea9",
+      "bytes": 879
+    },
+    {
+      "path": "src/native/wave009/interval_set.h",
+      "sha256": "7cb85ec58f7b18ba32652319904596a9c2d71c0417fc60781834dfc24b699490",
+      "bytes": 599
+    }
+  ],
+  "producers": [
+    {
+      "path": "toolscripts/native_wave010.py",
+      "sha256": "6a6cf9fb32588c23e1c9f62498062989a93075ef40734098fc9211d812442bf7",
+      "bytes": 20391
+    },
+    {
+      "path": "toolscripts/native_wave010_build.py",
+      "sha256": "c0bc97bb47f108691dc805cdcf8b77d610964caedee6b1688b51cf5191d36994",
+      "bytes": 6418
+    },
+    {
+      "path": "toolscripts/native_wave010_model.py",
+      "sha256": "8fdd55cab03bbed651b6136c1d69f5186a29be39c022d4a3eaa9c5dce1384457",
+      "bytes": 3720
+    },
+    {
+      "path": "toolscripts/native_wave010_oracle.py",
+      "sha256": "1e9ba1c66d13574cac2ddf925dd04417cc4a411e62af918e6930c21a32006664",
+      "bytes": 9155
+    },
+    {
+      "path": "toolscripts/native_wave010_native.py",
+      "sha256": "48e13d2605614183aa4ac1fc0dde50d52b2ae6533b875abe7f07d1b932667be9",
+      "bytes": 5299
+    },
+    {
+      "path": "toolscripts/native_wave010_fixtures.py",
+      "sha256": "f2c941c4416ddc472b47330e526980c2df81d756a1dbd6eadc42fe6c576a9988",
+      "bytes": 4255
+    },
+    {
+      "path": "toolscripts/native_wave009.py",
+      "sha256": "33370b268013088ed9969c61a4b0466e8d9d99131d32b85c2b1caa9bab390ab0",
+      "bytes": 23224
+    },
+    {
+      "path": "toolscripts/native_wave009_oracle.py",
+      "sha256": "8607f1cbd68471bbf995b2b2d46da30fcfd96fc64b557aff49a137d745e9e811",
+      "bytes": 8184
+    },
+    {
+      "path": "toolscripts/module_link_graph.py",
+      "sha256": "a750984d287d605e3143aa68d9bba26a3bc9d464f9d3db9a5e15b1afaa10038c",
+      "bytes": 13578
+    },
+    {
+      "path": "toolscripts/module_link.py",
+      "sha256": "936cacb42571da8fddaa3ba66c7f704703a6517f814598052b28bb71952258c7",
+      "bytes": 9773
+    }
+  ],
+  "compiler": {
+    "path": "tools/clang-21/clang.exe",
+    "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc",
+    "bytes": 99559064
+  },
+  "linker": {
+    "path": "tools/clang-21/ld.lld.exe",
+    "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3",
+    "bytes": 69225112
+  },
+  "compilerFlags": [
+    "--target=arm-none-eabi",
+    "-mcpu=mpcore",
+    "-marm",
+    "-O2",
+    "-std=c11",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-ffunction-sections",
+    "-fno-unwind-tables",
+    "-fno-asynchronous-unwind-tables",
+    "-Wall",
+    "-Wextra",
+    "-Werror"
+  ],
+  "historicalCompilerIdentified": false,
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010\\match_state.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\source\\matcher.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/source/matcher-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009\\interval_set.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\source\\intervals.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/source/intervals-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--build-id=none",
+        "--entry=fn_004bed30",
+        "-T",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\source\\matcher.ld",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\source\\matcher.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\source\\intervals.o",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\source\\matcher.elf"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/source/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\layout.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\layout-arm-none-eabi.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/layout-arm-none-eabi.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\layout.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\layout-x86_64-pc-windows-msvc.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/layout-x86_64-pc-windows-msvc.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\layout.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\layout-aarch64-linux-android29.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/layout-aarch64-linux-android29.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010\\match_state.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\windows\\matcher.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/windows/matcher-windows-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009\\interval_set.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\windows\\intervals.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/windows/intervals-windows-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-flavor",
+        "link",
+        "/dll",
+        "/noentry",
+        "/machine:x64",
+        "/nodefaultlib",
+        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\windows\\matcher.dll",
+        "/export:fn_004becdc",
+        "/export:fn_004bed30",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\windows\\matcher.windows.obj",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\windows\\intervals.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/windows/windows-link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fPIC",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010\\match_state.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\android\\matcher.android.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/android/matcher-android-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fPIC",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009\\interval_set.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\android\\intervals.android.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/android/intervals-android-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-shared",
+        "--no-undefined",
+        "-z",
+        "max-page-size=16384",
+        "-soname",
+        "libmatcher.so",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\android\\libmatcher.so",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\android\\matcher.android.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\android\\intervals.android.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/android/android-link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\control-mask\\wrong.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\control-mask\\arm\\matcher.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/control-mask/arm/matcher-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009\\interval_set.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\control-mask\\arm\\intervals.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/control-mask/arm/intervals-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--build-id=none",
+        "--entry=fn_004bed30",
+        "-T",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\control-mask\\arm\\matcher.ld",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\control-mask\\arm\\matcher.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\control-mask\\arm\\intervals.o",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\control-mask\\arm\\matcher.elf"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/control-mask/arm/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\control-mask\\wrong.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\control-mask\\windows\\matcher.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/control-mask/windows/matcher-windows-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009\\interval_set.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\control-mask\\windows\\intervals.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/control-mask/windows/intervals-windows-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-flavor",
+        "link",
+        "/dll",
+        "/noentry",
+        "/machine:x64",
+        "/nodefaultlib",
+        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\control-mask\\windows\\matcher.dll",
+        "/export:fn_004becdc",
+        "/export:fn_004bed30",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\control-mask\\windows\\matcher.windows.obj",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\control-mask\\windows\\intervals.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/control-mask/windows/windows-link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\crlf-grouping\\wrong.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\crlf-grouping\\arm\\matcher.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/crlf-grouping/arm/matcher-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009\\interval_set.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\crlf-grouping\\arm\\intervals.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/crlf-grouping/arm/intervals-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--build-id=none",
+        "--entry=fn_004bed30",
+        "-T",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\crlf-grouping\\arm\\matcher.ld",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\crlf-grouping\\arm\\matcher.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\crlf-grouping\\arm\\intervals.o",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\crlf-grouping\\arm\\matcher.elf"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/crlf-grouping/arm/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\crlf-grouping\\wrong.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\crlf-grouping\\windows\\matcher.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/crlf-grouping/windows/matcher-windows-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009\\interval_set.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\crlf-grouping\\windows\\intervals.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/crlf-grouping/windows/intervals-windows-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-flavor",
+        "link",
+        "/dll",
+        "/noentry",
+        "/machine:x64",
+        "/nodefaultlib",
+        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\crlf-grouping\\windows\\matcher.dll",
+        "/export:fn_004becdc",
+        "/export:fn_004bed30",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\crlf-grouping\\windows\\matcher.windows.obj",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\crlf-grouping\\windows\\intervals.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/crlf-grouping/windows/windows-link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\nbsp-classification\\wrong.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\nbsp-classification\\arm\\matcher.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/nbsp-classification/arm/matcher-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009\\interval_set.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\nbsp-classification\\arm\\intervals.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/nbsp-classification/arm/intervals-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--build-id=none",
+        "--entry=fn_004bed30",
+        "-T",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\nbsp-classification\\arm\\matcher.ld",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\nbsp-classification\\arm\\matcher.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\nbsp-classification\\arm\\intervals.o",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\nbsp-classification\\arm\\matcher.elf"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/nbsp-classification/arm/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\nbsp-classification\\wrong.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\nbsp-classification\\windows\\matcher.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/nbsp-classification/windows/matcher-windows-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009\\interval_set.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\nbsp-classification\\windows\\intervals.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/nbsp-classification/windows/intervals-windows-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-flavor",
+        "link",
+        "/dll",
+        "/noentry",
+        "/machine:x64",
+        "/nodefaultlib",
+        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\nbsp-classification\\windows\\matcher.dll",
+        "/export:fn_004becdc",
+        "/export:fn_004bed30",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\nbsp-classification\\windows\\matcher.windows.obj",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\nbsp-classification\\windows\\intervals.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/nbsp-classification/windows/windows-link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\signed-result\\wrong.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\signed-result\\arm\\matcher.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/signed-result/arm/matcher-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009\\interval_set.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\signed-result\\arm\\intervals.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/signed-result/arm/intervals-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--build-id=none",
+        "--entry=fn_004bed30",
+        "-T",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\signed-result\\arm\\matcher.ld",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\signed-result\\arm\\matcher.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\signed-result\\arm\\intervals.o",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\signed-result\\arm\\matcher.elf"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/signed-result/arm/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\signed-result\\wrong.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\signed-result\\windows\\matcher.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/signed-result/windows/matcher-windows-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave010",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009\\interval_set.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\signed-result\\windows\\intervals.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/signed-result/windows/intervals-windows-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-flavor",
+        "link",
+        "/dll",
+        "/noentry",
+        "/machine:x64",
+        "/nodefaultlib",
+        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\signed-result\\windows\\matcher.dll",
+        "/export:fn_004becdc",
+        "/export:fn_004bed30",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\signed-result\\windows\\matcher.windows.obj",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\release\\negative\\signed-result\\windows\\intervals.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave010-native/release/negative/signed-result/windows/windows-link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    }
+  ],
+  "functions": [
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "module": "content0/.code-decompressed",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 4975836,
+        "mode": "ARM"
+      },
+      "symbol": "fn_004becdc",
+      "source": {
+        "path": "src/native/wave010/match_state.c",
+        "sha256": "21fc1e9fc7c61435f8a09a01e6e80d830945bde1ee96106aece5e26ce673f96b",
+        "bytes": 2377
+      },
+      "originalBytes": 84,
+      "originalInstructionBytes": 84,
+      "candidateInstructionBytes": 104,
+      "poolBytes": 0,
+      "candidateObjectSpanSha256": "13d5af82cd4daa201b41cb5e5d2a9a96fd113687763b350cbb2c998404f73686",
+      "candidateLinkedSpanSha256": "13d5af82cd4daa201b41cb5e5d2a9a96fd113687763b350cbb2c998404f73686",
+      "originalSpanSha256": "d7d446be723bd2ac47cf607a999ff5c50d01f8f031513eaf3046c6e7a1fc83ae",
+      "compilerObject": {
+        "section": ".text.fn_004becdc",
+        "size": 104,
+        "symbolBytes": 104,
+        "mode": "ARM",
+        "sectionSha256": "13d5af82cd4daa201b41cb5e5d2a9a96fd113687763b350cbb2c998404f73686",
+        "relocations": [],
+        "linkedAddress": 9437184,
+        "poolBytes": 0,
+        "compilerMappingSymbols": [
+          {
+            "name": "$a",
+            "address": 9437184
+          }
+        ],
+        "instructionRanges": [
+          {
+            "start": 9437184,
+            "bytes": 104,
+            "endExclusive": 9437288
+          }
+        ],
+        "linkedSpanSha256": "13d5af82cd4daa201b41cb5e5d2a9a96fd113687763b350cbb2c998404f73686",
+        "completeSectionBytes": 104
+      },
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "module": "content0/.code-decompressed",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 4975920,
+        "mode": "ARM"
+      },
+      "symbol": "fn_004bed30",
+      "source": {
+        "path": "src/native/wave010/match_state.c",
+        "sha256": "21fc1e9fc7c61435f8a09a01e6e80d830945bde1ee96106aece5e26ce673f96b",
+        "bytes": 2377
+      },
+      "originalBytes": 416,
+      "originalInstructionBytes": 416,
+      "candidateInstructionBytes": 800,
+      "poolBytes": 0,
+      "candidateObjectSpanSha256": "620e75f6f3dd56ad5b73750f6b02afe884c25b2dd5d455f107948c289ad54032",
+      "candidateLinkedSpanSha256": "23974ba2c77a1cf964f9c44e920466cd07e61b4897fc03fa1e4bf8ad60bc9fe5",
+      "originalSpanSha256": "221496b8be7f9e158a93da6e7120dc084aefc3af6f006ed6d4127d3b3c9b97ab",
+      "compilerObject": {
+        "section": ".text.fn_004bed30",
+        "size": 800,
+        "symbolBytes": 800,
+        "mode": "ARM",
+        "sectionSha256": "620e75f6f3dd56ad5b73750f6b02afe884c25b2dd5d455f107948c289ad54032",
+        "relocations": [
+          {
+            "offset": 496,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_00780578",
+            "format": "SHT_REL"
+          }
+        ],
+        "linkedAddress": 9441280,
+        "poolBytes": 0,
+        "compilerMappingSymbols": [
+          {
+            "name": "$a",
+            "address": 9441280
+          }
+        ],
+        "instructionRanges": [
+          {
+            "start": 9441280,
+            "bytes": 800,
+            "endExclusive": 9442080
+          }
+        ],
+        "linkedSpanSha256": "23974ba2c77a1cf964f9c44e920466cd07e61b4897fc03fa1e4bf8ad60bc9fe5",
+        "completeSectionBytes": 800
+      },
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0
+    }
+  ],
+  "sourceGraph": {
+    "functions": {
+      "fn_004becdc": {
+        "section": ".text.fn_004becdc",
+        "size": 104,
+        "symbolBytes": 104,
+        "mode": "ARM",
+        "sectionSha256": "13d5af82cd4daa201b41cb5e5d2a9a96fd113687763b350cbb2c998404f73686",
+        "relocations": [],
+        "linkedAddress": 9437184,
+        "poolBytes": 0,
+        "compilerMappingSymbols": [
+          {
+            "name": "$a",
+            "address": 9437184
+          }
+        ],
+        "instructionRanges": [
+          {
+            "start": 9437184,
+            "bytes": 104,
+            "endExclusive": 9437288
+          }
+        ],
+        "linkedSpanSha256": "13d5af82cd4daa201b41cb5e5d2a9a96fd113687763b350cbb2c998404f73686",
+        "completeSectionBytes": 104
+      },
+      "fn_004bed30": {
+        "section": ".text.fn_004bed30",
+        "size": 800,
+        "symbolBytes": 800,
+        "mode": "ARM",
+        "sectionSha256": "620e75f6f3dd56ad5b73750f6b02afe884c25b2dd5d455f107948c289ad54032",
+        "relocations": [
+          {
+            "offset": 496,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_00780578",
+            "format": "SHT_REL"
+          }
+        ],
+        "linkedAddress": 9441280,
+        "poolBytes": 0,
+        "compilerMappingSymbols": [
+          {
+            "name": "$a",
+            "address": 9441280
+          }
+        ],
+        "instructionRanges": [
+          {
+            "start": 9441280,
+            "bytes": 800,
+            "endExclusive": 9442080
+          }
+        ],
+        "linkedSpanSha256": "23974ba2c77a1cf964f9c44e920466cd07e61b4897fc03fa1e4bf8ad60bc9fe5",
+        "completeSectionBytes": 800
+      },
+      "fn_00780578": {
+        "section": ".text.fn_00780578",
+        "size": 104,
+        "symbolBytes": 104,
+        "mode": "ARM",
+        "sectionSha256": "94ce9dcdd8f462447eb8e48b7e8164150f3efb2daae27ea03a6c3b6680b6912d",
+        "relocations": [],
+        "linkedAddress": 9445376,
+        "poolBytes": 0,
+        "compilerMappingSymbols": [
+          {
+            "name": "$a",
+            "address": 9445376
+          }
+        ],
+        "instructionRanges": [
+          {
+            "start": 9445376,
+            "bytes": 104,
+            "endExclusive": 9445480
+          }
+        ],
+        "linkedSpanSha256": "94ce9dcdd8f462447eb8e48b7e8164150f3efb2daae27ea03a6c3b6680b6912d",
+        "completeSectionBytes": 104
+      }
+    },
+    "sections": [
+      {
+        "section": ".text.fn_004becdc",
+        "address": 9437184,
+        "bytes": 104,
+        "sha256": "13d5af82cd4daa201b41cb5e5d2a9a96fd113687763b350cbb2c998404f73686",
+        "executable": true
+      },
+      {
+        "section": ".text.fn_004bed30",
+        "address": 9441280,
+        "bytes": 800,
+        "sha256": "23974ba2c77a1cf964f9c44e920466cd07e61b4897fc03fa1e4bf8ad60bc9fe5",
+        "executable": true
+      },
+      {
+        "section": ".text.fn_00780578",
+        "address": 9445376,
+        "bytes": 104,
+        "sha256": "94ce9dcdd8f462447eb8e48b7e8164150f3efb2daae27ea03a6c3b6680b6912d",
+        "executable": true
+      }
+    ],
+    "objects": [
+      {
+        "path": "work/wave010-native/release/source/matcher.o",
+        "sha256": "cffb9b61b01e973c6d50ba5feaf1199bc3c3571d27ed49e913cc42c2a6f7de17",
+        "bytes": 2160
+      },
+      {
+        "path": "work/wave010-native/release/source/intervals.o",
+        "sha256": "ad02b6f2c2152e27e8e5d85efd119442d7af53933d340b22a1a28c27aee05cca",
+        "bytes": 1364
+      }
+    ],
+    "linkedElf": {
+      "path": "work/wave010-native/release/source/matcher.elf",
+      "sha256": "de0bab3c430695e8cb70373d2a16a117aba1dd75a3af5da7f1591f26a18e5240",
+      "bytes": 74580
+    },
+    "linkerScript": {
+      "path": "work/wave010-native/release/source/matcher.ld",
+      "sha256": "24bec978510a95b99a7d05559fdb44d50a95962603e09839d3cf91b66f64965e",
+      "bytes": 341
+    }
+  },
+  "dependency": {
+    "symbol": "fn_00780578",
+    "originalAddress": 7865720,
+    "originalBytes": 108,
+    "originalSpanSha256": "21bca05b24b76ccc7cc4c2747d43d7309b7718e031a42cdbe4c1ab74c8e0c993",
+    "role": "source",
+    "validationPacket": {
+      "path": "evidence/lanes/wave009-native/packet.json",
+      "sha256": "db85e45dfb54695957dbad873a81678d36a662d1f7a15ab377833bc2ba252152",
+      "bytes": 24358
+    },
+    "newFunctionalCredit": 0,
+    "retainedOriginalDependencies": []
+  },
+  "ABI": {
+    "cursor": "mutable state pointer only",
+    "control": "void(cursor*, u32 flags)",
+    "matcher": "signed int(cursor*, const context*, const u16* nulTerminatedText)",
+    "ARM32Layouts": [
+      {
+        "expression": "sizeof(MatchState)",
+        "ARM32": 48,
+        "host64": 56
+      },
+      {
+        "expression": "__builtin_offsetof(MatchState, transitions)",
+        "ARM32": 8,
+        "host64": 8
+      },
+      {
+        "expression": "__builtin_offsetof(MatchState, result)",
+        "ARM32": 44,
+        "host64": 52
+      },
+      {
+        "expression": "sizeof(MatchContext)",
+        "ARM32": 8,
+        "host64": 16
+      },
+      {
+        "expression": "__builtin_offsetof(MatchContext, initial)",
+        "ARM32": 4,
+        "host64": 8
+      },
+      {
+        "expression": "sizeof(MatchEdge)",
+        "ARM32": 28,
+        "host64": 56
+      },
+      {
+        "expression": "__builtin_offsetof(MatchEdge, label)",
+        "ARM32": 8,
+        "host64": 16
+      },
+      {
+        "expression": "sizeof(MatchLink)",
+        "ARM32": 8,
+        "host64": 16
+      },
+      {
+        "expression": "__builtin_offsetof(MatchLink, next)",
+        "ARM32": 4,
+        "host64": 8
+      },
+      {
+        "expression": "__builtin_offsetof(IntervalSet, kind)",
+        "ARM32": 4,
+        "host64": 8
+      }
+    ],
+    "calleeSavedChecked": [
+      "r4",
+      "r5",
+      "r6",
+      "r7",
+      "r8",
+      "r9",
+      "r10",
+      "r11",
+      "sp"
+    ],
+    "callerSavedUnconstrained": [
+      "r0",
+      "r1",
+      "r2",
+      "r3",
+      "r12",
+      "lr"
+    ],
+    "returnPCAndARMThumbInterworkingChecked": true,
+    "noPointerTruncation": true
+  },
+  "behavior": {
+    "matcherCases": 349,
+    "independentControlCases": 168,
+    "originalOwnedInstructionsCovered": 125,
+    "originalOwnedInstructionsTotal": 125,
+    "allOriginalOwnedInstructionsReached": true,
+    "flagReturnCrossProductCases": 128,
+    "caseResultDigest": "ac9d75b34f5ce231c5634cf1a7dee423beadcae3cd85780556beafd61f1efab3",
+    "allComparedAgainstOriginalAndModel": true,
+    "typedReadAndWriteFootprintsChecked": true,
+    "graphOutsideCursorPreserved": true,
+    "privateStackFrameBytesExcludedFromEquality": 512,
+    "executionInstructionLimit": 1000000,
+    "boundedEvidenceNotUniversalEquivalence": true
+  },
+  "negativeControls": [
+    {
+      "name": "control-mask",
+      "platform": "arm-cpu",
+      "wrongSource": {
+        "path": "work/wave010-native/release/negative/control-mask/wrong.c",
+        "sha256": "b3418fd036f3dac2419535af586c2d4e34ebd58ed6bf76ecafbec122ce33bfac",
+        "bytes": 2377
+      },
+      "detected": true,
+      "actualResult": null,
+      "expectedResult": null,
+      "actualState": 51384448,
+      "expectedState": 51384320,
+      "returnedToSentinel": true,
+      "graphOutsideCursorPreserved": true,
+      "calleeSavedAndSpPreserved": true
+    },
+    {
+      "name": "control-mask",
+      "platform": "native-windows",
+      "wrongSource": {
+        "path": "work/wave010-native/release/negative/control-mask/wrong.c",
+        "sha256": "b3418fd036f3dac2419535af586c2d4e34ebd58ed6bf76ecafbec122ce33bfac",
+        "bytes": 2377
+      },
+      "detected": true,
+      "nativeWindowsReturnedNormally": true,
+      "guardedGraphOutsideCursorPreserved": true,
+      "actualResult": null,
+      "actualState": 1,
+      "expected": {
+        "result": null,
+        "state": 0
+      }
+    },
+    {
+      "name": "crlf-grouping",
+      "platform": "arm-cpu",
+      "wrongSource": {
+        "path": "work/wave010-native/release/negative/crlf-grouping/wrong.c",
+        "sha256": "e6f5e39f76ff095946cfe47471a634693cd31986eb87a35705911642d3a75c97",
+        "bytes": 2342
+      },
+      "detected": true,
+      "actualResult": 0,
+      "expectedResult": 17,
+      "actualState": 51384576,
+      "expectedState": 51384576,
+      "returnedToSentinel": true,
+      "graphOutsideCursorPreserved": true,
+      "calleeSavedAndSpPreserved": true
+    },
+    {
+      "name": "crlf-grouping",
+      "platform": "native-windows",
+      "wrongSource": {
+        "path": "work/wave010-native/release/negative/crlf-grouping/wrong.c",
+        "sha256": "e6f5e39f76ff095946cfe47471a634693cd31986eb87a35705911642d3a75c97",
+        "bytes": 2342
+      },
+      "detected": true,
+      "nativeWindowsReturnedNormally": true,
+      "guardedGraphOutsideCursorPreserved": true,
+      "actualResult": 0,
+      "actualState": 2,
+      "expected": {
+        "result": 17,
+        "state": 2
+      }
+    },
+    {
+      "name": "nbsp-classification",
+      "platform": "arm-cpu",
+      "wrongSource": {
+        "path": "work/wave010-native/release/negative/nbsp-classification/wrong.c",
+        "sha256": "53e37dbba7cbfa0c4bb58c6bf10f6c01be62e475c8b8e3211df7a768d47a9bf8",
+        "bytes": 2398
+      },
+      "detected": true,
+      "actualResult": 4294967289,
+      "expectedResult": 23,
+      "actualState": 51384320,
+      "expectedState": 51384448,
+      "returnedToSentinel": true,
+      "graphOutsideCursorPreserved": true,
+      "calleeSavedAndSpPreserved": true
+    },
+    {
+      "name": "nbsp-classification",
+      "platform": "native-windows",
+      "wrongSource": {
+        "path": "work/wave010-native/release/negative/nbsp-classification/wrong.c",
+        "sha256": "53e37dbba7cbfa0c4bb58c6bf10f6c01be62e475c8b8e3211df7a768d47a9bf8",
+        "bytes": 2398
+      },
+      "detected": true,
+      "nativeWindowsReturnedNormally": true,
+      "guardedGraphOutsideCursorPreserved": true,
+      "actualResult": -7,
+      "actualState": 0,
+      "expected": {
+        "result": 23,
+        "state": 1
+      }
+    },
+    {
+      "name": "signed-result",
+      "platform": "arm-cpu",
+      "wrongSource": {
+        "path": "work/wave010-native/release/negative/signed-result/wrong.c",
+        "sha256": "57a9720c135ff14cc8f93341ba1505bbfe7bf54852c646aa4ea1b9686480417c",
+        "bytes": 2392
+      },
+      "detected": true,
+      "actualResult": 128,
+      "expectedResult": 4294967168,
+      "actualState": 51384320,
+      "expectedState": 51384320,
+      "returnedToSentinel": true,
+      "graphOutsideCursorPreserved": true,
+      "calleeSavedAndSpPreserved": true
+    },
+    {
+      "name": "signed-result",
+      "platform": "native-windows",
+      "wrongSource": {
+        "path": "work/wave010-native/release/negative/signed-result/wrong.c",
+        "sha256": "57a9720c135ff14cc8f93341ba1505bbfe7bf54852c646aa4ea1b9686480417c",
+        "bytes": 2392
+      },
+      "detected": true,
+      "nativeWindowsReturnedNormally": true,
+      "guardedGraphOutsideCursorPreserved": true,
+      "actualResult": 128,
+      "actualState": 0,
+      "expected": {
+        "result": -128,
+        "state": 0
+      }
+    }
+  ],
+  "behaviorCorpus": {
+    "path": "evidence/lanes/wave010-native/behavior-corpus.json",
+    "sha256": "0413ad0cb1f93dc9551bb793ea41f4242b60664e656a5d0b2d4db6417e2b9509",
+    "bytes": 1029027
+  },
+  "platform": {
+    "windowsNativeExecuted": true,
+    "windowsMatcherCases": 349,
+    "windowsControlCases": 168,
+    "windowsLibrary": {
+      "path": "work/wave010-native/release/windows/matcher.dll",
+      "sha256": "d9c524eb6ca9a214346aceae88d3bee84be08746e68eb0902dd2faabee1c4ae0",
+      "bytes": 2560
+    },
+    "guardedMemoryPreserved": true,
+    "truePointersAbove32Bits": true,
+    "android": {
+      "library": {
+        "path": "work/wave010-native/release/android/libmatcher.so",
+        "sha256": "27ea0625dc55f6074a00c39e31f86ba9dca907d7e6bbb723dae5de9cf03fe9a2",
+        "bytes": 3976
+      },
+      "loadAlignments": [
+        16384,
+        16384,
+        16384,
+        16384
+      ],
+      "api": 29,
+      "deviceExecuted": false
+    },
+    "wholeGameBuildOrExecution": false
+  },
+  "newFunctionalFunctions": 2,
+  "newFunctionalOriginalBytes": 500,
+  "functionalFunctions": 2,
+  "functionalOriginalInstructionBytes": 500,
+  "exactMatchingFunctions": 0,
+  "acceptedSourceCreditGranted": 0,
+  "limits": [
+    "Finite synthetic typed graph/input domain, not universal equivalence",
+    "No malformed, dangling, cyclic-control, concurrent or MMIO graphs",
+    "Whitespace classification is the measured game subset, not Unicode normalization",
+    "Original instruction bytes differ; source graph is linked at separate addresses",
+    "Windows and Android outputs are components, not game builds; Android not device executed"
+  ],
+  "runtimeInputs": [
+    {
+      "path": "tools/python/Lib/site-packages/capstone/lib/capstone.dll",
+      "sha256": "76958e18380023a68fd1714fa2e01c594cc6db1955a07ad6937b66e66dc5d6c3",
+      "bytes": 7576576
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/__init__.py",
+      "sha256": "94571d1314355e261aff0ddfc94985fe8761232ddff6874181fd21efa9fab47f",
+      "bytes": 43853
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/lib/unicorn.dll",
+      "sha256": "010d85dce84b8f6ffaec3d5420f1b5f7768f859eb831be574c7da23e656ee8f1",
+      "bytes": 9598976
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/__init__.py",
+      "sha256": "0e8ac7115c755994a968fa865bd1b2f2075edea715c17e91d62af2cc52c13392",
+      "bytes": 305
+    }
+  ],
+  "runtime": {
+    "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+    "cpuModel": "Unicorn ARM1176",
+    "unicornDistribution": "2.1.4",
+    "unicornRuntime": "2.1.4",
+    "capstoneDistribution": "5.0.9",
+    "capstoneRuntime": "5.0.7"
+  },
+  "inputPinsUnchangedDuringValidation": true,
+  "preservedAttempts": {
+    "path": "evidence/lanes/wave010-native/attempts.json",
+    "sha256": "36e8161072acf1443364bbb8778f1bc9790d4fadd2b9a53228896d708627bb8c",
+    "bytes": 4317
+  },
+  "typePromotion": {
+    "path": "evidence/lanes/wave010-native/type-proposal.json",
+    "sha256": "060e36751289b208f0f3846574bbd7375689da364a8615a77a1c5031051ef7ec",
+    "bytes": 2230
+  }
+}
