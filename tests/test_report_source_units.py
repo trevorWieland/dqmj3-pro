@@ -2,6 +2,7 @@ import copy
 import hashlib
 import json
 from pathlib import Path
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -30,6 +31,11 @@ class SourceDirectedUnitsTests(unittest.TestCase):
     def save(self):
         path=self.root/routing.CONFIG;path.parent.mkdir(parents=True,exist_ok=True)
         path.write_text(json.dumps(self.config),encoding="utf-8")
+
+    def test_generator_checks_both_headers_in_isolated_python_from_another_cwd(self):
+        result = subprocess.run([sys.executable, "-I", "-S", str(ROOT / "toolscripts/generate_source_names.py"), "--check"], cwd=self.root, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(json.loads(result.stdout)["headers"], 2)
 
     def test_unit_alias_direction_supports_the_quick_source_file_index(self):
         self.assertEqual(routing.unit_names(self.config), "#define actual_controller fn_00100008\n")

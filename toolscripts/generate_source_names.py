@@ -2,6 +2,7 @@ import argparse
 import json
 from pathlib import Path
 import re
+import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -32,6 +33,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--check', action='store_true')
     args = parser.parse_args()
+    sys.path.insert(0, str(ROOT / "toolscripts"))
     from report_source_units import CONFIG, UNIT_NAMES, unit_names
     generated = generate(ROOT)
     targets = [(ROOT / 'include/bytematch_names.h', generated)]
