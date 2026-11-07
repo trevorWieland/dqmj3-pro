@@ -17,6 +17,12 @@
         "--output-dir",
         "work/squirrel-generator046/controls-actual-suspended"
       ]
+    },
+    {
+      "name": "generator046-strengthened-native-models",
+      "args": [
+        "toolscripts/squirrel_generator044_state_validate.py"
+      ]
     }
   ],
   "tests": [
@@ -25,6 +31,7 @@
   ],
   "packets": [
     "work/squirrel-generator046/primary-actual-suspended/execution.json",
-    "work/squirrel-generator046/controls-actual-suspended/controls.json"
+    "work/squirrel-generator046/controls-actual-suspended/controls.json",
+    "work/squirrel-generator046/native-model-validation.json"
   ]
 }
