@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "name": "controller055",
+  "producerSteps": [
+    {
+      "name": "controller055-prepare",
+      "args": [
+        "toolscripts/native_controller055_stage.py",
+        "prepare"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "controller055-positive",
+      "args": [
+        "toolscripts/native_controller055_stage.py",
+        "positive"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "controller055-controls",
+      "args": [
+        "toolscripts/native_controller055_stage.py",
+        "controls"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "controller055-copy",
+      "args": [
+        "toolscripts/native_controller055_stage.py",
+        "copy"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "controller055-repeat",
+      "args": [
+        "toolscripts/native_controller055_stage.py",
+        "repeat"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "controller055-copy-controls",
+      "args": [
+        "toolscripts/native_controller055_stage.py",
+        "copy-controls"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "controller055-padding",
+      "args": [
+        "toolscripts/native_controller055_stage.py",
+        "padding"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "controller055-verify",
+      "args": [
+        "toolscripts/native_controller055_stage.py",
+        "verify"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "controller055-checks",
+      "args": [
+        "toolscripts/native_controller055_stage.py",
+        "checks"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "native_controller055_stage",
+    "native_callback_inventory",
+    "compile_source_include_dirs"
+  ],
+  "packets": [
+    "work/controller055-public/v1/staged-inputs.json",
+    "work/controller055-public/v1/positive/run.log",
+    "work/controller055-public/v1/positive/public-input-guard.json",
+    "work/controller055-public/v1/controls/run.log",
+    "work/controller055-public/v1/controls/public-input-guard.json",
+    "work/controller055-public/v1/copy/run.log",
+    "work/controller055-public/v1/copy/public-input-guard.json",
+    "work/controller055-public/v1/repeat/run.log",
+    "work/controller055-public/v1/repeat/public-input-guard.json",
+    "work/controller055-public/v1/copy-controls/run.log",
+    "work/controller055-public/v1/copy-controls/public-input-guard.json",
+    "work/controller055-public/v1/padding/run.log",
+    "work/controller055-public/v1/padding/public-input-guard.json",
+    "work/controller055-public/v1/verify/run.log",
+    "work/controller055-public/v1/verify/public-input-guard.json",
+    "work/controller055-public/v1/checks/run.log",
+    "work/controller055-public/v1/checks/public-input-guard.json",
+    "work/native-state055/controller-v5/execution.json",
+    "work/native-state055/controller-v5/returning-controls.json",
+    "work/native-state055/controller-v5/source-copy.json",
+    "work/native-state055/controller-v5/caller-padding-audit.json",
+    "work/native-state055/controller-v5/replay-v1/execution.json",
+    "work/native-state055/controller-v5/replay-v1/returning-controls.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

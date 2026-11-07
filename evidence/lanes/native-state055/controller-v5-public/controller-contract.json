@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "canonical": {
+    "version": "update-content0",
+    "module": "main",
+    "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+    "entry": 7320156,
+    "mode": "ARM",
+    "instructionBytes": 14600
+  },
+  "entry": {
+    "source": "source/apply_controller055.c",
+    "name": "state_apply_controller055",
+    "signature": "void(const StateWord055 *mask, StateWord055 requests)",
+    "originalR0ResidueIsDiagnosticOnly": true
+  },
+  "storage": {
+    "context": {
+      "targetTouchedPrefixBytes": 2152,
+      "nativeComponentBytes": 2280,
+      "completeOriginalOwnerLayoutClaimed": false,
+      "genuineFirstMember": "StateContextSelector055 common",
+      "nativeCpuPointers": "native_attribute_words[16]"
+    },
+    "selection": {
+      "targetBytes": 3716,
+      "nativeComponentBytes": 4016,
+      "completeOriginalOwnerLayoutClaimed": false,
+      "nativeCacheNodes": "StateAttributeNode055 native_attribute_nodes[16]",
+      "nodeTargetBytes": 8,
+      "nodeNativeBytes": 16
+    },
+    "resource": {
+      "targetBytes": 2080,
+      "nativeBytes": 2112,
+      "name": "U32 key; not vtable",
+      "values": "256 binary32 at +4",
+      "deltas": "256 binary32 at +0x404",
+      "sixPointers": "target +0x804..+0x818; native +0x808..+0x830",
+      "flags": "target +0x81c; native +0x838",
+      "originalFactoryQualified": false
+    }
+  },
+  "providers": {
+    "directOriginalCallees": {
+      "6f95a4": "state_write055",
+      "6f9544": "state_reserve055",
+      "166900": "state_write_fixed055",
+      "7292d0": "state_resource_lookup055"
+    },
+    "resourceIndex": "Actual declared opaque header plus 32 typed entry pointers; caller supplies genuine declared component objects",
+    "storage": "Ordinary C, deterministic aligned subspans of a single physically backed U32 arena; not the original game allocator",
+    "callback": "void *(U32,U32,U32,U32), invoked as exact typed C; no register-return hooks",
+    "callbackDomain": "May observe initialized resource/context state. Cannot reenter or mutate controller-owned inputs during the call.",
+    "headerTable": "189 caller-provided U32 command headers; production initializer unrecovered",
+    "categories": "The 193 initialized-data list words are independently reconstructed and compared byte-for-byte with the measured image defaults",
+    "globalInitialization": "Actual complete game global/context/resource initialization is outside this packet"
+  },
+  "memoryContract": [
+    "Mask, selection/cache/context, resource records, immutable shader/constant inputs and output are properly backed declared component objects",
+    "Native CPU pointers remain full width. Physical/device address tokens remain separate U32 words; they are not native pointers",
+    "Opaque U32 cells used only as presence/address tokens are provisioned as such; no complete native game-owner cast is supported",
+    "All typed pointers obey their actual natural alignment; no packed-member pointer escape",
+    "Fixed/incrementing even-count writers physically read the extra backed U32 padding word; no implicit zero substitution for caller buffers",
+    "The main logical output limit can be exceeded by one U32 after a soft pair write; physical output backing includes that word",
+    "Controller temporary table storage is one genuine 513-word span initialized zero; shared scratch reuse is preserved"
+  ],
+  "floating": {
+    "profile": "IEEE binary32, nearest-even arithmetic, no FZ/DAZ or trapped floating exceptions, no fused contraction",
+    "floatToUnsigned": "Explicit finite/clamped/saturating conversion ranges; no undefined out-of-range C cast",
+    "status": "Raw VFP/FPSCR, FPCR/FPSR and Windows MXCSR observations retained; cross-backend floating-status equality not claimed",
+    "windowsHarness": "Clears only exception status for the measured call and restores the saved caller mode before model checks"
+  },
+  "rawDifferences": {
+    "callerStackPadding": "Actual caller stack words may enter command alignment padding; six seeded audits retain raw differences",
+    "comparison": "Only a post-execution decoder view compares packet headers/parameters. No executed memory/register/code/literal is rewritten.",
+    "universalRawEquality": false
+  },
+  "limits": [
+    "Single-threaded nonvolatile initialized storage; asynchronous/raw dead-stack observers excluded",
+    "OOM, invalid service pointers, malformed cache graphs and invalid/unbacked ranges unsupported",
+    "Buffer/constant attribute totals above 12 take the measured fallback path; compact descriptor invariants apply only to admitted <=12-slot storage",
+    "No actual GPU, original hardware, Android OS/device, whole-game, exact object matching or source-credit claim"
+  ],
+  "primaryCorroboration": [
+    "https://github.com/devkitPro/libctru/blob/62b7c42c88b1ee837f513358409d2e5c8f9001a9/libctru/source/gpu/gpu.c#L22-L40",
+    "https://github.com/devkitPro/libctru/blob/62b7c42c88b1ee837f513358409d2e5c8f9001a9/libctru/include/3ds/gpu/gpu.h#L8-L9"
+  ],
+  "sourceImportedFromUpstream": false,
+  "sourceCreditGranted": 0
+}
