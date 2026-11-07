@@ -1972,6 +1972,64 @@
         "src/native/wave013/pattern_unicode.h"
       ],
       "role": "bounded-rule-file-processing"
+    },
+    {
+      "source": "source/squirrel-wave017/fixture_observers.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave013/native_closure_release.h",
+        "source/squirrel-wave014/weak_reference.h",
+        "source/squirrel-wave015/string.h",
+        "source/squirrel-wave017/fixture_internal.h",
+        "source/squirrel-wave017/script_closure.h"
+      ],
+      "role": "bounded-actual-script-closure-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave017/fixture_run.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave013/native_closure_release.h",
+        "source/squirrel-wave014/weak_reference.h",
+        "source/squirrel-wave015/string.h",
+        "source/squirrel-wave017/fixture_internal.h",
+        "source/squirrel-wave017/script_closure.h"
+      ],
+      "role": "bounded-actual-script-closure-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave017/fixture_state.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave013/native_closure_release.h",
+        "source/squirrel-wave014/weak_reference.h",
+        "source/squirrel-wave015/string.h",
+        "source/squirrel-wave017/fixture_internal.h",
+        "source/squirrel-wave017/script_closure.h"
+      ],
+      "role": "bounded-actual-script-closure-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave017/script_closure.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_internal.h",
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave017/script_closure.h"
+      ],
+      "role": "bounded-actual-script-closure-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave017/vtables.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave017/script_closure.h"
+      ],
+      "role": "bounded-actual-script-closure-lifetime"
     }
   ],
   "excludedSources": [
@@ -1998,6 +2056,7 @@
     "source/squirrel-wave013",
     "source/squirrel-wave014",
     "source/squirrel-wave015",
-    "source/squirrel-wave016"
+    "source/squirrel-wave016",
+    "source/squirrel-wave017"
   ]
 }
