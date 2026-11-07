@@ -69,6 +69,19 @@ class OverlayGuards(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Shared-tail'):
             overlay.validate(self.base, packet, self.image)
 
+    def test_plain_vtable_slot_validates_its_distinct_encoding(self):
+        path = ROOT / 'evidence/verification/array007-function-overlay.json'
+        packet = json.loads(path.read_text())
+        rows = overlay.validate(self.base, packet, self.image)
+        self.assertEqual([(row['address'], row['textBodyBytes']) for row in rows], [(0x665c60, 96)])
+        self.assertEqual(rows[0]['calledFunctionAddresses'], [0x24d73c, 0x77f3f8])
+
+    def test_member_pair_cannot_be_reinterpreted_as_a_plain_vtable(self):
+        packet = copy.deepcopy(self.packet)
+        packet['tables'][0]['encoding'] = 'vtable-function-pointer'
+        with self.assertRaisesRegex(ValueError, 'table'):
+            overlay.validate(self.base, packet, self.image)
+
 
 if __name__ == '__main__':
     unittest.main()

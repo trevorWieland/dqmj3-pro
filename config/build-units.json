@@ -826,6 +826,51 @@
         "src/native/wave005/vm_views.h"
       ],
       "role": "provisional-vm-checkpoint"
+    },
+    {
+      "source": "source/squirrel-wave007/array_release.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-array-lifetime-component"
+    },
+    {
+      "source": "source/squirrel-wave007/chain_unlink.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-array-lifetime-component"
+    },
+    {
+      "source": "source/squirrel-wave007/fixture.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-array-lifetime-component"
+    },
+    {
+      "source": "source/squirrel-wave007/vector_destroy.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-array-lifetime-component"
+    },
+    {
+      "source": "source/squirrel-wave007/vtables.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-array-lifetime-component"
     }
   ],
   "excludedSources": [
@@ -842,6 +887,7 @@
     "source/squirrel-wave003",
     "source/squirrel-wave004",
     "source/squirrel-wave005",
-    "source/squirrel-wave006"
+    "source/squirrel-wave006",
+    "source/squirrel-wave007"
   ]
 }
