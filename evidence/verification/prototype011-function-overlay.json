@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "frozenCensus": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+    "bytes": 20574405
+  },
+  "producer": {
+    "path": "toolscripts/review_prototype011_inventory.py",
+    "sha256": "e2bc922163babd07fef2bd6e3ec77ed31463407b3002d7359c0842a125b8cbf0",
+    "bytes": 7631
+  },
+  "boundaryProducer": {
+    "path": "toolscripts/squirrel_prototype_release011.py",
+    "sha256": "12d7f23f0b015ddb8cbbea1b6a03650a9c4cd3639ef0c4cc1adec8fc2837e9e5",
+    "bytes": 8710
+  },
+  "boundaryEvidence": {
+    "path": "evidence/lanes/squirrel-prototype-release011/claim.json",
+    "sha256": "1cd3a100d75967242785207ea44a6c0dc3532b511b1b66dfb79e2f60cbb32a64",
+    "bytes": 5159
+  },
+  "tables": [
+    {
+      "name": "sq-prototype-vtable-slot0",
+      "encoding": "vtable-function-pointer",
+      "readerFunction": 2724900,
+      "literalAddress": 2725024,
+      "literalBytes": 4,
+      "literalSha256": "a06857e82e73a3141879246130352a433f69810fdc4d2e7e91750f6ac5d2eeb1",
+      "start": 8512812,
+      "bytes": 4,
+      "sha256": "da3c95c3ae2404751d80b338cdb3af95a8c44f65319b7fa372a33c9e3d912b53",
+      "entries": [
+        {
+          "key": 0,
+          "slot": 8512812,
+          "target": 2724900,
+          "mode": "ARM",
+          "virtual": true,
+          "thisAdjustmentBytes": 0
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "canonicalIdentity": {
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 2724900,
+        "mode": "ARM"
+      },
+      "instructionRanges": [
+        {
+          "start": 2724900,
+          "endExclusive": 2725024,
+          "bytes": 124,
+          "instructions": 31,
+          "sha256": "c3382f9a8fc0040f2303b609ff32610dedd584f6b46ba06f71ee1ac68a22dabf",
+          "originalMemorySha256": "c3382f9a8fc0040f2303b609ff32610dedd584f6b46ba06f71ee1ac68a22dabf"
+        }
+      ],
+      "literalPoolRanges": [
+        {
+          "start": 2725024,
+          "endExclusive": 2725028,
+          "bytes": 4,
+          "reader": 2724900,
+          "sha256": "a06857e82e73a3141879246130352a433f69810fdc4d2e7e91750f6ac5d2eeb1"
+        }
+      ],
+      "tableWitnesses": [
+        {
+          "table": "sq-prototype-vtable-slot0",
+          "slot": 8512812,
+          "target": 2724900
+        }
+      ],
+      "outgoingTransfers": [
+        {
+          "address": 2725020,
+          "target": 2309080,
+          "kind": "branch",
+          "sha256": "1e9255ba07d5ff63fec24e022d7eb533155330267ee66b40abc520c36fe26fd5"
+        }
+      ],
+      "indirectTransfers": [
+        {
+          "address": 2724960,
+          "operand": "r1",
+          "kind": "call",
+          "sha256": "42977fbd480f9e810b7d03e9ac27f426b718118139df60c30c20fee5cb9ba8e7"
+        },
+        {
+          "address": 2725008,
+          "operand": "r1",
+          "kind": "call",
+          "sha256": "42977fbd480f9e810b7d03e9ac27f426b718118139df60c30c20fee5cb9ba8e7"
+        }
+      ],
+      "sourceCreditRequested": 0
+    }
+  ],
+  "sourceCreditGranted": 0,
+  "initializedTextByteDenominatorChanged": false,
+  "newCandidateFunctions": 1,
+  "newInstructionUnionBytes": 124,
+  "candidatePeerOverlaps": [],
+  "sharedTailAliases": []
+}

@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "status": "measured-before-prototype-release-source-implementation",
+  "program": "dqmj3pro",
+  "version": "update-content0",
+  "module": "main",
+  "imageBase": 1048576,
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "censusSha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+  "functions": [
+    {
+      "role": "prototype-final-release",
+      "entry": 2724116,
+      "endExclusive": 2724716,
+      "mode": "ARM",
+      "instructionBytes": 600,
+      "instructionSha256": "3e2a37989608be8d554e189866181888b7faca5b1ec92cb34b638a53f0bda9dd",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "literalReferences": [],
+      "directCalleesOrTailCalls": [
+        1693312
+      ],
+      "frozenCensusEntryPresent": true
+    },
+    {
+      "role": "prototype-destructor",
+      "entry": 2724900,
+      "endExclusive": 2725024,
+      "mode": "ARM",
+      "instructionBytes": 124,
+      "instructionSha256": "c3382f9a8fc0040f2303b609ff32610dedd584f6b46ba06f71ee1ac68a22dabf",
+      "poolBytes": 4,
+      "poolSha256": "a06857e82e73a3141879246130352a433f69810fdc4d2e7e91750f6ac5d2eeb1",
+      "literalReferences": [
+        {
+          "instruction": 2724900,
+          "address": 2725024,
+          "sha256": "a06857e82e73a3141879246130352a433f69810fdc4d2e7e91750f6ac5d2eeb1"
+        }
+      ],
+      "directCalleesOrTailCalls": [
+        2309080
+      ],
+      "frozenCensusEntryPresent": false,
+      "newFunctionEvidence": {
+        "actualVtableSlot": 8512812,
+        "precedingCanonicalEntry": 2724716,
+        "precedingCanonicalEnd": 2724900,
+        "tailReturnCall": 2725020,
+        "tailReturnTarget": 2309080,
+        "followingPoolEnd": 2725028,
+        "followingUnseededEntry": 2725028,
+        "followingEntryTableWitness": 8512844,
+        "nextSeededEntry": 2725144,
+        "requiresCoordinatorCensusReview": true
+      }
+    }
+  ],
+  "completeMeasuredInstructionBytes": 724,
+  "scalarPointerPoolBytes": 4,
+  "prototypeVtable": {
+    "address": 8512812,
+    "bytes": 12,
+    "sha256": "78a85df15f0d5b36089809fe589617e32ffb07efd0ca46cffadb8d397ccd4b3b"
+  },
+  "factoryWitness": {
+    "entry": 1739548,
+    "allocationCall": 1739652,
+    "vtableLoad": 1739676,
+    "vtableLiteral": 1740864,
+    "vtableStore": 1739684,
+    "sourceOrIntervalCredit": 0
+  },
+  "targetAbi": {
+    "prefixBytes": 12,
+    "countOffset": 4,
+    "weakOffset": 8,
+    "sourceNameOffset": 12,
+    "nameOffset": 20,
+    "stackSizeOffset": 28,
+    "generatorByteOffset": 32,
+    "varargsByteOffset": 33,
+    "localCountOffset": 36,
+    "localsOffset": 40,
+    "lineCountOffset": 44,
+    "linesOffset": 48,
+    "literalCountOffset": 52,
+    "literalsOffset": 56,
+    "parameterCountOffset": 60,
+    "parametersOffset": 64,
+    "functionCountOffset": 68,
+    "functionsOffset": 72,
+    "outerCountOffset": 76,
+    "outersOffset": 80,
+    "defaultCountOffset": 84,
+    "defaultsOffset": 88,
+    "instructionCountOffset": 92,
+    "instructionsOffset": 96,
+    "objectBytes": 8,
+    "instructionBytes": 8,
+    "outerBytes": 20,
+    "localBytes": 20,
+    "lineBytes": 8,
+    "collectableLinksExist": false,
+    "destructorReturnsThisPointer": true
+  },
+  "readOrderContract": [
+    "Release literal objects before parameter objects before child-function objects",
+    "Release outer source object before outer name, caching current record across its callback",
+    "Release local-name objects after outer records",
+    "Reload each count and backing pointer across element callbacks",
+    "Compute compact whole-allocation byte count after vector callbacks but before virtual destructor",
+    "Destructor installs prototype identity, releases name before source name, then resets base and weak target",
+    "Use captured allocation byte count for one final free after destructor callbacks"
+  ],
+  "compactAllocation": {
+    "fixedTargetHeaderBytes": 96,
+    "order": [
+      "instructions",
+      "literals",
+      "parameters",
+      "functions",
+      "outers",
+      "lines",
+      "locals",
+      "defaults"
+    ],
+    "separateOwnedVectorFrees": false,
+    "nativeTypedTailsMustRemainNaturallyAligned": true
+  },
+  "sharedBaseReset": {
+    "start": 2309080,
+    "endExclusive": 2309124,
+    "censusOwner": 1891524,
+    "newFunctionOrFragmentCredit": 0
+  },
+  "referenceContract": "Named12-byte prefix and exact opaque-pointer vtable bridges; no prototype-to-collectable cast",
+  "externalServices": [
+    {
+      "originalThunk": 1693312,
+      "service": "typed C whole-allocation disposal",
+      "allocatorRecoveredOrCredited": false
+    },
+    {
+      "service": "exact typed normally returning opaque-reference callbacks"
+    }
+  ],
+  "sourceCodeWrittenAtMeasurement": false,
+  "requestedExactBytes": 0,
+  "acceptedSourceCreditGranted": 0,
+  "coordinatorAdmissionRequired": true,
+  "gcOrWholeVmOrDeviceClaimed": false,
+  "originalPayloadsPublished": false
+}

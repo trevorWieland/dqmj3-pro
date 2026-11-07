@@ -1,0 +1,1171 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-bounded-source-actual-prototype-lifetime-component",
+  "program": "dqmj3pro",
+  "version": "update-content0",
+  "module": "main",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "claim": {
+    "path": "evidence/lanes/squirrel-prototype-release011/claim.json",
+    "bytes": 5159,
+    "sha256": "1cd3a100d75967242785207ea44a6c0dc3532b511b1b66dfb79e2f60cbb32a64"
+  },
+  "completeBodies": [
+    {
+      "role": "prototype-final-release",
+      "entry": 2724116,
+      "endExclusive": 2724716,
+      "mode": "ARM",
+      "instructionBytes": 600,
+      "instructionSha256": "3e2a37989608be8d554e189866181888b7faca5b1ec92cb34b638a53f0bda9dd",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "literalReferences": [],
+      "directCalleesOrTailCalls": [
+        1693312
+      ],
+      "frozenCensusEntryPresent": true
+    },
+    {
+      "role": "prototype-destructor",
+      "entry": 2724900,
+      "endExclusive": 2725024,
+      "mode": "ARM",
+      "instructionBytes": 124,
+      "instructionSha256": "c3382f9a8fc0040f2303b609ff32610dedd584f6b46ba06f71ee1ac68a22dabf",
+      "poolBytes": 4,
+      "poolSha256": "a06857e82e73a3141879246130352a433f69810fdc4d2e7e91750f6ac5d2eeb1",
+      "literalReferences": [
+        {
+          "instruction": 2724900,
+          "address": 2725024,
+          "sha256": "a06857e82e73a3141879246130352a433f69810fdc4d2e7e91750f6ac5d2eeb1"
+        }
+      ],
+      "directCalleesOrTailCalls": [
+        2309080
+      ],
+      "frozenCensusEntryPresent": false,
+      "newFunctionEvidence": {
+        "actualVtableSlot": 8512812,
+        "precedingCanonicalEntry": 2724716,
+        "precedingCanonicalEnd": 2724900,
+        "tailReturnCall": 2725020,
+        "tailReturnTarget": 2309080,
+        "followingPoolEnd": 2725028,
+        "followingUnseededEntry": 2725028,
+        "followingEntryTableWitness": 8512844,
+        "nextSeededEntry": 2725144,
+        "requiresCoordinatorCensusReview": true
+      }
+    }
+  ],
+  "measuredNewInstructionBytes": 724,
+  "poolBytes": 4,
+  "requestedExactBytes": 0,
+  "acceptedSourceCreditGranted": 0,
+  "coordinatorAdmissionRequired": true,
+  "newDestructorRequiresCensusReview": true,
+  "duplicateIntervalCreditAllowed": false,
+  "sharedBaseFragmentSourceCredit": 0,
+  "byteRuntimePredecessor": {
+    "path": "evidence/lanes/squirrel-generator-release008/ready.json",
+    "bytes": 3070,
+    "sha256": "b01a7f74775289ff41f27c3a273111a1fb34d7ac162992b3f75cffa07801d6ce"
+  },
+  "cases": 48,
+  "comparisonsAgainstOriginal": 144,
+  "sourceArmWholeHeapComparisons": 48,
+  "originalInstructionsVisited": 181,
+  "originalInstructionsTotal": 181,
+  "all181OriginalInstructionsVisited": true,
+  "actualWindowsExecuted": true,
+  "androidActualObjectsCpuModelExecuted": true,
+  "androidModel": "Cortex-A72 AArch64, foreign arena above4GiB, natural named opaque-prefix types",
+  "androidReturnedApis": 192,
+  "androidX18SavedRegistersAndStackPassed": true,
+  "androidOperatingSystemOrDeviceExecutedForThisComponent": false,
+  "physicalAndroidOrAynThorExecuted": false,
+  "wholeVmOrGameExecuted": false,
+  "orderedCaseDigest": "051db63bf62e2c68c30158d74face4780f457b752a5a435c005da637262ca4a2",
+  "casesByRoot": [
+    {
+      "root": "release",
+      "variant": 0,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 231,
+      "orderedObservationSha256": "96a4557b15f4bdb0e702c24dfb0d3b1ab347abf9fac700804bfe768cd28fa945",
+      "wholeNormalizedArmHeapSha256": "c790f0d880ab4c8e4c331b0b0d11c405a3b695fa7addded2bd445779f9e4999f",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 1,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 401,
+      "orderedObservationSha256": "20902d8fc118b5725677516268c8126788921d24c6354618718a336174a0795b",
+      "wholeNormalizedArmHeapSha256": "42425b18bda0ed6205ed86b2e5b5bb3f32d872cd6f5a45949eb737fedd5ec60e",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 2,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 385,
+      "orderedObservationSha256": "58cb4458a61d51ec2f2c922b003a714466f308d8d3fb289d898e310924713d7b",
+      "wholeNormalizedArmHeapSha256": "c070b3a77e1b072945eb127ccf3e6832910e730eff16e7f582ee0ce694292358",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 3,
+      "caseClass": "unsigned-count-edge",
+      "observationWords": 401,
+      "orderedObservationSha256": "821499c9e3df4ed7e2992114f433f8ebeb4578de352377f066f77517aefb3340",
+      "wholeNormalizedArmHeapSha256": "613a5fdfa0c7c56e9443f58acc9f3f3485bd77f3ad4be92cdaf924da6eed8b86",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 4,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 401,
+      "orderedObservationSha256": "d7bffb8ecbf6088c41c8d5b8b5f6739333323e95dcdab31a1cc264a7b77dfff8",
+      "wholeNormalizedArmHeapSha256": "f8786214563c682e1dcb11d13dc7e17f005ce830b1e614345f63f3d1cfe87d04",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 5,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 433,
+      "orderedObservationSha256": "ceaa38843d2982140c32c5bd21f19fba9a134dcf1dc201ce051883e4e9e525a1",
+      "wholeNormalizedArmHeapSha256": "1b13920fac148c583529c0e560a23b6aefff2ba3ece54533ab57fa5966168928",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 6,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 417,
+      "orderedObservationSha256": "25988b84d5f402c5fe0d1e1f74eac4ca3c499ef4117580f7f3a3bf1cda094a26",
+      "wholeNormalizedArmHeapSha256": "e40ffc49a03b788047a097b76d72e14c21ab86a05c1fa4fa15be6acc61719b55",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 7,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 401,
+      "orderedObservationSha256": "0bb1ed8cbb5f69a36250dba858b288ec5c9ebe6976ca8404aaa9124aa507528a",
+      "wholeNormalizedArmHeapSha256": "1a6cde6aa06bd30ff4267f1b0f47af6accafb1b6e0337c2921da1b990b2db562",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 8,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 401,
+      "orderedObservationSha256": "e6a20948f28baea3b8993d54bae2142ee32ecf36f99f6075aa5d3d93409af94d",
+      "wholeNormalizedArmHeapSha256": "4c238791c2d6d630aa5faa56d01d33531a90df1ffe6c21d0fb373f3d6eb44ab9",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 9,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 401,
+      "orderedObservationSha256": "0ef216433980720b18bd219f34fe17ab37c0e9ff99aa9083e2cb97c59915d951",
+      "wholeNormalizedArmHeapSha256": "7c40e26670c5ef2c14620c4705d2ee876e35357d195061c4d00717df9a6af6f5",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 10,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 417,
+      "orderedObservationSha256": "b14440d0384146df1d3b0817b60660442e4f6400f0beadb2fd3e1dccceb49b20",
+      "wholeNormalizedArmHeapSha256": "6df90d9831ddd343bb7d503fe0f34b0fbf65d17662653ae08f332e98885695d3",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 11,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 263,
+      "orderedObservationSha256": "be9f12816bbec62e610a9c19af511682557c881bd31d60f04f4d36f972793da5",
+      "wholeNormalizedArmHeapSha256": "7dca3ad5c1bed6aa0da3c370109b886b4b82679a9ffa1404e403fb8917763203",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 12,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 401,
+      "orderedObservationSha256": "130234d97dba3869d35eded6117c9baecd2208c7525d35060b6cbe0e6a8e58fb",
+      "wholeNormalizedArmHeapSha256": "4cd91329a72e73fead02e99a82efc5b1a57cf7bb30b3786a300fb1c354c6757f",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 13,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 289,
+      "orderedObservationSha256": "d0aa4e961da2f21a7ca2e9facbe8f89236a215600cdd008c1fce867d669acb6d",
+      "wholeNormalizedArmHeapSha256": "6d446ad130c8fc78afd57bdf253d2dbc6bc927cb1852e1571df5d27546ce9920",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 14,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 369,
+      "orderedObservationSha256": "5d4465745bcaf9ea176558b2277518f20dfa66496e17570a2468f555508df74b",
+      "wholeNormalizedArmHeapSha256": "19316a81ef2bd0cc9c01ccef16c1a479039b339165e740727640e0ff8ef9fa9a",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 15,
+      "caseClass": "unsigned-count-edge",
+      "observationWords": 369,
+      "orderedObservationSha256": "9c52cc764a1d5e1f18ee04b4c8efa338954092b337cdb483a42b500c365c4b00",
+      "wholeNormalizedArmHeapSha256": "f0ab5909ebdf36c309e0f570ac81b7376a0e4a13f2c3d2665c2b31a91469dc8b",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 16,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 273,
+      "orderedObservationSha256": "f60929e9103c8df166557f8a6a6a4625ed31e8e18c310dfe5092438fe473b07f",
+      "wholeNormalizedArmHeapSha256": "482c44399944f728f48b90aed1b6dd17e11936c3d34d4dea8cac4d77c681c9c6",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 17,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 380,
+      "orderedObservationSha256": "33445f6c5a425453177e9e7b0a0827c717d8e48273374dea4d48e9d0d0a8ed76",
+      "wholeNormalizedArmHeapSha256": "d4e923ee034906f0ff6192da51d3e455b58673d5f4350daedfd8e8c1eaf8a680",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 18,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 422,
+      "orderedObservationSha256": "83878561c9723f9a818884bc633e16365e3201e9eb30f2aaa04f46f35236d302",
+      "wholeNormalizedArmHeapSha256": "f1747e7a4b1a37cd82daf34413e1e44068cec23c63f9e8e52dbf98cb071a23d6",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 19,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 401,
+      "orderedObservationSha256": "aad958e59acec154166e1be740a06dfa3847f61d7481981978a18b04c8558ca2",
+      "wholeNormalizedArmHeapSha256": "cdfee722d995cfd8d36efbe5282c194a2b5e1c32247251f6920b1e8773996d1c",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 20,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 401,
+      "orderedObservationSha256": "5adc69529496086cd72592fb8a65565ff9607ed361db6e872d9a32db0f1a5387",
+      "wholeNormalizedArmHeapSha256": "d2d16de7b54cff3b118771d70c61c6fcfa01aa2c4eb9c6be992caa0a08c7b5bf",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 21,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 401,
+      "orderedObservationSha256": "4b73419c56af2d85e20073fce9a30d795a94fc9be37e89c4c4154e22e9e0b580",
+      "wholeNormalizedArmHeapSha256": "5835829acb24c592f376be56cd85e76aa73a169ba25a21d971ff8476d9ba011a",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 22,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 401,
+      "orderedObservationSha256": "e891a9a1687828472ce344d535ed64ef3b36e11da503a81c3d466f091c9b8869",
+      "wholeNormalizedArmHeapSha256": "3ee35f42188db4e3a26830c04c3e755d6267862ba61e18cfb5f973d6ae315663",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 23,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 417,
+      "orderedObservationSha256": "4e3fe7b685acf439e0d35e48dafa8e99f174dd659d7da52084cac6691f5dfc51",
+      "wholeNormalizedArmHeapSha256": "42425b18bda0ed6205ed86b2e5b5bb3f32d872cd6f5a45949eb737fedd5ec60e",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 0,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 215,
+      "orderedObservationSha256": "46e38a8838d6c65b32b84d73994366e54b00b6f6e59b38ab293d44bb3ceab629",
+      "wholeNormalizedArmHeapSha256": "c790f0d880ab4c8e4c331b0b0d11c405a3b695fa7addded2bd445779f9e4999f",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 1,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 289,
+      "orderedObservationSha256": "c62bab542d1b490db564c844704c39428ddbfc4e32198e53a199638f082d6fd6",
+      "wholeNormalizedArmHeapSha256": "f4c062da94b6d65a3bd076c8b00ee20bf9b274e8f14fbf6f36aab6df7e7a24fd",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 2,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 273,
+      "orderedObservationSha256": "9724d1a8b2fc624ddd973b47e87b3f30575ea088e44444639ff2e32211ab7595",
+      "wholeNormalizedArmHeapSha256": "b131897aa9fddddf4f046e65c70af11a633202c35ad837f1050b85d55fbac6bf",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 3,
+      "caseClass": "unsigned-count-edge",
+      "observationWords": 289,
+      "orderedObservationSha256": "6e543ade0e20995945f0e2fed4e3c4431b851b65d247c73446fd7f2f4635014f",
+      "wholeNormalizedArmHeapSha256": "ab47aae6d30479a4baabd4d96f2acb2540af69d6f9ad773ce4ab95e8134337fa",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 4,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 289,
+      "orderedObservationSha256": "c62bab542d1b490db564c844704c39428ddbfc4e32198e53a199638f082d6fd6",
+      "wholeNormalizedArmHeapSha256": "f4c062da94b6d65a3bd076c8b00ee20bf9b274e8f14fbf6f36aab6df7e7a24fd",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 5,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 289,
+      "orderedObservationSha256": "c62bab542d1b490db564c844704c39428ddbfc4e32198e53a199638f082d6fd6",
+      "wholeNormalizedArmHeapSha256": "f4c062da94b6d65a3bd076c8b00ee20bf9b274e8f14fbf6f36aab6df7e7a24fd",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 6,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 289,
+      "orderedObservationSha256": "c62bab542d1b490db564c844704c39428ddbfc4e32198e53a199638f082d6fd6",
+      "wholeNormalizedArmHeapSha256": "f4c062da94b6d65a3bd076c8b00ee20bf9b274e8f14fbf6f36aab6df7e7a24fd",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 7,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 289,
+      "orderedObservationSha256": "ff9e6b6ffbfbb71398b0f2200646881a9d8a82991177f93d236f43b7996f437d",
+      "wholeNormalizedArmHeapSha256": "0f8216cc4a9d5f73a1092ea575761ac444e27bee8c9419aef7465a10e97be285",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 8,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 289,
+      "orderedObservationSha256": "c62bab542d1b490db564c844704c39428ddbfc4e32198e53a199638f082d6fd6",
+      "wholeNormalizedArmHeapSha256": "f4c062da94b6d65a3bd076c8b00ee20bf9b274e8f14fbf6f36aab6df7e7a24fd",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 9,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 289,
+      "orderedObservationSha256": "6c8c7dcdabcb11357e4e1b7a8ee1fa2f861a9e6f12e9dc40b1b7e62cab9498b3",
+      "wholeNormalizedArmHeapSha256": "7009c5e372cb673f807c2461d062d7f63c72a3041f6d7451ae05986e047782a6",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 10,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 289,
+      "orderedObservationSha256": "aa180bfd1ba61b5dc31087fe2874c85dafde3a852a57488f818abe3824537117",
+      "wholeNormalizedArmHeapSha256": "0deb326dc1e7ecec50fad3e4b19378f7db7b2f9f6394c98d56414924bc4f67d6",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 11,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 247,
+      "orderedObservationSha256": "51911809aa9bf0fd85de2bdb3547aa7f7d44df611866735564fbf4d61ec7f68d",
+      "wholeNormalizedArmHeapSha256": "7dca3ad5c1bed6aa0da3c370109b886b4b82679a9ffa1404e403fb8917763203",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 12,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 289,
+      "orderedObservationSha256": "df851ab2e33ffd08821ff8f98339abf290fce8730aea42474765f9876f543cde",
+      "wholeNormalizedArmHeapSha256": "1a109a848e575b61f01ec391badf880db0a0d7c67e1c6b3ca1b54ccf53b1b592",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 13,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 257,
+      "orderedObservationSha256": "c1ea5740f42f4ac160d0c4bf08bf331f24310f8c79589098d16521a3e83f0d6f",
+      "wholeNormalizedArmHeapSha256": "4fd7ea135682826a6d50b0444af81cdb5a0f38845b34f3f08c805b82f84572c6",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 14,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 257,
+      "orderedObservationSha256": "5fd76edfb64c7958879802f49e5a02a9881578cc54e802c24713b93100c7a42c",
+      "wholeNormalizedArmHeapSha256": "daa9219237bedd42d5dfc359ff841da70ba5d3a8d0288971f98c64b2644acbf0",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 15,
+      "caseClass": "unsigned-count-edge",
+      "observationWords": 257,
+      "orderedObservationSha256": "3e310fd81e1456b53587db5709902aab733743ba77357e4ef4ebd80cf2d0f9e3",
+      "wholeNormalizedArmHeapSha256": "54a9425b2c0dff0678c9d688a0bc9f66e245da697c6d0bf6b6818e0f4dc9d8ff",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 16,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 257,
+      "orderedObservationSha256": "cd8c3fcad76286193404ac2ee0415341bc01df728e8523f0084a36d7cbc5b240",
+      "wholeNormalizedArmHeapSha256": "482c44399944f728f48b90aed1b6dd17e11936c3d34d4dea8cac4d77c681c9c6",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 17,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 268,
+      "orderedObservationSha256": "ad3c79d5d041fba0536ce02ecaf54d401411f9b8fac5924504cbe3b6e05fc85e",
+      "wholeNormalizedArmHeapSha256": "b36f4524114194ee98bfce8d0a58feeef7011a0a704d57c2729a0436f49406a2",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 18,
+      "caseClass": "compact-factory-layout",
+      "observationWords": 310,
+      "orderedObservationSha256": "44fc75497d36a8e394739bc4356b31330cabc280c6d2e3cc5ac2047540497572",
+      "wholeNormalizedArmHeapSha256": "89a74a24e9bc1c424cf13cec1c808178f8b8be35dc5c3e705e2511f5098d65a6",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 19,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 289,
+      "orderedObservationSha256": "c62bab542d1b490db564c844704c39428ddbfc4e32198e53a199638f082d6fd6",
+      "wholeNormalizedArmHeapSha256": "f4c062da94b6d65a3bd076c8b00ee20bf9b274e8f14fbf6f36aab6df7e7a24fd",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 20,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 289,
+      "orderedObservationSha256": "54449546021c9c3f2db746ac0861bbc298fa3e8e0b565665c649cd6823692219",
+      "wholeNormalizedArmHeapSha256": "e7c11727c6af2d4c12cf0a3376c80a0b9cdf0fd68bd1f3d784722a437e682761",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 21,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 289,
+      "orderedObservationSha256": "c62bab542d1b490db564c844704c39428ddbfc4e32198e53a199638f082d6fd6",
+      "wholeNormalizedArmHeapSha256": "f4c062da94b6d65a3bd076c8b00ee20bf9b274e8f14fbf6f36aab6df7e7a24fd",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 22,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 289,
+      "orderedObservationSha256": "c62bab542d1b490db564c844704c39428ddbfc4e32198e53a199638f082d6fd6",
+      "wholeNormalizedArmHeapSha256": "f4c062da94b6d65a3bd076c8b00ee20bf9b274e8f14fbf6f36aab6df7e7a24fd",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 23,
+      "caseClass": "callback-interference-stress",
+      "observationWords": 289,
+      "orderedObservationSha256": "c62bab542d1b490db564c844704c39428ddbfc4e32198e53a199638f082d6fd6",
+      "wholeNormalizedArmHeapSha256": "f4c062da94b6d65a3bd076c8b00ee20bf9b274e8f14fbf6f36aab6df7e7a24fd",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    }
+  ],
+  "nativeTypeLayoutBytes": {
+    "prefix": 24,
+    "object": 16,
+    "compactHeader": 184,
+    "outer": 40,
+    "local": 32,
+    "literalsPointerOffset": 104,
+    "sourceNameOffset": 24,
+    "instructionCountOffset": 176
+  },
+  "nativeInstructionAndTypedTailAlignmentQualified": true,
+  "sourceModeOriginalCodeDataOrServicesMapped": false,
+  "sourceClosureUndefinedSymbols": [],
+  "allocatorRecovered": false,
+  "deallocationService": "typed C retained foreign whole-block observer",
+  "singleFreeByteArgumentComparedBeforeAndAfterDestructorMutation": true,
+  "nativeByteArgumentNormalization": "Subtract measured pointer/record widening using captured pre-destructor counts; source raw byte argument still determines result",
+  "actualPrototypesAndNestedActualPrototypesQualified": true,
+  "compatibleGenericObjectsHaveSameNamedPrefixAndExactOpaqueVtableType": true,
+  "genericArmReferenceAccessRestrictedToActual12Bytes": true,
+  "prototypeToCollectableCastsOrNonexistentLinkAccess": false,
+  "legacySqRefCallbacksOrVtableReinterpretationQualified": false,
+  "legacyGraphIntegrationRequiresTypedDispatcherOrCompatibleSuccessorVtables": true,
+  "creationCompilerGcAndActualAllocationQualified": false,
+  "interferenceStressDoesNotAssertUnmodifiedFactoryAllocationOwnership": true,
+  "returningSourceControls": {
+    "schemaVersion": 1,
+    "allNormallyReturningControlsRejected": true,
+    "controls": [
+      {
+        "name": "omit-virtual-header-destruction",
+        "root": "release",
+        "variant": 1,
+        "modifiedSource": {
+          "path": "work/squirrel-prototype-release011/controls/omit-virtual-header-destruction/prototype_release.c",
+          "bytes": 2388,
+          "sha256": "24076d4affb0b29bf17197a9362ae8126cc04185448cc26975b86128c6aeeceb"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-prototype-release011/controls/omit-virtual-header-destruction/arm/release.elf",
+          "bytes": 133924,
+          "sha256": "735b9b747f9dffbef09e0ad7772d77c1f8258eb21e3164bd47d1b73ab681aa91"
+        },
+        "nativeLibrary": {
+          "path": "work/squirrel-prototype-release011/controls/omit-virtual-header-destruction/windows/prototype-release.dll",
+          "bytes": 13824,
+          "sha256": "869715b3cd05945784c6213ce24e48233285999234cc14e498bb53274a55ccef"
+        },
+        "originalSourceAndNativeReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "actual12ByteGenericPrefixBoundsPassed": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": false,
+        "instructionOrObjectPatching": false
+      },
+      {
+        "name": "weak-reset-before-header-names",
+        "root": "destructor",
+        "variant": 1,
+        "modifiedSource": {
+          "path": "work/squirrel-prototype-release011/controls/weak-reset-before-header-names/prototype_release.c",
+          "bytes": 2563,
+          "sha256": "6b17413f2d0facf48dc7a7b6351d87ae91f667221d0a75496511d5266afd2852"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-prototype-release011/controls/weak-reset-before-header-names/arm/release.elf",
+          "bytes": 133924,
+          "sha256": "86ef9a2b3133211f1ee83337770a2ed3e8afbb2aa9eec7c89f4f6e5bfa2791a9"
+        },
+        "nativeLibrary": {
+          "path": "work/squirrel-prototype-release011/controls/weak-reset-before-header-names/windows/prototype-release.dll",
+          "bytes": 14336,
+          "sha256": "27d4ea46fe8d670467b22c0830fbbdc81e0e9da9ae2302504ffa926b852d5671"
+        },
+        "originalSourceAndNativeReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "actual12ByteGenericPrefixBoundsPassed": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": true,
+        "instructionOrObjectPatching": false
+      },
+      {
+        "name": "capture-allocation-size-after-destructor",
+        "root": "release",
+        "variant": 7,
+        "modifiedSource": {
+          "path": "work/squirrel-prototype-release011/controls/capture-allocation-size-after-destructor/prototype_release.c",
+          "bytes": 2402,
+          "sha256": "5f6cce5195f958ae06622a219dadcd58e8892aa6ea75acac7d590dd0dd110ddb"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-prototype-release011/controls/capture-allocation-size-after-destructor/arm/release.elf",
+          "bytes": 133924,
+          "sha256": "d3c3d92be2d95e11d36deb35d408727ee34de378bdbe9327763809a1bd571096"
+        },
+        "nativeLibrary": {
+          "path": "work/squirrel-prototype-release011/controls/capture-allocation-size-after-destructor/windows/prototype-release.dll",
+          "bytes": 13824,
+          "sha256": "c1acf62dcf9ba3a1c5ab229273bb63c1e7c1eb927e5fff35fb6d01a1ef8c2edf"
+        },
+        "originalSourceAndNativeReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "actual12ByteGenericPrefixBoundsPassed": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": true,
+        "instructionOrObjectPatching": false
+      },
+      {
+        "name": "reverse-outer-source-name-cleanup",
+        "root": "release",
+        "variant": 1,
+        "modifiedSource": {
+          "path": "work/squirrel-prototype-release011/controls/reverse-outer-source-name-cleanup/prototype_release.c",
+          "bytes": 2402,
+          "sha256": "ac2c90d17cf71cb00384a7a0b0d7f8cb4e06f02ba240f4a434d9a83e18b76e0b"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-prototype-release011/controls/reverse-outer-source-name-cleanup/arm/release.elf",
+          "bytes": 133924,
+          "sha256": "5938e913e47456a1727b65fa9efd0478b325d0d8db59e445065606d728a01893"
+        },
+        "nativeLibrary": {
+          "path": "work/squirrel-prototype-release011/controls/reverse-outer-source-name-cleanup/windows/prototype-release.dll",
+          "bytes": 13824,
+          "sha256": "f9f4d301cfa8f24b3b7837720ac189b72ce370958a4ad01747c721d29314db59"
+        },
+        "originalSourceAndNativeReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "actual12ByteGenericPrefixBoundsPassed": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": true,
+        "instructionOrObjectPatching": false
+      },
+      {
+        "name": "reload-current-outer-after-source-callback",
+        "root": "release",
+        "variant": 5,
+        "modifiedSource": {
+          "path": "work/squirrel-prototype-release011/controls/reload-current-outer-after-source-callback/prototype_release.c",
+          "bytes": 2446,
+          "sha256": "b567c4ddacb0d87bb0ec5043a22ae2ca94532242ba2645499c15178d0ba42e5e"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-prototype-release011/controls/reload-current-outer-after-source-callback/arm/release.elf",
+          "bytes": 133924,
+          "sha256": "b9e7798da20c6b4c28a612c992ca4f4a1d0dfbd8d5053ab9aa8a1df95b22098e"
+        },
+        "nativeLibrary": {
+          "path": "work/squirrel-prototype-release011/controls/reload-current-outer-after-source-callback/windows/prototype-release.dll",
+          "bytes": 13824,
+          "sha256": "f6cf75f33f66457744aa032b41708c648dd6de55e2cfe4be6c9e9749d691c189"
+        },
+        "originalSourceAndNativeReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "actual12ByteGenericPrefixBoundsPassed": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": false,
+        "instructionOrObjectPatching": false
+      },
+      {
+        "name": "cache-parameters-before-literal-callback",
+        "root": "release",
+        "variant": 4,
+        "modifiedSource": {
+          "path": "work/squirrel-prototype-release011/controls/cache-parameters-before-literal-callback/prototype_release.c",
+          "bytes": 2454,
+          "sha256": "b671230eca4d57c670debe164c341a8a58a00c15565f1ff7788b2d41cb1cc93a"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-prototype-release011/controls/cache-parameters-before-literal-callback/arm/release.elf",
+          "bytes": 133924,
+          "sha256": "94a1de43289040cc4ee0d712b7e5d38bc86da5361b5dc9b6dffe5c71d182353d"
+        },
+        "nativeLibrary": {
+          "path": "work/squirrel-prototype-release011/controls/cache-parameters-before-literal-callback/windows/prototype-release.dll",
+          "bytes": 13824,
+          "sha256": "42f99d3d208e91dc5c5ae25a832990ceb8a0515e42db7f146f828eca666d9889"
+        },
+        "originalSourceAndNativeReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "actual12ByteGenericPrefixBoundsPassed": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": false,
+        "instructionOrObjectPatching": false
+      },
+      {
+        "name": "omit-local-name-ownership",
+        "root": "release",
+        "variant": 1,
+        "modifiedSource": {
+          "path": "work/squirrel-prototype-release011/controls/omit-local-name-ownership/prototype_release.c",
+          "bytes": 2391,
+          "sha256": "6f9408c809588ed2836cdbefd16551055e34cbb2c6bfe92361a7ac3f6f1525aa"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-prototype-release011/controls/omit-local-name-ownership/arm/release.elf",
+          "bytes": 133924,
+          "sha256": "3dec5eef6c04c67fba7b05a8c3a517bd5f78e66729d2d2a7e743f8e54bbea1c1"
+        },
+        "nativeLibrary": {
+          "path": "work/squirrel-prototype-release011/controls/omit-local-name-ownership/windows/prototype-release.dll",
+          "bytes": 13824,
+          "sha256": "5b2317cc51184aee53579726729fb2488e8131bb16c71670f4eae92ecc328bc3"
+        },
+        "originalSourceAndNativeReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "actual12ByteGenericPrefixBoundsPassed": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": false,
+        "instructionOrObjectPatching": false
+      },
+      {
+        "name": "wrong-local-record-allocation-stride",
+        "root": "release",
+        "variant": 1,
+        "modifiedSource": {
+          "path": "work/squirrel-prototype-release011/controls/wrong-local-record-allocation-stride/prototype_release.c",
+          "bytes": 2401,
+          "sha256": "09ecedd03a6ce78301e2de229c76cb251da317c9d0b714fdfa9f037dba794b8c"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-prototype-release011/controls/wrong-local-record-allocation-stride/arm/release.elf",
+          "bytes": 133924,
+          "sha256": "8a0cff7c353d8957a0dc32a8e153dc7ba8f1849a8af55bcceb9ef01a151a1d71"
+        },
+        "nativeLibrary": {
+          "path": "work/squirrel-prototype-release011/controls/wrong-local-record-allocation-stride/windows/prototype-release.dll",
+          "bytes": 13824,
+          "sha256": "7f7b3c3ecc833d9b0c65a7acec3200dedf943222ec61a67d16e63c8fec798a59"
+        },
+        "originalSourceAndNativeReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "actual12ByteGenericPrefixBoundsPassed": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": true,
+        "instructionOrObjectPatching": false
+      }
+    ],
+    "sameFinalStateObserverControlsRejected": true
+  },
+  "nativeTests": {
+    "passed": 10,
+    "log": {
+      "path": "work/squirrel-prototype-release011/replay/tests.json",
+      "bytes": 2603,
+      "sha256": "42690bead4913b43079fb50045ea1380b6c720f1ebcb72161751a60147450cfc"
+    }
+  },
+  "armBuild": {
+    "objects": [
+      {
+        "path": "work/squirrel-prototype-release011/replay/arm/source-0.o",
+        "bytes": 2588,
+        "sha256": "0037d2acb8d7ca79f7c39089421868caa13ec23b9af4420de76be7f9f3353e97"
+      },
+      {
+        "path": "work/squirrel-prototype-release011/replay/arm/source-1.o",
+        "bytes": 1676,
+        "sha256": "a65c542feefb6c6939e137fe4a076a31d365a000275ead1177fc83c8ba2d91b6"
+      },
+      {
+        "path": "work/squirrel-prototype-release011/replay/arm/source-2.o",
+        "bytes": 10748,
+        "sha256": "aafe4dd2e3d0bc556fa90b09cbf0946f4519342a032f781ff2ad875b1b108280"
+      },
+      {
+        "path": "work/squirrel-prototype-release011/replay/arm/source-3.o",
+        "bytes": 5076,
+        "sha256": "6388df973616531f247a758def2c43f3870851ba09b1f889b9f7ad85c52e6356"
+      },
+      {
+        "path": "work/squirrel-prototype-release011/replay/arm/source-4.o",
+        "bytes": 4004,
+        "sha256": "2ec53e1e820240c0135aba743d0900cbab1f30a443c3448ab939a9a9d5087f16"
+      },
+      {
+        "path": "work/squirrel-prototype-release011/replay/arm/source-5.o",
+        "bytes": 1216,
+        "sha256": "9c69388300f6b80d4b9283fde017ecbe531a5adf13ef16d97fa3412772e83a03"
+      }
+    ],
+    "linkedElf": {
+      "path": "work/squirrel-prototype-release011/replay/arm/release.elf",
+      "bytes": 133924,
+      "sha256": "bb0b59273f06c11c9c0ea8c8907be8077a91b7e75526b2cff566bf7c538db9a4"
+    },
+    "linkerScript": {
+      "path": "work/squirrel-prototype-release011/replay/arm/release.ld",
+      "bytes": 237,
+      "sha256": "6fe9be71f881ff60f4a33f0b7119ff0d9968214cf4ae3ae886adb8f7e04ab6f7"
+    },
+    "sources": [
+      {
+        "path": "source/squirrel-wave011/prototype_release.c",
+        "bytes": 2353,
+        "sha256": "f772017b62016f4f29765ab2ff3a70d94f335be869ba85b3f1e720df5ed4022f"
+      },
+      {
+        "path": "source/squirrel-wave011/vtables.c",
+        "bytes": 459,
+        "sha256": "e9097052e4dfe7538485bee7f1a54570b66937b2db49c9d69d6f23c84b0635a7"
+      },
+      {
+        "path": "source/squirrel-wave011/fixture_state.c",
+        "bytes": 10686,
+        "sha256": "703baed6532c0bdfeccf26020eff6678a57cf75e0906e583948d601eecda2069"
+      },
+      {
+        "path": "source/squirrel-wave011/fixture_observers.c",
+        "bytes": 4613,
+        "sha256": "5178f9eb1536eab76fd5a335e452da83be3366fcde6895042a31d84b8bb12caa"
+      },
+      {
+        "path": "source/squirrel-wave011/fixture_snapshot.c",
+        "bytes": 4687,
+        "sha256": "bfbe1d9d9399916e315ba88dfc24bd44a32c9882d9538eb0003babd238686651"
+      },
+      {
+        "path": "source/squirrel-wave008/fixture_runtime.c",
+        "bytes": 317,
+        "sha256": "1907af52d2aff7f6df7a6eb1c1d4e5dd3da3815f75e3b398dfce4c91b2a17218"
+      }
+    ],
+    "flags": [
+      "--target=arm-none-eabi",
+      "-mcpu=mpcore",
+      "-marm",
+      "-O2",
+      "-std=c11",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-unwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-Wall",
+      "-Wextra",
+      "-Werror"
+    ],
+    "functions": {
+      "fn_00299114": {
+        "section": ".text.fn_00299114",
+        "size": 640,
+        "symbolBytes": 640,
+        "mode": "ARM",
+        "sectionSha256": "c51e740e8cb442a7b3a0646131fca76542f0c9ccf1eda8c03ddfa46da1978b3a",
+        "relocations": [
+          {
+            "offset": 636,
+            "type": 29,
+            "name": "R_ARM_JUMP24",
+            "symbol": "sq_prototype_deallocate011",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_00299424": {
+        "section": ".text.fn_00299424",
+        "size": 172,
+        "symbolBytes": 172,
+        "mode": "ARM",
+        "sectionSha256": "945ef5fa52fbb3bbcd73a0dfcca4243835619157eb2fe9baf841ddef252a2ea7",
+        "relocations": [
+          {
+            "offset": 164,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "sq_prototype_vtable011",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 168,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "sq_prototype_base_vtable011",
+            "format": "SHT_REL"
+          }
+        ]
+      }
+    },
+    "symbols": {
+      "prototype_destructor_entry": 15729532,
+      "prototype_release_entry": 15729536,
+      "observer_release": 15734328,
+      "alternate_destructor": 15735168,
+      "alternate_release": 15735332,
+      "sq_prototype_allocation_bytes011": 15728640,
+      "fn_00299114": 15728720,
+      "sq_prototype_deallocate011": 15735336,
+      "fn_00299424": 15729360,
+      "sq_prototype_vtable011": 15761408,
+      "sq_prototype_base_vtable011": 15761420,
+      "fixture_prototype": 15729540,
+      "prototype_fixture011": 15859712,
+      "fixture_reference": 15729564,
+      "fixture_weak": 15729588,
+      "fixture_spare": 15729612,
+      "fixture_spare_outers": 15729636,
+      "fixture_identity": 15729656,
+      "fixture_payload": 15730472,
+      "fixture_table_identity": 15730496,
+      "prototype_observer_table011": 15761460,
+      "prototype_alternate_table011": 15761472,
+      "fixture_set_reference": 15730588,
+      "fixture_compact": 15730608,
+      "fixture_bind": 15731152,
+      "fixture_prepare": 15731224,
+      "fixture_capture": 15733872,
+      "fixture_prototype_vtable": 15733976,
+      "fixture_base_vtable": 15733988,
+      "fixture_layout": 15734000,
+      "fixture_record": 15734028,
+      "fixture_snapshot": 15735472,
+      "memset": 15737472,
+      "__aeabi_memclr4": 15737500
+    },
+    "undefinedSymbols": [],
+    "originalCodeOrDataMappedBySource": false,
+    "heapServiceIsAuthoredCFixture": true
+  },
+  "nativeLibrary": {
+    "path": "work/squirrel-prototype-release011/replay/windows/prototype-release.dll",
+    "bytes": 13824,
+    "sha256": "81acdbe5e336cc1dbdb5c121621eb3dbb15808f40384262ae338d1fada18ed16"
+  },
+  "androidBuild": {
+    "actualAndroidObjects": [
+      {
+        "path": "work/squirrel-prototype-release011/replay/android/source-0.o",
+        "bytes": 2512,
+        "sha256": "02372688552933f57e1a7857af259a15c6515ae715c5636234eca60c8d71da0b"
+      },
+      {
+        "path": "work/squirrel-prototype-release011/replay/android/source-1.o",
+        "bytes": 1808,
+        "sha256": "40f8cd2df2dc73c3f1e387d4d01f004daf7899eac9c0da8f37d286dab8ac4d73"
+      },
+      {
+        "path": "work/squirrel-prototype-release011/replay/android/source-2.o",
+        "bytes": 11384,
+        "sha256": "038c20d9bb1a6341db60a5b22fbd6fbfa121b34c6d5d0c8c07b06db2cfae32bd"
+      },
+      {
+        "path": "work/squirrel-prototype-release011/replay/android/source-3.o",
+        "bytes": 6040,
+        "sha256": "f70934c1203a18a85729ac925e9ad55e85649e7e10f483334e14fd8908e63a1f"
+      },
+      {
+        "path": "work/squirrel-prototype-release011/replay/android/source-4.o",
+        "bytes": 5488,
+        "sha256": "d700b63c3a1f9329aa37db16252bd7ddfbd1b133c792fdfbac9cc321674a4c3f"
+      },
+      {
+        "path": "work/squirrel-prototype-release011/replay/android/source-5.o",
+        "bytes": 1320,
+        "sha256": "426c8ea66589f5e170b8893ab0a8cd10854fc502ef648defefeaca070b042187"
+      }
+    ],
+    "sharedLibrary": {
+      "path": "work/squirrel-prototype-release011/replay/android/libprototype_release011.so",
+      "bytes": 17968,
+      "sha256": "4cc96caad815b96ba30eef4275b8cb727880adb2e9a70ee7ddbbed1bd3d015ae"
+    },
+    "modelElf": {
+      "path": "work/squirrel-prototype-release011/replay/android/model.elf",
+      "bytes": 200032,
+      "sha256": "0c5cb99459afd9e96e125fc30c89c9e7f5188c04bc3faf0b1426ddaaca4d8b6f"
+    },
+    "originalCodeOrDataMapped": false,
+    "androidOperatingSystemExecuted": false
+  },
+  "toolIdentities": [
+    {
+      "path": "tools/clang-21/clang.exe",
+      "bytes": 99559064,
+      "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+    },
+    {
+      "path": "tools/clang-21/ld.lld.exe",
+      "bytes": 69225112,
+      "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3"
+    }
+  ],
+  "unicornWrapperVersion": "2.1.4",
+  "unicornNativeVersion": [
+    2,
+    1,
+    33621247
+  ],
+  "originalPayloadsOrRawOriginalInstructionsPublished": false,
+  "reproduction": [
+    "tools/python/Scripts/python.exe",
+    "toolscripts/squirrel_prototype_release011.py"
+  ]
+}
