@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-reference-entry-proposal-not-shared-inventory",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "approvedForFunctionInventory": false,
+  "sourceCreditGranted": 0,
+  "functions": [
+    {
+      "address": 3148048,
+      "mode": "Thumb",
+      "ranges": [
+        {
+          "start": 3148048,
+          "endExclusive": 3148058,
+          "bytes": 10,
+          "sha256": "030016105951a46b6f8274f0dc701e09c183ea68efe53a257a979ca598a85d21"
+        }
+      ],
+      "role": "UTF16 formatter input iterator",
+      "originalInstructionCount": 5,
+      "boundaryEvidence": "Actual indirect formatter transfer; five straight-line Thumb instructions ending in BX LR immediately before next known entry",
+      "pointerWitness": {
+        "function": 3148058,
+        "loadInstruction": 3148068,
+        "relativeAddInstruction": 3148072,
+        "relativeBase": 3148076,
+        "literalAddress": 3148092,
+        "literalSha256": "e6fab6c137fb875c0a75d7804910d98e765265310f0fd5d4fddcc132400897de",
+        "resolvedPointer": 3148049,
+        "pointerStoredAtInstruction": 3148074
+      },
+      "referenceExecutionCredit": 0
+    },
+    {
+      "address": 1059232,
+      "mode": "Thumb",
+      "ranges": [
+        {
+          "start": 1059232,
+          "endExclusive": 1059322,
+          "bytes": 90,
+          "sha256": "a297f984487895567365048e005eae85d9f48fa60802764bed07b931d7e6afbd"
+        }
+      ],
+      "role": "Mixed-mode decimal formatting body behind an ARM veneer; canonical function ownership unresolved",
+      "canonicalFunctionInventoryAdditionClaimed": false,
+      "boundaryEvidence": "Actual ARM dispatcher transfer to8-byte ARM ADD-IP/BX-IP veneer, then90-byte Thumb body ending POP PC; subsequent16-byte prefix data excluded",
+      "veneerWitness": {
+        "start": 1059224,
+        "endExclusive": 1059232,
+        "sha256": "68f73b58dbc3836dedbbf8b786ecbfe271f691d62b4015ac06f48b31f65d097c",
+        "frozenPhysicalOwnerEntry": 1067784,
+        "existingVeneerOwnershipChanged": false,
+        "executedModeAfterVeneer": "Thumb"
+      },
+      "referenceExecutionCredit": 0
+    }
+  ],
+  "frozenCensusChanged": false,
+  "initializedTextDenominatorChanged": false,
+  "originalExecutionFailure": {
+    "path": "work/wave013-native/file-owner-reference-first-failure-reproduction/failure.private.json",
+    "sha256": "3e1224c7cb40e83a9d657585aa149e5f79e5649abc26bd72c9ae6218493fe6f1",
+    "bytes": 2706
+  },
+  "data": [
+    {
+      "start": 1059324,
+      "endExclusive": 1059340,
+      "bytes": 16,
+      "sha256": "934e89776b279bb3146d248ce7489ebed6e5155d8f49c421a675f5eecfd0ec27",
+      "role": "nonexecutable decimal-format sign/prefix strings referenced with Thumb ADR",
+      "originalSourceCredit": 0
+    }
+  ],
+  "failureAttempts": [
+    {
+      "path": "work/wave013-native/file-owner-apply-reference-probe/failure-entry1029a0.private.json",
+      "sha256": "4d75f0ef0e9bbba34579106edf9dd88e7c71fdf6bfd936388d8af349e763a585",
+      "bytes": 2762
+    }
+  ]
+}

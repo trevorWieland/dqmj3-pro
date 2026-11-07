@@ -1,0 +1,608 @@
+{
+  "schemaVersion": 1,
+  "status": "completed-measurements-rejected-by-final-input-stability-guard",
+  "command": [
+    "tools/python/Scripts/python.exe",
+    "toolscripts/native_wave013_file_owner_orchestration.py"
+  ],
+  "observedExitCode": 1,
+  "observedError": "RuntimeError: Owner inputs changed during validation",
+  "producer": {
+    "path": "toolscripts/native_wave013_file_owner_orchestration.py",
+    "sha256": "5895855e6c7694fcbfefca3c98d7dee6c04f3550a0a9412d6717d1e9013f85a4",
+    "bytes": 15185
+  },
+  "capturedSharedBaseline": "c71f0ef53fdcbed9c54e8340d7f92a287b617f19",
+  "currentSharedBaseline": "7ae88bfb307d4a7b35df828eed3a206bd06c45b1",
+  "capturedReferenceTrace": {
+    "path": "evidence/lanes/wave013-native/file/owner/orchestration/captured-attempt-c71/reference-trace.json",
+    "sha256": "1890ee1031de7899d15da9bb06a5fdddf8038214aa88ace364dd9738a70c8a83",
+    "bytes": 1070026
+  },
+  "capturedReferenceInputPins": {
+    "scope": {
+      "path": "evidence/lanes/executable-scope/scope.json",
+      "sha256": "c974e6ed9d999276452bc35588b703d52ba1061aa4ffee6b166cbdda6d060dcf",
+      "bytes": 22099
+    },
+    "census": {
+      "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+      "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+      "bytes": 20574405
+    },
+    "overlays": [
+      {
+        "path": "evidence/lanes/wave013-native/method-dispatch-overlay.json",
+        "sha256": "ba4a6b8f633d62dc7ea2b9b8c473459215b7f5d62f42d79b849497900116c75e",
+        "bytes": 131026
+      },
+      {
+        "path": "evidence/verification/array007-function-overlay.json",
+        "sha256": "3f3121445869c567a8460efb59e97fe60d6b9073220ded6e593ae2e7acdcd7eb",
+        "bytes": 3339
+      },
+      {
+        "path": "evidence/verification/closure010-function-overlay.json",
+        "sha256": "3eb297926b78bcf312dc6a2bd2a06228a318de91bc4aebcda522d8a1605dd1a1",
+        "bytes": 4237
+      },
+      {
+        "path": "evidence/verification/prototype011-function-overlay.json",
+        "sha256": "6c9d4f364ed5b86f9c1a67699066e879214c57c0e159978200d53435d9b241c3",
+        "bytes": 3564
+      },
+      {
+        "path": "evidence/verification/native-closure013-function-overlay.json",
+        "sha256": "162506e5b52f798a2e41016b62f1be8c7bc38f9553b161b022fd4c1a7b64fcef",
+        "bytes": 4258
+      },
+      {
+        "path": "evidence/verification/weak014-function-overlay.json",
+        "sha256": "228f73f849e59725fcac20725adfddf69b7d14fedf2ccc1b2a8f4b766d4d06cd",
+        "bytes": 4882
+      },
+      {
+        "path": "evidence/verification/string015-function-overlay.json",
+        "sha256": "66ba81473f5175bb8bad57f0c954465b88e0fc9bc898bc6ceece05d7efda6c03",
+        "bytes": 5054
+      }
+    ],
+    "referenceEntryProposal": {
+      "path": "evidence/lanes/wave013-native/file/owner/reference-entry-proposal.json",
+      "sha256": "45b3fde6c68d160036e3763e53fab975b513727ac519d20061fbb022bb2f96d3",
+      "bytes": 3153
+    },
+    "inventoryReader": {
+      "path": "toolscripts/inventory.py",
+      "sha256": "32c3d637553cff27c10ffcf7142e3d1c33465bcff4338525fd6886e90e5d1cbd",
+      "bytes": 9687
+    },
+    "overlayReader": {
+      "path": "toolscripts/native_census_overlay.py",
+      "sha256": "245bf9e4190eb4a61ee7adc9b8c377e38c0189139020584dc1c9eb12af72a159",
+      "bytes": 10433
+    }
+  },
+  "observedSharedInputChange": {
+    "captured": {
+      "path": "toolscripts/native_census_overlay.py",
+      "sha256": "245bf9e4190eb4a61ee7adc9b8c377e38c0189139020584dc1c9eb12af72a159",
+      "bytes": 10433
+    },
+    "current": {
+      "path": "toolscripts/native_census_overlay.py",
+      "sha256": "1cc0fd82de21675e81981ecde7005a94858c1e085a675f39345f7bc66ee6ed4c",
+      "bytes": 11252
+    },
+    "capturedBytesReproducedFromImmutableBaseline": true
+  },
+  "completeFixtureRows": 95,
+  "privateRows": {
+    "path": "work/wave013-native/file-owner-orchestration-sealed/results.private.json",
+    "sha256": "238f6fdd4f13eda7146591b8984fa306f8b1f23159adc900ebc1323a9cb8b8c1",
+    "bytes": 274094
+  },
+  "explicitFlagsAndReturnModesCompleted": 32,
+  "compiledReturningControlsObservedPassedBothPlatforms": 11,
+  "negativeArtifacts": [
+    {
+      "name": "constructor-flag",
+      "changedSource": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/constructor-flag/pattern_file_owner_lifecycle.c",
+        "sha256": "b0e3cdf9cf5ab9d58ffdce5fa16f969f884459359586dd77abf8238e5d290098",
+        "bytes": 1721
+      },
+      "armElf": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/constructor-flag/arm/owner_full.elf",
+        "sha256": "a3fe1608b79a437ad6e9302256c1a5edf3189889fd390486b829e327baf0009c",
+        "bytes": 120296
+      },
+      "windowsDll": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/constructor-flag/windows/owner_full.dll",
+        "sha256": "cb89cd498b9f20507caf43d45d95af3bed96ef48b7b8ffc0c98334b36d1cb144",
+        "bytes": 44544
+      }
+    },
+    {
+      "name": "delayed-clear-same-final",
+      "changedSource": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/delayed-clear-same-final/pattern_file_owner_apply.c",
+        "sha256": "d20ff3927f1d36a8911c1e54ee68cd96e53b4669c7ad1bfedc70c6352dd3994f",
+        "bytes": 3634
+      },
+      "armElf": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/delayed-clear-same-final/arm/owner_full.elf",
+        "sha256": "d359c87091fdb13beea9ffd7adc5be8f85c7db2590591ac96cffeffb60d91eb2",
+        "bytes": 120296
+      },
+      "windowsDll": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/delayed-clear-same-final/windows/owner_full.dll",
+        "sha256": "c412b0fc20fc250ef026a359894e788d9b5f0e1542f04e2e8f335a2769cf13a3",
+        "bytes": 44544
+      }
+    },
+    {
+      "name": "skip-close",
+      "changedSource": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/skip-close/pattern_file_owner_apply.c",
+        "sha256": "cd702c0a77c2025acd223622560703dc812a52e09863a50211f2a6be288de341",
+        "bytes": 3657
+      },
+      "armElf": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/skip-close/arm/owner_full.elf",
+        "sha256": "37769a2ba5fb03064b5bbc14376727bb81cf0c42e091c6cf7ec72a97c3983bec",
+        "bytes": 120296
+      },
+      "windowsDll": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/skip-close/windows/owner_full.dll",
+        "sha256": "f7d0493208d08f703be08ec22e697075803a25beacd51f19d0abd720989e2674",
+        "bytes": 44544
+      }
+    },
+    {
+      "name": "skip-final-free",
+      "changedSource": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/skip-final-free/pattern_file_owner_lifecycle.c",
+        "sha256": "b64a8e6029130f73844d65dc6b44ac046bfd3aa6a799c8532186db8fe947e34b",
+        "bytes": 1683
+      },
+      "armElf": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/skip-final-free/arm/owner_full.elf",
+        "sha256": "47c308b7bfe74f01ba76f10a8812ea58680ea40ca6d136aa3531d0b0433dfb51",
+        "bytes": 120296
+      },
+      "windowsDll": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/skip-final-free/windows/owner_full.dll",
+        "sha256": "86f0deafe64f233a39ac712a84bf7e30466a3c5b701bb73b40360ca5600fad0f",
+        "bytes": 44544
+      }
+    },
+    {
+      "name": "skip-last-file",
+      "changedSource": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/skip-last-file/pattern_file_owner_apply.c",
+        "sha256": "9aaaa88630bed3116488a708eff58c4e614c6e2cce52c6c24b83d962f9622544",
+        "bytes": 3638
+      },
+      "armElf": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/skip-last-file/arm/owner_full.elf",
+        "sha256": "3ddcbaf5ec2fc07dda027d1d3f09ae5041a2c12bd3922d0f31f77f1c93737783",
+        "bytes": 120296
+      },
+      "windowsDll": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/skip-last-file/windows/owner_full.dll",
+        "sha256": "33368532f8bb2442de7b745e29626e500f39eaef67efca502cffa8f12fd89fdd",
+        "bytes": 44544
+      }
+    },
+    {
+      "name": "skip-owner-release",
+      "changedSource": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/skip-owner-release/pattern_file_owner_lifecycle.c",
+        "sha256": "2faf17030ec336be9f4ad1889ffd6d069197d13d9c44ad1515b46c1a4c6e35b9",
+        "bytes": 1687
+      },
+      "armElf": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/skip-owner-release/arm/owner_full.elf",
+        "sha256": "d6c8a895c7af8893bcc38822ea90f7cdf0795524dd938c27afcd7983bca3e2c3",
+        "bytes": 120296
+      },
+      "windowsDll": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/skip-owner-release/windows/owner_full.dll",
+        "sha256": "842aa1251794419deacd5fdedbdf7737885c1a0c60b3b554b3629c32f3556e93",
+        "bytes": 44544
+      }
+    },
+    {
+      "name": "skip-unmount",
+      "changedSource": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/skip-unmount/pattern_file_owner_lifecycle.c",
+        "sha256": "77e653af1bf2ffda5f05f9a8109c904c6db4a601d160a03669d1b8b03c38f5a5",
+        "bytes": 1721
+      },
+      "armElf": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/skip-unmount/arm/owner_full.elf",
+        "sha256": "7bb0d86f0b0b90aa04e4fcbbf772cf06f366f54e9b1565cb4877355cb0b2777e",
+        "bytes": 120296
+      },
+      "windowsDll": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/skip-unmount/windows/owner_full.dll",
+        "sha256": "b661355bf576edf18b284cd0fb41cced57903f52d610ea13778a772a2db4fc68",
+        "bytes": 44544
+      }
+    },
+    {
+      "name": "wrong-clear",
+      "changedSource": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/wrong-clear/pattern_file_owner_apply.c",
+        "sha256": "755bb63c1afdbc430757e2cc7b3d8c46847b9a34cb7000443da24d8f88bb9f95",
+        "bytes": 3644
+      },
+      "armElf": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/wrong-clear/arm/owner_full.elf",
+        "sha256": "a6cfa3030e32896f71d187b6e6823182d7a7eec0b9831fc16ec2fc9a0073529e",
+        "bytes": 120296
+      },
+      "windowsDll": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/wrong-clear/windows/owner_full.dll",
+        "sha256": "a3229ae5880b1d1c8ad20ed2443d432726350c185e77c7c14a1dc80af934aaac",
+        "bytes": 44544
+      }
+    },
+    {
+      "name": "wrong-file-id",
+      "changedSource": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/wrong-file-id/pattern_file_owner_apply.c",
+        "sha256": "e5ce8f7bcb3b8a17ba5ade718f6252fc4b0a445debfc5c7a911f8b36f6435117",
+        "bytes": 3655
+      },
+      "armElf": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/wrong-file-id/arm/owner_full.elf",
+        "sha256": "0019095ebfb87baa0038db9924d976dc96a726c1461cd5afbb12439afc0bc761",
+        "bytes": 120296
+      },
+      "windowsDll": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/wrong-file-id/windows/owner_full.dll",
+        "sha256": "43528dea08a410528a3db91c50cfee6cd6f37e1b9d95ec26602abeceb8eb63b5",
+        "bytes": 44544
+      }
+    },
+    {
+      "name": "wrong-path",
+      "changedSource": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/wrong-path/pattern_file_owner_apply.c",
+        "sha256": "1ba04780867411ec686c7895b1a794792d2044d05f0f1680e893d3b227316228",
+        "bytes": 3662
+      },
+      "armElf": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/wrong-path/arm/owner_full.elf",
+        "sha256": "22c7c9b9dd144c1eec9c6f1ebf205c1aa0eff61e8b95ce46e1db76eedeff56c3",
+        "bytes": 120296
+      },
+      "windowsDll": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/wrong-path/windows/owner_full.dll",
+        "sha256": "f70d4b68550c40eb4805fb0fa324f9a0eec67c18c6aa511cf87b63b789318562",
+        "bytes": 44544
+      }
+    },
+    {
+      "name": "wrong-validation",
+      "changedSource": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/wrong-validation/pattern_file_owner_apply.c",
+        "sha256": "70083cb21dffd518bd0a9654c37d89b62aee6f4907e00853c546c5e99f794f38",
+        "bytes": 3634
+      },
+      "armElf": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/wrong-validation/arm/owner_full.elf",
+        "sha256": "bdd46f459dafcb8b1a0f5f3e26ce976ff9801f761751c244b7d3a770e4e7ba65",
+        "bytes": 120296
+      },
+      "windowsDll": {
+        "path": "work/wave013-native/file-owner-orchestration-sealed/negative/wrong-validation/windows/owner_full.dll",
+        "sha256": "e47e4f7011cd832e5435e5194fc9da8ce2eb614640715056bd6e155c1c71f114",
+        "bytes": 44544
+      }
+    }
+  ],
+  "crossProductAndControlCompletionBasis": "Completed producer control flow and observed console passes, before the final guard",
+  "functions": [
+    {
+      "address": 4519348,
+      "mode": "ARM",
+      "instructionBytes": 28,
+      "instructionRanges": [
+        {
+          "start": 4519348,
+          "endExclusive": 4519376,
+          "bytes": 28,
+          "sha256": "81ddcc17763d8b2f4f0cb473beb0d3494bbee3a80bc0ad6f3adf26bb60c9338f"
+        }
+      ],
+      "poolRanges": [
+        {
+          "start": 4519376,
+          "endExclusive": 4519380,
+          "bytes": 4,
+          "sha256": "87c78ff0109b5841936216285cc6acc6baabae16f68f273da1f23985b55dceb6"
+        }
+      ],
+      "instructionsObservedInDurableTrace": 7,
+      "unhitInstructionAddresses": [],
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 4997884,
+          "address": 4997920,
+          "bytes": 4,
+          "sha256": "0b79d8cba39aa5069343837f055fa16aa38442e84e5a451304299b9bbba08f24"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4998056,
+          "address": 4998100,
+          "bytes": 4,
+          "sha256": "a72622a00699b0380811fe175b0c0d0dc3c2419a533165e49a2092d7f911a739"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4998056,
+          "address": 4998152,
+          "bytes": 4,
+          "sha256": "f93d156080a00c328c258e11facea08f61f82af1b8a1ccd1ad59a920bbf39545"
+        }
+      ]
+    },
+    {
+      "address": 4996724,
+      "mode": "ARM",
+      "instructionBytes": 464,
+      "instructionRanges": [
+        {
+          "start": 4996724,
+          "endExclusive": 4997188,
+          "bytes": 464,
+          "sha256": "e94c7a5d6c8690b42e1dd7ae89a758aa838dc86a59cc346eda5f1177e8847820"
+        }
+      ],
+      "poolRanges": [
+        {
+          "start": 4997220,
+          "endExclusive": 4997224,
+          "bytes": 4,
+          "sha256": "71e49c730c5f884a1b7d2945798c2f2c2d2001aff53029a2e5690def5c1a048e"
+        }
+      ],
+      "instructionsObservedInDurableTrace": 108,
+      "unhitInstructionAddresses": [
+        4996988,
+        4996992,
+        4996996,
+        4997100,
+        4997104,
+        4997108,
+        4997112,
+        4997116
+      ],
+      "callerWitnesses": [
+        {
+          "kind": "unadjusted-method-table",
+          "table": "file-owner-unadjusted-methods",
+          "tableStart": 8740308,
+          "tableSha256": "2f85d8175ae7bdc9d2fed1285a8d43fde69ba17822202669b7ce9f7c89c60074",
+          "target": 4996724,
+          "slot": 5,
+          "slotOffset": 20,
+          "thisAdjustment": 0,
+          "mode": "ARM"
+        }
+      ]
+    },
+    {
+      "address": 4997884,
+      "mode": "ARM",
+      "instructionBytes": 88,
+      "instructionRanges": [
+        {
+          "start": 4997884,
+          "endExclusive": 4997972,
+          "bytes": 88,
+          "sha256": "ceecffff52b8782ae3c1d51e22b71d8b7cef9e75a5630fa7a9d5e51b72110213"
+        }
+      ],
+      "poolRanges": [
+        {
+          "start": 4997972,
+          "endExclusive": 4997976,
+          "bytes": 4,
+          "sha256": "40c17be2ccc669dfd33f9186f1970b72fb43fa7ae6e89eb7a920901a8cfb5a53"
+        }
+      ],
+      "instructionsObservedInDurableTrace": 22,
+      "unhitInstructionAddresses": [],
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 2270696,
+          "address": 2270716,
+          "bytes": 4,
+          "sha256": "e2363f01850f8b40065e35765f876e499c1bfa23b6e0847934beb04e6cf45d64"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2387572,
+          "address": 2387592,
+          "bytes": 4,
+          "sha256": "cacea614d6397c64e88a256e0a2c4ff4befee5e836ef9737a6b5ade49465e470"
+        }
+      ]
+    },
+    {
+      "address": 4997976,
+      "mode": "ARM",
+      "instructionBytes": 76,
+      "instructionRanges": [
+        {
+          "start": 4997976,
+          "endExclusive": 4998052,
+          "bytes": 76,
+          "sha256": "c8147f4b3ed9eb7400eca73649b74c92b8377eb283e86bc05bc0fa625ce89051"
+        }
+      ],
+      "poolRanges": [
+        {
+          "start": 4998052,
+          "endExclusive": 4998056,
+          "bytes": 4,
+          "sha256": "d3772f371784a25b5307380d27a33a123d9ee1a37bab8fd4849631982dba3239"
+        }
+      ],
+      "instructionsObservedInDurableTrace": 19,
+      "unhitInstructionAddresses": [],
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 2270924,
+          "address": 2272512,
+          "bytes": 4,
+          "sha256": "728eec47513c5d4457b6b2c3cd5759dd6824adae34794dd4a2f5a17e88b1efc2"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2387456,
+          "address": 2387492,
+          "bytes": 4,
+          "sha256": "8c2beb8cc73c923fa0ac10834afa0f76aeb8d07d19867135a38da76a770a64d0"
+        }
+      ]
+    },
+    {
+      "address": 4998056,
+      "mode": "ARM",
+      "instructionBytes": 112,
+      "instructionRanges": [
+        {
+          "start": 4998056,
+          "endExclusive": 4998168,
+          "bytes": 112,
+          "sha256": "eee3994035b4c209467396038f6c36666fc55a9e7f3348e5373658ff5929dfc4"
+        }
+      ],
+      "poolRanges": [
+        {
+          "start": 4998168,
+          "endExclusive": 4998172,
+          "bytes": 4,
+          "sha256": "d3772f371784a25b5307380d27a33a123d9ee1a37bab8fd4849631982dba3239"
+        },
+        {
+          "start": 4998172,
+          "endExclusive": 4998176,
+          "bytes": 4,
+          "sha256": "40c17be2ccc669dfd33f9186f1970b72fb43fa7ae6e89eb7a920901a8cfb5a53"
+        }
+      ],
+      "instructionsObservedInDurableTrace": 28,
+      "unhitInstructionAddresses": [],
+      "callerWitnesses": [
+        {
+          "kind": "unadjusted-method-table",
+          "table": "file-owner-unadjusted-methods",
+          "tableStart": 8740308,
+          "tableSha256": "2f85d8175ae7bdc9d2fed1285a8d43fde69ba17822202669b7ce9f7c89c60074",
+          "target": 4998056,
+          "slot": 1,
+          "slotOffset": 4,
+          "thisAdjustment": 0,
+          "mode": "ARM"
+        }
+      ]
+    },
+    {
+      "address": 7160036,
+      "mode": "ARM",
+      "instructionBytes": 48,
+      "instructionRanges": [
+        {
+          "start": 7160036,
+          "endExclusive": 7160084,
+          "bytes": 48,
+          "sha256": "a52a9ff6d8991d047bac4c4af0cf04bacf680aceb4ec17165b9b3b1bed30b4c8"
+        }
+      ],
+      "poolRanges": [
+        {
+          "start": 7160084,
+          "endExclusive": 7160088,
+          "bytes": 4,
+          "sha256": "2bd3c03df087d14e870adb4ef9e57b50c9972cc9e7ca75257ad35e477bc476e9"
+        },
+        {
+          "start": 7160088,
+          "endExclusive": 7160092,
+          "bytes": 4,
+          "sha256": "afaaa4114124faf9d30357b087f4538f57689c757bf7e6bd3e7535d834343099"
+        },
+        {
+          "start": 7160092,
+          "endExclusive": 7160096,
+          "bytes": 4,
+          "sha256": "0abde3725e62131364d250497d46534e6e4266e501afe7c35fe1b9896f4cf5e8"
+        }
+      ],
+      "instructionsObservedInDurableTrace": 12,
+      "unhitInstructionAddresses": [],
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 4996724,
+          "address": 4996756,
+          "bytes": 4,
+          "sha256": "7b7bee8adb90a8cc922944d4f7f1d9ed8343dd5f677d58632d1e3725edd2d472"
+        }
+      ]
+    }
+  ],
+  "candidateInstructionBytes": 816,
+  "artifacts": [
+    {
+      "path": "work/wave013-native/file-owner-orchestration-sealed/source/owner_full.elf",
+      "sha256": "9cecaf0a8eb68df7b1e53cbb1530fae412f671bd2e0832b912255345d1218d31",
+      "bytes": 120296
+    },
+    {
+      "path": "work/wave013-native/file-owner-orchestration-sealed/source/owner_full.ld",
+      "sha256": "235efb91e53c7686a5f80b68e446353c0b4331ff77b1e6727832f9bf0222b24d",
+      "bytes": 276
+    },
+    {
+      "path": "work/wave013-native/file-owner-orchestration-sealed/windows/owner_full.dll",
+      "sha256": "773e38b771a596c434139f34742e31e69f7ff87c4ddfd6596f945839fd1537a6",
+      "bytes": 44544
+    },
+    {
+      "path": "work/wave013-native/file-owner-orchestration-sealed/provider/owner_provider.elf",
+      "sha256": "7b1eedf0f2327ca2a5527530eb2d1bbeb80323c382e65f64d6ca366932819c08",
+      "bytes": 67532
+    },
+    {
+      "path": "work/wave013-native/file-owner-orchestration-sealed/android/libpattern_file_owner.so",
+      "sha256": "bac818027a2167500dee3ac6fa0fd6f5beac0f772d0efe46291b3b8d776f545a",
+      "bytes": 68504
+    }
+  ],
+  "ownedTests": {
+    "command": "tools/python/Scripts/python.exe -m unittest discover -s tests -p test_native_wave013_file_owner_orchestration.py -q",
+    "observedPassed": 18,
+    "source": {
+      "path": "tests/test_native_wave013_file_owner_orchestration.py",
+      "sha256": "9593b44041dfb5aa19608bdddaff86af79a13677882907e4fc09bf8561a3185f",
+      "bytes": 6280
+    }
+  },
+  "verifiedCurrentPacketEmitted": false,
+  "unchangedInputReplayClaimed": false,
+  "independentCleanReplayClaimed": false,
+  "acceptedSourceCreditGranted": 0,
+  "sourceOutputPatched": false,
+  "nextAction": "Coordinator commits exact frozen manifest over7ae88bf, archives it and cold-runs producer with final metadata and2400-second timeout"
+}

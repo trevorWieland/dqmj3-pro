@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "status": "pre-seal-attempts-preserved",
+  "successfulSmokeCases": 95,
+  "successfulSmokeElapsedSeconds": 707.4148814999498,
+  "smokeResults": {
+    "path": "work/wave013-native/file-owner-observed-smoke/batch-results.private.json",
+    "sha256": "82cd78a245917060d193cc7c869dba1686c8db70f56ce8e83b0a18c2f169739f",
+    "bytes": 197792
+  },
+  "negativeSmokeResults": {
+    "path": "work/wave013-native/file-owner-observed-smoke/negative-results.private.json",
+    "sha256": "bbc102f8a431a6408ecabdda00771af5b01e63feca2d5fa77cc2eea03e923769",
+    "bytes": 26251
+  },
+  "attempts": [
+    {
+      "kind": "observer-correction",
+      "case": "second selected file open failure",
+      "finding": "A post-return stack read was overwritten by later SDK activity; replaced by live arena field-write observations stopped at the actual outer return",
+      "sourceOutputPatched": false
+    },
+    {
+      "kind": "reference-platform-precondition",
+      "case": "resource mount with zero-initialized SDK process mutex",
+      "result": "Two4000000-instruction and one20000-instruction bounded attempts did not return; actual PC14de4c loops in real mutex slow path",
+      "disposition": "No code patch. Executing genuine SDK initializer13c500 on SDK pool mutex8e3460 reaches FS IPC13b30c; mount/init remains unqualified"
+    },
+    {
+      "kind": "harness-input-correction",
+      "finding": "Namespace ASCII was initially written after input snapshot; moved into initial immutable fixture encoding"
+    },
+    {
+      "kind": "unit-test-correction",
+      "finding": "Two projection tests initially omitted owner offset0x3000; corrected offsets and all18tests pass"
+    }
+  ],
+  "sourceCreditGranted": 0
+}
