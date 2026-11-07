@@ -82,3 +82,7 @@
 #define fn_00734594 stream_table059
 #define fn_007456a4 stream_window059
 #define fn_00730208 stream_adler059
+#define fn_0044c578 asset_decode061
+#define fn_0044c728 asset_dispose061
+#define fn_0044c72c asset_allocate061
+#define fn_0044c74c asset_status061
