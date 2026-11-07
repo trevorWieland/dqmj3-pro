@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "status": "reviewed-vtable-destructor-function-ownership",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "overlay": {
+    "path": "evidence/verification/native-closure013-function-overlay.json",
+    "sha256": "162506e5b52f798a2e41016b62f1be8c7bc38f9553b161b022fd4c1a7b64fcef",
+    "bytes": 4258
+  },
+  "producer": {
+    "path": "toolscripts/review_native_closure013_inventory.py",
+    "sha256": "5866749ab6cfa42aa7ca15aa7bb0f69ff0b81658507bacddf362a8fa5ed585c0",
+    "bytes": 7957
+  },
+  "validator": {
+    "path": "toolscripts/native_census_overlay.py",
+    "sha256": "41320d53e4f6c3bc3a5202fea8e141041fae8877a970316cdb00489a382f56d3",
+    "bytes": 9835
+  },
+  "addedDiscoveredEntries": 1,
+  "instructionBytes": 244,
+  "literalPoolBytesNotCodeCredit": 12,
+  "independentlyDecodedInstructions": 61,
+  "literalReads": [
+    {
+      "instruction": 2725296,
+      "literal": 2725528
+    },
+    {
+      "instruction": 2725480,
+      "literal": 2725532
+    },
+    {
+      "instruction": 2725504,
+      "literal": 2725536
+    }
+  ],
+  "followingEntryWitness": {
+    "address": 2725540,
+    "vtableReleaseSlot": 8512868,
+    "isSeeded": false,
+    "slotSha256": "7937ab85d25aca1e794c20b901ddc14b4274a80288695639b53c8df61ac4b3ec",
+    "nearestFollowingSeededEntry": 2725548,
+    "newCredit": 0
+  },
+  "constructorWitness": {
+    "entry": 1535944,
+    "allocationCall": 1535972,
+    "vtableLoad": 1535988,
+    "vtableLiteral": 1536340,
+    "vtableStore": 1536000,
+    "nativeCallableStore": 1536056,
+    "sourceOrIntervalCredit": 0
+  },
+  "prototypePrefixValuesQualified": false,
+  "followingUnseededEntryAdded": false,
+  "sourceCreditGranted": 0,
+  "historicalFunctionCompletenessClaim": false
+}

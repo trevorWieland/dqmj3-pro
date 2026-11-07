@@ -1553,6 +1553,55 @@
         "src/native/wave005/vm_views.h"
       ],
       "role": "bounded-reference-prefix-core"
+    },
+    {
+      "source": "source/squirrel-wave013/fixture_observers.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave013/fixture_internal.h",
+        "source/squirrel-wave013/native_closure_release.h"
+      ],
+      "role": "bounded-opaque-native-closure-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave013/fixture_snapshot.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave013/fixture_internal.h",
+        "source/squirrel-wave013/native_closure_release.h"
+      ],
+      "role": "bounded-opaque-native-closure-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave013/fixture_state.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave013/fixture_internal.h",
+        "source/squirrel-wave013/native_closure_release.h"
+      ],
+      "role": "bounded-opaque-native-closure-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave013/native_closure_release.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_internal.h",
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave013/native_closure_release.h"
+      ],
+      "role": "bounded-opaque-native-closure-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave013/vtables.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave013/native_closure_release.h"
+      ],
+      "role": "bounded-opaque-native-closure-lifetime"
     }
   ],
   "excludedSources": [
@@ -1575,6 +1624,7 @@
     "source/squirrel-wave009",
     "source/squirrel-wave010",
     "source/squirrel-wave011",
-    "source/squirrel-wave012"
+    "source/squirrel-wave012",
+    "source/squirrel-wave013"
   ]
 }
