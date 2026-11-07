@@ -1,0 +1,848 @@
+{
+  "status": "pre-source-measured-initialization-support-claim",
+  "producer": {
+    "path": "toolscripts/squirrel_state045_measure.py",
+    "sha256": "4a9b10176da8901809b1d8bffa03c4c476543873b5ceafbe940a7b6e167f6898",
+    "bytes": 3954
+  },
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "census": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+    "bytes": 20574405
+  },
+  "sourceRegistrySnapshot": {
+    "path": "evidence/lanes/squirrel-state040/registration-source-registry-snapshot.json",
+    "sha256": "1e0672e6489ef7ff0c224c2e5d5bf5f4c457e1393c752020ecf41c269c8d443e",
+    "bytes": 353478
+  },
+  "functions": [
+    {
+      "entry": 1413732,
+      "mode": "ARM",
+      "role": "default-delegate-construction",
+      "instructionBytes": 624,
+      "ranges": [
+        {
+          "start": 1413732,
+          "endExclusive": 1414356,
+          "bytes": 624,
+          "sha256": "561c821d86c216392a4efb5a82f500cae81fa21e89a8f8bf2644687f35d306e2"
+        }
+      ],
+      "literalReadWitnesses": [
+        {
+          "address": 1414356,
+          "bytes": 4,
+          "sha256": "b6d6a7e37e23e7a65e964bc982979ceb94ab98a49fccf77cb888388fafa974eb"
+        },
+        {
+          "address": 1414360,
+          "bytes": 4,
+          "sha256": "1dbd6145b32151d5351d4cbacb4c8c317e45ddc10e3564523d9c8a2b608bf086"
+        },
+        {
+          "address": 1414364,
+          "bytes": 4,
+          "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+        },
+        {
+          "address": 1414368,
+          "bytes": 4,
+          "sha256": "01e1fe9a03a1dfa18cc4a3593dda8cb4d43191db1649b2c7ceecfc300324c339"
+        }
+      ],
+      "calls": [
+        {
+          "pc": 1413760,
+          "target": 3140840
+        },
+        {
+          "pc": 1413780,
+          "target": 1685912
+        },
+        {
+          "pc": 1413828,
+          "target": 3140840
+        },
+        {
+          "pc": 1413984,
+          "target": 1686120
+        },
+        {
+          "pc": 1414024,
+          "target": 1697892
+        },
+        {
+          "pc": 1414076,
+          "target": null
+        },
+        {
+          "pc": 1414096,
+          "target": 1541980
+        },
+        {
+          "pc": 1414164,
+          "target": 1686120
+        },
+        {
+          "pc": 1414208,
+          "target": 1685288
+        },
+        {
+          "pc": 1414256,
+          "target": 1336720
+        },
+        {
+          "pc": 1414272,
+          "target": null
+        },
+        {
+          "pc": 1414324,
+          "target": null
+        }
+      ],
+      "alreadyAdmittedInOwnedRegistrySnapshot": false,
+      "knownCensusCallers": [
+        1353376
+      ]
+    },
+    {
+      "entry": 1413072,
+      "mode": "ARM",
+      "role": "base-library-registration",
+      "instructionBytes": 328,
+      "ranges": [
+        {
+          "start": 1413072,
+          "endExclusive": 1413400,
+          "bytes": 328,
+          "sha256": "d874781ee6588e37bc038213d9772d336c727b07c2f73a7c30c2a5da7339c0cd"
+        }
+      ],
+      "literalReadWitnesses": [
+        {
+          "address": 1413400,
+          "bytes": 4,
+          "sha256": "8160572c673a7432e6d9ade3aeaeb1c78310308f2e3ed8d29d4c365373f09c48"
+        }
+      ],
+      "calls": [
+        {
+          "pc": 1413084,
+          "target": 1522964
+        },
+        {
+          "pc": 1413120,
+          "target": 1409320
+        },
+        {
+          "pc": 1413136,
+          "target": 1535944
+        },
+        {
+          "pc": 1413152,
+          "target": 1536352
+        },
+        {
+          "pc": 1413168,
+          "target": 1536624
+        },
+        {
+          "pc": 1413184,
+          "target": 1470220
+        },
+        {
+          "pc": 1413216,
+          "target": 1409320
+        },
+        {
+          "pc": 1413232,
+          "target": 1409320
+        },
+        {
+          "pc": 1413248,
+          "target": 1470220
+        },
+        {
+          "pc": 1413264,
+          "target": 1409320
+        },
+        {
+          "pc": 1413276,
+          "target": 1409228
+        },
+        {
+          "pc": 1413292,
+          "target": 1470220
+        },
+        {
+          "pc": 1413308,
+          "target": 1409320
+        },
+        {
+          "pc": 1413320,
+          "target": 1409228
+        },
+        {
+          "pc": 1413336,
+          "target": 1470220
+        },
+        {
+          "pc": 1413352,
+          "target": 1409320
+        },
+        {
+          "pc": 1413364,
+          "target": 1409228
+        },
+        {
+          "pc": 1413380,
+          "target": 1470220
+        }
+      ],
+      "alreadyAdmittedInOwnedRegistrySnapshot": false,
+      "knownCensusCallers": [
+        1393824
+      ]
+    },
+    {
+      "entry": 1476812,
+      "mode": "ARM",
+      "role": "object-vector-append",
+      "instructionBytes": 124,
+      "ranges": [
+        {
+          "start": 1476812,
+          "endExclusive": 1476936,
+          "bytes": 124,
+          "sha256": "2080fdd65aff87885d58c9fac5b74d35a6a1d993288d2909f58d95fc801ef126"
+        }
+      ],
+      "literalReadWitnesses": [],
+      "calls": [
+        {
+          "pc": 1476856,
+          "target": 1587340
+        }
+      ],
+      "alreadyAdmittedInOwnedRegistrySnapshot": false,
+      "knownCensusCallers": [
+        1353376
+      ]
+    },
+    {
+      "entry": 1541980,
+      "mode": "ARM",
+      "role": "native-parameter-mask-compilation",
+      "instructionBytes": 456,
+      "ranges": [
+        {
+          "start": 1541980,
+          "endExclusive": 1542164,
+          "bytes": 184,
+          "sha256": "738487155554eff8c2d4e0b33a9bae6d4cfe80d197c3f09ac28b95da6590e868"
+        },
+        {
+          "start": 1542204,
+          "endExclusive": 1542476,
+          "bytes": 272,
+          "sha256": "a8a0d04594610a277eaade3b34d6b984138a46228927b055fa7d2ea7cdd171c3"
+        }
+      ],
+      "literalReadWitnesses": [
+        {
+          "address": 1542164,
+          "bytes": 4,
+          "sha256": "c75b25c2b206721c88b5c82685323621aea06ac7b78d3bb9299ce244d2adea76"
+        }
+      ],
+      "calls": [
+        {
+          "pc": 1542312,
+          "target": 1587340
+        },
+        {
+          "pc": 1542404,
+          "target": 1587340
+        }
+      ],
+      "alreadyAdmittedInOwnedRegistrySnapshot": false,
+      "knownCensusCallers": [
+        1413732,
+        1536624
+      ]
+    },
+    {
+      "entry": 1409320,
+      "mode": "ARM",
+      "role": "push-string-api",
+      "instructionBytes": 160,
+      "ranges": [
+        {
+          "start": 1409320,
+          "endExclusive": 1409480,
+          "bytes": 160,
+          "sha256": "23d4e7ed2427e1c9957f0288f1aabb16c51b059c9cddb2484cb05635813ce452"
+        }
+      ],
+      "literalReadWitnesses": [
+        {
+          "address": 1409480,
+          "bytes": 4,
+          "sha256": "b6d6a7e37e23e7a65e964bc982979ceb94ab98a49fccf77cb888388fafa974eb"
+        },
+        {
+          "address": 1409484,
+          "bytes": 4,
+          "sha256": "3c9ba11c659ac11a8eacbf4e39da86a9ad7b3b3a9619bbeee21c07e86c65cf15"
+        }
+      ],
+      "calls": [
+        {
+          "pc": 1409348,
+          "target": 1686120
+        },
+        {
+          "pc": 1409392,
+          "target": 1522972
+        },
+        {
+          "pc": 1409444,
+          "target": null
+        },
+        {
+          "pc": 1409460,
+          "target": 1336720
+        }
+      ],
+      "alreadyAdmittedInOwnedRegistrySnapshot": false,
+      "knownCensusCallers": [
+        1261824,
+        1266504,
+        1268172,
+        1270280,
+        1273020,
+        1276828,
+        1277012,
+        1326652,
+        1326808,
+        1327000,
+        1327204,
+        1327400,
+        1345828,
+        1346100,
+        1393028,
+        1393132,
+        1393276,
+        1413072,
+        1808148,
+        1814492,
+        2600724,
+        2611632,
+        2636872,
+        2643144,
+        2646656,
+        2649516,
+        2649748,
+        6252112,
+        6252288,
+        6252444,
+        6252640,
+        6252836,
+        6253028,
+        6253220,
+        6253416,
+        6253572
+      ]
+    },
+    {
+      "entry": 1409228,
+      "mode": "ARM",
+      "role": "push-integer-api",
+      "instructionBytes": 88,
+      "ranges": [
+        {
+          "start": 1409228,
+          "endExclusive": 1409316,
+          "bytes": 88,
+          "sha256": "91b43fa6e7af6ef9fef27a6ca2ce5e8a71dc283f07197c49dc4b4900c8f01ef7"
+        }
+      ],
+      "literalReadWitnesses": [
+        {
+          "address": 1409316,
+          "bytes": 4,
+          "sha256": "2bfb5ed5897f29abbec666612dc847cb1cf2dfe4d3aa6a01dff2f282345d97d5"
+        }
+      ],
+      "calls": [
+        {
+          "pc": 1409252,
+          "target": 1522972
+        },
+        {
+          "pc": 1409304,
+          "target": null
+        }
+      ],
+      "alreadyAdmittedInOwnedRegistrySnapshot": false,
+      "knownCensusCallers": [
+        1235132,
+        1235608,
+        1236196,
+        1237200,
+        1237588,
+        1238260,
+        1238888,
+        1243504,
+        1243668,
+        1245896,
+        1247396,
+        1247596,
+        1249724,
+        1249968,
+        1250012,
+        1250176,
+        1250340,
+        1250584,
+        1250828,
+        1252992,
+        1253156,
+        1253204,
+        1253448,
+        1253612,
+        1253656,
+        1254136,
+        1254772,
+        1255284,
+        1255332,
+        1255656,
+        1255860,
+        1256028,
+        1256192,
+        1256280,
+        1256628,
+        1258940,
+        1258988,
+        1259032,
+        1260276,
+        1262072,
+        1262240,
+        1262720,
+        1263164,
+        1263320,
+        1263864,
+        1264020,
+        1264180,
+        1264428,
+        1264472,
+        1264880,
+        1265232,
+        1265508,
+        1265972,
+        1266216,
+        1266260,
+        1267292,
+        1267568,
+        1267888,
+        1268128,
+        1268780,
+        1269020,
+        1270036,
+        1270508,
+        1271712,
+        1272744,
+        1273368,
+        1274376,
+        1274644,
+        1275244,
+        1276476,
+        1276740,
+        1277240,
+        1277880,
+        1278176,
+        1278660,
+        1279040,
+        1279200,
+        1279288,
+        1279808,
+        1280332,
+        1280776,
+        1281480,
+        1281816,
+        1282164,
+        1282680,
+        1286112,
+        1286156,
+        1326808,
+        1327000,
+        1363604,
+        1413072,
+        1784636,
+        1814492,
+        1820792,
+        2598004,
+        2598160,
+        2598316,
+        2599608,
+        2599652,
+        2599980,
+        2600140,
+        2602408,
+        2602452,
+        2602852,
+        2608096,
+        2608396,
+        2610676,
+        2611296,
+        2611340,
+        2611384,
+        2614568,
+        2614844,
+        2615104,
+        2616424,
+        2616644,
+        2616688,
+        2619380,
+        2619424,
+        2619508,
+        2619740,
+        2621564,
+        2621936,
+        2622272,
+        2623388,
+        2623432,
+        2625904,
+        2626244,
+        2626536,
+        2626580,
+        2626624,
+        2626668,
+        2626712,
+        2626916,
+        2626960,
+        2627120,
+        2627164,
+        2627208,
+        2628356,
+        2628516,
+        2628756,
+        2629088,
+        2629272,
+        2629972,
+        2630016,
+        2630172,
+        2630416,
+        2630660,
+        2630904,
+        2631144,
+        2632016,
+        2632432,
+        2633076,
+        2633340,
+        2634204,
+        2634396,
+        2635284,
+        2635668,
+        2635712,
+        2636828,
+        2637044,
+        2638696,
+        2639396,
+        2639772,
+        2639816,
+        2640056,
+        2641052,
+        2641816,
+        2642092,
+        2642652,
+        2643256,
+        2643416,
+        2644256,
+        2644532,
+        2644948,
+        2645212,
+        2645256,
+        2645564,
+        2645824,
+        2646224,
+        2646268,
+        2646712,
+        2647324,
+        2648012,
+        2648520,
+        2648980,
+        2649328,
+        2649472,
+        2649628,
+        2650504,
+        2650852,
+        2651216,
+        2651632,
+        2652064,
+        2652444,
+        2652600,
+        2652960,
+        2653148,
+        2655396,
+        2655440,
+        2655484,
+        6252836,
+        6253028
+      ]
+    },
+    {
+      "entry": 1522964,
+      "mode": "ARM",
+      "role": "push-root-table-api",
+      "instructionBytes": 8,
+      "ranges": [
+        {
+          "start": 1522964,
+          "endExclusive": 1522972,
+          "bytes": 8,
+          "sha256": "9f87d6a6bf5ad3c5dc0a2a8dbf5e99dabf905847a9e0fc858b9f18555d0b534f"
+        }
+      ],
+      "literalReadWitnesses": [],
+      "calls": [],
+      "alreadyAdmittedInOwnedRegistrySnapshot": false,
+      "knownCensusCallers": [
+        1326652,
+        1326808,
+        1327000,
+        1327204,
+        1327400,
+        1346100,
+        1393028,
+        1393132,
+        1393276,
+        1413072,
+        1804008,
+        6252112,
+        6252288,
+        6252444,
+        6252640,
+        6252836,
+        6253028,
+        6253220,
+        6253416,
+        6253572
+      ]
+    },
+    {
+      "entry": 1522872,
+      "mode": "ARM",
+      "role": "pop-stack-api",
+      "instructionBytes": 24,
+      "ranges": [
+        {
+          "start": 1522872,
+          "endExclusive": 1522896,
+          "bytes": 24,
+          "sha256": "5f437b3afb7a220256e535bcbabcc922ccae2a6f62a2f73cb4bece94797f0b94"
+        }
+      ],
+      "literalReadWitnesses": [],
+      "calls": [
+        {
+          "pc": 1522884,
+          "target": 1336720
+        }
+      ],
+      "alreadyAdmittedInOwnedRegistrySnapshot": false,
+      "knownCensusCallers": [
+        1265508,
+        1276476,
+        1326652,
+        1326808,
+        1327000,
+        1327204,
+        1327400,
+        1345828,
+        1363604,
+        1393028,
+        1393132,
+        1393276,
+        1413072,
+        1784888,
+        1789944,
+        1814492,
+        2611632,
+        6252112,
+        6252288,
+        6252444,
+        6252640,
+        6252836,
+        6253028,
+        6253220,
+        6253416,
+        6253572
+      ]
+    },
+    {
+      "entry": 1470220,
+      "mode": "ARM",
+      "role": "new-slot-api",
+      "instructionBytes": 236,
+      "ranges": [
+        {
+          "start": 1470220,
+          "endExclusive": 1470456,
+          "bytes": 236,
+          "sha256": "9f7cf30873585e0cacc723d8978374835aef4eb3fb4c802b51f97e258e6a17e5"
+        }
+      ],
+      "literalReadWitnesses": [],
+      "calls": [
+        {
+          "pc": 1470260,
+          "target": 1671484
+        },
+        {
+          "pc": 1470292,
+          "target": 1523008
+        },
+        {
+          "pc": 1470312,
+          "target": 1523020
+        },
+        {
+          "pc": 1470352,
+          "target": 1523020
+        },
+        {
+          "pc": 1470400,
+          "target": 1523020
+        },
+        {
+          "pc": 1470432,
+          "target": 1523040
+        },
+        {
+          "pc": 1470444,
+          "target": 1522896
+        }
+      ],
+      "alreadyAdmittedInOwnedRegistrySnapshot": false,
+      "knownCensusCallers": [
+        1393028,
+        1393276,
+        1413072,
+        1814492,
+        6252112
+      ]
+    },
+    {
+      "entry": 1536352,
+      "mode": "ARM",
+      "role": "set-native-closure-name-api",
+      "instructionBytes": 232,
+      "ranges": [
+        {
+          "start": 1536352,
+          "endExclusive": 1536584,
+          "bytes": 232,
+          "sha256": "019a834fe4b116dec8739335c177a5b631a6be2b1107ab59ac22ea940f6d658a"
+        }
+      ],
+      "literalReadWitnesses": [
+        {
+          "address": 1536584,
+          "bytes": 4,
+          "sha256": "b6d6a7e37e23e7a65e964bc982979ceb94ab98a49fccf77cb888388fafa974eb"
+        }
+      ],
+      "calls": [
+        {
+          "pc": 1536392,
+          "target": 1523008
+        },
+        {
+          "pc": 1536404,
+          "target": 1523020
+        },
+        {
+          "pc": 1536440,
+          "target": 1686120
+        },
+        {
+          "pc": 1536484,
+          "target": 1697892
+        },
+        {
+          "pc": 1536532,
+          "target": 1336720
+        },
+        {
+          "pc": 1536548,
+          "target": null
+        }
+      ],
+      "alreadyAdmittedInOwnedRegistrySnapshot": false,
+      "knownCensusCallers": [
+        1413072
+      ]
+    },
+    {
+      "entry": 1536624,
+      "mode": "ARM",
+      "role": "set-native-parameter-checks-api",
+      "instructionBytes": 500,
+      "ranges": [
+        {
+          "start": 1536624,
+          "endExclusive": 1537124,
+          "bytes": 500,
+          "sha256": "141a86567416b7c620074b2eb67cd7aab65457a339cd4fadbbec0720fa9b875a"
+        }
+      ],
+      "literalReadWitnesses": [
+        {
+          "address": 1537168,
+          "bytes": 4,
+          "sha256": "e7dbdc1e18e51294d35d9b445edf5c7bafab7d259ee0b8353abb2dd1b2796ffe"
+        }
+      ],
+      "calls": [
+        {
+          "pc": 1536648,
+          "target": 1523020
+        },
+        {
+          "pc": 1536724,
+          "target": 1541980
+        },
+        {
+          "pc": 1536784,
+          "target": 1587340
+        },
+        {
+          "pc": 1536860,
+          "target": 1409488
+        },
+        {
+          "pc": 1536912,
+          "target": 1693312
+        },
+        {
+          "pc": 1537052,
+          "target": 1693312
+        }
+      ],
+      "alreadyAdmittedInOwnedRegistrySnapshot": false,
+      "knownCensusCallers": [
+        1413072
+      ]
+    }
+  ],
+  "candidateInstructionBytes": 2780,
+  "sourceCreditGranted": 0,
+  "sourceRoot": "source/squirrel-wave045",
+  "sealedCoreDependency": {
+    "path": "evidence/lanes/squirrel-state040/core-abi-v1/frozen-manifest.json",
+    "sha256": "23a38012b40a93aa1426a9fa08f424949d418a95c9cac939f7abdc2b237f2e28",
+    "bytes": 2537
+  }
+}

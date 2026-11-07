@@ -1,0 +1,2855 @@
+{
+  "status": "complete-measured-initialization-registration-tables-not-handler-admission",
+  "producer": {
+    "path": "toolscripts/squirrel_state040_tables.py",
+    "sha256": "ede3a1df01e495412f9edb2612751754f657b2033a7e5a56c2e38d0f06de47c6",
+    "bytes": 7136
+  },
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "census": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+    "bytes": 20574405
+  },
+  "sourceRegistrySnapshot": {
+    "path": "evidence/lanes/squirrel-state040/registration-source-registry-snapshot.json",
+    "sha256": "1e0672e6489ef7ff0c224c2e5d5bf5f4c457e1393c752020ecf41c269c8d443e",
+    "bytes": 353478
+  },
+  "functionalRegistryAtCapture": {
+    "path": "config/functional-functions.json",
+    "bytes": 86518,
+    "sha256": "19c4e9ef10a88725d1ff4afbeee05087adef9e30fabb0e929468ccf8778d0fd4"
+  },
+  "recoveryRegistryAtCapture": {
+    "path": "recovery.json",
+    "bytes": 1038,
+    "sha256": "63a24ce37101c761d58b34284b620ae381c10eccdbf7273780fcece5b104e259"
+  },
+  "exactCohortsAtCapture": [
+    {
+      "path": "evidence/cohorts/bundle001/acceptance.json",
+      "bytes": 166039,
+      "sha256": "153544d664d389e63dd86f764c69e18e5a7c49e63f9490c3586b755cce78b75b"
+    },
+    {
+      "path": "evidence/cohorts/bundle002/acceptance.json",
+      "bytes": 59583,
+      "sha256": "f1bd61390c233f43418bb03e1b27453c83aa26e96ba8d2a15c7eab47724ca663"
+    },
+    {
+      "path": "evidence/cohorts/bundle003/acceptance.json",
+      "bytes": 43259,
+      "sha256": "198d2d9278721b2bea0ebafebf5110507093da19db82f86f0d361afe7b565b57"
+    }
+  ],
+  "tables": [
+    {
+      "role": "default-delegate-0",
+      "requestCallsite": 1359936,
+      "tableLoadSite": 1359924,
+      "literalAddress": 1360300,
+      "tableAddress": 9189224,
+      "entryCount": 8,
+      "bytesIncludingSentinel": 144,
+      "tableSha256": "b0fecb2a8bdac8e4ea6e2e9c57f79c70010bc9f3388a2c00944456341a4053bd",
+      "entries": [
+        {
+          "ordinal": 0,
+          "slot": 9189224,
+          "name": {
+            "address": 8852960,
+            "bytes": 4,
+            "sha256": "df547c591b4c11515a12b679eedec9591d41fd5386f7069e17de3ed1f9bcb95e",
+            "text": "len"
+          },
+          "callbackAddress": 1824216,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bd5d8",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8770720,
+            "bytes": 2,
+            "sha256": "3776096e9733584bd622e7e6417b65ba6640f8a8b809f475cd15ed5923cce3f6",
+            "text": "t"
+          }
+        },
+        {
+          "ordinal": 1,
+          "slot": 9189240,
+          "name": {
+            "address": 8852970,
+            "bytes": 7,
+            "sha256": "01b050d7dea81fd7bc8a5e87edc6851fe39bb5fcfc984a326a724e3d2c6de7ef",
+            "text": "rawget"
+          },
+          "callbackAddress": 1788924,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b4bfc",
+          "parameterCheck": 2,
+          "typeMask": {
+            "address": 8770720,
+            "bytes": 2,
+            "sha256": "3776096e9733584bd622e7e6417b65ba6640f8a8b809f475cd15ed5923cce3f6",
+            "text": "t"
+          }
+        },
+        {
+          "ordinal": 2,
+          "slot": 9189256,
+          "name": {
+            "address": 8852977,
+            "bytes": 7,
+            "sha256": "ce1c53219ea5010824dea6d39851d92419601cec01a8cbe086656c2c24e3388b",
+            "text": "rawset"
+          },
+          "callbackAddress": 7613160,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_00742ae8",
+          "parameterCheck": 3,
+          "typeMask": {
+            "address": 8770720,
+            "bytes": 2,
+            "sha256": "3776096e9733584bd622e7e6417b65ba6640f8a8b809f475cd15ed5923cce3f6",
+            "text": "t"
+          }
+        },
+        {
+          "ordinal": 3,
+          "slot": 9189272,
+          "name": {
+            "address": 8852933,
+            "bytes": 10,
+            "sha256": "3ccb92dd561cffcaf75e7ffe56671fe09e192950181853b235bde5548645eeab",
+            "text": "rawdelete"
+          },
+          "callbackAddress": 1803416,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b8498",
+          "parameterCheck": 2,
+          "typeMask": {
+            "address": 8770720,
+            "bytes": 2,
+            "sha256": "3776096e9733584bd622e7e6417b65ba6640f8a8b809f475cd15ed5923cce3f6",
+            "text": "t"
+          }
+        },
+        {
+          "ordinal": 4,
+          "slot": 9189288,
+          "name": {
+            "address": 8852964,
+            "bytes": 6,
+            "sha256": "443077dee2654009959871504c2a3192878b71022786781254f4d4e46cbe72b7",
+            "text": "rawin"
+          },
+          "callbackAddress": 1821560,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bcb78",
+          "parameterCheck": 2,
+          "typeMask": {
+            "address": 8770720,
+            "bytes": 2,
+            "sha256": "3776096e9733584bd622e7e6417b65ba6640f8a8b809f475cd15ed5923cce3f6",
+            "text": "t"
+          }
+        },
+        {
+          "ordinal": 5,
+          "slot": 9189304,
+          "name": {
+            "address": 8852943,
+            "bytes": 8,
+            "sha256": "1cccf5b4126b23c530ee121ffa2f9d073f49966167ccf84cadb73eec8592c0cc",
+            "text": "weakref"
+          },
+          "callbackAddress": 1824332,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bd64c",
+          "parameterCheck": 1,
+          "typeMask": null
+        },
+        {
+          "ordinal": 6,
+          "slot": 9189320,
+          "name": {
+            "address": 8852951,
+            "bytes": 9,
+            "sha256": "b9f0f4fcb032c98cbb1ca9205b8a0e64aca31124036ca9a095c1a8e95099d161",
+            "text": "tostring"
+          },
+          "callbackAddress": 1835068,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001c003c",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8853177,
+            "bytes": 2,
+            "sha256": "075d3ddf5a3a826e13a92288e853bc4b2cb17fb05367ae865f401a4bb11f05ce",
+            "text": "."
+          }
+        },
+        {
+          "ordinal": 7,
+          "slot": 9189336,
+          "name": {
+            "address": 8773578,
+            "bytes": 6,
+            "sha256": "b7f55abd8447be97b5babfa9cdfc3c47b8e0fe39c06c8aaf22ccd424b7b10ad1",
+            "text": "clear"
+          },
+          "callbackAddress": 7610160,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_00741f30",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8853177,
+            "bytes": 2,
+            "sha256": "075d3ddf5a3a826e13a92288e853bc4b2cb17fb05367ae865f401a4bb11f05ce",
+            "text": "."
+          }
+        }
+      ],
+      "sentinelAddress": 9189352,
+      "sentinelRemainingWords": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "default-delegate-1",
+      "requestCallsite": 1360044,
+      "tableLoadSite": 1360032,
+      "literalAddress": 1360304,
+      "tableAddress": 9189368,
+      "entryCount": 15,
+      "bytesIncludingSentinel": 256,
+      "tableSha256": "d0f95280844c4869b03e3627b9b0399e3c256108f0f5cfd279b09823c2b77157",
+      "entries": [
+        {
+          "ordinal": 0,
+          "slot": 9189368,
+          "name": {
+            "address": 8852960,
+            "bytes": 4,
+            "sha256": "df547c591b4c11515a12b679eedec9591d41fd5386f7069e17de3ed1f9bcb95e",
+            "text": "len"
+          },
+          "callbackAddress": 1824216,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bd5d8",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8807322,
+            "bytes": 2,
+            "sha256": "ffe9aaeaa2a2d5048174df0b80599ef0197ec024c4b051bc9860cff58ef7f9f3",
+            "text": "a"
+          }
+        },
+        {
+          "ordinal": 1,
+          "slot": 9189384,
+          "name": {
+            "address": 8852990,
+            "bytes": 7,
+            "sha256": "f333e5d681c9d4772a8223cb0af641ace5cd5eddb561ee2acf9cfb65d9d535ad",
+            "text": "append"
+          },
+          "callbackAddress": 7607456,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_007414a0",
+          "parameterCheck": 2,
+          "typeMask": {
+            "address": 8807322,
+            "bytes": 2,
+            "sha256": "ffe9aaeaa2a2d5048174df0b80599ef0197ec024c4b051bc9860cff58ef7f9f3",
+            "text": "a"
+          }
+        },
+        {
+          "ordinal": 2,
+          "slot": 9189400,
+          "name": {
+            "address": 8852997,
+            "bytes": 7,
+            "sha256": "cd5d76e07729b6d007d2a15e1863c8dd38b91ac44b95d2a9514af4083f27f1cf",
+            "text": "extend"
+          },
+          "callbackAddress": 1786132,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b4114",
+          "parameterCheck": 2,
+          "typeMask": {
+            "address": 8852984,
+            "bytes": 3,
+            "sha256": "b5ac633ccf621312e238cce0487a228d5b28a5e226457dfcc118848ef75c4d2d",
+            "text": "aa"
+          }
+        },
+        {
+          "ordinal": 3,
+          "slot": 9189416,
+          "name": {
+            "address": 8853032,
+            "bytes": 5,
+            "sha256": "4eee5bb1a2d6dacae254cb65d814a3bd5d84646ad63a44f038ac5e29863c6b48",
+            "text": "push"
+          },
+          "callbackAddress": 7607456,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_007414a0",
+          "parameterCheck": 2,
+          "typeMask": {
+            "address": 8807322,
+            "bytes": 2,
+            "sha256": "ffe9aaeaa2a2d5048174df0b80599ef0197ec024c4b051bc9860cff58ef7f9f3",
+            "text": "a"
+          }
+        },
+        {
+          "ordinal": 4,
+          "slot": 9189432,
+          "name": {
+            "address": 8772094,
+            "bytes": 4,
+            "sha256": "80f7dcc230d5450bdcc30f394b995e580237a893158479ab434b17451465a619",
+            "text": "pop"
+          },
+          "callbackAddress": 1841280,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001c1880",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8807322,
+            "bytes": 2,
+            "sha256": "ffe9aaeaa2a2d5048174df0b80599ef0197ec024c4b051bc9860cff58ef7f9f3",
+            "text": "a"
+          }
+        },
+        {
+          "ordinal": 5,
+          "slot": 9189448,
+          "name": {
+            "address": 8813927,
+            "bytes": 4,
+            "sha256": "46a73685d49bef3eb0caebd51995e96141b01a6d9c957ab069bd0dc82bd05c2c",
+            "text": "top"
+          },
+          "callbackAddress": 1841312,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001c18a0",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8807322,
+            "bytes": 2,
+            "sha256": "ffe9aaeaa2a2d5048174df0b80599ef0197ec024c4b051bc9860cff58ef7f9f3",
+            "text": "a"
+          }
+        },
+        {
+          "ordinal": 6,
+          "slot": 9189464,
+          "name": {
+            "address": 8853041,
+            "bytes": 7,
+            "sha256": "25c1349233c40fa46025858195a537171e57d02363c0aecb10daac411d463d2e",
+            "text": "insert"
+          },
+          "callbackAddress": 1786192,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b4150",
+          "parameterCheck": 3,
+          "typeMask": {
+            "address": 8790046,
+            "bytes": 3,
+            "sha256": "23cf8ca186421d0586d068df970fa9355b12159965e813c02bf3a17f3595d3c5",
+            "text": "an"
+          }
+        },
+        {
+          "ordinal": 7,
+          "slot": 9189480,
+          "name": {
+            "address": 8853018,
+            "bytes": 7,
+            "sha256": "e1db42a568e5246d5f800c8cb69bcc3e097730572aa5b89b8012ae1400008b4c",
+            "text": "remove"
+          },
+          "callbackAddress": 1786692,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b4344",
+          "parameterCheck": 2,
+          "typeMask": {
+            "address": 8790046,
+            "bytes": 3,
+            "sha256": "23cf8ca186421d0586d068df970fa9355b12159965e813c02bf3a17f3595d3c5",
+            "text": "an"
+          }
+        },
+        {
+          "ordinal": 8,
+          "slot": 9189496,
+          "name": {
+            "address": 8853025,
+            "bytes": 7,
+            "sha256": "40b9811c1248f60376bea67cf7cf807b93933321cd31632269823c02c9684aac",
+            "text": "resize"
+          },
+          "callbackAddress": 1787292,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b459c",
+          "parameterCheck": -2,
+          "typeMask": {
+            "address": 8790046,
+            "bytes": 3,
+            "sha256": "23cf8ca186421d0586d068df970fa9355b12159965e813c02bf3a17f3595d3c5",
+            "text": "an"
+          }
+        },
+        {
+          "ordinal": 9,
+          "slot": 9189512,
+          "name": {
+            "address": 8853010,
+            "bytes": 8,
+            "sha256": "1115bdaa0122bf0c980fe332e71c4746e4bc617f327f8d55901f40b707e6f160",
+            "text": "reverse"
+          },
+          "callbackAddress": 7608100,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_00741724",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8807322,
+            "bytes": 2,
+            "sha256": "ffe9aaeaa2a2d5048174df0b80599ef0197ec024c4b051bc9860cff58ef7f9f3",
+            "text": "a"
+          }
+        },
+        {
+          "ordinal": 10,
+          "slot": 9189528,
+          "name": {
+            "address": 8796456,
+            "bytes": 5,
+            "sha256": "28c059fecab2486c4df7fa0ef24097d0c363d808bffc0407a8032a3e08614c3f",
+            "text": "sort"
+          },
+          "callbackAddress": 1782516,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b32f4",
+          "parameterCheck": -1,
+          "typeMask": {
+            "address": 8852987,
+            "bytes": 3,
+            "sha256": "21509fb6fa1ed0149b5e18d4021e0c21abc0b69fb0fecf7e961bb31b2065fe50",
+            "text": "ac"
+          }
+        },
+        {
+          "ordinal": 11,
+          "slot": 9189544,
+          "name": {
+            "address": 8853004,
+            "bytes": 6,
+            "sha256": "027783a8112c5fddd5a2d81e4e16c342c240bc027ea7f04a6c2ca1dd81372045",
+            "text": "slice"
+          },
+          "callbackAddress": 1783628,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b374c",
+          "parameterCheck": -1,
+          "typeMask": {
+            "address": 8853037,
+            "bytes": 4,
+            "sha256": "fed03448d4eac955737eeb1ba0cda332d258d0d092a1cbe70701a365cbbde9e7",
+            "text": "ann"
+          }
+        },
+        {
+          "ordinal": 12,
+          "slot": 9189560,
+          "name": {
+            "address": 8852943,
+            "bytes": 8,
+            "sha256": "1cccf5b4126b23c530ee121ffa2f9d073f49966167ccf84cadb73eec8592c0cc",
+            "text": "weakref"
+          },
+          "callbackAddress": 1824332,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bd64c",
+          "parameterCheck": 1,
+          "typeMask": null
+        },
+        {
+          "ordinal": 13,
+          "slot": 9189576,
+          "name": {
+            "address": 8852951,
+            "bytes": 9,
+            "sha256": "b9f0f4fcb032c98cbb1ca9205b8a0e64aca31124036ca9a095c1a8e95099d161",
+            "text": "tostring"
+          },
+          "callbackAddress": 1835068,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001c003c",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8853177,
+            "bytes": 2,
+            "sha256": "075d3ddf5a3a826e13a92288e853bc4b2cb17fb05367ae865f401a4bb11f05ce",
+            "text": "."
+          }
+        },
+        {
+          "ordinal": 14,
+          "slot": 9189592,
+          "name": {
+            "address": 8773578,
+            "bytes": 6,
+            "sha256": "b7f55abd8447be97b5babfa9cdfc3c47b8e0fe39c06c8aaf22ccd424b7b10ad1",
+            "text": "clear"
+          },
+          "callbackAddress": 7610160,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_00741f30",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8853177,
+            "bytes": 2,
+            "sha256": "075d3ddf5a3a826e13a92288e853bc4b2cb17fb05367ae865f401a4bb11f05ce",
+            "text": "."
+          }
+        }
+      ],
+      "sentinelAddress": 9189608,
+      "sentinelRemainingWords": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "default-delegate-2",
+      "requestCallsite": 1360152,
+      "tableLoadSite": 1360140,
+      "literalAddress": 1360308,
+      "tableAddress": 9189624,
+      "entryCount": 9,
+      "bytesIncludingSentinel": 160,
+      "tableSha256": "9a7f0ff6a4edce7a549442009db5ed4e4bfcbed647eefa3b1d94639295e9770b",
+      "entries": [
+        {
+          "ordinal": 0,
+          "slot": 9189624,
+          "name": {
+            "address": 8852960,
+            "bytes": 4,
+            "sha256": "df547c591b4c11515a12b679eedec9591d41fd5386f7069e17de3ed1f9bcb95e",
+            "text": "len"
+          },
+          "callbackAddress": 1824216,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bd5d8",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8770652,
+            "bytes": 2,
+            "sha256": "28a3d6d537e5d5090d33c042ad97db2081e47f9cc713e983ebb94121172153c8",
+            "text": "s"
+          }
+        },
+        {
+          "ordinal": 1,
+          "slot": 9189640,
+          "name": {
+            "address": 8853068,
+            "bytes": 10,
+            "sha256": "76322d1e94340d5a23af3736bae0d69281dc621a6d617a59392d0c40a6fdf771",
+            "text": "tointeger"
+          },
+          "callbackAddress": 1836568,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001c0618",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8770652,
+            "bytes": 2,
+            "sha256": "28a3d6d537e5d5090d33c042ad97db2081e47f9cc713e983ebb94121172153c8",
+            "text": "s"
+          }
+        },
+        {
+          "ordinal": 2,
+          "slot": 9189656,
+          "name": {
+            "address": 8853094,
+            "bytes": 8,
+            "sha256": "b5a5299071b1759ee40767870e13b6fccbd56e04d2d5ed8cbb95e555789ec732",
+            "text": "tofloat"
+          },
+          "callbackAddress": 1832660,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bf6d4",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8770652,
+            "bytes": 2,
+            "sha256": "28a3d6d537e5d5090d33c042ad97db2081e47f9cc713e983ebb94121172153c8",
+            "text": "s"
+          }
+        },
+        {
+          "ordinal": 3,
+          "slot": 9189672,
+          "name": {
+            "address": 8852951,
+            "bytes": 9,
+            "sha256": "b9f0f4fcb032c98cbb1ca9205b8a0e64aca31124036ca9a095c1a8e95099d161",
+            "text": "tostring"
+          },
+          "callbackAddress": 1835068,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001c003c",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8853177,
+            "bytes": 2,
+            "sha256": "075d3ddf5a3a826e13a92288e853bc4b2cb17fb05367ae865f401a4bb11f05ce",
+            "text": "."
+          }
+        },
+        {
+          "ordinal": 4,
+          "slot": 9189688,
+          "name": {
+            "address": 8853004,
+            "bytes": 6,
+            "sha256": "027783a8112c5fddd5a2d81e4e16c342c240bc027ea7f04a6c2ca1dd81372045",
+            "text": "slice"
+          },
+          "callbackAddress": 1788288,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b4980",
+          "parameterCheck": -1,
+          "typeMask": {
+            "address": 8853060,
+            "bytes": 8,
+            "sha256": "711237226ed7ab1af40db7fc22362f59042476a241dfa96f825246a31574b0b1",
+            "text": " s n  n"
+          }
+        },
+        {
+          "ordinal": 5,
+          "slot": 9189704,
+          "name": {
+            "address": 8853055,
+            "bytes": 5,
+            "sha256": "dcd3d7adcc31d052903c4fa31eda64f8c8c2c79bc244ba803b0e8197f2f8f444",
+            "text": "find"
+          },
+          "callbackAddress": 1784636,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b3b3c",
+          "parameterCheck": -2,
+          "typeMask": {
+            "address": 8853048,
+            "bytes": 7,
+            "sha256": "56f5ff41609db4cb557f43e97bd2b849c3140e1f477f075da360c93d71f6af77",
+            "text": "s s n "
+          }
+        },
+        {
+          "ordinal": 6,
+          "slot": 9189720,
+          "name": {
+            "address": 8853086,
+            "bytes": 8,
+            "sha256": "5b156ebf91d6829e9711b91cfdb918d5d174442526ba3e054eed06288a29ec0b",
+            "text": "tolower"
+          },
+          "callbackAddress": 1792896,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b5b80",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8770652,
+            "bytes": 2,
+            "sha256": "28a3d6d537e5d5090d33c042ad97db2081e47f9cc713e983ebb94121172153c8",
+            "text": "s"
+          }
+        },
+        {
+          "ordinal": 7,
+          "slot": 9189736,
+          "name": {
+            "address": 8853078,
+            "bytes": 8,
+            "sha256": "2c75bd9984d7eb3def5c09020c2ddbd51808a2602ef23f90243faa8263254e63",
+            "text": "toupper"
+          },
+          "callbackAddress": 1793176,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b5c98",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8770652,
+            "bytes": 2,
+            "sha256": "28a3d6d537e5d5090d33c042ad97db2081e47f9cc713e983ebb94121172153c8",
+            "text": "s"
+          }
+        },
+        {
+          "ordinal": 8,
+          "slot": 9189752,
+          "name": {
+            "address": 8852943,
+            "bytes": 8,
+            "sha256": "1cccf5b4126b23c530ee121ffa2f9d073f49966167ccf84cadb73eec8592c0cc",
+            "text": "weakref"
+          },
+          "callbackAddress": 1824332,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bd64c",
+          "parameterCheck": 1,
+          "typeMask": null
+        }
+      ],
+      "sentinelAddress": 9189768,
+      "sentinelRemainingWords": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "default-delegate-3",
+      "requestCallsite": 1360260,
+      "tableLoadSite": 1360248,
+      "literalAddress": 1360312,
+      "tableAddress": 9189784,
+      "entryCount": 5,
+      "bytesIncludingSentinel": 96,
+      "tableSha256": "c437c0c3bffb496ed92364d0342cae8ded2bb1878f496c44de4f63d8fee17d32",
+      "entries": [
+        {
+          "ordinal": 0,
+          "slot": 9189784,
+          "name": {
+            "address": 8853068,
+            "bytes": 10,
+            "sha256": "76322d1e94340d5a23af3736bae0d69281dc621a6d617a59392d0c40a6fdf771",
+            "text": "tointeger"
+          },
+          "callbackAddress": 1836568,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001c0618",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8853102,
+            "bytes": 4,
+            "sha256": "59749b4fdb19b548104361bf53a37c8e7130af2808cec73f48c7d5b29e45f623",
+            "text": "n|b"
+          }
+        },
+        {
+          "ordinal": 1,
+          "slot": 9189800,
+          "name": {
+            "address": 8853094,
+            "bytes": 8,
+            "sha256": "b5a5299071b1759ee40767870e13b6fccbd56e04d2d5ed8cbb95e555789ec732",
+            "text": "tofloat"
+          },
+          "callbackAddress": 1832660,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bf6d4",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8853102,
+            "bytes": 4,
+            "sha256": "59749b4fdb19b548104361bf53a37c8e7130af2808cec73f48c7d5b29e45f623",
+            "text": "n|b"
+          }
+        },
+        {
+          "ordinal": 2,
+          "slot": 9189816,
+          "name": {
+            "address": 8852951,
+            "bytes": 9,
+            "sha256": "b9f0f4fcb032c98cbb1ca9205b8a0e64aca31124036ca9a095c1a8e95099d161",
+            "text": "tostring"
+          },
+          "callbackAddress": 1835068,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001c003c",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8853177,
+            "bytes": 2,
+            "sha256": "075d3ddf5a3a826e13a92288e853bc4b2cb17fb05367ae865f401a4bb11f05ce",
+            "text": "."
+          }
+        },
+        {
+          "ordinal": 3,
+          "slot": 9189832,
+          "name": {
+            "address": 8853106,
+            "bytes": 7,
+            "sha256": "c0f661c0aa3b94cf61e9b3562b9132bc851adcbf92afa61d133974ed867eb25b",
+            "text": "tochar"
+          },
+          "callbackAddress": 1830916,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bf004",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8853102,
+            "bytes": 4,
+            "sha256": "59749b4fdb19b548104361bf53a37c8e7130af2808cec73f48c7d5b29e45f623",
+            "text": "n|b"
+          }
+        },
+        {
+          "ordinal": 4,
+          "slot": 9189848,
+          "name": {
+            "address": 8852943,
+            "bytes": 8,
+            "sha256": "1cccf5b4126b23c530ee121ffa2f9d073f49966167ccf84cadb73eec8592c0cc",
+            "text": "weakref"
+          },
+          "callbackAddress": 1824332,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bd64c",
+          "parameterCheck": 1,
+          "typeMask": null
+        }
+      ],
+      "sentinelAddress": 9189864,
+      "sentinelRemainingWords": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "default-delegate-4",
+      "requestCallsite": 1360420,
+      "tableLoadSite": 1360408,
+      "literalAddress": 1361072,
+      "tableAddress": 9189944,
+      "entryCount": 8,
+      "bytesIncludingSentinel": 144,
+      "tableSha256": "24e932db99f7e20e85d42c2e78ef84a76d8042e4d6085115825a5f8331a1f54d",
+      "entries": [
+        {
+          "ordinal": 0,
+          "slot": 9189944,
+          "name": {
+            "address": 8853135,
+            "bytes": 5,
+            "sha256": "4f3e6d671263a129b6c3b1102df1f90ea32fbbb55922c76b328c48e8e8747e62",
+            "text": "call"
+          },
+          "callbackAddress": 1787676,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b471c",
+          "parameterCheck": -1,
+          "typeMask": {
+            "address": 8826676,
+            "bytes": 2,
+            "sha256": "ec49f17f2c205644d3a0d242eb5a82ec222ed01fbd8fd6b55d0f2f6ef651e484",
+            "text": "c"
+          }
+        },
+        {
+          "ordinal": 1,
+          "slot": 9189960,
+          "name": {
+            "address": 8853134,
+            "bytes": 6,
+            "sha256": "e94915dda0bbef302beb1cbb477f408400498ec4bde114740d30074f931b614b",
+            "text": "pcall"
+          },
+          "callbackAddress": 1789664,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b4ee0",
+          "parameterCheck": -1,
+          "typeMask": {
+            "address": 8826676,
+            "bytes": 2,
+            "sha256": "ec49f17f2c205644d3a0d242eb5a82ec222ed01fbd8fd6b55d0f2f6ef651e484",
+            "text": "c"
+          }
+        },
+        {
+          "ordinal": 2,
+          "slot": 9189976,
+          "name": {
+            "address": 8853128,
+            "bytes": 6,
+            "sha256": "9d086612c4ad7136d4eabcc0d4e26128626a1ac2e22581157e2c985d366c7040",
+            "text": "acall"
+          },
+          "callbackAddress": 1789528,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b4e58",
+          "parameterCheck": 2,
+          "typeMask": {
+            "address": 8853124,
+            "bytes": 3,
+            "sha256": "b140d157156557c0a2f23b56fc9593cb58ec143ea4d1a676872a6936fe94670b",
+            "text": "ca"
+          }
+        },
+        {
+          "ordinal": 3,
+          "slot": 9189992,
+          "name": {
+            "address": 8853127,
+            "bytes": 7,
+            "sha256": "e4b8becb4deb9f5bf1a6926a9cafc717487f8ca0157e7262401eeb5abf640363",
+            "text": "pacall"
+          },
+          "callbackAddress": 1790828,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b536c",
+          "parameterCheck": 2,
+          "typeMask": {
+            "address": 8853124,
+            "bytes": 3,
+            "sha256": "b140d157156557c0a2f23b56fc9593cb58ec143ea4d1a676872a6936fe94670b",
+            "text": "ca"
+          }
+        },
+        {
+          "ordinal": 4,
+          "slot": 9190008,
+          "name": {
+            "address": 8852943,
+            "bytes": 8,
+            "sha256": "1cccf5b4126b23c530ee121ffa2f9d073f49966167ccf84cadb73eec8592c0cc",
+            "text": "weakref"
+          },
+          "callbackAddress": 1824332,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bd64c",
+          "parameterCheck": 1,
+          "typeMask": null
+        },
+        {
+          "ordinal": 5,
+          "slot": 9190024,
+          "name": {
+            "address": 8852951,
+            "bytes": 9,
+            "sha256": "b9f0f4fcb032c98cbb1ca9205b8a0e64aca31124036ca9a095c1a8e95099d161",
+            "text": "tostring"
+          },
+          "callbackAddress": 1835068,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001c003c",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8853177,
+            "bytes": 2,
+            "sha256": "075d3ddf5a3a826e13a92288e853bc4b2cb17fb05367ae865f401a4bb11f05ce",
+            "text": "."
+          }
+        },
+        {
+          "ordinal": 6,
+          "slot": 9190040,
+          "name": {
+            "address": 8853157,
+            "bytes": 8,
+            "sha256": "d4a4012b541eb688f621503442b16b6272071caf30405ada6a313769e210e266",
+            "text": "bindenv"
+          },
+          "callbackAddress": 1803036,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b831c",
+          "parameterCheck": 2,
+          "typeMask": {
+            "address": 8853149,
+            "bytes": 8,
+            "sha256": "cb98ca6e9f23edd88699fb5d966a974e4549c703697839ea410ea25cb57565ca",
+            "text": "c x|y|t"
+          }
+        },
+        {
+          "ordinal": 7,
+          "slot": 9190056,
+          "name": {
+            "address": 8853140,
+            "bytes": 9,
+            "sha256": "4caf4f6d955e2ececc5bd0fab4b8a03ad8e16d0f1f7975038d5609d64b0fdcea",
+            "text": "getinfos"
+          },
+          "callbackAddress": 1804652,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b896c",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8826676,
+            "bytes": 2,
+            "sha256": "ec49f17f2c205644d3a0d242eb5a82ec222ed01fbd8fd6b55d0f2f6ef651e484",
+            "text": "c"
+          }
+        }
+      ],
+      "sentinelAddress": 9190072,
+      "sentinelRemainingWords": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "default-delegate-5",
+      "requestCallsite": 1360528,
+      "tableLoadSite": 1360516,
+      "literalAddress": 1361076,
+      "tableAddress": 9189880,
+      "entryCount": 3,
+      "bytesIncludingSentinel": 64,
+      "tableSha256": "f8e82fd3f1f863a42a07a8062855170c3ee46f8146fb4dd2b4937bccf0eec019",
+      "entries": [
+        {
+          "ordinal": 0,
+          "slot": 9189880,
+          "name": {
+            "address": 8853113,
+            "bytes": 10,
+            "sha256": "b13c275cf151f3547975a4dc1cb0bb615f53c90fba157e1c7c91d7865098cff0",
+            "text": "getstatus"
+          },
+          "callbackAddress": 1821624,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bcbb8",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8769956,
+            "bytes": 2,
+            "sha256": "78f993c3392521c9db0e0819b09f95c5c4141ef1cad923ade3bee913bc6bdfd2",
+            "text": "g"
+          }
+        },
+        {
+          "ordinal": 1,
+          "slot": 9189896,
+          "name": {
+            "address": 8852943,
+            "bytes": 8,
+            "sha256": "1cccf5b4126b23c530ee121ffa2f9d073f49966167ccf84cadb73eec8592c0cc",
+            "text": "weakref"
+          },
+          "callbackAddress": 1824332,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bd64c",
+          "parameterCheck": 1,
+          "typeMask": null
+        },
+        {
+          "ordinal": 2,
+          "slot": 9189912,
+          "name": {
+            "address": 8852951,
+            "bytes": 9,
+            "sha256": "b9f0f4fcb032c98cbb1ca9205b8a0e64aca31124036ca9a095c1a8e95099d161",
+            "text": "tostring"
+          },
+          "callbackAddress": 1835068,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001c003c",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8853177,
+            "bytes": 2,
+            "sha256": "075d3ddf5a3a826e13a92288e853bc4b2cb17fb05367ae865f401a4bb11f05ce",
+            "text": "."
+          }
+        }
+      ],
+      "sentinelAddress": 9189928,
+      "sentinelRemainingWords": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "default-delegate-6",
+      "requestCallsite": 1360636,
+      "tableLoadSite": 1360624,
+      "literalAddress": 1361080,
+      "tableAddress": 9190088,
+      "entryCount": 5,
+      "bytesIncludingSentinel": 96,
+      "tableSha256": "d4462a5d63ecbdb7b7b002c3122036ccf698a1c837932af802f6977617481a1e",
+      "entries": [
+        {
+          "ordinal": 0,
+          "slot": 9190088,
+          "name": {
+            "address": 8853135,
+            "bytes": 5,
+            "sha256": "4f3e6d671263a129b6c3b1102df1f90ea32fbbb55922c76b328c48e8e8747e62",
+            "text": "call"
+          },
+          "callbackAddress": 1784888,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b3c38",
+          "parameterCheck": -1,
+          "typeMask": {
+            "address": 8853163,
+            "bytes": 2,
+            "sha256": "924310d6e64a28d18d5eb0933cd24dcaea16af5a2674f1f11bc0805d80c12069",
+            "text": "v"
+          }
+        },
+        {
+          "ordinal": 1,
+          "slot": 9190104,
+          "name": {
+            "address": 8853165,
+            "bytes": 7,
+            "sha256": "f522a1b46faa60a7b822b5f746fcf2229db770250331bc7eae3f204e539f1fc9",
+            "text": "wakeup"
+          },
+          "callbackAddress": 1789944,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b4ff8",
+          "parameterCheck": -1,
+          "typeMask": {
+            "address": 8853163,
+            "bytes": 2,
+            "sha256": "924310d6e64a28d18d5eb0933cd24dcaea16af5a2674f1f11bc0805d80c12069",
+            "text": "v"
+          }
+        },
+        {
+          "ordinal": 2,
+          "slot": 9190120,
+          "name": {
+            "address": 8853113,
+            "bytes": 10,
+            "sha256": "b13c275cf151f3547975a4dc1cb0bb615f53c90fba157e1c7c91d7865098cff0",
+            "text": "getstatus"
+          },
+          "callbackAddress": 1808148,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b9714",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8853163,
+            "bytes": 2,
+            "sha256": "924310d6e64a28d18d5eb0933cd24dcaea16af5a2674f1f11bc0805d80c12069",
+            "text": "v"
+          }
+        },
+        {
+          "ordinal": 3,
+          "slot": 9190136,
+          "name": {
+            "address": 8852943,
+            "bytes": 8,
+            "sha256": "1cccf5b4126b23c530ee121ffa2f9d073f49966167ccf84cadb73eec8592c0cc",
+            "text": "weakref"
+          },
+          "callbackAddress": 1824332,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bd64c",
+          "parameterCheck": 1,
+          "typeMask": null
+        },
+        {
+          "ordinal": 4,
+          "slot": 9190152,
+          "name": {
+            "address": 8852951,
+            "bytes": 9,
+            "sha256": "b9f0f4fcb032c98cbb1ca9205b8a0e64aca31124036ca9a095c1a8e95099d161",
+            "text": "tostring"
+          },
+          "callbackAddress": 1835068,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001c003c",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8853177,
+            "bytes": 2,
+            "sha256": "075d3ddf5a3a826e13a92288e853bc4b2cb17fb05367ae865f401a4bb11f05ce",
+            "text": "."
+          }
+        }
+      ],
+      "sentinelAddress": 9190168,
+      "sentinelRemainingWords": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "default-delegate-7",
+      "requestCallsite": 1360744,
+      "tableLoadSite": 1360732,
+      "literalAddress": 1361084,
+      "tableAddress": 9190184,
+      "entryCount": 6,
+      "bytesIncludingSentinel": 112,
+      "tableSha256": "4a091910b9fee8876bb73abb0fe69a81bbe5153bac64ddb863994b8e901e24a1",
+      "entries": [
+        {
+          "ordinal": 0,
+          "slot": 9190184,
+          "name": {
+            "address": 8853188,
+            "bytes": 14,
+            "sha256": "f01d5133cab6351a430065b5450bc8089a23a559d2d2e97a13488af961746d9d",
+            "text": "getattributes"
+          },
+          "callbackAddress": 1821504,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bcb40",
+          "parameterCheck": 2,
+          "typeMask": {
+            "address": 8853176,
+            "bytes": 3,
+            "sha256": "2f8e211cf2c68f6e2c3b62fcbeca29a0ffcf8ee332858c534b383cc61529bfe1",
+            "text": "y."
+          }
+        },
+        {
+          "ordinal": 1,
+          "slot": 9190200,
+          "name": {
+            "address": 8853202,
+            "bytes": 14,
+            "sha256": "c405380296a2e5469be4150451f7b1501cee9bca9ecfb9a0cec99026b3404707",
+            "text": "setattributes"
+          },
+          "callbackAddress": 1821532,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bcb5c",
+          "parameterCheck": 3,
+          "typeMask": {
+            "address": 8853172,
+            "bytes": 4,
+            "sha256": "f67ba066b7e0c896ed77202432dc6c61cf902aef9ba27602623e638fdba0b215",
+            "text": "y.."
+          }
+        },
+        {
+          "ordinal": 2,
+          "slot": 9190216,
+          "name": {
+            "address": 8852964,
+            "bytes": 6,
+            "sha256": "443077dee2654009959871504c2a3192878b71022786781254f4d4e46cbe72b7",
+            "text": "rawin"
+          },
+          "callbackAddress": 1821560,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bcb78",
+          "parameterCheck": 2,
+          "typeMask": {
+            "address": 8832177,
+            "bytes": 2,
+            "sha256": "6a75da5da0cd28492372c3dde802e4bbe80564f01926cc1af00066623653770c",
+            "text": "y"
+          }
+        },
+        {
+          "ordinal": 3,
+          "slot": 9190232,
+          "name": {
+            "address": 8852943,
+            "bytes": 8,
+            "sha256": "1cccf5b4126b23c530ee121ffa2f9d073f49966167ccf84cadb73eec8592c0cc",
+            "text": "weakref"
+          },
+          "callbackAddress": 1824332,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bd64c",
+          "parameterCheck": 1,
+          "typeMask": null
+        },
+        {
+          "ordinal": 4,
+          "slot": 9190248,
+          "name": {
+            "address": 8852951,
+            "bytes": 9,
+            "sha256": "b9f0f4fcb032c98cbb1ca9205b8a0e64aca31124036ca9a095c1a8e95099d161",
+            "text": "tostring"
+          },
+          "callbackAddress": 1835068,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001c003c",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8853177,
+            "bytes": 2,
+            "sha256": "075d3ddf5a3a826e13a92288e853bc4b2cb17fb05367ae865f401a4bb11f05ce",
+            "text": "."
+          }
+        },
+        {
+          "ordinal": 5,
+          "slot": 9190264,
+          "name": {
+            "address": 8853179,
+            "bytes": 9,
+            "sha256": "d753c59256b4d21bf7c3871f2646f98c201532b98179a2369434e4f66638e730",
+            "text": "instance"
+          },
+          "callbackAddress": 1790800,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b5350",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8832177,
+            "bytes": 2,
+            "sha256": "6a75da5da0cd28492372c3dde802e4bbe80564f01926cc1af00066623653770c",
+            "text": "y"
+          }
+        }
+      ],
+      "sentinelAddress": 9190280,
+      "sentinelRemainingWords": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "default-delegate-8",
+      "requestCallsite": 1360852,
+      "tableLoadSite": 1360840,
+      "literalAddress": 1361088,
+      "tableAddress": 9190296,
+      "entryCount": 4,
+      "bytesIncludingSentinel": 80,
+      "tableSha256": "7024c4911425f87e2e355634fb46d8d2cec9fe00c6d671e3520639e685c0ffc5",
+      "entries": [
+        {
+          "ordinal": 0,
+          "slot": 9190296,
+          "name": {
+            "address": 8853216,
+            "bytes": 9,
+            "sha256": "7feb38c8305a318f560ca1bca5a00d0591ef774707f73540205ba77712d40afb",
+            "text": "getclass"
+          },
+          "callbackAddress": 1811572,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001ba474",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8785473,
+            "bytes": 2,
+            "sha256": "14f825b2bbc32dd8d196367fa8776873069c12a8954d8da7513aa7704ddd09eb",
+            "text": "x"
+          }
+        },
+        {
+          "ordinal": 1,
+          "slot": 9190312,
+          "name": {
+            "address": 8852964,
+            "bytes": 6,
+            "sha256": "443077dee2654009959871504c2a3192878b71022786781254f4d4e46cbe72b7",
+            "text": "rawin"
+          },
+          "callbackAddress": 1821560,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bcb78",
+          "parameterCheck": 2,
+          "typeMask": {
+            "address": 8785473,
+            "bytes": 2,
+            "sha256": "14f825b2bbc32dd8d196367fa8776873069c12a8954d8da7513aa7704ddd09eb",
+            "text": "x"
+          }
+        },
+        {
+          "ordinal": 2,
+          "slot": 9190328,
+          "name": {
+            "address": 8852943,
+            "bytes": 8,
+            "sha256": "1cccf5b4126b23c530ee121ffa2f9d073f49966167ccf84cadb73eec8592c0cc",
+            "text": "weakref"
+          },
+          "callbackAddress": 1824332,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bd64c",
+          "parameterCheck": 1,
+          "typeMask": null
+        },
+        {
+          "ordinal": 3,
+          "slot": 9190344,
+          "name": {
+            "address": 8852951,
+            "bytes": 9,
+            "sha256": "b9f0f4fcb032c98cbb1ca9205b8a0e64aca31124036ca9a095c1a8e95099d161",
+            "text": "tostring"
+          },
+          "callbackAddress": 1835068,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001c003c",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8853177,
+            "bytes": 2,
+            "sha256": "075d3ddf5a3a826e13a92288e853bc4b2cb17fb05367ae865f401a4bb11f05ce",
+            "text": "."
+          }
+        }
+      ],
+      "sentinelAddress": 9190360,
+      "sentinelRemainingWords": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "default-delegate-9",
+      "requestCallsite": 1360960,
+      "tableLoadSite": 1360948,
+      "literalAddress": 1361092,
+      "tableAddress": 9190376,
+      "entryCount": 3,
+      "bytesIncludingSentinel": 64,
+      "tableSha256": "87ca1f4a10b68db41701c6d0b49b54eef8072038b943ec9c47d6336f30f6504c",
+      "entries": [
+        {
+          "ordinal": 0,
+          "slot": 9190376,
+          "name": {
+            "address": 8852947,
+            "bytes": 4,
+            "sha256": "f3096edac8e9fd4d4ffb03da2664c9c0884299580c016f37921f1974520ea0dc",
+            "text": "ref"
+          },
+          "callbackAddress": 1785268,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b3db4",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8850591,
+            "bytes": 2,
+            "sha256": "96229c0a1dcb79d7d50913f882e3144961b5616140ded9ab844bd685e08e3a30",
+            "text": "r"
+          }
+        },
+        {
+          "ordinal": 1,
+          "slot": 9190392,
+          "name": {
+            "address": 8852943,
+            "bytes": 8,
+            "sha256": "1cccf5b4126b23c530ee121ffa2f9d073f49966167ccf84cadb73eec8592c0cc",
+            "text": "weakref"
+          },
+          "callbackAddress": 1824332,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bd64c",
+          "parameterCheck": 1,
+          "typeMask": null
+        },
+        {
+          "ordinal": 2,
+          "slot": 9190408,
+          "name": {
+            "address": 8852951,
+            "bytes": 9,
+            "sha256": "b9f0f4fcb032c98cbb1ca9205b8a0e64aca31124036ca9a095c1a8e95099d161",
+            "text": "tostring"
+          },
+          "callbackAddress": 1835068,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001c003c",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8853177,
+            "bytes": 2,
+            "sha256": "075d3ddf5a3a826e13a92288e853bc4b2cb17fb05367ae865f401a4bb11f05ce",
+            "text": "."
+          }
+        }
+      ],
+      "sentinelAddress": 9190424,
+      "sentinelRemainingWords": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "base-library",
+      "requestCallsite": 1413084,
+      "tableLoadSite": 1413088,
+      "literalAddress": 1413400,
+      "tableAddress": 9188936,
+      "entryCount": 17,
+      "bytesIncludingSentinel": 288,
+      "tableSha256": "c4ff79c5417ba8df372e24fdf66970e5832a9a0b4423cf3be9847ce79200e071",
+      "entries": [
+        {
+          "ordinal": 0,
+          "slot": 9188936,
+          "name": {
+            "address": 8852874,
+            "bytes": 16,
+            "sha256": "dd1fd45bbc7f9fc7c2d6e0e4583a5da47f9b191115e374f1b511ae6aa904f3bf",
+            "text": "seterrorhandler"
+          },
+          "callbackAddress": 1824200,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bd5c8",
+          "parameterCheck": 2,
+          "typeMask": null
+        },
+        {
+          "ordinal": 1,
+          "slot": 9188952,
+          "name": {
+            "address": 8852842,
+            "bytes": 13,
+            "sha256": "307d9eb4960e60882bc316c18cc85fb57dfce6fe5c22c287e0c580a1d3acc2c1",
+            "text": "setdebughook"
+          },
+          "callbackAddress": 1811488,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001ba420",
+          "parameterCheck": 2,
+          "typeMask": null
+        },
+        {
+          "ordinal": 2,
+          "slot": 9188968,
+          "name": {
+            "address": 8852858,
+            "bytes": 16,
+            "sha256": "f818ac360091acc7b96d71c53997fcec8fd0a3f48b60794936bd8c57a58588a2",
+            "text": "enabledebuginfo"
+          },
+          "callbackAddress": 1824140,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bd58c",
+          "parameterCheck": 2,
+          "typeMask": null
+        },
+        {
+          "ordinal": 3,
+          "slot": 9188984,
+          "name": {
+            "address": 8852890,
+            "bytes": 14,
+            "sha256": "4a02ea9e9ee5d4427b480d72d9b6c613b6f42270f4afad942b50f05df22bc2a6",
+            "text": "getstackinfos"
+          },
+          "callbackAddress": 1814492,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bafdc",
+          "parameterCheck": 2,
+          "typeMask": {
+            "address": 8852855,
+            "bytes": 3,
+            "sha256": "112a3e4c90a7485dda6afe1c55e77cf62283d5f41bd1230837f84165485c4bb9",
+            "text": ".n"
+          }
+        },
+        {
+          "ordinal": 4,
+          "slot": 9189000,
+          "name": {
+            "address": 8852769,
+            "bytes": 13,
+            "sha256": "8a48c5409140cf06dd32c45a080916ac3519434ad51f94461b46b30767929d40",
+            "text": "getroottable"
+          },
+          "callbackAddress": 1811468,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001ba40c",
+          "parameterCheck": 1,
+          "typeMask": null
+        },
+        {
+          "ordinal": 5,
+          "slot": 9189016,
+          "name": {
+            "address": 8852782,
+            "bytes": 13,
+            "sha256": "c02740191ffe737ca00b44eec3399dd7ad2ea79a39becf5eea6b3af2c5467a36",
+            "text": "setroottable"
+          },
+          "callbackAddress": 1811504,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001ba430",
+          "parameterCheck": 2,
+          "typeMask": null
+        },
+        {
+          "ordinal": 6,
+          "slot": 9189032,
+          "name": {
+            "address": 8852795,
+            "bytes": 14,
+            "sha256": "f7cf1bb84c35e6bd239ab29aaecae274e43e41045d62a021835877b4f7f54095",
+            "text": "getconsttable"
+          },
+          "callbackAddress": 1814468,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bafc4",
+          "parameterCheck": 1,
+          "typeMask": null
+        },
+        {
+          "ordinal": 7,
+          "slot": 9189048,
+          "name": {
+            "address": 8852809,
+            "bytes": 14,
+            "sha256": "3e84cda5e130ad3fbd6368383795609a8587b36b8e27fd2bde7f9c9b4cbe7da0",
+            "text": "setconsttable"
+          },
+          "callbackAddress": 1814912,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bb180",
+          "parameterCheck": 2,
+          "typeMask": null
+        },
+        {
+          "ordinal": 8,
+          "slot": 9189064,
+          "name": {
+            "address": 8852914,
+            "bytes": 7,
+            "sha256": "fb0c47d274c0bdf1a82ff724c02d4a0a89f52dd40e7fb453c614a8f4f6c1656f",
+            "text": "assert"
+          },
+          "callbackAddress": 1784552,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b3ae8",
+          "parameterCheck": 2,
+          "typeMask": null
+        },
+        {
+          "ordinal": 9,
+          "slot": 9189080,
+          "name": {
+            "address": 8852908,
+            "bytes": 6,
+            "sha256": "b575798c2555dbb04f446ce30a8e9e2bd60ac3f6885d53a6926a3f608b81be7b",
+            "text": "print"
+          },
+          "callbackAddress": 1783104,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b3540",
+          "parameterCheck": 2,
+          "typeMask": null
+        },
+        {
+          "ordinal": 10,
+          "slot": 9189096,
+          "name": {
+            "address": 8852828,
+            "bytes": 14,
+            "sha256": "45eee40fb6357a1a9b44e9407b0393f03104f53a4e1a0ce5fbc6b164c9bc1686",
+            "text": "compilestring"
+          },
+          "callbackAddress": 1814316,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001baf2c",
+          "parameterCheck": -2,
+          "typeMask": {
+            "address": 8852904,
+            "bytes": 4,
+            "sha256": "332cfa03839ae3e44e460c40df8a11340d5ea49a4b25ed2a21c6e1829ef9b6cb",
+            "text": ".ss"
+          }
+        },
+        {
+          "ordinal": 11,
+          "slot": 9189112,
+          "name": {
+            "address": 8852736,
+            "bytes": 10,
+            "sha256": "7467eb26ff0200f5a8db14430f6c6bb162793df31cebd362e5e238bd866a344b",
+            "text": "newthread"
+          },
+          "callbackAddress": 1790720,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b5300",
+          "parameterCheck": 2,
+          "typeMask": {
+            "address": 8852733,
+            "bytes": 3,
+            "sha256": "efb2057eb1afa01b59cc68248a73572bd3ffed6276b81a0a53320ed5636a7c1d",
+            "text": ".c"
+          }
+        },
+        {
+          "ordinal": 12,
+          "slot": 9189128,
+          "name": {
+            "address": 8852746,
+            "bytes": 8,
+            "sha256": "d8286d5e2f22c8564b82b950ae111e0f0252cc23b5b9fffa202fe78d855e7465",
+            "text": "suspend"
+          },
+          "callbackAddress": 1787672,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b4718",
+          "parameterCheck": -1,
+          "typeMask": null
+        },
+        {
+          "ordinal": 13,
+          "slot": 9189144,
+          "name": {
+            "address": 8852921,
+            "bytes": 6,
+            "sha256": "00575e5df2e11252765d04959ff997f9e66c271c786c38b89673cd186e1f3290",
+            "text": "array"
+          },
+          "callbackAddress": 1782748,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b33dc",
+          "parameterCheck": -2,
+          "typeMask": {
+            "address": 8852855,
+            "bytes": 3,
+            "sha256": "112a3e4c90a7485dda6afe1c55e77cf62283d5f41bd1230837f84165485c4bb9",
+            "text": ".n"
+          }
+        },
+        {
+          "ordinal": 14,
+          "slot": 9189160,
+          "name": {
+            "address": 8852823,
+            "bytes": 5,
+            "sha256": "04f69a0edb2f94586d5c7530adf4e471a14739d72addd4f09b2ba21019596682",
+            "text": "type"
+          },
+          "callbackAddress": 1841416,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001c1908",
+          "parameterCheck": 2,
+          "typeMask": null
+        },
+        {
+          "ordinal": 15,
+          "slot": 9189176,
+          "name": {
+            "address": 8852927,
+            "bytes": 6,
+            "sha256": "c62a37eef92a89a667fa06b1ae2b1041383dc1e9e4ed724fe7526d737fb9dc81",
+            "text": "dummy"
+          },
+          "callbackAddress": 1783096,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001b3538",
+          "parameterCheck": 0,
+          "typeMask": null
+        },
+        {
+          "ordinal": 16,
+          "slot": 9189192,
+          "name": {
+            "address": 8852754,
+            "bytes": 15,
+            "sha256": "2bf1d06cb25eb34aa01aaa194f51b26543117465b8d28ef25463d37d689f29c0",
+            "text": "collectgarbage"
+          },
+          "callbackAddress": 1820792,
+          "callbackMode": "ARM",
+          "callbackSymbol": "fn_001bc878",
+          "parameterCheck": 1,
+          "typeMask": {
+            "address": 8770720,
+            "bytes": 2,
+            "sha256": "3776096e9733584bd622e7e6417b65ba6640f8a8b809f475cd15ed5923cce3f6",
+            "text": "t"
+          }
+        }
+      ],
+      "sentinelAddress": 9189208,
+      "sentinelRemainingWords": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "callbacks": [
+    {
+      "address": 1824216,
+      "mode": "ARM",
+      "symbol": "fn_001bd5d8",
+      "instructionBytes": 112,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-0",
+          "ordinal": 0,
+          "name": "len"
+        },
+        {
+          "tableRole": "default-delegate-1",
+          "ordinal": 0,
+          "name": "len"
+        },
+        {
+          "tableRole": "default-delegate-2",
+          "ordinal": 0,
+          "name": "len"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1788924,
+      "mode": "ARM",
+      "symbol": "fn_001b4bfc",
+      "instructionBytes": 28,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-0",
+          "ordinal": 1,
+          "name": "rawget"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 7613160,
+      "mode": "ARM",
+      "symbol": "fn_00742ae8",
+      "instructionBytes": 672,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-0",
+          "ordinal": 2,
+          "name": "rawset"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1803416,
+      "mode": "ARM",
+      "symbol": "fn_001b8498",
+      "instructionBytes": 32,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-0",
+          "ordinal": 3,
+          "name": "rawdelete"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1821560,
+      "mode": "ARM",
+      "symbol": "fn_001bcb78",
+      "instructionBytes": 64,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-0",
+          "ordinal": 4,
+          "name": "rawin"
+        },
+        {
+          "tableRole": "default-delegate-7",
+          "ordinal": 2,
+          "name": "rawin"
+        },
+        {
+          "tableRole": "default-delegate-8",
+          "ordinal": 1,
+          "name": "rawin"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1824332,
+      "mode": "ARM",
+      "symbol": "fn_001bd64c",
+      "instructionBytes": 20,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-0",
+          "ordinal": 5,
+          "name": "weakref"
+        },
+        {
+          "tableRole": "default-delegate-1",
+          "ordinal": 12,
+          "name": "weakref"
+        },
+        {
+          "tableRole": "default-delegate-2",
+          "ordinal": 8,
+          "name": "weakref"
+        },
+        {
+          "tableRole": "default-delegate-3",
+          "ordinal": 4,
+          "name": "weakref"
+        },
+        {
+          "tableRole": "default-delegate-4",
+          "ordinal": 4,
+          "name": "weakref"
+        },
+        {
+          "tableRole": "default-delegate-5",
+          "ordinal": 1,
+          "name": "weakref"
+        },
+        {
+          "tableRole": "default-delegate-6",
+          "ordinal": 3,
+          "name": "weakref"
+        },
+        {
+          "tableRole": "default-delegate-7",
+          "ordinal": 3,
+          "name": "weakref"
+        },
+        {
+          "tableRole": "default-delegate-8",
+          "ordinal": 2,
+          "name": "weakref"
+        },
+        {
+          "tableRole": "default-delegate-9",
+          "ordinal": 1,
+          "name": "weakref"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1835068,
+      "mode": "ARM",
+      "symbol": "fn_001c003c",
+      "instructionBytes": 20,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-0",
+          "ordinal": 6,
+          "name": "tostring"
+        },
+        {
+          "tableRole": "default-delegate-1",
+          "ordinal": 13,
+          "name": "tostring"
+        },
+        {
+          "tableRole": "default-delegate-2",
+          "ordinal": 3,
+          "name": "tostring"
+        },
+        {
+          "tableRole": "default-delegate-3",
+          "ordinal": 2,
+          "name": "tostring"
+        },
+        {
+          "tableRole": "default-delegate-4",
+          "ordinal": 5,
+          "name": "tostring"
+        },
+        {
+          "tableRole": "default-delegate-5",
+          "ordinal": 2,
+          "name": "tostring"
+        },
+        {
+          "tableRole": "default-delegate-6",
+          "ordinal": 4,
+          "name": "tostring"
+        },
+        {
+          "tableRole": "default-delegate-7",
+          "ordinal": 4,
+          "name": "tostring"
+        },
+        {
+          "tableRole": "default-delegate-8",
+          "ordinal": 3,
+          "name": "tostring"
+        },
+        {
+          "tableRole": "default-delegate-9",
+          "ordinal": 2,
+          "name": "tostring"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 7610160,
+      "mode": "ARM",
+      "symbol": "fn_00741f30",
+      "instructionBytes": 196,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-0",
+          "ordinal": 7,
+          "name": "clear"
+        },
+        {
+          "tableRole": "default-delegate-1",
+          "ordinal": 14,
+          "name": "clear"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 7607456,
+      "mode": "ARM",
+      "symbol": "fn_007414a0",
+      "instructionBytes": 284,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-1",
+          "ordinal": 1,
+          "name": "append"
+        },
+        {
+          "tableRole": "default-delegate-1",
+          "ordinal": 3,
+          "name": "push"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1786132,
+      "mode": "ARM",
+      "symbol": "fn_001b4114",
+      "instructionBytes": 60,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-1",
+          "ordinal": 2,
+          "name": "extend"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1841280,
+      "mode": "ARM",
+      "symbol": "fn_001c1880",
+      "instructionBytes": 32,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-1",
+          "ordinal": 4,
+          "name": "pop"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1841312,
+      "mode": "ARM",
+      "symbol": "fn_001c18a0",
+      "instructionBytes": 80,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-1",
+          "ordinal": 5,
+          "name": "top"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1786192,
+      "mode": "ARM",
+      "symbol": "fn_001b4150",
+      "instructionBytes": 476,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-1",
+          "ordinal": 6,
+          "name": "insert"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1786692,
+      "mode": "ARM",
+      "symbol": "fn_001b4344",
+      "instructionBytes": 564,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-1",
+          "ordinal": 7,
+          "name": "remove"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1787292,
+      "mode": "ARM",
+      "symbol": "fn_001b459c",
+      "instructionBytes": 352,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-1",
+          "ordinal": 8,
+          "name": "resize"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 7608100,
+      "mode": "ARM",
+      "symbol": "fn_00741724",
+      "instructionBytes": 260,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-1",
+          "ordinal": 9,
+          "name": "reverse"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1782516,
+      "mode": "ARM",
+      "symbol": "fn_001b32f4",
+      "instructionBytes": 232,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-1",
+          "ordinal": 10,
+          "name": "sort"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1783628,
+      "mode": "ARM",
+      "symbol": "fn_001b374c",
+      "instructionBytes": 876,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-1",
+          "ordinal": 11,
+          "name": "slice"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1836568,
+      "mode": "ARM",
+      "symbol": "fn_001c0618",
+      "instructionBytes": 492,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-2",
+          "ordinal": 1,
+          "name": "tointeger"
+        },
+        {
+          "tableRole": "default-delegate-3",
+          "ordinal": 0,
+          "name": "tointeger"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1832660,
+      "mode": "ARM",
+      "symbol": "fn_001bf6d4",
+      "instructionBytes": 500,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-2",
+          "ordinal": 2,
+          "name": "tofloat"
+        },
+        {
+          "tableRole": "default-delegate-3",
+          "ordinal": 1,
+          "name": "tofloat"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1788288,
+      "mode": "ARM",
+      "symbol": "fn_001b4980",
+      "instructionBytes": 592,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-2",
+          "ordinal": 4,
+          "name": "slice"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1784636,
+      "mode": "ARM",
+      "symbol": "fn_001b3b3c",
+      "instructionBytes": 236,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-2",
+          "ordinal": 5,
+          "name": "find"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1792896,
+      "mode": "ARM",
+      "symbol": "fn_001b5b80",
+      "instructionBytes": 276,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-2",
+          "ordinal": 6,
+          "name": "tolower"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1793176,
+      "mode": "ARM",
+      "symbol": "fn_001b5c98",
+      "instructionBytes": 276,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-2",
+          "ordinal": 7,
+          "name": "toupper"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1830916,
+      "mode": "ARM",
+      "symbol": "fn_001bf004",
+      "instructionBytes": 196,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-3",
+          "ordinal": 3,
+          "name": "tochar"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1787676,
+      "mode": "ARM",
+      "symbol": "fn_001b471c",
+      "instructionBytes": 48,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-4",
+          "ordinal": 0,
+          "name": "call"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1789664,
+      "mode": "ARM",
+      "symbol": "fn_001b4ee0",
+      "instructionBytes": 48,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-4",
+          "ordinal": 1,
+          "name": "pcall"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1789528,
+      "mode": "ARM",
+      "symbol": "fn_001b4e58",
+      "instructionBytes": 136,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-4",
+          "ordinal": 2,
+          "name": "acall"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1790828,
+      "mode": "ARM",
+      "symbol": "fn_001b536c",
+      "instructionBytes": 136,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-4",
+          "ordinal": 3,
+          "name": "pacall"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1803036,
+      "mode": "ARM",
+      "symbol": "fn_001b831c",
+      "instructionBytes": 28,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-4",
+          "ordinal": 6,
+          "name": "bindenv"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1804652,
+      "mode": "ARM",
+      "symbol": "fn_001b896c",
+      "instructionBytes": 2288,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-4",
+          "ordinal": 7,
+          "name": "getinfos"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1821624,
+      "mode": "ARM",
+      "symbol": "fn_001bcbb8",
+      "instructionBytes": 396,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-5",
+          "ordinal": 0,
+          "name": "getstatus"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1784888,
+      "mode": "ARM",
+      "symbol": "fn_001b3c38",
+      "instructionBytes": 364,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-6",
+          "ordinal": 0,
+          "name": "call"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1789944,
+      "mode": "ARM",
+      "symbol": "fn_001b4ff8",
+      "instructionBytes": 516,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-6",
+          "ordinal": 1,
+          "name": "wakeup"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1808148,
+      "mode": "ARM",
+      "symbol": "fn_001b9714",
+      "instructionBytes": 144,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-6",
+          "ordinal": 2,
+          "name": "getstatus"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1821504,
+      "mode": "ARM",
+      "symbol": "fn_001bcb40",
+      "instructionBytes": 28,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-7",
+          "ordinal": 0,
+          "name": "getattributes"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1821532,
+      "mode": "ARM",
+      "symbol": "fn_001bcb5c",
+      "instructionBytes": 28,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-7",
+          "ordinal": 1,
+          "name": "setattributes"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1790800,
+      "mode": "ARM",
+      "symbol": "fn_001b5350",
+      "instructionBytes": 28,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-7",
+          "ordinal": 5,
+          "name": "instance"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1811572,
+      "mode": "ARM",
+      "symbol": "fn_001ba474",
+      "instructionBytes": 28,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-8",
+          "ordinal": 0,
+          "name": "getclass"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1785268,
+      "mode": "ARM",
+      "symbol": "fn_001b3db4",
+      "instructionBytes": 28,
+      "registrationRoles": [
+        {
+          "tableRole": "default-delegate-9",
+          "ordinal": 0,
+          "name": "ref"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1824200,
+      "mode": "ARM",
+      "symbol": "fn_001bd5c8",
+      "instructionBytes": 16,
+      "registrationRoles": [
+        {
+          "tableRole": "base-library",
+          "ordinal": 0,
+          "name": "seterrorhandler"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1811488,
+      "mode": "ARM",
+      "symbol": "fn_001ba420",
+      "instructionBytes": 16,
+      "registrationRoles": [
+        {
+          "tableRole": "base-library",
+          "ordinal": 1,
+          "name": "setdebughook"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1824140,
+      "mode": "ARM",
+      "symbol": "fn_001bd58c",
+      "instructionBytes": 60,
+      "registrationRoles": [
+        {
+          "tableRole": "base-library",
+          "ordinal": 2,
+          "name": "enabledebuginfo"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1814492,
+      "mode": "ARM",
+      "symbol": "fn_001bafdc",
+      "instructionBytes": 384,
+      "registrationRoles": [
+        {
+          "tableRole": "base-library",
+          "ordinal": 3,
+          "name": "getstackinfos"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1811468,
+      "mode": "ARM",
+      "symbol": "fn_001ba40c",
+      "instructionBytes": 20,
+      "registrationRoles": [
+        {
+          "tableRole": "base-library",
+          "ordinal": 4,
+          "name": "getroottable"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1811504,
+      "mode": "ARM",
+      "symbol": "fn_001ba430",
+      "instructionBytes": 68,
+      "registrationRoles": [
+        {
+          "tableRole": "base-library",
+          "ordinal": 5,
+          "name": "setroottable"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1814468,
+      "mode": "ARM",
+      "symbol": "fn_001bafc4",
+      "instructionBytes": 24,
+      "registrationRoles": [
+        {
+          "tableRole": "base-library",
+          "ordinal": 6,
+          "name": "getconsttable"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1814912,
+      "mode": "ARM",
+      "symbol": "fn_001bb180",
+      "instructionBytes": 68,
+      "registrationRoles": [
+        {
+          "tableRole": "base-library",
+          "ordinal": 7,
+          "name": "setconsttable"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1784552,
+      "mode": "ARM",
+      "symbol": "fn_001b3ae8",
+      "instructionBytes": 64,
+      "registrationRoles": [
+        {
+          "tableRole": "base-library",
+          "ordinal": 8,
+          "name": "assert"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1783104,
+      "mode": "ARM",
+      "symbol": "fn_001b3540",
+      "instructionBytes": 72,
+      "registrationRoles": [
+        {
+          "tableRole": "base-library",
+          "ordinal": 9,
+          "name": "print"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1814316,
+      "mode": "ARM",
+      "symbol": "fn_001baf2c",
+      "instructionBytes": 136,
+      "registrationRoles": [
+        {
+          "tableRole": "base-library",
+          "ordinal": 10,
+          "name": "compilestring"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1790720,
+      "mode": "ARM",
+      "symbol": "fn_001b5300",
+      "instructionBytes": 80,
+      "registrationRoles": [
+        {
+          "tableRole": "base-library",
+          "ordinal": 11,
+          "name": "newthread"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1787672,
+      "mode": "ARM",
+      "symbol": "fn_001b4718",
+      "instructionBytes": 4,
+      "registrationRoles": [
+        {
+          "tableRole": "base-library",
+          "ordinal": 12,
+          "name": "suspend"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1782748,
+      "mode": "ARM",
+      "symbol": "fn_001b33dc",
+      "instructionBytes": 340,
+      "registrationRoles": [
+        {
+          "tableRole": "base-library",
+          "ordinal": 13,
+          "name": "array"
+        }
+      ],
+      "functionalRegistryEntry": {
+        "name": "fn_001b33dc",
+        "confidence": "medium",
+        "packet": {
+          "path": "evidence/functional/squirrel002-005.json",
+          "sha256": "76edae8c5a63365c45ac64186f28edefba115615ca2c96c8c82ad4cd6f451053"
+        },
+        "sourceLookup": "repository-function-index"
+      },
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1841416,
+      "mode": "ARM",
+      "symbol": "fn_001c1908",
+      "instructionBytes": 176,
+      "registrationRoles": [
+        {
+          "tableRole": "base-library",
+          "ordinal": 14,
+          "name": "type"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1783096,
+      "mode": "ARM",
+      "symbol": "fn_001b3538",
+      "instructionBytes": 8,
+      "registrationRoles": [
+        {
+          "tableRole": "base-library",
+          "ordinal": 15,
+          "name": "dummy"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    },
+    {
+      "address": 1820792,
+      "mode": "ARM",
+      "symbol": "fn_001bc878",
+      "instructionBytes": 32,
+      "registrationRoles": [
+        {
+          "tableRole": "base-library",
+          "ordinal": 16,
+          "name": "collectgarbage"
+        }
+      ],
+      "functionalRegistryEntry": null,
+      "exactAcceptanceEntry": null,
+      "handlerImplementationInvokedByThisMeasurement": false
+    }
+  ],
+  "registeredEntryCount": 83,
+  "uniqueCallbackCount": 57,
+  "functionalCallbackCount": 1,
+  "exactCallbackCount": 0,
+  "sourceCreditGranted": 0,
+  "handlerCreditGranted": 0,
+  "originalExecutablePayloadPublished": false
+}

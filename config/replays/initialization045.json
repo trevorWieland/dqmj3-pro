@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "name": "initialization045",
+  "producerSteps": [
+    {
+      "name": "initialization045-graphs-masks-controls-and-windows-tests",
+      "args": [
+        "toolscripts/squirrel_state045_packet.py",
+        "--work",
+        "work/squirrel-state040/initialization045/sealing-v1",
+        "--output",
+        "work/squirrel-state040/initialization045/coordinator-output"
+      ]
+    }
+  ],
+  "tests": [
+    "isolated_component_replay"
+  ],
+  "packets": [
+    "work/squirrel-state040/initialization045/coordinator-output/packet.json",
+    "work/squirrel-state040/initialization045/coordinator-output/verification.json"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "status": "preserved-drafts-and-harness-failures-not-final-proofs",
+  "delegatePublicationError": {
+    "wrongSource": {
+      "path": "work/squirrel-state040/initialization045/shared-initialize-before-slot-fix.c",
+      "sha256": "6e0e1287e439791ee394b171c598a97cc763f0011dae9855e18b9ad32c80c3d5",
+      "bytes": 4168
+    },
+    "originalTypedState": {
+      "path": "work/squirrel-state040/initialization045/original-shared-typed.json",
+      "sha256": "eda440410605e133a3532ab9984772c6c330ba2433a70d2737b542973a474a30",
+      "bytes": 106929
+    },
+    "wrongTypedState": {
+      "path": "work/squirrel-state040/initialization045/source-arm-shared-typed.json",
+      "sha256": "035065081b9a8b04cbcd1e1b939e0942355641be3863df3bf7c8940ae1b8b3d6",
+      "bytes": 106929
+    },
+    "error": "Construction order was mistaken for publication slot order; the caller publishes slots5then4.",
+    "returnsNormally": true,
+    "sourceOnlyRuntimeActuallyCompleted": true,
+    "repair": "045 delegate destination mapping only;040sealed inputs unchanged."
+  },
+  "staleControlSelector": {
+    "producer": {
+      "path": "work/squirrel-state040/initialization045/controls-first/producer-attempt1.py",
+      "sha256": "e0160571da2cdc9a0a634111d124317a97086e233118e8c1c28aeb0ba69fed79",
+      "bytes": 4164
+    },
+    "completedControlsBeforeStop": 5,
+    "failedLabel": "gc-backlink",
+    "reason": "Exact mutation-text selector did not match; stopped before compiling that control.",
+    "replacementRun": {
+      "path": "work/squirrel-state040/initialization045/controls-second/controls.json",
+      "sha256": "32128db0e21c5309e122e845e43434c233b617ae1c2d015f56ba27b76e5b5192",
+      "bytes": 1042682
+    },
+    "replacementControls": 7,
+    "replacementPlatformExecutions": 21
+  },
+  "originalVectorAliasEvidence": {
+    "metadata": {
+      "path": "evidence/lanes/squirrel-state040/initialization045-shared-field-correction-v1.json",
+      "sha256": "abb1d73dfaa1b6bcf6480f803c15b71e763202025bf377df31c03119d4a39b95",
+      "bytes": 18812
+    },
+    "thenCurrentSourcePreserved": {
+      "path": "work/squirrel-state040/initialization045/shared_views-alias-v1.c",
+      "sha256": "7998f1fe4f023ca66b835d49104e370077451c9ba989230b56f171e1345c74a4",
+      "bytes": 2793
+    },
+    "semanticCorrectionUnchanged": true
+  },
+  "earlierReferenceContextFailure": {
+    "pc": 1509136,
+    "mutexAddress": 88,
+    "managerGlobal": 9021060,
+    "reason": "The typed SDK-current-heap fixture did not establish the actualnonnull-reallocation manager.",
+    "repair": "Execute real10b980startup constructor over caller arena; no source/helper substitution inreference."
+  },
+  "sourceCreditGranted": 0
+}

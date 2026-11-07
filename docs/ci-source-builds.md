@@ -34,7 +34,7 @@ All builds use freestanding C11, `-O2`, function/data sections and `-Wall -Wextr
 
 ## Explicit source and warning policy
 
-`config/build-units.json` is the authoritative source census. The current configuration lists 400 translation units and 1130 target compilations, including explicitly limited fixture targets. It records every quoted header dependency and every selected native wave and Squirrel component root. Missing, duplicated, unlisted or conflicting C entries fail validation. A changed transitive header list, external header, system header or macro-based include requires an explicit build-tool update.
+`config/build-units.json` is the authoritative source census. The current configuration lists 413 translation units and 1169 target compilations, including explicitly limited fixture targets. It records every quoted header dependency and every selected native wave and Squirrel component root. Missing, duplicated, unlisted or conflicting C entries fail validation. A changed transitive header list, external header, system header or macro-based include requires an explicit build-tool update.
 
 `src/native/wave003/setters.c` is the historical void-return setter packet. It stays excluded from the active source list and active linking; `src/native/wave003/abi-qualified/setters.c` provides the current interface. This classification does not grant acceptance to every candidate in any active file.
 
