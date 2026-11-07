@@ -1,0 +1,742 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-sampled-key053-records-and-floor",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "version": "update-content0",
+  "programId": "0004000e001acb00",
+  "acceptedSourceCreditGranted": 0,
+  "matchingSourceCreditGranted": 0,
+  "functions": [
+    {
+      "symbol": "fn_0075bd7c",
+      "canonicalIdentity": {
+        "version": "update-content0",
+        "programId": "0004000e001acb00",
+        "module": "main",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7716220,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "src/native/wave053/entries.c",
+        "bytes": 1556,
+        "sha256": "752dd620a201f6fb5fc78e4f7ddeba65970c2b39e7ff417a14fdbc75805d660b"
+      },
+      "sourceName": "fn_0075bd7c",
+      "originalInstructionBytes": 1476,
+      "originalInstructionRanges": [
+        {
+          "start": 7716220,
+          "endExclusive": 7717088,
+          "bytes": 868
+        },
+        {
+          "start": 7717120,
+          "endExclusive": 7717728,
+          "bytes": 608
+        }
+      ],
+      "reportEntryBytes": 868,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "domain": "Exact frozen053 finite fixtures and explicit caller/FPU/unsafe-input exclusions; no universal or caller-reachability claim.",
+        "segmentCasesPerMethod": 576,
+        "floorBitPatterns": 0,
+        "allCanonicalInstructionPcsObserved": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sampled-key053-coordinator-91af291.json",
+          "bytes": 6947,
+          "sha256": "8ab9094cd3a5f5034e7b6ff1a6122a0dcddfd439300ec4cbe2e9971e2db002ab"
+        },
+        "originalInstructionPcs": 369,
+        "originalInstructionPcsVisited": 369,
+        "boundedNotUniversalEquivalence": true,
+        "actualWindowsAndHighAddressA64": true,
+        "originalRegisterReturnContractQualified": false,
+        "floatingPointStatusEquivalenceClaimed": false,
+        "selectorAndGameReachabilityQualified": false,
+        "animationIdentityQualified": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "normallyReturningWrongImplementations": 7,
+        "wrongSourceExecutions": 21,
+        "androidOsOrDeviceExecuted": false,
+        "confidenceJustification": "Medium: all canonical PCs visited in independently reproduced four-target finite fixtures and returning controls; original register-return ABI, FPU exception state, unsafe inputs, game/caller identity and universal equivalence remain unqualified."
+      },
+      "entrySourceArmFunction": {
+        "address": 9437184,
+        "bytes": 12,
+        "section": 1,
+        "sha256": "82196c5153c2a098c7d7cdd3c7efcdf4c32081b3f532faf95feda7e99cef608c",
+        "instructionAddresses": [
+          9437184,
+          9437188,
+          9437192
+        ]
+      },
+      "sourceDependencyClosure": "Shared ordinary C key decoder, search, boundary handling and coefficient construction; entry wrappers genuinely link the complete source graph.",
+      "originalBodySha256": "ba6c43d62e0ef883e8c16d4386aab6eb948a0a086750fd2dc4c1035b9590e675"
+    },
+    {
+      "symbol": "fn_0075c360",
+      "canonicalIdentity": {
+        "version": "update-content0",
+        "programId": "0004000e001acb00",
+        "module": "main",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7717728,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "src/native/wave053/entries.c",
+        "bytes": 1556,
+        "sha256": "752dd620a201f6fb5fc78e4f7ddeba65970c2b39e7ff417a14fdbc75805d660b"
+      },
+      "sourceName": "fn_0075c360",
+      "originalInstructionBytes": 992,
+      "originalInstructionRanges": [
+        {
+          "start": 7717728,
+          "endExclusive": 7718500,
+          "bytes": 772
+        },
+        {
+          "start": 7718532,
+          "endExclusive": 7718752,
+          "bytes": 220
+        }
+      ],
+      "reportEntryBytes": 772,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "domain": "Exact frozen053 finite fixtures and explicit caller/FPU/unsafe-input exclusions; no universal or caller-reachability claim.",
+        "segmentCasesPerMethod": 576,
+        "floorBitPatterns": 0,
+        "allCanonicalInstructionPcsObserved": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sampled-key053-coordinator-91af291.json",
+          "bytes": 6947,
+          "sha256": "8ab9094cd3a5f5034e7b6ff1a6122a0dcddfd439300ec4cbe2e9971e2db002ab"
+        },
+        "originalInstructionPcs": 248,
+        "originalInstructionPcsVisited": 248,
+        "boundedNotUniversalEquivalence": true,
+        "actualWindowsAndHighAddressA64": true,
+        "originalRegisterReturnContractQualified": false,
+        "floatingPointStatusEquivalenceClaimed": false,
+        "selectorAndGameReachabilityQualified": false,
+        "animationIdentityQualified": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "normallyReturningWrongImplementations": 7,
+        "wrongSourceExecutions": 21,
+        "androidOsOrDeviceExecuted": false,
+        "confidenceJustification": "Medium: all canonical PCs visited in independently reproduced four-target finite fixtures and returning controls; original register-return ABI, FPU exception state, unsafe inputs, game/caller identity and universal equivalence remain unqualified."
+      },
+      "entrySourceArmFunction": {
+        "address": 9437196,
+        "bytes": 12,
+        "section": 1,
+        "sha256": "fdf57f4e08c15b9b5985188f0f7820e3d95cabcb59bba0f2357775582dc8a3e8",
+        "instructionAddresses": [
+          9437196,
+          9437200,
+          9437204
+        ]
+      },
+      "sourceDependencyClosure": "Shared ordinary C key decoder, search, boundary handling and coefficient construction; entry wrappers genuinely link the complete source graph.",
+      "originalBodySha256": "36023aea6bf4a68c27839ff12dfc4b1effb03f3f8617c1ee76894e9908f05e51"
+    },
+    {
+      "symbol": "fn_0075c760",
+      "canonicalIdentity": {
+        "version": "update-content0",
+        "programId": "0004000e001acb00",
+        "module": "main",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7718752,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "src/native/wave053/entries.c",
+        "bytes": 1556,
+        "sha256": "752dd620a201f6fb5fc78e4f7ddeba65970c2b39e7ff417a14fdbc75805d660b"
+      },
+      "sourceName": "fn_0075c760",
+      "originalInstructionBytes": 1604,
+      "originalInstructionRanges": [
+        {
+          "start": 7718752,
+          "endExclusive": 7719648,
+          "bytes": 896
+        },
+        {
+          "start": 7719680,
+          "endExclusive": 7720388,
+          "bytes": 708
+        }
+      ],
+      "reportEntryBytes": 896,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "domain": "Exact frozen053 finite fixtures and explicit caller/FPU/unsafe-input exclusions; no universal or caller-reachability claim.",
+        "segmentCasesPerMethod": 576,
+        "floorBitPatterns": 0,
+        "allCanonicalInstructionPcsObserved": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sampled-key053-coordinator-91af291.json",
+          "bytes": 6947,
+          "sha256": "8ab9094cd3a5f5034e7b6ff1a6122a0dcddfd439300ec4cbe2e9971e2db002ab"
+        },
+        "originalInstructionPcs": 401,
+        "originalInstructionPcsVisited": 401,
+        "boundedNotUniversalEquivalence": true,
+        "actualWindowsAndHighAddressA64": true,
+        "originalRegisterReturnContractQualified": false,
+        "floatingPointStatusEquivalenceClaimed": false,
+        "selectorAndGameReachabilityQualified": false,
+        "animationIdentityQualified": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "normallyReturningWrongImplementations": 7,
+        "wrongSourceExecutions": 21,
+        "androidOsOrDeviceExecuted": false,
+        "confidenceJustification": "Medium: all canonical PCs visited in independently reproduced four-target finite fixtures and returning controls; original register-return ABI, FPU exception state, unsafe inputs, game/caller identity and universal equivalence remain unqualified."
+      },
+      "entrySourceArmFunction": {
+        "address": 9437208,
+        "bytes": 12,
+        "section": 1,
+        "sha256": "3d35f17854b21e5b008b5da94a647439414e681b398673d4e0466dcc8912019c",
+        "instructionAddresses": [
+          9437208,
+          9437212,
+          9437216
+        ]
+      },
+      "sourceDependencyClosure": "Shared ordinary C key decoder, search, boundary handling and coefficient construction; entry wrappers genuinely link the complete source graph.",
+      "originalBodySha256": "b0a7a15c7a06206e38ace846c17e4de8b4c907624f691e85af2d986d4cf47e03"
+    },
+    {
+      "symbol": "fn_0075ce80",
+      "canonicalIdentity": {
+        "version": "update-content0",
+        "programId": "0004000e001acb00",
+        "module": "main",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7720576,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "src/native/wave053/entries.c",
+        "bytes": 1556,
+        "sha256": "752dd620a201f6fb5fc78e4f7ddeba65970c2b39e7ff417a14fdbc75805d660b"
+      },
+      "sourceName": "fn_0075ce80",
+      "originalInstructionBytes": 1460,
+      "originalInstructionRanges": [
+        {
+          "start": 7720576,
+          "endExclusive": 7721444,
+          "bytes": 868
+        },
+        {
+          "start": 7721484,
+          "endExclusive": 7722076,
+          "bytes": 592
+        }
+      ],
+      "reportEntryBytes": 868,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "domain": "Exact frozen053 finite fixtures and explicit caller/FPU/unsafe-input exclusions; no universal or caller-reachability claim.",
+        "segmentCasesPerMethod": 576,
+        "floorBitPatterns": 0,
+        "allCanonicalInstructionPcsObserved": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sampled-key053-coordinator-91af291.json",
+          "bytes": 6947,
+          "sha256": "8ab9094cd3a5f5034e7b6ff1a6122a0dcddfd439300ec4cbe2e9971e2db002ab"
+        },
+        "originalInstructionPcs": 365,
+        "originalInstructionPcsVisited": 365,
+        "boundedNotUniversalEquivalence": true,
+        "actualWindowsAndHighAddressA64": true,
+        "originalRegisterReturnContractQualified": false,
+        "floatingPointStatusEquivalenceClaimed": false,
+        "selectorAndGameReachabilityQualified": false,
+        "animationIdentityQualified": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "normallyReturningWrongImplementations": 7,
+        "wrongSourceExecutions": 21,
+        "androidOsOrDeviceExecuted": false,
+        "confidenceJustification": "Medium: all canonical PCs visited in independently reproduced four-target finite fixtures and returning controls; original register-return ABI, FPU exception state, unsafe inputs, game/caller identity and universal equivalence remain unqualified."
+      },
+      "entrySourceArmFunction": {
+        "address": 9437220,
+        "bytes": 12,
+        "section": 1,
+        "sha256": "3a6934b7fa41155af238aafced82d218e0d8f9240d4255ccc652d258cc1d3411",
+        "instructionAddresses": [
+          9437220,
+          9437224,
+          9437228
+        ]
+      },
+      "sourceDependencyClosure": "Shared ordinary C key decoder, search, boundary handling and coefficient construction; entry wrappers genuinely link the complete source graph.",
+      "originalBodySha256": "2c90f9c19f2ca81a022dcf4a2981974b9ec31262c520892c6b23fc93f0c850bf"
+    },
+    {
+      "symbol": "fn_0075d460",
+      "canonicalIdentity": {
+        "version": "update-content0",
+        "programId": "0004000e001acb00",
+        "module": "main",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7722080,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "src/native/wave053/entries.c",
+        "bytes": 1556,
+        "sha256": "752dd620a201f6fb5fc78e4f7ddeba65970c2b39e7ff417a14fdbc75805d660b"
+      },
+      "sourceName": "fn_0075d460",
+      "originalInstructionBytes": 1108,
+      "originalInstructionRanges": [
+        {
+          "start": 7722080,
+          "endExclusive": 7722872,
+          "bytes": 792
+        },
+        {
+          "start": 7722900,
+          "endExclusive": 7723216,
+          "bytes": 316
+        }
+      ],
+      "reportEntryBytes": 792,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "domain": "Exact frozen053 finite fixtures and explicit caller/FPU/unsafe-input exclusions; no universal or caller-reachability claim.",
+        "segmentCasesPerMethod": 576,
+        "floorBitPatterns": 0,
+        "allCanonicalInstructionPcsObserved": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sampled-key053-coordinator-91af291.json",
+          "bytes": 6947,
+          "sha256": "8ab9094cd3a5f5034e7b6ff1a6122a0dcddfd439300ec4cbe2e9971e2db002ab"
+        },
+        "originalInstructionPcs": 277,
+        "originalInstructionPcsVisited": 277,
+        "boundedNotUniversalEquivalence": true,
+        "actualWindowsAndHighAddressA64": true,
+        "originalRegisterReturnContractQualified": false,
+        "floatingPointStatusEquivalenceClaimed": false,
+        "selectorAndGameReachabilityQualified": false,
+        "animationIdentityQualified": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "normallyReturningWrongImplementations": 7,
+        "wrongSourceExecutions": 21,
+        "androidOsOrDeviceExecuted": false,
+        "confidenceJustification": "Medium: all canonical PCs visited in independently reproduced four-target finite fixtures and returning controls; original register-return ABI, FPU exception state, unsafe inputs, game/caller identity and universal equivalence remain unqualified."
+      },
+      "entrySourceArmFunction": {
+        "address": 9437232,
+        "bytes": 12,
+        "section": 1,
+        "sha256": "d4aebc229437fa0fcf1e265dd70c826c8c2fd3ec58fe104ca379ce214221b234",
+        "instructionAddresses": [
+          9437232,
+          9437236,
+          9437240
+        ]
+      },
+      "sourceDependencyClosure": "Shared ordinary C key decoder, search, boundary handling and coefficient construction; entry wrappers genuinely link the complete source graph.",
+      "originalBodySha256": "74445d9f4e71f568bde257d7d1c7718757003b4c27a0f020366bcc682ec7ac5a"
+    },
+    {
+      "symbol": "fn_0075d97c",
+      "canonicalIdentity": {
+        "version": "update-content0",
+        "programId": "0004000e001acb00",
+        "module": "main",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7723388,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "src/native/wave053/entries.c",
+        "bytes": 1556,
+        "sha256": "752dd620a201f6fb5fc78e4f7ddeba65970c2b39e7ff417a14fdbc75805d660b"
+      },
+      "sourceName": "fn_0075d97c",
+      "originalInstructionBytes": 1576,
+      "originalInstructionRanges": [
+        {
+          "start": 7723388,
+          "endExclusive": 7724288,
+          "bytes": 900
+        },
+        {
+          "start": 7724320,
+          "endExclusive": 7724996,
+          "bytes": 676
+        }
+      ],
+      "reportEntryBytes": 900,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "domain": "Exact frozen053 finite fixtures and explicit caller/FPU/unsafe-input exclusions; no universal or caller-reachability claim.",
+        "segmentCasesPerMethod": 576,
+        "floorBitPatterns": 0,
+        "allCanonicalInstructionPcsObserved": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sampled-key053-coordinator-91af291.json",
+          "bytes": 6947,
+          "sha256": "8ab9094cd3a5f5034e7b6ff1a6122a0dcddfd439300ec4cbe2e9971e2db002ab"
+        },
+        "originalInstructionPcs": 394,
+        "originalInstructionPcsVisited": 394,
+        "boundedNotUniversalEquivalence": true,
+        "actualWindowsAndHighAddressA64": true,
+        "originalRegisterReturnContractQualified": false,
+        "floatingPointStatusEquivalenceClaimed": false,
+        "selectorAndGameReachabilityQualified": false,
+        "animationIdentityQualified": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "normallyReturningWrongImplementations": 7,
+        "wrongSourceExecutions": 21,
+        "androidOsOrDeviceExecuted": false,
+        "confidenceJustification": "Medium: all canonical PCs visited in independently reproduced four-target finite fixtures and returning controls; original register-return ABI, FPU exception state, unsafe inputs, game/caller identity and universal equivalence remain unqualified."
+      },
+      "entrySourceArmFunction": {
+        "address": 9437244,
+        "bytes": 12,
+        "section": 1,
+        "sha256": "b894eccc4fa8fefc361decb86f71378df2562112b7e129a5a041d341266bbecc",
+        "instructionAddresses": [
+          9437244,
+          9437248,
+          9437252
+        ]
+      },
+      "sourceDependencyClosure": "Shared ordinary C key decoder, search, boundary handling and coefficient construction; entry wrappers genuinely link the complete source graph.",
+      "originalBodySha256": "98ab7969460476693f7354ac42281e951789e3abaa2321a66a07e9bed92c2d58"
+    },
+    {
+      "symbol": "fn_0075e094",
+      "canonicalIdentity": {
+        "version": "update-content0",
+        "programId": "0004000e001acb00",
+        "module": "main",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7725204,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "src/native/wave053/entries.c",
+        "bytes": 1556,
+        "sha256": "752dd620a201f6fb5fc78e4f7ddeba65970c2b39e7ff417a14fdbc75805d660b"
+      },
+      "sourceName": "fn_0075e094",
+      "originalInstructionBytes": 1540,
+      "originalInstructionRanges": [
+        {
+          "start": 7725204,
+          "endExclusive": 7726100,
+          "bytes": 896
+        },
+        {
+          "start": 7726132,
+          "endExclusive": 7726776,
+          "bytes": 644
+        }
+      ],
+      "reportEntryBytes": 896,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "domain": "Exact frozen053 finite fixtures and explicit caller/FPU/unsafe-input exclusions; no universal or caller-reachability claim.",
+        "segmentCasesPerMethod": 576,
+        "floorBitPatterns": 0,
+        "allCanonicalInstructionPcsObserved": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sampled-key053-coordinator-91af291.json",
+          "bytes": 6947,
+          "sha256": "8ab9094cd3a5f5034e7b6ff1a6122a0dcddfd439300ec4cbe2e9971e2db002ab"
+        },
+        "originalInstructionPcs": 385,
+        "originalInstructionPcsVisited": 385,
+        "boundedNotUniversalEquivalence": true,
+        "actualWindowsAndHighAddressA64": true,
+        "originalRegisterReturnContractQualified": false,
+        "floatingPointStatusEquivalenceClaimed": false,
+        "selectorAndGameReachabilityQualified": false,
+        "animationIdentityQualified": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "normallyReturningWrongImplementations": 7,
+        "wrongSourceExecutions": 21,
+        "androidOsOrDeviceExecuted": false,
+        "confidenceJustification": "Medium: all canonical PCs visited in independently reproduced four-target finite fixtures and returning controls; original register-return ABI, FPU exception state, unsafe inputs, game/caller identity and universal equivalence remain unqualified."
+      },
+      "entrySourceArmFunction": {
+        "address": 9437256,
+        "bytes": 12,
+        "section": 1,
+        "sha256": "8b15dc9fa1287fde6c5fd01135beecde8e50f4369c58af976e6d74c8695ef3fa",
+        "instructionAddresses": [
+          9437256,
+          9437260,
+          9437264
+        ]
+      },
+      "sourceDependencyClosure": "Shared ordinary C key decoder, search, boundary handling and coefficient construction; entry wrappers genuinely link the complete source graph.",
+      "originalBodySha256": "d9d730918eb384b90187e744bec7edf3bf633080518a3f0119d84037d1540458"
+    },
+    {
+      "symbol": "fn_0075e6bc",
+      "canonicalIdentity": {
+        "version": "update-content0",
+        "programId": "0004000e001acb00",
+        "module": "main",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7726780,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "src/native/wave053/entries.c",
+        "bytes": 1556,
+        "sha256": "752dd620a201f6fb5fc78e4f7ddeba65970c2b39e7ff417a14fdbc75805d660b"
+      },
+      "sourceName": "fn_0075e6bc",
+      "originalInstructionBytes": 1104,
+      "originalInstructionRanges": [
+        {
+          "start": 7726780,
+          "endExclusive": 7727568,
+          "bytes": 788
+        },
+        {
+          "start": 7727596,
+          "endExclusive": 7727912,
+          "bytes": 316
+        }
+      ],
+      "reportEntryBytes": 788,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "domain": "Exact frozen053 finite fixtures and explicit caller/FPU/unsafe-input exclusions; no universal or caller-reachability claim.",
+        "segmentCasesPerMethod": 576,
+        "floorBitPatterns": 0,
+        "allCanonicalInstructionPcsObserved": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sampled-key053-coordinator-91af291.json",
+          "bytes": 6947,
+          "sha256": "8ab9094cd3a5f5034e7b6ff1a6122a0dcddfd439300ec4cbe2e9971e2db002ab"
+        },
+        "originalInstructionPcs": 276,
+        "originalInstructionPcsVisited": 276,
+        "boundedNotUniversalEquivalence": true,
+        "actualWindowsAndHighAddressA64": true,
+        "originalRegisterReturnContractQualified": false,
+        "floatingPointStatusEquivalenceClaimed": false,
+        "selectorAndGameReachabilityQualified": false,
+        "animationIdentityQualified": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "normallyReturningWrongImplementations": 7,
+        "wrongSourceExecutions": 21,
+        "androidOsOrDeviceExecuted": false,
+        "confidenceJustification": "Medium: all canonical PCs visited in independently reproduced four-target finite fixtures and returning controls; original register-return ABI, FPU exception state, unsafe inputs, game/caller identity and universal equivalence remain unqualified."
+      },
+      "entrySourceArmFunction": {
+        "address": 9437268,
+        "bytes": 12,
+        "section": 1,
+        "sha256": "35058b9669ffdb2e9174f1941d70dafcf0e1ff6c2939b6d5648b652b55bf7e5e",
+        "instructionAddresses": [
+          9437268,
+          9437272,
+          9437276
+        ]
+      },
+      "sourceDependencyClosure": "Shared ordinary C key decoder, search, boundary handling and coefficient construction; entry wrappers genuinely link the complete source graph.",
+      "originalBodySha256": "d57ce6baea927cd40c9fefe6207dd1920a6000915bb1f9bb0c4113f902bdc751"
+    },
+    {
+      "symbol": "fn_006fa358",
+      "canonicalIdentity": {
+        "version": "update-content0",
+        "programId": "0004000e001acb00",
+        "module": "main",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7316312,
+        "mode": "ARM"
+      },
+      "source": {
+        "path": "src/native/wave053/floor.c",
+        "bytes": 781,
+        "sha256": "9f2a6f1eadde50f2ef0f162da1435d38f62f264001e09ddf2773750c99389029"
+      },
+      "sourceName": "fn_006fa358",
+      "originalInstructionBytes": 140,
+      "originalInstructionRanges": [
+        {
+          "start": 7316312,
+          "endExclusive": 7316452,
+          "bytes": 140
+        }
+      ],
+      "reportEntryBytes": 140,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "domain": "Exact frozen053 finite fixtures and explicit caller/FPU/unsafe-input exclusions; no universal or caller-reachability claim.",
+        "segmentCasesPerMethod": 0,
+        "floorBitPatterns": 3072,
+        "allCanonicalInstructionPcsObserved": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sampled-key053-coordinator-91af291.json",
+          "bytes": 6947,
+          "sha256": "8ab9094cd3a5f5034e7b6ff1a6122a0dcddfd439300ec4cbe2e9971e2db002ab"
+        },
+        "originalInstructionPcs": 35,
+        "originalInstructionPcsVisited": 35,
+        "boundedNotUniversalEquivalence": true,
+        "actualWindowsAndHighAddressA64": true,
+        "originalRegisterReturnContractQualified": false,
+        "floatingPointStatusEquivalenceClaimed": false,
+        "selectorAndGameReachabilityQualified": false,
+        "animationIdentityQualified": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "normallyReturningWrongImplementations": 7,
+        "wrongSourceExecutions": 21,
+        "androidOsOrDeviceExecuted": false,
+        "confidenceJustification": "Medium: all canonical PCs visited in independently reproduced four-target finite fixtures and returning controls; original register-return ABI, FPU exception state, unsafe inputs, game/caller identity and universal equivalence remain unqualified."
+      },
+      "entrySourceArmFunction": {
+        "address": 9437280,
+        "bytes": 128,
+        "section": 1,
+        "sha256": "6091b414375357f9704420e60472d969441c48d607e8be6a0a06fab8929062e1",
+        "instructionAddresses": [
+          9437280,
+          9437284,
+          9437288,
+          9437292,
+          9437296,
+          9437300,
+          9437304,
+          9437308,
+          9437312,
+          9437316,
+          9437320,
+          9437324,
+          9437328,
+          9437332,
+          9437336,
+          9437340,
+          9437344,
+          9437348,
+          9437352,
+          9437356,
+          9437360,
+          9437364,
+          9437368,
+          9437372,
+          9437376,
+          9437380,
+          9437384,
+          9437388,
+          9437392
+        ]
+      },
+      "sourceDependencyClosure": "Shared ordinary C key decoder, search, boundary handling and coefficient construction; entry wrappers genuinely link the complete source graph.",
+      "originalBodySha256": "d8a2ed98aa9d55093a2715197a5f80b8adaec4d685febcc0e427e4aeab125bc2"
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave053/sampled_key.h",
+      "bytes": 2638,
+      "sha256": "35c87e23135266ddf8ae31a89349a6c66182032a7901c7f234d6213eff22c491"
+    }
+  ],
+  "sourceDependencies": [
+    {
+      "path": "src/native/wave053/entries.c",
+      "bytes": 1556,
+      "sha256": "752dd620a201f6fb5fc78e4f7ddeba65970c2b39e7ff417a14fdbc75805d660b"
+    },
+    {
+      "path": "src/native/wave053/floor.c",
+      "bytes": 781,
+      "sha256": "9f2a6f1eadde50f2ef0f162da1435d38f62f264001e09ddf2773750c99389029"
+    },
+    {
+      "path": "src/native/wave053/key_records.c",
+      "bytes": 3360,
+      "sha256": "0d0ea58609e3e6a4c4b37ca88e3313761551948c45fa2a523550f027a10b8a3e"
+    },
+    {
+      "path": "src/native/wave053/layout.c",
+      "bytes": 939,
+      "sha256": "81a08c4844cebed052695f925851f425cbfc86c82441e3916917b71fe69a5686"
+    },
+    {
+      "path": "src/native/wave053/prepare.c",
+      "bytes": 6460,
+      "sha256": "957e3aff9f98bba0f3c82b92a87cee3d46d338f1a5643179b7909a5337944a56"
+    }
+  ],
+  "behaviorPacket": {
+    "path": "evidence/lanes/native-sampled-key053/stage-v1/packet.json",
+    "bytes": 405231,
+    "sha256": "26e525a1030bc2d0ba378fdddbea71e9bd58a1fc6c5ba6b6d5616d650e48905a"
+  },
+  "verification": {
+    "path": "evidence/lanes/native-sampled-key053/stage-v1/verification.json",
+    "bytes": 322,
+    "sha256": "52e339554783c364355689cd87e1709ee21f0023314fd63b428b8093849b0bfd"
+  },
+  "frozenCandidateManifest": {
+    "path": "evidence/lanes/native-sampled-key053/stage-v1/frozen-manifest.json",
+    "bytes": 5851,
+    "sha256": "eee8645c0f4edf8bdd439b17e26395986751af1083464300f7090be91161ae89"
+  },
+  "reviewScope": "No selector/game reachability, animation identity, arbitrary unsafe inputs, FPU exception-state, AndroidOS/device or whole-game credit.",
+  "independentCoordinatorReview": {
+    "path": "evidence/verification/sampled-key053-coordinator-91af291.json",
+    "bytes": 6947,
+    "sha256": "8ab9094cd3a5f5034e7b6ff1a6122a0dcddfd439300ec4cbe2e9971e2db002ab"
+  },
+  "independentCleanReplayClaimed": true,
+  "producer": {
+    "path": "evidence/verification/producers/review-sampled-key053-functional.py",
+    "bytes": 6125,
+    "sha256": "e91aa75f71e897dc75459e07d6f4b2c4625a0d1fb9ec58b441d902f7aaec8a46"
+  },
+  "sharedRegistryChanged": false
+}
