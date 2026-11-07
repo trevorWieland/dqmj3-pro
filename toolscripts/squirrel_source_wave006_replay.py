@@ -14,11 +14,14 @@ import squirrel_source_wave002 as prior
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def replay(output):
+def replay(output, report_path=None):
     output = output.resolve()
     if not output.is_relative_to((ROOT / 'work/squirrel-source-wave006').resolve()) or output.exists():
         raise ValueError('Copied replay requires a fresh path inside private wave006 work')
-    report_path = ROOT / 'evidence/lanes/squirrel-source-wave006/report.json'
+    public_report = ROOT / 'evidence/lanes/squirrel-source-wave006/report.json'
+    report_path = public_report if report_path is None else report_path.resolve()
+    if report_path != public_report and not report_path.is_relative_to((ROOT / 'work/squirrel-source-wave006').resolve()):
+        raise ValueError('Private checkpoint report escaped wave006 work')
     primary = json.loads(report_path.read_text())
     paths = {ROOT / row['path'] for group in ('sources', 'frozenDependencies', 'producer') for row in primary[group]}
     paths |= {ROOT / row['path'] for row in primary['toolchainRuntime']}
@@ -80,12 +83,15 @@ def replay(output):
                'androidArm64TranslationUnits': len(rebuilt['platform']['androidArm64Objects']),
                'wholeRootComplete': False, 'sourceCodeCreditGranted': 0, 'committedSourceReplay': False,
                'androidDeviceExecution': False, 'wholeGameBuild': False}
-    prior.save(ROOT / 'evidence/lanes/squirrel-source-wave006/verification.json', receipt)
+    prior.save(output / 'verification.json', receipt)
+    if report_path == public_report: prior.save(ROOT / 'evidence/lanes/squirrel-source-wave006/verification.json', receipt)
     return receipt
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--output', type=Path, required=True)
-    result = replay(parser.parse_args().output)
+    parser.add_argument('--report', type=Path)
+    args = parser.parse_args()
+    result = replay(args.output, args.report)
     print(json.dumps({key: result[key] for key in ('status', 'originalReturns', 'sourceReturns', 'testsPassed')}))

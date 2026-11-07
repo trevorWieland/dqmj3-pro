@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-committed-vm-and-record-mixed-integration",
+  "completeUnmodifiedVmBatchReplayPassed": false,
+  "independentVmRuntimeComponentPassed": true,
+  "correctedSourceIntegrationReplayPassed": true,
+  "vmSourceRevision": "6d80f2ce33a958e66c639d8661348066d70f46a9",
+  "integrationSourceRevision": "02eddfce7300eca7cf06c2f5942747a2c3464de7",
+  "vmReplay": {
+    "path": "evidence/verification/squirrel006-isolated-6d80f2c.json",
+    "sha256": "61044fedc983857ec2e076a405f715324a4ebe2cd7837371742b22833154e33d",
+    "bytes": 7583
+  },
+  "fixedIntegrationReplay": {
+    "path": "evidence/verification/bundle-isolated-02eddfc.json",
+    "sha256": "730e506ec2772fd97d72802af4302b3826c50067521194e22890d29c6ba77c35",
+    "bytes": 15147
+  },
+  "checkpoint": {
+    "path": "evidence/lanes/squirrel-source-wave006/checkpoint-legacy-rename-1001.json",
+    "sha256": "6d644ce54630ff425815980f3b94ad23438439304e691960ac986e93648e3398",
+    "bytes": 21444
+  },
+  "archivedExecutedDrivers": [
+    {
+      "path": "evidence/verification/producers/squirrel006-6d80f2c-replay.py",
+      "sha256": "aa5a104c2e52017f885fb4754452e61ba5fab710081d2ceb49f5fb15d69c43a5",
+      "bytes": 4353
+    },
+    {
+      "path": "evidence/verification/producers/records-mixed012-a0de34b-replay.py",
+      "sha256": "c0e9b3b51ed6ea0b9ef27fb820bbc6b0cf0d06171a85af8411d658593c99bece",
+      "bytes": 5210
+    },
+    {
+      "path": "evidence/verification/producers/records-mixed012-c2d5055-replay.py",
+      "sha256": "99c386a40122ca25d2b2f5841da1dd10ad2fd5f847772aad61744b168e1bb725",
+      "bytes": 5210
+    },
+    {
+      "path": "evidence/verification/producers/bundle-02eddfc-replay.py",
+      "sha256": "8edce6692458235883a67d75a7697e85203d4032042b5eeda020f7d651b49a5d",
+      "bytes": 5466
+    }
+  ],
+  "vmOriginalAndSourceReturns": 1001,
+  "vmReturningControlsRejected": 31,
+  "vmAllPrimaryFieldsIdenticalExceptCommandPaths": true,
+  "vmArmElfIdentical": true,
+  "vmWindowsExecutableIdentical": true,
+  "vmWindowsCases": 41,
+  "vmAndroidObjectsCompiled": 40,
+  "tests": 111,
+  "publicUnits": 157,
+  "publicCompilations": 451,
+  "components": [
+    {
+      "name": "record",
+      "publishedPacket": {
+        "path": "evidence/lanes/squirrel-reference-prefix012/record-report.json",
+        "sha256": "1e03f36e1712a3a90121a754b0aac8e598d4afeb5d0b27fe14c71a421c5d46a1",
+        "bytes": 14230
+      },
+      "independentPacket": {
+        "path": "work/clean-replay/bundle-02eddfc/work/squirrel-reference-prefix012/committed-records/report.json",
+        "sha256": "2ae58ab84712083ad0c63a3f8cca3d2caa93970e3d57220868763e0eea190b99",
+        "bytes": 1568199
+      },
+      "originalSourceWindowsReturns": 288,
+      "allArtifactsCasesAndControlsIdenticalExceptCommandPaths": true
+    },
+    {
+      "name": "mixed",
+      "publishedPacket": {
+        "path": "evidence/lanes/squirrel-reference-prefix012/mixed-report.json",
+        "sha256": "b6602769d11994ed8465c5b2e5fe5b5f9d5b9ab030d749415fed5c9f7ebcec95",
+        "bytes": 18713
+      },
+      "independentPacket": {
+        "path": "work/clean-replay/bundle-02eddfc/work/squirrel-reference-prefix012/committed-mixed/report.json",
+        "sha256": "32b21b2ad3956db675cc0a3a68c46d8b32421cd65bd8cb129294915e2c2c3aba",
+        "bytes": 217067
+      },
+      "originalSourceWindowsReturns": 12,
+      "allArtifactsCasesAndControlsIdenticalExceptCommandPaths": true
+    }
+  ],
+  "failedHeaderAttempt": {
+    "path": "evidence/verification/records-mixed012-isolated-a0de34b.json",
+    "sha256": "1d5fcb373722397eeeaaeeb3ce35cd885a5a629a63b8a51e23afbe5cb68c8fad",
+    "bytes": 8293
+  },
+  "failedHostFixturePlatformAttempt": {
+    "path": "evidence/verification/records-mixed012-isolated-c2d5055.json",
+    "sha256": "b9c715c615a20ec0c03366369f52d8e65d0c2af50484b5f6907d8cf625d4a5b9",
+    "bytes": 8293
+  },
+  "integrationFixesChangedGameC": false,
+  "originalCodeByteCreditGranted": 0,
+  "wholeVmGameOrAndroidDeviceClaimed": false,
+  "producer": {
+    "path": "evidence/verification/producers/review-vm-record-mixed.py",
+    "sha256": "cce3051af3b3c458786b246e99b7e4da97d966b7088ee480bcf1e17d34f0a1cf",
+    "bytes": 6234
+  }
+}
