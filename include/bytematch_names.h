@@ -86,3 +86,4 @@
 #define fn_0044c728 asset_dispose061
 #define fn_0044c72c asset_allocate061
 #define fn_0044c74c asset_status061
+#define fn_006fb25c state_apply_controller055

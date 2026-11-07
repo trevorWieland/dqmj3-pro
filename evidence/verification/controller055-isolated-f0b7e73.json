@@ -1,0 +1,716 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "sourceRevision": "f0b7e73f37393a576f20bdac45822a9fedf4e019",
+  "sourceArchiveSha256": "0eb6f170a9136e265288274c6699bc91f0fd27f24c4e83d2ee87754a17e237a2",
+  "replayRoot": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73",
+  "plan": {
+    "schemaVersion": 1,
+    "name": "controller055",
+    "producerSteps": [
+      {
+        "name": "controller055-prepare",
+        "args": [
+          "toolscripts/native_controller055_stage.py",
+          "prepare"
+        ],
+        "inputKinds": [
+          "code",
+          "exheader"
+        ]
+      },
+      {
+        "name": "controller055-positive",
+        "args": [
+          "toolscripts/native_controller055_stage.py",
+          "positive"
+        ],
+        "inputKinds": [
+          "code",
+          "exheader"
+        ]
+      },
+      {
+        "name": "controller055-controls",
+        "args": [
+          "toolscripts/native_controller055_stage.py",
+          "controls"
+        ],
+        "inputKinds": [
+          "code",
+          "exheader"
+        ]
+      },
+      {
+        "name": "controller055-copy",
+        "args": [
+          "toolscripts/native_controller055_stage.py",
+          "copy"
+        ],
+        "inputKinds": [
+          "code",
+          "exheader"
+        ]
+      },
+      {
+        "name": "controller055-repeat",
+        "args": [
+          "toolscripts/native_controller055_stage.py",
+          "repeat"
+        ],
+        "inputKinds": [
+          "code",
+          "exheader"
+        ]
+      },
+      {
+        "name": "controller055-copy-controls",
+        "args": [
+          "toolscripts/native_controller055_stage.py",
+          "copy-controls"
+        ],
+        "inputKinds": [
+          "code",
+          "exheader"
+        ]
+      },
+      {
+        "name": "controller055-padding",
+        "args": [
+          "toolscripts/native_controller055_stage.py",
+          "padding"
+        ],
+        "inputKinds": [
+          "code",
+          "exheader"
+        ]
+      },
+      {
+        "name": "controller055-verify",
+        "args": [
+          "toolscripts/native_controller055_stage.py",
+          "verify"
+        ],
+        "inputKinds": [
+          "code",
+          "exheader"
+        ]
+      },
+      {
+        "name": "controller055-checks",
+        "args": [
+          "toolscripts/native_controller055_stage.py",
+          "checks"
+        ],
+        "inputKinds": [
+          "code",
+          "exheader"
+        ]
+      }
+    ],
+    "tests": [
+      "native_controller055_stage",
+      "native_callback_inventory",
+      "compile_source_include_dirs"
+    ],
+    "packets": [
+      "work/controller055-public/v1/staged-inputs.json",
+      "work/controller055-public/v1/positive/run.log",
+      "work/controller055-public/v1/positive/public-input-guard.json",
+      "work/controller055-public/v1/controls/run.log",
+      "work/controller055-public/v1/controls/public-input-guard.json",
+      "work/controller055-public/v1/copy/run.log",
+      "work/controller055-public/v1/copy/public-input-guard.json",
+      "work/controller055-public/v1/repeat/run.log",
+      "work/controller055-public/v1/repeat/public-input-guard.json",
+      "work/controller055-public/v1/copy-controls/run.log",
+      "work/controller055-public/v1/copy-controls/public-input-guard.json",
+      "work/controller055-public/v1/padding/run.log",
+      "work/controller055-public/v1/padding/public-input-guard.json",
+      "work/controller055-public/v1/verify/run.log",
+      "work/controller055-public/v1/verify/public-input-guard.json",
+      "work/controller055-public/v1/checks/run.log",
+      "work/controller055-public/v1/checks/public-input-guard.json",
+      "work/native-state055/controller-v5/execution.json",
+      "work/native-state055/controller-v5/returning-controls.json",
+      "work/native-state055/controller-v5/source-copy.json",
+      "work/native-state055/controller-v5/caller-padding-audit.json",
+      "work/native-state055/controller-v5/replay-v1/execution.json",
+      "work/native-state055/controller-v5/replay-v1/returning-controls.json"
+    ],
+    "intakeCleanup": {
+      "mode": "code-exheader-only",
+      "producerInputs": [
+        "code",
+        "exheader"
+      ]
+    }
+  },
+  "planSha256": "47a22f61a825a9fb76ac2709572d90e3e212c9e47a526aee820cfaf086e58d46",
+  "replayDriverSha256": "fd91f0fe8756b643c903913b74d05ddc742eddc49c8a3b47d3c7e5be989e28de",
+  "nativeLibraries": [
+    {
+      "path": "tools/python/Lib/site-packages/capstone/lib/capstone.dll",
+      "size": 7576576,
+      "sha256": "76958e18380023a68fd1714fa2e01c594cc6db1955a07ad6937b66e66dc5d6c3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/lib/unicorn.dll",
+      "size": 9598976,
+      "sha256": "010d85dce84b8f6ffaec3d5420f1b5f7768f859eb831be574c7da23e656ee8f1"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/z3/lib/libz3.dll",
+      "size": 17490432,
+      "sha256": "b6a30c2922293c2a2cab4299637935302d8fb0427762b5a3d2dc16f392f27b8c"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5/cvc5_python_base.cp313-win_amd64.pyd",
+      "size": 1310720,
+      "sha256": "810e9b9f4a9df25e3edeb27b08a373a5a61169ed269f2ae40b9c8c0f9261730a"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5.libs/libc++-8a9deaac6d2f4d2de468a544d1f35cd0.dll",
+      "size": 1659392,
+      "sha256": "8a9deaac6d2f4d2de468a544d1f35cd0dd4bcde03cda3cfb76fb9674749828d4"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5.libs/libcvc5-b3ddd8d0b36e795253fd2e6698441eea.dll",
+      "size": 29992448,
+      "sha256": "6abfaabb88587f543e31c24d261246b4d5014fb7424e7efff54604f1b7f53cab"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5.libs/libcvc5parser-5a140a2cd1789e9177c20f9e46be8c97.dll",
+      "size": 912896,
+      "sha256": "f6756dfae9bd483bb425e8239ee52a932a1807a09add36e7b0db57e585287bf8"
+    }
+  ],
+  "freshEnvironment": true,
+  "sharedGeneratedOrWorkInputs": false,
+  "copiedToolAndWheelFiles": [
+    {
+      "path": "tools/clang-21/clang.exe",
+      "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+    },
+    {
+      "path": "tools/clang-21/ld.lld.exe",
+      "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3"
+    },
+    {
+      "path": "tools/clang-21/libwinpthread-1.dll",
+      "sha256": "c9019ab753c2faa5e5da94e3fd4395f1d3d0e7d2509f5ed2d96cccff7f8b9357"
+    },
+    {
+      "path": "tools/clang-21/libxml2.dll",
+      "sha256": "e15a377aa308e3f7ba948e6d6622a5dea2308256dbc65858074b61d867af6148"
+    },
+    {
+      "path": "tools/ctrtool-1.3.0/ctrtool.exe",
+      "sha256": "79021f283b2199950eb22cf3c459806b9c8aaaf68f65c80100107d3454a1c224"
+    },
+    {
+      "path": "tools/objdiff-3.8.3/objdiff-cli.exe",
+      "sha256": "dd12dfb5e9e94a7f6c949a37e1815963cf2cffe4c87b4999b7ebc8c15b398a1f"
+    },
+    {
+      "path": "tools/android-r30-minimal/provenance.json",
+      "sha256": "42a7f16caf038712bfa917dfe2adaad22dc7f6044c43e3d8094b3c70aba06e29"
+    },
+    {
+      "path": "tools/android-r30-minimal/source.properties",
+      "sha256": "e73b7dc557cea2da9212c09ee1795434957d62e63b7550eef69fd1887a355d94"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/crtbegin_dynamic.o",
+      "sha256": "9087e4b58fd8aadc225d062e8750260079fce2f0a3cd4d0b46b8c2440eedb03a"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/crtend_android.o",
+      "sha256": "47cb49c3d286915f19287b94a7242f668fe62d0b2ae7c4256c7203ba0d179427"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/libc.so",
+      "sha256": "29a129043e28ba808e3bd69750242d71241a3e05581809551f0e371f4894b687"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/libdl.so",
+      "sha256": "b9d8f21c840570a4fe41b5a24c37651d1980fcda7d323003afcbd8483d3da51a"
+    },
+    {
+      "path": "tools/wheels/capstone-5.0.9-py3-none-win_amd64.whl",
+      "sha256": "732cedbbb56d42e723f14d7af6387f1454194a820b4b96b56d1e53f865ef85d0"
+    },
+    {
+      "path": "tools/wheels/pycryptodomex-3.24.2-cp37-abi3-win_amd64.whl",
+      "sha256": "6e912e3a21061bf8f4ce89223cb46f5e98a6b32420d08d770605891a2be266c6"
+    },
+    {
+      "path": "tools/wheels/pyctr-0.7.6-py3-none-any.whl",
+      "sha256": "60fe1dfa2af9fc518a2e4b38e39f42e48eae1f27c594e677836fd04726bb2323"
+    },
+    {
+      "path": "tools/wheels/pyelftools-0.33-py3-none-any.whl",
+      "sha256": "f215ad5f47d3f1373a21496a6c9e0707c622840d0622f23ff7ce08678b020036"
+    },
+    {
+      "path": "tools/wheels/unicorn-2.1.4-cp37-abi3-win_amd64.whl",
+      "sha256": "d7107500c64ce5c168fbff6bef9485b5db1350050036f4cea568650cf8bdbdf5"
+    },
+    {
+      "path": "tools/wheels/z3_solver-5.3.3.0-py3-none-win_amd64.whl",
+      "sha256": "d189844a586242fe3d2a701c09751a80d518645931931a7c6bf29df679044215"
+    },
+    {
+      "path": "tools/wheels/cvc5-1.4.2-cp313-cp313-win_amd64.whl",
+      "sha256": "0ee0a51862d9e8ae8a38572909641a88cdf8d5e1640dee481b24289b6811b9da"
+    },
+    {
+      "path": "inputs/archive/dqmj3pro/DQMJ3P.cia",
+      "sha256": "864d1c35ba6908bed94d9c5f09a148b3355c41794f1d126086dafe1876665f47"
+    },
+    {
+      "path": "inputs/archive/dqmj3pro/DQMJ3P_Update.cia",
+      "sha256": "e19f07d67165bf5bf5c3c226064433cf2e36e2cc489742c69b0c2efa28447c55"
+    }
+  ],
+  "steps": [
+    {
+      "name": "offline-dependencies",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\wheels\\capstone-5.0.9-py3-none-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\wheels\\pycryptodomex-3.24.2-cp37-abi3-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\wheels\\pyctr-0.7.6-py3-none-any.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\wheels\\pyelftools-0.33-py3-none-any.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\wheels\\unicorn-2.1.4-cp37-abi3-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\wheels\\z3_solver-5.3.3.0-py3-none-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\wheels\\cvc5-1.4.2-cp313-cp313-win_amd64.whl"
+      ],
+      "returncode": 0,
+      "log": "offline-dependencies.log",
+      "logSha256": "fe39035a0e22588053e35a653d2a145405f0cb03302e900570430d69f821953f"
+    },
+    {
+      "name": "fresh-original-intake",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "-c",
+        "import sys;from pathlib import Path;sys.path.insert(0,\"toolscripts\");import ci_native_build as ci;ci.extract_inputs(Path.cwd(),Path(\"work/component-intake\"))"
+      ],
+      "returncode": 0,
+      "log": "fresh-original-intake.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "controller055-prepare",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/native_controller055_stage.py",
+        "prepare"
+      ],
+      "returncode": 0,
+      "log": "controller055-prepare.log",
+      "logSha256": "538dce2571c5748f3f30b5de94f56afc9f010d5ae2a503ec71dbb550f0b92dc4"
+    },
+    {
+      "name": "controller055-positive",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/native_controller055_stage.py",
+        "positive"
+      ],
+      "returncode": 0,
+      "log": "controller055-positive.log",
+      "logSha256": "f8d7f0c20fd01509e091740948c9e4e2ef6ebed7131cee6fc2d623db737b6edc"
+    },
+    {
+      "name": "controller055-controls",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/native_controller055_stage.py",
+        "controls"
+      ],
+      "returncode": 0,
+      "log": "controller055-controls.log",
+      "logSha256": "f498b54b5a4fbbc0496632adb405c7477ed9ac64750b346ff4d47812135dd614"
+    },
+    {
+      "name": "controller055-copy",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/native_controller055_stage.py",
+        "copy"
+      ],
+      "returncode": 0,
+      "log": "controller055-copy.log",
+      "logSha256": "f20fe7d2ebcf835885a363917741081df58c781253237a8e1436cbdfa5f4d6dc"
+    },
+    {
+      "name": "controller055-repeat",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/native_controller055_stage.py",
+        "repeat"
+      ],
+      "returncode": 0,
+      "log": "controller055-repeat.log",
+      "logSha256": "a7c534656adacf1437c5fea274d32f3e321c5f43946cb95dd0d88ce09bee7626"
+    },
+    {
+      "name": "controller055-copy-controls",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/native_controller055_stage.py",
+        "copy-controls"
+      ],
+      "returncode": 0,
+      "log": "controller055-copy-controls.log",
+      "logSha256": "ea7ee52ece1a95a88b679d4fcd9bfee935380de5aa6dc60656b2a19a70a8f47e"
+    },
+    {
+      "name": "controller055-padding",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/native_controller055_stage.py",
+        "padding"
+      ],
+      "returncode": 0,
+      "log": "controller055-padding.log",
+      "logSha256": "9014fd48564c92f8486b117c0d899b18515c6bdb53cc579bba1326fe9b3a6dff"
+    },
+    {
+      "name": "controller055-verify",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/native_controller055_stage.py",
+        "verify"
+      ],
+      "returncode": 0,
+      "log": "controller055-verify.log",
+      "logSha256": "461ac239d74544a29fed19fca66dbe439436161a7bb057e220a6a619147206bb"
+    },
+    {
+      "name": "controller055-checks",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/native_controller055_stage.py",
+        "checks"
+      ],
+      "returncode": 0,
+      "log": "controller055-checks.log",
+      "logSha256": "018eccbd61f3343f9db8a95597598ab36287c9c4d982950ebb0df2fecbc4342e"
+    },
+    {
+      "name": "public-compilation",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/compile_sources.py",
+        "--output",
+        "work/source-compile-ci/committed-replay"
+      ],
+      "returncode": 0,
+      "log": "public-compilation.log",
+      "logSha256": "cf5dbaee45a34675b08ad4d115226bdb54ed02e5a1a21675b8788f253b51b1f9"
+    },
+    {
+      "name": "native_controller055_stage-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_native_controller055_stage.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "native_controller055_stage-tests.log",
+      "logSha256": "872da55ba73852160047f1859989b4b231a397a30f71b81998dec5494ef0c80f"
+    },
+    {
+      "name": "native_callback_inventory-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_native_callback_inventory.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "native_callback_inventory-tests.log",
+      "logSha256": "a0e2a496437ae719433e6ee2fdf2ef20d1a0c5605190f3277d64df3ce3ac8467"
+    },
+    {
+      "name": "compile_source_include_dirs-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_compile_source_include_dirs.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "compile_source_include_dirs-tests.log",
+      "logSha256": "05f208b880bb623d5a545f0396af75e4ca93891fd8694c99aaa5a54d664a9180"
+    },
+    {
+      "name": "compile_sources-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_compile_sources.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "compile_sources-tests.log",
+      "logSha256": "d0e12e2fff732f8798c31ed4ee3c9c4be9d2aa6871b384863c49b39198d03fce"
+    },
+    {
+      "name": "functional_report-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_functional_report.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "functional_report-tests.log",
+      "logSha256": "220681e55e7d1599991b6eab9a4433fc673341a31d788d5d273aa4d307446caa"
+    },
+    {
+      "name": "native_census_overlay-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_native_census_overlay.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "native_census_overlay-tests.log",
+      "logSha256": "895e6186d225c94e499d176a79094e17b0a77254191f2a235073731e0ef7d0b5"
+    },
+    {
+      "name": "reporting-objects",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/objdiff_objects.py"
+      ],
+      "returncode": 0,
+      "log": "reporting-objects.log",
+      "logSha256": "b80ae9f20769decd51750b6f7768656a1256faddb79ee4a59c68ab4b5ac21a05"
+    },
+    {
+      "name": "report-configuration",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/configure_objdiff.py",
+        "--version",
+        "update-content0",
+        "--output",
+        "objdiff.json"
+      ],
+      "returncode": 0,
+      "log": "report-configuration.log",
+      "logSha256": "5b4ee49079572b96586a596615a0c3e75fc3380b36527e6aeb49778895dc52d5"
+    },
+    {
+      "name": "stock-report",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\objdiff-3.8.3\\objdiff-cli.exe",
+        "report",
+        "generate",
+        "-o",
+        "build/update-content0/report.raw.json"
+      ],
+      "returncode": 0,
+      "log": "stock-report.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "normalized-report",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/finalize_objdiff_report.py",
+        "--input",
+        "build/update-content0/report.raw.json"
+      ],
+      "returncode": 0,
+      "log": "normalized-report.log",
+      "logSha256": "5f23f6aa90230843323f1aa0e6d95144e520bd80dff3144e66cee08cd6f708e0"
+    },
+    {
+      "name": "functional-companion",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\controller055-f0b7e73\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/functional_report.py"
+      ],
+      "returncode": 0,
+      "log": "functional-companion.log",
+      "logSha256": "54eb3383849060239e91a0168021a5eaede84070ddfd5b9343da12a8cd778864"
+    }
+  ],
+  "sourceAdmissionGranted": false,
+  "wholeGameClaimed": false,
+  "intakeCleanupReceipt": {
+    "path": "intake-cleanup.json",
+    "bytes": 3812,
+    "sha256": "0a81239ce70490dd837191440506309c723070646c3a94adb0ec7e5ab942ce4b"
+  },
+  "packets": [
+    {
+      "path": "work/controller055-public/v1/staged-inputs.json",
+      "sha256": "df99d2a3868ebd36256395f075e6976ca35694b4b24d6c6a8a7f79859dedb8ae",
+      "bytes": 28627
+    },
+    {
+      "path": "work/controller055-public/v1/positive/run.log",
+      "sha256": "66859de99e774cd7ce766ab9f78fc908b7cd907c4c75607daaa8a888e46bee90",
+      "bytes": 836
+    },
+    {
+      "path": "work/controller055-public/v1/positive/public-input-guard.json",
+      "sha256": "50852be220e19f257fdafc0e15925ce541ca31a22e326603d6bb08c27ee7b146",
+      "bytes": 28726
+    },
+    {
+      "path": "work/controller055-public/v1/controls/run.log",
+      "sha256": "feea4edac6a6384063460dd574feee85fd4b90dd7c260ddd72d57d3c4e10b04d",
+      "bytes": 3631
+    },
+    {
+      "path": "work/controller055-public/v1/controls/public-input-guard.json",
+      "sha256": "50852be220e19f257fdafc0e15925ce541ca31a22e326603d6bb08c27ee7b146",
+      "bytes": 28726
+    },
+    {
+      "path": "work/controller055-public/v1/copy/run.log",
+      "sha256": "0d955a87c766cad4a0c9ff48e1a9bf26d2a3723d54da820b8dd5ecc4ac0a11bd",
+      "bytes": 204
+    },
+    {
+      "path": "work/controller055-public/v1/copy/public-input-guard.json",
+      "sha256": "50852be220e19f257fdafc0e15925ce541ca31a22e326603d6bb08c27ee7b146",
+      "bytes": 28726
+    },
+    {
+      "path": "work/controller055-public/v1/repeat/run.log",
+      "sha256": "ff01968776a82af43eb7dfef32af328f559c269874d345ddea11a1977666e7a8",
+      "bytes": 866
+    },
+    {
+      "path": "work/controller055-public/v1/repeat/public-input-guard.json",
+      "sha256": "50852be220e19f257fdafc0e15925ce541ca31a22e326603d6bb08c27ee7b146",
+      "bytes": 28726
+    },
+    {
+      "path": "work/controller055-public/v1/copy-controls/run.log",
+      "sha256": "968f76e2710f2ae5a5e8b1cc490f7083b961298086bf16b20f8dd011628b6478",
+      "bytes": 3741
+    },
+    {
+      "path": "work/controller055-public/v1/copy-controls/public-input-guard.json",
+      "sha256": "50852be220e19f257fdafc0e15925ce541ca31a22e326603d6bb08c27ee7b146",
+      "bytes": 28726
+    },
+    {
+      "path": "work/controller055-public/v1/padding/run.log",
+      "sha256": "58d36915daa3eebc9e832dcaf85d0f658013c9a6438ad692b1c36fd81b74d76f",
+      "bytes": 224
+    },
+    {
+      "path": "work/controller055-public/v1/padding/public-input-guard.json",
+      "sha256": "50852be220e19f257fdafc0e15925ce541ca31a22e326603d6bb08c27ee7b146",
+      "bytes": 28726
+    },
+    {
+      "path": "work/controller055-public/v1/verify/run.log",
+      "sha256": "486543c1dc47d0e5380cbe3fee63bd176dd092b36fe44c9c8a40a19a4a6ec0fb",
+      "bytes": 126
+    },
+    {
+      "path": "work/controller055-public/v1/verify/public-input-guard.json",
+      "sha256": "50852be220e19f257fdafc0e15925ce541ca31a22e326603d6bb08c27ee7b146",
+      "bytes": 28726
+    },
+    {
+      "path": "work/controller055-public/v1/checks/run.log",
+      "sha256": "c636ff76c8f3743ca21a2d9a0aff5969b29dc6f0aac0797bf46a3528c6c06994",
+      "bytes": 1884
+    },
+    {
+      "path": "work/controller055-public/v1/checks/public-input-guard.json",
+      "sha256": "50852be220e19f257fdafc0e15925ce541ca31a22e326603d6bb08c27ee7b146",
+      "bytes": 28726
+    },
+    {
+      "path": "work/native-state055/controller-v5/execution.json",
+      "sha256": "80e7127967fce2cc6b17943d68e4d3882b2076127c76bf7a6d80a97f17e4b795",
+      "bytes": 26174118
+    },
+    {
+      "path": "work/native-state055/controller-v5/returning-controls.json",
+      "sha256": "29d4ce9452e095de131af3da1e7ecff5add68c2003b30a41cf5fd0d0c0ac1f74",
+      "bytes": 927820
+    },
+    {
+      "path": "work/native-state055/controller-v5/source-copy.json",
+      "sha256": "cb1290bf2d81c9c34c1088d932e3ddf6507e714723fe4d7ae7745773dcaba37b",
+      "bytes": 16286
+    },
+    {
+      "path": "work/native-state055/controller-v5/caller-padding-audit.json",
+      "sha256": "516d708a9ad7725c6dd2a1a9493931977fa17d1440a307d28438615cca0804d9",
+      "bytes": 1896652
+    },
+    {
+      "path": "work/native-state055/controller-v5/replay-v1/execution.json",
+      "sha256": "1bdb2fb75863c00947794b63e3d5d164e0b3b42e00aa1cee372ddab8e56a9894",
+      "bytes": 26174780
+    },
+    {
+      "path": "work/native-state055/controller-v5/replay-v1/returning-controls.json",
+      "sha256": "5854feb5a045d9629d7f0bd83a6ca67c9b8b4c9092350ac21d407166a2ed7f93",
+      "bytes": 928370
+    },
+    {
+      "path": "build/update-content0/report.json",
+      "sha256": "a91971ab69ab42e39b09f7138a49856070534ce0287b1bdf62665a7b59b4ad0b",
+      "bytes": 2741528
+    },
+    {
+      "path": "build/update-content0/functional.json",
+      "sha256": "e709587eef1a8592658527f204484e4a261fd3f1f34bf6a3891639d39b5b88c6",
+      "bytes": 27436
+    }
+  ]
+}
