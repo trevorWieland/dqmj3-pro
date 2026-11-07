@@ -54,7 +54,7 @@ class CompileSourcesTests(unittest.TestCase):
 
     def test_actual_source_census_and_historical_abi_exclusion(self):
         config = BUILD.read_config(ROOT)
-        self.assertEqual(len(config["units"]), 62)
+        self.assertEqual(len(config["units"]), 83)
         excluded = config["excludedSources"]
         self.assertEqual([item["source"] for item in excluded], ["src/native/wave003/setters.c"])
         self.assertIs(excluded[0]["activeLinking"], False)
@@ -130,7 +130,7 @@ class CompileSourcesTests(unittest.TestCase):
 
     def test_component_census_and_platform_restrictions_are_explicit(self):
         config = BUILD.read_config(ROOT)
-        expected = {f"source/squirrel-wave{wave:03d}" for wave in range(2, 6)}
+        expected = {f"source/squirrel-wave{wave:03d}" for wave in range(2, 7)}
         self.assertEqual(set(config["componentRoots"]), expected)
         restricted = [unit for unit in config["units"] if "targets" in unit]
         self.assertEqual({unit["source"] for unit in restricted},
