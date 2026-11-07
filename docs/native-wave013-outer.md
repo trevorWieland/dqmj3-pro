@@ -1,0 +1,33 @@
+The outer batch closes the original 484-byte caller at 0x004c3c20 and four remaining arena/zero-fill dependencies, 684 instruction bytes in total. It connects actual pattern input and candidate strings to the frozen tokenizer, literal fast path, NFA/DFA compiler and matcher. Source execution contains 124 canonical functions and ordinary typed C helpers, with no original executable helpers, register interpreter, output patches or retained-code source credit.
+
+The original caller allocates a local arena, builds its initial objects in 8 logical slots, tokenizes the input, probes the literal path, otherwise builds/compiles the NFA, and updates candidate flag words. Initial logical requests remain lexer 2, literal matcher 1, NFA builder 2, compiler context 2 and cursor 1. Target slots are 16 bytes; native physical slots are 32 bytes. The raw bitmap/header remains 3,072 bytes, and storage starts at offset 0xc00 in both layouts. This raw clearing operation must not be scaled by native pointer width.
+
+The source canonical function retains its local arena. Its complete control body is an ordinary shared C helper. `pattern_process_candidates` also accepts a caller-owned arena, so native full-graph observation has an independently known live owner address. This API provides the same flag-processing behavior with a distinct allocator-owner lifetime. Both APIs borrow the rule prefix, pattern, candidate strings, flag array and scratch memory. Flag words are the persistent output. The scratch graph is private working storage, not a public persistent graph handle; keeping an arena alive does not by itself extend every borrowed string or graph lifetime. A new invocation resets the arena/graph.
+
+Four observation modes are kept separate:
+
+- Original and canonical source ARM execute the complete outer function. The observer captures exactly one aligned arena address at the real constructor entry and translates it only in measured typed scratch-owner fields. It compares pointer representations without dereferencing an expired arena object.
+- Portable source ARM executes the same complete helper with a known caller-owned arena, comparing the full fixture.
+- Actual Windows 64 execution of that helper compares the full translated fixture with the independently supplied live arena address. Every original typed write, the bitmap/cursor, flags, live graph fields, unused storage, padding and guards remain checked.
+- Actual canonical Windows execution compares flag outputs, immutable inputs and outer guards. It makes no canonical Windows owner-pointer identity or scratch-graph proof claim.
+
+The distinction has a genuine returning control. Shifting only the lexer owner by one pointer width leaves flag outputs unchanged. Canonical source ARM rejects it using the independent constructor trace, and the Windows caller-owned API rejects it using the supplied arena address. The canonical Windows flags-only observation passes it, demonstrating its weaker scope. No identity is inferred from lexer.arena and then treated as an independent expected value.
+
+Canonical allocator owners expire at return. The measured caller 0x004c4104 consumes flag outputs and invokes the outer function for further pattern lines; it does not receive a graph handle from this call. Unknown indirect callers and later use of the canonical scratch graph are not qualified. The incidental original R0 value points into the private stack and is ignored by that observed caller, so the source canonical API returns void. The separate zero-fill functions retain their measured destination-end pointer returns.
+
+The borrowed rule prefix describes only measured layout: raw bit byte at offset 27 and scratch pointer at 32, target prefix 36 bytes/native 40 bytes. It is not the complete game class. The machine reads an unsigned byte for the register shift; the source signed-byte representation uses a bounds predicate whose mask behavior is checked for all 256 representations. It does not establish historical field signedness. Valid indices 0 through 31 select an unsigned 32-bit flag; all other byte representations yield zero without a wrapping C shift. Matching still runs in those cases as in the original.
+
+The unaligned zero-entry function at 0x00158f6c branches into 0x00301f54, inside the complete seeded aligned-zero function 0x00301f50. This shared tail is a genuine C dependency, not another invented function, and its bytes are accounted once. Direct zero fixtures cover small/multiword counts and all four initial alignments. Arena constructor/initializer fixtures also cover their complete bodies. The original readonly empty UTF16 string is represented by an ordinary two-byte C constant with zero recovered-source data credit.
+
+The sealed packet records 410 fixture cases: 314 whole outer invocations and 96 direct boundary cases, plus 64 flag/return combinations and eight normally returning semantic controls. The fixture set covers literal and compiled matching, Unicode case groups, malformed lexical/parser inputs, no candidates, preset flags, every raw bit byte and zero-fill boundaries. All 171 original instructions are reached. The 20-byte arena constructor is a complete exact object/linked-span candidate, excluded from the four-function 664-byte non-exact proposal. These candidates remain unadmitted by this worker; no universal equivalence or source admission is granted. The 20-field ABI probe checks the pointer layouts and unchanged logical budgets. The Android API 29 component links with 16-KiB load alignment; it is not Android device execution or a native game.
+
+Temporary retired link observations retain the strict complete-field guard from the DFA contract. They do not authorize arbitrary private-pointer exclusions. Source output is never patched. Owner-derived Unicode arrays remain typed non-executable services, with zero source-byte credit and no established public Unicode version. Corrupted pointers/owners, arbitrary aliases, concurrency, MMIO and persistent use of canonical scratch graphs remain outside this bounded contract.
+
+Reproduce using project-local tools:
+
+```
+tools/python/Scripts/python.exe toolscripts/native_wave013_outer.py
+tools/python/Scripts/python.exe toolscripts/native_wave013_outer_verify.py
+```
+
+The first command compiles genuine objects, links the full source graph, executes all four modes and controls, and freezes the packet. The second checks its pins and dedicated tests. Original images, extracted tables, disassembly and raw fixture buffers remain private under ignored paths. This worker changes no shared registry, denominator, CI or acceptance ledger.

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "status": "packet-and-current-inputs-verified",
+  "packet": {
+    "path": "evidence/lanes/wave013-native/outer/packet.json",
+    "sha256": "3be8cb3411429a14d41689e84cbf7e18ab2ef9e21abe03cda174eb47bf516643",
+    "bytes": 1710412
+  },
+  "producer": {
+    "path": "toolscripts/native_wave013_outer_verify.py",
+    "sha256": "7ba70ec6bcb4b5e459dcbd3c54d6526f721592b41f27aa2077675588d3f617ee",
+    "bytes": 3368
+  },
+  "checkedPinsAndArtifacts": 109,
+  "newFunctions": 5,
+  "originalInstructionBytes": 684,
+  "acceptedSourceCreditGranted": 0,
+  "independentCleanReplayClaimed": false,
+  "testCommand": [
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\python\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_native_wave013_outer.py",
+    "-v"
+  ],
+  "testExitCode": 0,
+  "testSource": {
+    "path": "tests/test_native_wave013_outer.py",
+    "sha256": "689b496bd41d8a97420390b71608bd5da928099eab918ebc6535e275e76e9c39",
+    "bytes": 7789
+  },
+  "testCount": 16,
+  "privateTestLog": {
+    "path": "work/wave013-native/outer-sealed/verification-tests.private.log",
+    "sha256": "14bf1321644048e317760746c0defef62f15275750d501af36adeb2bee199a36",
+    "bytes": 2637
+  }
+}

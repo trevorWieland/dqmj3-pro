@@ -1,0 +1,20 @@
+def mutations():
+    return [
+        ('shifted-scratch-owner','pattern_outer.c','    int literal_mode =',
+         '    lexer->arena = (FixedArena *)((unsigned char *)arena + sizeof(void *));\n    int literal_mode =',
+         {'pattern':'a','candidates':['a','b']}),
+        ('preset-flag-condition-inverted','pattern_outer.c','(flags[index] & mask) == 0','(flags[index] & mask) != 0',
+         {'pattern':'a','candidates':['a','b']}),
+        ('supported-nonmatch-treated-as-match','pattern_outer.c','fn_004c0060(literal, lexer, candidates[index]) == 1',
+         'fn_004c0060(literal, lexer, candidates[index]) != 0',{'pattern':'a','candidates':['b']}),
+        ('compiler-success-discarded','pattern_outer.c','if (!fn_004c2a00','if (fn_004c2a00',
+         {'pattern':'[a-z]','candidates':['a']}),
+        ('last-candidate-skipped','pattern_outer.c','index < count','index + 1 < count',
+         {'pattern':'a','candidates':['a']}),
+        ('invalid-bit-shift-wrapped','pattern_outer.c',
+         'rule->bit_index >= 0 && rule->bit_index < 32 ? 1u << rule->bit_index : 0',
+         '1u << ((unsigned int)rule->bit_index & 31)',{'pattern':'a','candidates':['a'],'bit_index':32}),
+        ('arena-constructor-cursor-nonzero','outer_arena.c','arena->next = 0;','arena->next = 1;',
+         {'leaf':'arena-constructor'}),
+        ('aligned-zero-leaves-last-byte','outer_arena.c','while (bytes != 0) {','while (bytes > 1) {',
+         {'leaf':'zero-aligned','bytes':33})]
