@@ -1,0 +1,68 @@
+{
+  "status": "complete-readable-caller-draft-not-linked-or-qualified",
+  "canonicalOwner": 2431568,
+  "canonicalInstructionBytes": 1628,
+  "source": [
+    "source/resource062.c",
+    "source/headers062.c",
+    "source/resource062.h"
+  ],
+  "wholeOwnerClaim": false,
+  "unresolvedProductionFunctions": [
+    "resource_linked_mode062",
+    "resource_channel_ready062",
+    "resource_manager_matches062",
+    "resource_manager_record062",
+    "resource_manager_post_word062",
+    "resource_manager_post_block062",
+    "resource_header_lookup062",
+    "resource_current_header062",
+    "resource_queue_header062",
+    "resource_seed062",
+    "resource_populate_prepared062",
+    "resource_snapshot062",
+    "resource_allocate062",
+    "resource_release062",
+    "resource_compress062"
+  ],
+  "portableMetadataTailPolicy": "Defined zero tail, actual original saved-register leak retained separately; no universal raw-packet equivalence claim.",
+  "predecessorsModified": false,
+  "definedMemorySuccessorNotes": [
+    "Caller block is deterministically zero-initialized: original exhausted packet slicer leaves its local128 bytes inactive; actual receiver exhausted path does not read them. Raw original caller packet evidence is still required and no whole-owner equivalence is claimed.",
+    "Metadata padding and saved-register tail differences remain explicit, including NULL lookup/inactive-record domains."
+  ],
+  "remainingUnimplementedProviders": [
+    "resource_linked_mode062",
+    "resource_channel_ready062",
+    "resource_header_lookup062",
+    "resource_current_header062",
+    "resource_environment_heap062",
+    "resource_populate_prepared062",
+    "resource_snapshot062",
+    "resource_allocate062",
+    "resource_release062",
+    "resource_compress062"
+  ],
+  "typedPartialStorageLimits": "Measured slot header owns a vtable pointer: target140/native144. Binding contains actual pointer-vector fields before enabled target17/native33. Live062 types are corrected from earlier bounded raw-storage views before any actual caller qualification. Full manager registration/constructor/lifetime and other virtual methods remain unqualified; fixture_manager_methods062 permits only genuine request query.",
+  "implementedButNotYetWholeCallerQualified": [
+    "resource_manager_matches062 (enabled callback provider stillunrecovered)",
+    "resource_manager_record062",
+    "resource_manager_post_word062",
+    "resource_manager_post_block062",
+    "resource_queue_header062",
+    "resource_record_append062",
+    "resource_packet_slice062",
+    "resource_packet_receive062",
+    "resource_metadata_receive062"
+  ],
+  "runtimeProofs": [
+    "first-packet-proof.json",
+    "records-proof.json",
+    "metadata-stack-review.json"
+  ],
+  "qualifiedResourceLifetimeProviders": [
+    "resource_initialize062",
+    "resource_destroy062",
+    "resource_snapshot_initialize062"
+  ]
+}

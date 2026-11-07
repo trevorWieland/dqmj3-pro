@@ -1,0 +1,33 @@
+{
+  "attempts": [
+    {
+      "stage": "first-helper-original-call",
+      "status": "reference-ABI-fault-retained",
+      "reason": "Original slicer third argument is a cursor pointer; the first authored signature/harness supplied a scalar. Original unmapped read failed before any comparison. Corrected live062 ABI to const Signed062* for both slicers; no predecessor edits or masked control."
+    },
+    {
+      "stage": "first-own-vector-heap-provisioning",
+      "status": "missing-allocator-enable-initialization-contract",
+      "retainedFailure": "vector-second-reference-failure.json",
+      "reason": "The original allocator checks SDK byte89a508; omitted from the first062 provisioner, allocation returnedNULL and original bad_alloc/TLS path faulted. Frozen058 setup already qualifies enable=1. Corrected only062 environment setup; no original code, callback results or predecessors patched."
+    },
+    {
+      "stage": "typed-byvalue-command-wrapper-first-link",
+      "status": "missing-compiler-runtime-services",
+      "retainedLog": "reproduced-runtime-link-failure/link.json",
+      "reason": "Clang emits __aeabi_memcpy/__aeabi_memclr8 for ordinary byvalue240-byte arguments and deterministic record initialization. Added explicit authored compiler-runtime support with zero original-source credit; no original callback/result substitution.",
+      "provenance": "Initial tool output observed the failure; this saved log independently reproduces it against current byte-bound objects, rather than claiming the overwritten initial scratch log survived."
+    },
+    {
+      "stage": "cross-layout-second-sink-hash",
+      "status": "raw-models-passed-representation-mask-failed",
+      "retainedFailure": "records-normalization-failure.json",
+      "reason": "Second vector is target+60/native+72. Every raw arena already exactly matched its independent target-specific model, but one common untyped hash zeroed each vector at different offsets. Canonicalized the full declared96-byte sink representation for that auxiliary hash; full raw per-profile models remain exact and unchanged."
+    },
+    {
+      "stage": "unqualified-controller-snapshot-offset-review",
+      "status": "arithmetic-error-in-compile-only-draft-corrected-before-execution",
+      "reason": "Original2400+3d8=27d8, so prepared+8d8/2264. Rejected old1240 offset. Existing guarded helper behavior and all frozen predecessors unchanged; no owner execution/admission was claimed."
+    }
+  ]
+}

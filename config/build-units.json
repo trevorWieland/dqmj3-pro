@@ -29,7 +29,8 @@
       "wave055",
       "wave058",
       "wave059",
-      "wave061"
+      "wave061",
+      "wave062"
     ]
   },
   "units": [
@@ -10006,6 +10007,48 @@
       "includeDirectories": [
         "src/native/wave055/controller-deps-v1",
         "src/native/wave055"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062/commands062.c",
+      "headers": [
+        "src/native/wave062/packets062.h",
+        "src/native/wave062/record_provider062.h",
+        "src/native/wave062/records062.h",
+        "src/native/wave062/resource062.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062/lifetime062.c",
+      "headers": [
+        "src/native/wave062/packets062.h",
+        "src/native/wave062/records062.h",
+        "src/native/wave062/resource062.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062/packets062.c",
+      "headers": [
+        "src/native/wave062/packets062.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062/random062.c",
+      "headers": [
+        "src/native/wave062/packets062.h",
+        "src/native/wave062/random062.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062/records062.c",
+      "headers": [
+        "src/native/wave062/packets062.h",
+        "src/native/wave062/records062.h"
       ],
       "role": "bounded-component"
     }
