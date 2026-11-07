@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-independent-crc054-canonical-little-endian-domain",
+  "sourceRevision": "4346b3060699d96f611c1810a59bd7121c9232bc",
+  "rawReplay": {
+    "path": "evidence/verification/crc054-isolated-4346b30.json",
+    "bytes": 17500,
+    "sha256": "e45f775894c97e0f0821029193d8cf0b00e67414cc852affd7af34e5280c3a6b"
+  },
+  "ready": {
+    "path": "evidence/lanes/crc054/ready.json",
+    "bytes": 5542,
+    "sha256": "2a2f42ac3df9d7a0ae8c276dd29ecc6ae247a710377d06da5cb1b19ba0e6506e"
+  },
+  "primaryReport": {
+    "path": "work/crc054/final/report.json",
+    "bytes": 1311380,
+    "sha256": "494abf726c8b748d95973fdafa847984759cdea6af93060ea7f37b656cd62b5b"
+  },
+  "independentReport": {
+    "path": "work/clean-replay/crc054-4346b30/work/crc054/root-review/report.json",
+    "bytes": 1311794,
+    "sha256": "fe513e6320d8ab5b90862e5a3d11b3d2cbd850dc1a6bfffe725bdeda56fde819"
+  },
+  "exactSemanticComparison": true,
+  "variants": [
+    {
+      "path": "work/crc054/final/controls/wrong-polynomial/windows/crc.o",
+      "kind": "coff-object-timestamp-only",
+      "primarySha256": "bb8cb27fb44a5c1a40cf1995074264f8472f2bd2f72765e25b3ff8bc985bc990",
+      "independentSha256": "a420391b72c4a7f5d46ead653fa2444e3fc4f66b524c562dbdafdcf6911c4986"
+    },
+    {
+      "path": "work/crc054/final/controls/omit-initial-complement/windows/crc.o",
+      "kind": "coff-object-timestamp-only",
+      "primarySha256": "5bd00677b29db2d75b4e921e87d7ef1d02b71d640944f62080339dbae1fff3cc",
+      "independentSha256": "c5cfc88b4367aab015f0ae65902ea7ca3656126a2de917154e3bd48e849fd4de"
+    },
+    {
+      "path": "work/crc054/final/controls/omit-final-complement/windows/crc.o",
+      "kind": "coff-object-timestamp-only",
+      "primarySha256": "5f51e92b74ee6bd8919e6918987dde0d8b77314308140ec47b23a715171074cc",
+      "independentSha256": "4e240c2b516972fef0b89f0397c95d840f738c2d07afdca8c4fedecab09790a3"
+    },
+    {
+      "path": "work/crc054/final/controls/ignore-seed/windows/crc.o",
+      "kind": "coff-object-timestamp-only",
+      "primarySha256": "196ee8a465becc2eddb156de05e6cf8288b162d0c44b44db6d25ac036a184539",
+      "independentSha256": "c6b667072fda56b4a3064a068a446aafb6303866f08786b9c11a343b1b7dd3a1"
+    },
+    {
+      "path": "work/crc054/final/controls/null-preserves-seed/windows/crc.o",
+      "kind": "coff-object-timestamp-only",
+      "primarySha256": "04109d6f5a0e8052f99a5f91159af87469fcba4a10eda3afa3dd19aa0db7f3b8",
+      "independentSha256": "3cf34c85c81fb5a0b66f1a429fad53561576908a3082a55e5c67596e83d56992"
+    },
+    {
+      "path": "work/crc054/final/controls/signed-input-byte/windows/crc.o",
+      "kind": "coff-object-timestamp-only",
+      "primarySha256": "840c0dcf1b63dc508bc6b76b921ffa30b2e15ee460144c518c7515d497575751",
+      "independentSha256": "d120845978b63e9836c879814a929e8951fb56298a97f983e4fd3405b56087d2"
+    },
+    {
+      "path": "work/crc054/final/controls/skip-last-byte/windows/crc.o",
+      "kind": "coff-object-timestamp-only",
+      "primarySha256": "40d5b552ebbb13461f5841ef27071c9e673b69fb856f4b082721ce61d34ea1ae",
+      "independentSha256": "5e078408e7e6000e279e193332a7f0d3d54d078cbdd4f4f577fa2338d98d94c7"
+    },
+    {
+      "path": "work/crc054/final/windows/crc.o",
+      "kind": "coff-object-timestamp-only",
+      "primarySha256": "746836c2f0c1024be08a197bc6df8352a67d49a96cc53ffb03db728b72c2e750",
+      "independentSha256": "6ade8119d738d70d6d229292e57ae19a3c1e1e3512a36b09285b8f88fed061d4"
+    }
+  ],
+  "artifactVarianceLimit": "Only verified four-byte COFF object timestamps; no instruction, section, relocation or linked-artifact differences allowed.",
+  "sets": 1024,
+  "observations": 4096,
+  "streamingChecks": 36,
+  "returningControls": 7,
+  "returningControlExecutions": 42,
+  "reachablePcsPerRoutine": 277,
+  "measuredPcsPerRoutine": 674,
+  "classifiedUnreachablePcsPerRoutine": 397,
+  "tests": 104,
+  "publicUnits": 424,
+  "publicCompilations": 1202,
+  "instructionFootprintBytes": 5392,
+  "sourceAdmissionGranted": false,
+  "exactMatchingCreditGranted": 0,
+  "universalMemoryOrWholeGzipSdkGameClaimed": false,
+  "physicalAndroidClaimed": false,
+  "producer": {
+    "path": "evidence/verification/producers/review-crc054-replay.py",
+    "bytes": 5144,
+    "sha256": "2991ab3ce733c682b91beb5ff52f6d4b9d0de729dda6b03cde378d08adbeefe6"
+  }
+}

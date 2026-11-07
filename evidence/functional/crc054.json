@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-crc054-canonical-domain",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "acceptedSourceCreditGranted": 0,
+  "functions": [
+    {
+      "symbol": "fn_007305b8",
+      "canonicalIdentity": {
+        "address": 7538104,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "src/native/wave054/crc.c",
+        "bytes": 731,
+        "sha256": "3540a33ed3c2e18378bf5f5be6e29ad3d19ed46abb29d524b50231ced7bc80d4"
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 2696,
+      "originalInstructionRanges": [
+        {
+          "start": 7515660,
+          "endExclusive": 7517120,
+          "bytes": 1460
+        },
+        {
+          "start": 7538104,
+          "endExclusive": 7539340,
+          "bytes": 1236
+        }
+      ],
+      "reportEntryBytes": 1236,
+      "originalBodySha256": "ce7d646eaf55d2fb8daa3c6138030015cb173cd97ad77b676b70e6f8c63ad05d",
+      "candidateObject": {
+        "path": "work/crc054/final/arm/crc.o",
+        "sha256": "601b44b37987c7c83221d1ad549e75c80cacee56bd573e54369646eb25cc6be7",
+        "bytes": 1300
+      },
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/crc054-coordinator-4346b30.json",
+          "bytes": 4428,
+          "sha256": "d4a25e90fda7feb060db3f7b70eb21decac1a17b493dd78adfe2468b802b89cb"
+        },
+        "executionSummary": {
+          "path": "evidence/lanes/crc054/execution.summary.json",
+          "bytes": 12311,
+          "sha256": "b1d6a7e128e77d61f7c2776330603d968e16c25ea396df279b2e277d33c0b331"
+        },
+        "batchCaseSets": 1024,
+        "perFunctionCaseSets": 512,
+        "fourTargetObservations": 4096,
+        "originalInstructionPcs": 674,
+        "originalInstructionPcsVisited": 277,
+        "classifiedCanonicalDomainUnreachablePcs": 397,
+        "unreachableRanges": [
+          {
+            "start": 7515660,
+            "endExclusive": 7517120,
+            "reason": "little-endian gate"
+          },
+          {
+            "start": 7539332,
+            "endExclusive": 7539340,
+            "reason": "little-endian gate"
+          },
+          {
+            "start": 7538780,
+            "endExclusive": 7538868,
+            "reason": "unsigned residual after32-byte loop is0..31; CMN cannot carry or produce zero"
+          },
+          {
+            "start": 7539184,
+            "endExclusive": 7539216,
+            "reason": "residual after4-byte loop is0..3; CMN cannot carry or produce zero"
+          }
+        ],
+        "unreachableCodeWasForcedOrPatched": false,
+        "allReachableInstructionPcsVisited": true,
+        "normallyReturningWrongImplementations": 7,
+        "wrongSourceExecutions": 42,
+        "genuineCrossEntryStreamingChecks": 36,
+        "sourceGraphOriginalCodeMapped": false,
+        "actualWindowsAndHighAddressA64": true,
+        "canonicalDomain": "Little-endian original module; unsigned32 seed/length; physically backed immutable input; ordinary stack and exclusive execution.",
+        "confidenceJustification": "Medium: complete canonical range ownership, all reachable PCs, generated polynomial/table identity, four-target corpus and returning controls; not a universal memory or game proof.",
+        "limits": [
+          "Corpus lengths are finite through16384 bytes; NULL is separately tested with length0xffffffff.",
+          "Big-endian hardware execution is not qualified; lower endian alternate remains in the measured body.",
+          "Invalid/unbacked/wrapping/concurrently mutated/volatile buffers and arbitrary external register observations are excluded.",
+          "No complete gzip/SDK/game or physical Android qualification follows from this packet."
+        ]
+      }
+    },
+    {
+      "symbol": "fn_00736734",
+      "canonicalIdentity": {
+        "address": 7563060,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "src/native/wave054/crc.c",
+        "bytes": 731,
+        "sha256": "3540a33ed3c2e18378bf5f5be6e29ad3d19ed46abb29d524b50231ced7bc80d4"
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 2696,
+      "originalInstructionRanges": [
+        {
+          "start": 7517124,
+          "endExclusive": 7518584,
+          "bytes": 1460
+        },
+        {
+          "start": 7563060,
+          "endExclusive": 7564296,
+          "bytes": 1236
+        }
+      ],
+      "reportEntryBytes": 1236,
+      "originalBodySha256": "239144eee27ae98d3fc8973f23cc53469bd4bcffed74faf8901fbf3fa4948a8b",
+      "candidateObject": {
+        "path": "work/crc054/final/arm/crc.o",
+        "sha256": "601b44b37987c7c83221d1ad549e75c80cacee56bd573e54369646eb25cc6be7",
+        "bytes": 1300
+      },
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/crc054-coordinator-4346b30.json",
+          "bytes": 4428,
+          "sha256": "d4a25e90fda7feb060db3f7b70eb21decac1a17b493dd78adfe2468b802b89cb"
+        },
+        "executionSummary": {
+          "path": "evidence/lanes/crc054/execution.summary.json",
+          "bytes": 12311,
+          "sha256": "b1d6a7e128e77d61f7c2776330603d968e16c25ea396df279b2e277d33c0b331"
+        },
+        "batchCaseSets": 1024,
+        "perFunctionCaseSets": 512,
+        "fourTargetObservations": 4096,
+        "originalInstructionPcs": 674,
+        "originalInstructionPcsVisited": 277,
+        "classifiedCanonicalDomainUnreachablePcs": 397,
+        "unreachableRanges": [
+          {
+            "start": 7517124,
+            "endExclusive": 7518584,
+            "reason": "little-endian gate"
+          },
+          {
+            "start": 7564288,
+            "endExclusive": 7564296,
+            "reason": "little-endian gate"
+          },
+          {
+            "start": 7563736,
+            "endExclusive": 7563824,
+            "reason": "unsigned residual after32-byte loop is0..31; CMN cannot carry or produce zero"
+          },
+          {
+            "start": 7564140,
+            "endExclusive": 7564172,
+            "reason": "residual after4-byte loop is0..3; CMN cannot carry or produce zero"
+          }
+        ],
+        "unreachableCodeWasForcedOrPatched": false,
+        "allReachableInstructionPcsVisited": true,
+        "normallyReturningWrongImplementations": 7,
+        "wrongSourceExecutions": 42,
+        "genuineCrossEntryStreamingChecks": 36,
+        "sourceGraphOriginalCodeMapped": false,
+        "actualWindowsAndHighAddressA64": true,
+        "canonicalDomain": "Little-endian original module; unsigned32 seed/length; physically backed immutable input; ordinary stack and exclusive execution.",
+        "confidenceJustification": "Medium: complete canonical range ownership, all reachable PCs, generated polynomial/table identity, four-target corpus and returning controls; not a universal memory or game proof.",
+        "limits": [
+          "Corpus lengths are finite through16384 bytes; NULL is separately tested with length0xffffffff.",
+          "Big-endian hardware execution is not qualified; lower endian alternate remains in the measured body.",
+          "Invalid/unbacked/wrapping/concurrently mutated/volatile buffers and arbitrary external register observations are excluded.",
+          "No complete gzip/SDK/game or physical Android qualification follows from this packet."
+        ]
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave054/crc.h",
+      "bytes": 341,
+      "sha256": "1267240d0d5c3074390fbaa4b4dd7c907e9bc286cb9d15876de25a5ef014c09b"
+    }
+  ],
+  "sourceDependencies": [
+    {
+      "path": "src/native/wave054/crc.c",
+      "bytes": 731,
+      "sha256": "3540a33ed3c2e18378bf5f5be6e29ad3d19ed46abb29d524b50231ced7bc80d4"
+    },
+    {
+      "path": "src/native/wave054/crc.h",
+      "bytes": 341,
+      "sha256": "1267240d0d5c3074390fbaa4b4dd7c907e9bc286cb9d15876de25a5ef014c09b"
+    }
+  ],
+  "sourceOriginalModuleMapped": false,
+  "importedTableOrExecutableBytes": false,
+  "polynomial": "0xedb88320",
+  "tableDerivation": {
+    "path": "evidence/lanes/crc054/claim.json",
+    "bytes": 19414,
+    "sha256": "a01ee319f86833f049a53b0cbb45de6072000401b5a0125b5be7f04b960c304f"
+  },
+  "originalPackets": [
+    {
+      "path": "evidence/lanes/crc054/ready.json",
+      "bytes": 5542,
+      "sha256": "2a2f42ac3df9d7a0ae8c276dd29ecc6ae247a710377d06da5cb1b19ba0e6506e"
+    },
+    {
+      "path": "evidence/verification/crc054-coordinator-4346b30.json",
+      "bytes": 4428,
+      "sha256": "d4a25e90fda7feb060db3f7b70eb21decac1a17b493dd78adfe2468b802b89cb"
+    }
+  ],
+  "producer": {
+    "path": "evidence/verification/producers/review-crc054-functional.py",
+    "bytes": 7164,
+    "sha256": "1d28bc78259052fbc54435ade3f5fe54cdf9d80d958a6b9b83da4050597a2efb"
+  },
+  "exactMatchingClaimed": false,
+  "confirmedOverallSourceCoverageClaimed": false
+}
