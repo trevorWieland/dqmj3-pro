@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "status": "measured-access-inventory-before047-source",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "canonicalExecuteEntry": 1627740,
+  "wholeExecuteInstructionBytes": 13184,
+  "storageAbi": [
+    {
+      "path": "evidence/lanes/squirrel-state040/core-abi-v1/frozen-manifest.json",
+      "sha256": "23a38012b40a93aa1426a9fa08f424949d418a95c9cac939f7abdc2b237f2e28",
+      "bytes": 2537
+    },
+    {
+      "path": "evidence/lanes/squirrel-state040/core-abi-v1/handoff.json",
+      "sha256": "b4dde1ded4ef928f85c21f72ff6039fd461475a131e07598fd6372f6463353e5",
+      "bytes": 11905
+    },
+    {
+      "path": "evidence/lanes/squirrel-state040/core-abi-v1/compiled-layout-probes.json",
+      "sha256": "146ccb7c3734adf71fe63f839671697e6025c9d7799356d6d882a0be40285064",
+      "bytes": 35795
+    },
+    {
+      "path": "evidence/lanes/squirrel-state040/initialization045-shared-field-correction.json",
+      "sha256": "abb1d73dfaa1b6bcf6480f803c15b71e763202025bf377df31c03119d4a39b95",
+      "bytes": 18812
+    }
+  ],
+  "actualVm": {
+    "type": "SqVm040",
+    "targetSize": 168,
+    "nativeSize": 264,
+    "nativeStackOffset": 48,
+    "nativeTopOffset": 80,
+    "nativeBaseOffset": 84,
+    "nativeSharedOffset": 232
+  },
+  "actualShared": {
+    "type": "SqSharedState040",
+    "targetSize": 180,
+    "nativeSize": 448
+  },
+  "frozenAlgorithms": [
+    "035 trap/unwind/handler/dispatch",
+    "041 full script creation",
+    "043 non-generator Next",
+    "039 iteration controller",
+    "031 arithmetic/access extensions",
+    "028 start/return",
+    "022 generic/native call",
+    "016 native creation"
+  ],
+  "replaceStorageUnits": [
+    "source/squirrel-wave016/vm_storage.c",
+    "source/squirrel-wave020/lookup_bindings.c",
+    "source/squirrel-wave022/vm_storage.c",
+    "source/squirrel-wave028/storage.c",
+    "source/squirrel-wave035/storage.c"
+  ],
+  "versionEmbeddedOffsets": [
+    "source/squirrel-wave022/native_call.c:error",
+    "source/squirrel-wave020/lookup_error.c:error"
+  ],
+  "actualFailureFlow": {
+    "foreachFailureBranch": 1638392,
+    "commonRaise": 1640180,
+    "commonRaiseCall": 1640188,
+    "errorCopy": 1640192
+  },
+  "scope": "One composed typed040 engine; separate typed fixture provisioners are not production startup. Frozen040/035/041/043 inputs stay unchanged.",
+  "unsealedGeneratorInputsConsumed": false,
+  "wholeExecuteCredit": 0,
+  "sourceCreditGranted": 0
+}

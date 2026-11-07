@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "name": "compose057",
+  "producerSteps": [
+    {
+      "name": "genuine-source-compose057-full-public-packet",
+      "args": [
+        "toolscripts/squirrel_compose057_replay.py",
+        "--output",
+        "work/squirrel-compose057/independent-review"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "isolated_component_replay",
+    "isolated_intake_cleanup",
+    "refresh_functional_source_names",
+    "refresh_functional_source_names_integration",
+    "compile_source_include_dirs",
+    "squirrel_compose057"
+  ],
+  "packets": [
+    "work/squirrel-compose057/independent-review/packet.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

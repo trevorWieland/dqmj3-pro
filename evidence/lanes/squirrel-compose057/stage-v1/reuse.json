@@ -1,0 +1,459 @@
+{
+  "status": "bounded-seven-step-same-VM-native-script-native-and-throw-catch-reuse",
+  "sequence": [
+    [
+      8,
+      0
+    ],
+    [
+      256,
+      1
+    ],
+    [
+      8,
+      1
+    ],
+    [
+      257,
+      0
+    ],
+    [
+      8,
+      0
+    ],
+    [
+      256,
+      0
+    ],
+    [
+      8,
+      1
+    ]
+  ],
+  "rows": [
+    {
+      "step": 0,
+      "program": 8,
+      "flags": 0,
+      "profile": "arm",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": [
+        {
+          "path": ".vm.calls.frames[1].target",
+          "original": 134217984,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].root",
+          "original": 10,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].instruction",
+          "original": false,
+          "source": true
+        },
+        {
+          "path": ".vm.calls.frames[1].literals",
+          "original": false,
+          "source": true
+        }
+      ]
+    },
+    {
+      "step": 0,
+      "program": 8,
+      "flags": 0,
+      "profile": "a64",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": [
+        {
+          "path": ".vm.calls.frames[1].target",
+          "original": 134217984,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].root",
+          "original": 10,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].instruction",
+          "original": false,
+          "source": true
+        },
+        {
+          "path": ".vm.calls.frames[1].literals",
+          "original": false,
+          "source": true
+        }
+      ]
+    },
+    {
+      "step": 0,
+      "program": 8,
+      "flags": 0,
+      "profile": "windows",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": [
+        {
+          "path": ".vm.calls.frames[1].target",
+          "original": 134217984,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].root",
+          "original": 10,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].instruction",
+          "original": false,
+          "source": true
+        },
+        {
+          "path": ".vm.calls.frames[1].literals",
+          "original": false,
+          "source": true
+        }
+      ]
+    },
+    {
+      "step": 1,
+      "program": 256,
+      "flags": 1,
+      "profile": "arm",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": []
+    },
+    {
+      "step": 1,
+      "program": 256,
+      "flags": 1,
+      "profile": "a64",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": []
+    },
+    {
+      "step": 1,
+      "program": 256,
+      "flags": 1,
+      "profile": "windows",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": []
+    },
+    {
+      "step": 2,
+      "program": 8,
+      "flags": 1,
+      "profile": "arm",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": [
+        {
+          "path": ".vm.calls.frames[1].target",
+          "original": 134217984,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].root",
+          "original": 10,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].instruction",
+          "original": false,
+          "source": true
+        },
+        {
+          "path": ".vm.calls.frames[1].literals",
+          "original": false,
+          "source": true
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "program": 8,
+      "flags": 1,
+      "profile": "a64",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": [
+        {
+          "path": ".vm.calls.frames[1].target",
+          "original": 134217984,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].root",
+          "original": 10,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].instruction",
+          "original": false,
+          "source": true
+        },
+        {
+          "path": ".vm.calls.frames[1].literals",
+          "original": false,
+          "source": true
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "program": 8,
+      "flags": 1,
+      "profile": "windows",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": [
+        {
+          "path": ".vm.calls.frames[1].target",
+          "original": 134217984,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].root",
+          "original": 10,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].instruction",
+          "original": false,
+          "source": true
+        },
+        {
+          "path": ".vm.calls.frames[1].literals",
+          "original": false,
+          "source": true
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "program": 257,
+      "flags": 0,
+      "profile": "arm",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": []
+    },
+    {
+      "step": 3,
+      "program": 257,
+      "flags": 0,
+      "profile": "a64",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": []
+    },
+    {
+      "step": 3,
+      "program": 257,
+      "flags": 0,
+      "profile": "windows",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": []
+    },
+    {
+      "step": 4,
+      "program": 8,
+      "flags": 0,
+      "profile": "arm",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": [
+        {
+          "path": ".vm.calls.frames[1].target",
+          "original": 134217984,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].root",
+          "original": 10,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].literals",
+          "original": false,
+          "source": true
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "program": 8,
+      "flags": 0,
+      "profile": "a64",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": [
+        {
+          "path": ".vm.calls.frames[1].target",
+          "original": 134217984,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].root",
+          "original": 10,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].literals",
+          "original": false,
+          "source": true
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "program": 8,
+      "flags": 0,
+      "profile": "windows",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": [
+        {
+          "path": ".vm.calls.frames[1].target",
+          "original": 134217984,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].root",
+          "original": 10,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].literals",
+          "original": false,
+          "source": true
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "program": 256,
+      "flags": 0,
+      "profile": "arm",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": []
+    },
+    {
+      "step": 5,
+      "program": 256,
+      "flags": 0,
+      "profile": "a64",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": []
+    },
+    {
+      "step": 5,
+      "program": 256,
+      "flags": 0,
+      "profile": "windows",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": []
+    },
+    {
+      "step": 6,
+      "program": 8,
+      "flags": 1,
+      "profile": "arm",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": [
+        {
+          "path": ".vm.calls.frames[1].target",
+          "original": 134217984,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].root",
+          "original": 10,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].instruction",
+          "original": false,
+          "source": true
+        },
+        {
+          "path": ".vm.calls.frames[1].literals",
+          "original": false,
+          "source": true
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "program": 8,
+      "flags": 1,
+      "profile": "a64",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": [
+        {
+          "path": ".vm.calls.frames[1].target",
+          "original": 134217984,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].root",
+          "original": 10,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].instruction",
+          "original": false,
+          "source": true
+        },
+        {
+          "path": ".vm.calls.frames[1].literals",
+          "original": false,
+          "source": true
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "program": 8,
+      "flags": 1,
+      "profile": "windows",
+      "callerVisibleResultAndLiveStateEqual": true,
+      "rawPostGraphResiduals": [
+        {
+          "path": ".vm.calls.frames[1].target",
+          "original": 134217984,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].root",
+          "original": 10,
+          "source": 0
+        },
+        {
+          "path": ".vm.calls.frames[1].instruction",
+          "original": false,
+          "source": true
+        },
+        {
+          "path": ".vm.calls.frames[1].literals",
+          "original": false,
+          "source": true
+        }
+      ]
+    }
+  ],
+  "allRelevantFrameReadsAndWritesTracedOn": [
+    "originalARM",
+    "authoredARM",
+    "highAarch64"
+  ],
+  "frameEvents": {
+    "original": 646,
+    "arm": 996,
+    "a64": 614
+  },
+  "retiredFieldsReadBeforeReinitialization": {
+    "original": 0,
+    "arm": 0,
+    "a64": 0
+  },
+  "windowsActualExecution": true,
+  "windowsPerInstructionMemoryReadsObserved": false,
+  "fullPostGraphEqualityClaimed": false,
+  "universalLifetimeEquivalenceClaimed": false
+}
