@@ -1,0 +1,21 @@
+def mutations():
+    return [
+      ('allowed-language-bit-removed','allowed = 0x226;','allowed = 0x222;',
+       {'regions':[1,1],'language':2,'operation':'policy'}),
+      ('base-file-id-changed','case 1: files[0] = 4; return;','case 1: files[0] = 1; return;',
+       {'regions':[2,2],'language':1}),
+      ('secondary-language-file-changed','two_files(files, count, 14, 1);','two_files(files, count, 13, 1);',
+       {'regions':[1,1],'language':9}),
+      ('paired-count-not-incremented','++*count;','*count += 0;',
+       {'regions':[1,1],'language':2}),
+      ('paired-fallback-file-changed','two_files(files, count, 2, 1);','two_files(files, count, 2, 0);',
+       {'regions':[1,1],'language':2}),
+      ('out-of-range-shift-wrapped','language < 32 ? 1u << language : 0','1u << (language & 31)',
+       {'regions':[1,1],'language':34,'operation':'policy'}),
+      ('policy-region-query-omitted','unsigned int region = current_region();','unsigned int region = 0;',
+       {'regions':[6,1],'language':1}),
+      ('count-initialization-delayed','*count = 1;\n    switch (current_region()) {',
+       'unsigned int region = current_region();\n    *count = 1;\n    switch (region) {',
+       {'regions':[1,1],'language':2}),
+      ('unsupported-region-clears-output','    *count = 0;','    files[0] = 0;\n    *count = 0;',
+       {'regions':[3,3],'language':0})]
