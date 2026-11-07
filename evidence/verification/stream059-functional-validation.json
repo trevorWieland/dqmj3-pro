@@ -1,0 +1,81 @@
+{
+  "status": "stream059-four-medium-functions-schema-validated-pending-registry",
+  "proof": {
+    "path": "evidence/functional/stream059.json",
+    "bytes": 19092,
+    "sha256": "65d9a1637a076930b90ae3c74f6807eb80cc0d05be0fdc5837a645d41c350050"
+  },
+  "functions": [
+    {
+      "name": "fn_007321e4",
+      "confidence": "medium",
+      "packet": {
+        "path": "evidence/functional/stream059.json",
+        "bytes": 19092,
+        "sha256": "65d9a1637a076930b90ae3c74f6807eb80cc0d05be0fdc5837a645d41c350050"
+      },
+      "sourceLookup": "repository-function-index"
+    },
+    {
+      "name": "fn_00734594",
+      "confidence": "medium",
+      "packet": {
+        "path": "evidence/functional/stream059.json",
+        "bytes": 19092,
+        "sha256": "65d9a1637a076930b90ae3c74f6807eb80cc0d05be0fdc5837a645d41c350050"
+      },
+      "sourceLookup": "repository-function-index"
+    },
+    {
+      "name": "fn_007456a4",
+      "confidence": "medium",
+      "packet": {
+        "path": "evidence/functional/stream059.json",
+        "bytes": 19092,
+        "sha256": "65d9a1637a076930b90ae3c74f6807eb80cc0d05be0fdc5837a645d41c350050"
+      },
+      "sourceLookup": "repository-function-index"
+    },
+    {
+      "name": "fn_00730208",
+      "confidence": "medium",
+      "packet": {
+        "path": "evidence/functional/stream059.json",
+        "bytes": 19092,
+        "sha256": "65d9a1637a076930b90ae3c74f6807eb80cc0d05be0fdc5837a645d41c350050"
+      },
+      "sourceLookup": "repository-function-index"
+    }
+  ],
+  "controls": [
+    {
+      "case": "missing-root-range",
+      "rejected": true,
+      "reason": "Fragmented functional proof needs complete ranges and explicit report entry extent"
+    },
+    {
+      "case": "wrong-byte-count",
+      "rejected": true,
+      "reason": "Functional proof omits part of the canonical function body"
+    },
+    {
+      "case": "wrong-source",
+      "rejected": true,
+      "reason": "Reviewed source lacks the reported C definition"
+    },
+    {
+      "case": "unsupported-confidence",
+      "rejected": true,
+      "reason": "Reviewed confidence or bounded behavior proof differs"
+    }
+  ],
+  "instructionFootprintBytes": 8616,
+  "sourceCreditGranted": 0,
+  "exactMatchingCreditGranted": 0,
+  "wholeLibraryApiGameOrDeviceClaimed": false,
+  "producer": {
+    "path": "evidence/verification/producers/review-stream059-functional.py",
+    "bytes": 8234,
+    "sha256": "48f7b0bcb62ba9b9d69f2151d37e9af577aa9b7b4bd85d63942712d30625437a"
+  }
+}

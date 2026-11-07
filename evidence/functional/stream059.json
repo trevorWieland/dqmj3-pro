@@ -1,0 +1,456 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-inflater059-controller-and-helpers",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "functions": [
+    {
+      "symbol": "fn_007321e4",
+      "source": {
+        "path": "src/native/wave059/inflate059.c",
+        "bytes": 3892,
+        "sha256": "0a10dea7622ae37062ba0b3e5b9ba5e425ee1a5a076130ae9450816c193c1e50"
+      },
+      "sourceName": "stream_inflate059",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 3462,
+        "sha256": "6536b7989b62f82e327e88f2a87675658d566c0ba7a7ab6dbc8930fbe4d0e0ba"
+      },
+      "canonicalIdentity": {
+        "address": 7545316,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 5956,
+      "originalInstructionRanges": [
+        {
+          "start": 7545316,
+          "endExclusive": 7545472,
+          "bytes": 156
+        },
+        {
+          "start": 7545596,
+          "endExclusive": 7546600,
+          "bytes": 1004
+        },
+        {
+          "start": 7546704,
+          "endExclusive": 7548116,
+          "bytes": 1412
+        },
+        {
+          "start": 7548196,
+          "endExclusive": 7549212,
+          "bytes": 1016
+        },
+        {
+          "start": 7549340,
+          "endExclusive": 7550252,
+          "bytes": 912
+        },
+        {
+          "start": 7550356,
+          "endExclusive": 7551324,
+          "bytes": 968
+        },
+        {
+          "start": 7551428,
+          "endExclusive": 7551916,
+          "bytes": 488
+        }
+      ],
+      "originalBodySha256": "dfec9d6e796d359efc00679b59df39330b773c498bc96f75ae0d917552746960",
+      "reportEntryBytes": 156,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/stream059-coordinator-ac27445.json",
+          "bytes": 335986,
+          "sha256": "0e7e2435a128354cd8c6adf92c17cbf7a5dd3acf43b8674dd0b64ef496bbe056"
+        },
+        "originalInstructionPcs": 1489,
+        "originalInstructionPcsVisited": 1479,
+        "unexecutedOriginalPcs": [
+          7545468,
+          7547524,
+          7547528,
+          7547532,
+          7547536,
+          7547540,
+          7547544,
+          7547548,
+          7547552,
+          7547556
+        ],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-stream059/stage-v1/closed-domain-review.json",
+          "bytes": 4135,
+          "sha256": "52054e745fd9cc00df060a6d392acbdb48419b1c24c52bc0fe8d4e41421eb3cb"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 30,
+        "productionAllocatorRecovered": false,
+        "completePresetDictionarySyncOrExternalMutationDomainQualified": false,
+        "explicitAuthoredWorkspaceArguments": 2,
+        "identicalOriginalFunctionAbiClaimed": false,
+        "domain": "Valid nonalias input/output/workspace/history and declared nonreentrant services; genuine058 init/reset; no external dictionary setter or sync/state mutation; optional typed borrowed-header fixture and bounded safe header capacities. The root ten dictionary/sync-default PCs are unexecuted under the recorded conditional domain argument.",
+        "physicalAndroidWholeGameOrUniversalEquivalenceClaimed": false,
+        "confidenceJustification": "Medium: complete canonical instruction extents, byte-identical independent four-target corpus/control reports and583 compiled artifacts. Declared initialized-stream and safe memory/service domains only; two extra authored root workspaces, unexecuted dictionary/sync paths and unrecovered production allocator remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_00734594",
+      "source": {
+        "path": "src/native/wave059/table059.c",
+        "bytes": 6032,
+        "sha256": "45bbc9cafb32dac8192a3003156a5edba153d7c571871ef313bcf083fda87c31"
+      },
+      "sourceName": "stream_table059",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 3462,
+        "sha256": "6536b7989b62f82e327e88f2a87675658d566c0ba7a7ab6dbc8930fbe4d0e0ba"
+      },
+      "canonicalIdentity": {
+        "address": 7554452,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 1432,
+      "originalInstructionRanges": [
+        {
+          "start": 7554452,
+          "endExclusive": 7555884,
+          "bytes": 1432
+        }
+      ],
+      "originalBodySha256": "be998202c1f4e25c1ae9eeeb81a120c49f2fcc04677db2deb7cd1de9e6c4c5e0",
+      "reportEntryBytes": 1432,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/stream059-coordinator-ac27445.json",
+          "bytes": 335986,
+          "sha256": "0e7e2435a128354cd8c6adf92c17cbf7a5dd3acf43b8674dd0b64ef496bbe056"
+        },
+        "originalInstructionPcs": 358,
+        "originalInstructionPcsVisited": 358,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-stream059/stage-v1/closed-domain-review.json",
+          "bytes": 4135,
+          "sha256": "52054e745fd9cc00df060a6d392acbdb48419b1c24c52bc0fe8d4e41421eb3cb"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 30,
+        "productionAllocatorRecovered": false,
+        "completePresetDictionarySyncOrExternalMutationDomainQualified": false,
+        "explicitAuthoredWorkspaceArguments": 0,
+        "identicalOriginalFunctionAbiClaimed": false,
+        "domain": "Valid nonalias input/output/workspace/history and declared nonreentrant services; genuine058 init/reset; no external dictionary setter or sync/state mutation; optional typed borrowed-header fixture and bounded safe header capacities. The root ten dictionary/sync-default PCs are unexecuted under the recorded conditional domain argument.",
+        "physicalAndroidWholeGameOrUniversalEquivalenceClaimed": false,
+        "confidenceJustification": "Medium: complete canonical instruction extents, byte-identical independent four-target corpus/control reports and583 compiled artifacts. Declared initialized-stream and safe memory/service domains only; two extra authored root workspaces, unexecuted dictionary/sync paths and unrecovered production allocator remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_007456a4",
+      "source": {
+        "path": "src/native/wave059/window059.c",
+        "bytes": 1452,
+        "sha256": "a64c8e477cae8ce52aa76e1419cb77dd3bc68a6b3e71a29001d9203de689a957"
+      },
+      "sourceName": "stream_window059",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 3462,
+        "sha256": "6536b7989b62f82e327e88f2a87675658d566c0ba7a7ab6dbc8930fbe4d0e0ba"
+      },
+      "canonicalIdentity": {
+        "address": 7624356,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 296,
+      "originalInstructionRanges": [
+        {
+          "start": 7624356,
+          "endExclusive": 7624652,
+          "bytes": 296
+        }
+      ],
+      "originalBodySha256": "18770ce6dacab4b1f6093a0036e0d04daaaaf6182986586a32d3d6cb435e2537",
+      "reportEntryBytes": 296,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/stream059-coordinator-ac27445.json",
+          "bytes": 335986,
+          "sha256": "0e7e2435a128354cd8c6adf92c17cbf7a5dd3acf43b8674dd0b64ef496bbe056"
+        },
+        "originalInstructionPcs": 74,
+        "originalInstructionPcsVisited": 74,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-stream059/stage-v1/closed-domain-review.json",
+          "bytes": 4135,
+          "sha256": "52054e745fd9cc00df060a6d392acbdb48419b1c24c52bc0fe8d4e41421eb3cb"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 30,
+        "productionAllocatorRecovered": false,
+        "completePresetDictionarySyncOrExternalMutationDomainQualified": false,
+        "explicitAuthoredWorkspaceArguments": 0,
+        "identicalOriginalFunctionAbiClaimed": false,
+        "domain": "Valid nonalias input/output/workspace/history and declared nonreentrant services; genuine058 init/reset; no external dictionary setter or sync/state mutation; optional typed borrowed-header fixture and bounded safe header capacities. The root ten dictionary/sync-default PCs are unexecuted under the recorded conditional domain argument.",
+        "physicalAndroidWholeGameOrUniversalEquivalenceClaimed": false,
+        "confidenceJustification": "Medium: complete canonical instruction extents, byte-identical independent four-target corpus/control reports and583 compiled artifacts. Declared initialized-stream and safe memory/service domains only; two extra authored root workspaces, unexecuted dictionary/sync paths and unrecovered production allocator remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_00730208",
+      "source": {
+        "path": "src/native/wave059/checksum059.c",
+        "bytes": 938,
+        "sha256": "ee85cc37ca32468245a4ef46c3a3616413436614d6f6261bd0628e64e1910aac"
+      },
+      "sourceName": "stream_adler059",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 3462,
+        "sha256": "6536b7989b62f82e327e88f2a87675658d566c0ba7a7ab6dbc8930fbe4d0e0ba"
+      },
+      "canonicalIdentity": {
+        "address": 7537160,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 932,
+      "originalInstructionRanges": [
+        {
+          "start": 7537160,
+          "endExclusive": 7538092,
+          "bytes": 932
+        }
+      ],
+      "originalBodySha256": "dce811a1a0b34f56a2afef083fe3f8720c0a72e4c841aa66efbed382d4280800",
+      "reportEntryBytes": 932,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/stream059-coordinator-ac27445.json",
+          "bytes": 335986,
+          "sha256": "0e7e2435a128354cd8c6adf92c17cbf7a5dd3acf43b8674dd0b64ef496bbe056"
+        },
+        "originalInstructionPcs": 233,
+        "originalInstructionPcsVisited": 233,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-stream059/stage-v1/closed-domain-review.json",
+          "bytes": 4135,
+          "sha256": "52054e745fd9cc00df060a6d392acbdb48419b1c24c52bc0fe8d4e41421eb3cb"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 30,
+        "productionAllocatorRecovered": false,
+        "completePresetDictionarySyncOrExternalMutationDomainQualified": false,
+        "explicitAuthoredWorkspaceArguments": 0,
+        "identicalOriginalFunctionAbiClaimed": false,
+        "domain": "Valid nonalias input/output/workspace/history and declared nonreentrant services; genuine058 init/reset; no external dictionary setter or sync/state mutation; optional typed borrowed-header fixture and bounded safe header capacities. The root ten dictionary/sync-default PCs are unexecuted under the recorded conditional domain argument.",
+        "physicalAndroidWholeGameOrUniversalEquivalenceClaimed": false,
+        "confidenceJustification": "Medium: complete canonical instruction extents, byte-identical independent four-target corpus/control reports and583 compiled artifacts. Declared initialized-stream and safe memory/service domains only; two extra authored root workspaces, unexecuted dictionary/sync paths and unrecovered production allocator remain explicit."
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave054/crc.h",
+      "sha256": "1267240d0d5c3074390fbaa4b4dd7c907e9bc286cb9d15876de25a5ef014c09b",
+      "bytes": 341
+    },
+    {
+      "path": "src/native/wave056/stream056.h",
+      "sha256": "160faf241df1cea1cc998da1662dbf8825e498387e6e83cb46c4da6af695edc4",
+      "bytes": 1672
+    },
+    {
+      "path": "src/native/wave058/fixture058.h",
+      "sha256": "ec261adc385e4b1fa57f8b431d4957752f99935a2efdb48478ab26433672901b",
+      "bytes": 1195
+    },
+    {
+      "path": "src/native/wave058/stream058.h",
+      "sha256": "603b40e043aaa86050368c72378e3f45dba8546f85af8f0e8fe6e53b48cd1496",
+      "bytes": 2167
+    },
+    {
+      "path": "src/native/wave059/inflate059.h",
+      "bytes": 2214,
+      "sha256": "86205f556a9a8e3bd5f38676052299b694d94ef61906172a558bbee02ee469b5"
+    }
+  ],
+  "sourceDependencies": [
+    {
+      "path": "src/native/wave054/crc.c",
+      "sha256": "3540a33ed3c2e18378bf5f5be6e29ad3d19ed46abb29d524b50231ced7bc80d4",
+      "bytes": 731
+    },
+    {
+      "path": "src/native/wave054/crc.h",
+      "sha256": "1267240d0d5c3074390fbaa4b4dd7c907e9bc286cb9d15876de25a5ef014c09b",
+      "bytes": 341
+    },
+    {
+      "path": "src/native/wave056/stream056.c",
+      "sha256": "3894a6b022da375e5dd66b62a5a42591384a657ed34c1eb39f822c20f9c98282",
+      "bytes": 5038
+    },
+    {
+      "path": "src/native/wave056/stream056.h",
+      "sha256": "160faf241df1cea1cc998da1662dbf8825e498387e6e83cb46c4da6af695edc4",
+      "bytes": 1672
+    },
+    {
+      "path": "src/native/wave058/fixed_gzip058.c",
+      "sha256": "c1cce577345357996d9c5c1a31c351687fc9b679e0aab3944c4da34e75482453",
+      "bytes": 3956
+    },
+    {
+      "path": "src/native/wave058/fixture058.c",
+      "sha256": "e2a25865ff975adbb00af63274ab4a798a2b8d4373b9a58379eb385f9472679a",
+      "bytes": 3887
+    },
+    {
+      "path": "src/native/wave058/fixture058.h",
+      "sha256": "ec261adc385e4b1fa57f8b431d4957752f99935a2efdb48478ab26433672901b",
+      "bytes": 1195
+    },
+    {
+      "path": "src/native/wave058/initialize058.c",
+      "sha256": "f3330d3c8c77598f5f2afe00b7443679e1f74f3929b5c2f6baa16a47df855ddc",
+      "bytes": 3365
+    },
+    {
+      "path": "src/native/wave058/kernel_bridge058.c",
+      "sha256": "a34c1d590355dbdee13accdc762e378b4098727e1cdc981d4f61bf0dde5fb78d",
+      "bytes": 1475
+    },
+    {
+      "path": "src/native/wave058/stream058.h",
+      "sha256": "603b40e043aaa86050368c72378e3f45dba8546f85af8f0e8fe6e53b48cd1496",
+      "bytes": 2167
+    },
+    {
+      "path": "src/native/wave059/body059.c",
+      "bytes": 2500,
+      "sha256": "265cece19dbf5d65d8ea02cd5b3024eb0ae5195f87123970c74c22b7884e6ae1"
+    },
+    {
+      "path": "src/native/wave059/checksum059.c",
+      "bytes": 938,
+      "sha256": "ee85cc37ca32468245a4ef46c3a3616413436614d6f6261bd0628e64e1910aac"
+    },
+    {
+      "path": "src/native/wave059/decode059.c",
+      "bytes": 4972,
+      "sha256": "25e5fe03d637a7b69b7a1c9a86aa41e4118985eac4e4577261a3f184613a4a5b"
+    },
+    {
+      "path": "src/native/wave059/dynamic059.c",
+      "bytes": 4245,
+      "sha256": "3c789b62df7a318a1e511f0dffca63359ec92dee80243929f031485edde9f711"
+    },
+    {
+      "path": "src/native/wave059/fixture059.c",
+      "bytes": 2456,
+      "sha256": "fc4ff253d00b3d07c84eb62024e9a314597938fc92e81ded3dc8506af98d0da5"
+    },
+    {
+      "path": "src/native/wave059/header059.c",
+      "bytes": 7301,
+      "sha256": "c78ef4a0365989cbb7b00d63f3f19e85f030642087694815d52552ac9151bb1e"
+    },
+    {
+      "path": "src/native/wave059/inflate059.c",
+      "bytes": 3892,
+      "sha256": "0a10dea7622ae37062ba0b3e5b9ba5e425ee1a5a076130ae9450816c193c1e50"
+    },
+    {
+      "path": "src/native/wave059/inflate059.h",
+      "bytes": 2214,
+      "sha256": "86205f556a9a8e3bd5f38676052299b694d94ef61906172a558bbee02ee469b5"
+    },
+    {
+      "path": "src/native/wave059/table059.c",
+      "bytes": 6032,
+      "sha256": "45bbc9cafb32dac8192a3003156a5edba153d7c571871ef313bcf083fda87c31"
+    },
+    {
+      "path": "src/native/wave059/utility059.c",
+      "bytes": 2119,
+      "sha256": "1b0446c2b797b4379416b49c93984a2108cdc724ef2a6b3420495ab08a0a11ab"
+    },
+    {
+      "path": "src/native/wave059/window059.c",
+      "bytes": 1452,
+      "sha256": "a64c8e477cae8ce52aa76e1419cb77dd3bc68a6b3e71a29001d9203de689a957"
+    }
+  ],
+  "qualificationOnlySourceNames": [
+    "fixture059.c",
+    "fixture058.c",
+    "fixed_gzip058.c"
+  ],
+  "originalPackets": [
+    {
+      "path": "evidence/lanes/native-stream059/stage-v1/stage-inputs.json",
+      "bytes": 21090,
+      "sha256": "5b103d961d8208a3ebfb7e188f32d420631d93436cdc3a245af97f8b94c40247"
+    },
+    {
+      "path": "evidence/lanes/native-stream059/stage-v1/claim.json",
+      "bytes": 18835,
+      "sha256": "b37e213cc8ebb5c7801ae3f660272ffc80004e12065f8ad1cd1c4dcfa335c9b2"
+    },
+    {
+      "path": "evidence/verification/stream059-coordinator-ac27445.json",
+      "bytes": 335986,
+      "sha256": "0e7e2435a128354cd8c6adf92c17cbf7a5dd3acf43b8674dd0b64ef496bbe056"
+    }
+  ],
+  "producer": {
+    "path": "evidence/verification/producers/review-stream059-functional.py",
+    "bytes": 8234,
+    "sha256": "48f7b0bcb62ba9b9d69f2151d37e9af577aa9b7b4bd85d63942712d30625437a"
+  },
+  "acceptedSourceCreditGranted": 0,
+  "exactMatchingClaimed": false,
+  "confirmedOverallSourceCoverageClaimed": false
+}
