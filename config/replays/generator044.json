@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "name": "generator044",
+  "producerSteps": [
+    {
+      "name": "generator044-execution",
+      "args": [
+        "toolscripts/squirrel_generator044_execution.py",
+        "--output-dir",
+        "work/squirrel-generator044/primary-closed-lifetime"
+      ]
+    },
+    {
+      "name": "generator044-controls",
+      "args": [
+        "toolscripts/squirrel_generator044_controls.py",
+        "--output-dir",
+        "work/squirrel-generator044/controls-closed-lifetime"
+      ]
+    }
+  ],
+  "tests": [
+    "squirrel_generator044",
+    "isolated_component_replay"
+  ],
+  "packets": [
+    "work/squirrel-generator044/primary-closed-lifetime/execution.json",
+    "work/squirrel-generator044/controls-closed-lifetime/controls.json"
+  ]
+}

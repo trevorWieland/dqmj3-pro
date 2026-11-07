@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "header": {
+    "path": "source/squirrel-wave043/iteration.h",
+    "sha256": "a9296d1dc54263c57dcc08b851d171a86a383d64331abb80901cb11eb79bfd7f"
+  },
+  "productionSources": [
+    "source/squirrel-wave043/next.c"
+  ],
+  "apis": [
+    {
+      "name": "sq_string_next043",
+      "originalEntry": 1711852,
+      "canonicalInstructionBytes": 200
+    },
+    {
+      "name": "sq_table_next043",
+      "originalEntry": 1738244,
+      "canonicalInstructionBytes": 300
+    },
+    {
+      "name": "sq_class_next043",
+      "originalEntry": 1709964,
+      "canonicalInstructionBytes": 280
+    }
+  ],
+  "immutableServices": [
+    "sq_class_clone_cursor030",
+    "sq_prefix_scalar",
+    "sq_prefix_assign",
+    "sq_prefix_release"
+  ],
+  "typeProviders": [
+    "SqString015",
+    "SqTable019",
+    "SqClass030",
+    "SqWeakReference014",
+    "SqPrefixObject012"
+  ],
+  "providerSelection": "Select existing frozen030 cursor and frozen012 alias-safe reference graph exactly once. Substitute the three043 Next calls explicitly for039; never compile both next.c providers under the same symbol aliases.",
+  "requiredObjectLifetimes": "Actual011 prototypes,014 weak objects,015 strings,019 tables,030 classes and034 existing member updates are composed in this packet under their frozen preconditions.",
+  "validationOnlySources": [
+    "source/squirrel-wave043/fixture.c",
+    "source/squirrel-wave043/fixture_mutation.c",
+    "source/squirrel-wave043/fixture_prepare.c",
+    "source/squirrel-wave043/fixture_script.c",
+    "source/squirrel-wave043/fixture_services.c",
+    "source/squirrel-wave043/fixture_snapshot.c",
+    "source/squirrel-wave043/native_fixture.c"
+  ],
+  "windowsOnlyFixture": "source/squirrel-wave043/native_fixture.c",
+  "validationBuilder": "toolscripts/squirrel_iteration043_build.py",
+  "noStructuredExceptionCaptureVm040OrGeneratorComposition": true,
+  "sourceOriginalModuleMapped": false,
+  "rawOriginalPayloadPublic": false,
+  "wholeGameQualified": false
+}

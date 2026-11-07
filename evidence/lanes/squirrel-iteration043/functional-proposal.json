@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "status": "proposal-only-not-registry-admission",
+  "qualificationSummarySha256": "fa1546f291a4148a1193eb6020bd7dc3787af5098d01c04ddc54067846eea03a",
+  "copiedVerificationSha256": "ea87cf801d1d1471924e5be4ff9382d9f92ce8158931815e8e72128aaf751fbb",
+  "functions": [
+    {
+      "entry": 1711852,
+      "mode": "ARM",
+      "source": "source/squirrel-wave043/next.c",
+      "sourceFunction": "sq_string_next043",
+      "instructionBytes": 200,
+      "ranges": [
+        {
+          "address": 1711852,
+          "endExclusive": 1712052,
+          "bytes": 200,
+          "sha256": "46518cba1429f5e74c42022dba4ff0e3c2d1e9fd03f16efee62692d247b1824b"
+        }
+      ],
+      "poolData": {
+        "address": 1712052,
+        "endExclusive": 1712056,
+        "bytes": 4,
+        "sha256": "2bfb5ed5897f29abbec666612dc847cb1cf2dfe4d3aa6a01dff2f282345d97d5"
+      },
+      "observedInstructionCount": 50,
+      "unvisitedInstructionAddresses": [],
+      "domain": "source/squirrel-wave043/README.md",
+      "coordinatorAdmissionRequired": true
+    },
+    {
+      "entry": 1738244,
+      "mode": "ARM",
+      "source": "source/squirrel-wave043/next.c",
+      "sourceFunction": "sq_table_next043",
+      "instructionBytes": 300,
+      "ranges": [
+        {
+          "address": 1738244,
+          "endExclusive": 1738544,
+          "bytes": 300,
+          "sha256": "a0ddbaa28f49d15a7b1284dd0bb797b89126945c74f2988dc4c6f300b50ecc63"
+        }
+      ],
+      "poolData": {
+        "address": 1738544,
+        "endExclusive": 1738548,
+        "bytes": 4,
+        "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+      },
+      "observedInstructionCount": 75,
+      "unvisitedInstructionAddresses": [],
+      "domain": "source/squirrel-wave043/README.md",
+      "coordinatorAdmissionRequired": true
+    },
+    {
+      "entry": 1709964,
+      "mode": "ARM",
+      "source": "source/squirrel-wave043/next.c",
+      "sourceFunction": "sq_class_next043",
+      "instructionBytes": 280,
+      "ranges": [
+        {
+          "address": 1709964,
+          "endExclusive": 1710244,
+          "bytes": 280,
+          "sha256": "f9a7a5663e251b91f5b3acd35f96e5c48bccd322c4b8f092103399616c3f2b93"
+        }
+      ],
+      "poolData": {
+        "address": 1710244,
+        "endExclusive": 1710248,
+        "bytes": 4,
+        "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+      },
+      "observedInstructionCount": 60,
+      "unvisitedInstructionAddresses": [
+        1710192,
+        1710196,
+        1710200,
+        1710204,
+        1710208,
+        1710212,
+        1710216,
+        1710220,
+        1710224,
+        1710228
+      ],
+      "domain": "source/squirrel-wave043/README.md",
+      "coordinatorAdmissionRequired": true
+    }
+  ],
+  "classInvariant": "The ten ref-descriptor cleanup PCs are excluded only by the measured constructor/NewSlot/clone provenance invariant; arbitrary native descriptor-map mutation is not qualified.",
+  "stringInvalidCursor": "Invalid Boolean cursor reaches an unqualified terminal-service boundary; this is not a normal-return or full fatal-service proof.",
+  "requestedDuplicateBytes": 0,
+  "requestedExactBytes": 0,
+  "wholeExecuteCredit": 0,
+  "sourceCreditGranted": 0
+}

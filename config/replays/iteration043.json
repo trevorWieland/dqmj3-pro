@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "name": "iteration043",
+  "producerSteps": [
+    {
+      "name": "iteration043-execution-and-controls",
+      "args": [
+        "toolscripts/squirrel_iteration043.py",
+        "--output",
+        "work/squirrel-iteration043/qualified"
+      ]
+    }
+  ],
+  "tests": [
+    "squirrel_iteration043",
+    "isolated_component_replay"
+  ],
+  "packets": [
+    "work/squirrel-iteration043/qualified/report.json"
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "version": "update-content0",
+  "module": "main",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "census": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55"
+  },
+  "functions": [
+    {
+      "entry": 1711852,
+      "role": "signed-byte-string-next",
+      "mode": "ARM",
+      "instructions": [
+        {
+          "address": 1711852,
+          "endExclusive": 1712052,
+          "bytes": 200,
+          "sha256": "46518cba1429f5e74c42022dba4ff0e3c2d1e9fd03f16efee62692d247b1824b"
+        }
+      ],
+      "instructionBytes": 200,
+      "trailingLiteral": {
+        "address": 1712052,
+        "endExclusive": 1712056,
+        "bytes": 4,
+        "sha256": "2bfb5ed5897f29abbec666612dc847cb1cf2dfe4d3aa6a01dff2f282345d97d5"
+      },
+      "nextCodeEntry": 1712056,
+      "directCalls": [
+        {
+          "instruction": 1711896,
+          "target": 1336720
+        }
+      ],
+      "censusCallers": [
+        1668528
+      ],
+      "sourceFunction": "sq_string_next043"
+    },
+    {
+      "entry": 1738244,
+      "role": "table-next-with-raw-weak-mode",
+      "mode": "ARM",
+      "instructions": [
+        {
+          "address": 1738244,
+          "endExclusive": 1738544,
+          "bytes": 300,
+          "sha256": "a0ddbaa28f49d15a7b1284dd0bb797b89126945c74f2988dc4c6f300b50ecc63"
+        }
+      ],
+      "instructionBytes": 300,
+      "trailingLiteral": {
+        "address": 1738544,
+        "endExclusive": 1738548,
+        "bytes": 4,
+        "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+      },
+      "nextCodeEntry": 1738548,
+      "directCalls": [
+        {
+          "instruction": 1738268,
+          "target": 1714988
+        }
+      ],
+      "censusCallers": [
+        1668528,
+        1709964,
+        1739548,
+        1749088
+      ],
+      "sourceFunction": "sq_table_next043"
+    },
+    {
+      "entry": 1709964,
+      "role": "class-field-and-method-next",
+      "mode": "ARM",
+      "instructions": [
+        {
+          "address": 1709964,
+          "endExclusive": 1710244,
+          "bytes": 280,
+          "sha256": "f9a7a5663e251b91f5b3acd35f96e5c48bccd322c4b8f092103399616c3f2b93"
+        }
+      ],
+      "instructionBytes": 280,
+      "trailingLiteral": {
+        "address": 1710244,
+        "endExclusive": 1710248,
+        "bytes": 4,
+        "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+      },
+      "nextCodeEntry": 1710248,
+      "directCalls": [
+        {
+          "instruction": 1710024,
+          "target": 1738244
+        },
+        {
+          "instruction": 1710072,
+          "target": 1697892
+        }
+      ],
+      "censusCallers": [
+        1668528
+      ],
+      "sourceFunction": "sq_class_next043"
+    }
+  ],
+  "classDescriptorInvariant": {
+    "status": "conditional-provenance-invariant",
+    "domain": "A live class whose private members map is empty at root initialization, cloned from a class in this same domain, or changed only by actual class NewSlot; no arbitrary native descriptor-map mutation.",
+    "induction": [
+      "Root constructor initializes an empty map.",
+      "Inherited constructor clones descriptors without changing types.",
+      "Both NewSlot insertion arms store integer descriptors, with field or method flags and an existing vector index.",
+      "Existing-field and existing-method updates change member payloads without changing descriptor types.",
+      "Admitted release callbacks replace existing member payloads only."
+    ],
+    "integerTagLiteral": {
+      "address": 1575136,
+      "endExclusive": 1575140,
+      "bytes": 4,
+      "sha256": "2bfb5ed5897f29abbec666612dc847cb1cf2dfe4d3aa6a01dff2f282345d97d5"
+    },
+    "methodInsertionWitness": {
+      "address": 1574380,
+      "endExclusive": 1574412,
+      "bytes": 32,
+      "sha256": "acfd628d717e64115ce86758cae997d91acb4beb483cba4438ec6e29b3c9b9a9"
+    },
+    "fieldInsertionWitness": {
+      "address": 1574772,
+      "endExclusive": 1574804,
+      "bytes": 32,
+      "sha256": "eec9757fa05588d77abd3f152e9913b11b6cae3764f2866323c16720f7dcde3e"
+    },
+    "guardWitness": {
+      "address": 1710180,
+      "endExclusive": 1710192,
+      "bytes": 12,
+      "sha256": "08c4f256c252708ff0a2ff1f7f614096f6e7a496e8c18cd305455df89b63a514"
+    },
+    "invariantDeadInstructionAddresses": [
+      1710192,
+      1710196,
+      1710200,
+      1710204,
+      1710208,
+      1710212,
+      1710216,
+      1710220,
+      1710224,
+      1710228
+    ],
+    "notAUniversalClaimAboutArbitraryNativeMutation": true,
+    "providers": [
+      "source/squirrel-wave030/class_initialize.c",
+      "source/squirrel-wave030/class_table_clone.c",
+      "source/squirrel-wave034/member_definition.c"
+    ]
+  },
+  "existingCursorReuse": {
+    "entry": 1714988,
+    "instructionBytes": 40,
+    "duplicateCredit": 0
+  },
+  "terminalCursorBoundary": {
+    "originalEntry": 1336720,
+    "sourceService": "sq_class_failure030",
+    "implementationQualified": false,
+    "normalReturn": false
+  },
+  "candidateInstructionBytes": 780,
+  "poolBytesExcludedFromInstructionCredit": 12,
+  "wholeExecuteCredit": 0,
+  "sourceCreditGranted": 0
+}

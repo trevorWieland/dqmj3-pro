@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "component": "squirrel-generator044-stage-a",
+  "controls": [
+    {
+      "name": "zero_unwritten_frame",
+      "variant": 0,
+      "cleanup": 0,
+      "normalReturnTargets": [
+        "authoredARM",
+        "actualWindows",
+        "androidAArch64Model"
+      ],
+      "rejectedTargets": 3,
+      "sameFinalArena": false,
+      "originalArenaSha256": "a895b142a2b53d4fe29388af94211c34765b540fc724d03aa088ea7b73dd3c87",
+      "mutantArenaSha256": "6eb20debf70e4f8f7fff8f9e66c9cc5fd74811b152be74b40709b58a938c4a88"
+    },
+    {
+      "name": "reverse_owned_vectors",
+      "variant": 15,
+      "cleanup": 1,
+      "normalReturnTargets": [
+        "authoredARM",
+        "actualWindows",
+        "androidAArch64Model"
+      ],
+      "rejectedTargets": 3,
+      "sameFinalArena": true,
+      "originalArenaSha256": "ae7f18deeea3d55c1bad720b2f7f558f2dfe3e4566c40828c209923e4710e17d",
+      "mutantArenaSha256": "ae7f18deeea3d55c1bad720b2f7f558f2dfe3e4566c40828c209923e4710e17d"
+    },
+    {
+      "name": "weak_invalidated_after_free",
+      "variant": 2,
+      "cleanup": 1,
+      "normalReturnTargets": [
+        "authoredARM",
+        "actualWindows",
+        "androidAArch64Model"
+      ],
+      "rejectedTargets": 3,
+      "sameFinalArena": true,
+      "originalArenaSha256": "20dc017a16ad9407075828be19f3782dc019eed9e1b0d0e3af213b28865d5a4d",
+      "mutantArenaSha256": "20dc017a16ad9407075828be19f3782dc019eed9e1b0d0e3af213b28865d5a4d"
+    },
+    {
+      "name": "unlink_after_trap_free",
+      "variant": 14,
+      "cleanup": 1,
+      "normalReturnTargets": [
+        "authoredARM",
+        "actualWindows",
+        "androidAArch64Model"
+      ],
+      "rejectedTargets": 3,
+      "sameFinalArena": true,
+      "originalArenaSha256": "7ab250058a596e9fb19e88d70cb15b2496e775fcf360a7955585adc3154ed87e",
+      "mutantArenaSha256": "7ab250058a596e9fb19e88d70cb15b2496e775fcf360a7955585adc3154ed87e"
+    }
+  ],
+  "allNormallyReturned": true,
+  "sameFinalArenaControls": 3
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "originalInputsChanged": false,
+  "frozenProvidersChanged": false,
+  "attempts": [
+    {
+      "name": "wrong-table-slot-endpoint",
+      "endpoint": 1684368,
+      "observedFaultPc": 1684456,
+      "correctEndpoint": 1685288,
+      "resolution": "Measured actual NewSlot caller; node allocator was not the slot API.",
+      "privateArtifacts": "work/squirrel-iteration043/direct-first"
+    },
+    {
+      "name": "empty-helper-snapshot-length",
+      "observedWords": 22,
+      "oldMinimum": 24,
+      "resolution": "Snapshot guard was corrected; later explicit event sections make the final schema at least25 words.",
+      "privateArtifacts": "work/squirrel-iteration043/terminal-and-empty"
+    },
+    {
+      "name": "wrong-script-receiver-slot",
+      "observedFaultPc": 1684564,
+      "resolution": "Use initialized NativeCall previous_base to locate the caller receiver; slot1 is not the caller register1.",
+      "privateArtifacts": "work/squirrel-iteration043/script1018"
+    }
+  ],
+  "allFinalQualifiedAttemptsAndReturningControlsPreserved": true
+}
