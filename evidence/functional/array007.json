@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-functional-array-lifetime",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "acceptedSourceCreditGranted": 0,
+  "functions": [
+    {
+      "symbol": "fn_00665bd4",
+      "canonicalIdentity": {
+        "address": 6708180,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave007/array_release.c",
+        "sha256": "f5645fc57423ba608972b30c5d2ec1ef6e89ce817a809739af463bf5f45f2383",
+        "bytes": 676
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 40,
+      "originalInstructionRanges": [
+        {
+          "start": 6708180,
+          "endExclusive": 6708220,
+          "bytes": 40
+        }
+      ],
+      "reportEntryBytes": 40,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "familyCases": 48,
+        "comparisonsAgainstOriginal": 144,
+        "directCasesPerRoot": 12,
+        "execution": {
+          "path": "evidence/lanes/squirrel-array-release007/execution.json",
+          "sha256": "34dfd6de9364299749feccf58513997dc6d2c101f677494a0366088c57ae8175",
+          "bytes": 42810
+        },
+        "independentReplay": {
+          "path": "evidence/verification/array007-isolated-c54ab3c.json",
+          "sha256": "c893758a6503012fe56c33f0271963a5316c6042aa0d45a8d82aaee3f7e457a9",
+          "bytes": 13722
+        },
+        "wholeNormalizedArmHeapAndOrderedObserversEqual": true,
+        "normallyReturningCompiledControlsRejected": 6,
+        "sameFinalHeapWrongReadOrderControlRejected": true,
+        "sourceServices": "typed C logical deallocation over retained foreign storage",
+        "excludedDomains": [
+          "allocator recovery",
+          "invalid or racing ownership",
+          "arbitrary GC",
+          "weak-reference methods",
+          "whole VM or game",
+          "Android OS or physical device"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_00665c60",
+      "canonicalIdentity": {
+        "address": 6708320,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave007/array_release.c",
+        "sha256": "f5645fc57423ba608972b30c5d2ec1ef6e89ce817a809739af463bf5f45f2383",
+        "bytes": 676
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 96,
+      "originalInstructionRanges": [
+        {
+          "start": 6708320,
+          "endExclusive": 6708416,
+          "bytes": 96
+        }
+      ],
+      "reportEntryBytes": 96,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "familyCases": 48,
+        "comparisonsAgainstOriginal": 144,
+        "directCasesPerRoot": 12,
+        "execution": {
+          "path": "evidence/lanes/squirrel-array-release007/execution.json",
+          "sha256": "34dfd6de9364299749feccf58513997dc6d2c101f677494a0366088c57ae8175",
+          "bytes": 42810
+        },
+        "independentReplay": {
+          "path": "evidence/verification/array007-isolated-c54ab3c.json",
+          "sha256": "c893758a6503012fe56c33f0271963a5316c6042aa0d45a8d82aaee3f7e457a9",
+          "bytes": 13722
+        },
+        "wholeNormalizedArmHeapAndOrderedObserversEqual": true,
+        "normallyReturningCompiledControlsRejected": 6,
+        "sameFinalHeapWrongReadOrderControlRejected": true,
+        "sourceServices": "typed C logical deallocation over retained foreign storage",
+        "excludedDomains": [
+          "allocator recovery",
+          "invalid or racing ownership",
+          "arbitrary GC",
+          "weak-reference methods",
+          "whole VM or game",
+          "Android OS or physical device"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_0077f3f8",
+      "canonicalIdentity": {
+        "address": 7861240,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave007/vector_destroy.c",
+        "sha256": "036149a8f1d45e435ebb565f29a7318e727efefd35c5e18699c87e534bbda56c",
+        "bytes": 596
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 128,
+      "originalInstructionRanges": [
+        {
+          "start": 7861240,
+          "endExclusive": 7861368,
+          "bytes": 128
+        }
+      ],
+      "reportEntryBytes": 128,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "familyCases": 48,
+        "comparisonsAgainstOriginal": 144,
+        "directCasesPerRoot": 12,
+        "execution": {
+          "path": "evidence/lanes/squirrel-array-release007/execution.json",
+          "sha256": "34dfd6de9364299749feccf58513997dc6d2c101f677494a0366088c57ae8175",
+          "bytes": 42810
+        },
+        "independentReplay": {
+          "path": "evidence/verification/array007-isolated-c54ab3c.json",
+          "sha256": "c893758a6503012fe56c33f0271963a5316c6042aa0d45a8d82aaee3f7e457a9",
+          "bytes": 13722
+        },
+        "wholeNormalizedArmHeapAndOrderedObserversEqual": true,
+        "normallyReturningCompiledControlsRejected": 6,
+        "sameFinalHeapWrongReadOrderControlRejected": true,
+        "sourceServices": "typed C logical deallocation over retained foreign storage",
+        "excludedDomains": [
+          "allocator recovery",
+          "invalid or racing ownership",
+          "arbitrary GC",
+          "weak-reference methods",
+          "whole VM or game",
+          "Android OS or physical device"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_0024d73c",
+      "canonicalIdentity": {
+        "address": 2414396,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave007/chain_unlink.c",
+        "sha256": "ab01e03676ef27b900c40f8037dab0045afc34cd318bcdf21d1401c5abd26a91",
+        "bytes": 341
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 48,
+      "originalInstructionRanges": [
+        {
+          "start": 2414396,
+          "endExclusive": 2414444,
+          "bytes": 48
+        }
+      ],
+      "reportEntryBytes": 48,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "familyCases": 48,
+        "comparisonsAgainstOriginal": 144,
+        "directCasesPerRoot": 12,
+        "execution": {
+          "path": "evidence/lanes/squirrel-array-release007/execution.json",
+          "sha256": "34dfd6de9364299749feccf58513997dc6d2c101f677494a0366088c57ae8175",
+          "bytes": 42810
+        },
+        "independentReplay": {
+          "path": "evidence/verification/array007-isolated-c54ab3c.json",
+          "sha256": "c893758a6503012fe56c33f0271963a5316c6042aa0d45a8d82aaee3f7e457a9",
+          "bytes": 13722
+        },
+        "wholeNormalizedArmHeapAndOrderedObserversEqual": true,
+        "normallyReturningCompiledControlsRejected": 6,
+        "sameFinalHeapWrongReadOrderControlRejected": true,
+        "sourceServices": "typed C logical deallocation over retained foreign storage",
+        "excludedDomains": [
+          "allocator recovery",
+          "invalid or racing ownership",
+          "arbitrary GC",
+          "weak-reference methods",
+          "whole VM or game",
+          "Android OS or physical device"
+        ]
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "source/squirrel-wave007/array_release.h",
+      "sha256": "3276dfd4bc77107e18d2c72bf3191103f625ff05fe55c9a7bc33f5427fd05190",
+      "bytes": 803
+    },
+    {
+      "path": "source/squirrel-wave002/array_views.h",
+      "sha256": "02e549c877765b7cbce879ec29e45c66dc46a1266bf630247775ec43bad2c0f4",
+      "bytes": 1492
+    },
+    {
+      "path": "src/native/wave005/vm_views.h",
+      "sha256": "1bf160e4679afbe5a59a244e78f9753684c93a109f7a703f78dff80d04f4840a",
+      "bytes": 1898
+    }
+  ],
+  "frozenReady": {
+    "path": "evidence/lanes/squirrel-array-release007/ready.json",
+    "sha256": "b398aa788374c97994be97e6ea40bfed6ed4ab7461585c140f0c103adcd0adce",
+    "bytes": 3195
+  },
+  "producer": {
+    "path": "evidence/functional/producers/review-array007.py",
+    "sha256": "925cbf5df555da8b36bb32ec7f79683e1b78b6f003188da3236bad097a895a15",
+    "bytes": 4565
+  },
+  "sharedBaseResetFragmentAdditionalCredit": 0,
+  "completeVmOrGameClaim": false
+}

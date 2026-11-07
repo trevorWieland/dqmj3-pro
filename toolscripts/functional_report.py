@@ -24,6 +24,24 @@ def checked(root, item):
     return path
 
 
+def repository_definitions(root):
+    found = {}
+    pattern = re.compile(r'\b(fn_[0-9a-f]{8})\s*\([^)]*\)\s*\{')
+    for folder in ('src/native', 'source'):
+        base = root / folder
+        if not base.exists():
+            continue
+        for path in base.rglob('*'):
+            if path.suffix.lower() not in ('.c', '.cpp', '.cc', '.cxx', '.h', '.hpp', '.hh', '.hxx') or not path.is_file():
+                continue
+            resolved = path.resolve()
+            if not resolved.is_relative_to(root.resolve()) or path.stat().st_size > 4 * 1024 * 1024:
+                raise ValueError('Repository source index contains an unsupported source path')
+            for match in pattern.finditer(path.read_text(encoding='utf-8', errors='replace')):
+                found.setdefault(match[1], set()).add(resolved)
+    return found
+
+
 def generate(root, report, registry):
     if registry['schemaVersion'] != 1 or registry['version'] != 'update-content0':
         raise ValueError('Unsupported reviewed functional registry')
@@ -45,7 +63,7 @@ def generate(root, report, registry):
             if function['name'] in reported:
                 raise ValueError('Report function ownership is ambiguous')
             reported[function['name']] = (unit, function)
-    emitted, names = [], set()
+    emitted, names, definitions = [], set(), None
     for item in registry['functions']:
         name = item['name']
         if not re.fullmatch(r'fn_[0-9a-f]{8}', name) or name in names or name in admitted:
@@ -53,6 +71,9 @@ def generate(root, report, registry):
         confidence = item['confidence']
         if confidence not in ('high', 'medium', 'low'):
             raise ValueError('Unsupported functional confidence')
+        lookup = item.get('sourceLookup', 'unit')
+        if lookup not in ('unit', 'repository-function-index'):
+            raise ValueError('Unsupported reviewed source lookup policy')
         packet = ci.read(checked(root, item['packet']))
         if packet['moduleSha256'] != registry['moduleSha256'] or packet['acceptedSourceCreditGranted'] != 0:
             raise ValueError('Functional proof has another module or claims source admission')
@@ -92,7 +113,12 @@ def generate(root, report, registry):
         unit, function = reported[name]
         owner = contained(root, unit['metadata']['source_path'])
         if not (source == owner or owner.is_dir() and source.is_relative_to(owner)):
-            raise ValueError('Report source ownership cannot expose the functional C definition')
+            if lookup != 'repository-function-index':
+                raise ValueError('Report source ownership cannot expose the functional C definition')
+            if definitions is None:
+                definitions = repository_definitions(root)
+            if definitions.get(name) != {source.resolve()}:
+                raise ValueError('Repository function index lacks a unique reviewed C definition')
         if (int(function['size']) != entry_bytes
                 or int(function['metadata']['virtual_address']) != address):
             raise ValueError('Functional original report extent differs')

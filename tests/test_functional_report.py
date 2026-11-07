@@ -72,6 +72,31 @@ class FunctionalReportTests(unittest.TestCase):
     def test_emits_only_requested_schema(self):
         self.assertEqual(self.generate(), {'functions': [{'name': 'fn_00100000', 'confidence': 'medium'}]})
 
+    def indexed_source(self):
+        destination = self.root / 'source/squirrel-wave007/array_release.c'
+        destination.parent.mkdir(parents=True)
+        destination.write_bytes(self.source.read_bytes())
+        self.source.unlink()
+        self.source = destination
+        self.proof['source'] = self.record(destination)
+        self.registry['functions'][0]['sourceLookup'] = 'repository-function-index'
+        self.update_packet()
+
+    def test_explicit_repository_index_finds_unique_source_outside_unit(self):
+        self.indexed_source()
+        self.assertEqual(len(self.generate()['functions']), 1)
+
+    def test_repository_index_rejects_ambiguous_canonical_definition(self):
+        self.indexed_source()
+        (self.source.parent / 'duplicate.c').write_text('int fn_00100000(void) { return 2; }\n')
+        with self.assertRaisesRegex(ValueError, 'unique reviewed'):
+            self.generate()
+
+    def test_unknown_source_lookup_cannot_bypass_ownership(self):
+        self.registry['functions'][0]['sourceLookup'] = 'anywhere'
+        with self.assertRaisesRegex(ValueError, 'lookup policy'):
+            self.generate()
+
     def test_thumb_identity_must_match_the_frozen_census(self):
         self.proof['canonicalIdentity']['mode'] = 'Thumb'
         self.update_packet()
