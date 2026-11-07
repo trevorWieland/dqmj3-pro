@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "status": "measured-before-generator-release-source-implementation",
+  "program": "dqmj3pro",
+  "version": "update-content0",
+  "module": "main",
+  "imageBase": 1048576,
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "censusSha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+  "functions": [
+    {
+      "role": "generator-final-release",
+      "entry": 2108876,
+      "endExclusive": 2108916,
+      "mode": "ARM",
+      "instructionBytes": 40,
+      "instructionSha256": "141c3f80714da05cd304cfbf4ff28bfe873fcac1d7578f67a0463ff91ac5aa38",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "literals": [],
+      "directCalleesOrTailCalls": [
+        1693312
+      ],
+      "canonicalCensusExtentVerified": true
+    },
+    {
+      "role": "generator-destructor",
+      "entry": 2109032,
+      "endExclusive": 2109296,
+      "mode": "ARM",
+      "instructionBytes": 264,
+      "instructionSha256": "f31569692dacba456c8ea39482f10dbbb09dae6f913f2ff09d67d1b586ca380c",
+      "poolBytes": 12,
+      "poolSha256": "701ac2abc3258d4f37d873cd512511824c93e81a9621365efedb39e398d37379",
+      "literals": [
+        {
+          "instruction": 2109044,
+          "address": 2109296,
+          "sha256": "8762070ebb4684e0c1093013a6e8f5a3f6f554ed3241b2316c94060c35f2542a"
+        },
+        {
+          "instruction": 2109248,
+          "address": 2109300,
+          "sha256": "cb1c48ae0f7d4023fd5545fd9fd0d684d4a1ed145548dc49aeb92b98047345ab"
+        },
+        {
+          "instruction": 2109272,
+          "address": 2109304,
+          "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+        }
+      ],
+      "directCalleesOrTailCalls": [
+        1693312,
+        2414396,
+        7861240
+      ],
+      "canonicalCensusExtentVerified": true
+    }
+  ],
+  "completeMeasuredInstructionBytes": 304,
+  "scalarPointerPoolBytes": 12,
+  "generatorVtable": {
+    "address": 8504152,
+    "bytes": 12,
+    "sha256": "f0375163b7afeb5ca1ec6d747c0159b17d8c94907fdef442a8ab356634859370",
+    "destructorSlot": 8504152,
+    "releaseSlot": 8504160
+  },
+  "targetAbi": {
+    "referenceBytes": 20,
+    "generatorBytes": 120,
+    "sharedOffset": 20,
+    "closureObjectOffset": 24,
+    "savedStackVectorOffset": 32,
+    "reverseVarargsVectorOffset": 44,
+    "callInfoOffset": 56,
+    "callInfoBytes": 48,
+    "savedClosureObjectOffset": 64,
+    "trapVectorOffset": 104,
+    "trapRecordBytes": 16,
+    "stateByteOffset": 116,
+    "destructorReturnsThisPointer": true
+  },
+  "readOrderContract": [
+    "Install generator vtable before observer-visible cleanup",
+    "Unlink only when the high reference-count bit is clear",
+    "Free nonzero-capacity POD trap backing storage first",
+    "Release saved CallInfo closure before reverse-varargs and saved-stack vectors",
+    "Destroy reverse-varargs before saved-stack vector with callback-aware frozen helpers",
+    "Release current main closure after both vectors",
+    "Reset base-prefix identity and current weak target before final generator free"
+  ],
+  "ownership": {
+    "weakPrefix": "clear target only; weak object is not freed",
+    "savedFrame": "saved closure owns a reference; instruction/literals/generator fields are non-owning",
+    "traps": "plain records; no element reference release",
+    "state": "destruction does not write state byte",
+    "creationYieldResumeKill": "exclusive live006 ownership, no new claim"
+  },
+  "sourceDependencies": [
+    {
+      "entry": 7861240,
+      "lane": "squirrel-array-release007",
+      "newCredit": 0
+    },
+    {
+      "entry": 2414396,
+      "lane": "squirrel-array-release007",
+      "newCredit": 0
+    }
+  ],
+  "externalServices": [
+    {
+      "originalThunk": 1693312,
+      "target": 3154748,
+      "service": "explicit typed C logical deallocation",
+      "allocatorRecoveredOrCredited": false
+    }
+  ],
+  "sourceCodeWrittenAtMeasurement": false,
+  "requestedExactBytes": 0,
+  "coordinatorAdmissionRequired": true,
+  "duplicatePhysicalCreditAllowed": false,
+  "originalPayloadsPublished": false
+}

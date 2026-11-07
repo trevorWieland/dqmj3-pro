@@ -1069,6 +1069,44 @@
         "src/native/wave013/pattern_unicode.h"
       ],
       "role": "bounded-pattern-nfa-component"
+    },
+    {
+      "source": "source/squirrel-wave008/fixture.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "source/squirrel-wave008/generator_release.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-generator-lifetime-component"
+    },
+    {
+      "source": "source/squirrel-wave008/fixture_runtime.c",
+      "headers": [],
+      "role": "bounded-generator-lifetime-component"
+    },
+    {
+      "source": "source/squirrel-wave008/generator_release.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "source/squirrel-wave008/generator_release.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-generator-lifetime-component"
+    },
+    {
+      "source": "source/squirrel-wave008/vtables.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "source/squirrel-wave008/generator_release.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-generator-lifetime-component"
     }
   ],
   "excludedSources": [
@@ -1086,6 +1124,7 @@
     "source/squirrel-wave004",
     "source/squirrel-wave005",
     "source/squirrel-wave006",
-    "source/squirrel-wave007"
+    "source/squirrel-wave007",
+    "source/squirrel-wave008"
   ]
 }
