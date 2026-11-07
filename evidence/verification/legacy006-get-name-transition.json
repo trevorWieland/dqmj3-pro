@@ -22,7 +22,9 @@
     "-Dsq_legacy_table_rehash006=fn_0019b4ec",
     "-Dsq_legacy_table_new_slot006=fn_0019b728",
     "-Dsq_legacy_table_delegate006=fn_0019e2e8",
-    "-Dsq_legacy_table_release006=fn_00666518"
+    "-Dsq_legacy_table_release006=fn_00666518",
+    "-Dsq_legacy_indexed_get006=fn_00198578",
+    "-Dsq_legacy_object_type_name006=fn_00191f20"
   ],
   "sourceFiles": [
     {
@@ -41,9 +43,19 @@
       "bytes": 1106
     },
     {
+      "path": "source/squirrel-wave006/indexed_get.c",
+      "sha256": "27366c905d643f0f93102473f555d43976cf71089416ba8656d701f16fa03e4a",
+      "bytes": 2877
+    },
+    {
+      "path": "source/squirrel-wave006/type_names.c",
+      "sha256": "7eb194255f33f7ca5284a1d3c9d3dbce1319b7d7f9618d915d2103f0bd21cd89",
+      "bytes": 635
+    },
+    {
       "path": "toolscripts/squirrel_wave006_build.py",
-      "sha256": "383d0b60d5ae5df3f700a11fa871f33a28e6bb92c0181e578eebf35201ef26ef",
-      "bytes": 14658
+      "sha256": "3c8a7f513e7ee26e1fce97ef32b2bcde3b371400e3c208621621853edc68ece9",
+      "bytes": 14755
     },
     {
       "path": "toolscripts/squirrel_wave006_platform.py",
@@ -221,7 +233,7 @@
   "wholeVmCreditGranted": 0,
   "producer": {
     "path": "evidence/verification/producers/review-legacy006-get-name-transition.py",
-    "sha256": "c4693b17be2e96f4c66273fad5710e4e154574bf41d726a39c7c106af26492b1",
-    "bytes": 2323
+    "sha256": "62758898df462f4a86a5ed8bd7259a3b7d31a07520cb0394158919cfe5554915",
+    "bytes": 2413
   }
 }

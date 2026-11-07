@@ -18,6 +18,8 @@ LEGACY_NAME_DEFINES = [
     '-Dsq_legacy_table_new_slot006=fn_0019b728',
     '-Dsq_legacy_table_delegate006=fn_0019e2e8',
     '-Dsq_legacy_table_release006=fn_00666518',
+    '-Dsq_legacy_indexed_get006=fn_00198578',
+    '-Dsq_legacy_object_type_name006=fn_00191f20',
 ]
 PLACEMENTS = {**previous.PLACEMENTS, 'fn_0018d65c': 0x18d65c, 'fn_001994c0': 0x1994c0,
               'fn_00199cb8': 0x199cb8, 'sq_execute_error_handler': 0x198320,

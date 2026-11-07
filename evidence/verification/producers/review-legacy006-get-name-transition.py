@@ -31,6 +31,7 @@ receipt = {'schemaVersion': 1, 'status': 'legacy-get-name-transition-with-identi
     'checks': checks, 'baseline': pin(baseline_path), 'nameDefines': builder.LEGACY_NAME_DEFINES,
     'sourceFiles': [pin(ROOT / path) for path in ['source/squirrel-wave006/table.c',
         'source/squirrel-wave006/delegate.c', 'source/squirrel-wave006/table_release.c',
+        'source/squirrel-wave006/indexed_get.c', 'source/squirrel-wave006/type_names.c',
         'toolscripts/squirrel_wave006_build.py', 'toolscripts/squirrel_wave006_platform.py']],
     'armElfSha256': arm['elfSha256'], 'windowsExeSha256': native['windowsExeSha256'],
     'androidObjects': native['androidArm64Objects'], 'oldNumericFloatEqualityDomainNotExpanded': True,

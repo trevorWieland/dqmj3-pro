@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-independent-actual-archive-service-component",
+  "sourceRevision": "4073a84c17fbdd48158201fd1554f1e0aae9f0c0",
+  "completeUnmodifiedBatchReplayPassed": true,
+  "rawReplay": {
+    "path": "evidence/verification/owner-mount-isolated-4073a84.json",
+    "sha256": "26df0dd9088b3af23f47f1c53512247745d697d97068683ec7efcb4373619396",
+    "bytes": 13469
+  },
+  "executedDriver": {
+    "path": "evidence/verification/producers/owner-mount-4073a84-replay.py",
+    "sha256": "be19487bc99b195b8898d91625994fab78c3aa5d6416e1ca0d5abc6615e39d31",
+    "bytes": 5321
+  },
+  "primaryPacket": {
+    "path": "evidence/lanes/wave013-native/file/owner/mount/packet.json",
+    "sha256": "289f88d70dcbbfe7799f66595ea19d58d29175d9e80a61640073516354f7340f",
+    "bytes": 2193683
+  },
+  "independentPacket": {
+    "path": "work/clean-replay/owner-mount-4073a84/evidence/lanes/wave013-native/file/owner/mount/packet.json",
+    "sha256": "472a591381a9ae778a6ca5e100e4bf4d6763aa9babc0e29f181aea6d593963b9",
+    "bytes": 2474720
+  },
+  "frozenManifest": {
+    "path": "evidence/lanes/wave013-native/file/owner/mount/frozen-manifest.json",
+    "sha256": "b58546e4d3ecf56e03d72dc898092f3237c5401890918e68147870a5ec11f418",
+    "bytes": 35950
+  },
+  "cases": 23,
+  "flagsReturnCases": 32,
+  "returningControls": 10,
+  "originalInstructionsVisited": 84,
+  "instructionBytesForFunctionalReview": 336,
+  "tests": 71,
+  "publicUnits": 237,
+  "publicCompilations": 653,
+  "allDurableNativeAndArmRowsIdentical": true,
+  "allOtherExecutionMetadataExceptPathsTimingAndOneAuxiliaryVerifierPinIdentical": true,
+  "windowsArtifactTimestampDifferences": [
+    {
+      "path": "work/wave013-native/file-owner-mount-sealed/archive-provider/archive.obj",
+      "timestampOffset": 4,
+      "differenceOffsets": [
+        4,
+        5
+      ],
+      "primarySha256": "b064aafa5d10573b1ffb7e3008b33bcae13553eba2e652e727e61ac56c1abff6",
+      "independentSha256": "88cfce8a2ae6e9156f6079fedde67fcec16811a6eb3f07ded770350c9a17f8dc"
+    },
+    {
+      "path": "work/wave013-native/file-owner-mount-sealed/negative/wrong-initialized-error/windows/owner_full.dll",
+      "timestampOffset": 128,
+      "differenceOffsets": [
+        128,
+        129
+      ],
+      "primarySha256": "c0604b81a5af860965bb43c01094bc23f0f922bf4942e9b9d9c386f3250bc5be",
+      "independentSha256": "2a73c5421ca85e40ad187fbaebdc986ddd55418cc00b010defa840cd8ec73f63"
+    },
+    {
+      "path": "work/wave013-native/file-owner-mount-sealed/negative/wrong-initialized-flag/windows/owner_full.dll",
+      "timestampOffset": 128,
+      "differenceOffsets": [
+        128,
+        129
+      ],
+      "primarySha256": "dbab556773c929ae99a5eed7fe0ffa95716a8c3cdc4f8c08c08ded2d902b8057",
+      "independentSha256": "fabee9bf9cdda97ef8c81ec69b6e46c68f26c9c0bcc40bc4d3c17abbf8bf1381"
+    },
+    {
+      "path": "work/wave013-native/file-owner-mount-sealed/archive-provider/archive.dll",
+      "timestampOffset": 128,
+      "differenceOffsets": [
+        128,
+        129
+      ],
+      "primarySha256": "eefe3df8e1fca3963113289d68c2dac23d1d631815072bf3df7317291dc0142b",
+      "independentSha256": "1843ed59f06461d587fbd5dbca6e4408818e406c6e9677cdb7ca215908df2d6a"
+    },
+    {
+      "path": "work/wave013-native/file-owner-mount-sealed/negative/wrong-page-rounding/windows/owner_full.dll",
+      "timestampOffset": 128,
+      "differenceOffsets": [
+        128,
+        129
+      ],
+      "primarySha256": "bceb7982c2a43baae4feeb2b3065d487e5856303fce0d143b0e0826be7840dc4",
+      "independentSha256": "b03e63e16b32bf5fad73bf764442ba8507baac9567de4dae311494318c85431f"
+    },
+    {
+      "path": "work/wave013-native/file-owner-mount-sealed/windows/owner_full.dll",
+      "timestampOffset": 128,
+      "differenceOffsets": [
+        128,
+        129
+      ],
+      "primarySha256": "daadef4375db8a620cbee8ebcef14f19e224aa150675318af91cf41c62786105",
+      "independentSha256": "79283d8dca200662d9bd84eae81d93e40651c338572df0b1feba947d8749891c"
+    },
+    {
+      "path": "work/wave013-native/file-owner-mount-sealed/negative/wrong-candidate-buffer/windows/owner_full.dll",
+      "timestampOffset": 128,
+      "differenceOffsets": [
+        128,
+        129
+      ],
+      "primarySha256": "1fb0058eeb7c36ccc4681e9b6d946d132c0bc6b8ee07026124a4c7bf24d43c2e",
+      "independentSha256": "546c7ca8575429327c0afedf7c26dd2d79729581ce76c66bfc586e60ec65bd3d"
+    },
+    {
+      "path": "work/wave013-native/file-owner-mount-sealed/negative/wrong-scratch/windows/owner_full.dll",
+      "timestampOffset": 128,
+      "differenceOffsets": [
+        128,
+        129
+      ],
+      "primarySha256": "94cfed6e71a6cc4e6872e169db04437e48dbf0daf56311d74a8d82fe6f2c171b",
+      "independentSha256": "b47d8fc5601bdc01ee85221ecfb7b75108dc03ec113d6fd401e7357a55743e9a"
+    },
+    {
+      "path": "work/wave013-native/file-owner-mount-sealed/negative/wrong-archive/windows/owner_full.dll",
+      "timestampOffset": 128,
+      "differenceOffsets": [
+        128,
+        129
+      ],
+      "primarySha256": "483f103067826e41a02d09056a0ffa2a2a6d891737443b67f0615e72f528ccb8",
+      "independentSha256": "6ca9f2bafa5eae4cce0baa6cd086a4b0d11f0054d4180f721c189fb63d48426b"
+    },
+    {
+      "path": "work/wave013-native/file-owner-mount-sealed/negative/allocate-while-unready/windows/owner_full.dll",
+      "timestampOffset": 128,
+      "differenceOffsets": [
+        128,
+        129
+      ],
+      "primarySha256": "cf9d0feca325d95b53462d76fbfdf655e1f55e2a326f0de663392200010f2449",
+      "independentSha256": "7d68d3623ab37cb5ab20344cf2879b85a68dffde5433012a7b603f7163b52f14"
+    },
+    {
+      "path": "work/wave013-native/file-owner-mount-sealed/abi/provider-layout.obj",
+      "timestampOffset": 4,
+      "differenceOffsets": [
+        4,
+        5
+      ],
+      "primarySha256": "40a0466d1abbd5557922219dd4a088f39f86c07ddd0578879d2b7a08749d2388",
+      "independentSha256": "cda59a2392be157bb444cdf1deaee40a10e9bdaecb37a007910c59225b1f3d00"
+    },
+    {
+      "path": "work/wave013-native/file-owner-mount-sealed/negative/preserve-allocation-flag/windows/owner_full.dll",
+      "timestampOffset": 128,
+      "differenceOffsets": [
+        128,
+        129
+      ],
+      "primarySha256": "2bd08b4c09af950bb580c5db8d76c04c1bed0909ea20e0eccf688f1b53457535",
+      "independentSha256": "740eb9ab90f2f1679c343d08b4ff73971f7269b475dabab228b0c7198cf3ae58"
+    },
+    {
+      "path": "work/wave013-native/file-owner-mount-sealed/negative/wrong-raw-work-budget/windows/owner_full.dll",
+      "timestampOffset": 128,
+      "differenceOffsets": [
+        128,
+        129
+      ],
+      "primarySha256": "81b01ead7812bddb020bae17abe9c6fed0fecbb74fffec046204a78a378e3b6c",
+      "independentSha256": "3f02541c92ce5ffcfc7a05cf58e1f1cc564056718d15fadebf0e2a643c648e1e"
+    },
+    {
+      "path": "work/wave013-native/file-owner-mount-sealed/abi/provider-layout.dll",
+      "timestampOffset": 128,
+      "differenceOffsets": [
+        128,
+        129
+      ],
+      "primarySha256": "08718efab2bd9e45750067e44479177345d6ed351ef9abfd52e2b192d576dac3",
+      "independentSha256": "e5739021f119d69466ddb283dadd2a8e9691d2e4bbfc64894b8c833f40867e7a"
+    },
+    {
+      "path": "work/wave013-native/file-owner-mount-sealed/negative/wrong-mounted-flag/windows/owner_full.dll",
+      "timestampOffset": 128,
+      "differenceOffsets": [
+        128,
+        129
+      ],
+      "primarySha256": "d829417e8349c9d7f1678782a18480eca206551d92fb75182d7b51f94fcf7db1",
+      "independentSha256": "056b7c548c1c60eee65080649f3237fa080f7b03e8b43a763ad5d204da45c9e1"
+    }
+  ],
+  "windowsBinaryPatchingPerformed": false,
+  "sdkWorkingCacheRepresentationDifferencesRemainExplicit": true,
+  "wholeMemoryOrGameOrDeviceEquivalenceClaimed": false,
+  "sourceAdmissionGranted": false,
+  "producer": {
+    "path": "evidence/verification/producers/review-owner-mount-replay.py",
+    "sha256": "8bb6b1fbf3ca1c4626d38437848886ad3ccf0ac4f6023e42ec8ac5e60c252c9f",
+    "bytes": 6089
+  }
+}

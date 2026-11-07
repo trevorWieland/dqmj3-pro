@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-independent-md5-compression-component",
+  "sourceRevision": "24f6b00286c47dd2d8101adfb71669d73ec2aa76",
+  "completeUnmodifiedBatchReplayPassed": true,
+  "rawReplay": {
+    "path": "evidence/verification/digest024-isolated-24f6b00.json",
+    "sha256": "292695162a0c1cc9bc7cefa40967ad5a5356348f6b99996ebf3c8d02108a41b7",
+    "bytes": 12712
+  },
+  "executedDriver": {
+    "path": "evidence/verification/producers/digest024-24f6b00-replay.py",
+    "sha256": "90e19f619d1a31a1668fb71b6a271df1cce1eb389ec638385bf7e6d89d7033ac",
+    "bytes": 5119
+  },
+  "primaryExecution": {
+    "path": "evidence/lanes/digest024/execution.json",
+    "sha256": "793be16f31bc88785f2e054092b4530c341eb12228c687e478c6d0f36748d526",
+    "bytes": 29390
+  },
+  "independentExecution": {
+    "path": "work/clean-replay/digest024-24f6b00/evidence/lanes/digest024/execution.json",
+    "sha256": "ea47d72e1b6d20053ee1255e9bf2ff84141160c812c4b31e6a9480697d9a89d1",
+    "bytes": 29158
+  },
+  "ready": {
+    "path": "evidence/lanes/digest024/ready.json",
+    "sha256": "949c50860309fe26bae292dedcd7eb641a776180fcb061dbf81d4539e5202dd2",
+    "bytes": 2960
+  },
+  "cases": 828,
+  "additionalPaddingBlocks": 126,
+  "independentHashlibMessages": 22,
+  "originalInstructionsVisited": 602,
+  "instructionBytesForFunctionalReview": 2408,
+  "tests": 74,
+  "publicUnits": 247,
+  "publicCompilations": 683,
+  "allCaseHashesMemoryAbiCoverageAndLinkedArtifactsIdentical": true,
+  "onlyOutputPathsTestTimingAndFiveCoffObjectTimestampsDiffer": true,
+  "objectIdentitiesVerifiedWithoutWritingAnyBinary": [
+    {
+      "path": "<OUTPUT>/controls/reverse-byte-order/windows/digest.obj",
+      "actualSha256": "acb08c431e21fd7c71d402cdd8737a4f5e8a9774f6e8ccf3d122be80e0b4ee83",
+      "exceptTimestampSha256": "125466af2b39b43d1e2db1717c8f9e27b2329df8f5b178b60a30324ef6a808ea"
+    },
+    {
+      "path": "<OUTPUT>/controls/wrong-round-rotation/windows/digest.obj",
+      "actualSha256": "8fef55d47d62228b010bf3c7a991611f8bf6b90c6f3ae4eb06e08294389a46da",
+      "exceptTimestampSha256": "85d7f7e81dabe22878b6dda95c4ff1e76b4ee9962ee8b88c3fc17593d5135072"
+    },
+    {
+      "path": "<OUTPUT>/controls/lose-initial-state-addition/windows/digest.obj",
+      "actualSha256": "ef599affe897c13df2257be43a7ec295349fdc0e9a64e0be303fe61d66752b13",
+      "exceptTimestampSha256": "d1320bbc1b79033fe1d8974b7a04004bb8e001b5465b705aa89c31c6f18abcd6"
+    },
+    {
+      "path": "<OUTPUT>/controls/write-overlapping-input-before-copy/windows/digest.obj",
+      "actualSha256": "68481282bf36709d59663f8087f2772bbf3dcaef44dd1b5a8b789757f2d1225c",
+      "exceptTimestampSha256": "2f6af22ce95a08c0dd5b50d58a4a8c8c6014b0244374fb1af83cec990a69d1c5"
+    },
+    {
+      "path": "<OUTPUT>/windows/digest.obj",
+      "actualSha256": "f5fd33d320d4dab4afe4a424a04022155c424935f27fbb675e026cf63a327b21",
+      "exceptTimestampSha256": "0f4f022930d4a5af85ecdb599881d0c20889a48d900d11dad7836b1b52f8c0c8"
+    },
+    {
+      "path": "<OUTPUT>/controls/reverse-byte-order/windows/digest.obj",
+      "actualSha256": "b693978c85384de35b40a55268081442418df96158ed8178973ec70023d35c89",
+      "exceptTimestampSha256": "125466af2b39b43d1e2db1717c8f9e27b2329df8f5b178b60a30324ef6a808ea"
+    },
+    {
+      "path": "<OUTPUT>/controls/wrong-round-rotation/windows/digest.obj",
+      "actualSha256": "ed9dc436af9133a001acdc9fd1ee37ab8996102bbc44e2857fadc542a3d309fc",
+      "exceptTimestampSha256": "85d7f7e81dabe22878b6dda95c4ff1e76b4ee9962ee8b88c3fc17593d5135072"
+    },
+    {
+      "path": "<OUTPUT>/controls/lose-initial-state-addition/windows/digest.obj",
+      "actualSha256": "e077fb42ca0ce8cc31bd949a6eca7677d222c8313ee215f06519075fade42f39",
+      "exceptTimestampSha256": "d1320bbc1b79033fe1d8974b7a04004bb8e001b5465b705aa89c31c6f18abcd6"
+    },
+    {
+      "path": "<OUTPUT>/controls/write-overlapping-input-before-copy/windows/digest.obj",
+      "actualSha256": "b7416c1610f203e2a4fa7be5ee9b5c8e28d709e2174ecaf38c092b42118c50bf",
+      "exceptTimestampSha256": "2f6af22ce95a08c0dd5b50d58a4a8c8c6014b0244374fb1af83cec990a69d1c5"
+    },
+    {
+      "path": "<OUTPUT>/windows/digest.obj",
+      "actualSha256": "0de970de4b4923ea36f52f4c6a505e1000564038ec336303774b11dbdd188d32",
+      "exceptTimestampSha256": "0f4f022930d4a5af85ecdb599881d0c20889a48d900d11dad7836b1b52f8c0c8"
+    }
+  ],
+  "previousFailedRelativeOutputAttemptPreserved": true,
+  "wholeMd5ApiGameAndroidOsOrPhysicalDeviceClaimed": false,
+  "sourceAdmissionGranted": false,
+  "producer": {
+    "path": "evidence/verification/producers/review-digest024-replay.py",
+    "sha256": "7ac9035e3723d5be8c733016a8cfb156b62c25f5fcbbd7aab10f5adcae8c5c67",
+    "bytes": 5736
+  }
+}

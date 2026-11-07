@@ -1,6 +1,6 @@
 #include "execute_views.h"
 
-_Bool fn_00198578(SqExecuteVM *vm, const SqObject *self, const SqObject *key,
+_Bool sq_legacy_indexed_get006(SqExecuteVM *vm, const SqObject *self, const SqObject *key,
                   SqObject *destination, SqU32 raw, SqU32 rooted)
 {
     (void)raw;

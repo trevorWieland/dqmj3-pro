@@ -1,6 +1,6 @@
 #include "execute_views.h"
 
-const char *fn_00191f20(const SqObject *object)
+const char *sq_legacy_object_type_name006(const SqObject *object)
 {
     switch (object->type & 0x00ffffffu) {
     case 1: return "null";

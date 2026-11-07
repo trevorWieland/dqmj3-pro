@@ -11,3 +11,12 @@
 #define fn_00666518 sq_table_release019
 #define fn_001a36d4 sq_lookup_scratch020
 #define fn_00202cf4 sq_lookup_table_meta020
+#define fn_00198578 sq_lookup_get020
+#define fn_00197b18 sq_lookup_fallback020
+#define fn_0019828c sq_lookup_index_error020
+#define fn_00197fe0 sq_lookup_stringify020
+#define fn_0019813c sq_lookup_raise_format020
+#define fn_00191f20 sq_lookup_object_type_name020
+#define fn_00191f28 sq_lookup_type_name020
+#define fn_0018d4fc sq_lookup_meta_call020
+#define fn_001cdaec sq_instance_get_meta023
