@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-repeated-actual-android-os-successor-routes",
+  "sourceRevision": "8109becd94254485d49ee35bc086dc4259defbb8",
+  "frozenReadySha256": "7e2a0e070d8be452283fdc3886207119267325e18f5d87ef908a76e24b88f644",
+  "frozenPredecessorsAndProducersUnchanged": true,
+  "routes": [
+    {
+      "jniLogicalFramesEqual": true,
+      "jniPixelsPerView": 76800,
+      "views": 2,
+      "frameRgbaSha256": "e9519cf31a3c0e80eac432239931e916290c199354208df88b22ddc69e4c9188",
+      "pictureCases": 17,
+      "materialRecords": 19,
+      "lifecyclePhases": [
+        "loaded",
+        "secondary",
+        "paused",
+        "paused-stable",
+        "resumed",
+        "secondary-removed",
+        "bad-cache-rejected",
+        "cold-cache-reloaded"
+      ],
+      "pauseClockStable": true,
+      "presentationCreatedRemovedAndRecreated": true,
+      "rejectedAsyncCachePreservesFrames": true,
+      "coldPrivateCacheReloads": true,
+      "userspacePageSize": 16384,
+      "observedKernelPageSizes": [
+        "4 kB"
+      ],
+      "physical16KiBKernelClaimed": false,
+      "osPageEmulation": true,
+      "asIsPrimarySurfaceSamplesEqual": 81,
+      "primarySurfaceSamples": 81,
+      "secondarySurfaceSamplesEqual": 81,
+      "secondarySurfaceSamples": 81,
+      "instrumentationFormatOverrideUsed": false,
+      "abi": "arm64",
+      "androidNativeBridgeUsed": true,
+      "physicalDeviceExecuted": false,
+      "aynThorExecuted": false,
+      "originalGpuPixelClaim": false,
+      "nativeFullGameBuild": false,
+      "additionalRecoveredSourceCreditBytes": 0,
+      "schemaVersion": 1,
+      "route": "successor-arm64",
+      "testedApk": {
+        "path": "work/android-os-validation/successor007/package/dqm-dual-view-projected.apk",
+        "bytes": 78306,
+        "sha256": "c47be52b9e6271e5df73d9946ef314ab2c4115bd87067ab6158cf97b1ed6ec18"
+      },
+      "probeApk": {
+        "path": "work/android-os-validation/diagnostic-build/arm64bridge-probe/os-validation-probe.apk",
+        "bytes": 16787,
+        "sha256": "a8f72a98e4b7ef5a3480b48adb4511d71bdd4b6aa057376fd449195bb7e7a663"
+      },
+      "frozenPredecessorsModified": false,
+      "privateOriginalAssetsPackaged": false
+    },
+    {
+      "jniLogicalFramesEqual": true,
+      "jniPixelsPerView": 76800,
+      "views": 2,
+      "frameRgbaSha256": "e9519cf31a3c0e80eac432239931e916290c199354208df88b22ddc69e4c9188",
+      "pictureCases": 17,
+      "materialRecords": 19,
+      "lifecyclePhases": [
+        "loaded",
+        "secondary",
+        "paused",
+        "paused-stable",
+        "resumed",
+        "secondary-removed",
+        "bad-cache-rejected",
+        "cold-cache-reloaded"
+      ],
+      "pauseClockStable": true,
+      "presentationCreatedRemovedAndRecreated": true,
+      "rejectedAsyncCachePreservesFrames": true,
+      "coldPrivateCacheReloads": true,
+      "userspacePageSize": 16384,
+      "observedKernelPageSizes": [
+        "4 kB"
+      ],
+      "physical16KiBKernelClaimed": false,
+      "osPageEmulation": true,
+      "asIsPrimarySurfaceSamplesEqual": 81,
+      "primarySurfaceSamples": 81,
+      "secondarySurfaceSamplesEqual": 81,
+      "secondarySurfaceSamples": 81,
+      "instrumentationFormatOverrideUsed": false,
+      "abi": "x86_64",
+      "androidNativeBridgeUsed": false,
+      "physicalDeviceExecuted": false,
+      "aynThorExecuted": false,
+      "originalGpuPixelClaim": false,
+      "nativeFullGameBuild": false,
+      "additionalRecoveredSourceCreditBytes": 0,
+      "schemaVersion": 1,
+      "route": "successor-x86",
+      "testedApk": {
+        "path": "work/android-os-validation/diagnostic-build/successor007/dqm-os-x86_64-diagnostic.apk",
+        "bytes": 78303,
+        "sha256": "08ec937ca9fb62e02f7e47a6969a8c45786b52576dfb09b560e811e60d2394be"
+      },
+      "probeApk": {
+        "path": "work/android-os-validation/diagnostic-build/x86-probe/os-validation-probe.apk",
+        "bytes": 16787,
+        "sha256": "d0a74ca9abc02ab9f5fb0142ba96de28540e37e526ffe31dd29b11aa11e34b5f"
+      },
+      "frozenPredecessorsModified": false,
+      "privateOriginalAssetsPackaged": false
+    }
+  ],
+  "ownedEmulatorAndServerCleanup": [
+    {
+      "port": 5046,
+      "listening": false
+    },
+    {
+      "port": 5580,
+      "listening": false
+    },
+    {
+      "port": 5581,
+      "listening": false
+    }
+  ],
+  "frameScope": "Two complete JNI logical frames;81 primary and81 secondary OS presentation samples per route",
+  "kernelAndHardwareScope": "16KiB userspace emulation over observed4KiB kernel pages; no physical/AYN Thor claim",
+  "fullGameBuild": false,
+  "sourceCreditGranted": 0
+}
