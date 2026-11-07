@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "status": "reviewed-string-vtable-and-existing-tail-ownership",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "overlay": {
+    "path": "evidence/verification/string015-function-overlay.json",
+    "sha256": "66ba81473f5175bb8bad57f0c954465b88e0fc9bc898bc6ceece05d7efda6c03",
+    "bytes": 5054
+  },
+  "producer": {
+    "path": "toolscripts/review_string015_inventory.py",
+    "sha256": "593fcefc84c86bddc94d146768f324c547315752305f336d1033d1a998e01040",
+    "bytes": 8795
+  },
+  "validator": {
+    "path": "toolscripts/native_census_overlay.py",
+    "sha256": "245bf9e4190eb4a61ee7adc9b8c377e38c0189139020584dc1c9eb12af72a159",
+    "bytes": 10433
+  },
+  "addedDiscoveredEntries": 2,
+  "instructionBytes": 64,
+  "literalPoolBytesNotCodeCredit": 8,
+  "independentlyDecodedNewInstructions": 16,
+  "sharedExistingTail": {
+    "physicalOwner": 2415072,
+    "sharedBy": 2415052,
+    "bytes": 144,
+    "ranges": [
+      {
+        "start": 2415072,
+        "endExclusive": 2415216,
+        "bytes": 144
+      }
+    ],
+    "sha256": "2444974a5051b9c6dba0179f965283b4488b2ddbc431246c5088a524eb82f5a7",
+    "fallthroughAddress": 2415068,
+    "newInstructionCredit": 0
+  },
+  "literalReads": [
+    {
+      "instruction": 6878564,
+      "literal": 6878608
+    },
+    {
+      "instruction": 6878584,
+      "literal": 6878612
+    }
+  ],
+  "nearestFollowingSeededDestructorNeighbor": 6878804,
+  "logicalReleaseBodyBytes": 164,
+  "physicalReleasePrefixBytes": 20,
+  "sourceCreditGranted": 0,
+  "historicalFunctionCompletenessClaim": false
+}

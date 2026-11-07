@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "status": "measured-before-string-source-implementation",
+  "program": "dqmj3pro",
+  "version": "update-content0",
+  "module": "main",
+  "imageBase": 1048576,
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "censusSha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+  "functions": [
+    {
+      "role": "string-intern-add-and-inline-grow",
+      "entry": 1488368,
+      "endExclusive": 1488852,
+      "mode": "ARM",
+      "instructionBytes": 484,
+      "instructionSha256": "de32e83445294638e12d378bc9768324aedc529a729f5e05ac7b535c17a44a83",
+      "poolBytes": 4,
+      "poolSha256": "86d30cbc04d2bcc2c315b6daa298ea70abc995627aedc8faf1410a62e7883852",
+      "literalReferences": [
+        {
+          "instruction": 1488560,
+          "address": 1488852,
+          "sha256": "86d30cbc04d2bcc2c315b6daa298ea70abc995627aedc8faf1410a62e7883852"
+        }
+      ],
+      "directCalleesOrTailCalls": [
+        1052872,
+        1693312,
+        3140568,
+        3140840,
+        3152540,
+        3153744
+      ],
+      "frozenCensusEntryPresent": true,
+      "requiresCoordinatorCensusReview": false,
+      "sharedTailOwner": null,
+      "uniquePrefixBytes": 484
+    },
+    {
+      "role": "string-create",
+      "entry": 1686120,
+      "endExclusive": 1686144,
+      "mode": "ARM",
+      "instructionBytes": 24,
+      "instructionSha256": "714fd5b45e8c2b663be3d8e16ae455e1a3f8eecfad3d6b793b6275ba17b713ca",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "literalReferences": [],
+      "directCalleesOrTailCalls": [
+        1488368
+      ],
+      "frozenCensusEntryPresent": true,
+      "requiresCoordinatorCensusReview": false,
+      "sharedTailOwner": null,
+      "uniquePrefixBytes": 24
+    },
+    {
+      "role": "string-table-remove",
+      "entry": 2415072,
+      "endExclusive": 2415216,
+      "mode": "ARM",
+      "instructionBytes": 144,
+      "instructionSha256": "2444974a5051b9c6dba0179f965283b4488b2ddbc431246c5088a524eb82f5a7",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "literalReferences": [],
+      "directCalleesOrTailCalls": [
+        1336720,
+        1693312
+      ],
+      "frozenCensusEntryPresent": true,
+      "requiresCoordinatorCensusReview": false,
+      "sharedTailOwner": null,
+      "uniquePrefixBytes": 144
+    },
+    {
+      "role": "string-final-release-with-shared-remove-tail",
+      "entry": 2415052,
+      "endExclusive": 2415216,
+      "mode": "ARM",
+      "instructionBytes": 164,
+      "instructionSha256": "7db9cdd30316b98583707fc6418c8acbeacfea2010a01d0fe85e38af32f9d9d0",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "literalReferences": [],
+      "directCalleesOrTailCalls": [
+        1336720,
+        1693312
+      ],
+      "frozenCensusEntryPresent": false,
+      "requiresCoordinatorCensusReview": true,
+      "sharedTailOwner": 2415072,
+      "uniquePrefixBytes": 20
+    },
+    {
+      "role": "string-destructor",
+      "entry": 6878564,
+      "endExclusive": 6878608,
+      "mode": "ARM",
+      "instructionBytes": 44,
+      "instructionSha256": "67a1e12bc57058306f9343db9e60ab6d05aac2ef0a2ddbcf7af13e9112585b97",
+      "poolBytes": 8,
+      "poolSha256": "db04a0b3e9d4185adbc24d2c9468394f245c4c11f77deec9beb535693ea91180",
+      "literalReferences": [
+        {
+          "instruction": 6878564,
+          "address": 6878608,
+          "sha256": "cb1c48ae0f7d4023fd5545fd9fd0d684d4a1ed145548dc49aeb92b98047345ab"
+        },
+        {
+          "instruction": 6878584,
+          "address": 6878612,
+          "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+        }
+      ],
+      "directCalleesOrTailCalls": [],
+      "frozenCensusEntryPresent": false,
+      "requiresCoordinatorCensusReview": true,
+      "sharedTailOwner": null,
+      "uniquePrefixBytes": 44
+    }
+  ],
+  "logicalBodyBytesIncludingSharedTail": 860,
+  "uniqueInstructionBytes": 716,
+  "scalarPointerPoolBytes": 12,
+  "physicalTailOwner": {
+    "entry": 2415072,
+    "sharedBy": 2415052,
+    "sharedInstructionBytes": 144,
+    "duplicateCredit": 0
+  },
+  "actualStringVtable": {
+    "address": 8720928,
+    "bytes": 12,
+    "sha256": "abe54eb15cbf02be133ed101861b6ff4f2a458bffbf7523d9d86dbdc5c86ccdf"
+  },
+  "callerWitnesses": [
+    {
+      "callSite": 1686132,
+      "canonicalOwner": 1686120
+    },
+    {
+      "callSite": 1781968,
+      "canonicalOwner": 1781692
+    }
+  ],
+  "targetAbi": {
+    "prefixBytes": 12,
+    "stringSharedOffset": 12,
+    "bucketNextOffset": 16,
+    "lengthOffset": 20,
+    "hashOffset": 24,
+    "byteStorageOffset": 28,
+    "nominalAllocationHeaderBytes": 32,
+    "tableBucketPointerOffset": 0,
+    "tableSlotCountOffset": 4,
+    "tableUsedOffset": 8,
+    "sharedStringTablePointerOffset": 20,
+    "byteSignedForHash": true,
+    "hashCodeUnitConversionBits": 16
+  },
+  "encodingScope": "Raw8-bit storage; each signed byte converted to unsigned16 for hash; no UTF16 or general Unicode decoder claim",
+  "hashFormula": "U32 seed=length; step=(length>>5)|1; decrement remaining by step but advance source by1 byte per mix",
+  "readOrderContract": [
+    "Initial hash selects lookup/insertion bucket; compare full declared byte length",
+    "Allocate nominal header32+length and initialize only the measured prefix fields before copying bytes",
+    "Terminate with one zero byte; recompute stored hash from current input after allocation/copy",
+    "Link inserted value and increase use count before testing crowding",
+    "Publish doubled slot count before bucket allocation; clear/migrate then free old buckets",
+    "Create publishes shared owner only after Add returns, including cache hits",
+    "Remove unlinks and decrements use count, captures length before virtual destructor, then frees captured allocation size"
+  ],
+  "originalByteHelpers": [
+    {
+      "entry": 3140568,
+      "endExclusive": 3140660,
+      "mode": "ARM",
+      "instructionBytes": 92,
+      "instructionSha256": "4c70cc0d2510ec81c614c58ba703e8cb098f00b113a2b0b8fe85fdb68f844f9d",
+      "poolBytes": 4,
+      "poolSha256": "27ecd0a598e76f8a2fd264d427df0a119903e8eae384e478902541756f089dd1",
+      "newIntervalCredit": 0
+    },
+    {
+      "entry": 1052872,
+      "endExclusive": 1052988,
+      "mode": "Thumb",
+      "instructionBytes": 116,
+      "instructionSha256": "697276718f56006a68df308a836fc8b135a19ab5eac95c000fa941fdbf889019",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newIntervalCredit": 0
+    },
+    {
+      "entry": 3152540,
+      "endExclusive": 3152676,
+      "mode": "ARM",
+      "instructionBytes": 136,
+      "instructionSha256": "2217944baf1827ed794894fa766ddba366a386b39f168c0dd344f45aeb3751fd",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newIntervalCredit": 0
+    },
+    {
+      "entry": 1540636,
+      "endExclusive": 1540752,
+      "mode": "ARM",
+      "instructionBytes": 116,
+      "instructionSha256": "d4e075de5405e2393514369688bf643d3d2064f5386b321b2b9f0ee3d511e0fe",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newIntervalCredit": 0
+    },
+    {
+      "entry": 3153744,
+      "endExclusive": 3153828,
+      "mode": "ARM",
+      "instructionBytes": 84,
+      "instructionSha256": "f5cb1bf62bab3c93d24747cb17e52c730da39f75b7a8e9144c3fd7c6dab03763",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newIntervalCredit": 0
+    }
+  ],
+  "sharedStateAdapter": {
+    "type": "SqPrefixState012",
+    "mechanism": "byte-copy pointer from opaque unknown bytes at20",
+    "portableProvisionerMustReserveStorage": true,
+    "unalignedTypedPointerOrIncompatibleStateCast": false,
+    "fullSharedStatePortableLayoutOrFutureAdjacentFieldNonoverlapQualified": false
+  },
+  "missingStringRemoval": {
+    "escapeCallSite": 2415212,
+    "dependency": 1336720,
+    "observedDependencyEntryIsNop": true,
+    "originalAbortOrReturnBehaviorQualified": false,
+    "includedInAdmittedDomain": false
+  },
+  "domain": [
+    "Valid initialized nonempty power-of-two bucket arrays and bounded byte buffers",
+    "Successful aligned nonoverlapping allocation and retained-storage disposal providers",
+    "Removal target registered in its stored-hash bucket; ordinary typed callbacks return normally"
+  ],
+  "originalAllocator": 3140840,
+  "originalDisposal": 1693312,
+  "sourceCodeWrittenAtMeasurement": false,
+  "requestedExactBytes": 0,
+  "acceptedSourceCreditGranted": 0,
+  "coordinatorAdmissionRequired": true,
+  "gcWholeVmGameOrDeviceClaimed": false,
+  "originalPayloadsPublished": false
+}

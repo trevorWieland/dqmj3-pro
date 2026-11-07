@@ -1,0 +1,2489 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-bounded-source-byte-string-interning-and-registered-lifetime-family",
+  "program": "dqmj3pro",
+  "version": "update-content0",
+  "module": "main",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "claim": {
+    "path": "evidence/lanes/squirrel-string-lifetime015/claim.json",
+    "bytes": 9190,
+    "sha256": "196ed232e150fcb4b1b7a491f805e4877ba1ec8081d03e752749f8f8022fc69d"
+  },
+  "completeMeasuredBodies": [
+    {
+      "role": "string-intern-add-and-inline-grow",
+      "entry": 1488368,
+      "endExclusive": 1488852,
+      "mode": "ARM",
+      "instructionBytes": 484,
+      "instructionSha256": "de32e83445294638e12d378bc9768324aedc529a729f5e05ac7b535c17a44a83",
+      "poolBytes": 4,
+      "poolSha256": "86d30cbc04d2bcc2c315b6daa298ea70abc995627aedc8faf1410a62e7883852",
+      "literalReferences": [
+        {
+          "instruction": 1488560,
+          "address": 1488852,
+          "sha256": "86d30cbc04d2bcc2c315b6daa298ea70abc995627aedc8faf1410a62e7883852"
+        }
+      ],
+      "directCalleesOrTailCalls": [
+        1052872,
+        1693312,
+        3140568,
+        3140840,
+        3152540,
+        3153744
+      ],
+      "frozenCensusEntryPresent": true,
+      "requiresCoordinatorCensusReview": false,
+      "sharedTailOwner": null,
+      "uniquePrefixBytes": 484
+    },
+    {
+      "role": "string-create",
+      "entry": 1686120,
+      "endExclusive": 1686144,
+      "mode": "ARM",
+      "instructionBytes": 24,
+      "instructionSha256": "714fd5b45e8c2b663be3d8e16ae455e1a3f8eecfad3d6b793b6275ba17b713ca",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "literalReferences": [],
+      "directCalleesOrTailCalls": [
+        1488368
+      ],
+      "frozenCensusEntryPresent": true,
+      "requiresCoordinatorCensusReview": false,
+      "sharedTailOwner": null,
+      "uniquePrefixBytes": 24
+    },
+    {
+      "role": "string-table-remove",
+      "entry": 2415072,
+      "endExclusive": 2415216,
+      "mode": "ARM",
+      "instructionBytes": 144,
+      "instructionSha256": "2444974a5051b9c6dba0179f965283b4488b2ddbc431246c5088a524eb82f5a7",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "literalReferences": [],
+      "directCalleesOrTailCalls": [
+        1336720,
+        1693312
+      ],
+      "frozenCensusEntryPresent": true,
+      "requiresCoordinatorCensusReview": false,
+      "sharedTailOwner": null,
+      "uniquePrefixBytes": 144
+    },
+    {
+      "role": "string-final-release-with-shared-remove-tail",
+      "entry": 2415052,
+      "endExclusive": 2415216,
+      "mode": "ARM",
+      "instructionBytes": 164,
+      "instructionSha256": "7db9cdd30316b98583707fc6418c8acbeacfea2010a01d0fe85e38af32f9d9d0",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "literalReferences": [],
+      "directCalleesOrTailCalls": [
+        1336720,
+        1693312
+      ],
+      "frozenCensusEntryPresent": false,
+      "requiresCoordinatorCensusReview": true,
+      "sharedTailOwner": 2415072,
+      "uniquePrefixBytes": 20
+    },
+    {
+      "role": "string-destructor",
+      "entry": 6878564,
+      "endExclusive": 6878608,
+      "mode": "ARM",
+      "instructionBytes": 44,
+      "instructionSha256": "67a1e12bc57058306f9343db9e60ab6d05aac2ef0a2ddbcf7af13e9112585b97",
+      "poolBytes": 8,
+      "poolSha256": "db04a0b3e9d4185adbc24d2c9468394f245c4c11f77deec9beb535693ea91180",
+      "literalReferences": [
+        {
+          "instruction": 6878564,
+          "address": 6878608,
+          "sha256": "cb1c48ae0f7d4023fd5545fd9fd0d684d4a1ed145548dc49aeb92b98047345ab"
+        },
+        {
+          "instruction": 6878584,
+          "address": 6878612,
+          "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+        }
+      ],
+      "directCalleesOrTailCalls": [],
+      "frozenCensusEntryPresent": false,
+      "requiresCoordinatorCensusReview": true,
+      "sharedTailOwner": null,
+      "uniquePrefixBytes": 44
+    }
+  ],
+  "measuredPhysicalInstructionUnionBytes": 716,
+  "logicalBodyBytesIncludingSharedTail": 860,
+  "poolBytes": 12,
+  "newReleaseAndDestructorRequireCensusReview": true,
+  "sharedRemoveTailPhysicalOwner": 2415072,
+  "requestedExactBytes": 0,
+  "acceptedSourceCreditGranted": 0,
+  "coordinatorAdmissionRequired": true,
+  "duplicateTailOrBorrowedHelperCreditAllowed": false,
+  "frozenPrerequisites": [
+    {
+      "path": "evidence/lanes/squirrel-prototype-release011/ready.json",
+      "bytes": 3749,
+      "sha256": "75b42c5dcaed077735ece2421f12cc26b71127ad297e7ea9a56dd56e2b6ec092"
+    },
+    {
+      "path": "evidence/lanes/squirrel-reference-prefix012/types-ready.json",
+      "bytes": 1047,
+      "sha256": "bcd20ae34361b01ea681598e5fefdc2a6f162395a02feb166d784eb9078e0ee1"
+    },
+    {
+      "path": "evidence/lanes/squirrel-weak-reference014/ready.json",
+      "bytes": 3449,
+      "sha256": "cf161d3eb1630b1272143669774db030327a69616b21b58f6b20c908858c7929"
+    }
+  ],
+  "cases": 112,
+  "comparisonsAgainstOriginal": 336,
+  "sourceArmWholeHeapComparisons": 112,
+  "casesByRoot": [
+    {
+      "root": "add",
+      "variant": 0,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "68f3a3be77b3fa053b66cfa75bf3a02bdcfc8bea415f1e8da454910ce841ec20",
+      "wholeNormalizedArmHeapSha256": "5ad54e8a97a2895bee2c13b929ddaecbd7bcfb25079d752e03e099e704ffccb9",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "add",
+      "variant": 1,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "d8d8f0503c120aa5db30d11cff1831707bc824e891351460a0f48dca31bb2d61",
+      "wholeNormalizedArmHeapSha256": "a0a6fdc312893423cabc32fdde62d3218ce7448a4236dde01b011b18cc1021b5",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "add",
+      "variant": 2,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "95e9f4759eac23d7188600cfd4612cab9ae19b07dbef963787eddf3e623a2447",
+      "wholeNormalizedArmHeapSha256": "3793b40d3b267d3cf12f2d9cffb4f2f26e32ec068c9656c8cc14a7545b4d2187",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "add",
+      "variant": 3,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "6d9db4f77db6af45ddb06001db1753fd9f26e454b6b726c24e662e0a7bbc0fa5",
+      "wholeNormalizedArmHeapSha256": "aa3df5b2fcdd142a44d7e53b2a61564adeac951dba3a23b311f536fd86c51b9b",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "add",
+      "variant": 4,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "20ee2042a34e4bae43753bba6452098409301e19d3461387e6a082e49fe8adc8",
+      "wholeNormalizedArmHeapSha256": "1f960dd99ba351fe21bfef8033a23a5ea37f471318ecc1ff9594c2beb00b224d",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "add",
+      "variant": 5,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "417ec274c47c5b37b27e02be441afe0bf54593472fc6647e5c56769285d3f4a9",
+      "wholeNormalizedArmHeapSha256": "3102c64525eaaf2891e602f9b27ea48bca84891d2f2d52f02698cc04c300df0c",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "add",
+      "variant": 6,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "ec6c0e3ddbde61f1dd8c153fc5897e764852d4fde086484c4be67d1d7668c8ca",
+      "wholeNormalizedArmHeapSha256": "cda3a89f6e07cc3d92c8a6362e17285d63d1126d0fbc60227ea37e92bed1005d",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "add",
+      "variant": 7,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "780c3adb6605c12638e1ac35bfd91f7eed2bb50833c15e893cb31d7f4de56670",
+      "wholeNormalizedArmHeapSha256": "cb4e379be3fc36bf0daa18a3214b9e496ec711dc1fe226ebd440440dd9e7bcbe",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "add",
+      "variant": 8,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "6679fb4c890eb95f385005d737fac8c4fe779dbf28446e28863089e1ff180103",
+      "wholeNormalizedArmHeapSha256": "6a5cd13ef3d950481491cda9af321438ed1bbd56afa649a391434a3234cb5724",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "add",
+      "variant": 9,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "7a6976f2cb11861a19e10288a687551b295c0c7c5ba2fca7f6eb963b762a78a2",
+      "wholeNormalizedArmHeapSha256": "5a9d695d5aef152832d687c57af9f511f92f8662bb459870749a77c3f7d9e456",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "add",
+      "variant": 10,
+      "caseClass": "callback-interference",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "971a093dc4c599604b022b31ad11e4bef8c118d4448813177edb2d169f7beb0e",
+      "wholeNormalizedArmHeapSha256": "36be8589264d6abc5f8d2e0bfdbdc6a5743a075c320d049e6af1a1424b6487cc",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "add",
+      "variant": 11,
+      "caseClass": "callback-interference",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "168ec31a2e06256e5a936a5b5f6eab9c45bebae17e7321af0b2bc4574f080b8e",
+      "wholeNormalizedArmHeapSha256": "bcdf50079cc090da34dc7d9f6e19587edde5a92009ab8dbad5b072bccafeee52",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "add",
+      "variant": 12,
+      "caseClass": "callback-interference",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "d8d8f0503c120aa5db30d11cff1831707bc824e891351460a0f48dca31bb2d61",
+      "wholeNormalizedArmHeapSha256": "a0a6fdc312893423cabc32fdde62d3218ce7448a4236dde01b011b18cc1021b5",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "add",
+      "variant": 13,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "a81a7b1c6e5fdc3db5770043ba0733ade3913fc640233ae0736fb53b0f82c03f",
+      "wholeNormalizedArmHeapSha256": "f59648a48f0b683e29be363b764a3451410dd58347d8c26084530702aa1fe4c5",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "add",
+      "variant": 14,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "be8f5ce7db837a885d7fbfcf730df3620660db02b1de154fa9f56859d51727d4",
+      "wholeNormalizedArmHeapSha256": "ae50285058574fd06a00f038d78ba0db1b177d0f46d85789440fc56c3a9fee88",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "add",
+      "variant": 15,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "d8d8f0503c120aa5db30d11cff1831707bc824e891351460a0f48dca31bb2d61",
+      "wholeNormalizedArmHeapSha256": "a0a6fdc312893423cabc32fdde62d3218ce7448a4236dde01b011b18cc1021b5",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "create",
+      "variant": 0,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "050894e1be36f54050d1b0b9d09bdad8e67eda5456992841d549c02c95edf2d9",
+      "wholeNormalizedArmHeapSha256": "f1c9944f997680125e32f79e7db04cc0d56e284041d54313b5b8eddc4e1e7070",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "create",
+      "variant": 1,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "df6faa4677df2e61fd61c6b6aeb3276192262eede51f630e9437053e298b3291",
+      "wholeNormalizedArmHeapSha256": "2e7002de16360af30d9c3fcdc124d40a4c33df6d1321ac384d11d082f777272e",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "create",
+      "variant": 2,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "3927cfcb7a24f73d61f166b136c51c7407c7f7870d484db5424d5a619fde4e34",
+      "wholeNormalizedArmHeapSha256": "e5d84a06cec8a73253cf1b28a51ae33ebbe246d241213984030a77fc85a53ee5",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "create",
+      "variant": 3,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "1a8500e2eb335b6fe0eb1ea8aef231ca5fa046a949e4e8241901722e4495d462",
+      "wholeNormalizedArmHeapSha256": "cca330cb08a008dd0b8774d5b98ae64c2116bc108c030d3e5db618f39c01c737",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "create",
+      "variant": 4,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "0944aab89cd4ec75edfccd5f2609a0e170d058798ccbe473058997ac2ab9461f",
+      "wholeNormalizedArmHeapSha256": "c658dcc2bb4db6bbaa701708eb7ebbe07bfe2eb8f7c178e45c86962eb5221bd1",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "create",
+      "variant": 5,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "ba5c5ff00c37fdee68373ad3a08f4f599abf4dd5eb7aad7337a8e5104f452842",
+      "wholeNormalizedArmHeapSha256": "d4ed5607f1c165d24db608aca9f29d0ff33111f2c7c269a3e1d4780b3c396465",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "create",
+      "variant": 6,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "73cf142c826449ed6feeaacead4e5b624ccd771da4fcf4b044ad7280d38202e4",
+      "wholeNormalizedArmHeapSha256": "b64402cf3a4aa1eb698b877925d8ae6411bb054d2f5ee6ae06252717c58a3bd2",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "create",
+      "variant": 7,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "c2bb03655f9cfc4bf525cf9a8cf5c131ec38827b80184fac2cb4a485c56e0384",
+      "wholeNormalizedArmHeapSha256": "b22a09bb7fad742f58b905f80552ab5514c8cfd3096e0058613247de7352e74f",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "create",
+      "variant": 8,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "da29399cd46bb63549820dacb676f0344ee2e43a878a15b5b6c6d79d3ce2180c",
+      "wholeNormalizedArmHeapSha256": "a2e932279be84343ab6d6febd0800d1cb304141e6c2444119a1597d52291d5cd",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "create",
+      "variant": 9,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "80769f9874bdc83418af710e9a116b06cbcf0081f7ed293d28ac25dc74cd7ebd",
+      "wholeNormalizedArmHeapSha256": "34f5e24d35e3ba8adfa3b9a9392401d379dcde18de839b3bde35fdf970c48119",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "create",
+      "variant": 10,
+      "caseClass": "callback-interference",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "0ef68579ec6056fe8fcddc15ca72618211c521e0539e52c5f523de1c80cc1077",
+      "wholeNormalizedArmHeapSha256": "ad4ab7af9d10c1eb7e9b1918b2ea7f1fc3f383318780a978189237e31fdce9d5",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "create",
+      "variant": 11,
+      "caseClass": "callback-interference",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "eab560592a82e152f4d053e3fe99f878cb34e9160597e4caee59963e6ec3de2c",
+      "wholeNormalizedArmHeapSha256": "0a82c3c12849497cb610d0ef605b65b21363d56133ac06ce2674e2a304c74e31",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "create",
+      "variant": 12,
+      "caseClass": "callback-interference",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "df6faa4677df2e61fd61c6b6aeb3276192262eede51f630e9437053e298b3291",
+      "wholeNormalizedArmHeapSha256": "2e7002de16360af30d9c3fcdc124d40a4c33df6d1321ac384d11d082f777272e",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "create",
+      "variant": 13,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "3616187e90541d7256f469ca19d9f718d09b3e2a62d0f4a27c00b1cfef374d2b",
+      "wholeNormalizedArmHeapSha256": "53b1836ca9e6a0e0c1a96e629a0e0194f106fb76710210bf5362fa4dd4698b5e",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "create",
+      "variant": 14,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "4e196c3f7d496083b501206466871cc596959f089c69306df82ff569be5fbbc0",
+      "wholeNormalizedArmHeapSha256": "7e8b53712c31cdd816b0514ccfff31c1744e0d8e6db61939f82dd024e4bb756b",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "create",
+      "variant": 15,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "df6faa4677df2e61fd61c6b6aeb3276192262eede51f630e9437053e298b3291",
+      "wholeNormalizedArmHeapSha256": "2e7002de16360af30d9c3fcdc124d40a4c33df6d1321ac384d11d082f777272e",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "remove",
+      "variant": 0,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "47268c219cb1f64f69cf6965d7db932607c06451df9d6b307bdaa62df80c941e",
+      "wholeNormalizedArmHeapSha256": "3c52bdf4f24b27b8b44b0342a1cb775753655342f16948b6b0b5440d34c96108",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "remove",
+      "variant": 1,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "cd20ddb671d2a4a6a40d70f60db3e314edce1f4491f329f548e4d7b2162dff98",
+      "wholeNormalizedArmHeapSha256": "e772551b8d69a2839c61d44dfcc8d2233790314fe1713165389bde4648f334af",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "remove",
+      "variant": 2,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "d69e0cbd01db45f4050ae4ffa9666cd1e87a43acc2b644f1026f093a22295dfd",
+      "wholeNormalizedArmHeapSha256": "c702458637132d431b0235a3fba6da8ae7e94f9532602bc0018822c51245dba7",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "remove",
+      "variant": 3,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "9e1f18c228a67e6588dc692563acd56e03b4379f9996449be1d34479e3c9d8e7",
+      "wholeNormalizedArmHeapSha256": "a4172798d5762c0bef33a6e208d7a9bfb8ea9fab90a917355cfc5b6a1420257a",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "remove",
+      "variant": 4,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "650f60ea2836247ea167ef365fb5e87006d9d5c516b9326b79df392fd9e51ed6",
+      "wholeNormalizedArmHeapSha256": "cb1ba50593d76461192c6f19801484c9bf4c133bf02cf6f1fbb08e1e519db3b5",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "remove",
+      "variant": 5,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "3d989e8641d3de6dd426e649588c6236e3b4264af7bac2bde08f1a2a32fb908a",
+      "wholeNormalizedArmHeapSha256": "0a7a44059890c256654d8ae9382c101b72d8c16a88979ee12ea195b1a7877657",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "remove",
+      "variant": 6,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "cd20ddb671d2a4a6a40d70f60db3e314edce1f4491f329f548e4d7b2162dff98",
+      "wholeNormalizedArmHeapSha256": "e772551b8d69a2839c61d44dfcc8d2233790314fe1713165389bde4648f334af",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "remove",
+      "variant": 7,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "aa8fd7d78168797d2699b3871d738e5d65baa1549286419920c9d1787dcab392",
+      "wholeNormalizedArmHeapSha256": "252aee385ba729650eb1a9d314a7bd2fc31921c5d41c3a76815914a081729503",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "remove",
+      "variant": 8,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "44c3b6456051189ad52a1b8415e02ad249c502b9b0a2c679065553819e477b7c",
+      "wholeNormalizedArmHeapSha256": "61bf3c629f708ccf58c24a4d3777ccaeab1b3421981321db12b5ba8f0967eec2",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "remove",
+      "variant": 9,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "17117aefdb6b1cd29b9636aa48e9f476cb683f01322af3d9b1c03ef80457d307",
+      "wholeNormalizedArmHeapSha256": "6cbd8780a3c63f8b97ac4ee301c9903f5b249211f4553a364771760c6db9e6fa",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "remove",
+      "variant": 10,
+      "caseClass": "callback-interference",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "cd20ddb671d2a4a6a40d70f60db3e314edce1f4491f329f548e4d7b2162dff98",
+      "wholeNormalizedArmHeapSha256": "e772551b8d69a2839c61d44dfcc8d2233790314fe1713165389bde4648f334af",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "remove",
+      "variant": 11,
+      "caseClass": "callback-interference",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "44c3b6456051189ad52a1b8415e02ad249c502b9b0a2c679065553819e477b7c",
+      "wholeNormalizedArmHeapSha256": "61bf3c629f708ccf58c24a4d3777ccaeab1b3421981321db12b5ba8f0967eec2",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "remove",
+      "variant": 12,
+      "caseClass": "callback-interference",
+      "observationWords": 1288,
+      "orderedObservationsSha256": "3fdeb0eec3b284756645a35f22e00c7bbaa23f68e3f0cf920a07bb10a4d48671",
+      "wholeNormalizedArmHeapSha256": "90f239cacf86c7555983b8f7dff193d616e9557638411a143320869c2b7eb834",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "remove",
+      "variant": 13,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "f4cf3159f6c5ae15505745b937314d0d02d935dbeb5120835331af30383bf889",
+      "wholeNormalizedArmHeapSha256": "0db95f4fd82619d9cf6bb2b294cf75e3a3b9658d28f2b8fb59442b81e1fe3564",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "remove",
+      "variant": 14,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "5246f2b8b5ab94b84ec1f0b3e36cce2ee6138fb36cf6f0b0fb58098ec6622d02",
+      "wholeNormalizedArmHeapSha256": "1aa4f90b4e6a489cf0d76a969f341aa920dc379ed28e2865af20179544a1ad00",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "remove",
+      "variant": 15,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "138c40c189f629a4dcb0fa01f22b3c110954b7ea1da040e44c96e8d86b61b646",
+      "wholeNormalizedArmHeapSha256": "d8cd5126354424fbddabdd8ae10804ed2eeb6eb03cb8f94e32ee33287776f98e",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 0,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "47268c219cb1f64f69cf6965d7db932607c06451df9d6b307bdaa62df80c941e",
+      "wholeNormalizedArmHeapSha256": "3c52bdf4f24b27b8b44b0342a1cb775753655342f16948b6b0b5440d34c96108",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 1,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "cd20ddb671d2a4a6a40d70f60db3e314edce1f4491f329f548e4d7b2162dff98",
+      "wholeNormalizedArmHeapSha256": "e772551b8d69a2839c61d44dfcc8d2233790314fe1713165389bde4648f334af",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 2,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "d69e0cbd01db45f4050ae4ffa9666cd1e87a43acc2b644f1026f093a22295dfd",
+      "wholeNormalizedArmHeapSha256": "c702458637132d431b0235a3fba6da8ae7e94f9532602bc0018822c51245dba7",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 3,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "9e1f18c228a67e6588dc692563acd56e03b4379f9996449be1d34479e3c9d8e7",
+      "wholeNormalizedArmHeapSha256": "a4172798d5762c0bef33a6e208d7a9bfb8ea9fab90a917355cfc5b6a1420257a",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 4,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "650f60ea2836247ea167ef365fb5e87006d9d5c516b9326b79df392fd9e51ed6",
+      "wholeNormalizedArmHeapSha256": "cb1ba50593d76461192c6f19801484c9bf4c133bf02cf6f1fbb08e1e519db3b5",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 5,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "3d989e8641d3de6dd426e649588c6236e3b4264af7bac2bde08f1a2a32fb908a",
+      "wholeNormalizedArmHeapSha256": "0a7a44059890c256654d8ae9382c101b72d8c16a88979ee12ea195b1a7877657",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 6,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "cd20ddb671d2a4a6a40d70f60db3e314edce1f4491f329f548e4d7b2162dff98",
+      "wholeNormalizedArmHeapSha256": "e772551b8d69a2839c61d44dfcc8d2233790314fe1713165389bde4648f334af",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 7,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "aa8fd7d78168797d2699b3871d738e5d65baa1549286419920c9d1787dcab392",
+      "wholeNormalizedArmHeapSha256": "252aee385ba729650eb1a9d314a7bd2fc31921c5d41c3a76815914a081729503",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 8,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "44c3b6456051189ad52a1b8415e02ad249c502b9b0a2c679065553819e477b7c",
+      "wholeNormalizedArmHeapSha256": "61bf3c629f708ccf58c24a4d3777ccaeab1b3421981321db12b5ba8f0967eec2",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 9,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "17117aefdb6b1cd29b9636aa48e9f476cb683f01322af3d9b1c03ef80457d307",
+      "wholeNormalizedArmHeapSha256": "6cbd8780a3c63f8b97ac4ee301c9903f5b249211f4553a364771760c6db9e6fa",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 10,
+      "caseClass": "callback-interference",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "cd20ddb671d2a4a6a40d70f60db3e314edce1f4491f329f548e4d7b2162dff98",
+      "wholeNormalizedArmHeapSha256": "e772551b8d69a2839c61d44dfcc8d2233790314fe1713165389bde4648f334af",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 11,
+      "caseClass": "callback-interference",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "44c3b6456051189ad52a1b8415e02ad249c502b9b0a2c679065553819e477b7c",
+      "wholeNormalizedArmHeapSha256": "61bf3c629f708ccf58c24a4d3777ccaeab1b3421981321db12b5ba8f0967eec2",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 12,
+      "caseClass": "callback-interference",
+      "observationWords": 1288,
+      "orderedObservationsSha256": "3fdeb0eec3b284756645a35f22e00c7bbaa23f68e3f0cf920a07bb10a4d48671",
+      "wholeNormalizedArmHeapSha256": "90f239cacf86c7555983b8f7dff193d616e9557638411a143320869c2b7eb834",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 13,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "f4cf3159f6c5ae15505745b937314d0d02d935dbeb5120835331af30383bf889",
+      "wholeNormalizedArmHeapSha256": "0db95f4fd82619d9cf6bb2b294cf75e3a3b9658d28f2b8fb59442b81e1fe3564",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 14,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "5246f2b8b5ab94b84ec1f0b3e36cce2ee6138fb36cf6f0b0fb58098ec6622d02",
+      "wholeNormalizedArmHeapSha256": "1aa4f90b4e6a489cf0d76a969f341aa920dc379ed28e2865af20179544a1ad00",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "release",
+      "variant": 15,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1268,
+      "orderedObservationsSha256": "138c40c189f629a4dcb0fa01f22b3c110954b7ea1da040e44c96e8d86b61b646",
+      "wholeNormalizedArmHeapSha256": "d8cd5126354424fbddabdd8ae10804ed2eeb6eb03cb8f94e32ee33287776f98e",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 0,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "174d6ec1167b0def533b6ace7d6770c96a84bfd10b16f560fa0418ed3b5a1ad2",
+      "wholeNormalizedArmHeapSha256": "b92cc7a7813e5bc3e5f331aa253f550f43b09ea320e3149b93587796a02874f0",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 1,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "a0f7ced641562595b41f5f7cfd59545d0ed8c805e2c6dd9e833fa58d7d81bacb",
+      "wholeNormalizedArmHeapSha256": "dfba9cda3616cd4569a5df512c9d83a0b01569ed86bb0809281f6cfbc5e972db",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 2,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "841da4ace06e961d97f700cb9a1398ed64531b6b0231f542a7a5fcaf6b7a62c4",
+      "wholeNormalizedArmHeapSha256": "be1d114322bca6019f2999fae81f532bddd2763a5e8fcaf7c933f1ea41423819",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 3,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "21ef670a1ab4f618f88a5934858d6202854b917e536a17f839b11deb6ba120b9",
+      "wholeNormalizedArmHeapSha256": "f5bf884238f932c8363e59af290c722b809ceb815c3dde2ef41116670b2c7940",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 4,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "b276acfedba7e0651d25a5ff13a410e845cd797336d42e248d85c2f834e4d769",
+      "wholeNormalizedArmHeapSha256": "31a4d9694c10a3150d6fc156f8be5f275d33197b61d15f4fd4c75ad016900cf8",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 5,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "a00fbdecd082296bb4c5865d9afa76da6fa0c49caca96b6adbed687d22917de8",
+      "wholeNormalizedArmHeapSha256": "1dd784cf52fd85d2a8e1eb1a5cccf429384d5b8a0ae7e8b45653f5c6fdccec6b",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 6,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "a0f7ced641562595b41f5f7cfd59545d0ed8c805e2c6dd9e833fa58d7d81bacb",
+      "wholeNormalizedArmHeapSha256": "dfba9cda3616cd4569a5df512c9d83a0b01569ed86bb0809281f6cfbc5e972db",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 7,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "faa6d6213a00c66ead793bb6a8984526a30c4e66da7b3bdc2069ee35f7cd36c4",
+      "wholeNormalizedArmHeapSha256": "cda8e0a58090e78e5f6d149d7d9eaf78b4e52e90445490248d891eb1d760a68e",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 8,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "c3af2dbe6cee5d0903031b4853669354af71e37601bbf8534b8f4664284c4ac8",
+      "wholeNormalizedArmHeapSha256": "a58dc7737fd5c7ec04fa023584fa9e10fb9c7907a03db7b2769b91a17b5bbcea",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 9,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "a579c3bcc3430ff5ca6fe882c678bf270e5fe2fba51f4127461cfc5210b56c34",
+      "wholeNormalizedArmHeapSha256": "78650b740b681c2feaa42026e9e4461b072f57ba48c3d0e0bb70a501f77ca479",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 10,
+      "caseClass": "callback-interference",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "a0f7ced641562595b41f5f7cfd59545d0ed8c805e2c6dd9e833fa58d7d81bacb",
+      "wholeNormalizedArmHeapSha256": "dfba9cda3616cd4569a5df512c9d83a0b01569ed86bb0809281f6cfbc5e972db",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 11,
+      "caseClass": "callback-interference",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "c3af2dbe6cee5d0903031b4853669354af71e37601bbf8534b8f4664284c4ac8",
+      "wholeNormalizedArmHeapSha256": "a58dc7737fd5c7ec04fa023584fa9e10fb9c7907a03db7b2769b91a17b5bbcea",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 12,
+      "caseClass": "callback-interference",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "a0f7ced641562595b41f5f7cfd59545d0ed8c805e2c6dd9e833fa58d7d81bacb",
+      "wholeNormalizedArmHeapSha256": "dfba9cda3616cd4569a5df512c9d83a0b01569ed86bb0809281f6cfbc5e972db",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 13,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "11573a273b7de6fa261c1393f153131b7cd20e2ad992bddd602b9504b30f1a3c",
+      "wholeNormalizedArmHeapSha256": "c1bdd02c7cc76083570348522bc0201fda2b86b48697ca4835e5efb7a15509e7",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 14,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "7eeeea66e9af5f50c5c90c7dc521ad8b112107a22eec03ec2068638fee493e26",
+      "wholeNormalizedArmHeapSha256": "125b3190337acb9c503e33e4c223d4233d94abe61b6feca431f2f1560fb616d3",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "destructor",
+      "variant": 15,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1248,
+      "orderedObservationsSha256": "6812dc9352868c1c4de2cf2652230b13c2d46da44b2a6b78f9e0bf146a4dba8a",
+      "wholeNormalizedArmHeapSha256": "024bffe577c7a40c4ff4a7291718b2b4259c702cd3c63aef6a5cc3ce7fcf4cdb",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "owner-first",
+      "variant": 0,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "8d9fbcda05ace649eb8a4d9930903eec93c71f09cbf60b28b8401269a7b4359e",
+      "wholeNormalizedArmHeapSha256": "19a0ab8eb4f483b4d5624272a7e05f0bef697bc04384d6145aaf1351a0d095a2",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "owner-first",
+      "variant": 1,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "124bb47043aacf7c5c4685a09d60a2f31c01df0075fe7ac01c01d3d86ea2e40f",
+      "wholeNormalizedArmHeapSha256": "d39362a306957052859712cdb15ef38a012c707fc80f4aeb5fca68441bc7f245",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "owner-first",
+      "variant": 2,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "897d61e9a39d8b1ffd19e6746f1fcb283bc46b6a000c5185225787a17732fbe3",
+      "wholeNormalizedArmHeapSha256": "be8192897cac5c7181048bfce3afadeb998ca24ecd0c2cca49c93097ebe6efd8",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "owner-first",
+      "variant": 3,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "0a759c380d1cf029b2f5372e0e8c0843766fe9d421a7a9c53f176f7c051b8bdd",
+      "wholeNormalizedArmHeapSha256": "12771fafaba7dcbb6fbdd4990d9e10706cf7eaebb40c1190b4ad6a319203f1a2",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "owner-first",
+      "variant": 4,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "f6a9f86b8545e4e0d6e5dba32365d40f285de46576adcd9ea0f64083efeb9bc5",
+      "wholeNormalizedArmHeapSha256": "4707ad13a7a963335c4891ac22a6a1a89a59723ad287ad4c1b002c4d77ecd96a",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "owner-first",
+      "variant": 5,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "166bf3619e51d60da402b6b51eaafedc0dbcf73968827d4317fa5dac411ac863",
+      "wholeNormalizedArmHeapSha256": "72d95190e5c4da97c8cc7a0f76081bd1bf6e829a860b40e693eec4e0971463db",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "owner-first",
+      "variant": 6,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "124bb47043aacf7c5c4685a09d60a2f31c01df0075fe7ac01c01d3d86ea2e40f",
+      "wholeNormalizedArmHeapSha256": "d39362a306957052859712cdb15ef38a012c707fc80f4aeb5fca68441bc7f245",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "owner-first",
+      "variant": 7,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "d80ab1947f11d38eaabcd80f7dd1756f9afcbe25d8ea97d0572eced2087eab20",
+      "wholeNormalizedArmHeapSha256": "60a65df6432966ef74455f65f8434398c44893fbb742db4570754c06892453f9",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "owner-first",
+      "variant": 8,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "9419d44531c34799cafca6bec8908f3d0f4c6a2710dbb2accbc3febce8140975",
+      "wholeNormalizedArmHeapSha256": "36bbed29a11b4da2f452bf6c1ac48a73bc8f9ab037194ca3df886100138f4158",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "owner-first",
+      "variant": 9,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "bb3fdffde1777ee72c67166ebc69e27e2616113a6a95649c2eca72e9136a6bfd",
+      "wholeNormalizedArmHeapSha256": "769ab47aa68199b801f31c1740f49886a972e16e2d282e406a54d27fb84f2b7d",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "owner-first",
+      "variant": 10,
+      "caseClass": "callback-interference",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "124bb47043aacf7c5c4685a09d60a2f31c01df0075fe7ac01c01d3d86ea2e40f",
+      "wholeNormalizedArmHeapSha256": "d39362a306957052859712cdb15ef38a012c707fc80f4aeb5fca68441bc7f245",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "owner-first",
+      "variant": 11,
+      "caseClass": "callback-interference",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "9419d44531c34799cafca6bec8908f3d0f4c6a2710dbb2accbc3febce8140975",
+      "wholeNormalizedArmHeapSha256": "36bbed29a11b4da2f452bf6c1ac48a73bc8f9ab037194ca3df886100138f4158",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "owner-first",
+      "variant": 12,
+      "caseClass": "callback-interference",
+      "observationWords": 1328,
+      "orderedObservationsSha256": "81e43add4d1bb4b2355aabe875718c097a23dff20e131e657aec1d3131e22e43",
+      "wholeNormalizedArmHeapSha256": "499aec1ee7f6f5dd85a8d974d8bf5a936bb22d673e50c3381dfa38447a62e517",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "owner-first",
+      "variant": 13,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "5cf098bddef01ea3880bf0a89e851d0d8b79c0d94abfaef030d7d3bff4d2c020",
+      "wholeNormalizedArmHeapSha256": "fc123186124a613d1212a5a6106c5c5ea6082f90b73440ce5cf33bf0aa2e5430",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "owner-first",
+      "variant": 14,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "2e682a01f10bec0559b3bc0d7be9647d42f3249ef1aaf952c83ac026017c7bba",
+      "wholeNormalizedArmHeapSha256": "7230cc586cb659982349e307dfd8efd04fc176b6fe2b1c3bd66ec9ba3f5eb793",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "owner-first",
+      "variant": 15,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1288,
+      "orderedObservationsSha256": "af9c4b6c33625732971a2c5e1d0d9cf8f81379df8e6ab9ea0e6ea866c53c2ed1",
+      "wholeNormalizedArmHeapSha256": "d39362a306957052859712cdb15ef38a012c707fc80f4aeb5fca68441bc7f245",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "weak-first",
+      "variant": 0,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "0ca745390fe902e690105df68837f3ec7c32eacf42d5bb5b5a2d3fccba6a61f8",
+      "wholeNormalizedArmHeapSha256": "db3d4b77d2b57d825b8234c3bd9da4b1364c6b020ae2f138faf0478deea6dc16",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "weak-first",
+      "variant": 1,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "dde4153259c40de24dc51d2df50ce34ab1def5f575e5be7347a3e0caaa9d5f57",
+      "wholeNormalizedArmHeapSha256": "bbae803d0f23f58ac2744569c8428d712f3136d2a965080d7f62ff3d6dd329bb",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "weak-first",
+      "variant": 2,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "3064f61aec1633def78221cef4cb4649111d0f0c995e096a354e84cceac3d24b",
+      "wholeNormalizedArmHeapSha256": "065e917347f2aa3a4ab8898ebb622a8cf0d6fc68b1505d1614cb354284c4423e",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "weak-first",
+      "variant": 3,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "779f21871fbae225614c8903f2485ff30364df0a06357cb3a0d12914e357a920",
+      "wholeNormalizedArmHeapSha256": "1d7ca44c7e380f2b26d55bf2496d5e0eb84f627df6f595794186f015a929ee83",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "weak-first",
+      "variant": 4,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "a5a177bab8f6dcce44c4944fa889389329b0554c9d1ea56ba619933238dccae7",
+      "wholeNormalizedArmHeapSha256": "2bad79f8e76a386ebeee8cb277fa7c1b4b56e8ae99cf327dd671492a9e394618",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "weak-first",
+      "variant": 5,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "e82ed44d693bb280ca3f15c1ee9c52350447d76622671323c58ca0f3b1161cbe",
+      "wholeNormalizedArmHeapSha256": "9c2269111bfd37f8c046c44f410dd8ac7d5235a1a7d4f16523f2e345a8dafcf4",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "weak-first",
+      "variant": 6,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "dde4153259c40de24dc51d2df50ce34ab1def5f575e5be7347a3e0caaa9d5f57",
+      "wholeNormalizedArmHeapSha256": "bbae803d0f23f58ac2744569c8428d712f3136d2a965080d7f62ff3d6dd329bb",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "weak-first",
+      "variant": 7,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "4f6980bbbcee69b55b570671f08ec7fe3407b8a303808e452cd393a9e364d2ad",
+      "wholeNormalizedArmHeapSha256": "441b40580aa23c6e97bfa136305930674cf7d6cbbe6152de6510e1e660cac092",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "weak-first",
+      "variant": 8,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "13066b8e622dc564dbcd032ae5fbb388ecf3cb75ed8b016e4fd73ea6700f9a0e",
+      "wholeNormalizedArmHeapSha256": "55b385e726d39a50a3b7ab5a0ea3b7d27e777e6aa65233989a0e67f80bab34a2",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "weak-first",
+      "variant": 9,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "e0fdc9209d1932014c28a35aaa94c59706c43ddc4d5426ae6b2bcd7b3f88beea",
+      "wholeNormalizedArmHeapSha256": "9990562b3ce02fa87a37a48773fe056a17d458be9f5c3a3c196550d3c52b6584",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "weak-first",
+      "variant": 10,
+      "caseClass": "callback-interference",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "dde4153259c40de24dc51d2df50ce34ab1def5f575e5be7347a3e0caaa9d5f57",
+      "wholeNormalizedArmHeapSha256": "bbae803d0f23f58ac2744569c8428d712f3136d2a965080d7f62ff3d6dd329bb",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "weak-first",
+      "variant": 11,
+      "caseClass": "callback-interference",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "13066b8e622dc564dbcd032ae5fbb388ecf3cb75ed8b016e4fd73ea6700f9a0e",
+      "wholeNormalizedArmHeapSha256": "55b385e726d39a50a3b7ab5a0ea3b7d27e777e6aa65233989a0e67f80bab34a2",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "weak-first",
+      "variant": 12,
+      "caseClass": "callback-interference",
+      "observationWords": 1328,
+      "orderedObservationsSha256": "6ea36bcfd7b9d22598357b4b3fb5cd635c79dd93a61e953cbfb0e97032ca6d9c",
+      "wholeNormalizedArmHeapSha256": "be188e8e6851de6d297f65f20b1e3f3120d601d9b7b0d786ed582a2da189e3ed",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "weak-first",
+      "variant": 13,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "a8151dcab6989da04e8bafb2f9200907a3ac0ef2be2f8fcfab7fed7a1548a0f9",
+      "wholeNormalizedArmHeapSha256": "34b1eaa8af790599f7f68fb08307b7c977de22423bff0d140e547c0d0c6e90f8",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "weak-first",
+      "variant": 14,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1308,
+      "orderedObservationsSha256": "fc108b8840671f53cf441cd9e1b336d03ce5a13bd4f2b912606636e7850256bf",
+      "wholeNormalizedArmHeapSha256": "18859e3826dbdb76ea641148e4891895113c77952a1380bccd79e1182eaf1e31",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    },
+    {
+      "root": "weak-first",
+      "variant": 15,
+      "caseClass": "typed-byte-string-lifetime",
+      "observationWords": 1288,
+      "orderedObservationsSha256": "0f67f82c0ecafbf74eb67b38e1ffb0222b36a440defdbddca5e185790cdf115a",
+      "wholeNormalizedArmHeapSha256": "bbae803d0f23f58ac2744569c8428d712f3136d2a965080d7f62ff3d6dd329bb",
+      "wholeArmHeapEqual": true,
+      "sourceArmEqual": true,
+      "actualWindowsEqual": true,
+      "actualAndroidObjectsCpuModelEqual": true
+    }
+  ],
+  "orderedCaseDigest": "b9bc7e6c17196f19f1357e900b161110b23243cd4f0b69a021f002126f711ecf",
+  "registeredTargetProof": {
+    "precondition": "finite stable computed-hash bucket chain contains actual removal target; positive use count",
+    "preconditionCheckedIndependentlyBeforeArmExecution": true,
+    "lookupCallsOrTargetMutationBeforeFound": false,
+    "raceOrCycleProofClaimed": false,
+    "unexecutedInstructionAddresses": [
+      2415208,
+      2415212
+    ],
+    "unexecutedInstructionBytes": 8,
+    "originalMissingTargetAbortOrReturnBehaviorQualified": false,
+    "missingTargetDependency": 1336720,
+    "universalDeadCodeClaimed": false
+  },
+  "independentRegisteredMembershipChecks": {
+    "originalArm": 80,
+    "sourceArm": 80
+  },
+  "originalInstructionAddressesVisited": 177,
+  "originalInstructionAddressesTotal": 179,
+  "executedNewInstructionBytes": 708,
+  "unexecutedNewInstructionBytes": 8,
+  "allOriginalInstructionsExecutedClaimed": false,
+  "actualWindowsExecuted": true,
+  "actualAndroidObjectsCpuModelExecuted": true,
+  "androidReturnedApis": 448,
+  "androidModel": "Cortex-A72 AArch64 above 4 GiB with x18/saved integer/floating-point/stack checks",
+  "androidOperatingSystemOrDeviceExecuted": false,
+  "wholeVmOrGameExecuted": false,
+  "actualEncodingScope": "8-bit storage; signed byte converted to unsigned16 for 32-bit sampled hash",
+  "utf16OrGeneralUnicodeDecoderQualified": false,
+  "targetStringPrefixBytes": 12,
+  "targetPayloadOffset": 28,
+  "targetNominalAllocationHeaderBytes": 32,
+  "targetTableBytes": 12,
+  "nativeLayoutBytes": {
+    "prefix": 24,
+    "payloadOffset": 48,
+    "table": 16,
+    "nominalAllocationHeader": 56,
+    "weak": 40
+  },
+  "sharedStateAdapter": {
+    "type": "SqPrefixState012",
+    "mechanism": "byte-copy pointer from opaque unknown bytes at20",
+    "portableProvisionerMustReserveStorage": true,
+    "unalignedTypedPointerOrIncompatibleStateCast": false,
+    "fullSharedStatePortableLayoutOrFutureAdjacentFieldNonoverlapQualified": false
+  },
+  "fullSharedStateOrFutureAdjacentOpaqueFieldNonoverlapQualified": false,
+  "sourceModeOriginalCodeDataOrServicesMapped": false,
+  "sourceClosureUndefinedSymbols": [],
+  "originalByteHelpersExecutedUnmodified": [
+    {
+      "entry": 3140568,
+      "endExclusive": 3140660,
+      "mode": "ARM",
+      "instructionBytes": 92,
+      "instructionSha256": "4c70cc0d2510ec81c614c58ba703e8cb098f00b113a2b0b8fe85fdb68f844f9d",
+      "poolBytes": 4,
+      "poolSha256": "27ecd0a598e76f8a2fd264d427df0a119903e8eae384e478902541756f089dd1",
+      "newIntervalCredit": 0
+    },
+    {
+      "entry": 1052872,
+      "endExclusive": 1052988,
+      "mode": "Thumb",
+      "instructionBytes": 116,
+      "instructionSha256": "697276718f56006a68df308a836fc8b135a19ab5eac95c000fa941fdbf889019",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newIntervalCredit": 0
+    },
+    {
+      "entry": 3152540,
+      "endExclusive": 3152676,
+      "mode": "ARM",
+      "instructionBytes": 136,
+      "instructionSha256": "2217944baf1827ed794894fa766ddba366a386b39f168c0dd344f45aeb3751fd",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newIntervalCredit": 0
+    },
+    {
+      "entry": 1540636,
+      "endExclusive": 1540752,
+      "mode": "ARM",
+      "instructionBytes": 116,
+      "instructionSha256": "d4e075de5405e2393514369688bf643d3d2064f5386b321b2b9f0ee3d511e0fe",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newIntervalCredit": 0
+    },
+    {
+      "entry": 3153744,
+      "endExclusive": 3153828,
+      "mode": "ARM",
+      "instructionBytes": 84,
+      "instructionSha256": "f5cb1bf62bab3c93d24747cb17e52c730da39f75b7a8e9144c3fd7c6dab03763",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "newIntervalCredit": 0
+    }
+  ],
+  "byteHelperInterface": "length result; comparison zero/nonzero; exact copied/zeroed bytes; copy/clear return values unused",
+  "broaderLibcAbiOrNewIntervalCreditQualified": false,
+  "legacySqRefVtableReinterpretationQualified": false,
+  "exactFrozenPrefixAndOpaqueVtableCallbacks": true,
+  "actualWeak014BothDestructionOrdersQualified": true,
+  "weakApiAccessBeyondStringPrefixOrAfterLogicalStringDisposalAllowed": false,
+  "allocatorRecovered": false,
+  "allocationFailureMissingRegistrationCyclesRacesGcAndUniversalVmQualified": false,
+  "allocationAndDisposalContract": "explicit successful aligned nonoverlapping typed storage and retained-storage disposal observers",
+  "returningSourceControls": {
+    "schemaVersion": 1,
+    "allNormallyReturningControlsRejected": true,
+    "controls": [
+      {
+        "name": "unsigned-byte-instead-of-signed-to-u16",
+        "root": "add",
+        "variant": 2,
+        "modifiedSource": {
+          "path": "work/squirrel-string-lifetime015/controls/unsigned-byte-instead-of-signed-to-u16/string.c",
+          "bytes": 4249,
+          "sha256": "a84c85635dc0f244a87a42d57c86eb604a2661c4ef9341a69a027040788fd384"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-string-lifetime015/controls/unsigned-byte-instead-of-signed-to-u16/arm/release.elf",
+          "bytes": 135648,
+          "sha256": "b738bf0838d0313e4b52ae5d4b8e51550915782fcc9af4f0ca0a528a125b9fb4"
+        },
+        "actualWindowsLibrary": {
+          "path": "work/squirrel-string-lifetime015/controls/unsigned-byte-instead-of-signed-to-u16/windows/string-lifetime.dll",
+          "bytes": 13312,
+          "sha256": "c865e02d9640e4cd9a15dbbc28c9e064221c662baf6d0c560431d75b6c318a90"
+        },
+        "originalSourceAndWindowsReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "realOriginalByteHelpersExecuted": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": false,
+        "instructionOrObjectPatching": false
+      },
+      {
+        "name": "advance-input-by-hash-step",
+        "root": "add",
+        "variant": 5,
+        "modifiedSource": {
+          "path": "work/squirrel-string-lifetime015/controls/advance-input-by-hash-step/string.c",
+          "bytes": 4264,
+          "sha256": "e4dd95fbe4dd1ade48ecf4e03c5712351fdcbd94ded8f37fcfa316b82cc604c0"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-string-lifetime015/controls/advance-input-by-hash-step/arm/release.elf",
+          "bytes": 135648,
+          "sha256": "e7564c3a3c3c846e5d22e0949825a4dffb2d358359c67522abfc0dec796c9a84"
+        },
+        "actualWindowsLibrary": {
+          "path": "work/squirrel-string-lifetime015/controls/advance-input-by-hash-step/windows/string-lifetime.dll",
+          "bytes": 13312,
+          "sha256": "42fa788707380278703fca9796d32d39fc619343bf883a6e96a431bc91409469"
+        },
+        "originalSourceAndWindowsReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "realOriginalByteHelpersExecuted": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": false,
+        "instructionOrObjectPatching": false
+      },
+      {
+        "name": "reuse-preallocation-hash",
+        "root": "add",
+        "variant": 10,
+        "modifiedSource": {
+          "path": "work/squirrel-string-lifetime015/controls/reuse-preallocation-hash/string.c",
+          "bytes": 4296,
+          "sha256": "ff407507d90e1bd2d3dc6ec9d47f8ba64f99cd8e51d15380e325e4862dcde949"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-string-lifetime015/controls/reuse-preallocation-hash/arm/release.elf",
+          "bytes": 135648,
+          "sha256": "8c75e3611f05258f2b608629390c984f0df71b2aa09f14235ac9ecdd0c029d04"
+        },
+        "actualWindowsLibrary": {
+          "path": "work/squirrel-string-lifetime015/controls/reuse-preallocation-hash/windows/string-lifetime.dll",
+          "bytes": 13312,
+          "sha256": "c448031fb57c147e6caa2950f7998ae98f47b2d53a06c953d89fea27f5075604"
+        },
+        "originalSourceAndWindowsReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "realOriginalByteHelpersExecuted": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": false,
+        "instructionOrObjectPatching": false
+      },
+      {
+        "name": "increase-used-after-grow-callbacks",
+        "root": "create",
+        "variant": 8,
+        "modifiedSource": {
+          "path": "work/squirrel-string-lifetime015/controls/increase-used-after-grow-callbacks/string.c",
+          "bytes": 4255,
+          "sha256": "ea944b185e876ff57ac89e096b52bfbb2bb5efd9cb580f45be8cf9e208c751d0"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-string-lifetime015/controls/increase-used-after-grow-callbacks/arm/release.elf",
+          "bytes": 135648,
+          "sha256": "a21ac5094fbfb44fd4449dd3c31da6a2d5b25afadb479448708965b93cad039f"
+        },
+        "actualWindowsLibrary": {
+          "path": "work/squirrel-string-lifetime015/controls/increase-used-after-grow-callbacks/windows/string-lifetime.dll",
+          "bytes": 13312,
+          "sha256": "3120a935b04ca9ad8c61191a45634249b527c4a2eb0d9b381324a032d095d331"
+        },
+        "originalSourceAndWindowsReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "realOriginalByteHelpersExecuted": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": true,
+        "instructionOrObjectPatching": false
+      },
+      {
+        "name": "read-length-after-virtual-destructor",
+        "root": "release",
+        "variant": 12,
+        "modifiedSource": {
+          "path": "work/squirrel-string-lifetime015/controls/read-length-after-virtual-destructor/string.c",
+          "bytes": 4251,
+          "sha256": "154562118b4aec8cb670f905e8154e5014b7dd1ef194061615ec6ba2d0153ab1"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-string-lifetime015/controls/read-length-after-virtual-destructor/arm/release.elf",
+          "bytes": 135648,
+          "sha256": "484678c77cb4bb6972e663322a48563a4f7a4d3dcfc61f260842b99a1377fe8e"
+        },
+        "actualWindowsLibrary": {
+          "path": "work/squirrel-string-lifetime015/controls/read-length-after-virtual-destructor/windows/string-lifetime.dll",
+          "bytes": 13312,
+          "sha256": "72e00742c0f375e8f9668775c1fb2b262f168008a44614b053bbd6b70f304a4e"
+        },
+        "originalSourceAndWindowsReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "realOriginalByteHelpersExecuted": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": true,
+        "instructionOrObjectPatching": false
+      },
+      {
+        "name": "unlink-after-virtual-destructor",
+        "root": "release",
+        "variant": 12,
+        "modifiedSource": {
+          "path": "work/squirrel-string-lifetime015/controls/unlink-after-virtual-destructor/string.c",
+          "bytes": 4251,
+          "sha256": "e2ebafee97d0c6cdd478c989bc8f5f385e9b40841eb5dad9d707d2a740595f25"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-string-lifetime015/controls/unlink-after-virtual-destructor/arm/release.elf",
+          "bytes": 135648,
+          "sha256": "59e4597f5cc2e024ee3df6bb25705e7ce7faa6a2399ba4e1a35d285460ac313c"
+        },
+        "actualWindowsLibrary": {
+          "path": "work/squirrel-string-lifetime015/controls/unlink-after-virtual-destructor/windows/string-lifetime.dll",
+          "bytes": 13312,
+          "sha256": "f46eaf4ed6c24f32c6e7b86760fb24b24a93761b52cd22af2bf6f71104bb5c9b"
+        },
+        "originalSourceAndWindowsReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "realOriginalByteHelpersExecuted": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": true,
+        "instructionOrObjectPatching": false
+      },
+      {
+        "name": "publish-shared-owner-before-add-returns",
+        "root": "create",
+        "variant": 8,
+        "modifiedSource": {
+          "path": "work/squirrel-string-lifetime015/controls/publish-shared-owner-before-add-returns/string.c",
+          "bytes": 4370,
+          "sha256": "a2690addef5f3eb711f2da7c70888dc2a975de038d1a3ce2a3969a34b41357e0"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-string-lifetime015/controls/publish-shared-owner-before-add-returns/arm/release.elf",
+          "bytes": 135700,
+          "sha256": "4ec3b3f34eb952b5463516703427aab2c42e9ba68981c05aef549b394ecbfdf1"
+        },
+        "actualWindowsLibrary": {
+          "path": "work/squirrel-string-lifetime015/controls/publish-shared-owner-before-add-returns/windows/string-lifetime.dll",
+          "bytes": 13312,
+          "sha256": "bc236fec4784ee6efca8fcc0f14e800cf3d51cd7ef106effbe791e272f022b0e"
+        },
+        "originalSourceAndWindowsReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "realOriginalByteHelpersExecuted": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": true,
+        "instructionOrObjectPatching": false
+      },
+      {
+        "name": "allocate-flexible-prefix-without-nominal-tail-padding",
+        "root": "add",
+        "variant": 0,
+        "modifiedSource": {
+          "path": "work/squirrel-string-lifetime015/controls/allocate-flexible-prefix-without-nominal-tail-padding/string.c",
+          "bytes": 4242,
+          "sha256": "c9789c821bd75b84c617f5c59ca609670f3fbc9db3bacc03e1c8e34ac021db28"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-string-lifetime015/controls/allocate-flexible-prefix-without-nominal-tail-padding/arm/release.elf",
+          "bytes": 135648,
+          "sha256": "f85ad3b646072a08ea39421080b6d1bf6d906002862620e819bd654fb36c7ffc"
+        },
+        "actualWindowsLibrary": {
+          "path": "work/squirrel-string-lifetime015/controls/allocate-flexible-prefix-without-nominal-tail-padding/windows/string-lifetime.dll",
+          "bytes": 13312,
+          "sha256": "7559941d03d1e96bddc7829caaa1505b773b1f3e51e5c6908c5f02c7c5973609"
+        },
+        "originalSourceAndWindowsReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "realOriginalByteHelpersExecuted": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": true,
+        "instructionOrObjectPatching": false
+      },
+      {
+        "name": "clone-instead-of-intern-cache-hit",
+        "root": "add",
+        "variant": 6,
+        "modifiedSource": {
+          "path": "work/squirrel-string-lifetime015/controls/clone-instead-of-intern-cache-hit/string.c",
+          "bytes": 4250,
+          "sha256": "9287370596a4d2d21f4002fb00fbc8aeb3ecafff8909d79941d21d64d3dabb81"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-string-lifetime015/controls/clone-instead-of-intern-cache-hit/arm/release.elf",
+          "bytes": 135648,
+          "sha256": "3bc418c87c25943296cbe5ab7cd587e1ae5d8a03af321c4986a1be520aa1fb2b"
+        },
+        "actualWindowsLibrary": {
+          "path": "work/squirrel-string-lifetime015/controls/clone-instead-of-intern-cache-hit/windows/string-lifetime.dll",
+          "bytes": 13312,
+          "sha256": "ae796c961b543e5d587d3051a6d7827e4b82ea28cda88a88065f51cf4502e22b"
+        },
+        "originalSourceAndWindowsReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "realOriginalByteHelpersExecuted": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": false,
+        "instructionOrObjectPatching": false
+      },
+      {
+        "name": "omit-current-weak-target-invalidation",
+        "root": "release",
+        "variant": 15,
+        "modifiedSource": {
+          "path": "work/squirrel-string-lifetime015/controls/omit-current-weak-target-invalidation/string.c",
+          "bytes": 4099,
+          "sha256": "153d9d7fe9bed107a7dce59dc7a77e5eb7b4e76a5a4947a23960f4629c10d8f9"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-string-lifetime015/controls/omit-current-weak-target-invalidation/arm/release.elf",
+          "bytes": 135648,
+          "sha256": "631aba1ea1c1fd6c1022a62e418b0954488f298f3f17709f1056622556bb9d8d"
+        },
+        "actualWindowsLibrary": {
+          "path": "work/squirrel-string-lifetime015/controls/omit-current-weak-target-invalidation/windows/string-lifetime.dll",
+          "bytes": 13312,
+          "sha256": "5fdf9cb31494dab075a41727805b51e25b8d461d70d9ad1637e39d4312dafd40"
+        },
+        "originalSourceAndWindowsReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "realOriginalByteHelpersExecuted": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": false,
+        "instructionOrObjectPatching": false
+      },
+      {
+        "name": "append-instead-of-prepend-during-rehash",
+        "root": "create",
+        "variant": 9,
+        "modifiedSource": {
+          "path": "work/squirrel-string-lifetime015/controls/append-instead-of-prepend-during-rehash/string.c",
+          "bytes": 4331,
+          "sha256": "69583636d9aa7e3670bfb02f38952674dc6a53cdb701cc1c7342795be5a405ef"
+        },
+        "sourceElf": {
+          "path": "work/squirrel-string-lifetime015/controls/append-instead-of-prepend-during-rehash/arm/release.elf",
+          "bytes": 135648,
+          "sha256": "47c142e9ee6e2a4ba68b45613c00696f107d41898c354c01309d35d865cd7dc2"
+        },
+        "actualWindowsLibrary": {
+          "path": "work/squirrel-string-lifetime015/controls/append-instead-of-prepend-during-rehash/windows/string-lifetime.dll",
+          "bytes": 13312,
+          "sha256": "adb5649a7f17ac9285f539162a0096fa44474dae0ad76744e5aca1d30a12b9fe"
+        },
+        "originalSourceAndWindowsReturnedNormally": true,
+        "boundedMemoryAndSavedAbiPassed": true,
+        "realOriginalByteHelpersExecuted": true,
+        "sourceObservationRejected": true,
+        "nativeObservationRejected": true,
+        "finalNormalizedHeapStillEqual": false,
+        "instructionOrObjectPatching": false
+      }
+    ],
+    "sameFinalStateObserverControlsRejected": true
+  },
+  "nativeTests": {
+    "passed": 14,
+    "log": {
+      "path": "work/squirrel-string-lifetime015/replay/tests.json",
+      "bytes": 3358,
+      "sha256": "3b621959db158d8733a7efe866eaa78cfd0e037bc218ca39d661bca943a92102"
+    }
+  },
+  "armBuild": {
+    "objects": [
+      {
+        "path": "work/squirrel-string-lifetime015/replay/arm/source-0.o",
+        "bytes": 4160,
+        "sha256": "fc8cf030286dee1e4f56fbbe1cc88b84aab9896d344c8491da1dcd061a2aa25b"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/arm/source-1.o",
+        "bytes": 2280,
+        "sha256": "01bad524e84c1108383820a5c67b1fbef9bbf7a705858b8492382dfe8fa4ac4f"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/arm/source-2.o",
+        "bytes": 1552,
+        "sha256": "c7ef6835cf0a3f8fe2f8324dcc33fde24be330a753f07a3619cebb3b7ecf15e2"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/arm/source-3.o",
+        "bytes": 8784,
+        "sha256": "0a5fb29f536ec07d3b86fa39d168d4b7fb0120ba3e2e28626fce98bc6f879070"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/arm/source-4.o",
+        "bytes": 6116,
+        "sha256": "6eaf3e51c63437b646244cfdf55dc7e4d8bc4ee9ab07d130cf68656fb4000fe6"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/arm/source-5.o",
+        "bytes": 3776,
+        "sha256": "8953282ade0631667ea8be65cc73c77844f1a622325a6007a98ca96cc020ea4e"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/arm/source-6.o",
+        "bytes": 2588,
+        "sha256": "0037d2acb8d7ca79f7c39089421868caa13ec23b9af4420de76be7f9f3353e97"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/arm/source-7.o",
+        "bytes": 1676,
+        "sha256": "a65c542feefb6c6939e137fe4a076a31d365a000275ead1177fc83c8ba2d91b6"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/arm/source-8.o",
+        "bytes": 1968,
+        "sha256": "0377f89bc57a01959370b982e79de42f0b3aefb374c4cb6f2d90dafae083aa69"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/arm/source-9.o",
+        "bytes": 1540,
+        "sha256": "a0ce7c0414cda29cbfc20ed96dd600c5a4363efa3c68f978dbef4d8d86e67174"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/arm/source-10.o",
+        "bytes": 1216,
+        "sha256": "9c69388300f6b80d4b9283fde017ecbe531a5adf13ef16d97fa3412772e83a03"
+      }
+    ],
+    "linkedElf": {
+      "path": "work/squirrel-string-lifetime015/replay/arm/release.elf",
+      "bytes": 135648,
+      "sha256": "2891bea367a9ff1be777c4dbacd27b7f576797316e4713b0008a423529ff5c71"
+    },
+    "linkerScript": {
+      "path": "work/squirrel-string-lifetime015/replay/arm/release.ld",
+      "bytes": 237,
+      "sha256": "6fe9be71f881ff60f4a33f0b7119ff0d9968214cf4ae3ae886adb8f7e04ab6f7"
+    },
+    "sources": [
+      {
+        "path": "source/squirrel-wave015/string.c",
+        "bytes": 4148,
+        "sha256": "cd10d0aaeb53701160428b626054ef770b4f7bbec918c0fa47bf6621010c8a96"
+      },
+      {
+        "path": "source/squirrel-wave015/bytes.c",
+        "bytes": 1343,
+        "sha256": "dd6c00224e775bade17253458cead7c2a26ec72217936d901e30a541036dcd90"
+      },
+      {
+        "path": "source/squirrel-wave015/vtables.c",
+        "bytes": 341,
+        "sha256": "1150299e779dc53d3259584e7197e063da501599c84b6fb410b553620944c404"
+      },
+      {
+        "path": "source/squirrel-wave015/fixture_state.c",
+        "bytes": 8166,
+        "sha256": "044be79eca6bad2d0bf13e36e0a91b9c4b435ea629d88474c34a8b5c3ccde40c"
+      },
+      {
+        "path": "source/squirrel-wave015/fixture_observers.c",
+        "bytes": 4064,
+        "sha256": "c32610ae71224415042b21560625e42d509fcd7f480205f2b8948d6adeb634f0"
+      },
+      {
+        "path": "source/squirrel-wave015/fixture_run.c",
+        "bytes": 3277,
+        "sha256": "a6807a1a38cef3616b58721f1f9b665d8dc3c65c938ba35c1ef749dd3b342f64"
+      },
+      {
+        "path": "source/squirrel-wave011/prototype_release.c",
+        "bytes": 2353,
+        "sha256": "f772017b62016f4f29765ab2ff3a70d94f335be869ba85b3f1e720df5ed4022f"
+      },
+      {
+        "path": "source/squirrel-wave011/vtables.c",
+        "bytes": 459,
+        "sha256": "e9097052e4dfe7538485bee7f1a54570b66937b2db49c9d69d6f23c84b0635a7"
+      },
+      {
+        "path": "source/squirrel-wave014/weak_reference.c",
+        "bytes": 1095,
+        "sha256": "d9719bf30cb04dcffb6ae41b5772e879ef1329d081b1f4955f6128a3c39c9f9b"
+      },
+      {
+        "path": "source/squirrel-wave014/vtables.c",
+        "bytes": 345,
+        "sha256": "49a8f45840425adc5dd6433014d2b503722e98589f08a4a06f966b02252fb631"
+      },
+      {
+        "path": "source/squirrel-wave008/fixture_runtime.c",
+        "bytes": 317,
+        "sha256": "1907af52d2aff7f6df7a6eb1c1d4e5dd3da3815f75e3b398dfce4c91b2a17218"
+      }
+    ],
+    "flags": [
+      "--target=arm-none-eabi",
+      "-mcpu=mpcore",
+      "-marm",
+      "-O2",
+      "-std=c11",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-unwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-Wall",
+      "-Wextra",
+      "-Werror"
+    ],
+    "functions": {
+      "fn_0016b5f0": {
+        "section": ".text.fn_0016b5f0",
+        "size": 488,
+        "symbolBytes": 488,
+        "mode": "ARM",
+        "sectionSha256": "699aa762c03a8501c42b8f7b2ffcc8e28d4bf6978ca55bd6c50bb7b048c4f35f",
+        "relocations": [
+          {
+            "offset": 32,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "sq_string_length015",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 160,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "sq_string_compare015",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 180,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "sq_string_allocate_value015",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 228,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "sq_string_copy015",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 352,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "sq_string_allocate_buckets015",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 368,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "sq_string_zero015",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 468,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "sq_string_deallocate_buckets015",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 484,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "sq_string_vtable015",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_0019ba68": {
+        "section": ".text.fn_0019ba68",
+        "size": 40,
+        "symbolBytes": 40,
+        "mode": "ARM",
+        "sectionSha256": "30198e7f3009b58d68e3cec056fe3a9b0ac9c74c2914efe1edc9710945a84d76",
+        "relocations": [
+          {
+            "offset": 16,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "sq_string_table015",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 28,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0016b5f0",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_0024d9e0": {
+        "section": ".text.fn_0024d9e0",
+        "size": 152,
+        "symbolBytes": 152,
+        "mode": "ARM",
+        "sectionSha256": "04bfaad1a375810a452d37725ad41b16e77062f89b1e1f7445738f3e8e0ef0b2",
+        "relocations": [
+          {
+            "offset": 144,
+            "type": 29,
+            "name": "R_ARM_JUMP24",
+            "symbol": "sq_string_deallocate_value015",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 148,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "sq_string_missing015",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_0024d9cc": {
+        "section": ".text.fn_0024d9cc",
+        "size": 148,
+        "symbolBytes": 148,
+        "mode": "ARM",
+        "sectionSha256": "870344d1ce0791af6362b4c9af38b16f7cb6ea70be4e231345e2ba5949d6f54d",
+        "relocations": [
+          {
+            "offset": 12,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "sq_string_table015",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 140,
+            "type": 29,
+            "name": "R_ARM_JUMP24",
+            "symbol": "sq_string_deallocate_value015",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 144,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "sq_string_missing015",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_0068f564": {
+        "section": ".text.fn_0068f564",
+        "size": 44,
+        "symbolBytes": 44,
+        "mode": "ARM",
+        "sectionSha256": "712fade64bab89f89fe724ec0732dec059f2b6f58a2088a710e40a731db46ad1",
+        "relocations": [
+          {
+            "offset": 40,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "sq_prototype_base_vtable011",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_00299114": {
+        "section": ".text.fn_00299114",
+        "size": 640,
+        "symbolBytes": 640,
+        "mode": "ARM",
+        "sectionSha256": "c51e740e8cb442a7b3a0646131fca76542f0c9ccf1eda8c03ddfa46da1978b3a",
+        "relocations": [
+          {
+            "offset": 636,
+            "type": 29,
+            "name": "R_ARM_JUMP24",
+            "symbol": "sq_prototype_deallocate011",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_00299424": {
+        "section": ".text.fn_00299424",
+        "size": 172,
+        "symbolBytes": 172,
+        "mode": "ARM",
+        "sectionSha256": "945ef5fa52fbb3bbcd73a0dfcca4243835619157eb2fe9baf841ddef252a2ea7",
+        "relocations": [
+          {
+            "offset": 164,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "sq_prototype_vtable011",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 168,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "sq_prototype_base_vtable011",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_00233b7c": {
+        "section": ".text.fn_00233b7c",
+        "size": 80,
+        "symbolBytes": 80,
+        "mode": "ARM",
+        "sectionSha256": "24afa857aefb4969f8e0db9779810694ddbe4d67035c257d234367f8e4757a41",
+        "relocations": [
+          {
+            "offset": 28,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "sq_weak_allocate014",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 76,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "sq_weak_vtable014",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_006a7780": {
+        "section": ".text.fn_006a7780",
+        "size": 60,
+        "symbolBytes": 60,
+        "mode": "ARM",
+        "sectionSha256": "878fab52167e03d9a1cb847c087c5c70c1096348e8b7af910310a5c092c7d63c",
+        "relocations": [
+          {
+            "offset": 56,
+            "type": 29,
+            "name": "R_ARM_JUMP24",
+            "symbol": "sq_weak_deallocate014",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_006a77c0": {
+        "section": ".text.fn_006a77c0",
+        "size": 44,
+        "symbolBytes": 44,
+        "mode": "ARM",
+        "sectionSha256": "712fade64bab89f89fe724ec0732dec059f2b6f58a2088a710e40a731db46ad1",
+        "relocations": [
+          {
+            "offset": 40,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "sq_prototype_base_vtable011",
+            "format": "SHT_REL"
+          }
+        ]
+      }
+    },
+    "symbols": {
+      "string_destroy_entry": 15729804,
+      "string_release_entry": 15729808,
+      "alternate_destructor": 15733620,
+      "alternate_release": 15733724,
+      "prototype_destructor_entry": 15736028,
+      "prototype_release_entry": 15736032,
+      "weak_destroy_entry": 15736220,
+      "weak_release_entry": 15736224,
+      "sq_string_hash015": 15728640,
+      "sq_string_allocation_bytes015": 15728712,
+      "fn_0016b5f0": 15728720,
+      "sq_string_length015": 15729592,
+      "sq_string_compare015": 15729620,
+      "sq_string_allocate_value015": 15733064,
+      "sq_string_copy015": 15729684,
+      "sq_string_allocate_buckets015": 15733280,
+      "sq_string_zero015": 15729712,
+      "sq_string_deallocate_buckets015": 15733432,
+      "sq_string_vtable015": 15761408,
+      "fn_0019ba68": 15729208,
+      "sq_string_table015": 15729740,
+      "fn_0024d9e0": 15729248,
+      "sq_string_deallocate_value015": 15733368,
+      "sq_string_missing015": 15733728,
+      "fn_0024d9cc": 15729400,
+      "fn_0068f564": 15729548,
+      "sq_prototype_base_vtable011": 15761444,
+      "sq_string_provision_table015": 15729772,
+      "fixture_state": 15729812,
+      "string_fixture015": 15859712,
+      "fixture_table": 15729836,
+      "fixture_buckets": 15729856,
+      "fixture_string": 15729880,
+      "fixture_weak": 15729904,
+      "fixture_input": 15729928,
+      "fixture_identity": 15729948,
+      "fixture_vtable_identity": 15730256,
+      "string_alternate_vtable015": 15761420,
+      "fixture_first_bytes": 15730344,
+      "fixture_hash": 15730376,
+      "fixture_bind": 15730484,
+      "fixture_prepare": 15730560,
+      "fixture_string_vtable": 15732540,
+      "fixture_weak_vtable": 15732552,
+      "sq_weak_vtable014": 15761456,
+      "fixture_base_vtable": 15732564,
+      "fixture_layout": 15732576,
+      "fixture_record": 15732652,
+      "sq_weak_allocate014": 15733528,
+      "sq_weak_deallocate014": 15733588,
+      "sq_prototype_deallocate011": 15733604,
+      "fixture_execute": 15733732,
+      "fn_00233b7c": 15736036,
+      "fn_006a7780": 15736116,
+      "fixture_snapshot": 15734024,
+      "sq_prototype_allocation_bytes011": 15735136,
+      "fn_00299114": 15735216,
+      "fn_00299424": 15735856,
+      "sq_prototype_vtable011": 15761432,
+      "fn_006a77c0": 15736176,
+      "memset": 15736228,
+      "__aeabi_memclr4": 15736256
+    },
+    "undefinedSymbols": [],
+    "originalCodeOrDataMappedBySource": false,
+    "heapServiceIsAuthoredCFixture": true
+  },
+  "actualWindowsLibrary": {
+    "path": "work/squirrel-string-lifetime015/replay/windows/string-lifetime.dll",
+    "bytes": 13312,
+    "sha256": "93eb02daa0bf78054b0f5cf707f77efecc85ea27bffc3306fbda9c1e5956687d"
+  },
+  "androidBuild": {
+    "actualAndroidObjects": [
+      {
+        "path": "work/squirrel-string-lifetime015/replay/android/source-0.o",
+        "bytes": 4032,
+        "sha256": "753388d420e68521bf307c0292253c656c3d7f052977acf125396690936cd052"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/android/source-1.o",
+        "bytes": 1992,
+        "sha256": "fa7afbb304c2849c58311640ff519ca575c741b4e88111d6a942af72213d7c21"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/android/source-2.o",
+        "bytes": 1624,
+        "sha256": "a3b632e5b694ea2e3879e9c27a33cc7e2124891a0accda5c18e7dbfbcaeb9aa5"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/android/source-3.o",
+        "bytes": 9024,
+        "sha256": "028e059e8e1815881f6774e8753d536a3dc5ffe416ae463d056c5f41187c4014"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/android/source-4.o",
+        "bytes": 6744,
+        "sha256": "105b5c837e489beb6c3f4f442927db7875b702eada68a1a0fae66e8f2030d97d"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/android/source-5.o",
+        "bytes": 5400,
+        "sha256": "b42d71182e010de0e52f639f4ea940a95f61f87b4f5c7aef2e8bd70bdb5ce590"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/android/source-6.o",
+        "bytes": 2512,
+        "sha256": "02372688552933f57e1a7857af259a15c6515ae715c5636234eca60c8d71da0b"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/android/source-7.o",
+        "bytes": 1808,
+        "sha256": "40f8cd2df2dc73c3f1e387d4d01f004daf7899eac9c0da8f37d286dab8ac4d73"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/android/source-8.o",
+        "bytes": 1880,
+        "sha256": "c481c8c36256a8d5324bb37b3a7a4827a466541bc614bbe06a9807c4a3c2002b"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/android/source-9.o",
+        "bytes": 1616,
+        "sha256": "bb753e53ebf686c80700c5086be12fca99b82fb2ebf1c92159bbb581b03a018d"
+      },
+      {
+        "path": "work/squirrel-string-lifetime015/replay/android/source-10.o",
+        "bytes": 1320,
+        "sha256": "426c8ea66589f5e170b8893ab0a8cd10854fc502ef648defefeaca070b042187"
+      }
+    ],
+    "sharedLibrary": {
+      "path": "work/squirrel-string-lifetime015/replay/android/libstring_lifetime015.so",
+      "bytes": 22240,
+      "sha256": "9678f84582ebb998805a5159ccf014acb0a614e1601afa6533c0a262d1d00ce1"
+    },
+    "modelElf": {
+      "path": "work/squirrel-string-lifetime015/replay/android/model.elf",
+      "bytes": 202184,
+      "sha256": "f45db008869464606f630176c172cb692d1b43c39d8e0771a2ff85d950e50021"
+    },
+    "originalCodeOrDataMapped": false,
+    "androidOperatingSystemExecuted": false
+  },
+  "toolIdentities": [
+    {
+      "path": "tools/clang-21/clang.exe",
+      "bytes": 99559064,
+      "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+    },
+    {
+      "path": "tools/clang-21/ld.lld.exe",
+      "bytes": 69225112,
+      "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3"
+    }
+  ],
+  "unicornWrapperVersion": "2.1.4",
+  "unicornNativeVersion": [
+    2,
+    1,
+    33621247
+  ],
+  "originalPayloadsOrRawOriginalInstructionsPublished": false,
+  "reproduction": [
+    "tools/python/Scripts/python.exe",
+    "toolscripts/squirrel_string_lifetime015.py"
+  ]
+}

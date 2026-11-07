@@ -1830,6 +1830,66 @@
         "src/native/wave013/pattern_unicode.h"
       ],
       "role": "bounded-public-data-text-normalization"
+    },
+    {
+      "source": "source/squirrel-wave015/bytes.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave015/string.h"
+      ],
+      "role": "bounded-byte-string-interning-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave015/fixture_observers.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave014/weak_reference.h",
+        "source/squirrel-wave015/fixture_internal.h",
+        "source/squirrel-wave015/string.h"
+      ],
+      "role": "bounded-byte-string-interning-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave015/fixture_run.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave014/weak_reference.h",
+        "source/squirrel-wave015/fixture_internal.h",
+        "source/squirrel-wave015/string.h"
+      ],
+      "role": "bounded-byte-string-interning-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave015/fixture_state.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave014/weak_reference.h",
+        "source/squirrel-wave015/fixture_internal.h",
+        "source/squirrel-wave015/string.h"
+      ],
+      "role": "bounded-byte-string-interning-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave015/string.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave015/string.h"
+      ],
+      "role": "bounded-byte-string-interning-lifetime"
+    },
+    {
+      "source": "source/squirrel-wave015/vtables.c",
+      "headers": [
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave015/string.h"
+      ],
+      "role": "bounded-byte-string-interning-lifetime"
     }
   ],
   "excludedSources": [
@@ -1854,6 +1914,7 @@
     "source/squirrel-wave011",
     "source/squirrel-wave012",
     "source/squirrel-wave013",
-    "source/squirrel-wave014"
+    "source/squirrel-wave014",
+    "source/squirrel-wave015"
   ]
 }
