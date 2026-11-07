@@ -9,3 +9,5 @@
 #define fn_0019e2e8 sq_table_delegate019
 #define fn_00666540 sq_table_destroy019
 #define fn_00666518 sq_table_release019
+#define fn_001a36d4 sq_lookup_scratch020
+#define fn_00202cf4 sq_lookup_table_meta020

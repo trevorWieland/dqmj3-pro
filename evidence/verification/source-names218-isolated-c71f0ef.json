@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "sourceRevision": "c71f0ef53fdcbed9c54e8340d7f92a287b617f19",
+  "sourceArchiveSha256": "a612b157bc6bcaa22dc95411465766c2257610558469c0c71ff9d457a6182fce",
+  "replayRoot": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef",
+  "replayDriverSha256": "ee09af535d3367863d69396a51cacc14c6636023f3f4956af2cf15fa86ecaddf",
+  "profile": "218-row aliases/dependency gate and byte-identical legacy table-family verification binaries; no additional family runtime or full VM/game/device assertion",
+  "freshEnvironment": true,
+  "sharedGeneratedOrWorkInputs": false,
+  "copiedToolAndWheelFiles": [
+    {
+      "path": "tools/clang-21/clang.exe",
+      "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+    },
+    {
+      "path": "tools/clang-21/ld.lld.exe",
+      "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3"
+    },
+    {
+      "path": "tools/clang-21/libwinpthread-1.dll",
+      "sha256": "c9019ab753c2faa5e5da94e3fd4395f1d3d0e7d2509f5ed2d96cccff7f8b9357"
+    },
+    {
+      "path": "tools/clang-21/libxml2.dll",
+      "sha256": "e15a377aa308e3f7ba948e6d6622a5dea2308256dbc65858074b61d867af6148"
+    },
+    {
+      "path": "tools/ctrtool-1.3.0/ctrtool.exe",
+      "sha256": "79021f283b2199950eb22cf3c459806b9c8aaaf68f65c80100107d3454a1c224"
+    },
+    {
+      "path": "tools/objdiff-3.8.3/objdiff-cli.exe",
+      "sha256": "dd12dfb5e9e94a7f6c949a37e1815963cf2cffe4c87b4999b7ebc8c15b398a1f"
+    },
+    {
+      "path": "tools/android-r30-minimal/provenance.json",
+      "sha256": "42a7f16caf038712bfa917dfe2adaad22dc7f6044c43e3d8094b3c70aba06e29"
+    },
+    {
+      "path": "tools/android-r30-minimal/source.properties",
+      "sha256": "e73b7dc557cea2da9212c09ee1795434957d62e63b7550eef69fd1887a355d94"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/crtbegin_dynamic.o",
+      "sha256": "9087e4b58fd8aadc225d062e8750260079fce2f0a3cd4d0b46b8c2440eedb03a"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/crtend_android.o",
+      "sha256": "47cb49c3d286915f19287b94a7242f668fe62d0b2ae7c4256c7203ba0d179427"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/libc.so",
+      "sha256": "29a129043e28ba808e3bd69750242d71241a3e05581809551f0e371f4894b687"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/libdl.so",
+      "sha256": "b9d8f21c840570a4fe41b5a24c37651d1980fcda7d323003afcbd8483d3da51a"
+    },
+    {
+      "path": "tools/wheels/capstone-5.0.9-py3-none-win_amd64.whl",
+      "sha256": "732cedbbb56d42e723f14d7af6387f1454194a820b4b96b56d1e53f865ef85d0"
+    },
+    {
+      "path": "tools/wheels/pycryptodomex-3.24.2-cp37-abi3-win_amd64.whl",
+      "sha256": "6e912e3a21061bf8f4ce89223cb46f5e98a6b32420d08d770605891a2be266c6"
+    },
+    {
+      "path": "tools/wheels/pyctr-0.7.6-py3-none-any.whl",
+      "sha256": "60fe1dfa2af9fc518a2e4b38e39f42e48eae1f27c594e677836fd04726bb2323"
+    },
+    {
+      "path": "tools/wheels/pyelftools-0.33-py3-none-any.whl",
+      "sha256": "f215ad5f47d3f1373a21496a6c9e0707c622840d0622f23ff7ce08678b020036"
+    },
+    {
+      "path": "tools/wheels/unicorn-2.1.4-cp37-abi3-win_amd64.whl",
+      "sha256": "d7107500c64ce5c168fbff6bef9485b5db1350050036f4cea568650cf8bdbdf5"
+    },
+    {
+      "path": "tools/wheels/z3_solver-5.3.3.0-py3-none-win_amd64.whl",
+      "sha256": "d189844a586242fe3d2a701c09751a80d518645931931a7c6bf29df679044215"
+    },
+    {
+      "path": "tools/wheels/cvc5-1.4.2-cp313-cp313-win_amd64.whl",
+      "sha256": "0ee0a51862d9e8ae8a38572909641a88cdf8d5e1640dee481b24289b6811b9da"
+    },
+    {
+      "path": "inputs/archive/dqmj3pro/DQMJ3P.cia",
+      "sha256": "864d1c35ba6908bed94d9c5f09a148b3355c41794f1d126086dafe1876665f47"
+    },
+    {
+      "path": "inputs/archive/dqmj3pro/DQMJ3P_Update.cia",
+      "sha256": "e19f07d67165bf5bf5c3c226064433cf2e36e2cc489742c69b0c2efa28447c55"
+    }
+  ],
+  "steps": [
+    {
+      "name": "offline-dependencies",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\wheels\\capstone-5.0.9-py3-none-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\wheels\\pycryptodomex-3.24.2-cp37-abi3-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\wheels\\pyctr-0.7.6-py3-none-any.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\wheels\\pyelftools-0.33-py3-none-any.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\wheels\\unicorn-2.1.4-cp37-abi3-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\wheels\\z3_solver-5.3.3.0-py3-none-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\wheels\\cvc5-1.4.2-cp313-cp313-win_amd64.whl"
+      ],
+      "returncode": 0,
+      "log": "offline-dependencies.log",
+      "logSha256": "016abf494855e348c0cdf84ae98ccd426e0db92637a2af093bbaa657c22d11d2"
+    },
+    {
+      "name": "fresh-original-intake",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\python\\Scripts\\python.exe",
+        "-c",
+        "import sys;from pathlib import Path;sys.path.insert(0,\"toolscripts\");import ci_native_build as ci;ci.extract_inputs(Path.cwd(),Path(\"work/component-intake\"))"
+      ],
+      "returncode": 0,
+      "log": "fresh-original-intake.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "source-names-check",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/generate_source_names.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "log": "source-names-check.log",
+      "logSha256": "d5f7da5079cc424f675b0bb90e98916c079458a144412830ecc2512da358605b"
+    },
+    {
+      "name": "legacy-family-binaries",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\python\\Scripts\\python.exe",
+        "evidence/verification/producers/review-legacy006-get-name-transition.py"
+      ],
+      "returncode": 0,
+      "log": "legacy-family-binaries.log",
+      "logSha256": "1992bdb45d745f168bdd6b8d8cc012e019f73b096fcb1d16ae3695eb12f58377"
+    },
+    {
+      "name": "public-compilation",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/compile_sources.py",
+        "--output",
+        "work/source-compile-ci/committed-replay"
+      ],
+      "returncode": 0,
+      "log": "public-compilation.log",
+      "logSha256": "fbe89f72a70f8a5fae6a0f291db08c92503cf691a7beba72309083333f5ca6dd"
+    },
+    {
+      "name": "compile_sources-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_compile_sources.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "compile_sources-tests.log",
+      "logSha256": "cd3d38a2f711814d24f4d88a9ed3397d602d3666e9adf8bf1bc254d367f4fd04"
+    },
+    {
+      "name": "functional_report-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_functional_report.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "functional_report-tests.log",
+      "logSha256": "a0c1004f9c4704e7188eb169a5f94b4ad9527b1427ae6bcc91276c87c30d2ae9"
+    },
+    {
+      "name": "native_census_overlay-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_native_census_overlay.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "native_census_overlay-tests.log",
+      "logSha256": "8171007cbda935bf6519e02dc515834a6df882556d427b0d2803c67dfe38a843"
+    },
+    {
+      "name": "reporting-objects",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/objdiff_objects.py"
+      ],
+      "returncode": 0,
+      "log": "reporting-objects.log",
+      "logSha256": "511b3fb38799b99524d0114b319d0deddc9476bab475640c7d5ef24bab72fce4"
+    },
+    {
+      "name": "report-configuration",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/configure_objdiff.py",
+        "--version",
+        "update-content0",
+        "--output",
+        "objdiff.json"
+      ],
+      "returncode": 0,
+      "log": "report-configuration.log",
+      "logSha256": "6fffbbac09a65c03dc7bb4ad936cb2acb01aadb8a9633b03b73d97d761fecd3b"
+    },
+    {
+      "name": "stock-report",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\objdiff-3.8.3\\objdiff-cli.exe",
+        "report",
+        "generate",
+        "-o",
+        "build/update-content0/report.raw.json"
+      ],
+      "returncode": 0,
+      "log": "stock-report.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "normalized-report",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/finalize_objdiff_report.py",
+        "--input",
+        "build/update-content0/report.raw.json"
+      ],
+      "returncode": 0,
+      "log": "normalized-report.log",
+      "logSha256": "14640f4b40b3d3f50d4ef4d1d7a08d84c1f155c2dac2d29f9cb5e8484124f4f2"
+    },
+    {
+      "name": "functional-companion",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\source-names218-c71f0ef\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/functional_report.py"
+      ],
+      "returncode": 0,
+      "log": "functional-companion.log",
+      "logSha256": "833e1069f38f88f80cac96e3f8c75f2d3c5cac94c3b516d616cf721fa6c100ca"
+    }
+  ],
+  "status": "passed",
+  "wholeGameExecution": false,
+  "sourceAdmissionGranted": false,
+  "packets": [
+    {
+      "path": "evidence/verification/legacy006-get-name-transition.json",
+      "sha256": "c31c57856d767892a9aa6e9c26e62219d7ea32f97064b9077d3396c91b9d173c"
+    },
+    {
+      "path": "build/update-content0/report.json",
+      "sha256": "8169c9234092ee6107f3a7f1c0b5946eccb53c5787f45d735a7cd31fe2bd0045"
+    },
+    {
+      "path": "build/update-content0/functional.json",
+      "sha256": "ad77fcc3c90bf1f21b9ac415f1ca42345508154419b2216ab97b8269d910acf0"
+    }
+  ]
+}

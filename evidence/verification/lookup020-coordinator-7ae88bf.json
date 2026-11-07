@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-independent-opaque-lookup-batch",
+  "sourceRevision": "7ae88bfb307d4a7b35df828eed3a206bd06c45b1",
+  "completeUnmodifiedBatchReplayPassed": true,
+  "rawReplay": {
+    "path": "evidence/verification/lookup020-isolated-7ae88bf.json",
+    "sha256": "35eb77caa43a0a43c20125a712dd8f8da88cf269c60e08e56d6e5bf0848ad066",
+    "bytes": 12711
+  },
+  "executedDriver": {
+    "path": "evidence/verification/producers/lookup020-7ae88bf-replay.py",
+    "sha256": "515ad5421b0e80200a6bbe9a46832153172ab1bcec3dbd8eb1278e529780b78a",
+    "bytes": 5120
+  },
+  "primaryExecution": {
+    "path": "evidence/lanes/squirrel-lookup020/execution.json",
+    "sha256": "fe0eb759271d9754bd9909523c6f8983f0d177876b72e29941ad3bc9948ed7ae",
+    "bytes": 127158
+  },
+  "secondaryExecution": {
+    "path": "work/clean-replay/lookup020-7ae88bf/evidence/lanes/squirrel-lookup020/execution.json",
+    "sha256": "b26c5f26016de1d536d9ded458e22e8406f50e0a468deb12decf3568a0ef7c86",
+    "bytes": 127158
+  },
+  "frozenReady": {
+    "path": "evidence/lanes/squirrel-lookup020/ready.json",
+    "sha256": "a48bda1f2ed39c1f7b49ead8b6d250a3d841a5e21a57c1c40940bac7b15d1884",
+    "bytes": 5653
+  },
+  "allExecutionFieldsExceptIndependentTestLogIdentityIdentical": true,
+  "independentNativeTestsPassed": 30,
+  "caseSets": 132,
+  "comparisonsAgainstOriginal": 396,
+  "wholeArmArenaBytes": 262144,
+  "caseDigest": "40a4768d5545f705136210751f94d8f03b1885b04f6996acf4b2f34b540ad253",
+  "returningControls": 18,
+  "controlsWithSameFinalHeap": 6,
+  "tests": 88,
+  "publicUnits": 214,
+  "publicCompilations": 586,
+  "existingFunctionalFunctions": 218,
+  "discoveredEntries": 26626,
+  "grossCodeByteDenominatorUnchanged": 7051280,
+  "matchingSourceBytesUnchanged": 5128,
+  "partialBodiesReceiveNoWholeFunctionCredit": true,
+  "sourceAdmissionGranted": false,
+  "wholeVmGameOrPhysicalDeviceClaimed": false,
+  "producer": {
+    "path": "evidence/verification/producers/review-lookup020-replay.py",
+    "sha256": "7cbc207beed8713d92c391653d1a8e1be0785016cd697df8a06e0e38b77bc306",
+    "bytes": 4544
+  }
+}
