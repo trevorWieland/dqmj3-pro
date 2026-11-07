@@ -3,16 +3,22 @@
 
 #include "../wave009/interval_set.h"
 
-typedef struct MatchLink {
-    unsigned int unknown_00;
-    struct MatchLink *next;
-} MatchLink;
+typedef IntrusiveLink MatchLink;
+
+typedef struct MatchStateData {
+    MatchLink transitions;
+    struct FixedArena *transition_arena;
+    MatchLink pending;
+    struct FixedArena *pending_arena;
+    struct FixedArena *data_arena;
+    unsigned char *members;
+    unsigned int member_count;
+    signed char result;
+} MatchStateData;
 
 typedef struct MatchState {
-    unsigned int unknown_00[2];
-    MatchLink transitions;
-    unsigned int unknown_10[7];
-    signed char result;
+    MatchLink collection;
+    MatchStateData data;
 } MatchState;
 
 typedef struct MatchCursor {

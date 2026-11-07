@@ -4,16 +4,17 @@ import native_wave009_oracle as intervals
 import native_wave010_model as model
 
 
-class NativeLink(ctypes.Structure):
-    pass
+NativeLink = intervals.NativeLink
 
 
-NativeLink._fields_ = [('unknown_00', ctypes.c_uint), ('next', ctypes.POINTER(NativeLink))]
+class NativeStateData(ctypes.Structure):
+    _fields_ = [('transitions', NativeLink), ('transition_arena', ctypes.c_void_p),
+                ('pending', NativeLink), ('pending_arena', ctypes.c_void_p), ('data_arena', ctypes.c_void_p),
+                ('members', ctypes.POINTER(ctypes.c_ubyte)), ('member_count', ctypes.c_uint), ('result', ctypes.c_byte)]
 
 
 class NativeState(ctypes.Structure):
-    _fields_ = [('unknown_00', ctypes.c_uint * 2), ('transitions', NativeLink),
-                ('unknown_10', ctypes.c_uint * 7), ('result', ctypes.c_byte)]
+    _fields_ = [('collection', NativeLink), ('data', NativeStateData)]
 
 
 class NativeCursor(ctypes.Structure):
@@ -51,20 +52,32 @@ def encode(case, operation):
     text = allocate(ctypes.c_ushort * (len(case['text']) + 1))
     text[:] = [*case['text'], 0]
     for instance, specification in zip(states, case['states']):
-        instance.result = specification['result']
-        sentinel = ctypes.pointer(instance.transitions)
+        instance.data.result = specification['result']
+        instance.collection.previous = ctypes.pointer(instance.collection)
+        instance.collection.next = ctypes.pointer(instance.collection)
+        instance.data.transition_arena = None
+        instance.data.pending.previous = ctypes.pointer(instance.data.pending)
+        instance.data.pending.next = ctypes.pointer(instance.data.pending)
+        instance.data.pending_arena, instance.data.data_arena = None, None
+        instance.data.members, instance.data.member_count = None, 0
+        sentinel = ctypes.pointer(instance.data.transitions)
         edges = [allocate(NativeEdge) for _ in specification['edges']]
-        instance.transitions.next = ctypes.pointer(edges[0].link) if edges else sentinel
+        instance.data.transitions.previous = ctypes.pointer(edges[-1].link) if edges else sentinel
+        instance.data.transitions.next = ctypes.pointer(edges[0].link) if edges else sentinel
         for index, (edge, spec) in enumerate(zip(edges, specification['edges'])):
+            edge.link.previous = ctypes.pointer(edges[index - 1].link) if index else sentinel
             edge.link.next = ctypes.pointer(edges[index + 1].link) if index + 1 < len(edges) else sentinel
             edge.label.destination = ctypes.addressof(states[spec['destination']])
-            edge.label.kind, edge.label.value = spec['kind'], spec.get('value', 0)
-            inner = ctypes.pointer(edge.label.intervals)
+            edge.label.kind, edge.label.value.character = spec['kind'], spec.get('value', 0)
+            inner = ctypes.pointer(edge.label.intervals.head)
+            edge.label.intervals.owner = None
             nodes = [allocate(intervals.NativeNode) for _ in spec.get('ranges', [])]
-            edge.label.intervals.next = ctypes.pointer(nodes[0]) if nodes else inner
+            edge.label.intervals.head.previous = ctypes.pointer(nodes[-1].link) if nodes else inner
+            edge.label.intervals.head.next = ctypes.pointer(nodes[0].link) if nodes else inner
             for number, (node, bounds) in enumerate(zip(nodes, spec.get('ranges', []))):
                 node.first, node.last = bounds
-                node.next = ctypes.pointer(nodes[number + 1]) if number + 1 < len(nodes) else inner
+                node.link.previous = ctypes.pointer(nodes[number - 1].link) if number else inner
+                node.link.next = ctypes.pointer(nodes[number + 1].link) if number + 1 < len(nodes) else inner
     return {'states': states, 'cursor': cursor, 'context': context, 'text': text, 'allocations': allocations}
 
 

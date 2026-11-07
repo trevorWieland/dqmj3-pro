@@ -1,54 +1,76 @@
 {
   "schemaVersion": 1,
-  "status": "reviewed-bounded-functional-component",
-  "packet": {
-    "path": "evidence/lanes/wave010-native/packet.json",
-    "sha256": "34b0ba8d4392911d9788f33286c7a3a03321d22dbf36e8aeffdd308927406743",
-    "bytes": 60947
-  },
-  "verification": {
-    "path": "evidence/lanes/wave010-native/verification.json",
-    "sha256": "f15bd595dcb4414996fa811f5788a76b1014fed7a93f632ff639d1238e86240b",
-    "bytes": 2395
-  },
-  "independentCoordinatorTests": {
-    "tests": 12,
-    "passed": true,
-    "skipped": 0,
-    "log": {
-      "path": "work/wave010-native/coordinator-tests.log",
-      "sha256": "3076668e68d630bbc27ee609b88d914cc8a5098e00ada7ff7f7cebf707b5b232",
-      "bytes": 1871
-    }
-  },
-  "publicCompilation": {
-    "units": 21,
-    "targets": 3,
-    "compilations": 63,
-    "failed": 0,
-    "manifest": {
-      "path": "work/source-compile-ci/native010-coordinator.json/manifests/compilation.json",
-      "sha256": "878270938d23786a80213451dba17b3e2654a357680b7dc3ed68190d41be22eb",
-      "bytes": 119804
+  "status": "coordinator-reviewed-expanded-pointer-types",
+  "predecessorSourceRevision": "88de9588e48d44ef931e96554e515d325bff1713",
+  "successorSourceRevision": "working tree after bcd973e; committed replay pending",
+  "packets": [
+    {
+      "path": "evidence/lanes/wave009-native/packet.json",
+      "sha256": "53c8dafde8b5b78fefd42f72bccf3fe09010df231c86c3ee4ad29740800a6d19",
+      "bytes": 23809
     },
-    "guardTests": 15
+    {
+      "path": "evidence/lanes/wave010-native/packet.json",
+      "sha256": "cd0594979d824075f71ad5c8a174cc1a538e9b993dfad52b73111952c150fa16",
+      "bytes": 63029
+    }
+  ],
+  "tests": [
+    {
+      "tests": 10,
+      "skipped": 0,
+      "log": {
+        "path": "work/component-coordinator-tests/native9-successor.log",
+        "sha256": "8de921703c593e526b759561fe693cd0b582dda450f9b2f90e087b8c7e6c4f6f",
+        "bytes": 1576
+      }
+    },
+    {
+      "tests": 12,
+      "skipped": 0,
+      "log": {
+        "path": "work/component-coordinator-tests/native10-successor.log",
+        "sha256": "07532e460f7572309dca0bf9f6c68dc39854a169cf7f5347b13e95d44e97f52f",
+        "bytes": 1871
+      }
+    }
+  ],
+  "ARMBodyAndRelocationProof": {
+    "path": "evidence/lanes/wave012-native/shared-type-arm-invariance.json",
+    "sha256": "c80a43a8dd5ca95873c1940ac15b8a062399ba681c849ac03724e150ef24bccb",
+    "bytes": 6850
+  },
+  "typeWitnesses": {
+    "path": "evidence/lanes/wave012-native/type-proposal.json",
+    "sha256": "f4b03c72cb1fad0f3ee4a19e697f4f2092f2349543653ccc7d4c9771e5d073ee",
+    "bytes": 4463
+  },
+  "provenanceClarification": "The invariance receipt sourceRevision identifies the predecessor baseline, not an independently replayed successor source tree.",
+  "reviewedLayouts": {
+    "ARMStateBytes": 48,
+    "ARMResultOffset": 44,
+    "host64StateBytes": 88,
+    "host64ResultOffset": 84
   },
   "reviewedBehavior": [
-    "First enabled control edge restarts from its destination",
-    "Low-byte bit selection guards shifts of 32 or more",
-    "First matching UTF16 edge wins and preserves observed boundary masks",
-    "CRLF grouping and measured space set preserved",
-    "Signed eight-bit state result and failure cursor preserved",
-    "Source graph links compiled membership dependency using genuine ARM relocations"
+    "Sentinel link is compared before casting a real node",
+    "Previous and next fields are actual pointers",
+    "Sentinel owner is distinct from interval bounds",
+    "Control payload copies one byte while singleton payload uses two",
+    "Expanded state contains typed arena and membership pointers",
+    "All four ARM bodies and real call relocations reproduce exactly"
   ],
-  "limits": [
-    "Finite measured graph and text domain only",
-    "Opaque unused class fields are not a complete native class layout",
-    "Independent committed-checkout replay remains required",
-    "Android build only; no device or full-game execution",
-    "No exact matching or recovered-source admission"
-  ],
+  "previousIndependentReplay": {
+    "path": "evidence/verification/native009010-isolated.json",
+    "sha256": "4b2f7cce33e69e8399535a203e92ce6ced54cc042e2dc24dc0b152a117e83be2",
+    "bytes": 9186
+  },
   "matchingSourceCreditGranted": 0,
-  "newFunctionalFunctions": 2,
-  "originalInstructionBytes": 500
+  "newFunctionalFunctions": 0,
+  "newFunctionalBytes": 0,
+  "limits": [
+    "Bounded component behavior only",
+    "Successor committed-checkout replay remains required",
+    "No NFA-prefix promotion, source-only game or Android device claim"
+  ]
 }

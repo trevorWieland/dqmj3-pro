@@ -122,47 +122,47 @@ def boundaries(image, census):
 
 
 def pointer_promotion(build, receipts, compiled):
-    baseline_path = OUT / 'v1-packet.json'
-    provenance = json.loads((OUT / 'v1-provenance.json').read_text())
-    if sha(baseline_path.read_bytes()) != 'fe8ef106cc1c58a7be27db781a536ed3135896b5bbb46de6abc032726ec0903b':
-        raise ValueError('Frozen v1 packet identity differs')
+    baseline_path = OUT / 'v2-packet.json'
+    provenance = json.loads((OUT / 'v2-provenance.json').read_text())
+    if sha(baseline_path.read_bytes()) != 'db85e45dfb54695957dbad873a81678d36a662d1f7a15ab377833bc2ba252152':
+        raise ValueError('Frozen v2 packet identity differs')
     baseline = json.loads(baseline_path.read_text())
-    if record(SOURCE)['sha256'] != baseline['sources'][0]['sha256']:
-        raise ValueError('Pointer promotion unexpectedly changes membership source')
     for row in baseline['functions']:
         address = row['canonicalIdentity']['address']
         if len(compiled[address]['raw']) != 104 or sha(compiled[address]['raw']) != row['candidateObjectSpanSha256']:
-            raise ValueError('Pointer promotion changed ARM membership body')
-    source, obj = build / 'layout.c', build / 'layout.o'
-    checks = [('sizeof(void *)', 4), ('sizeof(IntervalNode)', 12), ('sizeof(IntervalSet)', 20),
+            raise ValueError('Verified type expansion changed an ARM membership body')
+    checks = [('sizeof(void *)', 4), ('sizeof(IntrusiveLink)', 8), ('sizeof(IntervalNode)', 12),
+              ('sizeof(IntervalRing)', 12), ('sizeof(IntervalValue)', 2), ('sizeof(IntervalSet)', 20),
+              ('__builtin_offsetof(IntrusiveLink, previous)', 0), ('__builtin_offsetof(IntrusiveLink, next)', 4),
+              ('__builtin_offsetof(IntervalNode, link)', 0), ('__builtin_offsetof(IntervalNode, first)', 8),
+              ('__builtin_offsetof(IntervalNode, last)', 10), ('__builtin_offsetof(IntervalRing, owner)', 8),
               ('__builtin_offsetof(IntervalSet, destination)', 0), ('__builtin_offsetof(IntervalSet, kind)', 4),
-              ('__builtin_offsetof(IntervalSet, value)', 6), ('__builtin_offsetof(IntervalSet, intervals)', 8),
-              ('__builtin_offsetof(IntervalNode, unknown_00)', 0), ('__builtin_offsetof(IntervalNode, next)', 4),
-              ('__builtin_offsetof(IntervalNode, first)', 8), ('__builtin_offsetof(IntervalNode, last)', 10)]
+              ('__builtin_offsetof(IntervalSet, value)', 6), ('__builtin_offsetof(IntervalSet, intervals)', 8)]
+    source, obj = build / 'layout.c', build / 'layout.o'
     source.write_text('#include "interval_set.h"\n' + '\n'.join('_Static_assert(' + expression + ' == ' + str(value)
                       + ', "ARM layout");' for expression, value in checks) + '\n')
     command([ROOT / 'tools/clang-21/clang.exe', *FLAGS, '-I', HEADER.parent, '-c', source, '-o', obj],
             build / 'layout.log', receipts)
     host = {'pointerBytes': ctypes.sizeof(ctypes.c_void_p), 'setBytes': ctypes.sizeof(oracle.NativeSet),
-            'nodeBytes': ctypes.sizeof(oracle.NativeNode), 'destinationOffset': oracle.NativeSet.destination.offset,
+            'nodeBytes': ctypes.sizeof(oracle.NativeNode), 'ringBytes': ctypes.sizeof(oracle.NativeRing),
+            'valueBytes': ctypes.sizeof(oracle.NativeValue), 'destinationOffset': oracle.NativeSet.destination.offset,
             'kindOffset': oracle.NativeSet.kind.offset, 'valueOffset': oracle.NativeSet.value.offset,
-            'intervalsOffset': oracle.NativeSet.intervals.offset, 'nodeUnknownOffset': oracle.NativeNode.unknown_00.offset,
-            'nodeNextOffset': oracle.NativeNode.next.offset}
-    if list(host.values()) != [8, 40, 24, 0, 8, 10, 16, 0, 8]:
-        raise ValueError('True host64 pointer layout differs')
+            'intervalsOffset': oracle.NativeSet.intervals.offset, 'ownerInRingOffset': oracle.NativeRing.owner.offset,
+            'nodeLinkOffset': oracle.NativeNode.link.offset, 'linkPreviousOffset': oracle.NativeLink.previous.offset,
+            'linkNextOffset': oracle.NativeLink.next.offset, 'firstOffset': oracle.NativeNode.first.offset,
+            'lastOffset': oracle.NativeNode.last.offset}
+    if list(host.values()) != [8, 40, 24, 24, 2, 0, 8, 10, 16, 16, 0, 0, 8, 16, 18]:
+        raise ValueError('Expanded true host64 layout differs')
+    evidence = ROOT / 'evidence/lanes/wave012-native/type-proposal.json'
+    witnesses = json.loads(evidence.read_text())['evidence']
     image = (ROOT / 'generated/update-content0/code.bin').read_bytes()
-    callers = []
-    for start, end, expected_sha in [(0x4bee48, 0x4bee6c, '1cc896ccf560b89a2898c7fad70fddb99ed54636380c935c00832af6ecef335a'),
-                                     (0x4bece0, 0x4bed1c, '77b9e92606092f37331ed68bfab81f892b9115fbc180a902b7f0a9c84fa8802e')]:
-        actual = sha(image[start - 0x100000:end - 0x100000])
-        if actual != expected_sha:
-            raise ValueError('Pointer-typed caller evidence changed')
-        callers.append({'start': start, 'endExclusive': end, 'sha256': actual})
+    for row in witnesses:
+        if sha(image[row['address'] - 0x100000:row['address'] - 0x100000 + row['bytes']]) != row['sha256']:
+            raise ValueError('Verified typed witness span differs')
     return {'sourceRevision': provenance['sourceRevision'], 'baseline': record(baseline_path),
-            'originalCallerEvidence': callers,
-            'provenance': record(OUT / 'v1-provenance.json'), 'ARMLayoutStaticAssertions': checks,
-            'ARMCompiledBodiesInvariant': True, 'unchangedCSource': True, 'host64': host,
-            'IntervalNodeUnknownWordUnchanged': True, 'creditChanges': 0}
+            'provenance': record(OUT / 'v2-provenance.json'), 'originalTypeEvidence': record(evidence),
+            'ARMLayoutStaticAssertions': checks, 'ARMCompiledBodiesInvariant': True, 'bodyRelocationsInvariantEmpty': True,
+            'CSourceAccessorChanges': True, 'host64': host, 'typedPreviousNextOwnerAndPayload': True, 'creditChanges': 0}
 
 
 def windows_dll(source, build, name, receipts):
@@ -246,7 +246,7 @@ def build_packet(build, output):
             raise ValueError('Genuine candidate source-link placement changed')
     wrong = {}
     for name, before, after in [('upper-bound', 'value <= node->last', 'value < node->last'),
-                                ('singleton', 'set->value == value', 'set->value != value')]:
+                                ('singleton', 'set->value.character == value', 'set->value.character != value')]:
         source, destination = build / ('wrong-' + name + '.c'), build / ('wrong-' + name + '.o')
         source.write_text(SOURCE.read_text().replace(before, after))
         command([clang, *FLAGS, '-I', HEADER.parent, '-c', source, '-o', destination], build / ('wrong-' + name + '.log'), receipts)
@@ -312,7 +312,7 @@ def build_packet(build, output):
     save(OUT / 'behavior-corpus.json', {'schemaVersion': 1, 'moduleSha256': MODULE_SHA, 'functions': corpus})
     packet = {'schemaVersion': 1, 'lane': 'wave009-native', 'status': 'bounded-validated-functional-nonmatching-C',
               'moduleSha256': MODULE_SHA, 'programId': '0004000e001acb00', 'claim': record(OUT / 'claim.json'),
-              'sourceRevision': 'working-tree-v2', 'v1BaselineRevision': promotion['sourceRevision'],
+              'sourceRevision': 'working-tree-v3', 'previousPublishedRevision': promotion['sourceRevision'],
               'pointerPromotion': record(OUT / 'pointer-promotion.json'),
               'script': record(Path(__file__)), 'oracle': record(ROOT / 'toolscripts/native_wave009_oracle.py'),
               'sources': [record(SOURCE)], 'headers': [record(HEADER)], 'compiler': record(clang), 'linker': record(linker),

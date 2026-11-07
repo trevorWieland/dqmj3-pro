@@ -9,35 +9,35 @@
     "sha256": "dd5373fb5d361e8a6ca07c2978ebcec80a15241afe91bc51b26694b439344be7",
     "bytes": 2157
   },
-  "sourceRevision": "working-tree-v2",
-  "v1BaselineRevision": "fac2f01381fea91ea25d025f316a640e437dd76d",
+  "sourceRevision": "working-tree-v3",
+  "previousPublishedRevision": "88de9588e48d44ef931e96554e515d325bff1713",
   "pointerPromotion": {
     "path": "evidence/lanes/wave009-native/pointer-promotion.json",
-    "sha256": "ffbb3c374dc3c1f6ef0392777c7e62bb1578aae039edfc9dddad5f519bf6ff02",
-    "bytes": 1977
+    "sha256": "d491ab0a37d2e7af0d30c2aa7ceed21df002f9df8d750daa0b2f7772d33852f4",
+    "bytes": 2342
   },
   "script": {
     "path": "toolscripts/native_wave009.py",
-    "sha256": "33370b268013088ed9969c61a4b0466e8d9d99131d32b85c2b1caa9bab390ab0",
-    "bytes": 23224
+    "sha256": "912b19cbaaef56b3947820c6593a34a34396b58c258f466bb1c8b4df2b7d5209",
+    "bytes": 23525
   },
   "oracle": {
     "path": "toolscripts/native_wave009_oracle.py",
-    "sha256": "8607f1cbd68471bbf995b2b2d46da30fcfd96fc64b557aff49a137d745e9e811",
-    "bytes": 8184
+    "sha256": "56dc36c2d431f89e57b8f54e2f279f9112874a1c5b55c4b2d3889287939d220d",
+    "bytes": 8856
   },
   "sources": [
     {
       "path": "src/native/wave009/interval_set.c",
-      "sha256": "09685db174892a8703da9a94c713a0c25735f7b352338777c9ce0cce2cb7dbd7",
-      "bytes": 946
+      "sha256": "ab45ff656302781378d11a029083687f00ae894407138ddf1de1fe764cd7e160",
+      "bytes": 1149
     }
   ],
   "headers": [
     {
       "path": "src/native/wave009/interval_set.h",
-      "sha256": "7cb85ec58f7b18ba32652319904596a9c2d71c0417fc60781834dfc24b699490",
-      "bytes": 599
+      "sha256": "c9f8ea99061aaf09e3b82c8a75d3049282f14bdbf7e201a429c1064348853419",
+      "bytes": 987
     }
   ],
   "compiler": {
@@ -79,16 +79,16 @@
       "symbol": "fn_00780578",
       "source": {
         "path": "src/native/wave009/interval_set.c",
-        "sha256": "09685db174892a8703da9a94c713a0c25735f7b352338777c9ce0cce2cb7dbd7",
-        "bytes": 946
+        "sha256": "ab45ff656302781378d11a029083687f00ae894407138ddf1de1fe764cd7e160",
+        "bytes": 1149
       },
       "object": {
-        "path": "work/wave009-native/v2-sealed-final/interval_set.o",
+        "path": "work/wave009-native/v3/interval_set.o",
         "sha256": "ad02b6f2c2152e27e8e5d85efd119442d7af53933d340b22a1a28c27aee05cca",
         "bytes": 1364
       },
       "linkedElf": {
-        "path": "work/wave009-native/v2-sealed-final/interval_set.elf",
+        "path": "work/wave009-native/v3/interval_set.elf",
         "sha256": "c50162712ed8d2beafb37d27cbc3db7cdcdd92c2ffc805f4fffac19afff2d4da",
         "bytes": 2224
       },
@@ -128,16 +128,16 @@
       "symbol": "fn_007805e4",
       "source": {
         "path": "src/native/wave009/interval_set.c",
-        "sha256": "09685db174892a8703da9a94c713a0c25735f7b352338777c9ce0cce2cb7dbd7",
-        "bytes": 946
+        "sha256": "ab45ff656302781378d11a029083687f00ae894407138ddf1de1fe764cd7e160",
+        "bytes": 1149
       },
       "object": {
-        "path": "work/wave009-native/v2-sealed-final/interval_set.o",
+        "path": "work/wave009-native/v3/interval_set.o",
         "sha256": "ad02b6f2c2152e27e8e5d85efd119442d7af53933d340b22a1a28c27aee05cca",
         "bytes": 1364
       },
       "linkedElf": {
-        "path": "work/wave009-native/v2-sealed-final/interval_set.elf",
+        "path": "work/wave009-native/v3/interval_set.elf",
         "sha256": "c50162712ed8d2beafb37d27cbc3db7cdcdd92c2ffc805f4fffac19afff2d4da",
         "bytes": 2224
       },
@@ -272,11 +272,11 @@
         "-c",
         "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009\\interval_set.c",
         "-o",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\interval_set.o"
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\interval_set.o"
       ],
       "exitCode": 0,
       "privateLog": {
-        "path": "work/wave009-native/v2-sealed-final/compile.log",
+        "path": "work/wave009-native/v3/compile.log",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "bytes": 0
       }
@@ -300,13 +300,13 @@
         "-I",
         "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009",
         "-c",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\layout.c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\layout.c",
         "-o",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\layout.o"
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\layout.o"
       ],
       "exitCode": 0,
       "privateLog": {
-        "path": "work/wave009-native/v2-sealed-final/layout.log",
+        "path": "work/wave009-native/v3/layout.log",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "bytes": 0
       }
@@ -320,14 +320,14 @@
         "--build-id=none",
         "--entry=fn_00780578",
         "-T",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\membership.ld",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\interval_set.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\membership.ld",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\interval_set.o",
         "-o",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\interval_set.elf"
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\interval_set.elf"
       ],
       "exitCode": 0,
       "privateLog": {
-        "path": "work/wave009-native/v2-sealed-final/link.log",
+        "path": "work/wave009-native/v3/link.log",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "bytes": 0
       }
@@ -351,13 +351,13 @@
         "-I",
         "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009",
         "-c",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\wrong-upper-bound.c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\wrong-upper-bound.c",
         "-o",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\wrong-upper-bound.o"
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\wrong-upper-bound.o"
       ],
       "exitCode": 0,
       "privateLog": {
-        "path": "work/wave009-native/v2-sealed-final/wrong-upper-bound.log",
+        "path": "work/wave009-native/v3/wrong-upper-bound.log",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "bytes": 0
       }
@@ -381,13 +381,13 @@
         "-I",
         "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009",
         "-c",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\wrong-singleton.c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\wrong-singleton.c",
         "-o",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\wrong-singleton.o"
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\wrong-singleton.o"
       ],
       "exitCode": 0,
       "privateLog": {
-        "path": "work/wave009-native/v2-sealed-final/wrong-singleton.log",
+        "path": "work/wave009-native/v3/wrong-singleton.log",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "bytes": 0
       }
@@ -408,11 +408,11 @@
         "-c",
         "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009\\interval_set.c",
         "-o",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\interval_set.windows.obj"
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\interval_set.windows.obj"
       ],
       "exitCode": 0,
       "privateLog": {
-        "path": "work/wave009-native/v2-sealed-final/interval_set-windows-compile.log",
+        "path": "work/wave009-native/v3/interval_set-windows-compile.log",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "bytes": 0
       }
@@ -426,14 +426,14 @@
         "/noentry",
         "/machine:x64",
         "/nodefaultlib",
-        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\interval_set.dll",
+        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\interval_set.dll",
         "/export:fn_00780578",
         "/export:fn_007805e4",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\interval_set.windows.obj"
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\interval_set.windows.obj"
       ],
       "exitCode": 0,
       "privateLog": {
-        "path": "work/wave009-native/v2-sealed-final/interval_set-windows-link.log",
+        "path": "work/wave009-native/v3/interval_set-windows-link.log",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "bytes": 0
       }
@@ -452,13 +452,13 @@
         "-I",
         "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009",
         "-c",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\wrong-upper-bound.c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\wrong-upper-bound.c",
         "-o",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\wrong-upper-bound.windows.obj"
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\wrong-upper-bound.windows.obj"
       ],
       "exitCode": 0,
       "privateLog": {
-        "path": "work/wave009-native/v2-sealed-final/wrong-upper-bound-windows-compile.log",
+        "path": "work/wave009-native/v3/wrong-upper-bound-windows-compile.log",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "bytes": 0
       }
@@ -472,14 +472,14 @@
         "/noentry",
         "/machine:x64",
         "/nodefaultlib",
-        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\wrong-upper-bound.dll",
+        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\wrong-upper-bound.dll",
         "/export:fn_00780578",
         "/export:fn_007805e4",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\wrong-upper-bound.windows.obj"
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\wrong-upper-bound.windows.obj"
       ],
       "exitCode": 0,
       "privateLog": {
-        "path": "work/wave009-native/v2-sealed-final/wrong-upper-bound-windows-link.log",
+        "path": "work/wave009-native/v3/wrong-upper-bound-windows-link.log",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "bytes": 0
       }
@@ -498,13 +498,13 @@
         "-I",
         "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009",
         "-c",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\wrong-singleton.c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\wrong-singleton.c",
         "-o",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\wrong-singleton.windows.obj"
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\wrong-singleton.windows.obj"
       ],
       "exitCode": 0,
       "privateLog": {
-        "path": "work/wave009-native/v2-sealed-final/wrong-singleton-windows-compile.log",
+        "path": "work/wave009-native/v3/wrong-singleton-windows-compile.log",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "bytes": 0
       }
@@ -518,14 +518,14 @@
         "/noentry",
         "/machine:x64",
         "/nodefaultlib",
-        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\wrong-singleton.dll",
+        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\wrong-singleton.dll",
         "/export:fn_00780578",
         "/export:fn_007805e4",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\wrong-singleton.windows.obj"
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\wrong-singleton.windows.obj"
       ],
       "exitCode": 0,
       "privateLog": {
-        "path": "work/wave009-native/v2-sealed-final/wrong-singleton-windows-link.log",
+        "path": "work/wave009-native/v3/wrong-singleton-windows-link.log",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "bytes": 0
       }
@@ -545,11 +545,11 @@
         "-c",
         "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009\\interval_set.c",
         "-o",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\interval_set.android.o"
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\interval_set.android.o"
       ],
       "exitCode": 0,
       "privateLog": {
-        "path": "work/wave009-native/v2-sealed-final/android-compile.log",
+        "path": "work/wave009-native/v3/android-compile.log",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "bytes": 0
       }
@@ -564,12 +564,12 @@
         "-soname",
         "libinterval_set.so",
         "-o",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\libinterval_set.so",
-        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v2-sealed-final\\interval_set.android.o"
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\libinterval_set.so",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\v3\\interval_set.android.o"
       ],
       "exitCode": 0,
       "privateLog": {
-        "path": "work/wave009-native/v2-sealed-final/android-link.log",
+        "path": "work/wave009-native/v3/android-link.log",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "bytes": 0
       }
@@ -579,8 +579,8 @@
     "windowsNativeExecution": true,
     "windowsCasesPerFunction": 1141,
     "windowsDll": {
-      "path": "work/wave009-native/v2-sealed-final/interval_set.dll",
-      "sha256": "cbe1a242e46c62dacf3f4708ec2c528bb7f70deb360203284f68a04519ce4aa8",
+      "path": "work/wave009-native/v3/interval_set.dll",
+      "sha256": "c600536715346f7ef71cf6281e44a75302be113b27d2fe092e3022946aafe7e1",
       "bytes": 2048
     },
     "wrongSourceControls": [
@@ -627,7 +627,7 @@
     ],
     "androidArm64Api29Build": true,
     "androidSharedLibrary": {
-      "path": "work/wave009-native/v2-sealed-final/libinterval_set.so",
+      "path": "work/wave009-native/v3/libinterval_set.so",
       "sha256": "241664a3119e5a66c758420026272c9da5071a3d2dff80a9bf13b147883486aa",
       "bytes": 2384
     },

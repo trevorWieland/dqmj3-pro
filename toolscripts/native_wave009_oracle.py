@@ -67,14 +67,16 @@ def execute(raw, address, case, seed, return_thumb=False, flags=0):
     sentinel = object_address + 8
     memory = bytearray(rng.randbytes(16384))
     at = object_address - OBJECTS
+    struct.pack_into('<I', memory, at, object_address)
     memory[at + 4] = case['kind']
     struct.pack_into('<H', memory, at + 6, case['value'])
     nodes = [OBJECTS + 1024 + index * 24 for index in range(len(case['ranges']))]
     struct.pack_into('<II', memory, at + 8, nodes[-1] if nodes else sentinel, nodes[0] if nodes else sentinel)
+    struct.pack_into('<I', memory, at + 16, 0)
     permitted_reads = {(object_address + 4, 1), (object_address + 6, 2), (object_address + 12, 4)}
     for index, ((low, high), node) in enumerate(zip(case['ranges'], nodes)):
         following = nodes[index + 1] if index + 1 < len(nodes) else sentinel
-        struct.pack_into('<IIHH', memory, node - OBJECTS, rng.getrandbits(32), following, low, high)
+        struct.pack_into('<IIHH', memory, node - OBJECTS, nodes[index - 1] if index else sentinel, following, low, high)
         permitted_reads.update({(node + 4, 4), (node + 8, 2), (node + 10, 2)})
     snapshots = {OBJECTS: bytes(memory), STACK: rng.randbytes(8192)}
     for base, content in snapshots.items():
@@ -113,29 +115,43 @@ def execute(raw, address, case, seed, return_thumb=False, flags=0):
             'calleeSavedSpLrPreserved': True, 'typedReadFootprintOnly': True}
 
 
-class NativeNode(ctypes.Structure):
+class NativeLink(ctypes.Structure):
     pass
 
 
-NativeNode._fields_ = [('unknown_00', ctypes.c_uint), ('next', ctypes.POINTER(NativeNode)),
-                       ('first', ctypes.c_ushort), ('last', ctypes.c_ushort)]
+NativeLink._fields_ = [('previous', ctypes.POINTER(NativeLink)), ('next', ctypes.POINTER(NativeLink))]
+
+
+class NativeNode(ctypes.Structure):
+    _fields_ = [('link', NativeLink), ('first', ctypes.c_ushort), ('last', ctypes.c_ushort)]
+
+
+class NativeRing(ctypes.Structure):
+    _fields_ = [('head', NativeLink), ('owner', ctypes.c_void_p)]
+
+
+class NativeValue(ctypes.Union):
+    _fields_ = [('character', ctypes.c_ushort), ('control_bit', ctypes.c_ubyte)]
 
 
 class NativeSet(ctypes.Structure):
-    _fields_ = [('destination', ctypes.c_void_p), ('kind', ctypes.c_ubyte), ('value', ctypes.c_ushort), ('intervals', NativeNode)]
+    _fields_ = [('destination', ctypes.c_void_p), ('kind', ctypes.c_ubyte), ('value', NativeValue), ('intervals', NativeRing)]
 
 
 def execute_windows(function, case):
     model = expected(case)
     instance = NativeSet()
     instance.destination = ctypes.addressof(instance)
-    instance.kind, instance.value = case['kind'], case['value']
-    sentinel = ctypes.pointer(instance.intervals)
+    instance.kind, instance.value.character = case['kind'], case['value']
+    sentinel = ctypes.pointer(instance.intervals.head)
     nodes = [NativeNode() for _ in case['ranges']]
-    instance.intervals.next = ctypes.pointer(nodes[0]) if nodes else sentinel
+    instance.intervals.head.previous = ctypes.pointer(nodes[-1].link) if nodes else sentinel
+    instance.intervals.head.next = ctypes.pointer(nodes[0].link) if nodes else sentinel
+    instance.intervals.owner = None
     for index, (node, bounds) in enumerate(zip(nodes, case['ranges'])):
         node.first, node.last = bounds
-        node.next = ctypes.pointer(nodes[index + 1]) if index + 1 < len(nodes) else sentinel
+        node.link.previous = ctypes.pointer(nodes[index - 1].link) if index else sentinel
+        node.link.next = ctypes.pointer(nodes[index + 1].link) if index + 1 < len(nodes) else sentinel
     objects = [instance, *nodes]
     before = [ctypes.string_at(ctypes.addressof(item), ctypes.sizeof(item)) for item in objects]
     answer = function(ctypes.byref(instance), case['query'])

@@ -2,66 +2,71 @@
   "schemaVersion": 1,
   "status": "passed",
   "testCases": 12,
+  "sourceRevision": "working-tree-v2-expanded-types",
+  "previousPublishedRevision": "88de9588e48d44ef931e96554e515d325bff1713",
   "packet": {
     "path": "evidence/lanes/wave010-native/packet.json",
-    "sha256": "34b0ba8d4392911d9788f33286c7a3a03321d22dbf36e8aeffdd308927406743",
-    "bytes": 60947
-  },
-  "claim": {
-    "path": "evidence/lanes/wave010-native/claim.json",
-    "sha256": "5f775b4ae343d1a40c16b713d3b6cabd5d7be1b4f128b1c1d37e815a0d4693be",
-    "bytes": 3931
+    "sha256": "cd0594979d824075f71ad5c8a174cc1a538e9b993dfad52b73111952c150fa16",
+    "bytes": 63029
   },
   "tests": {
     "path": "tests/test_native_wave010.py",
-    "sha256": "5711ec72f87a5f5e97c941b0280da1ef10d415932e4be8027de6ff85960b6217",
-    "bytes": 8592
-  },
-  "testResult": {
-    "path": "evidence/lanes/wave010-native/test-result.json",
-    "sha256": "03b8ef9d0a32b75d1954cb51a61505570e6d900e6be512d82990aa8ac59efe56",
-    "bytes": 925
+    "sha256": "ccd3f981333b9cdab54f3433bf577e94fbda926a17a2a1685d7243982afe0aa5",
+    "bytes": 8634
   },
   "testOutput": {
     "path": "evidence/lanes/wave010-native/tests.txt",
-    "sha256": "859bd6137d499f76659b5df2450822d661f7c4c303a5addaa00b909e07a39e5b",
+    "sha256": "cdab45422aa9dbeb6b826c102dcf88c8d6d9eee9a8a7bbe3a26b8c890ba10bd1",
     "bytes": 1871
   },
   "readme": {
     "path": "evidence/lanes/wave010-native/README.md",
-    "sha256": "af6308bdcafdafd8ae82ce225421d28bdd3da7c4d584a1d60643fefb93997e35",
-    "bytes": 7061
+    "sha256": "2e235c71913a20226e7a6deb35a02a48e6b1b23444555fdf5517eca5b8c474cd",
+    "bytes": 8595
   },
   "style": {
     "path": "evidence/lanes/wave010-native/style.json",
-    "sha256": "9341333268f87e048d4a65b3f713b801e95838c2af72cb35836946b765abb1a4",
-    "bytes": 2106
+    "sha256": "21a1b866e63a3c915449190346ae468795a41b6f20095021534d6e3078b31c1f",
+    "bytes": 2064
   },
   "functionalProposal": {
     "path": "evidence/lanes/wave010-native/functional.json",
     "sha256": "a958e94f5762e017842570912b23e9309dbf82bee271def88d3d42e1f7cf7384",
     "bytes": 178
   },
-  "preservedAttempts": {
-    "path": "evidence/lanes/wave010-native/attempts.json",
-    "sha256": "36e8161072acf1443364bbb8778f1bc9790d4fadd2b9a53228896d708627bb8c",
-    "bytes": 4317
+  "typeEvidence": {
+    "path": "evidence/lanes/wave012-native/type-proposal.json",
+    "sha256": "f4b03c72cb1fad0f3ee4a19e697f4f2092f2349543653ccc7d4c9771e5d073ee",
+    "bytes": 4463
   },
-  "typePromotion": {
-    "path": "evidence/lanes/wave010-native/type-proposal.json",
-    "sha256": "060e36751289b208f0f3846574bbd7375689da364a8615a77a1c5031051ef7ec",
-    "bytes": 2230
+  "ARMBodyAndRelocationInvariance": {
+    "path": "evidence/lanes/wave012-native/shared-type-arm-invariance.json",
+    "sha256": "c80a43a8dd5ca95873c1940ac15b8a062399ba681c849ac03724e150ef24bccb",
+    "bytes": 6850
+  },
+  "matchingCreditChanges": 0,
+  "functionalByteCountChanges": 0,
+  "allFrozenInputsCurrent": true,
+  "independentSuccessorReplayPerformed": false,
+  "coordinatorSuccessorAdmissionGranted": false,
+  "previousPacket": {
+    "path": "evidence/lanes/wave010-native/v1-packet.json",
+    "sha256": "34b0ba8d4392911d9788f33286c7a3a03321d22dbf36e8aeffdd308927406743",
+    "bytes": 60947
+  },
+  "previousVerification": {
+    "path": "evidence/lanes/wave010-native/v1-verification.json",
+    "sha256": "f15bd595dcb4414996fa811f5788a76b1014fed7a93f632ff639d1238e86240b",
+    "bytes": 2395
+  },
+  "provenance": {
+    "path": "evidence/lanes/wave010-native/v1-provenance.json",
+    "sha256": "c0c55c9f9dc2ed39698094fea102a7ec9b8666304b4cb1b39822d851aec9a2b8",
+    "bytes": 608
   },
   "dependencyVerification": {
     "path": "evidence/lanes/wave009-native/verification.json",
-    "sha256": "f2b7e3e75ba69d4be45e655a79de0a6d70a88c44ef702a7205bcd747ea2d738e",
-    "bytes": 2465
-  },
-  "allFrozenInputsCurrent": true,
-  "independentCleanReplayPerformed": false,
-  "coordinatorAdmissionGranted": false,
-  "exactMatchingFunctions": 0,
-  "newFunctionalFunctionsProposed": 2,
-  "newFunctionalOriginalBytesProposed": 500,
-  "wholeGameBuildOrExecution": false
+    "sha256": "b7ea4c927bb84909e091edbe61a21f76c9ab639a1698d8d0b9eaa903d7546bb7",
+    "bytes": 2481
+  }
 }

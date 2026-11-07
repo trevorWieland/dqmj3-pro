@@ -1,26 +1,19 @@
 {
-  "sourceRevision": "fac2f01381fea91ea25d025f316a640e437dd76d",
+  "sourceRevision": "88de9588e48d44ef931e96554e515d325bff1713",
   "baseline": {
-    "path": "evidence/lanes/wave009-native/v1-packet.json",
-    "sha256": "fe8ef106cc1c58a7be27db781a536ed3135896b5bbb46de6abc032726ec0903b",
-    "bytes": 16589
+    "path": "evidence/lanes/wave009-native/v2-packet.json",
+    "sha256": "db85e45dfb54695957dbad873a81678d36a662d1f7a15ab377833bc2ba252152",
+    "bytes": 24358
   },
-  "originalCallerEvidence": [
-    {
-      "start": 4976200,
-      "endExclusive": 4976236,
-      "sha256": "1cc896ccf560b89a2898c7fad70fddb99ed54636380c935c00832af6ecef335a"
-    },
-    {
-      "start": 4975840,
-      "endExclusive": 4975900,
-      "sha256": "77b9e92606092f37331ed68bfab81f892b9115fbc180a902b7f0a9c84fa8802e"
-    }
-  ],
   "provenance": {
-    "path": "evidence/lanes/wave009-native/v1-provenance.json",
-    "sha256": "e412abdb82967fecbdef63c9518ff4fbcf374b24894d85401e84167fa221053b",
-    "bytes": 554
+    "path": "evidence/lanes/wave009-native/v2-provenance.json",
+    "sha256": "b9890a8e9a8a55d493e6a9a370dec5d64e7485b0af9374878161e96f204bcb66",
+    "bytes": 608
+  },
+  "originalTypeEvidence": {
+    "path": "evidence/lanes/wave012-native/type-proposal.json",
+    "sha256": "f4b03c72cb1fad0f3ee4a19e697f4f2092f2349543653ccc7d4c9771e5d073ee",
+    "bytes": 4463
   },
   "ARMLayoutStaticAssertions": [
     [
@@ -28,12 +21,48 @@
       4
     ],
     [
+      "sizeof(IntrusiveLink)",
+      8
+    ],
+    [
       "sizeof(IntervalNode)",
       12
     ],
     [
+      "sizeof(IntervalRing)",
+      12
+    ],
+    [
+      "sizeof(IntervalValue)",
+      2
+    ],
+    [
       "sizeof(IntervalSet)",
       20
+    ],
+    [
+      "__builtin_offsetof(IntrusiveLink, previous)",
+      0
+    ],
+    [
+      "__builtin_offsetof(IntrusiveLink, next)",
+      4
+    ],
+    [
+      "__builtin_offsetof(IntervalNode, link)",
+      0
+    ],
+    [
+      "__builtin_offsetof(IntervalNode, first)",
+      8
+    ],
+    [
+      "__builtin_offsetof(IntervalNode, last)",
+      10
+    ],
+    [
+      "__builtin_offsetof(IntervalRing, owner)",
+      8
     ],
     [
       "__builtin_offsetof(IntervalSet, destination)",
@@ -50,37 +79,28 @@
     [
       "__builtin_offsetof(IntervalSet, intervals)",
       8
-    ],
-    [
-      "__builtin_offsetof(IntervalNode, unknown_00)",
-      0
-    ],
-    [
-      "__builtin_offsetof(IntervalNode, next)",
-      4
-    ],
-    [
-      "__builtin_offsetof(IntervalNode, first)",
-      8
-    ],
-    [
-      "__builtin_offsetof(IntervalNode, last)",
-      10
     ]
   ],
   "ARMCompiledBodiesInvariant": true,
-  "unchangedCSource": true,
+  "bodyRelocationsInvariantEmpty": true,
+  "CSourceAccessorChanges": true,
   "host64": {
     "pointerBytes": 8,
     "setBytes": 40,
     "nodeBytes": 24,
+    "ringBytes": 24,
+    "valueBytes": 2,
     "destinationOffset": 0,
     "kindOffset": 8,
     "valueOffset": 10,
     "intervalsOffset": 16,
-    "nodeUnknownOffset": 0,
-    "nodeNextOffset": 8
+    "ownerInRingOffset": 16,
+    "nodeLinkOffset": 0,
+    "linkPreviousOffset": 0,
+    "linkNextOffset": 8,
+    "firstOffset": 16,
+    "lastOffset": 18
   },
-  "IntervalNodeUnknownWordUnchanged": true,
+  "typedPreviousNextOwnerAndPayload": true,
   "creditChanges": 0
 }

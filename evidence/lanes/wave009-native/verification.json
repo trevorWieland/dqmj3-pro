@@ -2,68 +2,66 @@
   "schemaVersion": 1,
   "status": "passed",
   "testCases": 10,
-  "sourceRevision": "working-tree-v2",
-  "v1BaselineRevision": "fac2f01381fea91ea25d025f316a640e437dd76d",
+  "sourceRevision": "working-tree-v3",
+  "previousPublishedRevision": "88de9588e48d44ef931e96554e515d325bff1713",
   "packet": {
     "path": "evidence/lanes/wave009-native/packet.json",
-    "sha256": "db85e45dfb54695957dbad873a81678d36a662d1f7a15ab377833bc2ba252152",
-    "bytes": 24358
-  },
-  "claim": {
-    "path": "evidence/lanes/wave009-native/claim.json",
-    "sha256": "dd5373fb5d361e8a6ca07c2978ebcec80a15241afe91bc51b26694b439344be7",
-    "bytes": 2157
+    "sha256": "53c8dafde8b5b78fefd42f72bccf3fe09010df231c86c3ee4ad29740800a6d19",
+    "bytes": 23809
   },
   "tests": {
     "path": "tests/test_native_wave009.py",
-    "sha256": "a4fd262971020ba894a32d05be8c3dd8d97880632b3714f807d7a148a5e14e1d",
-    "bytes": 7732
+    "sha256": "6cfbe0234ece310309eebb65edb920fa8daee6568ad933bf657ccd3ec17e905c",
+    "bytes": 7726
   },
   "testOutput": {
     "path": "evidence/lanes/wave009-native/tests.txt",
-    "sha256": "41c57709787f7c8e0d2036d46b7458d4ba2662d2e3cef307eacb7162b5ff1582",
+    "sha256": "118066c3312d717d4abcec0ca4a5aa5fe82f72de8c67b0da7e17a35b35d0de63",
     "bytes": 1576
   },
   "readme": {
     "path": "evidence/lanes/wave009-native/README.md",
-    "sha256": "01f2db4cf8deb9719fa6666609a6e90cde5218a5a66ad62bac2c07e009f2bec4",
-    "bytes": 6002
+    "sha256": "2b934c5c6a261128ec5575cf78eaaa18d218d614373016aaa7d512b661f1b921",
+    "bytes": 7535
+  },
+  "style": {
+    "path": "evidence/lanes/wave009-native/style.json",
+    "sha256": "442c994d2aa4bd20c1bde3c9153d5bb4977c9a431a9d36ffc1bb0598cb4dce22",
+    "bytes": 1159
   },
   "functionalProposal": {
     "path": "evidence/lanes/wave009-native/functional.json",
     "sha256": "417caf5dfb26eaa49079f352779a1738473fbe112ac5e30eb1d5be4ee0cbace0",
     "bytes": 178
   },
-  "pointerPromotion": {
-    "path": "evidence/lanes/wave009-native/pointer-promotion.json",
-    "sha256": "ffbb3c374dc3c1f6ef0392777c7e62bb1578aae039edfc9dddad5f519bf6ff02",
-    "bytes": 1977
+  "typeEvidence": {
+    "path": "evidence/lanes/wave012-native/type-proposal.json",
+    "sha256": "f4b03c72cb1fad0f3ee4a19e697f4f2092f2349543653ccc7d4c9771e5d073ee",
+    "bytes": 4463
   },
-  "v1Provenance": {
-    "path": "evidence/lanes/wave009-native/v1-provenance.json",
-    "sha256": "e412abdb82967fecbdef63c9518ff4fbcf374b24894d85401e84167fa221053b",
-    "bytes": 554
+  "ARMBodyAndRelocationInvariance": {
+    "path": "evidence/lanes/wave012-native/shared-type-arm-invariance.json",
+    "sha256": "c80a43a8dd5ca95873c1940ac15b8a062399ba681c849ac03724e150ef24bccb",
+    "bytes": 6850
   },
-  "runtimeInputs": [
-    {
-      "path": "tools/python/Lib/site-packages/capstone/lib/capstone.dll",
-      "sha256": "76958e18380023a68fd1714fa2e01c594cc6db1955a07ad6937b66e66dc5d6c3",
-      "bytes": 7576576
-    },
-    {
-      "path": "tools/python/Lib/site-packages/capstone/__init__.py",
-      "sha256": "94571d1314355e261aff0ddfc94985fe8761232ddff6874181fd21efa9fab47f",
-      "bytes": 43853
-    },
-    {
-      "path": "tools/python/Lib/site-packages/unicorn/__init__.py",
-      "sha256": "0e8ac7115c755994a968fa865bd1b2f2075edea715c17e91d62af2cc52c13392",
-      "bytes": 305
-    },
-    {
-      "path": "tools/python/Lib/site-packages/unicorn/lib/unicorn.dll",
-      "sha256": "010d85dce84b8f6ffaec3d5420f1b5f7768f859eb831be574c7da23e656ee8f1",
-      "bytes": 9598976
-    }
-  ]
+  "matchingCreditChanges": 0,
+  "functionalByteCountChanges": 0,
+  "allFrozenInputsCurrent": true,
+  "independentSuccessorReplayPerformed": false,
+  "coordinatorSuccessorAdmissionGranted": false,
+  "previousPacket": {
+    "path": "evidence/lanes/wave009-native/v2-packet.json",
+    "sha256": "db85e45dfb54695957dbad873a81678d36a662d1f7a15ab377833bc2ba252152",
+    "bytes": 24358
+  },
+  "previousVerification": {
+    "path": "evidence/lanes/wave009-native/v2-verification.json",
+    "sha256": "f2b7e3e75ba69d4be45e655a79de0a6d70a88c44ef702a7205bcd747ea2d738e",
+    "bytes": 2465
+  },
+  "provenance": {
+    "path": "evidence/lanes/wave009-native/v2-provenance.json",
+    "sha256": "b9890a8e9a8a55d493e6a9a370dec5d64e7485b0af9374878161e96f204bcb66",
+    "bytes": 608
+  }
 }

@@ -72,8 +72,8 @@ def boundaries(image, census):
 
 
 def layout(build, receipts):
-    checks = [('sizeof(MatchState)', 48, 56), ('__builtin_offsetof(MatchState, transitions)', 8, 8),
-              ('__builtin_offsetof(MatchState, result)', 44, 52), ('sizeof(MatchContext)', 8, 16),
+    checks = [('sizeof(MatchState)', 48, 88), ('__builtin_offsetof(MatchState, data) + __builtin_offsetof(MatchStateData, transitions)', 8, 16),
+              ('__builtin_offsetof(MatchState, data) + __builtin_offsetof(MatchStateData, result)', 44, 84), ('sizeof(MatchContext)', 8, 16),
               ('__builtin_offsetof(MatchContext, initial)', 4, 8), ('sizeof(MatchEdge)', 28, 56),
               ('__builtin_offsetof(MatchEdge, label)', 8, 16), ('sizeof(MatchLink)', 8, 16),
               ('__builtin_offsetof(MatchLink, next)', 4, 8), ('__builtin_offsetof(IntervalSet, kind)', 4, 8)]
@@ -97,11 +97,11 @@ def mutations():
     space_case = {'states': [state(-7, [edge(4, 1, 2), edge(3, 0, ranges=[(1, 65535)])]),
                             state(23, [edge(3, 1, ranges=[(1, 65535)])])], 'initial': 0, 'text': [0xa0]}
     signed_case = {'states': [state(-128)], 'initial': 0, 'text': []}
-    return [('control-mask', '(flags & (1u << (unsigned char)edge->label.value)) != 0',
-             '(flags & (1u << (unsigned char)edge->label.value)) == 0', control_case, 'control', 0),
+    return [('control-mask', '(flags & (1u << (unsigned char)edge->label.value.control_bit)) != 0',
+             '(flags & (1u << (unsigned char)edge->label.value.control_bit)) == 0', control_case, 'control', 0),
             ('crlf-grouping', 'remaining = *text == 13 && text[1] == 10 ? 2 : 1;', 'remaining = 1;', newline_case, 'match', 0),
             ('nbsp-classification', 'character == 0x3000;', 'character == 0x3000 || character == 0xa0;', space_case, 'match', 0),
-            ('signed-result', 'return cursor->state->result;', 'return (unsigned char)cursor->state->result;', signed_case, 'match', 0)]
+            ('signed-result', 'return cursor->state->data.result;', 'return (unsigned char)cursor->state->data.result;', signed_case, 'match', 0)]
 
 
 def run_packet(build, output):
@@ -259,7 +259,12 @@ def run_packet(build, output):
         raise ValueError('A source, producer or dependency packet changed during validation')
     packet['inputPinsUnchangedDuringValidation'] = True
     packet['preservedAttempts'] = record(OUT / 'attempts.json')
-    packet['typePromotion'] = record(OUT / 'type-proposal.json')
+    packet['typePromotion'] = record(ROOT / 'evidence/lanes/wave012-native/type-proposal.json')
+    packet['ARMBodyAndRelocationInvariance'] = record(ROOT / 'evidence/lanes/wave012-native/shared-type-arm-invariance.json')
+    packet['previousPublishedRevision'] = '88de9588e48d44ef931e96554e515d325bff1713'
+    packet['previousPacket'] = record(OUT / 'v1-packet.json')
+    packet['previousVerification'] = record(OUT / 'v1-verification.json')
+    packet['sourceRevision'] = 'working-tree-v2-expanded-types'
     save(output, packet)
     print(json.dumps({'status': packet['status'], 'newFunctions': 2, 'originalBytes': 500,
                       'matcherCases': len(cases), 'controlCases': len(controls), 'exactMatches': packet['exactMatchingFunctions'],

@@ -44,22 +44,24 @@ def encode(case, seed, operation):
         sentinel = address + 8
         edges = [base + 0x3000 + (edge_count + index) * 0x40 for index in range(len(state['edges']))]
         edge_count += len(edges)
-        struct.pack_into('<II', memory, address - base + 8, rng.getrandbits(32), edges[0] if edges else sentinel)
+        struct.pack_into('<II', memory, address - base, address, address)
+        struct.pack_into('<II', memory, address - base + 8, edges[-1] if edges else sentinel, edges[0] if edges else sentinel)
+        struct.pack_into('<IIIIIII', memory, address - base + 16, 0, address + 20, address + 20, 0, 0, 0, 0)
         struct.pack_into('<b', memory, address - base + 44, state['result'])
         for index, (edge, edge_address) in enumerate(zip(state['edges'], edges)):
             readable.append((edge_address, edge_address + 28))
             following = edges[index + 1] if index + 1 < len(edges) else sentinel
-            struct.pack_into('<III', memory, edge_address - base, rng.getrandbits(32), following, states[edge['destination']])
+            struct.pack_into('<III', memory, edge_address - base, edges[index - 1] if index else sentinel, following, states[edge['destination']])
             memory[edge_address - base + 12] = edge['kind']
             struct.pack_into('<H', memory, edge_address - base + 14, edge.get('value', 0))
             inner = edge_address + 16
             nodes = [base + 0x10000 + (range_count + number) * 0x20 for number in range(len(edge.get('ranges', [])))]
             range_count += len(nodes)
-            struct.pack_into('<I', memory, edge_address - base + 20, nodes[0] if nodes else inner)
+            struct.pack_into('<III', memory, edge_address - base + 16, nodes[-1] if nodes else inner, nodes[0] if nodes else inner, 0)
             for number, ((low, high), node) in enumerate(zip(edge.get('ranges', []), nodes)):
                 readable.append((node, node + 12))
                 next_node = nodes[number + 1] if number + 1 < len(nodes) else inner
-                struct.pack_into('<IIHH', memory, node - base, rng.getrandbits(32), next_node, low, high)
+                struct.pack_into('<IIHH', memory, node - base, nodes[number - 1] if number else inner, next_node, low, high)
     if edge_count > 256 or range_count > 4096:
         raise ValueError('Synthetic graph exceeds declared address allocation')
     return {'base': base, 'memory': bytes(memory), 'cursor': cursor, 'context': context, 'text': text,

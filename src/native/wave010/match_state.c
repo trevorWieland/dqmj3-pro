@@ -5,11 +5,11 @@ void fn_004becdc(MatchCursor *cursor, unsigned int flags)
     MatchState *state = cursor->state;
 restart:
     {
-        MatchLink *end = &state->transitions;
+        MatchLink *end = &state->data.transitions;
         for (MatchLink *link = end->next; link != end; link = link->next) {
             MatchEdge *edge = (MatchEdge *)link;
-            if (edge->label.kind == 4 && (unsigned char)edge->label.value < 32 &&
-                (flags & (1u << (unsigned char)edge->label.value)) != 0) {
+            if (edge->label.kind == 4 && (unsigned char)edge->label.value.control_bit < 32 &&
+                (flags & (1u << (unsigned char)edge->label.value.control_bit)) != 0) {
                 state = edge->label.destination;
                 cursor->state = state;
                 goto restart;
@@ -40,7 +40,7 @@ int fn_004bed30(MatchCursor *cursor, const MatchContext *context, const unsigned
         do {
             int space = input_space(*text);
             fn_004becdc(cursor, space == previous_space ? 8 : 4);
-            MatchLink *end = &cursor->state->transitions;
+            MatchLink *end = &cursor->state->data.transitions;
             MatchLink *link = end->next;
             for (; link != end; link = link->next) {
                 MatchEdge *edge = (MatchEdge *)link;
@@ -61,5 +61,5 @@ int fn_004bed30(MatchCursor *cursor, const MatchContext *context, const unsigned
         } while (*text != 0 && remaining > 0);
     }
     fn_004becdc(cursor, 0x62 | (previous_space ? 8 : 4));
-    return cursor->state->result;
+    return cursor->state->data.result;
 }

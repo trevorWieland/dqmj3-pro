@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "status": "reviewed-bounded-functional-component",
+  "packet": {
+    "path": "evidence/lanes/wave010-native/packet.json",
+    "sha256": "34b0ba8d4392911d9788f33286c7a3a03321d22dbf36e8aeffdd308927406743",
+    "bytes": 60947
+  },
+  "verification": {
+    "path": "evidence/lanes/wave010-native/verification.json",
+    "sha256": "f15bd595dcb4414996fa811f5788a76b1014fed7a93f632ff639d1238e86240b",
+    "bytes": 2395
+  },
+  "independentCoordinatorTests": {
+    "tests": 12,
+    "passed": true,
+    "skipped": 0,
+    "log": {
+      "path": "work/wave010-native/coordinator-tests.log",
+      "sha256": "3076668e68d630bbc27ee609b88d914cc8a5098e00ada7ff7f7cebf707b5b232",
+      "bytes": 1871
+    }
+  },
+  "publicCompilation": {
+    "units": 21,
+    "targets": 3,
+    "compilations": 63,
+    "failed": 0,
+    "manifest": {
+      "path": "work/source-compile-ci/native010-coordinator.json/manifests/compilation.json",
+      "sha256": "878270938d23786a80213451dba17b3e2654a357680b7dc3ed68190d41be22eb",
+      "bytes": 119804
+    },
+    "guardTests": 15
+  },
+  "reviewedBehavior": [
+    "First enabled control edge restarts from its destination",
+    "Low-byte bit selection guards shifts of 32 or more",
+    "First matching UTF16 edge wins and preserves observed boundary masks",
+    "CRLF grouping and measured space set preserved",
+    "Signed eight-bit state result and failure cursor preserved",
+    "Source graph links compiled membership dependency using genuine ARM relocations"
+  ],
+  "limits": [
+    "Finite measured graph and text domain only",
+    "Opaque unused class fields are not a complete native class layout",
+    "Independent committed-checkout replay remains required",
+    "Android build only; no device or full-game execution",
+    "No exact matching or recovered-source admission"
+  ],
+  "matchingSourceCreditGranted": 0,
+  "newFunctionalFunctions": 2,
+  "originalInstructionBytes": 500
+}

@@ -88,10 +88,10 @@ class NativeWave010Tests(unittest.TestCase):
     def test_all_32_control_bits_and_low_byte_payload_preserve_host_pointers(self):
         for case, mask in wave.fixtures.controls():
             self.compare(case, 'control', mask)
-        self.assertEqual(ctypes.sizeof(wave.native.NativeLink._fields_[0][1]), 4)
+        self.assertEqual(ctypes.sizeof(wave.native.NativeLink._fields_[0][1]), 8)
         self.assertEqual(wave.native.NativeLink.next.offset, 8)
         self.assertEqual(wave.native.NativeEdge.label.offset, 16)
-        self.assertEqual(wave.native.NativeState.result.offset, 52)
+        self.assertEqual(wave.native.NativeState.data.offset + wave.native.NativeStateData.result.offset, 84)
         self.assertEqual(wave.native.NativeContext.initial.offset, 8)
 
     def test_compiled_wrong_source_returns_and_fails_semantically(self):

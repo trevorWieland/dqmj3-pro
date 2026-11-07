@@ -85,7 +85,7 @@ class NativeWave009Tests(unittest.TestCase):
         self.assertEqual(oracle.NativeSet.destination.offset, 0)
         self.assertEqual(oracle.NativeSet.kind.offset, 8)
         self.assertEqual(oracle.NativeSet.intervals.offset, 16)
-        self.assertEqual(oracle.NativeNode.unknown_00.offset, 0)
+        self.assertEqual(oracle.NativeNode.link.offset, 0)
         baseline = json.loads((wave.OUT / 'v1-packet.json').read_text())
         for row in baseline['functions']:
             raw = self.compiled[row['canonicalIdentity']['address']]['raw']
