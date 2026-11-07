@@ -2,6 +2,7 @@ import argparse
 import json
 from pathlib import Path
 import re
+import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -32,12 +33,19 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--check', action='store_true')
     args = parser.parse_args()
-    target = ROOT / 'include/bytematch_names.h'
+    sys.path.insert(0, str(ROOT / "toolscripts"))
+    from report_source_units import CONFIG, UNIT_NAMES, unit_names
     generated = generate(ROOT)
-    if args.check:
-        if not target.is_file() or target.read_text() != generated:
-            raise ValueError('Generated source names header is stale')
-    else:
-        target.parent.mkdir(exist_ok=True)
-        target.write_text(generated, encoding='utf-8')
-    print(json.dumps({'mappings': len(generated.splitlines()), 'buildOutputChanged': False}))
+    targets = [(ROOT / 'include/bytematch_names.h', generated)]
+    config_path = ROOT / CONFIG
+    if config_path.exists():
+        targets.append((ROOT / UNIT_NAMES, unit_names(json.loads(config_path.read_text(encoding='utf-8')))))
+    for target, content in targets:
+        if args.check:
+            if not target.is_file() or target.read_text(encoding='utf-8') != content:
+                raise ValueError('Generated source names header is stale: ' + target.name)
+        else:
+            target.parent.mkdir(exist_ok=True)
+            if not target.is_file() or target.read_text(encoding='utf-8') != content:
+                target.write_text(content, encoding='utf-8')
+    print(json.dumps({'mappings': len(generated.splitlines()), 'headers': len(targets), 'buildOutputChanged': False}))

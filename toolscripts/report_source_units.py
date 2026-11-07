@@ -4,6 +4,21 @@ from pathlib import Path
 import re
 CONFIG = 'config/objdiff-source-units.json'
 
+UNIT_NAMES = 'include/bytematch_unit_names.h'
+
+
+def unit_names(config):
+    names = set()
+    lines = []
+    for unit in config['units']:
+        name, symbol = unit['sourceName'], unit['symbol']
+        if not re.fullmatch(r'[A-Za-z_]\w*', name) or not re.fullmatch(r'fn_[0-9a-f]{8}', symbol) or name in names:
+            raise ValueError('Source-directed aliases must have unique valid C names')
+        names.add(name)
+        lines.append('#define ' + name + ' ' + symbol)
+    return '\n'.join(lines) + '\n'
+
+
 def verify_refinement(expected, actual):
     index = 0
     actual = sorted(actual)
