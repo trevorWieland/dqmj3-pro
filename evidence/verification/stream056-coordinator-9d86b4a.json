@@ -1,0 +1,1655 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-independent-stream056-valid-table-backed-memory-domain",
+  "sourceRevision": "9d86b4acd5e2c634be8a80413b3659a06cfb8469",
+  "rawReplay": {
+    "path": "evidence/verification/stream056-isolated-9d86b4a.json",
+    "bytes": 22363,
+    "sha256": "40332d941d78bc1822f3e5ac68dc8386e0d61ebbe4048dd9c920b1214b9ca060"
+  },
+  "ready": {
+    "path": "evidence/lanes/native-stream056/stage-v1/ready.json",
+    "bytes": 12871,
+    "sha256": "d8f6f2790426d221bad007762dd651ff405ab0019200ed751d2e35e5f1681146"
+  },
+  "reports": [
+    {
+      "kind": "positive",
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/final-v2/report.json",
+        "bytes": 2112799,
+        "sha256": "714dbbac9697f57626bd65b5d14ce9f64ad18ff6acad5d7331ceb1de809d26a9"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-positive/report.json",
+        "bytes": 2112799,
+        "sha256": "714dbbac9697f57626bd65b5d14ce9f64ad18ff6acad5d7331ceb1de809d26a9"
+      },
+      "byteIdentical": true
+    },
+    {
+      "kind": "controls",
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/report.json",
+        "bytes": 131284,
+        "sha256": "7b9d7abf1ecb2dedc8d96ff5df562ef0c550ab5f0070c3bfaa4e627fbd500c63"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/report.json",
+        "bytes": 131284,
+        "sha256": "7b9d7abf1ecb2dedc8d96ff5df562ef0c550ab5f0070c3bfaa4e627fbd500c63"
+      },
+      "byteIdentical": true
+    }
+  ],
+  "artifacts": [
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/final-v2/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-positive/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/final-v2/a64/libstream056.so",
+        "bytes": 3408,
+        "sha256": "149a03214d018dd24c2a19cd3742c556235e33557175c5d5cc385d49338912b6"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-positive/a64/libstream056.so",
+        "bytes": 3408,
+        "sha256": "149a03214d018dd24c2a19cd3742c556235e33557175c5d5cc385d49338912b6"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/final-v2/a64/stream.o",
+        "bytes": 2064,
+        "sha256": "248d94f97096ae1e9748a579d62077433549bd674703c54c4b38e4fba0d66207"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-positive/a64/stream.o",
+        "bytes": 2064,
+        "sha256": "248d94f97096ae1e9748a579d62077433549bd674703c54c4b38e4fba0d66207"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/final-v2/a64/stream056.elf",
+        "bytes": 67248,
+        "sha256": "8df289d39a06ac8d20d57146fd265d2c90e4da97869fe4b16a77f1b4be7e5601"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-positive/a64/stream056.elf",
+        "bytes": 67248,
+        "sha256": "8df289d39a06ac8d20d57146fd265d2c90e4da97869fe4b16a77f1b4be7e5601"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/final-v2/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-positive/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/final-v2/arm/stream.o",
+        "bytes": 2052,
+        "sha256": "55eb3f929fb73f175c93bb240d4c6dffa5599438028d2dbdfebcd0aa4f1156ff"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-positive/arm/stream.o",
+        "bytes": 2052,
+        "sha256": "55eb3f929fb73f175c93bb240d4c6dffa5599438028d2dbdfebcd0aa4f1156ff"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/final-v2/arm/stream056.elf",
+        "bytes": 67188,
+        "sha256": "5046216d1e1b43bc4eced762569580ea61edc8189f4410f2e8c0988d3629fe78"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-positive/arm/stream056.elf",
+        "bytes": 67188,
+        "sha256": "5046216d1e1b43bc4eced762569580ea61edc8189f4410f2e8c0988d3629fe78"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/final-v2/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-positive/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/final-v2/windows/stream.o",
+        "bytes": 2028,
+        "sha256": "06fd17d5d0a88f4fe97f450992f27b4ef546ce482aa50909fb543252d7eceace"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-positive/windows/stream.o",
+        "bytes": 2028,
+        "sha256": "06fd17d5d0a88f4fe97f450992f27b4ef546ce482aa50909fb543252d7eceace"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/final-v2/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "33284b8fed694a6ae18d796bd4b1bbaaf176ee30a63404f435c7bf664a7c165d"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-positive/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "33284b8fed694a6ae18d796bd4b1bbaaf176ee30a63404f435c7bf664a7c165d"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/final-v2/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-positive/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-literal/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-literal/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-literal/a64/libstream056.so",
+        "bytes": 3416,
+        "sha256": "99b70d52f3db96ac436b4bcbb0275e4befb94e2cb31684c41c037ff23bc383d0"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-literal/a64/libstream056.so",
+        "bytes": 3416,
+        "sha256": "99b70d52f3db96ac436b4bcbb0275e4befb94e2cb31684c41c037ff23bc383d0"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-literal/a64/stream.o",
+        "bytes": 2072,
+        "sha256": "73d65194621c4d1abeb21316f37961ed626dad94545a9bf9e81343487e2aad0c"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-literal/a64/stream.o",
+        "bytes": 2072,
+        "sha256": "73d65194621c4d1abeb21316f37961ed626dad94545a9bf9e81343487e2aad0c"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-literal/a64/stream056.elf",
+        "bytes": 67248,
+        "sha256": "c5e67664fc8476a4dc706eb0690484040456a110f3611dc3ca6659c56a99ef54"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-literal/a64/stream056.elf",
+        "bytes": 67248,
+        "sha256": "c5e67664fc8476a4dc706eb0690484040456a110f3611dc3ca6659c56a99ef54"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-literal/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-literal/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-literal/arm/stream.o",
+        "bytes": 2056,
+        "sha256": "4510bb51aec150cbd7d2f3819e0118a38748606060a6c86843919a46a195f2ba"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-literal/arm/stream.o",
+        "bytes": 2056,
+        "sha256": "4510bb51aec150cbd7d2f3819e0118a38748606060a6c86843919a46a195f2ba"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-literal/arm/stream056.elf",
+        "bytes": 67192,
+        "sha256": "e719abe691a51b17b48df31df9cdcaae492f9a42eaa27d544c91aa267b699ba4"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-literal/arm/stream056.elf",
+        "bytes": 67192,
+        "sha256": "e719abe691a51b17b48df31df9cdcaae492f9a42eaa27d544c91aa267b699ba4"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-literal/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-literal/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-literal/windows/stream.o",
+        "bytes": 2028,
+        "sha256": "d4fbfc7008d44cfb649e5a23f3789d3f3cb506778e4d25b929ad4f25b781013a"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-literal/windows/stream.o",
+        "bytes": 2028,
+        "sha256": "d4fbfc7008d44cfb649e5a23f3789d3f3cb506778e4d25b929ad4f25b781013a"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-literal/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "81e8d035fe9ffc18b2dc4adcae8b49d682be5f37fe4e48493334c04c07ad2920"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-literal/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "81e8d035fe9ffc18b2dc4adcae8b49d682be5f37fe4e48493334c04c07ad2920"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-literal/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-literal/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-error-mode/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-error-mode/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-error-mode/a64/libstream056.so",
+        "bytes": 3408,
+        "sha256": "93754424dd0773f8a178162e33f12950cb7e9ed757237bf47e34130cd45c12aa"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-error-mode/a64/libstream056.so",
+        "bytes": 3408,
+        "sha256": "93754424dd0773f8a178162e33f12950cb7e9ed757237bf47e34130cd45c12aa"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-error-mode/a64/stream.o",
+        "bytes": 2064,
+        "sha256": "9f9b05cd835c8bd89974b41570f4cfa74e0799dd3bbd70cc61775c32fb10a67d"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-error-mode/a64/stream.o",
+        "bytes": 2064,
+        "sha256": "9f9b05cd835c8bd89974b41570f4cfa74e0799dd3bbd70cc61775c32fb10a67d"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-error-mode/a64/stream056.elf",
+        "bytes": 67248,
+        "sha256": "0dfa8d2921e2d50dd0e5281ff577fe1dd8786563191d91c91f9fa46c8d3fe696"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-error-mode/a64/stream056.elf",
+        "bytes": 67248,
+        "sha256": "0dfa8d2921e2d50dd0e5281ff577fe1dd8786563191d91c91f9fa46c8d3fe696"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-error-mode/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-error-mode/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-error-mode/arm/stream.o",
+        "bytes": 2052,
+        "sha256": "b87b832c636e3855204ca317d75c3177cc270d82636d6e5dfc6c7b6319cb8450"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-error-mode/arm/stream.o",
+        "bytes": 2052,
+        "sha256": "b87b832c636e3855204ca317d75c3177cc270d82636d6e5dfc6c7b6319cb8450"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-error-mode/arm/stream056.elf",
+        "bytes": 67188,
+        "sha256": "fc4a85f048e9fa70dfff608a2e29cc3ad1b237239ddf6f39b33a4e128c782298"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-error-mode/arm/stream056.elf",
+        "bytes": 67188,
+        "sha256": "fc4a85f048e9fa70dfff608a2e29cc3ad1b237239ddf6f39b33a4e128c782298"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-error-mode/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-error-mode/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-error-mode/windows/stream.o",
+        "bytes": 2028,
+        "sha256": "e0b25339aed4ff445d3db878bafe2b02d93ce93c9fc76019546a5aaa1ca7480f"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-error-mode/windows/stream.o",
+        "bytes": 2028,
+        "sha256": "e0b25339aed4ff445d3db878bafe2b02d93ce93c9fc76019546a5aaa1ca7480f"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-error-mode/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "93b3a75b51f0c3f5854601e4efbf6f3bdc71a27f12ddeb49022346763db2a26c"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-error-mode/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "93b3a75b51f0c3f5854601e4efbf6f3bdc71a27f12ddeb49022346763db2a26c"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/wrong-error-mode/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/wrong-error-mode/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/overwrite-inactive-mode-tail/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/overwrite-inactive-mode-tail/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/overwrite-inactive-mode-tail/a64/libstream056.so",
+        "bytes": 3416,
+        "sha256": "ca86d385d02f537b03767ba9581bb3bf3ab9a4ac091f937989b1a2bcdc44da69"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/overwrite-inactive-mode-tail/a64/libstream056.so",
+        "bytes": 3416,
+        "sha256": "ca86d385d02f537b03767ba9581bb3bf3ab9a4ac091f937989b1a2bcdc44da69"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/overwrite-inactive-mode-tail/a64/stream.o",
+        "bytes": 2072,
+        "sha256": "dca122305c32b87fc0309e259f4f4091cd718f901510aaaa1593eb70abe23fab"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/overwrite-inactive-mode-tail/a64/stream.o",
+        "bytes": 2072,
+        "sha256": "dca122305c32b87fc0309e259f4f4091cd718f901510aaaa1593eb70abe23fab"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/overwrite-inactive-mode-tail/a64/stream056.elf",
+        "bytes": 67248,
+        "sha256": "684f42522c3817271d9498f864ee56d02bb1ebd5c7c45e1d88c250fb5fab8752"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/overwrite-inactive-mode-tail/a64/stream056.elf",
+        "bytes": 67248,
+        "sha256": "684f42522c3817271d9498f864ee56d02bb1ebd5c7c45e1d88c250fb5fab8752"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/overwrite-inactive-mode-tail/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/overwrite-inactive-mode-tail/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/overwrite-inactive-mode-tail/arm/stream.o",
+        "bytes": 2060,
+        "sha256": "a2d0c10657120a6aa275bde030c18a00b5d3fe5494dcb58db9d119fc1dbad130"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/overwrite-inactive-mode-tail/arm/stream.o",
+        "bytes": 2060,
+        "sha256": "a2d0c10657120a6aa275bde030c18a00b5d3fe5494dcb58db9d119fc1dbad130"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/overwrite-inactive-mode-tail/arm/stream056.elf",
+        "bytes": 67196,
+        "sha256": "65ee6ff6fc94c5a302195a032d810c202f20e34c4121e74d99ca0ffab2dca144"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/overwrite-inactive-mode-tail/arm/stream056.elf",
+        "bytes": 67196,
+        "sha256": "65ee6ff6fc94c5a302195a032d810c202f20e34c4121e74d99ca0ffab2dca144"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/overwrite-inactive-mode-tail/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/overwrite-inactive-mode-tail/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/overwrite-inactive-mode-tail/windows/stream.o",
+        "bytes": 2028,
+        "sha256": "c577f2e87eb6a83936f9abb28869dc7250fa369efe9ac050dc1666872b64388c"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/overwrite-inactive-mode-tail/windows/stream.o",
+        "bytes": 2028,
+        "sha256": "c577f2e87eb6a83936f9abb28869dc7250fa369efe9ac050dc1666872b64388c"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/overwrite-inactive-mode-tail/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "1742e3d53a0de4ca148960439f9b7f2ccd1267e419c399819203d5b2e5f4517e"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/overwrite-inactive-mode-tail/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "1742e3d53a0de4ca148960439f9b7f2ccd1267e419c399819203d5b2e5f4517e"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/overwrite-inactive-mode-tail/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/overwrite-inactive-mode-tail/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/omit-input-rewind/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/omit-input-rewind/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/omit-input-rewind/a64/libstream056.so",
+        "bytes": 3400,
+        "sha256": "2788a6a84b229ab18402125a951623fa0601da088274ea30bb00820d8cf296d2"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/omit-input-rewind/a64/libstream056.so",
+        "bytes": 3400,
+        "sha256": "2788a6a84b229ab18402125a951623fa0601da088274ea30bb00820d8cf296d2"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/omit-input-rewind/a64/stream.o",
+        "bytes": 2056,
+        "sha256": "7821daaba11a4bfc93ebfb8ae16fa5b8f0ca5052be9195adec50c8ccae4fce5e"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/omit-input-rewind/a64/stream.o",
+        "bytes": 2056,
+        "sha256": "7821daaba11a4bfc93ebfb8ae16fa5b8f0ca5052be9195adec50c8ccae4fce5e"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/omit-input-rewind/a64/stream056.elf",
+        "bytes": 67240,
+        "sha256": "2668b3acd0d87ea6801641ecdaf2f7e1b57e0e311af4d1243fdf20a6a33c59d6"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/omit-input-rewind/a64/stream056.elf",
+        "bytes": 67240,
+        "sha256": "2668b3acd0d87ea6801641ecdaf2f7e1b57e0e311af4d1243fdf20a6a33c59d6"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/omit-input-rewind/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/omit-input-rewind/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/omit-input-rewind/arm/stream.o",
+        "bytes": 2112,
+        "sha256": "a89413681c628ac2802684b00a99166883069e8d1615c8e5b41c2a2dce733fce"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/omit-input-rewind/arm/stream.o",
+        "bytes": 2112,
+        "sha256": "a89413681c628ac2802684b00a99166883069e8d1615c8e5b41c2a2dce733fce"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/omit-input-rewind/arm/stream056.elf",
+        "bytes": 67248,
+        "sha256": "0a25311662df66fb5a1b6b8988e8041b62dbfee761bfaf2a0b9d508b44bde950"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/omit-input-rewind/arm/stream056.elf",
+        "bytes": 67248,
+        "sha256": "0a25311662df66fb5a1b6b8988e8041b62dbfee761bfaf2a0b9d508b44bde950"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/omit-input-rewind/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/omit-input-rewind/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/omit-input-rewind/windows/stream.o",
+        "bytes": 2012,
+        "sha256": "17f9e72a5c84fb3e07d07b909bb1d3cea3d98f705a334b843ffa8e01558c4763"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/omit-input-rewind/windows/stream.o",
+        "bytes": 2012,
+        "sha256": "17f9e72a5c84fb3e07d07b909bb1d3cea3d98f705a334b843ffa8e01558c4763"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/omit-input-rewind/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "bd7cadff319c7942904beb7a42df295c9158b69d5b016c1f84be74f29fae701f"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/omit-input-rewind/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "bd7cadff319c7942904beb7a42df295c9158b69d5b016c1f84be74f29fae701f"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/omit-input-rewind/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/omit-input-rewind/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/miss-end-code/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/miss-end-code/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/miss-end-code/a64/libstream056.so",
+        "bytes": 3408,
+        "sha256": "1457c5c1b0e084bcd2998498a1e2269b997e9ecb615350ba00b41656a14c8c70"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/miss-end-code/a64/libstream056.so",
+        "bytes": 3408,
+        "sha256": "1457c5c1b0e084bcd2998498a1e2269b997e9ecb615350ba00b41656a14c8c70"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/miss-end-code/a64/stream.o",
+        "bytes": 2064,
+        "sha256": "ec7e76e8e897eac68752f817fa1b607693894d96c630b8db20d38f80b3b88bdf"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/miss-end-code/a64/stream.o",
+        "bytes": 2064,
+        "sha256": "ec7e76e8e897eac68752f817fa1b607693894d96c630b8db20d38f80b3b88bdf"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/miss-end-code/a64/stream056.elf",
+        "bytes": 67240,
+        "sha256": "f719941d080c3d1aa3063ae2e535125881db75391804c7763e739c9cf424c491"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/miss-end-code/a64/stream056.elf",
+        "bytes": 67240,
+        "sha256": "f719941d080c3d1aa3063ae2e535125881db75391804c7763e739c9cf424c491"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/miss-end-code/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/miss-end-code/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/miss-end-code/arm/stream.o",
+        "bytes": 2040,
+        "sha256": "47c0457c0aa7fbe4c6620a190eec341af0c19fd6952919fde662518f96465256"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/miss-end-code/arm/stream.o",
+        "bytes": 2040,
+        "sha256": "47c0457c0aa7fbe4c6620a190eec341af0c19fd6952919fde662518f96465256"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/miss-end-code/arm/stream056.elf",
+        "bytes": 67176,
+        "sha256": "e32695e80fd20a040a6aedf2386a362e6f97bf4d4dc91a9e6bda2ba92d9e0d0e"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/miss-end-code/arm/stream056.elf",
+        "bytes": 67176,
+        "sha256": "e32695e80fd20a040a6aedf2386a362e6f97bf4d4dc91a9e6bda2ba92d9e0d0e"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/miss-end-code/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/miss-end-code/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/miss-end-code/windows/stream.o",
+        "bytes": 2044,
+        "sha256": "714cdda99980c50d44f3ccdacd6b17b58c58ecab067e3517770140d63418e8b2"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/miss-end-code/windows/stream.o",
+        "bytes": 2044,
+        "sha256": "714cdda99980c50d44f3ccdacd6b17b58c58ecab067e3517770140d63418e8b2"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/miss-end-code/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "72fb4bc41c0a4773fae4bed27077496c4c49d13e2dc9213154c32d07252346ab"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/miss-end-code/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "72fb4bc41c0a4773fae4bed27077496c4c49d13e2dc9213154c32d07252346ab"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/miss-end-code/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/miss-end-code/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/increment-caller-total/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/increment-caller-total/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/increment-caller-total/a64/libstream056.so",
+        "bytes": 3416,
+        "sha256": "71ff283a50da8c707a73301f696b24fb1b1382435e5bdf31ca50ac167e4e5f6a"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/increment-caller-total/a64/libstream056.so",
+        "bytes": 3416,
+        "sha256": "71ff283a50da8c707a73301f696b24fb1b1382435e5bdf31ca50ac167e4e5f6a"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/increment-caller-total/a64/stream.o",
+        "bytes": 2072,
+        "sha256": "177ffc7197d73eb71c9fde2230e57090608e67fb0aa3a9804a987351346828c7"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/increment-caller-total/a64/stream.o",
+        "bytes": 2072,
+        "sha256": "177ffc7197d73eb71c9fde2230e57090608e67fb0aa3a9804a987351346828c7"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/increment-caller-total/a64/stream056.elf",
+        "bytes": 67256,
+        "sha256": "8433c813fcd1b90dd2cf660d28fe2b54ef9eff85e0b794d62f63f5f368f041f2"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/increment-caller-total/a64/stream056.elf",
+        "bytes": 67256,
+        "sha256": "8433c813fcd1b90dd2cf660d28fe2b54ef9eff85e0b794d62f63f5f368f041f2"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/increment-caller-total/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/increment-caller-total/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/increment-caller-total/arm/stream.o",
+        "bytes": 2064,
+        "sha256": "7ae067020779950f5ca71e4ebf3c8851ae7d7bd8734b980d581ce112f67b39f8"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/increment-caller-total/arm/stream.o",
+        "bytes": 2064,
+        "sha256": "7ae067020779950f5ca71e4ebf3c8851ae7d7bd8734b980d581ce112f67b39f8"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/increment-caller-total/arm/stream056.elf",
+        "bytes": 67200,
+        "sha256": "b2dd40f3bd56b6234c904656394ab9de29543b418a4b73323851984c28757c5f"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/increment-caller-total/arm/stream056.elf",
+        "bytes": 67200,
+        "sha256": "b2dd40f3bd56b6234c904656394ab9de29543b418a4b73323851984c28757c5f"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/increment-caller-total/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/increment-caller-total/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/increment-caller-total/windows/stream.o",
+        "bytes": 2028,
+        "sha256": "0efbbf666e51f93d68f03e984f5cc689665159d6bcb9689b8b034a2c4bc411ba"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/increment-caller-total/windows/stream.o",
+        "bytes": 2028,
+        "sha256": "0efbbf666e51f93d68f03e984f5cc689665159d6bcb9689b8b034a2c4bc411ba"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/increment-caller-total/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "dae5f77be4f24ffd9d095a94daac7b4e5531c51656cf06444ef17ff4d13d0ea2"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/increment-caller-total/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "dae5f77be4f24ffd9d095a94daac7b4e5531c51656cf06444ef17ff4d13d0ea2"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/increment-caller-total/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/increment-caller-total/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-window-next/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-window-next/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-window-next/a64/libstream056.so",
+        "bytes": 3408,
+        "sha256": "84c4c5aaf7f55de6df026271e3810ed9baa3563d3dd1fbc8ed53d88326cb0aa7"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-window-next/a64/libstream056.so",
+        "bytes": 3408,
+        "sha256": "84c4c5aaf7f55de6df026271e3810ed9baa3563d3dd1fbc8ed53d88326cb0aa7"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-window-next/a64/stream.o",
+        "bytes": 2064,
+        "sha256": "ff5c549372c255737c8d010a92eeca515254d33532898f0b58fcfd9fce07018a"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-window-next/a64/stream.o",
+        "bytes": 2064,
+        "sha256": "ff5c549372c255737c8d010a92eeca515254d33532898f0b58fcfd9fce07018a"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-window-next/a64/stream056.elf",
+        "bytes": 67240,
+        "sha256": "5a0f7934cb2710acaedd3db35bd40c15eea655c3514d79e2f433d945ffee1eb6"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-window-next/a64/stream056.elf",
+        "bytes": 67240,
+        "sha256": "5a0f7934cb2710acaedd3db35bd40c15eea655c3514d79e2f433d945ffee1eb6"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-window-next/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-window-next/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-window-next/arm/stream.o",
+        "bytes": 2048,
+        "sha256": "17c5f902f93522f4950ade5b0c682e158a88d02069a9445c7f08f6b978d15e9a"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-window-next/arm/stream.o",
+        "bytes": 2048,
+        "sha256": "17c5f902f93522f4950ade5b0c682e158a88d02069a9445c7f08f6b978d15e9a"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-window-next/arm/stream056.elf",
+        "bytes": 67184,
+        "sha256": "da5993ad2fa13ee0f0c15b6b1e8ef652a8edda14fcad72766427c6bb1849c2ab"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-window-next/arm/stream056.elf",
+        "bytes": 67184,
+        "sha256": "da5993ad2fa13ee0f0c15b6b1e8ef652a8edda14fcad72766427c6bb1849c2ab"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-window-next/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-window-next/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-window-next/windows/stream.o",
+        "bytes": 2172,
+        "sha256": "b392941345d78357e59cf1a22a94d1ceea7c4b3b925a2382cdbed3f0e6043436"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-window-next/windows/stream.o",
+        "bytes": 2172,
+        "sha256": "b392941345d78357e59cf1a22a94d1ceea7c4b3b925a2382cdbed3f0e6043436"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-window-next/windows/stream056.dll",
+        "bytes": 3072,
+        "sha256": "0f09999a9063d7eb1d409cda6ecce0ad03dd56447411ff19e74ccd87b82ff663"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-window-next/windows/stream056.dll",
+        "bytes": 3072,
+        "sha256": "0f09999a9063d7eb1d409cda6ecce0ad03dd56447411ff19e74ccd87b82ff663"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-window-next/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-window-next/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-history-have/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-history-have/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-history-have/a64/libstream056.so",
+        "bytes": 3488,
+        "sha256": "40522bbef6ff5741328dbc892e68bbd46bbab2854805ed306778920c92ce7a3a"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-history-have/a64/libstream056.so",
+        "bytes": 3488,
+        "sha256": "40522bbef6ff5741328dbc892e68bbd46bbab2854805ed306778920c92ce7a3a"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-history-have/a64/stream.o",
+        "bytes": 2104,
+        "sha256": "ef97ba41d5a394aa1ebf10d0dba00e1d1af266274f34efe75e6445e52224f98c"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-history-have/a64/stream.o",
+        "bytes": 2104,
+        "sha256": "ef97ba41d5a394aa1ebf10d0dba00e1d1af266274f34efe75e6445e52224f98c"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-history-have/a64/stream056.elf",
+        "bytes": 67256,
+        "sha256": "e66b9123492fe1b9ef49212539b9ee7d52ea77b7e52ba76eee84ca841e4b105d"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-history-have/a64/stream056.elf",
+        "bytes": 67256,
+        "sha256": "e66b9123492fe1b9ef49212539b9ee7d52ea77b7e52ba76eee84ca841e4b105d"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-history-have/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-history-have/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-history-have/arm/stream.o",
+        "bytes": 2140,
+        "sha256": "381e8bead606566371f2f0795a54012dbf5b42eb60643bd8c3a4c08a2228047f"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-history-have/arm/stream.o",
+        "bytes": 2140,
+        "sha256": "381e8bead606566371f2f0795a54012dbf5b42eb60643bd8c3a4c08a2228047f"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-history-have/arm/stream056.elf",
+        "bytes": 67236,
+        "sha256": "ca16f5b054b3fa1d729c995b2dcfb60871f81cf150fcdb258c1a19f66574ca68"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-history-have/arm/stream056.elf",
+        "bytes": 67236,
+        "sha256": "ca16f5b054b3fa1d729c995b2dcfb60871f81cf150fcdb258c1a19f66574ca68"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-history-have/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-history-have/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-history-have/windows/stream.o",
+        "bytes": 1927,
+        "sha256": "048d8f9d2e1914998dc13a921ebea31c3d4c6bd3ec2d944f919152412d3c6743"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-history-have/windows/stream.o",
+        "bytes": 1927,
+        "sha256": "048d8f9d2e1914998dc13a921ebea31c3d4c6bd3ec2d944f919152412d3c6743"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-history-have/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "c95b2b5eb94ebc44d3d768c1daad7b564f3e522bd27668e8d184b353915394b9"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-history-have/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "c95b2b5eb94ebc44d3d768c1daad7b564f3e522bd27668e8d184b353915394b9"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-history-have/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-history-have/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-distance-extra/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-distance-extra/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-distance-extra/a64/libstream056.so",
+        "bytes": 3400,
+        "sha256": "ba05baa8ff8b1934a5ce73252bbcd2c149b12b7cc5d2fb8a2d61d8226826d2f3"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-distance-extra/a64/libstream056.so",
+        "bytes": 3400,
+        "sha256": "ba05baa8ff8b1934a5ce73252bbcd2c149b12b7cc5d2fb8a2d61d8226826d2f3"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-distance-extra/a64/stream.o",
+        "bytes": 2056,
+        "sha256": "674b5e1f3c6d8494507ce17b16ea76b7cc892fcfe8fbc10977c6d05c03e50e4c"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-distance-extra/a64/stream.o",
+        "bytes": 2056,
+        "sha256": "674b5e1f3c6d8494507ce17b16ea76b7cc892fcfe8fbc10977c6d05c03e50e4c"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-distance-extra/a64/stream056.elf",
+        "bytes": 67232,
+        "sha256": "23f1e9db356cd22d48152a2bf8777cb50f7cf4163c897ba9e125b67927ee1fe7"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-distance-extra/a64/stream056.elf",
+        "bytes": 67232,
+        "sha256": "23f1e9db356cd22d48152a2bf8777cb50f7cf4163c897ba9e125b67927ee1fe7"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-distance-extra/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-distance-extra/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-distance-extra/arm/stream.o",
+        "bytes": 2028,
+        "sha256": "233cac9ff526c5d0df6aa4ee6d29f57c29f0c7a7e0baae462562c27ebeef0ebe"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-distance-extra/arm/stream.o",
+        "bytes": 2028,
+        "sha256": "233cac9ff526c5d0df6aa4ee6d29f57c29f0c7a7e0baae462562c27ebeef0ebe"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-distance-extra/arm/stream056.elf",
+        "bytes": 67164,
+        "sha256": "beed2a2f63b31faf54acef37bd604bb323326a9363bd42175576c05c674c32dc"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-distance-extra/arm/stream056.elf",
+        "bytes": 67164,
+        "sha256": "beed2a2f63b31faf54acef37bd604bb323326a9363bd42175576c05c674c32dc"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-distance-extra/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-distance-extra/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-distance-extra/windows/stream.o",
+        "bytes": 2012,
+        "sha256": "5d2fac815addc5cad2a3535cebe6b678da1a819d161138965d91fc0cb9380ba7"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-distance-extra/windows/stream.o",
+        "bytes": 2012,
+        "sha256": "5d2fac815addc5cad2a3535cebe6b678da1a819d161138965d91fc0cb9380ba7"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-distance-extra/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "23fe4bb4a4caa374abd395a3a4cf4efae175bff83366733800ab046eaf4854b2"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-distance-extra/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "23fe4bb4a4caa374abd395a3a4cf4efae175bff83366733800ab046eaf4854b2"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/ignore-distance-extra/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/ignore-distance-extra/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/distance-one-only/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/distance-one-only/a64/layout.o",
+        "bytes": 992,
+        "sha256": "e1c26be73dd00399e3744423eb601a9598c0eb7f3e7efe6e7ba5044b820f0e97"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/distance-one-only/a64/libstream056.so",
+        "bytes": 3400,
+        "sha256": "2d90ef3467d513273cf78d7c3f82307d20ef19c1d77b21cbe3b61231976ff187"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/distance-one-only/a64/libstream056.so",
+        "bytes": 3400,
+        "sha256": "2d90ef3467d513273cf78d7c3f82307d20ef19c1d77b21cbe3b61231976ff187"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/distance-one-only/a64/stream.o",
+        "bytes": 2056,
+        "sha256": "b661a0267e2bc87b0b6a3bb5b61c12021a43f462c8ec06a8756bd0744b632f74"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/distance-one-only/a64/stream.o",
+        "bytes": 2056,
+        "sha256": "b661a0267e2bc87b0b6a3bb5b61c12021a43f462c8ec06a8756bd0744b632f74"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/distance-one-only/a64/stream056.elf",
+        "bytes": 67240,
+        "sha256": "c3c77a17f6167172a66111626941982a5d4b0e7f58166c9ab234efff39bc13c5"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/distance-one-only/a64/stream056.elf",
+        "bytes": 67240,
+        "sha256": "c3c77a17f6167172a66111626941982a5d4b0e7f58166c9ab234efff39bc13c5"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/distance-one-only/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/distance-one-only/arm/layout.o",
+        "bytes": 904,
+        "sha256": "6c43afee5d74cb32eeb02280c99c96c478e4418ccc21b2604c1e2e4a8cab9b90"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/distance-one-only/arm/stream.o",
+        "bytes": 2044,
+        "sha256": "e653d83b059817270a463393418fe01271206f162851bdbf47d8970e51f86f06"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/distance-one-only/arm/stream.o",
+        "bytes": 2044,
+        "sha256": "e653d83b059817270a463393418fe01271206f162851bdbf47d8970e51f86f06"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/distance-one-only/arm/stream056.elf",
+        "bytes": 67180,
+        "sha256": "eb8ecf2734d6edade2fcb303226c1cfed15cd072dc1d0fcde8d5270e1c4dd7e7"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/distance-one-only/arm/stream056.elf",
+        "bytes": 67180,
+        "sha256": "eb8ecf2734d6edade2fcb303226c1cfed15cd072dc1d0fcde8d5270e1c4dd7e7"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/distance-one-only/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/distance-one-only/windows/layout.o",
+        "bytes": 617,
+        "sha256": "4a28886e9c15e6bf37ef009dc56a7c33a2d9164048d49c53fe2a165288e9966a"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/distance-one-only/windows/stream.o",
+        "bytes": 2012,
+        "sha256": "a427a4ee98b8810c5673e24a40ef0ba24d58fdd26e2427bbb9cf52b4ae263e80"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/distance-one-only/windows/stream.o",
+        "bytes": 2012,
+        "sha256": "a427a4ee98b8810c5673e24a40ef0ba24d58fdd26e2427bbb9cf52b4ae263e80"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/distance-one-only/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "56d6e00422b084b6518f904fa5f9dcd643bc2f3711cf13e5fe793d65763db0cb"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/distance-one-only/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "56d6e00422b084b6518f904fa5f9dcd643bc2f3711cf13e5fe793d65763db0cb"
+      },
+      "byteIdentical": true
+    },
+    {
+      "primary": {
+        "path": "work/native-stream056/public-stage-v1/controls-v2/distance-one-only/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "independent": {
+        "path": "work/clean-replay/stream056-9d86b4a/work/native-stream056/public-stage-v1/root-controls/distance-one-only/windows/stream056.lib",
+        "bytes": 1718,
+        "sha256": "92c398eedebf35ef00d97075471f3ee0b136fe1a0033b0b61e6490ca41caf4ac"
+      },
+      "byteIdentical": true
+    }
+  ],
+  "byteIdenticalArtifactCount": 121,
+  "noBinaryOrReportNormalizationUsed": true,
+  "tests": 102,
+  "caseSets": 732,
+  "fourTargetObservations": 2928,
+  "returningControls": 10,
+  "returningTargetSymbolChecks": 60,
+  "observedOriginalPcs": [
+    413,
+    412
+  ],
+  "domainUnreachablePcsPerRoutine": 39,
+  "staticDomainProof": {
+    "path": "evidence/lanes/native-stream056/stage-v1/static-unreachable-proof.json",
+    "bytes": 9069,
+    "sha256": "7f11c3ba99af1c1c009e2b46dafd3d1cc7e82396785ea3e5f7f41a22cd6cad01"
+  },
+  "publicUnits": 430,
+  "publicCompilations": 1220,
+  "instructionFootprintBytes": 3612,
+  "windowsCalleeSavedRegistersDirectlyObserved": false,
+  "arbitraryMalformedAliasMemorySdkInitializerGameOrUniversalClaimed": false,
+  "androidOsOrDeviceExecuted": false,
+  "sourceAdmissionGranted": false,
+  "exactMatchingCreditGranted": 0,
+  "priorRejectedOutputPlan": {
+    "path": "evidence/verification/stream056-af19775-output-restart.json",
+    "bytes": 496,
+    "sha256": "de92980e7e2cf1345689e9991189dbb62f51abed2a8cf79aee3be0b4f1da36aa"
+  },
+  "producer": {
+    "path": "evidence/verification/producers/review-stream056-replay.py",
+    "bytes": 5857,
+    "sha256": "e101ecf4e7c641641d8ec198cbbfeb0560d03bbfe330c474b49bfde4b63b588d"
+  }
+}
