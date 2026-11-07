@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "frozenCensus": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "bytes": 20574405,
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55"
+  },
+  "producer": {
+    "path": "toolscripts/review_lookup020_inventory.py",
+    "sha256": "93c8e5abc11657d5680cda948be160699c2da7c0a932208ecf369eda6b564fd6",
+    "bytes": 7831
+  },
+  "boundaryEvidence": {
+    "path": "evidence/lanes/squirrel-lookup020/metamethod-overlay-candidate.json",
+    "sha256": "9d31d2baa491531f5a15b04f3c584a9f0727d45c1605474788da03192a29d4e7",
+    "bytes": 4082
+  },
+  "boundaryProducer": {
+    "path": "toolscripts/squirrel_lookup020_boundaries.py",
+    "bytes": 11284,
+    "sha256": "e13e419b08b93fc95a3c1e68301da65d2fee0ca5b92ccae6e8da588f906df678"
+  },
+  "tables": [
+    {
+      "name": "sq-table020-reviewed-vtable-prefix-six-slots",
+      "encoding": "vtable-function-pointer",
+      "readerFunction": 1685912,
+      "literalAddress": 1686016,
+      "literalBytes": 4,
+      "literalSha256": "b6e2955b763492ae92d77a450b98a4f4c61aa1a2a2347c5da6cbab3b07016482",
+      "start": 8719788,
+      "bytes": 24,
+      "sha256": "e0d6a8c32b9232282a459295f1815a6680b4c9a6e0ce4f0b901d475276b822cb",
+      "entries": [
+        {
+          "key": 0,
+          "slot": 8719788,
+          "target": 6710592,
+          "mode": "ARM",
+          "virtual": true,
+          "thisAdjustmentBytes": 0
+        },
+        {
+          "key": 1,
+          "slot": 8719792,
+          "target": 0,
+          "mode": null,
+          "virtual": true,
+          "thisAdjustmentBytes": 0,
+          "null": true
+        },
+        {
+          "key": 2,
+          "slot": 8719796,
+          "target": 6710552,
+          "mode": "ARM",
+          "virtual": true,
+          "thisAdjustmentBytes": 0
+        },
+        {
+          "key": 3,
+          "slot": 8719800,
+          "target": 6710384,
+          "mode": "ARM",
+          "virtual": true,
+          "thisAdjustmentBytes": 0
+        },
+        {
+          "key": 4,
+          "slot": 8719804,
+          "target": 1696460,
+          "mode": "ARM",
+          "virtual": true,
+          "thisAdjustmentBytes": 0
+        },
+        {
+          "key": 5,
+          "slot": 8719808,
+          "target": 2108660,
+          "mode": "ARM",
+          "virtual": true,
+          "thisAdjustmentBytes": 0
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "canonicalIdentity": {
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 2108660,
+        "mode": "ARM"
+      },
+      "instructionRanges": [
+        {
+          "start": 2108660,
+          "endExclusive": 2108700,
+          "bytes": 40,
+          "instructions": 10,
+          "sha256": "d5f7a324b43e32c4e13343d99c1b9b1149ac74795c403858f2347dd069fba315",
+          "originalMemorySha256": "d5f7a324b43e32c4e13343d99c1b9b1149ac74795c403858f2347dd069fba315",
+          "priorClassification": "defined-unowned-instruction"
+        }
+      ],
+      "literalPoolRanges": [],
+      "tableWitnesses": [
+        {
+          "table": "sq-table020-reviewed-vtable-prefix-six-slots",
+          "slot": 8719808,
+          "target": 2108660
+        }
+      ],
+      "outgoingTransfers": [
+        {
+          "address": 2108692,
+          "target": 1711560,
+          "kind": "branch",
+          "sha256": "610a060618c8edbc15a18ed2f29e9c48341a4d0be0d2a03a7450f8bb388f45f0"
+        }
+      ],
+      "indirectTransfers": [],
+      "terminalReturn": {
+        "address": 2108696,
+        "sha256": "379bec29dccd0a93c94826144d7ef6e42fab64ef195a3b8313a16926f66f388f"
+      },
+      "tailReturn": {
+        "address": 2108692,
+        "target": 1711560,
+        "sha256": "610a060618c8edbc15a18ed2f29e9c48341a4d0be0d2a03a7450f8bb388f45f0"
+      },
+      "sourceCreditRequested": 0
+    }
+  ],
+  "sourceCreditGranted": 0,
+  "initializedTextByteDenominatorChanged": false,
+  "newCandidateFunctions": 1,
+  "newInstructionUnionBytes": 40,
+  "candidatePeerOverlaps": [],
+  "sharedTailAliases": [],
+  "tableExtentClaim": "Reviewed six-slot prefix only; following bytes are not assigned to this vtable"
+}

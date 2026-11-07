@@ -96,6 +96,42 @@ class OverlayGuards(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Null vtable'):
             overlay.validate(self.base, packet, self.image)
 
+    def defined_orphan_packet(self):
+        base, packet = copy.deepcopy(self.base), copy.deepcopy(self.packet)
+        part = packet['functions'][0]['instructionRanges'][0]
+        low, high = part['start'], part['endExclusive']
+        remaining = []
+        for row in base['unclassifiedTextRanges']:
+            start, end = row['start'], row['endExclusive']
+            if end <= low or high <= start:
+                remaining.append(row)
+                continue
+            for a, b in [(start, min(end, low)), (max(start, high), end)]:
+                if a < b:
+                    remaining.append({'start': a, 'endExclusive': b, 'bytes': b - a})
+        base['unclassifiedTextRanges'] = remaining
+        base['instructionRanges'].append({'start': low, 'endExclusive': high, 'bytes': high - low})
+        part['priorClassification'] = 'defined-unowned-instruction'
+        return base, packet, part
+
+    def test_defined_unowned_instructions_add_entry_without_reclassifying_data(self):
+        base, packet, part = self.defined_orphan_packet()
+        rows = overlay.validate(base, packet, self.image)
+        self.assertEqual(len(rows), 44)
+        self.assertTrue(all(row['acceptedSourceBytes'] == 0 for row in rows))
+
+    def test_unclassified_bytes_cannot_claim_prior_defined_instruction_status(self):
+        packet = copy.deepcopy(self.packet)
+        packet['functions'][0]['instructionRanges'][0]['priorClassification'] = 'defined-unowned-instruction'
+        with self.assertRaisesRegex(ValueError, 'range'):
+            overlay.validate(self.base, packet, self.image)
+
+    def test_defined_data_overlap_cannot_be_hidden_as_orphan_instructions(self):
+        base, packet, part = self.defined_orphan_packet()
+        base['definedDataRanges'].append({'start': part['start'], 'endExclusive': part['endExclusive']})
+        with self.assertRaisesRegex(ValueError, 'range'):
+            overlay.validate(base, packet, self.image)
+
     def test_member_pair_cannot_be_reinterpreted_as_a_plain_vtable(self):
         packet = copy.deepcopy(self.packet)
         packet['tables'][0]['encoding'] = 'vtable-function-pointer'

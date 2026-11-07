@@ -145,6 +145,8 @@ class CompileSourcesTests(unittest.TestCase):
         fixtures.update("source/squirrel-wave019/" + name + ".c" for name in
                         ("fixture_float", "fixture_run", "fixture_services", "fixture_snapshot",
                          "fixture_state", "native_fixture"))
+        fixtures.update("source/squirrel-wave020/" + name + ".c" for name in
+                        ("fixture_run", "fixture_services", "fixture_state"))
         fixtures.update("source/squirrel-wave021/" + name + ".c" for name in
                         ("native_table_helpers", "table_helpers_fixture", "table_helpers_services"))
         self.assertEqual({unit["source"] for unit in restricted},

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "status": "pre-source-overlay-candidate-coordinator-review-required",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "frozenCensus": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "bytes": 20574405,
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55"
+  },
+  "producer": {
+    "path": "toolscripts/squirrel_lookup020_boundaries.py",
+    "bytes": 11284,
+    "sha256": "e13e419b08b93fc95a3c1e68301da65d2fee0ca5b92ccae6e8da588f906df678"
+  },
+  "tables": [
+    {
+      "address": 8719788,
+      "bytes": 48,
+      "sha256": "2de8f2a0dc72150300e7fabd41a2a2da082716c7637b929c5cd99fd7c9b04ed9",
+      "slot": 8719808,
+      "slotBytes": 4,
+      "slotSha256": "77692b223fb78acb742e066251c03feb7b23a9bffa1920a9af0c610b18b01951",
+      "slotIndex": 5,
+      "target": 2108660
+    }
+  ],
+  "constructorWitness": {
+    "entry": 1685912,
+    "instructionBytes": 104,
+    "instructionSha256": "c65a43dbd947a6207bcd529796056d49a3bf2a6817767dc40509621a7bb30387",
+    "vtableLoad": {
+      "instruction": 1685932,
+      "address": 1686016,
+      "bytes": 4,
+      "sha256": "b6e2955b763492ae92d77a450b98a4f4c61aa1a2a2347c5da6cbab3b07016482"
+    },
+    "vtableStore": 1685948,
+    "sourceOrInventoryCredit": 0
+  },
+  "initializedTextRegion": {
+    "start": 1048576,
+    "bytes": 7051280,
+    "sha256": "1acbbacb991b63711117a26c11d322ff9a671b2901dc9b60c2be34352b48e856"
+  },
+  "functions": [
+    {
+      "canonicalIdentity": {
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 2108660,
+        "mode": "ARM"
+      },
+      "instructionRanges": [
+        {
+          "start": 2108660,
+          "endExclusive": 2108700,
+          "bytes": 40,
+          "instructions": 10,
+          "sha256": "d5f7a324b43e32c4e13343d99c1b9b1149ac74795c403858f2347dd069fba315",
+          "originalMemorySha256": "d5f7a324b43e32c4e13343d99c1b9b1149ac74795c403858f2347dd069fba315"
+        }
+      ],
+      "literalPoolRanges": [],
+      "tableWitnesses": [
+        {
+          "address": 8719788,
+          "bytes": 48,
+          "sha256": "2de8f2a0dc72150300e7fabd41a2a2da082716c7637b929c5cd99fd7c9b04ed9",
+          "slot": 8719808,
+          "slotBytes": 4,
+          "slotSha256": "77692b223fb78acb742e066251c03feb7b23a9bffa1920a9af0c610b18b01951",
+          "slotIndex": 5,
+          "target": 2108660
+        }
+      ],
+      "outgoingTransfers": [
+        {
+          "address": 2108692,
+          "target": 1711560,
+          "kind": "tail",
+          "sha256": "610a060618c8edbc15a18ed2f29e9c48341a4d0be0d2a03a7450f8bb388f45f0"
+        }
+      ],
+      "indirectTransfers": [],
+      "terminalReturn": {
+        "address": 2108696,
+        "sha256": "379bec29dccd0a93c94826144d7ef6e42fab64ef195a3b8313a16926f66f388f"
+      },
+      "tailReturn": {
+        "address": 2108692,
+        "target": 1711560,
+        "sha256": "610a060618c8edbc15a18ed2f29e9c48341a4d0be0d2a03a7450f8bb388f45f0"
+      },
+      "sourceCreditRequested": 0
+    }
+  ],
+  "precedingEntryWitness": {
+    "address": 2108640,
+    "endExclusive": 2108656,
+    "terminalInstruction": 2108652,
+    "terminalSha256": "379bec29dccd0a93c94826144d7ef6e42fab64ef195a3b8313a16926f66f388f",
+    "unclaimedGapBytes": 4
+  },
+  "followingEntryWitness": {
+    "address": 2108700,
+    "frozenCensusPresent": true,
+    "instructionSha256": "156d03eb56543d0aceec7a410537cac98b1c706d4d373ef1e204e12b6ca83989",
+    "sourceCredit": 0
+  },
+  "candidatePeerOverlaps": [],
+  "sharedTailAliases": [],
+  "newCandidateFunctions": 1,
+  "newInstructionUnionBytes": 40,
+  "inventoryAdmissionGranted": 0,
+  "sourceCreditGranted": 0,
+  "initializedTextByteDenominatorChanged": false,
+  "coordinatorRegistryChangesRequired": true,
+  "sourceBodiesWrittenAtMeasurement": false,
+  "originalPayloadsPublished": false
+}

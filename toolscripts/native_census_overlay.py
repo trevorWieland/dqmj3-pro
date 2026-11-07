@@ -55,6 +55,8 @@ def validate(base, packet, image):
         raise ValueError('Inventory overlay duplicates an existing entry')
     owners = merge((part['start'], part['endExclusive']) for row in base['functions'] for part in row['ranges'])
     unclassified = merge((part['start'], part['endExclusive']) for part in base['unclassifiedTextRanges'])
+    defined_instructions = merge((part['start'], part['endExclusive']) for part in base.get('instructionRanges', []))
+    defined_data = merge((part['start'], part['endExclusive']) for part in base.get('definedDataRanges', []))
     known = existing | set(addresses)
     witnesses = set()
     for table in packet['tables']:
@@ -103,11 +105,20 @@ def validate(base, packet, image):
         for part in row['instructionRanges']:
             low, high = part['start'], part['endExclusive']
             size = high - low
+            prior = part.get('priorClassification', 'unclassified')
+            if prior == 'unclassified':
+                classification_valid = overlap(unclassified, low, high) == size
+            elif prior == 'defined-unowned-instruction':
+                classification_valid = (overlap(defined_instructions, low, high) == size
+                                        and overlap(unclassified, low, high) == 0
+                                        and overlap(defined_data, low, high) == 0)
+            else:
+                raise ValueError('Unsupported prior instruction classification')
             if (not origin <= low < high <= end or low % 4 or size % 4 or size != part['bytes']
                     or part['instructions'] * 4 != size or sha(image[low - origin:high - origin]) != part['sha256']
                     or part.get('ghidraMemorySha256', part.get('originalMemorySha256')) != part['sha256']
                     or overlap(owners, low, high)
-                    or overlap(unclassified, low, high) != size or overlap(seen, low, high)):
+                    or not classification_valid or overlap(seen, low, high)):
                 raise ValueError('Supplemental instruction range overlaps or differs')
             seen.append((low, high))
             parts.append({'start': low, 'endExclusive': high, 'bytes': size})
