@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "verifiedUtc": "2026-11-07T00:00:43.619031+00:00",
+  "sources": [
+    {
+      "path": "toolscripts/module_link_graph.py",
+      "sha256": "a750984d287d605e3143aa68d9bba26a3bc9d464f9d3db9a5e15b1afaa10038c"
+    },
+    {
+      "path": "tests/test_module_link_graph.py",
+      "sha256": "2208457fc27c66303c2adb2fb12712694f998ae303646632a09a42ec2f61d672"
+    }
+  ],
+  "testArgv": [
+    "tools/python/Scripts/python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_module_link_graph.py",
+    "-v"
+  ],
+  "observedTestCount": 12,
+  "observedProcessExitCode": 0,
+  "testScope": "Genuine Clang/LLD synthetic C reference; ARM source/retained calls, ARM-to-Thumb interworking, data and literal-pool relocation, semantic byte-identity counterfactuals and manifest failures",
+  "originalGamePayloadUsed": false,
+  "acceptedRecoveredSourceCreditGranted": 0,
+  "productionByteMatchIntegration": false,
+  "wholeGameBuildOrExecution": false
+}
