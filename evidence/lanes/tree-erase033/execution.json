@@ -1,0 +1,389 @@
+{
+  "schemaVersion": 1,
+  "status": "bounded-seven-clone-tree-erase-ready-for-independent-review",
+  "inputs": [
+    {
+      "path": "docs/native-tree-erase033.md",
+      "sha256": "3503d9cd6582d8c5b39285ae771ce4b9802964c8adbb4e5b7f174a08152bbf6f",
+      "bytes": 4284
+    },
+    {
+      "path": "evidence/lanes/tree-erase033/abi-and-exclusions.json",
+      "sha256": "a976249520e76c19bcb429d9be1e76056ca66b2a0f471e9467b72fdad8bf90a0",
+      "bytes": 100040
+    },
+    {
+      "path": "evidence/lanes/tree-erase033/claim.json",
+      "sha256": "9c0cff457d22e1e968b9c96cc73aae535d61c66985a2c93c9c8c23210710597a",
+      "bytes": 38304
+    },
+    {
+      "path": "src/native/wave033/tree_erase.c",
+      "sha256": "2e1e174037ecbb439f583107b475fc0418148806debb06f89f12df38e163bb4d",
+      "bytes": 3176
+    },
+    {
+      "path": "src/native/wave033/tree_erase.h",
+      "sha256": "40c9a8f5deae4ff7554be7ac04bcca0fce57bd25145622efdbda106ad40d0bbb",
+      "bytes": 808
+    },
+    {
+      "path": "src/native/wave033/tree_rebalance.c",
+      "sha256": "d791aaff20c1e7eb87738790f870636c78f2b70eda4b9d7ed2b2647b86f2cd54",
+      "bytes": 3308
+    },
+    {
+      "path": "tests/test_android_elf_alignment.py",
+      "sha256": "ff008ec4988d48782aa3cef3b93e5a33c5e96abf1c5b79b6aaad4568934455f7",
+      "bytes": 1744
+    },
+    {
+      "path": "tests/test_tree_erase033.py",
+      "sha256": "14edfafd337dbb1bcfccf6071ace67023580de7cf856c77928bb52d024614351",
+      "bytes": 4720
+    },
+    {
+      "path": "tools.lock.json",
+      "sha256": "f59e190ebf5e1dba8c26de76b0207d39832199e7c15396f559a17ff468823ffc",
+      "bytes": 1342837
+    },
+    {
+      "path": "toolscripts/android_elf_alignment.py",
+      "sha256": "73df652be2f513c5513693a02733cf5a0a4834dfc11b381965907845b1bee254",
+      "bytes": 3096
+    },
+    {
+      "path": "toolscripts/digest024_build.py",
+      "sha256": "b7f5af5a6b1225ee2942a96c5df8021e7a2f2883b539eae6c19e61ebd8159bbd",
+      "bytes": 4533
+    },
+    {
+      "path": "toolscripts/tree_erase033.py",
+      "sha256": "a950d613a4352629d81ba28a1486c4a34dc3afeeab2a2b05632a8d48c65b218b",
+      "bytes": 5379
+    },
+    {
+      "path": "toolscripts/tree_erase033_build.py",
+      "sha256": "22b2bf03971783760419690c92103767353dcceb8c76bbe94fa3fa2e7f0e17ac",
+      "bytes": 3233
+    },
+    {
+      "path": "toolscripts/tree_erase033_controls.py",
+      "sha256": "deecf6286cbb47843252db12fb6b5e3e04de3cec0623c8a8b8d909d844bb1d8e",
+      "bytes": 4172
+    },
+    {
+      "path": "toolscripts/tree_erase033_exclusions.py",
+      "sha256": "8697e7de4412d68fb494a6d0314dce9dd55cbd6d78b0a9c8a0136f262d62c89d",
+      "bytes": 2433
+    },
+    {
+      "path": "toolscripts/tree_erase033_fixtures.py",
+      "sha256": "6f681ddf674f258f6814e0c820139f7c23161820792afc3c5e5c4e88ccd5e2ff",
+      "bytes": 5245
+    },
+    {
+      "path": "toolscripts/tree_erase033_layout.c",
+      "sha256": "0c799cb07266c11bc6760170f0ba35f34bc0c8220d07f77be032a7575a3da021",
+      "bytes": 563
+    },
+    {
+      "path": "toolscripts/tree_erase033_measure.py",
+      "sha256": "91feeb89434965bcf447491d2e801ad5651e3cef14f8ad865f761f23a6c84095",
+      "bytes": 3729
+    },
+    {
+      "path": "toolscripts/tree_erase033_oracle.py",
+      "sha256": "671b957e838f53cf7c54f4ec656b5d14efba0511fc8f03aadaee65bf6e680bab",
+      "bytes": 8499
+    },
+    {
+      "path": "toolscripts/tree_erase033_qualify.py",
+      "sha256": "c9a41e299840a5a265ff8db6e16ad4b147f0fd521579b9d6a94ff99e8a7b4d3b",
+      "bytes": 5723
+    }
+  ],
+  "compilerAndNativeRuntimePins": [
+    {
+      "path": "tools/clang-21/clang.exe",
+      "size": 99559064,
+      "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+    },
+    {
+      "path": "tools/clang-21/ld.lld.exe",
+      "size": 69225112,
+      "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3"
+    },
+    {
+      "path": "tools/clang-21/libwinpthread-1.dll",
+      "size": 96408,
+      "sha256": "c9019ab753c2faa5e5da94e3fd4395f1d3d0e7d2509f5ed2d96cccff7f8b9357"
+    },
+    {
+      "path": "tools/clang-21/libxml2.dll",
+      "size": 1200792,
+      "sha256": "e15a377aa308e3f7ba948e6d6622a5dea2308256dbc65858074b61d867af6148"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/lib/capstone.dll",
+      "size": 7576576,
+      "sha256": "76958e18380023a68fd1714fa2e01c594cc6db1955a07ad6937b66e66dc5d6c3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/lib/unicorn.dll",
+      "size": 9598976,
+      "sha256": "010d85dce84b8f6ffaec3d5420f1b5f7768f859eb831be574c7da23e656ee8f1"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/z3/lib/libz3.dll",
+      "size": 17490432,
+      "sha256": "b6a30c2922293c2a2cab4299637935302d8fb0427762b5a3d2dc16f392f27b8c"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5/cvc5_python_base.cp313-win_amd64.pyd",
+      "size": 1310720,
+      "sha256": "810e9b9f4a9df25e3edeb27b08a373a5a61169ed269f2ae40b9c8c0f9261730a"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5.libs/libc++-8a9deaac6d2f4d2de468a544d1f35cd0.dll",
+      "size": 1659392,
+      "sha256": "8a9deaac6d2f4d2de468a544d1f35cd0dd4bcde03cda3cfb76fb9674749828d4"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5.libs/libcvc5-b3ddd8d0b36e795253fd2e6698441eea.dll",
+      "size": 29992448,
+      "sha256": "6abfaabb88587f543e31c24d261246b4d5014fb7424e7efff54604f1b7f53cab"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5.libs/libcvc5parser-5a140a2cd1789e9177c20f9e46be8c97.dll",
+      "size": 912896,
+      "sha256": "f6756dfae9bd483bb425e8239ee52a932a1807a09add36e7b0db57e585287bf8"
+    }
+  ],
+  "originalModule": {
+    "path": "generated/update-content0/code.bin",
+    "sha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+    "bytes": 8159232
+  },
+  "privatePositiveReport": {
+    "path": "work/tree-erase033/qualified-v2/positive/report.json",
+    "sha256": "b2ec8d4d82cf5a554e8ba1545d4eb3974b01c739804b986f60aa54910b70dac5",
+    "bytes": 10136027
+  },
+  "returningControls": {
+    "path": "work/tree-erase033/qualified-v2/controls/controls.json",
+    "sha256": "a035abf2acc3946c5c0dc3985f85f27970e9485db1c63ab65cd0988b53c8ffdb",
+    "bytes": 52774
+  },
+  "cases": 2048,
+  "canonicalOriginalBodies": 7,
+  "originalCalls": 14336,
+  "sourceCallsEachBackend": 2048,
+  "allSevenOriginalArenasEqualPerFixture": true,
+  "allSourceArmOriginal4096ByteArenasEqual": true,
+  "allNativeTypedFieldsAndPreservedCallerCanariesAgree": true,
+  "nativeRawByteEqualityAcrossPointerWidthsClaimed": false,
+  "coverage": [
+    {
+      "entry": 7760292,
+      "visitedInstructions": 406,
+      "totalInstructions": 408,
+      "unvisitedInvariantExcludedInstructions": [
+        7761488,
+        7761920
+      ]
+    },
+    {
+      "entry": 7762944,
+      "visitedInstructions": 406,
+      "totalInstructions": 408,
+      "unvisitedInvariantExcludedInstructions": [
+        7764140,
+        7764572
+      ]
+    },
+    {
+      "entry": 7765896,
+      "visitedInstructions": 406,
+      "totalInstructions": 408,
+      "unvisitedInvariantExcludedInstructions": [
+        7767092,
+        7767524
+      ]
+    },
+    {
+      "entry": 7768536,
+      "visitedInstructions": 406,
+      "totalInstructions": 408,
+      "unvisitedInvariantExcludedInstructions": [
+        7769732,
+        7770164
+      ]
+    },
+    {
+      "entry": 7827468,
+      "visitedInstructions": 406,
+      "totalInstructions": 408,
+      "unvisitedInvariantExcludedInstructions": [
+        7828664,
+        7829096
+      ]
+    },
+    {
+      "entry": 7854712,
+      "visitedInstructions": 406,
+      "totalInstructions": 408,
+      "unvisitedInvariantExcludedInstructions": [
+        7855908,
+        7856340
+      ]
+    },
+    {
+      "entry": 7857296,
+      "visitedInstructions": 406,
+      "totalInstructions": 408,
+      "unvisitedInvariantExcludedInstructions": [
+        7858492,
+        7858924
+      ]
+    }
+  ],
+  "visitedPhysicalInstructionBytes": 11368,
+  "invariantExcludedPhysicalInstructionBytes": 56,
+  "totalCanonicalInstructionBytes": 11424,
+  "newInventoryEntries": 0,
+  "returningControlsCount": 6,
+  "testsPassed": 17,
+  "testsLogs": [
+    {
+      "path": "work/tree-erase033/qualified-v2/test_tree_erase033.py.log",
+      "sha256": "e2fdd9428d00f694720266db2bad7934f18854336eb1cb3924776c5b78f2de90",
+      "bytes": 1810
+    },
+    {
+      "path": "work/tree-erase033/qualified-v2/test_android_elf_alignment.py.log",
+      "sha256": "2f73c7acdbc4fb39102a985a18655b00001a30bfcc9be8e60691762d01c8c287",
+      "bytes": 1005
+    }
+  ],
+  "allDeclaredInputsUnchangedBeforeAndAfter": true,
+  "sourceOriginalModuleMapped": false,
+  "originalInstructionsRegistersOrDataPatched": false,
+  "actualWindowsExecuted": true,
+  "nativePointersAbove32Bits": true,
+  "androidLinkage": {
+    "artifact": {
+      "path": "work/tree-erase033/qualified-v2/positive/android/libtree_erase033.so",
+      "bytes": 4880,
+      "sha256": "e21505c9cbad72f5574b77a5892268c8a7658a41a20e2683eae40e4929ef08a8"
+    },
+    "segments": [
+      {
+        "type": "PT_PHDR",
+        "address": 64,
+        "offset": 64,
+        "bytes": 448,
+        "alignment": 8,
+        "flags": 4
+      },
+      {
+        "type": "PT_LOAD",
+        "address": 0,
+        "offset": 0,
+        "bytes": 892,
+        "alignment": 16384,
+        "flags": 4
+      },
+      {
+        "type": "PT_LOAD",
+        "address": 17276,
+        "offset": 892,
+        "bytes": 1572,
+        "alignment": 16384,
+        "flags": 5
+      },
+      {
+        "type": "PT_LOAD",
+        "address": 35232,
+        "offset": 2464,
+        "bytes": 13920,
+        "alignment": 16384,
+        "flags": 6
+      },
+      {
+        "type": "PT_LOAD",
+        "address": 51848,
+        "offset": 2696,
+        "bytes": 32,
+        "alignment": 16384,
+        "flags": 6
+      },
+      {
+        "type": "PT_DYNAMIC",
+        "address": 35232,
+        "offset": 2464,
+        "bytes": 224,
+        "alignment": 8,
+        "flags": 6
+      },
+      {
+        "type": "PT_GNU_RELRO",
+        "address": 35232,
+        "offset": 2464,
+        "bytes": 13920,
+        "alignment": 1,
+        "flags": 4
+      },
+      {
+        "type": "PT_GNU_STACK",
+        "address": 0,
+        "offset": 0,
+        "bytes": 0,
+        "alignment": 0,
+        "flags": 6
+      }
+    ],
+    "relroExtentChecks": [
+      {
+        "start": 35232,
+        "endExclusive": 49152,
+        "trailingPageEndExclusive": 49152,
+        "containingWritableLoads": [
+          [
+            35232,
+            49152
+          ]
+        ],
+        "writableLoadBytesSharingTrailingPage": []
+      }
+    ],
+    "sixteenKiBLoadAndRelroContractPassed": true,
+    "officialGuidance": "https://developer.android.com/guide/practices/page-sizes",
+    "operatingSystemOrPhysicalPageSizeExecutionClaimed": false
+  },
+  "androidOsOrPhysicalDeviceExecuted": false,
+  "universalCorruptGraphOtherAliasesVolatileMemoryWholeGameOrSourceCreditClaimed": false,
+  "runtimeVersions": {
+    "python": "3.13.5",
+    "capstone": "5.0.7",
+    "capstoneNative": [
+      5,
+      0,
+      1280
+    ],
+    "unicorn": "2.1.4",
+    "unicornNative": [
+      2,
+      1,
+      33621247
+    ]
+  },
+  "acceptedSourceCreditGranted": 0,
+  "independentReplayClaimed": false,
+  "originalPayloadsPublished": false,
+  "producer": {
+    "path": "toolscripts/tree_erase033_qualify.py",
+    "sha256": "c9a41e299840a5a265ff8db6e16ad4b147f0fd521579b9d6a94ff99e8a7b4d3b",
+    "bytes": 5723
+  }
+}

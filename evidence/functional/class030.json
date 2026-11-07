@@ -1,0 +1,1476 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-class030-unique-functions",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "acceptedSourceCreditGranted": 0,
+  "functions": [
+    {
+      "symbol": "fn_00190c50",
+      "canonicalIdentity": {
+        "address": 1641552,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave030/class_instance_create.c",
+        "bytes": 3311,
+        "sha256": "91108c7dce2d44c1e05d731cc2d14125af7db8634943474705550c5f11115851"
+      },
+      "sourceName": "sq_class_create_instance030",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 1467,
+        "sha256": "3ad16ce5f965834f930f8223149cf752abbc3dd13fe0639029a550886e9e50eb"
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 140,
+      "originalInstructionRanges": [
+        {
+          "start": 1641552,
+          "endExclusive": 1641692,
+          "bytes": 140
+        }
+      ],
+      "reportEntryBytes": 140,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-class-call030/execution.json",
+          "bytes": 9383,
+          "sha256": "bf4dbdfd6dddcecea789aa1151db16a7f92e77f469f7afb4ecf891c30d1a4f6d"
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/class030-coordinator-a4f8f85.json",
+          "bytes": 2587,
+          "sha256": "996bdb179d13d54654f15f4df7611a02a29ebf16b6336f5061a7bfc68e61ae3e"
+        },
+        "batchCases": 54,
+        "fourTargetObservations": 216,
+        "returningControls": 13,
+        "sameFinalArenaControls": 5,
+        "originalInstructions": 35,
+        "originalInstructionsVisited": 35,
+        "unvisitedDeclaredDomainConditions": [],
+        "preAliasWholeArenaEqualSets": 0,
+        "postVerifiedCallbackAliasWholeArenaEqualSets": 12,
+        "definedMemoryEqualSets": 54,
+        "inactiveFrameDifferenceSets": 42,
+        "rawPreAliasHashesMismatchOffsetsAndTypedActualAliasesPreserved": true,
+        "callbackAliasesOnlyInPostExecutionComparisonCopies": true,
+        "executedHeapCodeRegistersOrTextPatched": false,
+        "inactiveFrameWordsRead": false,
+        "sourceOriginalModuleMapped": false,
+        "actualWindowsAndAarch64Model": true,
+        "wholeVmGameAndroidOsOrPhysicalDeviceClaimed": false,
+        "limits": [
+          "allocation failure/overflow/asserts",
+          "invalid descriptors or cursor tags",
+          "GC mark/finalize/instance clone",
+          "full shared-state lifetime",
+          "VM CLASS/NewSlot",
+          "script constructors/full Execute",
+          "native type-mask errors/general printf",
+          "mutation of stable clone source",
+          "raw inactive022 frame/debug/asynchronous observers"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_00192548",
+      "canonicalIdentity": {
+        "address": 1647944,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave030/class_instance_create.c",
+        "bytes": 3311,
+        "sha256": "91108c7dce2d44c1e05d731cc2d14125af7db8634943474705550c5f11115851"
+      },
+      "sourceName": "sq_class_instance_initialize030",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 1467,
+        "sha256": "3ad16ce5f965834f930f8223149cf752abbc3dd13fe0639029a550886e9e50eb"
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 216,
+      "originalInstructionRanges": [
+        {
+          "start": 1647944,
+          "endExclusive": 1648160,
+          "bytes": 216
+        }
+      ],
+      "reportEntryBytes": 216,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-class-call030/execution.json",
+          "bytes": 9383,
+          "sha256": "bf4dbdfd6dddcecea789aa1151db16a7f92e77f469f7afb4ecf891c30d1a4f6d"
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/class030-coordinator-a4f8f85.json",
+          "bytes": 2587,
+          "sha256": "996bdb179d13d54654f15f4df7611a02a29ebf16b6336f5061a7bfc68e61ae3e"
+        },
+        "batchCases": 54,
+        "fourTargetObservations": 216,
+        "returningControls": 13,
+        "sameFinalArenaControls": 5,
+        "originalInstructions": 54,
+        "originalInstructionsVisited": 54,
+        "unvisitedDeclaredDomainConditions": [],
+        "preAliasWholeArenaEqualSets": 0,
+        "postVerifiedCallbackAliasWholeArenaEqualSets": 12,
+        "definedMemoryEqualSets": 54,
+        "inactiveFrameDifferenceSets": 42,
+        "rawPreAliasHashesMismatchOffsetsAndTypedActualAliasesPreserved": true,
+        "callbackAliasesOnlyInPostExecutionComparisonCopies": true,
+        "executedHeapCodeRegistersOrTextPatched": false,
+        "inactiveFrameWordsRead": false,
+        "sourceOriginalModuleMapped": false,
+        "actualWindowsAndAarch64Model": true,
+        "wholeVmGameAndroidOsOrPhysicalDeviceClaimed": false,
+        "limits": [
+          "allocation failure/overflow/asserts",
+          "invalid descriptors or cursor tags",
+          "GC mark/finalize/instance clone",
+          "full shared-state lifetime",
+          "VM CLASS/NewSlot",
+          "script constructors/full Execute",
+          "native type-mask errors/general printf",
+          "mutation of stable clone source",
+          "raw inactive022 frame/debug/asynchronous observers"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_001a18a8",
+      "canonicalIdentity": {
+        "address": 1710248,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave030/class_initialize.c",
+        "bytes": 3075,
+        "sha256": "579a002e4965e4bee862b2b79c7741b2cef383b5be290190981e452d5cc24c11"
+      },
+      "sourceName": "sq_class_initialize030",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 1467,
+        "sha256": "3ad16ce5f965834f930f8223149cf752abbc3dd13fe0639029a550886e9e50eb"
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 1304,
+      "originalInstructionRanges": [
+        {
+          "start": 1710248,
+          "endExclusive": 1711552,
+          "bytes": 1304
+        }
+      ],
+      "reportEntryBytes": 1304,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-class-call030/execution.json",
+          "bytes": 9383,
+          "sha256": "bf4dbdfd6dddcecea789aa1151db16a7f92e77f469f7afb4ecf891c30d1a4f6d"
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/class030-coordinator-a4f8f85.json",
+          "bytes": 2587,
+          "sha256": "996bdb179d13d54654f15f4df7611a02a29ebf16b6336f5061a7bfc68e61ae3e"
+        },
+        "batchCases": 54,
+        "fourTargetObservations": 216,
+        "returningControls": 13,
+        "sameFinalArenaControls": 5,
+        "originalInstructions": 326,
+        "originalInstructionsVisited": 205,
+        "unvisitedDeclaredDomainConditions": [
+          {
+            "address": 1710440,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710444,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710448,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710476,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710480,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710484,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710488,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710492,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710496,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710500,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710504,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710508,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710512,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710516,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710520,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710524,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710528,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710532,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710536,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710540,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710544,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710548,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710552,
+            "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+          },
+          {
+            "address": 1710564,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710568,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710572,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710576,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710580,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710584,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710588,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710592,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710648,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710652,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710656,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710660,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710664,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710668,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710672,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710676,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710680,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710684,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710700,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710704,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710708,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710712,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710716,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710720,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710724,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710728,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710732,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710736,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710868,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710872,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710876,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710880,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710884,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710888,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710892,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710896,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710900,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710904,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710920,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710924,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710928,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710932,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710936,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710940,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710944,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710948,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710952,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1710956,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1711068,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711072,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711076,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711080,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711084,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711088,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711092,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711096,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711100,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711120,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711124,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711128,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711132,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711136,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711140,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711144,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711148,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711152,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711156,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711160,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711164,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711168,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711172,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711176,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711180,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711192,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711196,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711200,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711204,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711208,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711212,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711216,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711220,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711224,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711228,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711232,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711236,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711240,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711244,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711248,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711252,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711256,
+            "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+          },
+          {
+            "address": 1711272,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1711276,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1711280,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1711284,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1711288,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1711292,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1711296,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          },
+          {
+            "address": 1711300,
+            "condition": "constant-null-local-fill-retain-or-destruction"
+          }
+        ],
+        "preAliasWholeArenaEqualSets": 0,
+        "postVerifiedCallbackAliasWholeArenaEqualSets": 12,
+        "definedMemoryEqualSets": 54,
+        "inactiveFrameDifferenceSets": 42,
+        "rawPreAliasHashesMismatchOffsetsAndTypedActualAliasesPreserved": true,
+        "callbackAliasesOnlyInPostExecutionComparisonCopies": true,
+        "executedHeapCodeRegistersOrTextPatched": false,
+        "inactiveFrameWordsRead": false,
+        "sourceOriginalModuleMapped": false,
+        "actualWindowsAndAarch64Model": true,
+        "wholeVmGameAndroidOsOrPhysicalDeviceClaimed": false,
+        "limits": [
+          "allocation failure/overflow/asserts",
+          "invalid descriptors or cursor tags",
+          "GC mark/finalize/instance clone",
+          "full shared-state lifetime",
+          "VM CLASS/NewSlot",
+          "script constructors/full Execute",
+          "native type-mask errors/general printf",
+          "mutation of stable clone source",
+          "raw inactive022 frame/debug/asynchronous observers"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_0019a308",
+      "canonicalIdentity": {
+        "address": 1680136,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave030/class_instance_create.c",
+        "bytes": 3311,
+        "sha256": "91108c7dce2d44c1e05d731cc2d14125af7db8634943474705550c5f11115851"
+      },
+      "sourceName": "sq_class_lock030",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 1467,
+        "sha256": "3ad16ce5f965834f930f8223149cf752abbc3dd13fe0639029a550886e9e50eb"
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 36,
+      "originalInstructionRanges": [
+        {
+          "start": 1680136,
+          "endExclusive": 1680172,
+          "bytes": 36
+        }
+      ],
+      "reportEntryBytes": 36,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-class-call030/execution.json",
+          "bytes": 9383,
+          "sha256": "bf4dbdfd6dddcecea789aa1151db16a7f92e77f469f7afb4ecf891c30d1a4f6d"
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/class030-coordinator-a4f8f85.json",
+          "bytes": 2587,
+          "sha256": "996bdb179d13d54654f15f4df7611a02a29ebf16b6336f5061a7bfc68e61ae3e"
+        },
+        "batchCases": 54,
+        "fourTargetObservations": 216,
+        "returningControls": 13,
+        "sameFinalArenaControls": 5,
+        "originalInstructions": 9,
+        "originalInstructionsVisited": 9,
+        "unvisitedDeclaredDomainConditions": [],
+        "preAliasWholeArenaEqualSets": 0,
+        "postVerifiedCallbackAliasWholeArenaEqualSets": 12,
+        "definedMemoryEqualSets": 54,
+        "inactiveFrameDifferenceSets": 42,
+        "rawPreAliasHashesMismatchOffsetsAndTypedActualAliasesPreserved": true,
+        "callbackAliasesOnlyInPostExecutionComparisonCopies": true,
+        "executedHeapCodeRegistersOrTextPatched": false,
+        "inactiveFrameWordsRead": false,
+        "sourceOriginalModuleMapped": false,
+        "actualWindowsAndAarch64Model": true,
+        "wholeVmGameAndroidOsOrPhysicalDeviceClaimed": false,
+        "limits": [
+          "allocation failure/overflow/asserts",
+          "invalid descriptors or cursor tags",
+          "GC mark/finalize/instance clone",
+          "full shared-state lifetime",
+          "VM CLASS/NewSlot",
+          "script constructors/full Execute",
+          "native type-mask errors/general printf",
+          "mutation of stable clone source",
+          "raw inactive022 frame/debug/asynchronous observers"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_001a4734",
+      "canonicalIdentity": {
+        "address": 1722164,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave030/class_table_clone.c",
+        "bytes": 1463,
+        "sha256": "c31fce4315d744312c608295945102eeb69ba9c47cc06eecf0edcecd4b297769"
+      },
+      "sourceName": "sq_class_table_clone030",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 1467,
+        "sha256": "3ad16ce5f965834f930f8223149cf752abbc3dd13fe0639029a550886e9e50eb"
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 628,
+      "originalInstructionRanges": [
+        {
+          "start": 1722164,
+          "endExclusive": 1722792,
+          "bytes": 628
+        }
+      ],
+      "reportEntryBytes": 628,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-class-call030/execution.json",
+          "bytes": 9383,
+          "sha256": "bf4dbdfd6dddcecea789aa1151db16a7f92e77f469f7afb4ecf891c30d1a4f6d"
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/class030-coordinator-a4f8f85.json",
+          "bytes": 2587,
+          "sha256": "996bdb179d13d54654f15f4df7611a02a29ebf16b6336f5061a7bfc68e61ae3e"
+        },
+        "batchCases": 54,
+        "fourTargetObservations": 216,
+        "returningControls": 13,
+        "sameFinalArenaControls": 5,
+        "originalInstructions": 157,
+        "originalInstructionsVisited": 133,
+        "unvisitedDeclaredDomainConditions": [
+          {
+            "address": 1722488,
+            "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+          },
+          {
+            "address": 1722492,
+            "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+          },
+          {
+            "address": 1722496,
+            "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+          },
+          {
+            "address": 1722568,
+            "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+          },
+          {
+            "address": 1722572,
+            "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+          },
+          {
+            "address": 1722576,
+            "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+          },
+          {
+            "address": 1722616,
+            "condition": "constant-integer-position-has-no-reference-owner"
+          },
+          {
+            "address": 1722620,
+            "condition": "constant-integer-position-has-no-reference-owner"
+          },
+          {
+            "address": 1722624,
+            "condition": "constant-integer-position-has-no-reference-owner"
+          },
+          {
+            "address": 1722628,
+            "condition": "constant-integer-position-has-no-reference-owner"
+          },
+          {
+            "address": 1722632,
+            "condition": "constant-integer-position-has-no-reference-owner"
+          },
+          {
+            "address": 1722636,
+            "condition": "constant-integer-position-has-no-reference-owner"
+          },
+          {
+            "address": 1722640,
+            "condition": "constant-integer-position-has-no-reference-owner"
+          },
+          {
+            "address": 1722644,
+            "condition": "constant-integer-position-has-no-reference-owner"
+          },
+          {
+            "address": 1722648,
+            "condition": "constant-integer-position-has-no-reference-owner"
+          },
+          {
+            "address": 1722652,
+            "condition": "constant-integer-position-has-no-reference-owner"
+          },
+          {
+            "address": 1722712,
+            "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+          },
+          {
+            "address": 1722716,
+            "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+          },
+          {
+            "address": 1722720,
+            "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+          },
+          {
+            "address": 1722724,
+            "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+          },
+          {
+            "address": 1722764,
+            "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+          },
+          {
+            "address": 1722768,
+            "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+          },
+          {
+            "address": 1722772,
+            "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+          },
+          {
+            "address": 1722776,
+            "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+          }
+        ],
+        "preAliasWholeArenaEqualSets": 0,
+        "postVerifiedCallbackAliasWholeArenaEqualSets": 12,
+        "definedMemoryEqualSets": 54,
+        "inactiveFrameDifferenceSets": 42,
+        "rawPreAliasHashesMismatchOffsetsAndTypedActualAliasesPreserved": true,
+        "callbackAliasesOnlyInPostExecutionComparisonCopies": true,
+        "executedHeapCodeRegistersOrTextPatched": false,
+        "inactiveFrameWordsRead": false,
+        "sourceOriginalModuleMapped": false,
+        "actualWindowsAndAarch64Model": true,
+        "wholeVmGameAndroidOsOrPhysicalDeviceClaimed": false,
+        "limits": [
+          "allocation failure/overflow/asserts",
+          "invalid descriptors or cursor tags",
+          "GC mark/finalize/instance clone",
+          "full shared-state lifetime",
+          "VM CLASS/NewSlot",
+          "script constructors/full Execute",
+          "native type-mask errors/general printf",
+          "mutation of stable clone source",
+          "raw inactive022 frame/debug/asynchronous observers"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_001a2b2c",
+      "canonicalIdentity": {
+        "address": 1714988,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave030/class_table_clone.c",
+        "bytes": 1463,
+        "sha256": "c31fce4315d744312c608295945102eeb69ba9c47cc06eecf0edcecd4b297769"
+      },
+      "sourceName": "sq_class_clone_cursor030",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 1467,
+        "sha256": "3ad16ce5f965834f930f8223149cf752abbc3dd13fe0639029a550886e9e50eb"
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 40,
+      "originalInstructionRanges": [
+        {
+          "start": 1714988,
+          "endExclusive": 1715028,
+          "bytes": 40
+        }
+      ],
+      "reportEntryBytes": 40,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-class-call030/execution.json",
+          "bytes": 9383,
+          "sha256": "bf4dbdfd6dddcecea789aa1151db16a7f92e77f469f7afb4ecf891c30d1a4f6d"
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/class030-coordinator-a4f8f85.json",
+          "bytes": 2587,
+          "sha256": "996bdb179d13d54654f15f4df7611a02a29ebf16b6336f5061a7bfc68e61ae3e"
+        },
+        "batchCases": 54,
+        "fourTargetObservations": 216,
+        "returningControls": 13,
+        "sameFinalArenaControls": 5,
+        "originalInstructions": 10,
+        "originalInstructionsVisited": 9,
+        "unvisitedDeclaredDomainConditions": [
+          {
+            "address": 1715020,
+            "condition": "excluded-invalid-cursor-assert"
+          }
+        ],
+        "preAliasWholeArenaEqualSets": 0,
+        "postVerifiedCallbackAliasWholeArenaEqualSets": 12,
+        "definedMemoryEqualSets": 54,
+        "inactiveFrameDifferenceSets": 42,
+        "rawPreAliasHashesMismatchOffsetsAndTypedActualAliasesPreserved": true,
+        "callbackAliasesOnlyInPostExecutionComparisonCopies": true,
+        "executedHeapCodeRegistersOrTextPatched": false,
+        "inactiveFrameWordsRead": false,
+        "sourceOriginalModuleMapped": false,
+        "actualWindowsAndAarch64Model": true,
+        "wholeVmGameAndroidOsOrPhysicalDeviceClaimed": false,
+        "limits": [
+          "allocation failure/overflow/asserts",
+          "invalid descriptors or cursor tags",
+          "GC mark/finalize/instance clone",
+          "full shared-state lifetime",
+          "VM CLASS/NewSlot",
+          "script constructors/full Execute",
+          "native type-mask errors/general printf",
+          "mutation of stable clone source",
+          "raw inactive022 frame/debug/asynchronous observers"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_001cdba0",
+      "canonicalIdentity": {
+        "address": 1891232,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave030/class_instance_lifetime.c",
+        "bytes": 1574,
+        "sha256": "7a5f181db3724703e6bed5b68a44be9782a1ef3f3e1d98d9f5ff563500f7c9d3"
+      },
+      "sourceName": "sq_class_instance_release030",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 1467,
+        "sha256": "3ad16ce5f965834f930f8223149cf752abbc3dd13fe0639029a550886e9e50eb"
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 100,
+      "originalInstructionRanges": [
+        {
+          "start": 1891232,
+          "endExclusive": 1891332,
+          "bytes": 100
+        }
+      ],
+      "reportEntryBytes": 100,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-class-call030/execution.json",
+          "bytes": 9383,
+          "sha256": "bf4dbdfd6dddcecea789aa1151db16a7f92e77f469f7afb4ecf891c30d1a4f6d"
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/class030-coordinator-a4f8f85.json",
+          "bytes": 2587,
+          "sha256": "996bdb179d13d54654f15f4df7611a02a29ebf16b6336f5061a7bfc68e61ae3e"
+        },
+        "batchCases": 54,
+        "fourTargetObservations": 216,
+        "returningControls": 13,
+        "sameFinalArenaControls": 5,
+        "originalInstructions": 25,
+        "originalInstructionsVisited": 25,
+        "unvisitedDeclaredDomainConditions": [],
+        "preAliasWholeArenaEqualSets": 0,
+        "postVerifiedCallbackAliasWholeArenaEqualSets": 12,
+        "definedMemoryEqualSets": 54,
+        "inactiveFrameDifferenceSets": 42,
+        "rawPreAliasHashesMismatchOffsetsAndTypedActualAliasesPreserved": true,
+        "callbackAliasesOnlyInPostExecutionComparisonCopies": true,
+        "executedHeapCodeRegistersOrTextPatched": false,
+        "inactiveFrameWordsRead": false,
+        "sourceOriginalModuleMapped": false,
+        "actualWindowsAndAarch64Model": true,
+        "wholeVmGameAndroidOsOrPhysicalDeviceClaimed": false,
+        "limits": [
+          "allocation failure/overflow/asserts",
+          "invalid descriptors or cursor tags",
+          "GC mark/finalize/instance clone",
+          "full shared-state lifetime",
+          "VM CLASS/NewSlot",
+          "script constructors/full Execute",
+          "native type-mask errors/general printf",
+          "mutation of stable clone source",
+          "raw inactive022 frame/debug/asynchronous observers"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_001cdcc4",
+      "canonicalIdentity": {
+        "address": 1891524,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave030/class_instance_lifetime.c",
+        "bytes": 1574,
+        "sha256": "7a5f181db3724703e6bed5b68a44be9782a1ef3f3e1d98d9f5ff563500f7c9d3"
+      },
+      "sourceName": "sq_class_instance_destroy030",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 1467,
+        "sha256": "3ad16ce5f965834f930f8223149cf752abbc3dd13fe0639029a550886e9e50eb"
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 300,
+      "originalInstructionRanges": [
+        {
+          "start": 1891524,
+          "endExclusive": 1891780,
+          "bytes": 256
+        },
+        {
+          "start": 2309080,
+          "endExclusive": 2309124,
+          "bytes": 44
+        }
+      ],
+      "reportEntryBytes": 256,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-class-call030/execution.json",
+          "bytes": 9383,
+          "sha256": "bf4dbdfd6dddcecea789aa1151db16a7f92e77f469f7afb4ecf891c30d1a4f6d"
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/class030-coordinator-a4f8f85.json",
+          "bytes": 2587,
+          "sha256": "996bdb179d13d54654f15f4df7611a02a29ebf16b6336f5061a7bfc68e61ae3e"
+        },
+        "batchCases": 54,
+        "fourTargetObservations": 216,
+        "returningControls": 13,
+        "sameFinalArenaControls": 5,
+        "originalInstructions": 75,
+        "originalInstructionsVisited": 71,
+        "unvisitedDeclaredDomainConditions": [
+          {
+            "address": 1891680,
+            "condition": "literal-null-replacement-cannot-retain-reference"
+          },
+          {
+            "address": 1891684,
+            "condition": "literal-null-replacement-cannot-retain-reference"
+          },
+          {
+            "address": 1891688,
+            "condition": "literal-null-replacement-cannot-retain-reference"
+          },
+          {
+            "address": 1891692,
+            "condition": "literal-null-replacement-cannot-retain-reference"
+          }
+        ],
+        "preAliasWholeArenaEqualSets": 0,
+        "postVerifiedCallbackAliasWholeArenaEqualSets": 12,
+        "definedMemoryEqualSets": 54,
+        "inactiveFrameDifferenceSets": 42,
+        "rawPreAliasHashesMismatchOffsetsAndTypedActualAliasesPreserved": true,
+        "callbackAliasesOnlyInPostExecutionComparisonCopies": true,
+        "executedHeapCodeRegistersOrTextPatched": false,
+        "inactiveFrameWordsRead": false,
+        "sourceOriginalModuleMapped": false,
+        "actualWindowsAndAarch64Model": true,
+        "wholeVmGameAndroidOsOrPhysicalDeviceClaimed": false,
+        "limits": [
+          "allocation failure/overflow/asserts",
+          "invalid descriptors or cursor tags",
+          "GC mark/finalize/instance clone",
+          "full shared-state lifetime",
+          "VM CLASS/NewSlot",
+          "script constructors/full Execute",
+          "native type-mask errors/general printf",
+          "mutation of stable clone source",
+          "raw inactive022 frame/debug/asynchronous observers"
+        ]
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "source/squirrel-wave030/class_call.h",
+      "bytes": 3663,
+      "sha256": "1744a8a1a64961d6b9f5d010c35a097804a14b0050e273d5cb2bf0799e05741b"
+    },
+    {
+      "path": "source/squirrel-wave030/class_internal.h",
+      "bytes": 598,
+      "sha256": "2235c2921d18945b47c2e2f911cb2ad89ab74422733caaa299e26d4d27cf931d"
+    },
+    {
+      "path": "source/squirrel-wave011/prototype_internal.h",
+      "bytes": 428,
+      "sha256": "83070a74a5644c30643a4b5ec41aed9e412658257bc2ab16535fb7867aefd558"
+    },
+    {
+      "path": "source/squirrel-wave019/table_internal.h",
+      "bytes": 815,
+      "sha256": "44d072b3b94518060ca578d294075e809afae433f1f33aa22cf1666fa4e058ac"
+    },
+    {
+      "path": "source/squirrel-wave019/table.h",
+      "bytes": 1877,
+      "sha256": "a08e56e7071fdc75351bcb7cc366823938a7484963e88094d2d42ad9f4b73e83"
+    },
+    {
+      "path": "source/squirrel-wave012/reference_prefix.h",
+      "bytes": 1824,
+      "sha256": "a1c5422925b54a994b500be6805e74e8b8c339fe18bbc57002a7d1807db22ad2"
+    },
+    {
+      "path": "source/squirrel-wave015/string.h",
+      "bytes": 2497,
+      "sha256": "bad2126f596b07a111c36c19742c4214acc3fa9bec77b72d3cc26566f8a31cee"
+    },
+    {
+      "path": "source/squirrel-wave012/reference_types.h",
+      "bytes": 1360,
+      "sha256": "64a44751454449783222f7a7c00654a56f569e8f91a10e0621740c8661c3fbae"
+    },
+    {
+      "path": "source/squirrel-wave011/prototype_release.h",
+      "bytes": 3432,
+      "sha256": "33309e72078586399c1cf826ea13469541669a18dc17bc210bf23c3450391ba4"
+    },
+    {
+      "path": "source/squirrel-wave004/call_views.h",
+      "bytes": 3085,
+      "sha256": "4e8a0cc46d0aee9b72a8d0435d7efb19b8dd47cf9a4445a8007c4a44d916946e"
+    },
+    {
+      "path": "source/squirrel-wave002/array_views.h",
+      "bytes": 1492,
+      "sha256": "02e549c877765b7cbce879ec29e45c66dc46a1266bf630247775ec43bad2c0f4"
+    },
+    {
+      "path": "src/native/wave005/vm_views.h",
+      "bytes": 1898,
+      "sha256": "1bf160e4679afbe5a59a244e78f9753684c93a109f7a703f78dff80d04f4840a"
+    },
+    {
+      "path": "source/squirrel-wave022/vm_call.h",
+      "bytes": 4008,
+      "sha256": "7e8e2240f89c6b466380d9f910fd4a29c9ac31a54e628c18e2903363158c1c36"
+    },
+    {
+      "path": "source/squirrel-wave020/lookup.h",
+      "bytes": 4915,
+      "sha256": "37d79b9460b3206ca91ea800e0559abee8d1b294a5b9914c03790ba5a9c688ab"
+    },
+    {
+      "path": "source/squirrel-wave017/script_closure.h",
+      "bytes": 1360,
+      "sha256": "4379d064694e17209c6f19dd7bb8d9ec26ca6fef3482cf4a51ae383def7b6b0f"
+    },
+    {
+      "path": "source/squirrel-wave013/native_closure_release.h",
+      "bytes": 1486,
+      "sha256": "6723b66bce845aeb133508afb9cc1a8bc9299e5aee7a6d2c1c4b73418d26ef28"
+    },
+    {
+      "path": "source/squirrel-wave012/array_reference.h",
+      "bytes": 954,
+      "sha256": "f793588dc85d4b444cfbdff6a1d7ad5e660e14b09a370b617f09aa475e84cc03"
+    },
+    {
+      "path": "source/squirrel-wave020/metamethod.h",
+      "bytes": 1644,
+      "sha256": "2ea3fa8e6a46010a1d42b2324581caa8f851860e09802b656f9d966d2df2051b"
+    },
+    {
+      "path": "source/squirrel-wave014/weak_reference.h",
+      "bytes": 890,
+      "sha256": "fc58b153a5b5801ed60078cb31c436a84fd33803bc0b71102dff70c81579f63e"
+    },
+    {
+      "path": "source/squirrel-wave016/native_create.h",
+      "bytes": 1348,
+      "sha256": "a3925277f8144daac617b475f70fafc515cd3ccdfa9e3a828c98ba331767763f"
+    }
+  ],
+  "sourceDependencies": [
+    {
+      "path": "source/squirrel-wave030/class_bindings.c",
+      "bytes": 1595,
+      "sha256": "24414113f9389e65341028712078e2aa949fd37230cdb33046d5c6d965e12603"
+    },
+    {
+      "path": "source/squirrel-wave030/class_initialize.c",
+      "bytes": 3075,
+      "sha256": "579a002e4965e4bee862b2b79c7741b2cef383b5be290190981e452d5cc24c11"
+    },
+    {
+      "path": "source/squirrel-wave030/class_instance_create.c",
+      "bytes": 3311,
+      "sha256": "91108c7dce2d44c1e05d731cc2d14125af7db8634943474705550c5f11115851"
+    },
+    {
+      "path": "source/squirrel-wave030/class_instance_lifetime.c",
+      "bytes": 1574,
+      "sha256": "7a5f181db3724703e6bed5b68a44be9782a1ef3f3e1d98d9f5ff563500f7c9d3"
+    },
+    {
+      "path": "source/squirrel-wave030/class_lifetime.c",
+      "bytes": 2615,
+      "sha256": "d8b3d70e3375e1c6d7383ec43af383e89b5890fdeb9eb2c669fdbf9baa94a436"
+    },
+    {
+      "path": "source/squirrel-wave030/class_table_clone.c",
+      "bytes": 1463,
+      "sha256": "c31fce4315d744312c608295945102eeb69ba9c47cc06eecf0edcecd4b297769"
+    },
+    {
+      "path": "source/squirrel-wave030/class_vectors.c",
+      "bytes": 1636,
+      "sha256": "ac7165053efea4827b538c92ef0fe1e1c83cc54fd9c04ff970c3317aff3cb194"
+    },
+    {
+      "path": "source/squirrel-wave030/class_vtables.c",
+      "bytes": 917,
+      "sha256": "2b6ca75839bd59fa8f2b5f0def91712836a7b0779daa62aafbc71fdaad6ecf5d"
+    },
+    {
+      "path": "source/squirrel-wave030/class_call.h",
+      "bytes": 3663,
+      "sha256": "1744a8a1a64961d6b9f5d010c35a097804a14b0050e273d5cb2bf0799e05741b"
+    },
+    {
+      "path": "source/squirrel-wave030/class_internal.h",
+      "bytes": 598,
+      "sha256": "2235c2921d18945b47c2e2f911cb2ad89ab74422733caaa299e26d4d27cf931d"
+    },
+    {
+      "path": "source/squirrel-wave011/prototype_internal.h",
+      "bytes": 428,
+      "sha256": "83070a74a5644c30643a4b5ec41aed9e412658257bc2ab16535fb7867aefd558"
+    },
+    {
+      "path": "source/squirrel-wave019/table_internal.h",
+      "bytes": 815,
+      "sha256": "44d072b3b94518060ca578d294075e809afae433f1f33aa22cf1666fa4e058ac"
+    },
+    {
+      "path": "source/squirrel-wave019/table.h",
+      "bytes": 1877,
+      "sha256": "a08e56e7071fdc75351bcb7cc366823938a7484963e88094d2d42ad9f4b73e83"
+    },
+    {
+      "path": "source/squirrel-wave012/reference_prefix.h",
+      "bytes": 1824,
+      "sha256": "a1c5422925b54a994b500be6805e74e8b8c339fe18bbc57002a7d1807db22ad2"
+    },
+    {
+      "path": "source/squirrel-wave015/string.h",
+      "bytes": 2497,
+      "sha256": "bad2126f596b07a111c36c19742c4214acc3fa9bec77b72d3cc26566f8a31cee"
+    },
+    {
+      "path": "source/squirrel-wave012/reference_types.h",
+      "bytes": 1360,
+      "sha256": "64a44751454449783222f7a7c00654a56f569e8f91a10e0621740c8661c3fbae"
+    },
+    {
+      "path": "source/squirrel-wave011/prototype_release.h",
+      "bytes": 3432,
+      "sha256": "33309e72078586399c1cf826ea13469541669a18dc17bc210bf23c3450391ba4"
+    },
+    {
+      "path": "source/squirrel-wave004/call_views.h",
+      "bytes": 3085,
+      "sha256": "4e8a0cc46d0aee9b72a8d0435d7efb19b8dd47cf9a4445a8007c4a44d916946e"
+    },
+    {
+      "path": "source/squirrel-wave002/array_views.h",
+      "bytes": 1492,
+      "sha256": "02e549c877765b7cbce879ec29e45c66dc46a1266bf630247775ec43bad2c0f4"
+    },
+    {
+      "path": "src/native/wave005/vm_views.h",
+      "bytes": 1898,
+      "sha256": "1bf160e4679afbe5a59a244e78f9753684c93a109f7a703f78dff80d04f4840a"
+    },
+    {
+      "path": "source/squirrel-wave022/vm_call.h",
+      "bytes": 4008,
+      "sha256": "7e8e2240f89c6b466380d9f910fd4a29c9ac31a54e628c18e2903363158c1c36"
+    },
+    {
+      "path": "source/squirrel-wave020/lookup.h",
+      "bytes": 4915,
+      "sha256": "37d79b9460b3206ca91ea800e0559abee8d1b294a5b9914c03790ba5a9c688ab"
+    },
+    {
+      "path": "source/squirrel-wave017/script_closure.h",
+      "bytes": 1360,
+      "sha256": "4379d064694e17209c6f19dd7bb8d9ec26ca6fef3482cf4a51ae383def7b6b0f"
+    },
+    {
+      "path": "source/squirrel-wave013/native_closure_release.h",
+      "bytes": 1486,
+      "sha256": "6723b66bce845aeb133508afb9cc1a8bc9299e5aee7a6d2c1c4b73418d26ef28"
+    },
+    {
+      "path": "source/squirrel-wave012/array_reference.h",
+      "bytes": 954,
+      "sha256": "f793588dc85d4b444cfbdff6a1d7ad5e660e14b09a370b617f09aa475e84cc03"
+    },
+    {
+      "path": "source/squirrel-wave020/metamethod.h",
+      "bytes": 1644,
+      "sha256": "2ea3fa8e6a46010a1d42b2324581caa8f851860e09802b656f9d966d2df2051b"
+    },
+    {
+      "path": "source/squirrel-wave014/weak_reference.h",
+      "bytes": 890,
+      "sha256": "fc58b153a5b5801ed60078cb31c436a84fd33803bc0b71102dff70c81579f63e"
+    },
+    {
+      "path": "source/squirrel-wave016/native_create.h",
+      "bytes": 1348,
+      "sha256": "a3925277f8144daac617b475f70fafc515cd3ccdfa9e3a828c98ba331767763f"
+    }
+  ],
+  "frozenReady": {
+    "path": "evidence/lanes/squirrel-class-call030/ready.json",
+    "bytes": 9112,
+    "sha256": "f4f1e6682f51d59e9e679aa0576cd39bdf993cc984ac29e94f1e761d661ac818"
+  },
+  "recoveredPhysicalFunctionBytes": 2764,
+  "alreadyCataloguedFamilyBytesExcludedFromNewCredit": 1516,
+  "ambiguousFactoryBytesHeldForUniqueSourceName": 344,
+  "grossCodeByteDenominatorChanged": false,
+  "wholeGameCreditGranted": 0,
+  "producer": {
+    "path": "evidence/functional/producers/review-class030.py",
+    "bytes": 4992,
+    "sha256": "7c029da5f6c833cf6a6f434828176c8f972267c2da3a77b87e943f7a282be342"
+  }
+}

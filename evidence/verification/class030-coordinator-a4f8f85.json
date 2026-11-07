@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-independent-bounded-native-constructor-and-class-instance-lifetime",
+  "sourceRevision": "a4f8f85f43ea608f79f3a54e77d890cf3b1ddf32",
+  "completeUnmodifiedBatchReplayPassed": true,
+  "rawReplay": {
+    "path": "evidence/verification/class030-isolated-a4f8f85.json",
+    "bytes": 16519,
+    "sha256": "ba9242a612f115578e1ff2b8f56a47cfffe92f8346fe0a3f48563ff68103c655"
+  },
+  "driver": {
+    "path": "toolscripts/isolated_component_replay.py",
+    "bytes": 10926,
+    "sha256": "471f8bb375cca7d1e156a98570fc6fc29f15e858b5ec6234646c3acc4627072e"
+  },
+  "plan": {
+    "path": "config/replays/class030.json",
+    "bytes": 823,
+    "sha256": "b421f70bc248f652839ff1181f4962d3dd7528db8dc86f8f7fc88277353249ec"
+  },
+  "ready": {
+    "path": "evidence/lanes/squirrel-class-call030/ready.json",
+    "bytes": 9112,
+    "sha256": "f4f1e6682f51d59e9e679aa0576cd39bdf993cc984ac29e94f1e761d661ac818"
+  },
+  "primaryPrivateExecution": {
+    "path": "work/squirrel-class-call030/primary-qualified/execution.json",
+    "bytes": 1168307,
+    "sha256": "c5563caa5ebebca53fc0f33cc58ea2d52eed4dce134e27bc7186a39e598fb1d8"
+  },
+  "independentPrivateExecution": {
+    "path": "work/clean-replay/class030-a4f8f85/work/squirrel-class-call030/primary-qualified/execution.json",
+    "bytes": 1168307,
+    "sha256": "c5563caa5ebebca53fc0f33cc58ea2d52eed4dce134e27bc7186a39e598fb1d8"
+  },
+  "completeExecutionControlsAndAllLinkedArtifactsByteIdentical": true,
+  "cases": 54,
+  "fourTargetObservations": 216,
+  "returningControls": 13,
+  "sameFinalArenaControls": 5,
+  "tests": 79,
+  "publicUnits": 306,
+  "publicCompilations": 854,
+  "preAliasWholeArenaEqualSets": 0,
+  "postVerifiedCallbackAliasWholeArenaEqualSets": 12,
+  "definedMemoryEqualSets": 54,
+  "inactiveFrameDifferenceSets": 42,
+  "inactiveFrameWordsRead": false,
+  "callbackAliasesAppliedOnlyToPostExecutionComparisonCopies": true,
+  "executedHeapObjectsRegistersCodeLiteralsOrTextPatched": false,
+  "canonicalFamilyInstructionBytes": 4624,
+  "alreadyCataloguedInstructionBytes": 1516,
+  "heldFactoryInstructionBytesForUnambiguousSourceName": 344,
+  "newUniqueFunctionsForCatalogReview": 8,
+  "newUniqueInstructionBytesForCatalogReview": 2764,
+  "wholeMemoryUniversalVmGameAndroidOsOrPhysicalDeviceClaimed": false,
+  "sourceAdmissionGranted": false,
+  "producer": {
+    "path": "evidence/verification/producers/review-class030-replay.py",
+    "bytes": 4618,
+    "sha256": "ea36d2456cad793e3e98eab2bd258054a1aebbba79f9c7e198092d3717b08d7b"
+  }
+}

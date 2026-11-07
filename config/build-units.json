@@ -19,7 +19,9 @@
       "wave014",
       "wave024",
       "wave027",
-      "wave029"
+      "wave029",
+      "wave032",
+      "wave033"
     ]
   },
   "units": [
@@ -5057,6 +5059,41 @@
         "src/native/wave005/vm_views.h"
       ],
       "role": "expanded-partial-execute-candidate-zero-whole-function-credit"
+    },
+    {
+      "source": "src/native/wave032/archive_lookup.c",
+      "headers": [
+        "src/native/wave032/archive.h"
+      ],
+      "role": "frozen-resource-xbb-candidate"
+    },
+    {
+      "source": "src/native/wave032/archive_members.c",
+      "headers": [
+        "src/native/wave032/archive.h"
+      ],
+      "role": "frozen-resource-xbb-candidate"
+    },
+    {
+      "source": "src/native/wave032/archive_owner.c",
+      "headers": [
+        "src/native/wave032/archive.h"
+      ],
+      "role": "frozen-resource-xbb-candidate"
+    },
+    {
+      "source": "src/native/wave033/tree_erase.c",
+      "headers": [
+        "src/native/wave033/tree_erase.h"
+      ],
+      "role": "frozen-typed-tree-erase-candidate"
+    },
+    {
+      "source": "src/native/wave033/tree_rebalance.c",
+      "headers": [
+        "src/native/wave033/tree_erase.h"
+      ],
+      "role": "frozen-typed-tree-erase-candidate"
     }
   ],
   "excludedSources": [

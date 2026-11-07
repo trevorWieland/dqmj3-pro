@@ -1,0 +1,2134 @@
+{
+  "schemaVersion": 1,
+  "programId": "0004000e001acb00",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "status": "proposed-functional-proof-pending-coordinator-review-and-replay",
+  "acceptedSourceCreditGranted": 0,
+  "functions": [
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1148452,
+        "mode": "ARM"
+      },
+      "symbol": "fn_00118624",
+      "source": {
+        "path": "src/native/wave032/archive_owner.c",
+        "sha256": "5e8cba4615a2aa54073d1336d9bb4487d2db3f11cadf7f413c7212832e6d18c8",
+        "bytes": 1635
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 88,
+      "originalInstructionRanges": [
+        {
+          "start": 1148452,
+          "endExclusive": 1148540,
+          "bytes": 88
+        }
+      ],
+      "originalPoolRanges": [
+        {
+          "start": 1148540,
+          "endExclusive": 1148544,
+          "bytes": 4,
+          "sha256": "c958874711136b63c0b1ad8a04ebd94443b48232da2304b6d9d3e1e3cc7e45fa",
+          "loadInstruction": 1148460
+        },
+        {
+          "start": 1148544,
+          "endExclusive": 1148548,
+          "bytes": 4,
+          "sha256": "75ceae1c863f0acb0dace0d3a147748991ab6cb162275a5cd7a13cee13608f0e",
+          "loadInstruction": 1148472
+        },
+        {
+          "start": 1148548,
+          "endExclusive": 1148552,
+          "bytes": 4,
+          "sha256": "53636d441d28e0689e7d143926fed209c49f0f462fa1f37ac00b0298222d5127",
+          "loadInstruction": 1148512
+        }
+      ],
+      "reportEntryBytes": 88,
+      "originalSpanSha256": "b7abc8dc64c1e1024039d8bca37c5f2f0683c34e44643e86f0751e20e63b4c5c",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 1110500,
+          "address": 1110604,
+          "bytes": 4,
+          "sha256": "23d775115bfb0a11f6e0ea29856515a7053447296990aee51f804746b9dd36fb"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2013672,
+          "address": 2013908,
+          "bytes": 4,
+          "sha256": "14b8109ceef00830aebda38d6d5af729770ff1e127590cb58a1bb33b13b4080d"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2330604,
+          "address": 2330768,
+          "bytes": 4,
+          "sha256": "479602972fcbebb71a3f870bc8c706627621d48bdb2c26695ed9383461a1dd69"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2509288,
+          "address": 2509416,
+          "bytes": 4,
+          "sha256": "5218e29a28dd1cfe2371820ad4dbce84459c656221fbbcd75d7288ae0d1001a5"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2549256,
+          "address": 2549348,
+          "bytes": 4,
+          "sha256": "f8fb625d1aa21cdb70eee4b73163a08ddd2852be6a873546e93289b42e31f8f7"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2554136,
+          "address": 2554364,
+          "bytes": 4,
+          "sha256": "046e72b399534ed55aa8e0be4659805c265e9898200370c929e00c9927fb0dbe"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2783228,
+          "address": 2783328,
+          "bytes": 4,
+          "sha256": "6bc047fdc4ac5d4189568d8c130f182f95c17a95f1d5dcc1674a7e566aadd46f"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2785300,
+          "address": 2785372,
+          "bytes": 4,
+          "sha256": "85ced6701222e202f72ca5bf77a2f0f413fea8f55030dabae23bd1a77178f5b3"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2990776,
+          "address": 2990980,
+          "bytes": 4,
+          "sha256": "e707ecfe5481966269a8733951c01b3e73a3120cd7670aa36285464faea08060"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3131632,
+          "address": 3131780,
+          "bytes": 4,
+          "sha256": "ee12f265e7b7e3cc62fbddf2b2a6aba3cecbacdd41ceb8f76069455ceba4d2ec"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3131964,
+          "address": 3132900,
+          "bytes": 4,
+          "sha256": "bff57894da5c24f8537b88a7c7d26ebb0cd23b7e950357b1dc75c58ca5abba9e"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3244648,
+          "address": 3244720,
+          "bytes": 4,
+          "sha256": "e96fda1fbfe56391dd8b131830b76e16de33505f0969576fad358280a1b4afd5"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3535412,
+          "address": 3535644,
+          "bytes": 4,
+          "sha256": "83e9d57baedc5e552d4e6ba59b5c994ed7b8da47a15589bbd36184e65704f191"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3538256,
+          "address": 3538604,
+          "bytes": 4,
+          "sha256": "e805b19cdb92a15ddc7a11193bc99e8100a0bb53b7dcbd10fe5d7830be6e2ca6"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3887352,
+          "address": 3887476,
+          "bytes": 4,
+          "sha256": "c57c6c707d0e3bce04736621018d725daa488cde26f9456d48f74fb337b06f70"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3908156,
+          "address": 3908324,
+          "bytes": 4,
+          "sha256": "c021a5aebaf6655687e858195311afb448b50ba389463c5f05d6ddd230aeda00"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6121808,
+          "address": 6121896,
+          "bytes": 4,
+          "sha256": "eab23d55a76bf33ea75c3b6285518de2acb221db8a60ff4c9ecb480687e0b8a8"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7266972,
+          "address": 7267464,
+          "bytes": 4,
+          "sha256": "6c5317e2dc0871c44142bcbc6c5d63c159310a5b962704f0710742fc21fe3a12"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/xbb-seal-first/arm/archive_owner.o",
+          "sha256": "22aff0be4d63933c5ac82d5325d7d382f04b3a83e0aadf4238490a804418613f",
+          "bytes": 3668
+        },
+        "section": ".text.fn_00118624",
+        "bytes": 120,
+        "sha256": "0788224eeeee81d72a49a61f6e166432bc9d89410b28bb3602bd34a26055c5c4",
+        "source": {
+          "path": "src/native/wave032/archive_owner.c",
+          "sha256": "5e8cba4615a2aa54073d1336d9bb4487d2db3f11cadf7f413c7212832e6d18c8",
+          "bytes": 1635
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_00118624",
+            "offset": 80,
+            "type": 28,
+            "symbol": "archive_word",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_00118624",
+            "offset": 108,
+            "type": 2,
+            "symbol": "section:.bss",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_00118624",
+            "offset": 112,
+            "type": 2,
+            "symbol": "archive_operations",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 120,
+      "candidateLinkedSpanSha256": "becde2b6026297ea0c3c8af0b3af67136854211472689929051a341374f649fd",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/xbb/packet.json",
+          "sha256": "19e36bd6242892854436b54d61eb33999d6916c4157cc8dc18bb647c6bc4ad90",
+          "bytes": 286684
+        },
+        "verifiedTests": 15,
+        "constructionAndRangeCases": 451,
+        "attemptedFixtureCases": 451,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 22,
+        "originalInstructionsReached": 22,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "All initialized fixture bytes are compared after typed pointer and physical holder-width translation. Archive bytes are borrowed and read-only as consumed here. Real SDK allocator/free wrappers execute only on the reference side; no SDK source credit follows.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite initialized backing/count/name domain; arbitrary invalid payload offsets are unsupported.",
+          "Original SDK heap ready/current heap are explicit platform preconditions; no SDK startup/allocator recovery credit.",
+          "Borrowed archive immutability applies to these functions only; later BCH relocation is outside this proof.",
+          "Supplemental36-byte deleting destructor is not admitted to the canonical census.",
+          "Gzip preparation of one owner XBB fixture is not wrapper/inflate source validation.",
+          "No universal equivalence, independent clean replay or whole-game/device execution is claimed."
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1586824,
+        "mode": "ARM"
+      },
+      "symbol": "fn_00183688",
+      "source": {
+        "path": "src/native/wave032/archive_lookup.c",
+        "sha256": "77447d1f84669ef96e98a0bdbf8974b33bf6d37fea2502c67ba84c1a198bcaae",
+        "bytes": 2147
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 392,
+      "originalInstructionRanges": [
+        {
+          "start": 1586824,
+          "endExclusive": 1586948,
+          "bytes": 124
+        },
+        {
+          "start": 1643196,
+          "endExclusive": 1643464,
+          "bytes": 268
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 124,
+      "originalSpanSha256": "7b90f361bb6a5d29d951615a5e5b7a1cb11cd0ff2c2ab63e33db4205177befac",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 1535348,
+          "address": 1535356,
+          "bytes": 4,
+          "sha256": "216412a82bad37b034ed2caae581af7a829f3e5347fb71d07a07ae4304dbe2d8"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7265728,
+          "address": 7265736,
+          "bytes": 4,
+          "sha256": "2c36e6b74f081292bd8043b48c92fc7d673100aeb9669a0af1c0a8dd2afd0b61"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7265864,
+          "address": 7265872,
+          "bytes": 4,
+          "sha256": "f7928f14c3447d492b97d8240a684d2da7ed6c07aba83c30348e240fcd7dd092"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/xbb-seal-first/arm/archive_lookup.o",
+          "sha256": "34a81ab093d038a65714375a2bf0f378579cc534c7cdc8bc18b05d563338baf7",
+          "bytes": 1688
+        },
+        "section": ".text.fn_00183688",
+        "bytes": 496,
+        "sha256": "d601a185b11b6b375dbea33f9f514cd2096968138d79fbeffc3025e97cd17ee3",
+        "source": {
+          "path": "src/native/wave032/archive_lookup.c",
+          "sha256": "77447d1f84669ef96e98a0bdbf8974b33bf6d37fea2502c67ba84c1a198bcaae",
+          "bytes": 2147
+        },
+        "relocations": []
+      },
+      "candidateInstructionAndPoolBytes": 496,
+      "candidateLinkedSpanSha256": "d601a185b11b6b375dbea33f9f514cd2096968138d79fbeffc3025e97cd17ee3",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/xbb/packet.json",
+          "sha256": "19e36bd6242892854436b54d61eb33999d6916c4157cc8dc18bb647c6bc4ad90",
+          "bytes": 286684
+        },
+        "verifiedTests": 15,
+        "constructionAndRangeCases": 451,
+        "attemptedFixtureCases": 451,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 98,
+        "originalInstructionsReached": 98,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "All initialized fixture bytes are compared after typed pointer and physical holder-width translation. Archive bytes are borrowed and read-only as consumed here. Real SDK allocator/free wrappers execute only on the reference side; no SDK source credit follows.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite initialized backing/count/name domain; arbitrary invalid payload offsets are unsupported.",
+          "Original SDK heap ready/current heap are explicit platform preconditions; no SDK startup/allocator recovery credit.",
+          "Borrowed archive immutability applies to these functions only; later BCH relocation is outside this proof.",
+          "Supplemental36-byte deleting destructor is not admitted to the canonical census.",
+          "Gzip preparation of one owner XBB fixture is not wrapper/inflate source validation.",
+          "No universal equivalence, independent clean replay or whole-game/device execution is claimed."
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1535348,
+        "mode": "ARM"
+      },
+      "symbol": "fn_00176d74",
+      "source": {
+        "path": "src/native/wave032/archive_members.c",
+        "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+        "bytes": 1657
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 68,
+      "originalInstructionRanges": [
+        {
+          "start": 1535348,
+          "endExclusive": 1535416,
+          "bytes": 68
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 68,
+      "originalSpanSha256": "db9c322417f765f382b8df642dd37df71bf7c8b307eb5462421925387f95c281",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 1456568,
+          "address": 1456592,
+          "bytes": 4,
+          "sha256": "df43feb42cd7999b1bfe874cc39ab6a21ad36e7b693d5421f6be7992f278507d"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2330604,
+          "address": 2330788,
+          "bytes": 4,
+          "sha256": "36b391e84d55cc15d06a63c20c2f1085e954023a92fa719d29b5a54eb300f224"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2770892,
+          "address": 2771168,
+          "bytes": 4,
+          "sha256": "94e20e30752dab454ccd899dfdc234ffcabe5b6c3510853df6d21c006bc06352"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2770892,
+          "address": 2771200,
+          "bytes": 4,
+          "sha256": "ed777f739b899811c3701f1901c1e29df22324ea58de59507392afe47705552a"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2783228,
+          "address": 2783360,
+          "bytes": 4,
+          "sha256": "d66a5269a30fb575ddd54afa2febcb7c1d1bb51f32b262457f03bc4b123fa454"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3131632,
+          "address": 3131812,
+          "bytes": 4,
+          "sha256": "581578ebbced26f7c74ee7ae03f25173c8545758924776de6010dc4d2f43ed55"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3131964,
+          "address": 3132976,
+          "bytes": 4,
+          "sha256": "b76c12da5a0d177287a8f18a7b51f8f7c2d2e68fae888da68be2626860afd01e"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3535412,
+          "address": 3535888,
+          "bytes": 4,
+          "sha256": "895ff589efa042bff3c242372bdc77a3cb5be1482d6ca00922a0b02b9a1b6780"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3538256,
+          "address": 3538996,
+          "bytes": 4,
+          "sha256": "a98f5b779387fc489409826da4c6e474ead466f91fb98b5590bc881df0f8f95a"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3908096,
+          "address": 3908136,
+          "bytes": 4,
+          "sha256": "139ba5d8de02a4c9985734e7308f119659d6962b30e389ecc11d35c2533187e2"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6121808,
+          "address": 6121932,
+          "bytes": 4,
+          "sha256": "73345862817a93b15a957b3d57bd55c8003fad0d56e55b5139a20a368a7cfa5b"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6994964,
+          "address": 6994984,
+          "bytes": 4,
+          "sha256": "34ba4988b02abced3edd1a5ed11e87bb936e0d499bb53bf0cf92addc0d70fc0d"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6995084,
+          "address": 6995108,
+          "bytes": 4,
+          "sha256": "78786addb4222d25515b27e6be0c2e882542ec90e5ac0c96922685308512e66d"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7001952,
+          "address": 7001972,
+          "bytes": 4,
+          "sha256": "79582473ddcb40c91185337b737e003f8cfabc2f58b50b2cc1f3177f0d86f3f9"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7002052,
+          "address": 7002072,
+          "bytes": 4,
+          "sha256": "93d7c7b8c1aa716790efce1f89460e68585a508fa8876b40b12ec92abc5eeccd"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7002140,
+          "address": 7002164,
+          "bytes": 4,
+          "sha256": "0aafac3312891272f5baab9b6e9c2c7318cafd83bc6881a0654ad78825ffa314"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7266972,
+          "address": 7267604,
+          "bytes": 4,
+          "sha256": "9307af16f5facd1b2890e4e1dd2cde7686e5313b31a1f1e7c145510cecc5c4ac"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/xbb-seal-first/arm/archive_members.o",
+          "sha256": "c8a129e251779d47cd6e1d53550aee7f55d69a389fa1a6550245be6ce539aa5c",
+          "bytes": 3640
+        },
+        "section": ".text.fn_00176d74",
+        "bytes": 76,
+        "sha256": "69b50735b1411c2a5f2d4720be99411c01b439584051be7aecbae9042c55c67c",
+        "source": {
+          "path": "src/native/wave032/archive_members.c",
+          "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+          "bytes": 1657
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_00176d74",
+            "offset": 8,
+            "type": 28,
+            "symbol": "fn_00183688",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_00176d74",
+            "offset": 40,
+            "type": 28,
+            "symbol": "archive_word",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_00176d74",
+            "offset": 60,
+            "type": 28,
+            "symbol": "archive_word",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 76,
+      "candidateLinkedSpanSha256": "da34fc6218b7a3c9c3462a382270829eea9f7eeef568d6c0a03adf1a0859ac66",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/xbb/packet.json",
+          "sha256": "19e36bd6242892854436b54d61eb33999d6916c4157cc8dc18bb647c6bc4ad90",
+          "bytes": 286684
+        },
+        "verifiedTests": 15,
+        "constructionAndRangeCases": 451,
+        "attemptedFixtureCases": 451,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 17,
+        "originalInstructionsReached": 17,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "All initialized fixture bytes are compared after typed pointer and physical holder-width translation. Archive bytes are borrowed and read-only as consumed here. Real SDK allocator/free wrappers execute only on the reference side; no SDK source credit follows.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite initialized backing/count/name domain; arbitrary invalid payload offsets are unsupported.",
+          "Original SDK heap ready/current heap are explicit platform preconditions; no SDK startup/allocator recovery credit.",
+          "Borrowed archive immutability applies to these functions only; later BCH relocation is outside this proof.",
+          "Supplemental36-byte deleting destructor is not admitted to the canonical census.",
+          "Gzip preparation of one owner XBB fixture is not wrapper/inflate source validation.",
+          "No universal equivalence, independent clean replay or whole-game/device execution is claimed."
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 6249644,
+        "mode": "ARM"
+      },
+      "symbol": "fn_005f5cac",
+      "source": {
+        "path": "src/native/wave032/archive_owner.c",
+        "sha256": "5e8cba4615a2aa54073d1336d9bb4487d2db3f11cadf7f413c7212832e6d18c8",
+        "bytes": 1635
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 40,
+      "originalInstructionRanges": [
+        {
+          "start": 6249644,
+          "endExclusive": 6249684,
+          "bytes": 40
+        }
+      ],
+      "originalPoolRanges": [
+        {
+          "start": 6249684,
+          "endExclusive": 6249688,
+          "bytes": 4,
+          "sha256": "53636d441d28e0689e7d143926fed209c49f0f462fa1f37ac00b0298222d5127",
+          "loadInstruction": 6249652
+        }
+      ],
+      "reportEntryBytes": 40,
+      "originalSpanSha256": "70712171afe11f1139a992e3ee4b0113e80c0aefacbe50a8f1d31b752512db57",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 2588292,
+          "address": 2588428,
+          "bytes": 4,
+          "sha256": "8b3ca2c15f5cf00ed042ee0966e33ebfc18e6c20e1966c70693bafb3ba68c1f6"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2588292,
+          "address": 2588668,
+          "bytes": 4,
+          "sha256": "135c82dad0bfaa9b15777ecdd55dc6b5165f8d6643a6570e6cbf5587dda6c33b"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2770892,
+          "address": 2771140,
+          "bytes": 4,
+          "sha256": "12938a7333a1a1438fd93e047b267db10549d867afaefb7efd04cf9ff97cfea1"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/xbb-seal-first/arm/archive_owner.o",
+          "sha256": "22aff0be4d63933c5ac82d5325d7d382f04b3a83e0aadf4238490a804418613f",
+          "bytes": 3668
+        },
+        "section": ".text.fn_005f5cac",
+        "bytes": 76,
+        "sha256": "bd768b2166c315060b2c7d0be8b155cc6ef8fd26ae37eca84b326ea0d69e8869",
+        "source": {
+          "path": "src/native/wave032/archive_owner.c",
+          "sha256": "5e8cba4615a2aa54073d1336d9bb4487d2db3f11cadf7f413c7212832e6d18c8",
+          "bytes": 1635
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_005f5cac",
+            "offset": 28,
+            "type": 28,
+            "symbol": "archive_word",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 76,
+      "candidateLinkedSpanSha256": "93461539175863a4cd964b110c8677168caf93abe1dea4071755860dbc16d46d",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/xbb/packet.json",
+          "sha256": "19e36bd6242892854436b54d61eb33999d6916c4157cc8dc18bb647c6bc4ad90",
+          "bytes": 286684
+        },
+        "verifiedTests": 15,
+        "constructionAndRangeCases": 451,
+        "attemptedFixtureCases": 451,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 10,
+        "originalInstructionsReached": 10,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "All initialized fixture bytes are compared after typed pointer and physical holder-width translation. Archive bytes are borrowed and read-only as consumed here. Real SDK allocator/free wrappers execute only on the reference side; no SDK source credit follows.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite initialized backing/count/name domain; arbitrary invalid payload offsets are unsupported.",
+          "Original SDK heap ready/current heap are explicit platform preconditions; no SDK startup/allocator recovery credit.",
+          "Borrowed archive immutability applies to these functions only; later BCH relocation is outside this proof.",
+          "Supplemental36-byte deleting destructor is not admitted to the canonical census.",
+          "Gzip preparation of one owner XBB fixture is not wrapper/inflate source validation.",
+          "No universal equivalence, independent clean replay or whole-game/device execution is claimed."
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 6249688,
+        "mode": "ARM"
+      },
+      "symbol": "fn_005f5cd8",
+      "source": {
+        "path": "src/native/wave032/archive_owner.c",
+        "sha256": "5e8cba4615a2aa54073d1336d9bb4487d2db3f11cadf7f413c7212832e6d18c8",
+        "bytes": 1635
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 52,
+      "originalInstructionRanges": [
+        {
+          "start": 6249688,
+          "endExclusive": 6249740,
+          "bytes": 52
+        }
+      ],
+      "originalPoolRanges": [
+        {
+          "start": 6249740,
+          "endExclusive": 6249744,
+          "bytes": 4,
+          "sha256": "c958874711136b63c0b1ad8a04ebd94443b48232da2304b6d9d3e1e3cc7e45fa",
+          "loadInstruction": 6249688
+        },
+        {
+          "start": 6249744,
+          "endExclusive": 6249748,
+          "bytes": 4,
+          "sha256": "75ceae1c863f0acb0dace0d3a147748991ab6cb162275a5cd7a13cee13608f0e",
+          "loadInstruction": 6249704
+        }
+      ],
+      "reportEntryBytes": 52,
+      "originalSpanSha256": "ca21b9bf40e8aeba15e7f2639a09492b3ce9e0884fd608f53c11a24750812f06",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 2588292,
+          "address": 2588332,
+          "bytes": 4,
+          "sha256": "9a94c9491d3a37e7c8252629ed2f1e3a5f031d975d4b2c2f148849b5367faa02"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2770892,
+          "address": 2771128,
+          "bytes": 4,
+          "sha256": "6eb2b34caa21a3c5762ed998cea26a319401682bcf6346d2cf1030b4d116f536"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/xbb-seal-first/arm/archive_owner.o",
+          "sha256": "22aff0be4d63933c5ac82d5325d7d382f04b3a83e0aadf4238490a804418613f",
+          "bytes": 3668
+        },
+        "section": ".text.fn_005f5cd8",
+        "bytes": 76,
+        "sha256": "f82ef2d2bf4b3af53c4eb28b6153b5063370b2c49bea4184ce9863d3c4b3d529",
+        "source": {
+          "path": "src/native/wave032/archive_owner.c",
+          "sha256": "5e8cba4615a2aa54073d1336d9bb4487d2db3f11cadf7f413c7212832e6d18c8",
+          "bytes": 1635
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_005f5cd8",
+            "offset": 68,
+            "type": 2,
+            "symbol": "section:.bss",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_005f5cd8",
+            "offset": 72,
+            "type": 2,
+            "symbol": "archive_operations",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 76,
+      "candidateLinkedSpanSha256": "6c07b09293adc386b90610c5f306aa92ee73372c939cdec50e3b9cec9be42cce",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/xbb/packet.json",
+          "sha256": "19e36bd6242892854436b54d61eb33999d6916c4157cc8dc18bb647c6bc4ad90",
+          "bytes": 286684
+        },
+        "verifiedTests": 15,
+        "constructionAndRangeCases": 451,
+        "attemptedFixtureCases": 451,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 13,
+        "originalInstructionsReached": 13,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "All initialized fixture bytes are compared after typed pointer and physical holder-width translation. Archive bytes are borrowed and read-only as consumed here. Real SDK allocator/free wrappers execute only on the reference side; no SDK source credit follows.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite initialized backing/count/name domain; arbitrary invalid payload offsets are unsupported.",
+          "Original SDK heap ready/current heap are explicit platform preconditions; no SDK startup/allocator recovery credit.",
+          "Borrowed archive immutability applies to these functions only; later BCH relocation is outside this proof.",
+          "Supplemental36-byte deleting destructor is not admitted to the canonical census.",
+          "Gzip preparation of one owner XBB fixture is not wrapper/inflate source validation.",
+          "No universal equivalence, independent clean replay or whole-game/device execution is claimed."
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 6249788,
+        "mode": "ARM"
+      },
+      "symbol": "fn_005f5d3c",
+      "source": {
+        "path": "src/native/wave032/archive_owner.c",
+        "sha256": "5e8cba4615a2aa54073d1336d9bb4487d2db3f11cadf7f413c7212832e6d18c8",
+        "bytes": 1635
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 32,
+      "originalInstructionRanges": [
+        {
+          "start": 6249788,
+          "endExclusive": 6249820,
+          "bytes": 32
+        }
+      ],
+      "originalPoolRanges": [
+        {
+          "start": 6249820,
+          "endExclusive": 6249824,
+          "bytes": 4,
+          "sha256": "c958874711136b63c0b1ad8a04ebd94443b48232da2304b6d9d3e1e3cc7e45fa",
+          "loadInstruction": 6249796
+        }
+      ],
+      "reportEntryBytes": 32,
+      "originalSpanSha256": "b817a368c6c92c1f3143aacb1dce95f5a0c3d97c394bc25969e4180480f1b11a",
+      "callerWitnesses": [
+        {
+          "kind": "unadjusted-method-table",
+          "table": "XBB-view-exact-two-slot-prefix",
+          "tableStart": 8753004,
+          "tableSha256": "f200e638901ae6aa88dcedd6176c4c3230f05e77b9087cd125b45fd59587e569",
+          "slotOffset": 0,
+          "target": 6249788
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2330604,
+          "address": 2330800,
+          "bytes": 4,
+          "sha256": "7a331c0a459dc02afb1bd04fab173ff2fe0432263a42c55e22b8fb9b273ccb0e"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2509288,
+          "address": 2509460,
+          "bytes": 4,
+          "sha256": "be0296a37d192348a82361a2740f3b3ff3374e0e35e65caed34ef1b2c414d59d"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2509288,
+          "address": 2509480,
+          "bytes": 4,
+          "sha256": "4d1bb80b6da470eac48165828b0141dd23870d4b02a278dfcf43f5773933df12"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2549256,
+          "address": 2549372,
+          "bytes": 4,
+          "sha256": "f252c8218b3bf3eee1845e5cfed77bba1fcc226db240c9ebe40807bc00cd9e18"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2554136,
+          "address": 2554388,
+          "bytes": 4,
+          "sha256": "67fd510c24fca8269d2c2d1d08babdb40497dbbff6d90e523f78dc58d89a22cf"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2588292,
+          "address": 2588748,
+          "bytes": 4,
+          "sha256": "e469f9cbcd34bff8b23437c7c5cd74d4730a6b9b33ef205a006ee63c150e330c"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2770892,
+          "address": 2771264,
+          "bytes": 4,
+          "sha256": "a1fa2cd7353a2019560ab07b44c65e2d431a1ba6a57eb00ef488f5842a701f25"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2783228,
+          "address": 2784244,
+          "bytes": 4,
+          "sha256": "c234ac38f1604debc8d0111af25403714a5a68eb9bc970cbbdd615253a7d9840"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2785300,
+          "address": 2785504,
+          "bytes": 4,
+          "sha256": "54bc383025200f212c3260d77036436c011bb3607731a92c6f424be9c5ad22f2"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2990776,
+          "address": 2991376,
+          "bytes": 4,
+          "sha256": "d5ee974105cebc7fb44ca57ee75acf86c9c3a865a1ab13d5e2c8be78df428077"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3131632,
+          "address": 3131900,
+          "bytes": 4,
+          "sha256": "8c903327fec72f1384dc2ab82564a4cd081e78c79846d7ee027e1f27bc584166"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3131964,
+          "address": 3133104,
+          "bytes": 4,
+          "sha256": "b2fd34bc95a811a0f1fa295fee220b3416996bb6c528abb0109f9b561bb227b1"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3244648,
+          "address": 3244796,
+          "bytes": 4,
+          "sha256": "94c898e7722bd80f0d03f82364e84d0f3b7d3c05010fb804847d936e2843516c"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3244648,
+          "address": 3245812,
+          "bytes": 4,
+          "sha256": "1e2d4640882e30205b7398cb588dc2239ab59c45c39f0aca080f1f9fdaa497b0"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3535412,
+          "address": 3538188,
+          "bytes": 4,
+          "sha256": "629ed325ae1cca0ba3b75caa059ad18048504b4f86234e8f53595c7eb4696881"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3538256,
+          "address": 3539704,
+          "bytes": 4,
+          "sha256": "5e701d8702c3a87a01c4f511d5fefa7bfae6275c38ee4b934248376d0121dea8"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3887352,
+          "address": 3887596,
+          "bytes": 4,
+          "sha256": "f746b8c68468709fb15f68e7832659e7f663d5664f855631a01a822f00d23df9"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3887352,
+          "address": 3888176,
+          "bytes": 4,
+          "sha256": "400b8851613444ba25be6f58854505649bcd0201a4156f56680a9aa8128eb1b2"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6121808,
+          "address": 6121944,
+          "bytes": 4,
+          "sha256": "e4288e14455ca887d4a2d5a1d6bfe1724999b7e555bf5bbd362b60c16978a313"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6121808,
+          "address": 6121964,
+          "bytes": 4,
+          "sha256": "12e6f23dbe1d6eb8aee91c70c3bab35812be771daf60fb048fbfb8ca25f16110"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7266972,
+          "address": 7270516,
+          "bytes": 4,
+          "sha256": "106a0595b709403822697f12c63150f6e04208dd69cb08e95c188ebc3af17c64"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/xbb-seal-first/arm/archive_owner.o",
+          "sha256": "22aff0be4d63933c5ac82d5325d7d382f04b3a83e0aadf4238490a804418613f",
+          "bytes": 3668
+        },
+        "section": ".text.fn_005f5d3c",
+        "bytes": 56,
+        "sha256": "c90b7f2668b04ce9151423ca15ba6539d49afa04bff1d38c29fea583d01c0777",
+        "source": {
+          "path": "src/native/wave032/archive_owner.c",
+          "sha256": "5e8cba4615a2aa54073d1336d9bb4487d2db3f11cadf7f413c7212832e6d18c8",
+          "bytes": 1635
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_005f5d3c",
+            "offset": 48,
+            "type": 2,
+            "symbol": "section:.bss",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_005f5d3c",
+            "offset": 52,
+            "type": 2,
+            "symbol": "archive_operations",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 56,
+      "candidateLinkedSpanSha256": "4366f84705a84f2e82a648f415a50e5f52593148339998bd9d74e620ae58754d",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/xbb/packet.json",
+          "sha256": "19e36bd6242892854436b54d61eb33999d6916c4157cc8dc18bb647c6bc4ad90",
+          "bytes": 286684
+        },
+        "verifiedTests": 15,
+        "constructionAndRangeCases": 451,
+        "attemptedFixtureCases": 451,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 8,
+        "originalInstructionsReached": 8,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "All initialized fixture bytes are compared after typed pointer and physical holder-width translation. Archive bytes are borrowed and read-only as consumed here. Real SDK allocator/free wrappers execute only on the reference side; no SDK source credit follows.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite initialized backing/count/name domain; arbitrary invalid payload offsets are unsupported.",
+          "Original SDK heap ready/current heap are explicit platform preconditions; no SDK startup/allocator recovery credit.",
+          "Borrowed archive immutability applies to these functions only; later BCH relocation is outside this proof.",
+          "Supplemental36-byte deleting destructor is not admitted to the canonical census.",
+          "Gzip preparation of one owner XBB fixture is not wrapper/inflate source validation.",
+          "No universal equivalence, independent clean replay or whole-game/device execution is claimed."
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7265672,
+        "mode": "ARM"
+      },
+      "symbol": "fn_006edd88",
+      "source": {
+        "path": "src/native/wave032/archive_members.c",
+        "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+        "bytes": 1657
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 56,
+      "originalInstructionRanges": [
+        {
+          "start": 7265672,
+          "endExclusive": 7265728,
+          "bytes": 56
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 56,
+      "originalSpanSha256": "17ed1184cc737ad1b7855afb79d887b1ad72909f825d609910d0a80cc345d469",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 2509288,
+          "address": 2509428,
+          "bytes": 4,
+          "sha256": "048d43328f3b326e8932fbc435d490b55eb0061c2f329b67d8d21ba19fe5e4fb"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2588292,
+          "address": 2588460,
+          "bytes": 4,
+          "sha256": "3b913e8d4927bf18e6c64e84ce745c6ab7ce18e0a57cb29b59d0c084e415aab6"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2588292,
+          "address": 2588524,
+          "bytes": 4,
+          "sha256": "7cfbaf4ac252ebc789d9849d41449719eef939a99a557993ddd91b9f880317c6"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2588292,
+          "address": 2588704,
+          "bytes": 4,
+          "sha256": "ff338e9275b58e9b8c6f5d8f9a27fc8307cee7dc08ec8edc194c8e233c460637"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2785300,
+          "address": 2785408,
+          "bytes": 4,
+          "sha256": "b2918992def06d67af434ca6fadee1b75f34eb89ee96d8de5cba131fe13a040c"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2785300,
+          "address": 2785456,
+          "bytes": 4,
+          "sha256": "e3897ba776e1c63ec144a0cf684a94dc7025d3b86bfc138950cd43d33ba97f7d"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2990776,
+          "address": 2991040,
+          "bytes": 4,
+          "sha256": "1bb2d4112a6790e9a06b98ad3fba6e43904dee3c0ca6207dc300788fb1726d39"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3244648,
+          "address": 3244760,
+          "bytes": 4,
+          "sha256": "b636410d539ce3fddb861bef1635c58dc9249a5db13ce86910fac4c0c8dea37c"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3244648,
+          "address": 3244816,
+          "bytes": 4,
+          "sha256": "8a4b5b50eef42aec72b9fd4d1c7e82c93ddef66f2baa0a0c83a8a355adca61b1"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3878828,
+          "address": 3878864,
+          "bytes": 4,
+          "sha256": "ac3aabd83992c55f6dc6397ad6f99cccb95c3bb7addbd2f08af39b24a08af7c8"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3886568,
+          "address": 3886604,
+          "bytes": 4,
+          "sha256": "9ae9bcb3df8fe1788ccaab1d9eff37f34e7b235044fd194f18bd4b62a48d4376"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3886748,
+          "address": 3886784,
+          "bytes": 4,
+          "sha256": "253419df898ed9c24010a350f1536542b7cc4d2c6e90e272c94fb21f37d64ade"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3887352,
+          "address": 3887524,
+          "bytes": 4,
+          "sha256": "c62fb383bddc7974f93682b1c77b90c9b520b575c519b94e07d3692c18a12496"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3887352,
+          "address": 3887708,
+          "bytes": 4,
+          "sha256": "4bcf92e579dccb3b1aa8477c01fdcd458c1c315e23616755bcc02efd262bd989"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3887352,
+          "address": 3887868,
+          "bytes": 4,
+          "sha256": "1abdc0bd9c11e5e11b7792f8fab1c1b68a17850696f15c8dfe1e10bf7469698b"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3887352,
+          "address": 3888032,
+          "bytes": 4,
+          "sha256": "fbb65fc22bca0819674cec0aa5f544bdb837f0940154d698f5f05af95f7e5453"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/xbb-seal-first/arm/archive_members.o",
+          "sha256": "c8a129e251779d47cd6e1d53550aee7f55d69a389fa1a6550245be6ce539aa5c",
+          "bytes": 3640
+        },
+        "section": ".text.fn_006edd88",
+        "bytes": 68,
+        "sha256": "47690e6b90c3479429a95b4c24198e5b5567eb52eb861187d97ba0841de0fd94",
+        "source": {
+          "path": "src/native/wave032/archive_members.c",
+          "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+          "bytes": 1657
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_006edd88",
+            "offset": 32,
+            "type": 28,
+            "symbol": "archive_word",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_006edd88",
+            "offset": 52,
+            "type": 28,
+            "symbol": "archive_word",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 68,
+      "candidateLinkedSpanSha256": "beb267cd7bad83fab83e95cfb7209874ecd8e748e7348b7b745fcae5d17635a9",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/xbb/packet.json",
+          "sha256": "19e36bd6242892854436b54d61eb33999d6916c4157cc8dc18bb647c6bc4ad90",
+          "bytes": 286684
+        },
+        "verifiedTests": 15,
+        "constructionAndRangeCases": 451,
+        "attemptedFixtureCases": 451,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 14,
+        "originalInstructionsReached": 14,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "All initialized fixture bytes are compared after typed pointer and physical holder-width translation. Archive bytes are borrowed and read-only as consumed here. Real SDK allocator/free wrappers execute only on the reference side; no SDK source credit follows.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite initialized backing/count/name domain; arbitrary invalid payload offsets are unsupported.",
+          "Original SDK heap ready/current heap are explicit platform preconditions; no SDK startup/allocator recovery credit.",
+          "Borrowed archive immutability applies to these functions only; later BCH relocation is outside this proof.",
+          "Supplemental36-byte deleting destructor is not admitted to the canonical census.",
+          "Gzip preparation of one owner XBB fixture is not wrapper/inflate source validation.",
+          "No universal equivalence, independent clean replay or whole-game/device execution is claimed."
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7265728,
+        "mode": "ARM"
+      },
+      "symbol": "fn_006eddc0",
+      "source": {
+        "path": "src/native/wave032/archive_members.c",
+        "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+        "bytes": 1657
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 44,
+      "originalInstructionRanges": [
+        {
+          "start": 7265728,
+          "endExclusive": 7265772,
+          "bytes": 44
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 44,
+      "originalSpanSha256": "c0dcc2035748ceec5df698f501d27e0540a3a100fedea5d6c5f0df36766642b2",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 3535412,
+          "address": 3535860,
+          "bytes": 4,
+          "sha256": "dd23be9977c5bd902b35a4a341023da5b05ebd3396c5eb5ec54a8797f754fdbc"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3538256,
+          "address": 3538972,
+          "bytes": 4,
+          "sha256": "e70fbd9f9c79aec8218035a4635b769ea93b3a4be2910e65ca280bd9baa21f78"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6121808,
+          "address": 6121908,
+          "bytes": 4,
+          "sha256": "b0f9f82ef2862931ec199ee8c664b8ac5adc6b8fe614c1d09cac779495f68255"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/xbb-seal-first/arm/archive_members.o",
+          "sha256": "c8a129e251779d47cd6e1d53550aee7f55d69a389fa1a6550245be6ce539aa5c",
+          "bytes": 3640
+        },
+        "section": ".text.fn_006eddc0",
+        "bytes": 64,
+        "sha256": "a7b6bb252f00e7daffda102d5f6a747317cba196a6d318088e7f42cb3800bf88",
+        "source": {
+          "path": "src/native/wave032/archive_members.c",
+          "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+          "bytes": 1657
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_006eddc0",
+            "offset": 8,
+            "type": 28,
+            "symbol": "fn_00183688",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_006eddc0",
+            "offset": 44,
+            "type": 28,
+            "symbol": "archive_word",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 64,
+      "candidateLinkedSpanSha256": "6a8d8579cdef4421a5468319abd66f9ad8fd15ec8b595a6e4dfd91b83def5f59",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/xbb/packet.json",
+          "sha256": "19e36bd6242892854436b54d61eb33999d6916c4157cc8dc18bb647c6bc4ad90",
+          "bytes": 286684
+        },
+        "verifiedTests": 15,
+        "constructionAndRangeCases": 451,
+        "attemptedFixtureCases": 451,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 11,
+        "originalInstructionsReached": 11,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "All initialized fixture bytes are compared after typed pointer and physical holder-width translation. Archive bytes are borrowed and read-only as consumed here. Real SDK allocator/free wrappers execute only on the reference side; no SDK source credit follows.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite initialized backing/count/name domain; arbitrary invalid payload offsets are unsupported.",
+          "Original SDK heap ready/current heap are explicit platform preconditions; no SDK startup/allocator recovery credit.",
+          "Borrowed archive immutability applies to these functions only; later BCH relocation is outside this proof.",
+          "Supplemental36-byte deleting destructor is not admitted to the canonical census.",
+          "Gzip preparation of one owner XBB fixture is not wrapper/inflate source validation.",
+          "No universal equivalence, independent clean replay or whole-game/device execution is claimed."
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7265772,
+        "mode": "ARM"
+      },
+      "symbol": "fn_006eddec",
+      "source": {
+        "path": "src/native/wave032/archive_members.c",
+        "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+        "bytes": 1657
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 32,
+      "originalInstructionRanges": [
+        {
+          "start": 7265772,
+          "endExclusive": 7265804,
+          "bytes": 32
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 32,
+      "originalSpanSha256": "bf138691dbe796fc1fcc406f5020b88d1e0b54ca308771e145d02db19cbcb7d9",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 2588292,
+          "address": 2588440,
+          "bytes": 4,
+          "sha256": "92f3b8992138407442192aa4000d97404d6d9d80e583077d8ec20301c4bac3a8"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2588292,
+          "address": 2588500,
+          "bytes": 4,
+          "sha256": "cfb0ec9b6c9a9d78aea0a948ff6e2f8b3f58a583b0b2f7a6ec0c5fca38f3b1f7"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2588292,
+          "address": 2588680,
+          "bytes": 4,
+          "sha256": "d457ef711030c280a9004bd819efb0b75030672eb6d1972f535472a1da1efebe"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/xbb-seal-first/arm/archive_members.o",
+          "sha256": "c8a129e251779d47cd6e1d53550aee7f55d69a389fa1a6550245be6ce539aa5c",
+          "bytes": 3640
+        },
+        "section": ".text.fn_006eddec",
+        "bytes": 56,
+        "sha256": "ffe094d8a98a2539e184d28cb2168c8cd92ed0dafbbd4cd6050c25e6fafc1278",
+        "source": {
+          "path": "src/native/wave032/archive_members.c",
+          "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+          "bytes": 1657
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_006eddec",
+            "offset": 36,
+            "type": 28,
+            "symbol": "archive_word",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 56,
+      "candidateLinkedSpanSha256": "1c5a3fc2c657785917f255f0f272696eebd1dc06176e24b0e211347c1c14563b",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/xbb/packet.json",
+          "sha256": "19e36bd6242892854436b54d61eb33999d6916c4157cc8dc18bb647c6bc4ad90",
+          "bytes": 286684
+        },
+        "verifiedTests": 15,
+        "constructionAndRangeCases": 451,
+        "attemptedFixtureCases": 451,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 8,
+        "originalInstructionsReached": 8,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "All initialized fixture bytes are compared after typed pointer and physical holder-width translation. Archive bytes are borrowed and read-only as consumed here. Real SDK allocator/free wrappers execute only on the reference side; no SDK source credit follows.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite initialized backing/count/name domain; arbitrary invalid payload offsets are unsupported.",
+          "Original SDK heap ready/current heap are explicit platform preconditions; no SDK startup/allocator recovery credit.",
+          "Borrowed archive immutability applies to these functions only; later BCH relocation is outside this proof.",
+          "Supplemental36-byte deleting destructor is not admitted to the canonical census.",
+          "Gzip preparation of one owner XBB fixture is not wrapper/inflate source validation.",
+          "No universal equivalence, independent clean replay or whole-game/device execution is claimed."
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7265804,
+        "mode": "ARM"
+      },
+      "symbol": "fn_006ede0c",
+      "source": {
+        "path": "src/native/wave032/archive_members.c",
+        "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+        "bytes": 1657
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 60,
+      "originalInstructionRanges": [
+        {
+          "start": 7265804,
+          "endExclusive": 7265864,
+          "bytes": 60
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 60,
+      "originalSpanSha256": "2675a8110a9dfd03ef40414f301f4e238527966819e01a4bd1d3f03e32580725",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 2990776,
+          "address": 2991064,
+          "bytes": 4,
+          "sha256": "8fa367550eea8d031270d12bab011a03b0610899a8102c5fcd2269582b438893"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/xbb-seal-first/arm/archive_members.o",
+          "sha256": "c8a129e251779d47cd6e1d53550aee7f55d69a389fa1a6550245be6ce539aa5c",
+          "bytes": 3640
+        },
+        "section": ".text.fn_006ede0c",
+        "bytes": 76,
+        "sha256": "c658cb40953bd7f0c7260b99b52b3f26fa7301d1c801f8e729bcfae536b21068",
+        "source": {
+          "path": "src/native/wave032/archive_members.c",
+          "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+          "bytes": 1657
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_006ede0c",
+            "offset": 32,
+            "type": 28,
+            "symbol": "archive_word",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_006ede0c",
+            "offset": 52,
+            "type": 28,
+            "symbol": "archive_word",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 76,
+      "candidateLinkedSpanSha256": "0ef04a7fe9950cd3457a700ecf3f1d6aeed7bdb948e43f2819db2ecdc88bf1e0",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/xbb/packet.json",
+          "sha256": "19e36bd6242892854436b54d61eb33999d6916c4157cc8dc18bb647c6bc4ad90",
+          "bytes": 286684
+        },
+        "verifiedTests": 15,
+        "constructionAndRangeCases": 451,
+        "attemptedFixtureCases": 451,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 15,
+        "originalInstructionsReached": 15,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "All initialized fixture bytes are compared after typed pointer and physical holder-width translation. Archive bytes are borrowed and read-only as consumed here. Real SDK allocator/free wrappers execute only on the reference side; no SDK source credit follows.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite initialized backing/count/name domain; arbitrary invalid payload offsets are unsupported.",
+          "Original SDK heap ready/current heap are explicit platform preconditions; no SDK startup/allocator recovery credit.",
+          "Borrowed archive immutability applies to these functions only; later BCH relocation is outside this proof.",
+          "Supplemental36-byte deleting destructor is not admitted to the canonical census.",
+          "Gzip preparation of one owner XBB fixture is not wrapper/inflate source validation.",
+          "No universal equivalence, independent clean replay or whole-game/device execution is claimed."
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7265864,
+        "mode": "ARM"
+      },
+      "symbol": "fn_006ede48",
+      "source": {
+        "path": "src/native/wave032/archive_members.c",
+        "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+        "bytes": 1657
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 60,
+      "originalInstructionRanges": [
+        {
+          "start": 7265864,
+          "endExclusive": 7265924,
+          "bytes": 60
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 60,
+      "originalSpanSha256": "a54a35a23606af4d577ad6144994eed51b3bd9f3f39df633498556a600ff200a",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 2549256,
+          "address": 2549360,
+          "bytes": 4,
+          "sha256": "33201043036bf8a7ad01b24737237a47a9102eafe88152bf9bcc4500657559a2"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2554136,
+          "address": 2554376,
+          "bytes": 4,
+          "sha256": "a9ea4ed7cef1ab974ad02d384e0f330b81a2042bcbe5b77e6b35cb5054807525"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/xbb-seal-first/arm/archive_members.o",
+          "sha256": "c8a129e251779d47cd6e1d53550aee7f55d69a389fa1a6550245be6ce539aa5c",
+          "bytes": 3640
+        },
+        "section": ".text.fn_006ede48",
+        "bytes": 72,
+        "sha256": "6e779ead39caab4269e2c306d9a2d923be2127ec1fc2d72594f9335fb01c70ae",
+        "source": {
+          "path": "src/native/wave032/archive_members.c",
+          "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+          "bytes": 1657
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_006ede48",
+            "offset": 8,
+            "type": 28,
+            "symbol": "fn_00183688",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_006ede48",
+            "offset": 36,
+            "type": 28,
+            "symbol": "archive_word",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_006ede48",
+            "offset": 60,
+            "type": 29,
+            "symbol": "archive_word",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 72,
+      "candidateLinkedSpanSha256": "1b70cdbad8ec64a7130b46f19f58b3304873ba4e839171fc73419bbbd15c665e",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/xbb/packet.json",
+          "sha256": "19e36bd6242892854436b54d61eb33999d6916c4157cc8dc18bb647c6bc4ad90",
+          "bytes": 286684
+        },
+        "verifiedTests": 15,
+        "constructionAndRangeCases": 451,
+        "attemptedFixtureCases": 451,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 15,
+        "originalInstructionsReached": 15,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "All initialized fixture bytes are compared after typed pointer and physical holder-width translation. Archive bytes are borrowed and read-only as consumed here. Real SDK allocator/free wrappers execute only on the reference side; no SDK source credit follows.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite initialized backing/count/name domain; arbitrary invalid payload offsets are unsupported.",
+          "Original SDK heap ready/current heap are explicit platform preconditions; no SDK startup/allocator recovery credit.",
+          "Borrowed archive immutability applies to these functions only; later BCH relocation is outside this proof.",
+          "Supplemental36-byte deleting destructor is not admitted to the canonical census.",
+          "Gzip preparation of one owner XBB fixture is not wrapper/inflate source validation.",
+          "No universal equivalence, independent clean replay or whole-game/device execution is claimed."
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7265924,
+        "mode": "ARM"
+      },
+      "symbol": "fn_006ede84",
+      "source": {
+        "path": "src/native/wave032/archive_members.c",
+        "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+        "bytes": 1657
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 48,
+      "originalInstructionRanges": [
+        {
+          "start": 7265924,
+          "endExclusive": 7265972,
+          "bytes": 48
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 48,
+      "originalSpanSha256": "c1169a3b87a0815ed5738fd6e0b48890c68d5d6cd1bd2a170aa34259775f90b4",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 2785300,
+          "address": 2785392,
+          "bytes": 4,
+          "sha256": "6762e70f6b531074b34925e26f3395b0d89c656d3cde88766424efb022052426"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2785300,
+          "address": 2785440,
+          "bytes": 4,
+          "sha256": "f3c6efca6a178445aca4af8e9d254ace65ae620985228a749e2773c9bd3f1998"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3244648,
+          "address": 3244832,
+          "bytes": 4,
+          "sha256": "857a0080bf80352f8c1e3232c09c9681c0b362cc0519324a7cd7e6d4f68b0217"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3878828,
+          "address": 3878880,
+          "bytes": 4,
+          "sha256": "21f5f0e1548f0bc19e9e4b4f4d7764c7a7281a9463277dc0bf82169d8d1e3e40"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3886568,
+          "address": 3886620,
+          "bytes": 4,
+          "sha256": "8d28995d47096e9d6ce1d6411b7f0a011c5d6f683c1531bdff69b382efe10b03"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3886748,
+          "address": 3886800,
+          "bytes": 4,
+          "sha256": "363b91fbf615939ea76da7dd51f17e9fe3cc8b5d8fdd66736543d309e0422393"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3887352,
+          "address": 3887540,
+          "bytes": 4,
+          "sha256": "50ecaa12c3131df4ec7fa7dc93f6fce1f020f97934715024983727a1ae5cb6dd"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3887352,
+          "address": 3887724,
+          "bytes": 4,
+          "sha256": "caab394751ff3423e72a110ba4151e35e7369a021befb4ee5f5c5030581d68e0"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3887352,
+          "address": 3887884,
+          "bytes": 4,
+          "sha256": "c9b584091e4deaa0ad9162917819f1081960b28c8c03297d4f7c4d6a58f98fb3"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3887352,
+          "address": 3888048,
+          "bytes": 4,
+          "sha256": "6df2fcd33baaafd3ed712715c6fcaf4a6161e4e3df1abd15ad54518b61eb8c7b"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/xbb-seal-first/arm/archive_members.o",
+          "sha256": "c8a129e251779d47cd6e1d53550aee7f55d69a389fa1a6550245be6ce539aa5c",
+          "bytes": 3640
+        },
+        "section": ".text.fn_006ede84",
+        "bytes": 64,
+        "sha256": "fb987b97379483e2b2baa30b89f8b1aca1ff305cadc18a566d9bbe02cdee5496",
+        "source": {
+          "path": "src/native/wave032/archive_members.c",
+          "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+          "bytes": 1657
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_006ede84",
+            "offset": 28,
+            "type": 28,
+            "symbol": "archive_word",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_006ede84",
+            "offset": 52,
+            "type": 29,
+            "symbol": "archive_word",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 64,
+      "candidateLinkedSpanSha256": "d9a2f16898f1b8ec9d1c705b432e5722e01a47b78deb9e6adabb75cf4142c0c2",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/xbb/packet.json",
+          "sha256": "19e36bd6242892854436b54d61eb33999d6916c4157cc8dc18bb647c6bc4ad90",
+          "bytes": 286684
+        },
+        "verifiedTests": 15,
+        "constructionAndRangeCases": 451,
+        "attemptedFixtureCases": 451,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 12,
+        "originalInstructionsReached": 12,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "All initialized fixture bytes are compared after typed pointer and physical holder-width translation. Archive bytes are borrowed and read-only as consumed here. Real SDK allocator/free wrappers execute only on the reference side; no SDK source credit follows.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite initialized backing/count/name domain; arbitrary invalid payload offsets are unsupported.",
+          "Original SDK heap ready/current heap are explicit platform preconditions; no SDK startup/allocator recovery credit.",
+          "Borrowed archive immutability applies to these functions only; later BCH relocation is outside this proof.",
+          "Supplemental36-byte deleting destructor is not admitted to the canonical census.",
+          "Gzip preparation of one owner XBB fixture is not wrapper/inflate source validation.",
+          "No universal equivalence, independent clean replay or whole-game/device execution is claimed."
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7265972,
+        "mode": "ARM"
+      },
+      "symbol": "fn_006edeb4",
+      "source": {
+        "path": "src/native/wave032/archive_members.c",
+        "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+        "bytes": 1657
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 20,
+      "originalInstructionRanges": [
+        {
+          "start": 7265972,
+          "endExclusive": 7265992,
+          "bytes": 20
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 20,
+      "originalSpanSha256": "676f45900c740c76a8c1b84607819ffbd5db038f73148f2f3aada492267423d6",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 2785300,
+          "address": 2785380,
+          "bytes": 4,
+          "sha256": "c89d66f830036afe4c151d390a7b5e95d3d41f87f2ab14bfe157e06a62989fb8"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2990776,
+          "address": 2990992,
+          "bytes": 4,
+          "sha256": "42702f755dd1d1b1c623052ffe07227e9d77b1cce4be3ac4a11baf5ad419fa85"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3244648,
+          "address": 3244728,
+          "bytes": 4,
+          "sha256": "f1b8208e1d4ab8c413b567549165b85c6c4a8f246f5394c6d5fdbbd30393f033"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3887352,
+          "address": 3887484,
+          "bytes": 4,
+          "sha256": "2b39e7b7eea0bff793fca02145de36561b966c6c4ea9e6fde8b2b434b9d8a9ac"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/native-archive032/xbb-seal-first/arm/archive_members.o",
+          "sha256": "c8a129e251779d47cd6e1d53550aee7f55d69a389fa1a6550245be6ce539aa5c",
+          "bytes": 3640
+        },
+        "section": ".text.fn_006edeb4",
+        "bytes": 28,
+        "sha256": "5ff907a176198bc3354ba5312959dfdbc5ceadaf508380a69cfc3178671786a6",
+        "source": {
+          "path": "src/native/wave032/archive_members.c",
+          "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+          "bytes": 1657
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_006edeb4",
+            "offset": 24,
+            "type": 29,
+            "symbol": "archive_word",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 28,
+      "candidateLinkedSpanSha256": "aa0a7f6ee3efb00663f5f8e273aa6d16e485dbb370fa20df25caf96f3f478af7",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/native-archive032/xbb/packet.json",
+          "sha256": "19e36bd6242892854436b54d61eb33999d6916c4157cc8dc18bb647c6bc4ad90",
+          "bytes": 286684
+        },
+        "verifiedTests": 15,
+        "constructionAndRangeCases": 451,
+        "attemptedFixtureCases": 451,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 5,
+        "originalInstructionsReached": 5,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "All initialized fixture bytes are compared after typed pointer and physical holder-width translation. Archive bytes are borrowed and read-only as consumed here. Real SDK allocator/free wrappers execute only on the reference side; no SDK source credit follows.",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite initialized backing/count/name domain; arbitrary invalid payload offsets are unsupported.",
+          "Original SDK heap ready/current heap are explicit platform preconditions; no SDK startup/allocator recovery credit.",
+          "Borrowed archive immutability applies to these functions only; later BCH relocation is outside this proof.",
+          "Supplemental36-byte deleting destructor is not admitted to the canonical census.",
+          "Gzip preparation of one owner XBB fixture is not wrapper/inflate source validation.",
+          "No universal equivalence, independent clean replay or whole-game/device execution is claimed."
+        ]
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave032/archive.h",
+      "sha256": "898228acad7e6c345af740679090ecfb27e05a15fcd8326c15c134a25099eb9c",
+      "bytes": 2058
+    },
+    {
+      "path": "src/native/wave032/third_party/zlib-1.2.7/zconf.h",
+      "sha256": "ed886c15c846d31d2f6e6f5a33d3f6547812d85ec2aff4c3d70e8781e45d0959",
+      "bytes": 15291
+    },
+    {
+      "path": "src/native/wave032/third_party/zlib-1.2.7/zlib.h",
+      "sha256": "31b7ed2b5bceea407626bdbcf16a1efa9770e91b646012906ac8303aa3f1f242",
+      "bytes": 86717
+    },
+    {
+      "path": "toolscripts/native_archive032_fixture.h",
+      "sha256": "56d67bf6961bb8174764ac5a97b4ad3f1e817ec76698e60631f829e80de9fc92",
+      "bytes": 1372
+    }
+  ],
+  "originalPackets": [
+    {
+      "path": "evidence/lanes/native-archive032/xbb/packet.json",
+      "sha256": "19e36bd6242892854436b54d61eb33999d6916c4157cc8dc18bb647c6bc4ad90",
+      "bytes": 286684
+    },
+    {
+      "path": "evidence/lanes/native-archive032/xbb/verification.json",
+      "sha256": "c4eaeb70d7f7a3b2d9dc0ab7e7695f2ef4870eefe068db83da6434a4978f45f8",
+      "bytes": 468
+    }
+  ],
+  "producer": {
+    "path": "toolscripts/native_archive032_functional_proposal.py",
+    "sha256": "e47ac5dc936f8df837fc6e428b7e33dda56b341f792e0677e960c70c0879083e",
+    "bytes": 6325
+  },
+  "census": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+    "bytes": 20574405
+  },
+  "supplementalInventory": [
+    {
+      "path": "evidence/lanes/wave013-native/method-dispatch-overlay.json",
+      "sha256": "ba4a6b8f633d62dc7ea2b9b8c473459215b7f5d62f42d79b849497900116c75e",
+      "bytes": 131026
+    },
+    {
+      "path": "evidence/verification/array007-function-overlay.json",
+      "sha256": "3f3121445869c567a8460efb59e97fe60d6b9073220ded6e593ae2e7acdcd7eb",
+      "bytes": 3339
+    },
+    {
+      "path": "evidence/verification/closure010-function-overlay.json",
+      "sha256": "3eb297926b78bcf312dc6a2bd2a06228a318de91bc4aebcda522d8a1605dd1a1",
+      "bytes": 4237
+    },
+    {
+      "path": "evidence/verification/prototype011-function-overlay.json",
+      "sha256": "6c9d4f364ed5b86f9c1a67699066e879214c57c0e159978200d53435d9b241c3",
+      "bytes": 3564
+    },
+    {
+      "path": "evidence/verification/native-closure013-function-overlay.json",
+      "sha256": "162506e5b52f798a2e41016b62f1be8c7bc38f9553b161b022fd4c1a7b64fcef",
+      "bytes": 4258
+    },
+    {
+      "path": "evidence/verification/weak014-function-overlay.json",
+      "sha256": "228f73f849e59725fcac20725adfddf69b7d14fedf2ccc1b2a8f4b766d4d06cd",
+      "bytes": 4882
+    },
+    {
+      "path": "evidence/verification/string015-function-overlay.json",
+      "sha256": "66ba81473f5175bb8bad57f0c954465b88e0fc9bc898bc6ceece05d7efda6c03",
+      "bytes": 5054
+    },
+    {
+      "path": "evidence/verification/lookup020-function-overlay.json",
+      "sha256": "859e76a286fba74b4484450674ac3b01178077bc967e4cda3dc0821146f1682a",
+      "bytes": 4450
+    }
+  ],
+  "supplementalCandidateExcludedPendingInventoryReview": [
+    "fn_005f5d14"
+  ],
+  "originalInstructionBytes": 992,
+  "independentCleanReplayClaimed": false,
+  "sharedRegistryChanged": false
+}

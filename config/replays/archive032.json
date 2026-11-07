@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "name": "archive032",
+  "producerSteps": [
+    {
+      "name": "archive032-xbb",
+      "args": [
+        "toolscripts/native_archive032_packet.py",
+        "--work",
+        "work/native-archive032/xbb-seal",
+        "--output",
+        "evidence/lanes/native-archive032/xbb"
+      ]
+    }
+  ],
+  "tests": [
+    "isolated_component_replay"
+  ],
+  "packets": [
+    "evidence/lanes/native-archive032/xbb/packet.json",
+    "evidence/lanes/native-archive032/xbb/verification.json",
+    "evidence/lanes/native-archive032/xbb/case-results.json"
+  ]
+}

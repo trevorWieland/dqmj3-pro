@@ -23,3 +23,11 @@
 #define fn_001a1010 sq_native_type_error025
 #define fn_001a83dc sq_value_to_string026
 #define fn_007434e8 sq_index_to_string026
+#define fn_00190c50 sq_class_create_instance030
+#define fn_00192548 sq_class_instance_initialize030
+#define fn_001a18a8 sq_class_initialize030
+#define fn_0019a308 sq_class_lock030
+#define fn_001a4734 sq_class_table_clone030
+#define fn_001a2b2c sq_class_clone_cursor030
+#define fn_001cdba0 sq_class_instance_release030
+#define fn_001cdcc4 sq_class_instance_destroy030

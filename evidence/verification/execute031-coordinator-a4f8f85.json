@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-independent-bounded-partial-execute031",
+  "sourceRevision": "a4f8f85f43ea608f79f3a54e77d890cf3b1ddf32",
+  "completeUnmodifiedBatchReplayPassed": true,
+  "rawReplay": {
+    "path": "evidence/verification/execute031-isolated-a4f8f85.json",
+    "bytes": 15368,
+    "sha256": "27cb954cef7fe705abe0aa2bcfecb3cda642e09a08d013e0c9d2a06b8b0b87fe"
+  },
+  "driver": {
+    "path": "toolscripts/isolated_component_replay.py",
+    "bytes": 10926,
+    "sha256": "471f8bb375cca7d1e156a98570fc6fc29f15e858b5ec6234646c3acc4627072e"
+  },
+  "plan": {
+    "path": "config/replays/execute031.json",
+    "bytes": 450,
+    "sha256": "ddb2e91ee4d72a272b816b805c3972592e22c2acd5678474bdf1de6be7ba9e7a"
+  },
+  "ready": {
+    "path": "evidence/lanes/squirrel-execute031/ready.json",
+    "bytes": 6747,
+    "sha256": "97e26b14a4a6d1a3ee61b04826787dcf827e3f334d7860e259972d5905082041"
+  },
+  "primaryPrivateExecution": {
+    "path": "work/squirrel-execute031/qualified314/report.json",
+    "bytes": 32409171,
+    "sha256": "60514b04ecf6bdd1750c991eec53403f56cce3bdee352a2b1c4ce2959013109d"
+  },
+  "independentPrivateExecution": {
+    "path": "work/clean-replay/execute031-a4f8f85/work/squirrel-execute031/qualified314/report.json",
+    "bytes": 32409171,
+    "sha256": "60514b04ecf6bdd1750c991eec53403f56cce3bdee352a2b1c4ce2959013109d"
+  },
+  "allReportAndLinkedArtifactBytesIdentical": true,
+  "artifacts": [
+    {
+      "path": "work/squirrel-execute031/qualified314/arm/execute031.elf",
+      "bytes": 1392876,
+      "sha256": "c5f728c0577fda3f5c59abc356d93001c3fb7ab26ba294a0b4461e760b374304"
+    },
+    {
+      "path": "work/squirrel-execute031/qualified314/windows/execute031.exe",
+      "bytes": 49664,
+      "sha256": "3860919b06d3bc5f08031488454301963d0e291e53d2ede8d172980f142906dd"
+    },
+    {
+      "path": "work/squirrel-execute031/qualified314/android/android-model.elf",
+      "bytes": 1199264,
+      "sha256": "f36717c87e362dff426d007178c9560d40025d64420badf8063ed21a25d62b5f"
+    },
+    {
+      "path": "work/squirrel-execute031/qualified314/frozen028-arm/execute028.elf",
+      "bytes": 406536,
+      "sha256": "46cfc0e7e0ac0ceb152a4ab77e76d754ff410db03858597c646503f60e293281"
+    }
+  ],
+  "cases": 314,
+  "fourTargetObservations": 1256,
+  "returningControls": 22,
+  "sameFinalArenaControls": 4,
+  "tests": 81,
+  "publicUnits": 306,
+  "publicCompilations": 854,
+  "baseline028ProgramsPreserved": 108,
+  "all108StructuredPrefixesAndEntireDefinedSourceArenasIdentical": true,
+  "wholeOriginalSourceArenaEqualSets": 286,
+  "nativeInactiveFrameDifferenceSets": 28,
+  "observedOpcodeEntries": 37,
+  "rootInstructionPcsExercised": 1006,
+  "rootInstructionBytesObserved": 4024,
+  "rootInstructionBytesTotal": 13184,
+  "classifiedDataBytes": 628,
+  "wholeExecuteHelperVmGameAndroidOsOrPhysicalDeviceClaimed": false,
+  "sourceAdmissionGranted": false,
+  "newWholeFunctionCredit": 0,
+  "producer": {
+    "path": "evidence/verification/producers/review-execute031-replay.py",
+    "bytes": 4381,
+    "sha256": "cc08d96fd1187b286dc26934c6e3c0641cfd0e396716e66d8db87d3f63873f12"
+  }
+}
