@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-stopped-before-known-reporting-metadata-failure",
+  "sourceRevision": "c2aa3ee30694c56c604118b443228fe358ab1463",
+  "reason": "The new64-entry ByteMatch metadata header was present, while active306-function proofs still pinned its63-entry predecessor. Strict functional_report rejected the stale header SHA; no validator was weakened. The049 producer was stopped before wasting the remaining corpus runtime.",
+  "sourceRuntimeCodeChanged": false,
+  "behaviorOrSourceCreditGranted": 0,
+  "realIntakeCleanupReceipt": {
+    "path": "work/clean-replay/startup049-c2aa3ee/intake-cleanup.json"
+  },
+  "correctiveAction": "Append-only source-alias metadata refresh, full strict310-function validation, then a new immutable complete replay."
+}
