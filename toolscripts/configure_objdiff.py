@@ -7,6 +7,7 @@ import sys
 from pathlib import Path, PurePosixPath
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import native_census_overlay
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -114,6 +115,10 @@ def static_project(root, manifest, version):
     mapping = json.loads(contained(root, manifest["objectMap"]).read_text(encoding="utf-8"))
     if any(mapping["census"][key] != census[key] for key in ("path", "sha256")):
         raise ValueError("Object symbols were not built from the reviewed current census")
+    composed, overlays = native_census_overlay.compose(root, discovered)
+    if (mapping.get("censusOverlays", []) != overlays
+            or overlays and mapping.get("discoveredFunctionEntries") != composed["functionCount"]):
+        raise ValueError("Object symbols differ from reviewed supplemental inventory")
     mapped = verify_objects(root, mapping)
     if (sum(row["code"] for row in mapped.values()), sum(row["matched_code"] for row in mapped.values()),
             sum(row["matched_functions"] for row in mapped.values())) != (

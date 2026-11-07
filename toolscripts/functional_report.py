@@ -8,6 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import ci_native_build as ci
+import native_census_overlay
 from bootstrap_public_compiler import contained
 
 
@@ -32,6 +33,7 @@ def generate(root, report, registry):
     if registry['census']['path'] != CENSUS:
         raise ValueError('Unsupported reviewed functional census')
     census = ci.read(checked(root, registry['census']))
+    census, unused_overlays = native_census_overlay.compose(root, census)
     canonical = {row['address']: row for row in census['functions']}
     if (census['codeSha256'] != registry['moduleSha256']
             or len(canonical) != census['functionCount'] or len(canonical) != len(census['functions'])):

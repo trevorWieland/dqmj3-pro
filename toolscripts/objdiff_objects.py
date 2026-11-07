@@ -13,6 +13,7 @@ from elftools.elf.elffile import ELFFile
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import ci_native_build
 import configure_objdiff
+import native_census_overlay
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -195,6 +196,7 @@ def build(root, census_path, output):
     text = next(row for row in inventory["layout"]["segments"] if row["name"] == "text")
     if (census["initializedTextStart"], census["initializedTextGrossBytes"]) != (text["address"], text["initializedBytes"]):
         raise ValueError("Census and loader initialized-text extents differ")
+    census, overlay_references = native_census_overlay.compose(root, census)
     accepted = ci_native_build.accepted_functions(root)
     compiled = root / "work/objdiff-object-compile"
     build_result = ci_native_build.compile_accepted(root, compiled)
@@ -282,6 +284,7 @@ def build(root, census_path, output):
     result = {"schemaVersion": 1, "version": "update-content0", "moduleSha256": inventory["codeSha256"],
               "inventory": {"path": inventory_path.relative_to(root).as_posix(), "sha256": digest(inventory_path)},
               "census": {"path": census_path.relative_to(root).as_posix(), "sha256": digest(census_path)},
+              "censusOverlays": overlay_references, "discoveredFunctionEntries": census["functionCount"],
               "initializedTextBytes": text["initializedBytes"], "acceptedInstructionBytes": sum(row["instructionBytes"] for row in accepted),
               "initializedDataBytes": sum(row["initializedBytes"] for row in inventory["layout"]["segments"] if row["name"] != "text"),
               "bssBytes": inventory["layout"]["bssBytes"], "layout": inventory["layout"],

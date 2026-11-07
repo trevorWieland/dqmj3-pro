@@ -1,0 +1,17 @@
+def mutations():
+    return [('constructor-bit', 'control_compile.c', 'set->value.control_bit = control_bit;',
+             'set->value.control_bit = control_bit + 1;', {'operation': 'construct_control', 'bit': 255}),
+            ('membership-value', 'control_compile.c', 'members[destination->identifier] = 1;',
+             'members[destination->identifier] = 2;', {'operation': 'control', 'count': 2, 'pending': [[0, 7]]}),
+            ('copy-current-mask', 'control_compile.c',
+             'fn_00301a9c(members, (*state_pointer)->data.members, context->source_count);',
+             'for (unsigned int index = 0; index < context->source_count; ++index) members[index] = 0;',
+             {'operation': 'control', 'count': 2, 'members': [0, 1], 'pending': [[0, 7]]}),
+            ('skip-new-transition', 'control_compile.c',
+             'fn_001010c8(members, (*state_pointer)->data.members, context->source_count) != 0',
+             'fn_001010c8(members, (*state_pointer)->data.members, context->source_count) == 0',
+             {'operation': 'control', 'count': 2, 'pending': [[0, 7]]}),
+            ('retain-temporary-allocation', 'control_compile.c',
+             'fn_004c3994(context->data_arena, members, blocks);',
+             'if (blocks == 0) fn_004c3994(context->data_arena, members, blocks);',
+             {'operation': 'control', 'count': 2, 'pending': [[0, 7]]})]

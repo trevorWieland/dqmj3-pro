@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "packetSha256": "f81ba9ad84f8d225a2a153b86de16d8f0ff38dbc073fefb5d5c08b5e857cbdff",
+  "ownershipCounts": {
+    "frozen-seeded-census": 7,
+    "wave013-method-overlay": 38
+  },
+  "ownershipCsv": {
+    "path": "evidence/lanes/wave013-native/tokenizer-body-ownership.csv",
+    "sha256": "e650be124086bec6c5ada99ffd5ee88e3c9c2b91845365cd4683f764c42f7ce0"
+  },
+  "exactCandidate": {
+    "symbol": "fn_004bfcbc",
+    "address": 4979900,
+    "ownership": "wave013 supplemental method-dispatch overlay, absent from frozen seeded census",
+    "instructionRanges": [
+      {
+        "start": 4979900,
+        "endExclusive": 4979908,
+        "bytes": 8,
+        "sha256": "360e42c8d5fdec86ec8ac1e7dee4036c011d5d765363a8ab68e21cde9f86df6b"
+      }
+    ],
+    "literalPoolRanges": [],
+    "candidateObject": {
+      "object": {
+        "path": "work/wave013-native/tokenizer-release/source/token_escapes.o",
+        "sha256": "62f38f70b965bc52dab17ccd284adc21fa2c2a27410656eaa206a7433233db84",
+        "bytes": 6312
+      },
+      "section": ".text.fn_004bfcbc",
+      "bytes": 8,
+      "sha256": "360e42c8d5fdec86ec8ac1e7dee4036c011d5d765363a8ab68e21cde9f86df6b",
+      "source": {
+        "path": "src/native/wave013/token_escapes.c",
+        "sha256": "9659b402bfc27b50da9d81712ada6938ea2e3e1ac526d2e11b0048b9c5d47467",
+        "bytes": 3422
+      },
+      "relocations": []
+    },
+    "candidateLinkedSpanSha256": "360e42c8d5fdec86ec8ac1e7dee4036c011d5d765363a8ab68e21cde9f86df6b",
+    "candidateBytes": 8,
+    "behavior": "Returns integer5 through the normal LR return. It does not fall through into the following shared tail.",
+    "followingPhysicalRange": {
+      "start": 4979908,
+      "endExclusive": 4980128,
+      "owner": "fn_004bf7f0",
+      "role": "shared hexadecimal tail; excluded from fn_004bfcbc ownership"
+    },
+    "acceptedSourceCreditGranted": 0
+  },
+  "initializedTextDenominatorChanged": false
+}

@@ -11,6 +11,8 @@ The code denominator is every ExHeader-declared initialized main ARM text byte. 
 | Base | 7,042,136 | 0 | 0% |
 | Update | 7,051,280 | 5,128 | 0.072724385% |
 
+The frozen seeded census retains 26,573 discovered entries. The independently reviewed method-table supplement adds 44 entries and 3,172 instruction bytes of ownership, producing 26,617 discovered entries without changing the initialized-text denominator or granting source credit. Shared tails have one physical owner. See [pattern source components](pattern-source-components.md).
+
 The base baseline is inventoried separately; only the update currently has admitted source and a supported ByteMatch report. The update's 842,252 initialized rodata bytes, 260,036 initialized data bytes and 210,988 BSS bytes give a separate 1,313,276-byte data denominator, with zero matched data. DSP firmware, PICA shader programs, original interpreted scripts, assets and system firmware do not enter the ARM text denominator. They retain their own inventories and receive no native source credit.
 
 [Executable scope](executable-scope.md) records a fresh recursive audit of both measured CIAs and every supported archive member. It reconciles declared programs and structurally qualifying additional executable candidates. Permitted but unobserved loader services do not invent modules. [Static text accounting](../evidence/lanes/native-inventory-completion/static-text/update.json) independently partitions every initialized text byte into admitted source or unmatched original text. Missing, overlapping or reclassified ranges fail validation.

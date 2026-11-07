@@ -9,6 +9,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from configure_objdiff import contained
+import native_census_overlay
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -128,6 +129,10 @@ def verify_objects(root, mapping):
     if digest(census_path) != census_pin['sha256']:
         raise ValueError('Discovered entry census changed after object construction')
     census = read(census_path)
+    census, overlays = native_census_overlay.compose(root, census)
+    if (mapping.get('censusOverlays', []) != overlays
+            or overlays and mapping.get('discoveredFunctionEntries') != census['functionCount']):
+        raise ValueError('Reporting objects differ from reviewed supplemental inventory')
     if census['codeSha256'] != layout['codeSha256'] or census['functionCount'] != len(census['functions']):
         raise ValueError('Discovered entries belong to another measured image')
     known_entries = {'fn_' + format(row['address'], '08x'): row for row in census['functions']}

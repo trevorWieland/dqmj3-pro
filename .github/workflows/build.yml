@@ -66,6 +66,8 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_static_report_configuration.py -v
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_native_census_overlay.py -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_functional_report.py -v
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Configure reviewed objdiff project

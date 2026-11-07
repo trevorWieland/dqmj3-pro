@@ -15,6 +15,7 @@
       "wave010",
       "wave011-material",
       "wave012",
+      "wave013",
       "wave014"
     ]
   },
@@ -514,6 +515,81 @@
       "targets": [
         "windows-x64"
       ]
+    },
+    {
+      "source": "src/native/wave013/control_compile.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave010/match_state.h",
+        "src/native/wave012/compile_graph.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave012/label_ops.h",
+        "src/native/wave013/control_compile.h"
+      ],
+      "role": "bounded-control-tokenizer-component"
+    },
+    {
+      "source": "src/native/wave013/pattern_lexer.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave013/pattern_tokens.h"
+      ],
+      "role": "bounded-control-tokenizer-component"
+    },
+    {
+      "source": "src/native/wave013/token_ascii.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave013/pattern_tokens.h"
+      ],
+      "role": "bounded-control-tokenizer-component"
+    },
+    {
+      "source": "src/native/wave013/token_dispatch.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave013/pattern_tokens.h"
+      ],
+      "role": "bounded-control-tokenizer-component"
+    },
+    {
+      "source": "src/native/wave013/token_escapes.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave013/pattern_tokens.h"
+      ],
+      "role": "bounded-control-tokenizer-component"
+    },
+    {
+      "source": "src/native/wave013/token_numbers.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave013/pattern_tokens.h"
+      ],
+      "role": "bounded-control-tokenizer-component"
+    },
+    {
+      "source": "src/native/wave013/token_properties.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave013/pattern_tokens.h"
+      ],
+      "role": "bounded-control-tokenizer-component"
+    },
+    {
+      "source": "src/native/wave013/token_repeat.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave013/pattern_tokens.h"
+      ],
+      "role": "bounded-control-tokenizer-component"
     }
   ],
   "excludedSources": [
