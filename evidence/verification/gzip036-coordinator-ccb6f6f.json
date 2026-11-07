@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-independent-bounded-gzip036-wrapper-family",
+  "sourceRevision": "ccb6f6f0426306331a7de56b4df2e9bb36ef5978",
+  "completeUnmodifiedBatchReplayPassed": true,
+  "rawReplay": {
+    "path": "evidence/verification/gzip036-isolated-ccb6f6f.json",
+    "bytes": 16609,
+    "sha256": "7a87b04348ffe912f5e6538469a06a761fc69140818b3af835244d226469cab5"
+  },
+  "primaryPacket": {
+    "path": "evidence/lanes/native-archive032/gzip/packet.json",
+    "bytes": 1933073,
+    "sha256": "494664dfdd7744e2248df69606f49557c83b6567965cd6882214799db67c1629"
+  },
+  "independentPacket": {
+    "path": "work/clean-replay/gzip036-ccb6f6f/work/gzip036-independent/packet/packet.json",
+    "bytes": 2020699,
+    "sha256": "bf32221794f18eb30041065113f62db66b6db6de4acb65c5495a549ad4b5648b"
+  },
+  "frozenManifest": {
+    "path": "evidence/lanes/native-archive032/gzip/frozen-manifest.json",
+    "bytes": 14582,
+    "sha256": "efc55300ebb4b4878056e6d43d9297d692e8291070dc51c2c83f353b3e2e2f01"
+  },
+  "all141CaseRowsByteIdentical": true,
+  "allOtherFieldsCompared": true,
+  "verifiedVariants": [
+    {
+      "path": "work/native-archive032/gzip-seal-v2/modern14/windows/archive_gzip.dll",
+      "kind": "coff-timestamp-only",
+      "primarySha256": "2f4a392809107dabe0bc98f4aea157ff83ef75304180b4c56292607b1c9454b2",
+      "independentSha256": "68921187d025b35b54173958e8170657ea88eebc9c41cf2fe30a19ebfbf9ddf3"
+    },
+    {
+      "path": "work/native-archive032/gzip-seal-v2/historical127/windows/archive_gzip.dll",
+      "kind": "coff-timestamp-only",
+      "primarySha256": "1e7e1d75422fc5c403789c31062230fad1bc5836b65097ce80945ed7957a95e3",
+      "independentSha256": "5ece4a130e5ecc2810ac5bc5b02d376d29bf14655162500635d7a05ba4e84b35"
+    },
+    {
+      "path": "work/native-archive032/gzip-seal-v2/public-tests.log",
+      "kind": "verified-root-output-paths-or-unittest-timing-text",
+      "primarySha256": "231c9b964267eeb7b9305f07673cb6c782d4c1ef28da2a7503de8a2eb7e78b6d",
+      "independentSha256": "352ae2811a280ec2a45314d71ef74b63303b759f7e349a3df7455acae2ee6c26"
+    },
+    {
+      "path": "work/native-archive032/gzip-seal-v2/modern14/windows/archive_gzip.dll",
+      "kind": "coff-timestamp-only",
+      "primarySha256": "2f4a392809107dabe0bc98f4aea157ff83ef75304180b4c56292607b1c9454b2",
+      "independentSha256": "68921187d025b35b54173958e8170657ea88eebc9c41cf2fe30a19ebfbf9ddf3"
+    },
+    {
+      "path": "work/native-archive032/gzip-seal-v2/historical127/windows/archive_gzip.dll",
+      "kind": "coff-timestamp-only",
+      "primarySha256": "1e7e1d75422fc5c403789c31062230fad1bc5836b65097ce80945ed7957a95e3",
+      "independentSha256": "5ece4a130e5ecc2810ac5bc5b02d376d29bf14655162500635d7a05ba4e84b35"
+    },
+    {
+      "path": "work/native-archive032/gzip-seal-v2/public-tests.log",
+      "kind": "verified-root-output-paths-or-unittest-timing-text",
+      "primarySha256": "231c9b964267eeb7b9305f07673cb6c782d4c1ef28da2a7503de8a2eb7e78b6d",
+      "independentSha256": "352ae2811a280ec2a45314d71ef74b63303b759f7e349a3df7455acae2ee6c26"
+    },
+    {
+      "path": "evidence/lanes/native-archive032/gzip/packet.json",
+      "kind": "recursively-compared-json",
+      "primarySha256": "494664dfdd7744e2248df69606f49557c83b6567965cd6882214799db67c1629",
+      "independentSha256": "bf32221794f18eb30041065113f62db66b6db6de4acb65c5495a549ad4b5648b"
+    }
+  ],
+  "cases": 141,
+  "sourceDependencyProfiles": 2,
+  "sourceExecutionPlatformsPerProfile": 3,
+  "returningControlExecutions": 42,
+  "originalInstructionsVisited": 124,
+  "canonicalFunctionsForReview": 5,
+  "canonicalInstructionBytesForReview": 496,
+  "existingGetterNewCredit": 0,
+  "underlyingSdkCredit": 0,
+  "uniqueTests": 97,
+  "publicUnits": 355,
+  "publicCompilations": 999,
+  "sourceAdmissionGranted": false,
+  "wholeMemoryVmGameAndroidOsOrPhysicalDeviceClaimed": false,
+  "comparisonUtility": {
+    "path": "toolscripts/replay_packet_compare.py",
+    "bytes": 3194,
+    "sha256": "e4cbc87fe6be5f190bdf60638220e2c58c588cbfb8f4f57ab957af5cd7af8aef"
+  },
+  "producer": {
+    "path": "evidence/verification/producers/review-gzip036-replay.py",
+    "bytes": 4602,
+    "sha256": "4dabcd3fee5a740d8e260bdfd57b053d98544bdc85956facad4a961223847951"
+  }
+}
