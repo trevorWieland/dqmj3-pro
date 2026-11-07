@@ -1,0 +1,2358 @@
+{
+  "schemaVersion": 1,
+  "programId": "0004000e001acb00",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "status": "proposed-functional-proof-pending-coordinator-review-and-replay",
+  "acceptedSourceCreditGranted": 0,
+  "functions": [
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1051480,
+        "mode": "Thumb"
+      },
+      "symbol": "fn_00100b58",
+      "source": {
+        "path": "src/native/wave013/literal_compare.c",
+        "sha256": "29a5d8f9a86ffbff26e15fe68ddea2043d8dbe498acd70f3d20aa41493d49280",
+        "bytes": 1197
+      },
+      "originalMode": "Thumb",
+      "originalInstructionBytes": 18,
+      "originalInstructionRanges": [
+        {
+          "start": 1051480,
+          "endExclusive": 1051498,
+          "bytes": 18
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 18,
+      "originalSpanSha256": "8b6add75d20bde5f0fd78628ac964503b402f9a27468f87eae39213fbe5da057",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 1122140,
+          "address": 1122528,
+          "bytes": 4,
+          "sha256": "c4ad4f109512874f1a9988406491f9b2b41ad5c23b795e44a19981315b2a4484"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1122140,
+          "address": 1123004,
+          "bytes": 4,
+          "sha256": "1a9554c54dbdd2f1b41c2e4c6db5c598ac1ae3b0ba237163525651187ad019b2"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1163928,
+          "address": 1164432,
+          "bytes": 4,
+          "sha256": "dc28285cc0e3a4f4fc789ec75f9dc870f16384988cf8058819c30edc996104ff"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1163928,
+          "address": 1164660,
+          "bytes": 4,
+          "sha256": "3b9667ac8cc1ca442359cebf9924e1c58d0dcf4a5f42f5c0ffe7303cb071560c"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1163928,
+          "address": 1165280,
+          "bytes": 4,
+          "sha256": "c03bf14bfc3a39035c29bf8e291c9250c57a26c9bd468b8ff33f152529997d55"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1163928,
+          "address": 1165636,
+          "bytes": 4,
+          "sha256": "0dc6b7c74d7504ff815a7536240d5ab18a54f83af499ca49542a44cbf4344afa"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1170192,
+          "address": 1170240,
+          "bytes": 4,
+          "sha256": "992006435c02fc6d3952d0ffb6ed528b466fd5136d1883230873c14d6a1bccf2"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1185612,
+          "address": 1185668,
+          "bytes": 4,
+          "sha256": "2fbe4a89d707ce654aaf3f20b167d27c07c4511e3e76a54cbfb55c10f88633e6"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1239648,
+          "address": 1239688,
+          "bytes": 4,
+          "sha256": "6c1114dfd78cc89ed35212e4fd4f390624a2508c90d3c002e98c2edf82efc5b9"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1239988,
+          "address": 1240028,
+          "bytes": 4,
+          "sha256": "566158f0a0477640eb6a1e028d8e0c0ba1f5a5b98c295137a0610bfc0248bdab"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1240108,
+          "address": 1240156,
+          "bytes": 4,
+          "sha256": "cd4963c723ab9db4bc80fab30017c223ca37fe2e2752289f40389f5b52569371"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1287856,
+          "address": 1287872,
+          "bytes": 4,
+          "sha256": "35ac19af6d16e81b678e3202052b7bce0aedd5809eb14c09a08fa5b197570e24"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1287856,
+          "address": 1288104,
+          "bytes": 4,
+          "sha256": "f4962f85c61ba08a52384c8f2f6c287321a5a43ad3d143bad62ca260cc15c416"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1287856,
+          "address": 1288324,
+          "bytes": 4,
+          "sha256": "9b6ad1fbaa00317104a1ae0424ea467f296ae3188914e7510b49f880f003d894"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1287856,
+          "address": 1288848,
+          "bytes": 4,
+          "sha256": "e77d845fd30f12ff4b65e14ae41d0e79d3d95e3a4b6d0a81e5d6f8dfefda214e"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1287856,
+          "address": 1289320,
+          "bytes": 4,
+          "sha256": "9b755d96a1767ce1ab3b351234a21799c1086ec2670ee7a54714950442979463"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1329728,
+          "address": 1329744,
+          "bytes": 4,
+          "sha256": "629e53142dc5eebd1a75e5aef26e5897083ae1064afe006f2413fa9a9bd5d149"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1341812,
+          "address": 1341832,
+          "bytes": 4,
+          "sha256": "89b36732eda290a3926e0a1b3962af1f08c458757ea4419de2bbf6f1d662e63b"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1365708,
+          "address": 1365784,
+          "bytes": 4,
+          "sha256": "a5a504e274f94edfda82a44a345f033ec79281d23dcdea90d161b1ffcdae79b3"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1370752,
+          "address": 1371044,
+          "bytes": 4,
+          "sha256": "312a08dcb758725c97319914c9011be5e1a51298295da74933afc9d0061fa8f7"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1401396,
+          "address": 1401428,
+          "bytes": 4,
+          "sha256": "eaa8acfcf0121ed53918a615665f314913bf764ce92dac680660c9484bf614b8"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1403700,
+          "address": 1403888,
+          "bytes": 4,
+          "sha256": "65a09dffdffdace3c2bd008552c18e9594a7d860e23349fc2b2be4c263a7354c"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1403700,
+          "address": 1403928,
+          "bytes": 4,
+          "sha256": "5ecace13be1fd484aa7f249633431de5486235cade6aec4a6b533149ed1cecb5"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1403700,
+          "address": 1403968,
+          "bytes": 4,
+          "sha256": "d637abdf5d851e6a869b8e9e63e4c265993e16aa977c51ab9495e1b7ba1c80c4"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1403700,
+          "address": 1404008,
+          "bytes": 4,
+          "sha256": "483ad35e040df108faf08dd8a98befab8c0ee2b04eea517deb10c5d6f071f556"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1403700,
+          "address": 1404084,
+          "bytes": 4,
+          "sha256": "4bcad227eecb91386aa96be93b28da1099c65710dc089a4583406f3c8b147393"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1435376,
+          "address": 1435404,
+          "bytes": 4,
+          "sha256": "5d79b6158e2aa069a7e81f648a35c0d047734cbfde285cf6812a88e920252d01"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1435456,
+          "address": 1435524,
+          "bytes": 4,
+          "sha256": "bb8bc6fa9765381896f29ce156d0a3471baf7cedab72b4855e895ce62abf7ad4"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1436120,
+          "address": 1436204,
+          "bytes": 4,
+          "sha256": "b50fc0f1d71321e8a5494c4c4834c0e657189a713c90e6aa97e06b1da6728bc9"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1455908,
+          "address": 1455940,
+          "bytes": 4,
+          "sha256": "f2993dcfcf5fbcf0df8e693e0f35cc70117028c1b6614acda27640b046cc3d22"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1471788,
+          "address": 1471828,
+          "bytes": 4,
+          "sha256": "acdfd04ceedc2eaa2df0001a34e64abb5538c5f85783d7f424572145f839a8b6"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1477156,
+          "address": 1477176,
+          "bytes": 4,
+          "sha256": "5ff23028afcbe8c5572ffb2e07b149e2c532b9a58acd83baaac95fa1960d58e7"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1488116,
+          "address": 1488132,
+          "bytes": 4,
+          "sha256": "e02dd1e31776f81f3568488ca509b6a512d5a0f59088443cad07fd524a869d54"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1548684,
+          "address": 1548712,
+          "bytes": 4,
+          "sha256": "4708566b3996b9b99e70304558a2ad1356f10d7b01acecb73ec1bd473d62617e"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1583120,
+          "address": 1583300,
+          "bytes": 4,
+          "sha256": "e52ee80557d5af26064cc2e8a3546076cd11da2fd104c8248537d1d04cb9a469"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1641808,
+          "address": 1641824,
+          "bytes": 4,
+          "sha256": "d17173b9cabbd4c958823e7799854b80b3cf91b89bb46c811e0951f8844bb058"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1650748,
+          "address": 1650816,
+          "bytes": 4,
+          "sha256": "66f0d4af8c3ec9c2d0a78f5e99420828719ad0341e86399a171024e41fa45228"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1902220,
+          "address": 1902320,
+          "bytes": 4,
+          "sha256": "4a6dc52f58402c83bf1e73557a77c6db2054aa0582de3c9cd027121ec8b88c9e"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1907312,
+          "address": 1907420,
+          "bytes": 4,
+          "sha256": "5fa1c4ced8bc874664e73448397778a655accf1ec251a720f6310448da42e26c"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2225132,
+          "address": 2227684,
+          "bytes": 4,
+          "sha256": "f5b4796ccbfea80d98bcf4e5a304291869ae76e9ab65c43bffa17e623d694430"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2269960,
+          "address": 2270080,
+          "bytes": 4,
+          "sha256": "d5d1398bd6ad816272fce8d5d0733f8aae4d5e29e68508f4a2ff7b9241b1dcb0"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2273244,
+          "address": 2273284,
+          "bytes": 4,
+          "sha256": "8fd0b47a4eeaa40b537767bbf7f3da72c38f8a23feacd3a2e7fcc3d922ee7f8c"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2273648,
+          "address": 2273768,
+          "bytes": 4,
+          "sha256": "e40bf680b98f31220daff63a7dc05ec43d5ead8eca34fd79cb66da805a72ea71"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2273648,
+          "address": 2273876,
+          "bytes": 4,
+          "sha256": "b83a1c924bba6b91d7bed88083e40ab9cedad8810144ed61034f5803c31c3b94"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2275516,
+          "address": 2275540,
+          "bytes": 4,
+          "sha256": "351119842a3f17bebc9299200d828ae89b19abe03ccd1323c94b0fe2593f7db3"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2290452,
+          "address": 2290640,
+          "bytes": 4,
+          "sha256": "c90075195a450ac06ca88f456cad38f1e005dcb80ceea266439542c630dd28c9"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2290452,
+          "address": 2290652,
+          "bytes": 4,
+          "sha256": "944625f0cea94275f0b5c7e3dad7793d8ac067a25f149432919cfce8188894ac"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2290452,
+          "address": 2290724,
+          "bytes": 4,
+          "sha256": "66755e626b630dbd46db5800d979282f9cde472b8497eae99061bcbfc24d1d0e"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2290452,
+          "address": 2290736,
+          "bytes": 4,
+          "sha256": "6ea8d5149cf695ada55bd4a3d48b1b98eab703c8d784a017da6a64d3250340db"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2290452,
+          "address": 2290764,
+          "bytes": 4,
+          "sha256": "a0f373d740373634a62c9db1bc22214fb2d9de57565d69ca8da7fb0f86d7a724"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2290452,
+          "address": 2290776,
+          "bytes": 4,
+          "sha256": "c88fa24fa8aa6396634bf3c95757fc18cf9df9553e1fd0b1af35ae96b3174cc9"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2291736,
+          "address": 2291892,
+          "bytes": 4,
+          "sha256": "aefe8a141f3f6cb0a55859f85f9f7d33d4a489af068b537d253aa515059fffd9"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2291736,
+          "address": 2291904,
+          "bytes": 4,
+          "sha256": "b75629d20bd44b8a8cb2e3c3ab31b0b678be32d93d836a26b5080f5903df51b4"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2291736,
+          "address": 2292060,
+          "bytes": 4,
+          "sha256": "07e33210389e843c3c99b504d69aa8a08f6a9dd8cb0b8ae1369ca45c6b5b2203"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2291736,
+          "address": 2292072,
+          "bytes": 4,
+          "sha256": "71c8a348a9c091db85f9e8851c0eedea3da0439176b4f3e55fee2246c8a1156d"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2291736,
+          "address": 2292180,
+          "bytes": 4,
+          "sha256": "e5b371e1af4a8e4aee39a95294100a64848b8a473917fdff2f51bb81fe2a0a49"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2291736,
+          "address": 2292192,
+          "bytes": 4,
+          "sha256": "1b3624c101e82ae4f4b413f1473cfb18c14d9b8bfd0907de24275ada52316e57"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2294796,
+          "address": 2294960,
+          "bytes": 4,
+          "sha256": "2660b19adab1d0067104701cf3f96f6021473e3112aa85ba18fbfcf1215ab735"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2294796,
+          "address": 2295036,
+          "bytes": 4,
+          "sha256": "8c500dcc95beca0611cd494c637bd3c567800399b1ae02764c263d7afe299b54"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2299248,
+          "address": 2299360,
+          "bytes": 4,
+          "sha256": "64a0fd1e69392c89585ad0d02e8016c093d11565b386ce887b447a8c00f1185f"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2299248,
+          "address": 2299372,
+          "bytes": 4,
+          "sha256": "e3d7eb3634ec5c487b7f869968cbf4774bc1f50888b501c466dd61a2dd986563"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2300108,
+          "address": 2300744,
+          "bytes": 4,
+          "sha256": "6a2dfae01d831359976f6fdbf4958f64823e88096781af85aa11993d40683899"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2300108,
+          "address": 2300800,
+          "bytes": 4,
+          "sha256": "1b58c1129e55eb2a2151b59d03ce5eb11ee3be5fa053466c69a061f17d72b02d"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2301188,
+          "address": 2301208,
+          "bytes": 4,
+          "sha256": "81ea9f9eb48e2d8eaaa39635e1dc6a3e2bece08ca8eb5894ae75bdfd04e78838"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2302952,
+          "address": 2303080,
+          "bytes": 4,
+          "sha256": "b02f9aba7c398b7a925535e80c65260cd1c61ad079226d742077805b1ae69e36"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2303324,
+          "address": 2303504,
+          "bytes": 4,
+          "sha256": "2d6ed2d154724e4d2c24687c9b285cf518ce92236702c250eb0d42fe2da38ed7"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2303324,
+          "address": 2304028,
+          "bytes": 4,
+          "sha256": "f63a5688b659864ca92ea500c142abca6550e9b0070f00de0b3aa89a2dfc7eba"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2314764,
+          "address": 2314812,
+          "bytes": 4,
+          "sha256": "41a4688f9ea1097d7c630d0746d7e91d6ff55915df345f5f70168de3f739c655"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2315520,
+          "address": 2315540,
+          "bytes": 4,
+          "sha256": "0a80f83be97a27017635f66d8509a55e3aa111d918a80fc58c8ff71195a180dd"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2317444,
+          "address": 2317912,
+          "bytes": 4,
+          "sha256": "8a8431341ed83ba43f76b1cdb62af351fa20946760225f7d48828ca202d6b3ab"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2319784,
+          "address": 2319992,
+          "bytes": 4,
+          "sha256": "5b1e0a7b6984db1d3a44d3bebf4169142e35439216bf5f3d7d2803ce20d96bea"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2345516,
+          "address": 2345636,
+          "bytes": 4,
+          "sha256": "bb9ed3e51989ad4fd55f2ddb8283eaf9f2897e48924e2b58f8482d56fca0b7cb"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2378284,
+          "address": 2379012,
+          "bytes": 4,
+          "sha256": "801a7723a03cec48cef56528918c17c0017f07f2a943700b13e489050884f5ac"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2382288,
+          "address": 2382644,
+          "bytes": 4,
+          "sha256": "8d43fc7e937808095d72715c30d28d2b1d2de5965f37287a47fabfc602f9ddc7"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2382288,
+          "address": 2382664,
+          "bytes": 4,
+          "sha256": "b1f1348265c935af85ad0f5408b7e9055bce0047db07e22076f33538290b9957"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2487284,
+          "address": 2487392,
+          "bytes": 4,
+          "sha256": "ea1d7c57573f4d54131b37f0d8e02a5068627b6b6818ea58608c9153bfe2dbd9"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2547004,
+          "address": 2547792,
+          "bytes": 4,
+          "sha256": "74fb982af98b7b27dfc6d70b4502fbe16d04468d0a02d4dc867d7556e810ce81"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2548860,
+          "address": 2548892,
+          "bytes": 4,
+          "sha256": "6946d7fdd2e35eff7bd236231b18f5df3c824af84c2d4867d7eaa61bdffe6c6c"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2550092,
+          "address": 2550152,
+          "bytes": 4,
+          "sha256": "b4e34c0669f70cfd6a63534b04bef1d163b5581fbf467363f6f3dc6568168888"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2595796,
+          "address": 2595844,
+          "bytes": 4,
+          "sha256": "9efd2225702a5e48f9323de03c84d30e594d4a1abcaaf6071935bccd12e0d827"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2596020,
+          "address": 2596064,
+          "bytes": 4,
+          "sha256": "44e1727611ec2af84e6b56eb94bd9ecc42daf2405f498bd748b2a595787064cb"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2682900,
+          "address": 2683100,
+          "bytes": 4,
+          "sha256": "36ecf16be8c5fc6349a194251629ea4c10ea4efa0f3dc2e17057eeaf8c83357a"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2696368,
+          "address": 2696460,
+          "bytes": 4,
+          "sha256": "47535f92c2fa52587347e542778e502715527d21322c123a788bc2dd332c4dba"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2699120,
+          "address": 2699168,
+          "bytes": 4,
+          "sha256": "f271018520b96ff65b19666c1569fe934c8d61adb806f59ba28f0ff04bd8b4bc"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2767984,
+          "address": 2768068,
+          "bytes": 4,
+          "sha256": "f80336e42361bee6febdaef3db329d4f7fedb9737204919cb0a2a021e6e124b4"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2774484,
+          "address": 2774644,
+          "bytes": 4,
+          "sha256": "277992d2db06a58d1907e2aad2cbf12174226329873cab8b241c525dff8e0566"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2776132,
+          "address": 2776180,
+          "bytes": 4,
+          "sha256": "993ba3b0e8c9f8cb89a86a6ee13add003e91066c36454de9b2c788f6d2a4fcb5"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2776132,
+          "address": 2776520,
+          "bytes": 4,
+          "sha256": "e45dd2ba0fb62fac2bc69993e36d535a8f3afa5fe0cb5c5c89b424cff43c7bf0"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2806252,
+          "address": 2806436,
+          "bytes": 4,
+          "sha256": "8e2fd86dbeb3c871284c56c9b0521a860b5339874904d9e0419693eda9d43c1e"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2826144,
+          "address": 2826164,
+          "bytes": 4,
+          "sha256": "f8ae958525846936a27f50d7e569bd52fc3be52b11717c12318809da815806a0"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2873560,
+          "address": 2873664,
+          "bytes": 4,
+          "sha256": "a088fd13ed91ced0f567425f3805ea8cf0af1df326fafa8eed8e8dbe3d0e1500"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2903936,
+          "address": 2904164,
+          "bytes": 4,
+          "sha256": "098eae5603cf2f719521b2048e551e48aa0546844eac0bbef6476b5c20ff13cb"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2912596,
+          "address": 2912904,
+          "bytes": 4,
+          "sha256": "6d1134741395c06a448245e168a43b204cfe5dd4181ff47e2cb7dfbba2bc40f9"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 2913644,
+          "address": 2913668,
+          "bytes": 4,
+          "sha256": "80acc8461794bf14eb6cd3869c97bba8591fdf7d92b5dd46de82f516a7ca5d9a"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3043236,
+          "address": 3044028,
+          "bytes": 4,
+          "sha256": "398f2112e0f072a39e3e779daa9239bbe95de2548374a94736f5fea5b37d74bf"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3105896,
+          "address": 3105916,
+          "bytes": 4,
+          "sha256": "639f2dc3b7e902b6b5b56dbd9583ea291a20de4d07ae1152e8dc2b6bb756a1b8"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3198808,
+          "address": 3199568,
+          "bytes": 4,
+          "sha256": "dcb837e5951804a2c8b727320596ed654649a85d4f302432a09e518e8173a0a5"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3236576,
+          "address": 3237516,
+          "bytes": 4,
+          "sha256": "95af047594a9923bb177c6e969177e7e245d56b008dece683ab49c5752d43afa"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3263504,
+          "address": 3263892,
+          "bytes": 4,
+          "sha256": "605abad4b90443d9371d32b5162b5319d72d8b0a8b77c21192d2db64d157edd6"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3264412,
+          "address": 3264428,
+          "bytes": 4,
+          "sha256": "7d06def2302b26cfe5c4a62274573cf076f011fc56456384ab159cee4d36ddf2"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3388472,
+          "address": 3388508,
+          "bytes": 4,
+          "sha256": "b76e9270075db13a75d63cc737093390ae052707d2d04d7237fb79a9c185eb57"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3392148,
+          "address": 3392184,
+          "bytes": 4,
+          "sha256": "51e91f2ce52838507e04e508422b6519c2ac23405d68ff8e6d43bd1cc9f86dbc"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3418244,
+          "address": 3418316,
+          "bytes": 4,
+          "sha256": "2aa671ac89c4b7858c3b5e45b2ee3f12edc42a87b3abcc2caa7848ad7de9d733"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3454780,
+          "address": 3454812,
+          "bytes": 4,
+          "sha256": "7a39d4d4a1ef310988c3dac03810cd1c4cdfba749706c4fd944c799e542e8bcc"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3454780,
+          "address": 3454892,
+          "bytes": 4,
+          "sha256": "9ceacf28248c6a1612c9fda8e6ee5715dae4fdf189471241927cec135c2cb948"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3457260,
+          "address": 3457292,
+          "bytes": 4,
+          "sha256": "3eb2adcf360c2ee93ec0d2be79c584714a46d2466392cc51dcbbd56398856575"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3476020,
+          "address": 3476188,
+          "bytes": 4,
+          "sha256": "0375c3653d886045d3b1bb09f673a2a23a76aa46587e49ebf567f16190ae2847"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3588416,
+          "address": 3588444,
+          "bytes": 4,
+          "sha256": "911dd36152b17fae8d4c5975c88cab971ad953075fa029549fa75a9f5aca46b1"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3589116,
+          "address": 3589164,
+          "bytes": 4,
+          "sha256": "475e2d4bfcfeeeeba6733d8b8203972440c4be94f940fec23a8120caf6e46b44"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3589116,
+          "address": 3589224,
+          "bytes": 4,
+          "sha256": "cf2017998f2aef52f04169b102a33cfdff06715a26ee490a209a54cbdac42276"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3590504,
+          "address": 3590560,
+          "bytes": 4,
+          "sha256": "acbb5c7b4980974d6c81a82b367e9fc5439383553ef3af3532b739ae848515d2"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3654412,
+          "address": 3654660,
+          "bytes": 4,
+          "sha256": "00e360920a187e213f969400ef67ffbdd6d6416120fa1dc340f919c3f5089230"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3656704,
+          "address": 3657108,
+          "bytes": 4,
+          "sha256": "5424d04e2f1ba2c2f4f018fbd71b0db642afe1b57070843f5b11935c4a9d289b"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3657444,
+          "address": 3657476,
+          "bytes": 4,
+          "sha256": "acecd330c34393fa35af40060f5808092b0048c00227d8ad75ff219bc6deb396"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3657576,
+          "address": 3657652,
+          "bytes": 4,
+          "sha256": "bc5db146d9fae08afcb77796be4a1961badc52c5467f0b3983492ebded8a8f63"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3660072,
+          "address": 3660260,
+          "bytes": 4,
+          "sha256": "8dce96ed49870354081924cc8d7c459a1429d35d311aba922b2aba9a35626130"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3683504,
+          "address": 3685148,
+          "bytes": 4,
+          "sha256": "71be928e5977d06c5bfcb68537455b4e16b02fa2319fbd2e5a1b5fb2c3969e50"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3689200,
+          "address": 3689576,
+          "bytes": 4,
+          "sha256": "9a8086e49cc146536268a064d6daa76929bebb706273f56cb2bcf52f22d0dafc"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3733776,
+          "address": 3733800,
+          "bytes": 4,
+          "sha256": "cbae26c06c79785cac69a588ddab8877efa9cbafdc58c65935d844007af4420b"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3764412,
+          "address": 3764608,
+          "bytes": 4,
+          "sha256": "891e5ea15237f578cad98d928db9311757367721ccd8474f8bc11ed0ec494b28"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3765232,
+          "address": 3765292,
+          "bytes": 4,
+          "sha256": "3acf0ad2b0f1fe77c2c80ababf1ae19ad1146c65faffca33e483346c140bbf3e"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3772260,
+          "address": 3772488,
+          "bytes": 4,
+          "sha256": "25143e58f2feea0e453a13cc2afd010c1a7ac1b26e60171e7951c8773c9c3dca"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3784536,
+          "address": 3784552,
+          "bytes": 4,
+          "sha256": "0006201c3430ab0e6f719722fa0efcd344193639876d67e72636550c9d241b97"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3784536,
+          "address": 3784792,
+          "bytes": 4,
+          "sha256": "68dbfa6c3e5a96d70e360fa6e330262a4e0059446efcaa9d2c43dcf1fc4676e5"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3862876,
+          "address": 3862952,
+          "bytes": 4,
+          "sha256": "31836b7b9211b361d2ee82ed8c0b25628991c6f12a262c3cea0828ae9023f11e"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3896568,
+          "address": 3896612,
+          "bytes": 4,
+          "sha256": "d76b856920e3868f375f9dad3ac8f324cec6ccf7559a81a2f03082f596005fa6"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3914760,
+          "address": 3914812,
+          "bytes": 4,
+          "sha256": "9b97cc8288f37b6e0c8e08dbde30d116e1b3cb18ddc89656553e8c44cf4ef390"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3915232,
+          "address": 3915264,
+          "bytes": 4,
+          "sha256": "7e0282a9a98a9b4e5f927d53bb6f7a2bca7fbbaa95b766ab98f3e92f660d5dc8"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3915232,
+          "address": 3915332,
+          "bytes": 4,
+          "sha256": "6c6cc3d81fad780c3daa79c7ed18640bac2e5bdcca6d543b9bd3723b0da58d02"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3916056,
+          "address": 3916088,
+          "bytes": 4,
+          "sha256": "a9aeb5889eb4b83674913b98499b3ce198b2f2278ffe0bd17447481a2cf2a128"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3944860,
+          "address": 3945184,
+          "bytes": 4,
+          "sha256": "c48166333e121b78c76c42ca426eb51287ff4dfa38fc7f8ad8d9aec82a8cdb7b"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3959404,
+          "address": 3959608,
+          "bytes": 4,
+          "sha256": "3e4e48cd288e8d352b1b84cd188eb336210ffa3fffad3476cf27e5ef6e0a3c7d"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3975372,
+          "address": 3104256,
+          "bytes": 4,
+          "sha256": "b9782335e9b140ccf78e2b0fd711ca8b29c11abc15b081d29ebeadfa931c4d02"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 3982456,
+          "address": 3984164,
+          "bytes": 4,
+          "sha256": "d4b4e3f14c6014da40c36ebeda7ee4c4385e4f60d63df915f620befc45628294"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4077340,
+          "address": 4077456,
+          "bytes": 4,
+          "sha256": "2b286270d012ab05d369f8664b34090d2479790eeca666d1ac569707027d448a"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4087712,
+          "address": 4087812,
+          "bytes": 4,
+          "sha256": "6fee1940e89874a3d80a3c53811e0f20ed714fb562ec97439228e901196aae62"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4094164,
+          "address": 4094356,
+          "bytes": 4,
+          "sha256": "af738c9aaa69756c81abe0f514356f1a7aeb1843b9537eb8a036d7644f401932"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4096140,
+          "address": 4096276,
+          "bytes": 4,
+          "sha256": "70bf30bcaf95441ff2758926bb83992b1413c1d26546ac7a2cfc40d5e8633b1b"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4128340,
+          "address": 4128460,
+          "bytes": 4,
+          "sha256": "8b5af87278a43996397db70d395d2915c63e82b7e08da02d8b715a264b7a9208"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4136192,
+          "address": 4136556,
+          "bytes": 4,
+          "sha256": "c176517e07b3ad1c5ac956994b378c710b5921a7cb2cdd416afe4d93c7678cf6"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4150088,
+          "address": 4150392,
+          "bytes": 4,
+          "sha256": "6b188ab671e5726e8ad9f37329578e65c3963e87badde1daf0d162d002b0a1bf"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4154960,
+          "address": 4155220,
+          "bytes": 4,
+          "sha256": "1d1ed018bf1691d2c48927ebdfd83c778a1668626d1e341ba2b62f6d51f4a3e8"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4188076,
+          "address": 4188232,
+          "bytes": 4,
+          "sha256": "fb4e16e7738bd1e0ad9347c823fefb27f9e9b4b63157c3f3c432694601ddc9e2"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4190144,
+          "address": 4190216,
+          "bytes": 4,
+          "sha256": "e8b7223eca072fb35fb693b88e3171d791004f649e98d61602e01507f0680941"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4192616,
+          "address": 4192760,
+          "bytes": 4,
+          "sha256": "2c9d873c989c23f359d3728785ca527da371a4af585402b21653c25e4ed945c5"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4192616,
+          "address": 4192980,
+          "bytes": 4,
+          "sha256": "91c08f3e65e2cd56384c48437504a765e1ebf246be6b46dfcb593c16d7d363c2"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4198480,
+          "address": 4198692,
+          "bytes": 4,
+          "sha256": "4147150894e27d9da4a14f8476edddc22516a6a62664e03e5a102897e60cce00"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4201388,
+          "address": 4201652,
+          "bytes": 4,
+          "sha256": "a1a3f770e2c3300e80f330dec8fc98ace2e02b3b55889342dc0eb65d9434287e"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4252700,
+          "address": 4252924,
+          "bytes": 4,
+          "sha256": "b171416905132cdf93d5fc22015935aa8b43516fc41dca9e51dbef6cfe47207d"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4300836,
+          "address": 4301312,
+          "bytes": 4,
+          "sha256": "a46b3f6fc9f1701c8447792c7ee4a328c1918ff9a3de88629a81ca5b673c9543"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4312032,
+          "address": 4312352,
+          "bytes": 4,
+          "sha256": "ad34062a4c578d6a0c9561f5ca747416e0cd1c78913e02653d004df146803b3e"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4316664,
+          "address": 4316788,
+          "bytes": 4,
+          "sha256": "d956165e99001fe819393b2cb7c3a45f9b2239367d31c1edd0b816429a4e0941"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4317496,
+          "address": 4317552,
+          "bytes": 4,
+          "sha256": "531f0ef274f5f04ca3e5f7e71320a2d6b0961f2552f146fb215d3b40bd0d9a76"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4318784,
+          "address": 4318916,
+          "bytes": 4,
+          "sha256": "cd8dd55a36329936f15aa01dbc303181cc152bbe3464fa5dfd5ec5af988e807d"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4385236,
+          "address": 4385256,
+          "bytes": 4,
+          "sha256": "bbbbbc9e3a6e3263a44cb0b0e7477eed56ae035b16eabdf1c6581d7ab78ee9be"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4386060,
+          "address": 4386104,
+          "bytes": 4,
+          "sha256": "e17e1d1ca66dc0487f5e8ae63ff5b8ba2d39426a89971ae86668dee9e3692180"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4387348,
+          "address": 4387424,
+          "bytes": 4,
+          "sha256": "2f5dd2fa1233d85a51178652951daaa9e70310295447c4912c0ae1469f1d5bec"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4397504,
+          "address": 4397632,
+          "bytes": 4,
+          "sha256": "ec5dd702e1fab38231132b71e7225d09d1bbe57d55762f17b7575d1eafe0e116"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4397504,
+          "address": 4397720,
+          "bytes": 4,
+          "sha256": "b89bc72094e023b9650caa062bf093218ae6fc8b7b1387c98d25ebd66b1ea5f7"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4420124,
+          "address": 4420164,
+          "bytes": 4,
+          "sha256": "83d105097a8f323e9ef153d5fd470996b1f5a8cb97ed5e681fc5a5493e1c3130"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4421436,
+          "address": 4422856,
+          "bytes": 4,
+          "sha256": "4eec82a52ab96c0f40a9ea0befde73081de0d97ab711a2d95cd636bf3d4cfb7b"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4421484,
+          "address": 4421540,
+          "bytes": 4,
+          "sha256": "5afbd9535aa5a45b86fe0cb43e6c81604313b2266ed598f9430cb1d156633ee2"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4433092,
+          "address": 4433216,
+          "bytes": 4,
+          "sha256": "c475af565724e5a2a4ca459d5d4e9380162bec2e40d86b23d51c2d76021693fb"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4438332,
+          "address": 4438448,
+          "bytes": 4,
+          "sha256": "95960b429de9cb033346fc2ec91e21cd486399860074f1ce1a5046f51101c784"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4441608,
+          "address": 4442356,
+          "bytes": 4,
+          "sha256": "22d543a0c9694626e2be554283b9dafdf9debdc8a0e43c143c02979ff8088c07"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4443520,
+          "address": 4444280,
+          "bytes": 4,
+          "sha256": "85443e6c85d8f7d1f733ee05343c708435fdeb911dad6439ffd5417db0ae1e70"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4446792,
+          "address": 4447000,
+          "bytes": 4,
+          "sha256": "b6f7610673f2cb335589af7d2a54673fe9aa4d6d7f1d86e76b5e7db36bc080b3"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4468364,
+          "address": 4468524,
+          "bytes": 4,
+          "sha256": "52e593f138f1092d8b7ca4f408d913ff53c49605662690a5a6ae07e1415d276e"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4479332,
+          "address": 4479352,
+          "bytes": 4,
+          "sha256": "b6ac54903a667ce9f777c63d7bbae79bbffaadd3b68e8db9dbfb2b5f149d55ca"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4479888,
+          "address": 4479984,
+          "bytes": 4,
+          "sha256": "36874c73dff9ffca3206fbe026a29a33c32cc534e518a7b607fde8f88471c185"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4481092,
+          "address": 4481224,
+          "bytes": 4,
+          "sha256": "62ecf130915bd56ed177d5dfd292a95ee6615cc3978d9a4fdbc4d740c60fc564"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4484432,
+          "address": 4484628,
+          "bytes": 4,
+          "sha256": "a6a459d80ab15254085773bf43047bceac5914d390ed5db3781859d02088eac5"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4497132,
+          "address": 4497340,
+          "bytes": 4,
+          "sha256": "4b58b1dd1a11df1ec16ce8731abe784960b5aa301b6974d8e33dad3305ac57d9"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4511460,
+          "address": 4511520,
+          "bytes": 4,
+          "sha256": "b3e70a9632becc420ec9ce6a270553317025fd9dd21749056f95a5dc52332d1d"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4511568,
+          "address": 4511628,
+          "bytes": 4,
+          "sha256": "91e21e2b604fbe75652ecb9bb7dee139e096456cbf8385f7811f56e57c482f14"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4543888,
+          "address": 4544148,
+          "bytes": 4,
+          "sha256": "e58651bf361a8d29569f87d890b9a3a8fb037d0e0d33cbf3520a6651d28ca3f7"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4584412,
+          "address": 4584436,
+          "bytes": 4,
+          "sha256": "fada20513dbeeffb7260b3df1733220607476f768d900c3ffca8d0566e413c35"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4624088,
+          "address": 4624156,
+          "bytes": 4,
+          "sha256": "4966daeb1d1e03c9a842edf1ea8bc0f3210101f1b753e4ed160030d7dfbc67cb"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4660316,
+          "address": 4660364,
+          "bytes": 4,
+          "sha256": "7a77b9f8fe63d17ead1cef6d096ef8bdbaf8641035f33ee65302e8e0d6804a70"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4660316,
+          "address": 4660560,
+          "bytes": 4,
+          "sha256": "bd886d0b4df136824f461e59521f0b215864663ce556ef817f77a816b68283c1"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4942080,
+          "address": 4942180,
+          "bytes": 4,
+          "sha256": "add555dc5558efed23979509f0677cd4e17be1c67f5e982d943fe7777e925a3e"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4975060,
+          "address": 4975104,
+          "bytes": 4,
+          "sha256": "0be82734fd1255fb74f6b21bc2b77be5bbb9139e0ae03b3e6676452ab0702440"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4975060,
+          "address": 4975120,
+          "bytes": 4,
+          "sha256": "074a513f13c825fa6254ec4b5d32bb93e6d4a5c0b92c90d23ab52986df9b71b5"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4975316,
+          "address": 4975348,
+          "bytes": 4,
+          "sha256": "4934049c9ab41bfac4ce426b854505186a81b2fd4ef8545d17deebc12403831b"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4975316,
+          "address": 4975380,
+          "bytes": 4,
+          "sha256": "34b878ef90bb5fb8c45bf62fcdb0558ed8c3d418be22102699f7cb10951e7c8c"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4975576,
+          "address": 4975608,
+          "bytes": 4,
+          "sha256": "ab1902b61d18f6f5383cc7d41bceac8e34e2c6684bac7fa85513df4325bb22a1"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4975576,
+          "address": 4975632,
+          "bytes": 4,
+          "sha256": "9965eeee71a541f177e8753ce388133ce6e1c4ca1eaf4796a795f5f9a070bfcc"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4980832,
+          "address": 4980852,
+          "bytes": 4,
+          "sha256": "ecaf376f01d824bba7939a367a59eca5244b1c4747301047326b9b803e258404"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5586364,
+          "address": 5586384,
+          "bytes": 4,
+          "sha256": "2245cc68615cd017788049a41aefa5336d794677c27a8dcf01c6b75a405ed48c"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5645512,
+          "address": 5645732,
+          "bytes": 4,
+          "sha256": "42b82c5f7a0c6983b3671298231ebdaaa3af13220a8773dcef0b7aa3e4ef1218"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5708580,
+          "address": 5708604,
+          "bytes": 4,
+          "sha256": "b5cce3127ce755e1454654011c96fcc0cc4199a1a7c497f7e7c9ab4c0f066dc3"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5766240,
+          "address": 5766828,
+          "bytes": 4,
+          "sha256": "9667a1339893aa053f8e883391bd9443404ca278f361c2a8362984335e5d57ad"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5774256,
+          "address": 5774512,
+          "bytes": 4,
+          "sha256": "d6452145c6da307c9931170316096d0fc1244c42107a1ef0408091d55d3398fd"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5787488,
+          "address": 5787560,
+          "bytes": 4,
+          "sha256": "23b87fcc0a58ac7a225234b8b997053f822834fb2964a776f9d99cfa1b2c0472"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5818792,
+          "address": 5818812,
+          "bytes": 4,
+          "sha256": "6cdf0ec79676dba1aea266a747fecbe3b5aaa9d0b0f8773e65e6ca5570c5bf6d"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5819396,
+          "address": 5819428,
+          "bytes": 4,
+          "sha256": "87afe6ac2d51c082e48bdb53ced293e79289d5d4296fe4c45c3d0aac863bbba4"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5837504,
+          "address": 5838076,
+          "bytes": 4,
+          "sha256": "7a43d85107eef4765f5051a8fe78f342a95e3124763692779a287dcc73f8b6aa"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5837504,
+          "address": 5838124,
+          "bytes": 4,
+          "sha256": "b0ba6ee01516317b1498347bc40697d4d49087d05877326d7228ce282560206e"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5837504,
+          "address": 5838196,
+          "bytes": 4,
+          "sha256": "c3034f523bd7acbfedb84b30723ff54c398fa6b7d8bbc0068d1a149895cb8968"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5852256,
+          "address": 5852328,
+          "bytes": 4,
+          "sha256": "c6028a5709cc0a80c30a24c4944e6f693f8ceffdcf77ff8c4fa75c10b0cd34ac"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5862592,
+          "address": 5862652,
+          "bytes": 4,
+          "sha256": "1ae357924e2c2710851fb793e070a46c4f5804451b05f012db378a27cdbe3e94"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5865140,
+          "address": 5865356,
+          "bytes": 4,
+          "sha256": "be14b111887e1823bc7e5f1cfeb2643438f78eb0f05111f91b0f627f4f811fc4"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5865140,
+          "address": 5865388,
+          "bytes": 4,
+          "sha256": "793db79a01dbb012eba0c12d34fd1b99ebebf3da962ce5a8fff27bed9869d532"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5872236,
+          "address": 5872284,
+          "bytes": 4,
+          "sha256": "d41d9b9fc2334fae7f1d5a5d410d50193999d199f2e82fdceff6e9fece4f8b56"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5892520,
+          "address": 5892572,
+          "bytes": 4,
+          "sha256": "425c14df50cc713e0b493abd6ddfe06fe11db3fc3969c3096f5a25d3da39beb7"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5912376,
+          "address": 5912448,
+          "bytes": 4,
+          "sha256": "704f457d577e8e0e77962e90a5696fb70ec06e357b13ea364ee6654abc06b1ff"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5951092,
+          "address": 5947436,
+          "bytes": 4,
+          "sha256": "2c11817928dd6a0d0602846857390a9a0e4ea8f5b975639c6cb867a322837bb5"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5951092,
+          "address": 5951844,
+          "bytes": 4,
+          "sha256": "f98aa69bd6435284ec97ea7a1f8fd1015d3ca9e4230969cf2e623f01107e0407"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5952672,
+          "address": 5952816,
+          "bytes": 4,
+          "sha256": "959c8dffbfc965ff5ff99b0010f621091df14109ef7f322304dee6fc88c6cfdd"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5971368,
+          "address": 5971392,
+          "bytes": 4,
+          "sha256": "ad9064ae5125f63cffacd919075e28a93be551d01883d31bd822c592e78e0071"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5977164,
+          "address": 5977268,
+          "bytes": 4,
+          "sha256": "3f3603f82aa88adb7048b501cda635f90e172baca835cb42f9d9e86f6e2c5b84"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5992236,
+          "address": 5992896,
+          "bytes": 4,
+          "sha256": "05b1b17cfa893f8e77d2711a1ad6d6166f27878a38ce571593ec12420963302c"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 5998404,
+          "address": 5998460,
+          "bytes": 4,
+          "sha256": "899e77862e9b3df379912ab5e7ddce3fbf350797881fae73d4d2e9e6a1bcbac7"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6002784,
+          "address": 6002956,
+          "bytes": 4,
+          "sha256": "e6f44c7898ceee4e5385c27a3cbcf7d60bec8a47acbc675a480f466361ffad14"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6002784,
+          "address": 6003200,
+          "bytes": 4,
+          "sha256": "218344c1e802dbb88e32e8dd158895dff4587d375c5b0bb0fb481c4d770dbb8d"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6015460,
+          "address": 6015560,
+          "bytes": 4,
+          "sha256": "78fbedd39fe22a04fa1016269bcbcbcb9934eb0400d6b433528c64020a0d9f4f"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6022092,
+          "address": 6022444,
+          "bytes": 4,
+          "sha256": "042517360ecc1a5fb926205b723a00c62f9256b4ecff66bdd2bbb9f86708f729"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6023908,
+          "address": 6024120,
+          "bytes": 4,
+          "sha256": "707a1ba4cc71de9fbb3f0a08f89710f0af595c56c764128fbd9141aaec5ad6a0"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6038080,
+          "address": 6038184,
+          "bytes": 4,
+          "sha256": "b4e95141c5baab23a0d2d78baf2f5208ae2acf560a24a2aa2d48f6e731a30040"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6038080,
+          "address": 6038844,
+          "bytes": 4,
+          "sha256": "60e78e94b07f9a93630594a773defffd03a3c5bc1ae642c98353158793869bd6"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6038080,
+          "address": 6039072,
+          "bytes": 4,
+          "sha256": "58eef9e30f8cadcf0205ba14040e271e305dadf205384a12ef5fb8eabc9133fe"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6050216,
+          "address": 6050240,
+          "bytes": 4,
+          "sha256": "1ff1f004c4fb8b6d7f802e17bf1c420866f54df1c2455a718e78f5e41ac9a85b"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6050216,
+          "address": 6050400,
+          "bytes": 4,
+          "sha256": "435779967d552cea7444ea334e5ce27aacf0e229d57fc12b2fd9f6cd0f165cd6"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6068852,
+          "address": 6069064,
+          "bytes": 4,
+          "sha256": "7a52d72301442c55a7323862796fe2b696ed25976f0d8904f0d7eebe5dd78403"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6072612,
+          "address": 6072696,
+          "bytes": 4,
+          "sha256": "43ef61240bd55e3fcea809e9998454df147321ff0b24bf794d3b6ec3db20d272"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6078200,
+          "address": 6078272,
+          "bytes": 4,
+          "sha256": "917de8ac98ab47a9402c92764ad90e646df8624dcb2ee80682bdb59d4ac0a339"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6079700,
+          "address": 6079772,
+          "bytes": 4,
+          "sha256": "eb859d6c84b1b7a34318975184a5eb6d2596cf7c74f181f283600f6e01037070"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6103636,
+          "address": 6103696,
+          "bytes": 4,
+          "sha256": "30e311661b258a1019f69aac406b93155413878afd190ef6598f887602d002d0"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6106488,
+          "address": 6106660,
+          "bytes": 4,
+          "sha256": "99e22382080a5cdf692c809f85247bafbb13617a5ae5734555796b92770d1b9d"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6106780,
+          "address": 6107184,
+          "bytes": 4,
+          "sha256": "c0fa07ad8b6df890460e0769a8117be6e579882a488450c1be5a0f4c0b975cf1"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6109804,
+          "address": 6109920,
+          "bytes": 4,
+          "sha256": "7cae5a8531b50eaa53c01de5502065f3d2040af040aacc4884f74d0b21731c6c"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6110704,
+          "address": 6110784,
+          "bytes": 4,
+          "sha256": "3e9a1878db087f0f60305e367d400106e1b6bcf25ccc0068fb2410c5ddb99494"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6121280,
+          "address": 6121300,
+          "bytes": 4,
+          "sha256": "b5e0a7a1d969600530587a98b98d271bd646af0ac6f420194a682fd7d0cbde33"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6240980,
+          "address": 6241004,
+          "bytes": 4,
+          "sha256": "eb3769a2f98c3a712ffb4a0c7a79f01cc84353906a630625f80641666a284eb8"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6257208,
+          "address": 6257336,
+          "bytes": 4,
+          "sha256": "219a3a5b95b968a657b5c2d7e2807420f21427aac2b7355ada4592ea26ac37d7"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6300708,
+          "address": 6300916,
+          "bytes": 4,
+          "sha256": "c3d9dc422f590b2d0c7daa0ab245f3ede6a4c381bba8f230b0d32671ecc880b1"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6300708,
+          "address": 6301008,
+          "bytes": 4,
+          "sha256": "4c0dd985c062605eb226ff3a2fe49592e8cfd5a22f369d615eafe456d1dc0d5b"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6300708,
+          "address": 6301268,
+          "bytes": 4,
+          "sha256": "c4b39b98f2fd3113385add4e80fb61a09c7d58577917b3f5cfeb3ac811b67c75"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6311456,
+          "address": 6311536,
+          "bytes": 4,
+          "sha256": "9fb1594160883bb334406108b32e2d110263798e4245826d0cddba181cfe0b8a"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6323436,
+          "address": 6323716,
+          "bytes": 4,
+          "sha256": "561538bfd7cee46e871329d8730f3eae871b6d709fd80434d8b50f0f67030577"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6329880,
+          "address": 6330028,
+          "bytes": 4,
+          "sha256": "655dcc6c9f7584110487fb5d8afca85613af54b1c0316823d147ff235252d45b"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6333268,
+          "address": 6333548,
+          "bytes": 4,
+          "sha256": "218cb7173ed2e5cb4e66cf6151b23206f2c5bf464a2ce60a36d32e41b7cf701c"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6339780,
+          "address": 6340268,
+          "bytes": 4,
+          "sha256": "0f505a6899b7628efd28855f6960321f11bda8f4121eff73be66b7360f8990fa"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6657608,
+          "address": 6657952,
+          "bytes": 4,
+          "sha256": "440df613aef4ef403401b19f36e463a518c9fe328424a5c404104302ac094710"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6667052,
+          "address": 6667088,
+          "bytes": 4,
+          "sha256": "0281d0460d002f4f9ba04f8a0e3299e63d5d4c67e5ff08c20b3c6897380ad378"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6672536,
+          "address": 6672872,
+          "bytes": 4,
+          "sha256": "6e6175da874b99531c81ffcf248681b4d7b85dd7968084eec888876f569021e9"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6672536,
+          "address": 6672920,
+          "bytes": 4,
+          "sha256": "02f25d7aee3d78c9fb97ca5cc9f89f77c1542c5c3a49e287fb49f480fb378320"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6672536,
+          "address": 6672992,
+          "bytes": 4,
+          "sha256": "a1d88ef6046db6a9a88af339e61add799a4c4ffe54b20f28d00cc1c7381c97cd"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6769924,
+          "address": 6770016,
+          "bytes": 4,
+          "sha256": "9d3b1618e7fb12d4dfcd54819271986d09bc1076cf20c967db50191c5b685bae"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6769924,
+          "address": 6770072,
+          "bytes": 4,
+          "sha256": "e8a359cee29cb5deaaec7dc43789860f4269143ae4389701ca07beecb6bda6d0"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6851188,
+          "address": 6851204,
+          "bytes": 4,
+          "sha256": "0fe68f80dda679409d403bdb0f007961fdeae5c4241cec8e5d4009cf147487b9"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6851284,
+          "address": 6851496,
+          "bytes": 4,
+          "sha256": "76b93a4bef346193d9f8bfed8551e726b5d5e7ecbd7387b33634a54b996f85c8"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6851588,
+          "address": 6851708,
+          "bytes": 4,
+          "sha256": "dc6528485a3babef3e8a2c4dddb5dc1fbb440776fcf4c429a1f44520b912ecaa"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6851780,
+          "address": 6851880,
+          "bytes": 4,
+          "sha256": "bd9b8ab23159d99faeb43b6c6ec21b17ac90275a492d14f01baee39943775ec6"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6851932,
+          "address": 6852144,
+          "bytes": 4,
+          "sha256": "bdbabd628b2f77df7628e416cde6cb8cc917acdb053ffe7fd7feb77b3cf511ec"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6852256,
+          "address": 6852292,
+          "bytes": 4,
+          "sha256": "72ad7264e387f17b69a1cbbd03d90db4c786078ae9d9ddc22208b8c3ce52bd95"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 6852256,
+          "address": 6852308,
+          "bytes": 4,
+          "sha256": "c45505c3cfbf31fd0550b47137785ae18df64e650b71ba4a17fc5a65e1a73404"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7041756,
+          "address": 7042028,
+          "bytes": 4,
+          "sha256": "c9ba95553f8b227607aa49d4ecc5b48231dd3c6254c3223651ffef76f6ae2bee"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7042676,
+          "address": 7042740,
+          "bytes": 4,
+          "sha256": "4fe2ab9efc60ee965399193783a1f91acce1d52fdaf375064b3b5ba0d6cca9ca"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7108040,
+          "address": 7108212,
+          "bytes": 4,
+          "sha256": "031971b9d361bba6bdeacd829ed537b0df297d7b73344e90ecc841c1560546da"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7149100,
+          "address": 7149328,
+          "bytes": 4,
+          "sha256": "f8c8a88f862dd717306fcef9fd6bcb45072245bee3e8c25118dd29e6ffaae6fa"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7158032,
+          "address": 7158056,
+          "bytes": 4,
+          "sha256": "b58024de6fac38904ee7d3438584d45d04255dd67b2bc056d4d19fcc3e6b97d0"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7243348,
+          "address": 7243816,
+          "bytes": 4,
+          "sha256": "31995266c7d50cc24c47bdd350fbf76d52865e30ded285026dd03725193a4303"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7243348,
+          "address": 7243892,
+          "bytes": 4,
+          "sha256": "203c27a95d81a0a7ee1016420cf171662c6280589f46644a19d18f60c5488464"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7245504,
+          "address": 7245540,
+          "bytes": 4,
+          "sha256": "4708845aee57d5c1ddb4dcc3a3afc4fbd8e12b6d43f5cef0b5375a4b495aad86"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7245584,
+          "address": 7245608,
+          "bytes": 4,
+          "sha256": "5ba78cb79193e418db211faee2474f12417ee8b77affcce77bf56aa028db8e56"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7296264,
+          "address": 7296812,
+          "bytes": 4,
+          "sha256": "9490639d193fabc54d5bc8a36df0a7481ad8ffe14be9e8d14c149290e786a319"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7296264,
+          "address": 7297096,
+          "bytes": 4,
+          "sha256": "298e60168e0058ec08182f549cb3744c5cc935292955bf2fb18da66b9489ead4"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7630916,
+          "address": 7632368,
+          "bytes": 4,
+          "sha256": "c35b899807fa10165905215d1741bb199241ba462bcadc2fe2413cf91cd9bb67"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 7886268,
+          "address": 7886296,
+          "bytes": 4,
+          "sha256": "75f2322b50c84b7652fd825d3a050487f8b25642592f7dab5d80d0b020835be5"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/wave013-native/literal-sealed/source/literal_compare.o",
+          "sha256": "8c50025064805300a24527fd78a37d106795e7e33086d7dc6beddb46f29caa03",
+          "bytes": 1740
+        },
+        "section": ".text.fn_00100b58",
+        "bytes": 48,
+        "sha256": "8aa7652099216c4f29d4ef37c00692405ab0f888150de9eccaad5c1470de3be7",
+        "source": {
+          "path": "src/native/wave013/literal_compare.c",
+          "sha256": "29a5d8f9a86ffbff26e15fe68ddea2043d8dbe498acd70f3d20aa41493d49280",
+          "bytes": 1197
+        },
+        "relocations": []
+      },
+      "candidateInstructionAndPoolBytes": 48,
+      "candidateLinkedSpanSha256": "8aa7652099216c4f29d4ef37c00692405ab0f888150de9eccaad5c1470de3be7",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/wave013-native/literal/packet.json",
+          "sha256": "d24bcd990d216b38fb05e2cc2fd0b2cd79a3b848477d0d0b1ae8d37f8c04e4fb",
+          "bytes": 1236595
+        },
+        "verifiedTests": 15,
+        "constructionAndRangeCases": 699,
+        "attemptedFixtureCases": 699,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 9,
+        "originalInstructionsReached": 9,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "No retired pointers are excluded in these fixtures; bitmap, cursor, every translated field, padding and guards are compared",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite well-formed token streams from the frozen lexer and bounded UTF16 strings; not universal equivalence",
+          "Helper offset/count wrap cases are defined only when no out-of-bounds dereference occurs",
+          "The original outer caller and arena setup remain separate; they receive no credit from this batch",
+          "Unicode service borrows validated owner-derived nonexecutable arrays; public Unicode version not identified",
+          "No arbitrary corrupted owners, invalid pointers, concurrency or MMIO",
+          "Unhit instructions remain explicit and are not declared unreachable",
+          "No matching acceptance, independent clean replay, native game build or Android device execution granted"
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 4980648,
+        "mode": "ARM"
+      },
+      "symbol": "fn_004bffa8",
+      "source": {
+        "path": "src/native/wave013/literal_compare.c",
+        "sha256": "29a5d8f9a86ffbff26e15fe68ddea2043d8dbe498acd70f3d20aa41493d49280",
+        "bytes": 1197
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 184,
+      "originalInstructionRanges": [
+        {
+          "start": 4980648,
+          "endExclusive": 4980832,
+          "bytes": 184
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 184,
+      "originalSpanSha256": "51207565dd9d14f98177618e349a55dc843b075a6d52792b5149918499972d2f",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 4980832,
+          "address": 4981084,
+          "bytes": 4,
+          "sha256": "ace8929667d4024d998ef664a9fbca7df50cd607977f331f6187fc26cd5c8271"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4980832,
+          "address": 4981156,
+          "bytes": 4,
+          "sha256": "63e13f4adf8c2489862819786cac1fb3a820e3473546f9ffb7db3977bb6cf19f"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4980832,
+          "address": 4981288,
+          "bytes": 4,
+          "sha256": "c91f9fa6e7ca9c23ef8322412bb2e921c1d5008ed1b3552c9f0bee713e3fcc27"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4980832,
+          "address": 4981340,
+          "bytes": 4,
+          "sha256": "75b36e3db70919f445601eb3d02a1011076ce4eb76e6f3e00c31c620bf48998f"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4980832,
+          "address": 4981476,
+          "bytes": 4,
+          "sha256": "a41a960b25921e57302db7e118e5c2899f598cabaa33175ddf457ea7d9c57d49"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4980832,
+          "address": 4981556,
+          "bytes": 4,
+          "sha256": "3eb388b093fb6c9827688d44a8fe48595ff41d6eb4a463dab7dd8f012f9eeb25"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4980832,
+          "address": 4981600,
+          "bytes": 4,
+          "sha256": "c089fa5909d25f22e8ff462431989d67af28272f823d4326d5b5d9cbe309dc7f"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/wave013-native/literal-sealed/source/literal_compare.o",
+          "sha256": "8c50025064805300a24527fd78a37d106795e7e33086d7dc6beddb46f29caa03",
+          "bytes": 1740
+        },
+        "section": ".text.fn_004bffa8",
+        "bytes": 200,
+        "sha256": "8c5c352d406f8385891a2d475197fd6990c1d48413822fe933096d4a0dab6d86",
+        "source": {
+          "path": "src/native/wave013/literal_compare.c",
+          "sha256": "29a5d8f9a86ffbff26e15fe68ddea2043d8dbe498acd70f3d20aa41493d49280",
+          "bytes": 1197
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_004bffa8",
+            "offset": 84,
+            "type": 28,
+            "symbol": "fn_004c35b0",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 200,
+      "candidateLinkedSpanSha256": "00bfe35a5bbf44c319666442ffffa31278229666a56d3b990e4daa8380037e87",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/wave013-native/literal/packet.json",
+          "sha256": "d24bcd990d216b38fb05e2cc2fd0b2cd79a3b848477d0d0b1ae8d37f8c04e4fb",
+          "bytes": 1236595
+        },
+        "verifiedTests": 15,
+        "constructionAndRangeCases": 699,
+        "attemptedFixtureCases": 699,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 46,
+        "originalInstructionsReached": 46,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "No retired pointers are excluded in these fixtures; bitmap, cursor, every translated field, padding and guards are compared",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite well-formed token streams from the frozen lexer and bounded UTF16 strings; not universal equivalence",
+          "Helper offset/count wrap cases are defined only when no out-of-bounds dereference occurs",
+          "The original outer caller and arena setup remain separate; they receive no credit from this batch",
+          "Unicode service borrows validated owner-derived nonexecutable arrays; public Unicode version not identified",
+          "No arbitrary corrupted owners, invalid pointers, concurrency or MMIO",
+          "Unhit instructions remain explicit and are not declared unreachable",
+          "No matching acceptance, independent clean replay, native game build or Android device execution granted"
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 4980832,
+        "mode": "ARM"
+      },
+      "symbol": "fn_004c0060",
+      "source": {
+        "path": "src/native/wave013/literal_fast_path.c",
+        "sha256": "7366b0490572f7722ed1befd6ac021bcc2fe666c1f3236ea870269d0c37157d2",
+        "bytes": 3205
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 800,
+      "originalInstructionRanges": [
+        {
+          "start": 4980832,
+          "endExclusive": 4981632,
+          "bytes": 800
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 800,
+      "originalSpanSha256": "5596a1ef0f1e7bc55ab659adbcd15d92fedadabe42f45918b5c28d4872225868",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 4996128,
+          "address": 4996340,
+          "bytes": 4,
+          "sha256": "7315f9e70535b4b22b6b5f2ff4bfc55451cb69ed5026027715ca5726f17b2649"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4996128,
+          "address": 4996396,
+          "bytes": 4,
+          "sha256": "d60c8ea2ccc3664803348d8c511deadfbc29e9b9266f18cb8b57e5700c2bcd83"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/wave013-native/literal-sealed/source/literal_fast_path.o",
+          "sha256": "1e4edebc4fbd182ea536c7c55feaab69338dc37c09622d0371893e1096dc715c",
+          "bytes": 1776
+        },
+        "section": ".text.fn_004c0060",
+        "bytes": 688,
+        "sha256": "f01f4f539120d0a432e4302dec4d46371af18324405de6de09adc032d2c2b44f",
+        "source": {
+          "path": "src/native/wave013/literal_fast_path.c",
+          "sha256": "7366b0490572f7722ed1befd6ac021bcc2fe666c1f3236ea870269d0c37157d2",
+          "bytes": 3205
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_004c0060",
+            "offset": 28,
+            "type": 28,
+            "symbol": "fn_00100b58",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c0060",
+            "offset": 476,
+            "type": 28,
+            "symbol": "fn_004bffa8",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c0060",
+            "offset": 608,
+            "type": 28,
+            "symbol": "fn_004bffa8",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 688,
+      "candidateLinkedSpanSha256": "8ed10301b47b4c9077e267d6e6a009bba916cbaaf5192964fd885ec9089b618a",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/wave013-native/literal/packet.json",
+          "sha256": "d24bcd990d216b38fb05e2cc2fd0b2cd79a3b848477d0d0b1ae8d37f8c04e4fb",
+          "bytes": 1236595
+        },
+        "verifiedTests": 15,
+        "constructionAndRangeCases": 699,
+        "attemptedFixtureCases": 699,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 200,
+        "originalInstructionsReached": 200,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "No retired pointers are excluded in these fixtures; bitmap, cursor, every translated field, padding and guards are compared",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite well-formed token streams from the frozen lexer and bounded UTF16 strings; not universal equivalence",
+          "Helper offset/count wrap cases are defined only when no out-of-bounds dereference occurs",
+          "The original outer caller and arena setup remain separate; they receive no credit from this batch",
+          "Unicode service borrows validated owner-derived nonexecutable arrays; public Unicode version not identified",
+          "No arbitrary corrupted owners, invalid pointers, concurrency or MMIO",
+          "Unhit instructions remain explicit and are not declared unreachable",
+          "No matching acceptance, independent clean replay, native game build or Android device execution granted"
+        ]
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave009/interval_set.h",
+      "sha256": "c9f8ea99061aaf09e3b82c8a75d3049282f14bdbf7e201a429c1064348853419",
+      "bytes": 987
+    },
+    {
+      "path": "src/native/wave010/match_state.h",
+      "sha256": "c5331ad810d5fc508c5df281ece4f5b8f70a998cc5d226d2e7157593137d035b",
+      "bytes": 1055
+    },
+    {
+      "path": "src/native/wave012/compile_graph.h",
+      "sha256": "d496139a253186af9849862e764fcc1b50d77f432fe8e6e9dd4c6b4ce84f8ee5",
+      "bytes": 1657
+    },
+    {
+      "path": "src/native/wave012/fixed_arena.h",
+      "sha256": "576604e9c5fde42d82ada3fa977fa33591421711f129bd5cae1b3c45240eec4a",
+      "bytes": 689
+    },
+    {
+      "path": "src/native/wave012/label_ops.h",
+      "sha256": "0d96df2ffe4d5c6f404cbbe688e86f3f644fbc7fecfe9fe6ab0c03a43b2f5be1",
+      "bytes": 939
+    },
+    {
+      "path": "src/native/wave013/control_compile.h",
+      "sha256": "323e2786580a834a869dfd5a15d22edd58f84dc8d909322dbf3d99902937e8b0",
+      "bytes": 288
+    },
+    {
+      "path": "src/native/wave013/dfa_compile.h",
+      "sha256": "83f3627463a010ec5b5d561f1d443c25995be6dc8f4f86cbc28d534f1d2fe334",
+      "bytes": 830
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa.h",
+      "sha256": "76dddc817728b69b544e927320f5c1564a6a390ba6259adae837a324d3a07c36",
+      "bytes": 4884
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa_api.h",
+      "sha256": "974523189a56560a598aca0f00ef26cd7b50c3a12bb5c0bb1f0789e5ba82d8bb",
+      "bytes": 386
+    },
+    {
+      "path": "src/native/wave013/pattern_outer.h",
+      "sha256": "2e79c5635b7b411271ff28684f7349b0daf076e05473e2b997b6ccf21ea68e9a",
+      "bytes": 1605
+    },
+    {
+      "path": "src/native/wave013/pattern_ranges.h",
+      "sha256": "6eb248d90a59fc8f50469f8735a4b6ad224ca067b68ce66295ccd5de765abeee",
+      "bytes": 521
+    },
+    {
+      "path": "src/native/wave013/pattern_tokens.h",
+      "sha256": "2a06bf5d5efd04ef077298a341aaead1a5ef6e20ace3969363ff35b1ba78a9ae",
+      "bytes": 4191
+    },
+    {
+      "path": "src/native/wave013/pattern_unicode.h",
+      "sha256": "5a0f6e2c1824e58392c5d347108ff9b088ae256e684fcff613a9aaceb28f709b",
+      "bytes": 1109
+    }
+  ],
+  "originalPackets": [
+    {
+      "path": "evidence/lanes/wave013-native/literal/packet.json",
+      "sha256": "d24bcd990d216b38fb05e2cc2fd0b2cd79a3b848477d0d0b1ae8d37f8c04e4fb",
+      "bytes": 1236595
+    },
+    {
+      "path": "evidence/lanes/wave013-native/literal/verification.json",
+      "sha256": "2931c5692bb8ce83a3e1d962304bcd37383843f6e1800fd15e38f87a1fac224f",
+      "bytes": 1332
+    }
+  ],
+  "producer": {
+    "path": "toolscripts/native_wave013_literal_functional_proposal.py",
+    "sha256": "2899745f2158abb5f45f84d7c1b53e45b97a4b462e5cca8b727636db2e23dafd",
+    "bytes": 5951
+  },
+  "census": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+    "bytes": 20574405
+  },
+  "supplementalInventory": [
+    {
+      "path": "evidence/lanes/wave013-native/method-dispatch-overlay.json",
+      "sha256": "ba4a6b8f633d62dc7ea2b9b8c473459215b7f5d62f42d79b849497900116c75e",
+      "bytes": 131026
+    },
+    {
+      "path": "evidence/verification/array007-function-overlay.json",
+      "sha256": "3f3121445869c567a8460efb59e97fe60d6b9073220ded6e593ae2e7acdcd7eb",
+      "bytes": 3339
+    },
+    {
+      "path": "evidence/verification/closure010-function-overlay.json",
+      "sha256": "3eb297926b78bcf312dc6a2bd2a06228a318de91bc4aebcda522d8a1605dd1a1",
+      "bytes": 4237
+    },
+    {
+      "path": "evidence/verification/prototype011-function-overlay.json",
+      "sha256": "6c9d4f364ed5b86f9c1a67699066e879214c57c0e159978200d53435d9b241c3",
+      "bytes": 3564
+    }
+  ],
+  "exactCandidateExcludedPendingSeparateAdmission": [
+    "fn_004c0380"
+  ],
+  "originalInstructionBytes": 1002,
+  "independentCleanReplayClaimed": false,
+  "sharedRegistryChanged": false
+}

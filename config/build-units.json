@@ -1425,6 +1425,44 @@
         "source/squirrel-wave011/prototype_release.h"
       ],
       "role": "bounded-prototype-lifetime-component"
+    },
+    {
+      "source": "src/native/wave013/literal_compare.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave010/match_state.h",
+        "src/native/wave012/compile_graph.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave012/label_ops.h",
+        "src/native/wave013/control_compile.h",
+        "src/native/wave013/dfa_compile.h",
+        "src/native/wave013/pattern_nfa.h",
+        "src/native/wave013/pattern_nfa_api.h",
+        "src/native/wave013/pattern_outer.h",
+        "src/native/wave013/pattern_ranges.h",
+        "src/native/wave013/pattern_tokens.h",
+        "src/native/wave013/pattern_unicode.h"
+      ],
+      "role": "bounded-pattern-literal-component"
+    },
+    {
+      "source": "src/native/wave013/literal_fast_path.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave010/match_state.h",
+        "src/native/wave012/compile_graph.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave012/label_ops.h",
+        "src/native/wave013/control_compile.h",
+        "src/native/wave013/dfa_compile.h",
+        "src/native/wave013/pattern_nfa.h",
+        "src/native/wave013/pattern_nfa_api.h",
+        "src/native/wave013/pattern_outer.h",
+        "src/native/wave013/pattern_ranges.h",
+        "src/native/wave013/pattern_tokens.h",
+        "src/native/wave013/pattern_unicode.h"
+      ],
+      "role": "bounded-pattern-literal-component"
     }
   ],
   "excludedSources": [
