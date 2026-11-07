@@ -17,6 +17,8 @@ A separately reviewed real-array vtable destructor adds one further 96-byte inst
 
 The independently reviewed script-closure destructor adds a further 216-byte instruction body and a separate 12-byte pool, bringing reviewed discovered entries to 26,619. Its following entry is witnessed by another vtable but remains unseeded; no boundary or source credit is invented for that neighbor.
 
+The actual small-prefix prototype destructor adds another independently reviewed 124-byte body and four-byte pool, for 26,620 reviewed entries. Its shared weak-reset tail remains owned by the frozen existing function and receives zero additional credit.
+
 The base baseline is inventoried separately; only the update currently has admitted source and a supported ByteMatch report. The update's 842,252 initialized rodata bytes, 260,036 initialized data bytes and 210,988 BSS bytes give a separate 1,313,276-byte data denominator, with zero matched data. DSP firmware, PICA shader programs, original interpreted scripts, assets and system firmware do not enter the ARM text denominator. They retain their own inventories and receive no native source credit.
 
 [Executable scope](executable-scope.md) records a fresh recursive audit of both measured CIAs and every supported archive member. It reconciles declared programs and structurally qualifying additional executable candidates. Permitted but unobserved loader services do not invent modules. [Static text accounting](../evidence/lanes/native-inventory-completion/static-text/update.json) independently partitions every initialized text byte into admitted source or unmatched original text. Missing, overlapping or reclassified ranges fail validation.
@@ -51,11 +53,11 @@ Only `build/update-content0/report.json` and its reviewed `functional.json` comp
 
 Admitted report symbols use their exact C definition names, so a rename header is unnecessary. Future renames need a generated mapping or another mechanism from [ByteMatch source linking](https://bytematch.dev/docs/source-linking). Virtual addresses are independently checked against original section mapping. Unwritten functions may correctly be absent from the public source.
 
-`config/functional-functions.json` approves 174 working nonmatching C functions in declared bounded domains. There are 160 medium-confidence entries and 14 low-confidence scalar recipes with uncertain original signatures. Their canonical instruction bodies total 29,452 bytes without interval overlap. This is a candidate catalog, not a confirmed whole-game source percentage; matching source remains 5,128 bytes and every unit remains incomplete.
+`config/functional-functions.json` approves 185 working nonmatching C functions in declared bounded domains. There are 171 medium-confidence entries and 14 low-confidence scalar recipes with uncertain original signatures. Their canonical instruction bodies total 33,554 bytes without interval overlap. This is a candidate catalog, not a confirmed whole-game source percentage; matching source remains 5,128 bytes and every unit remains incomplete.
 
 `functional_report.py` checks frozen packet and C/header hashes, confidence, canonical module/address/mode, the complete body, exclusion of already admitted exact functions and the actual report entry. Navigation symbols cover the contiguous entry range. A fragmented function, such as CallNative, needs its full canonical range proof and an explicit report-entry extent.
 
-Source lookup normally uses the report unit's source path. An explicitly reviewed `repository-function-index` policy also permits C outside that folder, following [ByteMatch's repository-wide lookup](https://bytematch.dev/docs/source-linking). It requires one unique canonical C definition in the reviewed source trees. The live API resolved every one of the 170 functional entries at `4e065d2` to its expected file; the official checker separately found all 412 admitted C functions. Later catalog additions require a new hosted check after ingestion.
+Source lookup normally uses the report unit's source path. An explicitly reviewed `repository-function-index` policy also permits C outside that folder, following [ByteMatch's repository-wide lookup](https://bytematch.dev/docs/source-linking). It requires one unique canonical C definition in the reviewed source trees. The live API resolved every one of the 174 functional entries at `9445db7` to its expected file; the official checker separately found all 412 admitted C functions. Later catalog additions require a new hosted check after ingestion.
 
 | Reviewed packet | Functions | Original instruction bytes |
 | --- | ---: | ---: |
@@ -71,6 +73,9 @@ Source lookup normally uses the report unit's source path. An explicitly reviewe
 | [nfa013](../evidence/functional/nfa013.json) | 35 | 9,508 |
 | [squirrel002-005](../evidence/functional/squirrel002-005.json) | 7 | 3,220 |
 | [class009](../evidence/functional/class009.json) | 4 | 1,472 |
+| [dfa013](../evidence/functional/dfa013.json) | 6 | 2,376 |
+| [prototype011](../evidence/functional/prototype011.json) | 2 | 724 |
+| [literal013](../evidence/functional/literal013.json) | 3 | 1,002 |
 
 The earlier leaf and expanded host types were reproduced in the isolated `eb8e1b6` and `420bcff` replays. State-compiler012 passed `7c3c12d`, UV/math014 reproduced all five qualification packets under `df0258d`, and the material/helper graph passed `05fb713` with 105 tests and 142 compilations. Control/tokenizer013 passed `a9c62a1` with 62 tests and 176 compilations; its eight-byte exact candidate remains excluded pending separate admission.
 
@@ -81,6 +86,8 @@ NFA013 independently repeated 958 construction/range cases, 65,540 case queries,
 Class009 passed the isolated `d6a6567` replay with 108 cases on three executions, 56 guard tests and 339 public compilations. Its 48 compiler-generated null-cleanup instructions are statically excluded, not claimed executed. The component requires compatible full reference objects and successful bounded reallocation; short-prefix prototype cleanup is outside its domain.
 
 The committed provisional VM957 snapshot passed 957 original/source returns, 76 tests and 318 compilations under `653a552`. Its ARM ELF and Windows executable match the frozen snapshot. Whole Execute remains incomplete and the [portable reference-layout work](squirrel-reference-prefix.md) remains unresolved. Closure010 is source-visible but not in the functional companion while the published legacy wrapper has the same canonical definition.
+
+DFA013 passed the complete committed `2e4afbe` replay with 63 tests and 360 compilations. Its 916 qualified fixtures retain two unsupported partial-pointer representation cases and 33 untested instruction addresses. Literal013 passed `cb58bf4` with 62 tests and 381 compilations, including 699 fixtures and all 259 original instruction addresses; its exact 16-byte constructor remains excluded. Prototype011 passed `d70fa16` with 57 tests and 375 compilations, using actual small declared prefixes, exact opaque callback signatures and aligned native tails. These bounded proofs do not establish a complete portable VM graph.
 
 These checks grant zero matching-source credit. Public source CI compiles the candidates; they remain outside the matching module's admitted source selection. Other drafts remain proposals until review and source-link verification. Cold tails, literal pools and unclassified text remain fully in the initialized-text denominator.
 

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-independent-committed-dfa-component",
+  "completeUnmodifiedBatchReplayPassed": true,
+  "independentSourceComponentReplayPassed": true,
+  "sourceRevision": "2e4afbe32fc9bbc18e15fad404264f816c9d29cd",
+  "rawReplay": {
+    "path": "evidence/verification/dfa013-isolated-2e4afbe.json",
+    "sha256": "9040d933ab73e1706377cce9aea2f098e2141c6fb2d37a163619c278dc50e236",
+    "bytes": 13100
+  },
+  "executedDriver": {
+    "path": "evidence/verification/producers/dfa013-2e4afbe-replay.py",
+    "sha256": "123f61541a831d08c0ee0c15bb5cbabf6f4cf5ba6feca218e6bfc1cd7fcb57fc",
+    "bytes": 4947
+  },
+  "primaryPacket": {
+    "path": "evidence/lanes/wave013-native/dfa/packet.json",
+    "sha256": "11e6002217a2584f8db762e8718821a3601a02f1a25d2171192a8917b0a4926a",
+    "bytes": 1312778
+  },
+  "independentPacket": {
+    "path": "work/clean-replay/dfa013-2e4afbe/evidence/lanes/wave013-native/dfa/independent-packet.json",
+    "sha256": "1f5bff4d5a47b6c9afcd2e67885ba92d1bb1234a48a7bd145d949ec8184e9f10",
+    "bytes": 1441269
+  },
+  "tests": 63,
+  "publicCompilations": 360,
+  "newFunctions": 6,
+  "originalInstructionBytes": 2376,
+  "qualifiedFixtureCases": 916,
+  "attemptedFixtureCases": 918,
+  "unsupportedRepresentationCases": 2,
+  "originalSourceArmAndActualWindowsCompared": true,
+  "caseRowsIdenticalExceptProcessRelativeWindowsMemoryDigests": true,
+  "allArmObjectsAndLinkedElfIdentical": true,
+  "androidSharedLibraryIdentical": true,
+  "windowsDllDifferenceOffsets": [
+    128,
+    129
+  ],
+  "windowsCoffTimestampOffset": 128,
+  "windowsDllDifferencesConfinedToCoffTimestamp": true,
+  "binaryPatchingPerformed": false,
+  "sixReturningSemanticControlsAndSameStatePaddingReadControlRejected": true,
+  "originalInstructionsReached": 561,
+  "originalInstructions": 594,
+  "unhitInstructions": 33,
+  "allReachableInstructionsClaimedCovered": false,
+  "partialPointerRepresentationFamilyQualified": false,
+  "sourceAdmissionGranted": false,
+  "wholeGameOrAndroidDeviceExecuted": false,
+  "producer": {
+    "path": "evidence/verification/producers/review-dfa013-replay.py",
+    "sha256": "03e9a673fb3c466d608a3df9ecf75df55d547d563198ec4b2f071cf5edcc9b04",
+    "bytes": 6376
+  }
+}

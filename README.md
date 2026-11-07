@@ -46,7 +46,7 @@ For a fresh full verification checkout, provide the pinned minimal Clang and Ghi
 
 Read [AGENTS.md](AGENTS.md), the [project charter](docs/2026-11-06-project-charter.md), [roadmap](docs/2026-11-06-roadmap.md) and [validation design](docs/research/validation.md). Workers prepare disjoint frozen packets; one coordinator publishes acceptance after all gates pass. Preserve exact matching, linked source, bounded behavior, full replay and platform execution as distinct states.
 
-Windows source-function components execute against original ARM fixtures; Android ARM64 components compile with measured 16 KiB segment alignment. These are partial engine components. Native Windows game execution, packaged Android game execution, AYN Thor validation, source-only engine construction and a complete Joker 1 remake remain unproved. The roadmap keeps those requirements separate from native source acceptance.
+Windows source components execute against original ARM fixtures. The recovered scene component also runs on Windows and in the Android007 APK. Its [Android OS qualification](evidence/verification/android-os007-coordinator.json) covers dual-display lifecycle and sampled surface pixels on the API36 emulator, including ARM64 execution through its translation bridge. CPU-model checks, Android OS execution and physical handheld validation are distinct. These remain partial engine components: playable Windows/Android games, physical AYN Thor validation, a complete source engine and a complete Joker 1 remake remain unproved.
 
 ## Contributing and progress
 

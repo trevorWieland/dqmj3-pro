@@ -1,0 +1,1361 @@
+{
+  "schemaVersion": 1,
+  "programId": "0004000e001acb00",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "status": "coordinator-reviewed-bounded-functional-dfa",
+  "acceptedSourceCreditGranted": 0,
+  "functions": [
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 4988768,
+        "mode": "ARM"
+      },
+      "symbol": "fn_004c1f60",
+      "source": {
+        "path": "src/native/wave013/dfa_range_phase.c",
+        "sha256": "5a8c5d677313f58bdb32b9ababe3fa84c6a6d463ffe4a76124ce0c6795063af8",
+        "bytes": 4831
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 1332,
+      "originalInstructionRanges": [
+        {
+          "start": 4988768,
+          "endExclusive": 4990100,
+          "bytes": 1332
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 1332,
+      "originalSpanSha256": "9d61c048bd55516d31a9876f7c1ab90b0250812f6caf97f0e4348ceef19e6131",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 4991488,
+          "address": 4991860,
+          "bytes": 4,
+          "sha256": "b692ef2f56b9c7c818b3c33e341b09852a0c7edb9b4e28485dac67287ccae63e"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/wave013-native/dfa-sealed/source/dfa_range_phase.o",
+          "sha256": "d6bcea5e219d317caa89ae6ad40d3bbdb26cf6786acdb3831391b1b1aabb4f3d",
+          "bytes": 2652
+        },
+        "section": ".text.fn_004c1f60",
+        "bytes": 1180,
+        "sha256": "ce8891d7f373b1acacd55fc0eb39c6cce7c6d089451d9a6263de84158baaf473",
+        "source": {
+          "path": "src/native/wave013/dfa_range_phase.c",
+          "sha256": "5a8c5d677313f58bdb32b9ababe3fa84c6a6d463ffe4a76124ce0c6795063af8",
+          "bytes": 4831
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 80,
+            "type": 28,
+            "symbol": "fn_004c39c8",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 196,
+            "type": 28,
+            "symbol": "fn_004c39c8",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 316,
+            "type": 28,
+            "symbol": "fn_006d4080",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 336,
+            "type": 28,
+            "symbol": "fn_004c33dc",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 356,
+            "type": 28,
+            "symbol": "fn_004c2c80",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 412,
+            "type": 28,
+            "symbol": "fn_007557bc",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 432,
+            "type": 28,
+            "symbol": "fn_004c3994",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 456,
+            "type": 28,
+            "symbol": "fn_004c2c80",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 480,
+            "type": 28,
+            "symbol": "fn_004c1edc",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 496,
+            "type": 28,
+            "symbol": "fn_004c1de8",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 524,
+            "type": 28,
+            "symbol": "fn_004c3994",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 544,
+            "type": 28,
+            "symbol": "fn_004c39c8",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 568,
+            "type": 28,
+            "symbol": "fn_007555cc",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 620,
+            "type": 28,
+            "symbol": "fn_0075559c",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 628,
+            "type": 28,
+            "symbol": "fn_007557bc",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 736,
+            "type": 28,
+            "symbol": "fn_007557bc",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 756,
+            "type": 28,
+            "symbol": "fn_004c3994",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 808,
+            "type": 28,
+            "symbol": "fn_004c3994",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 888,
+            "type": 28,
+            "symbol": "fn_004c3994",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 956,
+            "type": 28,
+            "symbol": "fn_004c3994",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 1028,
+            "type": 28,
+            "symbol": "fn_004c3994",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 1092,
+            "type": 28,
+            "symbol": "fn_004c3994",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c1f60",
+            "offset": 1160,
+            "type": 28,
+            "symbol": "fn_004c3994",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 1180,
+      "candidateLinkedSpanSha256": "41dfd526393046af90f5123af87ddef9f660db48ce92c76d17ca7c5ec866b6dd",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/wave013-native/dfa/packet.json",
+          "sha256": "11e6002217a2584f8db762e8718821a3601a02f1a25d2171192a8917b0a4926a",
+          "bytes": 1312778
+        },
+        "verifiedTests": 16,
+        "constructionAndRangeCases": 916,
+        "attemptedFixtureCases": 918,
+        "unsupportedRepresentationCases": [
+          {
+            "id": "range-phase-oom-1-19",
+            "specification": {
+              "id": "range-phase-oom-1-19",
+              "pattern": "[^\\p{ASCII}\\P{ASCII}]",
+              "candidate": "A",
+              "free_slots": 19
+            },
+            "reason": "Historical private-pointer field was partially initialized; fragments are outside this packet contract",
+            "originalAndSourceArmReturnedNormally": true,
+            "originalLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "sourceLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "originalMemorySha256": "78d5e182f702a676624cf1bcd031d3867d944e0cdd4775bf730cbcae893364ec",
+            "sourceMemorySha256": "0c225df64f89cbaa12e35debaef4af9936e7658b112af8b6ac60c827e3b21f75",
+            "nativeExecutedForThisFixture": false,
+            "qualifiedComparisonClaimed": false
+          },
+          {
+            "id": "range-phase-oom-1-20",
+            "specification": {
+              "id": "range-phase-oom-1-20",
+              "pattern": "[^\\p{ASCII}\\P{ASCII}]",
+              "candidate": "A",
+              "free_slots": 20
+            },
+            "reason": "Historical private-pointer field was partially initialized; fragments are outside this packet contract",
+            "originalAndSourceArmReturnedNormally": true,
+            "originalLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "sourceLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "originalMemorySha256": "ec220d2936a3a6096d929a1fe2bfaaf0199edb8a865de4013fa93e10ce0010ab",
+            "sourceMemorySha256": "0ebd45f4ccc112ed44faa998623676cf98fe3db2f5c2252a7f2535e3504c2d91",
+            "nativeExecutedForThisFixture": false,
+            "qualifiedComparisonClaimed": false
+          }
+        ],
+        "allAttemptedCasesQualified": false,
+        "originalInstructions": 333,
+        "originalInstructionsReached": 300,
+        "unhitInstructionAddresses": [
+          4989104,
+          4989648,
+          4989652,
+          4989656,
+          4989660,
+          4989664,
+          4989668,
+          4989672,
+          4989676,
+          4989840,
+          4989844,
+          4989848,
+          4989852,
+          4989856,
+          4989860,
+          4989864,
+          4989868,
+          4989892,
+          4989896,
+          4989900,
+          4989904,
+          4989908,
+          4989912,
+          4989916,
+          4989920,
+          4989924,
+          4989928,
+          4989932,
+          4989936,
+          4989940,
+          4989944,
+          4989948,
+          4989952
+        ],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "Retired allocation bytes cannot be read while free or before initialization after reuse. Only complete untouched historical pointer fields in free slots or beyond the current raw membership extent can differ; every other byte, allocation bitmap/cursor and padding is compared.",
+        "independentCleanReplayClaimed": true,
+        "limits": [
+          "Finite initialized-data profile and typed fresh-builder/token fixtures; not universal equivalence",
+          "Complete original bodies are reconstructed; untested instruction addresses remain explicit",
+          "Pointer table keeps target logical ceil(N/4) block budget and uses native pointer elements; membership vectors retain N raw bytes",
+          "Matcher receives a genuine typed MatchContext local; ignored unknown_00 remains scalar zero, no head/padding pointer encoding",
+          "Character-class range loops ending at65535 are outside the terminating fixture domain",
+          "No malformed pointers, corrupted tables, arbitrary aliased ownership, concurrency or MMIO",
+          "Unicode service borrows hash-validated nonexecutable initialized arrays; owner keeps them alive and immutable while bound",
+          "Original whole-program table mutation and public Unicode version provenance are not established",
+          "Source API composes UTF16 tokenizer/NFA/DFA/matcher. Original outer caller and literal fast path remain separate",
+          "Partially initialized historical private pointers are unsupported cross-ABI representation cases, retained explicitly and never counted as passed",
+          "Component builds and bounded execution are not native game builds or Android device execution"
+        ],
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/dfa013-coordinator-2e4afbe.json",
+          "sha256": "2ccce2968cf592c4a13b13be4aa8c89ed0a391ee0daff5d3ed0b2b34f2f675bc",
+          "bytes": 2275
+        },
+        "completeUnmodifiedBatchReplayPassed": true
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 4991488,
+        "mode": "ARM"
+      },
+      "symbol": "fn_004c2a00",
+      "source": {
+        "path": "src/native/wave013/dfa_driver.c",
+        "sha256": "5d8a8047f897c290959a9fada9925adb9556a9d999ab6507c0b17e453d88a3a2",
+        "bytes": 2893
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 604,
+      "originalInstructionRanges": [
+        {
+          "start": 4991488,
+          "endExclusive": 4992092,
+          "bytes": 604
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 604,
+      "originalSpanSha256": "4c67f263c9e3dce7104e5f350ae564a79e4aff988bc5959154f7feeca73ce71b",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 4996128,
+          "address": 4996496,
+          "bytes": 4,
+          "sha256": "ce6a33aedb46d0d703eb899fc5745e0e0af251e67e2a29f3d0c0f444ecd90535"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/wave013-native/dfa-sealed/source/dfa_driver.o",
+          "sha256": "75e53320fb09107bc2d1066fdee110d7667ab353c216c139ae14cdacb9f7f525",
+          "bytes": 2100
+        },
+        "section": ".text.fn_004c2a00",
+        "bytes": 556,
+        "sha256": "f3b4f6d1cd055a6bfb54aefb04292e0f4db1c5c6cc2c54e9853f256e59b9e3ea",
+        "source": {
+          "path": "src/native/wave013/dfa_driver.c",
+          "sha256": "5d8a8047f897c290959a9fada9925adb9556a9d999ab6507c0b17e453d88a3a2",
+          "bytes": 2893
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_004c2a00",
+            "offset": 84,
+            "type": 28,
+            "symbol": "fn_004c39c8",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c2a00",
+            "offset": 144,
+            "type": 28,
+            "symbol": "fn_004c39c8",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c2a00",
+            "offset": 176,
+            "type": 28,
+            "symbol": "fn_004bff74",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c2a00",
+            "offset": 228,
+            "type": 28,
+            "symbol": "fn_004bfedc",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c2a00",
+            "offset": 256,
+            "type": 28,
+            "symbol": "fn_004c1edc",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c2a00",
+            "offset": 268,
+            "type": 28,
+            "symbol": "fn_004c2744",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c2a00",
+            "offset": 340,
+            "type": 28,
+            "symbol": "fn_004c2494",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c2a00",
+            "offset": 376,
+            "type": 28,
+            "symbol": "fn_004c1f60",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c2a00",
+            "offset": 412,
+            "type": 28,
+            "symbol": "fn_004c281c",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 556,
+      "candidateLinkedSpanSha256": "184023579b540d5331b882aefb082a4a5d6e368677c0cdd7633b68921c60c70c",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/wave013-native/dfa/packet.json",
+          "sha256": "11e6002217a2584f8db762e8718821a3601a02f1a25d2171192a8917b0a4926a",
+          "bytes": 1312778
+        },
+        "verifiedTests": 16,
+        "constructionAndRangeCases": 916,
+        "attemptedFixtureCases": 918,
+        "unsupportedRepresentationCases": [
+          {
+            "id": "range-phase-oom-1-19",
+            "specification": {
+              "id": "range-phase-oom-1-19",
+              "pattern": "[^\\p{ASCII}\\P{ASCII}]",
+              "candidate": "A",
+              "free_slots": 19
+            },
+            "reason": "Historical private-pointer field was partially initialized; fragments are outside this packet contract",
+            "originalAndSourceArmReturnedNormally": true,
+            "originalLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "sourceLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "originalMemorySha256": "78d5e182f702a676624cf1bcd031d3867d944e0cdd4775bf730cbcae893364ec",
+            "sourceMemorySha256": "0c225df64f89cbaa12e35debaef4af9936e7658b112af8b6ac60c827e3b21f75",
+            "nativeExecutedForThisFixture": false,
+            "qualifiedComparisonClaimed": false
+          },
+          {
+            "id": "range-phase-oom-1-20",
+            "specification": {
+              "id": "range-phase-oom-1-20",
+              "pattern": "[^\\p{ASCII}\\P{ASCII}]",
+              "candidate": "A",
+              "free_slots": 20
+            },
+            "reason": "Historical private-pointer field was partially initialized; fragments are outside this packet contract",
+            "originalAndSourceArmReturnedNormally": true,
+            "originalLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "sourceLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "originalMemorySha256": "ec220d2936a3a6096d929a1fe2bfaaf0199edb8a865de4013fa93e10ce0010ab",
+            "sourceMemorySha256": "0ebd45f4ccc112ed44faa998623676cf98fe3db2f5c2252a7f2535e3504c2d91",
+            "nativeExecutedForThisFixture": false,
+            "qualifiedComparisonClaimed": false
+          }
+        ],
+        "allAttemptedCasesQualified": false,
+        "originalInstructions": 151,
+        "originalInstructionsReached": 151,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "Retired allocation bytes cannot be read while free or before initialization after reuse. Only complete untouched historical pointer fields in free slots or beyond the current raw membership extent can differ; every other byte, allocation bitmap/cursor and padding is compared.",
+        "independentCleanReplayClaimed": true,
+        "limits": [
+          "Finite initialized-data profile and typed fresh-builder/token fixtures; not universal equivalence",
+          "Complete original bodies are reconstructed; untested instruction addresses remain explicit",
+          "Pointer table keeps target logical ceil(N/4) block budget and uses native pointer elements; membership vectors retain N raw bytes",
+          "Matcher receives a genuine typed MatchContext local; ignored unknown_00 remains scalar zero, no head/padding pointer encoding",
+          "Character-class range loops ending at65535 are outside the terminating fixture domain",
+          "No malformed pointers, corrupted tables, arbitrary aliased ownership, concurrency or MMIO",
+          "Unicode service borrows hash-validated nonexecutable initialized arrays; owner keeps them alive and immutable while bound",
+          "Original whole-program table mutation and public Unicode version provenance are not established",
+          "Source API composes UTF16 tokenizer/NFA/DFA/matcher. Original outer caller and literal fast path remain separate",
+          "Partially initialized historical private pointers are unsupported cross-ABI representation cases, retained explicitly and never counted as passed",
+          "Component builds and bounded execution are not native game builds or Android device execution"
+        ],
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/dfa013-coordinator-2e4afbe.json",
+          "sha256": "2ccce2968cf592c4a13b13be4aa8c89ed0a391ee0daff5d3ed0b2b34f2f675bc",
+          "bytes": 2275
+        },
+        "completeUnmodifiedBatchReplayPassed": true
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 4992092,
+        "mode": "ARM"
+      },
+      "symbol": "fn_004c2c5c",
+      "source": {
+        "path": "src/native/wave013/dfa_driver.c",
+        "sha256": "5d8a8047f897c290959a9fada9925adb9556a9d999ab6507c0b17e453d88a3a2",
+        "bytes": 2893
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 36,
+      "originalInstructionRanges": [
+        {
+          "start": 4992092,
+          "endExclusive": 4992128,
+          "bytes": 36
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 36,
+      "originalSpanSha256": "95b0a6c36f07e6091ee66862e6c3c6720bd0cdf83a9b560c01224bc9cb0bd050",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 4996128,
+          "address": 4996264,
+          "bytes": 4,
+          "sha256": "2e513301675eb226acaba7d7bdbbcd75f486c4b64ee0a1773b896a507f488013"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/wave013-native/dfa-sealed/source/dfa_driver.o",
+          "sha256": "75e53320fb09107bc2d1066fdee110d7667ab353c216c139ae14cdacb9f7f525",
+          "bytes": 2100
+        },
+        "section": ".text.fn_004c2c5c",
+        "bytes": 32,
+        "sha256": "1fe07c1d8f8fc45d17691461cf61778defba4d7eed6e342c0eaaced75a06137f",
+        "source": {
+          "path": "src/native/wave013/dfa_driver.c",
+          "sha256": "5d8a8047f897c290959a9fada9925adb9556a9d999ab6507c0b17e453d88a3a2",
+          "bytes": 2893
+        },
+        "relocations": []
+      },
+      "candidateInstructionAndPoolBytes": 32,
+      "candidateLinkedSpanSha256": "1fe07c1d8f8fc45d17691461cf61778defba4d7eed6e342c0eaaced75a06137f",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/wave013-native/dfa/packet.json",
+          "sha256": "11e6002217a2584f8db762e8718821a3601a02f1a25d2171192a8917b0a4926a",
+          "bytes": 1312778
+        },
+        "verifiedTests": 16,
+        "constructionAndRangeCases": 916,
+        "attemptedFixtureCases": 918,
+        "unsupportedRepresentationCases": [
+          {
+            "id": "range-phase-oom-1-19",
+            "specification": {
+              "id": "range-phase-oom-1-19",
+              "pattern": "[^\\p{ASCII}\\P{ASCII}]",
+              "candidate": "A",
+              "free_slots": 19
+            },
+            "reason": "Historical private-pointer field was partially initialized; fragments are outside this packet contract",
+            "originalAndSourceArmReturnedNormally": true,
+            "originalLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "sourceLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "originalMemorySha256": "78d5e182f702a676624cf1bcd031d3867d944e0cdd4775bf730cbcae893364ec",
+            "sourceMemorySha256": "0c225df64f89cbaa12e35debaef4af9936e7658b112af8b6ac60c827e3b21f75",
+            "nativeExecutedForThisFixture": false,
+            "qualifiedComparisonClaimed": false
+          },
+          {
+            "id": "range-phase-oom-1-20",
+            "specification": {
+              "id": "range-phase-oom-1-20",
+              "pattern": "[^\\p{ASCII}\\P{ASCII}]",
+              "candidate": "A",
+              "free_slots": 20
+            },
+            "reason": "Historical private-pointer field was partially initialized; fragments are outside this packet contract",
+            "originalAndSourceArmReturnedNormally": true,
+            "originalLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "sourceLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "originalMemorySha256": "ec220d2936a3a6096d929a1fe2bfaaf0199edb8a865de4013fa93e10ce0010ab",
+            "sourceMemorySha256": "0ebd45f4ccc112ed44faa998623676cf98fe3db2f5c2252a7f2535e3504c2d91",
+            "nativeExecutedForThisFixture": false,
+            "qualifiedComparisonClaimed": false
+          }
+        ],
+        "allAttemptedCasesQualified": false,
+        "originalInstructions": 9,
+        "originalInstructionsReached": 9,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "Retired allocation bytes cannot be read while free or before initialization after reuse. Only complete untouched historical pointer fields in free slots or beyond the current raw membership extent can differ; every other byte, allocation bitmap/cursor and padding is compared.",
+        "independentCleanReplayClaimed": true,
+        "limits": [
+          "Finite initialized-data profile and typed fresh-builder/token fixtures; not universal equivalence",
+          "Complete original bodies are reconstructed; untested instruction addresses remain explicit",
+          "Pointer table keeps target logical ceil(N/4) block budget and uses native pointer elements; membership vectors retain N raw bytes",
+          "Matcher receives a genuine typed MatchContext local; ignored unknown_00 remains scalar zero, no head/padding pointer encoding",
+          "Character-class range loops ending at65535 are outside the terminating fixture domain",
+          "No malformed pointers, corrupted tables, arbitrary aliased ownership, concurrency or MMIO",
+          "Unicode service borrows hash-validated nonexecutable initialized arrays; owner keeps them alive and immutable while bound",
+          "Original whole-program table mutation and public Unicode version provenance are not established",
+          "Source API composes UTF16 tokenizer/NFA/DFA/matcher. Original outer caller and literal fast path remain separate",
+          "Partially initialized historical private pointers are unsupported cross-ABI representation cases, retained explicitly and never counted as passed",
+          "Component builds and bounded execution are not native game builds or Android device execution"
+        ],
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/dfa013-coordinator-2e4afbe.json",
+          "sha256": "2ccce2968cf592c4a13b13be4aa8c89ed0a391ee0daff5d3ed0b2b34f2f675bc",
+          "bytes": 2275
+        },
+        "completeUnmodifiedBatchReplayPassed": true
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 4992128,
+        "mode": "ARM"
+      },
+      "symbol": "fn_004c2c80",
+      "source": {
+        "path": "src/native/wave013/dfa_ranges.c",
+        "sha256": "e02569424777c72d4de12b8d48d251a1e6a61c49bdeb33fb1248c81f5b2b55ad",
+        "bytes": 3055
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 280,
+      "originalInstructionRanges": [
+        {
+          "start": 4992128,
+          "endExclusive": 4992408,
+          "bytes": 280
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 280,
+      "originalSpanSha256": "46017ac00c8b145092ea7f802747454c11a538ec65c3816c0e690bbc24a45490",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 4988768,
+          "address": 4989244,
+          "bytes": 4,
+          "sha256": "faf5aa4cb7839e89d1feb35813011272415a8641a0049c0b06077df5e77c7637"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4988768,
+          "address": 4989456,
+          "bytes": 4,
+          "sha256": "f74443a049bbfa177f224ece5db9510b37fd03b8fa3fcfa7d0308dcb1fc9c8f6"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/wave013-native/dfa-sealed/source/dfa_ranges.o",
+          "sha256": "c7fd684e7f1a2350ee56fc0a5be895737916635bc8d1ca7a7bb414c2ee7b4b5e",
+          "bytes": 1928
+        },
+        "section": ".text.fn_004c2c80",
+        "bytes": 284,
+        "sha256": "0293812d5cc64b08e60376cf5156ebf86b48b2a1285446ecaabbcc8ca356d4de",
+        "source": {
+          "path": "src/native/wave013/dfa_ranges.c",
+          "sha256": "e02569424777c72d4de12b8d48d251a1e6a61c49bdeb33fb1248c81f5b2b55ad",
+          "bytes": 3055
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_004c2c80",
+            "offset": 60,
+            "type": 28,
+            "symbol": "fn_004c3994",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_004c2c80",
+            "offset": 216,
+            "type": 28,
+            "symbol": "fn_004c39c8",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 284,
+      "candidateLinkedSpanSha256": "d124019e68a23c36d045a50cd33e60675a84c02a5f985172c4622ce9eb4e425a",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/wave013-native/dfa/packet.json",
+          "sha256": "11e6002217a2584f8db762e8718821a3601a02f1a25d2171192a8917b0a4926a",
+          "bytes": 1312778
+        },
+        "verifiedTests": 16,
+        "constructionAndRangeCases": 916,
+        "attemptedFixtureCases": 918,
+        "unsupportedRepresentationCases": [
+          {
+            "id": "range-phase-oom-1-19",
+            "specification": {
+              "id": "range-phase-oom-1-19",
+              "pattern": "[^\\p{ASCII}\\P{ASCII}]",
+              "candidate": "A",
+              "free_slots": 19
+            },
+            "reason": "Historical private-pointer field was partially initialized; fragments are outside this packet contract",
+            "originalAndSourceArmReturnedNormally": true,
+            "originalLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "sourceLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "originalMemorySha256": "78d5e182f702a676624cf1bcd031d3867d944e0cdd4775bf730cbcae893364ec",
+            "sourceMemorySha256": "0c225df64f89cbaa12e35debaef4af9936e7658b112af8b6ac60c827e3b21f75",
+            "nativeExecutedForThisFixture": false,
+            "qualifiedComparisonClaimed": false
+          },
+          {
+            "id": "range-phase-oom-1-20",
+            "specification": {
+              "id": "range-phase-oom-1-20",
+              "pattern": "[^\\p{ASCII}\\P{ASCII}]",
+              "candidate": "A",
+              "free_slots": 20
+            },
+            "reason": "Historical private-pointer field was partially initialized; fragments are outside this packet contract",
+            "originalAndSourceArmReturnedNormally": true,
+            "originalLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "sourceLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "originalMemorySha256": "ec220d2936a3a6096d929a1fe2bfaaf0199edb8a865de4013fa93e10ce0010ab",
+            "sourceMemorySha256": "0ebd45f4ccc112ed44faa998623676cf98fe3db2f5c2252a7f2535e3504c2d91",
+            "nativeExecutedForThisFixture": false,
+            "qualifiedComparisonClaimed": false
+          }
+        ],
+        "allAttemptedCasesQualified": false,
+        "originalInstructions": 70,
+        "originalInstructionsReached": 70,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "Retired allocation bytes cannot be read while free or before initialization after reuse. Only complete untouched historical pointer fields in free slots or beyond the current raw membership extent can differ; every other byte, allocation bitmap/cursor and padding is compared.",
+        "independentCleanReplayClaimed": true,
+        "limits": [
+          "Finite initialized-data profile and typed fresh-builder/token fixtures; not universal equivalence",
+          "Complete original bodies are reconstructed; untested instruction addresses remain explicit",
+          "Pointer table keeps target logical ceil(N/4) block budget and uses native pointer elements; membership vectors retain N raw bytes",
+          "Matcher receives a genuine typed MatchContext local; ignored unknown_00 remains scalar zero, no head/padding pointer encoding",
+          "Character-class range loops ending at65535 are outside the terminating fixture domain",
+          "No malformed pointers, corrupted tables, arbitrary aliased ownership, concurrency or MMIO",
+          "Unicode service borrows hash-validated nonexecutable initialized arrays; owner keeps them alive and immutable while bound",
+          "Original whole-program table mutation and public Unicode version provenance are not established",
+          "Source API composes UTF16 tokenizer/NFA/DFA/matcher. Original outer caller and literal fast path remain separate",
+          "Partially initialized historical private pointers are unsupported cross-ABI representation cases, retained explicitly and never counted as passed",
+          "Component builds and bounded execution are not native game builds or Android device execution"
+        ],
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/dfa013-coordinator-2e4afbe.json",
+          "sha256": "2ccce2968cf592c4a13b13be4aa8c89ed0a391ee0daff5d3ed0b2b34f2f675bc",
+          "bytes": 2275
+        },
+        "completeUnmodifiedBatchReplayPassed": true
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7159936,
+        "mode": "ARM"
+      },
+      "symbol": "fn_006d4080",
+      "source": {
+        "path": "src/native/wave013/dfa_ranges.c",
+        "sha256": "e02569424777c72d4de12b8d48d251a1e6a61c49bdeb33fb1248c81f5b2b55ad",
+        "bytes": 3055
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 100,
+      "originalInstructionRanges": [
+        {
+          "start": 7159936,
+          "endExclusive": 7160036,
+          "bytes": 100
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 100,
+      "originalSpanSha256": "8ba2c09f0a3cfc58b41a415f5d02ec69f49cc4f5ef87a0071e67b9fef5c693b7",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 4988768,
+          "address": 4989196,
+          "bytes": 4,
+          "sha256": "9af1ada97d249ae5f5beab4d34e754d845cbc051d4284b86274570e9003a679d"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/wave013-native/dfa-sealed/source/dfa_ranges.o",
+          "sha256": "c7fd684e7f1a2350ee56fc0a5be895737916635bc8d1ca7a7bb414c2ee7b4b5e",
+          "bytes": 1928
+        },
+        "section": ".text.fn_006d4080",
+        "bytes": 116,
+        "sha256": "a18d806cf5534d0d010eecd50f06baed249052e3ed0f8880bfdf735b77b2aa17",
+        "source": {
+          "path": "src/native/wave013/dfa_ranges.c",
+          "sha256": "e02569424777c72d4de12b8d48d251a1e6a61c49bdeb33fb1248c81f5b2b55ad",
+          "bytes": 3055
+        },
+        "relocations": []
+      },
+      "candidateInstructionAndPoolBytes": 116,
+      "candidateLinkedSpanSha256": "a18d806cf5534d0d010eecd50f06baed249052e3ed0f8880bfdf735b77b2aa17",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/wave013-native/dfa/packet.json",
+          "sha256": "11e6002217a2584f8db762e8718821a3601a02f1a25d2171192a8917b0a4926a",
+          "bytes": 1312778
+        },
+        "verifiedTests": 16,
+        "constructionAndRangeCases": 916,
+        "attemptedFixtureCases": 918,
+        "unsupportedRepresentationCases": [
+          {
+            "id": "range-phase-oom-1-19",
+            "specification": {
+              "id": "range-phase-oom-1-19",
+              "pattern": "[^\\p{ASCII}\\P{ASCII}]",
+              "candidate": "A",
+              "free_slots": 19
+            },
+            "reason": "Historical private-pointer field was partially initialized; fragments are outside this packet contract",
+            "originalAndSourceArmReturnedNormally": true,
+            "originalLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "sourceLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "originalMemorySha256": "78d5e182f702a676624cf1bcd031d3867d944e0cdd4775bf730cbcae893364ec",
+            "sourceMemorySha256": "0c225df64f89cbaa12e35debaef4af9936e7658b112af8b6ac60c827e3b21f75",
+            "nativeExecutedForThisFixture": false,
+            "qualifiedComparisonClaimed": false
+          },
+          {
+            "id": "range-phase-oom-1-20",
+            "specification": {
+              "id": "range-phase-oom-1-20",
+              "pattern": "[^\\p{ASCII}\\P{ASCII}]",
+              "candidate": "A",
+              "free_slots": 20
+            },
+            "reason": "Historical private-pointer field was partially initialized; fragments are outside this packet contract",
+            "originalAndSourceArmReturnedNormally": true,
+            "originalLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "sourceLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "originalMemorySha256": "ec220d2936a3a6096d929a1fe2bfaaf0199edb8a865de4013fa93e10ce0010ab",
+            "sourceMemorySha256": "0ebd45f4ccc112ed44faa998623676cf98fe3db2f5c2252a7f2535e3504c2d91",
+            "nativeExecutedForThisFixture": false,
+            "qualifiedComparisonClaimed": false
+          }
+        ],
+        "allAttemptedCasesQualified": false,
+        "originalInstructions": 25,
+        "originalInstructionsReached": 25,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "Retired allocation bytes cannot be read while free or before initialization after reuse. Only complete untouched historical pointer fields in free slots or beyond the current raw membership extent can differ; every other byte, allocation bitmap/cursor and padding is compared.",
+        "independentCleanReplayClaimed": true,
+        "limits": [
+          "Finite initialized-data profile and typed fresh-builder/token fixtures; not universal equivalence",
+          "Complete original bodies are reconstructed; untested instruction addresses remain explicit",
+          "Pointer table keeps target logical ceil(N/4) block budget and uses native pointer elements; membership vectors retain N raw bytes",
+          "Matcher receives a genuine typed MatchContext local; ignored unknown_00 remains scalar zero, no head/padding pointer encoding",
+          "Character-class range loops ending at65535 are outside the terminating fixture domain",
+          "No malformed pointers, corrupted tables, arbitrary aliased ownership, concurrency or MMIO",
+          "Unicode service borrows hash-validated nonexecutable initialized arrays; owner keeps them alive and immutable while bound",
+          "Original whole-program table mutation and public Unicode version provenance are not established",
+          "Source API composes UTF16 tokenizer/NFA/DFA/matcher. Original outer caller and literal fast path remain separate",
+          "Partially initialized historical private pointers are unsupported cross-ABI representation cases, retained explicitly and never counted as passed",
+          "Component builds and bounded execution are not native game builds or Android device execution"
+        ],
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/dfa013-coordinator-2e4afbe.json",
+          "sha256": "2ccce2968cf592c4a13b13be4aa8c89ed0a391ee0daff5d3ed0b2b34f2f675bc",
+          "bytes": 2275
+        },
+        "completeUnmodifiedBatchReplayPassed": true
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7689628,
+        "mode": "ARM"
+      },
+      "symbol": "fn_0075559c",
+      "source": {
+        "path": "src/native/wave013/dfa_ranges.c",
+        "sha256": "e02569424777c72d4de12b8d48d251a1e6a61c49bdeb33fb1248c81f5b2b55ad",
+        "bytes": 3055
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 24,
+      "originalInstructionRanges": [
+        {
+          "start": 7689628,
+          "endExclusive": 7689652,
+          "bytes": 24
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 24,
+      "originalSpanSha256": "c961167c0de4da8730812b0ee1f77e24231d61366915a3ae9bcd5ed83aeff3a7",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 4988768,
+          "address": 4989612,
+          "bytes": 4,
+          "sha256": "5945546caa73677094ceb933b30468107dcabec84622d48511c4f95424d348d0"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/wave013-native/dfa-sealed/source/dfa_ranges.o",
+          "sha256": "c7fd684e7f1a2350ee56fc0a5be895737916635bc8d1ca7a7bb414c2ee7b4b5e",
+          "bytes": 1928
+        },
+        "section": ".text.fn_0075559c",
+        "bytes": 24,
+        "sha256": "490a94d53fab2df7a4cef9b30bad138c37372c74ef964d6f3645f7ee68d9ffb3",
+        "source": {
+          "path": "src/native/wave013/dfa_ranges.c",
+          "sha256": "e02569424777c72d4de12b8d48d251a1e6a61c49bdeb33fb1248c81f5b2b55ad",
+          "bytes": 3055
+        },
+        "relocations": []
+      },
+      "candidateInstructionAndPoolBytes": 24,
+      "candidateLinkedSpanSha256": "490a94d53fab2df7a4cef9b30bad138c37372c74ef964d6f3645f7ee68d9ffb3",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/wave013-native/dfa/packet.json",
+          "sha256": "11e6002217a2584f8db762e8718821a3601a02f1a25d2171192a8917b0a4926a",
+          "bytes": 1312778
+        },
+        "verifiedTests": 16,
+        "constructionAndRangeCases": 916,
+        "attemptedFixtureCases": 918,
+        "unsupportedRepresentationCases": [
+          {
+            "id": "range-phase-oom-1-19",
+            "specification": {
+              "id": "range-phase-oom-1-19",
+              "pattern": "[^\\p{ASCII}\\P{ASCII}]",
+              "candidate": "A",
+              "free_slots": 19
+            },
+            "reason": "Historical private-pointer field was partially initialized; fragments are outside this packet contract",
+            "originalAndSourceArmReturnedNormally": true,
+            "originalLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "sourceLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "originalMemorySha256": "78d5e182f702a676624cf1bcd031d3867d944e0cdd4775bf730cbcae893364ec",
+            "sourceMemorySha256": "0c225df64f89cbaa12e35debaef4af9936e7658b112af8b6ac60c827e3b21f75",
+            "nativeExecutedForThisFixture": false,
+            "qualifiedComparisonClaimed": false
+          },
+          {
+            "id": "range-phase-oom-1-20",
+            "specification": {
+              "id": "range-phase-oom-1-20",
+              "pattern": "[^\\p{ASCII}\\P{ASCII}]",
+              "candidate": "A",
+              "free_slots": 20
+            },
+            "reason": "Historical private-pointer field was partially initialized; fragments are outside this packet contract",
+            "originalAndSourceArmReturnedNormally": true,
+            "originalLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "sourceLifetime": {
+              "retiredByteEvents": 48,
+              "reinitializedByteEvents": 27,
+              "stillQuarantinedBytes": 21,
+              "readBeforeReinitialization": [],
+              "noRetiredReadBeforeReinitialization": true
+            },
+            "originalMemorySha256": "ec220d2936a3a6096d929a1fe2bfaaf0199edb8a865de4013fa93e10ce0010ab",
+            "sourceMemorySha256": "0ebd45f4ccc112ed44faa998623676cf98fe3db2f5c2252a7f2535e3504c2d91",
+            "nativeExecutedForThisFixture": false,
+            "qualifiedComparisonClaimed": false
+          }
+        ],
+        "allAttemptedCasesQualified": false,
+        "originalInstructions": 6,
+        "originalInstructionsReached": 6,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "Retired allocation bytes cannot be read while free or before initialization after reuse. Only complete untouched historical pointer fields in free slots or beyond the current raw membership extent can differ; every other byte, allocation bitmap/cursor and padding is compared.",
+        "independentCleanReplayClaimed": true,
+        "limits": [
+          "Finite initialized-data profile and typed fresh-builder/token fixtures; not universal equivalence",
+          "Complete original bodies are reconstructed; untested instruction addresses remain explicit",
+          "Pointer table keeps target logical ceil(N/4) block budget and uses native pointer elements; membership vectors retain N raw bytes",
+          "Matcher receives a genuine typed MatchContext local; ignored unknown_00 remains scalar zero, no head/padding pointer encoding",
+          "Character-class range loops ending at65535 are outside the terminating fixture domain",
+          "No malformed pointers, corrupted tables, arbitrary aliased ownership, concurrency or MMIO",
+          "Unicode service borrows hash-validated nonexecutable initialized arrays; owner keeps them alive and immutable while bound",
+          "Original whole-program table mutation and public Unicode version provenance are not established",
+          "Source API composes UTF16 tokenizer/NFA/DFA/matcher. Original outer caller and literal fast path remain separate",
+          "Partially initialized historical private pointers are unsupported cross-ABI representation cases, retained explicitly and never counted as passed",
+          "Component builds and bounded execution are not native game builds or Android device execution"
+        ],
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/dfa013-coordinator-2e4afbe.json",
+          "sha256": "2ccce2968cf592c4a13b13be4aa8c89ed0a391ee0daff5d3ed0b2b34f2f675bc",
+          "bytes": 2275
+        },
+        "completeUnmodifiedBatchReplayPassed": true
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave009/interval_set.h",
+      "sha256": "c9f8ea99061aaf09e3b82c8a75d3049282f14bdbf7e201a429c1064348853419",
+      "bytes": 987
+    },
+    {
+      "path": "src/native/wave010/match_state.h",
+      "sha256": "c5331ad810d5fc508c5df281ece4f5b8f70a998cc5d226d2e7157593137d035b",
+      "bytes": 1055
+    },
+    {
+      "path": "src/native/wave012/compile_graph.h",
+      "sha256": "d496139a253186af9849862e764fcc1b50d77f432fe8e6e9dd4c6b4ce84f8ee5",
+      "bytes": 1657
+    },
+    {
+      "path": "src/native/wave012/fixed_arena.h",
+      "sha256": "576604e9c5fde42d82ada3fa977fa33591421711f129bd5cae1b3c45240eec4a",
+      "bytes": 689
+    },
+    {
+      "path": "src/native/wave012/label_ops.h",
+      "sha256": "0d96df2ffe4d5c6f404cbbe688e86f3f644fbc7fecfe9fe6ab0c03a43b2f5be1",
+      "bytes": 939
+    },
+    {
+      "path": "src/native/wave013/control_compile.h",
+      "sha256": "323e2786580a834a869dfd5a15d22edd58f84dc8d909322dbf3d99902937e8b0",
+      "bytes": 288
+    },
+    {
+      "path": "src/native/wave013/dfa_compile.h",
+      "sha256": "83f3627463a010ec5b5d561f1d443c25995be6dc8f4f86cbc28d534f1d2fe334",
+      "bytes": 830
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa.h",
+      "sha256": "76dddc817728b69b544e927320f5c1564a6a390ba6259adae837a324d3a07c36",
+      "bytes": 4884
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa_api.h",
+      "sha256": "974523189a56560a598aca0f00ef26cd7b50c3a12bb5c0bb1f0789e5ba82d8bb",
+      "bytes": 386
+    },
+    {
+      "path": "src/native/wave013/pattern_ranges.h",
+      "sha256": "6eb248d90a59fc8f50469f8735a4b6ad224ca067b68ce66295ccd5de765abeee",
+      "bytes": 521
+    },
+    {
+      "path": "src/native/wave013/pattern_tokens.h",
+      "sha256": "2a06bf5d5efd04ef077298a341aaead1a5ef6e20ace3969363ff35b1ba78a9ae",
+      "bytes": 4191
+    },
+    {
+      "path": "src/native/wave013/pattern_unicode.h",
+      "sha256": "5a0f6e2c1824e58392c5d347108ff9b088ae256e684fcff613a9aaceb28f709b",
+      "bytes": 1109
+    }
+  ],
+  "originalPackets": [
+    {
+      "path": "evidence/lanes/wave013-native/dfa/packet.json",
+      "sha256": "11e6002217a2584f8db762e8718821a3601a02f1a25d2171192a8917b0a4926a",
+      "bytes": 1312778
+    },
+    {
+      "path": "evidence/lanes/wave013-native/dfa/verification.json",
+      "sha256": "0c4a21c638cfb87680d3c50d2dc80b154a1f6fd6c473576fb71a67fae4ff5bf6",
+      "bytes": 1312
+    }
+  ],
+  "producer": {
+    "path": "evidence/functional/producers/review-dfa013.py",
+    "sha256": "8ae7bbdb7cd6bc41f74b32ed3e129e78f841d02adf9838a1c66f0590c843886f",
+    "bytes": 2555
+  },
+  "census": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+    "bytes": 20574405
+  },
+  "supplementalInventory": [
+    {
+      "path": "evidence/lanes/wave013-native/method-dispatch-overlay.json",
+      "sha256": "ba4a6b8f633d62dc7ea2b9b8c473459215b7f5d62f42d79b849497900116c75e",
+      "bytes": 131026
+    },
+    {
+      "path": "evidence/verification/array007-function-overlay.json",
+      "sha256": "3f3121445869c567a8460efb59e97fe60d6b9073220ded6e593ae2e7acdcd7eb",
+      "bytes": 3339
+    },
+    {
+      "path": "evidence/verification/closure010-function-overlay.json",
+      "sha256": "3eb297926b78bcf312dc6a2bd2a06228a318de91bc4aebcda522d8a1605dd1a1",
+      "bytes": 4237
+    }
+  ],
+  "exactCandidateExcludedPendingSeparateAdmission": [],
+  "originalInstructionBytes": 2376,
+  "independentCleanReplayClaimed": false,
+  "sharedRegistryChanged": false,
+  "proposalProducer": {
+    "path": "toolscripts/native_wave013_dfa_functional_proposal.py",
+    "sha256": "f8899636e3deeac2d959efc0f28347de89f06bed2e8989d40810aca31ca6ff9e",
+    "bytes": 5932
+  },
+  "coordinatorReplay": {
+    "path": "evidence/verification/dfa013-coordinator-2e4afbe.json",
+    "sha256": "2ccce2968cf592c4a13b13be4aa8c89ed0a391ee0daff5d3ed0b2b34f2f675bc",
+    "bytes": 2275
+  },
+  "matchingSourceCreditGranted": 0
+}
