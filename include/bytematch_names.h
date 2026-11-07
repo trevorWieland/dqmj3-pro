@@ -78,3 +78,7 @@
 #define fn_006f9544 state_reserve055
 #define fn_00166900 state_write_fixed055
 #define fn_007292d0 state_resource_lookup055
+#define fn_007321e4 stream_inflate059
+#define fn_00734594 stream_table059
+#define fn_007456a4 stream_window059
+#define fn_00730208 stream_adler059

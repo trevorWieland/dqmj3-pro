@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "name": "stream059",
+  "producerSteps": [
+    {
+      "name": "stream059-prepare",
+      "args": [
+        "toolscripts/native_stream059_stage.py",
+        "prepare"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "stream059-positive",
+      "args": [
+        "toolscripts/native_stream059_stage.py",
+        "positive"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "stream059-controls",
+      "args": [
+        "toolscripts/native_stream059_stage.py",
+        "controls"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "stream059-tail",
+      "args": [
+        "toolscripts/native_stream059_stage.py",
+        "tail"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "stream059-fresh-staged-unit-checks",
+      "args": [
+        "toolscripts/native_stream059_stage.py",
+        "tests"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "isolated_component_replay",
+    "isolated_intake_cleanup",
+    "refresh_functional_source_names",
+    "refresh_functional_source_names_integration",
+    "compile_source_include_dirs"
+  ],
+  "packets": [
+    "work/native-stream059-public/v1/staged-inputs.json",
+    "work/native-stream059-public/v1/positive/report.json",
+    "work/native-stream059-public/v1/positive/input-guard.json",
+    "work/native-stream059-public/v1/positive/public-input-guard.json",
+    "work/native-stream059-public/v1/controls/report.json",
+    "work/native-stream059-public/v1/controls/public-input-guard.json",
+    "work/native-stream059-public/v1/tail/report.json",
+    "work/native-stream059-public/v1/tail/public-input-guard.json",
+    "work/native-stream059-public/v1/tests/tests.log",
+    "work/native-stream059-public/v1/tests/public-input-guard.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

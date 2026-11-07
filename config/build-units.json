@@ -27,7 +27,8 @@
       "wave053",
       "wave056",
       "wave055",
-      "wave058"
+      "wave058",
+      "wave059"
     ]
   },
   "units": [
@@ -9514,6 +9515,149 @@
         "source/squirrel-wave049/source_symbols.h",
         "source/squirrel-wave049/startup.h",
         "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave059/body059.c",
+      "headers": [
+        "src/native/wave056/stream056.h",
+        "src/native/wave058/stream058.h",
+        "src/native/wave059/inflate059.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave058",
+        "src/native/wave056",
+        "src/native/wave054"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave059/checksum059.c",
+      "headers": [
+        "src/native/wave056/stream056.h",
+        "src/native/wave058/stream058.h",
+        "src/native/wave059/inflate059.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave058",
+        "src/native/wave056",
+        "src/native/wave054"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave059/decode059.c",
+      "headers": [
+        "src/native/wave056/stream056.h",
+        "src/native/wave058/stream058.h",
+        "src/native/wave059/inflate059.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave058",
+        "src/native/wave056",
+        "src/native/wave054"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave059/dynamic059.c",
+      "headers": [
+        "src/native/wave056/stream056.h",
+        "src/native/wave058/stream058.h",
+        "src/native/wave059/inflate059.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave058",
+        "src/native/wave056",
+        "src/native/wave054"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave059/fixture059.c",
+      "headers": [
+        "src/native/wave056/stream056.h",
+        "src/native/wave058/fixture058.h",
+        "src/native/wave058/stream058.h",
+        "src/native/wave059/inflate059.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave058",
+        "src/native/wave056",
+        "src/native/wave054"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave059/header059.c",
+      "headers": [
+        "src/native/wave054/crc.h",
+        "src/native/wave056/stream056.h",
+        "src/native/wave058/stream058.h",
+        "src/native/wave059/inflate059.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave058",
+        "src/native/wave056",
+        "src/native/wave054"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave059/inflate059.c",
+      "headers": [
+        "src/native/wave056/stream056.h",
+        "src/native/wave058/stream058.h",
+        "src/native/wave059/inflate059.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave058",
+        "src/native/wave056",
+        "src/native/wave054"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave059/table059.c",
+      "headers": [
+        "src/native/wave056/stream056.h",
+        "src/native/wave058/stream058.h",
+        "src/native/wave059/inflate059.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave058",
+        "src/native/wave056",
+        "src/native/wave054"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave059/utility059.c",
+      "headers": [
+        "src/native/wave054/crc.h",
+        "src/native/wave056/stream056.h",
+        "src/native/wave058/stream058.h",
+        "src/native/wave059/inflate059.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave058",
+        "src/native/wave056",
+        "src/native/wave054"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave059/window059.c",
+      "headers": [
+        "src/native/wave056/stream056.h",
+        "src/native/wave058/stream058.h",
+        "src/native/wave059/inflate059.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave058",
+        "src/native/wave056",
+        "src/native/wave054"
       ],
       "role": "bounded-component"
     }
