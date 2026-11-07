@@ -1188,6 +1188,96 @@
         "src/native/wave005/vm_views.h"
       ],
       "role": "provisional-script-execution-component"
+    },
+    {
+      "source": "source/squirrel-wave009/class_finalize.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "source/squirrel-wave008/generator_release.h",
+        "source/squirrel-wave009/class_internal.h",
+        "source/squirrel-wave009/class_release.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-class-lifetime-component"
+    },
+    {
+      "source": "source/squirrel-wave009/class_release.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "source/squirrel-wave008/generator_release.h",
+        "source/squirrel-wave009/class_internal.h",
+        "source/squirrel-wave009/class_release.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-class-lifetime-component"
+    },
+    {
+      "source": "source/squirrel-wave009/fixture_observers.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "source/squirrel-wave008/generator_release.h",
+        "source/squirrel-wave009/class_release.h",
+        "source/squirrel-wave009/fixture_internal.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-class-lifetime-component"
+    },
+    {
+      "source": "source/squirrel-wave009/fixture_snapshot.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "source/squirrel-wave008/generator_release.h",
+        "source/squirrel-wave009/class_release.h",
+        "source/squirrel-wave009/fixture_internal.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-class-lifetime-component"
+    },
+    {
+      "source": "source/squirrel-wave009/fixture_state.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "source/squirrel-wave008/generator_release.h",
+        "source/squirrel-wave009/class_release.h",
+        "source/squirrel-wave009/fixture_internal.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-class-lifetime-component"
+    },
+    {
+      "source": "source/squirrel-wave009/member_resize.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "source/squirrel-wave008/generator_release.h",
+        "source/squirrel-wave009/class_internal.h",
+        "source/squirrel-wave009/class_release.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-class-lifetime-component"
+    },
+    {
+      "source": "source/squirrel-wave009/vtables.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave007/array_release.h",
+        "source/squirrel-wave008/generator_release.h",
+        "source/squirrel-wave009/class_release.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-class-lifetime-component"
     }
   ],
   "excludedSources": [
@@ -1206,6 +1296,7 @@
     "source/squirrel-wave005",
     "source/squirrel-wave006",
     "source/squirrel-wave007",
-    "source/squirrel-wave008"
+    "source/squirrel-wave008",
+    "source/squirrel-wave009"
   ]
 }

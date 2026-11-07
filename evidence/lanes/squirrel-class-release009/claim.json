@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "status": "measured-before-class-release-source-implementation",
+  "program": "dqmj3pro",
+  "version": "update-content0",
+  "module": "main",
+  "imageBase": 1048576,
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "censusSha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+  "functions": [
+    {
+      "role": "class-final-release",
+      "entry": 6708960,
+      "endExclusive": 6709024,
+      "mode": "ARM",
+      "instructionBytes": 64,
+      "instructionSha256": "435c35b4713816baafee24d3c2374614e5ccf6eb0b2d9423916a085d318bb3d0",
+      "poolBytes": 0,
+      "poolSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "literals": [],
+      "directCalleesOrTailCalls": [
+        1693312
+      ],
+      "canonicalCensusExtentVerified": true
+    },
+    {
+      "role": "class-destructor",
+      "entry": 6709572,
+      "endExclusive": 6710144,
+      "mode": "ARM",
+      "instructionBytes": 572,
+      "instructionSha256": "f2b639f8394d3490e11aea374ee06bb118c54d80dd3ea694bf3497674e770fe0",
+      "poolBytes": 4,
+      "poolSha256": "e1a9dfc0106e1c0faedb4bd3994b2cddb4bbfe58a332a1f075b14b57ebdf062b",
+      "literals": [
+        {
+          "instruction": 6709584,
+          "address": 6710144,
+          "sha256": "e1a9dfc0106e1c0faedb4bd3994b2cddb4bbfe58a332a1f075b14b57ebdf062b"
+        }
+      ],
+      "directCalleesOrTailCalls": [
+        1693312,
+        2309080,
+        2414396,
+        6709024
+      ],
+      "canonicalCensusExtentVerified": true
+    },
+    {
+      "role": "class-finalize",
+      "entry": 6709024,
+      "endExclusive": 6709564,
+      "mode": "ARM",
+      "instructionBytes": 540,
+      "instructionSha256": "639b28de35ae59224340612e717873439ca44ed7a09881185674433fcd19a753",
+      "poolBytes": 8,
+      "poolSha256": "c7159f012eedc17670600235a8b906f90d05a7d4c921b02d08ed1dc558aea27d",
+      "literals": [
+        {
+          "instruction": 6709036,
+          "address": 6709564,
+          "sha256": "3c9ba11c659ac11a8eacbf4e39da86a9ad7b3b3a9619bbeee21c07e86c65cf15"
+        },
+        {
+          "instruction": 6709048,
+          "address": 6709568,
+          "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+        }
+      ],
+      "directCalleesOrTailCalls": [
+        1697892,
+        1724896
+      ],
+      "canonicalCensusExtentVerified": true
+    },
+    {
+      "role": "member-vector-resize",
+      "entry": 1724896,
+      "endExclusive": 1725192,
+      "mode": "ARM",
+      "instructionBytes": 296,
+      "instructionSha256": "841d41b8676e77cb2996e7786cb9e583125bff1bbea67fbff3f43e8cde3cb0b9",
+      "poolBytes": 4,
+      "poolSha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108",
+      "literals": [
+        {
+          "instruction": 1724964,
+          "address": 1725192,
+          "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+        }
+      ],
+      "directCalleesOrTailCalls": [
+        1587340,
+        1697892
+      ],
+      "canonicalCensusExtentVerified": true
+    }
+  ],
+  "completeMeasuredInstructionBytes": 1472,
+  "scalarPointerPoolBytes": 16,
+  "classVtable": {
+    "address": 8719760,
+    "bytes": 12,
+    "sha256": "5bf77ae248179ca55384ca0b21681ea99faa9636238f2a4811586638e1e5fb2b",
+    "destructorSlot": 8719760,
+    "releaseSlot": 8719768
+  },
+  "targetAbi": {
+    "referenceBytes": 20,
+    "classBytes": 92,
+    "sharedOffset": 20,
+    "memberTableOffset": 24,
+    "baseClassOffset": 28,
+    "firstMemberVectorOffset": 32,
+    "secondMemberVectorOffset": 44,
+    "objectVectorOffset": 56,
+    "attributesOffset": 68,
+    "typeTagOffset": 76,
+    "releaseHookOffset": 80,
+    "lockedByteOffset": 84,
+    "instanceBytesOffset": 88,
+    "memberRecordBytes": 16,
+    "destructorReturnsThisPointer": true
+  },
+  "readOrderContract": [
+    "Optional release hook sees intact class before virtual-destructor lookup",
+    "Reload virtual destructor after release hook returns",
+    "Install class identity then unlink unmarked collectable",
+    "Finalize attributes, first member vector, second member vector and object vector",
+    "Release and clear member table before releasing and clearing base class",
+    "Destroy residual attributes and object/member vector backing storage",
+    "Within each member record release second object before first, caching current record across callbacks",
+    "Reload vector size and backing pointer between records",
+    "Reset base identity and weak target before final92-byte disposal"
+  ],
+  "globalNullPrecondition": {
+    "address": 9176808,
+    "bytes": 8,
+    "type": 16777217,
+    "payload": 0,
+    "onDiskBytesAreUninitializedZeros": true,
+    "originalInitializerPrefix": 7337628,
+    "prefixEndExclusive": 7337648,
+    "prefixSha256": "26c9742c11f7800dd39966201d03048006c03736dcb3b5b96a5921b6f4d0aaea",
+    "prefixExecutionIsPreconditionEvidenceOnly": true
+  },
+  "unreachableTemporaryCleanup": {
+    "reason": "Local fill member records hold fixed NULL tags and zero payloads; callbacks do not receive their unexposed stack storage",
+    "constantNullType": 16777217,
+    "referenceFlag": 134217728,
+    "requiresStaticReachabilityProof": true,
+    "patchedOriginalExecutionAllowed": false
+  },
+  "sourceDependencies": [
+    {
+      "entry": 1697892,
+      "lane": "native-wave005",
+      "newCredit": 0
+    },
+    {
+      "entry": 2414396,
+      "lane": "squirrel-array-release007",
+      "newCredit": 0
+    }
+  ],
+  "sharedBaseReset": {
+    "start": 2309080,
+    "endExclusive": 2309124,
+    "censusOwner": 1891524,
+    "newFunctionOrFragmentCredit": 0
+  },
+  "externalServices": [
+    {
+      "originalThunk": 1693312,
+      "service": "typed C logical deallocation"
+    },
+    {
+      "originalThunk": 1587340,
+      "service": "typed C bounded reallocation"
+    },
+    {
+      "service": "typed release hook and polymorphic reference callbacks"
+    }
+  ],
+  "constructorAndVmClassOperationsClaimed": false,
+  "sourceCodeWrittenAtMeasurement": false,
+  "requestedExactBytes": 0,
+  "coordinatorAdmissionRequired": true,
+  "duplicatePhysicalCreditAllowed": false,
+  "originalPayloadsPublished": false
+}
