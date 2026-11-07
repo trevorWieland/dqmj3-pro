@@ -16,7 +16,8 @@
       "wave011-material",
       "wave012",
       "wave013",
-      "wave014"
+      "wave014",
+      "wave024"
     ]
   },
   "units": [
@@ -3297,6 +3298,14 @@
         "src/native/wave005/vm_views.h"
       ],
       "role": "bounded-native-call-component"
+    },
+    {
+      "source": "src/native/wave024/digest.c",
+      "headers": [
+        "src/native/wave024/digest.h",
+        "src/native/wave024/digest_constants.h"
+      ],
+      "role": "bounded-md5-compression-candidate"
     }
   ],
   "excludedSources": [

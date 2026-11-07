@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-independent-frozen-native-invocation-graph",
+  "sourceRevision": "618d5051a0a62751c46312e560eaed0ec1833cae",
+  "completeUnmodifiedBatchReplayPassed": true,
+  "rawReplay": {
+    "path": "evidence/verification/vm-call022-isolated-618d505.json",
+    "bytes": 12797,
+    "sha256": "cf87b66c37186b95d186af198a58fdecb4e3dbf61e3b1bc4c8e3e260ddc11c6b"
+  },
+  "executedDriver": {
+    "path": "evidence/verification/producers/vm-call022-618d505-replay.py",
+    "bytes": 5164,
+    "sha256": "9f0661ae9022605277b7324e77830142550b8401a987ba9a60eacbc75a61b4a8"
+  },
+  "primaryReport": {
+    "path": "work/squirrel-vm-call022/final234/report.json",
+    "bytes": 17224171,
+    "sha256": "0eb35a2a2000eda51fabd7c1ee947ae330a217ebf3cfc6cb42cf9ba443002c3f"
+  },
+  "independentReport": {
+    "path": "work/clean-replay/vm-call022-618d505/work/squirrel-vm-call022/committed-root/report.json",
+    "bytes": 17224533,
+    "sha256": "06f0a91b36b6158a2aeb53f000beeb4ec1477fc194581e42e5aa564874b68788"
+  },
+  "ready": {
+    "path": "evidence/lanes/squirrel-vm-call022/ready.json",
+    "bytes": 15373,
+    "sha256": "64a08d949e507e59737db08356f5f45221ae18581bba315a2e58ce3036742202"
+  },
+  "cases": 234,
+  "targetObservations": 936,
+  "returningControls": 12,
+  "sameFinalHeapControls": 8,
+  "tests": 69,
+  "publicUnits": 237,
+  "publicCompilations": 653,
+  "allArmA64AndAllOtherNativeWordsAndOrderedEventsIdentical": true,
+  "nativeCallbackPointerWordsDifferWithRuntimeLoadAddresses": true,
+  "onlyNativeWords27And28ComparedByIdentity": true,
+  "callbackPointerWordSource": {
+    "path": "source/squirrel-wave022/fixture.c",
+    "bytes": 9543,
+    "sha256": "c41dd459cf68dc849f9f16778ca007d2318eb7b1777bd353140307643d8c3b0f"
+  },
+  "allNativeObservationsIndependentlyValidated": true,
+  "additionalColdInputPins": [
+    "toolscripts/squirrel_vm_call022_layout.py",
+    "toolscripts/squirrel_vm_call022_replay.py"
+  ],
+  "additionalFilesAreAuxiliaryMetadataToolsAndCommonInputPinsUnchanged": true,
+  "existingInstructionBytes": 2380,
+  "newOrDuplicateSourceCredit": 0,
+  "fullExecuteClassCreationTypeErrorOr018ParentQualified": false,
+  "wholeVmGameOrPhysicalAndroidClaimed": false,
+  "producer": {
+    "path": "evidence/verification/producers/review-vm-call022-replay.py",
+    "bytes": 5129,
+    "sha256": "2d10ecc90932c24dbcb9a488a105340c61804cf6a4e45f2b8eb0255008edabcd"
+  }
+}
