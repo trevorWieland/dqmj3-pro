@@ -33,7 +33,8 @@ def check_inputs(rows):
 
 
 def execute(output):
-    assert output.resolve().is_relative_to(WORK.resolve())
+    output = output.resolve()
+    assert output.is_relative_to(WORK.resolve())
     assert (SOURCE.parent / "digest_constants.h").read_bytes() == content().encode("utf-8")
     inputs = owned_inputs()
     claim = json.loads((EVIDENCE / "claim.json").read_text())
