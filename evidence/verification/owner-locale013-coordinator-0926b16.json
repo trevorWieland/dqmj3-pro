@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-independent-owner-locale-component",
+  "completeUnmodifiedBatchReplayPassed": true,
+  "sourceRevision": "0926b16cd099ae8abb0a54294be56316def294f3",
+  "rawReplay": {
+    "path": "evidence/verification/owner-locale013-isolated-0926b16.json",
+    "sha256": "e5cf2d6467e622d32b22ad606f6c02234d35c88c559eb5b8b00cbc2b2668ef13",
+    "bytes": 13068
+  },
+  "executedDriver": {
+    "path": "evidence/verification/producers/owner-locale013-0926b16-replay.py",
+    "sha256": "c6f03ebf34b5e26fbc50da333ef03eda96b7d2b8019b78353227e1b8ad0f0c84",
+    "bytes": 5289
+  },
+  "primaryPacket": {
+    "path": "evidence/lanes/wave013-native/file/owner/locale/packet.json",
+    "sha256": "9c8f344757b264570f690b31db82f92395c357e03dcb4cc0ad131c1c683f6c04",
+    "bytes": 1933464
+  },
+  "independentPacket": {
+    "path": "work/clean-replay/owner-locale013-0926b16/evidence/lanes/wave013-native/file/owner/locale/independent-packet.json",
+    "sha256": "23f85cb0d94ca46e914b3041287668a3286888538379457f2e3df9a43e2c7cfb",
+    "bytes": 1945434
+  },
+  "tests": 73,
+  "publicUnits": 182,
+  "publicCompilations": 522,
+  "qualifiedFixtureCases": 7345,
+  "flagAndReturnCases": 64,
+  "raw7345CaseRowsIdentical": true,
+  "allArmObjectsAndLinkedElfIdentical": true,
+  "androidSharedLibraryIdentical": true,
+  "windowsBinaryComparisons": {
+    "dll": {
+      "differenceOffsets": [
+        128,
+        129
+      ],
+      "timestampOffset": 128,
+      "onlyCoffTimestampVaries": true
+    },
+    "object": {
+      "differenceOffsets": [
+        4,
+        5
+      ],
+      "timestampOffset": 4,
+      "onlyCoffTimestampVaries": true
+    }
+  },
+  "returningControls": [
+    "allowed-language-bit-removed",
+    "base-file-id-changed",
+    "secondary-language-file-changed",
+    "paired-count-not-incremented",
+    "paired-fallback-file-changed",
+    "out-of-range-shift-wrapped",
+    "policy-region-query-omitted",
+    "count-initialization-delayed",
+    "unsupported-region-clears-output"
+  ],
+  "allControlArmAndWindowsResultsIdentical": true,
+  "originalInstructionsReached": 191,
+  "originalInstructions": 192,
+  "unhitUnprovedInstructions": 1,
+  "serviceDomain": "Successful CFG replies; stable and synthetic changing regions separately labeled",
+  "countWriteOrderObservedAtEveryActualOriginalSvc": true,
+  "fourIndexedDispatchTablesBytesExcludedFromCodeCredit": 128,
+  "newPhysicalInventoryCredit": 0,
+  "matchingSourceCreditGranted": 0,
+  "wholeGameOrAndroidDeviceExecuted": false,
+  "producer": {
+    "path": "evidence/verification/producers/review-owner-locale013-replay.py",
+    "sha256": "e187a9c1e22d3ac05fa42e4b50cd71c15826c14ab9f3b46417fb665a8b581ec3",
+    "bytes": 6386
+  }
+}
