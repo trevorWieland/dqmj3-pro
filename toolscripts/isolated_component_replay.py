@@ -2,6 +2,7 @@ import argparse
 import hashlib
 import io
 import json
+import os
 from pathlib import Path
 import re
 import shutil
@@ -72,6 +73,7 @@ def save(path, packet):
 
 
 def run_steps(destination, python, commands, receipt, receipt_path, packets):
+    environment = dict(os.environ, PYTHONPATH=str(destination / "toolscripts"), PYTHONNOUSERSITE="1", PYTHONDONTWRITEBYTECODE="1")
     stage = "commands"
     try:
         for name, arguments in commands:
@@ -81,7 +83,7 @@ def run_steps(destination, python, commands, receipt, receipt_path, packets):
             argv = [arg.replace("{REPLAY_ROOT}", str(destination)) for arg in argv]
             try:
                 with log.open("wb") as stream:
-                    result = subprocess.run(argv, cwd=destination, stdout=stream, stderr=subprocess.STDOUT, timeout=2400)
+                    result = subprocess.run(argv, cwd=destination, stdout=stream, stderr=subprocess.STDOUT, timeout=2400, env=environment)
             except Exception as error:
                 receipt["steps"].append({"name": name, "argv": argv, "returncode": None,
                     "errorType": type(error).__name__, "log": log.relative_to(destination).as_posix(),

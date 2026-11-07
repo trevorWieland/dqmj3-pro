@@ -85,6 +85,17 @@ class ImmutableReplayTests(unittest.TestCase):
         self.assertEqual(saved["packets"][0]["sha256"], replay.digest(root / "report.json"))
         self.assertEqual(saved["steps"][0]["logSha256"], replay.digest(root / "fixture.log"))
 
+    def test_child_imports_only_replay_tools_when_parent_path_is_poisoned(self):
+        root, receipt, path, commands, packets = self.run_fixture('import fixture_probe;from pathlib import Path;Path("report.json").write_text(fixture_probe.VALUE)', ["report.json"])
+        tools = root / "toolscripts"
+        tools.mkdir()
+        (tools / "fixture_probe.py").write_text('VALUE = "fresh"', encoding="utf-8")
+        outside = self.scratch()
+        (outside / "fixture_probe.py").write_text('raise RuntimeError("parent import escaped")', encoding="utf-8")
+        with patch.dict("os.environ", {"PYTHONPATH": str(outside)}):
+            replay.run_steps(root, Path(sys.executable), commands, receipt, path, packets)
+        self.assertEqual((root / "report.json").read_text(), "fresh")
+
     def test_failed_child_always_saves_failed_checkpoint(self):
         root, receipt, path, commands, packets = self.run_fixture('raise SystemExit(7)', ["report.json"])
         with self.assertRaises(RuntimeError):
