@@ -1,0 +1,827 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-state055-leaf-selector-address-family",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "functions": [
+    {
+      "symbol": "fn_006f95a4",
+      "source": {
+        "path": "src/native/wave055/state055.c",
+        "bytes": 988,
+        "sha256": "0dc88d3e60de5bf1595385441b43b4bf5954a4cf521a6fd2a0967ca5ee73521f"
+      },
+      "sourceName": "state_write055",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 3185,
+        "sha256": "fa217b0ee3dee5f2e0211202e6a5e3f48044d82aa2515aa4c02a8ab82ffa934f"
+      },
+      "canonicalIdentity": {
+        "address": 7312804,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 224,
+      "originalInstructionRanges": [
+        {
+          "start": 7312804,
+          "endExclusive": 7313028,
+          "bytes": 224
+        }
+      ],
+      "originalBodySha256": "3768ff88cb7134f958ed5cc5717768f55fd6e02d823811e64e5a07c4994e9121",
+      "reportEntryBytes": 224,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/state055-coordinator-49799dd.json",
+          "bytes": 19034,
+          "sha256": "ff6cca4231504e84fccad075206fd18958febde3d7335deecc7c035a1d9617f7"
+        },
+        "familyCaseSets": 83,
+        "originalInstructionPcs": 56,
+        "originalInstructionPcsVisited": 49,
+        "domainUnreachablePcs": 7,
+        "domain": "Count0..4096; aligned physically backed padding; no reservation overflow; pair cannot alias input/output; sequential array alias effects retained.",
+        "fullInitializedDataArenasCompared": true,
+        "actualWindowsAndHighAddressA64": true,
+        "windowsCalleeSavedRegistersDirectlyObserved": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "familyReturningControls": 15,
+        "familyReturningSourceExecutions": 45,
+        "productionGlobalInitializationQualified": false,
+        "floatingStatusEquivalenceClaimed": false,
+        "hardwareRendererGameOrUniversalEquivalenceClaimed": false,
+        "confidenceJustification": "Medium: independently replayed complete canonical extents, finite four-target corpus and returning controls. Qualified caller/buffer/token domains only; not arbitrary parameter, global setup, physical address, floating status or whole-game equivalence."
+      }
+    },
+    {
+      "symbol": "fn_007440bc",
+      "source": {
+        "path": "src/native/wave055/selector055.c",
+        "bytes": 5767,
+        "sha256": "7ee06adb4db98fa1162355e783d6ab36a5c449b552f08c64195ed96380b0fd5b"
+      },
+      "sourceName": "state_select055",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 3185,
+        "sha256": "fa217b0ee3dee5f2e0211202e6a5e3f48044d82aa2515aa4c02a8ab82ffa934f"
+      },
+      "canonicalIdentity": {
+        "address": 7618748,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 3944,
+      "originalInstructionRanges": [
+        {
+          "start": 7618748,
+          "endExclusive": 7619620,
+          "bytes": 872
+        },
+        {
+          "start": 7619668,
+          "endExclusive": 7622740,
+          "bytes": 3072
+        }
+      ],
+      "originalBodySha256": "5bb2072e95e698326071051bbbb3bd2197b6ae9295d61ffbbcab927c4366bbca",
+      "reportEntryBytes": 872,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/state055-coordinator-49799dd.json",
+          "bytes": 19034,
+          "sha256": "ff6cca4231504e84fccad075206fd18958febde3d7335deecc7c035a1d9617f7"
+        },
+        "familyCaseSets": 424,
+        "originalInstructionPcs": 986,
+        "originalInstructionPcsVisited": 986,
+        "domainUnreachablePcs": 0,
+        "domain": "Exact frozen descriptor/context/cache32-word and physically backed soft-limit corpus; target address tokens remain U32 data; no production initialization or GPU meaning inferred.",
+        "fullInitializedDataArenasCompared": true,
+        "actualWindowsAndHighAddressA64": true,
+        "windowsCalleeSavedRegistersDirectlyObserved": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "familyReturningControls": 15,
+        "familyReturningSourceExecutions": 45,
+        "productionGlobalInitializationQualified": false,
+        "floatingStatusEquivalenceClaimed": false,
+        "hardwareRendererGameOrUniversalEquivalenceClaimed": false,
+        "confidenceJustification": "Medium: independently replayed complete canonical extents, finite four-target corpus and returning controls. Qualified caller/buffer/token domains only; not arbitrary parameter, global setup, physical address, floating status or whole-game equivalence."
+      }
+    },
+    {
+      "symbol": "fn_00166b28",
+      "source": {
+        "path": "src/native/wave055/address055.c",
+        "bytes": 2515,
+        "sha256": "3db78c15e7629b8d10951f927f56866dee1591bd95f89b5b802a8a98ef358123"
+      },
+      "sourceName": "address_convert_entry055",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 3185,
+        "sha256": "fa217b0ee3dee5f2e0211202e6a5e3f48044d82aa2515aa4c02a8ab82ffa934f"
+      },
+      "canonicalIdentity": {
+        "address": 1469224,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 4,
+      "originalInstructionRanges": [
+        {
+          "start": 1469224,
+          "endExclusive": 1469228,
+          "bytes": 4
+        }
+      ],
+      "originalBodySha256": "b48fca2b21722bf179d4b073adbae369b38f421621dedc5c94533f9d61a8300d",
+      "reportEntryBytes": 4,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/state055-coordinator-49799dd.json",
+          "bytes": 19034,
+          "sha256": "ff6cca4231504e84fccad075206fd18958febde3d7335deecc7c035a1d9617f7"
+        },
+        "familyCaseSets": 156,
+        "originalInstructionPcs": 1,
+        "originalInstructionPcsVisited": 1,
+        "domainUnreachablePcs": 0,
+        "domain": "Frozen arithmetic graph fixtures; first/second map helpers reached only with length1. Real native region pointers and explicit U32 target tokens remain distinct; no native physical mapping inferred.",
+        "fullInitializedDataArenasCompared": true,
+        "actualWindowsAndHighAddressA64": true,
+        "windowsCalleeSavedRegistersDirectlyObserved": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "familyReturningControls": 15,
+        "familyReturningSourceExecutions": 45,
+        "productionGlobalInitializationQualified": false,
+        "floatingStatusEquivalenceClaimed": false,
+        "hardwareRendererGameOrUniversalEquivalenceClaimed": false,
+        "confidenceJustification": "Medium: independently replayed complete canonical extents, finite four-target corpus and returning controls. Qualified caller/buffer/token domains only; not arbitrary parameter, global setup, physical address, floating status or whole-game equivalence."
+      }
+    },
+    {
+      "symbol": "fn_0015fa8c",
+      "source": {
+        "path": "src/native/wave055/address055.c",
+        "bytes": 2515,
+        "sha256": "3db78c15e7629b8d10951f927f56866dee1591bd95f89b5b802a8a98ef358123"
+      },
+      "sourceName": "address_convert055",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 3185,
+        "sha256": "fa217b0ee3dee5f2e0211202e6a5e3f48044d82aa2515aa4c02a8ab82ffa934f"
+      },
+      "canonicalIdentity": {
+        "address": 1440396,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 172,
+      "originalInstructionRanges": [
+        {
+          "start": 1440396,
+          "endExclusive": 1440568,
+          "bytes": 172
+        }
+      ],
+      "originalBodySha256": "e9469fd1d002166d35953735cb1f81298d60b83f51c6d765e6f9b75c21eb302a",
+      "reportEntryBytes": 172,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/state055-coordinator-49799dd.json",
+          "bytes": 19034,
+          "sha256": "ff6cca4231504e84fccad075206fd18958febde3d7335deecc7c035a1d9617f7"
+        },
+        "familyCaseSets": 156,
+        "originalInstructionPcs": 43,
+        "originalInstructionPcsVisited": 43,
+        "domainUnreachablePcs": 0,
+        "domain": "Frozen arithmetic graph fixtures; first/second map helpers reached only with length1. Real native region pointers and explicit U32 target tokens remain distinct; no native physical mapping inferred.",
+        "fullInitializedDataArenasCompared": true,
+        "actualWindowsAndHighAddressA64": true,
+        "windowsCalleeSavedRegistersDirectlyObserved": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "familyReturningControls": 15,
+        "familyReturningSourceExecutions": 45,
+        "productionGlobalInitializationQualified": false,
+        "floatingStatusEquivalenceClaimed": false,
+        "hardwareRendererGameOrUniversalEquivalenceClaimed": false,
+        "confidenceJustification": "Medium: independently replayed complete canonical extents, finite four-target corpus and returning controls. Qualified caller/buffer/token domains only; not arbitrary parameter, global setup, physical address, floating status or whole-game equivalence."
+      }
+    },
+    {
+      "symbol": "fn_0019e94c",
+      "source": {
+        "path": "src/native/wave055/address055.c",
+        "bytes": 2515,
+        "sha256": "3db78c15e7629b8d10951f927f56866dee1591bd95f89b5b802a8a98ef358123"
+      },
+      "sourceName": "address_first_map055",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 3185,
+        "sha256": "fa217b0ee3dee5f2e0211202e6a5e3f48044d82aa2515aa4c02a8ab82ffa934f"
+      },
+      "canonicalIdentity": {
+        "address": 1698124,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 80,
+      "originalInstructionRanges": [
+        {
+          "start": 1698124,
+          "endExclusive": 1698204,
+          "bytes": 80
+        }
+      ],
+      "originalBodySha256": "487d58af6b17c854148c3ebbf2feb001802a1f858eecb49213fa0027d5006c60",
+      "reportEntryBytes": 80,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/state055-coordinator-49799dd.json",
+          "bytes": 19034,
+          "sha256": "ff6cca4231504e84fccad075206fd18958febde3d7335deecc7c035a1d9617f7"
+        },
+        "familyCaseSets": 156,
+        "originalInstructionPcs": 20,
+        "originalInstructionPcsVisited": 20,
+        "domainUnreachablePcs": 0,
+        "domain": "Frozen arithmetic graph fixtures; first/second map helpers reached only with length1. Real native region pointers and explicit U32 target tokens remain distinct; no native physical mapping inferred.",
+        "fullInitializedDataArenasCompared": true,
+        "actualWindowsAndHighAddressA64": true,
+        "windowsCalleeSavedRegistersDirectlyObserved": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "familyReturningControls": 15,
+        "familyReturningSourceExecutions": 45,
+        "productionGlobalInitializationQualified": false,
+        "floatingStatusEquivalenceClaimed": false,
+        "hardwareRendererGameOrUniversalEquivalenceClaimed": false,
+        "confidenceJustification": "Medium: independently replayed complete canonical extents, finite four-target corpus and returning controls. Qualified caller/buffer/token domains only; not arbitrary parameter, global setup, physical address, floating status or whole-game equivalence."
+      }
+    },
+    {
+      "symbol": "fn_00170868",
+      "source": {
+        "path": "src/native/wave055/address055.c",
+        "bytes": 2515,
+        "sha256": "3db78c15e7629b8d10951f927f56866dee1591bd95f89b5b802a8a98ef358123"
+      },
+      "sourceName": "address_second_enabled055",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 3185,
+        "sha256": "fa217b0ee3dee5f2e0211202e6a5e3f48044d82aa2515aa4c02a8ab82ffa934f"
+      },
+      "canonicalIdentity": {
+        "address": 1509480,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 20,
+      "originalInstructionRanges": [
+        {
+          "start": 1509480,
+          "endExclusive": 1509500,
+          "bytes": 20
+        }
+      ],
+      "originalBodySha256": "8a0dab0c7fd0357ce9fe39d5a0f58fba8d7709130b6d4b06c2403ebbc2c7a5e7",
+      "reportEntryBytes": 20,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/state055-coordinator-49799dd.json",
+          "bytes": 19034,
+          "sha256": "ff6cca4231504e84fccad075206fd18958febde3d7335deecc7c035a1d9617f7"
+        },
+        "familyCaseSets": 156,
+        "originalInstructionPcs": 5,
+        "originalInstructionPcsVisited": 5,
+        "domainUnreachablePcs": 0,
+        "domain": "Frozen arithmetic graph fixtures; first/second map helpers reached only with length1. Real native region pointers and explicit U32 target tokens remain distinct; no native physical mapping inferred.",
+        "fullInitializedDataArenasCompared": true,
+        "actualWindowsAndHighAddressA64": true,
+        "windowsCalleeSavedRegistersDirectlyObserved": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "familyReturningControls": 15,
+        "familyReturningSourceExecutions": 45,
+        "productionGlobalInitializationQualified": false,
+        "floatingStatusEquivalenceClaimed": false,
+        "hardwareRendererGameOrUniversalEquivalenceClaimed": false,
+        "confidenceJustification": "Medium: independently replayed complete canonical extents, finite four-target corpus and returning controls. Qualified caller/buffer/token domains only; not arbitrary parameter, global setup, physical address, floating status or whole-game equivalence."
+      }
+    },
+    {
+      "symbol": "fn_00170880",
+      "source": {
+        "path": "src/native/wave055/address055.c",
+        "bytes": 2515,
+        "sha256": "3db78c15e7629b8d10951f927f56866dee1591bd95f89b5b802a8a98ef358123"
+      },
+      "sourceName": "address_second_map055",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 3185,
+        "sha256": "fa217b0ee3dee5f2e0211202e6a5e3f48044d82aa2515aa4c02a8ab82ffa934f"
+      },
+      "canonicalIdentity": {
+        "address": 1509504,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 72,
+      "originalInstructionRanges": [
+        {
+          "start": 1509504,
+          "endExclusive": 1509576,
+          "bytes": 72
+        }
+      ],
+      "originalBodySha256": "f19cdd9bc95afe3fa68522e04f61ee1b1230fad2735d4a94b1324e8f48a0328c",
+      "reportEntryBytes": 72,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/state055-coordinator-49799dd.json",
+          "bytes": 19034,
+          "sha256": "ff6cca4231504e84fccad075206fd18958febde3d7335deecc7c035a1d9617f7"
+        },
+        "familyCaseSets": 156,
+        "originalInstructionPcs": 18,
+        "originalInstructionPcsVisited": 18,
+        "domainUnreachablePcs": 0,
+        "domain": "Frozen arithmetic graph fixtures; first/second map helpers reached only with length1. Real native region pointers and explicit U32 target tokens remain distinct; no native physical mapping inferred.",
+        "fullInitializedDataArenasCompared": true,
+        "actualWindowsAndHighAddressA64": true,
+        "windowsCalleeSavedRegistersDirectlyObserved": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "familyReturningControls": 15,
+        "familyReturningSourceExecutions": 45,
+        "productionGlobalInitializationQualified": false,
+        "floatingStatusEquivalenceClaimed": false,
+        "hardwareRendererGameOrUniversalEquivalenceClaimed": false,
+        "confidenceJustification": "Medium: independently replayed complete canonical extents, finite four-target corpus and returning controls. Qualified caller/buffer/token domains only; not arbitrary parameter, global setup, physical address, floating status or whole-game equivalence."
+      }
+    },
+    {
+      "symbol": "fn_001708cc",
+      "source": {
+        "path": "src/native/wave055/address055.c",
+        "bytes": 2515,
+        "sha256": "3db78c15e7629b8d10951f927f56866dee1591bd95f89b5b802a8a98ef358123"
+      },
+      "sourceName": "address_region_length055",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 3185,
+        "sha256": "fa217b0ee3dee5f2e0211202e6a5e3f48044d82aa2515aa4c02a8ab82ffa934f"
+      },
+      "canonicalIdentity": {
+        "address": 1509580,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 20,
+      "originalInstructionRanges": [
+        {
+          "start": 1509580,
+          "endExclusive": 1509600,
+          "bytes": 20
+        }
+      ],
+      "originalBodySha256": "b8d691b022eb5a6bb614332158666a6bebf0f73bdda7ccdf82258b0fbb8294d3",
+      "reportEntryBytes": 20,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/state055-coordinator-49799dd.json",
+          "bytes": 19034,
+          "sha256": "ff6cca4231504e84fccad075206fd18958febde3d7335deecc7c035a1d9617f7"
+        },
+        "familyCaseSets": 156,
+        "originalInstructionPcs": 5,
+        "originalInstructionPcsVisited": 5,
+        "domainUnreachablePcs": 0,
+        "domain": "Frozen arithmetic graph fixtures; first/second map helpers reached only with length1. Real native region pointers and explicit U32 target tokens remain distinct; no native physical mapping inferred.",
+        "fullInitializedDataArenasCompared": true,
+        "actualWindowsAndHighAddressA64": true,
+        "windowsCalleeSavedRegistersDirectlyObserved": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "familyReturningControls": 15,
+        "familyReturningSourceExecutions": 45,
+        "productionGlobalInitializationQualified": false,
+        "floatingStatusEquivalenceClaimed": false,
+        "hardwareRendererGameOrUniversalEquivalenceClaimed": false,
+        "confidenceJustification": "Medium: independently replayed complete canonical extents, finite four-target corpus and returning controls. Qualified caller/buffer/token domains only; not arbitrary parameter, global setup, physical address, floating status or whole-game equivalence."
+      }
+    },
+    {
+      "symbol": "fn_001708e4",
+      "source": {
+        "path": "src/native/wave055/address055.c",
+        "bytes": 2515,
+        "sha256": "3db78c15e7629b8d10951f927f56866dee1591bd95f89b5b802a8a98ef358123"
+      },
+      "sourceName": "address_region_base055",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 3185,
+        "sha256": "fa217b0ee3dee5f2e0211202e6a5e3f48044d82aa2515aa4c02a8ab82ffa934f"
+      },
+      "canonicalIdentity": {
+        "address": 1509604,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 20,
+      "originalInstructionRanges": [
+        {
+          "start": 1509604,
+          "endExclusive": 1509624,
+          "bytes": 20
+        }
+      ],
+      "originalBodySha256": "2a312931fdc341dba604295380abee868da0a5796eb09b110bbdf1c025ddd3e7",
+      "reportEntryBytes": 20,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/state055-coordinator-49799dd.json",
+          "bytes": 19034,
+          "sha256": "ff6cca4231504e84fccad075206fd18958febde3d7335deecc7c035a1d9617f7"
+        },
+        "familyCaseSets": 156,
+        "originalInstructionPcs": 5,
+        "originalInstructionPcsVisited": 5,
+        "domainUnreachablePcs": 0,
+        "domain": "Frozen arithmetic graph fixtures; first/second map helpers reached only with length1. Real native region pointers and explicit U32 target tokens remain distinct; no native physical mapping inferred.",
+        "fullInitializedDataArenasCompared": true,
+        "actualWindowsAndHighAddressA64": true,
+        "windowsCalleeSavedRegistersDirectlyObserved": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "familyReturningControls": 15,
+        "familyReturningSourceExecutions": 45,
+        "productionGlobalInitializationQualified": false,
+        "floatingStatusEquivalenceClaimed": false,
+        "hardwareRendererGameOrUniversalEquivalenceClaimed": false,
+        "confidenceJustification": "Medium: independently replayed complete canonical extents, finite four-target corpus and returning controls. Qualified caller/buffer/token domains only; not arbitrary parameter, global setup, physical address, floating status or whole-game equivalence."
+      }
+    },
+    {
+      "symbol": "fn_0015e284",
+      "source": {
+        "path": "src/native/wave055/address055.c",
+        "bytes": 2515,
+        "sha256": "3db78c15e7629b8d10951f927f56866dee1591bd95f89b5b802a8a98ef358123"
+      },
+      "sourceName": "address_first_base055",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 3185,
+        "sha256": "fa217b0ee3dee5f2e0211202e6a5e3f48044d82aa2515aa4c02a8ab82ffa934f"
+      },
+      "canonicalIdentity": {
+        "address": 1434244,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 12,
+      "originalInstructionRanges": [
+        {
+          "start": 1434244,
+          "endExclusive": 1434256,
+          "bytes": 12
+        }
+      ],
+      "originalBodySha256": "f65c720bf9f01608272b8642a87a2673dbfba0339c2c62eb328500eaa84f5f75",
+      "reportEntryBytes": 12,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/state055-coordinator-49799dd.json",
+          "bytes": 19034,
+          "sha256": "ff6cca4231504e84fccad075206fd18958febde3d7335deecc7c035a1d9617f7"
+        },
+        "familyCaseSets": 156,
+        "originalInstructionPcs": 3,
+        "originalInstructionPcsVisited": 3,
+        "domainUnreachablePcs": 0,
+        "domain": "Frozen arithmetic graph fixtures; first/second map helpers reached only with length1. Real native region pointers and explicit U32 target tokens remain distinct; no native physical mapping inferred.",
+        "fullInitializedDataArenasCompared": true,
+        "actualWindowsAndHighAddressA64": true,
+        "windowsCalleeSavedRegistersDirectlyObserved": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "familyReturningControls": 15,
+        "familyReturningSourceExecutions": 45,
+        "productionGlobalInitializationQualified": false,
+        "floatingStatusEquivalenceClaimed": false,
+        "hardwareRendererGameOrUniversalEquivalenceClaimed": false,
+        "confidenceJustification": "Medium: independently replayed complete canonical extents, finite four-target corpus and returning controls. Qualified caller/buffer/token domains only; not arbitrary parameter, global setup, physical address, floating status or whole-game equivalence."
+      }
+    },
+    {
+      "symbol": "fn_0015e218",
+      "source": {
+        "path": "src/native/wave055/address055.c",
+        "bytes": 2515,
+        "sha256": "3db78c15e7629b8d10951f927f56866dee1591bd95f89b5b802a8a98ef358123"
+      },
+      "sourceName": "address_first_length055",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 3185,
+        "sha256": "fa217b0ee3dee5f2e0211202e6a5e3f48044d82aa2515aa4c02a8ab82ffa934f"
+      },
+      "canonicalIdentity": {
+        "address": 1434136,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 12,
+      "originalInstructionRanges": [
+        {
+          "start": 1434136,
+          "endExclusive": 1434148,
+          "bytes": 12
+        }
+      ],
+      "originalBodySha256": "3c2fc37c85e0a5ae64076cb6cb494a59e099059b341644cbabbcaa883115ceb9",
+      "reportEntryBytes": 12,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/state055-coordinator-49799dd.json",
+          "bytes": 19034,
+          "sha256": "ff6cca4231504e84fccad075206fd18958febde3d7335deecc7c035a1d9617f7"
+        },
+        "familyCaseSets": 156,
+        "originalInstructionPcs": 3,
+        "originalInstructionPcsVisited": 3,
+        "domainUnreachablePcs": 0,
+        "domain": "Frozen arithmetic graph fixtures; first/second map helpers reached only with length1. Real native region pointers and explicit U32 target tokens remain distinct; no native physical mapping inferred.",
+        "fullInitializedDataArenasCompared": true,
+        "actualWindowsAndHighAddressA64": true,
+        "windowsCalleeSavedRegistersDirectlyObserved": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "familyReturningControls": 15,
+        "familyReturningSourceExecutions": 45,
+        "productionGlobalInitializationQualified": false,
+        "floatingStatusEquivalenceClaimed": false,
+        "hardwareRendererGameOrUniversalEquivalenceClaimed": false,
+        "confidenceJustification": "Medium: independently replayed complete canonical extents, finite four-target corpus and returning controls. Qualified caller/buffer/token domains only; not arbitrary parameter, global setup, physical address, floating status or whole-game equivalence."
+      }
+    },
+    {
+      "symbol": "fn_0017ca70",
+      "source": {
+        "path": "src/native/wave055/address055.c",
+        "bytes": 2515,
+        "sha256": "3db78c15e7629b8d10951f927f56866dee1591bd95f89b5b802a8a98ef358123"
+      },
+      "sourceName": "address_second_base055",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 3185,
+        "sha256": "fa217b0ee3dee5f2e0211202e6a5e3f48044d82aa2515aa4c02a8ab82ffa934f"
+      },
+      "canonicalIdentity": {
+        "address": 1559152,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 12,
+      "originalInstructionRanges": [
+        {
+          "start": 1559152,
+          "endExclusive": 1559164,
+          "bytes": 12
+        }
+      ],
+      "originalBodySha256": "f65c720bf9f01608272b8642a87a2673dbfba0339c2c62eb328500eaa84f5f75",
+      "reportEntryBytes": 12,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/state055-coordinator-49799dd.json",
+          "bytes": 19034,
+          "sha256": "ff6cca4231504e84fccad075206fd18958febde3d7335deecc7c035a1d9617f7"
+        },
+        "familyCaseSets": 156,
+        "originalInstructionPcs": 3,
+        "originalInstructionPcsVisited": 3,
+        "domainUnreachablePcs": 0,
+        "domain": "Frozen arithmetic graph fixtures; first/second map helpers reached only with length1. Real native region pointers and explicit U32 target tokens remain distinct; no native physical mapping inferred.",
+        "fullInitializedDataArenasCompared": true,
+        "actualWindowsAndHighAddressA64": true,
+        "windowsCalleeSavedRegistersDirectlyObserved": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "familyReturningControls": 15,
+        "familyReturningSourceExecutions": 45,
+        "productionGlobalInitializationQualified": false,
+        "floatingStatusEquivalenceClaimed": false,
+        "hardwareRendererGameOrUniversalEquivalenceClaimed": false,
+        "confidenceJustification": "Medium: independently replayed complete canonical extents, finite four-target corpus and returning controls. Qualified caller/buffer/token domains only; not arbitrary parameter, global setup, physical address, floating status or whole-game equivalence."
+      }
+    },
+    {
+      "symbol": "fn_0017ca60",
+      "source": {
+        "path": "src/native/wave055/address055.c",
+        "bytes": 2515,
+        "sha256": "3db78c15e7629b8d10951f927f56866dee1591bd95f89b5b802a8a98ef358123"
+      },
+      "sourceName": "address_second_length055",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 3185,
+        "sha256": "fa217b0ee3dee5f2e0211202e6a5e3f48044d82aa2515aa4c02a8ab82ffa934f"
+      },
+      "canonicalIdentity": {
+        "address": 1559136,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 12,
+      "originalInstructionRanges": [
+        {
+          "start": 1559136,
+          "endExclusive": 1559148,
+          "bytes": 12
+        }
+      ],
+      "originalBodySha256": "3c2fc37c85e0a5ae64076cb6cb494a59e099059b341644cbabbcaa883115ceb9",
+      "reportEntryBytes": 12,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/state055-coordinator-49799dd.json",
+          "bytes": 19034,
+          "sha256": "ff6cca4231504e84fccad075206fd18958febde3d7335deecc7c035a1d9617f7"
+        },
+        "familyCaseSets": 156,
+        "originalInstructionPcs": 3,
+        "originalInstructionPcsVisited": 3,
+        "domainUnreachablePcs": 0,
+        "domain": "Frozen arithmetic graph fixtures; first/second map helpers reached only with length1. Real native region pointers and explicit U32 target tokens remain distinct; no native physical mapping inferred.",
+        "fullInitializedDataArenasCompared": true,
+        "actualWindowsAndHighAddressA64": true,
+        "windowsCalleeSavedRegistersDirectlyObserved": false,
+        "sourceGraphOriginalCodeMapped": false,
+        "familyReturningControls": 15,
+        "familyReturningSourceExecutions": 45,
+        "productionGlobalInitializationQualified": false,
+        "floatingStatusEquivalenceClaimed": false,
+        "hardwareRendererGameOrUniversalEquivalenceClaimed": false,
+        "confidenceJustification": "Medium: independently replayed complete canonical extents, finite four-target corpus and returning controls. Qualified caller/buffer/token domains only; not arbitrary parameter, global setup, physical address, floating status or whole-game equivalence."
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave055/address055.h",
+      "bytes": 1737,
+      "sha256": "552153305ec11808d94197d58ee68076fd6bc1eb188713e5d0e71063d143eb8c"
+    },
+    {
+      "path": "src/native/wave055/selector055.h",
+      "bytes": 1597,
+      "sha256": "83623f1980e8f220315cfb616e22cde6289c7f0e0563da9ea6c27bcfc1929e72"
+    },
+    {
+      "path": "src/native/wave055/state055.h",
+      "bytes": 659,
+      "sha256": "45fe75a1f18fcf918a01f538f63be98ba8a342ff6f6c294bb25fa05b5f222dc1"
+    }
+  ],
+  "sourceDependencies": [
+    {
+      "path": "src/native/wave055/address055.c",
+      "bytes": 2515,
+      "sha256": "3db78c15e7629b8d10951f927f56866dee1591bd95f89b5b802a8a98ef358123"
+    },
+    {
+      "path": "src/native/wave055/address055.h",
+      "bytes": 1737,
+      "sha256": "552153305ec11808d94197d58ee68076fd6bc1eb188713e5d0e71063d143eb8c"
+    },
+    {
+      "path": "src/native/wave055/selector055.c",
+      "bytes": 5767,
+      "sha256": "7ee06adb4db98fa1162355e783d6ab36a5c449b552f08c64195ed96380b0fd5b"
+    },
+    {
+      "path": "src/native/wave055/selector055.h",
+      "bytes": 1597,
+      "sha256": "83623f1980e8f220315cfb616e22cde6289c7f0e0563da9ea6c27bcfc1929e72"
+    },
+    {
+      "path": "src/native/wave055/state055.c",
+      "bytes": 988,
+      "sha256": "0dc88d3e60de5bf1595385441b43b4bf5954a4cf521a6fd2a0967ca5ee73521f"
+    },
+    {
+      "path": "src/native/wave055/state055.h",
+      "bytes": 659,
+      "sha256": "45fe75a1f18fcf918a01f538f63be98ba8a342ff6f6c294bb25fa05b5f222dc1"
+    }
+  ],
+  "originalPackets": [
+    {
+      "path": "evidence/lanes/native-state055/leaf-v1/ready.json",
+      "bytes": 7828,
+      "sha256": "db59edb0e2c398e4f784e9d4373a142e82fd056cfc705dc2f0083a8d6a1c5273"
+    },
+    {
+      "path": "evidence/lanes/native-state055/caller-public-v1/ready.json",
+      "bytes": 10370,
+      "sha256": "af9beb722fe132c35fc6ff949dd526abd7508be420063bb2cad7f0fdf5c6c014"
+    },
+    {
+      "path": "evidence/verification/state055-coordinator-49799dd.json",
+      "bytes": 19034,
+      "sha256": "ff6cca4231504e84fccad075206fd18958febde3d7335deecc7c035a1d9617f7"
+    }
+  ],
+  "producer": {
+    "path": "evidence/verification/producers/review-state055-functional.py",
+    "bytes": 9039,
+    "sha256": "389ac35a55444e0f74007b8b93c95a11bd0c5608aca1600ad270fb618fa08484"
+  },
+  "acceptedSourceCreditGranted": 0,
+  "exactMatchingClaimed": false,
+  "confirmedOverallSourceCoverageClaimed": false
+}
