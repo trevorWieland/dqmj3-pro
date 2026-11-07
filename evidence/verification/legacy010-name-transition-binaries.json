@@ -1,0 +1,496 @@
+{
+  "schemaVersion": 1,
+  "status": "legacy-source-names-changed-with-identical-verification-binaries",
+  "checks": {
+    "armElfIdentical": true,
+    "windowsDllIdentical": true,
+    "androidSharedLibraryIdentical": true,
+    "androidModelElfIdentical": true
+  },
+  "nameDefines": [
+    "-Dsq_legacy_script_closure_release010=fn_006a7610",
+    "-Dsq_legacy_script_closure_destroy010=fn_006a769c"
+  ],
+  "legacySourceNamesOnly": true,
+  "modern017FrozenFilesChanged": false,
+  "originalInstructionCreditGranted": 0,
+  "armBuild": {
+    "objects": [
+      {
+        "path": "work/legacy010-source-name-transition/arm/source-0.o",
+        "bytes": 1764,
+        "sha256": "543933a616c0d5fba5d1a5e7c1e00b0a17a2bb15e498767f57ebb70ff2ad8b32"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/arm/source-1.o",
+        "bytes": 1256,
+        "sha256": "5af44211c5eef643a318623c761f94cd70ed1317627dc31a1bc4dff5c6e672c6"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/arm/source-2.o",
+        "bytes": 21284,
+        "sha256": "401a294f1174e2e0273c6bcfe32478a119c52204e10c743ec5619b539fa1b792"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/arm/source-3.o",
+        "bytes": 1648,
+        "sha256": "ca86e9e4de92b2e171ad6f2e5b19e8a31fe498c420a9d2a0e2b8add5c6cf294d"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/arm/source-4.o",
+        "bytes": 1180,
+        "sha256": "425ff285870e76e139e43cbf9ad28654554d57f7ee8d7ca48eae12d986b26f1e"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/arm/source-5.o",
+        "bytes": 988,
+        "sha256": "82e76ac54d398305ca5202b7b1c005cdc7549bd25d1c36064245bf148cfb7459"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/arm/source-6.o",
+        "bytes": 1344,
+        "sha256": "c9b742604f48155a99e83e32ab46c3da23e906735210080dbc5293afa7ea7513"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/arm/source-7.o",
+        "bytes": 1792,
+        "sha256": "e8ff0c1952b73ded733e44f1e0ef9caf61b2cc91355f5bfdff967c797e054c85"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/arm/source-8.o",
+        "bytes": 1256,
+        "sha256": "0b656deecfc002f78303c5e27260c373c2012982801bc44b90a4e3d8c5713da6"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/arm/source-9.o",
+        "bytes": 1216,
+        "sha256": "9c69388300f6b80d4b9283fde017ecbe531a5adf13ef16d97fa3412772e83a03"
+      }
+    ],
+    "linkedElf": {
+      "path": "work/legacy010-source-name-transition/arm/release.elf",
+      "bytes": 133788,
+      "sha256": "244f41d96b1eea9e77f5272aca73f3f3435516ed768851ca3302fc85301842dc"
+    },
+    "linkerScript": {
+      "path": "work/legacy010-source-name-transition/arm/release.ld",
+      "bytes": 237,
+      "sha256": "6fe9be71f881ff60f4a33f0b7119ff0d9968214cf4ae3ae886adb8f7e04ab6f7"
+    },
+    "sources": [
+      {
+        "path": "source/squirrel-wave010/closure_release.c",
+        "bytes": 1169,
+        "sha256": "fe9c00f2bacf176b3d0a71d84c165126074574fa2f5ea22772b77a1032021edf"
+      },
+      {
+        "path": "source/squirrel-wave010/vtables.c",
+        "bytes": 252,
+        "sha256": "4ce4e38509d2301456ecfecd04fe30e393a243e29394c9e63907bc1a46bb2d34"
+      },
+      {
+        "path": "source/squirrel-wave010/fixture.c",
+        "bytes": 12699,
+        "sha256": "0129be347bcfb27f9d3ffc322e9de04fb9cc3e2fae318f51a17c8b86fc4226f6"
+      },
+      {
+        "path": "source/squirrel-wave007/array_release.c",
+        "bytes": 676,
+        "sha256": "f5645fc57423ba608972b30c5d2ec1ef6e89ce817a809739af463bf5f45f2383"
+      },
+      {
+        "path": "source/squirrel-wave007/vector_destroy.c",
+        "bytes": 596,
+        "sha256": "036149a8f1d45e435ebb565f29a7318e727efefd35c5e18699c87e534bbda56c"
+      },
+      {
+        "path": "source/squirrel-wave007/chain_unlink.c",
+        "bytes": 341,
+        "sha256": "ab01e03676ef27b900c40f8037dab0045afc34cd318bcdf21d1401c5abd26a91"
+      },
+      {
+        "path": "source/squirrel-wave007/vtables.c",
+        "bytes": 243,
+        "sha256": "e8d1b1dda5622d57a75e1a1008f1c1b0c07d48f58b733a3df4ca6c6a8f08f39b"
+      },
+      {
+        "path": "source/squirrel-wave008/generator_release.c",
+        "bytes": 1250,
+        "sha256": "b7da7a0305dc940e436d04b2b1fc6a32099c10eb904953ca348883f261e038d2"
+      },
+      {
+        "path": "source/squirrel-wave008/vtables.c",
+        "bytes": 205,
+        "sha256": "8a19dfeb2c89df78c0b7727948cf5ee4b8b1bdb27ad912b87b773f1a3e254dfd"
+      },
+      {
+        "path": "source/squirrel-wave008/fixture_runtime.c",
+        "bytes": 317,
+        "sha256": "1907af52d2aff7f6df7a6eb1c1d4e5dd3da3815f75e3b398dfce4c91b2a17218"
+      }
+    ],
+    "flags": [
+      "--target=arm-none-eabi",
+      "-mcpu=mpcore",
+      "-marm",
+      "-O2",
+      "-std=c11",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-unwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Dsq_legacy_script_closure_release010=fn_006a7610",
+      "-Dsq_legacy_script_closure_destroy010=fn_006a769c"
+    ],
+    "functions": {
+      "fn_006a7610": {
+        "section": ".text.fn_006a7610",
+        "size": 40,
+        "symbolBytes": 40,
+        "mode": "ARM",
+        "sectionSha256": "3ac9eaddb968f5bad75a2de84912b4daee156fa7f54b14486161f2d95a7f42ac",
+        "relocations": [
+          {
+            "offset": 36,
+            "type": 29,
+            "name": "R_ARM_JUMP24",
+            "symbol": "sq_deallocate",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_006a769c": {
+        "section": ".text.fn_006a769c",
+        "size": 200,
+        "symbolBytes": 200,
+        "mode": "ARM",
+        "sectionSha256": "f9ad840e58dfe844cbbe82fd5b4020540c15c4d3195353742371be9ff43f0e2a",
+        "relocations": [
+          {
+            "offset": 40,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0024d73c",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 48,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0077f3f8",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 56,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0077f3f8",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 192,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "sq_script_closure_vtable",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 196,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "sq_release007_weak_vtable",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_00665bd4": {
+        "section": ".text.fn_00665bd4",
+        "size": 40,
+        "symbolBytes": 40,
+        "mode": "ARM",
+        "sectionSha256": "2eae31d243f0fad66634bbbacacec5306705972ffd48233b952a13b07b0310bc",
+        "relocations": [
+          {
+            "offset": 36,
+            "type": 29,
+            "name": "R_ARM_JUMP24",
+            "symbol": "sq_deallocate",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_00665c60": {
+        "section": ".text.fn_00665c60",
+        "size": 104,
+        "symbolBytes": 104,
+        "mode": "ARM",
+        "sectionSha256": "da5b986cd095689c624e04a5026023735e6c8414f969c4ad4791b91d0ac310e0",
+        "relocations": [
+          {
+            "offset": 40,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0024d73c",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 48,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0077f3f8",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 96,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "sq_array_vtable",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 100,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "sq_release007_weak_vtable",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_0077f3f8": {
+        "section": ".text.fn_0077f3f8",
+        "size": 136,
+        "symbolBytes": 136,
+        "mode": "ARM",
+        "sectionSha256": "12b7196c19cc3bd1df55ee29091a87d86d19a32e752228546816e6d7dd26b45b",
+        "relocations": [
+          {
+            "offset": 124,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "sq_deallocate",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_0024d73c": {
+        "section": ".text.fn_0024d73c",
+        "size": 48,
+        "symbolBytes": 48,
+        "mode": "ARM",
+        "sectionSha256": "9a649ad90172d90832c52a24b48873dc1c71e6e5cf9fd7f019c13ad69a00ceea",
+        "relocations": []
+      },
+      "fn_00202dcc": {
+        "section": ".text.fn_00202dcc",
+        "size": 40,
+        "symbolBytes": 40,
+        "mode": "ARM",
+        "sectionSha256": "329efa5f84841253e3815d81bec9f93f9432c716fbb2cef6e5488a108bf3a41c",
+        "relocations": [
+          {
+            "offset": 36,
+            "type": 29,
+            "name": "R_ARM_JUMP24",
+            "symbol": "sq_deallocate",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "fn_00202e68": {
+        "section": ".text.fn_00202e68",
+        "size": 224,
+        "symbolBytes": 224,
+        "mode": "ARM",
+        "sectionSha256": "941a1fd8e4f4121266d3f35105f6f931ec173d27794e713d36c83bb3d1189ad5",
+        "relocations": [
+          {
+            "offset": 40,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0024d73c",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 64,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "sq_deallocate",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 116,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0077f3f8",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 124,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0077f3f8",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 216,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "sq_generator_vtable",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 220,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "sq_release007_weak_vtable",
+            "format": "SHT_REL"
+          }
+        ]
+      }
+    },
+    "symbols": {
+      "closure_destructor_entry": 15728880,
+      "record": 15729728,
+      "fixture": 15859712,
+      "payload": 15742996,
+      "observer_table": 15761420,
+      "observer_release": 15743508,
+      "array_destructor_entry": 15744664,
+      "generator_destructor_entry": 15744932,
+      "fn_006a7610": 15728640,
+      "sq_deallocate": 15728884,
+      "fn_006a769c": 15728680,
+      "fn_0024d73c": 15744616,
+      "fn_0077f3f8": 15744480,
+      "sq_script_closure_vtable": 15761408,
+      "sq_release007_weak_vtable": 15761472,
+      "fixture_bind": 15731556,
+      "fixture_prepare": 15731644,
+      "__aeabi_memclr4": 15744964,
+      "fixture_snapshot": 15734608,
+      "fixture_closure_vtable": 15743432,
+      "fixture_array_vtable": 15743444,
+      "sq_array_vtable": 15761460,
+      "fixture_generator_vtable": 15743456,
+      "sq_generator_vtable": 15761484,
+      "fixture_base_vtable": 15743468,
+      "fixture_layout": 15743480,
+      "fn_00665bd4": 15744336,
+      "fn_00665c60": 15744376,
+      "fn_00202dcc": 15744668,
+      "fn_00202e68": 15744708,
+      "memset": 15744936
+    },
+    "undefinedSymbols": [],
+    "originalCodeOrDataMappedBySource": false,
+    "heapServiceIsAuthoredCFixture": true
+  },
+  "windowsDll": {
+    "path": "work/legacy010-source-name-transition/windows/closure-release.dll",
+    "bytes": 20992,
+    "sha256": "4171b635562fb0da47f294b29c1f3bba58cf8990f1831f02e12f238c1971a982"
+  },
+  "androidBuild": {
+    "actualAndroidObjects": [
+      {
+        "path": "work/legacy010-source-name-transition/android/source-0.o",
+        "bytes": 1816,
+        "sha256": "ab04db2a1519bbfcd33c47a75b95090fe45e76fd45e8f2ccbf4bda109d7da755"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/android/source-1.o",
+        "bytes": 1376,
+        "sha256": "a0b9b2e45d827f6f8c7fda63c87ee4829113056a261512e600f6d315d0921790"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/android/source-2.o",
+        "bytes": 21144,
+        "sha256": "432f7079cb1f036eddc7f0b520fdc85188e65c06e33915bce99f7e4c92c597e0"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/android/source-3.o",
+        "bytes": 1680,
+        "sha256": "ed02eefa1d4d65411e59af7b8bb9df927b0318a44efa9415ab0709aae5ab593a"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/android/source-4.o",
+        "bytes": 1176,
+        "sha256": "fbe9f442147834b58b4a8b400bc07072556426030b3acc04ef3e043a57496088"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/android/source-5.o",
+        "bytes": 928,
+        "sha256": "6e62c2c4e3db2719e3cd000f231a865a43e13bce3ba6aa17271f7de451e243a5"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/android/source-6.o",
+        "bytes": 1536,
+        "sha256": "a4f6fe768035c675fdec791a3d62be87a7717207c97923e6d432ad70482b0753"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/android/source-7.o",
+        "bytes": 1848,
+        "sha256": "41482a7507ca5f6938faf8f66fe8f2d24814cd05d563c2cc040d693050523ee5"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/android/source-8.o",
+        "bytes": 1376,
+        "sha256": "f066eb70a3175e1727c864d5c7cd08e93da877f75aadfac51e50d0c210d74fa0"
+      },
+      {
+        "path": "work/legacy010-source-name-transition/android/source-9.o",
+        "bytes": 1320,
+        "sha256": "426c8ea66589f5e170b8893ab0a8cd10854fc502ef648defefeaca070b042187"
+      }
+    ],
+    "sharedLibrary": {
+      "path": "work/legacy010-source-name-transition/android/libclosure_release010.so",
+      "bytes": 23256,
+      "sha256": "467a70bc31ccf6da0c491168cc9119ea3a8f5a5c610e3ae73389664f9d76ae24"
+    },
+    "modelElf": {
+      "path": "work/legacy010-source-name-transition/android/model.elf",
+      "bytes": 199848,
+      "sha256": "c263d1da58890cde7fa222a0e185b60de714b84b3faa7b84ece7c4c3360880d0"
+    },
+    "originalCodeOrDataMapped": false,
+    "androidOperatingSystemExecuted": false
+  },
+  "sourceFiles": [
+    {
+      "path": "source/squirrel-wave010/closure_release.c",
+      "bytes": 1169,
+      "sha256": "fe9c00f2bacf176b3d0a71d84c165126074574fa2f5ea22772b77a1032021edf"
+    },
+    {
+      "path": "source/squirrel-wave010/closure_release.h",
+      "bytes": 1094,
+      "sha256": "cc37edf7a57b4caefc2b429ada205e74a07b02190afbbed19918548d40df9806"
+    },
+    {
+      "path": "source/squirrel-wave010/vtables.c",
+      "bytes": 252,
+      "sha256": "4ce4e38509d2301456ecfecd04fe30e393a243e29394c9e63907bc1a46bb2d34"
+    },
+    {
+      "path": "toolscripts/squirrel_closure_release010_build.py",
+      "bytes": 6933,
+      "sha256": "3f6b71f4c6761ac2567425fab34e64fc632b1a46887d57c50ea23d3b7c651e99"
+    }
+  ],
+  "historicalExecution": {
+    "path": "evidence/lanes/squirrel-closure-release010/execution.json",
+    "bytes": 52123,
+    "sha256": "da959b70e45a1fd3968d5f51da539a38237786d4e8de14a561d19859f1de02e1"
+  },
+  "producer": {
+    "path": "evidence/verification/producers/review-legacy010-name-transition.py",
+    "bytes": 1890,
+    "sha256": "9a9a0d483b210e1d5c26cca28e3614d7e5adbc1bdaf7c6e95066e510a7ecc0f8"
+  }
+}

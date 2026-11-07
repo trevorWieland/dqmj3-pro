@@ -13,8 +13,8 @@ typedef struct SqScriptClosure010 {
 } SqScriptClosure010;
 
 extern const SqVTable sq_script_closure_vtable;
-void fn_006a7610(SqRef *reference);
-SqRef *fn_006a769c(SqRef *reference);
+void sq_legacy_script_closure_release010(SqRef *reference);
+SqRef *sq_legacy_script_closure_destroy010(SqRef *reference);
 
 _Static_assert(sizeof(void *) != 4 || sizeof(SqScriptClosure010) == 64, "target closure allocation");
 _Static_assert(sizeof(void *) != 4 || __builtin_offsetof(SqScriptClosure010, environment) == 24, "target environment");

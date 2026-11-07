@@ -10,13 +10,13 @@ static void release_object(const SqObject *object)
     }
 }
 
-void fn_006a7610(SqRef *reference)
+void sq_legacy_script_closure_release010(SqRef *reference)
 {
     reference->vtable->unknown_0(reference);
     sq_deallocate(reference, sizeof(SqScriptClosure010));
 }
 
-SqRef *fn_006a769c(SqRef *reference)
+SqRef *sq_legacy_script_closure_destroy010(SqRef *reference)
 {
     SqScriptClosure010 *closure = (SqScriptClosure010 *)reference;
     reference->vtable = &sq_script_closure_vtable;

@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-independent-owner-heap-component",
+  "completeUnmodifiedBatchReplayPassed": true,
+  "sourceRevision": "fbed14007867df601c25f1ddb4b099018ef38d8d",
+  "rawReplay": {
+    "path": "evidence/verification/owner-heap013-isolated-fbed140.json",
+    "sha256": "51fb589fdb4e1967b0d8672f55c1f3278ca298908de9f7d6b49977df4ce855cf",
+    "bytes": 12997
+  },
+  "executedDriver": {
+    "path": "evidence/verification/producers/owner-heap013-fbed140-replay.py",
+    "sha256": "dc318ceb94b5a54bced0be26dccecd25a272d2aef724d7bc049c9795ea6c5b7e",
+    "bytes": 5262
+  },
+  "primaryPacket": {
+    "path": "evidence/lanes/wave013-native/file/owner/heap/packet.json",
+    "sha256": "b960cea7b95b1a6700a4d07bf468641babb59670bb5075b0be9e44d07ae6b06f",
+    "bytes": 338209
+  },
+  "independentPacket": {
+    "path": "work/clean-replay/owner-heap013-fbed140/evidence/lanes/wave013-native/file/owner/heap/independent-packet.json",
+    "sha256": "05afee777684ec63d5e79cdf2e5621f838e07f10de073c6f7a74bb99b232bfd0",
+    "bytes": 352707
+  },
+  "tests": 68,
+  "publicUnits": 181,
+  "publicCompilations": 519,
+  "qualifiedFixtureCases": 617,
+  "flagAndReturnCases": 64,
+  "raw617CaseRowsIdentical": true,
+  "allArmObjectsAndLinkedElfIdentical": true,
+  "androidSharedLibraryIdentical": true,
+  "windowsBinaryComparisons": {
+    "dll": {
+      "differenceOffsets": [
+        128,
+        129
+      ],
+      "timestampOffset": 128,
+      "onlyCoffTimestampVaries": true
+    },
+    "object": {
+      "differenceOffsets": [
+        4,
+        5
+      ],
+      "timestampOffset": 4,
+      "onlyCoffTimestampVaries": true
+    }
+  },
+  "returningControls": [
+    "exact-fit-rejected",
+    "selected-placement-margin-ignored",
+    "empty-heap-margin-applied",
+    "oom-changes-block-size",
+    "fallback-anchor-not-replaced",
+    "free-selects-next-anchor",
+    "free-retains-data-pointer",
+    "allocation-changes-unknown-flag",
+    "allocation-unlock-omitted"
+  ],
+  "controlArmResultsAndWindowsDifferenceOffsetsAndZeroPatternsIdentical": true,
+  "processRelativeWindowsControlReturnValuesAndExpectedMemoryHashesNotComparedAcrossRuns": true,
+  "originalInstructionsReached": 120,
+  "originalInstructions": 134,
+  "unhitUnprovedInstructions": 14,
+  "synchronizationDomain": "Preheld current-thread recursive mutex, depth 1..8; no kernel slow path or contention",
+  "nonzeroMarginUnderflowMetadataOnlyNoPayloadConsumptionOrAllocationSafetyClaim": true,
+  "matchingSourceCreditGranted": 0,
+  "wholeGameOrAndroidDeviceExecuted": false,
+  "producer": {
+    "path": "evidence/verification/producers/review-owner-heap013-replay.py",
+    "sha256": "1beb0c1afcb3294a5d1215b3b90db285e16b92b54cb4a96baff25752ec109ac8",
+    "bytes": 6635
+  }
+}

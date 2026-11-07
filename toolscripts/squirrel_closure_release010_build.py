@@ -13,8 +13,9 @@ SOURCES += [ROOT / 'source/squirrel-wave007' / name for name in ['array_release.
 SOURCES += [ROOT / 'source/squirrel-wave008' / name for name in ['generator_release.c', 'vtables.c', 'fixture_runtime.c']]
 ENTRIES = ['fn_006a7610', 'fn_006a769c', 'fn_00202dcc', 'fn_00202e68', 'fn_00665bd4', 'fn_00665c60',
     'fn_0077f3f8', 'fn_0024d73c']
+NAME_DEFINES = ['-Dsq_legacy_script_closure_release010=fn_006a7610', '-Dsq_legacy_script_closure_destroy010=fn_006a769c']
 FLAGS = ['--target=arm-none-eabi', '-mcpu=mpcore', '-marm', '-O2', '-std=c11', '-ffreestanding', '-fno-builtin',
-    '-ffunction-sections', '-fdata-sections', '-fno-unwind-tables', '-fno-asynchronous-unwind-tables', '-Wall', '-Wextra', '-Werror']
+    '-ffunction-sections', '-fdata-sections', '-fno-unwind-tables', '-fno-asynchronous-unwind-tables', '-Wall', '-Wextra', '-Werror', *NAME_DEFINES]
 
 
 def arm(folder, sources=SOURCES):
@@ -60,7 +61,7 @@ def windows(folder, sources=SOURCES):
     for index, source in enumerate(sources):
         target = folder / ('source-' + str(index) + '.obj')
         command([ROOT / 'tools/clang-21/clang.exe', '--target=x86_64-pc-windows-msvc', '-O2', '-std=c11', '-ffreestanding',
-            '-fno-builtin', '-Wall', '-Wextra', '-Werror', '-I', SOURCE, '-c', source, '-o', target], folder / ('compile-' + str(index) + '.json'))
+            '-fno-builtin', '-Wall', '-Wextra', '-Werror', *NAME_DEFINES, '-I', SOURCE, '-c', source, '-o', target], folder / ('compile-' + str(index) + '.json'))
         objects.append(target)
     output = folder / 'closure-release.dll'
     exports = [*ENTRIES, 'fixture_bind', 'fixture_prepare', 'fixture_snapshot', 'fixture_array_vtable', 'fixture_generator_vtable', 'fixture_closure_vtable', 'fixture_base_vtable', 'fixture_layout']
@@ -76,7 +77,7 @@ def android(folder):
         target = folder / ('source-' + str(index) + '.o')
         command([ROOT / 'tools/clang-21/clang.exe', '--target=aarch64-linux-android29', '-O2', '-std=c11',
             '-ffreestanding', '-fno-builtin', '-fno-stack-protector', '-fPIC', '-ffunction-sections', '-fdata-sections',
-            '-Wall', '-Wextra', '-Werror', '-I', SOURCE, '-c', source, '-o', target], folder / ('compile-' + str(index) + '.json'))
+            '-Wall', '-Wextra', '-Werror', *NAME_DEFINES, '-I', SOURCE, '-c', source, '-o', target], folder / ('compile-' + str(index) + '.json'))
         objects.append(target)
     library = folder / 'libclosure_release010.so'
     command([ROOT / 'tools/clang-21/ld.lld.exe', '-shared', '--no-undefined', '-z', 'max-page-size=16384',

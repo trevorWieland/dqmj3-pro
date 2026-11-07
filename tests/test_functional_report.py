@@ -92,6 +92,42 @@ class FunctionalReportTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'unique reviewed'):
             self.generate()
 
+    def aliased_source(self):
+        self.indexed_source()
+        self.source.write_text('int actual_script_release(void) { return 1; }\n')
+        self.proof['source'] = self.record(self.source)
+        self.proof['sourceName'] = 'actual_script_release'
+        header = self.root / 'include/bytematch_names.h'
+        header.parent.mkdir()
+        header.write_text('#define fn_00100000 actual_script_release\n')
+        self.proof['symbolNames'] = self.record(header)
+        self.update_packet()
+        return header
+
+    def test_reviewed_names_header_exposes_unique_renamed_source(self):
+        self.aliased_source()
+        self.assertEqual(self.generate(), {'functions': [{'name': 'fn_00100000', 'confidence': 'medium'}]})
+
+    def test_changed_names_header_rejects_stale_function_approval(self):
+        header = self.aliased_source()
+        header.write_text('#define fn_00100000 another_function\n')
+        with self.assertRaisesRegex(ValueError, 'input changed'):
+            self.generate()
+
+    def test_names_header_cannot_hide_an_existing_canonical_definition(self):
+        self.aliased_source()
+        (self.source.parent / 'legacy.c').write_text('int fn_00100000(void) { return 2; }\n')
+        with self.assertRaisesRegex(ValueError, 'canonical conflict'):
+            self.generate()
+
+    def test_ambiguous_names_header_cannot_approve_a_function(self):
+        header = self.aliased_source()
+        header.write_text('#define fn_00100000 actual_script_release\n#define fn_00100000 another_function\n')
+        self.proof['symbolNames'] = self.record(header)
+        self.update_packet()
+        with self.assertRaisesRegex(ValueError, 'absent or ambiguous'):
+            self.generate()
+
     def test_unknown_source_lookup_cannot_bypass_ownership(self):
         self.registry['functions'][0]['sourceLookup'] = 'anywhere'
         with self.assertRaisesRegex(ValueError, 'lookup policy'):
@@ -135,6 +171,16 @@ class FunctionalReportTests(unittest.TestCase):
 
     def test_source_change_rejects_stale_approval(self):
         self.source.write_text('int fn_00100000(void) { return 2; }\n')
+        with self.assertRaisesRegex(ValueError, 'input changed'):
+            self.generate()
+
+    def test_changed_callee_source_rejects_stale_dependency_approval(self):
+        helper = self.source.parent / 'helper.c'
+        helper.write_text('int helper(void) { return 1; }\n')
+        self.packet['sourceDependencies'] = [self.record(helper)]
+        self.update_packet()
+        self.assertEqual(len(self.generate()['functions']), 1)
+        helper.write_text('int helper(void) { return 2; }\n')
         with self.assertRaisesRegex(ValueError, 'input changed'):
             self.generate()
 

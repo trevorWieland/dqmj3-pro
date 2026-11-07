@@ -26,7 +26,7 @@ def checked(root, item):
 
 def repository_definitions(root):
     found = {}
-    pattern = re.compile(r'\b(fn_[0-9a-f]{8})\s*\([^)]*\)\s*\{')
+    pattern = re.compile(r'\b([A-Za-z_][A-Za-z0-9_]*)\s*\([^)]*\)\s*\{')
     for folder in ('src/native', 'source'):
         base = root / folder
         if not base.exists():
@@ -106,8 +106,25 @@ def generate(root, report, registry):
         source = checked(root, proof['source'])
         for header in packet.get('headers', []):
             checked(root, header)
-        if source.suffix != '.c' or not re.search(r'\b' + name + r'\s*\([^)]*\)\s*\{', source.read_text()):
+        for dependency in packet.get('sourceDependencies', []):
+            checked(root, dependency)
+        source_name = proof.get('sourceName', name)
+        if not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_]*', source_name):
+            raise ValueError('Reviewed source name is invalid')
+        if source.suffix != '.c' or not re.search(r'\b' + re.escape(source_name) + r'\s*\([^)]*\)\s*\{', source.read_text()):
             raise ValueError('Reviewed source lacks the reported C definition')
+        if source_name != name:
+            alias = proof.get('symbolNames')
+            if not alias or alias['path'] != 'include/bytematch_names.h':
+                raise ValueError('Renamed source lacks its reviewed names header')
+            header = checked(root, alias)
+            targets = re.findall(r'^#define\s+' + re.escape(name) + r'\s+([A-Za-z_][A-Za-z0-9_]*)\s*$', header.read_text(), re.M)
+            if targets != [source_name]:
+                raise ValueError('Reviewed source alias is absent or ambiguous')
+            if definitions is None:
+                definitions = repository_definitions(root)
+            if definitions.get(name) or definitions.get(source_name) != {source.resolve()}:
+                raise ValueError('Renamed source index has a canonical conflict or lacks a unique reviewed definition')
         if name not in reported:
             raise ValueError('Functional name is absent from this report')
         unit, function = reported[name]
@@ -117,7 +134,7 @@ def generate(root, report, registry):
                 raise ValueError('Report source ownership cannot expose the functional C definition')
             if definitions is None:
                 definitions = repository_definitions(root)
-            if definitions.get(name) != {source.resolve()}:
+            if definitions.get(source_name) != {source.resolve()}:
                 raise ValueError('Repository function index lacks a unique reviewed C definition')
         if (int(function['size']) != entry_bytes
                 or int(function['metadata']['virtual_address']) != address):
