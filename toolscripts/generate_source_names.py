@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def generate(root):
+    root = root.resolve()
     config = json.loads((root / 'config/source-names.json').read_text())
     inventory = json.loads((root / 'evidence/inventory/update-content0.json').read_text())
     if config['schemaVersion'] != 1 or config['version'] != 'update-content0' or config['moduleSha256'] != inventory['codeSha256']:
@@ -18,8 +19,8 @@ def generate(root):
         if not re.fullmatch(r'fn_[0-9a-f]{8}', symbol) or symbol in names or not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_]*', source_name):
             raise ValueError('Source name mapping is invalid or duplicated')
         source = (root / row['sourcePath']).resolve()
-        if not source.is_relative_to((root / 'source').resolve()) or not source.is_file():
-            raise ValueError('Source name mapping escapes the reviewed source tree')
+        if not any(source.is_relative_to(root / folder) for folder in ('source', 'src/native')) or not source.is_file():
+            raise ValueError('Source name mapping escapes the reviewed source trees')
         if not re.search(r'\b' + re.escape(source_name) + r'\s*\([^)]*\)\s*\{', source.read_text()):
             raise ValueError('Source name has no C definition')
         lines.append('#define ' + symbol + ' ' + source_name)

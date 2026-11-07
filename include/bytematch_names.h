@@ -31,3 +31,10 @@
 #define fn_001a2b2c sq_class_clone_cursor030
 #define fn_001cdba0 sq_class_instance_release030
 #define fn_001cdcc4 sq_class_instance_destroy030
+#define fn_007669a4 tree_erase033
+#define fn_00767400 tree_erase033
+#define fn_00767f88 tree_erase033
+#define fn_007689d8 tree_erase033
+#define fn_0077700c tree_erase033
+#define fn_0077da78 tree_erase033
+#define fn_0077e490 tree_erase033

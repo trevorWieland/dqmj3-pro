@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "initialRevision": "dea2bdf1a210e185983f01d1782d8502d04e514d",
+  "initialPassed": false,
+  "initialFindingCount": 10,
+  "findings": [
+    {
+      "scope": "working-tree",
+      "path": "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json",
+      "rule": "encoded-restricted-payload",
+      "offset": 4590
+    },
+    {
+      "scope": "working-tree",
+      "path": "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json",
+      "rule": "encoded-restricted-payload",
+      "offset": 12029
+    },
+    {
+      "scope": "working-tree",
+      "path": "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json",
+      "rule": "encoded-restricted-payload",
+      "offset": 19468
+    },
+    {
+      "scope": "working-tree",
+      "path": "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json",
+      "rule": "encoded-restricted-payload",
+      "offset": 26907
+    },
+    {
+      "scope": "working-tree",
+      "path": "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json",
+      "rule": "encoded-restricted-payload",
+      "offset": 34346
+    },
+    {
+      "scope": "history",
+      "oid": "dbae9fcbb0f42b50ee61dfe2351416eb2310b545",
+      "path": "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json",
+      "rule": "encoded-restricted-payload",
+      "offset": 4590
+    },
+    {
+      "scope": "history",
+      "oid": "dbae9fcbb0f42b50ee61dfe2351416eb2310b545",
+      "path": "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json",
+      "rule": "encoded-restricted-payload",
+      "offset": 12029
+    },
+    {
+      "scope": "history",
+      "oid": "dbae9fcbb0f42b50ee61dfe2351416eb2310b545",
+      "path": "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json",
+      "rule": "encoded-restricted-payload",
+      "offset": 19468
+    },
+    {
+      "scope": "history",
+      "oid": "dbae9fcbb0f42b50ee61dfe2351416eb2310b545",
+      "path": "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json",
+      "rule": "encoded-restricted-payload",
+      "offset": 26907
+    },
+    {
+      "scope": "history",
+      "oid": "dbae9fcbb0f42b50ee61dfe2351416eb2310b545",
+      "path": "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json",
+      "rule": "encoded-restricted-payload",
+      "offset": 34346
+    }
+  ],
+  "classification": "All findings are the exact deterministic authored XBB fixture file, seen in working tree and reachable history",
+  "correction": "Pin both generator and fixture identities, regenerate in Python isolated mode without site initialization, permit only matching synthetic payload hashes in that one exact file, retain known-private-hash and secret checks",
+  "regressionTests": 30,
+  "originalPayloadExceptionGranted": false
+}

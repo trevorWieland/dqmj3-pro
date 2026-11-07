@@ -117,7 +117,7 @@ def magic(data):
         return "tar"
     return None
 
-def content_rules(data, private_hashes):
+def content_rules(data, private_hashes, authored_encoded_hashes=()):
     result = []
     if sha(data) in private_hashes:
         result.append(("known-private-game-payload", 0))
@@ -142,7 +142,7 @@ def content_rules(data, private_hashes):
                 payload = decode(match.group().decode("ascii"))
             except ValueError:
                 continue
-            if sha(payload) in private_hashes or magic(payload):
+            if sha(payload) in private_hashes or magic(payload) and sha(payload) not in authored_encoded_hashes:
                 result.append(("encoded-restricted-payload", match.start()))
             elif len(payload) >= 65536 and b"\x00" in payload:
                 result.append(("large-opaque-encoded-binary", match.start()))
@@ -153,6 +153,43 @@ def read_owned(root, relative):
     if path.is_symlink() or not path.resolve().is_relative_to(root):
         raise ValueError("Uninspected metadata or public-resource link")
     return path.read_bytes()
+
+def authored_xbb_fixture(root):
+    source_path = "toolscripts/native_archive032_fixtures.py"
+    fixture_path = "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json"
+    if not (root / fixture_path).exists():
+        return {}
+    source = read_owned(root, source_path)
+    data = read_owned(root, fixture_path)
+    source_sha = "738f08949ae658eb3eaa580b7dfd872613d3f53e12c5feb41fca94cdc72c2402"
+    fixture_sha = "1acba07c1d27452f6cc82ff5aa35d620876922a18cd336abc8e1d9f91d459de2"
+    if sha(source) != source_sha or len(source) != 3220 or sha(data) != fixture_sha or len(data) != 113672:
+        raise ValueError("Authored XBB generator or fixture identity changed")
+    regenerate = """import hashlib,json,sys
+scope={"__name__":"verified_authored_xbb_generator"}
+exec(compile(sys.stdin.buffer.read(),"verified-fixture-generator","exec"),scope)
+images,rows={},[]
+for item in scope["cases"]():
+    spec=item["specification"];image=spec["image"];identity=hashlib.sha256(image).hexdigest()
+    images[identity]={"bytes":len(image),"hex":image.hex()}
+    rows.append({"name":item["name"],"imageSha256":identity,
+        "fields":{key:value.hex() if isinstance(value,bytes) else value for key,value in spec.items() if key!="image"}})
+print(json.dumps({"images":images,"cases":rows}))
+"""
+    child = subprocess.run([sys.executable, "-I", "-S", "-c", regenerate], input=source,
+        capture_output=True, timeout=30, check=True)
+    if len(child.stdout) > 1024 * 1024 or child.stderr:
+        raise ValueError("Unexpected authored fixture regeneration output")
+    regenerated = json.loads(child.stdout)
+    images, rows = regenerated["images"], regenerated["cases"]
+    expected = {"generator": {"path": source_path, "sha256": source_sha, "bytes": len(source)},
+        "images": images, "cases": rows, "originalAssetBytesIncluded": False}
+    if json.loads(data) != expected:
+        raise ValueError("Authored XBB fixtures do not reproduce from the reviewed generator")
+    return {fixture_path: {"sha256": fixture_sha, "size": len(data),
+        "origin": "independently-regenerated-authored-synthetic-xbb",
+        "sourceGeneratorSha256": source_sha, "encodedSyntheticPayloadSha256": sorted(images)}}
+
 
 def public_allowlist(root):
     raw = read_owned(root, MANIFEST)
@@ -230,6 +267,8 @@ def entries(raw):
 def inspect(path, data, allowed, deny):
     identity = allowed.get(path)
     if identity and sha(data) == identity["sha256"] and len(data) == identity["size"]:
+        if "encodedSyntheticPayloadSha256" in identity:
+            return content_rules(data, deny, set(identity["encodedSyntheticPayloadSha256"]))
         return secrets(data)
     rules = [(x, 0) for x in path_rules(path)] + secrets(path.encode("utf-8"))
     if identity or path.startswith(UPSTREAM + "upstream/"):

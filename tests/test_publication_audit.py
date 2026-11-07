@@ -78,6 +78,30 @@ class PublicationAuditTests(unittest.TestCase):
         for encoded in (image.hex().encode(), base64.b64encode(image)):
             self.assertIn("encoded-restricted-payload", self.rules(AUDIT.content_rules(b'{"data":"' + encoded + b'"}', set())))
 
+    def test_exact_authored_xbb_fixtures_are_independently_regenerated(self):
+        allowed = AUDIT.authored_xbb_fixture(ROOT)
+        path = "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json"
+        data = (ROOT / path).read_bytes()
+        self.assertEqual(AUDIT.inspect(path, data, allowed, set()), [])
+        self.assertIn("encoded-restricted-payload", self.rules(AUDIT.inspect("docs/other.json", data, allowed, set())))
+
+    def test_known_private_hash_still_blocks_an_allowed_synthetic_payload(self):
+        allowed = AUDIT.authored_xbb_fixture(ROOT)
+        path = next(iter(allowed))
+        hashes = allowed[path]["encodedSyntheticPayloadSha256"]
+        data = (ROOT / path).read_bytes()
+        denied = next(value for value in hashes if len(json.loads(data)["images"][value]["hex"]) >= 2048)
+        self.assertIn("encoded-restricted-payload", self.rules(AUDIT.inspect(path, data, allowed, {denied})))
+
+    def test_authored_fixture_and_generator_changes_fail_identity_check(self):
+        root = self.repo()
+        paths = ["toolscripts/native_archive032_fixtures.py", "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json"]
+        for changed in paths:
+            for path in paths:
+                self.write(root, path, (ROOT / path).read_bytes() + (b" " if path == changed else b""))
+            with self.assertRaises(ValueError):
+                AUDIT.authored_xbb_fixture(root)
+
     def test_long_encoded_original_text_hash_is_blocked(self):
         payload = (b"original game text\n" * 120)
         encoded = base64.b64encode(payload)

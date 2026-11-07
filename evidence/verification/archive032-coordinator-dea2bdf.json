@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-independent-bounded-XBB-source-family",
+  "sourceRevision": "dea2bdf1a210e185983f01d1782d8502d04e514d",
+  "completeUnmodifiedBatchReplayPassed": true,
+  "rawReplay": {
+    "path": "evidence/verification/archive032-isolated-dea2bdf.json",
+    "bytes": 15378,
+    "sha256": "2dcd9483a443665aa513ce77f0152bfa4aa040d45958c6e9b2c6c20d91ae3397"
+  },
+  "primaryPacket": {
+    "path": "evidence/lanes/native-archive032/xbb/packet.json",
+    "bytes": 286684,
+    "sha256": "19e36bd6242892854436b54d61eb33999d6916c4157cc8dc18bb647c6bc4ad90"
+  },
+  "independentPacket": {
+    "path": "work/clean-replay/archive032-dea2bdf/evidence/lanes/native-archive032/xbb/packet.json",
+    "bytes": 293551,
+    "sha256": "44d6d6370808411cbe99815fb66aec55471d3e24caec7c4c76bc9a81c2c194b1"
+  },
+  "frozenManifest": {
+    "path": "evidence/lanes/native-archive032/xbb/frozen-manifest.json",
+    "bytes": 11769,
+    "sha256": "4eaf28d553b9a576c82370f8de5ddfed9837dc055dc48b193bad550c1b481b78"
+  },
+  "all451CaseRowsByteIdentical": true,
+  "allOtherMetadataComparedWithVerifiedPathsTimingsAndBinaryTimestampExceptions": true,
+  "artifactDifferences": [
+    {
+      "path": "work/native-archive032/xbb-seal-first/windows/archive.dll",
+      "kind": "coff-timestamp-only",
+      "primarySha256": "b9aa96431e2affc89f4e2f5e46738ae5515fe564bdcdc315c4474468a2face43",
+      "independentSha256": "8127aa1523790f2aea30ad0602751413f22c1cd99bfc60c019cc9bc43be26815"
+    },
+    {
+      "path": "work/native-archive032/xbb-seal-first/public-native-tests.log",
+      "kind": "verified-root-output-paths-or-unittest-timing-text",
+      "primarySha256": "bcd929954afe0837ced292325c864ee0aa95a51d863c19b3763818b6cd9f9b47",
+      "independentSha256": "9f9a0dd398623316b0f4c38d5c9a01eecd6bb0ae6bf5fd84d8a83c985a7a012b"
+    },
+    {
+      "path": "work/native-archive032/xbb-seal-first/windows/archive.dll",
+      "kind": "coff-timestamp-only",
+      "primarySha256": "b9aa96431e2affc89f4e2f5e46738ae5515fe564bdcdc315c4474468a2face43",
+      "independentSha256": "8127aa1523790f2aea30ad0602751413f22c1cd99bfc60c019cc9bc43be26815"
+    },
+    {
+      "path": "work/native-archive032/xbb-seal-first/public-native-tests.log",
+      "kind": "verified-root-output-paths-or-unittest-timing-text",
+      "primarySha256": "bcd929954afe0837ced292325c864ee0aa95a51d863c19b3763818b6cd9f9b47",
+      "independentSha256": "9f9a0dd398623316b0f4c38d5c9a01eecd6bb0ae6bf5fd84d8a83c985a7a012b"
+    },
+    {
+      "path": "evidence/lanes/native-archive032/xbb/packet.json",
+      "kind": "recursively-compared-json",
+      "primarySha256": "19e36bd6242892854436b54d61eb33999d6916c4157cc8dc18bb647c6bc4ad90",
+      "independentSha256": "44d6d6370808411cbe99815fb66aec55471d3e24caec7c4c76bc9a81c2c194b1"
+    }
+  ],
+  "frozenFiles": 60,
+  "cases": 451,
+  "normallyReturningControls": 5,
+  "originalSourceFlagsReturnPairs": 32,
+  "nativeTests": 15,
+  "integrationTests": 68,
+  "uniqueTests": 83,
+  "publicUnits": 311,
+  "publicCompilations": 869,
+  "canonicalFunctionsForReview": 13,
+  "canonicalInstructionBytesForReview": 992,
+  "supplementalCandidate36BytesStillUnadmitted": true,
+  "wholeMemorySdkSourceGameOrDeviceClaimed": false,
+  "sourceAdmissionGranted": false,
+  "comparisonUtility": {
+    "path": "toolscripts/replay_packet_compare.py",
+    "bytes": 3194,
+    "sha256": "e4cbc87fe6be5f190bdf60638220e2c58c588cbfb8f4f57ab957af5cd7af8aef"
+  },
+  "producer": {
+    "path": "evidence/verification/producers/review-archive032-replay.py",
+    "bytes": 3784,
+    "sha256": "5fc539117c965a1ad413c605f1ac86975ffcfc3ec16be1b653de8542b2187c9c"
+  }
+}
