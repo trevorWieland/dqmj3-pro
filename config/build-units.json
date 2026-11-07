@@ -23,7 +23,8 @@
       "wave032",
       "wave033",
       "wave036",
-      "wave054"
+      "wave054",
+      "wave053"
     ]
   },
   "units": [
@@ -8490,6 +8491,41 @@
       "source": "src/native/wave054/crc.c",
       "headers": [
         "src/native/wave054/crc.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave053/entries.c",
+      "headers": [
+        "src/native/wave053/sampled_key.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave053/floor.c",
+      "headers": [
+        "src/native/wave053/sampled_key.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave053/key_records.c",
+      "headers": [
+        "src/native/wave053/sampled_key.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave053/layout.c",
+      "headers": [
+        "src/native/wave053/sampled_key.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave053/prepare.c",
+      "headers": [
+        "src/native/wave053/sampled_key.h"
       ],
       "role": "bounded-component"
     }

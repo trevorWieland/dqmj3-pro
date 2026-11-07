@@ -1,0 +1,736 @@
+{
+  "status": "returning-authored-source-semantic-controls",
+  "controlCount": 7,
+  "sourcePlatformExecutions": 21,
+  "rows": [
+    {
+      "name": "reverse-tangent-fields",
+      "source": {
+        "path": "src/native/wave053/prepare.c",
+        "bytes": 6460,
+        "sha256": "957e3aff9f98bba0f3c82b92a87cee3d46d338f1a5643179b7909a5337944a56"
+      },
+      "wrongSource": {
+        "path": "work/sampled-key053/sealing-v1/controls/reverse-tangent-fields/prepare.c",
+        "bytes": 6640,
+        "sha256": "1d724a9688f1682c061a0e9fbcde05f6ee6fce2bf24dab48b2e01dee6b5baa3c"
+      },
+      "entry": 7726780,
+      "position": -0.5,
+      "expectedReferenceResult": {
+        "cachedKeyOffset": 0,
+        "period": -1,
+        "coefficientBits": [
+          3212836864,
+          0,
+          1082392576,
+          1073741824,
+          3251257344,
+          1099186176
+        ]
+      },
+      "profiles": [
+        {
+          "profile": "arm",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/reverse-tangent-fields/arm/sampled_key053.elf",
+            "bytes": 71204,
+            "sha256": "4c671b9ff90e609991c48c3861a5d90141ab6783030faec9e0884f33ac517a42"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 0,
+            "period": -1,
+            "coefficientBits": [
+              3212836864,
+              0,
+              1082392576,
+              3223322624,
+              3244883968,
+              1092943872
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": null,
+          "sourceOnlyExecution": true
+        },
+        {
+          "profile": "windows",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/reverse-tangent-fields/windows/sampled_key053.dll",
+            "bytes": 4608,
+            "sha256": "8a1775ce9678a29499c323fdf627633515b49f1e25942ab41106dc47520005dc"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 0,
+            "period": -1,
+            "coefficientBits": [
+              3212836864,
+              0,
+              1082392576,
+              3223322624,
+              3244883968,
+              1092943872
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": false,
+          "sourceOnlyExecution": true
+        },
+        {
+          "profile": "a64",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/reverse-tangent-fields/a64/sampled_key053.elf",
+            "bytes": 71328,
+            "sha256": "99076a5f56257af0ee9f2e394704ae7e18fb45939b3fa8b0096086e54fcf47c2"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 0,
+            "period": -1,
+            "coefficientBits": [
+              3212836864,
+              0,
+              1082392576,
+              3223322624,
+              3244883968,
+              1092943872
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": null,
+          "sourceOnlyExecution": true
+        }
+      ]
+    },
+    {
+      "name": "constant-value",
+      "source": {
+        "path": "src/native/wave053/prepare.c",
+        "bytes": 6460,
+        "sha256": "957e3aff9f98bba0f3c82b92a87cee3d46d338f1a5643179b7909a5337944a56"
+      },
+      "wrongSource": {
+        "path": "work/sampled-key053/sealing-v1/controls/constant-value/prepare.c",
+        "bytes": 6641,
+        "sha256": "55202d5533c7a2573fab9ccd3f5b856e3c66a1838e6338a6be814382ca945614"
+      },
+      "entry": 7717728,
+      "position": 0.25,
+      "expectedReferenceResult": {
+        "cachedKeyOffset": 8,
+        "period": 0,
+        "coefficientBits": [
+          0,
+          1065353216,
+          3223846912,
+          0,
+          0,
+          0
+        ]
+      },
+      "profiles": [
+        {
+          "profile": "arm",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/constant-value/arm/sampled_key053.elf",
+            "bytes": 71204,
+            "sha256": "bb968dab31869709d519e394f35fae3bb8ef35a49b4570a45b2f2a80da9b91eb"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 8,
+            "period": 0,
+            "coefficientBits": [
+              0,
+              1065353216,
+              1082392576,
+              0,
+              0,
+              0
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": null,
+          "sourceOnlyExecution": true
+        },
+        {
+          "profile": "windows",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/constant-value/windows/sampled_key053.dll",
+            "bytes": 4608,
+            "sha256": "d2ae029aa0d7796e35aefffdbabda6c1d90cd8b3bbc295bb09decc1ce236763a"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 8,
+            "period": 0,
+            "coefficientBits": [
+              0,
+              1065353216,
+              1082392576,
+              0,
+              0,
+              0
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": false,
+          "sourceOnlyExecution": true
+        },
+        {
+          "profile": "a64",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/constant-value/a64/sampled_key053.elf",
+            "bytes": 71328,
+            "sha256": "2713071d16d446acbfeadc3a5b9cf05ae8498761980851bd03f48afd7542d370"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 8,
+            "period": 0,
+            "coefficientBits": [
+              0,
+              1065353216,
+              1082392576,
+              0,
+              0,
+              0
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": null,
+          "sourceOnlyExecution": true
+        }
+      ]
+    },
+    {
+      "name": "period-counter",
+      "source": {
+        "path": "src/native/wave053/prepare.c",
+        "bytes": 6460,
+        "sha256": "957e3aff9f98bba0f3c82b92a87cee3d46d338f1a5643179b7909a5337944a56"
+      },
+      "wrongSource": {
+        "path": "work/sampled-key053/sealing-v1/controls/period-counter/prepare.c",
+        "bytes": 6640,
+        "sha256": "d7d11c6b70929639ac091a4fb90d99015bbb6b86d7893627e47bf5ff22fda24a"
+      },
+      "entry": 7717728,
+      "position": 0.25,
+      "expectedReferenceResult": {
+        "cachedKeyOffset": 8,
+        "period": 0,
+        "coefficientBits": [
+          0,
+          1065353216,
+          3223846912,
+          1087897600,
+          0,
+          0
+        ]
+      },
+      "profiles": [
+        {
+          "profile": "arm",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/period-counter/arm/sampled_key053.elf",
+            "bytes": 71204,
+            "sha256": "99a36302dccd4adb8c923bcb4d0264f9ae579a69a4ca9610ee2e5c2f7482991b"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 8,
+            "period": 1,
+            "coefficientBits": [
+              0,
+              1065353216,
+              3223846912,
+              1087897600,
+              0,
+              0
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": null,
+          "sourceOnlyExecution": true
+        },
+        {
+          "profile": "windows",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/period-counter/windows/sampled_key053.dll",
+            "bytes": 4608,
+            "sha256": "d76cb07751e8c382bb69a94ef3577914fd851c2699d2d631f8857538b8755e53"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 8,
+            "period": 1,
+            "coefficientBits": [
+              0,
+              1065353216,
+              3223846912,
+              1087897600,
+              0,
+              0
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": false,
+          "sourceOnlyExecution": true
+        },
+        {
+          "profile": "a64",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/period-counter/a64/sampled_key053.elf",
+            "bytes": 71328,
+            "sha256": "e46c790c2f8b18477bb692ae5faadb078344b21da5f77a4df28650da093b9c80"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 8,
+            "period": 1,
+            "coefficientBits": [
+              0,
+              1065353216,
+              3223846912,
+              1087897600,
+              0,
+              0
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": null,
+          "sourceOnlyExecution": true
+        }
+      ]
+    },
+    {
+      "name": "cached-neighbor",
+      "source": {
+        "path": "src/native/wave053/prepare.c",
+        "bytes": 6460,
+        "sha256": "957e3aff9f98bba0f3c82b92a87cee3d46d338f1a5643179b7909a5337944a56"
+      },
+      "wrongSource": {
+        "path": "work/sampled-key053/sealing-v1/controls/cached-neighbor/prepare.c",
+        "bytes": 6635,
+        "sha256": "9f84a24f908b8f10966280cb7b4be7cf042ab676a22708ac1b6aa7dafb15c220"
+      },
+      "entry": 7717728,
+      "position": 0.25,
+      "expectedReferenceResult": {
+        "cachedKeyOffset": 8,
+        "period": 0,
+        "coefficientBits": [
+          0,
+          1065353216,
+          3223846912,
+          0,
+          0,
+          0
+        ]
+      },
+      "profiles": [
+        {
+          "profile": "arm",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/cached-neighbor/arm/sampled_key053.elf",
+            "bytes": 71204,
+            "sha256": "372038c0300c1dbb49cfea616510e480d7be46493abde7c0a5fa7817134cc225"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 0,
+            "period": 0,
+            "coefficientBits": [
+              0,
+              1065353216,
+              3223846912,
+              0,
+              0,
+              0
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": null,
+          "sourceOnlyExecution": true
+        },
+        {
+          "profile": "windows",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/cached-neighbor/windows/sampled_key053.dll",
+            "bytes": 4608,
+            "sha256": "f842f9ed9c4b22773e24778a848d2a02b2296a630578e766b124b75cc16f3095"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 0,
+            "period": 0,
+            "coefficientBits": [
+              0,
+              1065353216,
+              3223846912,
+              0,
+              0,
+              0
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": false,
+          "sourceOnlyExecution": true
+        },
+        {
+          "profile": "a64",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/cached-neighbor/a64/sampled_key053.elf",
+            "bytes": 71328,
+            "sha256": "9bc01d306dd7347de4825835d00b6f8aa2ca52fb5d7d286ed8fbb996ae86ddcf"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 0,
+            "period": 0,
+            "coefficientBits": [
+              0,
+              1065353216,
+              3223846912,
+              0,
+              0,
+              0
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": null,
+          "sourceOnlyExecution": true
+        }
+      ]
+    },
+    {
+      "name": "quantized-value-offset",
+      "source": {
+        "path": "src/native/wave053/key_records.c",
+        "bytes": 3360,
+        "sha256": "0d0ea58609e3e6a4c4b37ca88e3313761551948c45fa2a523550f027a10b8a3e"
+      },
+      "wrongSource": {
+        "path": "work/sampled-key053/sealing-v1/controls/quantized-value-offset/key_records.c",
+        "bytes": 3438,
+        "sha256": "b2f084a7b20377036a0ac35ffc43a1d123eae907837f8a6ac60ebe48cfcd7319"
+      },
+      "entry": 7716220,
+      "position": 0.25,
+      "expectedReferenceResult": {
+        "cachedKeyOffset": 4,
+        "period": 0,
+        "coefficientBits": [
+          0,
+          1065353216,
+          3223846912,
+          1087897600,
+          0,
+          0
+        ]
+      },
+      "profiles": [
+        {
+          "profile": "arm",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/quantized-value-offset/arm/sampled_key053.elf",
+            "bytes": 71204,
+            "sha256": "528098216b6f1ba46f4a693443f397698b3097368935e19ef5349df11916316e"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 4,
+            "period": 0,
+            "coefficientBits": [
+              0,
+              1065353216,
+              1072693248,
+              1087897600,
+              0,
+              0
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": null,
+          "sourceOnlyExecution": true
+        },
+        {
+          "profile": "windows",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/quantized-value-offset/windows/sampled_key053.dll",
+            "bytes": 4608,
+            "sha256": "a4f1d22456874aba16d34ddf2fbc96fdc31f80348c91bdacf445ff7bb5fadedc"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 4,
+            "period": 0,
+            "coefficientBits": [
+              0,
+              1065353216,
+              1072693248,
+              1087897600,
+              0,
+              0
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": false,
+          "sourceOnlyExecution": true
+        },
+        {
+          "profile": "a64",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/quantized-value-offset/a64/sampled_key053.elf",
+            "bytes": 71328,
+            "sha256": "a50d6ce66076d09f3ab6d916906e65ce0c5ac09e714da0124825c8505d9a7006"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 4,
+            "period": 0,
+            "coefficientBits": [
+              0,
+              1065353216,
+              1072693248,
+              1087897600,
+              0,
+              0
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": null,
+          "sourceOnlyExecution": true
+        }
+      ]
+    },
+    {
+      "name": "signed-slope-scale",
+      "source": {
+        "path": "src/native/wave053/key_records.c",
+        "bytes": 3360,
+        "sha256": "0d0ea58609e3e6a4c4b37ca88e3313761551948c45fa2a523550f027a10b8a3e"
+      },
+      "wrongSource": {
+        "path": "work/sampled-key053/sealing-v1/controls/signed-slope-scale/key_records.c",
+        "bytes": 3458,
+        "sha256": "56c0f38e8ad13f7a7a5966d9d2a8947145ee9ec4a2e67f31a13c9357b7e5d6ae"
+      },
+      "entry": 7725204,
+      "position": 0.25,
+      "expectedReferenceResult": {
+        "cachedKeyOffset": 8,
+        "period": 0,
+        "coefficientBits": [
+          0,
+          1065353216,
+          3223846912,
+          1034944512,
+          1100881920,
+          3243352064
+        ]
+      },
+      "profiles": [
+        {
+          "profile": "arm",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/signed-slope-scale/arm/sampled_key053.elf",
+            "bytes": 71204,
+            "sha256": "0d9d5a050946c725a82c7231409b17cda9ff698ed6a3b3c6bb628cb4f162e82a"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 8,
+            "period": 0,
+            "coefficientBits": [
+              0,
+              1065353216,
+              3223846912,
+              1043333120,
+              1100627968,
+              3242934272
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": null,
+          "sourceOnlyExecution": true
+        },
+        {
+          "profile": "windows",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/signed-slope-scale/windows/sampled_key053.dll",
+            "bytes": 4608,
+            "sha256": "5c42daa7f70a4d54fa157fbe9c89d55a5e504ba92b5f9dc4faf8c23bbbbed9af"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 8,
+            "period": 0,
+            "coefficientBits": [
+              0,
+              1065353216,
+              3223846912,
+              1043333120,
+              1100627968,
+              3242934272
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": false,
+          "sourceOnlyExecution": true
+        },
+        {
+          "profile": "a64",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/signed-slope-scale/a64/sampled_key053.elf",
+            "bytes": 71328,
+            "sha256": "bf0c4bfd4b1da628aacaa612e1e6fb1b08cde16dc64d67cb120ffc9c55cbecd2"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 8,
+            "period": 0,
+            "coefficientBits": [
+              0,
+              1065353216,
+              3223846912,
+              1043333120,
+              1100627968,
+              3242934272
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": null,
+          "sourceOnlyExecution": true
+        }
+      ]
+    },
+    {
+      "name": "linear-direction",
+      "source": {
+        "path": "src/native/wave053/prepare.c",
+        "bytes": 6460,
+        "sha256": "957e3aff9f98bba0f3c82b92a87cee3d46d338f1a5643179b7909a5337944a56"
+      },
+      "wrongSource": {
+        "path": "work/sampled-key053/sealing-v1/controls/linear-direction/prepare.c",
+        "bytes": 6640,
+        "sha256": "d8f6546e5985da3dce95dcf3132b45d5d582d94d59e70bd4fa79cf89b7efe35a"
+      },
+      "entry": 7717728,
+      "position": 0.25,
+      "expectedReferenceResult": {
+        "cachedKeyOffset": 8,
+        "period": 0,
+        "coefficientBits": [
+          0,
+          1065353216,
+          3223846912,
+          1087897600,
+          0,
+          0
+        ]
+      },
+      "profiles": [
+        {
+          "profile": "arm",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/linear-direction/arm/sampled_key053.elf",
+            "bytes": 71204,
+            "sha256": "b22b30035c00f292759eb6ce7fb0503c4b1c432235ff2ab5d88ab667fb226fbf"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 8,
+            "period": 0,
+            "coefficientBits": [
+              0,
+              1065353216,
+              3223846912,
+              3235381248,
+              0,
+              0
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": null,
+          "sourceOnlyExecution": true
+        },
+        {
+          "profile": "windows",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/linear-direction/windows/sampled_key053.dll",
+            "bytes": 4608,
+            "sha256": "8eaf1ae3aa75d6282921589f9f3b9dbe879dd2a1c2d67ae542e27ad1d4d59353"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 8,
+            "period": 0,
+            "coefficientBits": [
+              0,
+              1065353216,
+              3223846912,
+              3235381248,
+              0,
+              0
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": false,
+          "sourceOnlyExecution": true
+        },
+        {
+          "profile": "a64",
+          "artifact": {
+            "path": "work/sampled-key053/sealing-v1/controls/linear-direction/a64/sampled_key053.elf",
+            "bytes": 71328,
+            "sha256": "d49e6eacb96049e8c1c5bfbe4b0c101b6bcec39a696a86f2b258670a1853cfb3"
+          },
+          "returnedNormally": true,
+          "callerGuardsPreserved": true,
+          "semanticMismatchDetected": true,
+          "actualResult": {
+            "cachedKeyOffset": 8,
+            "period": 0,
+            "coefficientBits": [
+              0,
+              1065353216,
+              3223846912,
+              3235381248,
+              0,
+              0
+            ]
+          },
+          "windowsCalleeSavedRegistersDirectlyObserved": null,
+          "sourceOnlyExecution": true
+        }
+      ]
+    }
+  ],
+  "sourceCreditGranted": 0
+}

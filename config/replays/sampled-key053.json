@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "name": "sampled-key053",
+  "producerSteps": [
+    {
+      "name": "sampled-key053-records-floor-and-returning-controls",
+      "args": [
+        "toolscripts/native_sampled_key053_packet.py",
+        "--work",
+        "work/replay053/run",
+        "--output",
+        "work/replay053/proof"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "isolated_component_replay",
+    "isolated_intake_cleanup",
+    "refresh_functional_source_names",
+    "refresh_functional_source_names_integration"
+  ],
+  "packets": [
+    "work/replay053/proof/packet.json",
+    "work/replay053/proof/verification.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}
