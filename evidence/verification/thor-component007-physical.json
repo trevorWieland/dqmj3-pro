@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "status": "direct-arm64-physical-component-observations-validated-composition-criterion-held",
+  "deviceModel": "AYN Thor",
+  "androidApi": 33,
+  "kernelPageBytes": 4096,
+  "sourceBuiltApkSha256": "c47be52b9e6271e5df73d9946ef314ab2c4115bd87067ab6158cf97b1ed6ec18",
+  "sourceBuiltNativeLibrarySha256": "96582f91e4f491a6b1ae540e2c9d02eec9764f328fa52a8ccf3f8d6a30eed5f8",
+  "elfMachine": 183,
+  "nativeBridgeProperty": "0",
+  "targetApkExecutableMappingObserved": true,
+  "privateRawReport": {
+    "path": "work/thor-validation/private/mappings-final-report.json",
+    "bytes": 10097,
+    "sha256": "41bca118b4aa2528cce6787b968c8e3e34f87c5e3b4210a554017a2669de9d82"
+  },
+  "privateProbeBuilder": {
+    "path": "work/thor-validation/build_probe.py",
+    "bytes": 12415,
+    "sha256": "ce68bc8f4f34cc4fcfa157489db594a6ee23e695095864a6c14472c80d0ef27c"
+  },
+  "primaryPixelCopy": {
+    "equal": 81,
+    "total": 81,
+    "colorSpace": "sRGB",
+    "coordinateModel": "Skia reference positive-scale nearest: floor(inverse(pixelCenter) - 1/65536)",
+    "reference": "https://android.googlesource.com/platform/external/skia/+/8b4ab703efb1097702eef9f6a73814221cf08200/src/core/SkBitmapProcState.h#168"
+  },
+  "secondaryPixelCopy": {
+    "equal": 81,
+    "total": 81
+  },
+  "input": {
+    "syntheticButtonDownUpDispatchChecks": 10,
+    "leftStickDispatchAndScaling": true,
+    "physicalHardwareButtonsAllTested": false,
+    "rightStickMappingQualified": false,
+    "osInjectedLowerTouchMatchesVisibleMap": true,
+    "primaryTouchIgnoredAsDesigned": true
+  },
+  "lifecycle": {
+    "pauseTicksStable": true,
+    "resume": true,
+    "badCacheRejected": true,
+    "coldCacheReloaded": true,
+    "coldFrameHashUnchanged": true
+  },
+  "originalCompositionScreenshotCriterion": {
+    "equal": 29,
+    "total": 81,
+    "passed": false,
+    "screenshotColorSpace": "Display P3",
+    "analysisReceipt": {
+      "path": "work/squirrel-execute051/thor-color-receipt.json",
+      "bytes": 10040,
+      "sha256": "c1dcde8e30c60b5d423c35d0f9aa8c56fafef34a771d0527a138e55f2ccee9e7"
+    },
+    "vendorBitExactRoundingReproduced": false
+  },
+  "completeHardwareQualificationClaimed": false,
+  "wholeGameWindowsAndroidOrThorClaimed": false,
+  "sourceOrMatchingCreditGranted": 0
+}

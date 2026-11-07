@@ -9,6 +9,7 @@ import shutil
 import subprocess
 import sys
 import zipfile
+import isolated_intake_cleanup as intake_cleanup
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -52,6 +53,7 @@ def validate_plan(plan):
         contained(ROOT, value)
         if Path(value).parts[0] not in ["work", "evidence", "build"]:
             raise ValueError("Replay packet is outside owned output folders")
+    intake_cleanup.validate_policy(plan)
     return plan
 
 
@@ -72,7 +74,7 @@ def save(path, packet):
     path.write_text(json.dumps(packet, indent=2) + "\n", encoding="utf-8")
 
 
-def run_steps(destination, python, commands, receipt, receipt_path, packets):
+def run_steps(destination, python, commands, receipt, receipt_path, packets, owner_root=None):
     environment = dict(os.environ, PYTHONPATH=str(destination / "toolscripts"), PYTHONNOUSERSITE="1", PYTHONDONTWRITEBYTECODE="1")
     stage = "commands"
     try:
@@ -99,6 +101,13 @@ def run_steps(destination, python, commands, receipt, receipt_path, packets):
                 for row in receipt.get("nativeLibraries", []):
                     if digest(contained(destination, row["path"])) != row["sha256"]:
                         raise ValueError("Installed native runtime differs from its pin")
+            if name == "fresh-original-intake" and receipt.get("plan", {}).get("intakeCleanup") is not None:
+                stage = "intake-cleanup"
+                if owner_root is None:
+                    raise ValueError("Intake cleanup requires the explicit owner root")
+                receipt["intakeCleanupReceipt"] = intake_cleanup.cleanup(owner_root, destination, receipt["plan"])
+                save(receipt_path, receipt)
+                stage = "commands"
         stage = "collect-packets"
         receipt["packets"] = [{"path": value, "sha256": digest(contained(destination, value)),
             "bytes": contained(destination, value).stat().st_size} for value in packets]
@@ -165,7 +174,7 @@ def replay(root, plan_path, revision):
             ("functional-companion", ["toolscripts/functional_report.py"])]
         receipt["status"] = "running"
         return run_steps(destination, python, commands, receipt, receipt_path,
-            [*plan["packets"], "build/update-content0/report.json", "build/update-content0/functional.json"])
+            [*plan["packets"], "build/update-content0/report.json", "build/update-content0/functional.json"], root)
     except Exception as error:
         if receipt["status"] != "failed":
             receipt.update(status="failed", failedStage="materialization", errorType=type(error).__name__, error=str(error))

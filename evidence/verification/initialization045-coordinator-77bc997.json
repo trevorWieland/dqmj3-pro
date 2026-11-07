@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-independent-initialization045-bounded-shared-initialization",
+  "sourceRevision": "77bc99741c58111877b9fa283fdced56349d49e0",
+  "completeUnmodifiedBatchReplayPassed": true,
+  "rawReplay": {
+    "path": "evidence/verification/initialization045-isolated-77bc997.json",
+    "bytes": 15590,
+    "sha256": "3a83498661099c944e3c14a9adf82c47b5130fea279c4ef0a2a930d647e5d5df"
+  },
+  "primaryPacket": {
+    "path": "evidence/lanes/squirrel-state040/initialization045-v1/packet.json",
+    "bytes": 1179747,
+    "sha256": "376e965916a08917f9789e4167051c13b6ae7da0373551ca19f58e68d4b4e5c5"
+  },
+  "independentPacket": {
+    "path": "work/clean-replay/initialization045-77bc997/work/squirrel-state040/initialization045/coordinator-output/packet.json",
+    "bytes": 1210368,
+    "sha256": "46677f31c91bd8a64cfb913abcfd85ac0f1c9b715a3af72c2da3623726faa7d8"
+  },
+  "primaryVerification": {
+    "path": "evidence/lanes/squirrel-state040/initialization045-v1/verification.json",
+    "bytes": 462,
+    "sha256": "5f10185c6580ec7572d7e96d829ee5f06a7de8025d5b71d0949ed4a88c9e9acc"
+  },
+  "independentVerification": {
+    "path": "work/clean-replay/initialization045-77bc997/work/squirrel-state040/initialization045/coordinator-output/verification.json",
+    "bytes": 468,
+    "sha256": "f2b54d7bcbcffdc021c78d85bd5c82669661aa52e6dd2c2611034230b93989ca"
+  },
+  "sharedRows": {
+    "path": "evidence/lanes/squirrel-state040/initialization045-v1/shared-rows.json",
+    "bytes": 2386937,
+    "sha256": "f6764de0a3121dde146654c446a735a2061eb41b2c4f531663dc58efc3c4b7b5"
+  },
+  "maskRows": {
+    "path": "evidence/lanes/squirrel-state040/initialization045-v1/mask-rows.json",
+    "bytes": 657606,
+    "sha256": "b6b04b36b6f2c2e52ba489d8fe553bb59cdf2b936819256552402b1bd3a39a52"
+  },
+  "returningControls": {
+    "path": "evidence/lanes/squirrel-state040/initialization045-v1/returning-controls.json",
+    "bytes": 1052479,
+    "sha256": "8b7e86ebfed019b86514c407dd270c45049c4b053b307a4c604e5ebec70b9208"
+  },
+  "coreAbiManifest": {
+    "path": "evidence/lanes/squirrel-state040/core-abi-v1/frozen-manifest.json",
+    "bytes": 2537,
+    "sha256": "23a38012b40a93aa1426a9fa08f424949d418a95c9cac939f7abdc2b237f2e28"
+  },
+  "frozenInputFiles": 103,
+  "tools": {
+    "python": "3.13.5",
+    "pythonExecutable": {
+      "path": "tools/python/Scripts/python.exe",
+      "sha256": "935016795f3e6908e75acbc2040a01e2e4cdb494a57c42f63a0d6eedb2372256",
+      "bytes": 254800
+    },
+    "clang": {
+      "path": "tools/clang-21/clang.exe",
+      "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc",
+      "bytes": 99559064
+    },
+    "lld": {
+      "path": "tools/clang-21/ld.lld.exe",
+      "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3",
+      "bytes": 69225112
+    },
+    "unicorn": {
+      "distribution": "2.1.4",
+      "interface": "2.1.4",
+      "runtime": [
+        2,
+        1,
+        33621247
+      ]
+    },
+    "capstone": {
+      "distribution": "5.0.9",
+      "interface": "5.0.7",
+      "runtime": [
+        5,
+        0,
+        1280
+      ]
+    }
+  },
+  "recursiveComparisonPassed": true,
+  "comparisonVariants": [
+    {
+      "path": "evidence/lanes/squirrel-state040/initialization045-v1/returning-controls.json",
+      "kind": "recursively-compared-json",
+      "primarySha256": "8b7e86ebfed019b86514c407dd270c45049c4b053b307a4c604e5ebec70b9208",
+      "independentSha256": "b44bdf5060fc823caea16fb451a8d9235c87d1a7126335207a681477e2257bca"
+    },
+    {
+      "path": "work/squirrel-state040/initialization045/sealing-v1/tests.log",
+      "kind": "verified-root-output-paths-or-unittest-timing-text",
+      "primarySha256": "ff000665080ff1c75fe3ff1e406bd7cabb5c08bf875ed9f3962a8a6dc7b19edd",
+      "independentSha256": "d7297e68c9dc361e43b0c24cd0a876f0e6e0ecf082f2edd3f31935680f3887a4"
+    },
+    {
+      "path": "evidence/lanes/squirrel-state040/initialization045-v1/returning-controls.json",
+      "kind": "recursively-compared-json",
+      "primarySha256": "8b7e86ebfed019b86514c407dd270c45049c4b053b307a4c604e5ebec70b9208",
+      "independentSha256": "b44bdf5060fc823caea16fb451a8d9235c87d1a7126335207a681477e2257bca"
+    },
+    {
+      "path": "work/squirrel-state040/initialization045/sealing-v1/tests.log",
+      "kind": "verified-root-output-paths-or-unittest-timing-text",
+      "primarySha256": "ff000665080ff1c75fe3ff1e406bd7cabb5c08bf875ed9f3962a8a6dc7b19edd",
+      "independentSha256": "d7297e68c9dc361e43b0c24cd0a876f0e6e0ecf082f2edd3f31935680f3887a4"
+    },
+    {
+      "path": "evidence/lanes/squirrel-state040/initialization045-v1/packet.json",
+      "kind": "recursively-compared-json",
+      "primarySha256": "376e965916a08917f9789e4167051c13b6ae7da0373551ca19f58e68d4b4e5c5",
+      "independentSha256": "46677f31c91bd8a64cfb913abcfd85ac0f1c9b715a3af72c2da3623726faa7d8"
+    }
+  ],
+  "originalComparison": {
+    "path": "work/initialization045-comparison.json",
+    "bytes": 1766,
+    "sha256": "e96458c164f2d47a4e94486bdcc9917a6a0a9d70f6298a3ea1dcf0b401435454"
+  },
+  "originalReviewProducer": {
+    "path": "work/review_initialization045.py",
+    "bytes": 1003,
+    "sha256": "652fc47d1ba53562a81ae457590e39e3643466d9d02d787049fffefa6cab78b8"
+  },
+  "recursiveComparator": {
+    "path": "toolscripts/replay_packet_compare.py",
+    "bytes": 3194,
+    "sha256": "e4cbc87fe6be5f190bdf60638220e2c58c588cbfb8f4f57ab957af5cd7af8aef"
+  },
+  "artifactRestoration": {
+    "path": "work/artifact-restoration045049/receipt.json",
+    "bytes": 552391,
+    "sha256": "0765340c070aa5f8e3c05ddf8359dee515de9ca436b4247ced290fb8e302d626"
+  },
+  "restorationProducer": {
+    "path": "work/restore_component_artifacts045049.py",
+    "sha256": "f2dc9cc10d37afe6476abc9d1136aa1c046d6f4d80f77121a4e744f4334cfaf3",
+    "bytes": 4244
+  },
+  "restoredDeterministicArtifactPinsVerified": 241,
+  "missingDerivedArtifactsBeforeRestoration": 190,
+  "restorationLanes": [
+    {
+      "lane": "045",
+      "deterministicArtifactPinsVerified": 101,
+      "missingBefore": 98
+    },
+    {
+      "lane": "049",
+      "deterministicArtifactPinsVerified": 140,
+      "missingBefore": 92
+    }
+  ],
+  "restorationDoesNotRerunBehavior": true,
+  "sourcePacketsAndGraphsUnchanged": true,
+  "windowsExecutionCompared": true,
+  "windowsHistoricalWholeFileIdentityEstablished": false,
+  "allArtifactWholeFileIdentityClaimed": false,
+  "provenance": "Original passed 77bc997 replay and per-file missing/present restoration history retained; comparison rerun only after derived-artifact restoration. Windows rebuilds remain separate and lack historical whole-file pins.",
+  "sharedCases": 16,
+  "sharedAuthoredPlatformObservations": 48,
+  "maskCases": 560,
+  "maskAuthoredPlatformObservations": 1680,
+  "returningControlCount": 7,
+  "returningControlPlatformExecutions": 21,
+  "tests": 83,
+  "publicCompilation": {
+    "path": "work/clean-replay/initialization045-77bc997/work/source-compile-ci/committed-replay/manifests/compilation.json",
+    "bytes": 4600842,
+    "sha256": "977871be47db2a9c8066907bf24335de5d174b0e56ad8226650413131d0c6473"
+  },
+  "publicUnits": 413,
+  "publicCompilations": 1169,
+  "candidateFunctions": 4,
+  "candidateInstructionBytes": 8556,
+  "unresolvedUninvokedEngineCallbacks": 56,
+  "sourceAdmissionGranted": false,
+  "sourceCreditGranted": 0,
+  "matchingCreditGranted": 0,
+  "sdkCreditGranted": 0,
+  "universalEquivalenceClaimed": false,
+  "wholeMemoryEquivalenceClaimed": false,
+  "fullFactoryVmInitializationInterpreterGameAndroidOsOrDeviceClaimed": false,
+  "allocationFailureOrArbitraryRepeatedInitializationQualified": false,
+  "producer": {
+    "path": "evidence/verification/producers/review-initialization045-replay.py",
+    "bytes": 10963,
+    "sha256": "137450131a5c8fb4bef92a0c80233a656480fa6aaf136720238312b2664ef4d2"
+  }
+}
