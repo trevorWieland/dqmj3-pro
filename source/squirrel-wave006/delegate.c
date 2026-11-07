@@ -1,6 +1,6 @@
 #include "execute_views.h"
 
-_Bool fn_0019e2e8(SqTable *table, SqTable *delegate)
+_Bool sq_legacy_table_delegate006(SqTable *table, SqTable *delegate)
 {
     for (SqTable *cursor = delegate; cursor; cursor = cursor->delegate)
         if (cursor == table) return 0;

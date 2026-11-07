@@ -15,18 +15,35 @@
     "bytes": 7139
   },
   "nameDefines": [
-    "-Dsq_legacy_table_get006=fn_001a1dc8"
+    "-Dsq_legacy_table_get006=fn_001a1dc8",
+    "-Dsq_legacy_table_allocate_nodes006=fn_0019b390",
+    "-Dsq_legacy_table_initialize006=fn_0019b998",
+    "-Dsq_legacy_table_set006=fn_0019b414",
+    "-Dsq_legacy_table_rehash006=fn_0019b4ec",
+    "-Dsq_legacy_table_new_slot006=fn_0019b728",
+    "-Dsq_legacy_table_delegate006=fn_0019e2e8",
+    "-Dsq_legacy_table_release006=fn_00666518"
   ],
   "sourceFiles": [
     {
       "path": "source/squirrel-wave006/table.c",
-      "sha256": "727b87c31bb945955835fad090b7dc6988058bb81783ab3e27cb28e701e28b8f",
-      "bytes": 5200
+      "sha256": "e4ba180cd5d7f6563fd55647d06075a1cbe573ebf1c8182757516b1d5d8ed48f",
+      "bytes": 5281
+    },
+    {
+      "path": "source/squirrel-wave006/delegate.c",
+      "sha256": "f20a3e6c2c57d7dc4db9bf4cb8fa3c09198a37451b7e3889d1277673970d3e65",
+      "bytes": 1250
+    },
+    {
+      "path": "source/squirrel-wave006/table_release.c",
+      "sha256": "a462d841d168b7e32af132ac6d5c959afa26dbc1799efc846c93480cc2c6d2e9",
+      "bytes": 1106
     },
     {
       "path": "toolscripts/squirrel_wave006_build.py",
-      "sha256": "7e01fb8f720101d5e73b53c786a1038254f39696ca5bff1c10de3931242eea33",
-      "bytes": 14308
+      "sha256": "383d0b60d5ae5df3f700a11fa871f33a28e6bb92c0181e578eebf35201ef26ef",
+      "bytes": 14658
     },
     {
       "path": "toolscripts/squirrel_wave006_platform.py",
@@ -204,7 +221,7 @@
   "wholeVmCreditGranted": 0,
   "producer": {
     "path": "evidence/verification/producers/review-legacy006-get-name-transition.py",
-    "sha256": "d80628ab937fcffa6a60797bb9c92766cf419a8a9d861d9077898cc00f5ec291",
-    "bytes": 2234
+    "sha256": "c4693b17be2e96f4c66273fad5710e4e154574bf41d726a39c7c106af26492b1",
+    "bytes": 2323
   }
 }

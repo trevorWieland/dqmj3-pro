@@ -9,7 +9,16 @@ import squirrel_wave004_build as previous
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'source/squirrel-wave006'
-LEGACY_NAME_DEFINES = ['-Dsq_legacy_table_get006=fn_001a1dc8']
+LEGACY_NAME_DEFINES = [
+    '-Dsq_legacy_table_get006=fn_001a1dc8',
+    '-Dsq_legacy_table_allocate_nodes006=fn_0019b390',
+    '-Dsq_legacy_table_initialize006=fn_0019b998',
+    '-Dsq_legacy_table_set006=fn_0019b414',
+    '-Dsq_legacy_table_rehash006=fn_0019b4ec',
+    '-Dsq_legacy_table_new_slot006=fn_0019b728',
+    '-Dsq_legacy_table_delegate006=fn_0019e2e8',
+    '-Dsq_legacy_table_release006=fn_00666518',
+]
 PLACEMENTS = {**previous.PLACEMENTS, 'fn_0018d65c': 0x18d65c, 'fn_001994c0': 0x1994c0,
               'fn_00199cb8': 0x199cb8, 'sq_execute_error_handler': 0x198320,
               'fn_001a0cc0': 0xa62000, 'sq_wave004_release': 0xa61000, '__aeabi_memcpy': 0xa63000,

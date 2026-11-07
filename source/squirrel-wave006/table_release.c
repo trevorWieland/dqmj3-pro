@@ -1,6 +1,6 @@
 #include "execute_views.h"
 
-void fn_00666518(SqRef *reference)
+void sq_legacy_table_release006(SqRef *reference)
 {
     SqTable *table = (SqTable *)reference;
     reference->vtable = &sq_table_vtable;

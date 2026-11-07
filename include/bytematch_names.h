@@ -1,3 +1,11 @@
 #define fn_006a7610 sq_script_closure_release017
 #define fn_006a769c sq_script_closure_destroy017
 #define fn_001a1dc8 sq_table_get019
+#define fn_0019b998 sq_table_initialize019
+#define fn_0019b390 sq_table_allocate_nodes019
+#define fn_0019b414 sq_table_set019
+#define fn_0019b728 sq_table_new_slot019
+#define fn_0019b4ec sq_table_rehash019
+#define fn_0019e2e8 sq_table_delegate019
+#define fn_00666540 sq_table_destroy019
+#define fn_00666518 sq_table_release019

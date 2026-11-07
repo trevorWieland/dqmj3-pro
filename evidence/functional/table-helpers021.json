@@ -1,0 +1,1150 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-immutable-table-helpers",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "acceptedSourceCreditGranted": 0,
+  "functions": [
+    {
+      "symbol": "fn_0019b998",
+      "canonicalIdentity": {
+        "address": 1685912,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave019/table_initialize.c",
+        "sha256": "f0db603ff1a23ee59505c6aa671bec46d8f87b0fddbfd887b83406ae102d49be",
+        "bytes": 1364
+      },
+      "sourceName": "sq_table_initialize019",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "sha256": "d022d177bd51162a03e898ab623c1dcaebb3308119f08a1a3734b07f0ceba258",
+        "bytes": 472
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 104,
+      "originalInstructionRanges": [
+        {
+          "start": 1685912,
+          "endExclusive": 1686016,
+          "bytes": 104
+        }
+      ],
+      "reportEntryBytes": 104,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-table-helpers021/report.json",
+          "sha256": "44dc72b82b90e95f916cc012eff8e9ea1caa629f4049000ce380bf0abc910f2a",
+          "bytes": 46281
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/table-helpers021-coordinator-639f420.json",
+          "sha256": "8bae244e61d4fafeb422687d0b59c66abdf2cf6a0fe3a6bc7babcdb85648de6e",
+          "bytes": 2638
+        },
+        "legacySourceNameTransition": {
+          "path": "evidence/verification/legacy006-get-name-transition.json",
+          "sha256": "c31c57856d767892a9aa6e9c26e62219d7ea32f97064b9077d3396c91b9d173c",
+          "bytes": 8677
+        },
+        "newCases": 29,
+        "newComparisonsAgainstOriginal": 87,
+        "repeated019OriginalAndSourceCases": 120,
+        "repeatedBaselineNewCredit": 0,
+        "originalInstructionsVisited": 26,
+        "originalInstructions": 26,
+        "domainUnvisitedInstructionAddresses": [],
+        "explicitDomainProof": {
+          "path": "evidence/lanes/squirrel-table-helpers021/domain-proof.json",
+          "sha256": "9176ba0393161c0ef218c76b51085b2f4819c7e3138c9b6adaeaa8daab59f934",
+          "bytes": 2700
+        },
+        "actualOriginalRehashKeyReferencesPositive": true,
+        "armWholeArenaBytes": 262144,
+        "actualWindowsAndAarch64Model": true,
+        "nativePointerBucketAndFreeStateIndependentlyValidated": true,
+        "fpscrStickyExceptionStatusUniversallyEqual": false,
+        "noReentrantMutationOverflowAllocationFailureOrGeneralGcClaim": true,
+        "broadVtableLookupVmOrDeviceQualified": false,
+        "limits": [
+          "listed bounded scalar/raw-pointer/string/native key families and exact opaque lifetime providers only",
+          "successful aligned nonoverflow allocations; capacities4\u201332; unique active keys and valid finite chains",
+          "ordinary nonwrapping owned references; no reentrant mutations or asynchronous raw-memory observers",
+          "NewSlot NULL/corrupt-chain error transfer excluded; Rehash old-key finalizer unreachable by retained-key ownership invariant",
+          "inactive NULL-key values remain real owned data and their finalizers are executed",
+          "frozen019 IOC limitation and three-slot lifetime-only vtable contract retained",
+          "no GC, general metamethods, broad lookup/error, allocator recovery, complete VM/game or physical Android claim"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_0019b390",
+      "canonicalIdentity": {
+        "address": 1684368,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave019/table_initialize.c",
+        "sha256": "f0db603ff1a23ee59505c6aa671bec46d8f87b0fddbfd887b83406ae102d49be",
+        "bytes": 1364
+      },
+      "sourceName": "sq_table_allocate_nodes019",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "sha256": "d022d177bd51162a03e898ab623c1dcaebb3308119f08a1a3734b07f0ceba258",
+        "bytes": 472
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 128,
+      "originalInstructionRanges": [
+        {
+          "start": 1684368,
+          "endExclusive": 1684496,
+          "bytes": 128
+        }
+      ],
+      "reportEntryBytes": 128,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-table-helpers021/report.json",
+          "sha256": "44dc72b82b90e95f916cc012eff8e9ea1caa629f4049000ce380bf0abc910f2a",
+          "bytes": 46281
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/table-helpers021-coordinator-639f420.json",
+          "sha256": "8bae244e61d4fafeb422687d0b59c66abdf2cf6a0fe3a6bc7babcdb85648de6e",
+          "bytes": 2638
+        },
+        "legacySourceNameTransition": {
+          "path": "evidence/verification/legacy006-get-name-transition.json",
+          "sha256": "c31c57856d767892a9aa6e9c26e62219d7ea32f97064b9077d3396c91b9d173c",
+          "bytes": 8677
+        },
+        "newCases": 29,
+        "newComparisonsAgainstOriginal": 87,
+        "repeated019OriginalAndSourceCases": 120,
+        "repeatedBaselineNewCredit": 0,
+        "originalInstructionsVisited": 32,
+        "originalInstructions": 32,
+        "domainUnvisitedInstructionAddresses": [],
+        "explicitDomainProof": {
+          "path": "evidence/lanes/squirrel-table-helpers021/domain-proof.json",
+          "sha256": "9176ba0393161c0ef218c76b51085b2f4819c7e3138c9b6adaeaa8daab59f934",
+          "bytes": 2700
+        },
+        "actualOriginalRehashKeyReferencesPositive": true,
+        "armWholeArenaBytes": 262144,
+        "actualWindowsAndAarch64Model": true,
+        "nativePointerBucketAndFreeStateIndependentlyValidated": true,
+        "fpscrStickyExceptionStatusUniversallyEqual": false,
+        "noReentrantMutationOverflowAllocationFailureOrGeneralGcClaim": true,
+        "broadVtableLookupVmOrDeviceQualified": false,
+        "limits": [
+          "listed bounded scalar/raw-pointer/string/native key families and exact opaque lifetime providers only",
+          "successful aligned nonoverflow allocations; capacities4\u201332; unique active keys and valid finite chains",
+          "ordinary nonwrapping owned references; no reentrant mutations or asynchronous raw-memory observers",
+          "NewSlot NULL/corrupt-chain error transfer excluded; Rehash old-key finalizer unreachable by retained-key ownership invariant",
+          "inactive NULL-key values remain real owned data and their finalizers are executed",
+          "frozen019 IOC limitation and three-slot lifetime-only vtable contract retained",
+          "no GC, general metamethods, broad lookup/error, allocator recovery, complete VM/game or physical Android claim"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_0019b414",
+      "canonicalIdentity": {
+        "address": 1684500,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave019/table_get.c",
+        "sha256": "3dac38e78a6485d0d2b0d0538cd165454307c06c0d973ac408b40bcb43f80af8",
+        "bytes": 2867
+      },
+      "sourceName": "sq_table_set019",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "sha256": "d022d177bd51162a03e898ab623c1dcaebb3308119f08a1a3734b07f0ceba258",
+        "bytes": 472
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 176,
+      "originalInstructionRanges": [
+        {
+          "start": 1684500,
+          "endExclusive": 1684676,
+          "bytes": 176
+        }
+      ],
+      "reportEntryBytes": 176,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-table-helpers021/report.json",
+          "sha256": "44dc72b82b90e95f916cc012eff8e9ea1caa629f4049000ce380bf0abc910f2a",
+          "bytes": 46281
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/table-helpers021-coordinator-639f420.json",
+          "sha256": "8bae244e61d4fafeb422687d0b59c66abdf2cf6a0fe3a6bc7babcdb85648de6e",
+          "bytes": 2638
+        },
+        "legacySourceNameTransition": {
+          "path": "evidence/verification/legacy006-get-name-transition.json",
+          "sha256": "c31c57856d767892a9aa6e9c26e62219d7ea32f97064b9077d3396c91b9d173c",
+          "bytes": 8677
+        },
+        "newCases": 29,
+        "newComparisonsAgainstOriginal": 87,
+        "repeated019OriginalAndSourceCases": 120,
+        "repeatedBaselineNewCredit": 0,
+        "originalInstructionsVisited": 44,
+        "originalInstructions": 44,
+        "domainUnvisitedInstructionAddresses": [],
+        "explicitDomainProof": {
+          "path": "evidence/lanes/squirrel-table-helpers021/domain-proof.json",
+          "sha256": "9176ba0393161c0ef218c76b51085b2f4819c7e3138c9b6adaeaa8daab59f934",
+          "bytes": 2700
+        },
+        "actualOriginalRehashKeyReferencesPositive": true,
+        "armWholeArenaBytes": 262144,
+        "actualWindowsAndAarch64Model": true,
+        "nativePointerBucketAndFreeStateIndependentlyValidated": true,
+        "fpscrStickyExceptionStatusUniversallyEqual": false,
+        "noReentrantMutationOverflowAllocationFailureOrGeneralGcClaim": true,
+        "broadVtableLookupVmOrDeviceQualified": false,
+        "limits": [
+          "listed bounded scalar/raw-pointer/string/native key families and exact opaque lifetime providers only",
+          "successful aligned nonoverflow allocations; capacities4\u201332; unique active keys and valid finite chains",
+          "ordinary nonwrapping owned references; no reentrant mutations or asynchronous raw-memory observers",
+          "NewSlot NULL/corrupt-chain error transfer excluded; Rehash old-key finalizer unreachable by retained-key ownership invariant",
+          "inactive NULL-key values remain real owned data and their finalizers are executed",
+          "frozen019 IOC limitation and three-slot lifetime-only vtable contract retained",
+          "no GC, general metamethods, broad lookup/error, allocator recovery, complete VM/game or physical Android claim"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_0019b728",
+      "canonicalIdentity": {
+        "address": 1685288,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave019/table_mutation.c",
+        "sha256": "bd1ae31ad44473762bbde83abf715b1d40fdf7eed52479452bfd5e5dbe22bc83",
+        "bytes": 3551
+      },
+      "sourceName": "sq_table_new_slot019",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "sha256": "d022d177bd51162a03e898ab623c1dcaebb3308119f08a1a3734b07f0ceba258",
+        "bytes": 472
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 612,
+      "originalInstructionRanges": [
+        {
+          "start": 1685288,
+          "endExclusive": 1685900,
+          "bytes": 612
+        }
+      ],
+      "reportEntryBytes": 612,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-table-helpers021/report.json",
+          "sha256": "44dc72b82b90e95f916cc012eff8e9ea1caa629f4049000ce380bf0abc910f2a",
+          "bytes": 46281
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/table-helpers021-coordinator-639f420.json",
+          "sha256": "8bae244e61d4fafeb422687d0b59c66abdf2cf6a0fe3a6bc7babcdb85648de6e",
+          "bytes": 2638
+        },
+        "legacySourceNameTransition": {
+          "path": "evidence/verification/legacy006-get-name-transition.json",
+          "sha256": "c31c57856d767892a9aa6e9c26e62219d7ea32f97064b9077d3396c91b9d173c",
+          "bytes": 8677
+        },
+        "newCases": 29,
+        "newComparisonsAgainstOriginal": 87,
+        "repeated019OriginalAndSourceCases": 120,
+        "repeatedBaselineNewCredit": 0,
+        "originalInstructionsVisited": 151,
+        "originalInstructions": 153,
+        "domainUnvisitedInstructionAddresses": [
+          1685692,
+          1685696
+        ],
+        "explicitDomainProof": {
+          "path": "evidence/lanes/squirrel-table-helpers021/domain-proof.json",
+          "sha256": "9176ba0393161c0ef218c76b51085b2f4819c7e3138c9b6adaeaa8daab59f934",
+          "bytes": 2700
+        },
+        "actualOriginalRehashKeyReferencesPositive": true,
+        "armWholeArenaBytes": 262144,
+        "actualWindowsAndAarch64Model": true,
+        "nativePointerBucketAndFreeStateIndependentlyValidated": true,
+        "fpscrStickyExceptionStatusUniversallyEqual": false,
+        "noReentrantMutationOverflowAllocationFailureOrGeneralGcClaim": true,
+        "broadVtableLookupVmOrDeviceQualified": false,
+        "limits": [
+          "listed bounded scalar/raw-pointer/string/native key families and exact opaque lifetime providers only",
+          "successful aligned nonoverflow allocations; capacities4\u201332; unique active keys and valid finite chains",
+          "ordinary nonwrapping owned references; no reentrant mutations or asynchronous raw-memory observers",
+          "NewSlot NULL/corrupt-chain error transfer excluded; Rehash old-key finalizer unreachable by retained-key ownership invariant",
+          "inactive NULL-key values remain real owned data and their finalizers are executed",
+          "frozen019 IOC limitation and three-slot lifetime-only vtable contract retained",
+          "no GC, general metamethods, broad lookup/error, allocator recovery, complete VM/game or physical Android claim"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_0019b4ec",
+      "canonicalIdentity": {
+        "address": 1684716,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave019/table_mutation.c",
+        "sha256": "bd1ae31ad44473762bbde83abf715b1d40fdf7eed52479452bfd5e5dbe22bc83",
+        "bytes": 3551
+      },
+      "sourceName": "sq_table_rehash019",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "sha256": "d022d177bd51162a03e898ab623c1dcaebb3308119f08a1a3734b07f0ceba258",
+        "bytes": 472
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 352,
+      "originalInstructionRanges": [
+        {
+          "start": 1684716,
+          "endExclusive": 1685068,
+          "bytes": 352
+        }
+      ],
+      "reportEntryBytes": 352,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-table-helpers021/report.json",
+          "sha256": "44dc72b82b90e95f916cc012eff8e9ea1caa629f4049000ce380bf0abc910f2a",
+          "bytes": 46281
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/table-helpers021-coordinator-639f420.json",
+          "sha256": "8bae244e61d4fafeb422687d0b59c66abdf2cf6a0fe3a6bc7babcdb85648de6e",
+          "bytes": 2638
+        },
+        "legacySourceNameTransition": {
+          "path": "evidence/verification/legacy006-get-name-transition.json",
+          "sha256": "c31c57856d767892a9aa6e9c26e62219d7ea32f97064b9077d3396c91b9d173c",
+          "bytes": 8677
+        },
+        "newCases": 29,
+        "newComparisonsAgainstOriginal": 87,
+        "repeated019OriginalAndSourceCases": 120,
+        "repeatedBaselineNewCredit": 0,
+        "originalInstructionsVisited": 84,
+        "originalInstructions": 88,
+        "domainUnvisitedInstructionAddresses": [
+          1684968,
+          1684972,
+          1684976,
+          1684980
+        ],
+        "explicitDomainProof": {
+          "path": "evidence/lanes/squirrel-table-helpers021/domain-proof.json",
+          "sha256": "9176ba0393161c0ef218c76b51085b2f4819c7e3138c9b6adaeaa8daab59f934",
+          "bytes": 2700
+        },
+        "actualOriginalRehashKeyReferencesPositive": true,
+        "armWholeArenaBytes": 262144,
+        "actualWindowsAndAarch64Model": true,
+        "nativePointerBucketAndFreeStateIndependentlyValidated": true,
+        "fpscrStickyExceptionStatusUniversallyEqual": false,
+        "noReentrantMutationOverflowAllocationFailureOrGeneralGcClaim": true,
+        "broadVtableLookupVmOrDeviceQualified": false,
+        "limits": [
+          "listed bounded scalar/raw-pointer/string/native key families and exact opaque lifetime providers only",
+          "successful aligned nonoverflow allocations; capacities4\u201332; unique active keys and valid finite chains",
+          "ordinary nonwrapping owned references; no reentrant mutations or asynchronous raw-memory observers",
+          "NewSlot NULL/corrupt-chain error transfer excluded; Rehash old-key finalizer unreachable by retained-key ownership invariant",
+          "inactive NULL-key values remain real owned data and their finalizers are executed",
+          "frozen019 IOC limitation and three-slot lifetime-only vtable contract retained",
+          "no GC, general metamethods, broad lookup/error, allocator recovery, complete VM/game or physical Android claim"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_0019e2e8",
+      "canonicalIdentity": {
+        "address": 1696488,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave019/table_lifetime.c",
+        "sha256": "417229d22e067756ee7672fbf7032a4c011a6729f4486edee8aacd40356f9a94",
+        "bytes": 2015
+      },
+      "sourceName": "sq_table_delegate019",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "sha256": "d022d177bd51162a03e898ab623c1dcaebb3308119f08a1a3734b07f0ceba258",
+        "bytes": 472
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 144,
+      "originalInstructionRanges": [
+        {
+          "start": 1696488,
+          "endExclusive": 1696632,
+          "bytes": 144
+        }
+      ],
+      "reportEntryBytes": 144,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-table-helpers021/report.json",
+          "sha256": "44dc72b82b90e95f916cc012eff8e9ea1caa629f4049000ce380bf0abc910f2a",
+          "bytes": 46281
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/table-helpers021-coordinator-639f420.json",
+          "sha256": "8bae244e61d4fafeb422687d0b59c66abdf2cf6a0fe3a6bc7babcdb85648de6e",
+          "bytes": 2638
+        },
+        "legacySourceNameTransition": {
+          "path": "evidence/verification/legacy006-get-name-transition.json",
+          "sha256": "c31c57856d767892a9aa6e9c26e62219d7ea32f97064b9077d3396c91b9d173c",
+          "bytes": 8677
+        },
+        "newCases": 29,
+        "newComparisonsAgainstOriginal": 87,
+        "repeated019OriginalAndSourceCases": 120,
+        "repeatedBaselineNewCredit": 0,
+        "originalInstructionsVisited": 36,
+        "originalInstructions": 36,
+        "domainUnvisitedInstructionAddresses": [],
+        "explicitDomainProof": {
+          "path": "evidence/lanes/squirrel-table-helpers021/domain-proof.json",
+          "sha256": "9176ba0393161c0ef218c76b51085b2f4819c7e3138c9b6adaeaa8daab59f934",
+          "bytes": 2700
+        },
+        "actualOriginalRehashKeyReferencesPositive": true,
+        "armWholeArenaBytes": 262144,
+        "actualWindowsAndAarch64Model": true,
+        "nativePointerBucketAndFreeStateIndependentlyValidated": true,
+        "fpscrStickyExceptionStatusUniversallyEqual": false,
+        "noReentrantMutationOverflowAllocationFailureOrGeneralGcClaim": true,
+        "broadVtableLookupVmOrDeviceQualified": false,
+        "limits": [
+          "listed bounded scalar/raw-pointer/string/native key families and exact opaque lifetime providers only",
+          "successful aligned nonoverflow allocations; capacities4\u201332; unique active keys and valid finite chains",
+          "ordinary nonwrapping owned references; no reentrant mutations or asynchronous raw-memory observers",
+          "NewSlot NULL/corrupt-chain error transfer excluded; Rehash old-key finalizer unreachable by retained-key ownership invariant",
+          "inactive NULL-key values remain real owned data and their finalizers are executed",
+          "frozen019 IOC limitation and three-slot lifetime-only vtable contract retained",
+          "no GC, general metamethods, broad lookup/error, allocator recovery, complete VM/game or physical Android claim"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_00666540",
+      "canonicalIdentity": {
+        "address": 6710592,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave019/table_lifetime.c",
+        "sha256": "417229d22e067756ee7672fbf7032a4c011a6729f4486edee8aacd40356f9a94",
+        "bytes": 2015
+      },
+      "sourceName": "sq_table_destroy019",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "sha256": "d022d177bd51162a03e898ab623c1dcaebb3308119f08a1a3734b07f0ceba258",
+        "bytes": 472
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 232,
+      "originalInstructionRanges": [
+        {
+          "start": 6710592,
+          "endExclusive": 6710824,
+          "bytes": 232
+        }
+      ],
+      "reportEntryBytes": 232,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-table-helpers021/report.json",
+          "sha256": "44dc72b82b90e95f916cc012eff8e9ea1caa629f4049000ce380bf0abc910f2a",
+          "bytes": 46281
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/table-helpers021-coordinator-639f420.json",
+          "sha256": "8bae244e61d4fafeb422687d0b59c66abdf2cf6a0fe3a6bc7babcdb85648de6e",
+          "bytes": 2638
+        },
+        "legacySourceNameTransition": {
+          "path": "evidence/verification/legacy006-get-name-transition.json",
+          "sha256": "c31c57856d767892a9aa6e9c26e62219d7ea32f97064b9077d3396c91b9d173c",
+          "bytes": 8677
+        },
+        "newCases": 29,
+        "newComparisonsAgainstOriginal": 87,
+        "repeated019OriginalAndSourceCases": 120,
+        "repeatedBaselineNewCredit": 0,
+        "originalInstructionsVisited": 58,
+        "originalInstructions": 58,
+        "domainUnvisitedInstructionAddresses": [],
+        "explicitDomainProof": {
+          "path": "evidence/lanes/squirrel-table-helpers021/domain-proof.json",
+          "sha256": "9176ba0393161c0ef218c76b51085b2f4819c7e3138c9b6adaeaa8daab59f934",
+          "bytes": 2700
+        },
+        "actualOriginalRehashKeyReferencesPositive": true,
+        "armWholeArenaBytes": 262144,
+        "actualWindowsAndAarch64Model": true,
+        "nativePointerBucketAndFreeStateIndependentlyValidated": true,
+        "fpscrStickyExceptionStatusUniversallyEqual": false,
+        "noReentrantMutationOverflowAllocationFailureOrGeneralGcClaim": true,
+        "broadVtableLookupVmOrDeviceQualified": false,
+        "limits": [
+          "listed bounded scalar/raw-pointer/string/native key families and exact opaque lifetime providers only",
+          "successful aligned nonoverflow allocations; capacities4\u201332; unique active keys and valid finite chains",
+          "ordinary nonwrapping owned references; no reentrant mutations or asynchronous raw-memory observers",
+          "NewSlot NULL/corrupt-chain error transfer excluded; Rehash old-key finalizer unreachable by retained-key ownership invariant",
+          "inactive NULL-key values remain real owned data and their finalizers are executed",
+          "frozen019 IOC limitation and three-slot lifetime-only vtable contract retained",
+          "no GC, general metamethods, broad lookup/error, allocator recovery, complete VM/game or physical Android claim"
+        ]
+      }
+    },
+    {
+      "symbol": "fn_00666518",
+      "canonicalIdentity": {
+        "address": 6710552,
+        "mode": "ARM",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "programId": "0004000e001acb00"
+      },
+      "source": {
+        "path": "source/squirrel-wave019/table_lifetime.c",
+        "sha256": "417229d22e067756ee7672fbf7032a4c011a6729f4486edee8aacd40356f9a94",
+        "bytes": 2015
+      },
+      "sourceName": "sq_table_release019",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "sha256": "d022d177bd51162a03e898ab623c1dcaebb3308119f08a1a3734b07f0ceba258",
+        "bytes": 472
+      },
+      "functionalConfidence": "medium",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "originalInstructionBytes": 40,
+      "originalInstructionRanges": [
+        {
+          "start": 6710552,
+          "endExclusive": 6710592,
+          "bytes": 40
+        }
+      ],
+      "reportEntryBytes": 40,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "execution": {
+          "path": "evidence/lanes/squirrel-table-helpers021/report.json",
+          "sha256": "44dc72b82b90e95f916cc012eff8e9ea1caa629f4049000ce380bf0abc910f2a",
+          "bytes": 46281
+        },
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/table-helpers021-coordinator-639f420.json",
+          "sha256": "8bae244e61d4fafeb422687d0b59c66abdf2cf6a0fe3a6bc7babcdb85648de6e",
+          "bytes": 2638
+        },
+        "legacySourceNameTransition": {
+          "path": "evidence/verification/legacy006-get-name-transition.json",
+          "sha256": "c31c57856d767892a9aa6e9c26e62219d7ea32f97064b9077d3396c91b9d173c",
+          "bytes": 8677
+        },
+        "newCases": 29,
+        "newComparisonsAgainstOriginal": 87,
+        "repeated019OriginalAndSourceCases": 120,
+        "repeatedBaselineNewCredit": 0,
+        "originalInstructionsVisited": 10,
+        "originalInstructions": 10,
+        "domainUnvisitedInstructionAddresses": [],
+        "explicitDomainProof": {
+          "path": "evidence/lanes/squirrel-table-helpers021/domain-proof.json",
+          "sha256": "9176ba0393161c0ef218c76b51085b2f4819c7e3138c9b6adaeaa8daab59f934",
+          "bytes": 2700
+        },
+        "actualOriginalRehashKeyReferencesPositive": true,
+        "armWholeArenaBytes": 262144,
+        "actualWindowsAndAarch64Model": true,
+        "nativePointerBucketAndFreeStateIndependentlyValidated": true,
+        "fpscrStickyExceptionStatusUniversallyEqual": false,
+        "noReentrantMutationOverflowAllocationFailureOrGeneralGcClaim": true,
+        "broadVtableLookupVmOrDeviceQualified": false,
+        "limits": [
+          "listed bounded scalar/raw-pointer/string/native key families and exact opaque lifetime providers only",
+          "successful aligned nonoverflow allocations; capacities4\u201332; unique active keys and valid finite chains",
+          "ordinary nonwrapping owned references; no reentrant mutations or asynchronous raw-memory observers",
+          "NewSlot NULL/corrupt-chain error transfer excluded; Rehash old-key finalizer unreachable by retained-key ownership invariant",
+          "inactive NULL-key values remain real owned data and their finalizers are executed",
+          "frozen019 IOC limitation and three-slot lifetime-only vtable contract retained",
+          "no GC, general metamethods, broad lookup/error, allocator recovery, complete VM/game or physical Android claim"
+        ]
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "source/squirrel-wave002/array_views.h",
+      "sha256": "02e549c877765b7cbce879ec29e45c66dc46a1266bf630247775ec43bad2c0f4",
+      "bytes": 1492
+    },
+    {
+      "path": "source/squirrel-wave004/call_views.h",
+      "sha256": "4e8a0cc46d0aee9b72a8d0435d7efb19b8dd47cf9a4445a8007c4a44d916946e",
+      "bytes": 3085
+    },
+    {
+      "path": "source/squirrel-wave011/prototype_release.h",
+      "sha256": "33309e72078586399c1cf826ea13469541669a18dc17bc210bf23c3450391ba4",
+      "bytes": 3432
+    },
+    {
+      "path": "source/squirrel-wave012/reference_prefix.h",
+      "sha256": "a1c5422925b54a994b500be6805e74e8b8c339fe18bbc57002a7d1807db22ad2",
+      "bytes": 1824
+    },
+    {
+      "path": "source/squirrel-wave012/reference_types.h",
+      "sha256": "64a44751454449783222f7a7c00654a56f569e8f91a10e0621740c8661c3fbae",
+      "bytes": 1360
+    },
+    {
+      "path": "source/squirrel-wave015/string.h",
+      "sha256": "bad2126f596b07a111c36c19742c4214acc3fa9bec77b72d3cc26566f8a31cee",
+      "bytes": 2497
+    },
+    {
+      "path": "source/squirrel-wave019/table.h",
+      "sha256": "a08e56e7071fdc75351bcb7cc366823938a7484963e88094d2d42ad9f4b73e83",
+      "bytes": 1877
+    },
+    {
+      "path": "source/squirrel-wave019/table_internal.h",
+      "sha256": "44d072b3b94518060ca578d294075e809afae433f1f33aa22cf1666fa4e058ac",
+      "bytes": 815
+    },
+    {
+      "path": "src/native/wave005/vm_views.h",
+      "sha256": "1bf160e4679afbe5a59a244e78f9753684c93a109f7a703f78dff80d04f4840a",
+      "bytes": 1898
+    }
+  ],
+  "sourceDependencies": [
+    {
+      "path": "source/squirrel-wave021/native_table_helpers.c",
+      "bytes": 3468,
+      "sha256": "8fc6c8fb27405efe4cbdfe11f3769ebaf1c28b8824d3d8e57c7e785ef733d7df"
+    },
+    {
+      "path": "source/squirrel-wave021/README.md",
+      "bytes": 3659,
+      "sha256": "e4a7a4138c0ec2b4c70f06be2dd45cfe57405e452ae016a3c5440008b62a39c2"
+    },
+    {
+      "path": "source/squirrel-wave021/table_helpers_fixture.c",
+      "bytes": 8278,
+      "sha256": "84e24fa1f3d05f6dbaa19ed386f75edf7fdf999ab12579bf00e82b1be2e38d7b"
+    },
+    {
+      "path": "source/squirrel-wave021/table_helpers_fixture.h",
+      "bytes": 552,
+      "sha256": "1b70c33fc5998a10fcdf2c15d4aa1de0794afd3bb9a33e3f163f87686cb25faf"
+    },
+    {
+      "path": "source/squirrel-wave021/table_helpers_services.c",
+      "bytes": 3820,
+      "sha256": "d446a73ebc89c820b20c8f1f479c5888418be9c346973382e510c42f24bd3dc3"
+    },
+    {
+      "path": "tests/test_squirrel_table_helpers021.py",
+      "bytes": 4998,
+      "sha256": "75329d36db102269ef7cbb9e1937608c67853e47ed6d9e0f81a0b8589c64d233"
+    },
+    {
+      "path": "toolscripts/squirrel_table_helpers021.py",
+      "bytes": 8748,
+      "sha256": "cdc9c100d637e4f3ba798e951f23c26fed8d964e5f95b9ef0d431988db6554ef"
+    },
+    {
+      "path": "toolscripts/squirrel_table_helpers021_android.py",
+      "bytes": 5723,
+      "sha256": "46950e3ea06cb6f3cd3be0d0de4a25efa81111d218da274920fa3de050e01e87"
+    },
+    {
+      "path": "toolscripts/squirrel_table_helpers021_build.py",
+      "bytes": 14601,
+      "sha256": "c48932166dd7b44a5bb040f1505eeb06dec2c4e49b409cba4120b4c3245965c0"
+    },
+    {
+      "path": "toolscripts/squirrel_table_helpers021_model.py",
+      "bytes": 4811,
+      "sha256": "4a40cd7d606a1bb90b47821b9e23dc22570873772a2aca700399cd477232eee9"
+    },
+    {
+      "path": "toolscripts/squirrel_table_helpers021_oracle.py",
+      "bytes": 10747,
+      "sha256": "ecb43f5df7b0f5833181e30e2ed7e0c60de664e6340f06ee5a1a9a7eb92283cc"
+    },
+    {
+      "path": "toolscripts/squirrel_table_helpers021_replay.py",
+      "bytes": 5279,
+      "sha256": "f6344814447dc67ebd0008399ea16728c8b8a85bc9cc8923814907e607b4314d"
+    },
+    {
+      "path": "evidence/lanes/squirrel-table-helpers021/report.json",
+      "bytes": 46281,
+      "sha256": "44dc72b82b90e95f916cc012eff8e9ea1caa629f4049000ce380bf0abc910f2a"
+    },
+    {
+      "path": "evidence/lanes/squirrel-table-helpers021/verification.json",
+      "bytes": 36499,
+      "sha256": "688e76a104f161ec8a392d1b4d98ae68889c53955bcd03ff3f0c2bd8e3220d6e"
+    },
+    {
+      "path": "evidence/lanes/squirrel-table-helpers021/domain-proof.json",
+      "bytes": 2700,
+      "sha256": "9176ba0393161c0ef218c76b51085b2f4819c7e3138c9b6adaeaa8daab59f934"
+    },
+    {
+      "path": "source/squirrel-wave001/upstream/squirrel/sqtable.cpp",
+      "bytes": 4686,
+      "sha256": "a12781b0ce24f6dd82633d049a44f623a57a829a2ecda8a8043703e4b1e74742"
+    },
+    {
+      "path": "source/squirrel-wave002/array_views.h",
+      "bytes": 1492,
+      "sha256": "02e549c877765b7cbce879ec29e45c66dc46a1266bf630247775ec43bad2c0f4"
+    },
+    {
+      "path": "source/squirrel-wave004/call_views.h",
+      "bytes": 3085,
+      "sha256": "4e8a0cc46d0aee9b72a8d0435d7efb19b8dd47cf9a4445a8007c4a44d916946e"
+    },
+    {
+      "path": "source/squirrel-wave011/README.md",
+      "bytes": 7022,
+      "sha256": "8c614b4fff1c80cbda6f930fc39e56fd68a0e87ee0b0d060c9f3be834bdafe2b"
+    },
+    {
+      "path": "source/squirrel-wave011/fixture_internal.h",
+      "bytes": 1843,
+      "sha256": "3b5b63db3fb0f619af6016a046c77071efaaaae0eb89f5845e9ccaf95fcaf3c9"
+    },
+    {
+      "path": "source/squirrel-wave011/fixture_observers.c",
+      "bytes": 4613,
+      "sha256": "5178f9eb1536eab76fd5a335e452da83be3366fcde6895042a31d84b8bb12caa"
+    },
+    {
+      "path": "source/squirrel-wave011/fixture_snapshot.c",
+      "bytes": 4687,
+      "sha256": "bfbe1d9d9399916e315ba88dfc24bd44a32c9882d9538eb0003babd238686651"
+    },
+    {
+      "path": "source/squirrel-wave011/fixture_state.c",
+      "bytes": 10686,
+      "sha256": "703baed6532c0bdfeccf26020eff6678a57cf75e0906e583948d601eecda2069"
+    },
+    {
+      "path": "source/squirrel-wave011/prototype_internal.h",
+      "bytes": 428,
+      "sha256": "83070a74a5644c30643a4b5ec41aed9e412658257bc2ab16535fb7867aefd558"
+    },
+    {
+      "path": "source/squirrel-wave011/prototype_release.c",
+      "bytes": 2353,
+      "sha256": "f772017b62016f4f29765ab2ff3a70d94f335be869ba85b3f1e720df5ed4022f"
+    },
+    {
+      "path": "source/squirrel-wave011/prototype_release.h",
+      "bytes": 3432,
+      "sha256": "33309e72078586399c1cf826ea13469541669a18dc17bc210bf23c3450391ba4"
+    },
+    {
+      "path": "source/squirrel-wave011/vtables.c",
+      "bytes": 459,
+      "sha256": "e9097052e4dfe7538485bee7f1a54570b66937b2db49c9d69d6f23c84b0635a7"
+    },
+    {
+      "path": "source/squirrel-wave012/README.md",
+      "bytes": 4555,
+      "sha256": "419ba35431c4b81cc1e1f0db65120e825fdd5fd1a93999519c05cf00ddd528bb"
+    },
+    {
+      "path": "source/squirrel-wave012/legacy_storage.c",
+      "bytes": 3635,
+      "sha256": "c66e0d7c6f1f608ebe1690b47da65d10a901e4a900f07c9b464e8658d05c527e"
+    },
+    {
+      "path": "source/squirrel-wave012/mixed_runtime.c",
+      "bytes": 1025,
+      "sha256": "ccc98d057681cd2a98cc8bf418dbf9fe9ca688b4e319331c0629e9c7501d5788"
+    },
+    {
+      "path": "source/squirrel-wave012/native_prefix_fixture.c",
+      "bytes": 7278,
+      "sha256": "bd4613b931f065b3aab56bf932bd63620905a046f6c7e07c65d47c79fb9e9df4"
+    },
+    {
+      "path": "source/squirrel-wave012/prefix_fixture.c",
+      "bytes": 1993,
+      "sha256": "da9f856ece098f4f7ec50a60c96057f4484a012afab795a1ed46529cb3b7865e"
+    },
+    {
+      "path": "source/squirrel-wave012/prefix_fixture.h",
+      "bytes": 1104,
+      "sha256": "e6b48f27497130a624a99c3cd7cb845d8c23c40355060326d48878616028b8f0"
+    },
+    {
+      "path": "source/squirrel-wave012/reference_dispatch.c",
+      "bytes": 507,
+      "sha256": "da35bf783c6afda0b3f5f68e899afee972001faa3fc94fbeed9d4d126d22b530"
+    },
+    {
+      "path": "source/squirrel-wave012/reference_dispatch_opaque.c",
+      "bytes": 228,
+      "sha256": "ca86896d8149d55f06cfdd92ddc2fc126fb35818b4dff9d955c25ee69f375906"
+    },
+    {
+      "path": "source/squirrel-wave012/reference_prefix.c",
+      "bytes": 1693,
+      "sha256": "09a4073e8e71f3f50769bc9058399cce666da47b157401af5915581134560408"
+    },
+    {
+      "path": "source/squirrel-wave012/reference_prefix.h",
+      "bytes": 1824,
+      "sha256": "a1c5422925b54a994b500be6805e74e8b8c339fe18bbc57002a7d1807db22ad2"
+    },
+    {
+      "path": "source/squirrel-wave012/reference_types.h",
+      "bytes": 1360,
+      "sha256": "64a44751454449783222f7a7c00654a56f569e8f91a10e0621740c8661c3fbae"
+    },
+    {
+      "path": "source/squirrel-wave012/vector_values.c",
+      "bytes": 1337,
+      "sha256": "a709e879402de6747ad1bf9702d7170e11696b085dd3607d1b368d8d3235446d"
+    },
+    {
+      "path": "source/squirrel-wave013/README.md",
+      "bytes": 5872,
+      "sha256": "7816cb0a9217115d5d03f849d45545bbffcb7d1dc199784209703e3aad12e37f"
+    },
+    {
+      "path": "source/squirrel-wave013/fixture_internal.h",
+      "bytes": 1489,
+      "sha256": "46cd81d1d35675f183500f82c79ac47246e5d8ec88ec8e643b2f4a58e7d930a2"
+    },
+    {
+      "path": "source/squirrel-wave013/fixture_observers.c",
+      "bytes": 4030,
+      "sha256": "7fcfa8e05f2563d3117e2c36784b6a3775f4f88e451a0195ba2c8c510de4f520"
+    },
+    {
+      "path": "source/squirrel-wave013/fixture_snapshot.c",
+      "bytes": 3033,
+      "sha256": "4d52cc7fbe4a67660442a36e91dca430274d54f436357be6a5db5ea19a5d5ffa"
+    },
+    {
+      "path": "source/squirrel-wave013/fixture_state.c",
+      "bytes": 10337,
+      "sha256": "01556336d888fd35f6e7fdcd9568a32698410ef5c9d00e8e0b4273205b099597"
+    },
+    {
+      "path": "source/squirrel-wave013/native_closure_release.c",
+      "bytes": 1704,
+      "sha256": "eb3f68ac72008a476873ad64801134f969d28449b2c457fb843d3cd51daa723f"
+    },
+    {
+      "path": "source/squirrel-wave013/native_closure_release.h",
+      "bytes": 1486,
+      "sha256": "6723b66bce845aeb133508afb9cc1a8bc9299e5aee7a6d2c1c4b73418d26ef28"
+    },
+    {
+      "path": "source/squirrel-wave013/vtables.c",
+      "bytes": 389,
+      "sha256": "e53c7a0adc645977ae0c3e140a8914fe5b107fc385a6ca5db8853778cd8a9eb5"
+    },
+    {
+      "path": "source/squirrel-wave014/README.md",
+      "bytes": 6490,
+      "sha256": "ff3474fba2c40ebc890cadd05db5697330f8052f0790a98ad0ecfe8df5ef6977"
+    },
+    {
+      "path": "source/squirrel-wave014/fixture_internal.h",
+      "bytes": 1211,
+      "sha256": "453f66f3f6715708d58ed0768c22157fa8cf0ee95a35b5458e39ac1b8018843a"
+    },
+    {
+      "path": "source/squirrel-wave014/fixture_observers.c",
+      "bytes": 2528,
+      "sha256": "e910d77d8f3a1260e60b807fb1de9d8d58c0401dda4d9ca53756fa2d064dc18f"
+    },
+    {
+      "path": "source/squirrel-wave014/fixture_run.c",
+      "bytes": 2484,
+      "sha256": "d6e2cae41a77fecaecf6876331521327e5d13bae59bf1663e5319f32bfda776c"
+    },
+    {
+      "path": "source/squirrel-wave014/fixture_state.c",
+      "bytes": 4701,
+      "sha256": "b68c540ae485811f20f2de62d6e10dfd70e13981092d9b629832cff283b97cc1"
+    },
+    {
+      "path": "source/squirrel-wave014/vtables.c",
+      "bytes": 345,
+      "sha256": "49a8f45840425adc5dd6433014d2b503722e98589f08a4a06f966b02252fb631"
+    },
+    {
+      "path": "source/squirrel-wave014/weak_reference.c",
+      "bytes": 1095,
+      "sha256": "d9719bf30cb04dcffb6ae41b5772e879ef1329d081b1f4955f6128a3c39c9f9b"
+    },
+    {
+      "path": "source/squirrel-wave014/weak_reference.h",
+      "bytes": 890,
+      "sha256": "fc58b153a5b5801ed60078cb31c436a84fd33803bc0b71102dff70c81579f63e"
+    },
+    {
+      "path": "source/squirrel-wave015/README.md",
+      "bytes": 7493,
+      "sha256": "887daa50a97a01ea6081257c5d2b976c4a01ae0ef44a20c442645000a1cb1ac9"
+    },
+    {
+      "path": "source/squirrel-wave015/bytes.c",
+      "bytes": 1343,
+      "sha256": "dd6c00224e775bade17253458cead7c2a26ec72217936d901e30a541036dcd90"
+    },
+    {
+      "path": "source/squirrel-wave015/fixture_internal.h",
+      "bytes": 1464,
+      "sha256": "c7031b7a6235e31d8de46afe3b7fb8e80467dd8928d833c89e4e40e746e0bb16"
+    },
+    {
+      "path": "source/squirrel-wave015/fixture_observers.c",
+      "bytes": 4064,
+      "sha256": "c32610ae71224415042b21560625e42d509fcd7f480205f2b8948d6adeb634f0"
+    },
+    {
+      "path": "source/squirrel-wave015/fixture_run.c",
+      "bytes": 3277,
+      "sha256": "a6807a1a38cef3616b58721f1f9b665d8dc3c65c938ba35c1ef749dd3b342f64"
+    },
+    {
+      "path": "source/squirrel-wave015/fixture_state.c",
+      "bytes": 8166,
+      "sha256": "044be79eca6bad2d0bf13e36e0a91b9c4b435ea629d88474c34a8b5c3ccde40c"
+    },
+    {
+      "path": "source/squirrel-wave015/string.c",
+      "bytes": 4148,
+      "sha256": "cd10d0aaeb53701160428b626054ef770b4f7bbec918c0fa47bf6621010c8a96"
+    },
+    {
+      "path": "source/squirrel-wave015/string.h",
+      "bytes": 2497,
+      "sha256": "bad2126f596b07a111c36c19742c4214acc3fa9bec77b72d3cc26566f8a31cee"
+    },
+    {
+      "path": "source/squirrel-wave015/vtables.c",
+      "bytes": 341,
+      "sha256": "1150299e779dc53d3259584e7197e063da501599c84b6fb410b553620944c404"
+    },
+    {
+      "path": "source/squirrel-wave017/README.md",
+      "bytes": 6698,
+      "sha256": "6b90d4b643129d281f3d8e849008710b0ed9d1320f63accd24542cd33341582b"
+    },
+    {
+      "path": "source/squirrel-wave017/fixture_internal.h",
+      "bytes": 1610,
+      "sha256": "02f1b70929f8499757c1d37b7bdaf0ca06ea0df9700913e1d936b51ba1e0e8c3"
+    },
+    {
+      "path": "source/squirrel-wave017/fixture_observers.c",
+      "bytes": 5076,
+      "sha256": "b1b6e61477e44133c3df07e57bfc8d3aa221b53a06a48aa597e11c394642db2f"
+    },
+    {
+      "path": "source/squirrel-wave017/fixture_run.c",
+      "bytes": 4219,
+      "sha256": "0f9cfeb90e3be148382c42e54719105711f10336cc523fe4d9523b02e9213406"
+    },
+    {
+      "path": "source/squirrel-wave017/fixture_state.c",
+      "bytes": 12341,
+      "sha256": "a8a8203e6ae70f461650357dab0f6f5b949dd5f79e7ee4681197a286211cc156"
+    },
+    {
+      "path": "source/squirrel-wave017/script_closure.c",
+      "bytes": 1639,
+      "sha256": "af8470d0365b98e1af4d83c7269a56fd6d98305adfcd6006b75cbdbfb9220658"
+    },
+    {
+      "path": "source/squirrel-wave017/script_closure.h",
+      "bytes": 1360,
+      "sha256": "4379d064694e17209c6f19dd7bb8d9ec26ca6fef3482cf4a51ae383def7b6b0f"
+    },
+    {
+      "path": "source/squirrel-wave017/vtables.c",
+      "bytes": 409,
+      "sha256": "8581552ee7469d57be0ab5d66e8da0e44f65574433394c1031e840f445822a0f"
+    },
+    {
+      "path": "source/squirrel-wave019/README.md",
+      "bytes": 4389,
+      "sha256": "ee6d8c6edbe8f5fcefb8d1681e23086e859100ba4871ff32bbd1a5a406a4fbd8"
+    },
+    {
+      "path": "source/squirrel-wave019/fixture_float.c",
+      "bytes": 851,
+      "sha256": "b22be6d6db389dfbdc2a3df594c04bc9c7007f8424668c4a24534806ffb10b68"
+    },
+    {
+      "path": "source/squirrel-wave019/fixture_internal.h",
+      "bytes": 2469,
+      "sha256": "3790f44c82dce65e8fd329c0f2a748a71bd8574cf775b1690db0f38befc42e5b"
+    },
+    {
+      "path": "source/squirrel-wave019/fixture_run.c",
+      "bytes": 6384,
+      "sha256": "b4e3ce0a19eb19d528d273a095d45ee8f1d5ebb8fd7722e54259197a879d2885"
+    },
+    {
+      "path": "source/squirrel-wave019/fixture_services.c",
+      "bytes": 3775,
+      "sha256": "837cc109e0e8032b4c479f0b72fe6cca171897b5d66e0a09d7041506c3715850"
+    },
+    {
+      "path": "source/squirrel-wave019/fixture_snapshot.c",
+      "bytes": 3671,
+      "sha256": "e81ded37ac3f692e9195326a90029e72946189495a1b3ce57fa4d5ad8891a6a0"
+    },
+    {
+      "path": "source/squirrel-wave019/fixture_state.c",
+      "bytes": 8494,
+      "sha256": "56a02d725027f78f7135fee1f1f7a950b7e1639d43558e95f76e4432e8f805a6"
+    },
+    {
+      "path": "source/squirrel-wave019/native_fixture.c",
+      "bytes": 2448,
+      "sha256": "8361ca2096f4648c2fe128caea393400f269588515fcd19d5627fa7fff012a04"
+    },
+    {
+      "path": "source/squirrel-wave019/table.h",
+      "bytes": 1877,
+      "sha256": "a08e56e7071fdc75351bcb7cc366823938a7484963e88094d2d42ad9f4b73e83"
+    },
+    {
+      "path": "source/squirrel-wave019/table_get.c",
+      "bytes": 2867,
+      "sha256": "3dac38e78a6485d0d2b0d0538cd165454307c06c0d973ac408b40bcb43f80af8"
+    },
+    {
+      "path": "source/squirrel-wave019/table_initialize.c",
+      "bytes": 1364,
+      "sha256": "f0db603ff1a23ee59505c6aa671bec46d8f87b0fddbfd887b83406ae102d49be"
+    },
+    {
+      "path": "source/squirrel-wave019/table_internal.h",
+      "bytes": 815,
+      "sha256": "44d072b3b94518060ca578d294075e809afae433f1f33aa22cf1666fa4e058ac"
+    },
+    {
+      "path": "source/squirrel-wave019/table_lifetime.c",
+      "bytes": 2015,
+      "sha256": "417229d22e067756ee7672fbf7032a4c011a6729f4486edee8aacd40356f9a94"
+    },
+    {
+      "path": "source/squirrel-wave019/table_mutation.c",
+      "bytes": 3551,
+      "sha256": "bd1ae31ad44473762bbde83abf715b1d40fdf7eed52479452bfd5e5dbe22bc83"
+    },
+    {
+      "path": "source/squirrel-wave019/table_vtables.c",
+      "bytes": 263,
+      "sha256": "44c58ef4d82c87300c0b5a6eb9f7c7ec672ba5300a66a346c1f99b472373a637"
+    },
+    {
+      "path": "src/native/wave005/vm_views.h",
+      "bytes": 1898,
+      "sha256": "1bf160e4679afbe5a59a244e78f9753684c93a109f7a703f78dff80d04f4840a"
+    }
+  ],
+  "frozenReady": {
+    "path": "evidence/lanes/squirrel-table-helpers021/ready.json",
+    "sha256": "2965c1caeaea4c47480f1945e1c47f5136897e576d1fa0bce725a17e1064192a",
+    "bytes": 3568
+  },
+  "newPhysicalInventoryCredit": 0,
+  "repeatedGetBodyCreditGranted": 0,
+  "wholeVmRootCreditGranted": 0,
+  "producer": {
+    "path": "evidence/functional/producers/review-table-helpers021.py",
+    "sha256": "aa5e6710a35afe25d24e4e716bca2c0b3b60c6afe7c172a84edd18b4bcc8d295",
+    "bytes": 5803
+  }
+}

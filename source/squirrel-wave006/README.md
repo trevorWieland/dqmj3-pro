@@ -296,3 +296,5 @@ reconstructed shipped-script source. A copied local replay is separate from an
 independent committed-source replay and from admission to the production ledger.
 
 The legacy table Get definition now uses the explicit C name `sq_legacy_table_get006`. Fixture compilers map it to the historical verification symbol through `LEGACY_NAME_DEFINES`; ARM ELF, both Windows executables and all 40 Android objects remain byte-for-byte identical. The original 1,001-case snapshots retain their original source. This name transition does not extend the legacy numeric-float or object-layout domain. ByteMatch can therefore name the actual-object019 provider independently.
+
+The remaining legacy table allocation, initialization, Set, NewSlot, Rehash, delegate and release definitions also have explicit `sq_legacy_*006` C names. `LEGACY_NAME_DEFINES` preserves the historical fixture symbols and all measured verification binaries. Source-name metadata selects the independently qualified actual-object019 providers; it grants no additional legacy VM coverage.

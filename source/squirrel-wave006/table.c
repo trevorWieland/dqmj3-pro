@@ -24,7 +24,7 @@ static SqHashNode *find(SqTable *table, const SqObject *key, SqU32 position)
     return 0;
 }
 
-void fn_0019b390(SqTable *table, SqI32 count)
+void sq_legacy_table_allocate_nodes006(SqTable *table, SqI32 count)
 {
     SqHashNode *nodes = sq_allocate((SqU32)count * sizeof(SqHashNode));
     if (!nodes) sq_execute_table_stop(-300);
@@ -38,7 +38,7 @@ void fn_0019b390(SqTable *table, SqI32 count)
     table->first_free = nodes + count - 1;
 }
 
-void fn_0019b998(SqTable *table, SqState *shared, SqI32 requested)
+void sq_legacy_table_initialize006(SqTable *table, SqState *shared, SqI32 requested)
 {
     table->reference = (SqRef){&sq_table_vtable, 0, 0, 0, 0};
     SqI32 count = 4;
@@ -61,7 +61,7 @@ _Bool sq_legacy_table_get006(SqTable *table, const SqObject *key, SqObject *dest
     return 1;
 }
 
-_Bool fn_0019b414(SqTable *table, const SqObject *key, const SqObject *value)
+_Bool sq_legacy_table_set006(SqTable *table, const SqObject *key, const SqObject *value)
 {
     SqHashNode *node = find(table, key, hash(key) & (SqU32)(table->node_count - 1));
     if (!node) return 0;
@@ -80,7 +80,7 @@ void fn_0019b650(SqTable *table, const SqObject *key)
     fn_0019b4ec(table, 0);
 }
 
-void fn_0019b4ec(SqTable *table, _Bool force)
+void sq_legacy_table_rehash006(SqTable *table, _Bool force)
 {
     SqI32 old_count = table->node_count < 4 ? 4 : table->node_count;
     SqHashNode *old = table->nodes;
@@ -98,7 +98,7 @@ void fn_0019b4ec(SqTable *table, _Bool force)
     sq_deallocate(old, (SqU32)old_count * sizeof(SqHashNode));
 }
 
-_Bool fn_0019b728(SqTable *table, const SqObject *key, const SqObject *value)
+_Bool sq_legacy_table_new_slot006(SqTable *table, const SqObject *key, const SqObject *value)
 {
     if (key->type == 0x01000001u) sq_execute_table_stop(-301);
     SqU32 position = hash(key) & (SqU32)(table->node_count - 1);
