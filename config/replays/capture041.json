@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "name": "capture041",
+  "producerSteps": [
+    {
+      "name": "capture041-positive",
+      "args": [
+        "toolscripts/squirrel_capture041_execute.py",
+        "--folder",
+        "work/squirrel-capture041/primary-qualified"
+      ]
+    },
+    {
+      "name": "capture041-controls",
+      "args": [
+        "toolscripts/squirrel_capture041_controls.py",
+        "--baseline",
+        "work/squirrel-capture041/primary-qualified",
+        "--folder",
+        "work/squirrel-capture041/controls-corrected"
+      ]
+    }
+  ],
+  "tests": [
+    "squirrel_capture041",
+    "isolated_component_replay"
+  ],
+  "packets": [
+    "work/squirrel-capture041/primary-qualified/execution.json",
+    "work/squirrel-capture041/controls-corrected/controls.json"
+  ]
+}
