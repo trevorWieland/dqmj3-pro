@@ -1,0 +1,52 @@
+{
+  "packet": {
+    "path": "evidence/lanes/wave027-owner-session/packet.json",
+    "sha256": "6e77ffd333346fde905276c56c8cbb481d5c7fdd8cf335f6e229f5549eb4cbdc",
+    "bytes": 1272971
+  },
+  "verification": {
+    "path": "evidence/lanes/wave027-owner-session/verification.json",
+    "sha256": "5bd49f9a5fb0a7529ad0536801b116177c0b7035e7d1149961db62229de75b55",
+    "bytes": 676
+  },
+  "elapsedSeconds": 683.4781402000226,
+  "coldSessionCases": 25,
+  "sourceArmProfiles": 25,
+  "portableArmProfiles": 25,
+  "nativeWindowsProfiles": 25,
+  "a64HighAddressProfiles": 25,
+  "returningSemanticControls": 5,
+  "returningControlProfileExecutions": 10,
+  "sourceArmFlagsReturnCrossProfiles": 32,
+  "publicNativeAdapterUnitTests": {
+    "passed": 9,
+    "command": "tools/python/Scripts/python.exe -m unittest discover -s tests -p test_native_wave027_owner_session.py"
+  },
+  "originalArchiveReadsRange": [
+    0,
+    33
+  ],
+  "exactPrimitiveTraceCases": 24,
+  "measuredSdkPrivateFallbackCases": [
+    "missing-selected-file"
+  ],
+  "sourceArmFunctions": 231,
+  "sourceA64Functions": 230,
+  "referenceSdkInstructionWitnesses": 4396,
+  "referenceDataReadWitnesses": 439,
+  "androidPicLibrary": {
+    "path": "work/wave027-owner-session/seal-first/android/libowner_session.so",
+    "sha256": "b989dbd0bbde82a94749765eff8b5a561763ce617e5db540abba87fdd61bfeb4",
+    "bytes": 75968
+  },
+  "androidLoadAlignments": [
+    16384,
+    16384,
+    16384,
+    16384
+  ],
+  "sdkSourceCredit": 0,
+  "newRecoveredSourceCredit": 0,
+  "androidOsDeviceExecuted": false,
+  "wholeGameExecutionClaimed": false
+}

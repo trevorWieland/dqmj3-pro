@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "originalDriverPassed": false,
+  "originalDriverStoppedAfterAllRuntimeAndIntegrationCommandsPassed": true,
+  "failure": "Final packet collector referred to stale work/digest024/committed-root/report.json and raised FileNotFoundError before its final receipt save",
+  "rawReceiptStillRunningIsPreservedHistoricalLastCheckpoint": true,
+  "rawReceipt": {
+    "path": "evidence/verification/md5-stream029-isolated-4f5c001.json",
+    "bytes": 12868,
+    "sha256": "012a979dce8154d33cec50a6279ee980eb4401862976cba27bdc9541846b33e6"
+  },
+  "executedDriver": {
+    "path": "work/replay-md5-stream029.py",
+    "bytes": 5147,
+    "sha256": "948ecdee2343a9121be770eefa557a4e224b78fadfa869117d0db659a2cdeffe"
+  },
+  "correctFinalPacketPins": [
+    {
+      "path": "work/clean-replay/md5-stream029-4f5c001/evidence/lanes/md5-stream029/execution.json",
+      "bytes": 11950,
+      "sha256": "338733b307e6b5ef94eb5b3d2ce965d8121f77b4fedec14513c9876d25d47f40"
+    },
+    {
+      "path": "work/clean-replay/md5-stream029-4f5c001/work/md5-stream029/qualified-v2/positive/report.json",
+      "bytes": 420896,
+      "sha256": "421c8ef28eaebab2f1d791d360d5c5f4c6a49b4c3eb67647123255c681607582"
+    },
+    {
+      "path": "work/clean-replay/md5-stream029-4f5c001/work/md5-stream029/qualified-v2/controls/controls.json",
+      "bytes": 35374,
+      "sha256": "3d18946efc5e47ae43da0c571114e04ca62e999fb55a8c4f5960099e3bd6583e"
+    },
+    {
+      "path": "work/clean-replay/md5-stream029-4f5c001/build/update-content0/report.json",
+      "bytes": 2740628,
+      "sha256": "396a40ed40de2fe853c06a58ce22239818fa489569d8a13cdb259a1709e37c2c"
+    },
+    {
+      "path": "work/clean-replay/md5-stream029-4f5c001/build/update-content0/functional.json",
+      "bytes": 18361,
+      "sha256": "ed2f03ff403ffc0954b625df8b0183acfe8a6c2b423ad18f8ba5d1dc2c38b2af"
+    }
+  ],
+  "immutableRuntimeAndAllIntegrationStepsPassed": true,
+  "tests": 76,
+  "externalCorrectPathFinalizationPassed": true,
+  "sourceCodeSnapshotRuntimeResultsOrOldDriverChanged": false,
+  "allFrozenSourceInputsAndRegeneratedOutputsUnchangedDuringFinalization": true,
+  "producer": {
+    "path": "evidence/verification/producers/finalize-md5-stream029-replay.py",
+    "bytes": 3531,
+    "sha256": "97db9b576f059b3997b925103eb8a504310b77825e187ec6ef05b1cb32813616"
+  }
+}

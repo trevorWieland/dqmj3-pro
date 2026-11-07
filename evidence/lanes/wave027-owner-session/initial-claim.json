@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "kind": "cold-mounted-archive-owner-session-integration",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "frozenGameFunctions": [
+    2387560,
+    2387456,
+    7033892,
+    2387572
+  ],
+  "sourceGraph": "frozen owner/filter graph plus typed root RomFS adapter",
+  "newProductionSources": [
+    "src/native/wave027/owner_archive_lookup.c",
+    "src/native/wave027/owner_archive_file.c",
+    "src/native/wave027/owner_archive_services.c"
+  ],
+  "originalSdkReferenceOnly": true,
+  "newSdkFunctionsAdmitted": 0,
+  "newRecoveredSourceBytesRequested": 0,
+  "finiteCorpus": "generated root directory, one directory/file hash bucket, names 0.txt through 16.txt, one live file",
+  "nativeWindowsExecution": true,
+  "sourceOnlyArmExecution": true,
+  "sourceOnlyHighAddressA64CpuExecution": true,
+  "androidOsOrDeviceExecutionClaimed": false,
+  "wholeGameExecutionClaimed": false,
+  "platformContracts": [
+    "caller-owned fixed heap and arena",
+    "immutable archive image",
+    "typed archive open/read/priority/resource-close/kernel-close",
+    "preheld current-thread mutex",
+    "bounded CFG region/language queries",
+    "immutable non-executable Unicode data"
+  ],
+  "ownershipObservations": [
+    "initialized/checked/teardown game and caller bytes",
+    "actual byte reads and file lengths",
+    "ordered logical operations",
+    "resource close before kernel handle close",
+    "independent native caller arena",
+    "explicit private SDK cache difference"
+  ]
+}
