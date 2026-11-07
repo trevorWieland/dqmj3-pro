@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 1,
+  "programId": "0004000e001acb00",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "status": "proposed-functional-proof-pending-coordinator-review-and-replay",
+  "acceptedSourceCreditGranted": 0,
+  "functions": [
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 4997380,
+        "mode": "ARM"
+      },
+      "symbol": "fn_004c4104",
+      "source": {
+        "path": "src/native/wave013/pattern_file_rules.c",
+        "sha256": "5c442f658cd738a8691ac348c94f46775d0ad2e4be75b6101b32e535ff435270",
+        "bytes": 3252
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 492,
+      "originalInstructionRanges": [
+        {
+          "start": 4997380,
+          "endExclusive": 4997872,
+          "bytes": 492
+        }
+      ],
+      "originalPoolRanges": [
+        {
+          "start": 4997872,
+          "endExclusive": 4997876,
+          "bytes": 4,
+          "sha256": "afaaa4114124faf9d30357b087f4538f57689c757bf7e6bd3e7535d834343099"
+        },
+        {
+          "start": 4997876,
+          "endExclusive": 4997880,
+          "bytes": 4,
+          "sha256": "26b6c161227297dab3e2215fc4ad65830ac39bc2a0a6fc5a62956f4027f47b06"
+        },
+        {
+          "start": 4997880,
+          "endExclusive": 4997884,
+          "bytes": 4,
+          "sha256": "14a1f0abcdb9d40c193dc5a19cd621f3c41d4a98288ce450c637f72a92a5270a"
+        }
+      ],
+      "reportEntryBytes": 492,
+      "originalSpanSha256": "6bfb2794769481e78da003ad4725e2dee6bb5615fdda0bcd3efb264539d09bca",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-branch-or-call",
+          "caller": 4996724,
+          "address": 4997056,
+          "target": 4997380,
+          "ownerEntry": 4997380,
+          "interiorSharedTail": false,
+          "bytes": 4,
+          "sha256": "d4b42f1bf321d48cedc7674727af3d664f9a9c8acf436dbe62af0a16408305f8"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/wave013-native/file-io-sealed-final/source/pattern_file_rules.o",
+          "sha256": "4167e5b9059095e21ed11c9be91c672238c936a221ff32829c94858cf6093a2f",
+          "bytes": 2580
+        },
+        "section": ".text.fn_004c4104",
+        "bytes": 52,
+        "sha256": "c9a1ae34dbe064344b6e15ee02967c6c15d0f8e8e21c9f1cd1aa95425eaab3a2",
+        "source": {
+          "path": "src/native/wave013/pattern_file_rules.c",
+          "sha256": "5c442f658cd738a8691ac348c94f46775d0ad2e4be75b6101b32e535ff435270",
+          "bytes": 3252
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_004c4104",
+            "offset": 40,
+            "type": 28,
+            "symbol": "read_file_rules",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 52,
+      "candidateLinkedSpanSha256": "be384980d71349663521c9f4474b58ed59cde94ba8d2937cdf11b0854989463e",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/wave013-native/file/io/packet.json",
+          "sha256": "ae3318459a0e92ef986af5dd74d8daba52630e3c2c5b1930fe7a88676b36a6f6",
+          "bytes": 1724739
+        },
+        "verifiedTests": 20,
+        "constructionAndRangeCases": 103,
+        "attemptedFixtureCases": 103,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 123,
+        "originalInstructionsReached": 123,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "Canonical arena identity is traced at constructor entry on ARM; compare representations without expired dereferences. Windows full graph proof uses the separately known caller-owned arena. Temporary retired link fields keep the strict complete-field guard.",
+        "independentCleanReplayClaimed": false,
+        "windowsFullGraphProofApi": "pattern_process_file_rules with independently known caller-owned FixedArena",
+        "canonicalWindowsPointerIdentityProofClaimed": false,
+        "canonicalWindowsPersistentBuffersFlagsAndIoStateCompared": true,
+        "canonicalWindowsScratchGraphCompared": false,
+        "canonicalArmArenaBoundAtConstructorEntry": true,
+        "nativeCallerOwnedArenaIndependentlyKnown": true,
+        "limits": [
+          "Finite candidate count0..16, UTF16 candidates at most120 units and bounded stream payloads; not universal equivalence",
+          "The rule/stream views expose measured fields and slots9/11 only, not complete historical classes",
+          "Each candidate output is a raw128-byte slot and the supplied file buffer is16384 bytes; those do not widen with pointers",
+          "Normalization and at-sign flag writes intentionally precede IO validation and survive errors",
+          "The original LF double advance and skipped one-unit final line are preserved rather than normalized into conventional line splitting",
+          "High-bit advertised sizes are qualified only with returning short reads; no huge successful read or unbounded buffer claim",
+          "Odd file lengths include initialized fixture tail bytes in comparisons, not a claim about arbitrary uninitialized allocations",
+          "Canonical arenas expire after each rule; observers inspect raw ARM memory snapshots without native expired-object dereferences",
+          "Windows full graph proof uses the separately known live caller-owned arena; canonical Windows compares persistent buffers/IO/flags and omits scratch",
+          "Every arena epoch resets logical allocation bookkeeping; retired link masks retain complete-field quarantine/read-order requirements",
+          "Frozen Unicode category/case services remain nonexecutable owner-derived data; normalizer maps come from public Unicode17 derivation",
+          "Stream providers are explicit genuine compiled C fixture services with zero recovered-game source credit",
+          "No shared registry changes, source acceptance, independent clean replay, native game or Android device execution claimed"
+        ]
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave009/interval_set.h",
+      "sha256": "c9f8ea99061aaf09e3b82c8a75d3049282f14bdbf7e201a429c1064348853419",
+      "bytes": 987
+    },
+    {
+      "path": "src/native/wave010/match_state.h",
+      "sha256": "c5331ad810d5fc508c5df281ece4f5b8f70a998cc5d226d2e7157593137d035b",
+      "bytes": 1055
+    },
+    {
+      "path": "src/native/wave012/compile_graph.h",
+      "sha256": "d496139a253186af9849862e764fcc1b50d77f432fe8e6e9dd4c6b4ce84f8ee5",
+      "bytes": 1657
+    },
+    {
+      "path": "src/native/wave012/fixed_arena.h",
+      "sha256": "576604e9c5fde42d82ada3fa977fa33591421711f129bd5cae1b3c45240eec4a",
+      "bytes": 689
+    },
+    {
+      "path": "src/native/wave012/label_ops.h",
+      "sha256": "0d96df2ffe4d5c6f404cbbe688e86f3f644fbc7fecfe9fe6ab0c03a43b2f5be1",
+      "bytes": 939
+    },
+    {
+      "path": "src/native/wave013/control_compile.h",
+      "sha256": "323e2786580a834a869dfd5a15d22edd58f84dc8d909322dbf3d99902937e8b0",
+      "bytes": 288
+    },
+    {
+      "path": "src/native/wave013/dfa_compile.h",
+      "sha256": "83f3627463a010ec5b5d561f1d443c25995be6dc8f4f86cbc28d534f1d2fe334",
+      "bytes": 830
+    },
+    {
+      "path": "src/native/wave013/pattern_character_maps.h",
+      "sha256": "f40fd14d27e2952be42bfab2ece6df2907ad057f725d8475c0a0ff77d8fee706",
+      "bytes": 2716
+    },
+    {
+      "path": "src/native/wave013/pattern_file_view.h",
+      "sha256": "6f0ae631c47a0688a377213903dbb0679ff4c8f394c7bcb21028946c71fb5b54",
+      "bytes": 1815
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa.h",
+      "sha256": "76dddc817728b69b544e927320f5c1564a6a390ba6259adae837a324d3a07c36",
+      "bytes": 4884
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa_api.h",
+      "sha256": "974523189a56560a598aca0f00ef26cd7b50c3a12bb5c0bb1f0789e5ba82d8bb",
+      "bytes": 386
+    },
+    {
+      "path": "src/native/wave013/pattern_outer.h",
+      "sha256": "2e79c5635b7b411271ff28684f7349b0daf076e05473e2b997b6ccf21ea68e9a",
+      "bytes": 1605
+    },
+    {
+      "path": "src/native/wave013/pattern_owner_api.h",
+      "sha256": "7b6f017f557ab64d74bef937ae63e6a3044ced94a2b16552f3ad13e9b93685a0",
+      "bytes": 403
+    },
+    {
+      "path": "src/native/wave013/pattern_ranges.h",
+      "sha256": "6eb248d90a59fc8f50469f8735a4b6ad224ca067b68ce66295ccd5de765abeee",
+      "bytes": 521
+    },
+    {
+      "path": "src/native/wave013/pattern_tokens.h",
+      "sha256": "2a06bf5d5efd04ef077298a341aaead1a5ef6e20ace3969363ff35b1ba78a9ae",
+      "bytes": 4191
+    },
+    {
+      "path": "src/native/wave013/pattern_unicode.h",
+      "sha256": "5a0f6e2c1824e58392c5d347108ff9b088ae256e684fcff613a9aaceb28f709b",
+      "bytes": 1109
+    },
+    {
+      "path": "toolscripts/native_wave013_file_io_fixture.h",
+      "sha256": "2b477a7c360db0f5714386132a22894397434c13e9395f0fced5af33af2091d0",
+      "bytes": 730
+    }
+  ],
+  "originalPackets": [
+    {
+      "path": "evidence/lanes/wave013-native/file/io/packet.json",
+      "sha256": "ae3318459a0e92ef986af5dd74d8daba52630e3c2c5b1930fe7a88676b36a6f6",
+      "bytes": 1724739
+    },
+    {
+      "path": "evidence/lanes/wave013-native/file/io/verification.json",
+      "sha256": "334323ce063c6963a3b0f754e822643e501afed987e16acd6121453d717edd45",
+      "bytes": 1337
+    }
+  ],
+  "producer": {
+    "path": "toolscripts/native_wave013_file_io_functional_proposal.py",
+    "sha256": "7098f56441eeccd7bedb5433d4b7d1e048113a6209d64fd9004a4b405281c525",
+    "bytes": 6372
+  },
+  "census": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+    "bytes": 20574405
+  },
+  "supplementalInventory": [
+    {
+      "path": "evidence/lanes/wave013-native/method-dispatch-overlay.json",
+      "sha256": "ba4a6b8f633d62dc7ea2b9b8c473459215b7f5d62f42d79b849497900116c75e",
+      "bytes": 131026
+    },
+    {
+      "path": "evidence/verification/array007-function-overlay.json",
+      "sha256": "3f3121445869c567a8460efb59e97fe60d6b9073220ded6e593ae2e7acdcd7eb",
+      "bytes": 3339
+    },
+    {
+      "path": "evidence/verification/closure010-function-overlay.json",
+      "sha256": "3eb297926b78bcf312dc6a2bd2a06228a318de91bc4aebcda522d8a1605dd1a1",
+      "bytes": 4237
+    },
+    {
+      "path": "evidence/verification/prototype011-function-overlay.json",
+      "sha256": "6c9d4f364ed5b86f9c1a67699066e879214c57c0e159978200d53435d9b241c3",
+      "bytes": 3564
+    },
+    {
+      "path": "evidence/verification/native-closure013-function-overlay.json",
+      "sha256": "162506e5b52f798a2e41016b62f1be8c7bc38f9553b161b022fd4c1a7b64fcef",
+      "bytes": 4258
+    },
+    {
+      "path": "evidence/verification/weak014-function-overlay.json",
+      "sha256": "228f73f849e59725fcac20725adfddf69b7d14fedf2ccc1b2a8f4b766d4d06cd",
+      "bytes": 4882
+    }
+  ],
+  "exactCandidateExcludedPendingSeparateAdmission": [],
+  "originalInstructionBytes": 492,
+  "independentCleanReplayClaimed": false,
+  "sharedRegistryChanged": false
+}

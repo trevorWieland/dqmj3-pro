@@ -1,0 +1,21 @@
+def mutations():
+    return [
+        ('missing-candidate-error-changed','return missing_candidate;','return missing_candidate ^ read_error ^ missing_candidate;',
+         {'file_units':[0xfeff,0x61,10],'candidates':[None]}),
+        ('at-sign-policy-inverted','rule->pattern.opaque_prefix[26] == 0','rule->pattern.opaque_prefix[26] != 0',
+         {'file_units':[0x61,0x62],'candidates':['@']}),
+        ('valid-bom-rejected','rule->file_buffer[0] != 0xfeff','rule->file_buffer[0] == 0xfeff',
+         {'file_units':[0xfeff,0x61,10],'candidates':['a']}),
+        ('signed-size-gate-made-unsigned','((bytes & 0x80000000u) == 0 && bytes > 0x4000)','bytes > 0x4000',
+         {'file_units':[0xfeff,0x61,10],'candidates':['a'],'advertised_size':0x80000000,'read_result':0,'copy_limit':0}),
+        ('short-read-equality-inverted','read_bytes(stream, rule->file_buffer, bytes) != bytes',
+         'read_bytes(stream, rule->file_buffer, bytes) == bytes',
+         {'file_units':[0xfeff,0x61,10],'candidates':['a'],'read_result':0}),
+        ('newline-preincrement-removed','if (value == 10) {\n                ++position;',
+         'if (value == 10) {',{'file_units':[0xfeff,0x61,10],'candidates':['a']}),
+        ('single-unit-final-rule-applied','position - 1 == line_start','position == line_start',
+         {'file_units':[0xfeff,0x61],'candidates':['a']}),
+        ('normalized-slot-width-halved','index * 64','index * 32',
+         {'file_units':[0xfeff,0x61,10],'candidates':['a','b']}),
+        ('invalid-bit-mask-wrapped','bit < 32 ? 1u << bit : 0','1u << (bit & 31)',
+         {'file_units':[0x61,0x62],'candidates':['@'],'bit_index':32})]
