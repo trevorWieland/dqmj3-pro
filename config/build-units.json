@@ -2433,6 +2433,75 @@
         "src/native/wave005/vm_views.h"
       ],
       "role": "bounded-actual-table-provider"
+    },
+    {
+      "source": "source/squirrel-wave021/native_table_helpers.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_prefix.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave013/native_closure_release.h",
+        "source/squirrel-wave014/weak_reference.h",
+        "source/squirrel-wave015/string.h",
+        "source/squirrel-wave017/script_closure.h",
+        "source/squirrel-wave019/fixture_internal.h",
+        "source/squirrel-wave019/table.h",
+        "source/squirrel-wave019/table_internal.h",
+        "source/squirrel-wave021/table_helpers_fixture.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "table-helper-verification-fixture",
+      "targets": [
+        "windows-x64"
+      ]
+    },
+    {
+      "source": "source/squirrel-wave021/table_helpers_fixture.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_prefix.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave013/native_closure_release.h",
+        "source/squirrel-wave014/weak_reference.h",
+        "source/squirrel-wave015/string.h",
+        "source/squirrel-wave017/script_closure.h",
+        "source/squirrel-wave019/fixture_internal.h",
+        "source/squirrel-wave019/table.h",
+        "source/squirrel-wave019/table_internal.h",
+        "source/squirrel-wave021/table_helpers_fixture.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "table-helper-verification-fixture",
+      "targets": [
+        "windows-x64"
+      ]
+    },
+    {
+      "source": "source/squirrel-wave021/table_helpers_services.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave011/prototype_release.h",
+        "source/squirrel-wave012/reference_prefix.h",
+        "source/squirrel-wave012/reference_types.h",
+        "source/squirrel-wave013/native_closure_release.h",
+        "source/squirrel-wave014/weak_reference.h",
+        "source/squirrel-wave015/string.h",
+        "source/squirrel-wave017/script_closure.h",
+        "source/squirrel-wave019/fixture_internal.h",
+        "source/squirrel-wave019/table.h",
+        "source/squirrel-wave019/table_internal.h",
+        "source/squirrel-wave021/table_helpers_fixture.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "table-helper-verification-fixture",
+      "targets": [
+        "windows-x64"
+      ]
     }
   ],
   "excludedSources": [
@@ -2462,6 +2531,7 @@
     "source/squirrel-wave016",
     "source/squirrel-wave017",
     "source/squirrel-wave018",
-    "source/squirrel-wave019"
+    "source/squirrel-wave019",
+    "source/squirrel-wave021"
   ]
 }
