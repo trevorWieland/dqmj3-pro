@@ -39,10 +39,15 @@ class FunctionalReportTests(unittest.TestCase):
         inventory.mkdir()
         (inventory / 'update-content0.json').write_text(json.dumps({'codeSha256': self.module,
                                                                   'programId': self.identity['programId']}))
+        self.census = {'codeSha256': self.module, 'functionCount': 1, 'functions': [
+            {'address': 0x100000, 'mode': 'ARM', 'textBodyBytes': 4,
+             'ranges': [{'start': 0x100000, 'endExclusive': 0x100004, 'bytes': 4}]}]}
+        self.save_census()
         (self.root / 'recovery.json').write_text(json.dumps({'acceptedCohorts': [], 'acceptedRecoveredFunctions': 0,
                                                             'acceptedRecoveredBytes': 0}))
         self.registry = {'schemaVersion': 1, 'version': 'update-content0', 'moduleSha256': self.module,
-                         'programId': self.identity['programId'], 'functions': [
+                         'programId': self.identity['programId'], 'census': self.record(self.root / functional.CENSUS),
+                         'functions': [
                              {'name': 'fn_00100000', 'confidence': 'medium', 'packet': self.record(self.packet_path)}]}
         self.report = {'units': [{'metadata': {'source_path': 'src/native'}, 'functions': [
             {'name': 'fn_00100000', 'size': '4', 'metadata': {'virtual_address': str(0x100000)}}]}]}
@@ -54,11 +59,54 @@ class FunctionalReportTests(unittest.TestCase):
         self.packet_path.write_text(json.dumps(self.packet))
         self.registry['functions'][0]['packet'] = self.record(self.packet_path)
 
+    def save_census(self):
+        path = self.root / functional.CENSUS
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(self.census))
+        if hasattr(self, 'registry'):
+            self.registry['census'] = self.record(path)
+
     def generate(self):
         return functional.generate(self.root, self.report, self.registry)
 
     def test_emits_only_requested_schema(self):
         self.assertEqual(self.generate(), {'functions': [{'name': 'fn_00100000', 'confidence': 'medium'}]})
+
+    def test_thumb_identity_must_match_the_frozen_census(self):
+        self.proof['canonicalIdentity']['mode'] = 'Thumb'
+        self.update_packet()
+        with self.assertRaisesRegex(ValueError, 'canonical identity'):
+            self.generate()
+        self.census['functions'][0]['mode'] = 'Thumb'
+        self.save_census()
+        self.assertEqual(len(self.generate()['functions']), 1)
+
+    def test_another_module_census_cannot_approve_functions(self):
+        self.census['codeSha256'] = 'e' * 64
+        self.save_census()
+        with self.assertRaisesRegex(ValueError, 'census identity'):
+            self.generate()
+
+    def test_census_change_rejects_stale_approval(self):
+        (self.root / functional.CENSUS).write_text('{}')
+        with self.assertRaisesRegex(ValueError, 'input changed'):
+            self.generate()
+
+    def test_fragmented_body_requires_full_proof_and_entry_extent(self):
+        original = self.census['functions'][0]
+        original['textBodyBytes'] = 8
+        original['ranges'].append({'start': 0x100008, 'endExclusive': 0x10000c, 'bytes': 4})
+        self.save_census()
+        with self.assertRaisesRegex(ValueError, 'omits part'):
+            self.generate()
+        self.proof['originalInstructionBytes'] = 8
+        self.update_packet()
+        with self.assertRaisesRegex(ValueError, 'complete ranges'):
+            self.generate()
+        self.proof['originalInstructionRanges'] = copy.deepcopy(original['ranges'])
+        self.proof['reportEntryBytes'] = 4
+        self.update_packet()
+        self.assertEqual(len(self.generate()['functions']), 1)
 
     def test_source_change_rejects_stale_approval(self):
         self.source.write_text('int fn_00100000(void) { return 2; }\n')

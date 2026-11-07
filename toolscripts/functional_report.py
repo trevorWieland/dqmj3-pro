@@ -13,6 +13,7 @@ from bootstrap_public_compiler import contained
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = 'config/functional-functions.json'
+CENSUS = 'evidence/lanes/native-inventory-completion/seeded/update-census.json'
 
 
 def checked(root, item):
@@ -28,6 +29,13 @@ def generate(root, report, registry):
     inventory = ci.read(root / 'evidence/inventory/update-content0.json')
     if registry['moduleSha256'] != inventory['codeSha256'] or registry['programId'] != inventory['programId']:
         raise ValueError('Functional registry identifies another original module')
+    if registry['census']['path'] != CENSUS:
+        raise ValueError('Unsupported reviewed functional census')
+    census = ci.read(checked(root, registry['census']))
+    canonical = {row['address']: row for row in census['functions']}
+    if (census['codeSha256'] != registry['moduleSha256']
+            or len(canonical) != census['functionCount'] or len(canonical) != len(census['functions'])):
+        raise ValueError('Functional census identity or entry count differs')
     admitted = {row['symbol'] for row in ci.accepted_functions(root)}
     reported = {}
     for unit in report['units']:
@@ -52,10 +60,22 @@ def generate(root, report, registry):
         proof = selected[0]
         identity = proof['canonicalIdentity']
         address = int(name[3:], 16)
-        if (identity['address'] != address or identity['mode'] != 'ARM'
+        original = canonical.get(address)
+        if (original is None or identity['address'] != address or identity['mode'] not in ('ARM', 'Thumb')
+                or identity['mode'] != original['mode']
                 or identity['programId'] != registry['programId']
                 or identity['moduleSha256'] != registry['moduleSha256']):
             raise ValueError('Functional canonical identity differs')
+        if proof['originalInstructionBytes'] != original['textBodyBytes']:
+            raise ValueError('Functional proof omits part of the canonical function body')
+        entry_ranges = [part for part in original['ranges'] if part['start'] <= address < part['endExclusive']]
+        if len(entry_ranges) != 1:
+            raise ValueError('Functional entry has no unique canonical range')
+        entry_bytes = entry_ranges[0]['endExclusive'] - address
+        if entry_bytes != proof['originalInstructionBytes']:
+            if (proof.get('originalInstructionRanges') != original['ranges']
+                    or proof.get('reportEntryBytes') != entry_bytes):
+                raise ValueError('Fragmented functional proof needs complete ranges and explicit report entry extent')
         if proof['exactObjectSpan'] is not False or proof['exactLinkedSpan'] is not False:
             raise ValueError('An exact candidate requires separate source admission')
         if proof['functionalConfidence'] != confidence or proof['behavior']['allPassed'] is not True:
@@ -71,7 +91,7 @@ def generate(root, report, registry):
         owner = contained(root, unit['metadata']['source_path'])
         if not (source == owner or owner.is_dir() and source.is_relative_to(owner)):
             raise ValueError('Report source ownership cannot expose the functional C definition')
-        if (int(function['size']) != proof['originalInstructionBytes']
+        if (int(function['size']) != entry_bytes
                 or int(function['metadata']['virtual_address']) != address):
             raise ValueError('Functional original report extent differs')
         emitted.append({'name': name, 'confidence': confidence})
