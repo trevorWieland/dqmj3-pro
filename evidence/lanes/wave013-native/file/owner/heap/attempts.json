@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "originalInputsChanged": false,
+  "priorAttempts": [
+    {
+      "kind": "wrong-source-case-did-not-reach-mutated-branch",
+      "name": "fallback-anchor-not-replaced",
+      "originalCase": "Anchor offset64 size16; next block starts128; request48 exactly fits interior gap48",
+      "observation": "Original and mutated source agree because fallback branch is not reached",
+      "resolution": "Use anchor size32 so interior gap32 cannot fit request48; low gap64 forces the actual anchor-replacement path",
+      "finalArmAndWindowsReturningRejection": true
+    },
+    {
+      "kind": "original-reader-indexed-dispatch",
+      "observation": "Frozen NFA reader rejects selector indexed-PC loads",
+      "resolution": "Separate owner reader maps only measured28/44-byte tables as nonexecutecutable data with validated targets; frozen reader/inventory unchanged"
+    },
+    {
+      "kind": "pointer-arithmetic-domain-review",
+      "resolution": "Explicit U32 byte-difference conversion; initialized8192-byte backing with256-byte prefix, cumulative request bound and no payload access in wrapped metadata cases"
+    }
+  ],
+  "positivePreflightCases": 617,
+  "normallyReturningControlsPerPlatform": 9,
+  "noSourceAcceptanceGranted": true
+}

@@ -2093,6 +2093,21 @@
       "targets": [
         "windows-x64"
       ]
+    },
+    {
+      "source": "src/native/wave013/pattern_file_owner_heap.c",
+      "headers": [
+        "src/native/wave013/pattern_file_owner_heap.h"
+      ],
+      "role": "bounded-owner-ring-allocation"
+    },
+    {
+      "source": "src/native/wave013/pattern_file_owner_sync.c",
+      "headers": [
+        "src/native/wave013/pattern_file_owner_heap.h",
+        "src/native/wave013/pattern_file_owner_sync.h"
+      ],
+      "role": "bounded-owner-ring-allocation"
     }
   ],
   "excludedSources": [

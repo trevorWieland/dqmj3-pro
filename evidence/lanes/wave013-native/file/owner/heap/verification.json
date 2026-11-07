@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "status": "packet-and-current-inputs-verified",
+  "packet": {
+    "path": "evidence/lanes/wave013-native/file/owner/heap/packet.json",
+    "sha256": "b960cea7b95b1a6700a4d07bf468641babb59670bb5075b0be9e44d07ae6b06f",
+    "bytes": 338209
+  },
+  "producer": {
+    "path": "toolscripts/native_wave013_file_owner_heap_verify.py",
+    "sha256": "536dd6d6c0bdd42763903f39ab67c38952511d3f9458a80586611b4681150d9f",
+    "bytes": 3423
+  },
+  "checkedPinsAndArtifacts": 39,
+  "newFunctions": 2,
+  "originalInstructionBytes": 536,
+  "acceptedSourceCreditGranted": 0,
+  "independentCleanReplayClaimed": false,
+  "testCommand": [
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\python\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_native_wave013_file_owner_heap.py",
+    "-v"
+  ],
+  "testExitCode": 0,
+  "testSource": {
+    "path": "tests/test_native_wave013_file_owner_heap.py",
+    "sha256": "40022fd308e6ae6336826830c9178bc84e8353cdc4070bee2dee0d7dd06f4b8d",
+    "bytes": 7247
+  },
+  "testCount": 18,
+  "privateTestLog": {
+    "path": "work/wave013-native/file-owner-heap-sealed/verification-tests.private.log",
+    "sha256": "315fc9ce11aa9fc0475f788440a0aa6408c52aed8565104fa47f731650165d19",
+    "bytes": 2484
+  }
+}

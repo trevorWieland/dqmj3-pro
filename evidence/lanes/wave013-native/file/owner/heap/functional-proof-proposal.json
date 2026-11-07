@@ -1,0 +1,342 @@
+{
+  "schemaVersion": 1,
+  "programId": "0004000e001acb00",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "status": "proposed-functional-proof-pending-coordinator-review-and-replay",
+  "acceptedSourceCreditGranted": 0,
+  "functions": [
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1368232,
+        "mode": "ARM"
+      },
+      "symbol": "fn_0014e0a8",
+      "source": {
+        "path": "src/native/wave013/pattern_file_owner_heap.c",
+        "sha256": "7a70cd1751fe278428e3940d51612d09f54752cf22a543361c79aeda453bbad4",
+        "bytes": 2872
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 432,
+      "originalInstructionRanges": [
+        {
+          "start": 1368232,
+          "endExclusive": 1368664,
+          "bytes": 432
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 432,
+      "originalSpanSha256": "818c41d9e3c90374c4aa935a031247dc94b559e6771ebf8e7bd601c8b5014d5d",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 1112920,
+          "address": 1113004,
+          "bytes": 4,
+          "sha256": "2b159a6ffc58ec27510afe46d5a114851a6abdac030fb78f3343a63c03237680"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 1368060,
+          "address": 1368156,
+          "bytes": 4,
+          "sha256": "f0e978dd7abae5db21ffc6507522d30ae19eaf7ab6a1c19fdda969918adb0795"
+        },
+        {
+          "kind": "actual-direct-call",
+          "caller": 4519244,
+          "address": 4519308,
+          "bytes": 4,
+          "sha256": "f0beec0d616fea1c9e54ca279cb8faa0453e2b1fa898f8f911cca09dec3ec697"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/wave013-native/file-owner-heap-sealed/source/pattern_file_owner_heap.o",
+          "sha256": "35d849e0cac65b5485a1f53cd5df356e1dc41001df90b714236eda2dd95397ed",
+          "bytes": 1832
+        },
+        "section": ".text.fn_0014e0a8",
+        "bytes": 316,
+        "sha256": "1af79cfdbbaf9576bfcfb30bfc9af2008f61828adf591626d4415ab93318ff07",
+        "source": {
+          "path": "src/native/wave013/pattern_file_owner_heap.c",
+          "sha256": "7a70cd1751fe278428e3940d51612d09f54752cf22a543361c79aeda453bbad4",
+          "bytes": 2872
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_0014e0a8",
+            "offset": 32,
+            "type": 28,
+            "symbol": "pattern_owner_mutex_lock",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0014e0a8",
+            "offset": 220,
+            "type": 28,
+            "symbol": "pattern_owner_mutex_unlock",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 316,
+      "candidateLinkedSpanSha256": "6fc010ef4b3f2932fd9bdb63a4321766a34aed77c54a07f03fbc46c3d4c70d77",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/wave013-native/file/owner/heap/packet.json",
+          "sha256": "b960cea7b95b1a6700a4d07bf468641babb59670bb5075b0be9e44d07ae6b06f",
+          "bytes": 338209
+        },
+        "verifiedTests": 18,
+        "constructionAndRangeCases": 617,
+        "attemptedFixtureCases": 617,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 108,
+        "originalInstructionsReached": 94,
+        "unhitInstructionAddresses": [
+          1368356,
+          1368420,
+          1368424,
+          1368428,
+          1368432,
+          1368436,
+          1368440,
+          1368444,
+          1368448,
+          1368452,
+          1368456,
+          1368460,
+          1368464,
+          1368468
+        ],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "Caller-owned heap/block/storage remain live; every metadata, unknown flag, payload and guard byte is compared",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite well-formed circular rings sorted by allocation address, bounded payload regions and32 registered block slots",
+          "Heap, block nodes, service context and registered initialized8192-byte backing object remain live; no corrupted links or aliased metadata",
+          "Logical heap begins256 bytes inside the backing object; conservative cumulative request/margin bounds keep all C pointer arithmetic within that object",
+          "Pointer differences convert explicitly to U32 byte counts; native pointer representations are never narrowed",
+          "Original request/gap arithmetic is qualified only within the initialized backing allocation and bounded nonoverflowing byte counts",
+          "Original empty-heap margin omission, unsigned32 gap underflow, anchor choice, unknown-flag preservation and complete block clearing are preserved",
+          "Nonzero-margin underflow cases compare metadata/returns only; overlapping or logically out-of-range results are never consumed and imply no allocation-safety claim",
+          "Current thread is independently supplied as CP15TLS identity in the reference and a real full-width pointer in the source fixture",
+          "Reference executes original mutex code; this packet qualifies preheld recursive fast paths, not kernel synchronization, scheduling or contention",
+          "Service query counters are fixture telemetry expected from observed original MRC instructions, not source output patches",
+          "Source synchronization wrappers and C provider fixtures receive no new original-function credit",
+          "Unhit instructions remain explicit, without claiming they are proven excluded",
+          "The seven-body owning file family remains a separate measured work item; this packet owns only its allocator prerequisite",
+          "No shared registry changes, acceptance, independent clean replay, native game or Android device execution claimed"
+        ]
+      }
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 1434032,
+        "mode": "ARM"
+      },
+      "symbol": "fn_0015e1b0",
+      "source": {
+        "path": "src/native/wave013/pattern_file_owner_heap.c",
+        "sha256": "7a70cd1751fe278428e3940d51612d09f54752cf22a543361c79aeda453bbad4",
+        "bytes": 2872
+      },
+      "originalMode": "ARM",
+      "originalInstructionBytes": 104,
+      "originalInstructionRanges": [
+        {
+          "start": 1434032,
+          "endExclusive": 1434136,
+          "bytes": 104
+        }
+      ],
+      "originalPoolRanges": [],
+      "reportEntryBytes": 104,
+      "originalSpanSha256": "92039ae8c7f1952fca4beeb8c1883ae7fc6e7db9ce0fb534f8df504d3a0cd1ee",
+      "callerWitnesses": [
+        {
+          "kind": "actual-direct-call",
+          "caller": 1433924,
+          "address": 1434000,
+          "bytes": 4,
+          "sha256": "243477f59bdff17df812495c4a1b5292cc61d977737343e2055c8dcd67eac21f"
+        }
+      ],
+      "candidateObject": {
+        "object": {
+          "path": "work/wave013-native/file-owner-heap-sealed/source/pattern_file_owner_heap.o",
+          "sha256": "35d849e0cac65b5485a1f53cd5df356e1dc41001df90b714236eda2dd95397ed",
+          "bytes": 1832
+        },
+        "section": ".text.fn_0015e1b0",
+        "bytes": 108,
+        "sha256": "4661d9823ddb38dae8a8ea2e69856b5a524be5f90dba2d12d095ebacdb9c331f",
+        "source": {
+          "path": "src/native/wave013/pattern_file_owner_heap.c",
+          "sha256": "7a70cd1751fe278428e3940d51612d09f54752cf22a543361c79aeda453bbad4",
+          "bytes": 2872
+        },
+        "relocations": [
+          {
+            "section": ".text.fn_0015e1b0",
+            "offset": 20,
+            "type": 28,
+            "symbol": "pattern_owner_mutex_lock",
+            "format": "SHT_REL"
+          },
+          {
+            "section": ".text.fn_0015e1b0",
+            "offset": 104,
+            "type": 29,
+            "symbol": "pattern_owner_mutex_unlock",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "candidateInstructionAndPoolBytes": 108,
+      "candidateLinkedSpanSha256": "73e0c6f61b17c8fb6967be965dd67819cea823945d6d9426c1b85866119d384e",
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0,
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "frozenPacket": {
+          "path": "evidence/lanes/wave013-native/file/owner/heap/packet.json",
+          "sha256": "b960cea7b95b1a6700a4d07bf468641babb59670bb5075b0be9e44d07ae6b06f",
+          "bytes": 338209
+        },
+        "verifiedTests": 18,
+        "constructionAndRangeCases": 617,
+        "attemptedFixtureCases": 617,
+        "unsupportedRepresentationCases": [],
+        "allAttemptedCasesQualified": true,
+        "originalInstructions": 26,
+        "originalInstructionsReached": 26,
+        "unhitInstructionAddresses": [],
+        "provenExcludedInstructionAddresses": [],
+        "everyLiveAndNonPrivateByteCompared": true,
+        "wholeMemoryEquivalenceClaimed": false,
+        "lifetimeQualification": "Caller-owned heap/block/storage remain live; every metadata, unknown flag, payload and guard byte is compared",
+        "independentCleanReplayClaimed": false,
+        "limits": [
+          "Finite well-formed circular rings sorted by allocation address, bounded payload regions and32 registered block slots",
+          "Heap, block nodes, service context and registered initialized8192-byte backing object remain live; no corrupted links or aliased metadata",
+          "Logical heap begins256 bytes inside the backing object; conservative cumulative request/margin bounds keep all C pointer arithmetic within that object",
+          "Pointer differences convert explicitly to U32 byte counts; native pointer representations are never narrowed",
+          "Original request/gap arithmetic is qualified only within the initialized backing allocation and bounded nonoverflowing byte counts",
+          "Original empty-heap margin omission, unsigned32 gap underflow, anchor choice, unknown-flag preservation and complete block clearing are preserved",
+          "Nonzero-margin underflow cases compare metadata/returns only; overlapping or logically out-of-range results are never consumed and imply no allocation-safety claim",
+          "Current thread is independently supplied as CP15TLS identity in the reference and a real full-width pointer in the source fixture",
+          "Reference executes original mutex code; this packet qualifies preheld recursive fast paths, not kernel synchronization, scheduling or contention",
+          "Service query counters are fixture telemetry expected from observed original MRC instructions, not source output patches",
+          "Source synchronization wrappers and C provider fixtures receive no new original-function credit",
+          "Unhit instructions remain explicit, without claiming they are proven excluded",
+          "The seven-body owning file family remains a separate measured work item; this packet owns only its allocator prerequisite",
+          "No shared registry changes, acceptance, independent clean replay, native game or Android device execution claimed"
+        ]
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave013/pattern_file_owner_heap.h",
+      "sha256": "fb660def6ddfdd2cad445c4f18ba7cd2a09e7dca174fc00710219365ce49b39c",
+      "bytes": 929
+    },
+    {
+      "path": "src/native/wave013/pattern_file_owner_sync.h",
+      "sha256": "be29ad09dac7da2e6c05b93aa6519c002beadeed0da9d7c2722d0088373e1df1",
+      "bytes": 471
+    },
+    {
+      "path": "toolscripts/native_wave013_file_owner_heap_fixture.h",
+      "sha256": "2782b34c79d3e20e8786f13cec9b7364edb2b2ae9641e5fc602485de67d6c8e4",
+      "bytes": 548
+    }
+  ],
+  "originalPackets": [
+    {
+      "path": "evidence/lanes/wave013-native/file/owner/heap/packet.json",
+      "sha256": "b960cea7b95b1a6700a4d07bf468641babb59670bb5075b0be9e44d07ae6b06f",
+      "bytes": 338209
+    },
+    {
+      "path": "evidence/lanes/wave013-native/file/owner/heap/verification.json",
+      "sha256": "5d8515e345217277c4e7b2d543725d940aa796df34ab37187e34148c6ec032b2",
+      "bytes": 1369
+    }
+  ],
+  "producer": {
+    "path": "toolscripts/native_wave013_file_owner_heap_functional_proposal.py",
+    "sha256": "40c94deed373e544e54914421deaf58578bff5ac4d17fc1fde3b8c459b788dcb",
+    "bytes": 5978
+  },
+  "census": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+    "bytes": 20574405
+  },
+  "supplementalInventory": [
+    {
+      "path": "evidence/lanes/wave013-native/method-dispatch-overlay.json",
+      "sha256": "ba4a6b8f633d62dc7ea2b9b8c473459215b7f5d62f42d79b849497900116c75e",
+      "bytes": 131026
+    },
+    {
+      "path": "evidence/verification/array007-function-overlay.json",
+      "sha256": "3f3121445869c567a8460efb59e97fe60d6b9073220ded6e593ae2e7acdcd7eb",
+      "bytes": 3339
+    },
+    {
+      "path": "evidence/verification/closure010-function-overlay.json",
+      "sha256": "3eb297926b78bcf312dc6a2bd2a06228a318de91bc4aebcda522d8a1605dd1a1",
+      "bytes": 4237
+    },
+    {
+      "path": "evidence/verification/prototype011-function-overlay.json",
+      "sha256": "6c9d4f364ed5b86f9c1a67699066e879214c57c0e159978200d53435d9b241c3",
+      "bytes": 3564
+    },
+    {
+      "path": "evidence/verification/native-closure013-function-overlay.json",
+      "sha256": "162506e5b52f798a2e41016b62f1be8c7bc38f9553b161b022fd4c1a7b64fcef",
+      "bytes": 4258
+    },
+    {
+      "path": "evidence/verification/weak014-function-overlay.json",
+      "sha256": "228f73f849e59725fcac20725adfddf69b7d14fedf2ccc1b2a8f4b766d4d06cd",
+      "bytes": 4882
+    },
+    {
+      "path": "evidence/verification/string015-function-overlay.json",
+      "sha256": "66ba81473f5175bb8bad57f0c954465b88e0fc9bc898bc6ceece05d7efda6c03",
+      "bytes": 5054
+    }
+  ],
+  "exactCandidateExcludedPendingSeparateAdmission": [],
+  "originalInstructionBytes": 536,
+  "independentCleanReplayClaimed": false,
+  "sharedRegistryChanged": false
+}
