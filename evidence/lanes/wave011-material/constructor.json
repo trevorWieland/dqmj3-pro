@@ -1,0 +1,950 @@
+{
+  "schemaVersion": 1,
+  "status": "complete-constructor-bounded-behavior-candidate",
+  "identity": {
+    "version": "update-content0",
+    "program": "main",
+    "mode": "ARM",
+    "entry": 5589552,
+    "codeSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+    "census": {
+      "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+      "bytes": 20574405,
+      "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55"
+    }
+  },
+  "originalInstructionRanges": [
+    {
+      "start": 5589552,
+      "endExclusive": 5592572,
+      "bytes": 3020,
+      "sha256": "26c67f3672cbc0d19875f9eec7ad9286263f6226adbaf5dd4acd5e1e14022b4a"
+    }
+  ],
+  "originalPoolRanges": [
+    {
+      "start": 5592572,
+      "endExclusive": 5592580,
+      "bytes": 8,
+      "sha256": "0a733b64d2d73725a527ef314a55523530bab724ffe740e1e27e969d6b4942fc"
+    }
+  ],
+  "callerWitnesses": [
+    {
+      "callerFunction": 5580948,
+      "mode": "ARM",
+      "call": 5581516,
+      "sha256": "52003f28a44b24368e62203c99e468a6b0ea335147609e89c698d2eb25441810"
+    },
+    {
+      "callerFunction": 5580948,
+      "mode": "ARM",
+      "call": 5581788,
+      "sha256": "3170fcc87bebce50cfa2dddebb7574d962dec987a5f3944234670c6d31a43817"
+    },
+    {
+      "callerFunction": 5583096,
+      "mode": "ARM",
+      "call": 5583416,
+      "sha256": "0c69367417146a0c7e8023ef658202126cef38459c3d2469aeff594e0915a6b1"
+    },
+    {
+      "callerFunction": 5586692,
+      "mode": "ARM",
+      "call": 5587748,
+      "sha256": "5cd9ab0973e289d7c3c639c0e35445dd881f2a8af122729a9a1c731321a47b91"
+    }
+  ],
+  "nextFunction": 5592580,
+  "observedConstructorInstructionAddresses": 738,
+  "instructionAddressesInCompleteBody": 755,
+  "build": {
+    "source": {
+      "path": "src/native/wave011-material/material.c",
+      "bytes": 9332,
+      "sha256": "5ab724c2ee02467f4265f135fa807f03555527fc0c294170423cab93ecbef300"
+    },
+    "header": {
+      "path": "src/native/wave011-material/material.h",
+      "bytes": 4300,
+      "sha256": "cbdf1f7c4bfd1dcf59efe1d240701212b544ae68c68746debb3986f8c8e4d6e0"
+    },
+    "object": {
+      "path": "work/wave011-material/build/material.o",
+      "bytes": 4836,
+      "sha256": "17d6358b51eed87bcef8477bf9bfd646c854069486fca74053a1638e52d99bbd"
+    },
+    "linkedElf": {
+      "path": "work/wave011-material/build/material.elf",
+      "bytes": 69672,
+      "sha256": "126f2806a9636d2ce63fd1bf6cb09212d744e425b0b377db2aeefd617510ab53"
+    },
+    "linkerScript": {
+      "path": "work/wave011-material/build/material.ld",
+      "bytes": 411,
+      "sha256": "5560cb549179a6783d60a2f597a40ad6db850f563838f94e68b92fab7382dd51"
+    },
+    "flags": [
+      "--target=arm-none-eabi",
+      "-mcpu=mpcore",
+      "-marm",
+      "-O2",
+      "-std=c11",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ffunction-sections",
+      "-fno-unwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-Wall",
+      "-Wextra",
+      "-Werror"
+    ],
+    "function": {
+      "section": ".text.fn_00554a30",
+      "size": 3388,
+      "symbolBytes": 3388,
+      "mode": "ARM",
+      "sectionSha256": "1ab6be6e1903951e06d0dccd5b84e8023d62a9d5e239c59f5108c1d7a31e7ebe",
+      "relocations": [
+        {
+          "offset": 68,
+          "type": 28,
+          "name": "R_ARM_CALL",
+          "symbol": "fn_005549f0",
+          "format": "SHT_REL"
+        },
+        {
+          "offset": 340,
+          "type": 28,
+          "name": "R_ARM_CALL",
+          "symbol": "fn_0019fdf4",
+          "format": "SHT_REL"
+        },
+        {
+          "offset": 444,
+          "type": 28,
+          "name": "R_ARM_CALL",
+          "symbol": "fn_005525ac",
+          "format": "SHT_REL"
+        },
+        {
+          "offset": 468,
+          "type": 28,
+          "name": "R_ARM_CALL",
+          "symbol": "fn_005525ac",
+          "format": "SHT_REL"
+        },
+        {
+          "offset": 496,
+          "type": 28,
+          "name": "R_ARM_CALL",
+          "symbol": "fn_005525ac",
+          "format": "SHT_REL"
+        },
+        {
+          "offset": 612,
+          "type": 28,
+          "name": "R_ARM_CALL",
+          "symbol": "fn_0019501c",
+          "format": "SHT_REL"
+        },
+        {
+          "offset": 636,
+          "type": 28,
+          "name": "R_ARM_CALL",
+          "symbol": "fn_0019fbb0",
+          "format": "SHT_REL"
+        },
+        {
+          "offset": 664,
+          "type": 28,
+          "name": "R_ARM_CALL",
+          "symbol": "fn_005524ec",
+          "format": "SHT_REL"
+        },
+        {
+          "offset": 732,
+          "type": 28,
+          "name": "R_ARM_CALL",
+          "symbol": "fn_0019501c",
+          "format": "SHT_REL"
+        },
+        {
+          "offset": 756,
+          "type": 28,
+          "name": "R_ARM_CALL",
+          "symbol": "fn_0019fbb0",
+          "format": "SHT_REL"
+        },
+        {
+          "offset": 780,
+          "type": 28,
+          "name": "R_ARM_CALL",
+          "symbol": "fn_005524ec",
+          "format": "SHT_REL"
+        },
+        {
+          "offset": 848,
+          "type": 28,
+          "name": "R_ARM_CALL",
+          "symbol": "fn_0019501c",
+          "format": "SHT_REL"
+        },
+        {
+          "offset": 872,
+          "type": 28,
+          "name": "R_ARM_CALL",
+          "symbol": "fn_0019fbb0",
+          "format": "SHT_REL"
+        },
+        {
+          "offset": 900,
+          "type": 28,
+          "name": "R_ARM_CALL",
+          "symbol": "fn_005524ec",
+          "format": "SHT_REL"
+        },
+        {
+          "offset": 3360,
+          "type": 28,
+          "name": "R_ARM_CALL",
+          "symbol": "fn_00166824",
+          "format": "SHT_REL"
+        },
+        {
+          "offset": 3376,
+          "type": 2,
+          "name": "R_ARM_ABS32",
+          "symbol": "material_vtable",
+          "format": "SHT_REL"
+        },
+        {
+          "offset": 3380,
+          "type": 2,
+          "name": "R_ARM_ABS32",
+          "symbol": "fn_0017d8f8",
+          "format": "SHT_REL"
+        },
+        {
+          "offset": 3384,
+          "type": 2,
+          "name": "R_ARM_ABS32",
+          "symbol": "fn_00101a1c",
+          "format": "SHT_REL"
+        }
+      ]
+    },
+    "linkedSections": [
+      {
+        "name": ".text",
+        "address": 15728640,
+        "bytes": 3388,
+        "sha256": "d4c618534061035ae36db037a6c82c2764054df22c5656baff0324aeb681ca85",
+        "executable": true
+      }
+    ],
+    "dependencies": {
+      "fn_00101a1c": 1055261,
+      "fn_0017d8f8": 1562872,
+      "fn_005549f0": 5589488,
+      "fn_0019fdf4": 1703412,
+      "fn_005525ac": 5580204,
+      "fn_0019501c": 1658908,
+      "fn_0019fbb0": 1702832,
+      "fn_005524ec": 5580012,
+      "fn_00166824": 1468452,
+      "material_vtable": 8748760
+    },
+    "containsOriginalInstructions": false,
+    "runsWithOriginalDependenciesInPrivateOracle": true,
+    "sourceOnlyGameBuild": false
+  },
+  "unobservedConstructorInstructionAddresses": [
+    5591320,
+    5591324,
+    5591328,
+    5591332,
+    5591336,
+    5591340,
+    5591464,
+    5591468,
+    5591472,
+    5591476,
+    5591480,
+    5591484,
+    5591488,
+    5591492,
+    5591496,
+    5591500,
+    5591504
+  ],
+  "unobservedAddressExplanation": "Six addresses select simple-stage offsets inside the detailed branch; eleven initialize spare detailed stages. The measured fresh-object allocator sets detailed mode and exact requested capacities, making those paths unreachable under this contract.",
+  "directDependencies": [
+    "0x00101a1c:Thumb",
+    "0x00166824:ARM",
+    "0x0019501c:ARM",
+    "0x0019fbb0:ARM",
+    "0x0019fdf4:ARM",
+    "0x005524ec:ARM",
+    "0x005525ac:ARM",
+    "0x005549f0:ARM"
+  ],
+  "dependencyClosure": [
+    {
+      "address": 1055260,
+      "mode": "Thumb",
+      "role": "retained-original-private-oracle-only",
+      "instructionRanges": [
+        {
+          "start": 1055260,
+          "endExclusive": 1055294,
+          "bytes": 34,
+          "sha256": "8f950f9459af3d52b8fdca4e3fc9b0992190dc212574ea3219c4edcd40a6c9c0"
+        }
+      ],
+      "executedInstructionAddresses": 17
+    },
+    {
+      "address": 1468452,
+      "mode": "ARM",
+      "role": "retained-original-private-oracle-only",
+      "instructionRanges": [
+        {
+          "start": 1468452,
+          "endExclusive": 1468472,
+          "bytes": 20,
+          "sha256": "1e3bd345401ba73ef5e57f5f54fddf59e69276a6645fef9f8b1a36a3fe62d900"
+        }
+      ],
+      "executedInstructionAddresses": 5
+    },
+    {
+      "address": 1562872,
+      "mode": "ARM",
+      "role": "retained-original-private-oracle-only",
+      "instructionRanges": [
+        {
+          "start": 1562872,
+          "endExclusive": 1562884,
+          "bytes": 12,
+          "sha256": "0a07108f8e293f7e43e33a6c9e3de055be4909606cc5312956baee20c03d1434"
+        }
+      ],
+      "executedInstructionAddresses": 3
+    },
+    {
+      "address": 1658596,
+      "mode": "ARM",
+      "role": "retained-original-private-oracle-only",
+      "instructionRanges": [
+        {
+          "start": 1658596,
+          "endExclusive": 1658628,
+          "bytes": 32,
+          "sha256": "b6dcbe6ac8e0455862c85703323e085c9de37001a803119eb1724d578818b05a"
+        }
+      ],
+      "executedInstructionAddresses": 8
+    },
+    {
+      "address": 1658908,
+      "mode": "ARM",
+      "role": "retained-original-private-oracle-only",
+      "instructionRanges": [
+        {
+          "start": 1658908,
+          "endExclusive": 1659008,
+          "bytes": 100,
+          "sha256": "1be142d7d86fc3ee80b9b622b2aeb08e87bc4f888de4171dbc8f1b01bcca758d"
+        }
+      ],
+      "executedInstructionAddresses": 25
+    },
+    {
+      "address": 1702804,
+      "mode": "ARM",
+      "role": "retained-original-private-oracle-only",
+      "instructionRanges": [
+        {
+          "start": 1702804,
+          "endExclusive": 1702828,
+          "bytes": 24,
+          "sha256": "8e18a1077dc1c3613a04cc846bcc28366f17dae2bfe108e97eb5efdd097922bf"
+        }
+      ],
+      "executedInstructionAddresses": 0
+    },
+    {
+      "address": 1702832,
+      "mode": "ARM",
+      "role": "retained-original-private-oracle-only",
+      "instructionRanges": [
+        {
+          "start": 1702832,
+          "endExclusive": 1702872,
+          "bytes": 40,
+          "sha256": "57f2d9082f4228df4089068766e8f285d0a805e39998361a8b43262a283d53a1"
+        }
+      ],
+      "executedInstructionAddresses": 10
+    },
+    {
+      "address": 1702872,
+      "mode": "ARM",
+      "role": "retained-original-private-oracle-only",
+      "instructionRanges": [
+        {
+          "start": 1702872,
+          "endExclusive": 1702904,
+          "bytes": 32,
+          "sha256": "e460275a7a368f327e2acf0bdd9798b65a75cd5fdb292610cc66998f9e252692"
+        },
+        {
+          "start": 1702960,
+          "endExclusive": 1703408,
+          "bytes": 448,
+          "sha256": "7a8e3b5dfb318c29207e8b8533cb3c3a989de6827fbfddd33a191bbd1dc5bdbb"
+        }
+      ],
+      "executedInstructionAddresses": 113
+    },
+    {
+      "address": 1703412,
+      "mode": "ARM",
+      "role": "retained-original-private-oracle-only",
+      "instructionRanges": [
+        {
+          "start": 1703412,
+          "endExclusive": 1704660,
+          "bytes": 1248,
+          "sha256": "fa0d20f577a158b421623f6d01e9b6d6690725606f61fed5a2a8a482bdf01ccd"
+        },
+        {
+          "start": 1704668,
+          "endExclusive": 1704788,
+          "bytes": 120,
+          "sha256": "c58b3e4c524368413ba79ce4df95b36be3e071b2e5993da261c32addd5d98d8b"
+        }
+      ],
+      "executedInstructionAddresses": 328
+    },
+    {
+      "address": 1720504,
+      "mode": "ARM",
+      "role": "retained-original-private-oracle-only",
+      "instructionRanges": [
+        {
+          "start": 1720504,
+          "endExclusive": 1720524,
+          "bytes": 20,
+          "sha256": "95aa02115068f00f26690557f15f7a6d1b5a954c121fd2184f229e074b8be288"
+        }
+      ],
+      "executedInstructionAddresses": 5
+    },
+    {
+      "address": 1722984,
+      "mode": "ARM",
+      "role": "retained-original-private-oracle-only",
+      "instructionRanges": [
+        {
+          "start": 1722984,
+          "endExclusive": 1723004,
+          "bytes": 20,
+          "sha256": "a03dcb834a4a05f4d0297378ad6553f5076f069c6c8e0fb62f0247fa0485219b"
+        }
+      ],
+      "executedInstructionAddresses": 5
+    },
+    {
+      "address": 5580012,
+      "mode": "ARM",
+      "role": "retained-original-private-oracle-only",
+      "instructionRanges": [
+        {
+          "start": 5580012,
+          "endExclusive": 5580064,
+          "bytes": 52,
+          "sha256": "b91e2735b07ce56bb5713850a08b9bd1a92d517d8d28b3cb11a2d980c2c39202"
+        }
+      ],
+      "executedInstructionAddresses": 13
+    },
+    {
+      "address": 5580204,
+      "mode": "ARM",
+      "role": "retained-original-private-oracle-only",
+      "instructionRanges": [
+        {
+          "start": 5580204,
+          "endExclusive": 5580284,
+          "bytes": 80,
+          "sha256": "e6414d436cb602c2ecc2da77f0877bb543913f1b87c15a3a00f0f05c35ba8427"
+        }
+      ],
+      "executedInstructionAddresses": 20
+    },
+    {
+      "address": 5589488,
+      "mode": "ARM",
+      "role": "retained-original-private-oracle-only",
+      "instructionRanges": [
+        {
+          "start": 5589488,
+          "endExclusive": 5589552,
+          "bytes": 64,
+          "sha256": "b9c4e95a494a9c0d9de17b505130bb43947067d97e1dfba0a453b20f05953754"
+        }
+      ],
+      "executedInstructionAddresses": 16
+    }
+  ],
+  "poolIdentities": {
+    "materialVtable": 8748760,
+    "colorConstructor": 1562872
+  },
+  "externalServices": [
+    "Heap vtable+8: allocate(heap,bytes,alignment), valid exclusive allocation or null",
+    "Texture accessor vtable+20: texture(accessor,name), immutable texture resource or null"
+  ],
+  "tests": {
+    "returningComparisons": 267,
+    "ownerMaterialComparisons": 76,
+    "distinctOwnerMaterials": 19,
+    "allocationFailureCases": 28,
+    "nullResourceCases": 59,
+    "completeObjectBytesCompared": 132,
+    "completeAllocationCompared": true,
+    "dependencyArgumentsAndOrderCompared": true,
+    "guardAndReadonlyInputsPreserved": true,
+    "calleeSavedAndStackPreserved": true,
+    "wrongSourceControls": [
+      {
+        "name": "wrong-black-color",
+        "case": "boundary-1-override-0",
+        "source": {
+          "path": "work/wave011-material/negative/wrong-black-color/material.c",
+          "bytes": 9510,
+          "sha256": "1d81b8e9d9894e31c9692f5777e77373645f377326a18db49ba1a5165f9bd31f"
+        },
+        "object": {
+          "path": "work/wave011-material/negative/wrong-black-color/material.o",
+          "bytes": 4832,
+          "sha256": "643087ab8b2da600de5449006e431d90635a80a74c465b4408c585498686da0e"
+        },
+        "returnedNormally": true,
+        "calleeSavedPreserved": true,
+        "inputAndGuardsPreserved": true,
+        "semanticMismatchObserved": true,
+        "mismatch": "Returning source/original semantic mismatch: object"
+      },
+      {
+        "name": "wrong-stage-clamp",
+        "case": "boundary-16-override-0",
+        "source": {
+          "path": "work/wave011-material/negative/wrong-stage-clamp/material.c",
+          "bytes": 9510,
+          "sha256": "6ed97be5d20bef274a29121da0ab03bdfced630184bd71cf5a8a8ae3b9ef7452"
+        },
+        "object": {
+          "path": "work/wave011-material/negative/wrong-stage-clamp/material.o",
+          "bytes": 4884,
+          "sha256": "fc1ab72090b3862ae0021dfac7cba466e842946418b0e594f9943fcd1c299f4e"
+        },
+        "returnedNormally": true,
+        "calleeSavedPreserved": true,
+        "inputAndGuardsPreserved": true,
+        "semanticMismatchObserved": true,
+        "mismatch": "Returning source/original semantic mismatch: object,storage,calls,allocations"
+      },
+      {
+        "name": "wrong-projection-link",
+        "case": "boundary-4-override-0",
+        "source": {
+          "path": "work/wave011-material/negative/wrong-projection-link/material.c",
+          "bytes": 9510,
+          "sha256": "66e38e9ab1f593ecaf4fb9372e0fbee8243f8245411f4d56f4581db86db6f34c"
+        },
+        "object": {
+          "path": "work/wave011-material/negative/wrong-projection-link/material.o",
+          "bytes": 4844,
+          "sha256": "a422b66cca28e7fa50668539d7d2ffcf7ba82a418814ad5f8e0e178ab43dd580"
+        },
+        "returnedNormally": true,
+        "calleeSavedPreserved": true,
+        "inputAndGuardsPreserved": true,
+        "semanticMismatchObserved": true,
+        "mismatch": "Returning source/original semantic mismatch: storage"
+      },
+      {
+        "name": "wrong-override-rule",
+        "case": "boundary-5-override-1",
+        "source": {
+          "path": "work/wave011-material/negative/wrong-override-rule/material.c",
+          "bytes": 9510,
+          "sha256": "c83d2da1a20212a7ee9a11746fcc7cebf82ef03d107ff94096b6fadd69309ab8"
+        },
+        "object": {
+          "path": "work/wave011-material/negative/wrong-override-rule/material.o",
+          "bytes": 4836,
+          "sha256": "fb01b10c95a77b5b39ba42e01f0db87bf3b6c2f29a74e1cd45fb0211b1ea5f77"
+        },
+        "returnedNormally": true,
+        "calleeSavedPreserved": true,
+        "inputAndGuardsPreserved": true,
+        "semanticMismatchObserved": true,
+        "mismatch": "Returning source/original semantic mismatch: object,storage,calls,lookups"
+      }
+    ],
+    "calleeSavedVfpPreserved": true,
+    "armAndThumbReturns": true,
+    "incomingConditionFlagsVaried": true,
+    "independentOutputRootReplay": {
+      "source": {
+        "path": "src/native/wave011-material/material.c",
+        "bytes": 9332,
+        "sha256": "5ab724c2ee02467f4265f135fa807f03555527fc0c294170423cab93ecbef300"
+      },
+      "header": {
+        "path": "src/native/wave011-material/material.h",
+        "bytes": 4300,
+        "sha256": "cbdf1f7c4bfd1dcf59efe1d240701212b544ae68c68746debb3986f8c8e4d6e0"
+      },
+      "object": {
+        "path": "work/wave011-material/replay/material.o",
+        "bytes": 4836,
+        "sha256": "17d6358b51eed87bcef8477bf9bfd646c854069486fca74053a1638e52d99bbd"
+      },
+      "linkedElf": {
+        "path": "work/wave011-material/replay/material.elf",
+        "bytes": 69672,
+        "sha256": "126f2806a9636d2ce63fd1bf6cb09212d744e425b0b377db2aeefd617510ab53"
+      },
+      "linkerScript": {
+        "path": "work/wave011-material/replay/material.ld",
+        "bytes": 411,
+        "sha256": "5560cb549179a6783d60a2f597a40ad6db850f563838f94e68b92fab7382dd51"
+      },
+      "flags": [
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror"
+      ],
+      "function": {
+        "section": ".text.fn_00554a30",
+        "size": 3388,
+        "symbolBytes": 3388,
+        "mode": "ARM",
+        "sectionSha256": "1ab6be6e1903951e06d0dccd5b84e8023d62a9d5e239c59f5108c1d7a31e7ebe",
+        "relocations": [
+          {
+            "offset": 68,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_005549f0",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 340,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0019fdf4",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 444,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_005525ac",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 468,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_005525ac",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 496,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_005525ac",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 612,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0019501c",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 636,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0019fbb0",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 664,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_005524ec",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 732,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0019501c",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 756,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0019fbb0",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 780,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_005524ec",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 848,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0019501c",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 872,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_0019fbb0",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 900,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_005524ec",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 3360,
+            "type": 28,
+            "name": "R_ARM_CALL",
+            "symbol": "fn_00166824",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 3376,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "material_vtable",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 3380,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "fn_0017d8f8",
+            "format": "SHT_REL"
+          },
+          {
+            "offset": 3384,
+            "type": 2,
+            "name": "R_ARM_ABS32",
+            "symbol": "fn_00101a1c",
+            "format": "SHT_REL"
+          }
+        ]
+      },
+      "linkedSections": [
+        {
+          "name": ".text",
+          "address": 15728640,
+          "bytes": 3388,
+          "sha256": "d4c618534061035ae36db037a6c82c2764054df22c5656baff0324aeb681ca85",
+          "executable": true
+        }
+      ],
+      "dependencies": {
+        "fn_00101a1c": 1055261,
+        "fn_0017d8f8": 1562872,
+        "fn_005549f0": 5589488,
+        "fn_0019fdf4": 1703412,
+        "fn_005525ac": 5580204,
+        "fn_0019501c": 1658908,
+        "fn_0019fbb0": 1702832,
+        "fn_005524ec": 5580012,
+        "fn_00166824": 1468452,
+        "material_vtable": 8748760
+      },
+      "containsOriginalInstructions": false,
+      "runsWithOriginalDependenciesInPrivateOracle": true,
+      "sourceOnlyGameBuild": false
+    },
+    "replayReturningComparisons": 3
+  },
+  "dataReadContract": {
+    "moduleReadRanges": [
+      {
+        "address": 1658628,
+        "bytes": 4
+      },
+      {
+        "address": 1702904,
+        "bytes": 4
+      },
+      {
+        "address": 1702908,
+        "bytes": 4
+      },
+      {
+        "address": 1702912,
+        "bytes": 4
+      },
+      {
+        "address": 1702916,
+        "bytes": 4
+      },
+      {
+        "address": 1702920,
+        "bytes": 4
+      },
+      {
+        "address": 1702924,
+        "bytes": 4
+      },
+      {
+        "address": 1702928,
+        "bytes": 4
+      },
+      {
+        "address": 1702936,
+        "bytes": 4
+      },
+      {
+        "address": 1702944,
+        "bytes": 4
+      },
+      {
+        "address": 1702948,
+        "bytes": 4
+      },
+      {
+        "address": 1702956,
+        "bytes": 4
+      },
+      {
+        "address": 1703408,
+        "bytes": 4
+      },
+      {
+        "address": 1704660,
+        "bytes": 4
+      },
+      {
+        "address": 1704664,
+        "bytes": 4
+      },
+      {
+        "address": 5592572,
+        "bytes": 4
+      },
+      {
+        "address": 5592576,
+        "bytes": 4
+      },
+      {
+        "address": 8226960,
+        "bytes": 4
+      },
+      {
+        "address": 8226964,
+        "bytes": 4
+      },
+      {
+        "address": 8226968,
+        "bytes": 4
+      },
+      {
+        "address": 8226972,
+        "bytes": 4
+      },
+      {
+        "address": 8226976,
+        "bytes": 4
+      },
+      {
+        "address": 9021720,
+        "bytes": 4
+      }
+    ],
+    "mutableEnvironmentGlobal": {
+      "address": 9021720,
+      "meaning": "heap service pointer supplied before execution"
+    },
+    "objectBytes": 132,
+    "objectPreservedFields": [
+      "bytes4..107",
+      "bytes125..127"
+    ],
+    "wire": "40-byte header plus flag-selected records; valid names table and nonoverlapping inputs",
+    "samplers": "wrap0..2 and minification/magnification0..1; wrap3 reads an unspecified original helper stack slot and is outside the contract"
+  },
+  "tool": {
+    "clang": {
+      "path": "tools/clang-21/clang.exe",
+      "bytes": 99559064,
+      "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+    },
+    "linker": {
+      "path": "tools/clang-21/ld.lld.exe",
+      "bytes": 69225112,
+      "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3"
+    },
+    "unicornCpuModel": "ARM11 MPCore",
+    "unicornPackage": "2.1.4",
+    "unicornApi": [
+      2,
+      1,
+      33621247
+    ],
+    "unicornNativeLibrary": {
+      "path": "tools/python/Lib/site-packages/unicorn/lib/unicorn.dll",
+      "bytes": 9598976,
+      "sha256": "010d85dce84b8f6ffaec3d5420f1b5f7768f859eb831be574c7da23e656ee8f1"
+    }
+  },
+  "limitations": [
+    "Bounded returning comparisons are not a universal equivalence proof",
+    "Original helper instructions execute only in private verification; no source-only helper graph claimed",
+    "Heap and resource services are explicit deterministic test interfaces",
+    "Undefined malformed resources and aliasing with mutable object/allocation are outside the contract",
+    "Original vtable identity is preserved; constructor does not invoke its virtual methods"
+  ],
+  "exactMatchingClaim": false,
+  "requestedExactBytes": 0,
+  "requestedFunctionalCandidateBytes": 3020,
+  "sourceOnlyGameBuild": false,
+  "nativeWindowsGameBuild": false,
+  "androidDeviceExecuted": false,
+  "originalPayloadsPublished": false
+}

@@ -54,7 +54,7 @@ class CompileSourcesTests(unittest.TestCase):
 
     def test_actual_source_census_and_historical_abi_exclusion(self):
         config = BUILD.read_config(ROOT)
-        self.assertEqual(len(config["units"]), 46)
+        self.assertEqual(len(config["units"]), 50)
         excluded = config["excludedSources"]
         self.assertEqual([item["source"] for item in excluded], ["src/native/wave003/setters.c"])
         self.assertIs(excluded[0]["activeLinking"], False)
@@ -108,6 +108,25 @@ class CompileSourcesTests(unittest.TestCase):
                 self.save(root, config)
                 with self.assertRaisesRegex(RuntimeError, "unit targets"):
                     BUILD.read_config(root)
+
+    def test_unknown_layout_profile_fails_before_compilation(self):
+        root = self.temporary()
+        config = self.minimal(root)
+        config["units"][0]["layoutProfile"] = "guess"
+        self.save(root, config)
+        with self.assertRaisesRegex(RuntimeError, "layout profile"):
+            BUILD.read_config(root)
+
+    def test_reviewed_packing_is_applied_to_actual_compiler(self):
+        root = self.temporary()
+        fixture = ROOT / "work/source-compile-ci/tests" / (root.name + "-packed.c")
+        self.addCleanup(fixture.unlink, missing_ok=True)
+        fixture.write_text('typedef struct { void *pointer; } Record;\n'
+                           '_Static_assert(_Alignof(Record) == 4, "packing");\n')
+        unit = {"source": fixture.relative_to(ROOT).as_posix(), "headers": [], "role": "layout-fixture"}
+        self.assertEqual(BUILD.run_unit(ROOT, unit, "windows-x64", root)["status"], "failed")
+        unit["layoutProfile"] = "packed-4"
+        self.assertEqual(BUILD.run_unit(ROOT, unit, "windows-x64", root)["status"], "compiled")
 
     def test_component_census_and_platform_restrictions_are_explicit(self):
         config = BUILD.read_config(ROOT)

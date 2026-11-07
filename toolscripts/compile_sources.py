@@ -27,7 +27,7 @@ def read_config(root):
     if data["schemaVersion"] != 1 or data["scope"]["root"] != "src/native":
         raise RuntimeError("Unsupported source-build configuration")
     waves = data["scope"]["waves"]
-    if not waves or len(set(waves)) != len(waves) or any(not re.fullmatch(r"wave\d{3}", wave) for wave in waves):
+    if not waves or len(set(waves)) != len(waves) or any(not re.fullmatch(r"wave\d{3}(?:-[a-z][a-z0-9-]*)?", wave) for wave in waves):
         raise RuntimeError("Invalid explicit native wave scope")
     components = data.get("componentRoots", [])
     if (not isinstance(components, list) or len(set(components)) != len(components)
@@ -48,6 +48,8 @@ def read_config(root):
         raise RuntimeError("Source census differs from explicit build units: " + str(sorted(actual ^ (set(active) | set(excluded)))))
     for unit in data["units"]:
         path = public_compiler.contained(root, unit["source"])
+        if unit.get("layoutProfile", "natural") not in ("natural", "packed-4"):
+            raise RuntimeError("Unknown reviewed layout profile")
         supported = unit.get("targets", list(TARGETS))
         if (not isinstance(supported, list) or not supported or len(set(supported)) != len(supported)
                 or not set(supported).issubset(TARGETS)):
@@ -140,6 +142,8 @@ def run_unit(root, unit, target, output):
     object_path.parent.mkdir(parents=True, exist_ok=True)
     log_path.parent.mkdir(parents=True, exist_ok=True)
     argv = ["tools/clang-21/clang.exe", *TARGETS[target]["flags"], *FLAGS]
+    if unit.get("layoutProfile") == "packed-4":
+        argv.append("-fpack-struct=4")
     if unit.get("allowedUnusedParameters"):
         argv.append("-Wno-error=unused-parameter")
     argv += ["-c", unit["source"], "-o", object_path.relative_to(root).as_posix()]

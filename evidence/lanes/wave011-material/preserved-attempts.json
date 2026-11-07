@@ -1,0 +1,26 @@
+{
+  "attempts": [
+    {
+      "issue": "Initial context-layout assertion found omitted halfword padding at 0x2a",
+      "resolution": "Explicit reserved2a field; ARM context flags offset 0x2c now asserted",
+      "originalDiagnosticRetention": "First diagnostic was observed in tool output before per-attempt log rotation was added"
+    },
+    {
+      "issue": "Absolute Thumb symbol direct call emitted linker interworking warning",
+      "resolution": "Ordinary typed volatile function-pointer dispatch; all subsequent builds have zero diagnostics",
+      "privateOriginalLog": {
+        "path": "work/wave011-material/build/link-prior-1.json",
+        "bytes": 1082,
+        "sha256": "bb7c6b577ec9c1ff7eea6fb01d7dbec1160c9ca17ac3c21cd8bb8262ef9368d7"
+      }
+    },
+    {
+      "issue": "Research import initially disassembled Thumb array helper as ARM",
+      "resolution": "Canonical census mode and actual Thumb execution used; decompiler text never defines the ABI"
+    },
+    {
+      "issue": "Early synthetic wraps included value3, which reads an unspecified original GPU-helper stack slot",
+      "resolution": "Although initial bounded comparisons agreed, this is not a valid source-level service contract; corpus and qualified domain now require wrap0..2"
+    }
+  ]
+}

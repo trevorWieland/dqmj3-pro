@@ -13,6 +13,7 @@
       "wave008",
       "wave009",
       "wave010",
+      "wave011-material",
       "wave012"
     ]
   },
@@ -440,6 +441,41 @@
         "src/native/wave012/label_ops.h"
       ],
       "role": "bounded-functional-component"
+    },
+    {
+      "source": "src/native/wave011-material/helpers/core.c",
+      "headers": [
+        "src/native/wave011-material/helpers/services.h",
+        "src/native/wave011-material/material.h"
+      ],
+      "role": "bounded-material-component",
+      "layoutProfile": "packed-4"
+    },
+    {
+      "source": "src/native/wave011-material/helpers/storage.c",
+      "headers": [
+        "src/native/wave011-material/helpers/services.h",
+        "src/native/wave011-material/material.h"
+      ],
+      "role": "bounded-material-component",
+      "layoutProfile": "packed-4"
+    },
+    {
+      "source": "src/native/wave011-material/helpers/texture.c",
+      "headers": [
+        "src/native/wave011-material/helpers/services.h",
+        "src/native/wave011-material/material.h"
+      ],
+      "role": "bounded-material-component",
+      "layoutProfile": "packed-4"
+    },
+    {
+      "source": "src/native/wave011-material/material.c",
+      "headers": [
+        "src/native/wave011-material/material.h"
+      ],
+      "role": "bounded-material-component",
+      "layoutProfile": "packed-4"
     }
   ],
   "excludedSources": [
