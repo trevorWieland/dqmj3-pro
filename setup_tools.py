@@ -47,7 +47,7 @@ def verify(lock):
     return not failures
 
 
-def install(lock, clang_source, android_source=None):
+def install(lock, clang_source, android_source=None, ghidra_source=None):
     if platform.python_version() != lock['python']:
         raise ValueError('Use pinned Python ' + lock['python'])
     py = ROOT / 'tools/python/Scripts/python.exe'
@@ -104,6 +104,18 @@ def install(lock, clang_source, android_source=None):
                 destination.parent.mkdir(parents=True, exist_ok=True)
                 if source.resolve() != destination.resolve():
                     shutil.copyfile(source, destination)
+    if ghidra_source:
+        prefix = Path(lock['formalAuditRuntime']['ghidraRoot'])
+        for item in lock['files']:
+            relative = Path(item['path'])
+            if relative.is_relative_to(prefix):
+                source = ghidra_source / relative.relative_to(prefix)
+                destination = ROOT / relative
+                if not source.is_file() or digest(source) != item['sha256']:
+                    raise ValueError('Ghidra source input missing or stale: ' + str(source))
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                if source.resolve() != destination.resolve():
+                    shutil.copyfile(source, destination)
     return subprocess.call([str(py), str(ROOT / 'setup_tools.py'), '--verify']) == 0
 
 
@@ -112,9 +124,10 @@ def main():
     parser.add_argument('--verify', action='store_true')
     parser.add_argument('--clang-source', type=Path)
     parser.add_argument('--android-source', type=Path)
+    parser.add_argument('--ghidra-source', type=Path)
     args = parser.parse_args()
     lock = json.loads((ROOT / 'tools.lock.json').read_text(encoding='utf-8'))
-    ok = verify(lock) if args.verify else install(lock, args.clang_source, args.android_source)
+    ok = verify(lock) if args.verify else install(lock, args.clang_source, args.android_source, args.ghidra_source)
     raise SystemExit(0 if ok else 1)
 
 

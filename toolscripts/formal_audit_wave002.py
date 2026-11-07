@@ -97,16 +97,22 @@ def query(folder, name, domain, bad, expected, x, get_value=False):
 
 def export_pcode(folder, bodies):
     prior = json.loads((ROOT / 'evidence/lanes/inventory-wave001/ghidra-run.json').read_text())
+    lock = json.loads((ROOT / 'tools.lock.json').read_text())
+    ghidra = ROOT / lock['formalAuditRuntime']['ghidraRoot']
+    prior_ghidra = Path(prior['reproductionArgv'][0]).parents[1]
     pins = []
     for item in prior['toolFiles']:
         path = Path(item['path'])
         if '\\jdk\\' in str(path):
             path = ROOT / 'tools/app-shell-jdk25' / str(path).split('jdk-25.0.5+8\\', 1)[1]
+        elif path.is_relative_to(prior_ghidra):
+            path = ghidra / path.relative_to(prior_ghidra)
+        else:
+            raise RuntimeError('Qualified Ghidra dependency is outside the declared distribution')
         pin = record(path)
         if pin['sha256'] != item['sha256']:
             raise RuntimeError('Qualified Ghidra/JDK component changed')
         pins.append(pin)
-    ghidra = Path(prior['reproductionArgv'][0]).parents[1]
     for name in ['ARM.sinc', 'ARMinstructions.sinc']:
         pins.append(record(ghidra / 'Ghidra/Processors/ARM/data/languages' / name))
     for name in ['project', 'home', 'settings', 'cache', 'scripts', 'export', 'inputs']:
@@ -123,7 +129,7 @@ def export_pcode(folder, bodies):
     env['JAVA_HOME'] = str(ROOT / 'tools/app-shell-jdk25')
     env['JAVA_TOOL_OPTIONS'] = ' '.join(['-Dapplication.settingsdir=' + (folder / 'settings').as_posix(),
         '-Dapplication.cachedir=' + (folder / 'cache').as_posix(), '-Duser.home=' + (folder / 'home').as_posix(), '-XX:ActiveProcessorCount=2'])
-    argv = [prior['reproductionArgv'][0], str(folder / 'project'), 'RangePcodeAudit', '-import', *map(str, paths),
+    argv = [str(ghidra / 'support/analyzeHeadless.bat'), str(folder / 'project'), 'RangePcodeAudit', '-import', *map(str, paths),
         '-loader', 'BinaryLoader', '-loader-baseAddr', hex(build.ADDRESS), '-processor', 'ARM:LE:32:v6', '-cspec', 'default',
         '-noanalysis', '-scriptPath', str(folder / 'scripts'), '-postScript', 'FormalAuditWave002.java',
         str(folder / 'export'), hex(build.ADDRESS), '20', '-max-cpu', '2', '-log', str(folder / 'analysis.log'), '-scriptlog', str(folder / 'script.log')]
@@ -214,7 +220,8 @@ def main():
         prior_output = EVIDENCE / name
         if prior_output.exists():
             prior_output.replace(folder / ('previous-' + name))
-    pilot_path = ROOT / 'evidence/lanes/formal-equivalence-wave001/packet.json'
+    frozen = json.loads((EVIDENCE / 'frozen-prior/manifest.json').read_text())
+    pilot_path = ROOT / frozen['pilot']['path']
     if build.digest(pilot_path.read_bytes()) != PILOT_SHA:
         raise RuntimeError('Frozen prior pilot changed')
     pilot = json.loads(pilot_path.read_text())
@@ -285,10 +292,10 @@ def main():
     save(folder / 'concrete-qualification.json', {'cases': observations, 'counterexamples': counterexamples})
     prior_replay = []
     for row in pilot['proofs']:
-        path = ROOT / row['query']['path']
-        if not path.exists():
-            owner_root = Path(pilot['reproductionArgv'][1]).parents[1]
-            path = owner_root / row['query']['path']
+        selected = [item for item in frozen['queries'] if item['originalPath'] == row['query']['path']]
+        if len(selected) != 1 or selected[0]['sha256'] != row['query']['sha256']:
+            raise RuntimeError('Frozen prior query is absent from the public replay capsule')
+        path = ROOT / selected[0]['path']
         if build.digest(path.read_bytes()) != row['query']['sha256']:
             raise RuntimeError('Frozen prior exported query changed')
         retained = folder / ('frozen-prior-' + path.name)

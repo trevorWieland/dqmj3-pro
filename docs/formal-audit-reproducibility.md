@@ -1,0 +1,11 @@
+# Independent formal-audit replay inputs
+
+The first clean replay of native batch003 passed fresh intake, both proposed source packets, full module linking and the prior native/component checks. Test discovery then exposed an existing missing dependency: `formal_audit_wave002.py` imported cvc5, but the offline dependency lock omitted it. The failed receipt is preserved as `evidence/verification/clean-checkout-bundle003-attempt001.json`; it grants no admission.
+
+The full local tool lock now includes the existing cvc5 1.4.2 CPython3.13 Windows wheel, its effective native libraries, and selected public distribution metadata. The wheel SHA256 was independently checked against the [versioned PyPI metadata](https://pypi.org/pypi/cvc5/1.4.2/json). The report-only CI environment continues to install its four required packages; the formal solver is a separate full-check dependency.
+
+The previously qualified Ghidra 12.2 distribution is separately copied into project-local `tools/formal-audit-wave002/ghidra_12.2_PUBLIC`. All 5,459 distribution files are enumerated and hashed in the lock. This records the effective existing distribution; it does not claim a newly verified upstream archive. No link into the neighboring checkout is used. `setup_tools.py --ghidra-source <distribution>` can materialize that exact tree when setting up a fresh full environment. The independent replay copies those pinned files and installs dependencies into its own environment.
+
+The formal audit now reads the preserved predecessor pilot and its five exact SMT queries from `evidence/lanes/formal-audit-wave002/frozen-prior/`. It no longer falls back to another checkout's generated work files, and rerunning the earlier pilot cannot mutate its reference inputs. Its raw P-code export uses the owned Ghidra runtime with isolated project, settings, cache and home folders.
+
+Local qualification passed the three input-lock tests and all ten formal-audit tests. Both solvers returned the expected eight unsatisfiable equivalence/coverage checks; 480 concrete contexts corroborated the model and 32 actual-returning wrong-source cases reproduced the counterexample. These are the existing research function and domain, not a new source-coverage admission or a general proof for memory, loops or game behavior. A fresh committed native-batch replay remains required after this fix.
