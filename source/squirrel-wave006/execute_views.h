@@ -21,7 +21,7 @@ typedef enum {
     SQ_NEWTABLE = 30, SQ_NEWARRAY = 31, SQ_APPENDARRAY = 32, SQ_CLOSURE = 48,
     SQ_COMPARITHL = 35, SQ_INCL = 37, SQ_PINCL = 39, SQ_CMP = 40, SQ_EXISTS = 41,
     SQ_AND = 43, SQ_OR = 44, SQ_NEG = 45, SQ_NOT = 46, SQ_BWNOT = 47,
-    SQ_YIELD = 49, SQ_RESUME = 50, SQ_FOREACH = 51, SQ_DELEGATE = 53, SQ_PUSHTRAP = 56, SQ_POPTRAP = 57, SQ_THROW = 58
+    SQ_YIELD = 49, SQ_RESUME = 50, SQ_FOREACH = 51, SQ_POSTFOREACH = 52, SQ_DELEGATE = 53, SQ_PUSHTRAP = 56, SQ_POPTRAP = 57, SQ_THROW = 58
 } SqMeasuredOpcode;
 
 typedef struct {
@@ -162,7 +162,7 @@ extern const SqVTable sq_script_closure_vtable;
 _Bool fn_00196b08(SqExecuteVM *vm, SqObject *destination, SqFunction *function);
 extern const SqVTable sq_weak_prefix_vtable;
 void sq_deallocate(void *pointer, SqU32 bytes);
-void fn_006a7610(SqRef *reference);
+void sq_execute_legacy_closure_release(SqRef *reference);
 _Bool fn_00198578(SqExecuteVM *vm, const SqObject *self, const SqObject *key,
                   SqObject *destination, SqU32 raw, SqU32 rooted);
 extern const SqVTable sq_table_vtable;

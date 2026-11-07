@@ -8,7 +8,7 @@ OPCODES = {'LINE': 0, 'LOAD': 1, 'LOADINT': 2, 'LOADFLOAT': 3, 'DLOAD': 4, 'CALL
            'EQ': 15, 'NE': 16, 'CMP': 40, 'GETVARGV': 29, 'NEWARRAY': 31, 'APPENDARRAY': 32, 'CLOSURE': 48,
            'GET': 14, 'GETK': 9, 'PREPCALL': 7, 'PREPCALLK': 8, 'NEWTABLE': 30, 'NEWSLOT': 11,
            'COMPARITHL': 35, 'INCL': 37, 'PINCL': 39, 'EXISTS': 41, 'SET': 13, 'DELEGATE': 53, 'FOREACH': 51, 'DELETE': 12,
-           'YIELD': 49, 'RESUME': 50}
+           'YIELD': 49, 'RESUME': 50, 'POSTFOREACH': 52}
 
 
 def instruction(name, argument0=0, argument1=0, argument2=0, argument3=0):
@@ -49,6 +49,9 @@ def encode(rows, window=8):
         if opcode == 50: registers.extend((a0, a1))
         if opcode == 49 and a1 != 255: registers.append(a1)
         if opcode == 51: registers.extend((a0, a2, a2 + 1, a2 + 2))
+        if opcode == 52:
+            registers.append(a0)
+            if not 0 <= index + a1 < len(rows): raise ValueError('PostForeach branch escaped owned program')
         if opcode == 30:
             registers.append(a0)
             if not -1 <= a1 <= 64: raise ValueError('Table size escaped fixture')

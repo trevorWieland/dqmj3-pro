@@ -374,7 +374,12 @@ class State(ArrayLifetimeModel, GeneratorModel, IterationModel, TableModel, Clos
                     return 0
             elif op == 51:
                 jump = self.foreach(self.read(self.slot(a0)), self.slot(a2), self.slot(a2 + 1), self.slot(a2 + 2), a1)
-                put(arena, frame, get(arena, frame) + jump * 8)
+                active = get(arena, VM + 132)
+                put(arena, active, get(arena, active) + jump * 8)
+            elif op == 52:
+                object_type, generator = self.read(self.slot(a0))
+                if object_type != 0x08000400: raise ValueError('PostForeach assertion is outside normal returns')
+                if arena[generator - HEAP + 116] == 2: put(arena, frame, get(arena, frame) + (a1 - 1) * 8)
             elif op == 53:
                 if not self.delegate_operation(self.slot(a0), self.read(self.slot(a1)), self.read(self.slot(a2))):
                     if self.unwind(): continue
@@ -460,6 +465,15 @@ class State(ArrayLifetimeModel, GeneratorModel, IterationModel, TableModel, Clos
                 put(arena, VM + 144, depth)
                 return 0
             elif op == 19:
+                generator = get(arena, frame + 16)
+                if generator:
+                    arena[generator - HEAP + 116] = 2
+                    index = 0
+                    while index < get(arena, generator + 36):
+                        self.release(*self.read(get(arena, generator + 32) + index * 8))
+                        index += 1
+                    put(arena, generator + 36, 0)
+                    self.clear(generator + 24)
                 if self.return_frame(a0, a1):
                     self.assign(RESULT, *self.read(VM + 88))
                     put(arena, VM + 144, depth)

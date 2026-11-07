@@ -13,7 +13,7 @@ PLACEMENTS = {**previous.PLACEMENTS, 'fn_0018d65c': 0x18d65c, 'fn_001994c0': 0x1
               'fn_00199cb8': 0x199cb8, 'sq_execute_error_handler': 0x198320,
               'fn_001a0cc0': 0xa62000, 'sq_wave004_release': 0xa61000, '__aeabi_memcpy': 0xa63000,
               'sq_wave006_release': 0xa11000, 'sq_execute_debug': 0x1a0d30, 'fn_00191f20': 0x191f20, 'fn_001a1234': 0x1a1234,
-              'fn_00199144': 0x199144, 'fn_00196b08': 0x196b08, '__aeabi_memclr4': 0xa65000, 'fn_006a7610': 0x6a7610,
+              'fn_00199144': 0x199144, 'fn_00196b08': 0x196b08, '__aeabi_memclr4': 0xa65000, 'sq_execute_legacy_closure_release': 0x6a7610,
               'fn_00198578': 0xa66000, 'fn_0019b390': 0xa67000, 'fn_0019b998': 0xa68000,
               'fn_001a1dc8': 0xa69000, 'fn_0019b728': 0xa6a000, 'fn_0019b4ec': 0xa6b000,
               'fn_0019b414': 0xa6c000, 'fn_001987e4': 0xa6d000, 'fn_00666518': 0x666518, 'fn_0019e2e8': 0x19e2e8,
@@ -46,7 +46,9 @@ def build(output, variant='normal'):
     output.mkdir(parents=True, exist_ok=True)
     inputs = sources()
     if variant != 'normal':
-        edits = {'wrong-integer-tag': ('0x05000002u, (SqU32)argument', '0x05000004u, (SqU32)argument'),
+        edits = {'wrong-postforeach-exit': ('instruction + argument - 1;', 'instruction + argument;'),
+                 'wrong-generator-terminal-state': ('generator->state = 2;', 'generator->state = 1;'),
+                 'wrong-integer-tag': ('0x05000002u, (SqU32)argument', '0x05000004u, (SqU32)argument'),
                  'wrong-jump': ('case SQ_JUMP:\n            base->current->instruction = (SqInstruction *)base->current->instruction + argument;',
                                 'case SQ_JUMP:\n            base->current->instruction = (SqInstruction *)base->current->instruction + argument + 1;'),
                  'wrong-null-count': ('index < argument;', 'index <= argument;'),
@@ -59,6 +61,8 @@ def build(output, variant='normal'):
             old, new = 'reference->vtable->unknown_0(reference);', '(void)reference;'
         elif variant == 'changed-generator-retention':
             index, old, new = 22, 'fn_0019e864(generator->stack.values, &null);', 'fn_0019e864(generator->stack.values + index, &null);'
+        elif variant == 'retained-yield-trap':
+            index, old, new = 21, 'base->traps.size--;', 'base->traps.size += 0;'
         elif variant == 'missing-generator-slot':
             index, old, new = 21, 'for (SqI32 index = 0; index < size; index++)', 'for (SqI32 index = 1; index < size; index++)'
         elif variant == 'uncounted-table-deletion':

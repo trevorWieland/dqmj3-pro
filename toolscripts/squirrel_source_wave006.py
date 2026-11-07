@@ -134,9 +134,9 @@ def execute(output, publish=False):
                   'closure missing named-outer errors, allocation failure, prototype finalization and GC/weak-environment lifetimes',
                   'indexed lookup failures, default delegates, classes/instances and general object lookup',
                   'table marked/weak finalization, null keys, delegated new-slot/metamethod cases, allocation failure and complete string/pointer key lifetimes',
-                  'broader GC/weak/reentrant lifetime cases; string/class/generator iteration and iterator assertions',
+                  'broader GC/weak/reentrant lifetime cases; string/class iteration, general generator iterators and iterator assertions',
                   'Delete missing-key stringification, delegate metamethods and instance/userdata cases',
-                  'generator completion/kill, traps/state errors, entry modes1/3 and final-owner destruction; pre-freeze raw frame observers'],
+                  'generator active-state errors, trap search across native frames, uncaught generator teardown, entry modes1/3 and resume under another stack height; pre-freeze raw frame observers'],
               'floatingPointExceptionStatusEquivalenceClaimed': False,
               'floatingPointExceptionStatusDifferences': [index for index, row in enumerate(normal)
                   if row['original']['trace']['finalFPSCRExceptionStatus'] != row['source']['trace']['finalFPSCRExceptionStatus']],

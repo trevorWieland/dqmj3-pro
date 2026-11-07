@@ -8,7 +8,7 @@ static void destroy_vector(SqVector *vector)
     sq_deallocate(vector->values, vector->capacity * sizeof(SqObject));
 }
 
-void fn_006a7610(SqRef *reference)
+void sq_execute_legacy_closure_release(SqRef *reference)
 {
     SqScriptClosure *closure = (SqScriptClosure *)reference;
     if (!(reference->references & 0x80000000u)) {

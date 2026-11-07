@@ -1,8 +1,19 @@
-from squirrel_wave004_model import NULL, INTEGER, get
+from squirrel_wave004_model import NULL, INTEGER, get, HEAP
+from squirrel_wave006_state import VM
 
 
 class IterationModel:
     def foreach(self, self_value, key, value, iterator, exit_position):
+        if self_value[0] == 0x08000400:
+            generator = self_value[1]
+            if self.arena[generator - HEAP + 116] == 2: return exit_position
+            current = self.read(iterator)
+            if current[0] not in (NULL, INTEGER): raise ValueError('Generator iterator is outside the qualified domain')
+            position = (current[1] + 1) & 0xffffffff if current[0] == INTEGER else 0
+            self.scalar(key, INTEGER, position)
+            self.scalar(iterator, INTEGER, position)
+            self.resume_generator(generator, (value - get(self.arena, VM + 24)) // 8 - get(self.arena, VM + 52))
+            return 0
         current = self.read(iterator)
         if current[0] == NULL: position = 0
         elif current[0] == INTEGER: position = current[1]

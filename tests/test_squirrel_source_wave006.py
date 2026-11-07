@@ -12,10 +12,26 @@ import squirrel_wave006_cases as cases
 import squirrel_wave006_model as model
 import squirrel_wave006_oracle as oracle
 import squirrel_wave006_fpscr as fpscr
+import squirrel_wave006_platform as platform
 from squirrel_wave006_programs import encode, instruction as op
 
 
 class ExecuteReconstruction(unittest.TestCase):
+    def test_native_typed_generator_execution_builds_fresh(self):
+        result = platform.build(ROOT, builder.SOURCE, self.output / 'fresh-native-platform')
+        self.assertEqual(result['windowsObservation']['result'], 0)
+        self.assertEqual(result['windowsObservation']['cases'], 41)
+        self.assertEqual(len(result['androidArm64Objects']), len(builder.sources()))
+
+    def test_generator_foreach_resumes_and_skips_completed_body(self):
+        for fields in (cases.generator_foreach_cases()[0], cases.generator_foreach_cases()[-1]): self.compare(fields)
+        wrong = builder.build(self.output / 'wrong-postforeach-exit', 'wrong-postforeach-exit')
+        case = {'seed': 0x66601a, **cases.negative_inputs()['wrong-postforeach-exit']}
+        actual, trace, unused, unused = oracle.execute(self.image, wrong, case, True)
+        expected, unused = model.model(case, True)
+        self.assertTrue(trace['returned'])
+        self.assertNotEqual(actual, expected)
+
     @classmethod
     def setUpClass(cls):
         cls.image = (ROOT / 'generated/update-content0/code.bin').read_bytes()
@@ -243,6 +259,24 @@ class ExecuteReconstruction(unittest.TestCase):
         self.compare(cases.array_release_cases()[-1])
         wrong = builder.build(self.output / 'skipped-real-array-destruction', 'skipped-real-array-destruction')
         case = {'seed': 0x666016, **cases.negative_inputs()['skipped-real-array-destruction']}
+        actual, trace, unused, unused = oracle.execute(self.image, wrong, case, True)
+        expected, unused = model.model(case, True)
+        self.assertTrue(trace['returned'])
+        self.assertNotEqual(actual, expected)
+
+    def test_generator_traps_move_in_lifo_order_and_catch_after_resume(self):
+        for fields in (cases.generator_trap_cases()[0], cases.generator_trap_cases()[5], cases.generator_trap_cases()[-1]): self.compare(fields)
+        wrong = builder.build(self.output / 'retained-yield-trap', 'retained-yield-trap')
+        case = {'seed': 0x666019, **cases.negative_inputs()['retained-yield-trap']}
+        actual, trace, unused, unused = oracle.execute(self.image, wrong, case, True)
+        expected, unused = model.model(case, True)
+        self.assertTrue(trace['returned'])
+        self.assertNotEqual(actual, expected)
+
+    def test_generator_completion_releases_snapshots_and_rejects_dead_resume(self):
+        for fields in (cases.generator_completion_cases()[0], cases.generator_completion_cases()[2], cases.generator_completion_cases()[-1]): self.compare(fields)
+        wrong = builder.build(self.output / 'wrong-generator-terminal-state', 'wrong-generator-terminal-state')
+        case = {'seed': 0x666018, **cases.negative_inputs()['wrong-generator-terminal-state']}
         actual, trace, unused, unused = oracle.execute(self.image, wrong, case, True)
         expected, unused = model.model(case, True)
         self.assertTrue(trace['returned'])

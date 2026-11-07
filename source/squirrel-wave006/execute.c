@@ -305,6 +305,13 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
             base->current->instruction = (SqInstruction *)base->current->instruction + jump;
             break;
         }
+        case SQ_POSTFOREACH: {
+            SqObject *object = slot(vm, instruction->argument0);
+            if (object->type != 0x08000400u) sq_execute_unsupported(vm, -152);
+            if (((SqGenerator *)object->value.reference)->state == 2)
+                base->current->instruction = (SqInstruction *)base->current->instruction + argument - 1;
+            break;
+        }
         case SQ_DELEGATE:
             if (!sq_execute_delegate(vm, slot(vm, instruction->argument0), slot(vm, argument), slot(vm, instruction->argument2))) {
                 fn_00198230(base, &base->last_error);
@@ -377,7 +384,13 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
             base->native_calls--;
             return 0;
         case SQ_RETURN:
-            if (base->current->generator) sq_execute_unsupported(vm, -19);
+            if (base->current->generator) {
+                SqGenerator *generator = (SqGenerator *)base->current->generator;
+                SqObject empty = {0x01000001u, {.bits = 0}};
+                generator->state = 2;
+                fn_0019d320(&generator->stack, 0, &empty);
+                fn_0019e864(&generator->closure, &empty);
+            }
             if (fn_001994c0(vm, instruction->argument0, argument, &base->temporary)) {
                 if (traps) sq_execute_unsupported(vm, -20);
                 fn_0019e864(result, &base->temporary);

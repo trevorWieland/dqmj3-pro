@@ -1,4 +1,5 @@
 #include "execute_fixture.h"
+#include "host_generators.h"
 
 __declspec(dllimport) void *malloc(unsigned long long bytes);
 __declspec(dllimport) void *realloc(void *pointer, unsigned long long bytes);
@@ -9,7 +10,7 @@ __declspec(dllimport) void ExitProcess(unsigned int result) __attribute__((noret
 int _fltused;
 const SqVTable sq_input_reference_vtable = {0, 0, sq_wave006_release};
 
-const SqVTable sq_script_closure_vtable = {0, 0, fn_006a7610};
+const SqVTable sq_script_closure_vtable = {0, 0, sq_execute_legacy_closure_release};
 const SqVTable sq_weak_prefix_vtable = {0};
 const SqVTable sq_table_vtable = {0, 0, fn_00666518};
 
@@ -351,34 +352,7 @@ static int exercise(SqU32 kind)
         function->instructions[2] = (SqInstruction){0, SQ_RETURN, 255, 0, 0};
         function->instruction_count = 3;
     }
-    if (kind == 33 || kind == 35) {
-        SqFunction *child = malloc(sizeof(SqFunction) + 3 * sizeof(SqInstruction));
-        __builtin_memset(child, 0, sizeof(SqFunction) + 3 * sizeof(SqInstruction));
-        child_script.reference.references = 7;
-        child_script.environment.type = 0x01000001u;
-        child_script.function = (SqObject){0x08002000u, {.reference = (SqRef *)child}};
-        child->parameter_count = 1;
-        child->stack_size = 8;
-        child->generator = 1;
-        child->instructions[0] = (SqInstruction){42, SQ_LOADINT, 1, 0, 0};
-        child->instructions[1] = (SqInstruction){1, SQ_YIELD, 1, 0, 0};
-        child->instructions[2] = (SqInstruction){0, SQ_RETURN, 255, 0, 0};
-        child->instruction_count = 3;
-        literals[0] = (SqObject){0x08000100u, {.reference = &child_script.reference}};
-        function->instructions[0] = (SqInstruction){0, SQ_LOAD, 1, 0, 0};
-        function->instructions[1] = (SqInstruction){1, SQ_CALL, 2, 3, 1};
-        function->instructions[2] = (SqInstruction){2, SQ_RESUME, 4, 0, 0};
-        function->instructions[3] = (SqInstruction){2, SQ_NEWARRAY, 5, 0, 0};
-        function->instructions[4] = (SqInstruction){2, SQ_APPENDARRAY, 5, 0, 0};
-        function->instructions[5] = (SqInstruction){4, SQ_APPENDARRAY, 5, 0, 0};
-        function->instructions[6] = (SqInstruction){5, SQ_RETURN, 1, 0, 0};
-        function->instruction_count = 7;
-        if (kind == 35) {
-            function->instructions[6] = (SqInstruction){33, SQ_LOADINT, 3, 0, 0};
-            function->instructions[7] = (SqInstruction){3, SQ_RETURN, 1, 0, 0};
-            function->instruction_count = 8;
-        }
-    }
+    sq_host_generator_program(kind, function, &child_script, literals);
     if (kind == 34) {
         function->instructions[0] = (SqInstruction){4, SQ_NEWARRAY, 5, 0, 0};
         function->instructions[1] = (SqInstruction){7, SQ_LOADINT, 1, 0, 0};
@@ -387,27 +361,16 @@ static int exercise(SqU32 kind)
         function->instructions[4] = (SqInstruction){3, SQ_RETURN, 1, 0, 0};
         function->instruction_count = 5;
     }
-    if (kind == 32) function->generator = 1;
     SqObject callable = {0x08000100u, {.reference = &script.reference}};
     _Bool returned = fn_0018d65c(&vm, &callable, 0, kind == 2 || kind == 15 ? 3 : 1, 4, &output, 0x7fc12345u, 0);
     if ((kind == 28 || kind == 31 ? returned : !returned) || vm.base.frame.base != 1 || vm.base.frame.top != (kind == 2 || kind == 15 ? 7 : 5) ||
         vm.base.call_count || vm.base.current || vm.base.native_calls != 1 ||
         script.reference.references != (kind == 32 ? 10u : kind == 28 || kind == 31 ? 8u : 7u)) return 2;
-    if (kind == 35) {
-        if (output.type != 0x05000002u || output.value.integer != 33 || shared.base.chain || child_script.reference.references != 7) return 32;
+    if (kind == 32 || kind == 33 || kind == 35 || kind == 36 || kind == 37 || kind == 38 || kind == 39 || kind == 40) {
+        int checked = sq_host_generator_check(kind, &output, &script, &child_script, &shared);
+        if (checked) return checked;
     } else if (kind == 34) {
         if (output.type != 0x05000002u || output.value.integer != 33 || shared.base.chain) return 31;
-    } else if (kind == 33) {
-        SqArray *array = (SqArray *)output.value.reference;
-        if (output.type != 0x08000040u || array->vector.size != 2 || array->vector.values[0].type != 0x08000400u ||
-            array->vector.values[1].value.integer != 42 || ((SqGenerator *)array->vector.values[0].value.reference)->state != 1 ||
-            child_script.reference.references != 9) return 30;
-    } else if (kind == 32) {
-        SqGenerator *generator = (SqGenerator *)output.value.reference;
-        if (output.type != 0x08000400u || generator->reference.references != 1 || generator->state != 1 ||
-            generator->stack.size != 8 || generator->stack.values[0].type != 0x05000002u ||
-            generator->stack.values[0].value.integer != 0x3355 || generator->saved.generator || generator->saved.root ||
-            generator->saved.closure.value.reference != &script.reference) return 29;
     } else if (kind == 30 || kind == 31) {
         if (output.type != 0x05000002u || output.value.integer != (kind == 30 ? 33 : 99) || shared.base.chain) return 28;
     } else if (kind == 29) {
@@ -488,7 +451,7 @@ void mainCRTStartup(void)
 {
     int result = 0;
     SqU32 cases = 0;
-    for (SqU32 kind = 0; kind < 36 && !result; kind++) { result = exercise(kind); cases++; }
+    for (SqU32 kind = 0; kind < 41 && !result; kind++) { result = exercise(kind); cases++; }
     printf("{\"result\":%d,\"cases\":%u,\"pointerBytes\":%u,\"objectBytes\":%u,\"bytecodeExecution\":true}\n",
            result, cases, (SqU32)sizeof(void *), (SqU32)sizeof(SqObject));
     ExitProcess((SqU32)result);

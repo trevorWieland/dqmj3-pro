@@ -3,6 +3,16 @@
 SqI32 sq_execute_foreach(SqExecuteVM *vm, const SqObject *self, SqObject *key, SqObject *value,
                          SqObject *iterator, SqI32 exit_position)
 {
+    if (self->type == 0x08000400u) {
+        SqGenerator *generator = (SqGenerator *)self->value.reference;
+        if (generator->state == 2) return exit_position;
+        if (iterator->type != 0x01000001u && iterator->type != 0x05000002u) sq_execute_unsupported(vm, -154);
+        SqU32 next = iterator->type == 0x05000002u ? iterator->value.bits + 1 : 0;
+        sq_execute_scalar(key, 0x05000002u, next);
+        sq_execute_scalar(iterator, 0x05000002u, next);
+        fn_0019e378(generator, vm, (SqI32)(value - vm->base.frame.stack) - vm->base.frame.base);
+        return 0;
+    }
     SqU32 position;
     if (iterator->type == 0x01000001u) position = 0;
     else if (iterator->type == 0x05000002u) position = iterator->value.bits;

@@ -1,3 +1,4 @@
+from squirrel_wave006_generator_cases import generator_cases, resumed_generator_cases, generator_release_cases, generator_completion_cases, generator_trap_cases, generator_foreach_cases
 from squirrel_wave006_programs import instruction as op
 
 
@@ -53,7 +54,7 @@ def corpus():
                   {'mode': mode, 'program': [op('LOAD', 1, 1), op('THROW', 1)]},
                   {'mode': mode, 'program': [*[op('PUSHTRAP', 4, 6 - index) for index in range(5)],
                                             op('POPTRAP', 5), op('RETURN', 255), op('RETURN', 255)]}]
-    cases += numerical_cases() + arithmetic_cases() + script_cases() + comparison_cases() + array_cases() + closure_cases() + indexed_cases() + table_cases() + local_cases() + setter_cases() + table_release_cases() + delegate_cases() + iteration_cases() + delete_cases() + generator_cases() + resumed_generator_cases() + array_release_cases() + generator_release_cases()
+    cases += numerical_cases() + arithmetic_cases() + script_cases() + comparison_cases() + array_cases() + closure_cases() + indexed_cases() + table_cases() + local_cases() + setter_cases() + table_release_cases() + delegate_cases() + iteration_cases() + delete_cases() + generator_cases() + resumed_generator_cases() + array_release_cases() + generator_release_cases() + generator_completion_cases() + generator_trap_cases() + generator_foreach_cases()
     return [{'seed': 0x666200 + index, **case} for index, case in enumerate(cases)]
 
 
@@ -325,43 +326,8 @@ def delete_cases():
     return cases
 
 
-def generator_cases():
-    return [{'mode': 0, 'generatorFunction': True, **fields} for fields in ({}, {'defaults': 2, 'parameters': 3},
-            {'arguments': 3, 'parameters': 1, 'variableParameters': True}, {'debug': True}, {'growStack': True}, {'oldReference': True})]
 
 
-def resumed_generator_cases():
-    cases = []
-    for mode in (0, 2):
-        for debug in (False, True):
-            for twice in (False, True):
-                rows = [op('LOAD', 1, 0), op('CALL', 2, 1, 3, 1), op('RESUME', 4, 2), op('NEWARRAY', 5, 3),
-                        op('APPENDARRAY', 5, 2), op('APPENDARRAY', 5, 4)]
-                if twice: rows += [op('RESUME', 4, 2), op('APPENDARRAY', 5, 4)]
-                child = [op('LOADINT', 1, 42), op('YIELD', 1, 1), op('LOADINT', 1, 43), op('YIELD', 1, 1), op('RETURN', 255)]
-                cases.append({'mode': mode, 'debug': debug, 'childGenerator': True, 'childProgram': child,
-                              'program': rows + [op('RETURN', 1, 5)]})
-        for kind in ('varargs', 'defaults', 'reference', 'null', 'allocator'):
-            rows, fields, arguments = [op('LOAD', 1, 0)], {}, 1
-            if kind == 'varargs':
-                fields = {'childVariableParameters': True}
-                arguments = 3
-                rows += [op('LOADINT', 3, 7), op('LOADINT', 4, 8), op('LOADINT', 5, 9)]
-                child = [op('VARGC', 1), op('YIELD', 1, 1), op('LOADINT', 1, 0), op('GETVARGV', 1, 1), op('YIELD', 1, 1)]
-            elif kind == 'defaults':
-                fields = {'childParameters': 3, 'childDefaults': 2}
-                child = [op('YIELD', 1, 1), op('YIELD', 1, 2)]
-            elif kind == 'reference': child = [op('LOAD', 1, 1), op('YIELD', 1, 1), op('YIELD', 1, 1)]
-            elif kind == 'null': child = [op('YIELD', 255, 255), op('YIELD', 255, 255)]
-            else:
-                fields, arguments = {'childParameters': 2}, 2
-                rows += [op('LOADINT', 3, 7), op('LOAD', 4, 1)]
-                child = [op('NEWARRAY', 5, 1), op('YIELD', 1, 5), op('YIELD', 255, 255)]
-            rows += [op('CALL', 2, 1, 3, arguments), op('RESUME', 4, 2), op('NEWARRAY', 5, 3), op('APPENDARRAY', 5, 2),
-                     op('APPENDARRAY', 5, 4), op('RESUME', 4, 2), op('APPENDARRAY', 5, 4), op('RETURN', 1, 5)]
-            cases.append({'mode': mode, 'childGenerator': True, 'childProgram': child + [op('RETURN', 255)],
-                          'program': rows, **fields})
-    return cases
 
 
 def array_release_cases():
@@ -376,19 +342,10 @@ def array_release_cases():
     return cases
 
 
-def generator_release_cases():
-    cases = []
-    for mode in (0, 2):
-        for resumed in (False, True):
-            for varargs in (False, True):
-                rows = [op('LOAD', 1, 0)]
-                if varargs: rows += [op('LOADINT', 3, 7), op('LOAD', 4, 1), op('LOADINT', 5, 9)]
-                rows += [op('CALL', 2, 1, 3, 3 if varargs else 1)]
-                if resumed: rows += [op('RESUME', 4, 2)]
-                cases.append({'mode': mode, 'childGenerator': True, 'childVariableParameters': varargs,
-                    'childProgram': [op('LOAD', 1, 1), op('YIELD', 1, 1), op('RETURN', 255)],
-                    'program': rows + [op('LOADINT', 3, 33), op('RETURN', 1, 3)]})
-    return cases
+
+
+
+
 
 
 def negative_inputs():
@@ -417,6 +374,17 @@ def negative_inputs():
             'wrong-array-index': {'program': [op('NEWARRAY', 5, 3), op('LOADINT', 1, 7), op('APPENDARRAY', 5, 1),
                 op('LOADINT', 1, 9), op('APPENDARRAY', 5, 1), op('LOADINT', 4, 0), op('GET', 3, 5, 4),
                 op('APPENDARRAY', 5, 3), op('RETURN', 1, 5)]},
+            'wrong-postforeach-exit': {'mode': 0, 'childGenerator': True,
+                'childProgram': [op('YIELD', 255, 255), op('RETURN', 255)],
+                'program': [op('LOAD', 1, 0), op('CALL', 2, 1, 3, 1), op('NEWARRAY', 3, 8), op('LOADNULLS', 7, 1),
+                    op('FOREACH', 2, 4, 5), op('POSTFOREACH', 2, 4), op('APPENDARRAY', 3, 5), op('APPENDARRAY', 3, 6),
+                    op('JUMP', 0, -5), op('RETURN', 1, 3), op('RETURN', 255)]},
+            'retained-yield-trap': {'mode': 0, 'childGenerator': True,
+                'childProgram': [op('PUSHTRAP', 4, 3), op('YIELD', 255, 255), op('POPTRAP', 1), op('RETURN', 255), op('RETURN', 255)],
+                'program': [op('LOAD', 1, 0), op('CALL', 2, 1, 3, 1), op('RESUME', 4, 2), op('RESUME', 4, 2), op('RETURN', 1, 2)]},
+            'wrong-generator-terminal-state': {'mode': 0, 'childGenerator': True,
+                'childProgram': [op('YIELD', 255, 255), op('RETURN', 255)],
+                'program': [op('LOAD', 1, 0), op('CALL', 2, 1, 3, 1), op('RESUME', 4, 2), op('RESUME', 4, 2), op('RETURN', 1, 2)]},
             'skipped-real-generator-destruction': {'mode': 0, 'childGenerator': True,
                 'childProgram': [op('YIELD', 255, 255), op('RETURN', 255)],
                 'program': [op('LOAD', 1, 0), op('CALL', 2, 1, 3, 1), op('LOADINT', 3, 33), op('RETURN', 1, 3)]},

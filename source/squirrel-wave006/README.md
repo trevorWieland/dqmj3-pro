@@ -57,7 +57,7 @@ not imply complete polymorphic Get or complete prepared-call handling.
 The names correspond to original table slots and actually visited original handler
 addresses in the report. Several named entries still have unsupported subpaths.
 String/metamethod arithmetic, floating remainder, general object/string comparison,
-class/metamethod/generator calls, generator cleanup and resume/yield, entry modes 1
+broader class/metamethod dispatch, generator entry modes 1
 and 3, and remaining object/container opcodes prevent whole-root completeness.
 Unsupported source paths stop with a separate diagnostic and receive no normal
 return or original-equivalence claim.
@@ -199,8 +199,8 @@ the saved frame, retained callable temporary and reference counts. Constructor
 frame fields that the original leaves indeterminate are initialized in portable C;
 the initial Yield overwrites all saved-frame fields before any admitted observer
 uses them. Raw constructor-frame observers before that overwrite are outside the
-declared service contract. Generator traps/state errors remain unfinished; the
-later lifetime integration below qualifies final-owner destruction. A wrong source snapshot that omits its
+declared service contract. The later sections qualify bounded trap transfer, dead
+resume errors and final-owner destruction. A wrong source snapshot that omits its
 first slot must genuinely return and fail. Windows runs this same source creation
 and freeze path; it keeps the returned generator live.
 
@@ -212,8 +212,8 @@ source path. The original Resume clears saved slot zero on every copied-stack
 iteration. This measured retention behavior is preserved. Changing it to clear
 each current slot returns with identical final heap bytes but different live
 reference counts at nested allocation, which the observer rejects. Generator
-completion/kill, traps, state errors and entry modes1/3 remain
-unqualified; returned arrays keep these suspended generators live.
+completion and trap work is qualified below. Active-generator errors and entry
+modes1/3 remain unqualified; these earlier cases keep suspended generators live.
 
 The successor consumes frozen SQArray007 after coordinator review, pinning its
 ready packet and source. Real array identities now call the compiled destructor,
@@ -236,8 +236,46 @@ and saved-stack storage, then return a scalar. Both the complete owned heap and
 ordered disposal observations must agree. Windows executes this path with real
 host allocation. A compiled skipped destructor must actually return and fail.
 This integration adds no duplicate lifetime interval credit, weak/marked observer
-domain, generator Kill or complete Execute claim. Fake generic references retain
+domain or complete Execute claim. Fake generic references retain
 their separate observer identity. Frozen008 is unchanged.
+
+Generator completion now marks the object dead, releases every saved-stack value
+through the frozen resize helper, clears the main closure, and returns the actual
+script result. Cases cover null, integer and reference results, ordinary/debug
+paths, dead-resume errors with and without a caller trap, and final disposal after
+completion. The saved CallInfo closure remains owned until final destruction;
+Kill and final destruction are distinct operations. A compiled wrong terminal
+state genuinely returns and is rejected. Windows executes completion and disposal.
+
+Yield and Resume transfer exception traps in reverse order between their source
+vectors, including growth across five live traps and repeated suspension. Original
+and source compare all owned ARM heap bytes and ordered allocation observations.
+Resumed script throws enter their retained handlers, pop remaining outer traps and
+return normally. A compiled missing trap pop genuinely returns and fails. Windows
+runs the same throw/catch path. The trap records retain the measured stack base;
+these cases resume at the same caller stack height. Resuming under another stack
+height, uncaught errors that tear down an active generator, active-generator state
+errors and entry modes1/3 remain unqualified. An exploratory nested-handler case
+that omitted its remaining POPTRAP reached the original assertion; it receives no
+normal-return credit. No new inactive-memory exclusions are introduced.
+
+Generator Foreach now resumes the saved script into the value register and
+publishes integer keys before iterator state, preserving the measured ownership
+order. Opcode52 is the measured PostForeach guard: a dead generator skips the loop
+body using its signed displacement minus one. Authored loops collect zero, one or
+two yielded values and exclude the final Return value. Source switches and enums
+encode dispatch, without original instruction addresses or executable tables.
+Windows executes the full loop and final-owner cleanup. A compiled wrong exit
+position returns through a different valid Return and fails. Invalid iterator
+kinds, active/self-recursive generator iteration and iterator traps remain outside
+this bounded loop domain. PostForeach on a non-generator retains its original
+assertion distinction and receives no normal-return claim.
+
+The expanded native fixture exposed a test-program insertion bug: its shift count
+assumed seven instructions after an eighth instruction had been added. The failed
+40-case producer output is retained privately. The corrected fixture derives the
+shift count from its actual program length; fresh native compilation and execution
+is also exercised directly by the test suite.
 
 ## Replay and interpretation
 

@@ -93,7 +93,7 @@ class GeneratorModel:
             self.write(pointer + (length - 1) * 8, *value)
             self.retain(*value)
         put(self.arena, generator + 72, 0)
-        if get(self.arena, generator + 76): raise ValueError('Generator trap snapshot not yet admitted')
+        self.transfer_traps(VM + 120, generator + 104, get(self.arena, generator + 76))
         self.arena[generator - HEAP + 116] = 1
         return True
 
@@ -116,7 +116,7 @@ class GeneratorModel:
         put(self.arena, frame + 16, generator)
         vargs = get(self.arena, generator + 48)
         put(self.arena, frame + 44, vargs)
-        if get(self.arena, generator + 76): raise ValueError('Generator trap restoration not admitted yet')
+        self.transfer_traps(generator + 104, VM + 120, get(self.arena, generator + 76))
         size = get(self.arena, generator + 36)
         values = get(self.arena, generator + 32)
         for index in range(size):
@@ -147,3 +147,18 @@ class GeneratorModel:
         if self.case.get('debug'): self.debug(ord('c'), 0)
         return True
 
+
+    def transfer_traps(self, source, destination, count):
+        for unused in range(count):
+            pointer, length, capacity = (get(self.arena, destination + offset) for offset in (0, 4, 8))
+            if length >= capacity:
+                enlarged = length * 2 if length else 4
+                replacement = self.allocate(enlarged * 16)
+                self.services.append({'operation': 'reallocate', 'oldBytes': capacity * 16, 'newBytes': enlarged * 16})
+                if capacity: self.arena[replacement - HEAP:replacement - HEAP + capacity * 16] = self.arena[pointer - HEAP:pointer - HEAP + capacity * 16]
+                pointer, capacity = replacement, enlarged
+                put(self.arena, destination, pointer, length, capacity)
+            previous = get(self.arena, source) + (get(self.arena, source + 4) - 1) * 16
+            self.arena[pointer - HEAP + length * 16:pointer - HEAP + (length + 1) * 16] = self.arena[previous - HEAP:previous - HEAP + 16]
+            put(self.arena, destination + 4, length + 1)
+            put(self.arena, source + 4, get(self.arena, source + 4) - 1)
