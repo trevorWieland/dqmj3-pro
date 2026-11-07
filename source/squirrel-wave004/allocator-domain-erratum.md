@@ -1,0 +1,11 @@
+# Frozen resize allocator domain
+
+Wave002 and wave003 remain unchanged. This erratum records their admitted domain precisely and proposes later harness corrections; it grants no additional source credit.
+
+For `fn_0019d320`, the admitted vector satisfies `0 <= size <= capacity`, correctly aligned live object storage for the entire positive capacity, and no null storage when any element can be visited. Capacity and requested byte products fit the target unsigned width and the fixture arena. The fill object is outside storage that reallocations move and remains alive throughout construction. Every positive reallocation succeeds, preserves the old capacity bytes and returns nonnull storage large enough for the requested objects. Release callbacks do not reenter, mutate the vector/fill, free storage being visited or change unrelated object ownership. Reference-bearing values have nonnull live reference headers and valid release functions; reference counts do not overflow or underflow.
+
+Wave002's finite corpus uses initial size at most 16, capacity at most 32 and requested size at most 33. Factory allocation may return null before any array/vector access; vector reallocations cannot. Wave003's array-length domain is finite 0 through 32, with successful vector reallocation; a failed array factory in its default path is a separate assertion, and failure in its fill path is an excluded original fault.
+
+The current C computes `values + index` before `if(slot)`. Pointer arithmetic on null is undefined even at zero; the test cannot make a failed-reallocation path defined C. It also cannot reproduce the original ARM's integer address arithmetic at positive indices after a null reallocation. Neither frozen packet established such failure behavior.
+
+A later reviewed harness change should reject invalid size/capacity/storage, overflowing allocation extents, aliased fill and null reallocations before source execution. Meaningful sanitizer controls should exercise invalid null storage and a positive failed reallocation, keeping fixture rejection separate from game behavior. A game-source branch that changes allocation-failure handling needs its own original-path evidence and review. This proposal does not silently add that branch or relax either frozen packet.

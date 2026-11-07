@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-source-components",
+  "sourceContext": "working tree after shared-type commit 853f490; committed replay pending",
+  "checks": [
+    {
+      "component": 2,
+      "tests": 10,
+      "skipped": 0,
+      "log": {
+        "path": "work/component-coordinator-tests/squirrel002.log",
+        "sha256": "15ba9d4fc5d106ed318cb113011201ec7d4c699a89bd8b84a310438e80ef7dbb",
+        "bytes": 1984
+      },
+      "report": {
+        "path": "evidence/lanes/squirrel-source-wave002/report.json",
+        "sha256": "e283d0f37b51db60db75b21996a4ea5a85f9092d46d90c22582b39e128658f38",
+        "bytes": 256792
+      },
+      "workerCopiedInputReplay": {
+        "path": "evidence/lanes/squirrel-source-wave002/verification.json",
+        "sha256": "2b7cae414b5387a016dc455c7d9281cb19530fc3c4aa331d8ef30e9230779335",
+        "bytes": 4257
+      }
+    },
+    {
+      "component": 3,
+      "tests": 11,
+      "skipped": 0,
+      "log": {
+        "path": "work/component-coordinator-tests/squirrel003.log",
+        "sha256": "a67ebc329b833571b1bbc75f2dc1b59d0495f117ca36a4b417394bcb5cb6a640",
+        "bytes": 2255
+      },
+      "report": {
+        "path": "evidence/lanes/squirrel-source-wave003/report.json",
+        "sha256": "702ece007cb326a34f437abc47bfac5e28e26fd79c338dee445e1eef9cd2a760",
+        "bytes": 376218
+      },
+      "workerCopiedInputReplay": {
+        "path": "evidence/lanes/squirrel-source-wave003/verification.json",
+        "sha256": "6b58b55b696f761f8b1e062e0fc85fd1b366d5601ab92dae1a0d74a75335b61b",
+        "bytes": 5792
+      }
+    },
+    {
+      "component": 4,
+      "tests": 14,
+      "skipped": 0,
+      "log": {
+        "path": "work/component-coordinator-tests/squirrel004.log",
+        "sha256": "006824c8e61b4d800835fd8c4eee5b408499040a56c71657b93c3502d923e56b",
+        "bytes": 2496
+      },
+      "report": {
+        "path": "evidence/lanes/squirrel-source-wave004/report.json",
+        "sha256": "307fe83092e7064da07f20f0ee18e917bab5e247c86e3aedbbf291e377848714",
+        "bytes": 620744
+      },
+      "workerCopiedInputReplay": {
+        "path": "evidence/lanes/squirrel-source-wave004/verification.json",
+        "sha256": "3c56bd60a082c5b06ac7f160f1c8925e5f61f45268e20786f67540f354675873",
+        "bytes": 7654
+      }
+    },
+    {
+      "component": 5,
+      "tests": 15,
+      "skipped": 0,
+      "log": {
+        "path": "work/component-coordinator-tests/squirrel005.log",
+        "sha256": "aca783884dc31a93f57755ad6e7fe5caa04e6a4f417b6830d1564987b9c670c8",
+        "bytes": 2703
+      },
+      "report": {
+        "path": "evidence/lanes/squirrel-source-wave005/report.json",
+        "sha256": "06991c9d07c05cbc9f93e2180459cc62c1cd413909ce7ddeaa2e51a88345d5c4",
+        "bytes": 891425
+      },
+      "workerCopiedInputReplay": {
+        "path": "evidence/lanes/squirrel-source-wave005/verification.json",
+        "sha256": "9e32c6910ca40725b487a03022025fa43764b533021fed11d1d2d21a0f0ece36",
+        "bytes": 9258
+      }
+    }
+  ],
+  "totalTests": 50,
+  "skippedTests": 0,
+  "publicCompileGuards": 19,
+  "compilation": {
+    "path": "work/source-compile-ci/squirrel-components-coordinator/manifests/compilation.json",
+    "sha256": "42a190c650d7ea12fa22029a35b4e6d8cc51e4f3270b6d8e8b07a3b4692b192e",
+    "bytes": 210386
+  },
+  "unitCount": 37,
+  "compilations": 103,
+  "WindowsOnlyFixtureRunners": 4,
+  "matchingSourceCreditGranted": 0,
+  "sourceOnlyGame": false,
+  "AndroidDeviceExecution": false,
+  "limits": [
+    "Component-specific finite domains and explicit service providers",
+    "No arbitrary raw observers of inactive native-frame fields",
+    "Copied-input worker replay is not committed-source replay",
+    "No whole interpreter or game claim"
+  ]
+}

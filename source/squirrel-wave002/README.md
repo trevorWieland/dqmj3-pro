@@ -1,0 +1,29 @@
+# Array lifecycle reconstruction component
+
+This lane reconstructs the measured update's tagged-object vector resize at `0x0019d320` and array factory at `0x00665a44`. These are new readable C implementations based on original ARM control flow and measured layouts. The public Squirrel 2.2.5 release retained in wave001 supplies qualified semantic correspondence; its implementation is not imported into these files and does not grant game-source credit.
+
+The original resize occupies 232 instruction bytes with no pool. The factory has 180 instruction bytes followed by eight literal bytes, including its original vtable address and null-object type. The frozen program ID is `0004000e001acb00`, module SHA-256 `d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126`. Complete original spans, census ownership and dependencies are recorded in the lane claim.
+
+The component handles growing a tagged-object vector, preserving old capacity storage through the allocator contract, constructing scalar/reference fills, incrementing incoming reference ownership, shrinking with ordered release callbacks, creating null-filled arrays, allocation failure and insertion into the shared reference chain. Pointer-bearing types adapt naturally to host widths; static assertions enforce the measured ARM32 object stride, allocation extent, shared-state offset and chain layout. They do not prove a complete VM type or a compatible 64-bit game runtime.
+
+The same new C roots and frozen chain helper also build into a native Windows x64 fixture using the system C allocation ABI. That executable exercises construction, null initialization, growth, reference ownership, shrink/release and both chain links using 16-byte logical objects and 64-byte arrays. A genuinely compiled wrong-reference variant executes and exits with the expected semantic failure. All three source translation units compile to Android ARM64 objects; this is compilation without a device-execution or game-build claim.
+
+## Validation
+
+Run the project-local Python on `toolscripts/squirrel_source_wave002.py --publish`, then `python -m unittest discover -s tests -p test_squirrel_source_wave002.py -v`. Alternate outputs stay beneath ignored `work/squirrel-source-wave002/`.
+
+Genuine Clang/LLD compilation links the new roots and the unchanged wave005 chain helper. Direct allocation/reallocation services are explicit bounded runtime contracts. A separately compiled release observer supplies the dynamic callback. Source execution may enter only these compiled functions, the declared service hooks and a genuine return sentinel; falling into original helper instructions fails. Original execution uses its own complete root bodies and original chain helper. The source ELF retains no unresolved symbols or relocations. A deliberately omitted chain object makes the real linker fail.
+
+The initial packet records 97 original returns and 97 source returns, each compared with an independent model of the entire randomized declared heap arena. It covers capacity boundaries, reference fills, retained external owners, final-owner release, chain back-links, null initialization and failed factory allocation. Release callbacks observe the old vector size before final publication. Live stack guards, SP, callee-save registers and permitted read/write arenas are checked. Four genuinely compiled wrong-source controls return successfully and are rejected for semantic differences: wrong reference increment, release threshold, capacity publication and initial ownership.
+
+Allocator fixtures deliberately overwrite caller-volatile registers and condition flags before returning. Native entry/frame/return boundaries and direct dependencies are cross-checked against the census, the pinned original spans and independent original controller callsites. The complete eight-byte factory literal pool remains part of exact-match comparison.
+
+## Limits and matching
+
+The current `-O2`, `-O1` and `-Os` compiler profiles do not reproduce complete original instruction/pool spans. The resize emits 236, 240 and 224 bytes respectively; the factory's compiled section is 180 bytes, shorter than the original 188-byte instruction-plus-pool extent. This packet therefore grants **zero newly accepted matching-source bytes**. Its source/model agreement is useful engine work without establishing universal equivalence, exact source acceptance or a completed native game.
+
+The allocator is a deterministic caller-supplied fixture, not the game's allocator reconstruction. Reallocation succeeds within bounded capacities, and the fill object is outside vector storage. The release observer mutates only its observation record; arbitrary destructors, reentrant callback mutation and complete object-graph lifetime remain unproved. Factory construction does not exercise the defensive temporary-null destructor's reference path. Bounded execution coverage is recorded without treating unreachable or unobserved paths as proved.
+
+The frozen chain helper is a source dependency with its own existing nonmatching status and receives no duplicate credit. No original code/object bytes, relocations or compiler output are patched. No original payload is added to public files. Private disassembly, ELF objects, memory fixtures and diagnostics stay in this lane's ignored work directory.
+
+`toolscripts/squirrel_wave002_replay.py --destination work/squirrel-source-wave002/replays/NEW_NAME` copies the declared source, original module and hash-pinned compiler into a new owned root, creates a fresh Python environment, installs only the pinned Unicorn/pyelftools wheels offline, then rebuilds and tests from an unrelated current directory. ARM ELF, Windows executable and Android object bytes reproduce exactly. This freezes copied source by hashes; it is not an immutable committed-tree replay. A committed snapshot and coordinator acceptance remain required before any credit change.

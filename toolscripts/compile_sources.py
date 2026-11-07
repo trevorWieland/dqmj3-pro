@@ -29,7 +29,17 @@ def read_config(root):
     waves = data["scope"]["waves"]
     if not waves or len(set(waves)) != len(waves) or any(not re.fullmatch(r"wave\d{3}", wave) for wave in waves):
         raise RuntimeError("Invalid explicit native wave scope")
+    components = data.get("componentRoots", [])
+    if (not isinstance(components, list) or len(set(components)) != len(components)
+            or any(not re.fullmatch(r"source/squirrel-wave\d{3}", item) for item in components)):
+        raise RuntimeError("Invalid explicit component scope")
+    folders = [(root / item).resolve() for item in components]
+    if any((root / item).is_symlink() or not folder.is_dir()
+           for item, folder in zip(components, folders)):
+        raise RuntimeError("Missing or linked component scope")
+    allowed = [(root / "src/native").resolve(), *folders]
     actual = {p.relative_to(root).as_posix() for wave in waves for p in (root / "src/native" / wave).rglob("*.c")}
+    actual.update(p.relative_to(root).as_posix() for item in components for p in (root / item).rglob("*.c"))
     active = [unit["source"] for unit in data["units"]]
     excluded = [unit["source"] for unit in data["excludedSources"]]
     if len(active) != len(set(active)) or len(excluded) != len(set(excluded)) or set(active) & set(excluded):
@@ -38,6 +48,12 @@ def read_config(root):
         raise RuntimeError("Source census differs from explicit build units: " + str(sorted(actual ^ (set(active) | set(excluded)))))
     for unit in data["units"]:
         path = public_compiler.contained(root, unit["source"])
+        supported = unit.get("targets", list(TARGETS))
+        if (not isinstance(supported, list) or not supported or len(set(supported)) != len(supported)
+                or not set(supported).issubset(TARGETS)):
+            raise RuntimeError("Invalid explicit unit targets")
+        if not any(path.is_relative_to(folder) for folder in allowed):
+            raise RuntimeError("Source unit escapes reviewed source trees")
         dependencies = set()
         pending = [path]
         while pending:
@@ -55,8 +71,8 @@ def read_config(root):
                 includes.append(literal[1])
             for name in includes:
                 header = (item.parent / name).resolve()
-                if not header.is_relative_to((root / "src/native").resolve()):
-                    raise RuntimeError("Source dependency escapes native source tree")
+                if not any(header.is_relative_to(folder) for folder in allowed):
+                    raise RuntimeError("Source dependency escapes reviewed source trees")
                 key = header.relative_to(root.resolve()).as_posix()
                 if key not in dependencies:
                     dependencies.add(key)
@@ -157,13 +173,17 @@ def compile_all(root, targets, output):
         if done.returncode:
             raise RuntimeError("Cannot execute pinned public compiler: " + tool)
         versions[tool] = done.stdout.strip()
-    rows = [run_unit(root, unit, target, output) for target in targets for unit in config["units"]]
+    rows = [run_unit(root, unit, target, output) for target in targets for unit in config["units"]
+            if target in unit.get("targets", TARGETS)]
     return {"schemaVersion": 1, "status": "compiled" if all(row["status"] == "compiled" for row in rows) else "failed",
             "purpose": "source-only target compilation; no linking, original comparison or game execution",
             "originalInputsRead": False, "sourceCredit": 0, "config": {"path": CONFIG, "sha256": public_compiler.digest(root / CONFIG)},
             "producers": [{"path": item, "sha256": public_compiler.digest(root / item)} for item in ["toolscripts/compile_sources.py", "toolscripts/bootstrap_public_compiler.py"]],
             "compiler": compiler, "toolVersions": versions, "targets": {target: TARGETS[target] for target in targets},
-            "unitCount": len(config["units"]), "excludedHistoricalSources": config["excludedSources"], "results": rows}
+            "unitCount": len(config["units"]), "componentRoots": config.get("componentRoots", []),
+            "platformSpecificUnits": [{"source": unit["source"], "targets": unit["targets"]}
+                                      for unit in config["units"] if "targets" in unit],
+            "excludedHistoricalSources": config["excludedSources"], "results": rows}
 
 
 def main():

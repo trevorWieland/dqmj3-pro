@@ -54,7 +54,7 @@ class CompileSourcesTests(unittest.TestCase):
 
     def test_actual_source_census_and_historical_abi_exclusion(self):
         config = BUILD.read_config(ROOT)
-        self.assertEqual(len(config["units"]), 21)
+        self.assertEqual(len(config["units"]), 37)
         excluded = config["excludedSources"]
         self.assertEqual([item["source"] for item in excluded], ["src/native/wave003/setters.c"])
         self.assertIs(excluded[0]["activeLinking"], False)
@@ -67,6 +67,56 @@ class CompileSourcesTests(unittest.TestCase):
         (root / "src/native/wave001/new.c").write_text("unsigned int new_unit(void) { return 2; }\n")
         with self.assertRaisesRegex(RuntimeError, "Source census differs"):
             BUILD.read_config(root)
+
+    def test_component_sources_require_complete_census_and_explicit_dependencies(self):
+        root = self.temporary()
+        config = self.minimal(root)
+        folder = root / "source/squirrel-wave002"
+        folder.mkdir(parents=True)
+        (folder / "unit.c").write_text('#include "types.h"\nint component(void) { return 1; }\n')
+        (folder / "types.h").write_text("typedef unsigned int Word;\n")
+        config["componentRoots"] = ["source/squirrel-wave002"]
+        self.save(root, config)
+        with self.assertRaisesRegex(RuntimeError, "Source census differs"):
+            BUILD.read_config(root)
+        config["units"].append({"source": "source/squirrel-wave002/unit.c", "headers": [],
+                                "role": "bounded-component"})
+        self.save(root, config)
+        with self.assertRaisesRegex(RuntimeError, "Explicit header dependency"):
+            BUILD.read_config(root)
+        config["units"][-1]["headers"] = ["source/squirrel-wave002/types.h"]
+        self.save(root, config)
+        self.assertEqual(len(BUILD.read_config(root)["units"]), 2)
+
+    def test_component_scope_rejects_private_duplicate_and_missing_roots(self):
+        for scopes in [["work/private"], ["source/squirrel-wave002"] * 2,
+                       ["source/squirrel-wave999"]]:
+            with self.subTest(scopes=scopes):
+                root = self.temporary()
+                config = self.minimal(root)
+                config["componentRoots"] = scopes
+                self.save(root, config)
+                with self.assertRaisesRegex(RuntimeError, "component scope"):
+                    BUILD.read_config(root)
+
+    def test_platform_target_lists_cannot_be_empty_unknown_or_duplicated(self):
+        for targets in [[], ["unknown"], ["windows-x64"] * 2, "windows-x64"]:
+            with self.subTest(targets=targets):
+                root = self.temporary()
+                config = self.minimal(root)
+                config["units"][0]["targets"] = targets
+                self.save(root, config)
+                with self.assertRaisesRegex(RuntimeError, "unit targets"):
+                    BUILD.read_config(root)
+
+    def test_component_census_and_platform_restrictions_are_explicit(self):
+        config = BUILD.read_config(ROOT)
+        expected = {f"source/squirrel-wave{wave:03d}" for wave in range(2, 6)}
+        self.assertEqual(set(config["componentRoots"]), expected)
+        restricted = [unit for unit in config["units"] if "targets" in unit]
+        self.assertEqual({unit["source"] for unit in restricted},
+                         {folder + "/host_runner.c" for folder in expected})
+        self.assertTrue(all(unit["targets"] == ["windows-x64"] for unit in restricted))
 
     def test_duplicate_or_historical_active_conflicts_fail(self):
         root = self.temporary()

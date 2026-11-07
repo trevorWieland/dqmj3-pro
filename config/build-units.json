@@ -184,6 +184,168 @@
         "src/native/wave009/interval_set.h"
       ],
       "role": "functional-nonmatching"
+    },
+    {
+      "source": "source/squirrel-wave002/array_create.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-functional-component"
+    },
+    {
+      "source": "source/squirrel-wave002/host_runner.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "component-host-fixture",
+      "targets": [
+        "windows-x64"
+      ]
+    },
+    {
+      "source": "source/squirrel-wave002/release_fixture.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "component-service-fixture"
+    },
+    {
+      "source": "source/squirrel-wave002/vector_resize.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-functional-component"
+    },
+    {
+      "source": "source/squirrel-wave003/array_controller.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave003/vm_controller.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-functional-component"
+    },
+    {
+      "source": "source/squirrel-wave003/host_runner.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave003/vm_controller.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "component-host-fixture",
+      "targets": [
+        "windows-x64"
+      ]
+    },
+    {
+      "source": "source/squirrel-wave003/release_fixture.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave003/vm_controller.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "component-service-fixture"
+    },
+    {
+      "source": "source/squirrel-wave004/array_adapter.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave003/array_controller.c",
+        "source/squirrel-wave003/vm_controller.h",
+        "source/squirrel-wave004/call_views.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "component-adapter"
+    },
+    {
+      "source": "source/squirrel-wave004/call_fixture.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_fixture.h",
+        "source/squirrel-wave004/call_views.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "component-service-fixture"
+    },
+    {
+      "source": "source/squirrel-wave004/frame_resize.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-functional-component"
+    },
+    {
+      "source": "source/squirrel-wave004/host_runner.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_fixture.h",
+        "source/squirrel-wave004/call_views.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "component-host-fixture",
+      "targets": [
+        "windows-x64"
+      ]
+    },
+    {
+      "source": "source/squirrel-wave004/native_call.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-functional-component"
+    },
+    {
+      "source": "source/squirrel-wave004/runtime.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_views.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "component-runtime-support"
+    },
+    {
+      "source": "source/squirrel-wave005/dispatch_services.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_fixture.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave005/dispatch_views.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "component-service-fixture"
+    },
+    {
+      "source": "source/squirrel-wave005/generic_call.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_fixture.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave005/dispatch_views.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "bounded-functional-component"
+    },
+    {
+      "source": "source/squirrel-wave005/host_runner.c",
+      "headers": [
+        "source/squirrel-wave002/array_views.h",
+        "source/squirrel-wave004/call_fixture.h",
+        "source/squirrel-wave004/call_views.h",
+        "source/squirrel-wave005/dispatch_views.h",
+        "src/native/wave005/vm_views.h"
+      ],
+      "role": "component-host-fixture",
+      "targets": [
+        "windows-x64"
+      ]
     }
   ],
   "excludedSources": [
@@ -194,5 +356,11 @@
       "activeLinking": false
     }
   ],
-  "warningExceptionReason": "Four wave001 scalar functions preserve an observed incoming ABI parameter that is unused by their value-level C semantics. Only the listed function/parameter declarations may issue -Wunused-parameter; all other diagnostics fail."
+  "warningExceptionReason": "Four wave001 scalar functions preserve an observed incoming ABI parameter that is unused by their value-level C semantics. Only the listed function/parameter declarations may issue -Wunused-parameter; all other diagnostics fail.",
+  "componentRoots": [
+    "source/squirrel-wave002",
+    "source/squirrel-wave003",
+    "source/squirrel-wave004",
+    "source/squirrel-wave005"
+  ]
 }

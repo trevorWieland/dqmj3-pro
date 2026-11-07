@@ -31,7 +31,7 @@ jobs:
         run: python -I -S toolscripts/bootstrap_public_compiler.py
       - name: Check compile tooling
         run: python -I -S -m unittest discover -s tests -p test_compile_sources.py -v
-      - name: Compile every active native source for all three targets
+      - name: Compile native sources and bounded VM components for reviewed targets
         run: python -I -S toolscripts/compile_sources.py
       - name: Upload compile diagnostics and manifests
         if: always()
