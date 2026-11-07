@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "name": "exception035",
+  "producerSteps": [
+    {
+      "name": "exception035-execution-and-controls",
+      "args": [
+        "toolscripts/squirrel_exception035.py",
+        "--output",
+        "work/squirrel-exception035/qualified818"
+      ]
+    }
+  ],
+  "tests": [
+    "squirrel_exception035",
+    "isolated_component_replay"
+  ],
+  "packets": [
+    "work/squirrel-exception035/qualified818/report.json"
+  ]
+}

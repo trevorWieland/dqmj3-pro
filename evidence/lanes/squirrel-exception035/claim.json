@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "canonicalCensusSha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+  "frozenPredecessors": [
+    {
+      "path": "evidence/lanes/squirrel-execute031/ready.json",
+      "sha256": "97e26b14a4a6d1a3ee61b04826787dcf827e3f334d7860e259972d5905082041"
+    },
+    {
+      "path": "evidence/lanes/squirrel-execute028/ready.json",
+      "sha256": "d31dc398c29e6783fac6522c70ac4186c1e52b5c7d08840aa5004ba4d2af90ac"
+    }
+  ],
+  "roots": [
+    {
+      "entry": 1671728,
+      "instructionRanges": [
+        {
+          "start": 1671728,
+          "endExclusive": 1671820,
+          "bytes": 92
+        }
+      ],
+      "instructionBytes": 92,
+      "rangeHashes": [
+        {
+          "start": 1671728,
+          "endExclusive": 1671820,
+          "sha256": "6bcac75405d4c7d4a63e63b3cebf54a7e1b7eb475497ff08e92b3ed6557f9ec2"
+        }
+      ],
+      "directCallees": []
+    },
+    {
+      "entry": 1671968,
+      "instructionRanges": [
+        {
+          "start": 1671968,
+          "endExclusive": 1672208,
+          "bytes": 240
+        }
+      ],
+      "instructionBytes": 240,
+      "rangeHashes": [
+        {
+          "start": 1671968,
+          "endExclusive": 1672208,
+          "sha256": "105b3a343cf9fba9c3da787f05430949aa2bc2ec12f8318127c82053c3282f62"
+        }
+      ],
+      "directCallees": [
+        1572780,
+        1697892
+      ]
+    },
+    {
+      "entry": 1627740,
+      "instructionRanges": [
+        {
+          "start": 1627740,
+          "endExclusive": 1628348,
+          "bytes": 608
+        },
+        {
+          "start": 1628624,
+          "endExclusive": 1629968,
+          "bytes": 1344
+        },
+        {
+          "start": 1630012,
+          "endExclusive": 1633104,
+          "bytes": 3092
+        },
+        {
+          "start": 1633132,
+          "endExclusive": 1634640,
+          "bytes": 1508
+        },
+        {
+          "start": 1634704,
+          "endExclusive": 1637652,
+          "bytes": 2948
+        },
+        {
+          "start": 1637728,
+          "endExclusive": 1638600,
+          "bytes": 872
+        },
+        {
+          "start": 1638700,
+          "endExclusive": 1639836,
+          "bytes": 1136
+        },
+        {
+          "start": 1639872,
+          "endExclusive": 1641548,
+          "bytes": 1676
+        }
+      ],
+      "instructionBytes": 13184,
+      "rangeHashes": [
+        {
+          "start": 1627740,
+          "endExclusive": 1628348,
+          "sha256": "e4222455400e59dd914d604b87c39a0002ab903cd43e934384504fec5a091807"
+        },
+        {
+          "start": 1628624,
+          "endExclusive": 1629968,
+          "sha256": "415ac5474524e8ee3959665227c196b39750d14f3ab1f13860a4da8c3a3bdd85"
+        },
+        {
+          "start": 1630012,
+          "endExclusive": 1633104,
+          "sha256": "50aa158fe9426e707baf725725cceca805fed19f7ed9ecedd8fa29e21c171a51"
+        },
+        {
+          "start": 1633132,
+          "endExclusive": 1634640,
+          "sha256": "91f0c31125c38b0ff6beaed4f1ac07727dfa3e35beeaeaab79b0c0a157026737"
+        },
+        {
+          "start": 1634704,
+          "endExclusive": 1637652,
+          "sha256": "5742cde10014352383cf65adf9f4d7fbb2187212133fcbbd243fe4617b8a11b8"
+        },
+        {
+          "start": 1637728,
+          "endExclusive": 1638600,
+          "sha256": "73c24283ad527ab1e810881851fc7987030488e94bb264c7f78e3a267d333b9f"
+        },
+        {
+          "start": 1638700,
+          "endExclusive": 1639836,
+          "sha256": "bdfc6926e5aed7d9fddd15236457ee567aa10c8c2555c737e3cab2195b2caf60"
+        },
+        {
+          "start": 1639872,
+          "endExclusive": 1641548,
+          "sha256": "bfc62e10641b4ea0759c2a52f2e57d6c936ed52734a25b0884cee80ab16ce632"
+        }
+      ],
+      "directCallees": [
+        1336720,
+        1523040,
+        1572780,
+        1587340,
+        1627388,
+        1646368,
+        1647896,
+        1648796,
+        1649564,
+        1665800,
+        1666924,
+        1668528,
+        1671484,
+        1671728,
+        1671820,
+        1671968,
+        1672216,
+        1672568,
+        1673188,
+        1674396,
+        1675588,
+        1676480,
+        1677044,
+        1677744,
+        1678520,
+        1679880,
+        1685072,
+        1685912,
+        1686120,
+        1692448,
+        1696488,
+        1696632,
+        1697892,
+        1697988,
+        1707312,
+        1708596,
+        1711560,
+        2108876,
+        3140840,
+        6708180
+      ]
+    }
+  ],
+  "initialScope": "actual PUSHTRAP/POPTRAP/THROW, nested unwinding, typed actual handler calls and ownership; no class implementation",
+  "wholeExecuteOrSourceCreditGranted": 0,
+  "opcodeWitnesses": [
+    {
+      "opcode": 56,
+      "name": "PUSHTRAP",
+      "handler": 1639204,
+      "nextHandler": 1639356
+    },
+    {
+      "opcode": 57,
+      "name": "POPTRAP",
+      "handler": 1639356,
+      "nextHandler": 1639424
+    },
+    {
+      "opcode": 58,
+      "name": "THROW",
+      "handler": 1639424,
+      "continuesAt": 1640192
+    }
+  ],
+  "unwindEntry": 1640192,
+  "newPhysicalCredit": 0,
+  "wholeExecuteComplete": false
+}

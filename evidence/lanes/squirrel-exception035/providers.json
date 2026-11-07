@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "productFiles": [
+    "source/squirrel-wave035/exception.h",
+    "source/squirrel-wave035/execute_core.c",
+    "source/squirrel-wave035/call_adapter.c",
+    "source/squirrel-wave035/storage.c",
+    "source/squirrel-wave035/handler.c",
+    "source/squirrel-wave035/traps.c",
+    "source/squirrel-wave035/unwind.c",
+    "source/squirrel-wave035/dispatch_call.c"
+  ],
+  "requiredReadonly031ProductFiles": [
+    "source/squirrel-wave031/execute.h",
+    "source/squirrel-wave031/extension.c",
+    "source/squirrel-wave031/collections.c",
+    "source/squirrel-wave031/numbers.c"
+  ],
+  "excludeVersionedPredecessorBodies": [
+    "source/squirrel-wave028/execute.c",
+    "source/squirrel-wave028/call_adapter.c",
+    "source/squirrel-wave031/execute_core.c",
+    "source/squirrel-wave031/call_adapter.c"
+  ],
+  "requiredReadonly028ProductFiles": [
+    "source/squirrel-wave028/storage.c",
+    "source/squirrel-wave028/start_call.c",
+    "source/squirrel-wave028/return.c",
+    "source/squirrel-wave028/arithmetic.c"
+  ],
+  "additionalUncalledReadonlyBodyLinkedByQualification": "source/squirrel-wave028/dispatch_call.c",
+  "requiredFrozenProviders": [
+    "011 compact prototypes",
+    "012 alias-safe opaque reference/vector/array",
+    "013 native closure lifetime",
+    "014 weak lifetime",
+    "015 byte strings",
+    "016 native closure constructor",
+    "017 script closure lifetime",
+    "019/021 table bodies",
+    "020 direct lookup/read bindings",
+    "022 Call/NativeCall/array/frame/storage/raiser",
+    "025 literal formatting/type errors"
+  ],
+  "externalServices": {
+    "sq_exception_reallocate035": "successful aligned allocation; copies previous bytes to nonoverlapping sufficient storage; normal fixture observer reads only declared live state",
+    "sq_exception_generator_unsupported035": "deliberate terminal boundary; no generator unwind support"
+  },
+  "fixtureOnlyFiles": [
+    "source/squirrel-wave035/fixture.h",
+    "source/squirrel-wave035/fixture.c",
+    "source/squirrel-wave035/fixture_services.c",
+    "source/squirrel-wave035/fixture_cases.h",
+    "source/squirrel-wave035/native_fixture.c"
+  ],
+  "windowsOnlyFixtureUnits": [
+    "source/squirrel-wave035/native_fixture.c"
+  ],
+  "fixtureOnlyIdentifierBindings": {
+    "source/squirrel-wave028/fixture.c": [
+      "sq_execute028=sq_execute035",
+      "fixture_native_event028=fixture_native_event031"
+    ],
+    "source/squirrel-wave028/fixture_services.c": [
+      "sq_reallocate=sq_baseline_reallocate031",
+      "sq_deallocate=sq_baseline_deallocate031",
+      "sq_execute_error_handler028=sq_baseline_error_handler035",
+      "sq_native_create_allocate016=sq_baseline_create_allocate035"
+    ]
+  },
+  "compiledCallbackLinkPlacement": {
+    "baselineARM": 10556932,
+    "baselineA64": 10555940,
+    "exceptionCallback": 10620928,
+    "purpose": "normal linker section placement preserves genuine fixture callback pointer identity across predecessor/control builds; no bytes or relocations patched"
+  },
+  "exceptionFixtureBounds": {
+    "handlerFamilies": [
+      "actual 013 native closures with NULL environment",
+      "actual 017 script closures with real 011 compact prototypes"
+    ],
+    "rootArgument": "NULL object",
+    "thrownValues": [
+      "signed32 integers",
+      "actual 011 compact prototypes"
+    ],
+    "trapCapacityMaximum": 8,
+    "trapStorageRetainedAfterExecution": true,
+    "allocationsMustSucceed": true,
+    "unrestrictedReentrantFrameStorageMutationQualified": false
+  },
+  "unsupported": [
+    "generator kill/unwind",
+    "suspension/resume",
+    "debug hooks",
+    "malformed/trap-underflow bytecode",
+    "uncovered arbitrary callable families",
+    "discard target sentinel and general inherited031 exclusions",
+    "classes/instances",
+    "allocation failure",
+    "unrestricted reentrant frame/stack storage mutation",
+    "whole Execute/VM/game/physical Android"
+  ],
+  "originalEndpointsAndTablesPreserved": true,
+  "sourceOriginalModuleMapped": false,
+  "compiledOutputOrOriginalInstructionsPatched": false,
+  "newPhysicalCredit": 0,
+  "wholeExecuteComplete": false
+}
