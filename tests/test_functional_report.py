@@ -120,6 +120,21 @@ class FunctionalReportTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'canonical conflict'):
             self.generate()
 
+    def test_exact_unit_file_selects_reviewed_alias_over_legacy_definition(self):
+        self.aliased_source()
+        (self.source.parent / 'legacy.c').write_text('int fn_00100000(void) { return 2; }\n')
+        self.registry['functions'][0]['sourceLookup'] = 'unit'
+        self.report['units'][0]['metadata']['source_path'] = self.source.relative_to(self.root).as_posix()
+        self.assertEqual(self.generate(), {'functions': [{'name': 'fn_00100000', 'confidence': 'medium'}]})
+
+    def test_directory_hint_cannot_override_legacy_canonical_definition(self):
+        self.aliased_source()
+        (self.source.parent / 'legacy.c').write_text('int fn_00100000(void) { return 2; }\n')
+        self.registry['functions'][0]['sourceLookup'] = 'unit'
+        self.report['units'][0]['metadata']['source_path'] = self.source.parent.relative_to(self.root).as_posix()
+        with self.assertRaisesRegex(ValueError, 'canonical conflict'):
+            self.generate()
+
     def test_ambiguous_names_header_cannot_approve_a_function(self):
         header = self.aliased_source()
         header.write_text('#define fn_00100000 actual_script_release\n#define fn_00100000 another_function\n')

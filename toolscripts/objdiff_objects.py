@@ -14,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import ci_native_build
 import configure_objdiff
 import native_census_overlay
+import report_source_units
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -210,8 +211,9 @@ def build(root, census_path, output):
     source_groups = {}
     for row in accepted:
         source_groups.setdefault(row["sourcePath"], []).append(row)
-    gaps = complement(accepted, text["address"], text["initializedBytes"])
-    discovered, skipped = census_symbols(census, gaps, accepted)
+    source_routes, source_routes_pin = report_source_units.load(root, census, accepted)
+    gaps = complement([*accepted, *source_routes], text["address"], text["initializedBytes"])
+    discovered, skipped = census_symbols(census, gaps, [*accepted, *source_routes])
     commands, units = [], []
     for source, rows in sorted(source_groups.items()):
         rows.sort(key=lambda row: row["address"])
@@ -264,6 +266,22 @@ def build(root, census_path, output):
                                          for name, address, size, off, kind in data_spans],
                   "expected_matched_code": 0, "expected_matched_functions": 0,
                   "targetDataBytes": target_summary["dataBytes"], "targetBssBytes": target_summary["bssBytes"]})
+    for route in source_routes:
+        address, size = route["address"], route["instructionBytes"]
+        spans = [(address, size, text["codeBinOffset"] + address - text["address"])]
+        symbols = {0: [{"symbol": route["symbol"], "address": address, "size": size, "mode": route["mode"]}]}
+        label = "source-route-" + route["symbol"]
+        routed_target, routed_summary, command = assemble_reference(root, image_path, spans, symbols, output, label)
+        commands.append(command)
+        units.append({"name": route["name"], "source_path": route["sourcePath"], "complete": False,
+            "target": {"path": routed_target.relative_to(root).as_posix(), "sha256": digest(routed_target)},
+            "base": {"path": base.relative_to(root).as_posix(), "sha256": digest(base)},
+            "targetCodeBytes": routed_summary["codeBytes"], "baseCodeBytes": 0,
+            "acceptedSymbols": [], "discoveredSymbols": [route["symbol"]],
+            "source_sha256": route["sourceSha256"], "source_profile": None, "sourceRouting": route,
+            "original_ranges": [{"section": ".text.original_" + format(address, "08x"),
+                "address": address, "size": size, "kind": "code"}],
+            "expected_matched_code": 0, "expected_matched_functions": 0})
     for unit in units:
         unit.update(target_path=unit["target"]["path"], target_sha256=unit["target"]["sha256"],
                     base_path=unit["base"]["path"], base_sha256=unit["base"]["sha256"])
@@ -284,7 +302,7 @@ def build(root, census_path, output):
     result = {"schemaVersion": 1, "version": "update-content0", "moduleSha256": inventory["codeSha256"],
               "inventory": {"path": inventory_path.relative_to(root).as_posix(), "sha256": digest(inventory_path)},
               "census": {"path": census_path.relative_to(root).as_posix(), "sha256": digest(census_path)},
-              "censusOverlays": overlay_references, "discoveredFunctionEntries": census["functionCount"],
+              "censusOverlays": overlay_references, "sourceUnits": source_routes_pin, "discoveredFunctionEntries": census["functionCount"],
               "initializedTextBytes": text["initializedBytes"], "acceptedInstructionBytes": sum(row["instructionBytes"] for row in accepted),
               "initializedDataBytes": sum(row["initializedBytes"] for row in inventory["layout"]["segments"] if row["name"] != "text"),
               "bssBytes": inventory["layout"]["bssBytes"], "layout": inventory["layout"],

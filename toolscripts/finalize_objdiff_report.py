@@ -139,13 +139,26 @@ def verify_objects(root, mapping):
     if len(known_entries) != len(census['functions']):
         raise ValueError('Discovered canonical entries are duplicated')
     accepted = accepted_functions(root)
+    import report_source_units
+    source_routes, source_routes_pin = report_source_units.load(root, census, accepted)
+    if mapping.get("sourceUnits") != source_routes_pin:
+        raise ValueError("Source-directed report configuration changed after object construction")
+    routes = {row["name"]: row for row in source_routes}
+    seen_routes = set()
     ledger = {row['symbol']: row for row in accepted}
     mapped, originals, credited = {}, [], set()
     for unit in mapping['units']:
         if unit['name'] in mapped or unit.get('complete') is not False:
             raise ValueError('Duplicate unit or unsupported unit-completion claim')
         source = contained(root, unit['source_path'])
-        if not source.exists() or not (unit['source_path'] == 'src/native' or unit['source_path'].startswith('src/native/')):
+        route = routes.get(unit['name'])
+        if route:
+            if (unit['source_path'] != route['sourcePath'] or unit.get('sourceRouting') != route
+                    or unit.get('acceptedSymbols') or unit.get('expected_matched_code') != 0
+                    or unit.get('expected_matched_functions') != 0):
+                raise ValueError('Source-directed unit changes source ownership or exact matching credit')
+            seen_routes.add(unit['name'])
+        elif not source.exists() or not (unit['source_path'] == 'src/native' or unit['source_path'].startswith('src/native/')):
             raise ValueError('Report source must be an existing public source path')
         if unit['name'] != (unit['source_path'] if source.is_dir() else source.relative_to(root).with_suffix('').as_posix()):
             raise ValueError('Report grouping must follow the actual public source hierarchy')
@@ -183,6 +196,8 @@ def verify_objects(root, mapping):
             actual_address = reference['address'] + function['offset']
             if entry is None or actual_address != entry['address'] or function['mode'] != entry['mode']:
                 raise ValueError('Reference symbol is not the actual discovered canonical entry')
+        if route and (set(functions) != {route['symbol']} or implementations):
+            raise ValueError('Source-directed unit contains extra symbols or reconstructed bytes')
         if any(item['kind'] != 'code' for item in base.values()):
             raise ValueError('Current accepted source has no data or BSS credit')
         if sum(item['size'] for item in base.values()) != sum(item['size'] for item in implementations.values()):
@@ -210,6 +225,8 @@ def verify_objects(root, mapping):
                                  'source_path': unit['source_path'], 'section_names': set(target)}
     if credited != set(ledger):
         raise ValueError('Object mapping omits an accepted source function')
+    if seen_routes != set(routes):
+        raise ValueError('Source-directed report unit is missing')
     for segment in layout['layout']['segments']:
         kind = 'code' if segment['name'] == 'text' else 'data'
         rows = [row for row in originals if row['kind'] == kind and segment['address'] <= row['address']

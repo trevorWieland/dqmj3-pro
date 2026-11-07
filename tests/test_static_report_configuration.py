@@ -60,6 +60,8 @@ class ReviewedStaticReportingTests(unittest.TestCase):
         units = self.validate()
         from ci_native_build import accepted_functions
         expected_sources = {row["sourcePath"] for row in accepted_functions(ROOT)} | {"src/native"}
+        routes = json.loads((ROOT / "config/objdiff-source-units.json").read_text())["units"] if (ROOT / "config/objdiff-source-units.json").exists() else []
+        expected_sources.update(row["sourcePath"] for row in routes)
         self.assertEqual({row["metadata"]["source_path"] for row in units}, expected_sources)
         self.assertEqual(len(units), len(expected_sources))
         self.assertTrue(all(row["metadata"]["complete"] is False for row in units))

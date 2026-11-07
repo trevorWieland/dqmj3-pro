@@ -123,7 +123,9 @@ def generate(root, report, registry):
                 raise ValueError('Reviewed source alias is absent or ambiguous')
             if definitions is None:
                 definitions = repository_definitions(root)
-            if definitions.get(name) or definitions.get(source_name) != {source.resolve()}:
+            explicit_file = (lookup == 'unit' and name in reported
+                and reported[name][0]['metadata']['source_path'] == proof['source']['path'])
+            if (definitions.get(name) and not explicit_file) or definitions.get(source_name) != {source.resolve()}:
                 raise ValueError('Renamed source index has a canonical conflict or lacks a unique reviewed definition')
         if name not in reported:
             raise ValueError('Functional name is absent from this report')

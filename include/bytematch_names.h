@@ -57,3 +57,4 @@
 #define fn_0077b3e4 tree_erase033
 #define fn_0077d2a0 tree_erase033
 #define fn_00198320 sq_exception_handler035
+#define fn_00196b08 sq_script_create041

@@ -126,8 +126,8 @@ def static_project(root, manifest, version):
         raise ValueError("Reporting objects disagree with independent complete byte accounting")
     expected = sorted((row["start"], row["bytes"]) for row in accounting["staticBytePartition"])
     actual = sorted((row["address"], row["size"]) for unit in mapping["units"] for row in unit["original_ranges"] if row["kind"] == "code")
-    if expected != actual:
-        raise ValueError("Object ownership differs from independent exhaustive source/unmatched partition")
+    from report_source_units import verify_refinement
+    verify_refinement(expected, actual)
     return [{"name": row["name"], "target_path": row["target_path"], "base_path": row["base_path"],
              "metadata": {"source_path": row["source_path"], "complete": False}}
             for row in mapping["units"]]
