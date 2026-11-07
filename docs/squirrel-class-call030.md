@@ -1,0 +1,28 @@
+# Typed class construction and native constructor calls
+
+The frozen030 component implements class initialization/inheritance, member-table cloning, instance allocation, the VM class factory, native constructor invocation through frozen022 and class/instance final-owner cleanup. Fourteen existing canonical entries total4,624 instruction bytes; this is a source candidate packet with zero independent admission. The VM CLASS opcode, class member-definition controller, script constructors, GC and complete shared-state lifetime remain separate work.
+
+`source/squirrel-wave030/class_call.h` defines the actual objects. `SqClass030` embeds the exact020 class common first and occupies92 target/152 native bytes. `SqClassInstance030` has a44/88-byte header plus at least one8/16-byte physical value, even for a class with no logical fields. The partial020/023 native instance header is80 bytes and is incompatible with the complete instance. The shared provisioner is a real `SqClassSharedStorage030` containing exact020 storage first. The target constructor-name object uses byte-copy offset60; native storage places its borrowed16-byte object in a tail at280, avoiding the chain at72. Its external owner must remain live through the final factory call.
+
+The implementation uses the actual011/012 opaque prefixes and values,013 native closures,014 weak references,015 byte strings,017 closures and019 tables. Lifetime callbacks use the exact `void(void*)` vtable carrier; user hooks use `I32(void*,I32)`. Native pointers and object fields retain their natural alignment. Full022 VM storage is required. No structural cast to a legacy SqRef, partial instance, short shared state or incompatible vtable is permitted.
+
+The instance factory caches shared/count/allocation budget before allocation and reloads the extra-byte value afterward. It retains and publishes the instance before releasing the old destination, then drops its temporary owner. Tests include a real compact-prototype finalizer whose resource observer clears that published destination, making the temporary the last owner. Instances retain their class/default values, borrow the class member table and join the actual typed chain. Final release adds the measured temporary reference around the user hook and permits resurrection. Destruction caches the field count, releases the class before values and invalidates weak references. Class release has no such reference guard. Class pair cleanup releases secondary before primary. Reentrant base release hooks repopulate the dying derived class and qualify every143 class-destructor instruction, including its later vector/attribute cleanup.
+
+The54-case corpus runs the actual original ARM bodies, authored ARM, a real Windows DLL and compiled A64 objects. It includes inheritance, actual native method/field constructors, live/dead weak constructors, native array returns, constructor failure/arity errors, both weak destruction orders, resurrection, owned vectors and callback observations. Thirteen compiled negative controls normally return and are rejected; five leave the final comparison arena identical, so ordering observations are essential. All14 authored C translation units compile on ARM, Windows and A64.
+
+Every ARM pre-alias arena hash and mismatch offset is retained. Callback aliases affect only a verified post-execution Python comparison copy. They alter no executed memory, register, code or literal. Twelve post-alias whole arenas agree. The other42 preserve frozen022's inactive native-frame words0/4/32/40; no qualified code reads them. Windows uses actual arena0x120000000 and A64 uses0x110000000, with independent full-width allocation/topology/ownership models. Android PT_LOAD and GNU_RELRO16KiB constraints pass, following [official guidance](https://developer.android.com/guide/practices/page-sizes); this is CPU-model execution, not Android OS or physical-device proof.
+
+The complete source, providers, excluded domains, original ranges, all unobserved-PC conditions and tool identities are pinned by `evidence/lanes/squirrel-class-call030/ready.json`. Its40 pins have SHA256 `f4f1e6682f51d59e9e679aa0576cd39bdf993cc984ac29e94f1e761d661ac818`. Allocation/assert failures, malformed descriptors, unstable clone sources, arbitrary observers of under-construction storage, GC, script constructors and full VM/game behavior are excluded. Constant NULL/cursor and live18-slot-class invariants explain remaining unobserved paths without claiming a universal theorem.
+
+With the pinned private owner module/ExHeader and local compiler/runtime:
+
+```powershell
+$env:PYTHONPATH='toolscripts'
+tools/python/Scripts/python.exe toolscripts/squirrel_class_call030_measure.py
+tools/python/Scripts/python.exe toolscripts/squirrel_class_call030_execute.py --folder work/squirrel-class-call030/primary-qualified
+tools/python/Scripts/python.exe toolscripts/squirrel_class_call030_controls.py --baseline work/squirrel-class-call030/primary-qualified --folder work/squirrel-class-call030/controls-final
+tools/python/Scripts/python.exe -m unittest discover -s tests -p test_squirrel_class_call030.py -v
+tools/python/Scripts/python.exe toolscripts/squirrel_class_call030_replay.py
+```
+
+The isolated replay copies actual C/header/Python/compiler/reference inputs into a new owned directory and rebuilds all three artifacts. Complete execution/control receipts and all artifact bytes reproduce, with11 fresh and11 copied tests passing. The package runtime shared outside the copy is explicitly fingerprinted. Failed earlier heap-overlap and unobservable-control attempts remain private and are excluded from accepted evidence. This document is an unfrozen explanatory successor; it changes none of the40 ready inputs.

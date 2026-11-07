@@ -1,0 +1,742 @@
+{
+  "schemaVersion": 1,
+  "status": "measured-before-class-call030-source",
+  "version": "update-content0",
+  "module": "main",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "census": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "bytes": 20574405,
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55"
+  },
+  "functions": [
+    {
+      "entry": 1672216,
+      "role": "VM-instance-construction-and-constructor-resolution",
+      "mode": "ARM",
+      "instructions": [
+        {
+          "address": 1672216,
+          "endExclusive": 1672560,
+          "bytes": 344,
+          "sha256": "58da36b1de4e1af544ee4c55ef30592908f024cdb6bed4cb85956067d992fe6d"
+        }
+      ],
+      "instructionBytes": 344,
+      "literalReferences": [
+        {
+          "instruction": 1672252,
+          "literal": {
+            "address": 1672560,
+            "endExclusive": 1672564,
+            "bytes": 4,
+            "sha256": "d794662c803e08aca9818af381b82c9139d85532972bef8661589656f0ab7265"
+          }
+        },
+        {
+          "instruction": 1672388,
+          "literal": {
+            "address": 1672564,
+            "endExclusive": 1672568,
+            "bytes": 4,
+            "sha256": "3c9ba11c659ac11a8eacbf4e39da86a9ad7b3b3a9619bbeee21c07e86c65cf15"
+          }
+        }
+      ],
+      "directCalls": [
+        {
+          "instruction": 1672248,
+          "target": 1641552
+        },
+        {
+          "instruction": 1672292,
+          "target": 1697892
+        },
+        {
+          "instruction": 1672340,
+          "target": 1336720
+        },
+        {
+          "instruction": 1672380,
+          "target": 1711560
+        },
+        {
+          "instruction": 1672544,
+          "target": 1697892
+        }
+      ],
+      "censusCallers": [
+        1572780,
+        1627740
+      ],
+      "canonicalExistingEntry": true,
+      "inventoryOrSourceCreditGranted": 0
+    },
+    {
+      "entry": 1641552,
+      "role": "class-instance-allocation-and-class-lock",
+      "mode": "ARM",
+      "instructions": [
+        {
+          "address": 1641552,
+          "endExclusive": 1641692,
+          "bytes": 140,
+          "sha256": "6592fc5db261582b9735db245ab12633deeab774ee95a18026fc0760d2bbbcfa"
+        }
+      ],
+      "instructionBytes": 140,
+      "literalReferences": [],
+      "directCalls": [
+        {
+          "instruction": 1641588,
+          "target": 1680136
+        },
+        {
+          "instruction": 1641628,
+          "target": 3140840
+        },
+        {
+          "instruction": 1641656,
+          "target": 1647944
+        }
+      ],
+      "censusCallers": [
+        1469780,
+        1672216
+      ],
+      "canonicalExistingEntry": true,
+      "inventoryOrSourceCreditGranted": 0
+    },
+    {
+      "entry": 1647944,
+      "role": "new-instance-initializer",
+      "mode": "ARM",
+      "instructions": [
+        {
+          "address": 1647944,
+          "endExclusive": 1648160,
+          "bytes": 216,
+          "sha256": "a83b026f94700818c59179e2cf510b03daec04cb423d75549b5e751ca147e05e"
+        }
+      ],
+      "instructionBytes": 216,
+      "literalReferences": [
+        {
+          "instruction": 1647956,
+          "literal": {
+            "address": 1648160,
+            "endExclusive": 1648164,
+            "bytes": 4,
+            "sha256": "f9776c4494f43f20b4079ff37163de174c3c68f2d57deb53271a4d6fbd9a919e"
+          }
+        },
+        {
+          "instruction": 1647976,
+          "literal": {
+            "address": 1648164,
+            "endExclusive": 1648168,
+            "bytes": 4,
+            "sha256": "405c237ef17f442e3a9a8ab0c996e7947df496a98d164df28ee657efcf0ccb85"
+          }
+        }
+      ],
+      "directCalls": [
+        {
+          "instruction": 1647992,
+          "target": 1055260
+        },
+        {
+          "instruction": 1648148,
+          "target": 1697988
+        }
+      ],
+      "censusCallers": [
+        1641552
+      ],
+      "canonicalExistingEntry": true,
+      "inventoryOrSourceCreditGranted": 0
+    },
+    {
+      "entry": 1710248,
+      "role": "class-initializer-and-inheritance",
+      "mode": "ARM",
+      "instructions": [
+        {
+          "address": 1710248,
+          "endExclusive": 1711552,
+          "bytes": 1304,
+          "sha256": "2c49f9eb586b9ed7672d0388f98d74579b89422d80868574125f5dbc0376e357"
+        }
+      ],
+      "instructionBytes": 1304,
+      "literalReferences": [
+        {
+          "instruction": 1710280,
+          "literal": {
+            "address": 1711552,
+            "endExclusive": 1711556,
+            "bytes": 4,
+            "sha256": "e1a9dfc0106e1c0faedb4bd3994b2cddb4bbfe58a332a1f075b14b57ebdf062b"
+          }
+        },
+        {
+          "instruction": 1710284,
+          "literal": {
+            "address": 1711556,
+            "endExclusive": 1711560,
+            "bytes": 4,
+            "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+          }
+        }
+      ],
+      "directCalls": [
+        {
+          "instruction": 1710384,
+          "target": 1587340
+        },
+        {
+          "instruction": 1710632,
+          "target": 1724896
+        },
+        {
+          "instruction": 1710792,
+          "target": 1697892
+        },
+        {
+          "instruction": 1710804,
+          "target": 1697892
+        },
+        {
+          "instruction": 1710852,
+          "target": 1724896
+        },
+        {
+          "instruction": 1711012,
+          "target": 1697892
+        },
+        {
+          "instruction": 1711024,
+          "target": 1697892
+        },
+        {
+          "instruction": 1711092,
+          "target": 1587340
+        },
+        {
+          "instruction": 1711428,
+          "target": 1722164
+        },
+        {
+          "instruction": 1711456,
+          "target": 3140840
+        },
+        {
+          "instruction": 1711480,
+          "target": 1685912
+        },
+        {
+          "instruction": 1711536,
+          "target": 1697988
+        }
+      ],
+      "censusCallers": [
+        1677044
+      ],
+      "canonicalExistingEntry": true,
+      "inventoryOrSourceCreditGranted": 0
+    },
+    {
+      "entry": 1680136,
+      "role": "ancestor-lock",
+      "mode": "ARM",
+      "instructions": [
+        {
+          "address": 1680136,
+          "endExclusive": 1680172,
+          "bytes": 36,
+          "sha256": "f69af9718a1e9077388300c0617a6f18e6a09aac3e53fddca7e4650f3451090b"
+        }
+      ],
+      "instructionBytes": 36,
+      "literalReferences": [],
+      "directCalls": [
+        {
+          "instruction": 1680164,
+          "target": 1680136
+        }
+      ],
+      "censusCallers": [
+        1641552,
+        1680136
+      ],
+      "canonicalExistingEntry": true,
+      "inventoryOrSourceCreditGranted": 0
+    },
+    {
+      "entry": 1722164,
+      "role": "owned-members-table-clone",
+      "mode": "ARM",
+      "instructions": [
+        {
+          "address": 1722164,
+          "endExclusive": 1722792,
+          "bytes": 628,
+          "sha256": "9b049c06b34dd297a3c67e8ab8fd6be796fc8d141be568efddd0cfca9775331a"
+        }
+      ],
+      "instructionBytes": 628,
+      "literalReferences": [
+        {
+          "instruction": 1722204,
+          "literal": {
+            "address": 1722792,
+            "endExclusive": 1722796,
+            "bytes": 4,
+            "sha256": "b6e2955b763492ae92d77a450b98a4f4c61aa1a2a2347c5da6cbab3b07016482"
+          }
+        },
+        {
+          "instruction": 1722292,
+          "literal": {
+            "address": 1722796,
+            "endExclusive": 1722800,
+            "bytes": 4,
+            "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+          }
+        }
+      ],
+      "directCalls": [
+        {
+          "instruction": 1722188,
+          "target": 3140840
+        },
+        {
+          "instruction": 1722256,
+          "target": 1684368
+        },
+        {
+          "instruction": 1722288,
+          "target": 1697988
+        },
+        {
+          "instruction": 1722348,
+          "target": 1685288
+        },
+        {
+          "instruction": 1722364,
+          "target": 1714988
+        },
+        {
+          "instruction": 1722672,
+          "target": 1696488
+        }
+      ],
+      "censusCallers": [
+        1674396,
+        1710248
+      ],
+      "canonicalExistingEntry": true,
+      "inventoryOrSourceCreditGranted": 0
+    },
+    {
+      "entry": 1714988,
+      "role": "null-or-integer-clone-cursor",
+      "mode": "ARM",
+      "instructions": [
+        {
+          "address": 1714988,
+          "endExclusive": 1715028,
+          "bytes": 40,
+          "sha256": "bd7d053a450a8487e5f8d2798d621e412c8348c7a86b3d22591131ea72d23d2a"
+        }
+      ],
+      "instructionBytes": 40,
+      "literalReferences": [],
+      "directCalls": [
+        {
+          "instruction": 1715020,
+          "target": 1336720
+        }
+      ],
+      "censusCallers": [
+        1668528,
+        1722164,
+        1738244
+      ],
+      "canonicalExistingEntry": true,
+      "inventoryOrSourceCreditGranted": 0
+    },
+    {
+      "entry": 6708960,
+      "role": "class-final-release",
+      "mode": "ARM",
+      "instructions": [
+        {
+          "address": 6708960,
+          "endExclusive": 6709024,
+          "bytes": 64,
+          "sha256": "435c35b4713816baafee24d3c2374614e5ccf6eb0b2d9423916a085d318bb3d0"
+        }
+      ],
+      "instructionBytes": 64,
+      "literalReferences": [],
+      "directCalls": [],
+      "censusCallers": [],
+      "canonicalExistingEntry": true,
+      "inventoryOrSourceCreditGranted": 0
+    },
+    {
+      "entry": 6709572,
+      "role": "class-destructor",
+      "mode": "ARM",
+      "instructions": [
+        {
+          "address": 6709572,
+          "endExclusive": 6710144,
+          "bytes": 572,
+          "sha256": "f2b639f8394d3490e11aea374ee06bb118c54d80dd3ea694bf3497674e770fe0"
+        }
+      ],
+      "instructionBytes": 572,
+      "literalReferences": [
+        {
+          "instruction": 6709584,
+          "literal": {
+            "address": 6710144,
+            "endExclusive": 6710148,
+            "bytes": 4,
+            "sha256": "e1a9dfc0106e1c0faedb4bd3994b2cddb4bbfe58a332a1f075b14b57ebdf062b"
+          }
+        }
+      ],
+      "directCalls": [
+        {
+          "instruction": 6709612,
+          "target": 2414396
+        },
+        {
+          "instruction": 6709620,
+          "target": 6709024
+        },
+        {
+          "instruction": 6709784,
+          "target": 1693312
+        },
+        {
+          "instruction": 6709956,
+          "target": 1693312
+        },
+        {
+          "instruction": 6710128,
+          "target": 1693312
+        }
+      ],
+      "censusCallers": [],
+      "canonicalExistingEntry": true,
+      "inventoryOrSourceCreditGranted": 0
+    },
+    {
+      "entry": 6709024,
+      "role": "class-owned-state-finalization",
+      "mode": "ARM",
+      "instructions": [
+        {
+          "address": 6709024,
+          "endExclusive": 6709564,
+          "bytes": 540,
+          "sha256": "639b28de35ae59224340612e717873439ca44ed7a09881185674433fcd19a753"
+        }
+      ],
+      "instructionBytes": 540,
+      "literalReferences": [
+        {
+          "instruction": 6709036,
+          "literal": {
+            "address": 6709564,
+            "endExclusive": 6709568,
+            "bytes": 4,
+            "sha256": "3c9ba11c659ac11a8eacbf4e39da86a9ad7b3b3a9619bbeee21c07e86c65cf15"
+          }
+        },
+        {
+          "instruction": 6709048,
+          "literal": {
+            "address": 6709568,
+            "endExclusive": 6709572,
+            "bytes": 4,
+            "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+          }
+        }
+      ],
+      "directCalls": [
+        {
+          "instruction": 6709044,
+          "target": 1697892
+        },
+        {
+          "instruction": 6709084,
+          "target": 1724896
+        },
+        {
+          "instruction": 6709220,
+          "target": 1724896
+        }
+      ],
+      "censusCallers": [
+        6709572
+      ],
+      "canonicalExistingEntry": true,
+      "inventoryOrSourceCreditGranted": 0
+    },
+    {
+      "entry": 1724896,
+      "role": "class-member-vector-resize",
+      "mode": "ARM",
+      "instructions": [
+        {
+          "address": 1724896,
+          "endExclusive": 1725192,
+          "bytes": 296,
+          "sha256": "841d41b8676e77cb2996e7786cb9e583125bff1bbea67fbff3f43e8cde3cb0b9"
+        }
+      ],
+      "instructionBytes": 296,
+      "literalReferences": [
+        {
+          "instruction": 1724964,
+          "literal": {
+            "address": 1725192,
+            "endExclusive": 1725196,
+            "bytes": 4,
+            "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+          }
+        }
+      ],
+      "directCalls": [
+        {
+          "instruction": 1724944,
+          "target": 1587340
+        },
+        {
+          "instruction": 1725012,
+          "target": 1697892
+        },
+        {
+          "instruction": 1725024,
+          "target": 1697892
+        }
+      ],
+      "censusCallers": [
+        1710248,
+        6709024
+      ],
+      "canonicalExistingEntry": true,
+      "inventoryOrSourceCreditGranted": 0
+    },
+    {
+      "entry": 1891232,
+      "role": "instance-final-release-with-resurrection-guard",
+      "mode": "ARM",
+      "instructions": [
+        {
+          "address": 1891232,
+          "endExclusive": 1891332,
+          "bytes": 100,
+          "sha256": "0544f4f44e3c87cb510fedb4e715ab3e1d23779ba1aac76a3311daf53d7d8836"
+        }
+      ],
+      "instructionBytes": 100,
+      "literalReferences": [],
+      "directCalls": [],
+      "censusCallers": [],
+      "canonicalExistingEntry": true,
+      "inventoryOrSourceCreditGranted": 0
+    },
+    {
+      "entry": 1891524,
+      "role": "instance-destructor-with-shared-base-tail",
+      "mode": "ARM",
+      "instructions": [
+        {
+          "address": 1891524,
+          "endExclusive": 1891780,
+          "bytes": 256,
+          "sha256": "ec7c2c51a3cdf4310aa5a7e95a57088125341f51e81d8c3a6650d7561cc9dec7"
+        },
+        {
+          "address": 2309080,
+          "endExclusive": 2309124,
+          "bytes": 44,
+          "sha256": "67a1e12bc57058306f9343db9e60ab6d05aac2ef0a2ddbcf7af13e9112585b97"
+        }
+      ],
+      "instructionBytes": 300,
+      "literalReferences": [
+        {
+          "instruction": 1891536,
+          "literal": {
+            "address": 1891780,
+            "endExclusive": 1891784,
+            "bytes": 4,
+            "sha256": "f9776c4494f43f20b4079ff37163de174c3c68f2d57deb53271a4d6fbd9a919e"
+          }
+        },
+        {
+          "instruction": 1891624,
+          "literal": {
+            "address": 1891784,
+            "endExclusive": 1891788,
+            "bytes": 4,
+            "sha256": "3c9ba11c659ac11a8eacbf4e39da86a9ad7b3b3a9619bbeee21c07e86c65cf15"
+          }
+        },
+        {
+          "instruction": 1891748,
+          "literal": {
+            "address": 1891788,
+            "endExclusive": 1891792,
+            "bytes": 4,
+            "sha256": "ea0d815856221b6c9b52c963ddbd11e7738edf0048abad58b0e7b433b8cd2475"
+          }
+        },
+        {
+          "instruction": 2309080,
+          "literal": {
+            "address": 2309124,
+            "endExclusive": 2309128,
+            "bytes": 4,
+            "sha256": "cb1c48ae0f7d4023fd5545fd9fd0d684d4a1ed145548dc49aeb92b98047345ab"
+          }
+        },
+        {
+          "instruction": 2309100,
+          "literal": {
+            "address": 2309128,
+            "endExclusive": 2309132,
+            "bytes": 4,
+            "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+          }
+        }
+      ],
+      "directCalls": [
+        {
+          "instruction": 1891564,
+          "target": 2414396
+        },
+        {
+          "instruction": 1891764,
+          "target": 1049620
+        }
+      ],
+      "censusCallers": [],
+      "canonicalExistingEntry": true,
+      "inventoryOrSourceCreditGranted": 0
+    },
+    {
+      "entry": 1891052,
+      "role": "instance-metamethod-accessor-retyped-without-duplicate-credit",
+      "mode": "ARM",
+      "instructions": [
+        {
+          "address": 1891052,
+          "endExclusive": 1891096,
+          "bytes": 44,
+          "sha256": "58a720de9b68612429f5c98e4cea7e67c61c53e8ee5d855a21c31580deba5651"
+        }
+      ],
+      "instructionBytes": 44,
+      "literalReferences": [],
+      "directCalls": [
+        {
+          "instruction": 1891084,
+          "target": 1697892
+        }
+      ],
+      "censusCallers": [],
+      "canonicalExistingEntry": true,
+      "inventoryOrSourceCreditGranted": 0
+    }
+  ],
+  "vtableWitnesses": [
+    {
+      "address": 8719760,
+      "endExclusive": 8719784,
+      "bytes": 24,
+      "sha256": "1e9a91127669e5a1c9bc184ef226dbe5ada88aa23d60a055431efb0eb0e63fb0",
+      "entryAddresses": [
+        6709572,
+        0,
+        6708960,
+        6708648,
+        6709024,
+        0
+      ],
+      "reviewedPrefixSlots": 6,
+      "followingVtableExtentInferred": false
+    },
+    {
+      "address": 8502600,
+      "endExclusive": 8502624,
+      "bytes": 24,
+      "sha256": "4e1888ed0c24f963b6a00721c3b1f4abb516a2b872995026d6ab9ac842ff9d8d",
+      "entryAddresses": [
+        1891524,
+        0,
+        1891232,
+        1891096,
+        1891332,
+        1891052
+      ],
+      "reviewedPrefixSlots": 6,
+      "followingVtableExtentInferred": false
+    }
+  ],
+  "plannedCanonicalInstructionBytes": 4624,
+  "classTargetBytes": 92,
+  "classFields": {
+    "shared": 20,
+    "members": 24,
+    "base": 28,
+    "fieldVector": 32,
+    "methodVector": 44,
+    "metamethodVector": 56,
+    "attributes": 68,
+    "typeTag": 76,
+    "releaseHook": 80,
+    "lockedByte": 84,
+    "extraInstanceBytes": 88
+  },
+  "instanceTargetFields": {
+    "shared": 20,
+    "delegate": 24,
+    "klass": 28,
+    "userPointer": 32,
+    "releaseHook": 36,
+    "allocationBytes": 40,
+    "values": 44
+  },
+  "instanceMinimumConstructedObjects": 1,
+  "targetAllocationFormula": "44 + max(1, class.fieldVector.size)*8 + class.extraInstanceBytes",
+  "instanceReleaseGuardRetainsBeforeUserHookAndPermitsResurrection": true,
+  "instanceDestructorCachesFieldCountThenReleasesClassBeforeClearingValues": true,
+  "constructorNameTargetSharedObjectOffset": 60,
+  "nativeSharedConstructorObjectMustAvoidExistingChain72": true,
+  "portableClassUsesExact020NamedCommonFirst": true,
+  "portableInstanceMustNotCastToPartial020Instance": true,
+  "portableInstanceNativeHeader88RequiresCompilationQualification": true,
+  "VMFactoryAbi": "Bool(void*vm,Class*class,Object*result,Object*constructor)",
+  "classInitializerAbi": "Class*(Class*storage,State*shared,Class*base)",
+  "instanceInitializerAbi": "Instance*(Instance*storage,State*shared,Class*class,U32allocationBytes)",
+  "nativeReleaseHookAbi": "I32(void*userPointerOrClassTypeTag,I32zero)",
+  "frozen009And023AreReadOnlyLeadsNotFullFactoryProof": true,
+  "sharedBaseTail233bd8RemainsPartOfCanonicalInstanceDestructor": true,
+  "scriptConstructorsRequireFutureFrozen028Provider": true,
+  "GCMarkAndInstanceCloneAndExplicitGCFinalizeRemainOutsideInitialFamily": true,
+  "newSourceOrInventoryAdmissionGranted": 0,
+  "originalPayloadsPublished": false,
+  "producer": {
+    "path": "toolscripts/squirrel_class_call030_measure.py",
+    "bytes": 5976,
+    "sha256": "c37bd951f920a1c16eaeabf5555cfe24634520ca2faaf7e9f1ba24bec4b51c38"
+  }
+}

@@ -142,6 +142,7 @@ class CompileSourcesTests(unittest.TestCase):
             "source/squirrel-wave022/native_fixture.c",
             "source/squirrel-wave025/native_fixture.c",
             "source/squirrel-wave028/native_fixture.c",
+            "source/squirrel-wave031/native_fixture.c",
         }
         fixtures.update("source/squirrel-wave018/" + name + ".c" for name in
                         ("fixture_run", "fixture_runtime", "fixture_services", "fixture_state"))

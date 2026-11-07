@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "name": "class030",
+  "producerSteps": [
+    {
+      "name": "class030-execution",
+      "args": [
+        "toolscripts/squirrel_class_call030_execute.py",
+        "--folder",
+        "work/squirrel-class-call030/primary-qualified"
+      ]
+    },
+    {
+      "name": "class030-controls",
+      "args": [
+        "toolscripts/squirrel_class_call030_controls.py",
+        "--baseline",
+        "work/squirrel-class-call030/primary-qualified",
+        "--folder",
+        "work/squirrel-class-call030/controls-final"
+      ]
+    }
+  ],
+  "tests": [
+    "squirrel_class_call030",
+    "isolated_component_replay"
+  ],
+  "packets": [
+    "work/squirrel-class-call030/primary-qualified/execution.json",
+    "work/squirrel-class-call030/controls-final/controls.json"
+  ]
+}

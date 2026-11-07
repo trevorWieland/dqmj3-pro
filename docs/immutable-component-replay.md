@@ -1,0 +1,9 @@
+# Immutable component replay
+
+`toolscripts/isolated_component_replay.py --plan config/replays/<component>.json --revision <commit>` extracts that exact Git archive into a new `work/clean-replay/` directory. It creates a fresh Python environment, copies individually hash-checked local tools and wheels, and extracts separately verified original inputs from private CIA copies. It never consumes shared generated objects or work directories.
+
+Plans specify `schemaVersion:1`, a lowercase hyphenated `name`, `producerSteps` containing explicit `name` and `args` arrays, requested test module names in `tests`, and concrete output `packets`. Arguments can contain `{REPLAY_ROOT}` for the new checkout. Producer names cannot collide with standard phases. The runner also compiles the public source configuration, runs common registry and inventory tests, and generates the stock objdiff report and functional companion.
+
+Every command has a retained log and exit status. Timeouts and final packet collection failures save a failed checkpoint, including the responsible step when a command started. A passing runtime command cannot conceal a missing final output. The receipt pins the plan, driver, source archive, copied inputs, logs and final packets. Materialization failures before command execution are separate from runtime failures.
+
+The component producer remains responsible for frozen input guards, measured ABI, dependency closure, genuine returning controls and declared domain limits. A successful replay alone grants no source credit, whole-game claim or device qualification. The coordinator compares the independent packet with its primary evidence before admission. Original inputs and extracted payloads remain private; public evidence contains identities and bounded observations.

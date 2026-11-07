@@ -1,0 +1,1179 @@
+{
+  "schemaVersion": 1,
+  "functions": [
+    {
+      "address": 1672216,
+      "role": "VM-instance-construction-and-constructor-resolution",
+      "totalArmInstructions": 86,
+      "coveredArmInstructions": 75,
+      "missingInstructionAddresses": [
+        1672336,
+        1672340,
+        1672492,
+        1672496,
+        1672500,
+        1672504,
+        1672508,
+        1672512,
+        1672516,
+        1672520,
+        1672524
+      ],
+      "missingConditions": [
+        {
+          "address": 1672336,
+          "condition": "excluded-allocation-failure-assert"
+        },
+        {
+          "address": 1672340,
+          "condition": "excluded-allocation-failure-assert"
+        },
+        {
+          "address": 1672492,
+          "condition": "valid-constructor-descriptor-is-nonreference-integer"
+        },
+        {
+          "address": 1672496,
+          "condition": "valid-constructor-descriptor-is-nonreference-integer"
+        },
+        {
+          "address": 1672500,
+          "condition": "valid-constructor-descriptor-is-nonreference-integer"
+        },
+        {
+          "address": 1672504,
+          "condition": "valid-constructor-descriptor-is-nonreference-integer"
+        },
+        {
+          "address": 1672508,
+          "condition": "valid-constructor-descriptor-is-nonreference-integer"
+        },
+        {
+          "address": 1672512,
+          "condition": "valid-constructor-descriptor-is-nonreference-integer"
+        },
+        {
+          "address": 1672516,
+          "condition": "valid-constructor-descriptor-is-nonreference-integer"
+        },
+        {
+          "address": 1672520,
+          "condition": "valid-constructor-descriptor-is-nonreference-integer"
+        },
+        {
+          "address": 1672524,
+          "condition": "valid-constructor-descriptor-is-nonreference-integer"
+        }
+      ]
+    },
+    {
+      "address": 1641552,
+      "role": "class-instance-allocation-and-class-lock",
+      "totalArmInstructions": 35,
+      "coveredArmInstructions": 35,
+      "missingInstructionAddresses": [],
+      "missingConditions": []
+    },
+    {
+      "address": 1647944,
+      "role": "new-instance-initializer",
+      "totalArmInstructions": 54,
+      "coveredArmInstructions": 54,
+      "missingInstructionAddresses": [],
+      "missingConditions": []
+    },
+    {
+      "address": 1710248,
+      "role": "class-initializer-and-inheritance",
+      "totalArmInstructions": 326,
+      "coveredArmInstructions": 205,
+      "missingInstructionAddresses": [
+        1710440,
+        1710444,
+        1710448,
+        1710476,
+        1710480,
+        1710484,
+        1710488,
+        1710492,
+        1710496,
+        1710500,
+        1710504,
+        1710508,
+        1710512,
+        1710516,
+        1710520,
+        1710524,
+        1710528,
+        1710532,
+        1710536,
+        1710540,
+        1710544,
+        1710548,
+        1710552,
+        1710564,
+        1710568,
+        1710572,
+        1710576,
+        1710580,
+        1710584,
+        1710588,
+        1710592,
+        1710648,
+        1710652,
+        1710656,
+        1710660,
+        1710664,
+        1710668,
+        1710672,
+        1710676,
+        1710680,
+        1710684,
+        1710700,
+        1710704,
+        1710708,
+        1710712,
+        1710716,
+        1710720,
+        1710724,
+        1710728,
+        1710732,
+        1710736,
+        1710868,
+        1710872,
+        1710876,
+        1710880,
+        1710884,
+        1710888,
+        1710892,
+        1710896,
+        1710900,
+        1710904,
+        1710920,
+        1710924,
+        1710928,
+        1710932,
+        1710936,
+        1710940,
+        1710944,
+        1710948,
+        1710952,
+        1710956,
+        1711068,
+        1711072,
+        1711076,
+        1711080,
+        1711084,
+        1711088,
+        1711092,
+        1711096,
+        1711100,
+        1711120,
+        1711124,
+        1711128,
+        1711132,
+        1711136,
+        1711140,
+        1711144,
+        1711148,
+        1711152,
+        1711156,
+        1711160,
+        1711164,
+        1711168,
+        1711172,
+        1711176,
+        1711180,
+        1711192,
+        1711196,
+        1711200,
+        1711204,
+        1711208,
+        1711212,
+        1711216,
+        1711220,
+        1711224,
+        1711228,
+        1711232,
+        1711236,
+        1711240,
+        1711244,
+        1711248,
+        1711252,
+        1711256,
+        1711272,
+        1711276,
+        1711280,
+        1711284,
+        1711288,
+        1711292,
+        1711296,
+        1711300
+      ],
+      "missingConditions": [
+        {
+          "address": 1710440,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710444,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710448,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710476,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710480,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710484,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710488,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710492,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710496,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710500,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710504,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710508,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710512,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710516,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710520,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710524,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710528,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710532,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710536,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710540,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710544,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710548,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710552,
+          "condition": "fresh-meta-vector-starts-zero-and-grows-to18-never-shrinks"
+        },
+        {
+          "address": 1710564,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710568,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710572,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710576,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710580,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710584,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710588,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710592,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710648,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710652,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710656,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710660,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710664,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710668,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710672,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710676,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710680,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710684,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710700,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710704,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710708,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710712,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710716,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710720,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710724,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710728,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710732,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710736,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710868,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710872,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710876,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710880,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710884,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710888,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710892,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710896,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710900,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710904,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710920,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710924,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710928,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710932,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710936,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710940,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710944,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710948,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710952,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1710956,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1711068,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711072,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711076,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711080,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711084,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711088,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711092,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711096,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711100,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711120,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711124,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711128,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711132,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711136,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711140,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711144,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711148,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711152,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711156,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711160,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711164,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711168,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711172,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711176,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711180,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711192,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711196,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711200,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711204,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711208,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711212,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711216,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711220,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711224,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711228,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711232,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711236,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711240,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711244,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711248,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711252,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711256,
+          "condition": "fully-live-base-and-new-class-have-fixed18-meta-slots"
+        },
+        {
+          "address": 1711272,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1711276,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1711280,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1711284,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1711288,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1711292,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1711296,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 1711300,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        }
+      ]
+    },
+    {
+      "address": 1680136,
+      "role": "ancestor-lock",
+      "totalArmInstructions": 9,
+      "coveredArmInstructions": 9,
+      "missingInstructionAddresses": [],
+      "missingConditions": []
+    },
+    {
+      "address": 1722164,
+      "role": "owned-members-table-clone",
+      "totalArmInstructions": 157,
+      "coveredArmInstructions": 133,
+      "missingInstructionAddresses": [
+        1722488,
+        1722492,
+        1722496,
+        1722568,
+        1722572,
+        1722576,
+        1722616,
+        1722620,
+        1722624,
+        1722628,
+        1722632,
+        1722636,
+        1722640,
+        1722644,
+        1722648,
+        1722652,
+        1722712,
+        1722716,
+        1722720,
+        1722724,
+        1722764,
+        1722768,
+        1722772,
+        1722776
+      ],
+      "missingConditions": [
+        {
+          "address": 1722488,
+          "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+        },
+        {
+          "address": 1722492,
+          "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+        },
+        {
+          "address": 1722496,
+          "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+        },
+        {
+          "address": 1722568,
+          "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+        },
+        {
+          "address": 1722572,
+          "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+        },
+        {
+          "address": 1722576,
+          "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+        },
+        {
+          "address": 1722616,
+          "condition": "constant-integer-position-has-no-reference-owner"
+        },
+        {
+          "address": 1722620,
+          "condition": "constant-integer-position-has-no-reference-owner"
+        },
+        {
+          "address": 1722624,
+          "condition": "constant-integer-position-has-no-reference-owner"
+        },
+        {
+          "address": 1722628,
+          "condition": "constant-integer-position-has-no-reference-owner"
+        },
+        {
+          "address": 1722632,
+          "condition": "constant-integer-position-has-no-reference-owner"
+        },
+        {
+          "address": 1722636,
+          "condition": "constant-integer-position-has-no-reference-owner"
+        },
+        {
+          "address": 1722640,
+          "condition": "constant-integer-position-has-no-reference-owner"
+        },
+        {
+          "address": 1722644,
+          "condition": "constant-integer-position-has-no-reference-owner"
+        },
+        {
+          "address": 1722648,
+          "condition": "constant-integer-position-has-no-reference-owner"
+        },
+        {
+          "address": 1722652,
+          "condition": "constant-integer-position-has-no-reference-owner"
+        },
+        {
+          "address": 1722712,
+          "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+        },
+        {
+          "address": 1722716,
+          "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+        },
+        {
+          "address": 1722720,
+          "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+        },
+        {
+          "address": 1722724,
+          "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+        },
+        {
+          "address": 1722764,
+          "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+        },
+        {
+          "address": 1722768,
+          "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+        },
+        {
+          "address": 1722772,
+          "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+        },
+        {
+          "address": 1722776,
+          "condition": "stable-source-and-new-clone-keep-temporary-key-value-owners-live"
+        }
+      ]
+    },
+    {
+      "address": 1714988,
+      "role": "null-or-integer-clone-cursor",
+      "totalArmInstructions": 10,
+      "coveredArmInstructions": 9,
+      "missingInstructionAddresses": [
+        1715020
+      ],
+      "missingConditions": [
+        {
+          "address": 1715020,
+          "condition": "excluded-invalid-cursor-assert"
+        }
+      ]
+    },
+    {
+      "address": 6708960,
+      "role": "class-final-release",
+      "totalArmInstructions": 16,
+      "coveredArmInstructions": 16,
+      "missingInstructionAddresses": [],
+      "missingConditions": []
+    },
+    {
+      "address": 6709572,
+      "role": "class-destructor",
+      "totalArmInstructions": 143,
+      "coveredArmInstructions": 143,
+      "missingInstructionAddresses": [],
+      "missingConditions": []
+    },
+    {
+      "address": 6709024,
+      "role": "class-owned-state-finalization",
+      "totalArmInstructions": 135,
+      "coveredArmInstructions": 87,
+      "missingInstructionAddresses": [
+        6709100,
+        6709104,
+        6709108,
+        6709112,
+        6709116,
+        6709120,
+        6709124,
+        6709128,
+        6709132,
+        6709136,
+        6709152,
+        6709156,
+        6709160,
+        6709164,
+        6709168,
+        6709172,
+        6709176,
+        6709180,
+        6709184,
+        6709188,
+        6709236,
+        6709240,
+        6709244,
+        6709248,
+        6709252,
+        6709256,
+        6709260,
+        6709264,
+        6709268,
+        6709272,
+        6709288,
+        6709292,
+        6709296,
+        6709300,
+        6709304,
+        6709308,
+        6709312,
+        6709316,
+        6709320,
+        6709324,
+        6709428,
+        6709432,
+        6709436,
+        6709440,
+        6709444,
+        6709448,
+        6709452,
+        6709456
+      ],
+      "missingConditions": [
+        {
+          "address": 6709100,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709104,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709108,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709112,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709116,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709120,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709124,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709128,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709132,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709136,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709152,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709156,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709160,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709164,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709168,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709172,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709176,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709180,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709184,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709188,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709236,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709240,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709244,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709248,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709252,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709256,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709260,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709264,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709268,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709272,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709288,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709292,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709296,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709300,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709304,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709308,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709312,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709316,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709320,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709324,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709428,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709432,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709436,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709440,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709444,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709448,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709452,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        },
+        {
+          "address": 6709456,
+          "condition": "constant-null-local-fill-retain-or-destruction"
+        }
+      ]
+    },
+    {
+      "address": 1724896,
+      "role": "class-member-vector-resize",
+      "totalArmInstructions": 74,
+      "coveredArmInstructions": 74,
+      "missingInstructionAddresses": [],
+      "missingConditions": []
+    },
+    {
+      "address": 1891232,
+      "role": "instance-final-release-with-resurrection-guard",
+      "totalArmInstructions": 25,
+      "coveredArmInstructions": 25,
+      "missingInstructionAddresses": [],
+      "missingConditions": []
+    },
+    {
+      "address": 1891524,
+      "role": "instance-destructor-with-shared-base-tail",
+      "totalArmInstructions": 75,
+      "coveredArmInstructions": 71,
+      "missingInstructionAddresses": [
+        1891680,
+        1891684,
+        1891688,
+        1891692
+      ],
+      "missingConditions": [
+        {
+          "address": 1891680,
+          "condition": "literal-null-replacement-cannot-retain-reference"
+        },
+        {
+          "address": 1891684,
+          "condition": "literal-null-replacement-cannot-retain-reference"
+        },
+        {
+          "address": 1891688,
+          "condition": "literal-null-replacement-cannot-retain-reference"
+        },
+        {
+          "address": 1891692,
+          "condition": "literal-null-replacement-cannot-retain-reference"
+        }
+      ]
+    },
+    {
+      "address": 1891052,
+      "role": "instance-metamethod-accessor-retyped-without-duplicate-credit",
+      "totalArmInstructions": 11,
+      "coveredArmInstructions": 11,
+      "missingInstructionAddresses": [],
+      "missingConditions": []
+    }
+  ],
+  "allMissingInstructionsClassified": true,
+  "allInstructionConditionsUniversallyProven": false,
+  "constructorStorageNotExternallyPublishedUntilInitialized": true,
+  "classAndCloneInvariantDomainsExplicitInReadme": true,
+  "sourceCreditGranted": 0
+}

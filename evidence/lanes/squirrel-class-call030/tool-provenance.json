@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "status": "effective030-tools-and-shared-package-identities",
+  "compiler": {
+    "path": "tools/clang-21/clang.exe",
+    "bytes": 99559064,
+    "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+  },
+  "linker": {
+    "path": "tools/clang-21/ld.lld.exe",
+    "bytes": 69225112,
+    "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3"
+  },
+  "armFlags": [
+    "--target=arm-none-eabi",
+    "-mcpu=mpcore",
+    "-marm",
+    "-mfpu=vfp",
+    "-mfloat-abi=softfp",
+    "-O2",
+    "-std=c11",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-ffunction-sections",
+    "-fdata-sections",
+    "-fno-unwind-tables",
+    "-fno-asynchronous-unwind-tables",
+    "-Wall",
+    "-Wextra",
+    "-Werror"
+  ],
+  "windowsTriple": "x86_64-pc-windows-msvc",
+  "androidTriple": "aarch64-linux-android29",
+  "androidLinkFlags": [
+    "-z",
+    "max-page-size=16384",
+    "-z",
+    "common-page-size=16384"
+  ],
+  "pythonVersion": "3.13.5",
+  "python": {
+    "filename": "python.exe",
+    "bytes": 254800,
+    "sha256": "935016795f3e6908e75acbc2040a01e2e4cdb494a57c42f63a0d6eedb2372256",
+    "sharedRuntimeOutsideCopy": true
+  },
+  "pythonBase": {
+    "filename": "python.exe",
+    "bytes": 105816,
+    "sha256": "5341746f92483a93e44c313de830f2fba2956f0759094404a16b2fed06c9a2ed",
+    "sharedRuntimeOutsideCopy": true
+  },
+  "packages": [
+    {
+      "distribution": "unicorn",
+      "metadataVersion": "2.1.4",
+      "moduleVersion": "2.1.4",
+      "module": {
+        "filename": "__init__.py",
+        "bytes": 305,
+        "sha256": "0e8ac7115c755994a968fa865bd1b2f2075edea715c17e91d62af2cc52c13392",
+        "sharedRuntimeOutsideCopy": true
+      },
+      "nativeLibraries": [
+        {
+          "filename": "unicorn.dll",
+          "bytes": 9598976,
+          "sha256": "010d85dce84b8f6ffaec3d5420f1b5f7768f859eb831be574c7da23e656ee8f1",
+          "sharedRuntimeOutsideCopy": true
+        }
+      ]
+    },
+    {
+      "distribution": "capstone",
+      "metadataVersion": "5.0.9",
+      "moduleVersion": "5.0.7",
+      "module": {
+        "filename": "__init__.py",
+        "bytes": 43853,
+        "sha256": "94571d1314355e261aff0ddfc94985fe8761232ddff6874181fd21efa9fab47f",
+        "sharedRuntimeOutsideCopy": true
+      },
+      "nativeLibraries": [
+        {
+          "filename": "capstone.dll",
+          "bytes": 7576576,
+          "sha256": "76958e18380023a68fd1714fa2e01c594cc6db1955a07ad6937b66e66dc5d6c3",
+          "sharedRuntimeOutsideCopy": true
+        }
+      ]
+    },
+    {
+      "distribution": "pyelftools",
+      "metadataVersion": "0.33",
+      "moduleVersion": "0.33",
+      "module": {
+        "filename": "__init__.py",
+        "bytes": 267,
+        "sha256": "d8a071e9e68576ceab6ed200c5f4718119f7d61ee0fae337a867b095f1d5c5d9",
+        "sharedRuntimeOutsideCopy": true
+      },
+      "nativeLibraries": []
+    }
+  ],
+  "unicornNativeApi": [
+    2,
+    1,
+    33621247
+  ],
+  "packageNativeVersionDifferencesPreserved": true,
+  "all14OwnCUnitsCompileForArmWindowsAndA64": true,
+  "windowsOnlyOwnCUnits": []
+}

@@ -1,0 +1,380 @@
+{
+  "schemaVersion": 1,
+  "versionedCore": "sq_execute031",
+  "frozenPredecessorReady": {
+    "path": "evidence/lanes/squirrel-execute028/ready.json",
+    "sha256": "d31dc398c29e6783fac6522c70ac4186c1e52b5c7d08840aa5004ba4d2af90ac"
+  },
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "entry": 1627740,
+  "abi": {
+    "return": "Bool",
+    "registerArguments": [
+      "vm",
+      "callableObject",
+      "targetWord ignored by mode0",
+      "argumentCount"
+    ],
+    "stackArguments": [
+      "raw stackBaseI32 transported viaS16",
+      "resultObjectPointer",
+      "raw raiseErrorU32",
+      "executionTypeI32"
+    ],
+    "requiresEnabledVFP": true,
+    "calleeSavedD8ToD15Required": true,
+    "fpscrExceptionStatusNotUniversalEquality": true
+  },
+  "firstNewCohort": "ordinary nested script CALL/RETURN, then typed table/array access/mutation and comparisons",
+  "plannedOpcodeWindows": [
+    {
+      "opcode": 7,
+      "handler": 1631280,
+      "privateWindowEnd": 1631556,
+      "privateWindowSha256": "58f0cfb6db3db5f3c6a22c56ccf8e743cb89ec20d531441d6c2e24f9eb6cced3",
+      "windowIsNotFunctionBoundary": true
+    },
+    {
+      "opcode": 8,
+      "handler": 1631280,
+      "privateWindowEnd": 1631556,
+      "privateWindowSha256": "58f0cfb6db3db5f3c6a22c56ccf8e743cb89ec20d531441d6c2e24f9eb6cced3",
+      "windowIsNotFunctionBoundary": true
+    },
+    {
+      "opcode": 9,
+      "handler": 1631556,
+      "privateWindowEnd": 1631692,
+      "privateWindowSha256": "644a7a2a15fed4d44571b6105f86d1d3bfa84d636e0d8e9e58db9aaca80ee981",
+      "windowIsNotFunctionBoundary": true
+    },
+    {
+      "opcode": 11,
+      "handler": 1631724,
+      "privateWindowEnd": 1631840,
+      "privateWindowSha256": "0ddf593fb4f74306c56cb7833c28d3de0916736eb0595b629623230bdaee5dd3",
+      "windowIsNotFunctionBoundary": true
+    },
+    {
+      "opcode": 13,
+      "handler": 1632312,
+      "privateWindowEnd": 1632428,
+      "privateWindowSha256": "e268b0a4bbfe7e2990c01fbe867d74b0deb15682d64b252e4141d67d1a47170a",
+      "windowIsNotFunctionBoundary": true
+    },
+    {
+      "opcode": 14,
+      "handler": 1632428,
+      "privateWindowEnd": 1632540,
+      "privateWindowSha256": "83f77a104640aebc7c5c78fa1ac738ef27f89ff78e0f5004c157fbe95ec9c526",
+      "windowIsNotFunctionBoundary": true
+    },
+    {
+      "opcode": 15,
+      "handler": 1632540,
+      "privateWindowEnd": 1632748,
+      "privateWindowSha256": "c3099a462383c5b6370c07d572a8ecf7137f303ca44cb360275f977dca71fb68",
+      "windowIsNotFunctionBoundary": true
+    },
+    {
+      "opcode": 16,
+      "handler": 1632748,
+      "privateWindowEnd": 1632944,
+      "privateWindowSha256": "4dfb76556181dcd54dc73d7ae1998f4616b332359d55d388a11b09c424416162",
+      "windowIsNotFunctionBoundary": true
+    },
+    {
+      "opcode": 18,
+      "handler": 1633012,
+      "privateWindowEnd": 1633316,
+      "privateWindowSha256": "2886811afeb291a6bb0632752254b77c84cea1dc45c5909b4f98f0499fd974bf",
+      "windowIsNotFunctionBoundary": true
+    },
+    {
+      "opcode": 30,
+      "handler": 1634196,
+      "privateWindowEnd": 1634348,
+      "privateWindowSha256": "2c15cc2f9a8f43353dd886dbf1e4383db0451648e4b0bc893837b968bd956428",
+      "windowIsNotFunctionBoundary": true
+    },
+    {
+      "opcode": 31,
+      "handler": 1634348,
+      "privateWindowEnd": 1634776,
+      "privateWindowSha256": "391cdaaef46d6598ae2a3990cb7a327b6e2fea5ed250c1814b949b4829aca230",
+      "windowIsNotFunctionBoundary": true
+    },
+    {
+      "opcode": 32,
+      "handler": 1634776,
+      "privateWindowEnd": 1635000,
+      "privateWindowSha256": "ebea6de7c0b218501a865f57c724e2586a109706067c01299063bdb6d921dc9b",
+      "windowIsNotFunctionBoundary": true
+    },
+    {
+      "opcode": 40,
+      "handler": 1636528,
+      "privateWindowEnd": 1636708,
+      "privateWindowSha256": "6b2b40ff846ba19784e1a88e26cd509960096e90da1e0f5a93dee07f3acf53ee",
+      "windowIsNotFunctionBoundary": true
+    },
+    {
+      "opcode": 41,
+      "handler": 1636708,
+      "privateWindowEnd": 1636808,
+      "privateWindowSha256": "2fe8ed17464f84489d9c5bb1b373f5625f1911ed46727f0a0eb1021ca7279534",
+      "windowIsNotFunctionBoundary": true
+    },
+    {
+      "opcode": 45,
+      "handler": 1637184,
+      "privateWindowEnd": 1637544,
+      "privateWindowSha256": "9615475bd3d35fe26a85c9f2b080265840a39fc8ed0fb635a4604354dfe7f2ac",
+      "windowIsNotFunctionBoundary": true
+    },
+    {
+      "opcode": 47,
+      "handler": 1637728,
+      "privateWindowEnd": 1637896,
+      "privateWindowSha256": "8bce47908146a872d7fc9a0eb91ed143d88e2727972fbd6a95099309a59d48e6",
+      "windowIsNotFunctionBoundary": true
+    }
+  ],
+  "wholeExecuteCreditGranted": 0,
+  "supportingHelpers": [
+    {
+      "entry": 1523040,
+      "instructionRanges": [
+        {
+          "start": 1523040,
+          "endExclusive": 1523900,
+          "bytes": 860
+        },
+        {
+          "start": 1524116,
+          "endExclusive": 1524124,
+          "bytes": 8
+        }
+      ],
+      "instructionBytes": 868,
+      "directCallees": [
+        1336720,
+        1574068,
+        1627388,
+        1646368,
+        1671136,
+        1671484,
+        1685288,
+        1697892,
+        1711560
+      ],
+      "rangeHashes": [
+        {
+          "start": 1523040,
+          "endExclusive": 1523900,
+          "sha256": "45d9cd0935bed64509fb5a1eb64d5573c7abdf9584190fa72da82f43433fd484"
+        },
+        {
+          "start": 1524116,
+          "endExclusive": 1524124,
+          "sha256": "7ddfab715d82c6b60c60459380a7d1d1290ece14f5ab1a25e4b1244157adb3e1"
+        }
+      ]
+    },
+    {
+      "entry": 1673188,
+      "instructionRanges": [
+        {
+          "start": 1673188,
+          "endExclusive": 1674064,
+          "bytes": 876
+        },
+        {
+          "start": 1674096,
+          "endExclusive": 1674376,
+          "bytes": 280
+        }
+      ],
+      "instructionBytes": 1156,
+      "directCallees": [
+        1627388,
+        1646368,
+        1671484,
+        1673188,
+        1684500,
+        1697892,
+        1711560
+      ],
+      "rangeHashes": [
+        {
+          "start": 1673188,
+          "endExclusive": 1674064,
+          "sha256": "2654f1410d5f4241680c7ea851ad62aca313ae3fb61c9c9099a599eb9fc31108"
+        },
+        {
+          "start": 1674096,
+          "endExclusive": 1674376,
+          "sha256": "65c5985baf91c14e4026e8459253b8320d6e272e5a06b0ed86f21fdac697dffd"
+        }
+      ]
+    },
+    {
+      "entry": 1675588,
+      "instructionRanges": [
+        {
+          "start": 1675588,
+          "endExclusive": 1676472,
+          "bytes": 884
+        }
+      ],
+      "instructionBytes": 884,
+      "directCallees": [
+        1627388,
+        1697892,
+        1707808,
+        3159472
+      ],
+      "rangeHashes": [
+        {
+          "start": 1675588,
+          "endExclusive": 1676472,
+          "sha256": "d3d34154ca429b1648f46e1f0b28b9b64a91de5a84c079d27a0fd3a54cc54f91"
+        }
+      ]
+    },
+    {
+      "entry": 1672568,
+      "instructionRanges": [
+        {
+          "start": 1672568,
+          "endExclusive": 1673180,
+          "bytes": 612
+        }
+      ],
+      "instructionBytes": 612,
+      "directCallees": [
+        1669912,
+        1697892,
+        1711560
+      ],
+      "rangeHashes": [
+        {
+          "start": 1672568,
+          "endExclusive": 1673180,
+          "sha256": "32ae2f3bbb0d926fcb325a9fd2f70ded06f244ce350ff5849aa3afdf805aa7ab"
+        }
+      ]
+    },
+    {
+      "entry": 1684368,
+      "instructionRanges": [
+        {
+          "start": 1684368,
+          "endExclusive": 1684496,
+          "bytes": 128
+        }
+      ],
+      "instructionBytes": 128,
+      "directCallees": [
+        3140840
+      ],
+      "rangeHashes": [
+        {
+          "start": 1684368,
+          "endExclusive": 1684496,
+          "sha256": "949399556a750911540f98bd714cc153e380ddd0a7d65119a8b7376a1be0b3e6"
+        }
+      ]
+    },
+    {
+      "entry": 1685912,
+      "instructionRanges": [
+        {
+          "start": 1685912,
+          "endExclusive": 1686016,
+          "bytes": 104
+        }
+      ],
+      "instructionBytes": 104,
+      "directCallees": [
+        1684368,
+        1697988
+      ],
+      "rangeHashes": [
+        {
+          "start": 1685912,
+          "endExclusive": 1686016,
+          "sha256": "c65a43dbd947a6207bcd529796056d49a3bf2a6817767dc40509621a7bb30387"
+        }
+      ]
+    },
+    {
+      "entry": 1685288,
+      "instructionRanges": [
+        {
+          "start": 1685288,
+          "endExclusive": 1685900,
+          "bytes": 612
+        }
+      ],
+      "instructionBytes": 612,
+      "directCallees": [
+        1336720,
+        1684716,
+        1697892
+      ],
+      "rangeHashes": [
+        {
+          "start": 1685288,
+          "endExclusive": 1685900,
+          "sha256": "4ff6d79b52e4dbde760c8a6ba11fd8fd5d21f57b2780105dd174811597af5ca5"
+        }
+      ]
+    },
+    {
+      "entry": 1684500,
+      "instructionRanges": [
+        {
+          "start": 1684500,
+          "endExclusive": 1684676,
+          "bytes": 176
+        }
+      ],
+      "instructionBytes": 176,
+      "directCallees": [
+        1697892
+      ],
+      "rangeHashes": [
+        {
+          "start": 1684500,
+          "endExclusive": 1684676,
+          "sha256": "41461f4aa071bb6507ca538c8aae70095797a26799fced90529a9689cf6bf8a9"
+        }
+      ]
+    },
+    {
+      "entry": 1711560,
+      "instructionRanges": [
+        {
+          "start": 1711560,
+          "endExclusive": 1711848,
+          "bytes": 288
+        }
+      ],
+      "instructionBytes": 288,
+      "directCallees": [],
+      "rangeHashes": [
+        {
+          "start": 1711560,
+          "endExclusive": 1711848,
+          "sha256": "d5eb57bd45eb9288c14f1aab0c1d326deb6d9e59843a6f8d2fc312b3ffed94ee"
+        }
+      ]
+    }
+  ],
+  "inlineArrayCapacityContinuation": {
+    "start": 1634704,
+    "endExclusive": 1634776,
+    "sha256": "b6963a990a15deb9012ac51fa7a7af876070f1f20f8e734e32539b63939ab4d2"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "name": "execute031",
+  "producerSteps": [
+    {
+      "name": "execute031-execution-and-controls",
+      "args": [
+        "toolscripts/squirrel_execute031.py",
+        "--output",
+        "work/squirrel-execute031/qualified314"
+      ]
+    }
+  ],
+  "tests": [
+    "squirrel_execute031",
+    "isolated_component_replay"
+  ],
+  "packets": [
+    "work/squirrel-execute031/qualified314/report.json"
+  ]
+}

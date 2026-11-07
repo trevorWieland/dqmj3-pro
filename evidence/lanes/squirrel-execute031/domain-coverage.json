@@ -1,0 +1,327 @@
+{
+  "schemaVersion": 1,
+  "entry": 1627740,
+  "mode": "ARM",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "censusSha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+  "instructionRanges": [
+    {
+      "start": 1627740,
+      "endExclusive": 1628348,
+      "bytes": 608
+    },
+    {
+      "start": 1628624,
+      "endExclusive": 1629968,
+      "bytes": 1344
+    },
+    {
+      "start": 1630012,
+      "endExclusive": 1633104,
+      "bytes": 3092
+    },
+    {
+      "start": 1633132,
+      "endExclusive": 1634640,
+      "bytes": 1508
+    },
+    {
+      "start": 1634704,
+      "endExclusive": 1637652,
+      "bytes": 2948
+    },
+    {
+      "start": 1637728,
+      "endExclusive": 1638600,
+      "bytes": 872
+    },
+    {
+      "start": 1638700,
+      "endExclusive": 1639836,
+      "bytes": 1136
+    },
+    {
+      "start": 1639872,
+      "endExclusive": 1641548,
+      "bytes": 1676
+    }
+  ],
+  "originalInstructionBytes": 13184,
+  "originalClassifiedDataBytes": 628,
+  "rootInstructionPCsExercised": 1006,
+  "rootInstructionPCsTotal": 3296,
+  "observedRootInstructionBytes": 4024,
+  "observedOpcodeEntries": [
+    {
+      "opcode": 0,
+      "name": "LINE",
+      "actualHandler": 1628624
+    },
+    {
+      "opcode": 1,
+      "name": "LOAD",
+      "actualHandler": 1628688
+    },
+    {
+      "opcode": 2,
+      "name": "LOADINT",
+      "actualHandler": 1628728
+    },
+    {
+      "opcode": 3,
+      "name": "LOADFLOAT",
+      "actualHandler": 1628808
+    },
+    {
+      "opcode": 4,
+      "name": "DLOAD",
+      "actualHandler": 1628892
+    },
+    {
+      "opcode": 6,
+      "name": "CALL",
+      "actualHandler": 1629036
+    },
+    {
+      "opcode": 7,
+      "name": "PREPCALL",
+      "actualHandler": 1631280
+    },
+    {
+      "opcode": 8,
+      "name": "PREPCALLK",
+      "actualHandler": 1631280
+    },
+    {
+      "opcode": 9,
+      "name": "GETK",
+      "actualHandler": 1631556
+    },
+    {
+      "opcode": 10,
+      "name": "MOVE",
+      "actualHandler": 1631692
+    },
+    {
+      "opcode": 11,
+      "name": "NEWSLOT",
+      "actualHandler": 1631724
+    },
+    {
+      "opcode": 13,
+      "name": "SET",
+      "actualHandler": 1632312
+    },
+    {
+      "opcode": 14,
+      "name": "GET",
+      "actualHandler": 1632428
+    },
+    {
+      "opcode": 15,
+      "name": "EQ",
+      "actualHandler": 1632540
+    },
+    {
+      "opcode": 16,
+      "name": "NE",
+      "actualHandler": 1632748
+    },
+    {
+      "opcode": 17,
+      "name": "ARITH",
+      "actualHandler": 1632944
+    },
+    {
+      "opcode": 18,
+      "name": "BITW",
+      "actualHandler": 1633012
+    },
+    {
+      "opcode": 19,
+      "name": "RETURN",
+      "actualHandler": 1633316
+    },
+    {
+      "opcode": 20,
+      "name": "LOADNULLS",
+      "actualHandler": 1633472
+    },
+    {
+      "opcode": 21,
+      "name": "LOADROOT",
+      "actualHandler": 1633540
+    },
+    {
+      "opcode": 22,
+      "name": "LOADBOOL",
+      "actualHandler": 1633568
+    },
+    {
+      "opcode": 23,
+      "name": "DMOVE",
+      "actualHandler": 1633604
+    },
+    {
+      "opcode": 24,
+      "name": "JUMP",
+      "actualHandler": 1633676
+    },
+    {
+      "opcode": 25,
+      "name": "JNZ",
+      "actualHandler": 1633696
+    },
+    {
+      "opcode": 26,
+      "name": "JZ",
+      "actualHandler": 1633776
+    },
+    {
+      "opcode": 27,
+      "name": "LOADFREE",
+      "actualHandler": 1633876
+    },
+    {
+      "opcode": 28,
+      "name": "VARGC",
+      "actualHandler": 1633900
+    },
+    {
+      "opcode": 30,
+      "name": "NEWTABLE",
+      "actualHandler": 1634196
+    },
+    {
+      "opcode": 31,
+      "name": "NEWARRAY",
+      "actualHandler": 1634348
+    },
+    {
+      "opcode": 32,
+      "name": "APPENDARRAY",
+      "actualHandler": 1634776
+    },
+    {
+      "opcode": 40,
+      "name": "CMP",
+      "actualHandler": 1636528
+    },
+    {
+      "opcode": 41,
+      "name": "EXISTS",
+      "actualHandler": 1636708
+    },
+    {
+      "opcode": 43,
+      "name": "AND",
+      "actualHandler": 1637000
+    },
+    {
+      "opcode": 44,
+      "name": "OR",
+      "actualHandler": 1637080
+    },
+    {
+      "opcode": 45,
+      "name": "NEG",
+      "actualHandler": 1637184
+    },
+    {
+      "opcode": 46,
+      "name": "NOT",
+      "actualHandler": 1637544
+    },
+    {
+      "opcode": 47,
+      "name": "BWNOT",
+      "actualHandler": 1637728
+    }
+  ],
+  "missingOpcodeEntries": [
+    5,
+    12,
+    29,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    42,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60
+  ],
+  "supportingHelperVisits": [
+    {
+      "entry": 1523040,
+      "instructionBytes": 868,
+      "observedInstructionBytes": 136,
+      "newWholeFunctionRecoveryClaimed": false
+    },
+    {
+      "entry": 1673188,
+      "instructionBytes": 1156,
+      "observedInstructionBytes": 184,
+      "newWholeFunctionRecoveryClaimed": false
+    },
+    {
+      "entry": 1675588,
+      "instructionBytes": 884,
+      "observedInstructionBytes": 160,
+      "newWholeFunctionRecoveryClaimed": false
+    },
+    {
+      "entry": 1672568,
+      "instructionBytes": 612,
+      "observedInstructionBytes": 252,
+      "newWholeFunctionRecoveryClaimed": false
+    },
+    {
+      "entry": 1684368,
+      "instructionBytes": 128,
+      "observedInstructionBytes": 128,
+      "newWholeFunctionRecoveryClaimed": false
+    },
+    {
+      "entry": 1685912,
+      "instructionBytes": 104,
+      "observedInstructionBytes": 92,
+      "newWholeFunctionRecoveryClaimed": false
+    },
+    {
+      "entry": 1685288,
+      "instructionBytes": 612,
+      "observedInstructionBytes": 276,
+      "newWholeFunctionRecoveryClaimed": false
+    },
+    {
+      "entry": 1684500,
+      "instructionBytes": 176,
+      "observedInstructionBytes": 140,
+      "newWholeFunctionRecoveryClaimed": false
+    },
+    {
+      "entry": 1711560,
+      "instructionBytes": 288,
+      "observedInstructionBytes": 240,
+      "newWholeFunctionRecoveryClaimed": false
+    }
+  ],
+  "observedBytesAreNotSourceCredit": true,
+  "wholeExecuteComplete": false,
+  "newWholeHelperRecoveryClaimed": false,
+  "acceptedSourceCreditGranted": 0
+}
