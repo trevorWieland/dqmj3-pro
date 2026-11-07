@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "compilerProfiles": [
+    {
+      "flags": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O1",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-c",
+        "work/wave010-native/control_probe.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\control-O1.o"
+      ],
+      "size": 120,
+      "exact": false,
+      "matchingBytes": 12,
+      "role": "private control-prefix prototype before full-source graph and defined-index guard"
+    },
+    {
+      "flags": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-c",
+        "work/wave010-native/control_probe.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\control-O2.o"
+      ],
+      "size": 96,
+      "exact": false,
+      "matchingBytes": 25,
+      "role": "private control-prefix prototype before full-source graph and defined-index guard"
+    },
+    {
+      "flags": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-Os",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-c",
+        "work/wave010-native/control_probe.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\control-Os.o"
+      ],
+      "size": 92,
+      "exact": false,
+      "matchingBytes": 26,
+      "role": "private control-prefix prototype before full-source graph and defined-index guard"
+    },
+    {
+      "flags": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-Oz",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-c",
+        "work/wave010-native/control_probe.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave010-native\\control-Oz.o"
+      ],
+      "size": 80,
+      "exact": false,
+      "matchingBytes": 18,
+      "role": "private control-prefix prototype before full-source graph and defined-index guard"
+    }
+  ],
+  "preservedValidationFailure": {
+    "status": "failed-and-corrected",
+    "stage": "initial-source-probe-helper-oracle",
+    "diagnostic": "Closed control helper unexpectedly changed LR",
+    "cause": "The source returned to the sentinel while clobbering caller-saved LR; the initial oracle incorrectly treated LR as callee-saved.",
+    "correction": "Require correct return PC/interworking, preserved r4-r11 and SP, and constrained writes; record LR without treating it as callee-saved."
+  },
+  "initialProvisionalDependency": {
+    "role": "retained-original-zero-credit",
+    "address": 7865720,
+    "bytes": 108,
+    "replacedInFinalValidation": "Ordinary C wave009-v2 source object with genuine named linker relocation"
+  },
+  "matchingSourceCreditGranted": 0,
+  "unusedLinkPrefixReview": {
+    "status": "tightened-before-freeze",
+    "observed": "Only the outer link next word is accessed by the recovered pair.",
+    "action": "Keep unused outer link prefix as unknown_00 u32 rather than guessing a previous-pointer role; native padding stores no pointer.",
+    "noSourceCreditChange": true
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "programId": "0004000e001acb00",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "sourceFrozenBaseline": {
+    "path": "src/native/wave009/interval_set.h",
+    "sha256": "e8d21135aa6aed100052c35aff49074d1b681b9c75b8b16176662bffa016a4f8",
+    "bytes": 580,
+    "sourceRevision": "fac2f01381fea91ea25d025f316a640e437dd76d"
+  },
+  "proposal": {
+    "member": "IntervalSet.unknown_00",
+    "newName": "destination",
+    "newType": "void *",
+    "ARMOffset": 0,
+    "ARMWidth": 4,
+    "host64Width": 8,
+    "IntervalNodeUnknownWordUnchanged": true
+  },
+  "evidence": [
+    {
+      "caller": 4975920,
+      "argumentFormation": 4976200,
+      "membershipCall": 4976208,
+      "callee": 7865720,
+      "destinationLoad": 4976224,
+      "cursorStateStore": 4976232,
+      "observation": "edge+8 is passed as IntervalSet; its first word is then loaded and stored as current state",
+      "spanStart": 4976200,
+      "spanEndExclusive": 4976236,
+      "sha256": "1cc896ccf560b89a2898c7fad70fddb99ed54636380c935c00832af6ecef335a"
+    },
+    {
+      "caller": 4975836,
+      "destinationLoad": 4975888,
+      "cursorStateStore": 4975892,
+      "observation": "matching control transition loads edge+8 into current-state register and stores cursor, then derives the new state transition sentinel",
+      "spanStart": 4975840,
+      "spanEndExclusive": 4975900,
+      "sha256": "77b9e92606092f37331ed68bfab81f892b9115fbc180a902b7f0a9c84fa8802e"
+    }
+  ],
+  "baselineARMCompiledSpans": [
+    {
+      "address": 7865720,
+      "bytes": 104,
+      "sha256": "94ce9dcdd8f462447eb8e48b7e8164150f3efb2daae27ea03a6c3b6680b6912d"
+    },
+    {
+      "address": 7865828,
+      "bytes": 104,
+      "sha256": "94ce9dcdd8f462447eb8e48b7e8164150f3efb2daae27ea03a6c3b6680b6912d"
+    }
+  ],
+  "status": "implemented-and-validated-in-coordinator-reviewed-wave009-v2",
+  "sourceCreditGranted": 0,
+  "wave009Modified": true,
+  "pointerPromotionValidation": {
+    "path": "evidence/lanes/wave009-native/pointer-promotion.json",
+    "sha256": "ffbb3c374dc3c1f6ef0392777c7e62bb1578aae039edfc9dddad5f519bf6ff02",
+    "bytes": 1977
+  }
+}

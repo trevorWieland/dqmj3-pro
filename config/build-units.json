@@ -11,7 +11,8 @@
       "wave006",
       "wave007",
       "wave008",
-      "wave009"
+      "wave009",
+      "wave010"
     ]
   },
   "units": [
@@ -172,6 +173,14 @@
     {
       "source": "src/native/wave009/interval_set.c",
       "headers": [
+        "src/native/wave009/interval_set.h"
+      ],
+      "role": "functional-nonmatching"
+    },
+    {
+      "source": "src/native/wave010/match_state.c",
+      "headers": [
+        "src/native/wave010/match_state.h",
         "src/native/wave009/interval_set.h"
       ],
       "role": "functional-nonmatching"
