@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "status": "physical-AYN-Thor-source-startup-and-VM-composition-validated-within-frozen-corpus",
+  "platform": {
+    "model": "AYN Thor",
+    "androidApi": 33,
+    "abi": "arm64-v8a",
+    "nativeBridge": "0",
+    "kernelPageBytes": 4096
+  },
+  "apkSha256": "bc9dde016589c09fd05178ccfb17c7e793426e64fe8237f0245e0f508b3a72a2",
+  "libraries": [
+    {
+      "name": "libcompose057.so",
+      "sha256": "f904557e2f91ccac65790eb79d388b389c36da23dcc7826490016e4c1ed78c5d",
+      "loadAlignments": [
+        16384,
+        16384,
+        16384,
+        16384
+      ],
+      "needed": []
+    },
+    {
+      "name": "libdqm_vmprobe057.so",
+      "sha256": "3a2c29612f9f14c5fc64ceae01a995bfab3dce0ffd846358ecd70772439776a8",
+      "loadAlignments": [
+        16384,
+        16384,
+        16384,
+        16384
+      ],
+      "needed": [
+        "libcompose057.so"
+      ]
+    }
+  ],
+  "frozenReadySha256": "100e76a398fa1eb68ca2d0325121423a93bbf16ff5df9930d50e2dd10743f035",
+  "frozenManifestSha256": "208387f241ae2eed9fa94863cf29c277589c2d1095c70fed05cfd268b33e64d4",
+  "all983SealedIdentitiesRecheckedAfterHardwareRun": true,
+  "coldCorpusCases": 14,
+  "coldProcessStarts": 15,
+  "sameVmSequenceSteps": 7,
+  "nativeProgramExecutions": 21,
+  "coldSourceTypedGraphsEqualFrozenWindows": 15,
+  "postSourceTypedGraphsEqualFrozenWindows": 21,
+  "all68OpaqueSharedPrefixBytesPreserved": true,
+  "genuineRecoveredFactoryAndStartupUsed": true,
+  "fixtureVmSharedProvisioningUsed": false,
+  "syntheticProgramInputs": true,
+  "fullOriginalPostGraphEqualityClaimed": false,
+  "inactiveFrameResidualsRetained": true,
+  "hardwareInstructionReadTracingClaimed": false,
+  "arbitraryCallbacksAllocationFailureVmDestructionOrFullInterpreterQualified": false,
+  "sourceOnlyGameBuild": false,
+  "wholeMemoryEquivalenceClaimed": false,
+  "physical16KiBKernelTested": false,
+  "elfAndApk16KiBAlignmentChecked": true,
+  "sourceCreditGranted": 0,
+  "rawCapturedRegionsRemainPrivate": true
+}

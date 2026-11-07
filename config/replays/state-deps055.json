@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "name": "state-deps055",
+  "producerSteps": [
+    {
+      "name": "state-deps055-complete-helpers-and-pointer-packet",
+      "args": [
+        "toolscripts/native_state_deps055_packet.py"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "isolated_component_replay",
+    "isolated_intake_cleanup",
+    "refresh_functional_source_names",
+    "refresh_functional_source_names_integration",
+    "compile_source_include_dirs",
+    "native_state_deps055_helpers",
+    "native_state_deps055_resource"
+  ],
+  "packets": [
+    "evidence/lanes/native-state055/controller-deps-public-v1/ready.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

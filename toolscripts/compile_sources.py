@@ -10,6 +10,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import bootstrap_public_compiler as public_compiler
 import public_zlib_headers
+import public_source_headers
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,6 +50,7 @@ def read_config(root):
         raise RuntimeError("Source census differs from explicit build units: " + str(sorted(actual ^ (set(active) | set(excluded)))))
     for unit in data["units"]:
         path = public_compiler.contained(root, unit["source"])
+        include_directories = public_source_headers.directories(root, unit, allowed)
         if unit.get("layoutProfile", "natural") not in ("natural", "packed-4"):
             raise RuntimeError("Unknown reviewed layout profile")
         supported = unit.get("targets", list(TARGETS))
@@ -77,9 +79,7 @@ def read_config(root):
                     raise RuntimeError("Only explicit literal quoted header inputs are supported")
                 includes.append(literal[1])
             for name in includes:
-                header = (item.parent / name).resolve()
-                if not any(header.is_relative_to(folder) for folder in allowed):
-                    raise RuntimeError("Source dependency escapes reviewed source trees")
+                header = public_source_headers.resolve(item, name, include_directories, allowed)
                 key = header.relative_to(root.resolve()).as_posix()
                 if key not in dependencies:
                     dependencies.add(key)
@@ -153,6 +153,8 @@ def run_unit(root, unit, target, output):
         argv.append("-fpack-struct=4")
     if unit.get("allowedUnusedParameters"):
         argv.append("-Wno-error=unused-parameter")
+    for directory in unit.get("includeDirectories", []):
+        argv += ["-I", directory]
     argv += ["-c", unit["source"], "-o", object_path.relative_to(root).as_posix()]
     row = {"source": unit["source"], "role": unit["role"], "target": target, "argv": argv,
            "inputs": [{"path": item, "sha256": public_compiler.digest(public_compiler.contained(root, item))} for item in [unit["source"], *unit["headers"]]],
@@ -189,7 +191,7 @@ def compile_all(root, targets, output):
     return {"schemaVersion": 1, "status": "compiled" if all(row["status"] == "compiled" for row in rows) else "failed",
             "purpose": "source-only target compilation; no linking, original comparison or game execution",
             "originalInputsRead": False, "sourceCredit": 0, "config": {"path": CONFIG, "sha256": public_compiler.digest(root / CONFIG)},
-            "producers": [{"path": item, "sha256": public_compiler.digest(root / item)} for item in ["toolscripts/compile_sources.py", "toolscripts/bootstrap_public_compiler.py", "toolscripts/public_zlib_headers.py"]],
+            "producers": [{"path": item, "sha256": public_compiler.digest(root / item)} for item in ["toolscripts/compile_sources.py", "toolscripts/bootstrap_public_compiler.py", "toolscripts/public_zlib_headers.py", "toolscripts/public_source_headers.py"]],
             "compiler": compiler, "toolVersions": versions, "targets": {target: TARGETS[target] for target in targets},
             "unitCount": len(config["units"]), "componentRoots": config.get("componentRoots", []),
             "platformSpecificUnits": [{"source": unit["source"], "targets": unit["targets"]}

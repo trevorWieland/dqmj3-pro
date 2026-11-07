@@ -75,3 +75,6 @@
 #define fn_0015e218 address_first_length055
 #define fn_0017ca70 address_second_base055
 #define fn_0017ca60 address_second_length055
+#define fn_006f9544 state_reserve055
+#define fn_00166900 state_write_fixed055
+#define fn_007292d0 state_resource_lookup055

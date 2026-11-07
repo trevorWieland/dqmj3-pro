@@ -26,7 +26,8 @@
       "wave054",
       "wave053",
       "wave056",
-      "wave055"
+      "wave055",
+      "wave058"
     ]
   },
   "units": [
@@ -8558,6 +8559,89 @@
       "source": "src/native/wave055/address055.c",
       "headers": [
         "src/native/wave055/address055.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave058/fixed_gzip058.c",
+      "headers": [
+        "src/native/wave054/crc.h",
+        "src/native/wave056/stream056.h",
+        "src/native/wave058/stream058.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave056",
+        "src/native/wave054"
+      ],
+      "role": "qualification-fixture"
+    },
+    {
+      "source": "src/native/wave058/fixture058.c",
+      "headers": [
+        "src/native/wave056/stream056.h",
+        "src/native/wave058/fixture058.h",
+        "src/native/wave058/stream058.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave056",
+        "src/native/wave054"
+      ],
+      "role": "qualification-fixture"
+    },
+    {
+      "source": "src/native/wave058/initialize058.c",
+      "headers": [
+        "src/native/wave056/stream056.h",
+        "src/native/wave058/stream058.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave056",
+        "src/native/wave054"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave058/kernel_bridge058.c",
+      "headers": [
+        "src/native/wave056/stream056.h",
+        "src/native/wave058/stream058.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave056",
+        "src/native/wave054"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave055/controller-deps-v1/fixture055.c",
+      "headers": [
+        "src/native/wave055/controller-deps-v1/resource055.h",
+        "src/native/wave055/state055.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave055"
+      ],
+      "role": "qualification-fixture"
+    },
+    {
+      "source": "src/native/wave055/controller-deps-v1/helpers055.c",
+      "headers": [
+        "src/native/wave055/controller-deps-v1/helpers055.h",
+        "src/native/wave055/state055.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave055"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave055/controller-deps-v1/resource055.c",
+      "headers": [
+        "src/native/wave055/controller-deps-v1/resource055.h",
+        "src/native/wave055/state055.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave055"
       ],
       "role": "bounded-component"
     }

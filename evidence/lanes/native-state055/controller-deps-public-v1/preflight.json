@@ -1,0 +1,403 @@
+{
+  "schemaVersion": 1,
+  "status": "new-public-C-independent-compiler-preflight",
+  "compilations": 9,
+  "rows": [
+    {
+      "source": {
+        "path": "src/native/wave055/controller-deps-v1/helpers055.c",
+        "bytes": 1738,
+        "sha256": "74e1933365fd1d8a7ba9a5c9e0ec24609812694903d14e5494f39011ef2b0d2f"
+      },
+      "profile": "arm",
+      "compiler": {
+        "path": "tools/clang-21/clang.exe",
+        "bytes": 99559064,
+        "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+      },
+      "command": {
+        "argv": [
+          "<repo>\\tools\\clang-21\\clang.exe",
+          "--target=arm-none-eabi",
+          "-mcpu=mpcore",
+          "-marm",
+          "-mfpu=vfp",
+          "-mfloat-abi=softfp",
+          "-std=c11",
+          "-O2",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-ffp-contract=off",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-I",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1",
+          "-I",
+          "<repo>\\src\\native\\wave055",
+          "-c",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1\\helpers055.c",
+          "-o",
+          "<repo>\\work\\native-state055-deps-public\\v1\\preflight\\arm-helpers055.c.o"
+        ],
+        "returncode": 0
+      },
+      "object": {
+        "path": "work/native-state055-deps-public/v1/preflight/arm-helpers055.c.o",
+        "bytes": 1624,
+        "sha256": "2eee97451990b2764a18453a83699083426d366f0349d2fb0e644dd6bed4e433"
+      }
+    },
+    {
+      "source": {
+        "path": "src/native/wave055/controller-deps-v1/helpers055.c",
+        "bytes": 1738,
+        "sha256": "74e1933365fd1d8a7ba9a5c9e0ec24609812694903d14e5494f39011ef2b0d2f"
+      },
+      "profile": "windows",
+      "compiler": {
+        "path": "tools/clang-21/clang.exe",
+        "bytes": 99559064,
+        "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+      },
+      "command": {
+        "argv": [
+          "<repo>\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-ffp-contract=off",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-I",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1",
+          "-I",
+          "<repo>\\src\\native\\wave055",
+          "-c",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1\\helpers055.c",
+          "-o",
+          "<repo>\\work\\native-state055-deps-public\\v1\\preflight\\windows-helpers055.c.o"
+        ],
+        "returncode": 0
+      },
+      "object": {
+        "path": "work/native-state055-deps-public/v1/preflight/windows-helpers055.c.o",
+        "bytes": 1444,
+        "sha256": "23a22d813b08b1d6ed55c84d3fd7fd429e3118f99f04fa8a01ce712595260c1e"
+      }
+    },
+    {
+      "source": {
+        "path": "src/native/wave055/controller-deps-v1/helpers055.c",
+        "bytes": 1738,
+        "sha256": "74e1933365fd1d8a7ba9a5c9e0ec24609812694903d14e5494f39011ef2b0d2f"
+      },
+      "profile": "a64",
+      "compiler": {
+        "path": "tools/clang-21/clang.exe",
+        "bytes": 99559064,
+        "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+      },
+      "command": {
+        "argv": [
+          "<repo>\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android21",
+          "-march=armv8-a",
+          "-mno-outline-atomics",
+          "-std=c11",
+          "-O2",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-ffp-contract=off",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-I",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1",
+          "-I",
+          "<repo>\\src\\native\\wave055",
+          "-c",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1\\helpers055.c",
+          "-o",
+          "<repo>\\work\\native-state055-deps-public\\v1\\preflight\\a64-helpers055.c.o"
+        ],
+        "returncode": 0
+      },
+      "object": {
+        "path": "work/native-state055-deps-public/v1/preflight/a64-helpers055.c.o",
+        "bytes": 1864,
+        "sha256": "99ed0a08199e0a9df984db6e639ca94926ab70362b67d5ee45bae8fb8f0d91a5"
+      }
+    },
+    {
+      "source": {
+        "path": "src/native/wave055/controller-deps-v1/resource055.c",
+        "bytes": 298,
+        "sha256": "a14f021e593faa43a11b0027c076ec926854aaed19bb1a628192a486a8deac17"
+      },
+      "profile": "arm",
+      "compiler": {
+        "path": "tools/clang-21/clang.exe",
+        "bytes": 99559064,
+        "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+      },
+      "command": {
+        "argv": [
+          "<repo>\\tools\\clang-21\\clang.exe",
+          "--target=arm-none-eabi",
+          "-mcpu=mpcore",
+          "-marm",
+          "-mfpu=vfp",
+          "-mfloat-abi=softfp",
+          "-std=c11",
+          "-O2",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-ffp-contract=off",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-I",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1",
+          "-I",
+          "<repo>\\src\\native\\wave055",
+          "-c",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1\\resource055.c",
+          "-o",
+          "<repo>\\work\\native-state055-deps-public\\v1\\preflight\\arm-resource055.c.o"
+        ],
+        "returncode": 0
+      },
+      "object": {
+        "path": "work/native-state055-deps-public/v1/preflight/arm-resource055.c.o",
+        "bytes": 1112,
+        "sha256": "28bda265ce6aa3d097fbcf6ca76516714ff115ab255bc664d606cd8c1ee01afc"
+      }
+    },
+    {
+      "source": {
+        "path": "src/native/wave055/controller-deps-v1/resource055.c",
+        "bytes": 298,
+        "sha256": "a14f021e593faa43a11b0027c076ec926854aaed19bb1a628192a486a8deac17"
+      },
+      "profile": "windows",
+      "compiler": {
+        "path": "tools/clang-21/clang.exe",
+        "bytes": 99559064,
+        "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+      },
+      "command": {
+        "argv": [
+          "<repo>\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-ffp-contract=off",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-I",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1",
+          "-I",
+          "<repo>\\src\\native\\wave055",
+          "-c",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1\\resource055.c",
+          "-o",
+          "<repo>\\work\\native-state055-deps-public\\v1\\preflight\\windows-resource055.c.o"
+        ],
+        "returncode": 0
+      },
+      "object": {
+        "path": "work/native-state055-deps-public/v1/preflight/windows-resource055.c.o",
+        "bytes": 671,
+        "sha256": "c2d380fb9c004af1c3fb4b28ce801f1b139c5e5896aa6d37627cb2c48cd14cf8"
+      }
+    },
+    {
+      "source": {
+        "path": "src/native/wave055/controller-deps-v1/resource055.c",
+        "bytes": 298,
+        "sha256": "a14f021e593faa43a11b0027c076ec926854aaed19bb1a628192a486a8deac17"
+      },
+      "profile": "a64",
+      "compiler": {
+        "path": "tools/clang-21/clang.exe",
+        "bytes": 99559064,
+        "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+      },
+      "command": {
+        "argv": [
+          "<repo>\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android21",
+          "-march=armv8-a",
+          "-mno-outline-atomics",
+          "-std=c11",
+          "-O2",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-ffp-contract=off",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-I",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1",
+          "-I",
+          "<repo>\\src\\native\\wave055",
+          "-c",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1\\resource055.c",
+          "-o",
+          "<repo>\\work\\native-state055-deps-public\\v1\\preflight\\a64-resource055.c.o"
+        ],
+        "returncode": 0
+      },
+      "object": {
+        "path": "work/native-state055-deps-public/v1/preflight/a64-resource055.c.o",
+        "bytes": 1128,
+        "sha256": "90219a5737730acd83509f60115642a62133c9d8d88b9ce84f1ec8fc96dc2031"
+      }
+    },
+    {
+      "source": {
+        "path": "src/native/wave055/controller-deps-v1/fixture055.c",
+        "bytes": 1447,
+        "sha256": "008c03c5c4170a888f5d429e4514dc607629f68ef2b3d44e4125500a1d06f18b"
+      },
+      "profile": "arm",
+      "compiler": {
+        "path": "tools/clang-21/clang.exe",
+        "bytes": 99559064,
+        "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+      },
+      "command": {
+        "argv": [
+          "<repo>\\tools\\clang-21\\clang.exe",
+          "--target=arm-none-eabi",
+          "-mcpu=mpcore",
+          "-marm",
+          "-mfpu=vfp",
+          "-mfloat-abi=softfp",
+          "-std=c11",
+          "-O2",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-ffp-contract=off",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-I",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1",
+          "-I",
+          "<repo>\\src\\native\\wave055",
+          "-c",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1\\fixture055.c",
+          "-o",
+          "<repo>\\work\\native-state055-deps-public\\v1\\preflight\\arm-fixture055.c.o"
+        ],
+        "returncode": 0
+      },
+      "object": {
+        "path": "work/native-state055-deps-public/v1/preflight/arm-fixture055.c.o",
+        "bytes": 1436,
+        "sha256": "341b9cb33025d743eb861ab1c90889ee78f1b6e52080cd2309fd148cfdec6852"
+      }
+    },
+    {
+      "source": {
+        "path": "src/native/wave055/controller-deps-v1/fixture055.c",
+        "bytes": 1447,
+        "sha256": "008c03c5c4170a888f5d429e4514dc607629f68ef2b3d44e4125500a1d06f18b"
+      },
+      "profile": "windows",
+      "compiler": {
+        "path": "tools/clang-21/clang.exe",
+        "bytes": 99559064,
+        "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+      },
+      "command": {
+        "argv": [
+          "<repo>\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-ffp-contract=off",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-I",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1",
+          "-I",
+          "<repo>\\src\\native\\wave055",
+          "-c",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1\\fixture055.c",
+          "-o",
+          "<repo>\\work\\native-state055-deps-public\\v1\\preflight\\windows-fixture055.c.o"
+        ],
+        "returncode": 0
+      },
+      "object": {
+        "path": "work/native-state055-deps-public/v1/preflight/windows-fixture055.c.o",
+        "bytes": 1124,
+        "sha256": "c82b53ca1d59b7dcf581efce2d587026914bf5dca3f4e2486787cfec6b035499"
+      }
+    },
+    {
+      "source": {
+        "path": "src/native/wave055/controller-deps-v1/fixture055.c",
+        "bytes": 1447,
+        "sha256": "008c03c5c4170a888f5d429e4514dc607629f68ef2b3d44e4125500a1d06f18b"
+      },
+      "profile": "a64",
+      "compiler": {
+        "path": "tools/clang-21/clang.exe",
+        "bytes": 99559064,
+        "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+      },
+      "command": {
+        "argv": [
+          "<repo>\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android21",
+          "-march=armv8-a",
+          "-mno-outline-atomics",
+          "-std=c11",
+          "-O2",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-ffp-contract=off",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-I",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1",
+          "-I",
+          "<repo>\\src\\native\\wave055",
+          "-c",
+          "<repo>\\src\\native\\wave055\\controller-deps-v1\\fixture055.c",
+          "-o",
+          "<repo>\\work\\native-state055-deps-public\\v1\\preflight\\a64-fixture055.c.o"
+        ],
+        "returncode": 0
+      },
+      "object": {
+        "path": "work/native-state055-deps-public/v1/preflight/a64-fixture055.c.o",
+        "bytes": 1520,
+        "sha256": "8bc7472594942a915b14dc87e11b288e3a9e941a1b885ab187f7c6be87ecf75b"
+      }
+    }
+  ],
+  "privateOriginalInputRequired": false,
+  "originalProgramExecuted": false,
+  "windowsOnlyNewProductionC": false,
+  "sourceCreditGranted": 0,
+  "producer": {
+    "path": "toolscripts/native_state_deps055_preflight.py",
+    "bytes": 1626,
+    "sha256": "f62f4aa89e49081d3b63682c87ea35ce7e062a6ef51e989ff7475e8d5ce7e982"
+  }
+}

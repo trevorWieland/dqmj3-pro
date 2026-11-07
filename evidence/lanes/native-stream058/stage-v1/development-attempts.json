@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "attempts": [
+    {
+      "id": "build-driver-lexical-spacing",
+      "status": "instrumentation-failed",
+      "reason": "Initial Python conditional omitted whitespace before a hexadecimal literal; corrected before compilation."
+    },
+    {
+      "id": "automatic-kernel-view-stack",
+      "status": "windows-link-rejected",
+      "reason": "A local7KiB frozen056 view required __chkstk in the freestanding Windows DLL.",
+      "resolution": "Expose a caller-owned typed StreamState056 scratch parameter; no fake stack-probe implementation, no056 change."
+    },
+    {
+      "id": "first-source-only-gzip-route",
+      "status": "passed",
+      "payloadBytes": 5600,
+      "inputBytes": 77,
+      "profiles": 4,
+      "originalEntryMode": 20
+    },
+    {
+      "id": "source-trace-observation-schema",
+      "status": "report-schema-adjusted",
+      "reason": "Windows has no CPU instruction hook; compare public observations on allfour profiles and genuine kernel-entry traces on originalARM/sourceARM/A64 only. No semantic fields omitted from acceptance."
+    },
+    {
+      "id": "null-default-dispose-service",
+      "status": "fixture-contract-tightened-before-direct-control",
+      "reason": "The native platform free service now treats NULL as a no-op, matching real original143b48 and ordinary free semantics; canonical source unchanged."
+    },
+    {
+      "id": "readme-default-locale",
+      "status": "instrumentation-read-rejected",
+      "reason": "The local default text-open encoding is CP932; reading a UTF8 documentation minus sign without an explicit encoding failed before any write.",
+      "resolution": "Read and write documentation explicitly as UTF8; product/source proof unchanged."
+    }
+  ],
+  "originalEndpointsPatched": false,
+  "sourceCreditGranted": 0
+}

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "name": "stream058",
+  "producerSteps": [
+    {
+      "name": "prepare-stream058-work",
+      "args": [
+        "-c",
+        "from pathlib import Path; Path('work/native-stream058/public-stage-v1').mkdir(parents=True,exist_ok=True)"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "measure-stream058",
+      "args": [
+        "toolscripts/native_stream058_measure.py"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "prove-stream058-domain",
+      "args": [
+        "toolscripts/native_stream058_proof.py"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "stream058-positive-corpus",
+      "args": [
+        "toolscripts/native_stream058_verify.py",
+        "--output",
+        "work/native-stream058/public-stage-v1/root-positive"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "stream058-returning-controls",
+      "args": [
+        "toolscripts/native_stream058_controls.py",
+        "--output",
+        "work/native-stream058/public-stage-v1/root-controls"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "isolated_component_replay",
+    "isolated_intake_cleanup",
+    "refresh_functional_source_names",
+    "refresh_functional_source_names_integration",
+    "compile_source_include_dirs",
+    "native_stream058"
+  ],
+  "packets": [
+    "work/native-stream058/public-stage-v1/root-positive/report.json",
+    "work/native-stream058/public-stage-v1/root-positive/input-guard.json",
+    "work/native-stream058/public-stage-v1/root-controls/report.json",
+    "work/native-stream058/public-stage-v1/root-controls/input-guard.json",
+    "work/native-stream058/public-stage-v1/claim.json",
+    "work/native-stream058/public-stage-v1/static-proof.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

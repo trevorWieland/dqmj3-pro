@@ -1,0 +1,433 @@
+{
+  "schemaVersion": 1,
+  "normallyReturningControls": 5,
+  "platformExecutions": 15,
+  "cases": [
+    {
+      "label": "reserve-odd-budget-rounded-down",
+      "input": {
+        "kind": "reserve",
+        "label": "reserve-3-5",
+        "count": 3,
+        "base": 4275878552,
+        "output": 33570816,
+        "source": 0,
+        "limit": 33570836
+      },
+      "source": {
+        "path": "work/native-state055-deps-public/v1/writers/controls/reserve-odd-budget-rounded-down/helpers055.c",
+        "bytes": 1793,
+        "sha256": "9be7f1eb87990fe5cbca164ef5db2276814e4aec6c4ff3d4b37493af866d5409"
+      },
+      "build": {
+        "path": "work/native-state055-deps-public/v1/writers/controls/reserve-odd-budget-rounded-down/build.json",
+        "bytes": 12160,
+        "sha256": "7bafe9d69207f7c8c35c0dd0f18716e7c8bc3e6fe52225a59d2532b821a6433c"
+      },
+      "authoredArm": {
+        "returned": 33570832,
+        "returnKind": "word",
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualReturnObservationExpected": false,
+        "actualPairExpected": false,
+        "actualWholePlatformArenaExpected": false,
+        "fullPlatformDataArenaSha256": "dad4624043caa15c147d47d98bbf5f6b407aad266bccffd16f27fad4046df624",
+        "actualArenaAddress": 33554432,
+        "pairOffsets": [
+          16400,
+          16404
+        ],
+        "targetAndNativeLookupArenaBytesClaimedEqual": true,
+        "nativePointersTruncated": false,
+        "actualDeclaredPairAddress": 9172880,
+        "savedIntegerVfpSpPreserved": true,
+        "declaredPointerBytes": 4
+      },
+      "actualWindows": {
+        "returned": 4831854608,
+        "returnKind": "word",
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualReturnObservationExpected": false,
+        "actualPairExpected": false,
+        "actualWholePlatformArenaExpected": false,
+        "fullPlatformDataArenaSha256": "dad4624043caa15c147d47d98bbf5f6b407aad266bccffd16f27fad4046df624",
+        "actualArenaAddress": 4831838208,
+        "pairOffsets": [
+          16400,
+          16404
+        ],
+        "targetAndNativeLookupArenaBytesClaimedEqual": true,
+        "nativePointersTruncated": false,
+        "actualDeclaredPairAddress": 140734061686792,
+        "actualWindows": true,
+        "declaredPointerBytes": 8,
+        "actualLibraryLoadBase": 140734061674496,
+        "actualDeclaredPairRva": 12296
+      },
+      "highAarch64": {
+        "returned": 4563419152,
+        "returnKind": "word",
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualReturnObservationExpected": false,
+        "actualPairExpected": false,
+        "actualWholePlatformArenaExpected": false,
+        "fullPlatformDataArenaSha256": "dad4624043caa15c147d47d98bbf5f6b407aad266bccffd16f27fad4046df624",
+        "actualArenaAddress": 4563402752,
+        "pairOffsets": [
+          16400,
+          16404
+        ],
+        "targetAndNativeLookupArenaBytesClaimedEqual": true,
+        "nativePointersTruncated": false,
+        "actualDeclaredPairAddress": 9172880,
+        "savedIntegerVfpSpPreserved": true,
+        "declaredPointerBytes": 8
+      },
+      "allReturnedNormally": true,
+      "allRejected": true
+    },
+    {
+      "label": "reserved-holes-zeroed",
+      "input": {
+        "kind": "reserve",
+        "label": "reserve-4-7",
+        "count": 4,
+        "base": 4275878552,
+        "output": 33570816,
+        "source": 0,
+        "limit": 33570844
+      },
+      "source": {
+        "path": "work/native-state055-deps-public/v1/writers/controls/reserved-holes-zeroed/helpers055.c",
+        "bytes": 1882,
+        "sha256": "1e66c9c68bb7331efa5a763d01202c5da43b3cec82d1f921ca89c68bd26c3103"
+      },
+      "build": {
+        "path": "work/native-state055-deps-public/v1/writers/controls/reserved-holes-zeroed/build.json",
+        "bytes": 11920,
+        "sha256": "ae40cb31d18928ee8a52cf381daf0a2ead169859adb93ed510d2aa1e4030d978"
+      },
+      "authoredArm": {
+        "returned": 33570840,
+        "returnKind": "cursor-pointer",
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualReturnObservationExpected": true,
+        "actualPairExpected": true,
+        "actualWholePlatformArenaExpected": false,
+        "fullPlatformDataArenaSha256": "cc51413868c7f79ff6f3a2515c0ac4c914f39abc462679d88f5970f18963f1a2",
+        "actualArenaAddress": 33554432,
+        "pairOffsets": [
+          16408,
+          16412
+        ],
+        "targetAndNativeLookupArenaBytesClaimedEqual": true,
+        "nativePointersTruncated": false,
+        "actualDeclaredPairAddress": 9172880,
+        "savedIntegerVfpSpPreserved": true,
+        "declaredPointerBytes": 4
+      },
+      "actualWindows": {
+        "returned": 4831854616,
+        "returnKind": "cursor-pointer",
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualReturnObservationExpected": true,
+        "actualPairExpected": true,
+        "actualWholePlatformArenaExpected": false,
+        "fullPlatformDataArenaSha256": "cc51413868c7f79ff6f3a2515c0ac4c914f39abc462679d88f5970f18963f1a2",
+        "actualArenaAddress": 4831838208,
+        "pairOffsets": [
+          16408,
+          16412
+        ],
+        "targetAndNativeLookupArenaBytesClaimedEqual": true,
+        "nativePointersTruncated": false,
+        "actualDeclaredPairAddress": 140734061228040,
+        "actualWindows": true,
+        "declaredPointerBytes": 8,
+        "actualLibraryLoadBase": 140734061215744,
+        "actualDeclaredPairRva": 12296
+      },
+      "highAarch64": {
+        "returned": 4563419160,
+        "returnKind": "cursor-pointer",
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualReturnObservationExpected": true,
+        "actualPairExpected": true,
+        "actualWholePlatformArenaExpected": false,
+        "fullPlatformDataArenaSha256": "cc51413868c7f79ff6f3a2515c0ac4c914f39abc462679d88f5970f18963f1a2",
+        "actualArenaAddress": 4563402752,
+        "pairOffsets": [
+          16408,
+          16412
+        ],
+        "targetAndNativeLookupArenaBytesClaimedEqual": true,
+        "nativePointersTruncated": false,
+        "actualDeclaredPairAddress": 9172880,
+        "savedIntegerVfpSpPreserved": true,
+        "declaredPointerBytes": 8
+      },
+      "allReturnedNormally": true,
+      "allRejected": true
+    },
+    {
+      "label": "fixed-writer-increment-flag-added",
+      "input": {
+        "kind": "fixed",
+        "label": "count-1-capacity-3",
+        "base": 153,
+        "count": 1,
+        "output": 33570816,
+        "source": 33558528,
+        "limit": 33570828
+      },
+      "source": {
+        "path": "work/native-state055-deps-public/v1/writers/controls/fixed-writer-increment-flag-added/helpers055.c",
+        "bytes": 1788,
+        "sha256": "13404b1f284aae4f8e03ae5995940d8b2bbca7f1d97b8cfca99fb463eb8d00b3"
+      },
+      "build": {
+        "path": "work/native-state055-deps-public/v1/writers/controls/fixed-writer-increment-flag-added/build.json",
+        "bytes": 12208,
+        "sha256": "7c11ea6218890902353b605bb811b736e7ce18e807178d3602fbd53850f6dfc4"
+      },
+      "authoredArm": {
+        "returned": 9172880,
+        "returnKind": "pair-pointer",
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualReturnObservationExpected": true,
+        "actualPairExpected": true,
+        "actualWholePlatformArenaExpected": false,
+        "fullPlatformDataArenaSha256": "cebfd13d4f135b2611da6eb94fa0f7e8a23a5178df896f057e08c01ce5850d4f",
+        "actualArenaAddress": 33554432,
+        "pairOffsets": [
+          16392,
+          16396
+        ],
+        "targetAndNativeLookupArenaBytesClaimedEqual": true,
+        "nativePointersTruncated": false,
+        "actualDeclaredPairAddress": 9172880,
+        "savedIntegerVfpSpPreserved": true,
+        "declaredPointerBytes": 4
+      },
+      "actualWindows": {
+        "returned": 140733961678856,
+        "returnKind": "pair-pointer",
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualReturnObservationExpected": true,
+        "actualPairExpected": true,
+        "actualWholePlatformArenaExpected": false,
+        "fullPlatformDataArenaSha256": "cebfd13d4f135b2611da6eb94fa0f7e8a23a5178df896f057e08c01ce5850d4f",
+        "actualArenaAddress": 4831838208,
+        "pairOffsets": [
+          16392,
+          16396
+        ],
+        "targetAndNativeLookupArenaBytesClaimedEqual": true,
+        "nativePointersTruncated": false,
+        "actualDeclaredPairAddress": 140733961678856,
+        "actualWindows": true,
+        "declaredPointerBytes": 8,
+        "actualLibraryLoadBase": 140733961666560,
+        "actualDeclaredPairRva": 12296
+      },
+      "highAarch64": {
+        "returned": 9172880,
+        "returnKind": "pair-pointer",
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualReturnObservationExpected": true,
+        "actualPairExpected": true,
+        "actualWholePlatformArenaExpected": false,
+        "fullPlatformDataArenaSha256": "cebfd13d4f135b2611da6eb94fa0f7e8a23a5178df896f057e08c01ce5850d4f",
+        "actualArenaAddress": 4563402752,
+        "pairOffsets": [
+          16392,
+          16396
+        ],
+        "targetAndNativeLookupArenaBytesClaimedEqual": true,
+        "nativePointersTruncated": false,
+        "actualDeclaredPairAddress": 9172880,
+        "savedIntegerVfpSpPreserved": true,
+        "declaredPointerBytes": 8
+      },
+      "allReturnedNormally": true,
+      "allRejected": true
+    },
+    {
+      "label": "fixed-header-base-increments",
+      "input": {
+        "kind": "fixed",
+        "label": "count-129-capacity-133",
+        "base": 153,
+        "count": 129,
+        "output": 33570816,
+        "source": 33558528,
+        "limit": 33571348
+      },
+      "source": {
+        "path": "work/native-state055-deps-public/v1/writers/controls/fixed-header-base-increments/helpers055.c",
+        "bytes": 1794,
+        "sha256": "6c196185e612e15d4d3e02fc07675d18cdd9adde56d8302ddad0b86611c522fc"
+      },
+      "build": {
+        "path": "work/native-state055-deps-public/v1/writers/controls/fixed-header-base-increments/build.json",
+        "bytes": 12088,
+        "sha256": "18a526d11501d692b82bd401eb53b7cd5a51dbb032e65564fc7f50cbf1c3d61a"
+      },
+      "authoredArm": {
+        "returned": 9172880,
+        "returnKind": "pair-pointer",
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualReturnObservationExpected": true,
+        "actualPairExpected": true,
+        "actualWholePlatformArenaExpected": false,
+        "fullPlatformDataArenaSha256": "7873e5d233342911c6b8a3c5228cff9d5b73aa9854ec04c46b1e760b1632c87c",
+        "actualArenaAddress": 33554432,
+        "pairOffsets": [
+          16912,
+          16916
+        ],
+        "targetAndNativeLookupArenaBytesClaimedEqual": true,
+        "nativePointersTruncated": false,
+        "actualDeclaredPairAddress": 9172880,
+        "savedIntegerVfpSpPreserved": true,
+        "declaredPointerBytes": 4
+      },
+      "actualWindows": {
+        "returned": 140733828968456,
+        "returnKind": "pair-pointer",
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualReturnObservationExpected": true,
+        "actualPairExpected": true,
+        "actualWholePlatformArenaExpected": false,
+        "fullPlatformDataArenaSha256": "7873e5d233342911c6b8a3c5228cff9d5b73aa9854ec04c46b1e760b1632c87c",
+        "actualArenaAddress": 4831838208,
+        "pairOffsets": [
+          16912,
+          16916
+        ],
+        "targetAndNativeLookupArenaBytesClaimedEqual": true,
+        "nativePointersTruncated": false,
+        "actualDeclaredPairAddress": 140733828968456,
+        "actualWindows": true,
+        "declaredPointerBytes": 8,
+        "actualLibraryLoadBase": 140733828956160,
+        "actualDeclaredPairRva": 12296
+      },
+      "highAarch64": {
+        "returned": 9172880,
+        "returnKind": "pair-pointer",
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualReturnObservationExpected": true,
+        "actualPairExpected": true,
+        "actualWholePlatformArenaExpected": false,
+        "fullPlatformDataArenaSha256": "7873e5d233342911c6b8a3c5228cff9d5b73aa9854ec04c46b1e760b1632c87c",
+        "actualArenaAddress": 4563402752,
+        "pairOffsets": [
+          16912,
+          16916
+        ],
+        "targetAndNativeLookupArenaBytesClaimedEqual": true,
+        "nativePointersTruncated": false,
+        "actualDeclaredPairAddress": 9172880,
+        "savedIntegerVfpSpPreserved": true,
+        "declaredPointerBytes": 8
+      },
+      "allReturnedNormally": true,
+      "allRejected": true
+    },
+    {
+      "label": "last-valid-table-index-rejected",
+      "input": {
+        "kind": "lookup",
+        "label": "lookup-31-deadbeef",
+        "index": 31,
+        "value": 3735928559,
+        "object": true,
+        "container": true
+      },
+      "source": {
+        "path": "work/native-state055-deps-public/v1/writers/controls/last-valid-table-index-rejected/helpers055.c",
+        "bytes": 1785,
+        "sha256": "5d9b67e5077171b3a312cd655bd9252ef565fa28d16ed5c1a0028b30da7bc7b7"
+      },
+      "build": {
+        "path": "work/native-state055-deps-public/v1/writers/controls/last-valid-table-index-rejected/build.json",
+        "bytes": 12160,
+        "sha256": "66de9c46ed4ff9c2d9e92b1f1b3fe2e1f173a30636124dcc96fba6150252b42b"
+      },
+      "authoredArm": {
+        "returned": 0,
+        "returnKind": "word",
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualReturnObservationExpected": false,
+        "actualPairExpected": true,
+        "actualWholePlatformArenaExpected": true,
+        "fullPlatformDataArenaSha256": "2835441810ef6b1dafb9f21b4d29cb5ff5c4c87760f7a60c36dbc2561773770d",
+        "actualArenaAddress": 33554432,
+        "pairOffsets": null,
+        "targetAndNativeLookupArenaBytesClaimedEqual": false,
+        "nativePointersTruncated": false,
+        "actualDeclaredPairAddress": 9172880,
+        "savedIntegerVfpSpPreserved": true,
+        "declaredPointerBytes": 4
+      },
+      "actualWindows": {
+        "returned": 0,
+        "returnKind": "word",
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualReturnObservationExpected": false,
+        "actualPairExpected": true,
+        "actualWholePlatformArenaExpected": true,
+        "fullPlatformDataArenaSha256": "89f29c278aff1c41cdee3146bbd6b6e50f1aaad61f557e7c5c51c0b07f0962ce",
+        "actualArenaAddress": 4831838208,
+        "pairOffsets": null,
+        "targetAndNativeLookupArenaBytesClaimedEqual": false,
+        "nativePointersTruncated": false,
+        "actualDeclaredPairAddress": 140733618532360,
+        "actualWindows": true,
+        "declaredPointerBytes": 8,
+        "actualLibraryLoadBase": 140733618520064,
+        "actualDeclaredPairRva": 12296
+      },
+      "highAarch64": {
+        "returned": 0,
+        "returnKind": "word",
+        "actualFunctionReturned": true,
+        "independentModelPassed": false,
+        "actualReturnObservationExpected": false,
+        "actualPairExpected": true,
+        "actualWholePlatformArenaExpected": true,
+        "fullPlatformDataArenaSha256": "517d0392153862c142300e8bb9421605f2d471773f736cbefd1568c0f1e368f1",
+        "actualArenaAddress": 4563402752,
+        "pairOffsets": null,
+        "targetAndNativeLookupArenaBytesClaimedEqual": false,
+        "nativePointersTruncated": false,
+        "actualDeclaredPairAddress": 9172880,
+        "savedIntegerVfpSpPreserved": true,
+        "declaredPointerBytes": 8
+      },
+      "allReturnedNormally": true,
+      "allRejected": true
+    }
+  ],
+  "productionAndOriginalSourceUnchanged": true,
+  "producer": {
+    "path": "toolscripts/native_state_deps055_helpers_controls.py",
+    "bytes": 2594,
+    "sha256": "0117725a1cff0ea8ab699a0b7244a62de77cb66cf91dc9686d799aae210fdbc9"
+  }
+}

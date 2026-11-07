@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "status": "validated-fresh-distinct-allocation-zero-window-proof",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "unreachableStart": 7552268,
+  "unreachableEndExclusive": 7552284,
+  "instructionPcs": 4,
+  "reason": "Allocate returns distinct valid state storage; init publishes it and explicitly zeros window. No intervening callback/store can change the field before its conditional test. Equality skips allfour old-window release instructions.",
+  "preconditions": [
+    "valid distinct stream/state allocations",
+    "no concurrent mutation",
+    "well-behaved allocator callback returning valid state storage"
+  ],
+  "originalInstructionsOrFlagsForced": false,
+  "sourceCreditGranted": 0
+}
