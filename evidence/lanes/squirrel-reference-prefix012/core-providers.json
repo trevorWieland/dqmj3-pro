@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "productionCommon": [
+    "source/squirrel-wave012/reference_prefix.c",
+    "source/squirrel-wave012/vector_values.c",
+    "source/squirrel-wave012/legacy_storage.c"
+  ],
+  "chooseExactlyOneDispatcher": {
+    "legacy": "source/squirrel-wave012/reference_dispatch.c",
+    "opaque": "source/squirrel-wave012/reference_dispatch_opaque.c"
+  },
+  "storageBindings": {
+    "core": [
+      "sq_prefix_assign",
+      "sq_prefix_vector_resize",
+      "sq_prefix_vector_destroy"
+    ],
+    "legacy": [
+      "sq_prefix_assign_legacy",
+      "sq_prefix_vector_resize_legacy",
+      "sq_prefix_vector_destroy_legacy"
+    ]
+  },
+  "fixturesExcludedFromProduction": [
+    "source/squirrel-wave012/prefix_fixture.c",
+    "source/squirrel-wave012/native_prefix_fixture.c"
+  ],
+  "scope": "bounded reference/storage core; explicit compatible callback family; no full graph or duplicate original credit",
+  "futureFilesNotInFrozenCore": [
+    "source/squirrel-wave012/record_storage.h",
+    "source/squirrel-wave012/record_storage.c"
+  ]
+}

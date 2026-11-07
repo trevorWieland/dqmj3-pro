@@ -133,7 +133,7 @@ class CompileSourcesTests(unittest.TestCase):
         self.assertEqual(set(config["componentRoots"]), expected | {"source/squirrel-wave007", "source/squirrel-wave008", "source/squirrel-wave009", "source/squirrel-wave010", "source/squirrel-wave011", "source/squirrel-wave012"})
         restricted = [unit for unit in config["units"] if "targets" in unit]
         self.assertEqual({unit["source"] for unit in restricted},
-                         {folder + "/host_runner.c" for folder in expected} | {"src/native/wave014/platform_marker.c"})
+                         {folder + "/host_runner.c" for folder in expected} | {"src/native/wave014/platform_marker.c", "source/squirrel-wave012/native_prefix_fixture.c"})
         self.assertTrue(all(unit["targets"] == ["windows-x64"] for unit in restricted))
 
     def test_duplicate_or_historical_active_conflicts_fail(self):
