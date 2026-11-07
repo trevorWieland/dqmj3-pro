@@ -12,7 +12,8 @@
       "wave007",
       "wave008",
       "wave009",
-      "wave010"
+      "wave010",
+      "wave012"
     ]
   },
   "units": [
@@ -346,6 +347,99 @@
       "targets": [
         "windows-x64"
       ]
+    },
+    {
+      "source": "src/native/wave012/epsilon_closure.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave010/match_state.h",
+        "src/native/wave012/compile_graph.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave012/label_ops.h"
+      ],
+      "role": "bounded-functional-component"
+    },
+    {
+      "source": "src/native/wave012/fixed_arena.c",
+      "headers": [
+        "src/native/wave012/fixed_arena.h"
+      ],
+      "role": "bounded-functional-component"
+    },
+    {
+      "source": "src/native/wave012/interval_mutation.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave010/match_state.h",
+        "src/native/wave012/compile_graph.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave012/label_ops.h"
+      ],
+      "role": "bounded-functional-component"
+    },
+    {
+      "source": "src/native/wave012/label_copy.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave010/match_state.h",
+        "src/native/wave012/compile_graph.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave012/label_ops.h"
+      ],
+      "role": "bounded-functional-component"
+    },
+    {
+      "source": "src/native/wave012/label_ops.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave010/match_state.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave012/label_ops.h"
+      ],
+      "role": "bounded-functional-component"
+    },
+    {
+      "source": "src/native/wave012/memory_ops.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave010/match_state.h",
+        "src/native/wave012/compile_graph.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave012/label_ops.h"
+      ],
+      "role": "bounded-functional-component"
+    },
+    {
+      "source": "src/native/wave012/singleton_transform.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave010/match_state.h",
+        "src/native/wave012/compile_graph.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave012/label_ops.h"
+      ],
+      "role": "bounded-functional-component"
+    },
+    {
+      "source": "src/native/wave012/state_compile.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave010/match_state.h",
+        "src/native/wave012/compile_graph.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave012/label_ops.h"
+      ],
+      "role": "bounded-functional-component"
+    },
+    {
+      "source": "src/native/wave012/state_storage.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave010/match_state.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave012/label_ops.h"
+      ],
+      "role": "bounded-functional-component"
     }
   ],
   "excludedSources": [

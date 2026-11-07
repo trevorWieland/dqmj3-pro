@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-candidate-publication",
+  "sourceContext": "working tree after dc8905b; independent committed wave012 replay pending",
+  "checks": [
+    {
+      "component": "arena",
+      "tests": 7,
+      "skipped": 0,
+      "log": {
+        "path": "work/component-coordinator-tests/wave012-arena.log",
+        "sha256": "9f52aa0ae87342d8a7148e66e57f911e53da6f73965c7a0b103ed211a3401ce2",
+        "bytes": 1130
+      },
+      "packet": {
+        "path": "evidence/lanes/wave012-native/arena/packet.json",
+        "sha256": "630d223a1c3fca2762599f50b80091e8514f6bbbf19308cbcd7beb8ba1ad844e",
+        "bytes": 94990
+      },
+      "verification": {
+        "path": "evidence/lanes/wave012-native/arena/verification.json",
+        "sha256": "8264e3914eafb1ee9eadc62194d1584a6310ccf278085168397590bdbcfc28a6",
+        "bytes": 1352
+      }
+    },
+    {
+      "component": "constructors",
+      "tests": 7,
+      "skipped": 0,
+      "log": {
+        "path": "work/component-coordinator-tests/wave012-constructors.log",
+        "sha256": "33300fffb915d22aeba6b36476fe5cbfd89d69c01231a19690b7131795a88563",
+        "bytes": 1387
+      },
+      "packet": {
+        "path": "evidence/lanes/wave012-native/constructors/packet.json",
+        "sha256": "a2d3c5782bb7bc4f84ae6e04cd364ab388459b6383e8d785f4cf5d7ca6c55992",
+        "bytes": 121261
+      },
+      "verification": {
+        "path": "evidence/lanes/wave012-native/constructors/verification.json",
+        "sha256": "5f57e4f63efd3b33aa9d3c0fb70cd7a02f4778a11d94d18620cf62bd8e8461d0",
+        "bytes": 1395
+      }
+    },
+    {
+      "component": "transition-graph",
+      "tests": 11,
+      "skipped": 0,
+      "log": {
+        "path": "work/component-coordinator-tests/wave012-graph.log",
+        "sha256": "4384e4fd94361027b4427c912975e40539b3c7060b096deb3b980d961c1e2106",
+        "bytes": 2013
+      },
+      "packet": {
+        "path": "evidence/lanes/wave012-native/transition-graph/packet.json",
+        "sha256": "fef330c847ba54ca3e5a693c4ae73ff81b0a88636ef5391eddf9fe34cf729cca",
+        "bytes": 1430288
+      },
+      "verification": {
+        "path": "evidence/lanes/wave012-native/transition-graph/verification.json",
+        "sha256": "b174d6a6cf0722b5272765efbf7baeba43af945c526dcfa2a6fb7bb3173ce09c",
+        "bytes": 1411
+      }
+    }
+  ],
+  "testCases": 25,
+  "skippedTests": 0,
+  "publicCompileGuards": 19,
+  "publicCompileUnits": 46,
+  "publicCompilations": 130,
+  "compilation": {
+    "path": "work/source-compile-ci/wave012-coordinator/manifests/compilation.json",
+    "sha256": "ceaa39c9303219a0e0ca8fa604d414bd3c1916c38eb305a36af0d1fcea08b6c4",
+    "bytes": 269381
+  },
+  "matchingSourceCreditGranted": 0,
+  "newProposedFunctionalFunctions": 18,
+  "newProposedOriginalInstructionBytes": 2980,
+  "functionalAdmissionGranted": false,
+  "review": [
+    "Real pointer links and bounded pointer differences",
+    "Original logical allocation budgets retained on host64",
+    "Sentinel comparison precedes enclosing-node cast",
+    "Raw byte copying remains separate from widened typed records",
+    "No rollback added to original partial-allocation failures",
+    "Thumb byte comparison preserves observed return magnitude",
+    "Remaining range/control/parser phases are separate"
+  ],
+  "limits": [
+    "Finite fixture domains; not universal equivalence",
+    "Aligned untyped arena storage and valid owned pointers required",
+    "No arbitrary aliasing, concurrency, MMIO, device or game claim"
+  ]
+}

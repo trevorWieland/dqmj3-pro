@@ -1,0 +1,3821 @@
+{
+  "schemaVersion": 1,
+  "lane": "wave012-native-constructors",
+  "status": "bounded-validated-functional-nonmatching-C",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "census": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+    "bytes": 20574405
+  },
+  "functions": [
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7689652,
+        "mode": "ARM"
+      },
+      "symbol": "fn_007555b4",
+      "source": {
+        "path": "src/native/wave012/label_ops.c",
+        "sha256": "2e6176ff50ce7a491e568f1ea5e2c2dca9fae717d28c9aea99240ccdb472461d",
+        "bytes": 1279
+      },
+      "originalCalls": [],
+      "callerWitnesses": [
+        {
+          "callerFunction": 4990100,
+          "callsite": 4990708,
+          "sha256": "0005cbad09e624b2c99184151f880bfc43a6a6f06aa15e94dbad7d8dac95e1d3"
+        }
+      ],
+      "originalInstructionBytes": 24,
+      "originalSpanSha256": "3db9fef9c6ceeef0f401715708f6c7a83ce98711b1e3d6bd8135718efa148db3",
+      "candidateInstructionBytes": 24,
+      "candidateObjectSpanSha256": "0fb8d300fd9e5277399f18d429673ad143b08d4c4e7f7634d584239ea007fc8b",
+      "candidateLinkedSpanSha256": "0fb8d300fd9e5277399f18d429673ad143b08d4c4e7f7634d584239ea007fc8b",
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "exactLinkedSpan": false,
+      "sourceCreditRequested": 0,
+      "functionalConfidence": "medium"
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7689676,
+        "mode": "ARM"
+      },
+      "symbol": "fn_007555cc",
+      "source": {
+        "path": "src/native/wave012/label_ops.c",
+        "sha256": "2e6176ff50ce7a491e568f1ea5e2c2dca9fae717d28c9aea99240ccdb472461d",
+        "bytes": 1279
+      },
+      "originalCalls": [],
+      "callerWitnesses": [
+        {
+          "callerFunction": 4988768,
+          "callsite": 4989568,
+          "sha256": "33e5d434ff7ac5d186977ac019b96fa8692a5f5e04c146244e830392123c1b58"
+        },
+        {
+          "callerFunction": 4990100,
+          "callsite": 4990664,
+          "sha256": "ef736242e7072d81a286ed80447c30380f8888c92ffd03f1b7e25b0345a03ade"
+        },
+        {
+          "callerFunction": 4991004,
+          "callsite": 4991344,
+          "sha256": "7cba84a2765059cd0379c438361f2124826025aa4d2a60d4cc9a60488368e80d"
+        }
+      ],
+      "originalInstructionBytes": 36,
+      "originalSpanSha256": "6f1adcceaae47c6987ac6bc049b342d8c13b9296d35971155a0df866f4e8813b",
+      "candidateInstructionBytes": 36,
+      "candidateObjectSpanSha256": "06ad60a76f41d998cbc9d1a0c06cced33545dcde4df1441786b9f3f34c99ac95",
+      "candidateLinkedSpanSha256": "06ad60a76f41d998cbc9d1a0c06cced33545dcde4df1441786b9f3f34c99ac95",
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "exactLinkedSpan": false,
+      "sourceCreditRequested": 0,
+      "functionalConfidence": "medium"
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7690136,
+        "mode": "ARM"
+      },
+      "symbol": "fn_00755798",
+      "source": {
+        "path": "src/native/wave012/label_ops.c",
+        "sha256": "2e6176ff50ce7a491e568f1ea5e2c2dca9fae717d28c9aea99240ccdb472461d",
+        "bytes": 1279
+      },
+      "originalCalls": [],
+      "callerWitnesses": [
+        {
+          "callerFunction": 4983620,
+          "callsite": 4983828,
+          "sha256": "920f79a1d9f63e032d6393f4ae5d87cb4617097ca4d8b141a787ae55ed359126"
+        },
+        {
+          "callerFunction": 4983620,
+          "callsite": 4984160,
+          "sha256": "230832aa50759f6da5d874e833f18a1dc87396be4ddf0219b5233c3bc7f79b05"
+        },
+        {
+          "callerFunction": 4984236,
+          "callsite": 4984408,
+          "sha256": "8b24949a95097bb942b7005190b613d328e813968bb564703d6d65d53e420e99"
+        },
+        {
+          "callerFunction": 4984236,
+          "callsite": 4984536,
+          "sha256": "ba990c40038ff1d04598d580728f42c2db3f9ac7e2320add8bbf6de25a03186b"
+        },
+        {
+          "callerFunction": 4985212,
+          "callsite": 4985384,
+          "sha256": "b5a7dbd61aeb11d52e29d705a2b63551791846170657d8907b330a01214479b0"
+        },
+        {
+          "callerFunction": 4986588,
+          "callsite": 4986752,
+          "sha256": "b97b6ce970327a889037eba23ba9481b3298cd3f38f38348a7beda703c4fb068"
+        },
+        {
+          "callerFunction": 4987248,
+          "callsite": 4987428,
+          "sha256": "e010a9d5324ccae7a82f653cd4ba7180f79f859819888ea8f962e30e271c5f5e"
+        },
+        {
+          "callerFunction": 4990788,
+          "callsite": 4990908,
+          "sha256": "d35fa168c4e0ec609514281b4318721b3a78d0f200272992b8e5e83e7873ca83"
+        },
+        {
+          "callerFunction": 4994572,
+          "callsite": 4994860,
+          "sha256": "c1a6715ab625504ecbc23ef10b00a89376060c95a3102493546fd0b79269af24"
+        },
+        {
+          "callerFunction": 4994572,
+          "callsite": 4995012,
+          "sha256": "f6ec74e4b1efce05720a61579ed3af1aa58f7386809c055930c5d27131635f35"
+        },
+        {
+          "callerFunction": 7690264,
+          "callsite": 7690304,
+          "sha256": "7f69a30331520620a295a2d8cdfd6abf4ee2e55e2b2661099be773030a535e74"
+        }
+      ],
+      "originalInstructionBytes": 36,
+      "originalSpanSha256": "6f1adcceaae47c6987ac6bc049b342d8c13b9296d35971155a0df866f4e8813b",
+      "candidateInstructionBytes": 36,
+      "candidateObjectSpanSha256": "06ad60a76f41d998cbc9d1a0c06cced33545dcde4df1441786b9f3f34c99ac95",
+      "candidateLinkedSpanSha256": "06ad60a76f41d998cbc9d1a0c06cced33545dcde4df1441786b9f3f34c99ac95",
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "exactLinkedSpan": false,
+      "sourceCreditRequested": 0,
+      "functionalConfidence": "medium"
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7690172,
+        "mode": "ARM"
+      },
+      "symbol": "fn_007557bc",
+      "source": {
+        "path": "src/native/wave012/label_ops.c",
+        "sha256": "2e6176ff50ce7a491e568f1ea5e2c2dca9fae717d28c9aea99240ccdb472461d",
+        "bytes": 1279
+      },
+      "originalCalls": [
+        {
+          "callsite": 7690224,
+          "target": 4995476,
+          "sha256": "6076882f5c21c73965f6e49e0de92c2badf48e569031a196fd027aeb263ce9dd"
+        }
+      ],
+      "callerWitnesses": [
+        {
+          "callerFunction": 4986588,
+          "callsite": 4987004,
+          "sha256": "9dea96046f64db5727ef8142e5e00ebe66c308759896286e109738e79d821702"
+        },
+        {
+          "callerFunction": 4988768,
+          "callsite": 4989324,
+          "sha256": "1f95ce563470eb3dfba62e8b2143f4af23c779c6ed9d237dade84d96df90dbbc"
+        },
+        {
+          "callerFunction": 4988768,
+          "callsite": 4989788,
+          "sha256": "c1061539ded0c77e81502f476f3778263d607023c4aed12af98c2fa1a2746da2"
+        },
+        {
+          "callerFunction": 4990100,
+          "callsite": 4990392,
+          "sha256": "0086ed50d27e97f439c991a782c9adf0107c05181856c55b1a887f72cffeee1a"
+        },
+        {
+          "callerFunction": 4990100,
+          "callsite": 4990524,
+          "sha256": "45824fc05c58fd816d10916693a2680b1701a957d88848a13c23bdc5663a8bca"
+        },
+        {
+          "callerFunction": 4990100,
+          "callsite": 4990744,
+          "sha256": "ee9d43fd09485ace3d81dc6b561ffd18c8e9a6a90290461041452e92d253dde5"
+        },
+        {
+          "callerFunction": 4991004,
+          "callsite": 4991192,
+          "sha256": "8a6e0ac48bd906dbaeafe03936cd66c44504b13901a2c3b39d4e4f8ad6c4cdbe"
+        },
+        {
+          "callerFunction": 4991004,
+          "callsite": 4991432,
+          "sha256": "3deee1b239622c7c24dae7ada957985af0ade042ac030b03daec4b83e9bfda18"
+        }
+      ],
+      "originalInstructionBytes": 92,
+      "originalSpanSha256": "a2b50e0e1f920242ed2228dfee8ca25860c363284807b74475580d7f0e00c1b6",
+      "candidateInstructionBytes": 88,
+      "candidateObjectSpanSha256": "fac994fe48ab9ce8aa5dd2debefc2967e4261e85aad055aa7330be62d5370b19",
+      "candidateLinkedSpanSha256": "713ac715879bc131341d21f8c7f5c57bd3ed90c68f3727b96e9c57e158c3afd3",
+      "poolBytes": 0,
+      "bodyRelocations": [
+        {
+          "offset": 48,
+          "type": 28,
+          "symbol": "fn_004c3994",
+          "format": "SHT_REL"
+        }
+      ],
+      "exactLinkedSpan": false,
+      "sourceCreditRequested": 0,
+      "functionalConfidence": "medium"
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 4980596,
+        "mode": "ARM"
+      },
+      "symbol": "fn_004bff74",
+      "source": {
+        "path": "src/native/wave012/state_storage.c",
+        "sha256": "1023022c92df51d044586a2e040ae03339d8b426d9f2acb26ae2644a5b3df57f",
+        "bytes": 982
+      },
+      "originalCalls": [],
+      "callerWitnesses": [
+        {
+          "callerFunction": 4988392,
+          "callsite": 4988508,
+          "sha256": "3ff0c213f5d59f71f1e83330e25c728427e3df481386970db291a2734340c87a"
+        },
+        {
+          "callerFunction": 4991488,
+          "callsite": 4991668,
+          "sha256": "9244ad31e732e6ec79ba92bd6c1fb01bf88d19f934ae0e29c7961eae90282b90"
+        }
+      ],
+      "originalInstructionBytes": 52,
+      "originalSpanSha256": "d1e5f0e66c25be6e5453f7675766d07aeba80a569a602919b8970261670f94fe",
+      "candidateInstructionBytes": 44,
+      "candidateObjectSpanSha256": "552c41006c055a7daaaf4026709bc60c8d24ace35b2a3a0557dd142ad39f70a4",
+      "candidateLinkedSpanSha256": "552c41006c055a7daaaf4026709bc60c8d24ace35b2a3a0557dd142ad39f70a4",
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "exactLinkedSpan": false,
+      "sourceCreditRequested": 0,
+      "functionalConfidence": "medium"
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 4980444,
+        "mode": "ARM"
+      },
+      "symbol": "fn_004bfedc",
+      "source": {
+        "path": "src/native/wave012/state_storage.c",
+        "sha256": "1023022c92df51d044586a2e040ae03339d8b426d9f2acb26ae2644a5b3df57f",
+        "bytes": 982
+      },
+      "originalCalls": [
+        {
+          "callsite": 4980480,
+          "target": 4995528,
+          "sha256": "9edb391a89f9db9476ea89edad8525f5f27aeec9ecea8fb689ecaaa28b29df75"
+        }
+      ],
+      "callerWitnesses": [
+        {
+          "callerFunction": 4988392,
+          "callsite": 4988560,
+          "sha256": "f3a4367751ec3e11806a454168796bad05eafa8a6954f2d3a7307b67d52d5fe3"
+        },
+        {
+          "callerFunction": 4991488,
+          "callsite": 4991708,
+          "sha256": "739bc87d563d1a5bae2370478dba9c662e8e59765ba0f880418411d5ea9b598f"
+        }
+      ],
+      "originalInstructionBytes": 152,
+      "originalSpanSha256": "2f9bcd2ed8f3656f09eff4162710bd7008b0eba07f0ac619e802f6eefe414c2b",
+      "candidateInstructionBytes": 124,
+      "candidateObjectSpanSha256": "622a1cc1b2072558cbc7ee1212bae4feb2d40ebc6e1f67d31e2a9b206351a5b4",
+      "candidateLinkedSpanSha256": "25fa20fe185eca27dbe266f8ffebd4ab302a96087a55081df3995e1a0fd8d749",
+      "poolBytes": 0,
+      "bodyRelocations": [
+        {
+          "offset": 40,
+          "type": 28,
+          "symbol": "fn_004c39c8",
+          "format": "SHT_REL"
+        }
+      ],
+      "exactLinkedSpan": false,
+      "sourceCreditRequested": 0,
+      "functionalConfidence": "medium"
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/native/wave012/fixed_arena.c",
+      "sha256": "15f387f814b9f0ac7aec659c3f64a2adf08d464eb275e9e9098760f0df056bdc",
+      "bytes": 1293
+    },
+    {
+      "path": "src/native/wave012/label_ops.c",
+      "sha256": "2e6176ff50ce7a491e568f1ea5e2c2dca9fae717d28c9aea99240ccdb472461d",
+      "bytes": 1279
+    },
+    {
+      "path": "src/native/wave012/state_storage.c",
+      "sha256": "1023022c92df51d044586a2e040ae03339d8b426d9f2acb26ae2644a5b3df57f",
+      "bytes": 982
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave012/fixed_arena.h",
+      "sha256": "576604e9c5fde42d82ada3fa977fa33591421711f129bd5cae1b3c45240eec4a",
+      "bytes": 689
+    },
+    {
+      "path": "src/native/wave012/label_ops.h",
+      "sha256": "0d96df2ffe4d5c6f404cbbe688e86f3f644fbc7fecfe9fe6ab0c03a43b2f5be1",
+      "bytes": 939
+    },
+    {
+      "path": "src/native/wave009/interval_set.h",
+      "sha256": "c9f8ea99061aaf09e3b82c8a75d3049282f14bdbf7e201a429c1064348853419",
+      "bytes": 987
+    },
+    {
+      "path": "src/native/wave010/match_state.h",
+      "sha256": "c5331ad810d5fc508c5df281ece4f5b8f70a998cc5d226d2e7157593137d035b",
+      "bytes": 1055
+    }
+  ],
+  "producers": [
+    {
+      "path": "toolscripts/native_wave012_common.py",
+      "sha256": "0f748a9fd031da2ca86b9f5ce34dfcdf727d5fa41ce7acaa47503612902c5ba6",
+      "bytes": 1350
+    },
+    {
+      "path": "toolscripts/native_wave012_constructors.py",
+      "sha256": "f84206930f0c398b73c037be95537759ca5cdd81b3e4d519222b65ae1c1b98c6",
+      "bytes": 15998
+    },
+    {
+      "path": "toolscripts/native_wave012_ctor_build.py",
+      "sha256": "959686967f682fb23a31a552fcd370140186e7864ecc1885f0aa36fede34c2b2",
+      "bytes": 5208
+    },
+    {
+      "path": "toolscripts/native_wave012_ctor_model.py",
+      "sha256": "f6bc2b9598f9f4227e01fa9afa9e40fa028a31bde7f2b19fddda1b5d2cde2b18",
+      "bytes": 7611
+    },
+    {
+      "path": "toolscripts/native_wave012_ctor_runtime.py",
+      "sha256": "ad3c31d33c8a825c964a0405c9417b4e5ee50e4c6127020498ead70c867ffca0",
+      "bytes": 7197
+    },
+    {
+      "path": "toolscripts/native_wave012_arena_model.py",
+      "sha256": "82151d24765b924a0204b50b838b5c87fa8a6ddf38c5e54ff04c4659d3f8139e",
+      "bytes": 3207
+    },
+    {
+      "path": "toolscripts/native_wave012_arena_oracle.py",
+      "sha256": "dcb3a5d09a9112190a0ff68950110b1a820cc763315b65c40ad2b34c60399096",
+      "bytes": 6350
+    }
+  ],
+  "compiler": {
+    "path": "tools/clang-21/clang.exe",
+    "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc",
+    "bytes": 99559064
+  },
+  "linker": {
+    "path": "tools/clang-21/ld.lld.exe",
+    "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3",
+    "bytes": 69225112
+  },
+  "compilerFlags": [
+    "--target=arm-none-eabi",
+    "-mcpu=mpcore",
+    "-marm",
+    "-O2",
+    "-std=c11",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-ffunction-sections",
+    "-fno-unwind-tables",
+    "-fno-asynchronous-unwind-tables",
+    "-Wall",
+    "-Wextra",
+    "-Werror"
+  ],
+  "objects": [
+    {
+      "path": "work/wave012-native/constructors-release/source/fixed_arena.o",
+      "sha256": "8ffbaf4f6ea62e0de1e9118c72c478bc1ea8fa93b4151abbef091ab04458917c",
+      "bytes": 1540
+    },
+    {
+      "path": "work/wave012-native/constructors-release/source/label_ops.o",
+      "sha256": "07180cedd5881c7635dec0ed8a0469c6d5611ab5fbab52063ee7e7d978ec5217",
+      "bytes": 1868
+    },
+    {
+      "path": "work/wave012-native/constructors-release/source/state_storage.o",
+      "sha256": "34b7555e5f43a8dbf114693e789b7b15345055b8cf29e36039fdd4d05895baa7",
+      "bytes": 1424
+    }
+  ],
+  "linkedElf": {
+    "path": "work/wave012-native/constructors-release/source/constructors.elf",
+    "sha256": "a65029536f8dabe70e69e8e4cfb53d9490a72d650cdb17b740f77af442a4f1f8",
+    "bytes": 95596
+  },
+  "linkerScript": {
+    "path": "work/wave012-native/constructors-release/source/constructors.ld",
+    "sha256": "b4d66d4742c94f7056cb3e501a5aaea42ecc240f076ada77fce9eff048e52a00",
+    "bytes": 589
+  },
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\fixed_arena.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\source\\fixed_arena.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/source/fixed_arena.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\label_ops.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\source\\label_ops.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/source/label_ops.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\state_storage.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\source\\state_storage.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/source/state_storage.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--entry=fn_007555cc",
+        "-T",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\source\\constructors.ld",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\source\\fixed_arena.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\source\\label_ops.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\source\\state_storage.o",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\source\\constructors.elf"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/source/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\fixed_arena.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\windows\\fixed_arena.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/windows/fixed_arena.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\label_ops.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\windows\\label_ops.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/windows/label_ops.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\state_storage.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\windows\\state_storage.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/windows/state_storage.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-flavor",
+        "link",
+        "/dll",
+        "/noentry",
+        "/machine:x64",
+        "/nodefaultlib",
+        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\windows\\constructors.dll",
+        "/export:fn_004bfedc",
+        "/export:fn_004bff74",
+        "/export:fn_004c3994",
+        "/export:fn_004c39c8",
+        "/export:fn_007555b4",
+        "/export:fn_007555cc",
+        "/export:fn_00755798",
+        "/export:fn_007557bc",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\windows\\fixed_arena.obj",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\windows\\label_ops.obj",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\windows\\state_storage.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/windows/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\fixed_arena.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\character\\arm\\fixed_arena.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/character/arm/fixed_arena.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\character\\label_ops.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\character\\arm\\label_ops.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/character/arm/label_ops.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\state_storage.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\character\\arm\\state_storage.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/character/arm/state_storage.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--entry=fn_007555cc",
+        "-T",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\character\\arm\\constructors.ld",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\character\\arm\\fixed_arena.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\character\\arm\\label_ops.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\character\\arm\\state_storage.o",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\character\\arm\\constructors.elf"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/character/arm/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\fixed_arena.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\character\\windows\\fixed_arena.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/character/windows/fixed_arena.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\character\\label_ops.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\character\\windows\\label_ops.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/character/windows/label_ops.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\state_storage.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\character\\windows\\state_storage.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/character/windows/state_storage.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-flavor",
+        "link",
+        "/dll",
+        "/noentry",
+        "/machine:x64",
+        "/nodefaultlib",
+        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\character\\windows\\constructors.dll",
+        "/export:fn_004bfedc",
+        "/export:fn_004bff74",
+        "/export:fn_004c3994",
+        "/export:fn_004c39c8",
+        "/export:fn_007555b4",
+        "/export:fn_007555cc",
+        "/export:fn_00755798",
+        "/export:fn_007557bc",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\character\\windows\\fixed_arena.obj",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\character\\windows\\label_ops.obj",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\character\\windows\\state_storage.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/character/windows/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\fixed_arena.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\default-kind\\arm\\fixed_arena.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/default-kind/arm/fixed_arena.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\default-kind\\label_ops.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\default-kind\\arm\\label_ops.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/default-kind/arm/label_ops.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\state_storage.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\default-kind\\arm\\state_storage.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/default-kind/arm/state_storage.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--entry=fn_007555cc",
+        "-T",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\default-kind\\arm\\constructors.ld",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\default-kind\\arm\\fixed_arena.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\default-kind\\arm\\label_ops.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\default-kind\\arm\\state_storage.o",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\default-kind\\arm\\constructors.elf"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/default-kind/arm/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\fixed_arena.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\default-kind\\windows\\fixed_arena.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/default-kind/windows/fixed_arena.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\default-kind\\label_ops.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\default-kind\\windows\\label_ops.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/default-kind/windows/label_ops.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\state_storage.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\default-kind\\windows\\state_storage.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/default-kind/windows/state_storage.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-flavor",
+        "link",
+        "/dll",
+        "/noentry",
+        "/machine:x64",
+        "/nodefaultlib",
+        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\default-kind\\windows\\constructors.dll",
+        "/export:fn_004bfedc",
+        "/export:fn_004bff74",
+        "/export:fn_004c3994",
+        "/export:fn_004c39c8",
+        "/export:fn_007555b4",
+        "/export:fn_007555cc",
+        "/export:fn_00755798",
+        "/export:fn_007557bc",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\default-kind\\windows\\fixed_arena.obj",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\default-kind\\windows\\label_ops.obj",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\default-kind\\windows\\state_storage.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/default-kind/windows/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\fixed_arena.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\destroy-previous\\arm\\fixed_arena.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/destroy-previous/arm/fixed_arena.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\destroy-previous\\label_ops.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\destroy-previous\\arm\\label_ops.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/destroy-previous/arm/label_ops.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\state_storage.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\destroy-previous\\arm\\state_storage.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/destroy-previous/arm/state_storage.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--entry=fn_007555cc",
+        "-T",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\destroy-previous\\arm\\constructors.ld",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\destroy-previous\\arm\\fixed_arena.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\destroy-previous\\arm\\label_ops.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\destroy-previous\\arm\\state_storage.o",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\destroy-previous\\arm\\constructors.elf"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/destroy-previous/arm/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\fixed_arena.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\destroy-previous\\windows\\fixed_arena.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/destroy-previous/windows/fixed_arena.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\destroy-previous\\label_ops.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\destroy-previous\\windows\\label_ops.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/destroy-previous/windows/label_ops.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\state_storage.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\destroy-previous\\windows\\state_storage.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/destroy-previous/windows/state_storage.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-flavor",
+        "link",
+        "/dll",
+        "/noentry",
+        "/machine:x64",
+        "/nodefaultlib",
+        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\destroy-previous\\windows\\constructors.dll",
+        "/export:fn_004bfedc",
+        "/export:fn_004bff74",
+        "/export:fn_004c3994",
+        "/export:fn_004c39c8",
+        "/export:fn_007555b4",
+        "/export:fn_007555cc",
+        "/export:fn_00755798",
+        "/export:fn_007557bc",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\destroy-previous\\windows\\fixed_arena.obj",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\destroy-previous\\windows\\label_ops.obj",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\destroy-previous\\windows\\state_storage.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/destroy-previous/windows/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\fixed_arena.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\state-result\\arm\\fixed_arena.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/state-result/arm/fixed_arena.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\label_ops.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\state-result\\arm\\label_ops.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/state-result/arm/label_ops.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\state-result\\state_storage.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\state-result\\arm\\state_storage.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/state-result/arm/state_storage.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--entry=fn_007555cc",
+        "-T",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\state-result\\arm\\constructors.ld",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\state-result\\arm\\fixed_arena.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\state-result\\arm\\label_ops.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\state-result\\arm\\state_storage.o",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\state-result\\arm\\constructors.elf"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/state-result/arm/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\fixed_arena.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\state-result\\windows\\fixed_arena.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/state-result/windows/fixed_arena.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\label_ops.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\state-result\\windows\\label_ops.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/state-result/windows/label_ops.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\state-result\\state_storage.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\state-result\\windows\\state_storage.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/state-result/windows/state_storage.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-flavor",
+        "link",
+        "/dll",
+        "/noentry",
+        "/machine:x64",
+        "/nodefaultlib",
+        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\state-result\\windows\\constructors.dll",
+        "/export:fn_004bfedc",
+        "/export:fn_004bff74",
+        "/export:fn_004c3994",
+        "/export:fn_004c39c8",
+        "/export:fn_007555b4",
+        "/export:fn_007555cc",
+        "/export:fn_00755798",
+        "/export:fn_007557bc",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\state-result\\windows\\fixed_arena.obj",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\state-result\\windows\\label_ops.obj",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\state-result\\windows\\state_storage.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/state-result/windows/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\fixed_arena.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\clear-byte\\arm\\fixed_arena.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/clear-byte/arm/fixed_arena.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\label_ops.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\clear-byte\\arm\\label_ops.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/clear-byte/arm/label_ops.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\clear-byte\\state_storage.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\clear-byte\\arm\\state_storage.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/clear-byte/arm/state_storage.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--entry=fn_007555cc",
+        "-T",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\clear-byte\\arm\\constructors.ld",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\clear-byte\\arm\\fixed_arena.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\clear-byte\\arm\\label_ops.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\clear-byte\\arm\\state_storage.o",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\clear-byte\\arm\\constructors.elf"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/clear-byte/arm/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\fixed_arena.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\clear-byte\\windows\\fixed_arena.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/clear-byte/windows/fixed_arena.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\label_ops.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\clear-byte\\windows\\label_ops.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/clear-byte/windows/label_ops.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\clear-byte\\state_storage.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\clear-byte\\windows\\state_storage.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/clear-byte/windows/state_storage.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-flavor",
+        "link",
+        "/dll",
+        "/noentry",
+        "/machine:x64",
+        "/nodefaultlib",
+        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\clear-byte\\windows\\constructors.dll",
+        "/export:fn_004bfedc",
+        "/export:fn_004bff74",
+        "/export:fn_004c3994",
+        "/export:fn_004c39c8",
+        "/export:fn_007555b4",
+        "/export:fn_007555cc",
+        "/export:fn_00755798",
+        "/export:fn_007557bc",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\clear-byte\\windows\\fixed_arena.obj",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\clear-byte\\windows\\label_ops.obj",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\negative\\clear-byte\\windows\\state_storage.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/negative/clear-byte/windows/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fPIC",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\fixed_arena.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\fixed_arena.android.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/fixed_arena-android.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fPIC",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\label_ops.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\label_ops.android.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/label_ops-android.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fPIC",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave012\\state_storage.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\state_storage.android.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/state_storage-android.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-shared",
+        "--no-undefined",
+        "-z",
+        "max-page-size=16384",
+        "-soname",
+        "libconstructors.so",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\libconstructors.so",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\fixed_arena.android.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\label_ops.android.o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave012-native\\constructors-release\\state_storage.android.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave012-native/constructors-release/android-link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    }
+  ],
+  "dependencies": {
+    "arenaValidation": {
+      "path": "evidence/lanes/wave012-native/arena/packet.json",
+      "sha256": "630d223a1c3fca2762599f50b80091e8514f6bbbf19308cbcd7beb8ba1ad844e",
+      "bytes": 94990
+    },
+    "role": "source",
+    "newFunctionalCredit": 0,
+    "retainedOriginalHelpers": []
+  },
+  "behavior": {
+    "cases": 253,
+    "caseResultDigest": "255cfb10dfea658b742d9831198ff623b5fa95f3a8034ab96c010e6528ed6876",
+    "flagReturnCrossProductCases": 128,
+    "newOriginalInstructionsReached": 98,
+    "allNewOriginalInstructionsReached": true,
+    "fullDefinedMemoryCompared": true,
+    "typedReadWriteFootprintsChecked": true,
+    "privateStackFrameBytesExcluded": 512,
+    "ARMThumbReturnsAndCalleeSavedSpChecked": true,
+    "boundedNotUniversalEquivalence": true
+  },
+  "negativeControls": [
+    {
+      "name": "character",
+      "wrongSource": {
+        "path": "work/wave012-native/constructors-release/negative/character/label_ops.c",
+        "sha256": "1a33892e790d81061cc3ea01c594cf171eb181b757a15e65c24c5b3ca4c12454",
+        "bytes": 1283
+      },
+      "platform": "arm-cpu",
+      "returnedNormally": true,
+      "immutableMemoryPreserved": true,
+      "actualReturn": null,
+      "expectedReturn": null,
+      "actualMemorySha256": "278796a16f28754d3ba510fe0f6e7838036b10c6e6b0fe896945a37bda7d6a0c",
+      "expectedMemorySha256": "43c527bd18c7ba88427776dddbaa1add9abc71edf7b0cc4fe54911ec5e90b27f"
+    },
+    {
+      "name": "character",
+      "wrongSource": {
+        "path": "work/wave012-native/constructors-release/negative/character/label_ops.c",
+        "sha256": "1a33892e790d81061cc3ea01c594cf171eb181b757a15e65c24c5b3ca4c12454",
+        "bytes": 1283
+      },
+      "platform": "native-windows",
+      "returnedNormally": true,
+      "immutableMemoryPreserved": true,
+      "actualReturn": null,
+      "expectedReturn": null,
+      "actualMemorySha256": "ac99cf1505591d5a8bb5e4aeb058080aebdd20d802f4c8a05d514e22058310d0",
+      "expectedMemorySha256": "b2792e88c7af000a34a8c6b535ea0a145e83cde391c0736f0b335f2abc34786a"
+    },
+    {
+      "name": "default-kind",
+      "wrongSource": {
+        "path": "work/wave012-native/constructors-release/negative/default-kind/label_ops.c",
+        "sha256": "c749bcff208d93f015e25bb5d9a9fe8fa730def08378ecd14258f5914d218d45",
+        "bytes": 1279
+      },
+      "platform": "arm-cpu",
+      "returnedNormally": true,
+      "immutableMemoryPreserved": true,
+      "actualReturn": null,
+      "expectedReturn": null,
+      "actualMemorySha256": "f5120b363a6e918ad6b4f18905d09c1fb02b96aee7cd28c60d0db6587d2b3628",
+      "expectedMemorySha256": "918c1df65dc3b46c65c7680d0fbc54d83f3e80b623b5739d2ed2bb0fd4f4ef45"
+    },
+    {
+      "name": "default-kind",
+      "wrongSource": {
+        "path": "work/wave012-native/constructors-release/negative/default-kind/label_ops.c",
+        "sha256": "c749bcff208d93f015e25bb5d9a9fe8fa730def08378ecd14258f5914d218d45",
+        "bytes": 1279
+      },
+      "platform": "native-windows",
+      "returnedNormally": true,
+      "immutableMemoryPreserved": true,
+      "actualReturn": null,
+      "expectedReturn": null,
+      "actualMemorySha256": "8b6ee028895f034f59c8da8b78c77606eb4a01c3b9d314d93eb027c07ef39265",
+      "expectedMemorySha256": "78f2025de7fa49fa6ca561dae54b8f197dca20d8309af28ff9793c7758b679b9"
+    },
+    {
+      "name": "destroy-previous",
+      "wrongSource": {
+        "path": "work/wave012-native/constructors-release/negative/destroy-previous/label_ops.c",
+        "sha256": "9d00cd5faf222c12507ff36389ab13aabd70ea9deb830870319030935acb61d2",
+        "bytes": 1285
+      },
+      "platform": "arm-cpu",
+      "returnedNormally": true,
+      "immutableMemoryPreserved": true,
+      "actualReturn": 51381248,
+      "expectedReturn": 51381248,
+      "actualMemorySha256": "06accc3431bac65077521158046c462deb09b9ceda147eb07495d26a40133c20",
+      "expectedMemorySha256": "dd6e4ce1d5f3bb33a7522a3c128d1845cc0f943ed86ecd797a7ca0fbcea42851"
+    },
+    {
+      "name": "destroy-previous",
+      "wrongSource": {
+        "path": "work/wave012-native/constructors-release/negative/destroy-previous/label_ops.c",
+        "sha256": "9d00cd5faf222c12507ff36389ab13aabd70ea9deb830870319030935acb61d2",
+        "bytes": 1285
+      },
+      "platform": "native-windows",
+      "returnedNormally": true,
+      "immutableMemoryPreserved": true,
+      "actualReturn": 2186753492064,
+      "expectedReturn": 2186753492064,
+      "actualMemorySha256": "779bdef865436aca8437b41b8f766c5ad6ea7992aedb7bcd8f6ca9824168f58d",
+      "expectedMemorySha256": "b6d6646aa26135f43fa19e232ba712e8f9ae68eba58b6957708bd5a04d61b9c1"
+    },
+    {
+      "name": "state-result",
+      "wrongSource": {
+        "path": "work/wave012-native/constructors-release/negative/state-result/state_storage.c",
+        "sha256": "fa3b52a68ac6b75f558bc3d7490e10ae6ebdf928d023e1334e23261f8ceb8d00",
+        "bytes": 982
+      },
+      "platform": "arm-cpu",
+      "returnedNormally": true,
+      "immutableMemoryPreserved": true,
+      "actualReturn": null,
+      "expectedReturn": null,
+      "actualMemorySha256": "126f82f7adf9809a3afb2f3454b02f6f92c5061ac8639128b65f37eb61c176e3",
+      "expectedMemorySha256": "e1a03a8b122f3527fb876c501d9db20eca60e088449d38ff3cbde75afd9a870f"
+    },
+    {
+      "name": "state-result",
+      "wrongSource": {
+        "path": "work/wave012-native/constructors-release/negative/state-result/state_storage.c",
+        "sha256": "fa3b52a68ac6b75f558bc3d7490e10ae6ebdf928d023e1334e23261f8ceb8d00",
+        "bytes": 982
+      },
+      "platform": "native-windows",
+      "returnedNormally": true,
+      "immutableMemoryPreserved": true,
+      "actualReturn": null,
+      "expectedReturn": null,
+      "actualMemorySha256": "8a91d36866fba39ba746e02e1a27c75928ff4ea03aef74751b345ad4b1d112ce",
+      "expectedMemorySha256": "598f8cd4a6e5db86e3c410256c6527a908129c6bab7dc103c6a21cc785a23494"
+    },
+    {
+      "name": "clear-byte",
+      "wrongSource": {
+        "path": "work/wave012-native/constructors-release/negative/clear-byte/state_storage.c",
+        "sha256": "1db1306c19c3169b8f52aa50bc57ee51adac0cdcd2e2d9bc91f40decedcd132c",
+        "bytes": 982
+      },
+      "platform": "arm-cpu",
+      "returnedNormally": true,
+      "immutableMemoryPreserved": true,
+      "actualReturn": 1,
+      "expectedReturn": 1,
+      "actualMemorySha256": "35319f0d26078bdec5ff5f2ef454bdcf2aa40c0dc5c3ab9d325754576ae2a443",
+      "expectedMemorySha256": "4bf78ffd4849bb5b4df062aaf065a85748399d8f33d850af22fd61c5225615c7"
+    },
+    {
+      "name": "clear-byte",
+      "wrongSource": {
+        "path": "work/wave012-native/constructors-release/negative/clear-byte/state_storage.c",
+        "sha256": "1db1306c19c3169b8f52aa50bc57ee51adac0cdcd2e2d9bc91f40decedcd132c",
+        "bytes": 982
+      },
+      "platform": "native-windows",
+      "returnedNormally": true,
+      "immutableMemoryPreserved": true,
+      "actualReturn": 1,
+      "expectedReturn": 1,
+      "actualMemorySha256": "5405b3679ced3bcf109960eaae369aba32be486b6ea4b13510533c2fb5788aec",
+      "expectedMemorySha256": "e360ab5e7eed54b2e301453e6cc45275df02d473d5258044c51d6740225cfa13"
+    }
+  ],
+  "fixtureSpecifications": [
+    {
+      "operation": "single",
+      "character": 0,
+      "nodes": 0
+    },
+    {
+      "operation": "single",
+      "character": 0,
+      "nodes": 2
+    },
+    {
+      "operation": "single",
+      "character": 1,
+      "nodes": 0
+    },
+    {
+      "operation": "single",
+      "character": 1,
+      "nodes": 2
+    },
+    {
+      "operation": "single",
+      "character": 32767,
+      "nodes": 0
+    },
+    {
+      "operation": "single",
+      "character": 32767,
+      "nodes": 2
+    },
+    {
+      "operation": "single",
+      "character": 32768,
+      "nodes": 0
+    },
+    {
+      "operation": "single",
+      "character": 32768,
+      "nodes": 2
+    },
+    {
+      "operation": "single",
+      "character": 65535,
+      "nodes": 0
+    },
+    {
+      "operation": "single",
+      "character": 65535,
+      "nodes": 2
+    },
+    {
+      "operation": "default_a",
+      "nodes": 0,
+      "owner": false
+    },
+    {
+      "operation": "default_a",
+      "nodes": 0,
+      "owner": true
+    },
+    {
+      "operation": "default_a",
+      "nodes": 1,
+      "owner": false
+    },
+    {
+      "operation": "default_a",
+      "nodes": 1,
+      "owner": true
+    },
+    {
+      "operation": "default_a",
+      "nodes": 3,
+      "owner": false
+    },
+    {
+      "operation": "default_a",
+      "nodes": 3,
+      "owner": true
+    },
+    {
+      "operation": "default_a",
+      "nodes": 16,
+      "owner": false
+    },
+    {
+      "operation": "default_a",
+      "nodes": 16,
+      "owner": true
+    },
+    {
+      "operation": "default_b",
+      "nodes": 0,
+      "owner": false
+    },
+    {
+      "operation": "default_b",
+      "nodes": 0,
+      "owner": true
+    },
+    {
+      "operation": "default_b",
+      "nodes": 1,
+      "owner": false
+    },
+    {
+      "operation": "default_b",
+      "nodes": 1,
+      "owner": true
+    },
+    {
+      "operation": "default_b",
+      "nodes": 3,
+      "owner": false
+    },
+    {
+      "operation": "default_b",
+      "nodes": 3,
+      "owner": true
+    },
+    {
+      "operation": "default_b",
+      "nodes": 16,
+      "owner": false
+    },
+    {
+      "operation": "default_b",
+      "nodes": 16,
+      "owner": true
+    },
+    {
+      "operation": "destroy",
+      "nodes": 0,
+      "owner": false
+    },
+    {
+      "operation": "destroy",
+      "nodes": 0,
+      "owner": true
+    },
+    {
+      "operation": "destroy",
+      "nodes": 1,
+      "owner": false
+    },
+    {
+      "operation": "destroy",
+      "nodes": 1,
+      "owner": true
+    },
+    {
+      "operation": "destroy",
+      "nodes": 3,
+      "owner": false
+    },
+    {
+      "operation": "destroy",
+      "nodes": 3,
+      "owner": true
+    },
+    {
+      "operation": "destroy",
+      "nodes": 16,
+      "owner": false
+    },
+    {
+      "operation": "destroy",
+      "nodes": 16,
+      "owner": true
+    },
+    {
+      "operation": "state_default",
+      "result": -128
+    },
+    {
+      "operation": "state_default",
+      "result": 0
+    },
+    {
+      "operation": "state_default",
+      "result": 127
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": -1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": -1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": 0,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": 0,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": 1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": 1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 0,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": -1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": -1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": 0,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": 0,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": 1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": 1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 1,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": -1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": -1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": 0,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": 0,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": 1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": 1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 15,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": -1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": -1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": 0,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": 0,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": 1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": 1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 16,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": -1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": -1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": 0,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": 0,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": 1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": 1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 17,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": -1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": -1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": 0,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": 0,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": 1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": 1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 31,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": -1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": -1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": 0,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": 0,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": 1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": 1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 32,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": -1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": -1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": 0,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": 0,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": 1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": 1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 127,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": -1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": -1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": -1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": -1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": -1,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": 0,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": 0,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": 0,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": 0,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": 0,
+      "pattern": "middle-free",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": 1,
+      "pattern": "empty",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": 1,
+      "pattern": "full",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": 1,
+      "pattern": "full",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": 1,
+      "pattern": "alternating",
+      "next": 2624
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 0
+    },
+    {
+      "operation": "state_init",
+      "members": 128,
+      "clear": 1,
+      "pattern": "middle-free",
+      "next": 2624
+    }
+  ],
+  "logicalBudgets": {
+    "rangeNode": 1,
+    "transition": 2,
+    "compiledState": 3,
+    "targetBlockBytes": 16,
+    "host64PhysicalBlockBytes": 32,
+    "CSizeAssertionsCoverAllThreeTypes": true,
+    "rawMembershipBytesAreNotDoubled": true
+  },
+  "ABI": {
+    "singletonAndDefaultConstructors": "void; R0 not interpreted as a formal return",
+    "rangeDestructor": "IntervalSet* returns input pointer",
+    "statePayloadConstructor": "void",
+    "statePayloadInitializer": "int boolean; count is raw membership bytes",
+    "ARMSetNodeDataBytes": [
+      20,
+      12,
+      40
+    ],
+    "host64SetNodeDataBytes": [
+      40,
+      24,
+      72
+    ]
+  },
+  "platform": {
+    "windowsNativeExecuted": true,
+    "windowsCases": 253,
+    "windowsDll": {
+      "path": "work/wave012-native/constructors-release/windows/constructors.dll",
+      "sha256": "0c5d0d9c326ec625817664948e617b5d82e016ffdc758038c610ca3f8438b255",
+      "bytes": 3072
+    },
+    "truePointersAbove32Bits": true,
+    "guardedMemoryPreserved": true,
+    "androidArm64Api29Built": true,
+    "androidSharedLibrary": {
+      "path": "work/wave012-native/constructors-release/libconstructors.so",
+      "sha256": "bc7314ea43bc89b38f03bc422a08c9287d91c63a0c7013a1710e88d3e86b1932",
+      "bytes": 4056
+    },
+    "androidLoadAlignments": [
+      16384,
+      16384,
+      16384,
+      16384
+    ],
+    "androidDeviceExecuted": false,
+    "wholeGameBuildOrExecution": false
+  },
+  "newFunctionalFunctions": 6,
+  "functionalOriginalInstructionBytes": 392,
+  "exactMatchingFunctions": 0,
+  "acceptedSourceCreditGranted": 0,
+  "runtimeInputs": [
+    {
+      "path": "tools/python/Lib/site-packages/capstone/lib/capstone.dll",
+      "sha256": "76958e18380023a68fd1714fa2e01c594cc6db1955a07ad6937b66e66dc5d6c3",
+      "bytes": 7576576
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/__init__.py",
+      "sha256": "94571d1314355e261aff0ddfc94985fe8761232ddff6874181fd21efa9fab47f",
+      "bytes": 43853
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/lib/unicorn.dll",
+      "sha256": "010d85dce84b8f6ffaec3d5420f1b5f7768f859eb831be574c7da23e656ee8f1",
+      "bytes": 9598976
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/__init__.py",
+      "sha256": "0e8ac7115c755994a968fa865bd1b2f2075edea715c17e91d62af2cc52c13392",
+      "bytes": 305
+    }
+  ],
+  "limits": [
+    "Finite valid typed graph/arena fixtures, not universal equivalence",
+    "At most16 range nodes and128 raw membership bytes; no malformed, concurrent or MMIO graphs",
+    "Constructor initialization retains untouched payload/padding and may discard old ownership without release",
+    "Failure preserves original partial mutation; no transactional rollback is added",
+    "Native physical blocks widen while original logical budgets and raw payload byte counts stay distinct"
+  ]
+}
