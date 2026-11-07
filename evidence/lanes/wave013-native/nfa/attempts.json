@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "attempts": [
+    {
+      "status": "harness-logging-failed-before-fixture-53",
+      "passedCases": 53,
+      "sourceChangedToFixFailure": false,
+      "failure": "cp932 stdout could not encode printable Unicode fixture name; private probe uses ascii representation now"
+    },
+    {
+      "status": "harness-boundary-failed-before-transition-helper-OOM-fixture",
+      "passedCases": 890,
+      "sourceChangedToFixFailure": false,
+      "failure": "General NFA model stripped token.slot alongside token object fields; include this existing measured output-pointer field for canonical transition helper"
+    },
+    {
+      "status": "wrong-control-rejected-outside-required-semantic-comparison-envelope",
+      "sourceChangedToFixFailure": false,
+      "passedSemanticControlPairs": 7,
+      "control": "repeat-minimum +1 created extra objects; native guard correctly rejected writes outside original-written field envelope; replaced control with bounded minimum edge condition to preserve the envelope"
+    },
+    {
+      "status": "test-expectation-failed-and-corrected",
+      "sourceChangedToFixFailure": false,
+      "failure": "ASCII range test incorrectly omitted measured non-ASCII case equivalents; original/source comparison had passed",
+      "actualBehavior": "[a-z] expands to A-Z, a-z, dotted/dotless I, long s and Kelvin sign under this data profile",
+      "privateFailedLog": "work/wave013-native/nfa-sealed/verification-tests-attempt001.private.log"
+    }
+  ],
+  "allFailuresPreserved": true,
+  "productSourceAlteredToHideFailure": false
+}
