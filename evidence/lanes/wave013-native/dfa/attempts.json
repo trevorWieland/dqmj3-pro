@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "status": "failures-preserved-final-qualified-contract-explicit",
+  "artifacts": [
+    {
+      "path": "work/wave013-native/dfa-batch-probe/failure-attempt001.private.json",
+      "sha256": "4e64ec0295a8e75cd7888eab62826314b1c00fbad799071c7c0dcf6615e5ee58",
+      "bytes": 240
+    },
+    {
+      "path": "work/wave013-native/dfa-batch-probe/attempt-001.json",
+      "sha256": "f647f80ad60a17a76f7b1397b11574f48f1ff4b3eabf6a58c3f47dfc7299bad4",
+      "bytes": 363
+    },
+    {
+      "path": "work/wave013-native/dfa-batch-probe/failure.private.json",
+      "sha256": "602a9e345c1b46ad8195a9af69b00fe4831330a8be74e7379bd279acd9ea29fe",
+      "bytes": 267
+    },
+    {
+      "path": "work/wave013-native/dfa-sealed/verification-tests-attempt001.private.log",
+      "sha256": "fc47ef3d5ad8e728c0251ed547f9ffe1f275b23803200982b9300a3054cce167",
+      "bytes": 3962
+    }
+  ],
+  "attempts": [
+    {
+      "issue": "Cumulative-byte initialization left an obsolete historical private-pointer mask",
+      "resolution": "Track original and native remaining byte offsets cumulatively; remove fully initialized native masks",
+      "productSourceChanged": false
+    },
+    {
+      "issue": "Projection bookkeeping reused an integer remaining-byte variable as a list",
+      "resolution": "Rename the separate remaining-offset list; no reconstructed game logic changed",
+      "productSourceChanged": false
+    },
+    {
+      "issue": "Complete historical link pointer remains outside four-byte current membership extent",
+      "resolution": "Separate DFA complete-field padding qualification and returning same-final-state read control; frozen NFA contract unchanged",
+      "productSourceChanged": false
+    },
+    {
+      "issue": "Partially initialized private-address fragments in count2 buffers",
+      "resolution": "Remain unsupported; two concrete cases retained and never counted as passed or Windows-executed",
+      "productSourceChanged": false
+    },
+    {
+      "issue": "Regression expected the previous less-specific exception message",
+      "resolution": "Assert the strengthened UnsupportedRepresentation diagnostic; final16 tests pass",
+      "productSourceChanged": false
+    }
+  ],
+  "sourcePacket": {
+    "path": "evidence/lanes/wave013-native/dfa/packet.json",
+    "sha256": "11e6002217a2584f8db762e8718821a3601a02f1a25d2171192a8917b0a4926a",
+    "bytes": 1312778
+  },
+  "verification": {
+    "path": "evidence/lanes/wave013-native/dfa/verification.json",
+    "sha256": "0c4a21c638cfb87680d3c50d2dc80b154a1f6fd6c473576fb71a67fae4ff5bf6",
+    "bytes": 1312
+  },
+  "representationProof": {
+    "path": "evidence/lanes/wave013-native/dfa/representation-limits.json",
+    "sha256": "87b50cb23a948273a595731cb7578f8eaba8ceb3380d138c09fc4c1ff3b47fda",
+    "bytes": 71259
+  },
+  "sourceCreditGranted": 0
+}

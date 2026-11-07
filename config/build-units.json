@@ -1314,6 +1314,78 @@
         "src/native/wave005/vm_views.h"
       ],
       "role": "bounded-closure-lifetime-component"
+    },
+    {
+      "source": "src/native/wave013/dfa_ranges.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave010/match_state.h",
+        "src/native/wave012/compile_graph.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave012/label_ops.h",
+        "src/native/wave013/control_compile.h",
+        "src/native/wave013/dfa_compile.h",
+        "src/native/wave013/pattern_nfa.h",
+        "src/native/wave013/pattern_nfa_api.h",
+        "src/native/wave013/pattern_ranges.h",
+        "src/native/wave013/pattern_tokens.h",
+        "src/native/wave013/pattern_unicode.h"
+      ],
+      "role": "bounded-pattern-dfa-component"
+    },
+    {
+      "source": "src/native/wave013/dfa_range_phase.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave010/match_state.h",
+        "src/native/wave012/compile_graph.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave012/label_ops.h",
+        "src/native/wave013/control_compile.h",
+        "src/native/wave013/dfa_compile.h",
+        "src/native/wave013/pattern_nfa.h",
+        "src/native/wave013/pattern_nfa_api.h",
+        "src/native/wave013/pattern_ranges.h",
+        "src/native/wave013/pattern_tokens.h",
+        "src/native/wave013/pattern_unicode.h"
+      ],
+      "role": "bounded-pattern-dfa-component"
+    },
+    {
+      "source": "src/native/wave013/dfa_driver.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave010/match_state.h",
+        "src/native/wave012/compile_graph.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave012/label_ops.h",
+        "src/native/wave013/control_compile.h",
+        "src/native/wave013/dfa_compile.h",
+        "src/native/wave013/pattern_nfa.h",
+        "src/native/wave013/pattern_nfa_api.h",
+        "src/native/wave013/pattern_ranges.h",
+        "src/native/wave013/pattern_tokens.h",
+        "src/native/wave013/pattern_unicode.h"
+      ],
+      "role": "bounded-pattern-dfa-component"
+    },
+    {
+      "source": "src/native/wave013/dfa_api.c",
+      "headers": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave010/match_state.h",
+        "src/native/wave012/compile_graph.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave012/label_ops.h",
+        "src/native/wave013/control_compile.h",
+        "src/native/wave013/dfa_compile.h",
+        "src/native/wave013/pattern_nfa.h",
+        "src/native/wave013/pattern_nfa_api.h",
+        "src/native/wave013/pattern_ranges.h",
+        "src/native/wave013/pattern_tokens.h",
+        "src/native/wave013/pattern_unicode.h"
+      ],
+      "role": "bounded-pattern-dfa-component"
     }
   ],
   "excludedSources": [
