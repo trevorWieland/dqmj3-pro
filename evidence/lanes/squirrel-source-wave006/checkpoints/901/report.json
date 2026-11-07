@@ -1,0 +1,1941 @@
+{
+  "schemaVersion": 1,
+  "kind": "public-summary-of-private-provisional-report",
+  "producerSha256": "730bf33f9ced2787734ecfcb733f40747a3ba3c9bb83d30f7cd2e44e3a27cf6f",
+  "privateReportSha256": "119b8ee07069a94d3fa1e6ebbe1a1b93c344445afffb405cbee2bdf37e06a3ef",
+  "privateReportBytes": 22099455,
+  "privateSourcePath": "work/squirrel-source-wave006/checkpoint-901-frozen/report.json",
+  "measurements": {
+    "schemaVersion": 1,
+    "status": "partial-source-script-execution-checkpoint",
+    "programId": "0004000e001acb00",
+    "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+    "originalReturns": 901,
+    "sourceReturns": 901,
+    "assertionsIncludedInReturnCounts": false,
+    "helperReturnsNotIncludedInExecuteReturnCount": true,
+    "universalMachineStateEqualityClaimed": false,
+    "sourceIndependentFullHeapModelComparisons": 901,
+    "originalIndependentSemanticHeapModelComparisons": 901,
+    "originalRawNativeFrameWordsUsePreCalleeWitness": true,
+    "rawWholeMemoryEquivalenceClaimed": false,
+    "implementedDispatchEntries": 48,
+    "measuredDispatchEntries": 61,
+    "nativeCallOpcodeOtherCallableKindsPending": true,
+    "generatorAndPositiveTrapPathsPending": true,
+    "wholeRootComplete": false,
+    "floatingPointExceptionStatusEquivalenceClaimed": false,
+    "armElfSha256": "52721ac6674246d20616ab97d2ad066797749527f11d966c1dc2d09943653ce7",
+    "wholeRootSourceCreditGranted": 0,
+    "sourceCodeCreditGranted": 0,
+    "wholeGameBuild": false,
+    "committedSourceReplay": false
+  },
+  "sources": [
+    {
+      "path": "source/squirrel-wave006/arithmetic.c",
+      "sha256": "f9ffaa9961b9a76a27e7d97dedba00697ac40f99342568ecab876a413aa74a02",
+      "bytes": 2481
+    },
+    {
+      "path": "source/squirrel-wave006/array_ops.c",
+      "sha256": "660ee96766ccada7cb3bba296c9490d2d8cc38dc102bff4170fabc7ac913ca9e",
+      "bytes": 2351
+    },
+    {
+      "path": "source/squirrel-wave006/closure.c",
+      "sha256": "5e50620dc5d6e035e30f77b1346583e89dbe6040aec213e4f47d628552368bdf",
+      "bytes": 2747
+    },
+    {
+      "path": "source/squirrel-wave006/closure_release.c",
+      "sha256": "b5471d430a14c71426220c1187eab76a88c912556d864be907d89eb583fb29d1",
+      "bytes": 1249
+    },
+    {
+      "path": "source/squirrel-wave006/comparison.c",
+      "sha256": "f3c7ee515bf74a4cbccb0ca093d2f9ea29748290bdd1fd35567441715ef5d186",
+      "bytes": 1356
+    },
+    {
+      "path": "source/squirrel-wave006/delegate.c",
+      "sha256": "d7c9f71e466e4400e458866efeefb1d634c49e5d7de5da6795523152fe6836fa",
+      "bytes": 1234
+    },
+    {
+      "path": "source/squirrel-wave006/exceptions.c",
+      "sha256": "6fe54859be1fa5d5e21d5603221c21ad9897f2cac9bbc46ed851ead0b3acdd36",
+      "bytes": 3296
+    },
+    {
+      "path": "source/squirrel-wave006/execute.c",
+      "sha256": "877967777a2c09cf6bd4f4b332dd774f53e2fe35a0aac2542f2ab23050012dce",
+      "bytes": 16484
+    },
+    {
+      "path": "source/squirrel-wave006/execute_fixture.c",
+      "sha256": "16e2047190f8b1f4d4c6dac7b8dbf34bdc05dfd90d4ad7b240f953e318b61d04",
+      "bytes": 1197
+    },
+    {
+      "path": "source/squirrel-wave006/execute_fixture.h",
+      "sha256": "b6d1fc97e147fa9d05367b1d87feb84d67b1d7dd077a4fbfca84f19c7bdfe5ba",
+      "bytes": 681
+    },
+    {
+      "path": "source/squirrel-wave006/execute_views.h",
+      "sha256": "ac1bb187c521aa09c820b0e224540ce498497fce2f7d35a499a3ddef620036bb",
+      "bytes": 7607
+    },
+    {
+      "path": "source/squirrel-wave006/host_runner.c",
+      "sha256": "4c4069771487e131025af1d91a057b655f205f4774f6090b8501998f3d8f6477",
+      "bytes": 25754
+    },
+    {
+      "path": "source/squirrel-wave006/indexed_get.c",
+      "sha256": "223b6cc23c76427d66e7bf797df73894894dec1603c561c4af7fa008eed99ef8",
+      "bytes": 2864
+    },
+    {
+      "path": "source/squirrel-wave006/iteration.c",
+      "sha256": "ebd3608d7ad207b8fe30e07b95a9de7ae1f1dd21c441e303b9adf3878b583a89",
+      "bytes": 1534
+    },
+    {
+      "path": "source/squirrel-wave006/local_arithmetic.c",
+      "sha256": "1b738af83d118a172d62863851ff51b13fcbf0ad42132f10cdda57b2aa501cf5",
+      "bytes": 1077
+    },
+    {
+      "path": "source/squirrel-wave006/numbers.c",
+      "sha256": "ecd721f6639b31cb6b3a527f2e294f3d0913c4206836efe076ee6b8a3d190c72",
+      "bytes": 2202
+    },
+    {
+      "path": "source/squirrel-wave006/objects.c",
+      "sha256": "20458f2f1d4a0dc3defda23e5af0a8d8220f3874ad8e10922e57235a60fd59d3",
+      "bytes": 1586
+    },
+    {
+      "path": "source/squirrel-wave006/return.c",
+      "sha256": "f620258a094360ad8138cb1e564e9cfbf33b9152085cc87a0f33f6c7970ff8d2",
+      "bytes": 1681
+    },
+    {
+      "path": "source/squirrel-wave006/runtime.c",
+      "sha256": "8f81839bea25de4ae0b7866d9aaf62958c439866a439f3fd2e33092649d0dab4",
+      "bytes": 434
+    },
+    {
+      "path": "source/squirrel-wave006/start_call.c",
+      "sha256": "504e75d1ed595e503935b7d5d72cb096c752b5130aa01d3f7a22e4d8c9c5d66f",
+      "bytes": 4128
+    },
+    {
+      "path": "source/squirrel-wave006/table.c",
+      "sha256": "c020e82c52c0a48ea4e87fcac02ee1146db1911e64ec4837ec0cd0a88653d526",
+      "bytes": 4844
+    },
+    {
+      "path": "source/squirrel-wave006/table_release.c",
+      "sha256": "9b7fd5fe42f31d56a494212e3c9ac62bcb9478c286de0ef3b8cf7b64fc8ab9e9",
+      "bytes": 1091
+    },
+    {
+      "path": "source/squirrel-wave006/type_names.c",
+      "sha256": "e438cb3bb130ad2a1dc7caf2134f13ddd87309b78b809df0b32ecb31fe447a9f",
+      "bytes": 617
+    }
+  ],
+  "compiler": {
+    "path": "tools/clang-21/clang.exe",
+    "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc",
+    "bytes": 99559064
+  },
+  "linker": {
+    "path": "tools/clang-21/ld.lld.exe",
+    "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3",
+    "bytes": 69225112
+  },
+  "scopeDocument": {
+    "path": "source/squirrel-wave006/README.md",
+    "sha256": "eb48039007f135aa9ce826dabfbff646b8ef42e91280a2e1b1d2e63fff12501f",
+    "bytes": 13873
+  },
+  "normalCases": 901,
+  "normalCaseRecordsSha256": "cd4abb066d643e7d23465baa7be670fb8ab413644683577b5e069059b77d8518",
+  "negativeControls": 23,
+  "negativeControlRecordsSha256": "734d76212523ae88f276ccb74afe49e59e90de31c9b870221c9aa1d931fc183e",
+  "pendingOpcodeEntries": [
+    12,
+    33,
+    34,
+    36,
+    38,
+    42,
+    49,
+    50,
+    52,
+    54,
+    55,
+    59,
+    60
+  ],
+  "additionalPendingSubpaths": [
+    "arithmetic string/metamethod/float remainder",
+    "negation metamethod",
+    "CALL class/metamethod/generator",
+    "general object/string comparison",
+    "trap search across native frames and generator cleanup",
+    "entry modes 1 and 3",
+    "closure missing named-outer errors, allocation failure, prototype finalization and GC/weak-environment lifetimes",
+    "indexed lookup failures, default delegates, classes/instances and general object lookup",
+    "table marked/weak finalization, null keys, delegated new-slot/metamethod cases, allocation failure and complete string/pointer key lifetimes",
+    "array final-owner destruction; string/class/generator iteration and iterator assertions"
+  ],
+  "platform": {
+    "windowsObservation": {
+      "result": 0,
+      "cases": 30,
+      "pointerBytes": 8,
+      "objectBytes": 16,
+      "bytecodeExecution": true
+    },
+    "windowsExeSha256": "8d9e4433897cb026cd8f190f8789de4a81262f5189070708938003a1a637d4cc",
+    "wrongSourceActuallyExecuted": true,
+    "wrongSourceExitCode": 3,
+    "wrongSourceObservation": {
+      "result": 3,
+      "cases": 1,
+      "pointerBytes": 8,
+      "objectBytes": 16,
+      "bytecodeExecution": true
+    },
+    "androidArm64Objects": [
+      {
+        "source": "source/squirrel-wave006/execute.c",
+        "sha256": "89c749d1b40c52d19b76badb17997c403a74b19a8fce2a6c581cc5f392aa17bf"
+      },
+      {
+        "source": "source/squirrel-wave006/objects.c",
+        "sha256": "fbcce636ab2eedb30c0b788b164302117473216abfede0568217441ee270d031"
+      },
+      {
+        "source": "source/squirrel-wave006/return.c",
+        "sha256": "05a74b860216d1f2fd800ffdf4b9eae00edc8aa42ecd04d412c20ef3aa3ddab7"
+      },
+      {
+        "source": "source/squirrel-wave006/start_call.c",
+        "sha256": "e2e10b25f0e5b1be5e7822253e5a4e138c68158c4a4fb67ae6d9be2f4671198d"
+      },
+      {
+        "source": "source/squirrel-wave006/execute_fixture.c",
+        "sha256": "d63529790fea3de14a2038d6ac51af6dbd03b4f32740c15f9769548c18034459"
+      },
+      {
+        "source": "source/squirrel-wave006/runtime.c",
+        "sha256": "b15357f80a4d45f5bf9531acb023a24fd19ac88cef691b39746ec9ae107dc3a4"
+      },
+      {
+        "source": "source/squirrel-wave006/exceptions.c",
+        "sha256": "8599d945009be575922dc0a65acbb6031dae57d088c44ccb8efc7cdbc722502a"
+      },
+      {
+        "source": "source/squirrel-wave006/type_names.c",
+        "sha256": "db89f3e4b7d88a63146301a7a9030f2fd9258e960e636144abcac25a911cf71f"
+      },
+      {
+        "source": "source/squirrel-wave006/numbers.c",
+        "sha256": "70f2666c1071f98088d0c6e33ee58f3571e8353d06a9b56112a41237556e226a"
+      },
+      {
+        "source": "source/squirrel-wave006/arithmetic.c",
+        "sha256": "f82893b677d13462f782e6f1c16cf11e40c9a20f4011d3a9912cce734dd101d5"
+      },
+      {
+        "source": "source/squirrel-wave006/comparison.c",
+        "sha256": "8c0908e78675f22b3667612b64f423b8f48f7a9e36ac2bcfca52bd51110aa122"
+      },
+      {
+        "source": "source/squirrel-wave006/array_ops.c",
+        "sha256": "d7e725228b2b3a4bff45056b734b99a002f88f6f980f21679b3bddd655b03224"
+      },
+      {
+        "source": "source/squirrel-wave006/closure.c",
+        "sha256": "468372f94be6257c19703abf6e8830b77482d21d35cd74a4d09b7d42534c0006"
+      },
+      {
+        "source": "source/squirrel-wave006/closure_release.c",
+        "sha256": "8939bcf64eed2f2a57a5b70842ada7522cdf1017f1c28580f419cd9604b433e8"
+      },
+      {
+        "source": "source/squirrel-wave006/indexed_get.c",
+        "sha256": "cebb703a34871731fdb867a35eb5e025478c3cc17b8bd064c7037dacd2a3ade8"
+      },
+      {
+        "source": "source/squirrel-wave006/table.c",
+        "sha256": "dab830a649c3ce3ea42e37da7c87f46238abbbd1aeed4cbae92943ec0277d5bb"
+      },
+      {
+        "source": "source/squirrel-wave006/local_arithmetic.c",
+        "sha256": "143d6d031ff8b912df7cf8073f2cf9ab2193c7f6f4a893b174af0228faedd4e2"
+      },
+      {
+        "source": "source/squirrel-wave006/table_release.c",
+        "sha256": "fa741088822ce6ca27b4c50a7be44caf4ad8a49cfee989771072aa2b31cc1f92"
+      },
+      {
+        "source": "source/squirrel-wave006/delegate.c",
+        "sha256": "d13deac7e37b6f5e00963425fde5b22b6f912d168a47edbe0bde6add1e67efce"
+      },
+      {
+        "source": "source/squirrel-wave006/iteration.c",
+        "sha256": "c38fcbe6e8be812c5c8107b9d1a1ea992e3fac8838d3c1b37d7db1b72d4d274a"
+      },
+      {
+        "source": "source/squirrel-wave004/native_call.c",
+        "sha256": "a149bc47ba18dd83c235a0c5808f20d2dc82a38f1fd4b66e6b3b861c89acbf96"
+      },
+      {
+        "source": "source/squirrel-wave004/frame_resize.c",
+        "sha256": "0aaa18a98a4820be95bcef62a3ff15f37baeb6ed68854928218ac2087c1bd56f"
+      },
+      {
+        "source": "source/squirrel-wave004/array_adapter.c",
+        "sha256": "f4eb5145b314ba2e2342fb7a5d5edc68ee1e5305d341807f606c010947285c27"
+      },
+      {
+        "source": "source/squirrel-wave004/call_fixture.c",
+        "sha256": "eb848f412122409a532192fbf86aea1d8e300a9f274038d00906af72c2f25abb"
+      },
+      {
+        "source": "source/squirrel-wave004/runtime.c",
+        "sha256": "4920c2d7fd4d163a71044347df102b1b84183ff9ef3b15f65b2dfd04494f3f26"
+      },
+      {
+        "source": "source/squirrel-wave002/vector_resize.c",
+        "sha256": "e0bb44e9e0d1f1acdfe81155a894057646cf2bc3c3a2cb4d37a17bc88aed1fe9"
+      },
+      {
+        "source": "source/squirrel-wave002/array_create.c",
+        "sha256": "69291ef3e9c22e580d1e63e6392617a5d86f1586e5753248dfb792f827dcec91"
+      },
+      {
+        "source": "src/native/wave005/chain.c",
+        "sha256": "8e43f39d93afaa8de09506af62bc5c115bfd640b1cce4403e76155731db3ef71"
+      },
+      {
+        "source": "src/native/wave005/stack.c",
+        "sha256": "cc4201f569698d8cf565ecb148bd16d538dedf445f22917cb77f92bfbc61b1f7"
+      },
+      {
+        "source": "src/native/wave005/push.c",
+        "sha256": "6af1e9b8b8455f622b9433738bd97212e6d42fab4072216ed429b94296978834"
+      },
+      {
+        "source": "src/native/wave005/object.c",
+        "sha256": "ed0874a68223187a203133298c6c93007a7031cc9a5438d0c9785783b590512b"
+      }
+    ],
+    "androidDeviceExecution": false,
+    "wholeGameBuild": false,
+    "commands": [
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\ld.lld.exe",
+          "-flavor",
+          "link",
+          "/lib",
+          "/machine:x64",
+          "/def:${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\msvcrt.def",
+          "/out:${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\msvcrt.lib"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\ld.lld.exe",
+          "-flavor",
+          "link",
+          "/lib",
+          "/machine:x64",
+          "/def:${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\kernel32.def",
+          "/out:${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\kernel32.lib"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\execute.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\0-execute.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\objects.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\1-objects.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\return.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\2-return.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\start_call.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\3-start_call.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\execute_fixture.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\4-execute_fixture.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\runtime.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\5-runtime.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\exceptions.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\6-exceptions.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\type_names.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\7-type_names.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\numbers.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\8-numbers.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\arithmetic.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\9-arithmetic.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\comparison.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\10-comparison.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\array_ops.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\11-array_ops.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\closure.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\12-closure.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\closure_release.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\13-closure_release.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\indexed_get.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\14-indexed_get.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\table.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\15-table.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\local_arithmetic.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\16-local_arithmetic.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\table_release.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\17-table_release.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\delegate.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\18-delegate.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\iteration.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\19-iteration.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave004\\native_call.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\20-native_call.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave004\\frame_resize.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\21-frame_resize.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave004\\array_adapter.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\22-array_adapter.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave004\\call_fixture.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\23-call_fixture.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave004\\runtime.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\24-runtime.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave002\\vector_resize.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\25-vector_resize.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave002\\array_create.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\26-array_create.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\src\\native\\wave005\\chain.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\27-chain.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\src\\native\\wave005\\stack.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\28-stack.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\src\\native\\wave005\\push.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\29-push.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\src\\native\\wave005\\object.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\30-object.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\host_runner.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\31-host_runner.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\ld.lld.exe",
+          "-flavor",
+          "link",
+          "/timestamp:0",
+          "/machine:x64",
+          "/entry:mainCRTStartup",
+          "/subsystem:console",
+          "/nodefaultlib",
+          "/out:${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\native-dispatch.exe",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\0-execute.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\1-objects.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\2-return.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\3-start_call.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\4-execute_fixture.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\5-runtime.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\6-exceptions.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\7-type_names.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\8-numbers.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\9-arithmetic.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\10-comparison.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\11-array_ops.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\12-closure.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\13-closure_release.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\14-indexed_get.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\15-table.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\16-local_arithmetic.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\17-table_release.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\18-delegate.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\19-iteration.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\20-native_call.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\21-frame_resize.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\22-array_adapter.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\23-call_fixture.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\24-runtime.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\25-vector_resize.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\26-array_create.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\27-chain.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\28-stack.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\29-push.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\30-object.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\31-host_runner.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\msvcrt.lib",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\kernel32.lib"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\native-dispatch.exe"
+        ],
+        "returncode": 0,
+        "logSha256": "664404e03d0112f1bf68cd4986ca71b7319d159e8f30edf354b5a7dbeb69a207"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=x86_64-pc-windows-msvc",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fno-stack-protector",
+          "-mno-incremental-linker-compatible",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\wrong-native-call.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\wrong-native-call.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\ld.lld.exe",
+          "-flavor",
+          "link",
+          "/timestamp:0",
+          "/machine:x64",
+          "/entry:mainCRTStartup",
+          "/subsystem:console",
+          "/nodefaultlib",
+          "/out:${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\wrong-dispatch.exe",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\wrong-native-call.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\1-objects.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\2-return.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\3-start_call.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\4-execute_fixture.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\5-runtime.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\6-exceptions.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\7-type_names.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\8-numbers.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\9-arithmetic.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\10-comparison.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\11-array_ops.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\12-closure.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\13-closure_release.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\14-indexed_get.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\15-table.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\16-local_arithmetic.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\17-table_release.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\18-delegate.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\19-iteration.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\20-native_call.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\21-frame_resize.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\22-array_adapter.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\23-call_fixture.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\24-runtime.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\25-vector_resize.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\26-array_create.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\27-chain.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\28-stack.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\29-push.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\30-object.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\31-host_runner.o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\msvcrt.lib",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\kernel32.lib"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\wrong-dispatch.exe"
+        ],
+        "returncode": 3,
+        "logSha256": "fae98d0e7e0572b4bd28a4f82810b922248ce8bdfbeafe2a670fbaa6ff78b778"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\execute.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-0-execute.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\objects.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-1-objects.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\return.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-2-return.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\start_call.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-3-start_call.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\execute_fixture.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-4-execute_fixture.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\runtime.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-5-runtime.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\exceptions.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-6-exceptions.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\type_names.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-7-type_names.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\numbers.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-8-numbers.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\arithmetic.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-9-arithmetic.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\comparison.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-10-comparison.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\array_ops.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-11-array_ops.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\closure.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-12-closure.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\closure_release.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-13-closure_release.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\indexed_get.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-14-indexed_get.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\table.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-15-table.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\local_arithmetic.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-16-local_arithmetic.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\table_release.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-17-table_release.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\delegate.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-18-delegate.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave006\\iteration.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-19-iteration.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave004\\native_call.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-20-native_call.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave004\\frame_resize.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-21-frame_resize.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave004\\array_adapter.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-22-array_adapter.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave004\\call_fixture.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-23-call_fixture.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave004\\runtime.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-24-runtime.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave002\\vector_resize.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-25-vector_resize.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\source\\squirrel-wave002\\array_create.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-26-array_create.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\src\\native\\wave005\\chain.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-27-chain.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\src\\native\\wave005\\stack.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-28-stack.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\src\\native\\wave005\\push.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-29-push.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "${ROOT}\\tools\\clang-21\\clang.exe",
+          "--target=aarch64-linux-android29",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-ffreestanding",
+          "-fno-builtin",
+          "-fPIC",
+          "-I",
+          "${ROOT}\\source\\squirrel-wave006",
+          "-c",
+          "${ROOT}\\src\\native\\wave005\\object.c",
+          "-o",
+          "${ROOT}\\work\\squirrel-source-wave006\\checkpoint-iteration\\platform\\android-30-object.o"
+        ],
+        "returncode": 0,
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  "wholeRootComplete": false,
+  "wholeRootSourceCreditGranted": 0,
+  "wholeGameBuild": false,
+  "limits": [
+    "arithmetic string/metamethod/float remainder",
+    "negation metamethod",
+    "CALL class/metamethod/generator",
+    "general object/string comparison",
+    "trap search across native frames and generator cleanup",
+    "entry modes 1 and 3",
+    "closure missing named-outer errors, allocation failure, prototype finalization and GC/weak-environment lifetimes",
+    "indexed lookup failures, default delegates, classes/instances and general object lookup",
+    "table marked/weak finalization, null keys, delegated new-slot/metamethod cases, allocation failure and complete string/pointer key lifetimes",
+    "array final-owner destruction; string/class/generator iteration and iterator assertions"
+  ],
+  "rawPerCaseStateAndExecutionCapturesPublished": false
+}
