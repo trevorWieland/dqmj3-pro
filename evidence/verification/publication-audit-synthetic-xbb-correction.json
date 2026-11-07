@@ -72,6 +72,13 @@
   ],
   "classification": "All findings are the exact deterministic authored XBB fixture file, seen in working tree and reachable history",
   "correction": "Pin both generator and fixture identities, regenerate in Python isolated mode without site initialization, permit only matching synthetic payload hashes in that one exact file, retain known-private-hash and secret checks",
-  "regressionTests": 30,
-  "originalPayloadExceptionGranted": false
+  "regressionTests": 31,
+  "originalPayloadExceptionGranted": false,
+  "integrationAttempt": {
+    "revision": "bbe7174808fedfe40c70eda6002a4fd0c27ff025",
+    "passed": false,
+    "findings": 10,
+    "reason": "Independent fixture verifier was not yet wired into the main public allowlist",
+    "correction": "Connect it at the real entry point; add whole-allowlist integration test and explicit82-entry resource census"
+  }
 }

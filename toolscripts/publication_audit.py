@@ -225,6 +225,7 @@ def public_allowlist(root):
             if not archive.read("native-includes/" + name):
                 raise ValueError("Missing public header license notice")
     allowed[HEADER_PATH] = {"sha256": HEADER_SHA, "size": 151286, "origin": "verified-public-aosp-llvm-headers-with-notices"}
+    allowed.update(authored_xbb_fixture(root))
     return allowed
 
 def private_hashes(root):

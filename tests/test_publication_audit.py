@@ -78,6 +78,12 @@ class PublicationAuditTests(unittest.TestCase):
         for encoded in (image.hex().encode(), base64.b64encode(image)):
             self.assertIn("encoded-restricted-payload", self.rules(AUDIT.content_rules(b'{"data":"' + encoded + b'"}', set())))
 
+    def test_main_public_allowlist_includes_the_verified_fixture(self):
+        allowed = AUDIT.public_allowlist(ROOT)
+        path = "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json"
+        self.assertEqual(allowed[path]["origin"], "independently-regenerated-authored-synthetic-xbb")
+        self.assertEqual(AUDIT.inspect(path, (ROOT / path).read_bytes(), allowed, set()), [])
+
     def test_exact_authored_xbb_fixtures_are_independently_regenerated(self):
         allowed = AUDIT.authored_xbb_fixture(ROOT)
         path = "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json"
@@ -165,7 +171,7 @@ class PublicationAuditTests(unittest.TestCase):
 
     def test_actual_public_resources_have_exact_manifest_identities(self):
         allowed = AUDIT.public_allowlist(ROOT)
-        self.assertEqual(len(allowed), 81)
+        self.assertEqual(len(allowed), 82)
         for path in ("source/squirrel-wave001/upstream/doc/squirrel2.pdf",
                      "source/squirrel-wave001/upstream/etc/test.nut", AUDIT.HEADER_PATH):
             self.assertEqual(AUDIT.inspect(path, (ROOT / path).read_bytes(), allowed, set()), [])
