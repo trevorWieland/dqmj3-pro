@@ -28,7 +28,8 @@
       "wave056",
       "wave055",
       "wave058",
-      "wave059"
+      "wave059",
+      "wave061"
     ]
   },
   "units": [
@@ -9655,6 +9656,38 @@
         "src/native/wave059/inflate059.h"
       ],
       "includeDirectories": [
+        "src/native/wave058",
+        "src/native/wave056",
+        "src/native/wave054"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave061/asset061.c",
+      "headers": [
+        "src/native/wave056/stream056.h",
+        "src/native/wave058/stream058.h",
+        "src/native/wave059/inflate059.h",
+        "src/native/wave061/asset061.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave059",
+        "src/native/wave058",
+        "src/native/wave056",
+        "src/native/wave054"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave061/fixture061.c",
+      "headers": [
+        "src/native/wave056/stream056.h",
+        "src/native/wave058/stream058.h",
+        "src/native/wave059/inflate059.h",
+        "src/native/wave061/asset061.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave059",
         "src/native/wave058",
         "src/native/wave056",
         "src/native/wave054"

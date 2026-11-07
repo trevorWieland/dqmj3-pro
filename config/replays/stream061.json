@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "name": "stream061",
+  "producerSteps": [
+    {
+      "name": "stream061-prepare",
+      "args": [
+        "toolscripts/native_stream061_stage.py",
+        "prepare"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "stream061-proof",
+      "args": [
+        "toolscripts/native_stream061_stage.py",
+        "proof"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "native_callback_inventory",
+    "native_census_overlay",
+    "native_stream061_stage",
+    "compile_source_include_dirs"
+  ],
+  "packets": [
+    "work/native-stream061-public/v1/staged-inputs.json",
+    "work/native-stream061-public/v1/proof/proof.log",
+    "work/native-stream061-public/v1/proof/public-input-guard.json",
+    "work/native-stream061/verification.json",
+    "work/native-stream061/final-attempt002/report.json",
+    "work/native-stream061/final-attempt002/controls/report.json",
+    "work/native-stream061/final-attempt002/input-guard.json",
+    "work/native-stream061/own-source-checkpoint.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

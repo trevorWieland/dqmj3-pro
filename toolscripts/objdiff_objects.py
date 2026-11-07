@@ -13,7 +13,7 @@ from elftools.elf.elffile import ELFFile
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import ci_native_build
 import configure_objdiff
-import native_census_overlay
+import native_callback_inventory as native_census_overlay
 import report_source_units
 
 

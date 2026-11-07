@@ -7,7 +7,7 @@ import sys
 from pathlib import Path, PurePosixPath
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import native_census_overlay
+import native_callback_inventory as native_census_overlay
 
 
 ROOT = Path(__file__).resolve().parents[1]
