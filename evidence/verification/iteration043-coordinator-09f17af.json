@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified-independent-iteration043-bounded-helper-domain",
+  "sourceRevision": "09f17afb1ba78d051f64948ced9081fd9c77c1c6",
+  "completeUnmodifiedBatchReplayPassed": true,
+  "rawReplay": {
+    "path": "evidence/verification/iteration043-isolated-09f17af.json",
+    "bytes": 15428,
+    "sha256": "af45cf24c48756e2a91e1e262ab71c4f86c8015c850c047169fdd1e1ce0072d7"
+  },
+  "ready": {
+    "path": "evidence/lanes/squirrel-iteration043/ready.json",
+    "bytes": 6730,
+    "sha256": "524af070d6429776a95a3d62e49fd2173127c16d13d0f816a91ea5102ea6d46a"
+  },
+  "primaryExecution": {
+    "path": "work/squirrel-iteration043/qualified1018/report.json",
+    "bytes": 83756065,
+    "sha256": "191da8edb31b5fe8d844f3cfc76f1d6517a7dcf6077c3793de7f62f68afa3417"
+  },
+  "independentExecution": {
+    "path": "work/clean-replay/iteration043-09f17af/work/squirrel-iteration043/qualified/report.json",
+    "bytes": 83756065,
+    "sha256": "191da8edb31b5fe8d844f3cfc76f1d6517a7dcf6077c3793de7f62f68afa3417"
+  },
+  "allReportControlsAndThreeArtifactsByteIdentical": true,
+  "artifacts": [
+    {
+      "path": "work/squirrel-iteration043/qualified1018/arm/iteration043.elf",
+      "bytes": 1399340,
+      "sha256": "56bbac3f745f908977d1d84a40bd1e22abe20c1b85f9872655d8566a06d8efa5"
+    },
+    {
+      "path": "work/squirrel-iteration043/qualified1018/windows/iteration043.exe",
+      "bytes": 79360,
+      "sha256": "32b5933b52ad94f07a250435ddeacd4f39fca39dc8187e36051ef06b710507e9"
+    },
+    {
+      "path": "work/squirrel-iteration043/qualified1018/android/android-model.elf",
+      "bytes": 1207144,
+      "sha256": "76c304a2c06e587bfc44a4f47d8bddca18f17f1db6c568f102a3884fc3e3db17"
+    }
+  ],
+  "cases": 1018,
+  "fourTargetObservations": 4072,
+  "terminalSets": 3,
+  "terminalObservations": 6,
+  "returningControls": 8,
+  "sameFinalSourceArenaControls": 2,
+  "preserved039Cases": 398,
+  "all398SourcePrefixesAndDefinedArenasPreserved": true,
+  "wholeOriginalSourceArenaEqualSets": 894,
+  "helperInstructionBytes": 780,
+  "helperInstructionPcsVisited": 185,
+  "invariantDeadClassInstructionBytes": 40,
+  "tests": 84,
+  "publicUnits": 393,
+  "publicCompilations": 1109,
+  "sourceAdmissionGranted": false,
+  "wholeExecuteVmGameAndroidOsOrPhysicalDeviceClaimed": false,
+  "producer": {
+    "path": "evidence/verification/producers/review-iteration043-replay.py",
+    "bytes": 4580,
+    "sha256": "64197850259254d1cdd5de4d3a786fc230ab383302b6cc0e60506a916bf8cbbf"
+  }
+}

@@ -58,3 +58,6 @@
 #define fn_0077d2a0 tree_erase033
 #define fn_00198320 sq_exception_handler035
 #define fn_00196b08 sq_script_create041
+#define fn_001a1eec sq_string_next043
+#define fn_001a8604 sq_table_next043
+#define fn_001a178c sq_class_next043
