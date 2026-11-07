@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "status": "explicit-bounded-domain-unvisited-classification",
+  "groups": [
+    {
+      "entry": 1572780,
+      "ranges": [
+        {
+          "start": 1573172,
+          "endExclusive": 1573212,
+          "instructionBytes": 40
+        },
+        {
+          "start": 1573224,
+          "endExclusive": 1573264,
+          "instructionBytes": 40
+        }
+      ],
+      "reason": "No-constructor branch requires exact NULL constructor tag; discarded temporary is initialized NULL and never passed to class service. Neither object can enter refcounted cleanup under the nonaliasing typed-service contract."
+    },
+    {
+      "entry": 1666924,
+      "ranges": [
+        {
+          "start": 1667184,
+          "endExclusive": 1667212,
+          "instructionBytes": 28
+        },
+        {
+          "start": 1667244,
+          "endExclusive": 1667260,
+          "instructionBytes": 16
+        }
+      ],
+      "reason": "The stack growth fill is the exact NULL object; its local cleanup cannot release a reference."
+    },
+    {
+      "entry": 1666924,
+      "ranges": [
+        {
+          "start": 1667376,
+          "endExclusive": 1667384,
+          "instructionBytes": 8
+        }
+      ],
+      "reason": "The registered native closure must be non-NULL and valid; this invalid-owner error transfer is excluded, never counted as a returning outcome."
+    },
+    {
+      "entry": 1666924,
+      "ranges": [
+        {
+          "start": 1667384,
+          "endExclusive": 1667400,
+          "instructionBytes": 16
+        }
+      ],
+      "reason": "The temporary native owner cannot be final while its copy in the local call frame retains the same object; nonwrapping references required."
+    },
+    {
+      "entry": 1666924,
+      "ranges": [
+        {
+          "start": 1667544,
+          "endExclusive": 1667584,
+          "instructionBytes": 40
+        }
+      ],
+      "reason": "The call-vector growth fill closure is NULL, so refcounted fill-temporary destruction is unreachable."
+    },
+    {
+      "entry": 1666924,
+      "ranges": [
+        {
+          "start": 1668104,
+          "endExclusive": 1668120,
+          "instructionBytes": 16
+        },
+        {
+          "start": 1668408,
+          "endExclusive": 1668424,
+          "instructionBytes": 16
+        }
+      ],
+      "reason": "Clearing the active vector frame cannot finalize its closure while the independently retained local frame still owns it."
+    },
+    {
+      "entry": 1666924,
+      "ranges": [
+        {
+          "start": 1668312,
+          "endExclusive": 1668332,
+          "instructionBytes": 20
+        }
+      ],
+      "reason": "The returned stack value has already been retained by separately live result storage before its stack slot is cleared; that clear cannot be final."
+    },
+    {
+      "entry": 1782748,
+      "ranges": [
+        {
+          "start": 1782900,
+          "endExclusive": 1782932,
+          "instructionBytes": 32
+        }
+      ],
+      "reason": "The real factory creates an empty array and resize grows capacity to exactly the requested positive size. Size greater than four cannot simultaneously be at most capacity/4 in this admitted successful/nonreentrant path."
+    },
+    {
+      "entry": 1782748,
+      "ranges": [
+        {
+          "start": 1783052,
+          "endExclusive": 1783076,
+          "instructionBytes": 24
+        }
+      ],
+      "reason": "Successful array creation and publication retain a live array owner. Invalid/failure error transfer146590 and its exceptional cleanup remain excluded."
+    }
+  ],
+  "doesNotClaimUnvisitedInstructionsExecuted": true,
+  "universalMachineStateOrUnrestrictedClassAndCallbackProof": false
+}

@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 1,
+  "status": "frozen-bounded-vm-call022-ready-for-independent-review",
+  "ownedFiles": [
+    {
+      "path": "source/squirrel-wave022/README.md",
+      "bytes": 6839,
+      "sha256": "01b95ecdebd4eca4a184f402336015e6832dafc712caad2215557004f6b0ef3b"
+    },
+    {
+      "path": "source/squirrel-wave022/array_native.c",
+      "bytes": 1360,
+      "sha256": "3567f0d1d7d27d085820370593295be383a5fd15f7531ed7d0eb7d7db5b8c3cc"
+    },
+    {
+      "path": "source/squirrel-wave022/call_frames.c",
+      "bytes": 872,
+      "sha256": "1413a8deda79267a2ccadbc96250c0b1de7c372d42e55cfd69f06c84a37d41d1"
+    },
+    {
+      "path": "source/squirrel-wave022/contract_fixture.c",
+      "bytes": 7015,
+      "sha256": "191c30b7e7369399a30ca4e5c60e2f3eb78241e4e6cfe75a420bbc289cb94521"
+    },
+    {
+      "path": "source/squirrel-wave022/contract_fixture.h",
+      "bytes": 1277,
+      "sha256": "811a8bc3164e64855db3360d0e29135d3af19e652a5f0c6f1c9df97c78b00226"
+    },
+    {
+      "path": "source/squirrel-wave022/error_fixture.c",
+      "bytes": 1877,
+      "sha256": "6cf4c7eda8ca9d3131359e710b68479217627a84d1bd050657c6ce7a289be8f5"
+    },
+    {
+      "path": "source/squirrel-wave022/error_service.c",
+      "bytes": 171,
+      "sha256": "c8bb738dc38c4ea87c2f7147bc638f7df55115e72d89be30000d5cb32d39c0df"
+    },
+    {
+      "path": "source/squirrel-wave022/fixture.c",
+      "bytes": 9543,
+      "sha256": "c41dd459cf68dc849f9f16778ca007d2318eb7b1777bd353140307643d8c3b0f"
+    },
+    {
+      "path": "source/squirrel-wave022/fixture.h",
+      "bytes": 1610,
+      "sha256": "7d5fa2d4b3b5323a670048486e2b3bd91a9bd471b0beb4c5939090f1600771f1"
+    },
+    {
+      "path": "source/squirrel-wave022/fixture_error_services.c",
+      "bytes": 1273,
+      "sha256": "5dc92c99c171058d39ea22b3ec1d0cfd056e35e3bcd8eeae868791fc808e628d"
+    },
+    {
+      "path": "source/squirrel-wave022/fixture_services.c",
+      "bytes": 5025,
+      "sha256": "194a31d898dc143a88c5ece622ffc730368c66efaffc68de850ad0aa883e1d60"
+    },
+    {
+      "path": "source/squirrel-wave022/generic_call.c",
+      "bytes": 1196,
+      "sha256": "0c0fb372a35efa7df6949b01f15ecec463d6f09ec2c956afbdfb71b7a0772d08"
+    },
+    {
+      "path": "source/squirrel-wave022/literal_format.c",
+      "bytes": 237,
+      "sha256": "0b38fd03dedcf1a600abc69478aa8920405807f9388ed811efdd437bff8a9c08"
+    },
+    {
+      "path": "source/squirrel-wave022/lookup_call_adapter.c",
+      "bytes": 273,
+      "sha256": "1de97d1b808f10ff4e7b3b9b5204e2084f6aab106157c45ef45b7a27d12c5076"
+    },
+    {
+      "path": "source/squirrel-wave022/native_call.c",
+      "bytes": 5246,
+      "sha256": "6700bf2960c7b2bda84c6a5b9cab5bafd62c6bb7dd16c3d0bb8653816bdd48ee"
+    },
+    {
+      "path": "source/squirrel-wave022/native_fixture.c",
+      "bytes": 4594,
+      "sha256": "f3ef398ff6f5a8fad42c10baae5eb06846a34c51868d249253eeed8bdd493ff5"
+    },
+    {
+      "path": "source/squirrel-wave022/native_profile_fixture.c",
+      "bytes": 3431,
+      "sha256": "6a0a2525c03dc63bb8dd0a5786efde6f11055cc8f552d4c8b73524c1758726d3"
+    },
+    {
+      "path": "source/squirrel-wave022/parent_binding.c",
+      "bytes": 501,
+      "sha256": "23d301d741b3201cef15f6a556f5cc647bba4fc24b5cbb9a8aeb6a992e3cea73"
+    },
+    {
+      "path": "source/squirrel-wave022/vm_call.h",
+      "bytes": 4008,
+      "sha256": "7e8e2240f89c6b466380d9f910fd4a29c9ac31a54e628c18e2903363158c1c36"
+    },
+    {
+      "path": "source/squirrel-wave022/vm_storage.c",
+      "bytes": 3516,
+      "sha256": "6fe073fb7997128f5a1bba21409333b400331446712fd09f0c79ed7685c9abdc"
+    },
+    {
+      "path": "tests/test_squirrel_vm_call022.py",
+      "bytes": 7056,
+      "sha256": "d55f1f24837787ec45c45f130e2a0e2e7756d6965dca6d96863d721671363ee1"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022.py",
+      "bytes": 11387,
+      "sha256": "6d6f786052e63b4b2f44b18b889f135b0a978c256a864a5eb0afbabd78580661"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022_android.py",
+      "bytes": 6325,
+      "sha256": "ebf7ed595731bf51588f5b778031aa40a5e159ceaa9b859b3770f9fc71340cc6"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022_build.py",
+      "bytes": 10185,
+      "sha256": "718c4856d1a23c9aa7d49956b88e11fde4f5b61a8068579f58bf11f8769ff7e0"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022_controls.py",
+      "bytes": 4721,
+      "sha256": "008f9d5e6565278f7eeb77b6f1b4a9124e882e8ebea717f6c147b6cd24cbb421"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022_layout.py",
+      "bytes": 2395,
+      "sha256": "6ce9833c392eb9c840258f5f52b55a865656bf91fcb947b66fa81792c20fae14"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022_measure.py",
+      "bytes": 5237,
+      "sha256": "ecd8fbb08915d16a6f19158eae1f8bc693f07f721c949dd2bf1b6d0e483f2944"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022_model.py",
+      "bytes": 13656,
+      "sha256": "3e207c232d8898734f1a97a2f906f1dce83ac877c3fc283ea716a095f849f698"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022_oracle.py",
+      "bytes": 12544,
+      "sha256": "1215e59ea5021217e46045121b442297659c10e9823cee02ab4bcdcba0a01733"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022_replay.py",
+      "bytes": 5047,
+      "sha256": "18aa64f066c391176cf762d5f4d067da87a64cfe658d1b8c670f76bbd0aff7c4"
+    }
+  ],
+  "pins": [
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/canonical-proposal.json",
+      "bytes": 1476,
+      "sha256": "fc7566d4de57aa5b655b220ac3ab75b2c1709acddcd243cc9d9cd8834c7a4023"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/development-failures.json",
+      "bytes": 3336,
+      "sha256": "5d0ece999d9f3536bb3ba16b1cf5412886e415c41597b96498e3ab6266b39ffc"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/domain-coverage.json",
+      "bytes": 3912,
+      "sha256": "d8d2eaa3694fa028418d952edada2357ef059c9e62a9289e2b00b4279455a3ff"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/environment.json",
+      "bytes": 1120,
+      "sha256": "65c17602bc958ef495eb8f7684dbb06b87661cd2910574f7ed1932aedf94d30b"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/execution.json",
+      "bytes": 44052,
+      "sha256": "3946bd01d2eed412cf4c699af94b404ba7c3ff11b23f8159a64c029317ca2188"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/layout.json",
+      "bytes": 3046,
+      "sha256": "d7daaa601499b76bd950e9f6d46cfaaa54322071a88b2daf70699357f85ea168"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/measurement.json",
+      "bytes": 27548,
+      "sha256": "3d25b4544e7e49b69654288c59193fbdc049671f0b4fc3453addb46e1bc6884e"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/providers.json",
+      "bytes": 3380,
+      "sha256": "e1cfe83c4ba97d1572beadc4693fa40dcc28967609bf6f87050cec71e3cc6c42"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/tests.json",
+      "bytes": 469,
+      "sha256": "4cd1cb71c1a93100ec36eea550de0007aaf06fb35c86b48c74a0414a817179ad"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/verification.json",
+      "bytes": 1305,
+      "sha256": "1b112872f77dcba1a050af542aec483f5abb48975fd9b7d7d303b182cc6855b9"
+    }
+  ],
+  "files": [
+    {
+      "path": "source/squirrel-wave022/README.md",
+      "bytes": 6839,
+      "sha256": "01b95ecdebd4eca4a184f402336015e6832dafc712caad2215557004f6b0ef3b"
+    },
+    {
+      "path": "source/squirrel-wave022/array_native.c",
+      "bytes": 1360,
+      "sha256": "3567f0d1d7d27d085820370593295be383a5fd15f7531ed7d0eb7d7db5b8c3cc"
+    },
+    {
+      "path": "source/squirrel-wave022/call_frames.c",
+      "bytes": 872,
+      "sha256": "1413a8deda79267a2ccadbc96250c0b1de7c372d42e55cfd69f06c84a37d41d1"
+    },
+    {
+      "path": "source/squirrel-wave022/contract_fixture.c",
+      "bytes": 7015,
+      "sha256": "191c30b7e7369399a30ca4e5c60e2f3eb78241e4e6cfe75a420bbc289cb94521"
+    },
+    {
+      "path": "source/squirrel-wave022/contract_fixture.h",
+      "bytes": 1277,
+      "sha256": "811a8bc3164e64855db3360d0e29135d3af19e652a5f0c6f1c9df97c78b00226"
+    },
+    {
+      "path": "source/squirrel-wave022/error_fixture.c",
+      "bytes": 1877,
+      "sha256": "6cf4c7eda8ca9d3131359e710b68479217627a84d1bd050657c6ce7a289be8f5"
+    },
+    {
+      "path": "source/squirrel-wave022/error_service.c",
+      "bytes": 171,
+      "sha256": "c8bb738dc38c4ea87c2f7147bc638f7df55115e72d89be30000d5cb32d39c0df"
+    },
+    {
+      "path": "source/squirrel-wave022/fixture.c",
+      "bytes": 9543,
+      "sha256": "c41dd459cf68dc849f9f16778ca007d2318eb7b1777bd353140307643d8c3b0f"
+    },
+    {
+      "path": "source/squirrel-wave022/fixture.h",
+      "bytes": 1610,
+      "sha256": "7d5fa2d4b3b5323a670048486e2b3bd91a9bd471b0beb4c5939090f1600771f1"
+    },
+    {
+      "path": "source/squirrel-wave022/fixture_error_services.c",
+      "bytes": 1273,
+      "sha256": "5dc92c99c171058d39ea22b3ec1d0cfd056e35e3bcd8eeae868791fc808e628d"
+    },
+    {
+      "path": "source/squirrel-wave022/fixture_services.c",
+      "bytes": 5025,
+      "sha256": "194a31d898dc143a88c5ece622ffc730368c66efaffc68de850ad0aa883e1d60"
+    },
+    {
+      "path": "source/squirrel-wave022/generic_call.c",
+      "bytes": 1196,
+      "sha256": "0c0fb372a35efa7df6949b01f15ecec463d6f09ec2c956afbdfb71b7a0772d08"
+    },
+    {
+      "path": "source/squirrel-wave022/literal_format.c",
+      "bytes": 237,
+      "sha256": "0b38fd03dedcf1a600abc69478aa8920405807f9388ed811efdd437bff8a9c08"
+    },
+    {
+      "path": "source/squirrel-wave022/lookup_call_adapter.c",
+      "bytes": 273,
+      "sha256": "1de97d1b808f10ff4e7b3b9b5204e2084f6aab106157c45ef45b7a27d12c5076"
+    },
+    {
+      "path": "source/squirrel-wave022/native_call.c",
+      "bytes": 5246,
+      "sha256": "6700bf2960c7b2bda84c6a5b9cab5bafd62c6bb7dd16c3d0bb8653816bdd48ee"
+    },
+    {
+      "path": "source/squirrel-wave022/native_fixture.c",
+      "bytes": 4594,
+      "sha256": "f3ef398ff6f5a8fad42c10baae5eb06846a34c51868d249253eeed8bdd493ff5"
+    },
+    {
+      "path": "source/squirrel-wave022/native_profile_fixture.c",
+      "bytes": 3431,
+      "sha256": "6a0a2525c03dc63bb8dd0a5786efde6f11055cc8f552d4c8b73524c1758726d3"
+    },
+    {
+      "path": "source/squirrel-wave022/parent_binding.c",
+      "bytes": 501,
+      "sha256": "23d301d741b3201cef15f6a556f5cc647bba4fc24b5cbb9a8aeb6a992e3cea73"
+    },
+    {
+      "path": "source/squirrel-wave022/vm_call.h",
+      "bytes": 4008,
+      "sha256": "7e8e2240f89c6b466380d9f910fd4a29c9ac31a54e628c18e2903363158c1c36"
+    },
+    {
+      "path": "source/squirrel-wave022/vm_storage.c",
+      "bytes": 3516,
+      "sha256": "6fe073fb7997128f5a1bba21409333b400331446712fd09f0c79ed7685c9abdc"
+    },
+    {
+      "path": "tests/test_squirrel_vm_call022.py",
+      "bytes": 7056,
+      "sha256": "d55f1f24837787ec45c45f130e2a0e2e7756d6965dca6d96863d721671363ee1"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022.py",
+      "bytes": 11387,
+      "sha256": "6d6f786052e63b4b2f44b18b889f135b0a978c256a864a5eb0afbabd78580661"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022_android.py",
+      "bytes": 6325,
+      "sha256": "ebf7ed595731bf51588f5b778031aa40a5e159ceaa9b859b3770f9fc71340cc6"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022_build.py",
+      "bytes": 10185,
+      "sha256": "718c4856d1a23c9aa7d49956b88e11fde4f5b61a8068579f58bf11f8769ff7e0"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022_controls.py",
+      "bytes": 4721,
+      "sha256": "008f9d5e6565278f7eeb77b6f1b4a9124e882e8ebea717f6c147b6cd24cbb421"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022_layout.py",
+      "bytes": 2395,
+      "sha256": "6ce9833c392eb9c840258f5f52b55a865656bf91fcb947b66fa81792c20fae14"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022_measure.py",
+      "bytes": 5237,
+      "sha256": "ecd8fbb08915d16a6f19158eae1f8bc693f07f721c949dd2bf1b6d0e483f2944"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022_model.py",
+      "bytes": 13656,
+      "sha256": "3e207c232d8898734f1a97a2f906f1dce83ac877c3fc283ea716a095f849f698"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022_oracle.py",
+      "bytes": 12544,
+      "sha256": "1215e59ea5021217e46045121b442297659c10e9823cee02ab4bcdcba0a01733"
+    },
+    {
+      "path": "toolscripts/squirrel_vm_call022_replay.py",
+      "bytes": 5047,
+      "sha256": "18aa64f066c391176cf762d5f4d067da87a64cfe658d1b8c670f76bbd0aff7c4"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/canonical-proposal.json",
+      "bytes": 1476,
+      "sha256": "fc7566d4de57aa5b655b220ac3ab75b2c1709acddcd243cc9d9cd8834c7a4023"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/development-failures.json",
+      "bytes": 3336,
+      "sha256": "5d0ece999d9f3536bb3ba16b1cf5412886e415c41597b96498e3ab6266b39ffc"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/domain-coverage.json",
+      "bytes": 3912,
+      "sha256": "d8d2eaa3694fa028418d952edada2357ef059c9e62a9289e2b00b4279455a3ff"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/environment.json",
+      "bytes": 1120,
+      "sha256": "65c17602bc958ef495eb8f7684dbb06b87661cd2910574f7ed1932aedf94d30b"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/execution.json",
+      "bytes": 44052,
+      "sha256": "3946bd01d2eed412cf4c699af94b404ba7c3ff11b23f8159a64c029317ca2188"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/layout.json",
+      "bytes": 3046,
+      "sha256": "d7daaa601499b76bd950e9f6d46cfaaa54322071a88b2daf70699357f85ea168"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/measurement.json",
+      "bytes": 27548,
+      "sha256": "3d25b4544e7e49b69654288c59193fbdc049671f0b4fc3453addb46e1bc6884e"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/providers.json",
+      "bytes": 3380,
+      "sha256": "e1cfe83c4ba97d1572beadc4693fa40dcc28967609bf6f87050cec71e3cc6c42"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/tests.json",
+      "bytes": 469,
+      "sha256": "4cd1cb71c1a93100ec36eea550de0007aaf06fb35c86b48c74a0414a817179ad"
+    },
+    {
+      "path": "evidence/lanes/squirrel-vm-call022/verification.json",
+      "bytes": 1305,
+      "sha256": "1b112872f77dcba1a050af542aec483f5abb48975fd9b7d7d303b182cc6855b9"
+    }
+  ],
+  "mainObservationsPerTarget": 234,
+  "returningSemanticControls": 12,
+  "sameFinalArmArenaControls": 8,
+  "freshAndCopiedTests": 11,
+  "existingCanonicalInstructionBytesReconstructedWithPortableGraph": 2380,
+  "newPhysicalCreditRequested": 0,
+  "requestedExactBytes": 0,
+  "acceptedSourceCreditGranted": 0,
+  "canonicalMappingAndAdmissionOwnedByCoordinator": true,
+  "completeScriptExecuteClassCreationTypeErrorOrWholeVmClaim": false,
+  "experimental018ParentAdapterQualified": false,
+  "originalCodeOrMemoryPayloadPublished": false,
+  "nativeWindowsExecuted": true,
+  "physicalAndroidOrGameClaim": false
+}

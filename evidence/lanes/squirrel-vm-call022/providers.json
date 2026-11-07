@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "productFiles": [
+    "source/squirrel-wave022/vm_call.h",
+    "source/squirrel-wave022/vm_storage.c",
+    "source/squirrel-wave022/generic_call.c",
+    "source/squirrel-wave022/native_call.c",
+    "source/squirrel-wave022/call_frames.c",
+    "source/squirrel-wave022/array_native.c",
+    "source/squirrel-wave022/lookup_call_adapter.c",
+    "source/squirrel-wave022/error_service.c",
+    "source/squirrel-wave022/literal_format.c"
+  ],
+  "experimentalUnqualifiedFiles": [
+    "source/squirrel-wave022/parent_binding.c"
+  ],
+  "windowsOnlyFixtureUnits": [
+    "source/squirrel-wave022/native_fixture.c"
+  ],
+  "syntheticFixtureFiles": [
+    "source/squirrel-wave022/contract_fixture.c",
+    "source/squirrel-wave022/contract_fixture.h",
+    "source/squirrel-wave022/error_fixture.c",
+    "source/squirrel-wave022/fixture.c",
+    "source/squirrel-wave022/fixture.h",
+    "source/squirrel-wave022/fixture_error_services.c",
+    "source/squirrel-wave022/fixture_services.c",
+    "source/squirrel-wave022/native_fixture.c",
+    "source/squirrel-wave022/native_profile_fixture.c"
+  ],
+  "actualFrozenProviderSourceSelection": [
+    "source/squirrel-wave012/reference_prefix.c",
+    "source/squirrel-wave012/reference_dispatch_opaque.c",
+    "source/squirrel-wave012/vector_values.c",
+    "source/squirrel-wave012/array_reference.c",
+    "source/squirrel-wave012/array_vtables.c",
+    "source/squirrel-wave012/mixed_runtime.c",
+    "source/squirrel-wave011/prototype_release.c",
+    "source/squirrel-wave011/vtables.c",
+    "source/squirrel-wave013/native_closure_release.c",
+    "source/squirrel-wave013/vtables.c",
+    "source/squirrel-wave014/weak_reference.c",
+    "source/squirrel-wave014/vtables.c",
+    "source/squirrel-wave017/script_closure.c",
+    "source/squirrel-wave017/vtables.c",
+    "source/squirrel-wave016/native_create.c",
+    "source/squirrel-wave016/vm_storage.c",
+    "source/squirrel-wave020/lookup_bindings.c",
+    "source/squirrel-wave020/lookup_error.c",
+    "source/squirrel-wave020/lookup_scratch.c",
+    "source/squirrel-wave020/lookup_type_name.c",
+    "source/squirrel-wave015/string.c",
+    "source/squirrel-wave015/bytes.c",
+    "source/squirrel-wave015/vtables.c"
+  ],
+  "requiredExternalCallContracts": [
+    "sq_vm_execute022",
+    "sq_vm_create_instance022",
+    "sq_vm_call_type_error022",
+    "sq_vm_call_reallocate022",
+    "sq_vm_array_failure022"
+  ],
+  "nativeCallableABI": "I32(void*) exact frozen013 type; actual compiled callback execution qualified here",
+  "sharedStorage": "actual SqLookupSharedStorage020 with common012 first; standalone small prefix insufficient",
+  "vmStorage": "actual complete SqVmCallStorage022, exact common020 first; standalone020 storage insufficient",
+  "originalReferenceRoute": [
+    "actual176fc8",
+    "actual17ffac",
+    "actual196f6c",
+    "separately linked common callbackA0ff00",
+    "actual1b33dc"
+  ],
+  "authoredRoute": [
+    "frozen016 native factory",
+    "sq_vm_call022",
+    "sq_vm_call_native022",
+    "same separately compiled callback",
+    "sq_vm_array_native022"
+  ],
+  "originalEndpointOverwritten": false,
+  "fixtureFilesMayBeLinkedAsProduction": false,
+  "literalFormatterPercentConversionsQualified": false,
+  "originalPayloadPublished": false,
+  "sourceCreditGranted": 0
+}
