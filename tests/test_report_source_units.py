@@ -31,6 +31,14 @@ class SourceDirectedUnitsTests(unittest.TestCase):
         path=self.root/routing.CONFIG;path.parent.mkdir(parents=True,exist_ok=True)
         path.write_text(json.dumps(self.config),encoding="utf-8")
 
+    def test_unit_alias_direction_supports_the_quick_source_file_index(self):
+        self.assertEqual(routing.unit_names(self.config), "#define actual_controller fn_00100008\n")
+
+    def test_unit_aliases_reject_conflicting_source_names(self):
+        self.config['units'].append({**self.config['units'][0], 'symbol': 'fn_00100010'})
+        with self.assertRaisesRegex(ValueError, 'unique valid C names'):
+            routing.unit_names(self.config)
+
     def test_partition_preserves_every_byte_and_adds_no_exact_source(self):
         accepted=[{"address":0x100000,"instructionBytes":4}]
         units,pin=routing.load(self.root,self.census,accepted)
