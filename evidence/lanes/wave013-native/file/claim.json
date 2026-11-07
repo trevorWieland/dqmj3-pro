@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "status": "claimed-file-and-normalization-frontier-before-source",
+  "producer": {
+    "path": "toolscripts/native_wave013_file_claim.py",
+    "sha256": "cdc147e5fe67a9693f6aa0814b2c0463f8883a9dd5e50bf7ec53db4034026afe",
+    "bytes": 3870
+  },
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "functions": [
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 4997380,
+        "mode": "ARM"
+      },
+      "instructionRanges": [
+        {
+          "start": 4997380,
+          "endExclusive": 4997872,
+          "bytes": 492,
+          "sha256": "6bfb2794769481e78da003ad4725e2dee6bb5615fdda0bcd3efb264539d09bca"
+        }
+      ],
+      "literalPoolRanges": [
+        {
+          "start": 4997872,
+          "endExclusive": 4997876,
+          "bytes": 4,
+          "sha256": "afaaa4114124faf9d30357b087f4538f57689c757bf7e6bd3e7535d834343099"
+        },
+        {
+          "start": 4997876,
+          "endExclusive": 4997880,
+          "bytes": 4,
+          "sha256": "26b6c161227297dab3e2215fc4ad65830ac39bc2a0a6fc5a62956f4027f47b06"
+        },
+        {
+          "start": 4997880,
+          "endExclusive": 4997884,
+          "bytes": 4,
+          "sha256": "14a1f0abcdb9d40c193dc5a19cd621f3c41d4a98288ce450c637f72a92a5270a"
+        }
+      ],
+      "instructionBytes": 492,
+      "directCalls": [
+        4996128,
+        4998176,
+        4998252
+      ],
+      "callerEntries": [
+        4996724
+      ],
+      "sourceCreditRequested": 0
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 4998176,
+        "mode": "ARM"
+      },
+      "instructionRanges": [
+        {
+          "start": 4998176,
+          "endExclusive": 4998248,
+          "bytes": 72,
+          "sha256": "cb6ecf13d833edb65d1804b875cf95d599ffb7e69018ee71f3a5ec95f745c3ab"
+        }
+      ],
+      "literalPoolRanges": [
+        {
+          "start": 4998248,
+          "endExclusive": 4998252,
+          "bytes": 4,
+          "sha256": "372b36846b858143e18f5432bf24ba0a30829b5fe0a8392032934b76532ee877"
+        }
+      ],
+      "instructionBytes": 72,
+      "directCalls": [],
+      "callerEntries": [
+        4997380
+      ],
+      "sourceCreditRequested": 0
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 4998252,
+        "mode": "ARM"
+      },
+      "instructionRanges": [
+        {
+          "start": 4998252,
+          "endExclusive": 4998868,
+          "bytes": 616,
+          "sha256": "22ef2d04e4042810732b73dbe3ffac8f3ebdd4aba8a555bb1498fee53cb96cf7"
+        }
+      ],
+      "literalPoolRanges": [
+        {
+          "start": 4998868,
+          "endExclusive": 4998872,
+          "bytes": 4,
+          "sha256": "b02bede0eed5239f54ca4e41cf9b8ab8cf2c062122bd693b96db76fed4cccfc1"
+        },
+        {
+          "start": 4998872,
+          "endExclusive": 4998876,
+          "bytes": 4,
+          "sha256": "84941ac44e5537241796bf8ae6f73a1e3890acf0142084c5e43056ac1e5614f5"
+        },
+        {
+          "start": 4998876,
+          "endExclusive": 4998880,
+          "bytes": 4,
+          "sha256": "4a279f03be48f17cdd78d27e424c5d34255816a4d888cf80a5596ebc690fb7d7"
+        },
+        {
+          "start": 4998880,
+          "endExclusive": 4998884,
+          "bytes": 4,
+          "sha256": "30928a614bd10f88f755b82b76945ed7ee4065b4e13698bb91f867eb5e970468"
+        },
+        {
+          "start": 4998884,
+          "endExclusive": 4998888,
+          "bytes": 4,
+          "sha256": "9c30368700a4f6d50b434e37d433643a06f5c2fc009f02f47e726d1031e03ef3"
+        }
+      ],
+      "instructionBytes": 616,
+      "directCalls": [],
+      "callerEntries": [
+        4997380
+      ],
+      "sourceCreditRequested": 0
+    }
+  ],
+  "candidateFunctions": 3,
+  "candidateInstructionBytes": 1180,
+  "canonicalInstructionRangesComplete": true,
+  "lookupTables": [
+    {
+      "name": "small-kana",
+      "pointerLoadLiteral": 4998872,
+      "start": 8273914,
+      "bytes": 48,
+      "entries": 12,
+      "format": "two little-endian u16 code units per entry",
+      "sha256": "661c9e655985f1a51065a717873df0243d53c9fbd4edf914748ba1d42ad12c9e",
+      "role": "nonexecutable character mapping data",
+      "originalDataSourceCredit": 0
+    },
+    {
+      "name": "halfwidth-voiced",
+      "pointerLoadLiteral": 4998876,
+      "start": 8274194,
+      "bytes": 84,
+      "entries": 21,
+      "format": "two little-endian u16 code units per entry",
+      "sha256": "167b061a0846182cd0d14f1fc796f6e24fb4bdb82ea0e86c9b0befb8c8ffe782",
+      "role": "nonexecutable character mapping data",
+      "originalDataSourceCredit": 0
+    },
+    {
+      "name": "halfwidth-semivoiced",
+      "pointerLoadLiteral": 4998880,
+      "start": 8274278,
+      "bytes": 20,
+      "entries": 5,
+      "format": "two little-endian u16 code units per entry",
+      "sha256": "25d56791e2a14d7c7f0a4625c261279d373a104837564779499fb9029fc07443",
+      "role": "nonexecutable character mapping data",
+      "originalDataSourceCredit": 0
+    },
+    {
+      "name": "halfwidth-single",
+      "pointerLoadLiteral": 4998884,
+      "start": 8273962,
+      "bytes": 232,
+      "entries": 58,
+      "format": "two little-endian u16 code units per entry",
+      "sha256": "f73da89b9e6b310daf0f26e0dca6c59936520b75ac3739effd231b57ecd49862",
+      "role": "nonexecutable character mapping data",
+      "originalDataSourceCredit": 0
+    }
+  ],
+  "sourceCreditGranted": 0,
+  "closedSourceDependency": {
+    "path": "evidence/lanes/wave013-native/outer/packet.json",
+    "sha256": "3be8cb3411429a14d41689e84cbf7e18ab2ef9e21abe03cda174eb47bf516643",
+    "bytes": 1710412
+  },
+  "providerBoundary": {
+    "logicalMethods": [
+      {
+        "targetVtableOffset": 36,
+        "role": "byte size"
+      },
+      {
+        "targetVtableOffset": 44,
+        "role": "read into supplied buffer and return byte count"
+      }
+    ],
+    "thisAdjustmentObserved": 0,
+    "nativeRepresentation": "explicit typed callbacks; no ARM member-pointer words"
+  },
+  "owningViewProposal": {
+    "fullClassClaimed": false,
+    "patternPrefix": "frozen PatternRulePrefix as first member",
+    "atSignBypassTargetByteOffset": 26,
+    "fileBufferTargetOffset": 36,
+    "candidateStorageTargetOffset": 44,
+    "fileBufferNativeOffset": 40,
+    "candidateStorageNativeOffset": 56,
+    "targetViewBytes": 48,
+    "nativeViewBytes": 64,
+    "candidateSlots": 16,
+    "candidateSlotRawBytes": 128,
+    "candidateSlotCodeUnits": 64
+  },
+  "measuredSemantics": [
+    "remove ASCII/U+3000 spaces",
+    "fold fullwidth Latin letters and digits only",
+    "hiragana range to katakana",
+    "twelve measured small-kana enlargements",
+    "halfwidth kana single and voiced/semivoiced pairs",
+    "detect ASCII/fullwidth at sign",
+    "BOM/byte-count checking, newline rule iteration and flag effects before file errors"
+  ],
+  "qualificationNeeded": [
+    "public Unicode provenance for compatible mappings and explicit game-specific exceptions",
+    "capacity/alias domains and exact source/output consumption",
+    "odd byte counts and signed upper-size comparison",
+    "separate persistent buffers and scratch graph lifetimes across repeated pattern-line invocations"
+  ]
+}
