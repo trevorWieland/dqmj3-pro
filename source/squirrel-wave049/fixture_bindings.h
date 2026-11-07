@@ -1,0 +1,11 @@
+#ifndef DQMJ3_SQUIRREL_FIXTURE_BINDINGS049_H
+#define DQMJ3_SQUIRREL_FIXTURE_BINDINGS049_H
+
+#define sq_lookup_raise_format020 required_lookup_raise_format049
+#define sq_lookup_stringify020 required_lookup_stringify049
+#define sq_lookup_object_type_name020 required_lookup_object_type_name049
+#define sq_lookup_meta_call020 required_lookup_meta_call049
+#define sq_class_new_slot034 required_class_new_slot049
+#define sq_class_failure030 required_class_failure049
+
+#endif

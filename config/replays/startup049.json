@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "name": "startup049",
+  "producerSteps": [
+    {
+      "name": "startup049-cold-factory-shared-vm-and-controls",
+      "args": [
+        "toolscripts/squirrel_state049_packet.py",
+        "--work",
+        "work/replay049/run",
+        "--output",
+        "work/replay049/proof"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "isolated_component_replay",
+    "isolated_intake_cleanup"
+  ],
+  "packets": [
+    "work/replay049/proof/packet.json",
+    "work/replay049/proof/verification.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

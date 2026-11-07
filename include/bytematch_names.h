@@ -61,3 +61,4 @@
 #define fn_001a1eec sq_string_next043
 #define fn_001a8604 sq_table_next043
 #define fn_001a178c sq_class_next043
+#define fn_00173d4c sq_startup_relative049

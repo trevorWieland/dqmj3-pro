@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "status": "explicit-selected-source-and-uninvoked-dependencies-not-admission",
+  "producer": {
+    "path": "toolscripts/squirrel_state049_boundaries.py",
+    "sha256": "3e5ad4d06928d5a24c89e61d986af27aff8331281a97f50839efd4b306cde1be",
+    "bytes": 4060
+  },
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "census": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+    "bytes": 20574405
+  },
+  "actualNewSlotBody": {
+    "canonicalAddress": 1523040,
+    "mode": "ARM",
+    "source": {
+      "path": "source/squirrel-wave034/new_slot.c",
+      "sha256": "8d458e735e0c7faf7a1a933849b85a390d2ad7a86ec92376e6f2c604f768083f",
+      "bytes": 2594
+    },
+    "selectedBy": {
+      "path": "source/squirrel-wave049/new_slot_binding.c",
+      "sha256": "26367cc60c6d60e6a4bd106fd5ed31997bd73fef5f78ef4f8f31c3c2369fec8e",
+      "bytes": 72
+    },
+    "scopedBindings": {
+      "path": "source/squirrel-wave049/fixture_bindings.h",
+      "sha256": "b29f2f13f021bcd9444e80ebf25d74b690693a3efb7afe3a39e89ed6f81e92e1",
+      "bytes": 469
+    },
+    "qualifiedPath": "Nondelegating root table insertion; actual authored body executes once in the selected graph.",
+    "newCreditGranted": 0
+  },
+  "uninvokedEngineDependencies": [
+    {
+      "sourceBinding": "required_lookup_raise_format049",
+      "canonicalAddress": 1671484,
+      "mode": "ARM",
+      "instructionBytes": 240,
+      "role": "formatted-error-construction",
+      "typedFixtureSignature": "void(void *, const char *, ...)",
+      "existingSourceReference": {
+        "path": "source/squirrel-wave020/lookup_error.c",
+        "sha256": "c103367fc4cf20f16773a4e42e5e1de9cedfa8f8be89c5549a1e3fe9270b49da",
+        "bytes": 2608
+      },
+      "existingSourceSelectedUnderThisName": false,
+      "invokedInQualifiedDomain": false,
+      "failsClosedOnExecution": true,
+      "platformServiceClaimed": false,
+      "sourceOrSdkCreditGranted": 0
+    },
+    {
+      "sourceBinding": "required_lookup_stringify049",
+      "canonicalAddress": 1671136,
+      "mode": "ARM",
+      "instructionBytes": 336,
+      "role": "object-stringification",
+      "typedFixtureSignature": "SqString015 *(void *, const SqPrefixObject012 *)",
+      "existingSourceReference": {
+        "path": "source/squirrel-wave020/lookup_error.c",
+        "sha256": "c103367fc4cf20f16773a4e42e5e1de9cedfa8f8be89c5549a1e3fe9270b49da",
+        "bytes": 2608
+      },
+      "existingSourceSelectedUnderThisName": false,
+      "invokedInQualifiedDomain": false,
+      "failsClosedOnExecution": true,
+      "platformServiceClaimed": false,
+      "sourceOrSdkCreditGranted": 0
+    },
+    {
+      "sourceBinding": "required_lookup_object_type_name049",
+      "canonicalAddress": 1646368,
+      "mode": "ARM",
+      "instructionBytes": 8,
+      "role": "object-type-name",
+      "typedFixtureSignature": "const char *(const SqPrefixObject012 *)",
+      "existingSourceReference": null,
+      "existingSourceSelectedUnderThisName": false,
+      "invokedInQualifiedDomain": false,
+      "failsClosedOnExecution": true,
+      "platformServiceClaimed": false,
+      "sourceOrSdkCreditGranted": 0
+    },
+    {
+      "sourceBinding": "required_lookup_meta_call049",
+      "canonicalAddress": 1627388,
+      "mode": "ARM",
+      "instructionBytes": 344,
+      "role": "metamethod-call",
+      "typedFixtureSignature": "_Bool(void *, void *, SqPrototypeU32, SqPrototypeI32, SqPrefixObject012 *)",
+      "existingSourceReference": {
+        "path": "source/squirrel-wave020/metamethod_call.c",
+        "sha256": "ec1a49af1a16d175ddd0b198448c3c4b66470093d4b8f04cc3595e9bbea78344",
+        "bytes": 770
+      },
+      "existingSourceSelectedUnderThisName": false,
+      "invokedInQualifiedDomain": false,
+      "failsClosedOnExecution": true,
+      "platformServiceClaimed": false,
+      "sourceOrSdkCreditGranted": 0
+    },
+    {
+      "sourceBinding": "required_class_new_slot049",
+      "canonicalAddress": 1574068,
+      "mode": "ARM",
+      "instructionBytes": 1060,
+      "role": "class-member-definition",
+      "typedFixtureSignature": "_Bool(SqClass030 *, SqPrefixState012 *, const SqPrefixObject012 *, const SqPrefixObject012 *, SqPrototypeU32)",
+      "existingSourceReference": {
+        "path": "source/squirrel-wave034/member_definition.c",
+        "sha256": "d8bbcf0f54b13b39eec769e221b2365a40cdf603a9899a18aae9f6c7fb6fb67d",
+        "bytes": 2527
+      },
+      "existingSourceSelectedUnderThisName": false,
+      "invokedInQualifiedDomain": false,
+      "failsClosedOnExecution": true,
+      "platformServiceClaimed": false,
+      "sourceOrSdkCreditGranted": 0
+    }
+  ],
+  "assertionAndClassFailureSentinels": {
+    "sourceBindings": [
+      "sq_startup_assert049",
+      "required_class_failure049"
+    ],
+    "canonicalPrefixEntry": 1336720,
+    "fullOriginalAssertionAbiQualified": false,
+    "typedSentinelSignature": "_Noreturn void(void)",
+    "invokedInQualifiedDomain": false,
+    "sourceOrSdkCreditGranted": 0
+  },
+  "uninvokedFormattedUnderflowBoundary": {
+    "sourceBinding": "sq_startup_formatted_error049",
+    "canonicalAddress": 1671484,
+    "signature": "void(SqVm040 *, const char *)",
+    "actualCallerPassesAdditionalVarargs": false,
+    "invokedInQualifiedDomain": false,
+    "sourceOrSdkCreditGranted": 0
+  },
+  "registrationBindings": {
+    "path": "evidence/lanes/squirrel-state040/initialization045-table-bindings.json",
+    "sha256": "09918fbf514e9d90f77475f2049184ca03e34366e35d981fa315d45295b60ca6",
+    "bytes": 18490
+  },
+  "registrationHandlersInvoked": false,
+  "unresolvedRegistrationHandlerIdentities": 56,
+  "existingArrayHandlerHasActualSourceBinding": true,
+  "originalHelpersOrImagesMappedInSourceExecution": false,
+  "existingNativeCreationSource": {
+    "path": "source/squirrel-wave016/native_create.c",
+    "sha256": "c2fd06c9986a29b2625ff3787c03e1450bc6d7c5c854acc5c3763bdb21bbab22",
+    "bytes": 2459
+  },
+  "existingCallFrameResizeSource": {
+    "path": "source/squirrel-wave022/call_frames.c",
+    "sha256": "1413a8deda79267a2ccadbc96250c0b1de7c372d42e55cfd69f06c84a37d41d1",
+    "bytes": 872
+  },
+  "sourceCreditGranted": 0
+}
