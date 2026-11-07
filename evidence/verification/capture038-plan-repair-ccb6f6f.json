@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "status": "replay-plan-path-corrected-fresh-replay-required",
+  "failedReplay": {
+    "path": "evidence/verification/capture038-isolated-ccb6f6f.json",
+    "bytes": 11313,
+    "sha256": "b7a278bd3a8b43d50a9ca4aff5b6043761b64cd77b3e7e1ba3a26f5ee24eb415"
+  },
+  "failedTestLog": {
+    "path": "work/clean-replay/capture038-ccb6f6f/squirrel_capture038-tests.log",
+    "bytes": 1784,
+    "sha256": "59da15479620825677e76e20e15e43b2fcee15889daa6747a88a898e817ac309"
+  },
+  "successfulPriorStages": [
+    "capture038-positive",
+    "capture038-controls",
+    "public-compilation"
+  ],
+  "completedRuntimeCases": 108,
+  "completedReturningControls": 7,
+  "completedPublicCompilations": 999,
+  "testsRunBeforeSetupFailure": 0,
+  "reason": "Coordinator output paths differed from the frozen test suite primary-qualified and controls-sealed paths. The corrected plan produces those paths directly.",
+  "correctedPlan": {
+    "path": "config/replays/capture038.json",
+    "bytes": 801,
+    "sha256": "23ed638e0575e92e301bc2f62783a4cef6b8493ea877faf0bbc86b19ffba8370"
+  },
+  "frozenInputsChanged": false,
+  "failedAttemptPreserved": true,
+  "completeBatchReplayPassed": false,
+  "sourceAdmissionGranted": false
+}

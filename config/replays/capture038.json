@@ -7,7 +7,7 @@
       "args": [
         "toolscripts/squirrel_capture038_execute.py",
         "--folder",
-        "work/squirrel-capture038/coordinator-positive"
+        "work/squirrel-capture038/primary-qualified"
       ]
     },
     {
@@ -15,9 +15,9 @@
       "args": [
         "toolscripts/squirrel_capture038_controls.py",
         "--baseline",
-        "work/squirrel-capture038/coordinator-positive",
+        "work/squirrel-capture038/primary-qualified",
         "--folder",
-        "work/squirrel-capture038/coordinator-controls"
+        "work/squirrel-capture038/controls-sealed"
       ]
     }
   ],
@@ -26,7 +26,7 @@
     "isolated_component_replay"
   ],
   "packets": [
-    "work/squirrel-capture038/coordinator-positive/execution.json",
-    "work/squirrel-capture038/coordinator-controls/controls.json"
+    "work/squirrel-capture038/primary-qualified/execution.json",
+    "work/squirrel-capture038/controls-sealed/controls.json"
   ]
 }
