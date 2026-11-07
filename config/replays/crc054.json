@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "name": "crc054",
+  "producerSteps": [
+    {
+      "name": "crc054-original-source-corpus-and-returning-controls",
+      "args": [
+        "toolscripts/crc054.py",
+        "--output",
+        "work/crc054/root-review"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "isolated_component_replay",
+    "isolated_intake_cleanup",
+    "refresh_functional_source_names",
+    "refresh_functional_source_names_integration",
+    "crc054"
+  ],
+  "packets": [
+    "work/crc054/root-review/report.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

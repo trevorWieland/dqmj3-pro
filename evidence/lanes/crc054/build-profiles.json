@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "artifacts": {
+    "arm": {
+      "object": {
+        "path": "work/crc054/final/arm/crc.o",
+        "sha256": "601b44b37987c7c83221d1ad549e75c80cacee56bd573e54369646eb25cc6be7",
+        "bytes": 1300
+      },
+      "linkedArtifact": {
+        "path": "work/crc054/final/arm/crc054.elf",
+        "sha256": "4bf2d1ad6c503eee0096e3ddaee591183b1402e871060c2feaa352b027fb96ed",
+        "bytes": 66376
+      },
+      "flags": [
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfloat-abi=soft",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-Wall",
+        "-Wextra",
+        "-Werror"
+      ],
+      "undefinedSymbols": [],
+      "originalCodeLinked": false
+    },
+    "windows": {
+      "object": {
+        "path": "work/crc054/final/windows/crc.o",
+        "sha256": "746836c2f0c1024be08a197bc6df8352a67d49a96cc53ffb03db728b72c2e750",
+        "bytes": 953
+      },
+      "linkedArtifact": {
+        "path": "work/crc054/final/windows/crc054.dll",
+        "sha256": "eb80abdd57272676254dc8a1c4fef217028f6d1447fe77835a9df5f1350ff425",
+        "bytes": 2048
+      },
+      "flags": [
+        "--target=x86_64-pc-windows-msvc",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-Wall",
+        "-Wextra",
+        "-Werror"
+      ],
+      "undefinedSymbols": [],
+      "originalCodeLinked": false
+    },
+    "a64": {
+      "object": {
+        "path": "work/crc054/final/a64/crc.o",
+        "sha256": "0fb169fdc0dc159a789cd5ef1ba4412ebf45754e396ea6b9b242f591660ad448",
+        "bytes": 1200
+      },
+      "linkedArtifact": {
+        "path": "work/crc054/final/a64/crc054.elf",
+        "sha256": "c45173ad06bf7d5a8e73f34c776c5cf026543bd91d0c424e6c1b2056a3799783",
+        "bytes": 66408
+      },
+      "flags": [
+        "--target=aarch64-linux-android29",
+        "-fPIC",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-Wall",
+        "-Wextra",
+        "-Werror"
+      ],
+      "undefinedSymbols": [],
+      "originalCodeLinked": false
+    }
+  }
+}

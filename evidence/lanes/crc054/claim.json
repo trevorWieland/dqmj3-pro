@@ -1,0 +1,576 @@
+{
+  "schemaVersion": 1,
+  "status": "measured-complete-crc-pair-before-source",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "censusSha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+  "functions": [
+    {
+      "address": 7538104,
+      "symbol": "fn_007305b8",
+      "mode": "ARM",
+      "instructionBytes": 2696,
+      "instructionRanges": [
+        {
+          "start": 7515660,
+          "endExclusive": 7517120,
+          "bytes": 1460,
+          "sha256": "73641cde57e88558b5f3a285e540655dd3fe1dfb66069f6532399d2c3da1c671"
+        },
+        {
+          "start": 7538104,
+          "endExclusive": 7539340,
+          "bytes": 1236,
+          "sha256": "3d9b31329b337aaa8dfe5ff43e1353a7acfc0946934f85b3c3768acdfa0acc6a"
+        }
+      ],
+      "literalDependencies": [
+        {
+          "instruction": 7515688,
+          "address": 7517120,
+          "size": 4,
+          "sha256": "a841a4a461ffc12d4a3fb85abe806d91358344dc7a603b0e02c6b3ed4e938ca1",
+          "resolvedPointer": 8325976
+        },
+        {
+          "instruction": 7538136,
+          "address": 7539340,
+          "size": 4,
+          "sha256": "a841a4a461ffc12d4a3fb85abe806d91358344dc7a603b0e02c6b3ed4e938ca1",
+          "resolvedPointer": 8325976
+        }
+      ],
+      "tableAddress": 8325976,
+      "directCallees": [],
+      "callers": [
+        {
+          "censusEntry": 7526512,
+          "measuredDirectEdges": [
+            {
+              "instruction": 7527072,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "a3311ea6ecd82e6decb50db0c2b19d2ca21fa0f650c677a1c10cdd224919eb95"
+            }
+          ]
+        },
+        {
+          "censusEntry": 7539348,
+          "measuredDirectEdges": [
+            {
+              "instruction": 7539824,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "58902ee7e1266a2c75ee059f65b730c547b6a360db039bc9c5c97b6e0189f7d7"
+            },
+            {
+              "instruction": 7540340,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "dd64101e532b7c405756f4bd1635608b4830a271601c7904b27b49993b506bac"
+            },
+            {
+              "instruction": 7540472,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "587e9be0aa89ba88070c0050af4d82c54c8201c1ba27248a6932c535e7ae9d6c"
+            },
+            {
+              "instruction": 7540620,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "2e354356fdb1777bd057a4440ec5da61dda73525c7b2475623183ae29fc8cd3f"
+            },
+            {
+              "instruction": 7540976,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "ee3ecc1e894d431b24e8afcb06884eb807a0e63c67d859ec3ca1a25026e3ec42"
+            },
+            {
+              "instruction": 7541116,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "4017c127ebfc58400f05651a44c2a2b22b9fbd2d57083439cd75e6d1a9228939"
+            },
+            {
+              "instruction": 7541244,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "e82d07ca800052d70f34889eef83bb52dd5d808c9bb236f627a8b0ca0798f075"
+            },
+            {
+              "instruction": 7541384,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "74611f65468cc696901ebba079d9c35baeba33e4da566611de125adb3bc37a7d"
+            },
+            {
+              "instruction": 7541540,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "57d9dea8106626bf4e634b0059e5e6b65b872ff3dc6eb29a4012861fc61cf614"
+            }
+          ]
+        },
+        {
+          "censusEntry": 7544272,
+          "measuredDirectEdges": [
+            {
+              "instruction": 7545288,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "cd5a72c8e36507f4a472f39e45ceb15115547d881d1905b2782b095c9b50a35a"
+            }
+          ]
+        },
+        {
+          "censusEntry": 7545316,
+          "measuredDirectEdges": [
+            {
+              "instruction": 7545696,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "4e52ecb0bb2e2a86e55ac3c06a482cb8c022f2b5e52023db747878f729f241c5"
+            },
+            {
+              "instruction": 7545728,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "9d5102318195e0bb8ee2f32c1817504e643fee256f8958f28a913bee54fcd2a4"
+            },
+            {
+              "instruction": 7546172,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "b27328a405418f291a3489596aac542629f177810c7543d74867f23bf84b0714"
+            },
+            {
+              "instruction": 7546308,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "4ca53c3683f55fbb3fd59fd0e592eefabfcad565a9e4a3d04c93939ff964ac0a"
+            },
+            {
+              "instruction": 7546448,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "3594216728c0ef075b41094cf9998f7c3853ee652664436d857c6603cf4f79a3"
+            },
+            {
+              "instruction": 7546580,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "de7191eb7a8b66ec4fef76975038ae2d76f639b298fa0410c4811cd722967059"
+            },
+            {
+              "instruction": 7546852,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "bb35ea6dff13974e1d453f1d16346111a45dd02aab9eeba83d52ddbbdc226d3d"
+            },
+            {
+              "instruction": 7547016,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "04612e6400b0cacc1522d1cd63433fbf2c1cb4b888f4ca93b3120c62c07d4018"
+            },
+            {
+              "instruction": 7547188,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "d71554e318b7a5feb1ca183b528f36af09086875da26fc8afbf784562fd03d77"
+            },
+            {
+              "instruction": 7547392,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "351e356397180ab42183f3fce7bef3d761def30a51cfa91e16b275653b948608"
+            },
+            {
+              "instruction": 7551088,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "5832419000ba054d8c7945037f31b41d9d2a5d5b0472b1160466eda6a148dc3c"
+            },
+            {
+              "instruction": 7551764,
+              "mnemonic": "bl",
+              "target": 7538104,
+              "sha256": "2d170ad15ca2f2d6da242da637bd039795496e5b2c73318382f840f3042dc355"
+            }
+          ]
+        }
+      ],
+      "arguments": [
+        "uint32 seed:r0",
+        "const unsigned char* buffer:r1",
+        "uint32 length:r2"
+      ],
+      "nullBufferReturnsZero": true,
+      "endianDomain": "Canonical ARM little-endian data; local store1/read-byte selects entry path.",
+      "endianGateProof": {
+        "localWord": 1,
+        "firstByteUnderCanonicalLittleEndian": 1,
+        "condition": "CMP byte,0; intervening conditional LDR/MVN preserve flags",
+        "equalBranchInstruction": 7538144,
+        "unreachableEntryTail": [
+          7539332,
+          7539340
+        ],
+        "unreachableLowerRange": [
+          7515660,
+          7517120
+        ],
+        "totalUnreachablePcs": 367,
+        "notClaimedForBigEndianExecution": true
+      },
+      "residualLengthProof": {
+        "afterBulk32": [
+          0,
+          31
+        ],
+        "afterWords4": [
+          0,
+          3
+        ],
+        "cmnConstant": 2147483649,
+        "carry": false,
+        "zero": false,
+        "residualScalarFallbackPcs": 30
+      },
+      "unreachableRanges": [
+        {
+          "start": 7515660,
+          "endExclusive": 7517120,
+          "reason": "little-endian gate"
+        },
+        {
+          "start": 7539332,
+          "endExclusive": 7539340,
+          "reason": "little-endian gate"
+        },
+        {
+          "start": 7538780,
+          "endExclusive": 7538868,
+          "reason": "unsigned residual after32-byte loop is0..31; CMN cannot carry or produce zero"
+        },
+        {
+          "start": 7539184,
+          "endExclusive": 7539216,
+          "reason": "residual after4-byte loop is0..3; CMN cannot carry or produce zero"
+        }
+      ],
+      "expectedReachableInstructionPcs": 277,
+      "lowerAddressAlternate": "Complete measured owned fragment; statically unreachable from the declared little-endian entry."
+    },
+    {
+      "address": 7563060,
+      "symbol": "fn_00736734",
+      "mode": "ARM",
+      "instructionBytes": 2696,
+      "instructionRanges": [
+        {
+          "start": 7517124,
+          "endExclusive": 7518584,
+          "bytes": 1460,
+          "sha256": "73641cde57e88558b5f3a285e540655dd3fe1dfb66069f6532399d2c3da1c671"
+        },
+        {
+          "start": 7563060,
+          "endExclusive": 7564296,
+          "bytes": 1236,
+          "sha256": "f951582f1742429b04859c9ba35aca60294e483c0a61d6af33524f5f4df293cb"
+        }
+      ],
+      "literalDependencies": [
+        {
+          "instruction": 7517152,
+          "address": 7518584,
+          "size": 4,
+          "sha256": "fa40fd5ff8914cd09dab0ac1ae5756cfc0fc904e5c9ebb01ca4ec93e375ca15c",
+          "resolvedPointer": 8431736
+        },
+        {
+          "instruction": 7563092,
+          "address": 7564296,
+          "size": 4,
+          "sha256": "fa40fd5ff8914cd09dab0ac1ae5756cfc0fc904e5c9ebb01ca4ec93e375ca15c",
+          "resolvedPointer": 8431736
+        }
+      ],
+      "tableAddress": 8431736,
+      "directCallees": [],
+      "callers": [
+        {
+          "censusEntry": 7527504,
+          "measuredDirectEdges": [
+            {
+              "instruction": 7528036,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "3684c5f6ac7f39484f8c353fc408fec1ce77270b1e3f4f9d31dbb35ebae22cba"
+            }
+          ]
+        },
+        {
+          "censusEntry": 7564300,
+          "measuredDirectEdges": [
+            {
+              "instruction": 7564772,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "9e25e2cad5c5b062b1f456859e7f14e3bf5e9ded18eeb2a28defd0c3fb34aaf0"
+            },
+            {
+              "instruction": 7565288,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "c66dce4cb9c4d0755708b8cee0c696e7f2152feff559b52c6117beb30aef2d8b"
+            },
+            {
+              "instruction": 7565420,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "512c24d802a8c334d1446aa082853862c61e80bdc3b8d21341fc04504656d2de"
+            },
+            {
+              "instruction": 7565564,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "3a5c486a9d84d39c950e346b1c9b6df8e7a336c7f5a4b899bc0db8313cf4843d"
+            },
+            {
+              "instruction": 7565920,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "b864b08d26419eaee97ae18d8ea7d49f494bf4c373aba7c3e60fc80c1d48b304"
+            },
+            {
+              "instruction": 7566060,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "aa5811c2158348171f11d8c9e0be977920c83b1b6951d45d7c64b19003c0f7bd"
+            },
+            {
+              "instruction": 7566188,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "3e5444ffc631dbd758cd2faaaf32c1eb421b649c5c7cb54e2d72956b99013490"
+            },
+            {
+              "instruction": 7566324,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "373425fb537f7d3cf975d9dd5efe5722f22bf80bb4ef8caef84cf5ff2103b7ff"
+            },
+            {
+              "instruction": 7566480,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "cd71c318eb8cc1012baa25eeacbe11fe252d07ee3c2cdbfa9d5d8a55c8171453"
+            }
+          ]
+        },
+        {
+          "censusEntry": 7569400,
+          "measuredDirectEdges": [
+            {
+              "instruction": 7569692,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "86a6f93ff33a2bcdb8e22ffb7512b8c8fc4e32bdae88b73070820116080796aa"
+            }
+          ]
+        },
+        {
+          "censusEntry": 7569712,
+          "measuredDirectEdges": [
+            {
+              "instruction": 7570092,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "cac307a68e7375b560f7da6b45dfd932e0fb16916eb74ead8a99dd4891261e91"
+            },
+            {
+              "instruction": 7570124,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "769c4ba28a57d5bfa156a0d99886aedc6cb15f2d1976ed9f74c6992aba9feec3"
+            },
+            {
+              "instruction": 7570592,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "36be13f167d19ea581ee9d55645d038918ce921b0892cac0c5087d47a209e4a9"
+            },
+            {
+              "instruction": 7570728,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "caa9a198da854fcb88d0a5615a8c26f333429380d90ca980d9b63201567c5f1a"
+            },
+            {
+              "instruction": 7570868,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "e7150ca5c2d0c5161a80db88123f087ac31958005ede6e7d6f70175db1b631d0"
+            },
+            {
+              "instruction": 7571000,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "0dd5e3793836859c3e4f15953fe4fdda998eda827e19997e0d6980e66716ec82"
+            },
+            {
+              "instruction": 7571268,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "8f086635555af73a6817dbe593a44a66d90d3977090ac3f18b39031a4d906e5f"
+            },
+            {
+              "instruction": 7571432,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "3c12b3e5bde96e3950fdb9596d8c5dc15e4487f674d465f1ae9060477aab3134"
+            },
+            {
+              "instruction": 7571604,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "771362b204494325ffa34b2d7c6279452ed31b3b1499325ce55b076c04fe23e4"
+            },
+            {
+              "instruction": 7571808,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "bb35ea6dff13974e1d453f1d16346111a45dd02aab9eeba83d52ddbbdc226d3d"
+            },
+            {
+              "instruction": 7575468,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "b12f5ada6bb795a096e679509a7c0cf27a59a1ed392392bcf72cf8e2eba44aad"
+            },
+            {
+              "instruction": 7576124,
+              "mnemonic": "bl",
+              "target": 7563060,
+              "sha256": "fc64523d9bb90a7ece91acca999ea883fc20ae034f603abac37dbd6bfe70e78b"
+            }
+          ]
+        }
+      ],
+      "arguments": [
+        "uint32 seed:r0",
+        "const unsigned char* buffer:r1",
+        "uint32 length:r2"
+      ],
+      "nullBufferReturnsZero": true,
+      "endianDomain": "Canonical ARM little-endian data; local store1/read-byte selects entry path.",
+      "endianGateProof": {
+        "localWord": 1,
+        "firstByteUnderCanonicalLittleEndian": 1,
+        "condition": "CMP byte,0; intervening conditional LDR/MVN preserve flags",
+        "equalBranchInstruction": 7563100,
+        "unreachableEntryTail": [
+          7564288,
+          7564296
+        ],
+        "unreachableLowerRange": [
+          7517124,
+          7518584
+        ],
+        "totalUnreachablePcs": 367,
+        "notClaimedForBigEndianExecution": true
+      },
+      "residualLengthProof": {
+        "afterBulk32": [
+          0,
+          31
+        ],
+        "afterWords4": [
+          0,
+          3
+        ],
+        "cmnConstant": 2147483649,
+        "carry": false,
+        "zero": false,
+        "residualScalarFallbackPcs": 30
+      },
+      "unreachableRanges": [
+        {
+          "start": 7517124,
+          "endExclusive": 7518584,
+          "reason": "little-endian gate"
+        },
+        {
+          "start": 7564288,
+          "endExclusive": 7564296,
+          "reason": "little-endian gate"
+        },
+        {
+          "start": 7563736,
+          "endExclusive": 7563824,
+          "reason": "unsigned residual after32-byte loop is0..31; CMN cannot carry or produce zero"
+        },
+        {
+          "start": 7564140,
+          "endExclusive": 7564172,
+          "reason": "residual after4-byte loop is0..3; CMN cannot carry or produce zero"
+        }
+      ],
+      "expectedReachableInstructionPcs": 277,
+      "lowerAddressAlternate": "Complete measured owned fragment; statically unreachable from the declared little-endian entry."
+    }
+  ],
+  "tableDependencies": [
+    {
+      "address": 8325976,
+      "size": 8192,
+      "sha256": "24363a766de82f6877f1c0e25912659526684c30b689fea3d960cc703067a718",
+      "tables": 8,
+      "entriesPerTable": 256,
+      "entryBytes": 4,
+      "mathematicalPolynomial": 3988292384,
+      "allEntriesMatchGeneratedTables": true
+    },
+    {
+      "address": 8431736,
+      "size": 8192,
+      "sha256": "24363a766de82f6877f1c0e25912659526684c30b689fea3d960cc703067a718",
+      "tables": 8,
+      "entriesPerTable": 256,
+      "entryBytes": 4,
+      "mathematicalPolynomial": 3988292384,
+      "allEntriesMatchGeneratedTables": true
+    }
+  ],
+  "totalInstructionBytes": 5392,
+  "measuredGzipPath": {
+    "edges": [
+      {
+        "instruction": 6250292,
+        "target": 7545312,
+        "sha256": "f837879da4b944ca9b4af33f78e950a65102cb87d34ee6549ae6f1146704a505"
+      },
+      {
+        "instruction": 6250304,
+        "target": 7545312,
+        "sha256": "f6ef572860522ab400819ca26e8520736d096db0b549806c830aac0801428a47"
+      },
+      {
+        "instruction": 7545696,
+        "target": 7538104,
+        "sha256": "4e52ecb0bb2e2a86e55ac3c06a482cb8c022f2b5e52023db747878f729f241c5"
+      }
+    ],
+    "sdkNoOpAddress": 7545312,
+    "sdkCensusOwner": 7545316,
+    "sdkNoOpSha256": "71b1548a3867fe8e62a860f8010becb36b0386c9e97d552809cebccb9d93881d",
+    "establishesFirstCrcCopyOnly": true,
+    "additionalSdkCredit": 0
+  },
+  "sourceCreditGranted": 0,
+  "exactCreditGranted": 0,
+  "coordinatorReviewRequired": true
+}
