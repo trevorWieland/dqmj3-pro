@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "status": "physical-AYN-Thor-native-inflater059-corpus-validated",
+  "platform": {
+    "manufacturer": "AYN",
+    "model": "AYN Thor",
+    "androidRelease": "13",
+    "api": "33",
+    "abi": "arm64-v8a",
+    "nativeBridge": "0",
+    "emulatorProperty": "",
+    "kernelPageBytes": 4096
+  },
+  "apkSha256": "3d6b9d4f0a2bf8c875837d6dd967bc54d6d7b8222183b54baae14b6ac435bc6a",
+  "libraries": [
+    {
+      "name": "libstream058.so",
+      "sha256": "ac55cf7c53eda159298f705182405f0a71f7f823f5c6992c2fdc91fef0e0863a",
+      "loadAlignments": [
+        16384,
+        16384,
+        16384,
+        16384
+      ],
+      "needed": []
+    },
+    {
+      "name": "libdqm_inflateprobe059.so",
+      "sha256": "7f7a89452e0410f9d62f1270483967df190172baf69edf052580eda4d5b28ca5",
+      "loadAlignments": [
+        16384,
+        16384,
+        16384,
+        16384
+      ],
+      "needed": [
+        "libstream058.so"
+      ]
+    }
+  ],
+  "cases": 15,
+  "nativeDecoderCalls": 64,
+  "allDeclaredStateWorkspaceWindowOutputAndOrderedCallbacksMatchedOriginalReference": true,
+  "typedCrossLayoutPointerProjectionUsed": true,
+  "actualStatePointersAbove32Bits": true,
+  "nativeCallerGuardsAndUndeclaredArenaBytesPreserved": true,
+  "sourceLibraryByteIdenticalToIndependentlyReplayedComponent": true,
+  "originalExecutableOrGameAssetsPackaged": false,
+  "syntheticCallerInputsOnly": true,
+  "postExecutionStateOrResultsModifiedForComparison": false,
+  "sourceHeapServiceIsDeclaredQualificationFixture": true,
+  "productionGameAllocatorQualified": false,
+  "hardwareInstructionReadTracingClaimed": false,
+  "physical16KiBKernelTested": false,
+  "elfAndApk16KiBAlignmentChecked": true,
+  "captureArchiveSha256": "03b084453a02bcf01c873c81879305ec1c3984280448a29165c6e4e8e84b1db9",
+  "rawCapturedRegionsRemainPrivate": true,
+  "fullDictionarySyncApiOrWholeGameClaimed": false,
+  "sourceCreditGranted": 0,
+  "privateProbeProducerIdentities": [
+    {
+      "path": "work/inflater-probe059-source/inflate_jni.c",
+      "bytes": 4288,
+      "sha256": "a7be22daae32897a58c1ecd23fcb19205a5c3f7e80233ff7dd30d0ba71514d41"
+    },
+    {
+      "path": "work/inflater-probe059-source/MaterialActivity.java",
+      "bytes": 5121,
+      "sha256": "64bf3b19bb6b9613d1d5f41831595bbfb1bc119ad4f7a143c97a5b93bd0e9966"
+    },
+    {
+      "path": "work/inflater-probe059-source/AndroidManifest.xml",
+      "bytes": 756,
+      "sha256": "d5e271920a999c38c6c9f768e3d9964643a6ac5f7f56e402caae3c29f019b464"
+    },
+    {
+      "path": "work/inflater-probe059-source/segments059.h",
+      "bytes": 196,
+      "sha256": "13c5fd53576bbfd26e6476872aa0c3daa89d82e7e7f9deec8ce9c261558c955b"
+    },
+    {
+      "path": "work/inflater-probe059/build.py",
+      "bytes": 4340,
+      "sha256": "da1fb241c70ee7e347783c52d9977ea4e4964ff7868560fdc3aea8db296217fc"
+    },
+    {
+      "path": "work/inflater-probe059/prepare_cases.py",
+      "bytes": 4534,
+      "sha256": "bf1b5776a0ff5b8eaa95a4126c3daa5c38a89ae159aefedc8fa392cb9dea536a"
+    },
+    {
+      "path": "work/inflater-probe059/run_device.py",
+      "bytes": 1902,
+      "sha256": "359a9a9082402b03a7d97f79e55ecfee059e6392aa8de727671148ce709cc602"
+    },
+    {
+      "path": "work/inflater-probe059/verify_device.py",
+      "bytes": 5826,
+      "sha256": "da8148ac9b1c57cb4b407f1a80f6d25ee68905a326a3212ec9690ecaa5000176"
+    }
+  ]
+}
