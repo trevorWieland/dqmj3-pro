@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "status": "verification-rejected-enriched-record-comparison",
+  "packet": {
+    "path": "evidence/lanes/wave013-native/file/owner/mount/packet.json",
+    "sha256": "289f88d70dcbbfe7799f66595ea19d58d29175d9e80a61640073516354f7340f",
+    "bytes": 2193683
+  },
+  "verifier": {
+    "path": "toolscripts/native_wave013_file_owner_mount_verify.py",
+    "sha256": "4191c9282381a5edc78d56e45480b12f2f99137e07c7c7bb30aed6677a32ea8e",
+    "bytes": 4325
+  },
+  "rejectedArtifact": "work/wave013-native/file-owner-mount-sealed/source/fixed_arena.o",
+  "reason": "Verifier compared the basic filesystem identity dict with an object record also carrying relocation metadata",
+  "behaviorRunSucceeded": true,
+  "behaviorOutputsModified": false,
+  "sourceInputsModified": false,
+  "acceptedSourceCreditGranted": 0
+}

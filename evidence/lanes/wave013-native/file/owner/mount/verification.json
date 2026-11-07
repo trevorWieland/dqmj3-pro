@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "status": "packet-and-current-inputs-verified",
+  "packet": {
+    "path": "evidence/lanes/wave013-native/file/owner/mount/packet.json",
+    "sha256": "289f88d70dcbbfe7799f66595ea19d58d29175d9e80a61640073516354f7340f",
+    "bytes": 2193683
+  },
+  "producer": {
+    "path": "toolscripts/native_wave013_file_owner_mount_verify_v2.py",
+    "sha256": "0d7a6abb732bead388269210f00ea7f804311a6d2bb339e89aa36c4e54fa3186",
+    "bytes": 4373
+  },
+  "checkedPinsAndArtifacts": 260,
+  "newFunctions": 3,
+  "originalInstructionBytes": 336,
+  "acceptedSourceCreditGranted": 0,
+  "independentCleanReplayClaimed": false,
+  "testCommand": [
+    "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\python\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_native_wave013_file_owner_mount_service.py",
+    "-v"
+  ],
+  "testExitCode": 0,
+  "testSource": {
+    "path": "tests/test_native_wave013_file_owner_mount_service.py",
+    "sha256": "08b10227567478f0bb9ad7355babe658b35094837b241c53b57f8021de6ab187",
+    "bytes": 3980
+  },
+  "testCount": 13,
+  "privateTestLog": {
+    "path": "work/wave013-native/file-owner-mount-sealed/verification-tests.private.log",
+    "sha256": "9facf2b543da148532330d79cad52140974120048060507ac4838697c7ede135",
+    "bytes": 2293
+  }
+}
