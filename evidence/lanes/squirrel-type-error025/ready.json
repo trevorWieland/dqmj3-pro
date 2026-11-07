@@ -1,0 +1,333 @@
+{
+  "schemaVersion": 1,
+  "status": "frozen-bounded-actual-native-type-error025-ready-for-independent-review",
+  "ownedFiles": [
+    {
+      "path": "source/squirrel-wave025/README.md",
+      "bytes": 5114,
+      "sha256": "a95dc1d746b069675c53dcfdd140b60451e393af89f75243d1d0c4b13d053925"
+    },
+    {
+      "path": "source/squirrel-wave025/fixture.c",
+      "bytes": 9063,
+      "sha256": "571fd8ebe9de4fb59504da53b94c59f2b5842eadba289b5593d6428d4774416c"
+    },
+    {
+      "path": "source/squirrel-wave025/fixture.h",
+      "bytes": 1151,
+      "sha256": "e39e241d0d0d4f39fa31cfe21fdf048b34598c2c8cb6fc6059d7354f437a11bb"
+    },
+    {
+      "path": "source/squirrel-wave025/fixture_cases.h",
+      "bytes": 3847,
+      "sha256": "6259a94edb25596f3d311555d6342a48d5ac563c1b3f05475f6addb8fc6c5d31"
+    },
+    {
+      "path": "source/squirrel-wave025/fixture_services.c",
+      "bytes": 4786,
+      "sha256": "3d5d0b8bc45608126276b210d35f77e81c7f0479302e18a7df0cab2b496bc6ae"
+    },
+    {
+      "path": "source/squirrel-wave025/format.c",
+      "bytes": 1371,
+      "sha256": "73f6d23fc1fde8a73e2e9bbde17912a77619710b136f69ad02d6fc5dd9f0847d"
+    },
+    {
+      "path": "source/squirrel-wave025/native_adapter.c",
+      "bytes": 191,
+      "sha256": "71ca3ce232d50b22d110de64f5a8f3dc9da61de6826ab2e836a179cf48faa1e3"
+    },
+    {
+      "path": "source/squirrel-wave025/native_fixture.c",
+      "bytes": 1837,
+      "sha256": "fcfdc0c8c117ee9c05dbcf346911c70e3095de9fb84b75b29dcde9eb17ebea09"
+    },
+    {
+      "path": "source/squirrel-wave025/string_concat.c",
+      "bytes": 1485,
+      "sha256": "256786e4d00a31314a8721ca3d757212c1158ebcf85c192822bad246b3d8e1ab"
+    },
+    {
+      "path": "source/squirrel-wave025/type_error.c",
+      "bytes": 1346,
+      "sha256": "3d0eee0d01e97a5ee92d6c7982bd8cdd03af0c2fe7acb61dd966bc6e5752f615"
+    },
+    {
+      "path": "source/squirrel-wave025/type_error.h",
+      "bytes": 639,
+      "sha256": "df0415589ccdc0d6961acc6c833ec66b1d1a31cfa5b090060ff9fc9b426832b3"
+    },
+    {
+      "path": "tests/test_squirrel_type_error025.py",
+      "bytes": 5761,
+      "sha256": "28974c83988bc12ec1137c819c98ea7ef66b73b37daf3cd764cf43a729c18946"
+    },
+    {
+      "path": "toolscripts/squirrel_type_error025.py",
+      "bytes": 7350,
+      "sha256": "821d82659443ea5ce948df62294501f9d1a0fac49965623e827e1823c3981171"
+    },
+    {
+      "path": "toolscripts/squirrel_type_error025_android.py",
+      "bytes": 5275,
+      "sha256": "af99638cefca7e91cfa2d25894c6a9ba79681838795614abc2f98e10eedbbcdf"
+    },
+    {
+      "path": "toolscripts/squirrel_type_error025_build.py",
+      "bytes": 10252,
+      "sha256": "d69df8aafadcd19e4f3d586dc8e4fe14f939064b545568dab5ed113542c90c0f"
+    },
+    {
+      "path": "toolscripts/squirrel_type_error025_controls.py",
+      "bytes": 4155,
+      "sha256": "9c1976515990003e5b065bff8d4d7e43c3fb3513aa4abcb1d860581a423f81a7"
+    },
+    {
+      "path": "toolscripts/squirrel_type_error025_measure.py",
+      "bytes": 4383,
+      "sha256": "9f83f5dd678bc1ad2df7c90a6e604f02b09cbd95a16ead283822756dc3d5bbd2"
+    },
+    {
+      "path": "toolscripts/squirrel_type_error025_model.py",
+      "bytes": 7346,
+      "sha256": "a5c1b1e4435bff4177041469f71b621b744adc7c106e3d16f5223cca9de23fbd"
+    },
+    {
+      "path": "toolscripts/squirrel_type_error025_oracle.py",
+      "bytes": 12118,
+      "sha256": "49341442757d3a8077dff3e3d76a5152215b5bbf07d083ffe7534de90ca19acb"
+    },
+    {
+      "path": "toolscripts/squirrel_type_error025_replay.py",
+      "bytes": 5020,
+      "sha256": "21934930df7d67d2affd75332cc07322eae2ff4970aa06f16f4b654e2feb9537"
+    }
+  ],
+  "pins": [
+    {
+      "path": "evidence/lanes/squirrel-type-error025/canonical-proposal.json",
+      "bytes": 563,
+      "sha256": "a0376df7a01e006c943000089ebfcc82a03ea10094007ce76caae3edcfa3d2bd"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/claim.json",
+      "bytes": 22245,
+      "sha256": "84a746299e4403fe4d993726de6d7d1e8c8591b8ec62d9261e743f08df9ffc52"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/development-failures.json",
+      "bytes": 2337,
+      "sha256": "5b1c43ee78dd3b017cfa14376e5ce9f859f2f9e8b04028223a62fee0e9c1ff26"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/domain-coverage.json",
+      "bytes": 1576,
+      "sha256": "fba058cbbf9804566ade7d0eccf42743f4ddf010057f20cea414b214f28a8f47"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/environment.json",
+      "bytes": 546,
+      "sha256": "a5f2f2281fd5e5796adaae9a277ed49f90a722baa2511f74e343c8291dfe0139"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/execution.json",
+      "bytes": 45590,
+      "sha256": "fb33cc1ec4de6b3255fce10d72f42afba18b705e9a3bff917b04a45555f5ddfe"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/providers.json",
+      "bytes": 1689,
+      "sha256": "8ef34f1424128f6e40d140552dc75563ac34dfcb9352adec861d6d79bb3b2dc3"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/reference-sdk-additions.json",
+      "bytes": 2823,
+      "sha256": "a6d362f21232421dd8a7088088c1d6d186dbf4f7b0c91a8a9bb4ee24e464d7b5"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/tests.json",
+      "bytes": 574,
+      "sha256": "b61ad19039008a16cc662e93e3f70a160dbbd006326c056e222492c67a83a224"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/verification.json",
+      "bytes": 1305,
+      "sha256": "b9a55396cfb6a10e8a634e0fb65f7fe05650cbd5082f2c958b59015456835dbb"
+    }
+  ],
+  "files": [
+    {
+      "path": "source/squirrel-wave025/README.md",
+      "bytes": 5114,
+      "sha256": "a95dc1d746b069675c53dcfdd140b60451e393af89f75243d1d0c4b13d053925"
+    },
+    {
+      "path": "source/squirrel-wave025/fixture.c",
+      "bytes": 9063,
+      "sha256": "571fd8ebe9de4fb59504da53b94c59f2b5842eadba289b5593d6428d4774416c"
+    },
+    {
+      "path": "source/squirrel-wave025/fixture.h",
+      "bytes": 1151,
+      "sha256": "e39e241d0d0d4f39fa31cfe21fdf048b34598c2c8cb6fc6059d7354f437a11bb"
+    },
+    {
+      "path": "source/squirrel-wave025/fixture_cases.h",
+      "bytes": 3847,
+      "sha256": "6259a94edb25596f3d311555d6342a48d5ac563c1b3f05475f6addb8fc6c5d31"
+    },
+    {
+      "path": "source/squirrel-wave025/fixture_services.c",
+      "bytes": 4786,
+      "sha256": "3d5d0b8bc45608126276b210d35f77e81c7f0479302e18a7df0cab2b496bc6ae"
+    },
+    {
+      "path": "source/squirrel-wave025/format.c",
+      "bytes": 1371,
+      "sha256": "73f6d23fc1fde8a73e2e9bbde17912a77619710b136f69ad02d6fc5dd9f0847d"
+    },
+    {
+      "path": "source/squirrel-wave025/native_adapter.c",
+      "bytes": 191,
+      "sha256": "71ca3ce232d50b22d110de64f5a8f3dc9da61de6826ab2e836a179cf48faa1e3"
+    },
+    {
+      "path": "source/squirrel-wave025/native_fixture.c",
+      "bytes": 1837,
+      "sha256": "fcfdc0c8c117ee9c05dbcf346911c70e3095de9fb84b75b29dcde9eb17ebea09"
+    },
+    {
+      "path": "source/squirrel-wave025/string_concat.c",
+      "bytes": 1485,
+      "sha256": "256786e4d00a31314a8721ca3d757212c1158ebcf85c192822bad246b3d8e1ab"
+    },
+    {
+      "path": "source/squirrel-wave025/type_error.c",
+      "bytes": 1346,
+      "sha256": "3d0eee0d01e97a5ee92d6c7982bd8cdd03af0c2fe7acb61dd966bc6e5752f615"
+    },
+    {
+      "path": "source/squirrel-wave025/type_error.h",
+      "bytes": 639,
+      "sha256": "df0415589ccdc0d6961acc6c833ec66b1d1a31cfa5b090060ff9fc9b426832b3"
+    },
+    {
+      "path": "tests/test_squirrel_type_error025.py",
+      "bytes": 5761,
+      "sha256": "28974c83988bc12ec1137c819c98ea7ef66b73b37daf3cd764cf43a729c18946"
+    },
+    {
+      "path": "toolscripts/squirrel_type_error025.py",
+      "bytes": 7350,
+      "sha256": "821d82659443ea5ce948df62294501f9d1a0fac49965623e827e1823c3981171"
+    },
+    {
+      "path": "toolscripts/squirrel_type_error025_android.py",
+      "bytes": 5275,
+      "sha256": "af99638cefca7e91cfa2d25894c6a9ba79681838795614abc2f98e10eedbbcdf"
+    },
+    {
+      "path": "toolscripts/squirrel_type_error025_build.py",
+      "bytes": 10252,
+      "sha256": "d69df8aafadcd19e4f3d586dc8e4fe14f939064b545568dab5ed113542c90c0f"
+    },
+    {
+      "path": "toolscripts/squirrel_type_error025_controls.py",
+      "bytes": 4155,
+      "sha256": "9c1976515990003e5b065bff8d4d7e43c3fb3513aa4abcb1d860581a423f81a7"
+    },
+    {
+      "path": "toolscripts/squirrel_type_error025_measure.py",
+      "bytes": 4383,
+      "sha256": "9f83f5dd678bc1ad2df7c90a6e604f02b09cbd95a16ead283822756dc3d5bbd2"
+    },
+    {
+      "path": "toolscripts/squirrel_type_error025_model.py",
+      "bytes": 7346,
+      "sha256": "a5c1b1e4435bff4177041469f71b621b744adc7c106e3d16f5223cca9de23fbd"
+    },
+    {
+      "path": "toolscripts/squirrel_type_error025_oracle.py",
+      "bytes": 12118,
+      "sha256": "49341442757d3a8077dff3e3d76a5152215b5bbf07d083ffe7534de90ca19acb"
+    },
+    {
+      "path": "toolscripts/squirrel_type_error025_replay.py",
+      "bytes": 5020,
+      "sha256": "21934930df7d67d2affd75332cc07322eae2ff4970aa06f16f4b654e2feb9537"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/canonical-proposal.json",
+      "bytes": 563,
+      "sha256": "a0376df7a01e006c943000089ebfcc82a03ea10094007ce76caae3edcfa3d2bd"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/claim.json",
+      "bytes": 22245,
+      "sha256": "84a746299e4403fe4d993726de6d7d1e8c8591b8ec62d9261e743f08df9ffc52"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/development-failures.json",
+      "bytes": 2337,
+      "sha256": "5b1c43ee78dd3b017cfa14376e5ce9f859f2f9e8b04028223a62fee0e9c1ff26"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/domain-coverage.json",
+      "bytes": 1576,
+      "sha256": "fba058cbbf9804566ade7d0eccf42743f4ddf010057f20cea414b214f28a8f47"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/environment.json",
+      "bytes": 546,
+      "sha256": "a5f2f2281fd5e5796adaae9a277ed49f90a722baa2511f74e343c8291dfe0139"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/execution.json",
+      "bytes": 45590,
+      "sha256": "fb33cc1ec4de6b3255fce10d72f42afba18b705e9a3bff917b04a45555f5ddfe"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/providers.json",
+      "bytes": 1689,
+      "sha256": "8ef34f1424128f6e40d140552dc75563ac34dfcb9352adec861d6d79bb3b2dc3"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/reference-sdk-additions.json",
+      "bytes": 2823,
+      "sha256": "a6d362f21232421dd8a7088088c1d6d186dbf4f7b0c91a8a9bb4ee24e464d7b5"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/tests.json",
+      "bytes": 574,
+      "sha256": "b61ad19039008a16cc662e93e3f70a160dbbd006326c056e222492c67a83a224"
+    },
+    {
+      "path": "evidence/lanes/squirrel-type-error025/verification.json",
+      "bytes": 1305,
+      "sha256": "b9a55396cfb6a10e8a634e0fb65f7fe05650cbd5082f2c958b59015456835dbb"
+    }
+  ],
+  "mainObservationsPerTarget": 108,
+  "returningSemanticControls": 13,
+  "sameFinalArmArenaControls": 3,
+  "primaryAndCopiedFreshTests": 10,
+  "controllerEntry": 1708048,
+  "controllerInstructionBytes": 480,
+  "controllerDataBytes": 68,
+  "controllerExecutedInstructions": 118,
+  "controllerTotalInstructions": 120,
+  "stringOnlyConcatEntry": 1709548,
+  "stringOnlyConcatInstructionBytes": 408,
+  "fullStandaloneGenericConcatRecoveryClaimed": false,
+  "broadToString508RecoveryClaimed": false,
+  "actualFrozen022TypeErrorBoundaryClosedForDeclaredCases": true,
+  "formatterDomain": "literal/%d signed32/nonNULL%s/%% only",
+  "requestedExactBytes": 0,
+  "acceptedSourceCreditGranted": 0,
+  "duplicateTypeNameCreditRequested": 0,
+  "canonicalMappingAndAdmissionOwnedByCoordinator": true,
+  "allocatorFailureGcGeneralPrintfWholeVmGameOrPhysicalAndroidClaim": false,
+  "nativeWindowsExecuted": true,
+  "originalCodeOrMemoryPayloadPublished": false,
+  "stoppedFirstCopiedReplayRetainedAndExcluded": true
+}

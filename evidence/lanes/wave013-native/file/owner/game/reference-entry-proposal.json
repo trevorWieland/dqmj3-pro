@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "status": "reference-only-SDK-boundary-candidate",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "approvedForFunctionInventory": false,
+  "sourceCreditGranted": 0,
+  "functions": [
+    {
+      "address": 7137996,
+      "mode": "ARM",
+      "ranges": [
+        {
+          "start": 7137996,
+          "endExclusive": 7138036,
+          "bytes": 40,
+          "sha256": "8081be601bd2dcf3d6c4d86253e2fe759d3ad750f87ca11f929121cfaa6104a8"
+        }
+      ],
+      "literalPoolRanges": [],
+      "instructionAddresses": [
+        7137996,
+        7138000,
+        7138004,
+        7138008,
+        7138012,
+        7138016,
+        7138020,
+        7138024,
+        7138028,
+        7138032
+      ],
+      "referenceOnly": true,
+      "sourceCreditGranted": 0
+    }
+  ],
+  "readonlyTargetSlot": {
+    "start": 8725584,
+    "endExclusive": 8725588,
+    "bytes": 4,
+    "sha256": "0f57ffe27b3b9526bcb2ffc494ee7f8155a251cefe89f7af6dd933ca92e29cea",
+    "target": 7137996
+  },
+  "boundaryWitnesses": {
+    "previousFrozenFunction": 7137952,
+    "previousFrozenEnd": 7137996,
+    "nextFrozenFunction": 7138036,
+    "lastInstruction": 7138032,
+    "leafReturnsViaBxLr": true,
+    "internalBranches": 0,
+    "literalPoolLoads": 0
+  },
+  "limits": [
+    "Qualified for reference execution only",
+    "No historical function inventory or source admission",
+    "No vtable base or complete SDK class inferred from a single target slot"
+  ]
+}
