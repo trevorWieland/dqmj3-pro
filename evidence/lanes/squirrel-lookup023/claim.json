@@ -1,0 +1,863 @@
+{
+  "schemaVersion": 1,
+  "status": "measured-before-new023-source",
+  "program": "dqmj3pro",
+  "version": "update-content0",
+  "module": "main",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "frozen020": {
+    "path": "evidence/lanes/squirrel-lookup020/ready.json",
+    "bytes": 5653,
+    "sha256": "a48bda1f2ed39c1f7b49ead8b6d250a3d841a5e21a57c1c40940bac7b15d1884"
+  },
+  "frozen020Execution": {
+    "path": "evidence/lanes/squirrel-lookup020/execution.json",
+    "bytes": 127158,
+    "sha256": "fe0eb759271d9754bd9909523c6f8983f0d177876b72e29941ad3bc9948ed7ae"
+  },
+  "census": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "bytes": 20574405,
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55"
+  },
+  "missingInstructionAddresses": 111,
+  "gaps": [
+    {
+      "entry": 1672568,
+      "pc": 1672984,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "The member descriptor normally has an integer tag and encoded index payload. Do not fabricate an object pointer whose bits also act as an index."
+    },
+    {
+      "entry": 1672568,
+      "pc": 1672988,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "The member descriptor normally has an integer tag and encoded index payload. Do not fabricate an object pointer whose bits also act as an index."
+    },
+    {
+      "entry": 1672568,
+      "pc": 1672992,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "The member descriptor normally has an integer tag and encoded index payload. Do not fabricate an object pointer whose bits also act as an index."
+    },
+    {
+      "entry": 1672568,
+      "pc": 1672996,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "The member descriptor normally has an integer tag and encoded index payload. Do not fabricate an object pointer whose bits also act as an index."
+    },
+    {
+      "entry": 1672568,
+      "pc": 1673000,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "The member descriptor normally has an integer tag and encoded index payload. Do not fabricate an object pointer whose bits also act as an index."
+    },
+    {
+      "entry": 1672568,
+      "pc": 1673004,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "The member descriptor normally has an integer tag and encoded index payload. Do not fabricate an object pointer whose bits also act as an index."
+    },
+    {
+      "entry": 1672568,
+      "pc": 1673008,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "The member descriptor normally has an integer tag and encoded index payload. Do not fabricate an object pointer whose bits also act as an index."
+    },
+    {
+      "entry": 1672568,
+      "pc": 1673012,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "The member descriptor normally has an integer tag and encoded index payload. Do not fabricate an object pointer whose bits also act as an index."
+    },
+    {
+      "entry": 1672568,
+      "pc": 1673016,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "The member descriptor normally has an integer tag and encoded index payload. Do not fabricate an object pointer whose bits also act as an index."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670104,
+      "condition": "instance-dispatch-recognition",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Exercise exact instance type through its independently measured slot5 provider."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670108,
+      "condition": "instance-dispatch-recognition",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Exercise exact instance type through its independently measured slot5 provider."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670112,
+      "condition": "instance-dispatch-recognition",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Exercise exact instance type through its independently measured slot5 provider."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670116,
+      "condition": "instance-dispatch-recognition",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Exercise exact instance type through its independently measured slot5 provider."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670120,
+      "condition": "instance-dispatch-recognition",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Exercise exact instance type through its independently measured slot5 provider."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670248,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "Same integer member-descriptor constraint as Get; not declared universally unreachable without the real member writer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670252,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "Same integer member-descriptor constraint as Get; not declared universally unreachable without the real member writer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670256,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "Same integer member-descriptor constraint as Get; not declared universally unreachable without the real member writer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670260,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "Same integer member-descriptor constraint as Get; not declared universally unreachable without the real member writer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670264,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "Same integer member-descriptor constraint as Get; not declared universally unreachable without the real member writer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670268,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "Same integer member-descriptor constraint as Get; not declared universally unreachable without the real member writer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670272,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "Same integer member-descriptor constraint as Get; not declared universally unreachable without the real member writer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670276,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "Same integer member-descriptor constraint as Get; not declared universally unreachable without the real member writer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670280,
+      "condition": "class-member-index-reference-release",
+      "classification": "requires-invariant-evidence",
+      "evidenceOrNextScenario": "Same integer member-descriptor constraint as Get; not declared universally unreachable without the real member writer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670424,
+      "condition": "last-temporary-delegate-owner",
+      "classification": "valid-domain-missing-callback-case",
+      "evidenceOrNextScenario": "A destination release callback removes the original delegate owner while the recursive lookup retains its temporary."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670428,
+      "condition": "last-temporary-delegate-owner",
+      "classification": "valid-domain-missing-callback-case",
+      "evidenceOrNextScenario": "A destination release callback removes the original delegate owner while the recursive lookup retains its temporary."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670432,
+      "condition": "last-temporary-delegate-owner",
+      "classification": "valid-domain-missing-callback-case",
+      "evidenceOrNextScenario": "A destination release callback removes the original delegate owner while the recursive lookup retains its temporary."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670436,
+      "condition": "last-temporary-delegate-owner",
+      "classification": "valid-domain-missing-callback-case",
+      "evidenceOrNextScenario": "A destination release callback removes the original delegate owner while the recursive lookup retains its temporary."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670656,
+      "condition": "float-string-index",
+      "classification": "valid-domain-missing-case",
+      "evidenceOrNextScenario": "Finite signed32-representable float index using the actual byte string."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670660,
+      "condition": "float-string-index",
+      "classification": "valid-domain-missing-case",
+      "evidenceOrNextScenario": "Finite signed32-representable float index using the actual byte string."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670664,
+      "condition": "float-string-index",
+      "classification": "valid-domain-missing-case",
+      "evidenceOrNextScenario": "Finite signed32-representable float index using the actual byte string."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670816,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670820,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670824,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670828,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670832,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670836,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670840,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670844,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670848,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670852,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670856,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670860,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670864,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670868,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670872,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670876,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670880,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670884,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670888,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670892,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670896,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670900,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670904,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670908,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670912,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670916,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670920,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670924,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670928,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670932,
+      "condition": "instance-meta-and-default-path",
+      "classification": "missing-real-provider",
+      "evidenceOrNextScenario": "Use real instance method dispatch and actual callable providers; no synthetic method answer."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670972,
+      "condition": "generator-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; object construction and lifetime remain separate."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670976,
+      "condition": "generator-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; object construction and lifetime remain separate."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670980,
+      "condition": "generator-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; object construction and lifetime remain separate."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670984,
+      "condition": "generator-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; object construction and lifetime remain separate."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670988,
+      "condition": "generator-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; object construction and lifetime remain separate."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670992,
+      "condition": "generator-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; object construction and lifetime remain separate."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1670996,
+      "condition": "generator-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; object construction and lifetime remain separate."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1671000,
+      "condition": "generator-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; object construction and lifetime remain separate."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1671004,
+      "condition": "generator-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; object construction and lifetime remain separate."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1671036,
+      "condition": "thread-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; a complete thread provider is not implied."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1671040,
+      "condition": "thread-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; a complete thread provider is not implied."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1671056,
+      "condition": "thread-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; a complete thread provider is not implied."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1671060,
+      "condition": "thread-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; a complete thread provider is not implied."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1671064,
+      "condition": "thread-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; a complete thread provider is not implied."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1671068,
+      "condition": "thread-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; a complete thread provider is not implied."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1671072,
+      "condition": "thread-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; a complete thread provider is not implied."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1671076,
+      "condition": "thread-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; a complete thread provider is not implied."
+    },
+    {
+      "entry": 1669912,
+      "pc": 1671080,
+      "condition": "thread-default-dispatch",
+      "classification": "missing-borrowed-tag-dispatch-case",
+      "evidenceOrNextScenario": "This path reads only the receiver tag; a complete thread provider is not implied."
+    },
+    {
+      "entry": 1671820,
+      "pc": 1671916,
+      "condition": "null-string-assertion",
+      "classification": "excluded-failed-allocation-assertion",
+      "evidenceOrNextScenario": "The original calls its assertion service after a NULL string result; not a normally returning admitted allocation domain."
+    },
+    {
+      "entry": 1671820,
+      "pc": 1671920,
+      "condition": "null-string-assertion",
+      "classification": "excluded-failed-allocation-assertion",
+      "evidenceOrNextScenario": "The original calls its assertion service after a NULL string result; not a normally returning admitted allocation domain."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671372,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671376,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671380,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671384,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671388,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671392,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671396,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671400,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671404,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671408,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671412,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671416,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671420,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671424,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671428,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671432,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671436,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671440,
+      "condition": "float-formatting",
+      "classification": "missing-general-formatter-provider",
+      "evidenceOrNextScenario": "Variable/general floating formatting remains explicit; no canned float answers."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671444,
+      "condition": "last-stringify-input-owner",
+      "classification": "valid-domain-missing-callback-case",
+      "evidenceOrNextScenario": "The real string allocator callback drops the external compact-prototype owner while stringify retains a temporary."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671448,
+      "condition": "last-stringify-input-owner",
+      "classification": "valid-domain-missing-callback-case",
+      "evidenceOrNextScenario": "The real string allocator callback drops the external compact-prototype owner while stringify retains a temporary."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671452,
+      "condition": "last-stringify-input-owner",
+      "classification": "valid-domain-missing-callback-case",
+      "evidenceOrNextScenario": "The real string allocator callback drops the external compact-prototype owner while stringify retains a temporary."
+    },
+    {
+      "entry": 1671136,
+      "pc": 1671456,
+      "condition": "last-stringify-input-owner",
+      "classification": "valid-domain-missing-callback-case",
+      "evidenceOrNextScenario": "The real string allocator callback drops the external compact-prototype owner while stringify retains a temporary."
+    },
+    {
+      "entry": 1671484,
+      "pc": 1671652,
+      "condition": "retained-previous-error",
+      "classification": "valid-domain-missing-case",
+      "evidenceOrNextScenario": "Keep another actual string owner so replacement decrements without final destruction."
+    },
+    {
+      "entry": 1671484,
+      "pc": 1671656,
+      "condition": "null-error-string-assertion",
+      "classification": "excluded-failed-allocation-assertion",
+      "evidenceOrNextScenario": "Failed string allocation invokes the original assertion and is excluded."
+    },
+    {
+      "entry": 1671484,
+      "pc": 1671660,
+      "condition": "null-error-string-assertion",
+      "classification": "excluded-failed-allocation-assertion",
+      "evidenceOrNextScenario": "Failed string allocation invokes the original assertion and is excluded."
+    },
+    {
+      "entry": 1646376,
+      "pc": 1646492,
+      "condition": "unknown-small-type-name",
+      "classification": "valid-domain-missing-case",
+      "evidenceOrNextScenario": "Unknown low24 type code between userdata and function returns NULL."
+    },
+    {
+      "entry": 1646376,
+      "pc": 1646548,
+      "condition": "unknown-middle-type-name",
+      "classification": "valid-domain-missing-case",
+      "evidenceOrNextScenario": "Unknown low24 type code between thread and function-prototype returns NULL."
+    },
+    {
+      "entry": 1627388,
+      "pc": 1627700,
+      "condition": "failed-call-last-callable-owner",
+      "classification": "valid-domain-missing-callback-case",
+      "evidenceOrNextScenario": "Failure cleanup destroys the last callable only after argument cleanup; prefer actual022 native invocation."
+    },
+    {
+      "entry": 1627388,
+      "pc": 1627704,
+      "condition": "failed-call-last-callable-owner",
+      "classification": "valid-domain-missing-callback-case",
+      "evidenceOrNextScenario": "Failure cleanup destroys the last callable only after argument cleanup; prefer actual022 native invocation."
+    },
+    {
+      "entry": 1627388,
+      "pc": 1627708,
+      "condition": "failed-call-last-callable-owner",
+      "classification": "valid-domain-missing-callback-case",
+      "evidenceOrNextScenario": "Failure cleanup destroys the last callable only after argument cleanup; prefer actual022 native invocation."
+    },
+    {
+      "entry": 1627388,
+      "pc": 1627712,
+      "condition": "failed-call-last-callable-owner",
+      "classification": "valid-domain-missing-callback-case",
+      "evidenceOrNextScenario": "Failure cleanup destroys the last callable only after argument cleanup; prefer actual022 native invocation."
+    }
+  ],
+  "newProvider": {
+    "name": "sq_instance_get_meta023",
+    "mode": "ARM",
+    "instructions": {
+      "address": 1891052,
+      "endExclusive": 1891096,
+      "bytes": 44,
+      "sha256": "58a720de9b68612429f5c98e4cea7e67c61c53e8ee5d855a21c31580deba5651"
+    },
+    "literalPoolBytes": 0,
+    "nextCanonicalEntry": 1891096,
+    "callee": 1697892,
+    "vtableSixSlotPrefix": {
+      "address": 8502600,
+      "endExclusive": 8502624,
+      "bytes": 24,
+      "sha256": "4e1888ed0c24f963b6a00721c3b1f4abb516a2b872995026d6ab9ac842ff9d8d"
+    },
+    "slot": 5,
+    "instanceClassTargetOffset": 28,
+    "classValuesTargetOffset": 56,
+    "constructors": [
+      {
+        "address": 1647944,
+        "endExclusive": 1648160,
+        "bytes": 216,
+        "sha256": "a83b026f94700818c59179e2cf510b03daec04cb423d75549b5e751ca147e05e",
+        "pool": {
+          "address": 1648160,
+          "endExclusive": 1648168,
+          "bytes": 8,
+          "sha256": "50f6a2db5357dfdfedd4cdb35ed6878a82035582b5896b82bf0515654e226ce5"
+        }
+      },
+      {
+        "address": 1696236,
+        "endExclusive": 1696452,
+        "bytes": 216,
+        "sha256": "6734c3f9ebff4fcd9fad75f523c2547155f1bb89eb50c1a97e550ed6fef6c42d",
+        "pool": {
+          "address": 1696452,
+          "endExclusive": 1696460,
+          "bytes": 8,
+          "sha256": "50f6a2db5357dfdfedd4cdb35ed6878a82035582b5896b82bf0515654e226ce5"
+        }
+      }
+    ],
+    "typedStorageContract": "frozen020 named read-only class/instance storage; no factory or lifetime qualification",
+    "behavior": "NULL-tag selected method returns false without destination change; otherwise assign actual selected object and return true"
+  },
+  "typeNameEntryPrefixStandaloneFunction": false,
+  "frozen020Modified": false,
+  "fullVmGameAllocatorGcOrDeviceClaimed": false,
+  "sourceOrInventoryCreditGranted": 0,
+  "originalPayloadsPublished": false,
+  "producer": {
+    "path": "toolscripts/squirrel_lookup023_boundaries.py",
+    "bytes": 7563,
+    "sha256": "f4bcc20e5cb3bfaca2cc1192fbcff9974f6d5b1ddc3a690030aeaa1b24a82287"
+  }
+}
