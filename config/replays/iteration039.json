@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "name": "iteration039",
+  "producerSteps": [
+    {
+      "name": "iteration039-execution-and-controls",
+      "args": [
+        "toolscripts/squirrel_iteration039.py",
+        "--output",
+        "work/squirrel-iteration039/coordinator-qualified398"
+      ]
+    }
+  ],
+  "tests": [
+    "squirrel_iteration039",
+    "isolated_component_replay"
+  ],
+  "packets": [
+    "work/squirrel-iteration039/coordinator-qualified398/report.json"
+  ]
+}
