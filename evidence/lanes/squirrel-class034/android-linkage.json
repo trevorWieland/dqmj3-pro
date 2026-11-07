@@ -1,0 +1,93 @@
+{
+  "artifact": {
+    "path": "work/squirrel-class034/primary-qualified/android/libcoercion026.so",
+    "bytes": 154416,
+    "sha256": "46e735eb5e9e6bb29b35f1580ab3f3040f583155ec99c2c7e850d8e796c65ad1"
+  },
+  "segments": [
+    {
+      "type": "PT_PHDR",
+      "address": 64,
+      "offset": 64,
+      "bytes": 448,
+      "alignment": 8,
+      "flags": 4
+    },
+    {
+      "type": "PT_LOAD",
+      "address": 0,
+      "offset": 0,
+      "bytes": 29192,
+      "alignment": 16384,
+      "flags": 4
+    },
+    {
+      "type": "PT_LOAD",
+      "address": 45576,
+      "offset": 29192,
+      "bytes": 80088,
+      "alignment": 16384,
+      "flags": 5
+    },
+    {
+      "type": "PT_LOAD",
+      "address": 142048,
+      "offset": 109280,
+      "bytes": 5408,
+      "alignment": 16384,
+      "flags": 6
+    },
+    {
+      "type": "PT_LOAD",
+      "address": 159264,
+      "offset": 110112,
+      "bytes": 29832,
+      "alignment": 16384,
+      "flags": 6
+    },
+    {
+      "type": "PT_DYNAMIC",
+      "address": 142392,
+      "offset": 109624,
+      "bytes": 256,
+      "alignment": 8,
+      "flags": 6
+    },
+    {
+      "type": "PT_GNU_RELRO",
+      "address": 142048,
+      "offset": 109280,
+      "bytes": 5408,
+      "alignment": 1,
+      "flags": 4
+    },
+    {
+      "type": "PT_GNU_STACK",
+      "address": 0,
+      "offset": 0,
+      "bytes": 0,
+      "alignment": 0,
+      "flags": 6
+    }
+  ],
+  "relroExtentChecks": [
+    {
+      "start": 142048,
+      "endExclusive": 147456,
+      "trailingPageEndExclusive": 147456,
+      "containingWritableLoads": [
+        [
+          142048,
+          147456
+        ]
+      ],
+      "writableLoadBytesSharingTrailingPage": []
+    }
+  ],
+  "sixteenKiBLoadAndRelroContractPassed": true,
+  "officialGuidance": "https://developer.android.com/guide/practices/page-sizes",
+  "error": null,
+  "operatingSystemOrPhysicalPageSizeExecutionClaimed": false,
+  "actualA64ObjectModelExecuted": true,
+  "androidOsPhysicalDeviceOrAynThorExecuted": false
+}

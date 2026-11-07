@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "name": "class034",
+  "producerSteps": [
+    {
+      "name": "class034-execution",
+      "args": [
+        "toolscripts/squirrel_class034_execute.py",
+        "--folder",
+        "work/squirrel-class034/primary-qualified"
+      ]
+    },
+    {
+      "name": "class034-controls",
+      "args": [
+        "toolscripts/squirrel_class034_controls.py",
+        "--baseline",
+        "work/squirrel-class034/primary-qualified",
+        "--folder",
+        "work/squirrel-class034/controls-sealed"
+      ]
+    }
+  ],
+  "tests": [
+    "squirrel_class034",
+    "isolated_component_replay"
+  ],
+  "packets": [
+    "work/squirrel-class034/primary-qualified/execution.json",
+    "work/squirrel-class034/controls-sealed/controls.json"
+  ]
+}

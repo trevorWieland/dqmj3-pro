@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "name": "tree037",
+  "producerSteps": [
+    {
+      "name": "tree037-qualification",
+      "args": [
+        "toolscripts/tree_erase037_qualify.py",
+        "--output",
+        "work/tree-erase037/qualified-v1"
+      ]
+    }
+  ],
+  "tests": [
+    "isolated_component_replay"
+  ],
+  "packets": [
+    "evidence/lanes/tree-erase037/execution.json",
+    "work/tree-erase037/qualified-v1/positive/report.json",
+    "work/tree-erase033/tree037-qualified-v1-controls/controls.json"
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "count": 15,
+  "allNormallyReturned": true,
+  "allRejected": true,
+  "controls": [
+    {
+      "name": "locked-class-mutated",
+      "variant": 1,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": false,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "source": {
+        "path": "work/squirrel-class034/controls-sealed/locked-class-mutated/member_definition.c",
+        "bytes": 2594,
+        "sha256": "e2cd23815aa28b0c93498d89b888ba15e32a42769b54fe1a36e16292a1a8526c"
+      },
+      "artifact": {
+        "path": "work/squirrel-class034/controls-sealed/locked-class-mutated/arm/class034.elf",
+        "bytes": 554004,
+        "sha256": "0ee719497005085312e58eca1c154750aefe7785d979910f6b5ace9c2f2df7e8"
+      }
+    },
+    {
+      "name": "existing-field-secondary-updated-instead-of-primary",
+      "variant": 7,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": false,
+      "sameFinalObservations": true,
+      "forbiddenNativeFrameReads": [],
+      "source": {
+        "path": "work/squirrel-class034/controls-sealed/existing-field-secondary-updated-instead-of-primary/member_definition.c",
+        "bytes": 2633,
+        "sha256": "48210052996e6c62b320d026341fbc8c7ed810a8a0a00e2b9d0f58c34fff6734"
+      },
+      "artifact": {
+        "path": "work/squirrel-class034/controls-sealed/existing-field-secondary-updated-instead-of-primary/arm/class034.elf",
+        "bytes": 554004,
+        "sha256": "1a4d9738cec64002192d0b8f49114fd9f618837b48dfe034b7ad2ae5de9f058d"
+      }
+    },
+    {
+      "name": "static-scalar-reclassified-as-field",
+      "variant": 3,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": false,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "source": {
+        "path": "work/squirrel-class034/controls-sealed/static-scalar-reclassified-as-field/member_definition.c",
+        "bytes": 2642,
+        "sha256": "187775e62867954104ab37177e4de9007ef52dec9099a7e33218b1e38fcd2404"
+      },
+      "artifact": {
+        "path": "work/squirrel-class034/controls-sealed/static-scalar-reclassified-as-field/arm/class034.elf",
+        "bytes": 554004,
+        "sha256": "b80e689a06d48916d99f98bbb90ba0ffd34d382e2f1019ab7c71aae77175fb26"
+      }
+    },
+    {
+      "name": "wrong-meta-index",
+      "variant": 9,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": false,
+      "sameFinalObservations": true,
+      "forbiddenNativeFrameReads": [],
+      "source": {
+        "path": "work/squirrel-class034/controls-sealed/wrong-meta-index/member_definition.c",
+        "bytes": 2633,
+        "sha256": "9ab8c5540af978a4313909a9af138defcc90bb056b8874aed643afcd807b476c"
+      },
+      "artifact": {
+        "path": "work/squirrel-class034/controls-sealed/wrong-meta-index/arm/class034.elf",
+        "bytes": 554004,
+        "sha256": "279046fd08fd661a284e35ec4ae847c9a5f980a69cbdfd5e94dc536375bbc7e8"
+      }
+    },
+    {
+      "name": "vector-capacity-increments-instead-of-doubling",
+      "variant": 12,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": false,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "source": {
+        "path": "work/squirrel-class034/controls-sealed/vector-capacity-increments-instead-of-doubling/member_definition.c",
+        "bytes": 2631,
+        "sha256": "8e09768638e5f48e0e2479c43042e6f3f517a1d99c75a1f5ed8d05e6527f8b76"
+      },
+      "artifact": {
+        "path": "work/squirrel-class034/controls-sealed/vector-capacity-increments-instead-of-doubling/arm/class034.elf",
+        "bytes": 554004,
+        "sha256": "e4034d27696fde27561fa99e8782963999eac329c3d707edd2864cacf4b4a6fc"
+      }
+    },
+    {
+      "name": "descriptor-published-after-vector-allocation",
+      "variant": 0,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": true,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "source": {
+        "path": "work/squirrel-class034/controls-sealed/descriptor-published-after-vector-allocation/member_definition.c",
+        "bytes": 2631,
+        "sha256": "10443a00b228ce4f5a47c522f479bd9ee46cde633e7701df1a6087396428b95b"
+      },
+      "artifact": {
+        "path": "work/squirrel-class034/controls-sealed/descriptor-published-after-vector-allocation/arm/class034.elf",
+        "bytes": 554004,
+        "sha256": "5ff36ff459ce318e9989207fe10ac4a3eba30cd2ee6e803f0373feec6c3cd285"
+      }
+    },
+    {
+      "name": "attributes-assigned-to-stale-result-owner",
+      "variant": 27,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": false,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "source": {
+        "path": "work/squirrel-class034/controls-sealed/attributes-assigned-to-stale-result-owner/class_create.c",
+        "bytes": 2057,
+        "sha256": "bb75f470e5d70a974b0dd7d2645073dcabeea837ed334df36af4ad952e5eca09"
+      },
+      "artifact": {
+        "path": "work/squirrel-class034/controls-sealed/attributes-assigned-to-stale-result-owner/arm/class034.elf",
+        "bytes": 554004,
+        "sha256": "045037a3177c8a5440c226f4048b367935be57f2803613745daf957195209bc9"
+      }
+    },
+    {
+      "name": "inherited-call-failure-propagated",
+      "variant": 26,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": false,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "source": {
+        "path": "work/squirrel-class034/controls-sealed/inherited-call-failure-propagated/class_create.c",
+        "bytes": 2200,
+        "sha256": "c194e7df551169298fd23c0b1aec079e261aef1d9ba88ae0dfc805cd6217a8fe"
+      },
+      "artifact": {
+        "path": "work/squirrel-class034/controls-sealed/inherited-call-failure-propagated/arm/class034.elf",
+        "bytes": 554004,
+        "sha256": "15d63d2ccf3912ec1421514329ee8acc7351aabad0731bade279918e7b1f1282"
+      }
+    },
+    {
+      "name": "discarded-result-destroyed-before-argument-pops",
+      "variant": 25,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": true,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "source": {
+        "path": "work/squirrel-class034/controls-sealed/discarded-result-destroyed-before-argument-pops/class_create.c",
+        "bytes": 2093,
+        "sha256": "a409db788e5d130f7374fe688d2bf860480e356942fb0ba11142b34aee227124"
+      },
+      "artifact": {
+        "path": "work/squirrel-class034/controls-sealed/discarded-result-destroyed-before-argument-pops/arm/class034.elf",
+        "bytes": 554004,
+        "sha256": "e6e9b505e2ee27d12919f9188dba7595cc7f9e477dfa3254d5d5f5d6e27a4853"
+      }
+    },
+    {
+      "name": "temporary-instance-owner-leaked",
+      "variant": 45,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": false,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "source": {
+        "path": "work/squirrel-class034/controls-sealed/temporary-instance-owner-leaked/instance_factory.c",
+        "bytes": 1299,
+        "sha256": "26d6aa2713d395109140ad359b4ef21aed75afb2281bb1cc7084185d824d9aa3"
+      },
+      "artifact": {
+        "path": "work/squirrel-class034/controls-sealed/temporary-instance-owner-leaked/arm/class034.elf",
+        "bytes": 554004,
+        "sha256": "58f70205c2187a073b45d42d33ff6192b0285e491b7cebfeea6c9ced2aea12d8"
+      }
+    },
+    {
+      "name": "constructor-weak-not-unwrapped",
+      "variant": 30,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": false,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "source": {
+        "path": "work/squirrel-class034/controls-sealed/constructor-weak-not-unwrapped/instance_factory.c",
+        "bytes": 1253,
+        "sha256": "565e3b30538a3ca2e08efc8b8580821835bbc0ec400084eaf1e36e85d45c1a21"
+      },
+      "artifact": {
+        "path": "work/squirrel-class034/controls-sealed/constructor-weak-not-unwrapped/arm/class034.elf",
+        "bytes": 554004,
+        "sha256": "2c340a0c90b6532274c191c7e6617cd77dd6d274bec7cb32a6e5e2d5bd1c1266"
+      }
+    },
+    {
+      "name": "successful-table-meta-also-inserts-slot",
+      "variant": 41,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": false,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "source": {
+        "path": "work/squirrel-class034/controls-sealed/successful-table-meta-also-inserts-slot/new_slot.c",
+        "bytes": 2719,
+        "sha256": "dfcbbe194477c061d15e5e16de695a4b4e0ac39a0c661a03990bb60bed5936ed"
+      },
+      "artifact": {
+        "path": "work/squirrel-class034/controls-sealed/successful-table-meta-also-inserts-slot/arm/class034.elf",
+        "bytes": 554004,
+        "sha256": "f4ad5f9593000e2c8120c22496f69e3d09ee28cdd092309f18a31c9a72017f0b"
+      }
+    },
+    {
+      "name": "instance-newslot-failure-reported-as-success",
+      "variant": 36,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": true,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "source": {
+        "path": "work/squirrel-class034/controls-sealed/instance-newslot-failure-reported-as-success/new_slot.c",
+        "bytes": 2714,
+        "sha256": "8839433170e5571d12a7525da0ad4c07c7626cf2abba231a3ea80e6f4115858d"
+      },
+      "artifact": {
+        "path": "work/squirrel-class034/controls-sealed/instance-newslot-failure-reported-as-success/arm/class034.elf",
+        "bytes": 554004,
+        "sha256": "367a10ed16d65e49dd97d1a4a0e4604833d8faa4317fbc1192ce68f7b1912b74"
+      }
+    },
+    {
+      "name": "meta-name-miss-returns-zero",
+      "variant": 19,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": true,
+      "sameFinalObservations": false,
+      "forbiddenNativeFrameReads": [],
+      "source": {
+        "path": "work/squirrel-class034/controls-sealed/meta-name-miss-returns-zero/meta_names.c",
+        "bytes": 1215,
+        "sha256": "e02b8fa40d8b1d466404efe269afe61ab3e13157515db25380dabd613e19da3b"
+      },
+      "artifact": {
+        "path": "work/squirrel-class034/controls-sealed/meta-name-miss-returns-zero/arm/class034.elf",
+        "bytes": 554004,
+        "sha256": "0f480b3ef75fe7acc43d7b5b0834fbd4bf0400d3806964604164669ec7a30541"
+      }
+    },
+    {
+      "name": "forbidden-inactive-native-frame-observer",
+      "variant": 33,
+      "cleanup": 1,
+      "normallyReturnedWithSavedArmAndVfpAbi": true,
+      "rejected": true,
+      "sameFinalSourceArena": true,
+      "sameFinalObservations": true,
+      "forbiddenNativeFrameReads": [
+        [
+          15787740,
+          177200,
+          1
+        ]
+      ],
+      "source": {
+        "path": "work/squirrel-class034/controls-sealed/forbidden-inactive-native-frame-observer/fixture_constructor.c",
+        "bytes": 2116,
+        "sha256": "81b14a7035e9ce1ae80f19b94d08eeb8812beaa10ab4484d4cd3bd73ba1cf4b0"
+      },
+      "artifact": {
+        "path": "work/squirrel-class034/controls-sealed/forbidden-inactive-native-frame-observer/arm/class034.elf",
+        "bytes": 554004,
+        "sha256": "969ca3757ba50b52382557df0b2b8c8f253b3cfae0bd3e79d13a9a81f69dada0"
+      }
+    }
+  ],
+  "sameFinalSourceArenaControls": 5,
+  "producer": {
+    "path": "toolscripts/squirrel_class034_controls.py",
+    "bytes": 6570,
+    "sha256": "71be13f3b1ffa5ad63b567136b6081fb5fadc16f30fd8324e27cf781577a0623"
+  }
+}
