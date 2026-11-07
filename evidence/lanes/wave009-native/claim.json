@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "lane": "wave009-native",
+  "programId": "0004000e001acb00",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "census": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55",
+    "bytes": 20574405
+  },
+  "intervals": [
+    {
+      "address": 7865720,
+      "mode": "ARM",
+      "bytes": 108,
+      "endExclusive": 7865828,
+      "sha256": "21bca05b24b76ccc7cc4c2747d43d7309b7718e031a42cdbe4c1ab74c8e0c993",
+      "ghidraRanges": [
+        {
+          "start": 7865720,
+          "endExclusive": 7865828,
+          "bytes": 108
+        }
+      ],
+      "callerWitnesses": [
+        {
+          "callerFunction": 4975920,
+          "callsite": 4976208,
+          "callsiteSha256": "4ab0cd841b58e27c584ba166a9d8cc6c14e1fabc101d33b24b7045e81a83da92"
+        }
+      ],
+      "instructionBytes": 108,
+      "poolBytes": 0,
+      "outgoingDependencies": [],
+      "semanticRole": "tagged singleton or inclusive circular interval-set membership"
+    },
+    {
+      "address": 7865828,
+      "mode": "ARM",
+      "bytes": 108,
+      "endExclusive": 7865936,
+      "sha256": "21bca05b24b76ccc7cc4c2747d43d7309b7718e031a42cdbe4c1ab74c8e0c993",
+      "ghidraRanges": [
+        {
+          "start": 7865828,
+          "endExclusive": 7865936,
+          "bytes": 108
+        }
+      ],
+      "callerWitnesses": [
+        {
+          "callerFunction": 4990100,
+          "callsite": 4990432,
+          "callsiteSha256": "ba2e4cc0b5970d8c08b1527664c16df591cf885fc7b117e6505f4d8f7435db10"
+        }
+      ],
+      "instructionBytes": 108,
+      "poolBytes": 0,
+      "outgoingDependencies": [],
+      "semanticRole": "tagged singleton or inclusive circular interval-set membership"
+    }
+  ],
+  "exclusiveSourceRoot": "src/native/wave009",
+  "sourceCreditRequested": 0,
+  "behaviorDomain": "Valid aligned typed objects; finite circular lists of 0..128 nodes; arbitrary u32 query, u8 tag and u16 bounds; no concurrent mutation"
+}

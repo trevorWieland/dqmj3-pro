@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "testCases": 7,
+  "packet": {
+    "path": "evidence/lanes/wave009-native/packet.json",
+    "sha256": "fe8ef106cc1c58a7be27db781a536ed3135896b5bbb46de6abc032726ec0903b",
+    "bytes": 16589
+  },
+  "claim": {
+    "path": "evidence/lanes/wave009-native/claim.json",
+    "sha256": "dd5373fb5d361e8a6ca07c2978ebcec80a15241afe91bc51b26694b439344be7",
+    "bytes": 2157
+  },
+  "tests": {
+    "path": "tests/test_native_wave009.py",
+    "sha256": "1e9632de6e7c276937e75b6c73dc696f5ccb395dd2ccac0759eb01e87a1fb22c",
+    "bytes": 4769
+  },
+  "testOutput": {
+    "path": "evidence/lanes/wave009-native/tests.txt",
+    "sha256": "d4765834562a81f2de1961c9b1eb6ad6265dfaf3661813d802aed41e110a99f3",
+    "bytes": 1120
+  },
+  "readme": {
+    "path": "evidence/lanes/wave009-native/README.md",
+    "sha256": "87494895057608629611d84d32d7eae8ef584184fb55e408e75b07f9c0401d6d",
+    "bytes": 4108
+  },
+  "functionalProposal": {
+    "path": "evidence/lanes/wave009-native/functional.json",
+    "sha256": "417caf5dfb26eaa49079f352779a1738473fbe112ac5e30eb1d5be4ee0cbace0",
+    "bytes": 178
+  },
+  "runtimeInputs": [
+    {
+      "path": "tools/python/Lib/site-packages/capstone/lib/capstone.dll",
+      "sha256": "76958e18380023a68fd1714fa2e01c594cc6db1955a07ad6937b66e66dc5d6c3",
+      "bytes": 7576576
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/__init__.py",
+      "sha256": "94571d1314355e261aff0ddfc94985fe8761232ddff6874181fd21efa9fab47f",
+      "bytes": 43853
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/__init__.py",
+      "sha256": "0e8ac7115c755994a968fa865bd1b2f2075edea715c17e91d62af2cc52c13392",
+      "bytes": 305
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/lib/unicorn.dll",
+      "sha256": "010d85dce84b8f6ffaec3d5420f1b5f7768f859eb831be574c7da23e656ee8f1",
+      "bytes": 9598976
+    }
+  ],
+  "originalModuleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "functionalFunctions": 2,
+  "functionalOriginalInstructionBytes": 216,
+  "casesPerFunction": 1141,
+  "returnFlagCrossProductCasesPerFunction": 64,
+  "negativeControls": 4,
+  "matchingSourceCreditGranted": 0,
+  "independentCoordinatorReplay": false,
+  "windowsComponentExecuted": true,
+  "androidComponentBuilt": true,
+  "wholeGameBuildOrExecution": false
+}

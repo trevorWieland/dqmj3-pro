@@ -54,7 +54,7 @@ class CompileSourcesTests(unittest.TestCase):
 
     def test_actual_source_census_and_historical_abi_exclusion(self):
         config = BUILD.read_config(ROOT)
-        self.assertEqual(len(config["units"]), 19)
+        self.assertEqual(len(config["units"]), 20)
         excluded = config["excludedSources"]
         self.assertEqual([item["source"] for item in excluded], ["src/native/wave003/setters.c"])
         self.assertIs(excluded[0]["activeLinking"], False)
