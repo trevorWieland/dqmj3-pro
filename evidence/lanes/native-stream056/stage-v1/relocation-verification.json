@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "status": "public-path-rebuild-preserves-private-source-and-semantics",
+  "privateReady": {
+    "path": "work/native-stream056/ready.json",
+    "bytes": 12513,
+    "sha256": "8ac7d66438f077613363bdadce0535f9fe55c32d85cb95d1fae48d09920eef51"
+  },
+  "positiveObservationsAndCoverageExact": true,
+  "controlSemanticsExact": true,
+  "CAndHeaderByteIdentical": true,
+  "artifactRelocation": [
+    {
+      "target": "arm",
+      "reconstructedSourceObjectByteIdentical": true,
+      "privateArtifact": {
+        "path": "work/native-stream056/final-reproducible/arm/stream056.elf",
+        "bytes": 67172,
+        "sha256": "90d1b60ef755c3c05dbfd6f286d97685759b4a6b832624931208942e14303e1c"
+      },
+      "publicArtifact": {
+        "path": "work/native-stream056/public-stage-v1/final-v2/arm/stream056.elf",
+        "bytes": 67188,
+        "sha256": "5046216d1e1b43bc4eced762569580ea61edc8189f4410f2e8c0988d3629fe78"
+      },
+      "wholeFileByteIdentical": false,
+      "allAllocatedSectionsByteIdentical": true,
+      "nonallocatedDifference": "Fixture filename changed layout056.c to native_stream056_layout.c in file-symbol metadata; no executable bytes changed"
+    },
+    {
+      "target": "windows",
+      "reconstructedSourceObjectByteIdentical": true,
+      "privateArtifact": {
+        "path": "work/native-stream056/final-reproducible/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "33284b8fed694a6ae18d796bd4b1bbaaf176ee30a63404f435c7bf664a7c165d"
+      },
+      "publicArtifact": {
+        "path": "work/native-stream056/public-stage-v1/final-v2/windows/stream056.dll",
+        "bytes": 2560,
+        "sha256": "33284b8fed694a6ae18d796bd4b1bbaaf176ee30a63404f435c7bf664a7c165d"
+      },
+      "wholeFileByteIdentical": true,
+      "allAllocatedSectionsByteIdentical": true,
+      "nonallocatedDifference": null
+    },
+    {
+      "target": "a64",
+      "reconstructedSourceObjectByteIdentical": true,
+      "privateArtifact": {
+        "path": "work/native-stream056/final-reproducible/a64/stream056.elf",
+        "bytes": 67232,
+        "sha256": "d685358d1349ba361dfaa5fb1fa797e678831825c4eb71e04ef416db20ee49d6"
+      },
+      "publicArtifact": {
+        "path": "work/native-stream056/public-stage-v1/final-v2/a64/stream056.elf",
+        "bytes": 67248,
+        "sha256": "8df289d39a06ac8d20d57146fd265d2c90e4da97869fe4b16a77f1b4be7e5601"
+      },
+      "wholeFileByteIdentical": false,
+      "allAllocatedSectionsByteIdentical": true,
+      "nonallocatedDifference": "Fixture filename changed layout056.c to native_stream056_layout.c in file-symbol metadata; no executable bytes changed"
+    }
+  ],
+  "privatePredecessorOwnedPinsUnchanged": true,
+  "aliasesAdded": false,
+  "sourceCreditGranted": 0
+}

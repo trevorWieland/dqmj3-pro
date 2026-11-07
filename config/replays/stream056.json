@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "name": "stream056",
+  "producerSteps": [
+    {
+      "name": "prepare-stream056-work",
+      "args": [
+        "-c",
+        "from pathlib import Path; Path('work/native-stream056/public-stage-v1').mkdir(parents=True,exist_ok=True)"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "measure-stream056",
+      "args": [
+        "toolscripts/native_stream056_measure.py"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "prove-stream056-domain",
+      "args": [
+        "toolscripts/native_stream056_proof.py"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "stream056-positive-corpus",
+      "args": [
+        "toolscripts/native_stream056_verify.py",
+        "--output",
+        "work/replay056/positive"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "stream056-returning-controls",
+      "args": [
+        "toolscripts/native_stream056_controls.py",
+        "--output",
+        "work/replay056/controls"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "isolated_component_replay",
+    "isolated_intake_cleanup",
+    "refresh_functional_source_names",
+    "refresh_functional_source_names_integration",
+    "native_stream056"
+  ],
+  "packets": [
+    "work/replay056/positive/report.json",
+    "work/replay056/positive/build-profiles.json",
+    "work/replay056/positive/input-guard.json",
+    "work/replay056/controls/report.json",
+    "work/replay056/controls/input-guard.json",
+    "work/native-stream056/public-stage-v1/claim.json",
+    "work/native-stream056/public-stage-v1/static-unreachable-proof.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}
