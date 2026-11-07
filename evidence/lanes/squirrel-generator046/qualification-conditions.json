@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "nullTemplateLiterals": [
+    {
+      "address": 1649464,
+      "bytes": 4,
+      "value": 16777217,
+      "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+    },
+    {
+      "address": 1697696,
+      "bytes": 4,
+      "value": 16777217,
+      "sha256": "afa7518106309c22d325df6d2663249d158d2f36f1976269d6d4104d9198a108"
+    }
+  ],
+  "validDomainUnobserved": [
+    {
+      "pcs": [
+        1648980,
+        1648984,
+        1648988,
+        1648992,
+        1648996,
+        1649000,
+        1649004,
+        1649056,
+        1649060,
+        1649064,
+        1649068
+      ],
+      "reason": "Yield builds a NULL-tag temporary for vector fill. Literal01000001 lacks08000000. Qualified services do not mutate private caller temporaries; retain/release branches cannot execute in this domain."
+    },
+    {
+      "pcs": [
+        1696844,
+        1696848,
+        1696852,
+        1697060,
+        1697064,
+        1697068,
+        1697072,
+        1697076,
+        1697080,
+        1697084,
+        1697088
+      ],
+      "reason": "Frame construction and temporary cleanup use the measured fixed NULL tag and zero payload; refcount-bit branches are false."
+    },
+    {
+      "pcs": [
+        1697676,
+        1697680,
+        1697684,
+        1697688,
+        1697692
+      ],
+      "reason": "A valid stored vararg owner has count c>=1 before append. Append retains to c+1 and pop releases to c>=1. Under the admitted nonoverflow domain, last-owner finalization cannot occur here."
+    }
+  ],
+  "outsideQualifiedDomain": [
+    {
+      "pcs": [
+        1697864,
+        1697868,
+        1697872,
+        1697876
+      ],
+      "callee": 1707312,
+      "reason": "Actual debug-hook invocation remains external. NULL and same-closure suppression are tested; this is a provider gap, not an impossible path."
+    }
+  ],
+  "assumptions": [
+    "All stored reference-bearing values have genuine declared011/012/013/014/015/017/044-compatible prefixes and exact callbacks.",
+    "Positive owned refcounts do not overflow during retain.",
+    "Allocation services preserve private stack temporaries and return correctly aligned backed storage in the positive corpus.",
+    "Frame/vector domains and typed budget relationships are checked by independent models."
+  ],
+  "sourceOrInventoryCreditGranted": 0
+}

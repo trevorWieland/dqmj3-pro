@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "component": "squirrel-generator046-state-transitions",
+  "claimBeforeSource": true,
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "functions": [
+    {
+      "entry": 1648796,
+      "instructionRanges": [
+        {
+          "start": 1648796,
+          "endExclusive": 1649464,
+          "bytes": 668,
+          "sha256": "cd3803f847e50de6b17fecc063920669734147a33a26e7bc4673c76a3bd14bf4"
+        }
+      ],
+      "instructionBytes": 668,
+      "dataRanges": [
+        {
+          "start": 1649464,
+          "endExclusive": 1649564,
+          "bytes": 100,
+          "sha256": "fefc584ed403e1974276177eed6133e829704c716b74cf88e30af32d63a3b9fd"
+        }
+      ],
+      "sourceName": "sq_generator_yield046"
+    },
+    {
+      "entry": 1696632,
+      "instructionRanges": [
+        {
+          "start": 1696632,
+          "endExclusive": 1697696,
+          "bytes": 1064,
+          "sha256": "8fd7ed97285bff69b2b89c0d33efe0d9cd3891612d60c8d6200c20b125e41a23"
+        },
+        {
+          "start": 1697756,
+          "endExclusive": 1697892,
+          "bytes": 136,
+          "sha256": "f4e57d7571a1f47c578335ae996ffd2301b27ff8b7c7e45b0348187cffa4405c"
+        }
+      ],
+      "instructionBytes": 1200,
+      "dataRanges": [
+        {
+          "start": 1697696,
+          "endExclusive": 1697756,
+          "bytes": 60,
+          "sha256": "3dab737adf84baa9f071a23a6022259fed7f12e6cb3329cfea4387740f5e9547"
+        }
+      ],
+      "sourceName": "sq_generator_resume046"
+    }
+  ],
+  "frozen044": {
+    "path": "evidence/lanes/squirrel-generator044/ready.json",
+    "sha256": "697c044d9897da2b2a6e7e0856f8cbdfeddbec10de5c520e0114fe9da9384d94"
+  },
+  "core040": {
+    "path": "evidence/lanes/squirrel-state040/core-abi-v1/frozen-manifest.json",
+    "sha256": "23a38012b40a93aa1426a9fa08f424949d418a95c9cac939f7abdc2b237f2e28"
+  },
+  "measuredAbi": "Yield(generatorR0,actualVmR1)->Bool;Resume(generatorR0,actualVmR1,targetR2)->Bool. Original168/native264 VM and original120/native192 generator; exact48/72-byte CallInfo.",
+  "measuredBehavior": [
+    "Resume clears saved-stack slot0 on every iteration, retaining slots1..n-1.",
+    "Yield retains reverse varargs without popping VM varargs.",
+    "Resume restores traps and reverse varargs with ownership transfer.",
+    "Saved frame closure ownership is assigned, not shallow-copied."
+  ],
+  "externalBoundaries": [
+    "Real literal-error ownership/scratch/string provider needed.",
+    "Debug service1a0d30 remains excluded.",
+    "VM/shared initialization,GC,allocator internals and wholeExecute remain separate."
+  ],
+  "sourceOrInventoryAdmission": 0,
+  "existingVectorResizeDependency": {
+    "entry": 1692448,
+    "endExclusive": 1692680,
+    "instructionBytes": 232,
+    "sha256": "d206fed157df231661b1b6ac50ffe0bc7c4f519b5c9af267a8d1113343493df7",
+    "callee": 1587340,
+    "source": "frozen012 sq_prefix_vector_resize",
+    "newCredit": 0
+  },
+  "qualificationDomain": {
+    "generators": "Actually declared opaque044 with real017/011 owners and positive nonoverflowing stored counts.",
+    "vm": "Fully allocated actual040 object with explicit initialized client fields; not old fixtureVM casts.",
+    "resumerPools": "Natural typed vectors, including preprovisioned inactive actual closure owners beyond allocated_calls, with every element backed.",
+    "errorPaths": "Actual original19813c/SDK vs ordinary literal/scratch/String015/owner publication; no general formatter claim.",
+    "suspendedFailure": "State1 is produced by actual Yield before attempting Yield again.",
+    "unqualified": "Debug invocation1a0d30, OOM/assert, GC, Execute, general printf and zero/overflowing owners."
+  }
+}

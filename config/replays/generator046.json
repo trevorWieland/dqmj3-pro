@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "name": "generator046",
+  "producerSteps": [
+    {
+      "name": "generator046-execution",
+      "args": [
+        "toolscripts/squirrel_generator044_state_execution.py",
+        "--output-dir",
+        "work/squirrel-generator046/primary-actual-suspended"
+      ]
+    },
+    {
+      "name": "generator046-controls",
+      "args": [
+        "toolscripts/squirrel_generator044_state_controls.py",
+        "--output-dir",
+        "work/squirrel-generator046/controls-actual-suspended"
+      ]
+    }
+  ],
+  "tests": [
+    "squirrel_generator046",
+    "isolated_component_replay"
+  ],
+  "packets": [
+    "work/squirrel-generator046/primary-actual-suspended/execution.json",
+    "work/squirrel-generator046/controls-actual-suspended/controls.json"
+  ]
+}
