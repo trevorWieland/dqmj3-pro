@@ -1,0 +1,86 @@
+{
+  "sourceRevision": "fac2f01381fea91ea25d025f316a640e437dd76d",
+  "baseline": {
+    "path": "evidence/lanes/wave009-native/v1-packet.json",
+    "sha256": "fe8ef106cc1c58a7be27db781a536ed3135896b5bbb46de6abc032726ec0903b",
+    "bytes": 16589
+  },
+  "originalCallerEvidence": [
+    {
+      "start": 4976200,
+      "endExclusive": 4976236,
+      "sha256": "1cc896ccf560b89a2898c7fad70fddb99ed54636380c935c00832af6ecef335a"
+    },
+    {
+      "start": 4975840,
+      "endExclusive": 4975900,
+      "sha256": "77b9e92606092f37331ed68bfab81f892b9115fbc180a902b7f0a9c84fa8802e"
+    }
+  ],
+  "provenance": {
+    "path": "evidence/lanes/wave009-native/v1-provenance.json",
+    "sha256": "e412abdb82967fecbdef63c9518ff4fbcf374b24894d85401e84167fa221053b",
+    "bytes": 554
+  },
+  "ARMLayoutStaticAssertions": [
+    [
+      "sizeof(void *)",
+      4
+    ],
+    [
+      "sizeof(IntervalNode)",
+      12
+    ],
+    [
+      "sizeof(IntervalSet)",
+      20
+    ],
+    [
+      "__builtin_offsetof(IntervalSet, destination)",
+      0
+    ],
+    [
+      "__builtin_offsetof(IntervalSet, kind)",
+      4
+    ],
+    [
+      "__builtin_offsetof(IntervalSet, value)",
+      6
+    ],
+    [
+      "__builtin_offsetof(IntervalSet, intervals)",
+      8
+    ],
+    [
+      "__builtin_offsetof(IntervalNode, unknown_00)",
+      0
+    ],
+    [
+      "__builtin_offsetof(IntervalNode, next)",
+      4
+    ],
+    [
+      "__builtin_offsetof(IntervalNode, first)",
+      8
+    ],
+    [
+      "__builtin_offsetof(IntervalNode, last)",
+      10
+    ]
+  ],
+  "ARMCompiledBodiesInvariant": true,
+  "unchangedCSource": true,
+  "host64": {
+    "pointerBytes": 8,
+    "setBytes": 40,
+    "nodeBytes": 24,
+    "destinationOffset": 0,
+    "kindOffset": 8,
+    "valueOffset": 10,
+    "intervalsOffset": 16,
+    "nodeUnknownOffset": 0,
+    "nodeNextOffset": 8
+  },
+  "IntervalNodeUnknownWordUnchanged": true,
+  "creditChanges": 0
+}

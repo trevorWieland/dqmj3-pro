@@ -14,9 +14,11 @@ RETURN, STACK, OBJECTS = 0x1000000, 0x2000000, 0x3000000
 
 
 class ResultMismatch(RuntimeError):
-    def __init__(self, actual, expected):
+    def __init__(self, actual, expected, platform='arm'):
         self.details = {'actual': actual, 'expected': expected, 'returnedToSentinel': True,
                         'allMemoryPreserved': True, 'calleeSavedSpLrPreserved': True}
+        if platform == 'windows':
+            self.details = {'actual': actual, 'expected': expected, 'nativeWindowsReturnedNormally': True, 'allMemoryPreserved': True}
         super().__init__('Returned normally with a different membership result')
 
 
@@ -87,7 +89,11 @@ def execute(raw, address, case, seed, return_thumb=False, flags=0):
     reads, writes, steps = [], [], []
     cpu.hook_add(unicorn.UC_HOOK_MEM_READ, lambda uc, access, a, n, value, user: reads.append((a, n)))
     cpu.hook_add(unicorn.UC_HOOK_MEM_WRITE, lambda uc, access, a, n, value, user: writes.append((a, n)))
-    cpu.hook_add(unicorn.UC_HOOK_CODE, lambda uc, a, n, user: steps.append(a))
+    def executed(uc, executed_address, size, user):
+        if not address <= executed_address < executed_address + size <= address + len(raw):
+            raise RuntimeError('Execution escaped the complete owned membership body')
+        steps.append(executed_address)
+    cpu.hook_add(unicorn.UC_HOOK_CODE, executed)
     cpu.emu_start(address, RETURN, count=4096)
     if cpu.reg_read(UC_ARM_REG_PC) != RETURN:
         raise RuntimeError('Membership function did not return within instruction bound')
@@ -116,12 +122,13 @@ NativeNode._fields_ = [('unknown_00', ctypes.c_uint), ('next', ctypes.POINTER(Na
 
 
 class NativeSet(ctypes.Structure):
-    _fields_ = [('unknown_00', ctypes.c_uint), ('kind', ctypes.c_ubyte), ('value', ctypes.c_ushort), ('intervals', NativeNode)]
+    _fields_ = [('destination', ctypes.c_void_p), ('kind', ctypes.c_ubyte), ('value', ctypes.c_ushort), ('intervals', NativeNode)]
 
 
 def execute_windows(function, case):
     model = expected(case)
     instance = NativeSet()
+    instance.destination = ctypes.addressof(instance)
     instance.kind, instance.value = case['kind'], case['value']
     sentinel = ctypes.pointer(instance.intervals)
     nodes = [NativeNode() for _ in case['ranges']]
@@ -132,8 +139,8 @@ def execute_windows(function, case):
     objects = [instance, *nodes]
     before = [ctypes.string_at(ctypes.addressof(item), ctypes.sizeof(item)) for item in objects]
     answer = function(ctypes.byref(instance), case['query'])
-    if answer != model:
-        raise ResultMismatch(answer, model)
     if before != [ctypes.string_at(ctypes.addressof(item), ctypes.sizeof(item)) for item in objects]:
         raise RuntimeError('Native Windows membership query changed memory')
+    if answer != model:
+        raise ResultMismatch(answer, model, platform='windows')
     return answer

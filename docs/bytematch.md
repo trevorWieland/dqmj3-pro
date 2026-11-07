@@ -9,7 +9,7 @@ The code denominator is every ExHeader-declared initialized main ARM text byte. 
 | Measured image | Initialized ARM text bytes | Accepted source bytes | Native text reconstruction |
 | --- | ---: | ---: | ---: |
 | Base | 7,042,136 | 0 | 0% |
-| Update | 7,051,280 | 4,164 | 0.059053108% |
+| Update | 7,051,280 | 5,128 | 0.072724385% |
 
 The base baseline is inventoried separately; only the update currently has admitted source and a supported ByteMatch report. The update's 842,252 initialized rodata bytes, 260,036 initialized data bytes and 210,988 BSS bytes give a separate 1,313,276-byte data denominator, with zero matched data. DSP firmware, PICA shader programs, original interpreted scripts, assets and system firmware do not enter the ARM text denominator. They retain their own inventories and receive no native source credit.
 
@@ -39,11 +39,13 @@ objdiff-cli report generate -o build/update-content0/report.json
 
 Stock objdiff sums code symbols and omits unsymbolized executable bytes. `toolscripts/finalize_objdiff_report.py` verifies the actual original/source ELF objects, preserves the CLI's exact matching identities and sizes, and replaces each unit's code denominator with its complete executable-section byte size. Overall counters and percentages are recomputed from those exhaustive units. Cold/unknown surroundings contribute unmatched bytes without becoming invented functions. Final JSON is reconstructed from a fixed safe schema so arbitrary payload fields cannot reach the public artifact.
 
-Only `build/update-content0/report.json` is uploaded as `update-content0_report` after a successful push build on `main`. No original objects, hybrid images, input parts, raw private logs, signing material, build directories or caches are uploaded. The report retains objdiff schema 2; ByteMatch preserves its explicit measures. Tests exercise real Clang/LLD/objdiff objects and the actual ByteMatch parser, protobuf round-trip and source lexer.
+Only `build/update-content0/report.json` and its reviewed `functional.json` companion are uploaded as `update-content0_report` after a successful push build on `main`. No original objects, hybrid images, input parts, raw private logs, signing material, build directories or caches are uploaded. The report retains objdiff schema 2; ByteMatch preserves its explicit measures. Tests exercise real Clang/LLD/objdiff objects and the actual ByteMatch parser, protobuf round-trip and source lexer.
 
 ## Source links and reproduction
 
-All 356 admitted report symbols use their exact C definition names, so a rename header is unnecessary. Future renames need a generated mapping or another mechanism from [ByteMatch source linking](https://bytematch.dev/docs/source-linking). Virtual addresses are independently checked against original section mapping. Unwritten functions may correctly be absent from the public source. No reviewed working/nonmatching function registry exists, so no `functional.json` is invented from bounded candidate tests.
+Admitted report symbols use their exact C definition names, so a rename header is unnecessary. Future renames need a generated mapping or another mechanism from [ByteMatch source linking](https://bytematch.dev/docs/source-linking). Virtual addresses are independently checked against original section mapping. Unwritten functions may correctly be absent from the public source.
+
+`config/functional-functions.json` separately approves two interval lookup routines as medium-confidence, working nonmatching C within their declared finite typed-list corpus. The coordinator repeated their original/source and Windows tests. These tests are bounded and grant zero matching-source credit. `functional_report.py` checks frozen packet, C/header hashes, confidence, canonical module/address/extent, exact-admission exclusion and actual report source ownership before emitting the requested name/confidence schema. Other drafts remain proposals until reviewed and their report ownership exposes the actual C. Nonmatching candidates are compiled by public source CI and remain outside the matching module's admitted source selection.
 
 With private inputs and pinned report tools available:
 
@@ -54,6 +56,7 @@ tools/report-python/Scripts/python.exe -I toolscripts/objdiff_objects.py --censu
 tools/report-python/Scripts/python.exe -I toolscripts/configure_objdiff.py
 tools/objdiff-3.8.3/objdiff-cli.exe report generate -o build/update-content0/report.raw.json
 tools/report-python/Scripts/python.exe -I toolscripts/finalize_objdiff_report.py
+tools/report-python/Scripts/python.exe -I toolscripts/functional_report.py
 ```
 
 After ingestion, run the unmodified [ByteMatch source-link checker](https://github.com/Veradictus/ByteMatch/blob/master/scripts/check-source-links.py) against `trevorWieland/dqmj3-pro`, for example with `--version update-content0 --per-unit 3`. The hosted result is checked separately from local tests. The [inventory issue](https://github.com/trevorWieland/dqmj3-pro/issues/1) retains historical boundary/classification follow-up; that uncertainty does not drop bytes from the denominator.

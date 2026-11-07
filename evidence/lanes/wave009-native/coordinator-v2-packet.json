@@ -1,0 +1,676 @@
+{
+  "schemaVersion": 1,
+  "lane": "wave009-native",
+  "status": "bounded-validated-functional-nonmatching-C",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "programId": "0004000e001acb00",
+  "claim": {
+    "path": "evidence/lanes/wave009-native/claim.json",
+    "sha256": "dd5373fb5d361e8a6ca07c2978ebcec80a15241afe91bc51b26694b439344be7",
+    "bytes": 2157
+  },
+  "sourceRevision": "working-tree-v2",
+  "v1BaselineRevision": "fac2f01381fea91ea25d025f316a640e437dd76d",
+  "pointerPromotion": {
+    "path": "evidence/lanes/wave009-native/pointer-promotion.json",
+    "sha256": "ffbb3c374dc3c1f6ef0392777c7e62bb1578aae039edfc9dddad5f519bf6ff02",
+    "bytes": 1977
+  },
+  "script": {
+    "path": "toolscripts/native_wave009.py",
+    "sha256": "33370b268013088ed9969c61a4b0466e8d9d99131d32b85c2b1caa9bab390ab0",
+    "bytes": 23224
+  },
+  "oracle": {
+    "path": "toolscripts/native_wave009_oracle.py",
+    "sha256": "8607f1cbd68471bbf995b2b2d46da30fcfd96fc64b557aff49a137d745e9e811",
+    "bytes": 8184
+  },
+  "sources": [
+    {
+      "path": "src/native/wave009/interval_set.c",
+      "sha256": "09685db174892a8703da9a94c713a0c25735f7b352338777c9ce0cce2cb7dbd7",
+      "bytes": 946
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave009/interval_set.h",
+      "sha256": "7cb85ec58f7b18ba32652319904596a9c2d71c0417fc60781834dfc24b699490",
+      "bytes": 599
+    }
+  ],
+  "compiler": {
+    "path": "tools/clang-21/clang.exe",
+    "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc",
+    "bytes": 99559064
+  },
+  "linker": {
+    "path": "tools/clang-21/ld.lld.exe",
+    "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3",
+    "bytes": 69225112
+  },
+  "configuration": [
+    "--target=arm-none-eabi",
+    "-mcpu=mpcore",
+    "-marm",
+    "-O2",
+    "-std=c11",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-ffunction-sections",
+    "-fno-unwind-tables",
+    "-fno-asynchronous-unwind-tables",
+    "-Wall",
+    "-Wextra",
+    "-Werror"
+  ],
+  "historicalCompilerIdentified": false,
+  "functions": [
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7865720,
+        "mode": "ARM"
+      },
+      "symbol": "fn_00780578",
+      "source": {
+        "path": "src/native/wave009/interval_set.c",
+        "sha256": "09685db174892a8703da9a94c713a0c25735f7b352338777c9ce0cce2cb7dbd7",
+        "bytes": 946
+      },
+      "object": {
+        "path": "work/wave009-native/coordinator-v2/interval_set.o",
+        "sha256": "ad02b6f2c2152e27e8e5d85efd119442d7af53933d340b22a1a28c27aee05cca",
+        "bytes": 1364
+      },
+      "linkedElf": {
+        "path": "work/wave009-native/coordinator-v2/interval_set.elf",
+        "sha256": "c50162712ed8d2beafb37d27cbc3db7cdcdd92c2ffc805f4fffac19afff2d4da",
+        "bytes": 2224
+      },
+      "originalInstructionBytes": 108,
+      "candidateInstructionBytes": 104,
+      "originalSpanSha256": "21bca05b24b76ccc7cc4c2747d43d7309b7718e031a42cdbe4c1ab74c8e0c993",
+      "candidateObjectSpanSha256": "94ce9dcdd8f462447eb8e48b7e8164150f3efb2daae27ea03a6c3b6680b6912d",
+      "candidateLinkedSpanSha256": "94ce9dcdd8f462447eb8e48b7e8164150f3efb2daae27ea03a6c3b6680b6912d",
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "behavior": {
+        "allPassed": true,
+        "cases": 1141,
+        "caseResultDigest": "6c6f7b47c256d8c60ca2cd7975dc617ae0f88db27fce4419eebe25b86ee6fc4b",
+        "wholeOriginalInstructionPathCovered": true,
+        "fullMemoryPreserved": true,
+        "calleeSavedSpLrPreserved": true,
+        "typedReadFootprintOnly": true,
+        "returnFlagCrossProductCases": 64,
+        "ARMThumbReturnModesAndAll16InitialFlagsCovered": true
+      },
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0
+    },
+    {
+      "canonicalIdentity": {
+        "build": "owner-archive-update",
+        "programId": "0004000e001acb00",
+        "module": "content0/.code-decompressed",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+        "address": 7865828,
+        "mode": "ARM"
+      },
+      "symbol": "fn_007805e4",
+      "source": {
+        "path": "src/native/wave009/interval_set.c",
+        "sha256": "09685db174892a8703da9a94c713a0c25735f7b352338777c9ce0cce2cb7dbd7",
+        "bytes": 946
+      },
+      "object": {
+        "path": "work/wave009-native/coordinator-v2/interval_set.o",
+        "sha256": "ad02b6f2c2152e27e8e5d85efd119442d7af53933d340b22a1a28c27aee05cca",
+        "bytes": 1364
+      },
+      "linkedElf": {
+        "path": "work/wave009-native/coordinator-v2/interval_set.elf",
+        "sha256": "c50162712ed8d2beafb37d27cbc3db7cdcdd92c2ffc805f4fffac19afff2d4da",
+        "bytes": 2224
+      },
+      "originalInstructionBytes": 108,
+      "candidateInstructionBytes": 104,
+      "originalSpanSha256": "21bca05b24b76ccc7cc4c2747d43d7309b7718e031a42cdbe4c1ab74c8e0c993",
+      "candidateObjectSpanSha256": "94ce9dcdd8f462447eb8e48b7e8164150f3efb2daae27ea03a6c3b6680b6912d",
+      "candidateLinkedSpanSha256": "94ce9dcdd8f462447eb8e48b7e8164150f3efb2daae27ea03a6c3b6680b6912d",
+      "poolBytes": 0,
+      "bodyRelocations": [],
+      "unresolvedSymbols": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "behavior": {
+        "allPassed": true,
+        "cases": 1141,
+        "caseResultDigest": "6c6f7b47c256d8c60ca2cd7975dc617ae0f88db27fce4419eebe25b86ee6fc4b",
+        "wholeOriginalInstructionPathCovered": true,
+        "fullMemoryPreserved": true,
+        "calleeSavedSpLrPreserved": true,
+        "typedReadFootprintOnly": true,
+        "returnFlagCrossProductCases": 64,
+        "ARMThumbReturnModesAndAll16InitialFlagsCovered": true
+      },
+      "functionalConfidence": "medium",
+      "sourceCreditRequested": 0
+    }
+  ],
+  "negativeControls": [
+    {
+      "address": 7865720,
+      "kind": "upper-bound",
+      "detected": true,
+      "failureClass": "ResultMismatch",
+      "actual": 0,
+      "expected": 1,
+      "returnedToSentinel": true,
+      "allMemoryPreserved": true,
+      "calleeSavedSpLrPreserved": true
+    },
+    {
+      "address": 7865720,
+      "kind": "singleton",
+      "detected": true,
+      "failureClass": "ResultMismatch",
+      "actual": 0,
+      "expected": 1,
+      "returnedToSentinel": true,
+      "allMemoryPreserved": true,
+      "calleeSavedSpLrPreserved": true
+    },
+    {
+      "address": 7865828,
+      "kind": "upper-bound",
+      "detected": true,
+      "failureClass": "ResultMismatch",
+      "actual": 0,
+      "expected": 1,
+      "returnedToSentinel": true,
+      "allMemoryPreserved": true,
+      "calleeSavedSpLrPreserved": true
+    },
+    {
+      "address": 7865828,
+      "kind": "singleton",
+      "detected": true,
+      "failureClass": "ResultMismatch",
+      "actual": 0,
+      "expected": 1,
+      "returnedToSentinel": true,
+      "allMemoryPreserved": true,
+      "calleeSavedSpLrPreserved": true
+    },
+    {
+      "address": 7865720,
+      "kind": "upper-bound",
+      "platform": "native-windows",
+      "detected": true,
+      "actual": 0,
+      "expected": 1,
+      "nativeWindowsReturnedNormally": true,
+      "allMemoryPreserved": true
+    },
+    {
+      "address": 7865828,
+      "kind": "upper-bound",
+      "platform": "native-windows",
+      "detected": true,
+      "actual": 0,
+      "expected": 1,
+      "nativeWindowsReturnedNormally": true,
+      "allMemoryPreserved": true
+    },
+    {
+      "address": 7865720,
+      "kind": "singleton",
+      "platform": "native-windows",
+      "detected": true,
+      "actual": 0,
+      "expected": 1,
+      "nativeWindowsReturnedNormally": true,
+      "allMemoryPreserved": true
+    },
+    {
+      "address": 7865828,
+      "kind": "singleton",
+      "platform": "native-windows",
+      "detected": true,
+      "actual": 0,
+      "expected": 1,
+      "nativeWindowsReturnedNormally": true,
+      "allMemoryPreserved": true
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009\\interval_set.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\interval_set.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave009-native/coordinator-v2/compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\layout.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\layout.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave009-native/coordinator-v2/layout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-m",
+        "armelf",
+        "--no-undefined",
+        "--build-id=none",
+        "--entry=fn_00780578",
+        "-T",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\membership.ld",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\interval_set.o",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\interval_set.elf"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave009-native/coordinator-v2/link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\wrong-upper-bound.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\wrong-upper-bound.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave009-native/coordinator-v2/wrong-upper-bound.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\wrong-singleton.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\wrong-singleton.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave009-native/coordinator-v2/wrong-singleton.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009\\interval_set.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\interval_set.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave009-native/coordinator-v2/interval_set-windows-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-flavor",
+        "link",
+        "/dll",
+        "/noentry",
+        "/machine:x64",
+        "/nodefaultlib",
+        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\interval_set.dll",
+        "/export:fn_00780578",
+        "/export:fn_007805e4",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\interval_set.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave009-native/coordinator-v2/interval_set-windows-link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\wrong-upper-bound.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\wrong-upper-bound.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave009-native/coordinator-v2/wrong-upper-bound-windows-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-flavor",
+        "link",
+        "/dll",
+        "/noentry",
+        "/machine:x64",
+        "/nodefaultlib",
+        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\wrong-upper-bound.dll",
+        "/export:fn_00780578",
+        "/export:fn_007805e4",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\wrong-upper-bound.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave009-native/coordinator-v2/wrong-upper-bound-windows-link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\wrong-singleton.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\wrong-singleton.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave009-native/coordinator-v2/wrong-singleton-windows-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-flavor",
+        "link",
+        "/dll",
+        "/noentry",
+        "/machine:x64",
+        "/nodefaultlib",
+        "/out:C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\wrong-singleton.dll",
+        "/export:fn_00780578",
+        "/export:fn_007805e4",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\wrong-singleton.windows.obj"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave009-native/coordinator-v2/wrong-singleton-windows-link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\clang.exe",
+        "--target=aarch64-linux-android29",
+        "-O2",
+        "-std=c11",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fPIC",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-c",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\src\\native\\wave009\\interval_set.c",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\interval_set.android.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave009-native/coordinator-v2/android-compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\clang-21\\ld.lld.exe",
+        "-shared",
+        "--no-undefined",
+        "-z",
+        "max-page-size=16384",
+        "-soname",
+        "libinterval_set.so",
+        "-o",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\libinterval_set.so",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\wave009-native\\coordinator-v2\\interval_set.android.o"
+      ],
+      "exitCode": 0,
+      "privateLog": {
+        "path": "work/wave009-native/coordinator-v2/android-link.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    }
+  ],
+  "portability": {
+    "windowsNativeExecution": true,
+    "windowsCasesPerFunction": 1141,
+    "windowsDll": {
+      "path": "work/wave009-native/coordinator-v2/interval_set.dll",
+      "sha256": "1c2fee9cef3c701cc6645e011c8b932636ec128938a1f26ce49fd30fcff28d04",
+      "bytes": 2048
+    },
+    "wrongSourceControls": [
+      {
+        "address": 7865720,
+        "kind": "upper-bound",
+        "platform": "native-windows",
+        "detected": true,
+        "actual": 0,
+        "expected": 1,
+        "nativeWindowsReturnedNormally": true,
+        "allMemoryPreserved": true
+      },
+      {
+        "address": 7865828,
+        "kind": "upper-bound",
+        "platform": "native-windows",
+        "detected": true,
+        "actual": 0,
+        "expected": 1,
+        "nativeWindowsReturnedNormally": true,
+        "allMemoryPreserved": true
+      },
+      {
+        "address": 7865720,
+        "kind": "singleton",
+        "platform": "native-windows",
+        "detected": true,
+        "actual": 0,
+        "expected": 1,
+        "nativeWindowsReturnedNormally": true,
+        "allMemoryPreserved": true
+      },
+      {
+        "address": 7865828,
+        "kind": "singleton",
+        "platform": "native-windows",
+        "detected": true,
+        "actual": 0,
+        "expected": 1,
+        "nativeWindowsReturnedNormally": true,
+        "allMemoryPreserved": true
+      }
+    ],
+    "androidArm64Api29Build": true,
+    "androidSharedLibrary": {
+      "path": "work/wave009-native/coordinator-v2/libinterval_set.so",
+      "sha256": "241664a3119e5a66c758420026272c9da5071a3d2dff80a9bf13b147883486aa",
+      "bytes": 2384
+    },
+    "androidLoadAlignments": [
+      16384,
+      16384,
+      16384
+    ],
+    "androidDeviceExecution": false,
+    "wholeGameBuildOrExecution": false
+  },
+  "preservedCompilerAttempts": [
+    {
+      "path": "evidence/lanes/wave009-native/compiler-attempts.json",
+      "sha256": "92990ead61dc4d634d3b676cecdf19c24f173bfe03cd3f9ba23bfeabf18f03ad",
+      "bytes": 29825
+    },
+    {
+      "path": "evidence/lanes/wave009-native/optional-compiler-availability.json",
+      "sha256": "76493f0532012134b3c137a080b9bef1aff72d8db73d4091afccac673d887461",
+      "bytes": 335
+    }
+  ],
+  "behaviorCorpus": {
+    "path": "evidence/lanes/wave009-native/behavior-corpus.json",
+    "sha256": "de63d57b84809417932f960e7bb45909b3152bfeb88c88403cd3e4530255dddd",
+    "bytes": 1379024
+  },
+  "exactMatchingFunctions": 0,
+  "functionalFunctions": 2,
+  "functionalOriginalInstructionBytes": 216,
+  "acceptedSourceCreditGranted": 0,
+  "limits": [
+    "Bounded finite typed-list domain, not universal equivalence",
+    "No cyclic-malformed, dangling, concurrent or service/MMIO inputs",
+    "Ordinary C source differs from original machine code",
+    "Platform outputs are function components, not game builds"
+  ],
+  "runtime": {
+    "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+    "unicornDistribution": "2.1.4",
+    "unicornRuntime": "2.1.4",
+    "capstoneDistribution": "5.0.9",
+    "capstoneRuntime": "5.0.7"
+  }
+}

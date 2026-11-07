@@ -1,4 +1,6 @@
+import ctypes
 import importlib.util
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -76,6 +78,48 @@ class NativeWave009Tests(unittest.TestCase):
                 oracle.execute(self.wrong[address]['raw'], address, case, 1, True, 15)
             self.assertTrue(caught.exception.details['returnedToSentinel'])
             self.assertTrue(caught.exception.details['allMemoryPreserved'])
+
+    def test_host64_uses_a_real_destination_pointer(self):
+        self.assertEqual(ctypes.sizeof(oracle.NativeSet), 40)
+        self.assertEqual(ctypes.sizeof(oracle.NativeNode), 24)
+        self.assertEqual(oracle.NativeSet.destination.offset, 0)
+        self.assertEqual(oracle.NativeSet.kind.offset, 8)
+        self.assertEqual(oracle.NativeSet.intervals.offset, 16)
+        self.assertEqual(oracle.NativeNode.unknown_00.offset, 0)
+        baseline = json.loads((wave.OUT / 'v1-packet.json').read_text())
+        for row in baseline['functions']:
+            raw = self.compiled[row['canonicalIdentity']['address']]['raw']
+            self.assertEqual(wave.sha(raw), row['candidateObjectSpanSha256'])
+
+    def test_windows_checks_memory_before_reporting_wrong_result(self):
+        def bad(instance, query):
+            instance._obj.kind = 0
+            return 0
+        case = {'kind': 2, 'value': 7, 'query': 7, 'ranges': []}
+        with self.assertRaisesRegex(RuntimeError, 'changed memory'):
+            oracle.execute_windows(bad, case)
+        with self.assertRaises(oracle.ResultMismatch) as caught:
+            oracle.execute_windows(lambda instance, query: 0, case)
+        self.assertTrue(caught.exception.details['nativeWindowsReturnedNormally'])
+        self.assertTrue(caught.exception.details['allMemoryPreserved'])
+        self.assertNotIn('calleeSavedSpLrPreserved', caught.exception.details)
+
+    def test_executed_address_outside_owned_body_is_rejected(self):
+        source, obj, linked = [self.work / ('escape.' + suffix) for suffix in ['c', 'o', 'elf']]
+        source.write_text('extern int outside(const void *, unsigned int);\n'
+                          'int fn_00780578(const void *p, unsigned int q) { return outside(p, q); }\n'
+                          'int fn_007805e4(const void *p, unsigned int q) { return outside(p, q); }\n')
+        wave.command([ROOT / 'tools/clang-21/clang.exe', *wave.FLAGS, '-c', source, '-o', obj],
+                     self.work / 'escape-compile.log', self.receipts)
+        script = self.work / 'escape.ld'
+        script.write_text('outside = 0x780700; SECTIONS { .text.fn_00780578 0x780578 : { *(.text.fn_00780578) } '
+                          '.text.fn_007805e4 0x7805e4 : { *(.text.fn_007805e4) } '
+                          '/DISCARD/ : { *(.ARM.exidx*) *(.ARM.extab*) *(.comment) *(.note*) } }')
+        wave.command([ROOT / 'tools/clang-21/ld.lld.exe', '-m', 'armelf', '-T', script, obj, '-o', linked,
+                      '--entry=fn_00780578'], self.work / 'escape-link.log', self.receipts)
+        raw = wave.functions(linked)[0x780578]['raw']
+        with self.assertRaisesRegex(RuntimeError, 'escaped the complete owned'):
+            oracle.execute(raw, 0x780578, {'kind': 2, 'value': 7, 'query': 7, 'ranges': []}, 1)
 
     def test_invalid_fixture_domain_rejected(self):
         base = {'kind': 3, 'value': 0, 'query': 7, 'ranges': [(1, 7)]}

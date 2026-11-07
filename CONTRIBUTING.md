@@ -2,7 +2,7 @@
 
 This is the development repository for the DQMJ3 Professional reconstruction. Source, build tools, research, naming investigations and derived validation records belong here. Supply your own original inputs; ROMs, CIAs, extracted original payloads, retained-original hybrid binaries, private keys and saves do not belong in the public tree or public CI artifacts.
 
-The initial native source target is the measured update module. Base and update have separate program IDs and executable hashes. Current acceptance is 356 functions and 4,164 instruction bytes; the full executable inventory, overall source percentage and native game builds remain incomplete. recovery.json and immutable cohort acceptance receipts are authoritative.
+The initial native source target is the measured update module. Base and update have separate program IDs and executable hashes. Current acceptance is 412 functions and 5,128 instruction bytes; the conservative main-text denominator is 7,051,280 bytes; historical function-boundary review, overall whole-game source percentage and native game builds remain incomplete. recovery.json and immutable cohort acceptance receipts are authoritative.
 
 ## Work and review
 

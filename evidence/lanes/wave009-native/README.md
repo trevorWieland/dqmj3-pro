@@ -2,7 +2,7 @@
 
 This packet reconstructs the two closed ARM membership routines at update addresses `0x780578` and `0x7805e4`. Each original body has 108 instruction bytes, no literal pool, no outgoing calls and a direct caller witnessed inside the frozen function/instruction census. Their respective callers are `0x4bed30` and `0x4c2494`. Actual four-byte call-site hashes and complete original extents are recorded in `claim.json`.
 
-The ordinary C in `src/native/wave009/interval_set.c` queries a tagged singleton or circular list of inclusive 16-bit intervals. `interval_set.h` models the observed ARM layout naturally: tag at offset 4, singleton value at 6, sentinel node at 8, node next pointer at 4 and interval endpoints at 8 and 10. The unread prefix words stay named `unknown_00`; their purpose, pointer interpretation and original class identity remain unresolved. The fixtures vary these unread words without attributing a role to them.
+The ordinary C in `src/native/wave009/interval_set.c` queries a tagged singleton or circular list of inclusive 16-bit intervals. `interval_set.h` models the observed ARM layout naturally: tag at offset 4, singleton value at 6, sentinel node at 8, node next pointer at 4 and interval endpoints at 8 and 10. Caller evidence identifies the interval-set prefix as a destination-state pointer. The interval-node prefix remains `unknown_00`; its role and original class identity remain unresolved. Original ARM fixtures vary unread words, while host64 fixtures store a real destination pointer.
 
 The measured Clang 21 ARM11 profile produces 104-byte source functions. They differ from the 108-byte originals in branch layout, register allocation and boolean materialization. The genuinely linked source spans equal their compiled object spans at the intended addresses. They do not equal the original spans. **Requested matching-source credit is zero.** The compiler profile and forty additional profile/source-form diagnostics are preserved; similarity counts are not progress.
 
@@ -24,3 +24,13 @@ Reproduce with the project-local tool environment:
 ```
 
 Coordinator admission, the shared source-build configuration, the recovery ledger and report upload remain coordinator-owned. This lane does not self-admit source credit or change another lane's files.
+
+## Reviewed v2 pointer promotion
+
+The v1 baseline is preserved byte for byte in `v1-packet.json` and `v1-verification.json`, with full source revision `fac2f01381fea91ea25d025f316a640e437dd76d` in `v1-provenance.json`. V2 changes only the interval-set prefix type from an unknown 32-bit word to `void *destination`; the interval-node unknown word remains unchanged. Two hash-bound caller spans show the set address passed to membership and its first word subsequently loaded as the cursor's current-state pointer.
+
+`pointer-promotion.json` records actual compiler-checked ARM layout, true host64 layout and invariance of both 104-byte ARM source bodies. ARM offsets remain destination0/kind4/value6/intervals8. Host64 offsets are destination0/kind8/value10/intervals16, with a 40-byte set and 24-byte interval node. Native test instances store real host pointers; no pointer is encoded in a 32-bit word or padding.
+
+V2 repeats the 1141 cases per function, ARM flag/return-mode cross-product and all-instruction coverage, then adds genuine native Windows executions of both wrong-source mutations for both functions. The four ARM and four Windows controls all return normally, preserve the checked memory, and fail semantically. The ARM oracle rejects every executed address outside the complete owned function span. Windows checks memory before reporting a different result, and its failure details claim native return and memory checks rather than ARM SP/LR or emulated-sentinel checks.
+
+The v2 focused suite has 10 tests, including a genuine compiler/linker branch to an undeclared executable address and a simultaneous wrong-result/memory-write ordering control. Matching credit remains zero. These are function components with finite behavior evidence, not native game builds.

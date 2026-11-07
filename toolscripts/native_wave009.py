@@ -121,13 +121,64 @@ def boundaries(image, census):
     return result
 
 
+def pointer_promotion(build, receipts, compiled):
+    baseline_path = OUT / 'v1-packet.json'
+    provenance = json.loads((OUT / 'v1-provenance.json').read_text())
+    if sha(baseline_path.read_bytes()) != 'fe8ef106cc1c58a7be27db781a536ed3135896b5bbb46de6abc032726ec0903b':
+        raise ValueError('Frozen v1 packet identity differs')
+    baseline = json.loads(baseline_path.read_text())
+    if record(SOURCE)['sha256'] != baseline['sources'][0]['sha256']:
+        raise ValueError('Pointer promotion unexpectedly changes membership source')
+    for row in baseline['functions']:
+        address = row['canonicalIdentity']['address']
+        if len(compiled[address]['raw']) != 104 or sha(compiled[address]['raw']) != row['candidateObjectSpanSha256']:
+            raise ValueError('Pointer promotion changed ARM membership body')
+    source, obj = build / 'layout.c', build / 'layout.o'
+    checks = [('sizeof(void *)', 4), ('sizeof(IntervalNode)', 12), ('sizeof(IntervalSet)', 20),
+              ('__builtin_offsetof(IntervalSet, destination)', 0), ('__builtin_offsetof(IntervalSet, kind)', 4),
+              ('__builtin_offsetof(IntervalSet, value)', 6), ('__builtin_offsetof(IntervalSet, intervals)', 8),
+              ('__builtin_offsetof(IntervalNode, unknown_00)', 0), ('__builtin_offsetof(IntervalNode, next)', 4),
+              ('__builtin_offsetof(IntervalNode, first)', 8), ('__builtin_offsetof(IntervalNode, last)', 10)]
+    source.write_text('#include "interval_set.h"\n' + '\n'.join('_Static_assert(' + expression + ' == ' + str(value)
+                      + ', "ARM layout");' for expression, value in checks) + '\n')
+    command([ROOT / 'tools/clang-21/clang.exe', *FLAGS, '-I', HEADER.parent, '-c', source, '-o', obj],
+            build / 'layout.log', receipts)
+    host = {'pointerBytes': ctypes.sizeof(ctypes.c_void_p), 'setBytes': ctypes.sizeof(oracle.NativeSet),
+            'nodeBytes': ctypes.sizeof(oracle.NativeNode), 'destinationOffset': oracle.NativeSet.destination.offset,
+            'kindOffset': oracle.NativeSet.kind.offset, 'valueOffset': oracle.NativeSet.value.offset,
+            'intervalsOffset': oracle.NativeSet.intervals.offset, 'nodeUnknownOffset': oracle.NativeNode.unknown_00.offset,
+            'nodeNextOffset': oracle.NativeNode.next.offset}
+    if list(host.values()) != [8, 40, 24, 0, 8, 10, 16, 0, 8]:
+        raise ValueError('True host64 pointer layout differs')
+    image = (ROOT / 'generated/update-content0/code.bin').read_bytes()
+    callers = []
+    for start, end, expected_sha in [(0x4bee48, 0x4bee6c, '1cc896ccf560b89a2898c7fad70fddb99ed54636380c935c00832af6ecef335a'),
+                                     (0x4bece0, 0x4bed1c, '77b9e92606092f37331ed68bfab81f892b9115fbc180a902b7f0a9c84fa8802e')]:
+        actual = sha(image[start - 0x100000:end - 0x100000])
+        if actual != expected_sha:
+            raise ValueError('Pointer-typed caller evidence changed')
+        callers.append({'start': start, 'endExclusive': end, 'sha256': actual})
+    return {'sourceRevision': provenance['sourceRevision'], 'baseline': record(baseline_path),
+            'originalCallerEvidence': callers,
+            'provenance': record(OUT / 'v1-provenance.json'), 'ARMLayoutStaticAssertions': checks,
+            'ARMCompiledBodiesInvariant': True, 'unchangedCSource': True, 'host64': host,
+            'IntervalNodeUnknownWordUnchanged': True, 'creditChanges': 0}
+
+
+def windows_dll(source, build, name, receipts):
+    obj, dll = build / (name + '.windows.obj'), build / (name + '.dll')
+    command([ROOT / 'tools/clang-21/clang.exe', '--target=x86_64-pc-windows-msvc', '-O2', '-std=c11',
+             '-ffreestanding', '-fno-builtin', '-Wall', '-Wextra', '-Werror', '-I', HEADER.parent,
+             '-c', source, '-o', obj], build / (name + '-windows-compile.log'), receipts)
+    command([ROOT / 'tools/clang-21/ld.lld.exe', '-flavor', 'link', '/dll', '/noentry', '/machine:x64',
+             '/nodefaultlib', '/out:' + str(dll), *['/export:fn_' + format(address, '08x') for address in ADDRESSES], obj],
+             build / (name + '-windows-link.log'), receipts)
+    return dll
+
+
 def platform(source, build, cases, receipts):
     clang, linker = ROOT / 'tools/clang-21/clang.exe', ROOT / 'tools/clang-21/ld.lld.exe'
-    windows_object, dll = build / 'interval_set.windows.obj', build / 'interval_set.dll'
-    command([clang, '--target=x86_64-pc-windows-msvc', '-O2', '-std=c11', '-ffreestanding', '-fno-builtin',
-             '-Wall', '-Wextra', '-Werror', '-c', source, '-o', windows_object], build / 'windows-compile.log', receipts)
-    command([linker, '-flavor', 'link', '/dll', '/noentry', '/machine:x64', '/nodefaultlib', '/out:' + str(dll),
-             *['/export:fn_' + format(address, '08x') for address in ADDRESSES], windows_object], build / 'windows-link.log', receipts)
+    dll = windows_dll(source, build, 'interval_set', receipts)
     library = ctypes.CDLL(str(dll))
     for address in ADDRESSES:
         function = getattr(library, 'fn_' + format(address, '08x'))
@@ -135,6 +186,20 @@ def platform(source, build, cases, receipts):
         function.restype = ctypes.c_int
         for case in cases:
             oracle.execute_windows(function, case)
+    negative = []
+    for name, case in [('upper-bound', {'kind': 3, 'value': 0, 'query': 7, 'ranges': [(1, 7)]}),
+                       ('singleton', {'kind': 2, 'value': 7, 'query': 7, 'ranges': []})]:
+        wrong_library = ctypes.CDLL(str(windows_dll(build / ('wrong-' + name + '.c'), build, 'wrong-' + name, receipts)))
+        for address in ADDRESSES:
+            function = getattr(wrong_library, 'fn_' + format(address, '08x'))
+            function.argtypes, function.restype = [ctypes.POINTER(oracle.NativeSet), ctypes.c_uint], ctypes.c_int
+            try:
+                oracle.execute_windows(function, case)
+            except oracle.ResultMismatch as failure:
+                negative.append({'address': address, 'kind': name, 'platform': 'native-windows',
+                                 'detected': True, **failure.details})
+            else:
+                raise ValueError('Native Windows wrong-source control unexpectedly passed')
     android_object, shared = build / 'interval_set.android.o', build / 'libinterval_set.so'
     command([clang, '--target=aarch64-linux-android29', '-O2', '-std=c11', '-ffreestanding', '-fno-builtin', '-fPIC',
              '-Wall', '-Wextra', '-Werror', '-c', source, '-o', android_object], build / 'android-compile.log', receipts)
@@ -144,7 +209,7 @@ def platform(source, build, cases, receipts):
     loads = [segment['p_align'] for segment in elf.iter_segments() if segment['p_type'] == 'PT_LOAD']
     if elf['e_machine'] != 'EM_AARCH64' or not loads or any(value < 16384 for value in loads):
         raise ValueError('Android component architecture or 16 KiB segment alignment differs')
-    return {'windowsNativeExecution': True, 'windowsCasesPerFunction': len(cases), 'windowsDll': record(dll),
+    return {'windowsNativeExecution': True, 'windowsCasesPerFunction': len(cases), 'windowsDll': record(dll), 'wrongSourceControls': negative,
             'androidArm64Api29Build': True, 'androidSharedLibrary': record(shared), 'androidLoadAlignments': loads,
             'androidDeviceExecution': False, 'wholeGameBuildOrExecution': False}
 
@@ -167,6 +232,8 @@ def build_packet(build, output):
     obj, linked = build / 'interval_set.o', build / 'interval_set.elf'
     command([clang, *FLAGS, '-c', SOURCE, '-o', obj], build / 'compile.log', receipts)
     compiled = functions(obj)
+    promotion = pointer_promotion(build, receipts, compiled)
+    save(OUT / 'pointer-promotion.json', promotion)
     script = build / 'membership.ld'
     script.write_text('SECTIONS {\n' + '\n'.join('.text.fn_' + format(address, '08x') + ' ' + hex(address)
                       + ' : { KEEP(*(.text.fn_' + format(address, '08x') + ')) }' for address in ADDRESSES)
@@ -234,6 +301,7 @@ def build_packet(build, output):
                          'functionalConfidence': 'medium', 'sourceCreditRequested': 0})
         corpus.append({'symbol': compiled[address]['symbol'], 'cases': cases, 'resultDigest': digest.hexdigest()})
     portability = platform(SOURCE, build, cases, receipts)
+    negatives.extend(portability['wrongSourceControls'])
     attempts = []
     for source, name in [(WORK / 'compiler-attempts.json', 'compiler-attempts.json'),
                          (WORK / 'compiler/availability.json', 'optional-compiler-availability.json')]:
@@ -244,6 +312,8 @@ def build_packet(build, output):
     save(OUT / 'behavior-corpus.json', {'schemaVersion': 1, 'moduleSha256': MODULE_SHA, 'functions': corpus})
     packet = {'schemaVersion': 1, 'lane': 'wave009-native', 'status': 'bounded-validated-functional-nonmatching-C',
               'moduleSha256': MODULE_SHA, 'programId': '0004000e001acb00', 'claim': record(OUT / 'claim.json'),
+              'sourceRevision': 'working-tree-v2', 'v1BaselineRevision': promotion['sourceRevision'],
+              'pointerPromotion': record(OUT / 'pointer-promotion.json'),
               'script': record(Path(__file__)), 'oracle': record(ROOT / 'toolscripts/native_wave009_oracle.py'),
               'sources': [record(SOURCE)], 'headers': [record(HEADER)], 'compiler': record(clang), 'linker': record(linker),
               'configuration': FLAGS, 'historicalCompilerIdentified': False, 'functions': outcomes,

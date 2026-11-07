@@ -9,7 +9,7 @@ typedef struct IntervalNode {
 } IntervalNode;
 
 typedef struct IntervalSet {
-    unsigned int unknown_00;
+    void *destination;
     unsigned char kind;
     unsigned short value;
     IntervalNode intervals;

@@ -58,7 +58,10 @@ class ReviewedStaticReportingTests(unittest.TestCase):
 
     def test_actual_reviewed_static_contract_accepts_exact_verified_objects(self):
         units = self.validate()
-        self.assertEqual(len(units), 11)
+        from ci_native_build import accepted_functions
+        expected_sources = {row["sourcePath"] for row in accepted_functions(ROOT)} | {"src/native"}
+        self.assertEqual({row["metadata"]["source_path"] for row in units}, expected_sources)
+        self.assertEqual(len(units), len(expected_sources))
         self.assertTrue(all(row["metadata"]["complete"] is False for row in units))
         self.assertEqual({row["name"] for row in units}, {row["name"] for row in self.mapping["units"]})
         self.assertEqual(sum(row["code"] for row in self.verified.values()), self.accounting["totalInitializedTextBytes"])

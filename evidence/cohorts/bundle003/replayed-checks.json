@@ -1,0 +1,615 @@
+{
+  "schemaVersion": 1,
+  "startedUtc": "2026-11-07T00:27:51.275622+00:00",
+  "sourceHashes": {
+    "source/squirrel-wave001/upstream/COMPILE": "4fccdb58bfc30a921d40e9555d5bccd3b00562a7f8f53454f38faf9602076531",
+    "source/squirrel-wave001/upstream/COPYRIGHT": "24517556c2acb13cd9f055dbc0b608b6888ca7e0b2665be4d5f09ab2811de0e1",
+    "source/squirrel-wave001/upstream/doc/sqstdlib2.chm": "f6cca4d426625b0bf7d3351b9dbd63ae7ff9372ffaf0a3479ce93b199b487891",
+    "source/squirrel-wave001/upstream/doc/sqstdlib2.pdf": "319467a8e2e2426bbe45c96c4cb95d66af77e6494e9a71385dbc27ce76ded1c6",
+    "source/squirrel-wave001/upstream/doc/squirrel2.chm": "8df29d9696cff341d1372b987b11de0def375aeb327847ff5862622770768c4e",
+    "source/squirrel-wave001/upstream/doc/squirrel2.pdf": "159316655725f19ff5c761c38f71568c4d1a6e20e9a2b92cb8e15aeea6aa5252",
+    "source/squirrel-wave001/upstream/etc/minimal.c": "281ba89f5db4bfd7cbd63e24a5eb7559b46703a4fdd10b856256ed2fe6bd821b",
+    "source/squirrel-wave001/upstream/etc/test.nut": "a6fe96f24aec43eb805406896ec41a15bb97773d544ab007f34cc821df58ebc9",
+    "source/squirrel-wave001/upstream/HISTORY": "c43f75d0f93dad5113c8ed477230659e7bb7692951bed80005d4ab167ca9f3e5",
+    "source/squirrel-wave001/upstream/include/sqstdaux.h": "b01a87b1162b0a19478ba65afc2a87c2b7a6319b495e74c0197559ddaa770740",
+    "source/squirrel-wave001/upstream/include/sqstdblob.h": "e53a3528a9b925db22ae072a59b81bc8081ca64c509027ae09b64b524f16d85f",
+    "source/squirrel-wave001/upstream/include/sqstdio.h": "ce19a7fb57c37e31a91cfb31c33d0a0a590594c738626f77e4b256b7c928d234",
+    "source/squirrel-wave001/upstream/include/sqstdmath.h": "925e383bdcc2690a7c809955f2b3aec5115b789028bd085a82e26cfbd8b6c10d",
+    "source/squirrel-wave001/upstream/include/sqstdstring.h": "e90813722898804606bef7dc1e241dcb547d4b3af2c40a1d412cc385eb5ea9f4",
+    "source/squirrel-wave001/upstream/include/sqstdsystem.h": "3099ed98d3c188a49b4860f136e61624bdee468ad87e3af1e35c76d9ecadc8dd",
+    "source/squirrel-wave001/upstream/include/squirrel.h": "a30b71f61b1ed452962eb263757622e6ef82321f96a6c25e37f86054b0922bd3",
+    "source/squirrel-wave001/upstream/Makefile": "8f6e7c3bbb7ec93c30e1a118453ef9d1bdb7963ebee53335ff9118dc679ef38c",
+    "source/squirrel-wave001/upstream/README": "f30bf48beb931a02176d4731a2082f6e5c0bd68408ed293a40e87a6fb1b0017f",
+    "source/squirrel-wave001/upstream/samples/ackermann.nut": "4485995f8380e90390563592155532f5a24c2bbd765f7b8f9d11c9d72beb7fff",
+    "source/squirrel-wave001/upstream/samples/array.nut": "50933c2bc9b35c0766d83201e4d2686be13bc6107c5fa13f2b31d464730de1d2",
+    "source/squirrel-wave001/upstream/samples/class.nut": "ca0ba2f0a421682b3eb47ca24a3fad452b7954314ef278b67ab2ddddd1597305",
+    "source/squirrel-wave001/upstream/samples/classattributes.nut": "410e201b189c44811d5c7cf63213a8412a6c4ca08ae4de53ec60f2fbdffa89dd",
+    "source/squirrel-wave001/upstream/samples/coroutines.nut": "3fd687fbdb60ed8a2c5f334edfd1caec9d451e702597f84a4be4696c0f8a84e0",
+    "source/squirrel-wave001/upstream/samples/delegation.nut": "b80ffc4c20e407c2aa3b2eedcefcf6dded84b8d3fdc125bf12ef2503e2a26630",
+    "source/squirrel-wave001/upstream/samples/fibonacci.nut": "525c5590d2cb285506bf7808fd5b74b4562ab3373a3ba800660d42b72b1c226c",
+    "source/squirrel-wave001/upstream/samples/flow.nut": "7b5272605e9a763aef62a618b508df8218c1239eb4e83fd18617def7b59a8325",
+    "source/squirrel-wave001/upstream/samples/generators.nut": "cf4a23e40c0d625a0a1075d4bea33db5d41ae18c916b629f1f3928be7c75bba8",
+    "source/squirrel-wave001/upstream/samples/hello.nut": "866b5033009e3e3f3e40bef180e6924d937996a57fc8b5ce85090b5d14459f1f",
+    "source/squirrel-wave001/upstream/samples/list.nut": "07e43800b623a381038d5c19b5e841e3349e23c0cef69789455e6f286a984030",
+    "source/squirrel-wave001/upstream/samples/loops.nut": "2ef9aa18672a70ac2a19d49b1398796cb4f480b78d4abf9c66c6b79652a84b80",
+    "source/squirrel-wave001/upstream/samples/matrix.nut": "43e92bc3de5dd7eb686b139c0e66c07db74f0b6390249b75f8eb344a1071a11a",
+    "source/squirrel-wave001/upstream/samples/metamethods.nut": "f869d4af84206db6f8055f182d021997e0a26eb8e35db09b045ec873de916e55",
+    "source/squirrel-wave001/upstream/samples/methcall.nut": "069e7d2216cf08b6ea2fb6276da1527b251acfc207e9d7d055a49970ebdb0301",
+    "source/squirrel-wave001/upstream/samples/tailstate.nut": "06c8a3df0a56cc8db914db5c154aec21f38de41a7a1bf911b1f6a38c3508a491",
+    "source/squirrel-wave001/upstream/sq/Makefile": "a34f426bfae1f1ab65c9f78af52d2943af9a8f508dec48e945455e51e59fb3cf",
+    "source/squirrel-wave001/upstream/sq/sq.c": "343f4085b7c1ebfb83b93b08deae542a8efb9b470d9dffcc3d322377fe91c267",
+    "source/squirrel-wave001/upstream/sq/sq.dsp": "7a92dcfd636f49ebc19f2d1b5d4d6e3821a136b08bfefd59080c88dec93197da",
+    "source/squirrel-wave001/upstream/sqstdlib/Makefile": "3602589ee6d64d8cbad8d329a49c6ccae00e3e984aed1c09efb02f8a931fee1c",
+    "source/squirrel-wave001/upstream/sqstdlib/sqstdaux.cpp": "473e5637b970eac6d47e7a50486b9a18a789d089af2d9b914bd31ab940e1a2fc",
+    "source/squirrel-wave001/upstream/sqstdlib/sqstdblob.cpp": "4d6ca2f94725587544ab29d80fdc5b1f86b29c08edf24437267c7585c966ab17",
+    "source/squirrel-wave001/upstream/sqstdlib/sqstdblobimpl.h": "e793bbfc5d5e511dd5684284e113a3b7728709c76441e2dedaf34d589e0bff8c",
+    "source/squirrel-wave001/upstream/sqstdlib/sqstdio.cpp": "8c2897381aa2956ecdce8166760796e640ed9d035995408fda13efeb66e146ab",
+    "source/squirrel-wave001/upstream/sqstdlib/sqstdlib.dsp": "ef88110ab77be4580b70fba8194695ae04e0e3c9c50caeb395b6a01f395ff077",
+    "source/squirrel-wave001/upstream/sqstdlib/sqstdmath.cpp": "ef8607e92e19f9f9d6e010a9970b503f19c62396228c00873003f44b0fd4975a",
+    "source/squirrel-wave001/upstream/sqstdlib/sqstdrex.cpp": "cbc8a3ca4f97523fc3260b0eafaf551ce40799327835bf591ade5bcf3a05c184",
+    "source/squirrel-wave001/upstream/sqstdlib/sqstdstream.cpp": "fa8ea21a6d58649bf900fdfc872a8b19ce1e05a5b72808513e4a512b6253cbd4",
+    "source/squirrel-wave001/upstream/sqstdlib/sqstdstream.h": "413edaa0bb1a16424b66bf01adb579a26477d4605814d2f4508741bddc9d0488",
+    "source/squirrel-wave001/upstream/sqstdlib/sqstdstring.cpp": "decc5fb745d5f67aa1063953ee080d78006ac55585d3118c438db4343e28799d",
+    "source/squirrel-wave001/upstream/sqstdlib/sqstdsystem.cpp": "be8d926804fa1e0a96e68786b664831d2a473988df51672546e3f1f5e6e22591",
+    "source/squirrel-wave001/upstream/squirrel/Makefile": "fb9e8346d5c485390bb283b4be026a11c3be6a0e7d131324f6e21addf45f82bf",
+    "source/squirrel-wave001/upstream/squirrel/sqapi.cpp": "419dd16821fd7a17b9de31206e914ef517be871383dc04d0fbf00df003189e1c",
+    "source/squirrel-wave001/upstream/squirrel/sqarray.h": "8f1a15b72714da4598dd9405d4138049b2189a0ed974cb1ce0ee78c73704f47e",
+    "source/squirrel-wave001/upstream/squirrel/sqbaselib.cpp": "6c7523418aec078c3d6e88d00ea367de7d98757de28aeb4a338cb61bb3dfe23c",
+    "source/squirrel-wave001/upstream/squirrel/sqclass.cpp": "aec2f1707afcfbe4a6fed1bac5392c8c8c0c428b924980d3173431cb1144bb82",
+    "source/squirrel-wave001/upstream/squirrel/sqclass.h": "dc9f7c956ad1aa154097169998f745e6ef00ad9accb5688c1d589022988cbde2",
+    "source/squirrel-wave001/upstream/squirrel/sqclosure.h": "778cf68440e459d0faa36e8c4705a8b1bc5021cda8750363857cd857153105e4",
+    "source/squirrel-wave001/upstream/squirrel/sqcompiler.cpp": "26a013a71ae78ac3360922b58c26a71bc245a5eafef1e3ada9e6ae36d1131f53",
+    "source/squirrel-wave001/upstream/squirrel/sqcompiler.h": "8cdbc21321d5172c741011cc2d45036b7bcb0dac0348f4226b8d8db26ebae574",
+    "source/squirrel-wave001/upstream/squirrel/sqdebug.cpp": "571d343ea192ba0b86e612a2408d5cad4bdb533382880df898d4794231593f54",
+    "source/squirrel-wave001/upstream/squirrel/sqfuncproto.h": "3b52bf7982787c882a5f52dcd21bd7b2fb3d0df1c837b39c45f06c2067fb7e66",
+    "source/squirrel-wave001/upstream/squirrel/sqfuncstate.cpp": "0f99bc07b250b5e8ec50cab4baaf6f00188e175fa780d4a880785dd8ff89e0e7",
+    "source/squirrel-wave001/upstream/squirrel/sqfuncstate.h": "8d4b7f31fe59f19c7a85a2cee0a5c00b1038d0416677daca8994d6e3b2596f82",
+    "source/squirrel-wave001/upstream/squirrel/sqlexer.cpp": "f2bac2a9d8edc479ef6aa3389eb710d344e390cfcad6971b852289e9d5c2da03",
+    "source/squirrel-wave001/upstream/squirrel/sqlexer.h": "6df3b06bd66eb6e351b34fb6e84bd90b5a344bda5229fb64ceb2653d1d361f8b",
+    "source/squirrel-wave001/upstream/squirrel/sqmem.cpp": "6e9388adf1fad4bad83c30f6551d791daa30e69d124ab90eb9194cccc39821b6",
+    "source/squirrel-wave001/upstream/squirrel/sqobject.cpp": "943fa3f951d547ea3ff11553b1ededd78227ec1d27fa782483424a3c4d48a8c8",
+    "source/squirrel-wave001/upstream/squirrel/sqobject.h": "be8a448c57ba5bab77e9dbf7f0ddb329ca9dee908881366675a9585fe649c8c9",
+    "source/squirrel-wave001/upstream/squirrel/sqopcodes.h": "b4c0ecdefaeff6cf5a66042c0e63de7526ee1f26a514e986f869667e9e5b5fed",
+    "source/squirrel-wave001/upstream/squirrel/sqpcheader.h": "8b16f4c61f26fde45c49de157780f526ed91365cd6c04519df16ca44c6523596",
+    "source/squirrel-wave001/upstream/squirrel/sqstate.cpp": "bed2cfa1d8df8b6b66a585cbe86d528f3fb83c68def5e8d860478a2939b24b0b",
+    "source/squirrel-wave001/upstream/squirrel/sqstate.h": "b425e753a056f4c0112d986907b9ddf12eab95b67122fece30fc265252098c10",
+    "source/squirrel-wave001/upstream/squirrel/sqstring.h": "3856909a71131135717fb5dcd41bbff9ad6cd5493ff1de4fccaf9a7910467e40",
+    "source/squirrel-wave001/upstream/squirrel/sqtable.cpp": "a12781b0ce24f6dd82633d049a44f623a57a829a2ecda8a8043703e4b1e74742",
+    "source/squirrel-wave001/upstream/squirrel/sqtable.h": "459c2c2a8563bdf243d78895455f8cd4d9e7b723b4c97ceb9a3adbd2b5a13a30",
+    "source/squirrel-wave001/upstream/squirrel/squirrel.dsp": "1cb4479b110b95e406b6d8c006e9102f2c9c5b5cdc3c5c1df00874195c7a2c10",
+    "source/squirrel-wave001/upstream/squirrel/squserdata.h": "5d8581c3aea1201f0c54e2e2b8384062d1f623c5161d829d65c2bfcefba50a70",
+    "source/squirrel-wave001/upstream/squirrel/squtils.h": "89d36b58d23b4fdd728c6634254c42051122ff17df33dca16a9f8917fa483565",
+    "source/squirrel-wave001/upstream/squirrel/sqvm.cpp": "0d7a2993033ac4741c0eb3ed8cf9ec1347e00a7c9a3bec0500ebc62ad957e1d8",
+    "source/squirrel-wave001/upstream/squirrel/sqvm.h": "a8ab767f4502786c3018773969074ef00c2515124c94c533b8ad69a5f7ca59e2",
+    "source/squirrel-wave001/upstream/squirrel.dsw": "6c15e18bef3fbad73c6a2fc8cba7a08c9dc9cd2aa06e6fbd86bdf00c662f3cbb",
+    "configure_inputs.py": "0ceea9ba7e517178892d2f6696a49dc79c34531bb9f3ac8440b9e54ff6082535",
+    "platform/app-shell/gdi32.def": "488eee5794e0197683556e1be869a67cee24227736324848c37536c1cabf3ca7",
+    "platform/app-shell/jni_bridge.c": "3a5f499192d40ceb00c5614454561ef6ca8ff638fa20dd8bd4cb2778cd3466ca",
+    "platform/app-shell/kernel32.def": "a6ddc12546715676d63624e3d40768f75f2b4d7a2526ed680839bfb7dba46bde",
+    "platform/app-shell/materialize_tools.py": "b651cfbfc07ace98f1867f1d4155818a181e50c788e3cf565b7bb88cfeb14a9e",
+    "platform/app-shell/shell.c": "3a37521074d463793e01c0546f14b0d60f0b5cfb6536db279f138a94dfb370ff",
+    "platform/app-shell/shell.h": "9be85ec11ab7ce79075ca57ceba90a2a2f0a6b7dc3bb0599a1e2f98ee4da280c",
+    "platform/app-shell/ShellActivity.java": "fb5703aaa9314c155045608398bb208bdb3b70c27a827f5c4930c358c078737e",
+    "platform/app-shell/user32.def": "d83abe7fd0bd8733098f126b0bd868b35a03f6c8e4df2c5ca6d26b257a73c08a",
+    "platform/app-shell/win32.c": "909f77ee0beba4d0f318b740c00bb730121a403a82f1ba22b1a2d741933a0b70",
+    "platform/app-shell/win32_api.h": "c476359cea9be43e71fa1f97644c2d5952ddbfbf056bd6c6c1ecbfea3e366c28",
+    "platform/kernel32.def": "fa6cf4900e0b6f278b4cb8d535b9deba96036eb5f3c18071b6d65c5777f96625",
+    "platform/memory-wave001/kernel32.def": "aa5cbef0be18f800ec1c5425898cbded0ead3a14d81ffd82e19c6b2b0ffe873f",
+    "platform/memory-wave001/memory_test.c": "6fa664cea041dee66ef1d42de1114663e47115d652a552db0fb750c453f15d05",
+    "platform/memory-wave001/runner.c": "8ef576dd0b412537dec35557c09977a190ed15ddf8f09db048244bf491ad0d88",
+    "platform/memory-wave001/test_api.h": "4235e955eda6753467161618d9bd53be1797117be061aa2be49a3aa4dd8ebf8f",
+    "platform/memory-wave002/contracts.py": "4e30f3fb424c4c41bc09ba916229a0d5b7bf123eabd55ca4301a30947b8ce819",
+    "platform/memory-wave002/isolation.py": "2c4bef39437e0a7bfba4cd4ae92db0699d499a9f132ec01b91721f80e723a769",
+    "platform/memory-wave002/kernel32.def": "aa5cbef0be18f800ec1c5425898cbded0ead3a14d81ffd82e19c6b2b0ffe873f",
+    "platform/memory-wave002/memory_test.c": "6fa664cea041dee66ef1d42de1114663e47115d652a552db0fb750c453f15d05",
+    "platform/memory-wave002/runner.c": "8ef576dd0b412537dec35557c09977a190ed15ddf8f09db048244bf491ad0d88",
+    "platform/memory-wave002/test_api.h": "4235e955eda6753467161618d9bd53be1797117be061aa2be49a3aa4dd8ebf8f",
+    "platform/runner.c": "31a8d902a0976ea57aeeeb59aa622db5c1fa31b594e768f6bed01655a5b815e8",
+    "run_checks.py": "9dff9bc024410a009d84097dce09e74c2b8be493c882e649171255ad921fff74",
+    "setup_tools.py": "a60c2cd12e0aff798b4a57c4be0f67456dcd228d99dea30ef3e665e1e3e522c0",
+    "source/squirrel-wave001/probe/compat/assert.h": "7fff88f43233e767f641c87080a940fe4bb3c6463ad8d9cc13195d0770034d2d",
+    "source/squirrel-wave001/probe/compat/common.h": "ad08086f7e3af6708e882712df1d5091cafe9042be349c5bf63bdeecd7938037",
+    "source/squirrel-wave001/probe/compat/ctype.h": "a8270bf9e33e88ce8ecb8c1d0e1d8b5a626c359ba2bc263165738b3c780230f0",
+    "source/squirrel-wave001/probe/compat/math.h": "179badbb2b9a3b9673e32fa011cfe958786c037ecedbb1068b0e35eff4c29c54",
+    "source/squirrel-wave001/probe/compat/setjmp.h": "31b6380fd0efaca4c0cc2931c87bc4e24b91d7e8ed025bbd7a261616afe4ae4d",
+    "source/squirrel-wave001/probe/compat/stdarg.h": "bb224f8aad9a0349a438e8ea7a70edeaf37f50a0dcdd755d825c916135b00850",
+    "source/squirrel-wave001/probe/compat/stdio.h": "87c70e6eb96bd2b74ac63ffe71be76401f8b71c8f887c69bbd5e376605224936",
+    "source/squirrel-wave001/probe/compat/stdlib.h": "d0c5599168d312231ddcc1afd2d8b26768c22d8e6d9427a51a58a1a85028925b",
+    "source/squirrel-wave001/probe/compat/string.h": "c27c6d99a2043c0f5ca96a3b4ceb52be4db9420ec4bbc09f6e32a0beefc8f795",
+    "source/squirrel-wave001/probe/layout.cpp": "3e0e62200d3ee5593cdc92dbe8f1718e81ef5d4a0b248c5bab25f5797be6df74",
+    "source/squirrel-wave001/probe/oracle.cpp": "978b15c2b9ba8293aefcb76e6e9d026e0c8b58a184a8fdd57594f26ea5f4942e",
+    "source/squirrel-wave001/probe/prelude.h": "6d4fe0799cb6f436bd75094099284e373c3cb5bb8f671c064c9df665eb99c200",
+    "source/squirrel-wave001/probe/wrong.cpp": "48b6307e00a98701874e686a27bbd9cfa6a9cecbbcbe9aea2ba03829ca09a469",
+    "source/squirrel-wave001/replay.py": "fb5eee0630f906b00cc77bca69edd7761f825c07e647802ee310031e40946808",
+    "source/squirrel-wave001/test_probe.py": "df8cdd011e637577ccf1a061606b062ba0ff1ea4c4ce51302baf22e73bca0e43",
+    "src/formal-audit-wave002/build_and_execute.py": "3f2d548944278ad1a49b470b5fa956afb6203080e36d31f8b9d34ca670f11dc9",
+    "src/formal-audit-wave002/pcode_model.py": "7ed0963b939771c34b664440b41ccde2cc2dc4c9aa339e548ffbca7105ad893b",
+    "src/formal-audit-wave002/wrong_range.c": "f4ec6f4b16a85a0b423450c3e0da3fe6e85571b2e913d4cfbc3f9e3d1e4d48e8",
+    "src/formal-wave001/arm32_model.py": "d29bd3a5debee651e53f7cfc34ce0e75b8967105a9f3415dade01010679dcdd3",
+    "src/formal-wave001/c_uint_model.py": "89d9e4a2991fb436a6b6f0392589ed4985fbe9cc11739e373a711b4012b36ff1",
+    "src/formal-wave001/data_model.c": "766d483a875c9774026db46a18f76d984da459234dd3808b3a26eaed79b02d34",
+    "src/formal-wave001/wrong_range.c": "f4ec6f4b16a85a0b423450c3e0da3fe6e85571b2e913d4cfbc3f9e3d1e4d48e8",
+    "src/inventory-wave003/audit.py": "0c4eb0ef2faf050133d8857d04e6b8c4142a9cd43b17095c4844eb613d510b80",
+    "src/inventory-wave003/containers.py": "dc19d391e0daac7afd5eb79460d4568e06ea3d430ebcc5dfca05901a3ff69eba",
+    "src/inventory-wave003/programs.py": "599682f6276b1ccb6b511841a4b1255ecea8b05f219ad60e5a43db5ab9279b19",
+    "src/inventory-wave003/summarize.py": "f2fe289ce670b47a834fc10bcc2580f266f1565ea28c4c0dce236734edc6e65a",
+    "src/inventory-wave003/test_inventory.py": "7b984f8b6e0979e5ff7ee9fd7e0df2afa1ed6124de38121ed7cdfac97bb42f29",
+    "src/native/wave001/BoundarySurvey.java": "373cabfbb052ba9578f961643ccdf3c02c632edfbbc20db9788a1e926136271e",
+    "src/native/wave001/leaves.c": "da2ca7a59e59d2126dfe9a3992453ccd112c335ccca2a4a0f7283d2d4e1e0efb",
+    "src/native/wave001/record_access.c": "6aa76acd02972373e3427ceb9545ff7d8d8f4c0131b6e5c073bc97bf7d0dfd71",
+    "src/native/wave002/types.h": "f8e5367f0db62dae45801b2ab5660010eb719e9fd639f5ad29cd5efade96c7e2",
+    "src/native/wave002/views_00.c": "25a202ce60ce38ffa51315f023cf7d010372169de8e57da579cbca995e74ede9",
+    "src/native/wave002/views_00.h": "95bb78674a2a7c505d3bb9494a7b429ac1b5266489b3740da2455ffd7cc1f5ef",
+    "src/native/wave002/views_01.c": "a3104cd081df2066a3c3b5f9207fb355f5b646ab2a8b9af33520a8894a752a21",
+    "src/native/wave002/views_01.h": "960853e463b0bcd414b53775d1e84b8b815114640650029d34e6c4dd7bd4473f",
+    "src/native/wave002/views_02.c": "1090fb5d2f3b094057269774c04b75636eaecc940da68f7cac89038b490e1098",
+    "src/native/wave002/views_02.h": "bd64a0d88be9bc389eafd2dabcf38cee98b5aa38a5ac2d79d6dade832de57d32",
+    "src/native/wave002/views_03.c": "b139506e0993f9fc52c65e3bd39777f132d1fe081159bbdcded7a127730e5384",
+    "src/native/wave002/views_03.h": "72e103a184811d5d72a46fa3f2ea890d83ce3afc78366a2a1d93f111466caed2",
+    "src/native/wave003/abi-qualified/setters.c": "30e6cc1826ae1ea934320405a214c2c1ba937192e723ef6e0a1f7289725fa94e",
+    "src/native/wave003/abi-qualified/views.h": "a9d418c5f30912ad903272d3a7ac03f4bc746c427d821252c67407e148bf03dd",
+    "src/native/wave003/setters.c": "d3c9a708cc2c30d51978a1087ac5227c23e9ab096ee8b66dac38632ed20dd216",
+    "src/native/wave003/views.h": "a9d418c5f30912ad903272d3a7ac03f4bc746c427d821252c67407e148bf03dd",
+    "src/native/wave004/BoundarySurvey.java": "7a8af00932d4ab21af0df86efacae7d51ee38b30df601158a64d5596734f9ba6",
+    "src/native/wave004/types.h": "d9cb0985a7c13796aca31e122506d324e7e34fe42b969687c1544c4e0dff516a",
+    "src/native/wave004/views.c": "56165b8e9e587c07301dc976996e6d1dc3e7f71d8a730a4bf725f168d625bb97",
+    "src/native/wave004/views.h": "bdc32a10909c612c759db5369909b86a7faab8bc66bf5bcd602e93bdfaf25d41",
+    "src/native/wave005/chain.c": "e26e818d6fe5b236d7b43ca186493f178c9bbb4b23833caceee97d3c7ca9839e",
+    "src/native/wave005/fixture.c": "c2c9b1ff14a9df5819ad100d824bc63f411197a85b0075f46de5241cb57626b4",
+    "src/native/wave005/object.c": "5ffd18f62b0ec1e01a68f466a07b4a0e52a85523d5116c97dbe3e98966812ff6",
+    "src/native/wave005/oracle.py": "73b80f67f84970ba7d74d6ac8f74de432c21b5a1112450bbf20e171eb93444e4",
+    "src/native/wave005/push.c": "03dcec750a90da181ecd51eb3ecdd1a5a5cd3f5188417a4d195832524d500cf7",
+    "src/native/wave005/stack.c": "40225c220e8f6b2efe4cb8bcd58c047844807f25225e1b77db7fa6cb3a0f90b0",
+    "src/native/wave005/test_oracle.py": "b98eb386cd0e6f03276cf70a34c186d637b56ffaa0764b119bf3b78f8fb6a597",
+    "src/native/wave005/vm_views.h": "1bf160e4679afbe5a59a244e78f9753684c93a109f7a703f78dff80d04f4840a",
+    "src/native/wave006/constants.c": "4e47d3b9cfc6d2741ed9a12fac46642f29c1818337336eb84400703f0090849f",
+    "src/native/wave007/predicates.c": "022ea0038c622e35df308f0af3e1a53d779f9b404eabf3c27c9016648bd8d3cd",
+    "src/native/wave007/views.h": "5bda41aafd92a46983ea97a990c36d7864c80fd860c9f0e4d95eb7d687d9e2c7",
+    "src/native/wave008/flags_00.c": "00d4e8f198f387f31ed3ff1700ce793f1c21440dd20d0d91be7ede3ea636c29a",
+    "src/native/wave008/flags_01.c": "3f8bff07eb89f57d9d7a2dafe460fe6515ca84158d8d1cf1dd465f252f6b0881",
+    "src/native/wave008/flags_02.c": "76018cfe5fc5c5362d15eeceb8f1ca05040d18b9bb000ef2ca4ebdbd8bb410b3",
+    "src/native/wave008/flags_03.c": "1e969c5770f4bf94992211f49d485a9e956bd5c290b380db0fe702a07e5b1772",
+    "src/native/wave008/oracle.py": "d12075a7186e477c43d6a67b2541dfbc870838ba65a131850a41eb42571b5c23",
+    "src/native/wave008/test_oracle.py": "020ef50158bb36f1aad341718638a1e9f10e723eccc8515b9ee1d03d7452755f",
+    "src/native/wave008/types.h": "1fb3d54a3798a20402666690081ceeda210b166afcd2681a2664ef36e133cb9d",
+    "src/native/wave008/views_00.h": "55baba04086c821e800dd487fcf5cdc56a935cc95de9172fc93e7dc734cc6e1c",
+    "src/native/wave008/views_01.h": "f4fd66e8e288f8b88a06a969477824813569cd164edaa087084c6fa2e0f32881",
+    "src/native/wave008/views_02.h": "8f055548655419d074cff8e09c332c522bf14abb7ff87c7e0090b69cae975958",
+    "src/native/wave008/views_03.h": "ba9e15e390e61c67559c5a243e1d3ba57c1053655e9e8d4e0586dcad92b601b5",
+    "src/native/wave009/interval_set.c": "09685db174892a8703da9a94c713a0c25735f7b352338777c9ce0cce2cb7dbd7",
+    "src/native/wave009/interval_set.h": "e8d21135aa6aed100052c35aff49074d1b681b9c75b8b16176662bffa016a4f8",
+    "tests/test_app_shell.py": "4e9774c65dfe4613104cbb5e198c1d55f2adbd10d7819405e64b2f5883e5d4f0",
+    "tests/test_asset_survey.py": "18b541b4d405ca0558b3749d6cad9aa96e75b02892ea6a62dde8bdd03e22b559",
+    "tests/test_behavior_smoke.py": "c9ff1e3911c8c1bb7be1253dcc7598cf8c2d8e9a0dcebcceef0e8cb343e40420",
+    "tests/test_ci_native_build.py": "20f64877c26996de8c7ec446f9e5a6902a1bf5dd5d01642bb7c53fabfe4f4c6f",
+    "tests/test_compile_sources.py": "f929e1cc60e70f25a9a7f6630825a1d349fa5dc8b1f08c79a6ccc7cb9bc88f9b",
+    "tests/test_configure_objdiff.py": "f82af411ab65ff92cba502e805f53b2289e6b4024331e06c9e233083fb563b85",
+    "tests/test_executable_scope.py": "de2925ae08b1b06aef77ea483f0788f79f065a563798bb11f71f07889b5f7601",
+    "tests/test_finalize_objdiff_report.py": "01b67b8674aacd9724d274c8483d95ab4a0ee50968b29fdee8b63dc5efdcf474",
+    "tests/test_formal_audit_wave002.py": "9ef9ad8209b19057d61f6caf356d47b385848a2106d8f920caad5c1467b95195",
+    "tests/test_formal_equivalence_wave001.py": "f2f31e6071728b792fd7c8aa644ad5619a83cf5bd0d00bac4de39d9e112ebc6e",
+    "tests/test_formal_toolchain_inputs.py": "969d6d31834a02e8747283d4b8e7d00f8f22ef5529a1521b87ee2f678b05207e",
+    "tests/test_import_policy.py": "bb3cb47de2768fef8aa01531bd3fa3fa109293ed9e047f0fe256f90cb3c72610",
+    "tests/test_inventory.py": "aaae1834ac7895e14e68c9d75807243d75bd3e4a18e1d4d8da1dad8ad9fc2974",
+    "tests/test_inventory_wave001.py": "7826c2c8328605afef655aa01c6a2fe8150967055c5d67b95fc4568f5e356a40",
+    "tests/test_module_link.py": "c39303e9c5131f5a572c62cb9e587af96853a1705e410c38b74a8e5a560ba389",
+    "tests/test_module_link_graph.py": "2208457fc27c66303c2adb2fb12712694f998ae303646632a09a42ec2f61d672",
+    "tests/test_native_batch.py": "7cf7380aa7daffa55b686a2b0fbab90e9575d6b3a2074f5f9e7c47d5c32aad01",
+    "tests/test_native_bundle002.py": "6b6eb1c014ebc9877fab4ca9d30012b6cfa2261450f30a5b5e1da25ee2a894dc",
+    "tests/test_native_inventory_complete.py": "b97ccd57cb8be6f5e931f57363142549af57b6199b1cd2773786c68840605450",
+    "tests/test_native_inventory_qualification.py": "5d98136a980cbb11b2f91c5ed9559284ece013d3322836a2aa9f06b1f668d35b",
+    "tests/test_native_text_accounting.py": "10af75a391b50f99bc5ae90dd339e4c840331d88a586bb9687f8172e74f305a7",
+    "tests/test_native_wave009.py": "1e9632de6e7c276937e75b6c73dc696f5ccb395dd2ccac0759eb01e87a1fb22c",
+    "tests/test_objdiff_objects.py": "f86cbe8eaeb9a0451098588e88933235b883ca9ef559fd123b21ca9918ae6281",
+    "tests/test_platform_build.py": "ce158af63880ef0ce461b7ec1564b39a6c97944212673fe7e3995fb6dedb8f5d",
+    "tests/test_platform_memory_wave002.py": "3ccfe80491302384e254a989490a3a52f8de7ba7f7b4da99097dacab5c76884d",
+    "tests/test_publication_audit.py": "9c271af80d448f394bc6e174243068e7e8baef40b4af4de3a3028367692f616d",
+    "tests/test_semantic_report.py": "49a0a4f18946664ae2d41e151a5686a712e7253bbc128ae911f96adb6c2e0c7f",
+    "tests/test_source_policy.py": "443ed861344eec9ffa1f6f7ebf571b16347726cafe619875886e5404417616b3",
+    "tests/test_static_report_configuration.py": "e8b4e4b2db813f5184343f707af4ccf0a535a5ff85c5b070bff8297c690d143f",
+    "toolscripts/app_shell_build.py": "3a42f04edb1332dd3ee52313687f2f62ce46137361b460908e81aa2c483d784b",
+    "toolscripts/asset_survey.py": "d3c2f2327723a8a60b08aeaf45c41f01f13c1bdc86368ff3599862ddd349a2f8",
+    "toolscripts/behavior_smoke.py": "f3e141024a9b31302365d4c6c7cb21b9b1f661970e43138c771d03f0c435c978",
+    "toolscripts/bootstrap_public_compiler.py": "6782fdeecc42477e9a8a3cf65441313ce6e2ffef6c9f0ae38ad4b0823f6ff44d",
+    "toolscripts/bootstrap_report_tools.py": "89d5fad54690924d932b1b0a82596d20e5199f8e0acf580dab2b6290b976fda5",
+    "toolscripts/ci_native_build.py": "76e544ac936e713bff71417450e28a8813522e6bf003da82bc62a6394d1fb6ac",
+    "toolscripts/compile_sources.py": "345a03255b86739b77eb04dbf5c8a9a0ea5a8df7dbb0f622069d7eb48726d3b2",
+    "toolscripts/configure_objdiff.py": "0f8bf0dbdb8d69cd23d010dba7d90f2cb09d6b238761972c5ba811bf59bf198c",
+    "toolscripts/container_inventory_wave003.py": "f3f01a87c2f8655fd0d4e459a6c2ad52c212b6e51b68ddd74670abeec5ffb10c",
+    "toolscripts/executable_inventory.py": "a2e12b3e5286559c1bf4989a6e293ed46ab1f169be4c03162a2bf02720925912",
+    "toolscripts/executable_scope.py": "0a0513407ba8f879fb6feb987c54a1e4fc5e5d404fa3c004ab4bd073b288a519",
+    "toolscripts/finalize_objdiff_report.py": "8e5d733fb2d9cabd1c37c0f761d6a0e744c5fadff65511ea81b3388cfb39b4ab",
+    "toolscripts/formal_audit_wave002.py": "48e5f8af0963f66f15dfa9ee960edd6304dd99fed7c55864a6699a1376998e37",
+    "toolscripts/formal_equivalence_wave001.py": "818180f03175f0f3e2e8531689d4a360feb3be357555205fb242d41af5182d4c",
+    "toolscripts/ghidra/FormalAuditWave002.java": "1fe313d9ec707537add94e43a1ab7d10a2f2bdc2f57d5199f94da62bb10e9c96",
+    "toolscripts/ghidra/InventoryWave001.java": "0e5b0c3da3e1262d028da81c5587e6d2bf9b8f9964a2e203fa232b6b57a4b843",
+    "toolscripts/ghidra/InventoryWave002.java": "54b5bda073009a93a378ccfc9e7efc679bf66503cce2abe735db21e5f33878e1",
+    "toolscripts/ghidra/NativeInventoryDetail.java": "df14a0dd814773b6adece336968120763086a79015ae44e6a679b89b34f0bb2c",
+    "toolscripts/ghidra/NativeLeafSurvey.java": "5411716b10543d2e0f5083665141eb33f94f13a969c11ea819f3bf1e1fcc7cb5",
+    "toolscripts/ghidra_inventory_wave002.py": "b9a8fc62f9c620425b486afb74cee2ce1ad225ecdd053e7d4a9738c0c6dc4a18",
+    "toolscripts/inventory.py": "32c3d637553cff27c10ffcf7142e3d1c33465bcff4338525fd6886e90e5d1cbd",
+    "toolscripts/lock_tools.py": "06feed4a873d7e7cdf150e07eda78a1e4361f03d820b3e56f26a263e9a55baca",
+    "toolscripts/module_link.py": "936cacb42571da8fddaa3ba66c7f704703a6517f814598052b28bb71952258c7",
+    "toolscripts/module_link_graph.py": "a750984d287d605e3143aa68d9bba26a3bc9d464f9d3db9a5e15b1afaa10038c",
+    "toolscripts/native_batch.py": "02440e8eeb2d7e8b7078b4fc0e047065dbb5fbfab378a7f9457d6297fdfacf91",
+    "toolscripts/native_batch_proof.py": "d274d1a3cba8a53d4bc301d0d60f5bb847e8843a506df72cd014c1f585b89187",
+    "toolscripts/native_batch_replay.py": "a968ae0a7a9557223a40ea28914f0bdb71ba478efd46a8509dc54b7b345b8abf",
+    "toolscripts/native_bundle.py": "7739f413d4917f92dd60974a202179511a26e7f439fe8007ee85c8ac6dee5f45",
+    "toolscripts/native_bundle002.py": "46aaaec0622c0d99f2ec7797f70251ccf5898e43ffe5e8dbb9f39d8e5cac6a7a",
+    "toolscripts/native_cohort.py": "96808830807891f1d57ed6bd4173fcf850a7bef0f6c9d687ffcb0d1347687dbf",
+    "toolscripts/native_inventory_complete.py": "a1c90199e29a281c84d916d47bcaf6b6af908ccb7e2ecb6a1ecde00c259aeb93",
+    "toolscripts/native_inventory_qualification.py": "b4d0c8e980464c151d2363803ab9a6b92556394d8dc174e5fda80c5671bf130e",
+    "toolscripts/native_inventory_seeded.py": "6b098d4e9e16c72e91330847f473891f0ffd0194dea4b0f00f3d2304083afa1f",
+    "toolscripts/native_survey.py": "6600fe54a35e47d49c0d77c4946236926ab35deb00b7bb7a4e932c612cb9495f",
+    "toolscripts/native_text_accounting.py": "c2e43218fb9ac1bada8f014c6eb3b624d51914235ec19bd4de6c75d7aec4a405",
+    "toolscripts/native_wave001.py": "1da2e22668c940dc57dba6c1630b0d600089c6110aee91423cdd9950f61867a0",
+    "toolscripts/native_wave002.py": "b905fa4cc179818117bf3564021772f2d288bf0c78603a50c6619be1c6f0d062",
+    "toolscripts/native_wave003.py": "7520a90ee1a30e6b789ffd83ca0f08a5186fc3f1533d11d6b9248eb570f741dd",
+    "toolscripts/native_wave003_abi.py": "832650a773da18f2dc926cba3ff4e10f26d4a629f5b8069d9f49380759900cce",
+    "toolscripts/native_wave004.py": "802b4fb5735f44a6194f5cda305063c4d52f0d86cb9c22686f957fed78aafffe",
+    "toolscripts/native_wave005.py": "c88f7ff565380d9768099c03d9451febd9497800fa2c6f7ce4ea8772f8abbf55",
+    "toolscripts/native_wave006.py": "749c306beaa370784ab8f59fd5235753ab903cde458740d42e12e3d1ee264ceb",
+    "toolscripts/native_wave007.py": "de4f0a5a0e904153fbd52173ea0e53587ea477adc3b336e8d1cc6f9378112972",
+    "toolscripts/native_wave008.py": "18800c81d3806080b47d8f4f0ea92d41cc15345273934586cc26bf32627e5f10",
+    "toolscripts/native_wave009.py": "a84dcb9008e0a27b12fd6aa02f1d3205e595ab55a8f18b00b71dc78cff613790",
+    "toolscripts/native_wave009_oracle.py": "0246fd638c6cfa22983a9456de7afdba5569e72d9a3b99be6dcef56a80b80c7f",
+    "toolscripts/objdiff_objects.py": "f62ceb91c522b56c06ce8b4b28543dfa40633c66c07dbe3757bdbdeceef93b7d",
+    "toolscripts/platform_build.py": "bb49c7a7cc461ffa940afa5763d7f7edf0aca4430d8d726bc6c623c4ea8ad965",
+    "toolscripts/platform_memory_build.py": "0edc2aaf4f777297e85e459156db7483952a477642863f372fb83790603235cf",
+    "toolscripts/platform_memory_wave002.py": "2cffb452e7947fa991b0ce67b9cecffbe64d136fead2114d68e2b9134d11bfa2",
+    "toolscripts/publication_audit.py": "8b049d9758a168b0d69abb4f42d4daa477b753d184f4641913646548dccedcd3",
+    "toolscripts/publish_native_batch.py": "c72b4b443a0003b2dc1c917a1ab1214178c9675d4f813c4598ba67b9997abf21",
+    "toolscripts/publish_native_bundle002.py": "41ae28bf63b7759bb24a27c7a90cad8e3725781efc4b515ea730ec0efd0407e5",
+    "toolscripts/publish_native_cohort.py": "990e667791db6d87c7211334df0924218267dda4114a6ab7cd63401827b3730f",
+    "toolscripts/script_interfaces.py": "f00fbfd38a9f534873cda71f54763504ee76b2d423d55e4ad5c37e54b2ab7ba4",
+    "toolscripts/semantic_report.py": "18f8d79e8a8147079c171c9f47ba2c8da45cf86bb479d9eabeefec9d08f49dbb",
+    "toolscripts/source_policy.py": "c2cd1e1486eea962e2bc930b257ea12f86b5cfa00362a50043a61e5776ad33df",
+    "toolscripts/squirrel_source_wave001.py": "8715171bb11169fdf22d0e4a1540656a253f4a41151bb25ee555df9f48086777",
+    "toolscripts/verify_intake.py": "446bf21dbfc8b7809337081ce0f6149a1b2693884ecf91a938acad50df1f27e6",
+    "validate_clean_checkout.py": "040da0dcc38cb8221a6be04ef69c775e12cfa765b875be8626b35b5abeb66334"
+  },
+  "toolLockSha256": "f59e190ebf5e1dba8c26de76b0207d39832199e7c15396f559a17ff468823ffc",
+  "projectConfigSha256": "afe97102f2f85458858ecb757fa1f6be032a3f983125f5dafb244d64ffecef5e",
+  "checks": [
+    {
+      "name": "tool-pins",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\setup_tools.py",
+        "--verify"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/tool-pins.log",
+      "logSha256": "188a37705ec8130ac9b929bf51d4c4b08790cfb849c4d94bff6418a872cb25c4"
+    },
+    {
+      "name": "intake",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\inventory.py"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/intake.log",
+      "logSha256": "427bd8111f9923cb7dd28454b1644918fdea326d86c46c22c6190d62b6a3b580"
+    },
+    {
+      "name": "independent-extraction",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\verify_intake.py"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/independent-extraction.log",
+      "logSha256": "1061e033ec98f1c94eb81205cdfae370a57994d3b02759655d832c8e176eeef5"
+    },
+    {
+      "name": "assets",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\asset_survey.py"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/assets.log",
+      "logSha256": "1b4d3545f122662de45d743ed3f20ddc40fe6edb5a6a8f371f45a964c4ef9955"
+    },
+    {
+      "name": "native-candidates",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\native_survey.py"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/native-candidates.log",
+      "logSha256": "748cc32f86dfbb2ff89a46cfbc3b1c3aaaf2493845d8afc68ece6a12d7d63cef"
+    },
+    {
+      "name": "native-boundary-controls",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\native_survey.py",
+        "--self-test"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/native-boundary-controls.log",
+      "logSha256": "848250ac7192f0fcf84f079ffee1a44bfea99edb8c5767ebcfc867e5f47fa927"
+    },
+    {
+      "name": "executable-inventory",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\executable_inventory.py"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/executable-inventory.log",
+      "logSha256": "262c3c3c550f6373702be2e28b24718654ae2b8dcd8283b1b4c76474717b2a20"
+    },
+    {
+      "name": "script-interfaces",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\script_interfaces.py"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/script-interfaces.log",
+      "logSha256": "a6a28f93005199f0216cd96d30a2b8c65daf822ec096e1e60c97aa85907bb487"
+    },
+    {
+      "name": "native-wave001",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\native_wave001.py"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/native-wave001.log",
+      "logSha256": "ed3c0231d3710e99ba5a1f4c53706705393fb81e4ed0ceae2751057254ece1b0"
+    },
+    {
+      "name": "native-wave002",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\native_wave002.py",
+        "--workers",
+        "3"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/native-wave002.log",
+      "logSha256": "bbec3189fa293563fc1fa27aa0f9fd811ec45dddc2d2bb2ce059c14a78680efa"
+    },
+    {
+      "name": "native-module-link",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\native_bundle.py"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/native-module-link.log",
+      "logSha256": "4c3f7bc0cf59573c54a0f82301cf0f9fb460c6a8faa9d093c46996ed9a05788e"
+    },
+    {
+      "name": "native-platforms",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\platform_build.py"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/native-platforms.log",
+      "logSha256": "6f44afdd88b92051b0f319765f808e0672a0dbbc9667ba613a8df794e3936147"
+    },
+    {
+      "name": "native-wave003-abi",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\native_wave003_abi.py"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/native-wave003-abi.log",
+      "logSha256": "81ba34aa3a1ace051d836af9573bd0657e108fabeb85051f8fa8da0ee1d229e9"
+    },
+    {
+      "name": "native-wave004",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\native_wave004.py"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/native-wave004.log",
+      "logSha256": "4f2a98c8030ef6d87d3a29131c28074b2ae10c2e60fe85a47645d4c7e23ef5e5"
+    },
+    {
+      "name": "native-wave005",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\native_wave005.py"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/native-wave005.log",
+      "logSha256": "43d69297e368f4fde1eca9cff178a9f2fc3f26a303ce699c1824a30b0bf7b453"
+    },
+    {
+      "name": "native-wave005-controls",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\src\\native\\wave005",
+        "-p",
+        "test_oracle.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/native-wave005-controls.log",
+      "logSha256": "a638656b7401581087db112788de60d9dddb72cc63427e40c58629fc785331b2"
+    },
+    {
+      "name": "native-wave006",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\native_wave006.py"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/native-wave006.log",
+      "logSha256": "f252ae56d6703b418dd73da57b50dfb5a37b8c2f6adaad95766eb273d4df3996"
+    },
+    {
+      "name": "native-bundle002",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\native_bundle002.py"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/native-bundle002.log",
+      "logSha256": "85f399d2fc13e485cc5642a164c8cb1b1e5d9f8a551101a3afffe6b7896b3807"
+    },
+    {
+      "name": "native-memory-platforms",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\platform_memory_wave002.py",
+        "--capture-native"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/native-memory-platforms.log",
+      "logSha256": "6fb20a44de5ffd37daabf5c2b6f801fe4ad107af3e805b43a8c8c5662ab7e75e"
+    },
+    {
+      "name": "public-app-tools",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\platform\\app-shell\\materialize_tools.py",
+        "--verify"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/public-app-tools.log",
+      "logSha256": "742eff89c4f7708f57db1effe7c96052c8383f7e0e310b2d936fd2798f2aa311"
+    },
+    {
+      "name": "native-diagnostic-app",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\app_shell_build.py"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/native-diagnostic-app.log",
+      "logSha256": "c59b468fb3661ff5389cf985edef4a6e1c061bf300a36a59bd7943463b939657"
+    },
+    {
+      "name": "formal-research-pilot",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\toolscripts\\formal_equivalence_wave001.py"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/formal-research-pilot.log",
+      "logSha256": "9998cbc8208bfc36e50f38c60cde793d119f944d86d837fce0d1f4d5aa93d0a8"
+    },
+    {
+      "name": "tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bundle003-eb8e1b6\\tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "logPath": "work/checks/tests.log",
+      "logSha256": "2fc95026aea8741b11021bdc25e686a110f05389bf775527fce9389b4fe00e01"
+    }
+  ],
+  "acceptedRecoveredFunctions": 0,
+  "acceptedRecoveredBytes": 0,
+  "cleanIndependentReplay": false,
+  "wholeGameExecution": false,
+  "status": "passed",
+  "artifacts": [
+    {
+      "path": "evidence/inventory/summary.json",
+      "sha256": "427bd8111f9923cb7dd28454b1644918fdea326d86c46c22c6190d62b6a3b580"
+    },
+    {
+      "path": "evidence/verification/intake-independent.json",
+      "sha256": "8218547a27c826d5268f2d921c2c4e1e845cbea603b46549e8e2ae0cc7a041d8"
+    },
+    {
+      "path": "evidence/assets/summary.json",
+      "sha256": "1b4d3545f122662de45d743ed3f20ddc40fe6edb5a6a8f371f45a964c4ef9955"
+    },
+    {
+      "path": "evidence/native-survey/survey.json",
+      "sha256": "8da24a1960634618d43db160cf9884c07e2b11fa402dc405abf7c48476a48d35"
+    },
+    {
+      "path": "work/validation-smoke/unittest/report.json",
+      "sha256": "a790ef55b9901f9a29fd89545edc5a462514df7c965ec407f79fd62f6bdde461"
+    },
+    {
+      "path": "work/validation-smoke/game-leaf-unittest/report.json",
+      "sha256": "430a89c06d1c8d6e9709ad6d15e130bb1e3bc9210984341707297c5bf084a70a"
+    },
+    {
+      "path": "evidence/lanes/inventory-wave001/executable-summary.json",
+      "sha256": "262c3c3c550f6373702be2e28b24718654ae2b8dcd8283b1b4c76474717b2a20"
+    },
+    {
+      "path": "evidence/lanes/inventory-wave001/script-summary.json",
+      "sha256": "a6a28f93005199f0216cd96d30a2b8c65daf822ec096e1e60c97aa85907bb487"
+    },
+    {
+      "path": "evidence/lanes/wave001-native/packet.json",
+      "sha256": "15a0e38fbba79511d758335500217a84088490b4125d9a565af3b0f3237328ec"
+    },
+    {
+      "path": "evidence/cohorts/wave001/verification.json",
+      "sha256": "5b6423ddd26dfc79a2f56e0aa73556e3d660eb669866e30914b0396578e06d22"
+    },
+    {
+      "path": "evidence/cohorts/bundle001/verification.json",
+      "sha256": "9226462bde4d25d785241411f8584909fe9fcded16682dc7aa3b5571e42fa197"
+    },
+    {
+      "path": "evidence/lanes/wave002-native/packet.json",
+      "sha256": "dcebfe559d892c2612c3ca89bc30707ee283d5f9cbc5b05bccc837dcb6a742f4"
+    },
+    {
+      "path": "evidence/lanes/platform-wave001/report.json",
+      "sha256": "2250b2d7319900448c524faa483c4aab576fdb70ff4287dee796c2029d345cfe"
+    },
+    {
+      "path": "evidence/lanes/wave003-abi/packet.json",
+      "sha256": "bd40d830066cefcadb9f34e8d3632d3de9b7d8b79ba184b891b7a2199acdea99"
+    },
+    {
+      "path": "evidence/lanes/wave004-native/packet.json",
+      "sha256": "14b50ffe919f724dbfeefad1b372bf819c90654ea7d16b6ded6ad5c4a7ce4536"
+    },
+    {
+      "path": "evidence/lanes/wave005-native/packet.json",
+      "sha256": "ce6e22865b633b4d206357ada66aa4a96ba278f364eb21ecefdad1ddfe4856bf"
+    },
+    {
+      "path": "evidence/lanes/wave006-native/packet.json",
+      "sha256": "c3fa5837a9f700be5f99228cf3ea6c2f5dfc3d2407458da792d084b872d32ac1"
+    },
+    {
+      "path": "evidence/cohorts/bundle002/verification.json",
+      "sha256": "a122296636df4311cc02a5508ec688f7d4511495a537dd15d13cc51fca1c4867"
+    },
+    {
+      "path": "evidence/lanes/platform-memory-wave002/report.json",
+      "sha256": "484988b8d4eb8365557f522437618f7377ea0effec9b2621ebe2a86f4adb3176"
+    },
+    {
+      "path": "evidence/lanes/app-shell-wave001/report.json",
+      "sha256": "8703b7f25007e965c5587c4f0769a2cd2435d2cdb8f313d16dd7d0efa28f87ab"
+    },
+    {
+      "path": "evidence/lanes/formal-equivalence-wave001/packet.json",
+      "sha256": "efe528295e2d193c0bb2f77a60384d78e18fd2f04cbbd7c17bb6fce35872f4ea"
+    }
+  ],
+  "finishedUtc": "2026-11-07T00:41:31.906232+00:00"
+}

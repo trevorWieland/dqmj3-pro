@@ -66,6 +66,8 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_static_report_configuration.py -v
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_functional_report.py -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Configure reviewed objdiff project
         if: steps.progress.outputs.ready == 'true'
         run: tools/report-python/Scripts/python.exe -I toolscripts/configure_objdiff.py --version update-content0 --output objdiff.json
@@ -80,10 +82,15 @@ jobs:
           & tools/report-python/Scripts/python.exe -I toolscripts/finalize_objdiff_report.py --input build/update-content0/report.raw.json
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           'ByteMatch code coverage uses every initialized main ARM text byte, including pools and unclassified regions. Function totals count discovered canonical entries. Only accepted exact source spans receive credit. See docs/bytematch.md.' >> $env:GITHUB_STEP_SUMMARY
+      - name: Generate reviewed functional companion
+        if: steps.progress.outputs.ready == 'true'
+        run: tools/report-python/Scripts/python.exe -I toolscripts/functional_report.py
       - name: Upload progress report
         if: steps.progress.outputs.ready == 'true'
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: update-content0_report
-          path: build/update-content0/report.json
+          path: |
+            build/update-content0/report.json
+            build/update-content0/functional.json
           if-no-files-found: error
