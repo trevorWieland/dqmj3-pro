@@ -3,6 +3,7 @@ from pathlib import Path
 import struct
 import sys
 import unittest
+from unittest.mock import patch
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -81,3 +82,41 @@ class DigestCompressionTests(unittest.TestCase):
         for index in range(4):
             self.check_case(self.corpus[index])
         self.assertEqual(len(self.backends[0].coverage), 602)
+
+    def test_invalid_offsets_are_rejected_before_any_backend_access(self):
+        memory = bytes(4096)
+        for backend in self.backends:
+            for state, block in [(-4, 128), (4084, 128), (64, -1), (64, 4033), (1, 128)]:
+                before = backend.calls
+                with self.subTest(backend=type(backend).__name__, state=state, block=block), self.assertRaises(ValueError):
+                    backend.execute(memory, state, block)
+                self.assertEqual(backend.calls, before)
+
+    def test_native_checks_actual_state_pointer_alignment(self):
+        native = self.backends[2]
+        before = native.calls
+        with patch("digest024_oracle.ctypes.addressof", return_value=0x100000001), self.assertRaises(ValueError):
+            native.execute(bytes(4096), 64, 128)
+        self.assertEqual(native.calls, before)
+
+    def test_arm_guard_rejects_thumb_and_halfword_execution(self):
+        from unicorn.arm_const import UC_ARM_REG_CPSR
+        source = self.backends[1]
+        cpsr = source.cpu.reg_read(UC_ARM_REG_CPSR)
+        try:
+            source.cpu.reg_write(UC_ARM_REG_CPSR, cpsr | 0x20)
+            with self.assertRaises(ValueError):
+                source.code(source.cpu, source.entry, 4, None)
+        finally:
+            source.cpu.reg_write(UC_ARM_REG_CPSR, cpsr)
+        with self.assertRaises(ValueError):
+            source.code(source.cpu, source.entry + 2, 2, None)
+
+    def test_arm_literal_pool_words_are_not_instruction_boundaries(self):
+        source = self.backends[1]
+        words = {address for low, high in source.executable for address in range(low, high, 4)}
+        data = words - source.instructions
+        self.assertTrue(data)
+        for address in data:
+            with self.assertRaises(ValueError):
+                source.code(source.cpu, address, 4, None)

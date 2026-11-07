@@ -89,7 +89,7 @@ def execute(output):
     result = subprocess.run(test_command, cwd=ROOT, capture_output=True, timeout=180)
     log = output / "tests.log"
     log.write_bytes(result.stdout + result.stderr)
-    assert result.returncode == 0 and b"Ran 12 tests" in log.read_bytes() and log.read_bytes().strip().endswith(b"OK")
+    assert result.returncode == 0 and b"Ran 16 tests" in log.read_bytes() and log.read_bytes().strip().endswith(b"OK")
     check_inputs(inputs)
     raw = {"schemaVersion": 1, "status": "bounded-md5-single-block-compression-qualified",
         "moduleSha256": MODULE, "entry": 0x1b2554, "mode": "ARM", "claim": pin(EVIDENCE / "claim.json"),
@@ -98,7 +98,7 @@ def execute(output):
         "unvisitedInstructions": [], "branchOutcomeCoverageClaimed": False, "literalPoolBytesExcludedFromCode": 256,
         "cases": observations, "caseDigest": digest.hexdigest(), "caseSets": 828, "originalAndEachSourceReturns": engines[0].calls,
         "additionalPaddingCompressionBlocks": blocks, "independentHashlibMessages": golden,
-        "wholeCallerArenaBytes": 4096, "negativeControls": negative, "testsPassed": 12, "testCommand": test_command, "testLog": pin(log),
+        "wholeCallerArenaBytes": 4096, "negativeControls": negative, "testsPassed": 16, "testCommand": test_command, "testLog": pin(log),
         "armBuild": arm_build, "windowsBuild": windows_build, "androidBuild": android_build,
         "sourceGraphOriginalModuleMapped": False, "sourceGraphUndefinedSymbols": [],
         "actualWindowsExecuted": True, "actualAndroidObjectsExecutedInAarch64Model": True,
@@ -119,10 +119,10 @@ def execute(output):
     owned += [pin(EVIDENCE / "execution.json")]
     ready = {"schemaVersion": 1, "status": "frozen-bounded-digest024-ready-for-independent-review",
         "files": owned, "instructionBytesForReview": 2408, "caseSets": 828, "independentHashlibMessages": len(golden),
-        "negativeControls": 4, "tests": 12, "inventoryAdmissionGranted": 0, "acceptedSourceCreditGranted": 0,
+        "negativeControls": 4, "tests": 16, "inventoryAdmissionGranted": 0, "acceptedSourceCreditGranted": 0,
         "wholeGameClaimed": False, "originalPayloadsPublished": False}
     save(EVIDENCE / "ready.json", ready)
-    print(json.dumps({"cases": 828, "additionalBlocks": blocks, "goldenMessages": len(golden), "tests": 12,
+    print(json.dumps({"cases": 828, "additionalBlocks": blocks, "goldenMessages": len(golden), "tests": 16,
                       "controls": 4, "instructionBytesForReview": 2408}), flush=True)
     return raw
 

@@ -14,5 +14,16 @@
   "fix": "Resolve private output at the producer API boundary before containment checking and builds",
   "gameCHeadersOrConstantsChanged": false,
   "failedSnapshotEdited": false,
-  "sourceCreditGranted": 0
+  "sourceCreditGranted": 0,
+  "peerReview": {
+    "readOnlyReviewer": "objdiff_research",
+    "gameCAlgorithmOverlapIntegerAndPointerWidths": "no defect found",
+    "hardening": [
+      "Caller offsets checked before native access",
+      "Actual native state address alignment checked",
+      "ARM mode, width, alignment and ELF mapping-symbol instruction boundaries checked"
+    ],
+    "newRegressionTests": 4,
+    "gameCHeadersOrConstantsChanged": false
+  }
 }

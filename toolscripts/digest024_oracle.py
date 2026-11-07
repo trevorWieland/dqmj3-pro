@@ -1,6 +1,10 @@
 import ctypes
 import hashlib
 import struct
+from pathlib import Path
+
+from capstone import Cs, CS_ARCH_ARM, CS_MODE_ARM
+from elftools.elf.elffile import ELFFile
 
 from unicorn import Uc, UC_ARCH_ARM, UC_MODE_ARM, UC_HOOK_CODE, UC_HOOK_MEM_READ, UC_HOOK_MEM_WRITE
 from unicorn import UC_PROT_READ, UC_PROT_WRITE, UC_PROT_EXEC
@@ -21,6 +25,39 @@ def within(address, size, low, high):
     return low <= address and address + size <= high
 
 
+def checked_offsets(memory, state_offset, block_offset):
+    if (len(memory) != 4096 or type(state_offset) is not int or type(block_offset) is not int
+            or not 0 <= state_offset <= 4080 or state_offset % 4 or not 0 <= block_offset <= 4032):
+        raise ValueError("Digest caller offsets or state alignment are outside the declared arena")
+
+
+def arm_instruction_addresses(path):
+    addresses = set()
+    with Path(path).open("rb") as stream:
+        elf = ELFFile(stream)
+        symbols = list(elf.get_section_by_name(".symtab").iter_symbols())
+        for index, section in enumerate(elf.iter_sections()):
+            if not section["sh_flags"] & 4:
+                continue
+            low, high = section["sh_addr"], section["sh_addr"] + section["sh_size"]
+            mappings = sorted((symbol["st_value"], symbol.name[1]) for symbol in symbols
+                              if symbol["st_shndx"] == index and symbol.name.startswith(("$a", "$d", "$t")))
+            if not mappings or mappings[0][0] != low:
+                raise ValueError("ARM source lacks complete instruction/data mapping symbols")
+            for number, (start, kind) in enumerate(mappings):
+                end = mappings[number + 1][0] if number + 1 < len(mappings) else high
+                if kind == "d":
+                    continue
+                if kind != "a" or start % 4 or end % 4:
+                    raise ValueError("Unexpected Thumb or unaligned ARM source mapping")
+                data = section.data()[start - low:end - low]
+                decoded = list(Cs(CS_ARCH_ARM, CS_MODE_ARM).disasm(data, start))
+                if sum(i.size for i in decoded) != len(data) or any(i.size != 4 for i in decoded):
+                    raise ValueError("ARM source mapping does not decode completely")
+                addresses.update(i.address for i in decoded)
+    return addresses
+
+
 class Arm:
     def __init__(self, elf=None):
         self.cpu = Uc(UC_ARCH_ARM, UC_MODE_ARM)
@@ -36,10 +73,12 @@ class Arm:
             self.cpu.mem_protect(0x100000, size, UC_PROT_READ | UC_PROT_EXEC)
             self.entry = 0x1b2554
             self.executable = RANGES
+            self.instructions = {pc for low, high in RANGES for pc in range(low, high, 4)}
             self.readonly = [(0x1b2e94, 0x1b2f94), (0x7e1968, 0x7e1969)]
         else:
             sections, symbols = load(elf)
             self.entry = symbols["fn_001b2554"]
+            self.instructions = arm_instruction_addresses(elf)
             pages = set()
             for address, size, flags, data in sections:
                 for page in range(address & -4096, (address + size + 4095) & -4096, 4096):
@@ -62,6 +101,8 @@ class Arm:
         self.calls = 0
 
     def code(self, cpu, address, size, unused):
+        if size != 4 or address % 4 or cpu.reg_read(registers.UC_ARM_REG_CPSR) & 0x20 or address not in self.instructions:
+            raise ValueError("Digest execution is not a decoded four-byte ARM instruction")
         if not any(within(address, size, low, high) for low, high in self.executable):
             raise ValueError("Digest execution escaped owned instructions: " + hex(address))
         self.coverage.add(address)
@@ -82,7 +123,7 @@ class Arm:
         raise ValueError("Digest write escaped state/private frame: " + hex(address))
 
     def execute(self, memory, state_offset, block_offset, seed=0):
-        assert len(memory) == 4096 and state_offset % 4 == 0
+        checked_offsets(memory, state_offset, block_offset)
         self.state = RAM + state_offset
         block = RAM + block_offset
         self.caller_reads = [(self.state, self.state + 16), (block, block + 64)]
@@ -124,9 +165,11 @@ class Windows:
         self.calls = 0
 
     def execute(self, memory, state_offset, block_offset):
+        checked_offsets(memory, state_offset, block_offset)
         data = (ctypes.c_ubyte * 4096).from_buffer_copy(memory)
         address = ctypes.addressof(data)
-        assert address > 0xffffffff and state_offset % 4 == 0
+        if address <= 0xffffffff or (address + state_offset) % 4:
+            raise ValueError("Native digest state address lacks declared width/alignment")
         self.function(ctypes.cast(address + state_offset, ctypes.POINTER(ctypes.c_uint32)),
                       ctypes.cast(address + block_offset, ctypes.POINTER(ctypes.c_ubyte)))
         result = bytes(data)
@@ -170,6 +213,8 @@ class Android:
         self.calls = 0
 
     def code(self, cpu, address, size, unused):
+        if size != 4 or address % 4:
+            raise ValueError("Digest execution is not a four-byte AArch64 instruction")
         if not any(within(address, size, low, high) for low, high in self.executable):
             raise ValueError("A64 digest escaped owned instructions: " + hex(address))
         self.coverage.add(address)
@@ -190,7 +235,7 @@ class Android:
         raise ValueError("A64 digest write escaped state/private frame: " + hex(address))
 
     def execute(self, memory, state_offset, block_offset, seed=0):
-        assert len(memory) == 4096 and state_offset % 4 == 0
+        checked_offsets(memory, state_offset, block_offset)
         self.state = self.ram + state_offset
         block = self.ram + block_offset
         self.caller_reads = [(self.state, self.state + 16), (block, block + 64)]
