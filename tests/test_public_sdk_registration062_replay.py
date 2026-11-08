@@ -58,7 +58,7 @@ class RegistrationTerminalTests(unittest.TestCase):
     def test_artifact_collector_checks_all_native_outputs_and_ignores_logs(self):
         import hashlib
         with tempfile.TemporaryDirectory() as folder:
-            root = Path(folder)
+            root = Path(folder).resolve()
             (root / 'source.o').write_bytes(b'authored object')
             (root / 'component.dll').write_bytes(b'authored linked component')
             (root / 'compile.log').write_text('diagnostic')
@@ -68,7 +68,7 @@ class RegistrationTerminalTests(unittest.TestCase):
 
     def test_verified_archive_preserves_exact_reports_before_cleanup(self):
         with tempfile.TemporaryDirectory() as folder:
-            root = Path(folder)
+            root = Path(folder).resolve()
             report = root / 'full/report.json'
             report.parent.mkdir()
             report.write_bytes(b'{"qualification":"passed"}')
@@ -79,7 +79,7 @@ class RegistrationTerminalTests(unittest.TestCase):
 
     def test_failed_archive_verification_keeps_raw_report(self):
         with tempfile.TemporaryDirectory() as folder:
-            root = Path(folder)
+            root = Path(folder).resolve()
             report = root / 'report.json'
             report.write_bytes(b'preserve this proof')
             with patch.object(replay.zipfile.ZipFile, 'testzip', return_value='report.json'):

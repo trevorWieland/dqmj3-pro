@@ -212,3 +212,6 @@
 #define fn_002fecec heap_default_bytes062ac
 #define fn_0074a414 heap_proxy_free062ac
 #define fn_0074a444 heap_proxy_allocate062ac
+#define fn_004955f0 registry_register062ad
+#define fn_0049599c registry_unregister062ad
+#define fn_00495d00 registry_find062ad

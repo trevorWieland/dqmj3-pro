@@ -1,0 +1,10 @@
+{
+  "status": "windows-ci-temporary-path-fixtures-corrected",
+  "failedCiRun": 42473418725,
+  "sourceRevision": "6ff4f7899ad415cf9aae17d48893a3a196dfa5f1",
+  "reason": "Windows hosted temporary directory can use a short-name alias; test passed an unresolved root to the archive helper while comparing canonical child paths",
+  "change": "Resolve all three temporary roots in the tests, matching the existing replay CLI output normalization",
+  "runtimeReplayCodeChanged": false,
+  "productionSourceChanged": false,
+  "testsPassed": 9
+}

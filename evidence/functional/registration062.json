@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-sdk-registration-operations",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "functions": [
+    {
+      "symbol": "fn_004955f0",
+      "source": {
+        "path": "src/native/wave062-registration/register062ad.c",
+        "bytes": 3386,
+        "sha256": "28057ab5b7d773fe751c7f24bd2596d6e5c266fc478681b458c4afd4d83e7b14"
+      },
+      "sourceName": "registry_register062ad",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 9362,
+        "sha256": "f5039e046dc25430dbf633d3e274ea0633c3ef6a518c889f373543e045d0fa4e"
+      },
+      "canonicalIdentity": {
+        "address": 4806128,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 940,
+      "originalInstructionRanges": [
+        {
+          "start": 4806128,
+          "endExclusive": 4807068,
+          "bytes": 940
+        }
+      ],
+      "originalBodySha256": "773fb2dcabe38af343bf1db47fa25cc26d19087d63c07f75f2aafb863d5a8694",
+      "reportEntryBytes": 940,
+      "literalPoolsExcluded": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/registration062-coordinator-6ff4f78.json",
+          "bytes": 2452,
+          "sha256": "a4ccd0178ff3101cfa4305e5b0ec0fdcc303539bb35e66fc02cee6e2bb273d81"
+        },
+        "completeCanonicalWitnesses": {
+          "path": "evidence/lanes/sdk-registration062-public-input/entry-roster-v1.json",
+          "bytes": 5686,
+          "sha256": "cdfcdf7f7eec11a655549d504cd2776a3310be3d32072f887fc503905c490bef"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "physicalAndroidExecutionClaimed": false,
+        "sourceCodeOriginalImageMapped": false,
+        "pipelineTests": 100,
+        "completeNativeArtifactChecks": 3352,
+        "sourceOnlyProfilesPerRoot": 12,
+        "completeArenaModelObservations": 35496,
+        "returningSemanticRejectionsPerFullRoot": 24,
+        "persistentCaughtAttemptControlsPerRoot": 11,
+        "allInstructionPositionsEncountered": true,
+        "allConditionalOutcomesProven": false,
+        "domain": "initialized API vector with live borrowed owners, successful allocations, stable default context and uncontended recursive mutex; declared callback observers delegate real SDK methods",
+        "limits": [
+          "Only the measured registry prefix is modeled; a full Info or owning game-class ABI is unqualified.",
+          "Valid sorted unique-key vectors and nonnull live borrowed owners; successful nonwrapping allocation.",
+          "Stable default context, explicit lookup-lock byte and uncontended recursive locking.",
+          "Callbacks do not reenter or mutate the registry; owners are borrowed, not retained or destroyed.",
+          "No callback mutation, arbitrary fabricated vectors, use after destruction or general memory-safety claim.",
+          "Constructor/destructor credit, full SDK startup, separate owner maps, physical Android and full games excluded."
+        ],
+        "confidenceJustification": "Medium: committed independent original/ARM/native replay, complete independent arena models, explicit ownership projection, returning controls and persistent input boundaries; finite ABI/service domain."
+      }
+    },
+    {
+      "symbol": "fn_0049599c",
+      "source": {
+        "path": "src/native/wave062-registration/remove062ad.c",
+        "bytes": 935,
+        "sha256": "f5bbe160f46a94b0b1114fafc5a9cf70f201007a0c7b54e25a4b794bf1b428f7"
+      },
+      "sourceName": "registry_unregister062ad",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 9362,
+        "sha256": "f5039e046dc25430dbf633d3e274ea0633c3ef6a518c889f373543e045d0fa4e"
+      },
+      "canonicalIdentity": {
+        "address": 4807068,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 368,
+      "originalInstructionRanges": [
+        {
+          "start": 4807068,
+          "endExclusive": 4807436,
+          "bytes": 368
+        }
+      ],
+      "originalBodySha256": "06a3488f82187d0bcebdfcb955a0c9777d0c71953940429624622040604ca0d4",
+      "reportEntryBytes": 368,
+      "literalPoolsExcluded": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/registration062-coordinator-6ff4f78.json",
+          "bytes": 2452,
+          "sha256": "a4ccd0178ff3101cfa4305e5b0ec0fdcc303539bb35e66fc02cee6e2bb273d81"
+        },
+        "completeCanonicalWitnesses": {
+          "path": "evidence/lanes/sdk-registration062-public-input/entry-roster-v1.json",
+          "bytes": 5686,
+          "sha256": "cdfcdf7f7eec11a655549d504cd2776a3310be3d32072f887fc503905c490bef"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "physicalAndroidExecutionClaimed": false,
+        "sourceCodeOriginalImageMapped": false,
+        "pipelineTests": 100,
+        "completeNativeArtifactChecks": 3352,
+        "sourceOnlyProfilesPerRoot": 12,
+        "completeArenaModelObservations": 35496,
+        "returningSemanticRejectionsPerFullRoot": 24,
+        "persistentCaughtAttemptControlsPerRoot": 11,
+        "allInstructionPositionsEncountered": true,
+        "allConditionalOutcomesProven": false,
+        "domain": "initialized API vector with live borrowed owners, successful allocations, stable default context and uncontended recursive mutex; declared callback observers delegate real SDK methods",
+        "limits": [
+          "Only the measured registry prefix is modeled; a full Info or owning game-class ABI is unqualified.",
+          "Valid sorted unique-key vectors and nonnull live borrowed owners; successful nonwrapping allocation.",
+          "Stable default context, explicit lookup-lock byte and uncontended recursive locking.",
+          "Callbacks do not reenter or mutate the registry; owners are borrowed, not retained or destroyed.",
+          "No callback mutation, arbitrary fabricated vectors, use after destruction or general memory-safety claim.",
+          "Constructor/destructor credit, full SDK startup, separate owner maps, physical Android and full games excluded."
+        ],
+        "confidenceJustification": "Medium: committed independent original/ARM/native replay, complete independent arena models, explicit ownership projection, returning controls and persistent input boundaries; finite ABI/service domain."
+      }
+    },
+    {
+      "symbol": "fn_00495d00",
+      "source": {
+        "path": "src/native/wave062-registration/lookup062ad.c",
+        "bytes": 1436,
+        "sha256": "c62e297a253da58f5dd059d2f559abd115c018ca606425d0c64a6a70a0baf387"
+      },
+      "sourceName": "registry_find062ad",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 9362,
+        "sha256": "f5039e046dc25430dbf633d3e274ea0633c3ef6a518c889f373543e045d0fa4e"
+      },
+      "canonicalIdentity": {
+        "address": 4807936,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 292,
+      "originalInstructionRanges": [
+        {
+          "start": 4807936,
+          "endExclusive": 4808228,
+          "bytes": 292
+        }
+      ],
+      "originalBodySha256": "e8e08e59c71fec202fa5fa7f8e54f0166860aa5c8122a457eaea628e9a289e87",
+      "reportEntryBytes": 292,
+      "literalPoolsExcluded": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/registration062-coordinator-6ff4f78.json",
+          "bytes": 2452,
+          "sha256": "a4ccd0178ff3101cfa4305e5b0ec0fdcc303539bb35e66fc02cee6e2bb273d81"
+        },
+        "completeCanonicalWitnesses": {
+          "path": "evidence/lanes/sdk-registration062-public-input/entry-roster-v1.json",
+          "bytes": 5686,
+          "sha256": "cdfcdf7f7eec11a655549d504cd2776a3310be3d32072f887fc503905c490bef"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "physicalAndroidExecutionClaimed": false,
+        "sourceCodeOriginalImageMapped": false,
+        "pipelineTests": 100,
+        "completeNativeArtifactChecks": 3352,
+        "sourceOnlyProfilesPerRoot": 12,
+        "completeArenaModelObservations": 35496,
+        "returningSemanticRejectionsPerFullRoot": 24,
+        "persistentCaughtAttemptControlsPerRoot": 11,
+        "allInstructionPositionsEncountered": true,
+        "allConditionalOutcomesProven": false,
+        "domain": "initialized API vector with live borrowed owners, successful allocations, stable default context and uncontended recursive mutex; declared callback observers delegate real SDK methods",
+        "limits": [
+          "Only the measured registry prefix is modeled; a full Info or owning game-class ABI is unqualified.",
+          "Valid sorted unique-key vectors and nonnull live borrowed owners; successful nonwrapping allocation.",
+          "Stable default context, explicit lookup-lock byte and uncontended recursive locking.",
+          "Callbacks do not reenter or mutate the registry; owners are borrowed, not retained or destroyed.",
+          "No callback mutation, arbitrary fabricated vectors, use after destruction or general memory-safety claim.",
+          "Constructor/destructor credit, full SDK startup, separate owner maps, physical Android and full games excluded."
+        ],
+        "confidenceJustification": "Medium: committed independent original/ARM/native replay, complete independent arena models, explicit ownership projection, returning controls and persistent input boundaries; finite ABI/service domain."
+      }
+    }
+  ],
+  "sourceDependencies": [
+    {
+      "path": "src/native/wave062-registration/lookup062ad.c",
+      "bytes": 1436,
+      "sha256": "c62e297a253da58f5dd059d2f559abd115c018ca606425d0c64a6a70a0baf387"
+    },
+    {
+      "path": "src/native/wave062-registration/register062ad.c",
+      "bytes": 3386,
+      "sha256": "28057ab5b7d773fe751c7f24bd2596d6e5c266fc478681b458c4afd4d83e7b14"
+    },
+    {
+      "path": "src/native/wave062-registration/remove062ad.c",
+      "bytes": 935,
+      "sha256": "f5bbe160f46a94b0b1114fafc5a9cf70f201007a0c7b54e25a4b794bf1b428f7"
+    },
+    {
+      "path": "src/native/wave062-registration/lifetime062ad.c",
+      "bytes": 903,
+      "sha256": "8a7edad4e5d583856adf82f40f401d86e1c1ea6c3e4761d39c9ed1e1177ffde6"
+    },
+    {
+      "path": "src/native/wave062-registration/bindings062ad.c",
+      "bytes": 226,
+      "sha256": "c745e00119c5f79b63b0ae883e115020cae0cae8583d9adcab0884e997a7985f"
+    },
+    {
+      "path": "src/native/wave062-registration/registry062ad.h",
+      "bytes": 1661,
+      "sha256": "d76fecb46bb6dc5157531ac09196f7f9c9be6af0424965f3defae9ad806f0f76"
+    },
+    {
+      "path": "src/native/wave062-heap/heap_registry062ac.c",
+      "bytes": 2491,
+      "sha256": "d6e5702924351b9dc0db8b2fb232179859e708e6ace8151dfbab9573a4022fa9"
+    },
+    {
+      "path": "src/native/wave062-heap/heap_initialize062ac.c",
+      "bytes": 1080,
+      "sha256": "2541126844b5b0cd4a13ef695cc9be8353b8010a5bbc6fba092042c1d9bbfb6b"
+    },
+    {
+      "path": "src/native/wave062-heap/heap_split062ac.c",
+      "bytes": 3015,
+      "sha256": "a91f202065ece1fe224a628bcfe18bc64f6ebf11df778a6b382b5f421aa2afce"
+    },
+    {
+      "path": "src/native/wave062-heap/heap_allocate062ac.c",
+      "bytes": 1594,
+      "sha256": "cea4415e4d8d4f870297f1264627378e1219a56be1c2a510bc869d9a1fd00e6e"
+    },
+    {
+      "path": "src/native/wave062-heap/heap_free062ac.c",
+      "bytes": 2408,
+      "sha256": "bf2ea0c72cbd517b50485155dda97d9bdb83dfb565c90a1f45264dc9e739efd5"
+    },
+    {
+      "path": "src/native/wave062-heap/heap_default062ac.c",
+      "bytes": 2229,
+      "sha256": "566599e281aa1cd8eee3d1003686dce4a8f94dce8ef056a8e0ee9268e7f67b74"
+    },
+    {
+      "path": "src/native/wave062-heap/heap_proxy062ac.c",
+      "bytes": 870,
+      "sha256": "6fc65f8e342459de402db82870d43f8e975f2680870b5935ee8ab81468c1e090"
+    },
+    {
+      "path": "src/native/wave062-heap/heap_object062ac.c",
+      "bytes": 1613,
+      "sha256": "723a2037905bcb1fb58d3c4d875c2abff38b0dc5ab9e8b0bc6f9ddbb79079cb0"
+    },
+    {
+      "path": "src/native/wave062-heap/heap_size062ac.c",
+      "bytes": 277,
+      "sha256": "67a447e3a75f8358dce6ed7867079b62bc6ca6bccba9956cdb6e87069cb5f997"
+    },
+    {
+      "path": "src/native/wave062-heap/heap_sdk062ac.c",
+      "bytes": 948,
+      "sha256": "c44bc2e6952eaa318b28a6991b0762aa62233a5e1cf838d6a2bbfd9d276fed18"
+    },
+    {
+      "path": "src/native/wave062-heap/heap062ac.h",
+      "bytes": 3865,
+      "sha256": "6fa87c8a018ea92f362bc4e66a3aa8f664a1d9a1c19bb148e84c6043d62709a4"
+    },
+    {
+      "path": "toolscripts/fixtures/sdk062_heap_v1/fixture_heap062ac.c",
+      "bytes": 974,
+      "sha256": "0fcd61a1de2a1755e1abe4adb4b2d1360a8e21d586e612e4bbdafedd6ff65e25"
+    },
+    {
+      "path": "toolscripts/fixtures/sdk062_heap_v1/fixture_default062ac.c",
+      "bytes": 1243,
+      "sha256": "9f452eb91c1c2aaace12c4d9b1f2bbc24a06addab32ce8079a6fa8dbf5b7e756"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/mutex062s.c",
+      "bytes": 2170,
+      "sha256": "796b69eb236287be917731074248d7e7ee8161745d88bbb635a45641efac8382"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/context062s.c",
+      "bytes": 2007,
+      "sha256": "d9130340bec329b1466f60c55192f1490b54513fdcbad24473857775781fbf4b"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/map062s.c",
+      "bytes": 4931,
+      "sha256": "4988a3cd066383fe9c31cad09f50ce8ab0c7ea2ac7db84eb7e51b337aec2cd5e"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/map_initialize062s.c",
+      "bytes": 906,
+      "sha256": "4d55295125b6ed49390be7bea8e48134a15fa336765d700c7b41d96b828b617d"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/mutex_initialize062u.c",
+      "bytes": 958,
+      "sha256": "df03183ae626d46cca649dda4a0e8710d8041f969ea85fe18d2c394d50aeedde"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/sdk062s.h",
+      "bytes": 4076,
+      "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/clock062u.h",
+      "bytes": 1764,
+      "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+    },
+    {
+      "path": "src/native/wave062-owner/include/owner062ab.h",
+      "bytes": 2725,
+      "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+    },
+    {
+      "path": "src/native/wave062-owner/include/config062ab.h",
+      "bytes": 1907,
+      "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/timer062aa.h",
+      "bytes": 1816,
+      "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave062-registration/registry062ad.h",
+      "bytes": 1661,
+      "sha256": "d76fecb46bb6dc5157531ac09196f7f9c9be6af0424965f3defae9ad806f0f76"
+    },
+    {
+      "path": "src/native/wave062-heap/heap062ac.h",
+      "bytes": 3865,
+      "sha256": "6fa87c8a018ea92f362bc4e66a3aa8f664a1d9a1c19bb148e84c6043d62709a4"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/sdk062s.h",
+      "bytes": 4076,
+      "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/clock062u.h",
+      "bytes": 1764,
+      "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+    },
+    {
+      "path": "src/native/wave062-owner/include/owner062ab.h",
+      "bytes": 2725,
+      "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+    },
+    {
+      "path": "src/native/wave062-owner/include/config062ab.h",
+      "bytes": 1907,
+      "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/timer062aa.h",
+      "bytes": 1816,
+      "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+    },
+    {
+      "path": "include/bytematch_names.h",
+      "bytes": 9362,
+      "sha256": "f5039e046dc25430dbf633d3e274ea0633c3ef6a518c889f373543e045d0fa4e"
+    }
+  ],
+  "qualificationOnlySources": [
+    "toolscripts/fixtures/sdk062_registration_v1/fixture_registry062ad.c",
+    "toolscripts/fixtures/sdk062_registration_v1/fixture_observer062ad.c"
+  ],
+  "excludedUnvisitedBodies": [
+    "fn_00495e28",
+    "fn_00495f88"
+  ],
+  "originalPackets": [
+    {
+      "path": "evidence/verification/registration062-coordinator-6ff4f78.json",
+      "bytes": 2452,
+      "sha256": "a4ccd0178ff3101cfa4305e5b0ec0fdcc303539bb35e66fc02cee6e2bb273d81"
+    },
+    {
+      "path": "evidence/lanes/sdk-registration062-public-input/entry-roster-v1.json",
+      "bytes": 5686,
+      "sha256": "cdfcdf7f7eec11a655549d504cd2776a3310be3d32072f887fc503905c490bef"
+    }
+  ],
+  "producer": {
+    "path": "evidence/verification/producers/review_registration062_functional.py",
+    "bytes": 10040,
+    "sha256": "a51217fb761802b5257a6b79e08a9b95eb8d808d6940b29a451ce97537f6f09e"
+  },
+  "acceptedSourceCreditGranted": 0,
+  "exactMatchingClaimed": false,
+  "overallConfirmedSourceCoverageClaimed": false,
+  "wholeGameClaimed": false
+}

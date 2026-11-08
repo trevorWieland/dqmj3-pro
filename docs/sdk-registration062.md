@@ -75,3 +75,11 @@ input-boundary regressions. It verifies a lossless archive before removing the
 three large raw reports. `report-archive.json` records every exact member hash;
 `native-artifacts.json` records the complete object and linked-artifact roster.
 The committed independent replay plan is `config/replays/sdk-registration062.json`.
+
+Following the committed independent replay and coordinator review, registration,
+unregistration and lookup have bounded medium-confidence working-C evidence:
+three entries and 1,600 original instruction bytes. All 400 instruction positions
+were encountered, with complete arena models and returning controls on the three
+source platforms. The constructor and destructor remain uncounted; their 27
+unvisited positions require separate invariant review. This does not establish
+every conditional outcome, full startup or an overall source-coverage percentage.
