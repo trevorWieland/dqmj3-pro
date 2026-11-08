@@ -107,3 +107,4 @@
 #define fn_00107aac sdk_seed062
 #define fn_0010d9d4 xorshift_seed062
 #define fn_00100670 resource_sdk_words063
+#define fn_0073b7a4 state_dispatch6

@@ -1,0 +1,56 @@
+{
+  "status": "complete-medium-dispatcher-schema-validated-pending-registry",
+  "packet": {
+    "path": "evidence/functional/dispatcher6.json",
+    "bytes": 12274,
+    "sha256": "9b316a4a71f05835399a873d78c71c1522e52c61c327a03f818f30f5a381d5a4"
+  },
+  "functions": [
+    {
+      "name": "fn_0073b7a4",
+      "confidence": "medium",
+      "packet": {
+        "path": "evidence/functional/dispatcher6.json",
+        "bytes": 12274,
+        "sha256": "9b316a4a71f05835399a873d78c71c1522e52c61c327a03f818f30f5a381d5a4"
+      },
+      "sourceLookup": "repository-function-index"
+    }
+  ],
+  "controls": [
+    {
+      "case": "missing-range",
+      "rejected": true,
+      "reason": "Fragmented functional proof needs complete ranges and explicit report entry extent"
+    },
+    {
+      "case": "wrong-byte-count",
+      "rejected": true,
+      "reason": "Functional proof omits part of the canonical function body"
+    },
+    {
+      "case": "wrong-source",
+      "rejected": true,
+      "reason": "Reviewed source lacks the reported C definition"
+    },
+    {
+      "case": "wrong-mode",
+      "rejected": true,
+      "reason": "Functional canonical identity differs"
+    },
+    {
+      "case": "wrong-entry-extent",
+      "rejected": true,
+      "reason": "Fragmented functional proof needs complete ranges and explicit report entry extent"
+    }
+  ],
+  "instructionFootprintBytes": 18296,
+  "sourceCreditGranted": 0,
+  "exactMatchingCreditGranted": 0,
+  "wholeOwnerOrGpuOrGameClaim": false,
+  "producer": {
+    "path": "evidence/verification/producers/review_dispatcher6_functional.py",
+    "bytes": 9729,
+    "sha256": "9053c1fccd1ad772e5ba74ac49ebe5855a9e3b07027d7981442595c5902fed68"
+  }
+}
