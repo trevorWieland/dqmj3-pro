@@ -1,0 +1,350 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed-teardown-entry-repair-with-actual-original-witnesses",
+  "programId": "0004000e001acb00",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "baseCensus": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "bytes": 20574405,
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55"
+  },
+  "beforeDiscoveredEntries": 26660,
+  "originalOwner": {
+    "address": 1070428,
+    "mode": "ARM",
+    "ranges": [
+      {
+        "start": 1070428,
+        "endExclusive": 1070476,
+        "bytes": 48
+      },
+      {
+        "start": 1098996,
+        "endExclusive": 1099076,
+        "bytes": 80
+      }
+    ],
+    "textBodyBytes": 128,
+    "bodyBytesOutsideInitializedText": 0,
+    "entryInstructionDefined": true,
+    "isThunk": false,
+    "calledFunctionAddresses": [
+      1501664,
+      3154748
+    ],
+    "acceptedSourceBytes": 0,
+    "boundaryStatus": "Ghidra-analysis-candidate-not-manual-closure"
+  },
+  "retainedOwner": {
+    "address": 1070428,
+    "mode": "ARM",
+    "range": {
+      "start": 1070428,
+      "endExclusive": 1070476,
+      "bytes": 48,
+      "sha256": "2dbca228270c7fa0a8d52047a58992f54508d5ac60e481e1bf850fee7033b34e"
+    },
+    "pool": {
+      "start": 1070476,
+      "endExclusive": 1070480,
+      "bytes": 4,
+      "sha256": "7e82ae7c1c98f63520ff75281d9931528d30275ee22b13658801fae0fc8a69ea"
+    },
+    "restoredFrameTail": {
+      "start": 1070468,
+      "endExclusive": 1070476,
+      "bytes": 8,
+      "sha256": "ce55927dd536bc6403fa00213e9625986f37242d7e41928eba0d1d193cbe4a68"
+    },
+    "tailTarget": 1098996
+  },
+  "newEntries": [
+    {
+      "address": 1098996,
+      "mode": "ARM",
+      "instructionRange": {
+        "start": 1098996,
+        "endExclusive": 1099076,
+        "bytes": 80,
+        "sha256": "73ac48721abda40157288c01d574b89e007b0467c2bcc642f7b4e08bf2366325"
+      },
+      "literalPoolRange": {
+        "start": 1099076,
+        "endExclusive": 1099088,
+        "bytes": 12,
+        "sha256": "bb8ad24644428b4db9eb22334c75e5f38583702f1d0d9c65aa8dbaf23bb6cbce"
+      },
+      "observedInstructionPcs": [
+        1098996,
+        1099000,
+        1099004,
+        1099008,
+        1099012,
+        1099016,
+        1099020,
+        1099024,
+        1099028,
+        1099032,
+        1099036,
+        1099040,
+        1099044,
+        1099048,
+        1099052,
+        1099056,
+        1099060,
+        1099064,
+        1099068,
+        1099072
+      ],
+      "literalReaders": [
+        {
+          "reader": 1099000,
+          "literalAddress": 1099076,
+          "value": 1143784,
+          "readerSha256": "282084183dcaa5174d15b59dd21bc3620eeebb474d6348339c42b9d930ea642e"
+        },
+        {
+          "reader": 1099008,
+          "literalAddress": 1099080,
+          "value": 9020648,
+          "readerSha256": "3242ca5c9fe97e52450fa3a5258394d9d5437d05cd96bee5bc755d52861088a6"
+        },
+        {
+          "reader": 1099048,
+          "literalAddress": 1099084,
+          "value": 1143792,
+          "readerSha256": "245fcbf582e191c61bc387955a338a0493580e5b2f4e2ed7da433b47d4b5e678"
+        }
+      ],
+      "directOrTailCalls": [
+        {
+          "address": 1099004,
+          "target": 1501664,
+          "kind": "BL",
+          "instructionSha256": "aeb9c358013b9861b703c10292b7a446c73a49bfdf762479031d9ba9032e0cbb"
+        },
+        {
+          "address": 1099028,
+          "target": 3154748,
+          "kind": "BL",
+          "instructionSha256": "79cb8ab273f789576cd97f9289167666b3bcc06051fd5dedc29df7794fc62e8f"
+        },
+        {
+          "address": 1099052,
+          "target": 1501664,
+          "kind": "BL",
+          "instructionSha256": "af564c2872bc098be4964983fd91ce4d06efd2c7577b7e4d8903fcf0b5ec0de8"
+        },
+        {
+          "address": 1099064,
+          "target": 3154748,
+          "kind": "BL",
+          "instructionSha256": "6937de09fd9899de8347312032d68cec86e676001f1598b015b3c357887c49f9"
+        }
+      ],
+      "knownOwnedArmIncomingEdges": [
+        {
+          "owner": 1070428,
+          "address": 1070472,
+          "kind": "B",
+          "condition": 14,
+          "instructionSha256": "c04a96bf49c3d282b8ae1850d24af4bfc67ee8c39a78d03d1362c4cbbb88fac1"
+        }
+      ],
+      "sourceCreditGranted": 0
+    },
+    {
+      "address": 4513708,
+      "mode": "ARM",
+      "instructionRange": {
+        "start": 4513708,
+        "endExclusive": 4513788,
+        "bytes": 80,
+        "sha256": "c94d0cc38093760569565c598128879da7c9aaa72e94ac83cdc8b6182b4f2821"
+      },
+      "literalPoolRange": {
+        "start": 4513788,
+        "endExclusive": 4513792,
+        "bytes": 4,
+        "sha256": "138116eddcfd2bfca4b6bdad577b12d1f68f797d7bfb8584655d88d3c49db6a5"
+      },
+      "observedInstructionPcs": [
+        4513708,
+        4513712,
+        4513716,
+        4513720,
+        4513724,
+        4513728,
+        4513732,
+        4513736,
+        4513740,
+        4513744,
+        4513748,
+        4513752,
+        4513756,
+        4513760,
+        4513764,
+        4513768,
+        4513772,
+        4513776,
+        4513780,
+        4513784
+      ],
+      "literalReaders": [
+        {
+          "reader": 4513732,
+          "literalAddress": 4513788,
+          "value": 9021024,
+          "readerSha256": "e77b9a08f79b5c4d4b32bfab32a3563e8d2ac4683810f5f6fcadf2a153c792d1"
+        }
+      ],
+      "directOrTailCalls": [
+        {
+          "address": 4513748,
+          "target": 1509124,
+          "kind": "BL",
+          "instructionSha256": "56ce599623a7318a4397b83b954aee1c8a8440818e5ddbba7811e56964d1b94e"
+        },
+        {
+          "address": 4513784,
+          "target": 1509300,
+          "kind": "B",
+          "instructionSha256": "5a4f180a83d8c21d2b5f939e3fc2e52f502810f73badacb925d357229ea4589b"
+        }
+      ],
+      "knownOwnedArmIncomingEdges": [],
+      "sourceCreditGranted": 0
+    },
+    {
+      "address": 4513792,
+      "mode": "ARM",
+      "instructionRange": {
+        "start": 4513792,
+        "endExclusive": 4513916,
+        "bytes": 124,
+        "sha256": "9291cb4909b30b4740107015c2e0d89c9d093e5fea28fadad1cfae4646cd3a83"
+      },
+      "literalPoolRange": {
+        "start": 4513916,
+        "endExclusive": 4513924,
+        "bytes": 8,
+        "sha256": "6972563e74bbe8750412b52422e7e9a6f15f84876f294c683b1165780dcb41fb"
+      },
+      "observedInstructionPcs": [
+        4513792,
+        4513796,
+        4513800,
+        4513804,
+        4513808,
+        4513812,
+        4513816,
+        4513820,
+        4513824,
+        4513828,
+        4513832,
+        4513836,
+        4513840,
+        4513844,
+        4513848,
+        4513852,
+        4513856,
+        4513860,
+        4513864,
+        4513868,
+        4513872,
+        4513876,
+        4513880,
+        4513884,
+        4513888,
+        4513892,
+        4513896,
+        4513900,
+        4513904,
+        4513908,
+        4513912
+      ],
+      "literalReaders": [
+        {
+          "reader": 4513800,
+          "literalAddress": 4513916,
+          "value": 8725640,
+          "readerSha256": "77e3eebd6a8db0dd4e7a0e6b5439dbc1ef815ec5def1c91da30c48e8805da40c"
+        },
+        {
+          "reader": 4513864,
+          "literalAddress": 4513920,
+          "value": 8726100,
+          "readerSha256": "4aeb026327019621c7afb8d6483f470d7426c3cf068222d420fa9323e61f0392"
+        }
+      ],
+      "directOrTailCalls": [
+        {
+          "address": 4513884,
+          "target": 1510460,
+          "kind": "BL",
+          "instructionSha256": "4ca46c4e293eeffb7690958d64f17138ada0cdce8d2c21eef14ba3407537e637"
+        },
+        {
+          "address": 4513904,
+          "target": 1510460,
+          "kind": "BL",
+          "instructionSha256": "7064900406eb8a1bdcd217cbf1ea162c24221327d4348c79f257b201634914b4"
+        }
+      ],
+      "knownOwnedArmIncomingEdges": [],
+      "sourceCreditGranted": 0
+    }
+  ],
+  "virtualTableSlots": [
+    {
+      "table": 8725856,
+      "slot": 12,
+      "slotAddress": 8725904,
+      "target": 4513708,
+      "slotSha256": "034b4ae0362fff7fa67b6c1c2671879f17eb12a13246db6b3e9fe620173120a8"
+    },
+    {
+      "table": 8725856,
+      "slot": 13,
+      "slotAddress": 8725908,
+      "target": 4513792,
+      "slotSha256": "63d0b35a7bfb23be3939139dbcab16d37011215ba35f9c52e3532db7581ac14a"
+    }
+  ],
+  "actualOriginalObservations": [
+    {
+      "path": "actual-original-branch-alias.json",
+      "bytes": 25549,
+      "sha256": "28dde61103bcd14760e5a7cddd42c09a6359efae769d133ded9ee702fde30fd4"
+    },
+    {
+      "path": "actual-original-branch-null-equal.json",
+      "bytes": 27445,
+      "sha256": "adcbdb7010e130681fe628ba459c88c41a16cc222aecc6576f6f6e4a6c5d3e15"
+    },
+    {
+      "path": "actual-original-branch-warm.json",
+      "bytes": 39124,
+      "sha256": "716591cd00daee957282b27b15eb4db7d326cafc2f8b7a223d01651d0459e5c4"
+    },
+    {
+      "path": "actual-original-sdk-None.json",
+      "bytes": 32508,
+      "sha256": "f3f93582096b58545175a5236f6e8215aa7054a52105aca019adbc7b338ff86a"
+    }
+  ],
+  "byteAccounting": {
+    "oldOwnerBytes": 128,
+    "retainedOwnerBytes": 48,
+    "detachedShutdownBytes": 80,
+    "additionalPreviouslyUnclassifiedInstructionBytes": 204,
+    "literalPoolBytes": 28,
+    "resultingDiscoveredEntries": 26663,
+    "grossInitializedTextBytes": 7051280,
+    "grossDenominatorChange": 0,
+    "sourceCreditGranted": 0
+  },
+  "historicalFunctionCompletenessClaim": false,
+  "approvedForFunctionInventory": false,
+  "sourceCreditGranted": 0
+}
