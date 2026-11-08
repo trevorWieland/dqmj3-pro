@@ -40,6 +40,8 @@ jobs:
         run: tools/ci-python-3.13.5/python.exe -I -S toolscripts/bootstrap_report_tools.py
       - name: Test private intake and build guards
         run: tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_ci_native_build.py -v
+      - name: Check read-only original archive extraction
+        run: tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_readonly_original_intake.py -v
       - name: Checkout owner-controlled private input parts
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:

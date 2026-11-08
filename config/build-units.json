@@ -11637,6 +11637,24 @@
         "src/native/wave072-construction/device_types072.h"
       ],
       "role": "bounded-component"
+    },
+    {
+      "source": "src/native/md5-stream062/md5_block062ag.c",
+      "headers": [
+        "src/native/md5-stream062/sdk_md5062ag.h",
+        "src/native/wave024/digest.h"
+      ],
+      "role": "bounded-component",
+      "includeDirectories": [
+        "src/native/wave024"
+      ]
+    },
+    {
+      "source": "src/native/md5-stream062/md5_stream062ag.c",
+      "headers": [
+        "src/native/md5-stream062/sdk_md5062ag.h"
+      ],
+      "role": "bounded-component"
     }
   ],
   "excludedSources": [
@@ -11691,6 +11709,7 @@
     "source/squirrel-wave057"
   ],
   "nativeComponentRoots": [
-    "src/native/particle019-velocity"
+    "src/native/particle019-velocity",
+    "src/native/md5-stream062"
   ]
 }

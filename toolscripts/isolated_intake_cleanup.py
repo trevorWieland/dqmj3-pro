@@ -61,7 +61,7 @@ def save(path, value):
     path.write_text(json.dumps(value, indent=2) + '\n', encoding='utf-8')
 
 
-def cleanup(owner, destination, plan):
+def cleanup(owner, destination, plan, *, read_only_originals=False):
     if not validate_policy(plan):
         return None
     owner = Path(owner).resolve()
@@ -74,7 +74,7 @@ def cleanup(owner, destination, plan):
     project = json.loads(owned(destination, 'project.json').read_text())
     if set(project['inputs']) != {'base', 'update'}:
         raise ValueError('Cleanup requires the two measured CIA input identities')
-    final_copies, copied_inputs, inventory_receipts = [], [], []
+    final_copies, copied_inputs, inventory_receipts, read_only_inputs = [], [], [], []
     targets = []
     for label in ['base', 'update']:
         inventory_path = owned(destination, 'evidence/inventory/' + label + '-content0.json')
@@ -90,12 +90,17 @@ def cleanup(owner, destination, plan):
             raise ValueError('Cleanup CIA target is outside the private input-copy tree')
         target = owned(destination, relative_input)
         primary = owned(owner, relative_input)
-        if not target.is_file() or digest(target) != project[label + 'CiaSha256']:
-            raise ValueError('Cleanup copied CIA identity differs')
-        if primary.exists() and target.samefile(primary):
-            raise ValueError('Cleanup input is linked to the owner primary')
-        targets.append(target)
-        copied_inputs.append(pin(target, destination))
+        if read_only_originals:
+            if target.exists() or not primary.is_file() or digest(primary) != project[label + 'CiaSha256']:
+                raise ValueError('Read-only original archive changed or an unnecessary local copy exists')
+            read_only_inputs.append(pin(primary, owner))
+        else:
+            if not target.is_file() or digest(target) != project[label + 'CiaSha256']:
+                raise ValueError('Cleanup copied CIA identity differs')
+            if primary.exists() and target.samefile(primary):
+                raise ValueError('Cleanup input is linked to the owner primary')
+            targets.append(target)
+            copied_inputs.append(pin(target, destination))
         for name in [label + '.json', label + '-content0.json']:
             receipt = owned(destination, 'work/component-intake/private/evidence/inventory/' + name)
             if not receipt.is_file():
@@ -132,6 +137,7 @@ def cleanup(owner, destination, plan):
     receipt = {'schemaVersion': 1, 'status': 'verified-before-removal', 'policy': plan['intakeCleanup'],
         'executedHelperSha256': digest(Path(__file__).resolve()),
         'finalCopies': final_copies, 'copiedInputs': copied_inputs, 'stagingFiles': staged,
+        'readOnlyOriginalInputs': read_only_inputs, 'freshExtractionVerified': True,
         'preservedFreshInventory': inventory_receipts, 'removedPaths': [],
         'ownerPrimaryInputsModified': False, 'generatedFinalCopiesRemoved': False}
     save(receipt_path, receipt)

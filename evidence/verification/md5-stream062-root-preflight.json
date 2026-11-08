@@ -1,0 +1,215 @@
+{
+  "status": "coordinator-public-MD5-source-preflight-passed",
+  "producer": {
+    "path": "evidence/verification/producers/review_md5_stream062_preflight.py",
+    "bytes": 4079,
+    "sha256": "804d7606b9767d26c3eebe39ef2d4da6fd1cd88a28ae61d836d7aad87fc27f8d"
+  },
+  "sourceFiles": [
+    {
+      "path": "docs/native-md5-stream062.md",
+      "bytes": 7817,
+      "sha256": "c916c54db2827ff5fe6a324add639728d38b163283ab399e88e928c46af504f6"
+    },
+    {
+      "path": "src/native/md5-stream062/md5_block062ag.c",
+      "bytes": 319,
+      "sha256": "df8f57312dc0ce51d0dafe86cf25564df85af5303eb9fed0757bfa656733a901"
+    },
+    {
+      "path": "src/native/md5-stream062/md5_stream062ag.c",
+      "bytes": 2129,
+      "sha256": "c0f46952b12e612b275d269af123c32456a3a4c697b9037882e1e449739a7609"
+    },
+    {
+      "path": "src/native/md5-stream062/sdk_md5062ag.h",
+      "bytes": 1166,
+      "sha256": "6cf9f3132caea32d03768669711bb9f0ed062bc7a5341107c1260f9651b3b35f"
+    },
+    {
+      "path": "tests/fixtures/md5-stream062/fixture_layout062ag.c",
+      "bytes": 383,
+      "sha256": "1b0eb5548a8a1b6fd1efef0826e7269378661fc4a2784b6bec05eba49485f5c2"
+    },
+    {
+      "path": "toolscripts/md5_stream062/build062ag.py",
+      "bytes": 4033,
+      "sha256": "05445e93948f6ff2288a9f6e7198ca88d588fbd4e3b1036ff13ac46a14ae8d63"
+    },
+    {
+      "path": "toolscripts/md5_stream062/controls062ag.py",
+      "bytes": 5834,
+      "sha256": "23ed664e983be35b1f3fcf9555d1a9a6d20d03e68faedf26bd64026453cbd4c5"
+    },
+    {
+      "path": "toolscripts/md5_stream062/gates062ag.py",
+      "bytes": 7268,
+      "sha256": "d134726a45191b92db68527da69378418e04d8ebd31c7d5bbf14ae76b92b717e"
+    },
+    {
+      "path": "toolscripts/md5_stream062/inputs.json",
+      "bytes": 4053,
+      "sha256": "65df38567108e34544d3cb7f5ebad5cc4a6cfd7318ebfec637fdb74bdf3d09d6"
+    },
+    {
+      "path": "toolscripts/md5_stream062/layout062ag.py",
+      "bytes": 2128,
+      "sha256": "85db86c80af11d056a28ea6795c093494c025ee454d37a8a8c9dd9bf938551d9"
+    },
+    {
+      "path": "toolscripts/md5_stream062/model062ag.py",
+      "bytes": 1848,
+      "sha256": "cf51d5f7f34610e2f897c34f1aaf3420dca1acb7d31a28a377948e2077b45660"
+    },
+    {
+      "path": "toolscripts/md5_stream062/qualify062ag.py",
+      "bytes": 6993,
+      "sha256": "3637dd318caeeee306abaca793a09c1773055934b38365ec6555766a76538564"
+    },
+    {
+      "path": "toolscripts/md5_stream062/run062ag.py",
+      "bytes": 3802,
+      "sha256": "c31b97dad7025f492fca87fdf3d03edbacf55712205e3e80f72985743c2025c8"
+    },
+    {
+      "path": "toolscripts/md5_stream062/runtime062ag.py",
+      "bytes": 8388,
+      "sha256": "65f6dba879517ae49529952b63b2bcb779e79f51c516c6321e030dcfa3ccbc6e"
+    },
+    {
+      "path": "toolscripts/md5_stream062/tests062ag.py",
+      "bytes": 5179,
+      "sha256": "bcd59946f5aa7d15c6a7ca7856ac4d11f369a4fdfb8e67dddbeaf5145bce2d78"
+    },
+    {
+      "path": "toolscripts/md5_stream062_boundary.py",
+      "bytes": 2256,
+      "sha256": "e920b72520f6328c70a29ac913ab06c929a445c2665b4010ad395811800d1faa"
+    },
+    {
+      "path": "toolscripts/md5_stream062_check.py",
+      "bytes": 3992,
+      "sha256": "ba80c529369aca33010309e03e5aa64fb7f0fafd352b4d83a49c0dedf613b33b"
+    },
+    {
+      "path": "toolscripts/md5_stream062_run.py",
+      "bytes": 4169,
+      "sha256": "560b4e04505f5b4a4894dbdd7aef74ae1e87b002dbf835430a2ad171d35de532"
+    }
+  ],
+  "sourceScopes": [
+    "original-corroborated-full",
+    "public-data-only",
+    "minimal-copy-full"
+  ],
+  "structuralCasesPerScope": 339,
+  "streamProgramsPerScope": 44,
+  "callsPerTarget": 602,
+  "testsPerScope": 9,
+  "returningCompiledControls": 7,
+  "all136RawNativeArtifactsEqualAcrossScopesAndWorker": true,
+  "postExitSelectedInputHashesChecked": 23,
+  "persistentBoundaryControls": 12,
+  "actualChildExitZeroRejectedByReusableParent": true,
+  "postExitCorruptionControls": [
+    {
+      "case": "missing-import-library",
+      "rejected": true,
+      "reason": "Complete raw native MD5 artifact roster differs"
+    },
+    {
+      "case": "extra-native-artifact",
+      "rejected": true,
+      "reason": "Complete raw native MD5 artifact roster differs"
+    },
+    {
+      "case": "wrong-object-bytes",
+      "rejected": true,
+      "reason": "Complete raw native MD5 artifact roster differs"
+    },
+    {
+      "case": "wrong-source-observation",
+      "rejected": true,
+      "reason": "Structural or stream operation observations differ"
+    },
+    {
+      "case": "wrong-returning-control",
+      "rejected": true,
+      "reason": "Compiled returning control behavior differs"
+    },
+    {
+      "case": "late-selected-input-change",
+      "rejected": true,
+      "reason": "Selected MD5 input changed after source process exit"
+    }
+  ],
+  "defaultTargetCompiles": 6,
+  "sourceOnlyUnits": 618,
+  "sourceTargetCompileCases": 1782,
+  "parentAndReadOnlyIntakeRegressionTests": 55,
+  "regressionSuites": [
+    {
+      "test": "readonly_original_intake",
+      "tests": 5,
+      "exitCode": 0,
+      "log": "work/readonly-original-intake-validation-v2/readonly_original_intake.log",
+      "sha256": "f6fdea3898374268dda4fb83e01ac7012780fc5853859ce6fe40f7e665755d32"
+    },
+    {
+      "test": "isolated_intake_cleanup",
+      "tests": 21,
+      "exitCode": 0,
+      "log": "work/readonly-original-intake-validation-v2/isolated_intake_cleanup.log",
+      "sha256": "7db9f7db63aa8ef9b82b198ff1055dc9759cb92a8ea7748bb7f9030760e9ae7e"
+    },
+    {
+      "test": "isolated_component_replay",
+      "tests": 12,
+      "exitCode": 0,
+      "log": "work/readonly-original-intake-validation-v2/isolated_component_replay.log",
+      "sha256": "6684710d1f3f8f31fab41cfce832c14b7a48ba6f24a4a8e8c41ada166081f345"
+    },
+    {
+      "test": "ci_native_build",
+      "tests": 10,
+      "exitCode": 0,
+      "log": "work/readonly-original-intake-validation-v2/ci_native_build.log",
+      "sha256": "267ba42d10b523d70bd9f13aae4559023457ca233b27f26f9944f3fc224a1cdc"
+    },
+    {
+      "test": "md5_stream062_public",
+      "tests": 7,
+      "exitCode": 0,
+      "log": "work/readonly-original-intake-validation-v2/md5_stream062_public.log",
+      "sha256": "5216d3d73760da625ca300a4b4349f5929092900fd53a75be346b445e1339803"
+    }
+  ],
+  "sourceCode": {
+    "path": "toolscripts/md5_stream062_verify.py",
+    "bytes": 3731,
+    "sha256": "8b15e66658f218237e6ffbe9be16d4d6db428e1c024362e661502932b022ac0a"
+  },
+  "expectedReplay": {
+    "path": "evidence/lanes/md5-stream062/public-inputs-v1/expected-replay.json",
+    "bytes": 16688,
+    "sha256": "8829e75c3d43b6f5ed6d4e31df16820f78b53024a86b7ecc0f9140ea83814abf"
+  },
+  "replayPlan": {
+    "path": "config/replays/md5_stream062.json",
+    "bytes": 2111,
+    "sha256": "8ea9e2a8be45939f6af4accbbca589d76cde507c5bcc8af7321f180ccb84ffc3"
+  },
+  "WindowsNativeExecution": true,
+  "AndroidInstructionModelExecution": true,
+  "physicalAndroidExecutionClaimed": false,
+  "independentCommittedReplayPassed": false,
+  "readOnlyArchiveRealExtractionNotYetReplayed": true,
+  "canonicalInstructionBytes": 1444,
+  "originalPcsObserved": 355,
+  "originalPcsDeclared": 361,
+  "remainingOriginalPcs": "Six trailing-zero loop PCs excluded by the measured four-byte alignment invariant; preserved, not executed.",
+  "existingCompressionSourceUnchanged": true,
+  "sourceCreditGranted": 0,
+  "workingCAdmissionGranted": 0,
+  "wholeGameClaimed": false
+}

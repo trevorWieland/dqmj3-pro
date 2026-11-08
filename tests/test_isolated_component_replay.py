@@ -32,6 +32,14 @@ class ImmutableReplayTests(unittest.TestCase):
             with self.subTest(value=value), self.assertRaises(ValueError):
                 replay.contained(root, value)
 
+    def test_read_only_archives_require_declared_narrow_intake_before_materialization(self):
+        root=self.scratch()
+        plan=root/'plan.json';plan.write_text(json.dumps(self.plan()))
+        with patch.object(replay.subprocess,'check_output')as command:
+            with self.assertRaisesRegex(ValueError,'explicit code/ExHeader-only'):
+                replay.replay(root,plan,'HEAD',read_only_originals=True)
+        command.assert_not_called()
+
     def test_empty_duplicate_and_reserved_steps_rejected(self):
         for steps in [[], [{"name": "producer", "args": ["x"]}] * 2, [{"name": "stock-report", "args": ["x"]}], [{"name": "hidden-tests", "args": ["x"]}]]:
             plan = self.plan()

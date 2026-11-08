@@ -79,7 +79,7 @@ def materialize_inputs(root, private):
     return rows
 
 
-def extract_inputs(root, output):
+def extract_inputs(root, output, *, source_root=None):
     import inventory
     project = read(root / "project.json")
     previous = inventory.ROOT
@@ -87,9 +87,12 @@ def extract_inputs(root, output):
     try:
         results = {}
         for label in ("base", "update"):
-            source = compiler.contained(root, project["inputs"][label])
+            source = compiler.contained(root if source_root is None else source_root, project["inputs"][label])
             verify(source, project[label + "CiaSha256"])
-            results[label] = inventory.inspect_cia(source, label)
+            try:
+                results[label] = inventory.inspect_cia(source, label)
+            finally:
+                verify(source, project[label + "CiaSha256"])
         for label in ("base-content0", "update-content0"):
             generated = inventory.ROOT / "generated" / label
             frozen = read(root / "evidence/inventory" / (label + ".json"))

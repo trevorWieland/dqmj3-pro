@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "name": "md5-stream062",
+  "producerSteps": [
+    {
+      "name": "md5-source-only",
+      "args": [
+        "toolscripts/md5_stream062_run.py",
+        "--output",
+        "work/md5-stream062-committed-v1/source-only",
+        "--public-data-only"
+      ],
+      "inputKinds": [
+        "none"
+      ]
+    },
+    {
+      "name": "md5-persistent-boundaries",
+      "args": [
+        "toolscripts/md5_stream062_boundary.py",
+        "--output",
+        "work/md5-stream062-committed-v1/boundaries"
+      ],
+      "inputKinds": [
+        "none"
+      ]
+    },
+    {
+      "name": "md5-post-exit-review",
+      "args": [
+        "toolscripts/md5_stream062_verify.py",
+        "--source-output",
+        "work/md5-stream062-committed-v1/source-only",
+        "--output",
+        "work/md5-stream062-committed-v1/post-exit"
+      ],
+      "inputKinds": [
+        "none"
+      ]
+    }
+  ],
+  "tests": [
+    "md5_stream062_public",
+    "compile_source_include_dirs",
+    "readonly_original_intake",
+    "isolated_intake_cleanup",
+    "isolated_component_replay"
+  ],
+  "packets": [
+    "work/md5-stream062-committed-v1/source-only/parent-process.json",
+    "work/md5-stream062-committed-v1/source-only/parent-validation.json",
+    "work/md5-stream062-committed-v1/source-only/gate-receipt.json",
+    "work/md5-stream062-committed-v1/source-only/behavior/report.json",
+    "work/md5-stream062-committed-v1/source-only/tests/report.json",
+    "work/md5-stream062-committed-v1/source-only/controls/report.json",
+    "work/md5-stream062-committed-v1/boundaries/report.json",
+    "work/md5-stream062-committed-v1/post-exit/report.json",
+    "work/md5-stream062-committed-v1/post-exit/forced-zero-parent/parent-process.json",
+    "work/md5-stream062-committed-v1/post-exit/forced-zero-parent/parent-validation.json",
+    "work/md5-stream062-committed-v1/post-exit/forced-zero-parent/gate-receipt.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

@@ -105,7 +105,8 @@ def run_steps(destination, python, commands, receipt, receipt_path, packets, own
                 stage = "intake-cleanup"
                 if owner_root is None:
                     raise ValueError("Intake cleanup requires the explicit owner root")
-                receipt["intakeCleanupReceipt"] = intake_cleanup.cleanup(owner_root, destination, receipt["plan"])
+                receipt["intakeCleanupReceipt"] = intake_cleanup.cleanup(owner_root, destination, receipt["plan"],
+                    read_only_originals=receipt.get("readOnlyOriginalArchives", False))
                 save(receipt_path, receipt)
                 stage = "commands"
         stage = "collect-packets"
@@ -120,9 +121,11 @@ def run_steps(destination, python, commands, receipt, receipt_path, packets, own
     return receipt
 
 
-def replay(root, plan_path, revision):
+def replay(root, plan_path, revision, *, read_only_originals=False):
     root = root.resolve()
     plan = validate_plan(json.loads(plan_path.read_text(encoding="utf-8")))
+    if read_only_originals and not intake_cleanup.validate_policy(plan):
+        raise ValueError("Read-only original archives require an explicit code/ExHeader-only replay plan")
     revision = subprocess.check_output(["git", "-C", str(root), "rev-parse", "--verify", revision + "^{commit}"], text=True).strip()
     if not re.fullmatch(r"[0-9a-f]{40}", revision):
         raise ValueError("Replay revision did not resolve to a commit")
@@ -142,11 +145,13 @@ def replay(root, plan_path, revision):
     project = json.loads((destination / "project.json").read_text())
     items = [row for row in lock["files"] if row["path"].startswith(("tools/clang-21/", "tools/ctrtool-1.3.0/", "tools/android-r30-minimal/", "tools/objdiff-3.8.3/"))]
     items += [{"path": "tools/wheels/" + row["filename"], "sha256": row["sha256"]} for row in lock["wheels"]]
-    items += [{"path": value, "sha256": project[name + "CiaSha256"]} for name, value in project["inputs"].items()]
+    if not read_only_originals:
+        items += [{"path": value, "sha256": project[name + "CiaSha256"]} for name, value in project["inputs"].items()]
     receipt = {"schemaVersion": 1, "status": "materializing", "sourceRevision": revision,
         "sourceArchiveSha256": hashlib.sha256(archive).hexdigest(), "replayRoot": str(destination),
         "plan": plan, "planSha256": digest(plan_path), "replayDriverSha256": digest(Path(__file__)), "nativeLibraries": lock["nativeLibraries"],
         "freshEnvironment": True, "sharedGeneratedOrWorkInputs": False, "copiedToolAndWheelFiles": [], "steps": [],
+        "readOnlyOriginalArchives": read_only_originals, "originalArchiveRoot": str(root) if read_only_originals else None,
         "sourceAdmissionGranted": False, "wholeGameClaimed": False}
     save(receipt_path, receipt)
     try:
@@ -161,8 +166,10 @@ def replay(root, plan_path, revision):
             receipt["copiedToolAndWheelFiles"].append({"path": row["path"], "sha256": row["sha256"]})
         subprocess.run([sys.executable, "-m", "venv", str(destination / "tools/python")], check=True, timeout=120)
         python = destination / "tools/python/Scripts/python.exe"
+        intake = 'import sys;from pathlib import Path;sys.path.insert(0,"toolscripts");import ci_native_build as ci;ci.extract_inputs(Path.cwd(),Path("work/component-intake")'
+        intake += ',source_root=Path(' + repr(str(root)) + '))' if read_only_originals else ')'
         commands = [("offline-dependencies", ["-m", "pip", "install", "--no-index", "--no-deps", *[str(destination / "tools/wheels" / row["filename"]) for row in lock["wheels"]]]),
-            ("fresh-original-intake", ["-c", 'import sys;from pathlib import Path;sys.path.insert(0,"toolscripts");import ci_native_build as ci;ci.extract_inputs(Path.cwd(),Path("work/component-intake"))'])]
+            ("fresh-original-intake", ["-c", intake])]
         commands += [(row["name"], row["args"]) for row in plan["producerSteps"]]
         commands.append(("public-compilation", ["toolscripts/compile_sources.py", "--output", "work/source-compile-ci/committed-replay"]))
         for name in dict.fromkeys([*plan["tests"], *DEFAULT_TESTS]):
@@ -187,5 +194,6 @@ if __name__ == "__main__":
     parser.add_argument("--plan", type=Path, required=True)
     parser.add_argument("--revision", required=True)
     parser.add_argument("--root", type=Path, default=ROOT)
+    parser.add_argument("--read-only-originals", action="store_true")
     args = parser.parse_args()
-    replay(args.root, args.plan.resolve(), args.revision)
+    replay(args.root, args.plan.resolve(), args.revision, read_only_originals=args.read_only_originals)

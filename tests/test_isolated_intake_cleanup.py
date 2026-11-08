@@ -221,6 +221,33 @@ class IntakeCleanupTests(unittest.TestCase):
         self.assertEqual(saved['status'], 'passed')
         self.assertEqual(saved['intakeCleanupReceipt']['sha256'], cleanup.digest(self.destination / 'intake-cleanup.json'))
 
+    def test_read_only_archives_remain_at_owner_and_only_staging_is_removed(self):
+        for path in self.inputs:
+            path.unlink()
+        before={p:p.read_bytes()for p in self.owner.rglob('*.cia')}
+        result=cleanup.cleanup(self.owner,self.destination,self.plan,read_only_originals=True)
+        saved=json.loads((self.destination/'intake-cleanup.json').read_text())
+        self.assertEqual(saved['copiedInputs'],[])
+        self.assertEqual(len(saved['readOnlyOriginalInputs']),2)
+        self.assertTrue(saved['freshExtractionVerified'])
+        self.assertEqual({p:p.read_bytes()for p in before},before)
+        self.assertFalse((self.destination/cleanup.STAGING).exists())
+        self.assertEqual(result['sha256'],cleanup.digest(self.destination/'intake-cleanup.json'))
+
+    def test_read_only_mode_rejects_unnecessary_local_archive_without_removing_it(self):
+        with self.assertRaisesRegex(ValueError,'unnecessary local copy'):
+            cleanup.cleanup(self.owner,self.destination,self.plan,read_only_originals=True)
+        self.assert_nothing_removed()
+
+    def test_read_only_mode_rejects_changed_owner_archive_before_cleanup(self):
+        for path in self.inputs:
+            path.unlink()
+        original=next(self.owner.rglob('*.cia'));original.write_bytes(b'wrong identity')
+        with self.assertRaisesRegex(ValueError,'original archive changed'):
+            cleanup.cleanup(self.owner,self.destination,self.plan,read_only_originals=True)
+        self.assertTrue((self.destination/cleanup.STAGING).is_dir())
+        self.assertFalse((self.destination/'intake-cleanup.json').exists())
+
     def test_runner_keeps_failed_cleanup_checkpoint_and_intake_log(self):
         receipt = {'status': 'running', 'steps': [], 'plan': self.plan}
         path = self.destination / 'runner-receipt.json'
