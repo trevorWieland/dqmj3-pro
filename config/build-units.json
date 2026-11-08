@@ -40,7 +40,8 @@
       "wave065-owner",
       "wave066-request",
       "wave062-owner",
-      "wave067-queue"
+      "wave067-queue",
+      "wave062-heap"
     ]
   },
   "units": [
@@ -11298,6 +11299,126 @@
       "includeDirectories": [
         "src/native/wave067-queue",
         "src/native/wave066-request"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-heap/heap_allocate062ac.c",
+      "headers": [
+        "src/native/wave062-heap/heap062ac.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-heap",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-heap/heap_default062ac.c",
+      "headers": [
+        "src/native/wave062-heap/heap062ac.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-heap",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-heap/heap_free062ac.c",
+      "headers": [
+        "src/native/wave062-heap/heap062ac.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-heap",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-heap/heap_initialize062ac.c",
+      "headers": [
+        "src/native/wave062-heap/heap062ac.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-heap",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-heap/heap_object062ac.c",
+      "headers": [
+        "src/native/wave062-heap/heap062ac.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-heap",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-heap/heap_proxy062ac.c",
+      "headers": [
+        "src/native/wave062-heap/heap062ac.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-heap",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-heap/heap_registry062ac.c",
+      "headers": [
+        "src/native/wave062-heap/heap062ac.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-heap",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-heap/heap_sdk062ac.c",
+      "headers": [
+        "src/native/wave062-heap/heap062ac.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-heap",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-heap/heap_size062ac.c",
+      "headers": [
+        "src/native/wave062-heap/heap062ac.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-heap",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-heap/heap_split062ac.c",
+      "headers": [
+        "src/native/wave062-heap/heap062ac.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-heap",
+        "src/native/wave062-sdk/include"
       ],
       "role": "bounded-component"
     }

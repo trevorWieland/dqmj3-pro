@@ -14,6 +14,8 @@ The [shader callback inventory](docs/native-shader-inventory.md) adds one observ
 
 The [public queue transport](docs/native-file-queue067-public.md) independently qualifies seven bounded functions in four production C units with separate qualification fixtures. The committed replay passed 120 pipeline tests, all 990 raw native artifact comparisons and all 63 original/source/copied case files. [Admission scope](docs/native-queue067-admission.md) preserves event-synchronized or joined observations, explicit missing/error paths and the original read-error leak. Five physical Thor pthread captures were independently rechecked; complete native games remain unqualified.
 
+The [public SDK heap candidate](docs/native-sdk-heap062-public.md) adds ten production C units and a source-only/copied-input replay with persistent terminal audit controls. Local preflight passed 117 source-only profiles and 284 copied native artifact comparisons. Independent committed replay and function admission remain pending.
+
 ## Established inputs
 
 The [resource CPU replay](docs/native-resource065-public-replay.md) independently qualifies nine bounded kernels with complete canonical extents, including discontiguous cold fragments. It passed 141 pipeline tests, 39 returning controls and byte-identical reproduction of all 461 native artifacts; the main resource constructor/finalizer and complete effect graph remain open.

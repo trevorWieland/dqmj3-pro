@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "name": "sdk-heap062",
+  "producerSteps": [
+    {
+      "name": "sdk-heap062-proof",
+      "args": [
+        "toolscripts/public_sdk_heap062_replay.py",
+        "--output",
+        "work/heap062-public-replay-v1"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "public_sdk_heap062_replay",
+    "native_shader_inventory",
+    "native_file_inventory",
+    "compile_source_include_dirs",
+    "c_function_definitions"
+  ],
+  "packets": [
+    "work/heap062-public-replay-v1/public-replay.json",
+    "work/heap062-public-replay-v1/source-map-v1.json",
+    "work/heap062-public-replay-v1/copy-verification-v2.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/report.json",
+    "work/heap062-public-replay-v1/qualification-final-v2/receipt.json",
+    "work/heap062-public-replay-v1/qualification-final-v2/process-completion.json",
+    "work/heap062-public-replay-v1/qualification-final-v2/generic/report.json",
+    "work/heap062-public-replay-v1/qualification-final-v2/default/report.json",
+    "work/heap062-public-replay-v1/qualification-final-v2/registry/report.json",
+    "work/heap062-public-replay-v1/qualification-final-v2/setters/report.json",
+    "work/heap062-public-replay-v1/qualification-final-v2/disabled/report.json",
+    "work/heap062-public-replay-v1/qualification-final-v2/controls/report.json",
+    "work/heap062-public-replay-v1/source-only-final-v2/receipt.json",
+    "work/heap062-public-replay-v1/source-only-final-v2/process-completion.json",
+    "work/heap062-public-replay-v1/source-only-final-v2/source-only.json",
+    "work/heap062-public-replay-v1/copied-final-v2/receipt.json",
+    "work/heap062-public-replay-v1/copied-final-v2/process-completion.json",
+    "work/heap062-public-replay-v1/copied-final-v2/generic/report.json",
+    "work/heap062-public-replay-v1/copied-final-v2/default/report.json",
+    "work/heap062-public-replay-v1/copied-final-v2/registry/report.json",
+    "work/heap062-public-replay-v1/copied-final-v2/setters/report.json",
+    "work/heap062-public-replay-v1/copied-final-v2/disabled/report.json",
+    "work/heap062-public-replay-v1/copied-final-v2/controls/report.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/cached-bytecode/receipt.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/cached-bytecode/process-completion.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/cached-bytecode/audit-rejections.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/generated-stat/receipt.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/generated-stat/process-completion.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/generated-stat/audit-rejections.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/late-caught/receipt.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/late-caught/process-completion.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/late-caught/audit-rejections.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/library/receipt.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/library/process-completion.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/library/audit-rejections.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/listdir/receipt.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/listdir/process-completion.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/listdir/audit-rejections.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/lstat/receipt.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/lstat/process-completion.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/lstat/audit-rejections.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/open/receipt.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/open/process-completion.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/open/audit-rejections.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/original/receipt.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/original/process-completion.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/original/audit-rejections.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/scandir/receipt.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/scandir/process-completion.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/scandir/audit-rejections.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/source-write/receipt.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/source-write/process-completion.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/source-write/audit-rejections.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/stat/receipt.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/stat/process-completion.json",
+    "work/heap062-public-replay-v1/boundary-controls-v1/stat/audit-rejections.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}
