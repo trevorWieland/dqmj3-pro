@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "name": "sdk062",
+  "producerSteps": [
+    {
+      "name": "sdk062-proof",
+      "args": [
+        "toolscripts/public_sdk062_replay.py"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "public_sdk062_inputs",
+    "sdk062_original_v1",
+    "native_provider_inventory",
+    "native_callback_inventory",
+    "compile_source_include_dirs"
+  ],
+  "packets": [
+    "work/sdk062-public-replay-v1/public-replay.json",
+    "work/sdk062-public-replay-v1/context/public-qualify-receipt.json",
+    "work/sdk062-public-replay-v1/context/public-tests-receipt.json",
+    "work/sdk062-public-replay-v1/arbiter/public-qualify-receipt.json",
+    "work/sdk062-public-replay-v1/arbiter/public-tests-receipt.json",
+    "work/sdk062-public-replay-v1/object/public-qualify-receipt.json",
+    "work/sdk062-public-replay-v1/object/public-tests-receipt.json",
+    "work/sdk062-public-replay-v1/startup/public-qualify-receipt.json",
+    "work/sdk062-public-replay-v1/startup/public-tests-receipt.json",
+    "work/sdk062-public-replay-v1/context/map-proof-attempt001.json",
+    "work/sdk062-public-replay-v1/context/context-proof-attempt001.json",
+    "work/sdk062-public-replay-v1/context/mutex-proof-attempt001.json",
+    "work/sdk062-public-replay-v1/context/controls-attempt003/report.json",
+    "work/sdk062-public-replay-v1/arbiter/handoff-programs.json",
+    "work/sdk062-public-replay-v1/arbiter/controls-attempt001/report.json",
+    "work/sdk062-public-replay-v1/object/final-attempt-v4/report.json",
+    "work/sdk062-public-replay-v1/object/attempt002-controls/report.json",
+    "work/sdk062-public-replay-v1/startup/final-stage-v1/report.json",
+    "work/sdk062-public-replay-v1/startup/attempt004-controls/report.json",
+    "work/sdk062-public-replay-v1/startup/standalone-constructor-math-v1/constructor-math.json",
+    "work/sdk062-public-replay-v1/startup/default-work-coverage-v1.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}
