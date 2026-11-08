@@ -6,6 +6,8 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'toolscripts'))
+import c_function_definitions
 
 
 def generate(root):
@@ -22,7 +24,7 @@ def generate(root):
         source = (root / row['sourcePath']).resolve()
         if not any(source.is_relative_to(root / folder) for folder in ('source', 'src/native')) or not source.is_file():
             raise ValueError('Source name mapping escapes the reviewed source trees')
-        if not re.search(r'\b' + re.escape(source_name) + r'\s*\([^)]*\)\s*\{', source.read_text()):
+        if not c_function_definitions.has_definition(source.read_text(), source_name):
             raise ValueError('Source name has no C definition')
         lines.append('#define ' + symbol + ' ' + source_name)
         names.add(symbol)

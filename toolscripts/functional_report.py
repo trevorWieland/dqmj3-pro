@@ -9,6 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import ci_native_build as ci
 import native_sdk_inventory as native_census_overlay
+import c_function_definitions
 from bootstrap_public_compiler import contained
 
 
@@ -26,7 +27,6 @@ def checked(root, item):
 
 def repository_definitions(root):
     found = {}
-    pattern = re.compile(r'\b([A-Za-z_][A-Za-z0-9_]*)\s*\([^)]*\)\s*\{')
     for folder in ('src/native', 'source'):
         base = root / folder
         if not base.exists():
@@ -37,8 +37,8 @@ def repository_definitions(root):
             resolved = path.resolve()
             if not resolved.is_relative_to(root.resolve()) or path.stat().st_size > 4 * 1024 * 1024:
                 raise ValueError('Repository source index contains an unsupported source path')
-            for match in pattern.finditer(path.read_text(encoding='utf-8', errors='replace')):
-                found.setdefault(match[1], set()).add(resolved)
+            for name in c_function_definitions.definitions(path.read_text(encoding='utf-8', errors='replace')):
+                found.setdefault(name, set()).add(resolved)
     return found
 
 
@@ -121,7 +121,7 @@ def generate(root, report, registry):
         source_name = proof.get('sourceName', name)
         if not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_]*', source_name):
             raise ValueError('Reviewed source name is invalid')
-        if source.suffix != '.c' or not re.search(r'\b' + re.escape(source_name) + r'\s*\([^)]*\)\s*\{', source.read_text()):
+        if source.suffix != '.c' or not c_function_definitions.has_definition(source.read_text(), source_name):
             raise ValueError('Reviewed source lacks the reported C definition')
         if source_name != name:
             alias = proof.get('symbolNames')

@@ -29,6 +29,8 @@ jobs:
           python-version: '3.12'
       - name: Check generated source-link names
         run: python -I -S toolscripts/generate_source_names.py --check
+      - name: Check C source-definition indexing
+        run: python -I -S -m unittest discover -s tests -p test_c_function_definitions.py -v
       - name: Materialize only pinned public compiler files
         run: python -I -S toolscripts/bootstrap_public_compiler.py
       - name: Check compile tooling

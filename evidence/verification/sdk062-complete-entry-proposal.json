@@ -1,0 +1,2023 @@
+{
+  "status": "minimal-metadata-only-admission-proposal;no-shared-edits-or-self-admission",
+  "candidateSourceCommit": "92e093e",
+  "canonicalModuleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "completeEntryCandidates": [
+    {
+      "entry": 4932560,
+      "entryHex": "004b43d0",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4932560,
+          "endExclusive": 4932716,
+          "bytes": 156,
+          "sha256": "249811674bc6bb28f7bf6f8544c739710e40b53719362274165182632d27a5b6"
+        }
+      ],
+      "instructionBytes": 156,
+      "sourceFunction": "sdk_map_initialize062s",
+      "sourcePath": "src/native/wave062-sdk/context/map_initialize062s.c",
+      "sourceFile": {
+        "bytes": 906,
+        "sha256": "4d55295125b6ed49390be7bea8e48134a15fa336765d700c7b41d96b828b617d"
+      },
+      "domain": "successful aligned nonreentrant custom allocation;address-dependent map+25 byte preserved per true this pointer",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 4932560,
+          "endExclusive": 4932716,
+          "bytes": 156
+        }
+      ],
+      "frozenCensusReportEntryBytes": 156,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 1342016,
+      "entryHex": "00147a40",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1342016,
+          "endExclusive": 1342324,
+          "bytes": 308,
+          "sha256": "18120ae694d98b46d3ba4e4fb7f2c85a89a87da67093693cb104f4dd21721966"
+        }
+      ],
+      "instructionBytes": 308,
+      "sourceFunction": "sdk_map_value062s",
+      "sourcePath": "src/native/wave062-sdk/context/map062s.c",
+      "sourceFile": {
+        "bytes": 4931,
+        "sha256": "4988a3cd066383fe9c31cad09f50ce8ab0c7ea2ac7db84eb7e51b337aec2cd5e"
+      },
+      "domain": "valid initialized finite red-black trees;qualified insertion-created storage;free-list/forced-left domains not established",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 1342016,
+          "endExclusive": 1342324,
+          "bytes": 308
+        }
+      ],
+      "frozenCensusReportEntryBytes": 308,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 1198544,
+      "entryHex": "001249d0",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1198544,
+          "endExclusive": 1198872,
+          "bytes": 328,
+          "sha256": "b77017b0c76ed630bab4730b4dd65fd04c07e392dc7944753436d55a3d8be21e"
+        }
+      ],
+      "instructionBytes": 328,
+      "sourceFunction": "sdk_context062s",
+      "sourcePath": "src/native/wave062-sdk/context/context062s.c",
+      "sourceFile": {
+        "bytes": 2007,
+        "sha256": "d9130340bec329b1466f60c55192f1490b54513fdcbad24473857775781fbf4b"
+      },
+      "domain": "valid context indices/bindings;record slot3;actual numeric thread ID distinct from TLS owner;invalid-index diagnostic/fault excluded",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 1198544,
+          "endExclusive": 1198872,
+          "bytes": 328
+        }
+      ],
+      "frozenCensusReportEntryBytes": 328,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [
+        {
+          "start": 1198872,
+          "endExclusive": 1198876,
+          "bytes": 4,
+          "sha256": "aa4cb9ae2a0e56495dfa947b1ec4719ff661614c338eb8c9a1aa599b4442bece",
+          "readers": [
+            1198544
+          ]
+        },
+        {
+          "start": 1198876,
+          "endExclusive": 1198880,
+          "bytes": 4,
+          "sha256": "49533bd658eadb44860d28d06ba800ab3224958bf69e566abdea9108c73091d7",
+          "readers": [
+            1198564
+          ]
+        },
+        {
+          "start": 1198880,
+          "endExclusive": 1198884,
+          "bytes": 4,
+          "sha256": "a2b580cc445a2c3bfa32de53bc620389628a69a5b0405b077310db30fd26d65c",
+          "readers": [
+            1198784
+          ]
+        },
+        {
+          "start": 1198884,
+          "endExclusive": 1198888,
+          "bytes": 4,
+          "sha256": "f7a151969c8aefaf0315adc6263ae5e22553536d9c7dbdce8057a61b6b1a02b2",
+          "readers": [
+            1198824
+          ]
+        }
+      ],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 4945736,
+      "entryHex": "004b7748",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4945736,
+          "endExclusive": 4946064,
+          "bytes": 328,
+          "sha256": "d2656cfa46b7ae5d0ef12dccf3fe5961d55bd411a911493f417d2e06ff77d244"
+        }
+      ],
+      "instructionBytes": 328,
+      "sourceFunction": "sdk_context_alternate062s",
+      "sourcePath": "src/native/wave062-sdk/context/context062s.c",
+      "sourceFile": {
+        "bytes": 2007,
+        "sha256": "d9130340bec329b1466f60c55192f1490b54513fdcbad24473857775781fbf4b"
+      },
+      "domain": "valid context indices/bindings;record slot1;invalid-index diagnostic/fault excluded",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 4945736,
+          "endExclusive": 4946064,
+          "bytes": 328
+        }
+      ],
+      "frozenCensusReportEntryBytes": 328,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [
+        {
+          "start": 4946064,
+          "endExclusive": 4946068,
+          "bytes": 4,
+          "sha256": "aa4cb9ae2a0e56495dfa947b1ec4719ff661614c338eb8c9a1aa599b4442bece",
+          "readers": [
+            4945736
+          ]
+        },
+        {
+          "start": 4946068,
+          "endExclusive": 4946072,
+          "bytes": 4,
+          "sha256": "49533bd658eadb44860d28d06ba800ab3224958bf69e566abdea9108c73091d7",
+          "readers": [
+            4945756
+          ]
+        },
+        {
+          "start": 4946072,
+          "endExclusive": 4946076,
+          "bytes": 4,
+          "sha256": "a2b580cc445a2c3bfa32de53bc620389628a69a5b0405b077310db30fd26d65c",
+          "readers": [
+            4945976
+          ]
+        },
+        {
+          "start": 4946076,
+          "endExclusive": 4946080,
+          "bytes": 4,
+          "sha256": "dad9283b0a703495e4ece9ea05e32475b675defd4db0b4c0348916665300e0b8",
+          "readers": [
+            4946016
+          ]
+        }
+      ],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 1367532,
+      "entryHex": "0014ddec",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1367532,
+          "endExclusive": 1367756,
+          "bytes": 224,
+          "sha256": "d9a806a61fe5fae8e51db8713246b3b240116d8f9691555cb26cd23fe8e18f73"
+        }
+      ],
+      "instructionBytes": 224,
+      "sourceFunction": "sdk_fast_acquire062s",
+      "sourcePath": "src/native/wave062-sdk/context/mutex062s.c",
+      "sourceFile": {
+        "bytes": 2170,
+        "sha256": "796b69eb236287be917731074248d7e7ee8161745d88bbb635a45641efac8382"
+      },
+      "domain": "bounded nonoverflow counts;uncontended plus single owned waiter SVC22 compatibility;no general fairness or overlapping cross-CPU exclusives",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 1367532,
+          "endExclusive": 1367756,
+          "bytes": 224
+        }
+      ],
+      "frozenCensusReportEntryBytes": 224,
+      "referencedPcRelativeData": [
+        {
+          "start": 1367756,
+          "endExclusive": 1367760,
+          "bytes": 4,
+          "sha256": "8bd18d3da9ef6f6c5da02e87a896bf65642c823a81ffdada1a5437513e0e8a0c",
+          "readers": [
+            1367616
+          ]
+        }
+      ],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 1295500,
+      "entryHex": "0013c48c",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1295500,
+          "endExclusive": 1295580,
+          "bytes": 80,
+          "sha256": "54138378bb8a499a7e3a87f27c5bdedf2a09d6e28a4df857df7c0852eb2dd2ac"
+        }
+      ],
+      "instructionBytes": 80,
+      "sourceFunction": "sdk_fast_release062s",
+      "sourcePath": "src/native/wave062-sdk/context/mutex062s.c",
+      "sourceFile": {
+        "bytes": 2170,
+        "sha256": "796b69eb236287be917731074248d7e7ee8161745d88bbb635a45641efac8382"
+      },
+      "domain": "same owned bounded mutex/arbiter domain;signal primitive does not mutate count",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": false,
+      "inventoryAction": "independently review real caller/vtable/entry witness before adding missing entry;never fabricate a gap function",
+      "referencedPcRelativeData": [
+        {
+          "start": 1295580,
+          "endExclusive": 1295584,
+          "bytes": 4,
+          "sha256": "8bd18d3da9ef6f6c5da02e87a896bf65642c823a81ffdada1a5437513e0e8a0c",
+          "readers": [
+            1295540
+          ]
+        }
+      ],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 1509124,
+      "entryHex": "00170704",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1509124,
+          "endExclusive": 1509180,
+          "bytes": 56,
+          "sha256": "0e6cfb8cd76a1066309421af2a420904828bec44a60431e24675d47093d66cf6"
+        }
+      ],
+      "instructionBytes": 56,
+      "sourceFunction": "sdk_recursive_acquire062s",
+      "sourcePath": "src/native/wave062-sdk/context/mutex062s.c",
+      "sourceFile": {
+        "bytes": 2170,
+        "sha256": "796b69eb236287be917731074248d7e7ee8161745d88bbb635a45641efac8382"
+      },
+      "domain": "live same-thread TLS owner;bounded depth;single waiter compatibility",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 1509124,
+          "endExclusive": 1509180,
+          "bytes": 56
+        }
+      ],
+      "frozenCensusReportEntryBytes": 56,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 1509300,
+      "entryHex": "001707b4",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1509300,
+          "endExclusive": 1509332,
+          "bytes": 32,
+          "sha256": "a1af71ec52767d65bf5617d58cc824c16030a08dcd2e8bee6178b8cd1eda9b21"
+        }
+      ],
+      "instructionBytes": 32,
+      "sourceFunction": "sdk_recursive_release062s",
+      "sourcePath": "src/native/wave062-sdk/context/mutex062s.c",
+      "sourceFile": {
+        "bytes": 2170,
+        "sha256": "796b69eb236287be917731074248d7e7ee8161745d88bbb635a45641efac8382"
+      },
+      "domain": "balanced valid recursive ownership;bounded counts/depth",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 1509300,
+          "endExclusive": 1509332,
+          "bytes": 32
+        }
+      ],
+      "frozenCensusReportEntryBytes": 32,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 4670872,
+      "entryHex": "00474598",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4670872,
+          "endExclusive": 4670900,
+          "bytes": 28,
+          "sha256": "fae1ac198cb0e1cec587a5f37a37e9e1bdee3e3af206d4718668a635a598814e"
+        }
+      ],
+      "instructionBytes": 28,
+      "sourceFunction": "sdk_mutex_acquire062s",
+      "sourcePath": "src/native/wave062-sdk/context/mutex062s.c",
+      "sourceFile": {
+        "bytes": 2170,
+        "sha256": "796b69eb236287be917731074248d7e7ee8161745d88bbb635a45641efac8382"
+      },
+      "domain": "complete concrete virtual acquire entry;actual lock-disable flag and declared mutex prefix",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": false,
+      "inventoryAction": "independently review real caller/vtable/entry witness before adding missing entry;never fabricate a gap function",
+      "literalPools": [
+        {
+          "start": 4670900,
+          "endExclusive": 4670904,
+          "bytes": 4,
+          "sha256": "05977b7cb37e8d41f2f0e6a7dcedc58ad7be7efb743c01fd796a594079d22bb6",
+          "role": "referenced4-byte literal;metadata only",
+          "reader": 4670872,
+          "ownership": "adjacent own literal"
+        }
+      ],
+      "missingEntryWitness": "missing-nine-entry-witnesses.json#00474598",
+      "composedCensusEntryPresentAtRootPrecheck": false,
+      "referencedPcRelativeData": [
+        {
+          "start": 4670900,
+          "endExclusive": 4670904,
+          "bytes": 4,
+          "sha256": "05977b7cb37e8d41f2f0e6a7dcedc58ad7be7efb743c01fd796a594079d22bb6",
+          "readers": [
+            4670872
+          ]
+        }
+      ]
+    },
+    {
+      "entry": 4670904,
+      "entryHex": "004745b8",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4670904,
+          "endExclusive": 4670932,
+          "bytes": 28,
+          "sha256": "dac6e727c014f3b423be58b97ac8c7e304402c89f1d62a73015b111b5959e939"
+        }
+      ],
+      "instructionBytes": 28,
+      "sourceFunction": "sdk_mutex_release062s",
+      "sourcePath": "src/native/wave062-sdk/context/mutex062s.c",
+      "sourceFile": {
+        "bytes": 2170,
+        "sha256": "796b69eb236287be917731074248d7e7ee8161745d88bbb635a45641efac8382"
+      },
+      "domain": "complete concrete virtual release entry;balanced owned mutex",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": false,
+      "inventoryAction": "independently review real caller/vtable/entry witness before adding missing entry;never fabricate a gap function",
+      "literalPools": [
+        {
+          "start": 4670932,
+          "endExclusive": 4670936,
+          "bytes": 4,
+          "sha256": "05977b7cb37e8d41f2f0e6a7dcedc58ad7be7efb743c01fd796a594079d22bb6",
+          "role": "referenced4-byte literal;metadata only",
+          "reader": 4670904,
+          "ownership": "adjacent own literal"
+        }
+      ],
+      "missingEntryWitness": "missing-nine-entry-witnesses.json#004745b8",
+      "composedCensusEntryPresentAtRootPrecheck": false,
+      "referencedPcRelativeData": [
+        {
+          "start": 4670932,
+          "endExclusive": 4670936,
+          "bytes": 4,
+          "sha256": "05977b7cb37e8d41f2f0e6a7dcedc58ad7be7efb743c01fd796a594079d22bb6",
+          "readers": [
+            4670904
+          ]
+        }
+      ]
+    },
+    {
+      "entry": 4588172,
+      "entryHex": "0046028c",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4588172,
+          "endExclusive": 4588192,
+          "bytes": 20,
+          "sha256": "b17cae9fade6c3bf8d5eeedeb3ab070549a01b5da94adc87c634c7ce6f5adb6a"
+        }
+      ],
+      "instructionBytes": 20,
+      "sourceFunction": "sdk_connection_ready062t",
+      "sourcePath": "src/native/wave062-sdk/object/connection062t.c",
+      "sourceFile": {
+        "bytes": 1486,
+        "sha256": "b4761c13711884d0041f0e4743c07eb723b6e62a6d2c64bdaa02a91bef1f1e90"
+      },
+      "domain": "actual connection state byte target188==2;native partial field view provisioned exactly",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": false,
+      "inventoryAction": "independently review real caller/vtable/entry witness before adding missing entry;never fabricate a gap function",
+      "literalPools": [],
+      "missingEntryWitness": "missing-nine-entry-witnesses.json#0046028c",
+      "composedCensusEntryPresentAtRootPrecheck": false,
+      "referencedPcRelativeData": []
+    },
+    {
+      "entry": 4610036,
+      "entryHex": "004657f4",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4610036,
+          "endExclusive": 4610056,
+          "bytes": 20,
+          "sha256": "f2caeb1f787a2b6d7c6de52aacfb20bdd215c99777c96c8d069608410e81191a"
+        }
+      ],
+      "instructionBytes": 20,
+      "sourceFunction": "sdk_connection_closed062t",
+      "sourcePath": "src/native/wave062-sdk/object/connection062t.c",
+      "sourceFile": {
+        "bytes": 1486,
+        "sha256": "b4761c13711884d0041f0e4743c07eb723b6e62a6d2c64bdaa02a91bef1f1e90"
+      },
+      "domain": "actual connection state byte target188==4",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": false,
+      "inventoryAction": "independently review real caller/vtable/entry witness before adding missing entry;never fabricate a gap function",
+      "literalPools": [],
+      "missingEntryWitness": "missing-nine-entry-witnesses.json#004657f4",
+      "composedCensusEntryPresentAtRootPrecheck": false,
+      "referencedPcRelativeData": []
+    },
+    {
+      "entry": 4657836,
+      "entryHex": "004712ac",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4657836,
+          "endExclusive": 4657864,
+          "bytes": 28,
+          "sha256": "95035efebea66243f23e80c63133c2668d8b06c778d6df7a4d6b9ea21f87af42"
+        }
+      ],
+      "instructionBytes": 28,
+      "sourceFunction": "sdk_child_ready062t",
+      "sourcePath": "src/native/wave062-sdk/object/connection062t.c",
+      "sourceFile": {
+        "bytes": 1486,
+        "sha256": "b4761c13711884d0041f0e4743c07eb723b6e62a6d2c64bdaa02a91bef1f1e90"
+      },
+      "domain": "actual proxy child target+144 points real connection;fresh virtualslot11",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": false,
+      "inventoryAction": "independently review real caller/vtable/entry witness before adding missing entry;never fabricate a gap function",
+      "literalPools": [],
+      "missingEntryWitness": "missing-nine-entry-witnesses.json#004712ac",
+      "composedCensusEntryPresentAtRootPrecheck": false,
+      "referencedPcRelativeData": []
+    },
+    {
+      "entry": 4658796,
+      "entryHex": "0047166c",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4658796,
+          "endExclusive": 4658824,
+          "bytes": 28,
+          "sha256": "1de9be5359c02dbaebdeb3e112d09455617263fc327adfbe0a59c16258debd60"
+        }
+      ],
+      "instructionBytes": 28,
+      "sourceFunction": "sdk_child_closed062t",
+      "sourcePath": "src/native/wave062-sdk/object/connection062t.c",
+      "sourceFile": {
+        "bytes": 1486,
+        "sha256": "b4761c13711884d0041f0e4743c07eb723b6e62a6d2c64bdaa02a91bef1f1e90"
+      },
+      "domain": "actual proxy child target+144 points real connection;fresh virtualslot10",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": false,
+      "inventoryAction": "independently review real caller/vtable/entry witness before adding missing entry;never fabricate a gap function",
+      "literalPools": [],
+      "missingEntryWitness": "missing-nine-entry-witnesses.json#0047166c",
+      "composedCensusEntryPresentAtRootPrecheck": false,
+      "referencedPcRelativeData": []
+    },
+    {
+      "entry": 4592796,
+      "entryHex": "0046149c",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4592796,
+          "endExclusive": 4593028,
+          "bytes": 232,
+          "sha256": "1f0a5d0457cc8e2c8bad6e2373036127d819818dbc4db997b50f395d06ae13d8"
+        }
+      ],
+      "instructionBytes": 232,
+      "sourceFunction": "sdk_connection_set_state062t",
+      "sourcePath": "src/native/wave062-sdk/object/connection062t.c",
+      "sourceFile": {
+        "bytes": 1486,
+        "sha256": "b4761c13711884d0041f0e4743c07eb723b6e62a6d2c64bdaa02a91bef1f1e90"
+      },
+      "domain": "raw32 requested-state semantics;captured callback and fresh cleanup reads;live external owner prevents unqualified finalizer calls",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 4592796,
+          "endExclusive": 4593028,
+          "bytes": 232
+        }
+      ],
+      "frozenCensusReportEntryBytes": 232,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [
+        {
+          "start": 4593028,
+          "endExclusive": 4593032,
+          "bytes": 4,
+          "sha256": "df2d4b4fe4c75b71ab6ce3033dc15dfd410f516184837f36dab11529cfc625bf",
+          "readers": [
+            4592836
+          ]
+        },
+        {
+          "start": 4593032,
+          "endExclusive": 4593036,
+          "bytes": 4,
+          "sha256": "d043e824da409a4f713d044c592ea4ce1c9ec0ae6310fc97b2297d442890f32f",
+          "readers": [
+            4592840
+          ]
+        }
+      ],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 4646468,
+      "entryHex": "0046e644",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4646468,
+          "endExclusive": 4646608,
+          "bytes": 140,
+          "sha256": "d7b2ef25a78c6225ffd950544e1bd831f9b74c008f3e5e0115c08983d249d2bb"
+        }
+      ],
+      "instructionBytes": 140,
+      "sourceFunction": "sdk_address_replace062t",
+      "sourcePath": "src/native/wave062-sdk/object/reference062t.c",
+      "sourceFile": {
+        "bytes": 1494,
+        "sha256": "1e9bf959665e3b509aca23ae371fcac524ba5d57b565f4296e71230b52169df5"
+      },
+      "domain": "actual embedded address peer replacement;retain/release ordering;nonzero live external ownership",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 4646468,
+          "endExclusive": 4646608,
+          "bytes": 140
+        }
+      ],
+      "frozenCensusReportEntryBytes": 140,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 4804968,
+      "entryHex": "00495168",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4804968,
+          "endExclusive": 4804976,
+          "bytes": 8,
+          "sha256": "0dd82b65ff3b6559fb733452702610fc24a426c18a967e1542fabb35800d7b9b"
+        }
+      ],
+      "instructionBytes": 8,
+      "sourceFunction": "sdk_wrapper_prepare062t",
+      "sourcePath": "src/native/wave062-sdk/object/reference062t.c",
+      "sourceFile": {
+        "bytes": 1494,
+        "sha256": "1e9bf959665e3b509aca23ae371fcac524ba5d57b565f4296e71230b52169df5"
+      },
+      "domain": "complete8-byte virtual prepare tail entry forwards this+16 AND original replacementR1 to46e644;no duplicate dependency credit",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": false,
+      "inventoryAction": "independently review real caller/vtable/entry witness before adding missing entry;never fabricate a gap function",
+      "literalPools": [],
+      "missingEntryWitness": "missing-nine-entry-witnesses.json#00495168",
+      "composedCensusEntryPresentAtRootPrecheck": false,
+      "referencedPcRelativeData": []
+    },
+    {
+      "entry": 4632992,
+      "entryHex": "0046b1a0",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4632992,
+          "endExclusive": 4633148,
+          "bytes": 156,
+          "sha256": "4b594727bd020e93f1ca537cb660bdfd486fa3356a4488ee7558eef4de5059ed"
+        }
+      ],
+      "instructionBytes": 156,
+      "sourceFunction": "sdk_wrapper_replace062t",
+      "sourcePath": "src/native/wave062-sdk/object/reference062t.c",
+      "sourceFile": {
+        "bytes": 1494,
+        "sha256": "1e9bf959665e3b509aca23ae371fcac524ba5d57b565f4296e71230b52169df5"
+      },
+      "domain": "prepare before separately replacing wrapper current peer;two real references and alias/null cases",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 4632992,
+          "endExclusive": 4633148,
+          "bytes": 156
+        }
+      ],
+      "frozenCensusReportEntryBytes": 156,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 7148036,
+      "entryHex": "006d1204",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 7148036,
+          "endExclusive": 7148192,
+          "bytes": 156,
+          "sha256": "d53ca971e43a3740e5b3b82dd6457ce5a5161e442c178caa471dc59e5531a9c1"
+        }
+      ],
+      "instructionBytes": 156,
+      "sourceFunction": "sdk_wrapper_ready062t",
+      "sourcePath": "src/native/wave062-sdk/object/wrapper062t.c",
+      "sourceFile": {
+        "bytes": 825,
+        "sha256": "d9fc50b936fc86581f8d447d15d180f98252febfc8c7d00c230897978021e747"
+      },
+      "domain": "actual recursive nested lock and fresh current/disabled/child checks;typed real connection providers",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 7148036,
+          "endExclusive": 7148192,
+          "bytes": 156
+        }
+      ],
+      "frozenCensusReportEntryBytes": 156,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 7148264,
+      "entryHex": "006d12e8",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 7148264,
+          "endExclusive": 7148336,
+          "bytes": 72,
+          "sha256": "fdfa7c80bb2ce42140bfe9eaf22df6d106dabfdcd345a41e310f7e47eed07120"
+        }
+      ],
+      "instructionBytes": 72,
+      "sourceFunction": "sdk_wrapper_closed062t",
+      "sourcePath": "src/native/wave062-sdk/object/wrapper062t.c",
+      "sourceFile": {
+        "bytes": 825,
+        "sha256": "d9fc50b936fc86581f8d447d15d180f98252febfc8c7d00c230897978021e747"
+      },
+      "domain": "unlocked actual closed path;no invented lock",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 7148264,
+          "endExclusive": 7148336,
+          "bytes": 72
+        }
+      ],
+      "frozenCensusReportEntryBytes": 72,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 4951372,
+      "entryHex": "004b8d4c",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4951372,
+          "endExclusive": 4951400,
+          "bytes": 28,
+          "sha256": "00383200aac6db8104a5760330af11652ad3281ad3523b0ee955297368473451"
+        }
+      ],
+      "instructionBytes": 28,
+      "sourceFunction": "sdk_result_make062t",
+      "sourcePath": "src/native/wave062-sdk/object/result062t.c",
+      "sourceFile": {
+        "bytes": 1766,
+        "sha256": "db9755ce0973783e4799e374530acefa18face83d965241c18fecdb8f0fc0098"
+      },
+      "domain": "code/line and opaque diagnostic-origin identity only;no debug filename rendering claim",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 4951372,
+          "endExclusive": 4951400,
+          "bytes": 28
+        }
+      ],
+      "frozenCensusReportEntryBytes": 28,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [
+        {
+          "start": 4951400,
+          "endExclusive": 4951404,
+          "bytes": 4,
+          "sha256": "d043e824da409a4f713d044c592ea4ce1c9ec0ae6310fc97b2297d442890f32f",
+          "readers": [
+            4951384
+          ]
+        }
+      ],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 7158668,
+      "entryHex": "006d3b8c",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 7158668,
+          "endExclusive": 7158684,
+          "bytes": 16,
+          "sha256": "4e734c9ffa32967dfe17f515a992f02b77c4f18a11f4025533ac23e63ec4a9b7"
+        }
+      ],
+      "instructionBytes": 16,
+      "sourceFunction": "sdk_result_success062t",
+      "sourcePath": "src/native/wave062-sdk/object/result062t.c",
+      "sourceFile": {
+        "bytes": 1766,
+        "sha256": "db9755ce0973783e4799e374530acefa18face83d965241c18fecdb8f0fc0098"
+      },
+      "domain": "unsigned sign-bit result predicate",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 7158668,
+          "endExclusive": 7158684,
+          "bytes": 16
+        }
+      ],
+      "frozenCensusReportEntryBytes": 16,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 7149608,
+      "entryHex": "006d1828",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 7149608,
+          "endExclusive": 7150000,
+          "bytes": 392,
+          "sha256": "e26f593a98ce1cc81bae34d8a6114fd06ef346c5d4c73f5bb52b3bc28c4aa892"
+        }
+      ],
+      "instructionBytes": 392,
+      "sourceFunction": "sdk_operation_result062t",
+      "sourcePath": "src/native/wave062-sdk/object/result062t.c",
+      "sourceFile": {
+        "bytes": 1766,
+        "sha256": "db9755ce0973783e4799e374530acefa18face83d965241c18fecdb8f0fc0098"
+      },
+      "domain": "complete nonnull status controller;first task NULL orstate5;second nonnullstate5;live peers/context;unqualified finalizers excluded",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 7149608,
+          "endExclusive": 7150000,
+          "bytes": 392
+        }
+      ],
+      "frozenCensusReportEntryBytes": 392,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [
+        {
+          "start": 7150000,
+          "endExclusive": 7150004,
+          "bytes": 4,
+          "sha256": "fb6bdda584fb8f32a195030e86c33c1eaf3c04d6abecb1fed9ecb4195b14c5dc",
+          "readers": [
+            7149668
+          ]
+        },
+        {
+          "start": 7150004,
+          "endExclusive": 7150008,
+          "bytes": 4,
+          "sha256": "507503b51960cceda8d924904fb85377fe7d177fb8dfcf56b24e4557644ed486",
+          "readers": [
+            7149956
+          ]
+        }
+      ],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 6711844,
+      "entryHex": "00666a24",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 6711844,
+          "endExclusive": 6711892,
+          "bytes": 48,
+          "sha256": "978f385b1c72fc59e23ce5199d2ee166f979dcb9c767d67e92cfdca05bad9b2d"
+        }
+      ],
+      "instructionBytes": 48,
+      "sourceFunction": "sdk_holder_ready062t",
+      "sourcePath": "src/native/wave062-sdk/object/result062t.c",
+      "sourceFile": {
+        "bytes": 1766,
+        "sha256": "db9755ce0973783e4799e374530acefa18face83d965241c18fecdb8f0fc0098"
+      },
+      "domain": "NULL holder child returnsfalse;nonnull path executes complete6d1828 and sign predicate",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 6711844,
+          "endExclusive": 6711892,
+          "bytes": 48
+        }
+      ],
+      "frozenCensusReportEntryBytes": 48,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 4927556,
+      "entryHex": "004b3044",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4927556,
+          "endExclusive": 4927656,
+          "bytes": 100,
+          "sha256": "51dbf16fec2325e75f8fbbf12834bed62e01513c380c8b87c69a36c1370bfd1a"
+        }
+      ],
+      "instructionBytes": 100,
+      "sourceFunction": "sdk_task_initialize062u",
+      "sourcePath": "src/native/wave062-sdk/startup/task_initialize062u.c",
+      "sourceFile": {
+        "bytes": 1391,
+        "sha256": "eb0f52ae886067eabbfef0cd8163ee4f7115ad5f57e120a8c1147f65f8a33112"
+      },
+      "domain": "explicit initialized input tag byte;unwritten padding preserved;not original484660 uninitialized-local caller",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 4927556,
+          "endExclusive": 4927656,
+          "bytes": 100
+        }
+      ],
+      "frozenCensusReportEntryBytes": 100,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [
+        {
+          "start": 4927656,
+          "endExclusive": 4927660,
+          "bytes": 4,
+          "sha256": "af35ea35e13f59475b905831b04473b2e600dc1eae6a3296ad60fc58b3a446a5",
+          "readers": [
+            4927572
+          ]
+        }
+      ],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 4693208,
+      "entryHex": "00479cd8",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4693208,
+          "endExclusive": 4693284,
+          "bytes": 76,
+          "sha256": "16aa400dc598f46a37d56fb08abb3faceac12e1d997cf2f6b384b1ef7bc5fe47"
+        }
+      ],
+      "instructionBytes": 76,
+      "sourceFunction": "sdk_task_extended_initialize062u",
+      "sourcePath": "src/native/wave062-sdk/startup/task_initialize062u.c",
+      "sourceFile": {
+        "bytes": 1391,
+        "sha256": "eb0f52ae886067eabbfef0cd8163ee4f7115ad5f57e120a8c1147f65f8a33112"
+      },
+      "domain": "same initialized tag;named full task storage/layout;work provider invocation excluded",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 4693208,
+          "endExclusive": 4693284,
+          "bytes": 76
+        }
+      ],
+      "frozenCensusReportEntryBytes": 76,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [
+        {
+          "start": 4693284,
+          "endExclusive": 4693288,
+          "bytes": 4,
+          "sha256": "306c143a29d64fc877a1f4ebebcf00a4b18c7b319eced504a5c622fa8e36d542",
+          "readers": [
+            4693216
+          ]
+        },
+        {
+          "start": 4693288,
+          "endExclusive": 4693292,
+          "bytes": 4,
+          "sha256": "b7d0886a8664fa6327e9c882b4d253a87c6f9198d2955926ca3d3625987ab454",
+          "readers": [
+            4693244
+          ]
+        },
+        {
+          "start": 4693292,
+          "endExclusive": 4693296,
+          "bytes": 4,
+          "sha256": "7f01f5d743167d8cdb21a9970b9844e8592a9a80c54ee1bc144c675929b5b506",
+          "readers": [
+            4693236
+          ]
+        }
+      ],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 4927516,
+      "entryHex": "004b301c",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4927516,
+          "endExclusive": 4927552,
+          "bytes": 36,
+          "sha256": "2bc46f7901cfb3d168ed7773310b475edaf2cd01ba9718bc69a7ff5d38382a15"
+        }
+      ],
+      "instructionBytes": 36,
+      "sourceFunction": "sdk_task_set_state062u",
+      "sourcePath": "src/native/wave062-sdk/startup/task_state062u.c",
+      "sourceFile": {
+        "bytes": 1004,
+        "sha256": "3a4bbedcfaeba9c5afced7a94ed939cea60d42444ea57c6d2ab62cefc38371be"
+      },
+      "domain": "raw32 equality5 controls callback,stored low8 state;capture address passed;callback may mutate live task",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 4927516,
+          "endExclusive": 4927552,
+          "bytes": 36
+        }
+      ],
+      "frozenCensusReportEntryBytes": 36,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 4927452,
+      "entryHex": "004b2fdc",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4927452,
+          "endExclusive": 4927460,
+          "bytes": 8,
+          "sha256": "1e92122b94da268fed933116d2d740ba893af1ee928efb0ed3e72101a9461efa"
+        }
+      ],
+      "instructionBytes": 8,
+      "sourceFunction": "sdk_task_complete062u",
+      "sourcePath": "src/native/wave062-sdk/startup/task_state062u.c",
+      "sourceFile": {
+        "bytes": 1004,
+        "sha256": "3a4bbedcfaeba9c5afced7a94ed939cea60d42444ea57c6d2ab62cefc38371be"
+      },
+      "domain": "complete tail entry to state5;dependency4b301c not duplicated",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": false,
+      "inventoryAction": "independently review real caller/vtable/entry witness before adding missing entry;never fabricate a gap function",
+      "literalPools": [],
+      "missingEntryWitness": "missing-nine-entry-witnesses.json#004b2fdc",
+      "composedCensusEntryPresentAtRootPrecheck": false,
+      "referencedPcRelativeData": []
+    },
+    {
+      "entry": 4927072,
+      "entryHex": "004b2e60",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4927072,
+          "endExclusive": 4927080,
+          "bytes": 8,
+          "sha256": "d3aedcf25678887d57835f677fe22cfcfbe7d35eaaf421172286f3054edfdec7"
+        }
+      ],
+      "instructionBytes": 8,
+      "sourceFunction": "sdk_task_state_four062u",
+      "sourcePath": "src/native/wave062-sdk/startup/task_state062u.c",
+      "sourceFile": {
+        "bytes": 1004,
+        "sha256": "3a4bbedcfaeba9c5afced7a94ed939cea60d42444ea57c6d2ab62cefc38371be"
+      },
+      "domain": "complete state4 entry",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 4927072,
+          "endExclusive": 4927080,
+          "bytes": 8
+        }
+      ],
+      "frozenCensusReportEntryBytes": 8,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 4927244,
+      "entryHex": "004b2f0c",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4927244,
+          "endExclusive": 4927252,
+          "bytes": 8,
+          "sha256": "204f84c6884409898c7e6e71d02d6aee28b719fbff747f07c7ef3309f71f0cbf"
+        }
+      ],
+      "instructionBytes": 8,
+      "sourceFunction": "sdk_task_state_two062u",
+      "sourcePath": "src/native/wave062-sdk/startup/task_state062u.c",
+      "sourceFile": {
+        "bytes": 1004,
+        "sha256": "3a4bbedcfaeba9c5afced7a94ed939cea60d42444ea57c6d2ab62cefc38371be"
+      },
+      "domain": "complete state2 entry",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 4927244,
+          "endExclusive": 4927252,
+          "bytes": 8
+        }
+      ],
+      "frozenCensusReportEntryBytes": 8,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 4927460,
+      "entryHex": "004b2fe4",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4927460,
+          "endExclusive": 4927468,
+          "bytes": 8,
+          "sha256": "83695ffbc91708e892770508a508a8bf530a0ef792882af3ff552c72fb6b71c0"
+        }
+      ],
+      "instructionBytes": 8,
+      "sourceFunction": "sdk_task_state_three062u",
+      "sourcePath": "src/native/wave062-sdk/startup/task_state062u.c",
+      "sourceFile": {
+        "bytes": 1004,
+        "sha256": "3a4bbedcfaeba9c5afced7a94ed939cea60d42444ea57c6d2ab62cefc38371be"
+      },
+      "domain": "complete state3 entry",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 4927460,
+          "endExclusive": 4927468,
+          "bytes": 8
+        }
+      ],
+      "frozenCensusReportEntryBytes": 8,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 4927080,
+      "entryHex": "004b2e68",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4927080,
+          "endExclusive": 4927108,
+          "bytes": 28,
+          "sha256": "cf3877c64e5217d96f857a5bc32bc3b579246b67d3a4658d1634cfda9998d4dd"
+        }
+      ],
+      "instructionBytes": 28,
+      "sourceFunction": "sdk_task_set_delay062u",
+      "sourcePath": "src/native/wave062-sdk/startup/task_state062u.c",
+      "sourceFile": {
+        "bytes": 1004,
+        "sha256": "3a4bbedcfaeba9c5afced7a94ed939cea60d42444ea57c6d2ab62cefc38371be"
+      },
+      "domain": "state1 publication before signed delay store and callback order",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 4927080,
+          "endExclusive": 4927108,
+          "bytes": 28
+        }
+      ],
+      "frozenCensusReportEntryBytes": 28,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 4927252,
+      "entryHex": "004b2f14",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4927252,
+          "endExclusive": 4927264,
+          "bytes": 12,
+          "sha256": "0ecd0f344b7d32676842b33e0bc1a5c9211ec4f61054a8511993990a8411d5b8"
+        }
+      ],
+      "instructionBytes": 12,
+      "sourceFunction": "sdk_task_dispatch062u",
+      "sourcePath": "src/native/wave062-sdk/startup/task_state062u.c",
+      "sourceFile": {
+        "bytes": 1004,
+        "sha256": "3a4bbedcfaeba9c5afced7a94ed939cea60d42444ea57c6d2ab62cefc38371be"
+      },
+      "domain": "actual typed virtual workslot;only measured base default-work graph qualified",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": false,
+      "inventoryAction": "independently review real caller/vtable/entry witness before adding missing entry;never fabricate a gap function",
+      "literalPools": [],
+      "missingEntryWitness": "missing-nine-entry-witnesses.json#004b2f14",
+      "composedCensusEntryPresentAtRootPrecheck": false,
+      "referencedPcRelativeData": []
+    },
+    {
+      "entry": 1298684,
+      "entryHex": "0013d0fc",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1298684,
+          "endExclusive": 1298852,
+          "bytes": 168,
+          "sha256": "683cbf49f00e02b5ddfedeaead3844e7f5b42aad53296814143b9f2f0cf15290"
+        }
+      ],
+      "instructionBytes": 168,
+      "sourceFunction": "sdk_clock_current062u",
+      "sourcePath": "src/native/wave062-sdk/startup/clock_read062u.c",
+      "sourceFile": {
+        "bytes": 1855,
+        "sha256": "bd884a5ccc93f9c842a3d6396b5e8992c4b6daaf3e6a6525512c5527d6bc3611"
+      },
+      "domain": "corrected authoritative ordering:initialized flag BEFORE first raw callback;cached fields/control flags from actual SDKglobals",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 1298684,
+          "endExclusive": 1298852,
+          "bytes": 168
+        }
+      ],
+      "frozenCensusReportEntryBytes": 168,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [
+        {
+          "start": 1298852,
+          "endExclusive": 1298856,
+          "bytes": 4,
+          "sha256": "05977b7cb37e8d41f2f0e6a7dcedc58ad7be7efb743c01fd796a594079d22bb6",
+          "readers": [
+            1298692
+          ]
+        }
+      ],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 1436484,
+      "entryHex": "0015eb44",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1436484,
+          "endExclusive": 1436636,
+          "bytes": 152,
+          "sha256": "9ae15d50b45f007abfd9e1339092c5698cad55affe53378293ba26b80ee417f9"
+        }
+      ],
+      "instructionBytes": 152,
+      "sourceFunction": "sdk_clock_raw062u",
+      "sourcePath": "src/native/wave062-sdk/startup/clock_read062u.c",
+      "sourceFile": {
+        "bytes": 1855,
+        "sha256": "bd884a5ccc93f9c842a3d6396b5e8992c4b6daaf3e6a6525512c5527d6bc3611"
+      },
+      "domain": "real typed optional backend or declared platform ticks;u64 multiply1000 wraps before exact268111856 division",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 1436484,
+          "endExclusive": 1436636,
+          "bytes": 152
+        }
+      ],
+      "frozenCensusReportEntryBytes": 152,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [
+        {
+          "start": 1436636,
+          "endExclusive": 1436640,
+          "bytes": 4,
+          "sha256": "05977b7cb37e8d41f2f0e6a7dcedc58ad7be7efb743c01fd796a594079d22bb6",
+          "readers": [
+            1436484
+          ]
+        },
+        {
+          "start": 1436640,
+          "endExclusive": 1436644,
+          "bytes": 4,
+          "sha256": "6eab1f46de8edc5a7ea0f3b45aab28b71728d7600158917ca28f4d50beb023c2",
+          "readers": [
+            1436524
+          ]
+        }
+      ],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 1371404,
+      "entryHex": "0014ed0c",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1371404,
+          "endExclusive": 1371776,
+          "bytes": 372,
+          "sha256": "3ba648276cac7cfae7d0dd467bc49f958c6f1dd60c2d75d9bd68785f0b73313d"
+        }
+      ],
+      "instructionBytes": 372,
+      "sourceFunction": "sdk_clock_monotonic062u",
+      "sourcePath": "src/native/wave062-sdk/startup/clock_monotonic062u.c",
+      "sourceFile": {
+        "bytes": 1421,
+        "sha256": "b878342e1365fd81ee8805d18c52a997c8dd05b03028a4aa141b1c03ddee1708"
+      },
+      "domain": "actual guard/fullword/cache/rebase ordering and fresh offset reads;qualified callback domains",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 1371404,
+          "endExclusive": 1371776,
+          "bytes": 372
+        }
+      ],
+      "frozenCensusReportEntryBytes": 372,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [
+        {
+          "start": 1371776,
+          "endExclusive": 1371780,
+          "bytes": 4,
+          "sha256": "05977b7cb37e8d41f2f0e6a7dcedc58ad7be7efb743c01fd796a594079d22bb6",
+          "readers": [
+            1371420
+          ]
+        },
+        {
+          "start": 1371780,
+          "endExclusive": 1371784,
+          "bytes": 4,
+          "sha256": "f84743da34e5e8bfe3dee5331109e3f574c9374cf15c6c8e1858e652339e12da",
+          "readers": [
+            1371476,
+            1371504
+          ]
+        }
+      ],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 1436288,
+      "entryHex": "0015ea80",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1436288,
+          "endExclusive": 1436476,
+          "bytes": 188,
+          "sha256": "e3ce78af467ddef9d34abedf3c075cc70f0ee8a1d26db30dc8beabfcbd1edddc"
+        }
+      ],
+      "instructionBytes": 188,
+      "sourceFunction": "sdk_clock_locked062u",
+      "sourcePath": "src/native/wave062-sdk/startup/clock_read062u.c",
+      "sourceFile": {
+        "bytes": 1855,
+        "sha256": "bd884a5ccc93f9c842a3d6396b5e8992c4b6daaf3e6a6525512c5527d6bc3611"
+      },
+      "domain": "actual owned mutex;forced read doesnot update cachedcurrent",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 1436288,
+          "endExclusive": 1436476,
+          "bytes": 188
+        }
+      ],
+      "frozenCensusReportEntryBytes": 188,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [
+        {
+          "start": 1436476,
+          "endExclusive": 1436480,
+          "bytes": 4,
+          "sha256": "af407d4272a3065b22dd465787d9629a6c38618767302915bad3e12d581f0f0e",
+          "readers": [
+            1436296
+          ]
+        },
+        {
+          "start": 1436480,
+          "endExclusive": 1436484,
+          "bytes": 4,
+          "sha256": "05977b7cb37e8d41f2f0e6a7dcedc58ad7be7efb743c01fd796a594079d22bb6",
+          "readers": [
+            1436320
+          ]
+        }
+      ],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 3160828,
+      "entryHex": "00303afc",
+      "mode": "Thumb",
+      "instructionRanges": [
+        {
+          "start": 3160828,
+          "endExclusive": 3160846,
+          "bytes": 18,
+          "sha256": "2d81a3f37d5e5150e37bb03f0e4114a3c20ec9f73170595e6db823c516945b0f"
+        }
+      ],
+      "instructionBytes": 18,
+      "sourceFunction": "sdk_clock_guard062u",
+      "sourcePath": "src/native/wave062-sdk/startup/clock_math062u.c",
+      "sourceFile": {
+        "bytes": 998,
+        "sha256": "16f7378066cca9f8eaac5e33a24900eaceaa5a613321025c3e59d8dae48b5eab"
+      },
+      "domain": "Thumb complete18-byte guard;fullword !=0 semantics,not Boolean-byte test",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 3160828,
+          "endExclusive": 3160846,
+          "bytes": 18
+        }
+      ],
+      "frozenCensusReportEntryBytes": 18,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 4670936,
+      "entryHex": "004745d8",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 4670936,
+          "endExclusive": 4671016,
+          "bytes": 80,
+          "sha256": "70aeb2363e06bac36bcff006fd42ab73cdf7121b9f3c4260e1c115440483e4f7"
+        }
+      ],
+      "instructionBytes": 80,
+      "sourceFunction": "sdk_mutex_initialize062u",
+      "sourcePath": "src/native/wave062-sdk/startup/mutex_initialize062u.c",
+      "sourceFile": {
+        "bytes": 958,
+        "sha256": "df03183ae626d46cca649dda4a0e8710d8041f969ea85fe18d2c394d50aeedde"
+      },
+      "domain": "full concrete mutex initialization;typed identities,unwrittenbytes preserved",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 4670936,
+          "endExclusive": 4671016,
+          "bytes": 80
+        }
+      ],
+      "frozenCensusReportEntryBytes": 80,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [
+        {
+          "start": 4671016,
+          "endExclusive": 4671020,
+          "bytes": 4,
+          "sha256": "79efd397f2e8e9dba1f17fb1e4fb85459b7326d6dbc309e1cc9f1b6d6c294e95",
+          "readers": [
+            4670944
+          ]
+        },
+        {
+          "start": 4671020,
+          "endExclusive": 4671024,
+          "bytes": 4,
+          "sha256": "a6e25a3867e5d5fa2e1ce659ca3269b7844a3542f7d42821df5d4f86f0f2446b",
+          "readers": [
+            4670948
+          ]
+        },
+        {
+          "start": 4671024,
+          "endExclusive": 4671028,
+          "bytes": 4,
+          "sha256": "847eaccf48b2dd8897035b158e20ca787caaff28d1f80f6aee392a1c40d859bb",
+          "readers": [
+            4670984
+          ]
+        }
+      ],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 1295616,
+      "entryHex": "0013c500",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1295616,
+          "endExclusive": 1295644,
+          "bytes": 28,
+          "sha256": "efc3a41920c2932d9fc54623ad56e00833d3eb516d3501181d1725fffb40d5c9"
+        }
+      ],
+      "instructionBytes": 28,
+      "sourceFunction": "sdk_recursive_initialize062u",
+      "sourcePath": "src/native/wave062-sdk/startup/mutex_initialize062u.c",
+      "sourceFile": {
+        "bytes": 958,
+        "sha256": "df03183ae626d46cca649dda4a0e8710d8041f969ea85fe18d2c394d50aeedde"
+      },
+      "domain": "complete recursive mutex initializer with sourcecount helper",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 1295616,
+          "endExclusive": 1295644,
+          "bytes": 28
+        }
+      ],
+      "frozenCensusReportEntryBytes": 28,
+      "composedCensusEntryPresentAtRootPrecheck": true,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 1193592,
+      "entryHex": "00123678",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1193592,
+          "endExclusive": 1193616,
+          "bytes": 24,
+          "sha256": "b90002e1cf9e0adb0bc8ae79791ee51b08f00f0e24d01847b7bfda8dc227c5d8"
+        }
+      ],
+      "instructionBytes": 24,
+      "sourceFunction": "sdk_count_initialize062u",
+      "sourcePath": "src/native/wave062-sdk/startup/mutex_initialize062u.c",
+      "sourceFile": {
+        "bytes": 958,
+        "sha256": "df03183ae626d46cca649dda4a0e8710d8041f969ea85fe18d2c394d50aeedde"
+      },
+      "domain": "complete exclusive count initializer;C11 atomic source,not kernel recovery",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 1193592,
+          "endExclusive": 1193616,
+          "bytes": 24
+        }
+      ],
+      "frozenCensusReportEntryBytes": 24,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 1065290,
+      "entryHex": "0010414a",
+      "mode": "Thumb",
+      "instructionRanges": [
+        {
+          "start": 1065290,
+          "endExclusive": 1065300,
+          "bytes": 10,
+          "sha256": "51b753167589b46abd024890a2dab2ef02ec5303bbd9ff42c755eb2011469632"
+        }
+      ],
+      "instructionBytes": 10,
+      "sourceFunction": "sdk_task_default_work062u",
+      "sourcePath": "src/native/wave062-sdk/startup/task_default_work062u.c",
+      "sourceFile": {
+        "bytes": 236,
+        "sha256": "c96cc361a3805f346dbfefc4e4491c354aae82234d7e0390bed2fea044060d7f"
+      },
+      "domain": "Thumb whole10-byte defaultwork entry;void caller contract only;103540 wrapper folded as dependency",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": false,
+      "inventoryAction": "independently review real caller/vtable/entry witness before adding missing entry;never fabricate a gap function",
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    },
+    {
+      "entry": 3156920,
+      "entryHex": "00302bb8",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 3156920,
+          "endExclusive": 3156924,
+          "bytes": 4,
+          "sha256": "379bec29dccd0a93c94826144d7ef6e42fab64ef195a3b8313a16926f66f388f"
+        }
+      ],
+      "instructionBytes": 4,
+      "sourceFunction": "sdk_runtime_code062u",
+      "sourcePath": "src/native/wave062-sdk/startup/task_default_work062u.c",
+      "sourceFile": {
+        "bytes": 236,
+        "sha256": "c96cc361a3805f346dbfefc4e4491c354aae82234d7e0390bed2fea044060d7f"
+      },
+      "domain": "ARM4-byte no-op under qualified void(code,detail) ABI only;raw volatileR0 excluded",
+      "fullEntryCandidate": true,
+      "acceptance": "Root review required;bounded behavior,functional only;no exact/source-percent self-credit",
+      "frozenCensusEntryPresent": true,
+      "frozenCensusRanges": [
+        {
+          "start": 3156920,
+          "endExclusive": 3156924,
+          "bytes": 4
+        }
+      ],
+      "frozenCensusReportEntryBytes": 4,
+      "referencedPcRelativeData": [],
+      "literalOwnership": "explicit PC-relative load references enumerated;shared/trailing pool ownership not promoted beyond frozen claims"
+    }
+  ],
+  "withheldEntries": [
+    {
+      "entry": 1436896,
+      "entryHex": "0015ece0",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1436896,
+          "endExclusive": 1436964,
+          "bytes": 68,
+          "sha256": "fc811dc3fdf03c1f5c34f28311c4ed46fd82d8f4fa0577490c5f89e4c6a5f7b0"
+        }
+      ],
+      "sourceFunction": "sdk_allocate062s",
+      "sourcePath": "src/native/wave062-sdk/context/allocate062s.c",
+      "reason": "source implements successful custom-backend branch only;legitimate default SDK allocation branch unrecovered;do not admit whole entry",
+      "wholeEntryClaim": false
+    },
+    {
+      "entry": 1538316,
+      "entryHex": "0017790c",
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1538316,
+          "endExclusive": 1539208,
+          "bytes": 892,
+          "sha256": "9cc694f93010396452509098a502ce6d759d0e27026b67a8229aa119fa63def3"
+        }
+      ],
+      "sourceFunction": "sdk_map_insert062s",
+      "sourcePath": "src/native/wave062-sdk/context/map062s.c",
+      "reason": "complete C present,but free-list reuse and direct forced-left caller domains explicitly unexercised;hold minimal whole-entry admission pending focused qualification",
+      "wholeEntryClaim": false
+    }
+  ],
+  "candidateCount": 43,
+  "candidateInstructionBytes": 4240,
+  "remainingWork": "factory/task constructor481940/484660,full readiness/resource owner,cold startup and finalizers remain open",
+  "sourceCreditGranted": 0,
+  "authoredOrInlineWithoutSeparateEntry": [
+    {
+      "sourceFunction": "context_resolve062s",
+      "sourcePath": "src/native/wave062-sdk/context/context062s.c",
+      "reason": "shared-C implementation for whole1249d0/4b7748;no third original entry",
+      "wholeEntryClaim": false
+    },
+    {
+      "sourceFunction": "map_node062s",
+      "sourcePath": "src/native/wave062-sdk/context/map062s.c",
+      "reason": "node-allocation/free-list helper factored from map insertion;no separate original entry",
+      "wholeEntryClaim": false
+    },
+    {
+      "sourceFunction": "map_left062s",
+      "sourcePath": "src/native/wave062-sdk/context/map062s.c",
+      "reason": "inline red-black rotation body from17790c;no separate entry",
+      "wholeEntryClaim": false
+    },
+    {
+      "sourceFunction": "map_right062s",
+      "sourcePath": "src/native/wave062-sdk/context/map062s.c",
+      "reason": "inline red-black rotation body from17790c;no separate entry",
+      "wholeEntryClaim": false
+    },
+    {
+      "sourceFunction": "mutex_load062s",
+      "sourcePath": "src/native/wave062-sdk/context/mutex062s.c",
+      "reason": "authored C11 atomic load helper for original exclusive loops;no separate entry",
+      "wholeEntryClaim": false
+    },
+    {
+      "sourceFunction": "mutex_replace062s",
+      "sourcePath": "src/native/wave062-sdk/context/mutex062s.c",
+      "reason": "authored C11 compare-exchange helper for original exclusive loops;no separate entry",
+      "wholeEntryClaim": false
+    },
+    {
+      "sourceFunction": "arbiter_wait062a",
+      "sourcePath": "src/native/wave062-sdk/arbiter/arbiter062a.c",
+      "reason": "authored Windows WaitOnAddress compatibility primitive;doesnot recover original147e54 SVC22 wrapper or kernel",
+      "wholeEntryClaim": false
+    },
+    {
+      "sourceFunction": "arbiter_signal062a",
+      "sourcePath": "src/native/wave062-sdk/arbiter/arbiter062a.c",
+      "reason": "authored Windows WakeByAddressSingle compatibility primitive;no game/SDK whole-entry claim",
+      "wholeEntryClaim": false
+    },
+    {
+      "sourceFunction": "arbiter_owner062a",
+      "sourcePath": "src/native/wave062-sdk/arbiter/arbiter062a.c",
+      "reason": "authored owned Windows TLS primitive;no original CP15/TLS whole-entry claim",
+      "wholeEntryClaim": false
+    },
+    {
+      "sourceFunction": "sdk_reference_release062t",
+      "sourcePath": "src/native/wave062-sdk/object/reference062t.c",
+      "reason": "shared extracted inline reference release semantics inside owning SDK functions;no standalone canonical entry;zero-count finalizer paths excluded by live ownership",
+      "wholeEntryClaim": false
+    },
+    {
+      "sourceFunction": "sdk_reference_retain062t",
+      "sourcePath": "src/native/wave062-sdk/object/reference062t.c",
+      "reason": "shared extracted inline atomic retain;no standalone canonical entry",
+      "wholeEntryClaim": false
+    },
+    {
+      "sourceFunction": "sdk_clock_divide062u",
+      "sourcePath": "src/native/wave062-sdk/startup/clock_math062u.c",
+      "reason": "authored portable U64 quotient dependency;2175cases/profile corroborate original169c20 reference,not recovery/admission of688-byte compiler helper",
+      "wholeEntryClaim": false
+    },
+    {
+      "sourceFunction": "sdk_clock_pair_write062u",
+      "sourcePath": "src/native/wave062-sdk/startup/clock_math062u.c",
+      "reason": "authored alias/alignment-safe pair store,not separate original entry",
+      "wholeEntryClaim": false
+    },
+    {
+      "sourceFunction": "sdk_clock_pair_read062u",
+      "sourcePath": "src/native/wave062-sdk/startup/clock_math062u.c",
+      "reason": "authored alias/alignment-safe pair load,not separate original entry",
+      "wholeEntryClaim": false
+    },
+    {
+      "sourceFunction": "clock_rebase062u",
+      "sourcePath": "src/native/wave062-sdk/startup/clock_monotonic062u.c",
+      "reason": "factored inline372-byte monotonic-clock behavior,no separate entry",
+      "wholeEntryClaim": false
+    },
+    {
+      "sourceFunction": "sdk_windows_ticks062u",
+      "sourcePath": "src/native/wave062-sdk/startup/clock_windows062u.c",
+      "reason": "authored actual Windows QPC/QPF scaling primitive;not recovery of158f14 SVC28/176fc4 veneer or3DS kernel",
+      "wholeEntryClaim": false
+    }
+  ],
+  "originalDependenciesWithoutSeparateCEntry": [
+    {
+      "entry": 1062208,
+      "mode": "Thumb",
+      "instructionRanges": [
+        {
+          "start": 1062208,
+          "endExclusive": 1062220
+        }
+      ],
+      "reason": "complete real12-byte wrapper executed as defaultwork dependency;code12/detail0 folded into sdk_task_default_work062u;no separate C function claim"
+    },
+    {
+      "entry": 1412884,
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1412884,
+          "endExclusive": 1412892
+        }
+      ],
+      "reason": "actual SVC28 wrapper executed reference-only;source is declared platform ticks service"
+    },
+    {
+      "entry": 1535940,
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1535940,
+          "endExclusive": 1535944
+        }
+      ],
+      "reason": "actual tick forwarding veneer reference-only;no separate C function"
+    },
+    {
+      "entry": 1298856,
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1298856,
+          "endExclusive": 1298892
+        }
+      ],
+      "reason": "original numeric-thread-ID wrapper dependency;source receives typed Windows numeric-ID primitive;no separate C function"
+    },
+    {
+      "entry": 1343060,
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": 1343060,
+          "endExclusive": 1343084
+        }
+      ],
+      "reason": "original SVC22 boundary;authored Windows arbiter service is distinct,no kernel entry recovery"
+    }
+  ],
+  "criticalFrozenErrata": [
+    {
+      "path": "work/native-asset062-sdk-startup/clock-order-erratum.json",
+      "note": "corrects stale pre-C clock claim:first13d0fc raw callback sees initialized1 BEFORE call;final source/qualified corpus correct"
+    },
+    {
+      "path": "work/native-asset062-sdk/context-slot-erratum.json",
+      "note": "primary contextslot3 distinct from alternate queryslot1"
+    },
+    {
+      "path": "work/native-asset062-sdk-startup/task-prefix-stack-byte.json",
+      "note": "standalone constructor requires initialized tag;actual484660 caller passes uninitialized local byte and remains open"
+    }
+  ],
+  "globalDomain": [
+    "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+    "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+    "map+25 is address-dependent low byte,not normalized scalar",
+    "full context/manager/root startup and SDK object lifetimes not established",
+    "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+    "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+  ],
+  "evidence": [
+    {
+      "path": "work/native-asset062-sdk/context-ready-v1.json",
+      "sha256": "fe0e805f30482f081d33bfaa403f8c3ab90e9988cb5dd5fd3d2fbae14cb3edd2"
+    },
+    {
+      "path": "work/native-asset062-sdk-arbiter/ready-v1.json",
+      "sha256": "23eb1c792ea74d544457803727ba50ff0b68e021e6b2dc15ab232c989f889ae2"
+    },
+    {
+      "path": "work/native-asset062-sdk-object/ready-v1.json",
+      "sha256": "4e6762fba89d49b494609dbb0a9b27cd9a4fdb3c410cb4f65edec7a73c9da4e7"
+    },
+    {
+      "path": "work/native-asset062-sdk-startup/ready-v1.json",
+      "sha256": "fe92a79cd97291d0cfd7efe4c89b18eeaeea676edd9bbd1022d2fa136aa02f97"
+    },
+    {
+      "path": "work/native-sdk-public-intake/oracle-v1/qualification-v1.json",
+      "sha256": "3607132c970188bef049f2752b8941b4d7cd0e689df1d6d7feb1a79daa6bdc46"
+    },
+    {
+      "path": "work/native-sdk-public-intake/oracle-v1/ready-v1.json",
+      "sha256": "60e1b7f1e33566e6d5a0e81bda191fd9756022416986bca19c916d7e09039dbe"
+    }
+  ],
+  "minimalRecommendation": "review43bounded whole-entry mappings;hold allocator legitimate default branch and unexercised map-insert domains;review11genuine missing-entry witnesses before new census seeds;none of16authored/inline helpers adds a separate game function",
+  "rootRuntimeMapComparison": {
+    "path": "work/sdk062-canonical-precheck-v1.json",
+    "sha256": "e67af90027910f5643114b419d76b21ab2fe50d97f51f3333f9c019df338f4e3",
+    "runtimeMapEntries": 39,
+    "missingComposedEntries": 9,
+    "proposalAdditionalMappings": [
+      "sdk_count_initialize062u",
+      "sdk_fast_acquire062s",
+      "sdk_fast_release062s",
+      "sdk_map_insert062s (withheld)",
+      "sdk_runtime_code062u",
+      "sdk_task_default_work062u"
+    ],
+    "note": "old frozen census booleans remain explicit;composed census now includes13c48cand10414a,so its genuine missing-entry set is nine"
+  },
+  "missingNineEvidence": {
+    "path": "missing-nine-entry-witnesses.json",
+    "sha256": "68e5f9e65a8eaaac6d97bb9ba0227b855aadfc4dcc432bc76eef7f61f892a50c",
+    "entries": 9,
+    "completeInstructionBytes": 180,
+    "literalPoolBytes": 8,
+    "noRawOriginalBytesCopied": true
+  },
+  "dataExtentPolicy": "instruction bytes and PC-relative data references separate;known nine-entry pools explicit;no referenced data/alignment gaps counted as code;ADR/static/global dependencies remain in frozen packets"
+}

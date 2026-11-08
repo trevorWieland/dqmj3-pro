@@ -1,0 +1,3344 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-SDK-context-arbitration-object-task-clock",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "functions": [
+    {
+      "symbol": "fn_004b43d0",
+      "source": {
+        "path": "src/native/wave062-sdk/context/map_initialize062s.c",
+        "bytes": 906,
+        "sha256": "4d55295125b6ed49390be7bea8e48134a15fa336765d700c7b41d96b828b617d"
+      },
+      "sourceName": "sdk_map_initialize062s",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4932560,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 156,
+      "originalInstructionRanges": [
+        {
+          "start": 4932560,
+          "endExclusive": 4932716,
+          "bytes": 156
+        }
+      ],
+      "originalBodySha256": "249811674bc6bb28f7bf6f8544c739710e40b53719362274165182632d27a5b6",
+      "reportEntryBytes": 156,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "successful aligned nonreentrant custom allocation;address-dependent map+25 byte preserved per true this pointer",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_00147a40",
+      "source": {
+        "path": "src/native/wave062-sdk/context/map062s.c",
+        "bytes": 4931,
+        "sha256": "4988a3cd066383fe9c31cad09f50ce8ab0c7ea2ac7db84eb7e51b337aec2cd5e"
+      },
+      "sourceName": "sdk_map_value062s",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 1342016,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 308,
+      "originalInstructionRanges": [
+        {
+          "start": 1342016,
+          "endExclusive": 1342324,
+          "bytes": 308
+        }
+      ],
+      "originalBodySha256": "18120ae694d98b46d3ba4e4fb7f2c85a89a87da67093693cb104f4dd21721966",
+      "reportEntryBytes": 308,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "valid initialized finite red-black trees;qualified insertion-created storage;free-list/forced-left domains not established",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_001249d0",
+      "source": {
+        "path": "src/native/wave062-sdk/context/context062s.c",
+        "bytes": 2007,
+        "sha256": "d9130340bec329b1466f60c55192f1490b54513fdcbad24473857775781fbf4b"
+      },
+      "sourceName": "sdk_context062s",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 1198544,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 328,
+      "originalInstructionRanges": [
+        {
+          "start": 1198544,
+          "endExclusive": 1198872,
+          "bytes": 328
+        }
+      ],
+      "originalBodySha256": "b77017b0c76ed630bab4730b4dd65fd04c07e392dc7944753436d55a3d8be21e",
+      "reportEntryBytes": 328,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "valid context indices/bindings;record slot3;actual numeric thread ID distinct from TLS owner;invalid-index diagnostic/fault excluded",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_004b7748",
+      "source": {
+        "path": "src/native/wave062-sdk/context/context062s.c",
+        "bytes": 2007,
+        "sha256": "d9130340bec329b1466f60c55192f1490b54513fdcbad24473857775781fbf4b"
+      },
+      "sourceName": "sdk_context_alternate062s",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4945736,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 328,
+      "originalInstructionRanges": [
+        {
+          "start": 4945736,
+          "endExclusive": 4946064,
+          "bytes": 328
+        }
+      ],
+      "originalBodySha256": "d2656cfa46b7ae5d0ef12dccf3fe5961d55bd411a911493f417d2e06ff77d244",
+      "reportEntryBytes": 328,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "valid context indices/bindings;record slot1;invalid-index diagnostic/fault excluded",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_0014ddec",
+      "source": {
+        "path": "src/native/wave062-sdk/context/mutex062s.c",
+        "bytes": 2170,
+        "sha256": "796b69eb236287be917731074248d7e7ee8161745d88bbb635a45641efac8382"
+      },
+      "sourceName": "sdk_fast_acquire062s",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 1367532,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 224,
+      "originalInstructionRanges": [
+        {
+          "start": 1367532,
+          "endExclusive": 1367756,
+          "bytes": 224
+        }
+      ],
+      "originalBodySha256": "d9a806a61fe5fae8e51db8713246b3b240116d8f9691555cb26cd23fe8e18f73",
+      "reportEntryBytes": 224,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "bounded nonoverflow counts;uncontended plus single owned waiter SVC22 compatibility;no general fairness or overlapping cross-CPU exclusives",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_0013c48c",
+      "source": {
+        "path": "src/native/wave062-sdk/context/mutex062s.c",
+        "bytes": 2170,
+        "sha256": "796b69eb236287be917731074248d7e7ee8161745d88bbb635a45641efac8382"
+      },
+      "sourceName": "sdk_fast_release062s",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 1295500,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 80,
+      "originalInstructionRanges": [
+        {
+          "start": 1295500,
+          "endExclusive": 1295580,
+          "bytes": 80
+        }
+      ],
+      "originalBodySha256": "54138378bb8a499a7e3a87f27c5bdedf2a09d6e28a4df857df7c0852eb2dd2ac",
+      "reportEntryBytes": 80,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "same owned bounded mutex/arbiter domain;signal primitive does not mutate count",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_00170704",
+      "source": {
+        "path": "src/native/wave062-sdk/context/mutex062s.c",
+        "bytes": 2170,
+        "sha256": "796b69eb236287be917731074248d7e7ee8161745d88bbb635a45641efac8382"
+      },
+      "sourceName": "sdk_recursive_acquire062s",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 1509124,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 56,
+      "originalInstructionRanges": [
+        {
+          "start": 1509124,
+          "endExclusive": 1509180,
+          "bytes": 56
+        }
+      ],
+      "originalBodySha256": "0e6cfb8cd76a1066309421af2a420904828bec44a60431e24675d47093d66cf6",
+      "reportEntryBytes": 56,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "live same-thread TLS owner;bounded depth;single waiter compatibility",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_001707b4",
+      "source": {
+        "path": "src/native/wave062-sdk/context/mutex062s.c",
+        "bytes": 2170,
+        "sha256": "796b69eb236287be917731074248d7e7ee8161745d88bbb635a45641efac8382"
+      },
+      "sourceName": "sdk_recursive_release062s",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 1509300,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 32,
+      "originalInstructionRanges": [
+        {
+          "start": 1509300,
+          "endExclusive": 1509332,
+          "bytes": 32
+        }
+      ],
+      "originalBodySha256": "a1af71ec52767d65bf5617d58cc824c16030a08dcd2e8bee6178b8cd1eda9b21",
+      "reportEntryBytes": 32,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "balanced valid recursive ownership;bounded counts/depth",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_00474598",
+      "source": {
+        "path": "src/native/wave062-sdk/context/mutex062s.c",
+        "bytes": 2170,
+        "sha256": "796b69eb236287be917731074248d7e7ee8161745d88bbb635a45641efac8382"
+      },
+      "sourceName": "sdk_mutex_acquire062s",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4670872,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 28,
+      "originalInstructionRanges": [
+        {
+          "start": 4670872,
+          "endExclusive": 4670900,
+          "bytes": 28
+        }
+      ],
+      "originalBodySha256": "fae1ac198cb0e1cec587a5f37a37e9e1bdee3e3af206d4718668a635a598814e",
+      "reportEntryBytes": 28,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "complete concrete virtual acquire entry;actual lock-disable flag and declared mutex prefix",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_004745b8",
+      "source": {
+        "path": "src/native/wave062-sdk/context/mutex062s.c",
+        "bytes": 2170,
+        "sha256": "796b69eb236287be917731074248d7e7ee8161745d88bbb635a45641efac8382"
+      },
+      "sourceName": "sdk_mutex_release062s",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4670904,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 28,
+      "originalInstructionRanges": [
+        {
+          "start": 4670904,
+          "endExclusive": 4670932,
+          "bytes": 28
+        }
+      ],
+      "originalBodySha256": "dac6e727c014f3b423be58b97ac8c7e304402c89f1d62a73015b111b5959e939",
+      "reportEntryBytes": 28,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "complete concrete virtual release entry;balanced owned mutex",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_0046028c",
+      "source": {
+        "path": "src/native/wave062-sdk/object/connection062t.c",
+        "bytes": 1486,
+        "sha256": "b4761c13711884d0041f0e4743c07eb723b6e62a6d2c64bdaa02a91bef1f1e90"
+      },
+      "sourceName": "sdk_connection_ready062t",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4588172,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 20,
+      "originalInstructionRanges": [
+        {
+          "start": 4588172,
+          "endExclusive": 4588192,
+          "bytes": 20
+        }
+      ],
+      "originalBodySha256": "b17cae9fade6c3bf8d5eeedeb3ab070549a01b5da94adc87c634c7ce6f5adb6a",
+      "reportEntryBytes": 20,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "actual connection state byte target188==2;native partial field view provisioned exactly",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_004657f4",
+      "source": {
+        "path": "src/native/wave062-sdk/object/connection062t.c",
+        "bytes": 1486,
+        "sha256": "b4761c13711884d0041f0e4743c07eb723b6e62a6d2c64bdaa02a91bef1f1e90"
+      },
+      "sourceName": "sdk_connection_closed062t",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4610036,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 20,
+      "originalInstructionRanges": [
+        {
+          "start": 4610036,
+          "endExclusive": 4610056,
+          "bytes": 20
+        }
+      ],
+      "originalBodySha256": "f2caeb1f787a2b6d7c6de52aacfb20bdd215c99777c96c8d069608410e81191a",
+      "reportEntryBytes": 20,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "actual connection state byte target188==4",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_004712ac",
+      "source": {
+        "path": "src/native/wave062-sdk/object/connection062t.c",
+        "bytes": 1486,
+        "sha256": "b4761c13711884d0041f0e4743c07eb723b6e62a6d2c64bdaa02a91bef1f1e90"
+      },
+      "sourceName": "sdk_child_ready062t",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4657836,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 28,
+      "originalInstructionRanges": [
+        {
+          "start": 4657836,
+          "endExclusive": 4657864,
+          "bytes": 28
+        }
+      ],
+      "originalBodySha256": "95035efebea66243f23e80c63133c2668d8b06c778d6df7a4d6b9ea21f87af42",
+      "reportEntryBytes": 28,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "actual proxy child target+144 points real connection;fresh virtualslot11",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_0047166c",
+      "source": {
+        "path": "src/native/wave062-sdk/object/connection062t.c",
+        "bytes": 1486,
+        "sha256": "b4761c13711884d0041f0e4743c07eb723b6e62a6d2c64bdaa02a91bef1f1e90"
+      },
+      "sourceName": "sdk_child_closed062t",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4658796,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 28,
+      "originalInstructionRanges": [
+        {
+          "start": 4658796,
+          "endExclusive": 4658824,
+          "bytes": 28
+        }
+      ],
+      "originalBodySha256": "1de9be5359c02dbaebdeb3e112d09455617263fc327adfbe0a59c16258debd60",
+      "reportEntryBytes": 28,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "actual proxy child target+144 points real connection;fresh virtualslot10",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_0046149c",
+      "source": {
+        "path": "src/native/wave062-sdk/object/connection062t.c",
+        "bytes": 1486,
+        "sha256": "b4761c13711884d0041f0e4743c07eb723b6e62a6d2c64bdaa02a91bef1f1e90"
+      },
+      "sourceName": "sdk_connection_set_state062t",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4592796,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 232,
+      "originalInstructionRanges": [
+        {
+          "start": 4592796,
+          "endExclusive": 4593028,
+          "bytes": 232
+        }
+      ],
+      "originalBodySha256": "1f0a5d0457cc8e2c8bad6e2373036127d819818dbc4db997b50f395d06ae13d8",
+      "reportEntryBytes": 232,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "raw32 requested-state semantics;captured callback and fresh cleanup reads;live external owner prevents unqualified finalizer calls",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_0046e644",
+      "source": {
+        "path": "src/native/wave062-sdk/object/reference062t.c",
+        "bytes": 1494,
+        "sha256": "1e9bf959665e3b509aca23ae371fcac524ba5d57b565f4296e71230b52169df5"
+      },
+      "sourceName": "sdk_address_replace062t",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4646468,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 140,
+      "originalInstructionRanges": [
+        {
+          "start": 4646468,
+          "endExclusive": 4646608,
+          "bytes": 140
+        }
+      ],
+      "originalBodySha256": "d7b2ef25a78c6225ffd950544e1bd831f9b74c008f3e5e0115c08983d249d2bb",
+      "reportEntryBytes": 140,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "actual embedded address peer replacement;retain/release ordering;nonzero live external ownership",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_00495168",
+      "source": {
+        "path": "src/native/wave062-sdk/object/reference062t.c",
+        "bytes": 1494,
+        "sha256": "1e9bf959665e3b509aca23ae371fcac524ba5d57b565f4296e71230b52169df5"
+      },
+      "sourceName": "sdk_wrapper_prepare062t",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4804968,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 8,
+      "originalInstructionRanges": [
+        {
+          "start": 4804968,
+          "endExclusive": 4804976,
+          "bytes": 8
+        }
+      ],
+      "originalBodySha256": "0dd82b65ff3b6559fb733452702610fc24a426c18a967e1542fabb35800d7b9b",
+      "reportEntryBytes": 8,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "complete8-byte virtual prepare tail entry forwards this+16 AND original replacementR1 to46e644;no duplicate dependency credit",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_0046b1a0",
+      "source": {
+        "path": "src/native/wave062-sdk/object/reference062t.c",
+        "bytes": 1494,
+        "sha256": "1e9bf959665e3b509aca23ae371fcac524ba5d57b565f4296e71230b52169df5"
+      },
+      "sourceName": "sdk_wrapper_replace062t",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4632992,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 156,
+      "originalInstructionRanges": [
+        {
+          "start": 4632992,
+          "endExclusive": 4633148,
+          "bytes": 156
+        }
+      ],
+      "originalBodySha256": "4b594727bd020e93f1ca537cb660bdfd486fa3356a4488ee7558eef4de5059ed",
+      "reportEntryBytes": 156,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "prepare before separately replacing wrapper current peer;two real references and alias/null cases",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_006d1204",
+      "source": {
+        "path": "src/native/wave062-sdk/object/wrapper062t.c",
+        "bytes": 825,
+        "sha256": "d9fc50b936fc86581f8d447d15d180f98252febfc8c7d00c230897978021e747"
+      },
+      "sourceName": "sdk_wrapper_ready062t",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 7148036,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 156,
+      "originalInstructionRanges": [
+        {
+          "start": 7148036,
+          "endExclusive": 7148192,
+          "bytes": 156
+        }
+      ],
+      "originalBodySha256": "d53ca971e43a3740e5b3b82dd6457ce5a5161e442c178caa471dc59e5531a9c1",
+      "reportEntryBytes": 156,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "actual recursive nested lock and fresh current/disabled/child checks;typed real connection providers",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_006d12e8",
+      "source": {
+        "path": "src/native/wave062-sdk/object/wrapper062t.c",
+        "bytes": 825,
+        "sha256": "d9fc50b936fc86581f8d447d15d180f98252febfc8c7d00c230897978021e747"
+      },
+      "sourceName": "sdk_wrapper_closed062t",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 7148264,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 72,
+      "originalInstructionRanges": [
+        {
+          "start": 7148264,
+          "endExclusive": 7148336,
+          "bytes": 72
+        }
+      ],
+      "originalBodySha256": "fdfa7c80bb2ce42140bfe9eaf22df6d106dabfdcd345a41e310f7e47eed07120",
+      "reportEntryBytes": 72,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "unlocked actual closed path;no invented lock",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_004b8d4c",
+      "source": {
+        "path": "src/native/wave062-sdk/object/result062t.c",
+        "bytes": 1766,
+        "sha256": "db9755ce0973783e4799e374530acefa18face83d965241c18fecdb8f0fc0098"
+      },
+      "sourceName": "sdk_result_make062t",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4951372,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 28,
+      "originalInstructionRanges": [
+        {
+          "start": 4951372,
+          "endExclusive": 4951400,
+          "bytes": 28
+        }
+      ],
+      "originalBodySha256": "00383200aac6db8104a5760330af11652ad3281ad3523b0ee955297368473451",
+      "reportEntryBytes": 28,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "code/line and opaque diagnostic-origin identity only;no debug filename rendering claim",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_006d3b8c",
+      "source": {
+        "path": "src/native/wave062-sdk/object/result062t.c",
+        "bytes": 1766,
+        "sha256": "db9755ce0973783e4799e374530acefa18face83d965241c18fecdb8f0fc0098"
+      },
+      "sourceName": "sdk_result_success062t",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 7158668,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 16,
+      "originalInstructionRanges": [
+        {
+          "start": 7158668,
+          "endExclusive": 7158684,
+          "bytes": 16
+        }
+      ],
+      "originalBodySha256": "4e734c9ffa32967dfe17f515a992f02b77c4f18a11f4025533ac23e63ec4a9b7",
+      "reportEntryBytes": 16,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "unsigned sign-bit result predicate",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_006d1828",
+      "source": {
+        "path": "src/native/wave062-sdk/object/result062t.c",
+        "bytes": 1766,
+        "sha256": "db9755ce0973783e4799e374530acefa18face83d965241c18fecdb8f0fc0098"
+      },
+      "sourceName": "sdk_operation_result062t",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 7149608,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 392,
+      "originalInstructionRanges": [
+        {
+          "start": 7149608,
+          "endExclusive": 7150000,
+          "bytes": 392
+        }
+      ],
+      "originalBodySha256": "e26f593a98ce1cc81bae34d8a6114fd06ef346c5d4c73f5bb52b3bc28c4aa892",
+      "reportEntryBytes": 392,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "complete nonnull status controller;first task NULL orstate5;second nonnullstate5;live peers/context;unqualified finalizers excluded",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_00666a24",
+      "source": {
+        "path": "src/native/wave062-sdk/object/result062t.c",
+        "bytes": 1766,
+        "sha256": "db9755ce0973783e4799e374530acefa18face83d965241c18fecdb8f0fc0098"
+      },
+      "sourceName": "sdk_holder_ready062t",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 6711844,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 48,
+      "originalInstructionRanges": [
+        {
+          "start": 6711844,
+          "endExclusive": 6711892,
+          "bytes": 48
+        }
+      ],
+      "originalBodySha256": "978f385b1c72fc59e23ce5199d2ee166f979dcb9c767d67e92cfdca05bad9b2d",
+      "reportEntryBytes": 48,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "NULL holder child returnsfalse;nonnull path executes complete6d1828 and sign predicate",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_004b3044",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/task_initialize062u.c",
+        "bytes": 1391,
+        "sha256": "eb0f52ae886067eabbfef0cd8163ee4f7115ad5f57e120a8c1147f65f8a33112"
+      },
+      "sourceName": "sdk_task_initialize062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4927556,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 100,
+      "originalInstructionRanges": [
+        {
+          "start": 4927556,
+          "endExclusive": 4927656,
+          "bytes": 100
+        }
+      ],
+      "originalBodySha256": "51dbf16fec2325e75f8fbbf12834bed62e01513c380c8b87c69a36c1370bfd1a",
+      "reportEntryBytes": 100,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "explicit initialized input tag byte;unwritten padding preserved;not original484660 uninitialized-local caller",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_00479cd8",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/task_initialize062u.c",
+        "bytes": 1391,
+        "sha256": "eb0f52ae886067eabbfef0cd8163ee4f7115ad5f57e120a8c1147f65f8a33112"
+      },
+      "sourceName": "sdk_task_extended_initialize062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4693208,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 76,
+      "originalInstructionRanges": [
+        {
+          "start": 4693208,
+          "endExclusive": 4693284,
+          "bytes": 76
+        }
+      ],
+      "originalBodySha256": "16aa400dc598f46a37d56fb08abb3faceac12e1d997cf2f6b384b1ef7bc5fe47",
+      "reportEntryBytes": 76,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "same initialized tag;named full task storage/layout;work provider invocation excluded",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_004b301c",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/task_state062u.c",
+        "bytes": 1004,
+        "sha256": "3a4bbedcfaeba9c5afced7a94ed939cea60d42444ea57c6d2ab62cefc38371be"
+      },
+      "sourceName": "sdk_task_set_state062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4927516,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 36,
+      "originalInstructionRanges": [
+        {
+          "start": 4927516,
+          "endExclusive": 4927552,
+          "bytes": 36
+        }
+      ],
+      "originalBodySha256": "2bc46f7901cfb3d168ed7773310b475edaf2cd01ba9718bc69a7ff5d38382a15",
+      "reportEntryBytes": 36,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "raw32 equality5 controls callback,stored low8 state;capture address passed;callback may mutate live task",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_004b2fdc",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/task_state062u.c",
+        "bytes": 1004,
+        "sha256": "3a4bbedcfaeba9c5afced7a94ed939cea60d42444ea57c6d2ab62cefc38371be"
+      },
+      "sourceName": "sdk_task_complete062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4927452,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 8,
+      "originalInstructionRanges": [
+        {
+          "start": 4927452,
+          "endExclusive": 4927460,
+          "bytes": 8
+        }
+      ],
+      "originalBodySha256": "1e92122b94da268fed933116d2d740ba893af1ee928efb0ed3e72101a9461efa",
+      "reportEntryBytes": 8,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "complete tail entry to state5;dependency4b301c not duplicated",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_004b2e60",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/task_state062u.c",
+        "bytes": 1004,
+        "sha256": "3a4bbedcfaeba9c5afced7a94ed939cea60d42444ea57c6d2ab62cefc38371be"
+      },
+      "sourceName": "sdk_task_state_four062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4927072,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 8,
+      "originalInstructionRanges": [
+        {
+          "start": 4927072,
+          "endExclusive": 4927080,
+          "bytes": 8
+        }
+      ],
+      "originalBodySha256": "d3aedcf25678887d57835f677fe22cfcfbe7d35eaaf421172286f3054edfdec7",
+      "reportEntryBytes": 8,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "complete state4 entry",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_004b2f0c",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/task_state062u.c",
+        "bytes": 1004,
+        "sha256": "3a4bbedcfaeba9c5afced7a94ed939cea60d42444ea57c6d2ab62cefc38371be"
+      },
+      "sourceName": "sdk_task_state_two062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4927244,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 8,
+      "originalInstructionRanges": [
+        {
+          "start": 4927244,
+          "endExclusive": 4927252,
+          "bytes": 8
+        }
+      ],
+      "originalBodySha256": "204f84c6884409898c7e6e71d02d6aee28b719fbff747f07c7ef3309f71f0cbf",
+      "reportEntryBytes": 8,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "complete state2 entry",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_004b2fe4",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/task_state062u.c",
+        "bytes": 1004,
+        "sha256": "3a4bbedcfaeba9c5afced7a94ed939cea60d42444ea57c6d2ab62cefc38371be"
+      },
+      "sourceName": "sdk_task_state_three062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4927460,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 8,
+      "originalInstructionRanges": [
+        {
+          "start": 4927460,
+          "endExclusive": 4927468,
+          "bytes": 8
+        }
+      ],
+      "originalBodySha256": "83695ffbc91708e892770508a508a8bf530a0ef792882af3ff552c72fb6b71c0",
+      "reportEntryBytes": 8,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "complete state3 entry",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_004b2e68",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/task_state062u.c",
+        "bytes": 1004,
+        "sha256": "3a4bbedcfaeba9c5afced7a94ed939cea60d42444ea57c6d2ab62cefc38371be"
+      },
+      "sourceName": "sdk_task_set_delay062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4927080,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 28,
+      "originalInstructionRanges": [
+        {
+          "start": 4927080,
+          "endExclusive": 4927108,
+          "bytes": 28
+        }
+      ],
+      "originalBodySha256": "cf3877c64e5217d96f857a5bc32bc3b579246b67d3a4658d1634cfda9998d4dd",
+      "reportEntryBytes": 28,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "state1 publication before signed delay store and callback order",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_004b2f14",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/task_state062u.c",
+        "bytes": 1004,
+        "sha256": "3a4bbedcfaeba9c5afced7a94ed939cea60d42444ea57c6d2ab62cefc38371be"
+      },
+      "sourceName": "sdk_task_dispatch062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4927252,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 12,
+      "originalInstructionRanges": [
+        {
+          "start": 4927252,
+          "endExclusive": 4927264,
+          "bytes": 12
+        }
+      ],
+      "originalBodySha256": "0ecd0f344b7d32676842b33e0bc1a5c9211ec4f61054a8511993990a8411d5b8",
+      "reportEntryBytes": 12,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "actual typed virtual workslot;only measured base default-work graph qualified",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_0013d0fc",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/clock_read062u.c",
+        "bytes": 1855,
+        "sha256": "bd884a5ccc93f9c842a3d6396b5e8992c4b6daaf3e6a6525512c5527d6bc3611"
+      },
+      "sourceName": "sdk_clock_current062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 1298684,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 168,
+      "originalInstructionRanges": [
+        {
+          "start": 1298684,
+          "endExclusive": 1298852,
+          "bytes": 168
+        }
+      ],
+      "originalBodySha256": "683cbf49f00e02b5ddfedeaead3844e7f5b42aad53296814143b9f2f0cf15290",
+      "reportEntryBytes": 168,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "corrected authoritative ordering:initialized flag BEFORE first raw callback;cached fields/control flags from actual SDKglobals",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_0015eb44",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/clock_read062u.c",
+        "bytes": 1855,
+        "sha256": "bd884a5ccc93f9c842a3d6396b5e8992c4b6daaf3e6a6525512c5527d6bc3611"
+      },
+      "sourceName": "sdk_clock_raw062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 1436484,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 152,
+      "originalInstructionRanges": [
+        {
+          "start": 1436484,
+          "endExclusive": 1436636,
+          "bytes": 152
+        }
+      ],
+      "originalBodySha256": "9ae15d50b45f007abfd9e1339092c5698cad55affe53378293ba26b80ee417f9",
+      "reportEntryBytes": 152,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "real typed optional backend or declared platform ticks;u64 multiply1000 wraps before exact268111856 division",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_0014ed0c",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/clock_monotonic062u.c",
+        "bytes": 1421,
+        "sha256": "b878342e1365fd81ee8805d18c52a997c8dd05b03028a4aa141b1c03ddee1708"
+      },
+      "sourceName": "sdk_clock_monotonic062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 1371404,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 372,
+      "originalInstructionRanges": [
+        {
+          "start": 1371404,
+          "endExclusive": 1371776,
+          "bytes": 372
+        }
+      ],
+      "originalBodySha256": "3ba648276cac7cfae7d0dd467bc49f958c6f1dd60c2d75d9bd68785f0b73313d",
+      "reportEntryBytes": 372,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "actual guard/fullword/cache/rebase ordering and fresh offset reads;qualified callback domains",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_0015ea80",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/clock_read062u.c",
+        "bytes": 1855,
+        "sha256": "bd884a5ccc93f9c842a3d6396b5e8992c4b6daaf3e6a6525512c5527d6bc3611"
+      },
+      "sourceName": "sdk_clock_locked062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 1436288,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 188,
+      "originalInstructionRanges": [
+        {
+          "start": 1436288,
+          "endExclusive": 1436476,
+          "bytes": 188
+        }
+      ],
+      "originalBodySha256": "e3ce78af467ddef9d34abedf3c075cc70f0ee8a1d26db30dc8beabfcbd1edddc",
+      "reportEntryBytes": 188,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "actual owned mutex;forced read doesnot update cachedcurrent",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_00303afc",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/clock_math062u.c",
+        "bytes": 998,
+        "sha256": "16f7378066cca9f8eaac5e33a24900eaceaa5a613321025c3e59d8dae48b5eab"
+      },
+      "sourceName": "sdk_clock_guard062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 3160828,
+        "mode": "Thumb",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 18,
+      "originalInstructionRanges": [
+        {
+          "start": 3160828,
+          "endExclusive": 3160846,
+          "bytes": 18
+        }
+      ],
+      "originalBodySha256": "2d81a3f37d5e5150e37bb03f0e4114a3c20ec9f73170595e6db823c516945b0f",
+      "reportEntryBytes": 18,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "Thumb complete18-byte guard;fullword !=0 semantics,not Boolean-byte test",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_004745d8",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/mutex_initialize062u.c",
+        "bytes": 958,
+        "sha256": "df03183ae626d46cca649dda4a0e8710d8041f969ea85fe18d2c394d50aeedde"
+      },
+      "sourceName": "sdk_mutex_initialize062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 4670936,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 80,
+      "originalInstructionRanges": [
+        {
+          "start": 4670936,
+          "endExclusive": 4671016,
+          "bytes": 80
+        }
+      ],
+      "originalBodySha256": "70aeb2363e06bac36bcff006fd42ab73cdf7121b9f3c4260e1c115440483e4f7",
+      "reportEntryBytes": 80,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "full concrete mutex initialization;typed identities,unwrittenbytes preserved",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_0013c500",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/mutex_initialize062u.c",
+        "bytes": 958,
+        "sha256": "df03183ae626d46cca649dda4a0e8710d8041f969ea85fe18d2c394d50aeedde"
+      },
+      "sourceName": "sdk_recursive_initialize062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 1295616,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 28,
+      "originalInstructionRanges": [
+        {
+          "start": 1295616,
+          "endExclusive": 1295644,
+          "bytes": 28
+        }
+      ],
+      "originalBodySha256": "efc3a41920c2932d9fc54623ad56e00833d3eb516d3501181d1725fffb40d5c9",
+      "reportEntryBytes": 28,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "complete recursive mutex initializer with sourcecount helper",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_00123678",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/mutex_initialize062u.c",
+        "bytes": 958,
+        "sha256": "df03183ae626d46cca649dda4a0e8710d8041f969ea85fe18d2c394d50aeedde"
+      },
+      "sourceName": "sdk_count_initialize062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 1193592,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 24,
+      "originalInstructionRanges": [
+        {
+          "start": 1193592,
+          "endExclusive": 1193616,
+          "bytes": 24
+        }
+      ],
+      "originalBodySha256": "b90002e1cf9e0adb0bc8ae79791ee51b08f00f0e24d01847b7bfda8dc227c5d8",
+      "reportEntryBytes": 24,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "complete exclusive count initializer;C11 atomic source,not kernel recovery",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_0010414a",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/task_default_work062u.c",
+        "bytes": 236,
+        "sha256": "c96cc361a3805f346dbfefc4e4491c354aae82234d7e0390bed2fea044060d7f"
+      },
+      "sourceName": "sdk_task_default_work062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 1065290,
+        "mode": "Thumb",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 10,
+      "originalInstructionRanges": [
+        {
+          "start": 1065290,
+          "endExclusive": 1065300,
+          "bytes": 10
+        }
+      ],
+      "originalBodySha256": "51b753167589b46abd024890a2dab2ef02ec5303bbd9ff42c755eb2011469632",
+      "reportEntryBytes": 10,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "Thumb whole10-byte defaultwork entry;void caller contract only;103540 wrapper folded as dependency",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    },
+    {
+      "symbol": "fn_00302bb8",
+      "source": {
+        "path": "src/native/wave062-sdk/startup/task_default_work062u.c",
+        "bytes": 236,
+        "sha256": "c96cc361a3805f346dbfefc4e4491c354aae82234d7e0390bed2fea044060d7f"
+      },
+      "sourceName": "sdk_runtime_code062u",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 6620,
+        "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+      },
+      "canonicalIdentity": {
+        "address": 3156920,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 4,
+      "originalInstructionRanges": [
+        {
+          "start": 3156920,
+          "endExclusive": 3156924,
+          "bytes": 4
+        }
+      ],
+      "originalBodySha256": "379bec29dccd0a93c94826144d7ef6e42fab64ef195a3b8313a16926f66f388f",
+      "reportEntryBytes": 4,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+          "bytes": 480652,
+          "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+          "bytes": 77491,
+          "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 99,
+        "pipelineTests": 128,
+        "freshStageTests": 59,
+        "sourceOnlyUnits": 536,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "functionSpecificDomain": "ARM4-byte no-op under qualified void(code,detail) ABI only;raw volatileR0 excluded",
+        "globalDomain": [
+          "valid initialized aligned named storage;actual source/native pointer widths,not structural class casts",
+          "normal-return behavior in exact declared domains;excluded original diagnostics,OS failures,arbitrary finalizers and startup not silently substituted",
+          "map+25 is address-dependent low byte,not normalized scalar",
+          "full context/manager/root startup and SDK object lifetimes not established",
+          "nine object finalizer-call PCs unvisited under explicit live external-reference domain;actual source branch remains typed external dependency",
+          "source-linked functional proposal only;matched-byte credit and total denominator unchanged"
+        ],
+        "limits": [
+          "Successful bounded custom allocation; default allocator and forced-left insertion are not separately admitted.",
+          "Arbitration is staged with declared service/ownership preconditions; arbitrary concurrency and other kernel modes are unproved.",
+          "Live external references exclude the measured object finalizer callsites; full finalizers remain dependencies.",
+          "Task prerequisites receive the explicit measured tag; complete factory/task caller ownership is unproved.",
+          "Original and source clock inputs retain their actual values; independent arithmetic validates the real Windows readings.",
+          "Void default/runtime callbacks exclude raw volatile register-return equality.",
+          "Physical Android, GPU, SDK cold startup and complete native game builds are unproved."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data witnesses and real original calls; fresh committed source-only CPU/native Windows/high-address A64 replay; whole-arena and explicit typed-pointer models; all 99 wrong-source controls return and reject; 1761 raw artifacts reproduce exactly. No exact linked/object or universal behavior claim."
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave062-sdk/include/sdk062s.h",
+      "bytes": 4076,
+      "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/arbiter062a.h",
+      "bytes": 932,
+      "sha256": "2e1b164d04d2f8536975718d538b11701dc6d755fe6f1146e52fe99f04bed4b8"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/object062t.h",
+      "bytes": 5023,
+      "sha256": "2a63ad6ffe06386f362b68be6a883075e8517e523893f271a1b7d0860aeff12d"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/clock062u.h",
+      "bytes": 1764,
+      "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/clock_windows062u.h",
+      "bytes": 475,
+      "sha256": "8c699a6ecee0dd975376cb8964fc9d204ce53dfa964f80ca7a68698de8effb09"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/task062u.h",
+      "bytes": 2605,
+      "sha256": "2b0c02c6b12233b864eb91bef302869a8efc86820468d53dab1ee0c6e0f06ce2"
+    },
+    {
+      "path": "include/bytematch_names.h",
+      "bytes": 6620,
+      "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+    }
+  ],
+  "sourceDependencies": [
+    {
+      "path": "src/native/wave062-sdk/context/allocate062s.c",
+      "bytes": 530,
+      "sha256": "233d7668845739f5b897deb558c486eb8b3cab6c4f5e00065caed268f4b9528c"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/context062s.c",
+      "bytes": 2007,
+      "sha256": "d9130340bec329b1466f60c55192f1490b54513fdcbad24473857775781fbf4b"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/map062s.c",
+      "bytes": 4931,
+      "sha256": "4988a3cd066383fe9c31cad09f50ce8ab0c7ea2ac7db84eb7e51b337aec2cd5e"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/map_initialize062s.c",
+      "bytes": 906,
+      "sha256": "4d55295125b6ed49390be7bea8e48134a15fa336765d700c7b41d96b828b617d"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/mutex062s.c",
+      "bytes": 2170,
+      "sha256": "796b69eb236287be917731074248d7e7ee8161745d88bbb635a45641efac8382"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/sdk062s.h",
+      "bytes": 4076,
+      "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+    },
+    {
+      "path": "src/native/wave062-sdk/arbiter/arbiter062a.c",
+      "bytes": 934,
+      "sha256": "321e73024636f40079affd54132a6ec51106ba3064d2923c79475582e4cba5e4"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/arbiter062a.h",
+      "bytes": 932,
+      "sha256": "2e1b164d04d2f8536975718d538b11701dc6d755fe6f1146e52fe99f04bed4b8"
+    },
+    {
+      "path": "src/native/wave062-sdk/object/connection062t.c",
+      "bytes": 1486,
+      "sha256": "b4761c13711884d0041f0e4743c07eb723b6e62a6d2c64bdaa02a91bef1f1e90"
+    },
+    {
+      "path": "src/native/wave062-sdk/object/methods062t.c",
+      "bytes": 443,
+      "sha256": "bbfd904a68c24835b79781cbd83d232596a7545f9c726808ddc6e23ace78cdfa"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/object062t.h",
+      "bytes": 5023,
+      "sha256": "2a63ad6ffe06386f362b68be6a883075e8517e523893f271a1b7d0860aeff12d"
+    },
+    {
+      "path": "src/native/wave062-sdk/object/reference062t.c",
+      "bytes": 1494,
+      "sha256": "1e9bf959665e3b509aca23ae371fcac524ba5d57b565f4296e71230b52169df5"
+    },
+    {
+      "path": "src/native/wave062-sdk/object/result062t.c",
+      "bytes": 1766,
+      "sha256": "db9755ce0973783e4799e374530acefa18face83d965241c18fecdb8f0fc0098"
+    },
+    {
+      "path": "src/native/wave062-sdk/object/wrapper062t.c",
+      "bytes": 825,
+      "sha256": "d9fc50b936fc86581f8d447d15d180f98252febfc8c7d00c230897978021e747"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/clock062u.h",
+      "bytes": 1764,
+      "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/clock_math062u.c",
+      "bytes": 998,
+      "sha256": "16f7378066cca9f8eaac5e33a24900eaceaa5a613321025c3e59d8dae48b5eab"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/clock_monotonic062u.c",
+      "bytes": 1421,
+      "sha256": "b878342e1365fd81ee8805d18c52a997c8dd05b03028a4aa141b1c03ddee1708"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/clock_read062u.c",
+      "bytes": 1855,
+      "sha256": "bd884a5ccc93f9c842a3d6396b5e8992c4b6daaf3e6a6525512c5527d6bc3611"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/clock_windows062u.c",
+      "bytes": 905,
+      "sha256": "7f1718457343ba8c51ff183e4ca6bf647b99e11a622895585b36f553686cae3b"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/clock_windows062u.h",
+      "bytes": 475,
+      "sha256": "8c699a6ecee0dd975376cb8964fc9d204ce53dfa964f80ca7a68698de8effb09"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/mutex_initialize062u.c",
+      "bytes": 958,
+      "sha256": "df03183ae626d46cca649dda4a0e8710d8041f969ea85fe18d2c394d50aeedde"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/task062u.h",
+      "bytes": 2605,
+      "sha256": "2b0c02c6b12233b864eb91bef302869a8efc86820468d53dab1ee0c6e0f06ce2"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/task_default_work062u.c",
+      "bytes": 236,
+      "sha256": "c96cc361a3805f346dbfefc4e4491c354aae82234d7e0390bed2fea044060d7f"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/task_initialize062u.c",
+      "bytes": 1391,
+      "sha256": "eb0f52ae886067eabbfef0cd8163ee4f7115ad5f57e120a8c1147f65f8a33112"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/task_state062u.c",
+      "bytes": 1004,
+      "sha256": "3a4bbedcfaeba9c5afced7a94ed939cea60d42444ea57c6d2ab62cefc38371be"
+    },
+    {
+      "path": "include/bytematch_names.h",
+      "bytes": 6620,
+      "sha256": "e41412e473db7959c86b3e5ad09847b99cb55784514b01cf287d4468cbc5c207"
+    }
+  ],
+  "qualificationOnlySources": [
+    "toolscripts/fixtures/sdk062/context/fixture062s.c",
+    "toolscripts/fixtures/sdk062/arbiter/fixture062a.c",
+    "toolscripts/fixtures/sdk062/arbiter/model062a.c",
+    "toolscripts/fixtures/sdk062/object/fixture062t.c",
+    "toolscripts/fixtures/sdk062/startup/fixture062u.c",
+    "toolscripts/fixtures/sdk062/startup/fixture_clock062u.c"
+  ],
+  "producer": {
+    "path": "evidence/verification/producers/review_sdk062_functional.py",
+    "bytes": 9590,
+    "sha256": "16e11ceeb653630e1f0f67a33e3d9d3bbd729cc1656d18687b0441fe7b77f04b"
+  },
+  "originalPackets": [
+    {
+      "path": "evidence/verification/sdk062-coordinator-a96256d.json",
+      "bytes": 480652,
+      "sha256": "7f021f32179dfab2507253a1648d8b755af88bff83e7b9a5972b303497995b16"
+    },
+    {
+      "path": "evidence/verification/sdk062-complete-entry-proposal.json",
+      "bytes": 77491,
+      "sha256": "10a18c3d81954f294684873537cd1499d4f2b34910f531432075d4cb3646ed80"
+    }
+  ],
+  "acceptedSourceCreditGranted": 0,
+  "exactMatchingClaimed": false,
+  "confirmedOverallSourceCoverageClaimed": false,
+  "fullSdkStartupFactoryTaskGpuOrGameClaimed": false
+}
