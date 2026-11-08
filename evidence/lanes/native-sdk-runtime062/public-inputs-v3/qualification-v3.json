@@ -1,0 +1,206 @@
+{
+  "status": "six-stage-exclusive-output-complete-guard-fresh-source-transport-passed",
+  "sourceManifest": {
+    "bytes": 22656,
+    "sha256": "85863e006107f38682f388a0cc82f8a0460304e42ccdbe0a37ccddd293b305cb"
+  },
+  "supportManifest": {
+    "bytes": 21816,
+    "sha256": "97b7bc4977f97be140f0a6cca4b4b9ef2635856f67e5a2ec0c6611c9e788b1d3"
+  },
+  "entryRoster": {
+    "bytes": 31490,
+    "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+  },
+  "missingSevenEntryWitnesses": {
+    "bytes": 35182,
+    "sha256": "ad298c5714cd2277d7d8a4e18ab400572c67bfca14ddf9af50938a1d84155850"
+  },
+  "productionBoundaries": {
+    "bytes": 6409,
+    "sha256": "9d8b9d0293324fc8276b19bad2866c4266e545e451b6f1b81c371ef93361a562"
+  },
+  "minimalExistingSourceClosure": {
+    "bytes": 3316,
+    "sha256": "39eb793201e8edb748e98a9045f44181f061b192dcc3be0eadc2a262a0c9955d"
+  },
+  "artifactEquivalence": {
+    "bytes": 646479,
+    "sha256": "8330892fce42e4a914938a4f0583df7dff5e7d90331d7119d0d03dad103813e2"
+  },
+  "guardRegressionTests": {
+    "bytes": 1174,
+    "sha256": "7ac81a72271f97bbffd52f7351bb111f7bdfbc2245e2f2d7abb230206a401f2f"
+  },
+  "retainedGuardGaps": [
+    {
+      "bytes": 608,
+      "sha256": "d84d7212b478a30a39f6ee1bb7c4cadfe0e4b3c0a36e4694bbf95b06975b1088"
+    },
+    {
+      "bytes": 438,
+      "sha256": "4bcf21ca5d0275909ae482c9832cffac82f6e78f292e280b7e13181d67c02ab2"
+    }
+  ],
+  "stages": [
+    {
+      "lane": "binding",
+      "proof": {
+        "bytes": 261938,
+        "sha256": "bae89db01a5a96fed1797af1e4ff22846829c4eddce530b2957a0f0d5d5323b5"
+      },
+      "tests": {
+        "bytes": 256655,
+        "sha256": "e18e2ac52e3ebad1605d4e074f8e442d135e2bf8bc9e3f6d5d8d7eada099954e"
+      },
+      "freshTests": 10,
+      "returningControls": 18,
+      "sameFinalArenaControls": 15,
+      "artifactPairs": 248,
+      "runtimeInputPins": 275,
+      "sourceInputPins": 145,
+      "snapshotInputPins": 63,
+      "inheritedAuthoredSupportFiles": 40,
+      "freshSourceImports": true,
+      "exclusiveOutputAndExactPinnedInputs": true,
+      "rejectedHistoricalReads": []
+    },
+    {
+      "lane": "binding-start",
+      "proof": {
+        "bytes": 263812,
+        "sha256": "bbe9f9d6401c7d64ae917fbf9034652075fa65061e70f985cbede2d3180d9fa8"
+      },
+      "tests": {
+        "bytes": 256691,
+        "sha256": "61e075947c7e7f152da7506761417e16f8326db6f15b49a9d1ecf54b12942b20"
+      },
+      "freshTests": 10,
+      "returningControls": 24,
+      "sameFinalArenaControls": 9,
+      "artifactPairs": 370,
+      "runtimeInputPins": 275,
+      "sourceInputPins": 145,
+      "snapshotInputPins": 63,
+      "inheritedAuthoredSupportFiles": 40,
+      "freshSourceImports": true,
+      "exclusiveOutputAndExactPinnedInputs": true,
+      "rejectedHistoricalReads": []
+    },
+    {
+      "lane": "construction",
+      "proof": {
+        "bytes": 267132,
+        "sha256": "2b6a8211ee6487934126b05b898e733a16ed00178a34fe9907719fff46d12002"
+      },
+      "tests": {
+        "bytes": 256685,
+        "sha256": "45fe0a03bb489e43c78cd79d18678af30006be2ef65c3bd6449b64b2158fda7b"
+      },
+      "freshTests": 12,
+      "returningControls": 36,
+      "sameFinalArenaControls": 9,
+      "artifactPairs": 686,
+      "runtimeInputPins": 275,
+      "sourceInputPins": 145,
+      "snapshotInputPins": 63,
+      "inheritedAuthoredSupportFiles": 40,
+      "freshSourceImports": true,
+      "exclusiveOutputAndExactPinnedInputs": true,
+      "rejectedHistoricalReads": []
+    },
+    {
+      "lane": "manager",
+      "proof": {
+        "bytes": 265400,
+        "sha256": "83ccfaecfd78ad789638e666fcec9868282ac7e33607416b721073677dd065e4"
+      },
+      "tests": {
+        "bytes": 256658,
+        "sha256": "312d6bb82b69f43d98f5a5ede770b844898bcad3ad0c1a17f0ebed9fc8d03c0b"
+      },
+      "freshTests": 15,
+      "returningControls": 30,
+      "sameFinalArenaControls": 9,
+      "artifactPairs": 372,
+      "runtimeInputPins": 275,
+      "sourceInputPins": 145,
+      "snapshotInputPins": 63,
+      "inheritedAuthoredSupportFiles": 40,
+      "freshSourceImports": true,
+      "exclusiveOutputAndExactPinnedInputs": true,
+      "rejectedHistoricalReads": []
+    },
+    {
+      "lane": "erase",
+      "proof": {
+        "bytes": 263359,
+        "sha256": "8b9904beb2e3d5593c55617df23946850d3bd24a52b54beff1e2f50a5b67ab23"
+      },
+      "tests": {
+        "bytes": 256648,
+        "sha256": "a656134aba678eefdde7851a23a66c2b56aa34cc18c676668a67ef28cfabf371"
+      },
+      "freshTests": 10,
+      "returningControls": 24,
+      "sameFinalArenaControls": 3,
+      "artifactPairs": 340,
+      "runtimeInputPins": 275,
+      "sourceInputPins": 145,
+      "snapshotInputPins": 63,
+      "inheritedAuthoredSupportFiles": 40,
+      "freshSourceImports": true,
+      "exclusiveOutputAndExactPinnedInputs": true,
+      "rejectedHistoricalReads": []
+    },
+    {
+      "lane": "timer",
+      "proof": {
+        "bytes": 266138,
+        "sha256": "39ed46062e8c66e95af730b55d3c930b114a8b63ac9601dac3f97a8fd553740d"
+      },
+      "tests": {
+        "bytes": 256644,
+        "sha256": "cc8e5238686ede8bacd3be16927dfa345a18ae6328033bc3bed6b9b05175eddf"
+      },
+      "freshTests": 12,
+      "returningControls": 33,
+      "sameFinalArenaControls": 3,
+      "artifactPairs": 793,
+      "runtimeInputPins": 275,
+      "sourceInputPins": 145,
+      "snapshotInputPins": 63,
+      "inheritedAuthoredSupportFiles": 40,
+      "freshSourceImports": true,
+      "exclusiveOutputAndExactPinnedInputs": true,
+      "rejectedHistoricalReads": []
+    }
+  ],
+  "freshTests": 69,
+  "guardTests": 6,
+  "returningControls": 165,
+  "sameFinalArenaControls": 48,
+  "nativeArtifactPairs": 2809,
+  "productionUnits": 18,
+  "headers": 6,
+  "qualificationOnlyUnits": 6,
+  "boundedEntryCandidates": 21,
+  "boundedInstructionBytes": 5260,
+  "fourProfileObservations": 29664,
+  "canonicalOnlyOriginalLoading": true,
+  "exclusiveOutputAndExactPinnedIntakeInputs": true,
+  "caughtAuditAttemptsTerminal": true,
+  "all40InheritedAuthoredHelpersPinned": true,
+  "freshSourceImports": true,
+  "unchangedFrozenSourceBytes": true,
+  "sourceCreditGranted": 0,
+  "whole4b5afc46ad80FactoryTaskOwnerCredit": 0,
+  "guardRegressionProducer": {
+    "bytes": 3757,
+    "sha256": "98b02af424efe8a81329ade9e1f40cd9a9a2517f30f7cbda45527a9db193c1b2"
+  },
+  "guardRegressionFixtureSuccessor": {
+    "bytes": 367,
+    "sha256": "3dd6d4cc68fcc75cc72b637772ce0d093b904847a3e36a3f7a171b9dc93ba9d6"
+  }
+}

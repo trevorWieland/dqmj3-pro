@@ -34,7 +34,8 @@
       "wave063",
       "wave065",
       "wave062-sdk",
-      "wave065-resource"
+      "wave065-resource",
+      "wave062-runtime"
     ]
   },
   "units": [
@@ -10694,6 +10695,246 @@
         "src/native/wave065-resource/effect_vertex.h",
         "src/native/wave065/effect_services.h",
         "src/native/wave065/effect_shader.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/binding/binding_active062v.c",
+      "headers": [
+        "src/native/wave062-runtime/include/binding062v.h",
+        "src/native/wave062-sdk/include/object062t.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/binding/binding_policy062v.c",
+      "headers": [
+        "src/native/wave062-runtime/include/binding062v.h",
+        "src/native/wave062-sdk/include/object062t.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/binding-start/binding_providers062w.c",
+      "headers": [
+        "src/native/wave062-runtime/include/binding062v.h",
+        "src/native/wave062-runtime/include/binding_start062w.h",
+        "src/native/wave062-sdk/include/object062t.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/binding-start/binding_start062w.c",
+      "headers": [
+        "src/native/wave062-runtime/include/binding062v.h",
+        "src/native/wave062-runtime/include/binding_start062w.h",
+        "src/native/wave062-sdk/include/object062t.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/construction/binding_initialize062x.c",
+      "headers": [
+        "src/native/wave062-runtime/include/binding062v.h",
+        "src/native/wave062-runtime/include/binding_start062w.h",
+        "src/native/wave062-runtime/include/construction062x.h",
+        "src/native/wave062-sdk/include/object062t.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/construction/list_initialize062x.c",
+      "headers": [
+        "src/native/wave062-runtime/include/binding062v.h",
+        "src/native/wave062-runtime/include/binding_start062w.h",
+        "src/native/wave062-runtime/include/construction062x.h",
+        "src/native/wave062-sdk/include/object062t.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/construction/wide_owner062x.c",
+      "headers": [
+        "src/native/wave062-runtime/include/binding062v.h",
+        "src/native/wave062-runtime/include/binding_start062w.h",
+        "src/native/wave062-runtime/include/construction062x.h",
+        "src/native/wave062-sdk/include/object062t.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/construction/wide_units062x.c",
+      "headers": [
+        "src/native/wave062-runtime/include/binding062v.h",
+        "src/native/wave062-runtime/include/binding_start062w.h",
+        "src/native/wave062-runtime/include/construction062x.h",
+        "src/native/wave062-sdk/include/object062t.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/erase/tree_access062z.c",
+      "headers": [
+        "src/native/wave062-runtime/include/tree_erase062z.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/erase/tree_erase062z.c",
+      "headers": [
+        "src/native/wave062-runtime/include/tree_erase062z.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/erase/tree_rebalance062z.c",
+      "headers": [
+        "src/native/wave062-runtime/include/tree_erase062z.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/manager/map_select062y.c",
+      "headers": [
+        "src/native/wave062-runtime/include/thread_map062y.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/manager/thread_index062y.c",
+      "headers": [
+        "src/native/wave062-runtime/include/thread_map062y.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/timer/endpoint062aa.c",
+      "headers": [
+        "src/native/wave062-runtime/include/timer062aa.h",
+        "src/native/wave062-sdk/include/clock062u.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/timer/timer_initialize062aa.c",
+      "headers": [
+        "src/native/wave062-runtime/include/timer062aa.h",
+        "src/native/wave062-sdk/include/clock062u.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/timer/timer_insert062aa.c",
+      "headers": [
+        "src/native/wave062-runtime/include/timer062aa.h",
+        "src/native/wave062-sdk/include/clock062u.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/timer/timer_set062aa.c",
+      "headers": [
+        "src/native/wave062-runtime/include/timer062aa.h",
+        "src/native/wave062-sdk/include/clock062u.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-runtime/timer/timer_update062aa.c",
+      "headers": [
+        "src/native/wave062-runtime/include/timer062aa.h",
+        "src/native/wave062-runtime/include/tree_erase062z.h",
+        "src/native/wave062-sdk/include/clock062u.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
       ],
       "role": "bounded-component"
     }

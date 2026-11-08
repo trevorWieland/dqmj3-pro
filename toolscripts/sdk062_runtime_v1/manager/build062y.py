@@ -1,0 +1,31 @@
+import sys
+from pathlib import Path
+
+WORK=Path(__file__).resolve().parent
+ROOT=next(p for p in WORK.parents if(p/'AGENTS.md').is_file())
+SDK=ROOT/'work/native-asset062-sdk'
+sys.path.append(str(ROOT/'toolscripts'))
+from digest024_build import FLAGS, command
+
+DATA=['sdk_environment062s','fixture_sdk_heap062s','fixture_sdk_owner062s','fixture_sdk_numeric_id062s','fixture_sdk_owner_calls062s','fixture_sdk_layout062s','fixture_sdk_mutex_methods062s','fixture_sdk_id_calls062s','fixture_thread_map_layout062y']
+FUNCTIONS=['sdk_map_initialize062s','sdk_context062s','sdk_context_alternate062s','sdk_allocate062s','sdk_map_insert062s','sdk_map_value062s','sdk_fast_acquire062s','sdk_fast_release062s','sdk_recursive_acquire062s','sdk_recursive_release062s','sdk_mutex_acquire062s','sdk_mutex_release062s','fixture_sdk_allocate062s','fixture_sdk_dispose062s','fixture_sdk_thread_owner062s','fixture_sdk_thread_id062s','fixture_sdk_wait062s','fixture_sdk_signal062s','sdk_map_select062y','sdk_thread_index062y','sdk_thread_query062y','sdk_thread_result_failure062y']
+
+
+def build(folder,target,overrides=None):
+    folder.mkdir(parents=True,exist_ok=True)
+    compiler=ROOT/'tools/clang-21/clang.exe';linker=ROOT/'tools/clang-21/ld.lld.exe'
+    flags=dict(arm=['--target=arm-none-eabi','-mcpu=mpcore','-marm','-mfloat-abi=soft'],windows=['--target=x86_64-pc-windows-msvc','-mno-incremental-linker-compatible'],a64=['--target=aarch64-linux-android29','-fPIC','-mno-outline-atomics'])
+    objects=[]
+    for name in ['allocate062s.c','map062s.c','map_initialize062s.c','mutex062s.c','context062s.c','fixture062s.c','map_select062y.c','thread_index062y.c','fixture062y.c']:
+        source=(overrides or{}).get(name,WORK/'source'/name if name in ['map_select062y.c','thread_index062y.c','fixture062y.c']else SDK/'source'/name);obj=folder/(source.stem+'.o')
+        command([compiler,*flags[target],*FLAGS,'-I',WORK/'source','-I',SDK/'source','-c',source,'-o',obj],folder/(source.stem+'-compile.json'));objects.append(obj)
+    if target=='windows':
+        command([linker,'-flavor','link','/dll','/noentry','/nodefaultlib','/machine:x64','/timestamp:0',*['/export:'+n for n in FUNCTIONS],*['/export:'+n+',DATA' for n in DATA+['fixture_sdk_get_thread_id062s','fixture_sdk_tls_get062s','fixture_sdk_tls_index062s']],'/out:'+str(folder/'sdk062s.dll'),*objects],folder/'link.json')
+    else:
+        script=folder/'sdk062s.ld';base=0x1300000 if target=='arm'else 0x110000000
+        script.write_text('SECTIONS { .text '+hex(base)+' : { *(.text*) } .rodata : { *(.rodata*) } .data : { *(.data*) *(.got*) } .bss : { *(.bss*) *(COMMON) } /DISCARD/ : { *(.ARM.exidx*) *(.ARM.extab*) *(.eh_frame*) *(.comment*) *(.note*) *(.llvm_addrsig) } }\n',encoding='utf-8')
+        command([linker,'-m','armelf'if target=='arm'else'aarch64elf','--no-undefined','--build-id=none','--entry=sdk_map_value062s','-T',script,*objects,'-o',folder/'sdk062s.elf'],folder/'link.json')
+
+
+if __name__=='__main__':
+    for target in ['arm','windows','a64']:build(WORK/'attempt001/build'/target,target)

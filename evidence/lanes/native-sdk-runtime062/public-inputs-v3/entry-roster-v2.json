@@ -1,0 +1,719 @@
+{
+  "status": "canonical-to-proposed-source-roster-awaiting-root-review",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "entries": [
+    {
+      "lane": "binding",
+      "canonicalAddress": 4694024,
+      "addressHex": "0x47a008",
+      "mode": "ARM",
+      "sourceFunction": "sdk_binding_active062v",
+      "proposedProductionPath": "src/native/wave062-runtime/binding/binding_active062v.c",
+      "sourceLine": 3,
+      "sourceSha256": "84d755f229ff6751916f8fdb7e6d99a2ae1348850296d4a28d3b8a873a67b64a",
+      "instructionRanges": [
+        {
+          "start": 4694024,
+          "endExclusive": 4694048,
+          "bytes": 24,
+          "sha256": "8663a05153d75c35af8139fd83c7b8104c60170eb035ed061d94b82d7cce38f2"
+        }
+      ],
+      "instructionBytes": 24,
+      "referencedLiteralWords": [],
+      "domain": "Measured selected base-vtable policy/active/no-op notification;state is U16 at target20/native32,dependents U32 at24/native36;requested state and scalar return are U32.",
+      "remainingExclusions": [
+        "No full484660 caller/task/startup or arbitrary derived-vtable behavior."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-factory/ready-v1.json",
+        "sha256": "fe801b114af2ecf890b44ae5fd31f540517474a0a1a07b37d4444835f8b9563f"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "binding",
+      "canonicalAddress": 4694056,
+      "addressHex": "0x47a028",
+      "mode": "ARM",
+      "sourceFunction": "sdk_binding_notify062v",
+      "proposedProductionPath": "src/native/wave062-runtime/binding/binding_active062v.c",
+      "sourceLine": 8,
+      "sourceSha256": "84d755f229ff6751916f8fdb7e6d99a2ae1348850296d4a28d3b8a873a67b64a",
+      "instructionRanges": [
+        {
+          "start": 4694056,
+          "endExclusive": 4694060,
+          "bytes": 4,
+          "sha256": "379bec29dccd0a93c94826144d7ef6e42fab64ef195a3b8313a16926f66f388f"
+        }
+      ],
+      "instructionBytes": 4,
+      "referencedLiteralWords": [],
+      "domain": "Measured selected base-vtable policy/active/no-op notification;state is U16 at target20/native32,dependents U32 at24/native36;requested state and scalar return are U32.",
+      "remainingExclusions": [
+        "No full484660 caller/task/startup or arbitrary derived-vtable behavior."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-factory/ready-v1.json",
+        "sha256": "fe801b114af2ecf890b44ae5fd31f540517474a0a1a07b37d4444835f8b9563f"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "binding",
+      "canonicalAddress": 4694060,
+      "addressHex": "0x47a02c",
+      "mode": "ARM",
+      "sourceFunction": "sdk_binding_can_transition062v",
+      "proposedProductionPath": "src/native/wave062-runtime/binding/binding_policy062v.c",
+      "sourceLine": 3,
+      "sourceSha256": "6f6985d9b2be929949894a442e4730927b8dfe09bd17bfd7858d030ab3c41f3a",
+      "instructionRanges": [
+        {
+          "start": 4694060,
+          "endExclusive": 4694296,
+          "bytes": 236,
+          "sha256": "06ed267eae298d4546bd8a2d5872b7e82222a9c003506a3a9dc52091db2019b9"
+        }
+      ],
+      "instructionBytes": 236,
+      "referencedLiteralWords": [],
+      "domain": "Measured selected base-vtable policy/active/no-op notification;state is U16 at target20/native32,dependents U32 at24/native36;requested state and scalar return are U32. NULL object is allowed only for original early-success requested128or256;other requests require valid complete prefix.",
+      "remainingExclusions": [
+        "No full484660 caller/task/startup or arbitrary derived-vtable behavior."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-factory/ready-v1.json",
+        "sha256": "fe801b114af2ecf890b44ae5fd31f540517474a0a1a07b37d4444835f8b9563f"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "binding-start",
+      "canonicalAddress": 4693724,
+      "addressHex": "0x479edc",
+      "mode": "ARM",
+      "sourceFunction": "sdk_binding_start062w",
+      "proposedProductionPath": "src/native/wave062-runtime/binding-start/binding_start062w.c",
+      "sourceLine": 8,
+      "sourceSha256": "7b32769b8c24e0787abb72d7c4b9fc44996c4408c29ae632bc7f5a93194e5653",
+      "instructionRanges": [
+        {
+          "start": 4693724,
+          "endExclusive": 4694000,
+          "bytes": 276,
+          "sha256": "2f81c50ceba877ac8650262f58f93e3da61da0930192af3254a1d18018768f9a"
+        }
+      ],
+      "instructionBytes": 276,
+      "referencedLiteralWords": [],
+      "domain": "Exact32-byte target/48-byte native binding object and measured actual base ready/state methods.",
+      "remainingExclusions": [
+        "False/reentrant derived providers are not qualified;unreachable failure arms remain authored.",
+        "No full481940/484660 owner."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-factory-owner/ready-v2.json",
+        "sha256": "c94d0ccaf6e545b2c18a1036af22b87b654dcc2e395ef357168fef3386f14cd6"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "binding-start",
+      "canonicalAddress": 4694012,
+      "addressHex": "0x479ffc",
+      "mode": "ARM",
+      "sourceFunction": "sdk_binding_query062w",
+      "proposedProductionPath": "src/native/wave062-runtime/binding-start/binding_providers062w.c",
+      "sourceLine": 3,
+      "sourceSha256": "f2a7fb3c9031d19ee812e46f34428ebb1d4148e5ecfefa43df9c5661366a44ed",
+      "instructionRanges": [
+        {
+          "start": 4694012,
+          "endExclusive": 4694024,
+          "bytes": 12,
+          "sha256": "abbaa29604d1090deeb7aa18ec57c57b89d2108c55beaa972a5db8f0c3ce9c03"
+        }
+      ],
+      "instructionBytes": 12,
+      "referencedLiteralWords": [],
+      "domain": "Exact32-byte target/48-byte native binding object and measured actual base ready/state methods.",
+      "remainingExclusions": [
+        "False/reentrant derived providers are not qualified;unreachable failure arms remain authored.",
+        "No full481940/484660 owner."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-factory-owner/ready-v2.json",
+        "sha256": "c94d0ccaf6e545b2c18a1036af22b87b654dcc2e395ef357168fef3386f14cd6"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "binding-start",
+      "canonicalAddress": 4694304,
+      "addressHex": "0x47a120",
+      "mode": "ARM",
+      "sourceFunction": "sdk_binding_poll_ready062w",
+      "proposedProductionPath": "src/native/wave062-runtime/binding-start/binding_providers062w.c",
+      "sourceLine": 21,
+      "sourceSha256": "f2a7fb3c9031d19ee812e46f34428ebb1d4148e5ecfefa43df9c5661366a44ed",
+      "instructionRanges": [
+        {
+          "start": 4694304,
+          "endExclusive": 4694312,
+          "bytes": 8,
+          "sha256": "007f34a6c3441b0240da53f253e513b959105da2d8803255e1856aa48f48db47"
+        }
+      ],
+      "instructionBytes": 8,
+      "referencedLiteralWords": [],
+      "domain": "Exact32-byte target/48-byte native binding object and measured actual base ready/state methods.",
+      "remainingExclusions": [
+        "False/reentrant derived providers are not qualified;unreachable failure arms remain authored.",
+        "No full481940/484660 owner."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-factory-owner/ready-v2.json",
+        "sha256": "c94d0ccaf6e545b2c18a1036af22b87b654dcc2e395ef357168fef3386f14cd6"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "binding-start",
+      "canonicalAddress": 4694312,
+      "addressHex": "0x47a128",
+      "mode": "ARM",
+      "sourceFunction": "sdk_binding_start_ready062w",
+      "proposedProductionPath": "src/native/wave062-runtime/binding-start/binding_providers062w.c",
+      "sourceLine": 15,
+      "sourceSha256": "f2a7fb3c9031d19ee812e46f34428ebb1d4148e5ecfefa43df9c5661366a44ed",
+      "instructionRanges": [
+        {
+          "start": 4694312,
+          "endExclusive": 4694320,
+          "bytes": 8,
+          "sha256": "007f34a6c3441b0240da53f253e513b959105da2d8803255e1856aa48f48db47"
+        }
+      ],
+      "instructionBytes": 8,
+      "referencedLiteralWords": [],
+      "domain": "Exact32-byte target/48-byte native binding object and measured actual base ready/state methods.",
+      "remainingExclusions": [
+        "False/reentrant derived providers are not qualified;unreachable failure arms remain authored.",
+        "No full481940/484660 owner."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-factory-owner/ready-v2.json",
+        "sha256": "c94d0ccaf6e545b2c18a1036af22b87b654dcc2e395ef357168fef3386f14cd6"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "binding-start",
+      "canonicalAddress": 4695196,
+      "addressHex": "0x47a49c",
+      "mode": "ARM",
+      "sourceFunction": "sdk_binding_state062w",
+      "proposedProductionPath": "src/native/wave062-runtime/binding-start/binding_providers062w.c",
+      "sourceLine": 10,
+      "sourceSha256": "f2a7fb3c9031d19ee812e46f34428ebb1d4148e5ecfefa43df9c5661366a44ed",
+      "instructionRanges": [
+        {
+          "start": 4695196,
+          "endExclusive": 4695204,
+          "bytes": 8,
+          "sha256": "d9b0b5a5cbd3294c9c224137c64792b79b8445e8429e834f3b75247587f9e764"
+        }
+      ],
+      "instructionBytes": 8,
+      "referencedLiteralWords": [],
+      "domain": "Exact32-byte target/48-byte native binding object and measured actual base ready/state methods.",
+      "remainingExclusions": [
+        "False/reentrant derived providers are not qualified;unreachable failure arms remain authored.",
+        "No full481940/484660 owner."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-factory-owner/ready-v2.json",
+        "sha256": "c94d0ccaf6e545b2c18a1036af22b87b654dcc2e395ef357168fef3386f14cd6"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "construction",
+      "canonicalAddress": 1435376,
+      "addressHex": "0x15e6f0",
+      "mode": "ARM",
+      "sourceFunction": "sdk_wide_create062x",
+      "proposedProductionPath": "src/native/wave062-runtime/construction/wide_owner062x.c",
+      "sourceLine": 3,
+      "sourceSha256": "6e8bccc7d39dbca6a591d868d9246993145088bbf8cdb2a9b07fa4f97a4ffec5",
+      "instructionRanges": [
+        {
+          "start": 1435376,
+          "endExclusive": 1435456,
+          "bytes": 80,
+          "sha256": "2e29fcfe9036729db504d81fa219c20b488c8e8d8acad3d7e45a233f995485de"
+        }
+      ],
+      "instructionBytes": 80,
+      "referencedLiteralWords": [],
+      "domain": "Aligned bounded raw16-bit NUL-terminated storage;successful allocation;exact binding prefix and separate methods-prefixed pointer-list.",
+      "remainingExclusions": [
+        "No wchar_t/Unicode-normalization claim.",
+        "Wide default disposal remains a typed unqualified dependency;nonnull observer disposal is qualified.",
+        "Pointer-list payload is opaque,not112-byte full-address nodes or52/88/56-byte trees."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-construction/ready-v1.json",
+        "sha256": "385ad528f50a881255444b30d2bab6483ef110479e7e82ad5f56f457fbfefb88"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "construction",
+      "canonicalAddress": 1511252,
+      "addressHex": "0x170f54",
+      "mode": "ARM",
+      "sourceFunction": "sdk_wide_destroy062x",
+      "proposedProductionPath": "src/native/wave062-runtime/construction/wide_owner062x.c",
+      "sourceLine": 18,
+      "sourceSha256": "6e8bccc7d39dbca6a591d868d9246993145088bbf8cdb2a9b07fa4f97a4ffec5",
+      "instructionRanges": [
+        {
+          "start": 1511252,
+          "endExclusive": 1511320,
+          "bytes": 68,
+          "sha256": "76b811e445afed3d3f792a2cfa097ba4aa2a1144f481dce9c94d9b112cb62d16"
+        }
+      ],
+      "instructionBytes": 68,
+      "referencedLiteralWords": [
+        {
+          "reader": 1511264,
+          "address": 1511320,
+          "bytes": 4,
+          "sha256": "9ede7038d283ea099acc9d421af2aa1eb68ca52f004596646bb8370abfd2a941",
+          "separateOwnershipClaim": false
+        }
+      ],
+      "domain": "Aligned bounded raw16-bit NUL-terminated storage;successful allocation;exact binding prefix and separate methods-prefixed pointer-list.",
+      "remainingExclusions": [
+        "No wchar_t/Unicode-normalization claim.",
+        "Wide default disposal remains a typed unqualified dependency;nonnull observer disposal is qualified.",
+        "Pointer-list payload is opaque,not112-byte full-address nodes or52/88/56-byte trees."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-construction/ready-v1.json",
+        "sha256": "385ad528f50a881255444b30d2bab6483ef110479e7e82ad5f56f457fbfefb88"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "construction",
+      "canonicalAddress": 4695204,
+      "addressHex": "0x47a4a4",
+      "mode": "ARM",
+      "sourceFunction": "sdk_binding_initialize062x",
+      "proposedProductionPath": "src/native/wave062-runtime/construction/binding_initialize062x.c",
+      "sourceLine": 3,
+      "sourceSha256": "b380e6302432b65ae01661e569b2eb022eb86d6d34ccc9f937b3045661867f1a",
+      "instructionRanges": [
+        {
+          "start": 4695204,
+          "endExclusive": 4695284,
+          "bytes": 80,
+          "sha256": "6201d0afec689ea381c9147bbad90edafd6191be5eb3ac68b814e1d3bdcedefc"
+        }
+      ],
+      "instructionBytes": 80,
+      "referencedLiteralWords": [
+        {
+          "reader": 4695228,
+          "address": 4695284,
+          "bytes": 4,
+          "sha256": "add04c86698daac01ba289db59019408bfef6579270996db034321f95f25771c",
+          "separateOwnershipClaim": false
+        },
+        {
+          "reader": 4695232,
+          "address": 4695288,
+          "bytes": 4,
+          "sha256": "9ede7038d283ea099acc9d421af2aa1eb68ca52f004596646bb8370abfd2a941",
+          "separateOwnershipClaim": false
+        }
+      ],
+      "domain": "Aligned bounded raw16-bit NUL-terminated storage;successful allocation;exact binding prefix and separate methods-prefixed pointer-list.",
+      "remainingExclusions": [
+        "No wchar_t/Unicode-normalization claim.",
+        "Wide default disposal remains a typed unqualified dependency;nonnull observer disposal is qualified.",
+        "Pointer-list payload is opaque,not112-byte full-address nodes or52/88/56-byte trees."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-construction/ready-v1.json",
+        "sha256": "385ad528f50a881255444b30d2bab6483ef110479e7e82ad5f56f457fbfefb88"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "construction",
+      "canonicalAddress": 4563484,
+      "addressHex": "0x45a21c",
+      "mode": "ARM",
+      "sourceFunction": "sdk_address_list_initialize062x",
+      "proposedProductionPath": "src/native/wave062-runtime/construction/list_initialize062x.c",
+      "sourceLine": 3,
+      "sourceSha256": "b7bc84861d77a6930a2612177230413c8166b76f8ffd4d561391ff2acaed8264",
+      "instructionRanges": [
+        {
+          "start": 4563484,
+          "endExclusive": 4563616,
+          "bytes": 132,
+          "sha256": "37c6f9e490c92d4609019c9f9d215494d8aee3872eda3841449ab3d4c2e59a09"
+        }
+      ],
+      "instructionBytes": 132,
+      "referencedLiteralWords": [
+        {
+          "reader": 4563496,
+          "address": 4563616,
+          "bytes": 4,
+          "sha256": "42b332e94bdbad24719309344750415a43fcfe10199b704198a1d8748e3b0473",
+          "separateOwnershipClaim": false
+        }
+      ],
+      "domain": "Aligned bounded raw16-bit NUL-terminated storage;successful allocation;exact binding prefix and separate methods-prefixed pointer-list.",
+      "remainingExclusions": [
+        "No wchar_t/Unicode-normalization claim.",
+        "Wide default disposal remains a typed unqualified dependency;nonnull observer disposal is qualified.",
+        "Pointer-list payload is opaque,not112-byte full-address nodes or52/88/56-byte trees."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-construction/ready-v1.json",
+        "sha256": "385ad528f50a881255444b30d2bab6483ef110479e7e82ad5f56f457fbfefb88"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "construction",
+      "canonicalAddress": 1051480,
+      "addressHex": "0x100b58",
+      "mode": "Thumb",
+      "sourceFunction": "sdk_wide_length062x",
+      "proposedProductionPath": "src/native/wave062-runtime/construction/wide_units062x.c",
+      "sourceLine": 3,
+      "sourceSha256": "4dad75f4c980a6f8bde8a00f22353c02bce8e1611d65b4c39831e5a9192258ce",
+      "instructionRanges": [
+        {
+          "start": 1051480,
+          "endExclusive": 1051498,
+          "bytes": 18,
+          "sha256": "8b6add75d20bde5f0fd78628ac964503b402f9a27468f87eae39213fbe5da057"
+        }
+      ],
+      "instructionBytes": 18,
+      "referencedLiteralWords": [],
+      "domain": "Aligned bounded raw16-bit NUL-terminated storage;successful allocation;exact binding prefix and separate methods-prefixed pointer-list.",
+      "remainingExclusions": [
+        "No wchar_t/Unicode-normalization claim.",
+        "Wide default disposal remains a typed unqualified dependency;nonnull observer disposal is qualified.",
+        "Pointer-list payload is opaque,not112-byte full-address nodes or52/88/56-byte trees."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-construction/ready-v1.json",
+        "sha256": "385ad528f50a881255444b30d2bab6483ef110479e7e82ad5f56f457fbfefb88"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "construction",
+      "canonicalAddress": 1049568,
+      "addressHex": "0x1003e0",
+      "mode": "Thumb",
+      "sourceFunction": "sdk_wide_copy062x",
+      "proposedProductionPath": "src/native/wave062-runtime/construction/wide_units062x.c",
+      "sourceLine": 13,
+      "sourceSha256": "4dad75f4c980a6f8bde8a00f22353c02bce8e1611d65b4c39831e5a9192258ce",
+      "instructionRanges": [
+        {
+          "start": 1049568,
+          "endExclusive": 1049586,
+          "bytes": 18,
+          "sha256": "bdf215b5cb438a1f0c07f469439f5d201fc4b90ae88de7f9877a08e657fe1244"
+        }
+      ],
+      "instructionBytes": 18,
+      "referencedLiteralWords": [],
+      "domain": "Aligned bounded raw16-bit NUL-terminated storage;successful allocation;exact binding prefix and separate methods-prefixed pointer-list.",
+      "remainingExclusions": [
+        "No wchar_t/Unicode-normalization claim.",
+        "Wide default disposal remains a typed unqualified dependency;nonnull observer disposal is qualified.",
+        "Pointer-list payload is opaque,not112-byte full-address nodes or52/88/56-byte trees."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-construction/ready-v1.json",
+        "sha256": "385ad528f50a881255444b30d2bab6483ef110479e7e82ad5f56f457fbfefb88"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "manager",
+      "canonicalAddress": 1537512,
+      "addressHex": "0x1775e8",
+      "mode": "ARM",
+      "sourceFunction": "sdk_thread_index062y",
+      "proposedProductionPath": "src/native/wave062-runtime/manager/thread_index062y.c",
+      "sourceLine": 12,
+      "sourceSha256": "9a30bcffb19b3c415470bd192b85f05eea9e0a4cded4e97eb8af2d3b15102fab",
+      "instructionRanges": [
+        {
+          "start": 1537512,
+          "endExclusive": 1537852,
+          "bytes": 340,
+          "sha256": "24c1c956af43d352bb0bc466bc4ff3c212111acc18b67d6387fdd4e6149adc85"
+        }
+      ],
+      "instructionBytes": 340,
+      "referencedLiteralWords": [
+        {
+          "reader": 1537544,
+          "address": 1537852,
+          "bytes": 4,
+          "sha256": "0b1f4cc15e5bccc7c7914cbb3a8fb0ad26d38e67f19cf03136cd7d9e830c82f6",
+          "separateOwnershipClaim": false
+        }
+      ],
+      "domain": "Existing exact numeric SDK map/context;actual Windows thread/TLS plus original SVC primitive route;context-index value is U32.",
+      "remainingExclusions": [
+        "Negative SDK status15e294 remains a typed unqualified error dependency.",
+        "Selector predecessor-left-subtree arm is entry-unreachable by last-search-left-null invariant;source arm retained.",
+        "No duplicate or whole-entry17790c insertion credit."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-manager/ready-v1.json",
+        "sha256": "f23a59ccdb54d1c49438ff6786f185569460242efe08467b9e666744b65131dd"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "manager",
+      "canonicalAddress": 1538016,
+      "addressHex": "0x1777e0",
+      "mode": "ARM",
+      "sourceFunction": "sdk_map_select062y",
+      "proposedProductionPath": "src/native/wave062-runtime/manager/map_select062y.c",
+      "sourceLine": 21,
+      "sourceSha256": "997b0da982220db77ccfc62a72022932dffa20b51134c76f2d1b5f9ef7e2977a",
+      "instructionRanges": [
+        {
+          "start": 1538016,
+          "endExclusive": 1538316,
+          "bytes": 300,
+          "sha256": "e1a7af72b7c9702cb09df2bb3820f33e8267e339d79546bb4fa4d1f93f046970"
+        }
+      ],
+      "instructionBytes": 300,
+      "referencedLiteralWords": [],
+      "domain": "Existing exact numeric SDK map/context;actual Windows thread/TLS plus original SVC primitive route;context-index value is U32.",
+      "remainingExclusions": [
+        "Negative SDK status15e294 remains a typed unqualified error dependency.",
+        "Selector predecessor-left-subtree arm is entry-unreachable by last-search-left-null invariant;source arm retained.",
+        "No duplicate or whole-entry17790c insertion credit."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-manager/ready-v1.json",
+        "sha256": "f23a59ccdb54d1c49438ff6786f185569460242efe08467b9e666744b65131dd"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "erase",
+      "canonicalAddress": 7753288,
+      "addressHex": "0x764e48",
+      "mode": "ARM",
+      "sourceFunction": "sdk_tree_erase062z",
+      "proposedProductionPath": "src/native/wave062-runtime/erase/tree_erase062z.c",
+      "sourceLine": 38,
+      "sourceSha256": "2eb189edc3194a28335cbc7b0f3ab2498ed5689c91b413baeeb128a7a7ba9640",
+      "instructionRanges": [
+        {
+          "start": 7753288,
+          "endExclusive": 7754916,
+          "bytes": 1628,
+          "sha256": "da523020d3d013186e259ca418bd0bcac8dc66eab97d029702493795c92500e1"
+        }
+      ],
+      "instructionBytes": 1628,
+      "referencedLiteralWords": [],
+      "domain": "Valid compatible headers through individual field copies;original NULL-replacement balancing quirk and actual free-list reuse;numeric and timer domains separately qualified.",
+      "remainingExclusions": [
+        "No structural node cast or textbook equal-black-height claim.",
+        "7652f0/7654a0 NULL arms are unreachable after the known-nonnull near-child rotation;source arms retained.",
+        "No payload-destructor/allocator/whole-owner claim."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-info/ready-v1.json",
+        "sha256": "e629a7ad0a312c63fb70615a580e310b9fcc3482c420ba5828ea4b4a27929486"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "timer",
+      "canonicalAddress": 4581504,
+      "addressHex": "0x45e880",
+      "mode": "ARM",
+      "sourceFunction": "sdk_timer_initialize062aa",
+      "proposedProductionPath": "src/native/wave062-runtime/timer/timer_initialize062aa.c",
+      "sourceLine": 3,
+      "sourceSha256": "d85a14cb0dc79339d1c438be576897989b922778b7564e7eff18aea06efd346b",
+      "instructionRanges": [
+        {
+          "start": 4581504,
+          "endExclusive": 4581680,
+          "bytes": 176,
+          "sha256": "f1bf7a46809e15588c59a255b012c8edfb5bfa6a4d94ce617b6aa67468f603bb"
+        }
+      ],
+      "instructionBytes": 176,
+      "referencedLiteralWords": [],
+      "domain": "Valid nonaliased finite endpoint-pair trees;successful bounded allocation;actual original/frozen SDK current body and explicit compiled deterministic backend. Constructor-initialized duplicate-policy byte is0 throughout the qualified API sequences;external mutation to nonzero is not qualified.",
+      "remainingExclusions": [
+        "No allocation failure/concurrent or reentrant callbacks.",
+        "No removal45e744/wrapper7654a4/full4b5afc/46ad80/481940/484660 owner.",
+        "Actual pointer-low-byte metadata retained;no cross-process raw-memory identity."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-timer/ready-v1.json",
+        "sha256": "4d19d7d60b1d68a331a6999eb2a188a8e1e2c4ac9a69ebe1fe4ef918e63e37b2"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "timer",
+      "canonicalAddress": 4580612,
+      "addressHex": "0x45e504",
+      "mode": "ARM",
+      "sourceFunction": "sdk_timer_set062aa",
+      "proposedProductionPath": "src/native/wave062-runtime/timer/timer_set062aa.c",
+      "sourceLine": 21,
+      "sourceSha256": "e0128475f7f3eedb7404432260acdf75592aa403547afc510c2798b7eee99c15",
+      "instructionRanges": [
+        {
+          "start": 4580612,
+          "endExclusive": 4581184,
+          "bytes": 572,
+          "sha256": "6521c8b475c67156229234e8dd903a76407552306e2aa198811266eb9309f0e9"
+        }
+      ],
+      "instructionBytes": 572,
+      "referencedLiteralWords": [
+        {
+          "reader": 4580708,
+          "address": 4581184,
+          "bytes": 4,
+          "sha256": "b9f0143c30f5cf21fbc176bec3b3098f78ae8905395429fff4f1f91dc541fb45",
+          "separateOwnershipClaim": false
+        }
+      ],
+      "domain": "Valid nonaliased finite endpoint-pair trees;successful bounded allocation;actual original/frozen SDK current body and explicit compiled deterministic backend. Constructor-initialized duplicate-policy byte is0 throughout the qualified API sequences;external mutation to nonzero is not qualified.",
+      "remainingExclusions": [
+        "No allocation failure/concurrent or reentrant callbacks.",
+        "No removal45e744/wrapper7654a4/full4b5afc/46ad80/481940/484660 owner.",
+        "Actual pointer-low-byte metadata retained;no cross-process raw-memory identity.",
+        "Nine predecessor-left-subtree PCs are entry-unreachable without an intervening write/call;source arm retained."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-timer/ready-v1.json",
+        "sha256": "4d19d7d60b1d68a331a6999eb2a188a8e1e2c4ac9a69ebe1fe4ef918e63e37b2"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "timer",
+      "canonicalAddress": 4580316,
+      "addressHex": "0x45e3dc",
+      "mode": "ARM",
+      "sourceFunction": "sdk_timer_update062aa",
+      "proposedProductionPath": "src/native/wave062-runtime/timer/timer_update062aa.c",
+      "sourceLine": 22,
+      "sourceSha256": "8ffc453c33e511d4a64add26313fb67ffdbbe3ec7e3a7121cd42fd9df2327bd8",
+      "instructionRanges": [
+        {
+          "start": 4580316,
+          "endExclusive": 4580612,
+          "bytes": 296,
+          "sha256": "e59e0fa85214d45e34d8f63decf4376ede7f8cac11b40a8e6ef69dc28b48931e"
+        }
+      ],
+      "instructionBytes": 296,
+      "referencedLiteralWords": [],
+      "domain": "Valid nonaliased finite endpoint-pair trees;successful bounded allocation;actual original/frozen SDK current body and explicit compiled deterministic backend. Constructor-initialized duplicate-policy byte is0 throughout the qualified API sequences;external mutation to nonzero is not qualified.",
+      "remainingExclusions": [
+        "No allocation failure/concurrent or reentrant callbacks.",
+        "No removal45e744/wrapper7654a4/full4b5afc/46ad80/481940/484660 owner.",
+        "Actual pointer-low-byte metadata retained;no cross-process raw-memory identity."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-timer/ready-v1.json",
+        "sha256": "4d19d7d60b1d68a331a6999eb2a188a8e1e2c4ac9a69ebe1fe4ef918e63e37b2"
+      },
+      "sourceCreditGranted": 0
+    },
+    {
+      "lane": "timer",
+      "canonicalAddress": 7755296,
+      "addressHex": "0x765620",
+      "mode": "ARM",
+      "sourceFunction": "sdk_timer_insert062aa",
+      "proposedProductionPath": "src/native/wave062-runtime/timer/timer_insert062aa.c",
+      "sourceLine": 67,
+      "sourceSha256": "75c9f5f4b4950e65f32e999366d96f89572c17322aaa86a95e1b8524cf3a622d",
+      "instructionRanges": [
+        {
+          "start": 7755296,
+          "endExclusive": 7756272,
+          "bytes": 976,
+          "sha256": "18c659378ac801d565ebee0ec507541b901c85c5267153db50424aad1626694d"
+        }
+      ],
+      "instructionBytes": 976,
+      "referencedLiteralWords": [
+        {
+          "reader": 7755500,
+          "address": 7756272,
+          "bytes": 4,
+          "sha256": "b9f0143c30f5cf21fbc176bec3b3098f78ae8905395429fff4f1f91dc541fb45",
+          "separateOwnershipClaim": false
+        }
+      ],
+      "domain": "Valid nonaliased finite endpoint-pair trees;successful bounded allocation;actual original/frozen SDK current body and explicit compiled deterministic backend. Constructor-initialized duplicate-policy byte is0 throughout the qualified API sequences;external mutation to nonzero is not qualified.",
+      "remainingExclusions": [
+        "No allocation failure/concurrent or reentrant callbacks.",
+        "No removal45e744/wrapper7654a4/full4b5afc/46ad80/481940/484660 owner.",
+        "Actual pointer-low-byte metadata retained;no cross-process raw-memory identity.",
+        "Only genuine45e504 caller force-left-zero is qualified;nonzero force-left remains unqualified.",
+        "Actual caller ignores volatileR0;authored ABI is void plus real output pointer."
+      ],
+      "frozenReady": {
+        "path": "work/native-asset062-sdk-timer/ready-v1.json",
+        "sha256": "4d19d7d60b1d68a331a6999eb2a188a8e1e2c4ac9a69ebe1fe4ef918e63e37b2"
+      },
+      "sourceCreditGranted": 0
+    }
+  ],
+  "entryCount": 21,
+  "instructionBytes": 5260,
+  "boundaryAuthority": "frozen measured claims;full decode is an additional consistency check,not a boundary proof",
+  "interworkingDependency": {
+    "start": 1049560,
+    "endExclusive": 1049568,
+    "bytes": 8,
+    "targetEntry": 1049568,
+    "targetMode": "Thumb",
+    "separateSourceCredit": 0
+  },
+  "platformAndInlineHelpers": "production-boundaries-v1.json;no additional entry/duplicate-provider credit",
+  "wholeOwnerCredit": 0,
+  "sourceCreditGranted": 0,
+  "metadataClarification": "v2 corrects roster-only state-width wording (source/frozen evidence always U16) and makes initialized-only timer policy explicit;all ranges/source bytes unchanged."
+}

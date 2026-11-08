@@ -43,6 +43,8 @@ jobs:
         run: python -I -S -m unittest discover -s tests -p test_public_sdk062_replay.py -v
       - name: Check public resource input boundaries
         run: python -I -S -m unittest discover -s tests -p test_public_resource065_replay.py -v
+      - name: Check public runtime replay receipts
+        run: python -I -S -m unittest discover -s tests -p test_public_sdk_runtime062_replay.py -v
       - name: Compile native sources and bounded VM components for reviewed targets
         run: python -I -S toolscripts/compile_sources.py
       - name: Upload compile diagnostics and manifests

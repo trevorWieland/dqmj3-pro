@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "name": "sdk-runtime062",
+  "producerSteps": [
+    {
+      "name": "sdk-runtime062-proof",
+      "args": [
+        "toolscripts/public_sdk_runtime062_replay.py",
+        "--output",
+        "work/sdk-runtime062-public-replay-v1"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "public_sdk_runtime062_replay",
+    "native_binding_inventory",
+    "native_sdk_inventory",
+    "native_provider_inventory",
+    "native_callback_inventory",
+    "compile_source_include_dirs",
+    "c_function_definitions"
+  ],
+  "packets": [
+    "work/sdk-runtime062-public-replay-v1/public-replay.json",
+    "work/sdk-runtime062-public-replay-v1/guard-tests.log",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/binding/transport-proof.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/binding/transport-tests.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/binding/final-v1/report.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/binding/final-v1/controls/report.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/binding-start/transport-proof.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/binding-start/transport-tests.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/binding-start/final-v1/report.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/binding-start/final-v1/controls/report.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/construction/transport-proof.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/construction/transport-tests.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/construction/final-v1/report.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/construction/final-v1/controls/report.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/manager/transport-proof.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/manager/transport-tests.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/manager/final-v1/report.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/manager/final-v1/controls/report.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/erase/transport-proof.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/erase/transport-tests.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/erase/final-v1/report.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/erase/final-v1/controls/report.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/timer/transport-proof.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/timer/transport-tests.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/timer/final-v1/report.json",
+    "work/sdk-runtime062-public-replay-v1/intake/replay/timer/final-v1/controls/report.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

@@ -1,0 +1,547 @@
+{
+  "status": "disjoint-public-input-proposal-with-frozen-timer",
+  "version": 1,
+  "files": [
+    {
+      "lane": "binding",
+      "role": "header",
+      "oldPath": "work/native-asset062-sdk-factory/source/binding062v.h",
+      "proposedPath": "src/native/wave062-runtime/include/binding062v.h",
+      "intakePath": "proposed/src/native/wave062-runtime/include/binding062v.h",
+      "bytes": 851,
+      "sha256": "a089d9901a6590bca4295aff3ffb7a979cf952f95e2b0c855719a561ed70c2d7"
+    },
+    {
+      "lane": "binding",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-factory/source/binding_active062v.c",
+      "proposedPath": "src/native/wave062-runtime/binding/binding_active062v.c",
+      "intakePath": "proposed/src/native/wave062-runtime/binding/binding_active062v.c",
+      "bytes": 239,
+      "sha256": "84d755f229ff6751916f8fdb7e6d99a2ae1348850296d4a28d3b8a873a67b64a"
+    },
+    {
+      "lane": "binding",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-factory/source/binding_policy062v.c",
+      "proposedPath": "src/native/wave062-runtime/binding/binding_policy062v.c",
+      "intakePath": "proposed/src/native/wave062-runtime/binding/binding_policy062v.c",
+      "bytes": 774,
+      "sha256": "6f6985d9b2be929949894a442e4730927b8dfe09bd17bfd7858d030ab3c41f3a"
+    },
+    {
+      "lane": "binding",
+      "role": "qualification-fixture",
+      "oldPath": "work/native-asset062-sdk-factory/source/fixture062v.c",
+      "proposedPath": "toolscripts/fixtures/sdk062_runtime_v1/binding/fixture062v.c",
+      "intakePath": "proposed/toolscripts/fixtures/sdk062_runtime_v1/binding/fixture062v.c",
+      "bytes": 1229,
+      "sha256": "4564fd4fa8361a76c326f216991d2a7032a82dd6842e31c1588d71e3df25e132"
+    },
+    {
+      "lane": "binding-start",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-factory-owner/source/binding_providers062w.c",
+      "proposedPath": "src/native/wave062-runtime/binding-start/binding_providers062w.c",
+      "intakePath": "proposed/src/native/wave062-runtime/binding-start/binding_providers062w.c",
+      "bytes": 574,
+      "sha256": "f2a7fb3c9031d19ee812e46f34428ebb1d4148e5ecfefa43df9c5661366a44ed"
+    },
+    {
+      "lane": "binding-start",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-factory-owner/source/binding_start062w.c",
+      "proposedPath": "src/native/wave062-runtime/binding-start/binding_start062w.c",
+      "intakePath": "proposed/src/native/wave062-runtime/binding-start/binding_start062w.c",
+      "bytes": 1075,
+      "sha256": "7b32769b8c24e0787abb72d7c4b9fc44996c4408c29ae632bc7f5a93194e5653"
+    },
+    {
+      "lane": "binding-start",
+      "role": "header",
+      "oldPath": "work/native-asset062-sdk-factory-owner/source/binding_start062w.h",
+      "proposedPath": "src/native/wave062-runtime/include/binding_start062w.h",
+      "intakePath": "proposed/src/native/wave062-runtime/include/binding_start062w.h",
+      "bytes": 1127,
+      "sha256": "ca6f1fffc565d1c72bb41e7dacae0f6f4809c77631d9162211a5ff2ef083e0be"
+    },
+    {
+      "lane": "binding-start",
+      "role": "qualification-fixture",
+      "oldPath": "work/native-asset062-sdk-factory-owner/source/fixture062w.c",
+      "proposedPath": "toolscripts/fixtures/sdk062_runtime_v1/binding-start/fixture062w.c",
+      "intakePath": "proposed/toolscripts/fixtures/sdk062_runtime_v1/binding-start/fixture062w.c",
+      "bytes": 997,
+      "sha256": "08d21ba2ce34e89bc18852fc15cf4ff1fcf1bb7b51102fc8075a0c2daa7fe889"
+    },
+    {
+      "lane": "construction",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-construction/source/binding_initialize062x.c",
+      "proposedPath": "src/native/wave062-runtime/construction/binding_initialize062x.c",
+      "intakePath": "proposed/src/native/wave062-runtime/construction/binding_initialize062x.c",
+      "bytes": 612,
+      "sha256": "b380e6302432b65ae01661e569b2eb022eb86d6d34ccc9f937b3045661867f1a"
+    },
+    {
+      "lane": "construction",
+      "role": "header",
+      "oldPath": "work/native-asset062-sdk-construction/source/construction062x.h",
+      "proposedPath": "src/native/wave062-runtime/include/construction062x.h",
+      "intakePath": "proposed/src/native/wave062-runtime/include/construction062x.h",
+      "bytes": 1742,
+      "sha256": "14fba2a134c8509888e21a36bcb7b9a71813b36f62f9b4685aa4a4417e9d9722"
+    },
+    {
+      "lane": "construction",
+      "role": "qualification-fixture",
+      "oldPath": "work/native-asset062-sdk-construction/source/fixture062x.c",
+      "proposedPath": "toolscripts/fixtures/sdk062_runtime_v1/construction/fixture062x.c",
+      "intakePath": "proposed/toolscripts/fixtures/sdk062_runtime_v1/construction/fixture062x.c",
+      "bytes": 2198,
+      "sha256": "709ce4e82cddeb8c4c1b860c3ca1fc7859e7a08324f074ebe29708542654a5a1"
+    },
+    {
+      "lane": "construction",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-construction/source/list_initialize062x.c",
+      "proposedPath": "src/native/wave062-runtime/construction/list_initialize062x.c",
+      "intakePath": "proposed/src/native/wave062-runtime/construction/list_initialize062x.c",
+      "bytes": 727,
+      "sha256": "b7bc84861d77a6930a2612177230413c8166b76f8ffd4d561391ff2acaed8264"
+    },
+    {
+      "lane": "construction",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-construction/source/wide_owner062x.c",
+      "proposedPath": "src/native/wave062-runtime/construction/wide_owner062x.c",
+      "intakePath": "proposed/src/native/wave062-runtime/construction/wide_owner062x.c",
+      "bytes": 1042,
+      "sha256": "6e8bccc7d39dbca6a591d868d9246993145088bbf8cdb2a9b07fa4f97a4ffec5"
+    },
+    {
+      "lane": "construction",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-construction/source/wide_units062x.c",
+      "proposedPath": "src/native/wave062-runtime/construction/wide_units062x.c",
+      "intakePath": "proposed/src/native/wave062-runtime/construction/wide_units062x.c",
+      "bytes": 515,
+      "sha256": "4dad75f4c980a6f8bde8a00f22353c02bce8e1611d65b4c39831e5a9192258ce"
+    },
+    {
+      "lane": "manager",
+      "role": "qualification-fixture",
+      "oldPath": "work/native-asset062-sdk-manager/source/fixture062y.c",
+      "proposedPath": "toolscripts/fixtures/sdk062_runtime_v1/manager/fixture062y.c",
+      "intakePath": "proposed/toolscripts/fixtures/sdk062_runtime_v1/manager/fixture062y.c",
+      "bytes": 507,
+      "sha256": "c77fffba511d2007f4a6ea5c4b22a6633553f44ded01e7298704bd6daba296f8"
+    },
+    {
+      "lane": "manager",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-manager/source/map_select062y.c",
+      "proposedPath": "src/native/wave062-runtime/manager/map_select062y.c",
+      "intakePath": "proposed/src/native/wave062-runtime/manager/map_select062y.c",
+      "bytes": 1419,
+      "sha256": "997b0da982220db77ccfc62a72022932dffa20b51134c76f2d1b5f9ef7e2977a"
+    },
+    {
+      "lane": "manager",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-manager/source/thread_index062y.c",
+      "proposedPath": "src/native/wave062-runtime/manager/thread_index062y.c",
+      "intakePath": "proposed/src/native/wave062-runtime/manager/thread_index062y.c",
+      "bytes": 1412,
+      "sha256": "9a30bcffb19b3c415470bd192b85f05eea9e0a4cded4e97eb8af2d3b15102fab"
+    },
+    {
+      "lane": "manager",
+      "role": "header",
+      "oldPath": "work/native-asset062-sdk-manager/source/thread_map062y.h",
+      "proposedPath": "src/native/wave062-runtime/include/thread_map062y.h",
+      "intakePath": "proposed/src/native/wave062-runtime/include/thread_map062y.h",
+      "bytes": 474,
+      "sha256": "936d879b9deedaa8c44681ff7b30d4a10f2217bfd30c78dae854993a1e88cab8"
+    },
+    {
+      "lane": "erase",
+      "role": "qualification-fixture",
+      "oldPath": "work/native-asset062-sdk-info/source/fixture062z.c",
+      "proposedPath": "toolscripts/fixtures/sdk062_runtime_v1/erase/fixture062z.c",
+      "intakePath": "proposed/toolscripts/fixtures/sdk062_runtime_v1/erase/fixture062z.c",
+      "bytes": 635,
+      "sha256": "61441650382f40caf7f699e9318b1b79b872569695adb0ca4cca8b3bec7424bd"
+    },
+    {
+      "lane": "erase",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-info/source/tree_access062z.c",
+      "proposedPath": "src/native/wave062-runtime/erase/tree_access062z.c",
+      "intakePath": "proposed/src/native/wave062-runtime/erase/tree_access062z.c",
+      "bytes": 2481,
+      "sha256": "12a1975f5853bd3040dbbf7ddc54eb72c849d734d109400f92b35d558533212d"
+    },
+    {
+      "lane": "erase",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-info/source/tree_erase062z.c",
+      "proposedPath": "src/native/wave062-runtime/erase/tree_erase062z.c",
+      "intakePath": "proposed/src/native/wave062-runtime/erase/tree_erase062z.c",
+      "bytes": 4436,
+      "sha256": "2eb189edc3194a28335cbc7b0f3ab2498ed5689c91b413baeeb128a7a7ba9640"
+    },
+    {
+      "lane": "erase",
+      "role": "header",
+      "oldPath": "work/native-asset062-sdk-info/source/tree_erase062z.h",
+      "proposedPath": "src/native/wave062-runtime/include/tree_erase062z.h",
+      "intakePath": "proposed/src/native/wave062-runtime/include/tree_erase062z.h",
+      "bytes": 1030,
+      "sha256": "a6cd87e6e7128d9de7652d40929a97cc83637616747b011c705a8dcc36ec3def"
+    },
+    {
+      "lane": "erase",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-info/source/tree_rebalance062z.c",
+      "proposedPath": "src/native/wave062-runtime/erase/tree_rebalance062z.c",
+      "intakePath": "proposed/src/native/wave062-runtime/erase/tree_rebalance062z.c",
+      "bytes": 2311,
+      "sha256": "7d17d5fb4944085db61e1f48cb818e438cf4f7c879b327ffaec4c0891a4d84bf"
+    },
+    {
+      "lane": "timer",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-timer/source/endpoint062aa.c",
+      "proposedPath": "src/native/wave062-runtime/timer/endpoint062aa.c",
+      "intakePath": "proposed/src/native/wave062-runtime/timer/endpoint062aa.c",
+      "bytes": 772,
+      "sha256": "204b7895651d3e19f372399a8a46f0359fa638d04541a8e0e62e8935a787a109"
+    },
+    {
+      "lane": "timer",
+      "role": "qualification-fixture",
+      "oldPath": "work/native-asset062-sdk-timer/source/fixture062aa.c",
+      "proposedPath": "toolscripts/fixtures/sdk062_runtime_v1/timer/fixture062aa.c",
+      "intakePath": "proposed/toolscripts/fixtures/sdk062_runtime_v1/timer/fixture062aa.c",
+      "bytes": 2201,
+      "sha256": "373dfe16e8a32664d3f6b3c85baf20556e06f04ba7872c6a9b7e376149502114"
+    },
+    {
+      "lane": "timer",
+      "role": "header",
+      "oldPath": "work/native-asset062-sdk-timer/source/timer062aa.h",
+      "proposedPath": "src/native/wave062-runtime/include/timer062aa.h",
+      "intakePath": "proposed/src/native/wave062-runtime/include/timer062aa.h",
+      "bytes": 1816,
+      "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+    },
+    {
+      "lane": "timer",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-timer/source/timer_initialize062aa.c",
+      "proposedPath": "src/native/wave062-runtime/timer/timer_initialize062aa.c",
+      "intakePath": "proposed/src/native/wave062-runtime/timer/timer_initialize062aa.c",
+      "bytes": 973,
+      "sha256": "d85a14cb0dc79339d1c438be576897989b922778b7564e7eff18aea06efd346b"
+    },
+    {
+      "lane": "timer",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-timer/source/timer_insert062aa.c",
+      "proposedPath": "src/native/wave062-runtime/timer/timer_insert062aa.c",
+      "intakePath": "proposed/src/native/wave062-runtime/timer/timer_insert062aa.c",
+      "bytes": 4626,
+      "sha256": "75c9f5f4b4950e65f32e999366d96f89572c17322aaa86a95e1b8524cf3a622d"
+    },
+    {
+      "lane": "timer",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-timer/source/timer_set062aa.c",
+      "proposedPath": "src/native/wave062-runtime/timer/timer_set062aa.c",
+      "intakePath": "proposed/src/native/wave062-runtime/timer/timer_set062aa.c",
+      "bytes": 1967,
+      "sha256": "e0128475f7f3eedb7404432260acdf75592aa403547afc510c2798b7eee99c15"
+    },
+    {
+      "lane": "timer",
+      "role": "production-algorithm",
+      "oldPath": "work/native-asset062-sdk-timer/source/timer_update062aa.c",
+      "proposedPath": "src/native/wave062-runtime/timer/timer_update062aa.c",
+      "intakePath": "proposed/src/native/wave062-runtime/timer/timer_update062aa.c",
+      "bytes": 1288,
+      "sha256": "8ffc453c33e511d4a64add26313fb67ffdbbe3ec7e3a7121cd42fd9df2327bd8"
+    }
+  ],
+  "productionUnits": 18,
+  "headers": 6,
+  "qualificationOnlyUnits": 6,
+  "unchangedProductionBytes": true,
+  "includeDirectories": [
+    "src/native/wave062-runtime/include",
+    "src/native/wave062-sdk/include"
+  ],
+  "existingSdkInputs": [
+    {
+      "path": "src/native/wave062-sdk/context/allocate062s.c",
+      "role": "production-algorithm",
+      "bytes": 530,
+      "sha256": "233d7668845739f5b897deb558c486eb8b3cab6c4f5e00065caed268f4b9528c"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/context062s.c",
+      "role": "production-algorithm",
+      "bytes": 2007,
+      "sha256": "d9130340bec329b1466f60c55192f1490b54513fdcbad24473857775781fbf4b"
+    },
+    {
+      "path": "toolscripts/fixtures/sdk062/context/fixture062s.c",
+      "role": "qualification-fixture",
+      "bytes": 3354,
+      "sha256": "c065cef741f9402404f4dc878bcd2dc75ef516a718378f20bd89fbe725b5f2ad"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/map062s.c",
+      "role": "production-algorithm",
+      "bytes": 4931,
+      "sha256": "4988a3cd066383fe9c31cad09f50ce8ab0c7ea2ac7db84eb7e51b337aec2cd5e"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/map_initialize062s.c",
+      "role": "production-algorithm",
+      "bytes": 906,
+      "sha256": "4d55295125b6ed49390be7bea8e48134a15fa336765d700c7b41d96b828b617d"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/mutex062s.c",
+      "role": "production-algorithm",
+      "bytes": 2170,
+      "sha256": "796b69eb236287be917731074248d7e7ee8161745d88bbb635a45641efac8382"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/sdk062s.h",
+      "role": "header",
+      "bytes": 4076,
+      "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+    },
+    {
+      "path": "src/native/wave062-sdk/arbiter/arbiter062a.c",
+      "role": "production-algorithm",
+      "bytes": 934,
+      "sha256": "321e73024636f40079affd54132a6ec51106ba3064d2923c79475582e4cba5e4"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/arbiter062a.h",
+      "role": "header",
+      "bytes": 932,
+      "sha256": "2e1b164d04d2f8536975718d538b11701dc6d755fe6f1146e52fe99f04bed4b8"
+    },
+    {
+      "path": "toolscripts/fixtures/sdk062/arbiter/fixture062a.c",
+      "role": "qualification-fixture",
+      "bytes": 455,
+      "sha256": "7d69cc8e86e94a8c7482fdd8df2ecbd671652ec46937c193c952318e06bccd9d"
+    },
+    {
+      "path": "toolscripts/fixtures/sdk062/arbiter/model062a.c",
+      "role": "cpu-model",
+      "bytes": 633,
+      "sha256": "905f951cb5e0190d9c6bb3c1e81c3be33f3d88792ff11d636994204e89a05ec5"
+    },
+    {
+      "path": "src/native/wave062-sdk/object/connection062t.c",
+      "role": "production-algorithm",
+      "bytes": 1486,
+      "sha256": "b4761c13711884d0041f0e4743c07eb723b6e62a6d2c64bdaa02a91bef1f1e90"
+    },
+    {
+      "path": "toolscripts/fixtures/sdk062/object/fixture062t.c",
+      "role": "qualification-fixture",
+      "bytes": 3117,
+      "sha256": "66fb1193955d41caa5fa7ce68d29ebaa12f26343e3ebec78ab06d98ab0f4c3d1"
+    },
+    {
+      "path": "src/native/wave062-sdk/object/methods062t.c",
+      "role": "production-algorithm",
+      "bytes": 443,
+      "sha256": "bbfd904a68c24835b79781cbd83d232596a7545f9c726808ddc6e23ace78cdfa"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/object062t.h",
+      "role": "header",
+      "bytes": 5023,
+      "sha256": "2a63ad6ffe06386f362b68be6a883075e8517e523893f271a1b7d0860aeff12d"
+    },
+    {
+      "path": "src/native/wave062-sdk/object/reference062t.c",
+      "role": "production-algorithm",
+      "bytes": 1494,
+      "sha256": "1e9bf959665e3b509aca23ae371fcac524ba5d57b565f4296e71230b52169df5"
+    },
+    {
+      "path": "src/native/wave062-sdk/object/result062t.c",
+      "role": "production-algorithm",
+      "bytes": 1766,
+      "sha256": "db9755ce0973783e4799e374530acefa18face83d965241c18fecdb8f0fc0098"
+    },
+    {
+      "path": "src/native/wave062-sdk/object/wrapper062t.c",
+      "role": "production-algorithm",
+      "bytes": 825,
+      "sha256": "d9fc50b936fc86581f8d447d15d180f98252febfc8c7d00c230897978021e747"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/clock062u.h",
+      "role": "header",
+      "bytes": 1764,
+      "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/clock_math062u.c",
+      "role": "production-algorithm",
+      "bytes": 998,
+      "sha256": "16f7378066cca9f8eaac5e33a24900eaceaa5a613321025c3e59d8dae48b5eab"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/clock_monotonic062u.c",
+      "role": "production-algorithm",
+      "bytes": 1421,
+      "sha256": "b878342e1365fd81ee8805d18c52a997c8dd05b03028a4aa141b1c03ddee1708"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/clock_read062u.c",
+      "role": "production-algorithm",
+      "bytes": 1855,
+      "sha256": "bd884a5ccc93f9c842a3d6396b5e8992c4b6daaf3e6a6525512c5527d6bc3611"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/clock_windows062u.c",
+      "role": "production-algorithm",
+      "bytes": 905,
+      "sha256": "7f1718457343ba8c51ff183e4ca6bf647b99e11a622895585b36f553686cae3b"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/clock_windows062u.h",
+      "role": "header",
+      "bytes": 475,
+      "sha256": "8c699a6ecee0dd975376cb8964fc9d204ce53dfa964f80ca7a68698de8effb09"
+    },
+    {
+      "path": "toolscripts/fixtures/sdk062/startup/fixture062u.c",
+      "role": "qualification-fixture",
+      "bytes": 2517,
+      "sha256": "7832aa803d052742bbf1d1f6381c56b8e65e6b17bbb8d7c944a746e205f73ffe"
+    },
+    {
+      "path": "toolscripts/fixtures/sdk062/startup/fixture_clock062u.c",
+      "role": "qualification-fixture",
+      "bytes": 3106,
+      "sha256": "5b9d3d042a72e74e4c42a3e36d08aa237176083c01876c22dad3c625fab36227"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/mutex_initialize062u.c",
+      "role": "production-algorithm",
+      "bytes": 958,
+      "sha256": "df03183ae626d46cca649dda4a0e8710d8041f969ea85fe18d2c394d50aeedde"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/task062u.h",
+      "role": "header",
+      "bytes": 2605,
+      "sha256": "2b0c02c6b12233b864eb91bef302869a8efc86820468d53dab1ee0c6e0f06ce2"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/task_default_work062u.c",
+      "role": "production-algorithm",
+      "bytes": 236,
+      "sha256": "c96cc361a3805f346dbfefc4e4491c354aae82234d7e0390bed2fea044060d7f"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/task_initialize062u.c",
+      "role": "production-algorithm",
+      "bytes": 1391,
+      "sha256": "eb0f52ae886067eabbfef0cd8163ee4f7115ad5f57e120a8c1147f65f8a33112"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/task_state062u.c",
+      "role": "production-algorithm",
+      "bytes": 1004,
+      "sha256": "3a4bbedcfaeba9c5afced7a94ed939cea60d42444ea57c6d2ab62cefc38371be"
+    }
+  ],
+  "stageDependencies": {
+    "binding": [
+      "binding"
+    ],
+    "binding-start": [
+      "binding",
+      "binding-start"
+    ],
+    "construction": [
+      "binding",
+      "binding-start",
+      "construction"
+    ],
+    "manager": [
+      "manager"
+    ],
+    "erase": [
+      "erase"
+    ],
+    "timer": [
+      "erase",
+      "timer"
+    ]
+  },
+  "canonicalOriginalInputs": [
+    "generated/update-content0/code.bin",
+    "generated/update-content0/exheader.bin",
+    "evidence/lanes/native-inventory-completion/seeded/update-census.json"
+  ],
+  "frozenPrerequisites": [
+    {
+      "lane": "binding",
+      "readyPath": "work/native-asset062-sdk-factory/ready-v1.json",
+      "bytes": 5706,
+      "sha256": "fe801b114af2ecf890b44ae5fd31f540517474a0a1a07b37d4444835f8b9563f",
+      "intakePath": "references/binding/ready-v1.json"
+    },
+    {
+      "lane": "binding-start",
+      "readyPath": "work/native-asset062-sdk-factory-owner/ready-v2.json",
+      "bytes": 5206,
+      "sha256": "c94d0ccaf6e545b2c18a1036af22b87b654dcc2e395ef357168fef3386f14cd6",
+      "intakePath": "references/binding-start/ready-v2.json"
+    },
+    {
+      "lane": "construction",
+      "readyPath": "work/native-asset062-sdk-construction/ready-v1.json",
+      "bytes": 6858,
+      "sha256": "385ad528f50a881255444b30d2bab6483ef110479e7e82ad5f56f457fbfefb88",
+      "intakePath": "references/construction/ready-v1.json"
+    },
+    {
+      "lane": "manager",
+      "readyPath": "work/native-asset062-sdk-manager/ready-v1.json",
+      "bytes": 6144,
+      "sha256": "f23a59ccdb54d1c49438ff6786f185569460242efe08467b9e666744b65131dd",
+      "intakePath": "references/manager/ready-v1.json"
+    },
+    {
+      "lane": "erase",
+      "readyPath": "work/native-asset062-sdk-info/ready-v1.json",
+      "bytes": 6537,
+      "sha256": "e629a7ad0a312c63fb70615a580e310b9fcc3482c420ba5828ea4b4a27929486",
+      "intakePath": "references/erase/ready-v1.json"
+    },
+    {
+      "lane": "timer",
+      "readyPath": "work/native-asset062-sdk-timer/ready-v1.json",
+      "bytes": 7302,
+      "sha256": "4d19d7d60b1d68a331a6999eb2a188a8e1e2c4ac9a69ebe1fe4ef918e63e37b2",
+      "intakePath": "references/timer/ready-v1.json"
+    }
+  ],
+  "sourceCreditGranted": 0,
+  "wholeFactoryTaskOwnerCredit": 0
+}
