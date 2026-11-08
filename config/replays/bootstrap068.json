@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "name": "bootstrap068",
+  "producerSteps": [
+    {
+      "name": "bootstrap068-proof",
+      "args": [
+        "toolscripts/bootstrap_file068_intake.py",
+        "--output",
+        "work/bootstrap068-public-replay-v1"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "bootstrap_file068_public",
+    "native_heap_inventory",
+    "native_shader_inventory",
+    "native_file_inventory",
+    "compile_source_include_dirs",
+    "c_function_definitions"
+  ],
+  "packets": [
+    "work/bootstrap068-public-replay-v1/ready.json",
+    "work/bootstrap068-public-replay-v1/actual-original-observation.json",
+    "work/bootstrap068-public-replay-v1/receipt-absolute-library.json",
+    "work/bootstrap068-public-replay-v1/receipt-build.json",
+    "work/bootstrap068-public-replay-v1/receipt-control-allocation-order-a64.json",
+    "work/bootstrap068-public-replay-v1/receipt-control-allocation-order-arm.json",
+    "work/bootstrap068-public-replay-v1/receipt-control-allocation-order-windows.json",
+    "work/bootstrap068-public-replay-v1/receipt-control-cache-count-a64.json",
+    "work/bootstrap068-public-replay-v1/receipt-control-cache-count-arm.json",
+    "work/bootstrap068-public-replay-v1/receipt-control-cache-count-windows.json",
+    "work/bootstrap068-public-replay-v1/receipt-control-patch-name-a64.json",
+    "work/bootstrap068-public-replay-v1/receipt-control-patch-name-arm.json",
+    "work/bootstrap068-public-replay-v1/receipt-control-patch-name-windows.json",
+    "work/bootstrap068-public-replay-v1/receipt-controls-build.json",
+    "work/bootstrap068-public-replay-v1/receipt-image-read.json",
+    "work/bootstrap068-public-replay-v1/receipt-listdir.json",
+    "work/bootstrap068-public-replay-v1/receipt-lstat.json",
+    "work/bootstrap068-public-replay-v1/receipt-metadata-write.json",
+    "work/bootstrap068-public-replay-v1/receipt-named-library.json",
+    "work/bootstrap068-public-replay-v1/receipt-open.json",
+    "work/bootstrap068-public-replay-v1/receipt-original-constructor.json",
+    "work/bootstrap068-public-replay-v1/receipt-original.json",
+    "work/bootstrap068-public-replay-v1/receipt-resolve.json",
+    "work/bootstrap068-public-replay-v1/receipt-scandir.json",
+    "work/bootstrap068-public-replay-v1/receipt-source-a64.json",
+    "work/bootstrap068-public-replay-v1/receipt-source-arm.json",
+    "work/bootstrap068-public-replay-v1/receipt-source-windows.json",
+    "work/bootstrap068-public-replay-v1/receipt-stat.json",
+    "work/bootstrap068-public-replay-v1/receipt-tiny-a64.json",
+    "work/bootstrap068-public-replay-v1/receipt-tiny-arm.json",
+    "work/bootstrap068-public-replay-v1/receipt-tiny-build.json",
+    "work/bootstrap068-public-replay-v1/receipt-tiny-history.json",
+    "work/bootstrap068-public-replay-v1/receipt-tiny-windows.json",
+    "work/bootstrap068-public-replay-v1/profiles/arm/report.json",
+    "work/bootstrap068-public-replay-v1/profiles/windows/report.json",
+    "work/bootstrap068-public-replay-v1/profiles/a64/report.json",
+    "work/bootstrap068-public-replay-v1/tiny/profiles/arm/report.json",
+    "work/bootstrap068-public-replay-v1/tiny/profiles/windows/report.json",
+    "work/bootstrap068-public-replay-v1/tiny/profiles/a64/report.json",
+    "work/bootstrap068-public-replay-v1/controls/cache-count/profiles/arm/report.json",
+    "work/bootstrap068-public-replay-v1/controls/cache-count/profiles/windows/report.json",
+    "work/bootstrap068-public-replay-v1/controls/cache-count/profiles/a64/report.json",
+    "work/bootstrap068-public-replay-v1/controls/patch-name/profiles/arm/report.json",
+    "work/bootstrap068-public-replay-v1/controls/patch-name/profiles/windows/report.json",
+    "work/bootstrap068-public-replay-v1/controls/patch-name/profiles/a64/report.json",
+    "work/bootstrap068-public-replay-v1/controls/allocation-order/profiles/arm/report.json",
+    "work/bootstrap068-public-replay-v1/controls/allocation-order/profiles/windows/report.json",
+    "work/bootstrap068-public-replay-v1/controls/allocation-order/profiles/a64/report.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

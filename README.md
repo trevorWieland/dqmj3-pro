@@ -18,6 +18,10 @@ The [public SDK heap candidate](docs/native-sdk-heap062-public.md) adds ten prod
 
 The [heap initializer inventory split](docs/native-heap-inventory.md) separates 160 existing instruction bytes from a startup candidate without changing byte totals or granting source credit. Discovered canonical entries become 26,660; historical inventory completeness remains unproved.
 
+The [physical Thor heap replay](docs/native-sdk-heap062-thor.md) passes 39 source profiles, 3,090 native calls and 3,015 whole-arena checks. It runs unchanged heap C directly on ARM64; OS contention, physical 16 KiB kernels and complete games remain unqualified.
+
+The [cold filesystem bootstrap candidate](docs/native-file-bootstrap068-public.md) adds three production C units with explicit SDK qualification ports. Full/source-only/copied input runs pass; independent committed replay and function admission remain pending.
+
 ## Established inputs
 
 The [resource CPU replay](docs/native-resource065-public-replay.md) independently qualifies nine bounded kernels with complete canonical extents, including discontiguous cold fragments. It passed 141 pipeline tests, 39 returning controls and byte-identical reproduction of all 461 native artifacts; the main resource constructor/finalizer and complete effect graph remain open.

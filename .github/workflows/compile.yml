@@ -53,6 +53,8 @@ jobs:
         run: python -I -S -m unittest discover -s tests -p test_queue_file067_public.py -v
       - name: Check public heap terminal audit receipts
         run: python -I -S -m unittest discover -s tests -p test_public_sdk_heap062_replay.py -v
+      - name: Check public filesystem bootstrap input boundaries
+        run: python -I -S -m unittest discover -s tests -p test_bootstrap_file068_public.py -v
       - name: Compile native sources and bounded VM components for reviewed targets
         run: python -I -S toolscripts/compile_sources.py
       - name: Upload compile diagnostics and manifests

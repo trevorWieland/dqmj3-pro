@@ -22,16 +22,20 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
-      - name: Set up Python
+      - name: Set up bootstrap Python
         uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
-          python-version: '3.13.5'
+          python-version: '3.12'
+      - name: Check frozen Python archive boundaries
+        run: python -I -S -m unittest discover -s tests -p test_bootstrap_report_python.py -v
+      - name: Materialize project-local frozen Python
+        run: python -I -S toolscripts/bootstrap_report_python.py
       - name: Check generated source-link names
-        run: python -I -S toolscripts/generate_source_names.py --check
+        run: tools/ci-python-3.13.5/python.exe -I -S toolscripts/generate_source_names.py --check
       - name: Check frozen public download integrity and retries
-        run: python -I -S -m unittest discover -s tests -p test_bootstrap_report_tools.py -v
+        run: tools/ci-python-3.13.5/python.exe -I -S -m unittest discover -s tests -p test_bootstrap_report_tools.py -v
       - name: Materialize frozen public report tools
-        run: python -I -S toolscripts/bootstrap_report_tools.py
+        run: tools/ci-python-3.13.5/python.exe -I -S toolscripts/bootstrap_report_tools.py
       - name: Test private intake and build guards
         run: tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_ci_native_build.py -v
       - name: Checkout owner-controlled private input parts

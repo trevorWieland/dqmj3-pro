@@ -41,7 +41,8 @@
       "wave066-request",
       "wave062-owner",
       "wave067-queue",
-      "wave062-heap"
+      "wave062-heap",
+      "wave068-bootstrap"
     ]
   },
   "units": [
@@ -11419,6 +11420,33 @@
       "includeDirectories": [
         "src/native/wave062-heap",
         "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave068-bootstrap/filesystem.c",
+      "headers": [
+        "src/native/wave068-bootstrap/bootstrap.h",
+        "src/native/wave067-queue/file_queue.h",
+        "src/native/wave066-request/request.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave068-bootstrap/requests.c",
+      "headers": [
+        "src/native/wave068-bootstrap/bootstrap.h",
+        "src/native/wave067-queue/file_queue.h",
+        "src/native/wave066-request/request.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave068-bootstrap/singleton.c",
+      "headers": [
+        "src/native/wave068-bootstrap/bootstrap.h",
+        "src/native/wave067-queue/file_queue.h",
+        "src/native/wave066-request/request.h"
       ],
       "role": "bounded-component"
     }

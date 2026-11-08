@@ -1,0 +1,402 @@
+{
+  "status": "coordinator-reviewed-physical-thor-heap-source-passed",
+  "producer": {
+    "path": "evidence/verification/producers/review_heap062_thor.py",
+    "bytes": 5200,
+    "sha256": "f2635139ae13e2537d7ae17b227a68560868fda1959ea9722bea0ce213248169"
+  },
+  "sourceCommit": "2e4490ceb330dcc46a8e9e280140382523b7e893",
+  "rawReceipt": {
+    "path": "work/heap062-android-public-physical-v1/receipt.json",
+    "bytes": 16199,
+    "sha256": "8807ef028dce7c1e1c1ad282af9c055f8b57c132b08637852270a5bf0ddfdb3a"
+  },
+  "build": {
+    "path": "work/heap062-android-public-build-v1/build.json",
+    "bytes": 7330,
+    "sha256": "0b22f9da6828aef53bb5d6da320b5995e4e67c6256143f27b9c3e9a46812e800"
+  },
+  "executable": {
+    "path": "work/heap062-android-public-build-v1/heap062-device",
+    "bytes": 17096,
+    "sha256": "1b2c4284845d955db23b37b6f785ce46d5f788fe8c8281614daa8e9eec9483e7"
+  },
+  "device": {
+    "model": "AYN Thor",
+    "api": "33",
+    "abi": "arm64-v8a",
+    "architecture": "aarch64",
+    "kernelPageBytes": "4096",
+    "qemu": "",
+    "transport": "unknown",
+    "nativeBridge": "0"
+  },
+  "profiles": 39,
+  "nativeCalls": 3090,
+  "completeArenaObservations": 3015,
+  "streamedBytesChecked": 296483678,
+  "rawArenaDumpsStored": false,
+  "originalReadsOrConstructions": 0,
+  "nativePointersGenuinelyHigh": true,
+  "elf16KiBAligned": true,
+  "actualKernelPageBytes": 4096,
+  "physical16KiBKernelClaimed": false,
+  "simulatedPlatformThreadIdentity": true,
+  "actualOSContentionQualified": false,
+  "sourceInstructionTraceClaimed": false,
+  "newSourceCreditGranted": 0,
+  "wholeNativeGameQualified": false,
+  "cases": [
+    {
+      "name": "generic-0",
+      "reportSha256": "cf1b147522484917e0d8106ed89ead97f566202ed25984db4c186ed42bcaed8a",
+      "pointerBytes": 8,
+      "arenaAddress": "0x5fa10fa400",
+      "nativeCalls": 75,
+      "bytesStreamedAndChecked": 7276346,
+      "fullArenaObservations": 74
+    },
+    {
+      "name": "generic-1",
+      "reportSha256": "6e85648589da139a5c857418991f6048b35bd016c7ca554b72449ac0c93af33b",
+      "pointerBytes": 8,
+      "arenaAddress": "0x58895d6400",
+      "nativeCalls": 81,
+      "bytesStreamedAndChecked": 7866320,
+      "fullArenaObservations": 80
+    },
+    {
+      "name": "generic-2",
+      "reportSha256": "5ce481fd25055d2aff16916f9d621294077859e53eb5c259e711e74a2342d85a",
+      "pointerBytes": 8,
+      "arenaAddress": "0x5a7dd3e400",
+      "nativeCalls": 80,
+      "bytesStreamedAndChecked": 7767991,
+      "fullArenaObservations": 79
+    },
+    {
+      "name": "generic-3",
+      "reportSha256": "c867a94f199a7113cf74159b3419e6687c965617397f4e098ca8e960d01984b1",
+      "pointerBytes": 8,
+      "arenaAddress": "0x61e61ee400",
+      "nativeCalls": 93,
+      "bytesStreamedAndChecked": 9046268,
+      "fullArenaObservations": 92
+    },
+    {
+      "name": "generic-4",
+      "reportSha256": "b546e9fe29b18ee834cf9c1a00c46eb2e7d85e7951a6a1c992490bde3e00a89a",
+      "pointerBytes": 8,
+      "arenaAddress": "0x55d1566400",
+      "nativeCalls": 78,
+      "bytesStreamedAndChecked": 7571333,
+      "fullArenaObservations": 77
+    },
+    {
+      "name": "generic-5",
+      "reportSha256": "6da32af72342ef765c541ce5c7708f271278a00ccfe7b4678f1ce8bbf60ac9fc",
+      "pointerBytes": 8,
+      "arenaAddress": "0x57e3d7e400",
+      "nativeCalls": 80,
+      "bytesStreamedAndChecked": 7767991,
+      "fullArenaObservations": 79
+    },
+    {
+      "name": "generic-6",
+      "reportSha256": "517836844f430c4ba7639d78545d6a307325f76db14bca6bd02368d62f055af2",
+      "pointerBytes": 8,
+      "arenaAddress": "0x5fc557e400",
+      "nativeCalls": 89,
+      "bytesStreamedAndChecked": 8652952,
+      "fullArenaObservations": 88
+    },
+    {
+      "name": "generic-7",
+      "reportSha256": "9cbddcbf344107f592c93a4847efe13e7f95d491248905f3dd56629959cc55b5",
+      "pointerBytes": 8,
+      "arenaAddress": "0x5fba336400",
+      "nativeCalls": 84,
+      "bytesStreamedAndChecked": 8161307,
+      "fullArenaObservations": 83
+    },
+    {
+      "name": "generic-8",
+      "reportSha256": "e8c4f457b0178443999dbd06f270c57ee29ae28ed0ee86386a18ba46fff18cbe",
+      "pointerBytes": 8,
+      "arenaAddress": "0x6402c72400",
+      "nativeCalls": 80,
+      "bytesStreamedAndChecked": 7767991,
+      "fullArenaObservations": 79
+    },
+    {
+      "name": "generic-9",
+      "reportSha256": "31f655b5bb6aebdd1d83615ed0c93c761d4adad46547c41bba84de249ce7dc57",
+      "pointerBytes": 8,
+      "arenaAddress": "0x56b8dbe400",
+      "nativeCalls": 97,
+      "bytesStreamedAndChecked": 9439584,
+      "fullArenaObservations": 96
+    },
+    {
+      "name": "generic-10",
+      "reportSha256": "b2b1d188be2a1e7208c1860c0326d3a243860424512451cce54c57cef8955160",
+      "pointerBytes": 8,
+      "arenaAddress": "0x613aa32400",
+      "nativeCalls": 92,
+      "bytesStreamedAndChecked": 8947939,
+      "fullArenaObservations": 91
+    },
+    {
+      "name": "generic-11",
+      "reportSha256": "1f47dfeeeacf43d5cb33c63e3341977bb565b1c5598c8b995a8be053dd231d7a",
+      "pointerBytes": 8,
+      "arenaAddress": "0x58726aa400",
+      "nativeCalls": 89,
+      "bytesStreamedAndChecked": 8652952,
+      "fullArenaObservations": 88
+    },
+    {
+      "name": "generic-12",
+      "reportSha256": "97854dbaa37d91c9faa8b0487b2bd55997f46c388cc23a3b926fd151f44af1dc",
+      "pointerBytes": 8,
+      "arenaAddress": "0x613d51e400",
+      "nativeCalls": 91,
+      "bytesStreamedAndChecked": 8849610,
+      "fullArenaObservations": 90
+    },
+    {
+      "name": "generic-13",
+      "reportSha256": "a0f26e05ee5b0c3aac0426373fef6e89d188648d7d5301aea6fb1e831b452d53",
+      "pointerBytes": 8,
+      "arenaAddress": "0x556638a400",
+      "nativeCalls": 85,
+      "bytesStreamedAndChecked": 8259636,
+      "fullArenaObservations": 84
+    },
+    {
+      "name": "generic-14",
+      "reportSha256": "923bbfad9467c7fdd8e7bbc896428fa2937eb72419f0921ad591b234736f9f76",
+      "pointerBytes": 8,
+      "arenaAddress": "0x5df5d06400",
+      "nativeCalls": 86,
+      "bytesStreamedAndChecked": 8357965,
+      "fullArenaObservations": 85
+    },
+    {
+      "name": "generic-15",
+      "reportSha256": "379b831e3cc7222033e533f4faae0ac3ff87337266ea3c4b443680f6978d28dd",
+      "pointerBytes": 8,
+      "arenaAddress": "0x5f1be9e400",
+      "nativeCalls": 70,
+      "bytesStreamedAndChecked": 6784701,
+      "fullArenaObservations": 69
+    },
+    {
+      "name": "generic-16",
+      "reportSha256": "19442a2d1eb9517c316bf97091454b248f079e1b0d69fd301295720115ab2254",
+      "pointerBytes": 8,
+      "arenaAddress": "0x5aba56a400",
+      "nativeCalls": 92,
+      "bytesStreamedAndChecked": 8947939,
+      "fullArenaObservations": 91
+    },
+    {
+      "name": "generic-17",
+      "reportSha256": "d48ad6c3778ece350fd09c30051d6dc670946e7cf787998a505506a7330d6598",
+      "pointerBytes": 8,
+      "arenaAddress": "0x623d11e400",
+      "nativeCalls": 88,
+      "bytesStreamedAndChecked": 8554623,
+      "fullArenaObservations": 87
+    },
+    {
+      "name": "generic-18",
+      "reportSha256": "916100a429ecf4b1d3ffd742a0a14923717087c410f46326a03ff6d1b1f8fdb0",
+      "pointerBytes": 8,
+      "arenaAddress": "0x5f27ba6400",
+      "nativeCalls": 83,
+      "bytesStreamedAndChecked": 8062978,
+      "fullArenaObservations": 82
+    },
+    {
+      "name": "generic-19",
+      "reportSha256": "263b09cb8f6a9707ada5ba586b4d01e6f878a417d3ad5b86c12f64c69d664cbb",
+      "pointerBytes": 8,
+      "arenaAddress": "0x59ad942400",
+      "nativeCalls": 93,
+      "bytesStreamedAndChecked": 9046268,
+      "fullArenaObservations": 92
+    },
+    {
+      "name": "generic-20",
+      "reportSha256": "d76cbb37c445e38224d547a99742b7055e466dec3e87034101ceecfbab91228e",
+      "pointerBytes": 8,
+      "arenaAddress": "0x576cf06400",
+      "nativeCalls": 79,
+      "bytesStreamedAndChecked": 7669662,
+      "fullArenaObservations": 78
+    },
+    {
+      "name": "generic-21",
+      "reportSha256": "60f5c50cf10f9c080ac0454fe30bef3505255be0093c2346fb5245c65268627b",
+      "pointerBytes": 8,
+      "arenaAddress": "0x579d122400",
+      "nativeCalls": 79,
+      "bytesStreamedAndChecked": 7669662,
+      "fullArenaObservations": 78
+    },
+    {
+      "name": "generic-22",
+      "reportSha256": "2ddfdfe256090871a73a33926e1929373beb2df36f1cfc1b7673e57131c4a400",
+      "pointerBytes": 8,
+      "arenaAddress": "0x63a7026400",
+      "nativeCalls": 89,
+      "bytesStreamedAndChecked": 8652952,
+      "fullArenaObservations": 88
+    },
+    {
+      "name": "generic-23",
+      "reportSha256": "61f798f6ff919ebde617190cbca28b84e1692a99571cb96b1ebd2e8192093975",
+      "pointerBytes": 8,
+      "arenaAddress": "0x62f0eea400",
+      "nativeCalls": 77,
+      "bytesStreamedAndChecked": 7473004,
+      "fullArenaObservations": 76
+    },
+    {
+      "name": "default-0",
+      "reportSha256": "e4b0f2c86456105b1f33544cd793533b10d42f344186ff744650e66fc2a4234d",
+      "pointerBytes": 8,
+      "arenaAddress": "0x5b0c8b2400",
+      "nativeCalls": 86,
+      "bytesStreamedAndChecked": 8163216,
+      "fullArenaObservations": 83
+    },
+    {
+      "name": "default-1",
+      "reportSha256": "953195c4a0e6f3df031b0614bb352e69587df2da1380a72c3c2cb2e1c497a188",
+      "pointerBytes": 8,
+      "arenaAddress": "0x6450c52400",
+      "nativeCalls": 84,
+      "bytesStreamedAndChecked": 7966512,
+      "fullArenaObservations": 81
+    },
+    {
+      "name": "default-2",
+      "reportSha256": "d750302cfea5cab3ffab20eb784e2ddfde5b437b8e3654d0f3c9de10f1581b25",
+      "pointerBytes": 8,
+      "arenaAddress": "0x633c586400",
+      "nativeCalls": 84,
+      "bytesStreamedAndChecked": 7966512,
+      "fullArenaObservations": 81
+    },
+    {
+      "name": "default-3",
+      "reportSha256": "99e08f547da50eff53565ff544d1d073ce94f542bc084d3cee283aada5aa1182",
+      "pointerBytes": 8,
+      "arenaAddress": "0x5da4f5e400",
+      "nativeCalls": 88,
+      "bytesStreamedAndChecked": 8359920,
+      "fullArenaObservations": 85
+    },
+    {
+      "name": "default-4",
+      "reportSha256": "2f5fd9840ad88ba00c8618ddc7d928901c935926c4280c78fbd2f802984f8842",
+      "pointerBytes": 8,
+      "arenaAddress": "0x62997ee400",
+      "nativeCalls": 84,
+      "bytesStreamedAndChecked": 7966512,
+      "fullArenaObservations": 81
+    },
+    {
+      "name": "default-5",
+      "reportSha256": "a3851b35af6f1a0b582f6aed3534ccdff25d5ba337d5476e47c59c52ea34d24b",
+      "pointerBytes": 8,
+      "arenaAddress": "0x5be698a400",
+      "nativeCalls": 100,
+      "bytesStreamedAndChecked": 9540144,
+      "fullArenaObservations": 97
+    },
+    {
+      "name": "default-6",
+      "reportSha256": "5018ae2de6bdc61400fbb6fb197bd6246313f7b9f8129b8002bdab10f6c46aff",
+      "pointerBytes": 8,
+      "arenaAddress": "0x6283056400",
+      "nativeCalls": 84,
+      "bytesStreamedAndChecked": 7966512,
+      "fullArenaObservations": 81
+    },
+    {
+      "name": "default-7",
+      "reportSha256": "37b1b5b09587b0acde810d76106bfe5391fbd78d03fb2ec7e204977a6f89850a",
+      "pointerBytes": 8,
+      "arenaAddress": "0x63e059e400",
+      "nativeCalls": 66,
+      "bytesStreamedAndChecked": 6196176,
+      "fullArenaObservations": 63
+    },
+    {
+      "name": "default-8",
+      "reportSha256": "8ab7a81a9b63d8c24e288aac90d0289c7360a047b8654c921c988ee4b5fa70af",
+      "pointerBytes": 8,
+      "arenaAddress": "0x5fc0796400",
+      "nativeCalls": 84,
+      "bytesStreamedAndChecked": 7966512,
+      "fullArenaObservations": 81
+    },
+    {
+      "name": "default-9",
+      "reportSha256": "4194fae5f379ac29db435f885d97a5a2e036af77430590fe23888d9642adadf6",
+      "pointerBytes": 8,
+      "arenaAddress": "0x5689c06400",
+      "nativeCalls": 86,
+      "bytesStreamedAndChecked": 8163216,
+      "fullArenaObservations": 83
+    },
+    {
+      "name": "default-10",
+      "reportSha256": "5502523161a30759d72700a0ce8b92e2420c12a10495a4c99d32f1222021ebf7",
+      "pointerBytes": 8,
+      "arenaAddress": "0x608eb96400",
+      "nativeCalls": 84,
+      "bytesStreamedAndChecked": 7966512,
+      "fullArenaObservations": 81
+    },
+    {
+      "name": "default-11",
+      "reportSha256": "6691d252489e99e30b6e6e78179b9a3b3fabf97b8e32300c96726ffae5d91982",
+      "pointerBytes": 8,
+      "arenaAddress": "0x56bdd2a400",
+      "nativeCalls": 84,
+      "bytesStreamedAndChecked": 7966512,
+      "fullArenaObservations": 81
+    },
+    {
+      "name": "registry",
+      "reportSha256": "c2fc051154a205b3162e5d35548b547e68782cae8bba44023d9b14b3415044d9",
+      "pointerBytes": 8,
+      "arenaAddress": "0x5858b8e400",
+      "nativeCalls": 21,
+      "bytesStreamedAndChecked": 983064,
+      "fullArenaObservations": 10
+    },
+    {
+      "name": "setter",
+      "reportSha256": "0ffd33191df8c1520a06e9dd40e0548a49d16c3ab4aa3e7150d1b453665c6cc0",
+      "pointerBytes": 8,
+      "arenaAddress": "0x5a06b9a400",
+      "nativeCalls": 21,
+      "bytesStreamedAndChecked": 1769472,
+      "fullArenaObservations": 18
+    },
+    {
+      "name": "disabled",
+      "reportSha256": "44a4a58dd40e0b968a6446b7992f22da0f4c323f04b8afaeb5eccd17c1671bc1",
+      "pointerBytes": 8,
+      "arenaAddress": "0x6394bea400",
+      "nativeCalls": 4,
+      "bytesStreamedAndChecked": 294912,
+      "fullArenaObservations": 3
+    }
+  ]
+}
