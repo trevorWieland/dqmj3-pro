@@ -8,7 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import ci_native_build as ci
-import native_sdk_inventory as native_census_overlay
+import native_binding_inventory as native_census_overlay
 import c_function_definitions
 from bootstrap_public_compiler import contained
 
