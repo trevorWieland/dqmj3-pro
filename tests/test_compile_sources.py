@@ -98,6 +98,39 @@ class CompileSourcesTests(unittest.TestCase):
                 with self.assertRaisesRegex(RuntimeError, "component scope"):
                     BUILD.read_config(root)
 
+    def test_named_native_component_requires_complete_source_and_header_census(self):
+        root = self.temporary()
+        config = self.minimal(root)
+        folder = root / "src/native/particle019-velocity"
+        folder.mkdir()
+        (folder / "types.h").write_text("typedef unsigned int Word;\n")
+        (folder / "unit.c").write_text('#include "types.h"\nWord component(void) { return 1; }\n')
+        config["nativeComponentRoots"] = ["src/native/particle019-velocity"]
+        self.save(root, config)
+        with self.assertRaisesRegex(RuntimeError, "Source census differs"):
+            BUILD.read_config(root)
+        config["units"].append({"source": "src/native/particle019-velocity/unit.c", "headers": [], "role": "bounded-component"})
+        self.save(root, config)
+        with self.assertRaisesRegex(RuntimeError, "Explicit header dependency"):
+            BUILD.read_config(root)
+        config["units"][-1]["headers"] = ["src/native/particle019-velocity/types.h"]
+        self.save(root, config)
+        self.assertEqual(len(BUILD.read_config(root)["units"]), 2)
+        (folder / "new.c").write_text("int extra(void) { return 2; }\n")
+        with self.assertRaisesRegex(RuntimeError, "Source census differs"):
+            BUILD.read_config(root)
+
+    def test_named_native_components_reject_escape_duplicates_missing_or_wave_overlap(self):
+        for scopes in [["work/private"], ["src/native/../private"], ["src/native/missing"],
+                       ["src/native/wave001"], ["src/native/particle019-velocity"] * 2, "src/native/particle019-velocity", [17]]:
+            with self.subTest(scopes=scopes):
+                root = self.temporary()
+                config = self.minimal(root)
+                config["nativeComponentRoots"] = scopes
+                self.save(root, config)
+                with self.assertRaisesRegex(RuntimeError, "native component scope"):
+                    BUILD.read_config(root)
+
     def test_platform_target_lists_cannot_be_empty_unknown_or_duplicated(self):
         for targets in [[], ["unknown"], ["windows-x64"] * 2, "windows-x64"]:
             with self.subTest(targets=targets):

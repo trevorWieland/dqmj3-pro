@@ -20,6 +20,8 @@ The [heap initializer inventory split](docs/native-heap-inventory.md) separates 
 
 The [filesystem teardown inventory repair](docs/native-file-teardown-inventory.md) adds three independently witnessed entries and separates the application wrapper from its filesystem shutdown callee. The composed census now contains **26,663 discovered entries**. Its gross text denominator and source-credit totals stay unchanged; the complete coupled replay passed 98 pipeline tests and rechecked all 5,586 native artifacts across three scopes. Ten [filesystem lifecycle and SDK teardown operations](docs/native-file-coupled070-public-replay.md) now have medium-confidence working-C proofs covering 812 instruction bytes in their measured domains. The embedded intrusive-list destructor remains excluded.
 
+The [particle velocity source and callable inventory](docs/native-particle019-velocity.md) publishes the closed scalar callback and ten independently reached entries, bringing the composed census to **26,673 discovered entries**. Its C compiles for all three public targets; full, source-only and public-only replays pass. Existing byte classifications, the initialized-text denominator and source-credit totals stay unchanged.
+
 The [physical Thor heap replay](docs/native-sdk-heap062-thor.md) passes 39 source profiles, 3,090 native calls and 3,015 whole-arena checks. It runs unchanged heap C directly on ARM64; OS contention, physical 16 KiB kernels and complete games remain unqualified.
 
 The [cold filesystem bootstrap candidate](docs/native-file-bootstrap068-public.md) adds three production C units with explicit SDK qualification ports. Full/source-only/copied input runs pass; independent committed replay and function admission remain pending.

@@ -1,0 +1,57 @@
+{
+  "status": "coordinator-velocity-integrated-path-preflight-passed",
+  "producer": {
+    "path": "evidence/verification/producers/review_particle019_preflight.py",
+    "bytes": 7401,
+    "sha256": "346c1a91ca58b7f0e9ea49bc3c411d1ccaba1c76f63f6e4b1b09bc9dbef38ec4"
+  },
+  "scopes": [
+    {
+      "mode": "full",
+      "positiveCases": 117,
+      "returningControlCases": 120,
+      "boundaryPrograms": 20,
+      "cleanExitFinalizerButParentRejected": 3,
+      "receipt": {
+        "path": "work/particle019-root-full-v1/adapter/replay/transport-receipt.public.json",
+        "bytes": 68350,
+        "sha256": "735cb440948aa9d6ae68d06ceec6beb8de219a3f4b60f78b941174cc03ccfacf"
+      }
+    },
+    {
+      "mode": "source-only",
+      "positiveCases": 117,
+      "returningControlCases": 120,
+      "boundaryPrograms": 20,
+      "cleanExitFinalizerButParentRejected": 3,
+      "receipt": {
+        "path": "work/particle019-root-source-only-v1/adapter/replay/transport-receipt.public.json",
+        "bytes": 69123,
+        "sha256": "d85cf160c805ff30869ee47a03ad8b528f462221ec9279a3a2bb44d3695ae983"
+      }
+    },
+    {
+      "mode": "public-only",
+      "positiveCases": 57,
+      "returningControlCases": 114,
+      "boundaryPrograms": 20,
+      "cleanExitFinalizerButParentRejected": 3,
+      "receipt": {
+        "path": "work/particle019-root-integrated-public-v1/adapter/replay/transport-receipt.public.json",
+        "bytes": 64870,
+        "sha256": "83ef17f3b47ccbbb47c244088ce9979bdc1f230c11f2f01b39bee3bd3ee80bab"
+      }
+    }
+  ],
+  "completeNativeArtifactRowsChecked": 90,
+  "artifactsPerBuild": 10,
+  "additionalExportImportLibrariesChecked": 9,
+  "declaredPrimaryArtifactsPerBuild": 9,
+  "missingImportLibraryFromOriginalDeclaredRosterCorrectedByExhaustiveCoordinatorCheck": true,
+  "completeActualOriginalCases": 20,
+  "persistentBoundaryProgramsPerScope": 20,
+  "sourceCreditGranted": 0,
+  "independentCommittedReplayPending": true,
+  "canonicalInventoryRepairSeparate": true,
+  "wholeGameClaimed": false
+}

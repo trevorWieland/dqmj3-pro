@@ -23,6 +23,8 @@ def validate_policy(plan):
         raise ValueError('Cleanup requires explicit producer steps')
     for step in steps:
         kinds = step.get('inputKinds')
+        if kinds == ['none']:
+            continue
         if (not isinstance(kinds, list) or not kinds or not all(isinstance(kind, str) for kind in kinds)
                 or len(kinds) != len(set(kinds)) or not set(kinds) <= KINDS):
             raise ValueError('Cleanup producers must explicitly consume only code/exheader inputs')

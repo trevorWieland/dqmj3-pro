@@ -92,6 +92,8 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_native_teardown_inventory.py -v
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_native_particle_inventory.py -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_functional_report.py -v
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_report_source_units.py -v

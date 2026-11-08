@@ -39,9 +39,21 @@ def read_config(root):
     if any((root / item).is_symlink() or not folder.is_dir()
            for item, folder in zip(components, folders)):
         raise RuntimeError("Missing or linked component scope")
+    native_components = data.get("nativeComponentRoots", [])
+    if (not isinstance(native_components, list) or any(not isinstance(item, str) for item in native_components)
+            or len(set(native_components)) != len(native_components)
+            or any(not re.fullmatch(r"src/native/[a-z][a-z0-9]*(?:-[a-z0-9]+)*", item) for item in native_components)
+            or any(item.removeprefix("src/native/") in waves for item in native_components)):
+        raise RuntimeError("Invalid explicit native component scope")
+    native_base = (root / "src/native").resolve()
+    for item in native_components:
+        path = root / item
+        if path.is_symlink() or path.is_junction() or not path.is_dir() or not path.resolve().is_relative_to(native_base):
+            raise RuntimeError("Missing or linked native component scope")
     allowed = [(root / "src/native").resolve(), *folders]
     actual = {p.relative_to(root).as_posix() for wave in waves for p in (root / "src/native" / wave).rglob("*.c")}
     actual.update(p.relative_to(root).as_posix() for item in components for p in (root / item).rglob("*.c"))
+    actual.update(p.relative_to(root).as_posix() for item in native_components for p in (root / item).rglob("*.c"))
     active = [unit["source"] for unit in data["units"]]
     excluded = [unit["source"] for unit in data["excludedSources"]]
     if len(active) != len(set(active)) or len(excluded) != len(set(excluded)) or set(active) & set(excluded):

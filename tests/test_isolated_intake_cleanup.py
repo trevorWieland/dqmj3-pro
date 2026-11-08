@@ -86,6 +86,23 @@ class IntakeCleanupTests(unittest.TestCase):
                 replay.validate_plan(plan)
         self.assert_nothing_removed()
 
+    def test_explicit_no_private_input_producer_retains_required_reporting_inputs(self):
+        plan = copy.deepcopy(self.plan)
+        plan['producerSteps'][0]['inputKinds'] = ['none']
+        self.assertTrue(cleanup.validate_policy(plan))
+        self.run_cleanup(plan)
+        self.assertTrue((self.destination / 'generated/update-content0/code.bin').is_file())
+        self.assertTrue((self.destination / 'generated/update-content0/exheader.bin').is_file())
+        self.assertTrue(all(not path.exists() for path in self.inputs))
+
+    def test_no_private_input_declaration_cannot_be_mixed_with_other_kinds(self):
+        for kinds in [['none', 'code'], ['none', 'romfs'], ['none', 'none']]:
+            plan = copy.deepcopy(self.plan)
+            plan['producerSteps'][0]['inputKinds'] = kinds
+            with self.subTest(kinds=kinds), self.assertRaises(ValueError):
+                cleanup.validate_policy(plan)
+        self.assert_nothing_removed()
+
     def test_missing_or_ambiguous_producer_declarations_fail_closed(self):
         for kinds in [None, [], ['code', 'code'], [['romfs']], 'code']:
             plan = copy.deepcopy(self.plan)

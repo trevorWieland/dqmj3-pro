@@ -1,0 +1,92 @@
+{
+  "status": "frozen-consumed-field-and-real-owning-route-contract-before-C",
+  "reference": {
+    "path": "work/particle019-velocity-v1/reference-normal-v1/profile1-stack0-saved42-frames1-set0-group0/observation.private.json",
+    "bytes": 3053849,
+    "sha256": "ffff003a27ee25b2ff9bd7c91d201d97834ff20a99f8b84f180597963b8baf00"
+  },
+  "callback": {
+    "index": 0,
+    "particle": 34054912,
+    "resource": 167773440,
+    "caller": 5457768,
+    "entrySp": 268427072,
+    "stepBits": 1065353216,
+    "returned": true,
+    "particleBefore": {
+      "path": "work/particle019-velocity-v1/reference-normal-v1/profile1-stack0-saved42-frames1-set0-group0/velocity-particle0.private.bin.xz",
+      "bytes": 128,
+      "sha256": "7e5a77ca387b91ce0e519ec1c679d323c1528649214560f74251e803261b6987"
+    },
+    "resourceBefore": {
+      "path": "work/particle019-velocity-v1/reference-normal-v1/profile1-stack0-saved42-frames1-set0-group0/velocity-resource0.private.bin.xz",
+      "bytes": 100,
+      "sha256": "7fec472c4a7978ca25c3de222fafd4822feb872bb1898642649c5d9edec1679e"
+    },
+    "exitSp": 268427072,
+    "after": {
+      "path": "work/particle019-velocity-v1/reference-normal-v1/profile1-stack0-saved42-frames1-set0-group0/velocity-after0.private.bin.xz",
+      "bytes": 128,
+      "sha256": "7e5a77ca387b91ce0e519ec1c679d323c1528649214560f74251e803261b6987"
+    }
+  },
+  "actualParticleBytes": 360,
+  "consumedParticleMinimumBytes": 328,
+  "originalResourceMinimumBytes": 772,
+  "velocityBits": [
+    0,
+    0,
+    0
+  ],
+  "retentionBits": 0,
+  "stepBits": 1065353216,
+  "originalCallbackReturned": true,
+  "unknownWordsPreserved": true,
+  "actualParticleBeforeAfterIdentical": true,
+  "upstreamPriorByte58": {
+    "offset": 58,
+    "value": 42,
+    "lastOriginalWriter": {
+      "pc": 1509948,
+      "writeAddress": 268427128,
+      "writeBytes": 4,
+      "value": 42,
+      "entryContext": {
+        "entrySp": 268427136,
+        "registers": {
+          "3": 0,
+          "4": 150994944,
+          "5": 1256,
+          "6": 128,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          "10": 0,
+          "11": 757738026,
+          "14": 1509924
+        }
+      }
+    }
+  },
+  "typedViews": {
+    "resource": {
+      "opaqueWordsBeforeRetention": 192,
+      "retentionOffset": 768
+    },
+    "particle": {
+      "opaqueWordsBeforeVelocity": 9,
+      "velocityOffset": 36,
+      "opaqueWordsAfterVelocity": 69,
+      "resourcePointerOffsetArm": 324,
+      "resourcePointerOffsetNative64": 328
+    }
+  },
+  "canonicalArmFloatingArgument": "aapcs-vfp S0; explicit ARM pcs attribute required under softfp component compiler profile",
+  "unsupported": [
+    "full owning class ABI",
+    "unaligned or null object fields",
+    "overlapping resource and particle objects",
+    "arbitrary floating control-register modes"
+  ],
+  "sourceCreditGranted": 0
+}
