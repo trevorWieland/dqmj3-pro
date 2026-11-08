@@ -1,0 +1,105 @@
+{
+  "status": "coordinator-reviewed-physical-thor-registration-source-passed",
+  "sourceCommit": "9e61dd4d22a0669ed90508fa5c130e266e1ea112",
+  "producer": {
+    "path": "evidence/verification/producers/review_registration062_thor.py",
+    "bytes": 7756,
+    "sha256": "c3076dfb69929ef7bbd095efa060f222189414a8c471e9655dcc9c7b3d0a6c86"
+  },
+  "rawReceipt": {
+    "path": "work/registration062-thor-full-v1/receipt.json",
+    "bytes": 9325,
+    "sha256": "0e5fffc16054f5ff8eba862a1ba6cd9b78aabd5d43ae991c5d10d8390b7e0e39"
+  },
+  "build": {
+    "path": "work/registration062-android-build-v1/build.json",
+    "bytes": 13102,
+    "sha256": "051f0caa914b5672181b80043e9ca6cfb216e5a2e3bea10ec0e89edd7bd7f0cd"
+  },
+  "executable": {
+    "path": "work/registration062-android-build-v1/registration062-device",
+    "bytes": 24136,
+    "sha256": "e52dcb1019be9255b9c0a66e49e61a3326103885aa7ea3c93185286003acfdfa"
+  },
+  "device": {
+    "model": "AYN Thor",
+    "api": "33",
+    "abi": "arm64-v8a",
+    "architecture": "aarch64",
+    "kernelPageBytes": "4096",
+    "qemu": "",
+    "transport": "unknown",
+    "nativeBridge": "0"
+  },
+  "profiles": 4,
+  "nativeCalls": 3088,
+  "completeArenaObservations": 1972,
+  "streamedBytesChecked": 1088770184,
+  "orderedMutexCallbacks": 8756,
+  "windowsProjectionObservationsMatched": 1972,
+  "rawWindowsArenaEqualityClaimed": false,
+  "simulatedPlatformThreadIdentity": true,
+  "actualOSContentionQualified": false,
+  "sourceInstructionTraceClaimed": false,
+  "actualKernelPageBytes": 4096,
+  "elf16KiBAligned": true,
+  "physical16KiBKernelClaimed": false,
+  "originalReadsOrConstructions": 0,
+  "newSourceCreditGranted": 0,
+  "constructorDestructorAdmissionGranted": false,
+  "wholeNativeGameQualified": false,
+  "cases": [
+    {
+      "profile": 0,
+      "seed": 622,
+      "lookupLock": 0,
+      "disposer": false,
+      "reportSha256": "c1ac9e55e60bd456371fff220779cc763f2549080b3a46b39a3fde77a515e1a1",
+      "pointerBytes": 8,
+      "arenaAddress": "0x5af8713440",
+      "nativeCalls": 772,
+      "bytesStreamedAndChecked": 264406796,
+      "completeArenaObservations": 493,
+      "orderedMutexCallbacks": 1064
+    },
+    {
+      "profile": 1,
+      "seed": 623,
+      "lookupLock": 128,
+      "disposer": true,
+      "reportSha256": "3147400240a63d794ecf220818df33fb28e2182b18880c82a7c38a265853c2b0",
+      "pointerBytes": 8,
+      "arenaAddress": "0x63b800b440",
+      "nativeCalls": 772,
+      "bytesStreamedAndChecked": 274787684,
+      "completeArenaObservations": 493,
+      "orderedMutexCallbacks": 2560
+    },
+    {
+      "profile": 2,
+      "seed": 624,
+      "lookupLock": 255,
+      "disposer": false,
+      "reportSha256": "0310881bad3a25b1a4e3f220dceb3faa2f0970c178c980bcea007c1a621d83c2",
+      "pointerBytes": 8,
+      "arenaAddress": "0x6461e27440",
+      "nativeCalls": 772,
+      "bytesStreamedAndChecked": 274787796,
+      "completeArenaObservations": 493,
+      "orderedMutexCallbacks": 2564
+    },
+    {
+      "profile": 3,
+      "seed": 625,
+      "lookupLock": 1,
+      "disposer": true,
+      "reportSha256": "3922b351edb42b6406019b4dec6393a337a2b6f798bc99c2306fd2fe691b9542",
+      "pointerBytes": 8,
+      "arenaAddress": "0x635b5eb440",
+      "nativeCalls": 772,
+      "bytesStreamedAndChecked": 274787908,
+      "completeArenaObservations": 493,
+      "orderedMutexCallbacks": 2568
+    }
+  ]
+}
