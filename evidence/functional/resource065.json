@@ -1,0 +1,934 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-resource-CPU-kernels",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "functions": [
+    {
+      "symbol": "fn_0014db24",
+      "source": {
+        "path": "src/native/wave065-resource/effect_vertex.c",
+        "bytes": 3159,
+        "sha256": "2f6862b7705ac9ce9870ce3b2edb34d9ca6ae738b96eb30c43312550ebb52d05"
+      },
+      "canonicalIdentity": {
+        "address": 1366820,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 268,
+      "originalInstructionRanges": [
+        {
+          "start": 1366820,
+          "endExclusive": 1367088,
+          "bytes": 268
+        }
+      ],
+      "originalBodySha256": "af03fa517da564cdece2e457a0fbeeed16bc67f8957747096927fddc148012b9",
+      "reportEntryBytes": 268,
+      "originalDataWitnesses": {
+        "fixedPCRelativeDataReads": [],
+        "indexedPCDataReadSitesRequiringExplicitDomain": [],
+        "interiorNoninstructionRanges": []
+      },
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/resource065-coordinator-5c2b215.json",
+          "bytes": 1566,
+          "sha256": "5979756423c01b99a8f59c4943caca194ea566c41bdddb4e6cc05c5a1b4056aa"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-effect065/resource-cpu-v1/boundaries-and-coverage.json",
+          "bytes": 47984,
+          "sha256": "87ced7bb54b560599d05e7d429d3766ff2e95556f175d670ea7c299aeeaeb161"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "returningSourceGraphControls": 39,
+        "pipelineTests": 141,
+        "observerTests": 15,
+        "sourceOnlyUnits": 547,
+        "fullCanonicalColdFragmentsIncluded": true,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "limits": [
+          "Vertex and attribute domains retain the explicit available-binding and index preconditions.",
+          "Constant floating values are compared as opaque bit patterns; rendering is unproved.",
+          "Texture dimensions through 32x32 retain complete backing and a 4096-byte usable scratch allocation even for zero requests.",
+          "Serialized U32 offsets, device words and actual widened native pointers remain separately typed.",
+          "The main resource constructor/finalizer, supplemental entries, SDK cold startup, GPU, physical Android and complete native games remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data extents including discontiguous cold fragments; original/source/model CPU comparisons; independent committed replay; all 461 raw artifacts reproduce; 39 wrong-source controls genuinely return and reject. No universal or exact matching claim."
+      }
+    },
+    {
+      "symbol": "fn_0015d0e0",
+      "source": {
+        "path": "src/native/wave065-resource/effect_vertex.c",
+        "bytes": 3159,
+        "sha256": "2f6862b7705ac9ce9870ce3b2edb34d9ca6ae738b96eb30c43312550ebb52d05"
+      },
+      "canonicalIdentity": {
+        "address": 1429728,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 240,
+      "originalInstructionRanges": [
+        {
+          "start": 1429728,
+          "endExclusive": 1429760,
+          "bytes": 32
+        },
+        {
+          "start": 1429824,
+          "endExclusive": 1430032,
+          "bytes": 208
+        }
+      ],
+      "originalBodySha256": "418dd6beeb42c12150642e8d1bd417b67201b68b6ac1058dd1ed32d552a82202",
+      "reportEntryBytes": 32,
+      "originalDataWitnesses": {
+        "fixedPCRelativeDataReads": [],
+        "indexedPCDataReadSitesRequiringExplicitDomain": [
+          1429752
+        ],
+        "interiorNoninstructionRanges": [
+          {
+            "start": 1429760,
+            "endExclusive": 1429824,
+            "bytes": 64,
+            "sha256": "a8dbe897534e978ab0be5258ac6ddf9f9145c6d373c7c6db817f41618cdc0bc7"
+          }
+        ]
+      },
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/resource065-coordinator-5c2b215.json",
+          "bytes": 1566,
+          "sha256": "5979756423c01b99a8f59c4943caca194ea566c41bdddb4e6cc05c5a1b4056aa"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-effect065/resource-cpu-v1/boundaries-and-coverage.json",
+          "bytes": 47984,
+          "sha256": "87ced7bb54b560599d05e7d429d3766ff2e95556f175d670ea7c299aeeaeb161"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "returningSourceGraphControls": 39,
+        "pipelineTests": 141,
+        "observerTests": 15,
+        "sourceOnlyUnits": 547,
+        "fullCanonicalColdFragmentsIncluded": true,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "limits": [
+          "Vertex and attribute domains retain the explicit available-binding and index preconditions.",
+          "Constant floating values are compared as opaque bit patterns; rendering is unproved.",
+          "Texture dimensions through 32x32 retain complete backing and a 4096-byte usable scratch allocation even for zero requests.",
+          "Serialized U32 offsets, device words and actual widened native pointers remain separately typed.",
+          "The main resource constructor/finalizer, supplemental entries, SDK cold startup, GPU, physical Android and complete native games remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data extents including discontiguous cold fragments; original/source/model CPU comparisons; independent committed replay; all 461 raw artifacts reproduce; 39 wrong-source controls genuinely return and reject. No universal or exact matching claim."
+      }
+    },
+    {
+      "symbol": "fn_0015d21c",
+      "source": {
+        "path": "src/native/wave065-resource/effect_vertex.c",
+        "bytes": 3159,
+        "sha256": "2f6862b7705ac9ce9870ce3b2edb34d9ca6ae738b96eb30c43312550ebb52d05"
+      },
+      "canonicalIdentity": {
+        "address": 1430044,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 60,
+      "originalInstructionRanges": [
+        {
+          "start": 1430044,
+          "endExclusive": 1430104,
+          "bytes": 60
+        }
+      ],
+      "originalBodySha256": "ec3f7686ba75c84b30b82f0abe95327bafc80e3e4a998627d5e6865f37725b5a",
+      "reportEntryBytes": 60,
+      "originalDataWitnesses": {
+        "fixedPCRelativeDataReads": [],
+        "indexedPCDataReadSitesRequiringExplicitDomain": [],
+        "interiorNoninstructionRanges": []
+      },
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/resource065-coordinator-5c2b215.json",
+          "bytes": 1566,
+          "sha256": "5979756423c01b99a8f59c4943caca194ea566c41bdddb4e6cc05c5a1b4056aa"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-effect065/resource-cpu-v1/boundaries-and-coverage.json",
+          "bytes": 47984,
+          "sha256": "87ced7bb54b560599d05e7d429d3766ff2e95556f175d670ea7c299aeeaeb161"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "returningSourceGraphControls": 39,
+        "pipelineTests": 141,
+        "observerTests": 15,
+        "sourceOnlyUnits": 547,
+        "fullCanonicalColdFragmentsIncluded": true,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "limits": [
+          "Vertex and attribute domains retain the explicit available-binding and index preconditions.",
+          "Constant floating values are compared as opaque bit patterns; rendering is unproved.",
+          "Texture dimensions through 32x32 retain complete backing and a 4096-byte usable scratch allocation even for zero requests.",
+          "Serialized U32 offsets, device words and actual widened native pointers remain separately typed.",
+          "The main resource constructor/finalizer, supplemental entries, SDK cold startup, GPU, physical Android and complete native games remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data extents including discontiguous cold fragments; original/source/model CPU comparisons; independent committed replay; all 461 raw artifacts reproduce; 39 wrong-source controls genuinely return and reject. No universal or exact matching claim."
+      }
+    },
+    {
+      "symbol": "fn_0044f3b8",
+      "source": {
+        "path": "src/native/wave065-resource/effect_commands.c",
+        "bytes": 5991,
+        "sha256": "ebb3cd9cf39fdd3352b85658a37085280cbf7329cd8c4d200e1fe53ca21fafab"
+      },
+      "canonicalIdentity": {
+        "address": 4518840,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 148,
+      "originalInstructionRanges": [
+        {
+          "start": 4518840,
+          "endExclusive": 4518988,
+          "bytes": 148
+        }
+      ],
+      "originalBodySha256": "fe1fd0c34fb1f09e97be08332a769c639e4aa53b2c51597587cfb1210dc449e6",
+      "reportEntryBytes": 148,
+      "originalDataWitnesses": {
+        "fixedPCRelativeDataReads": [
+          {
+            "start": 4518988,
+            "endExclusive": 4518992,
+            "bytes": 4,
+            "sha256": "5d7455ef6d4bd34516fa65441bd77c5b76fff0ef2065a7277bbe8d1b5c299a9a",
+            "actualPCRelativeReadWitness": 4518880
+          }
+        ],
+        "indexedPCDataReadSitesRequiringExplicitDomain": [],
+        "interiorNoninstructionRanges": []
+      },
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/resource065-coordinator-5c2b215.json",
+          "bytes": 1566,
+          "sha256": "5979756423c01b99a8f59c4943caca194ea566c41bdddb4e6cc05c5a1b4056aa"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-effect065/resource-cpu-v1/boundaries-and-coverage.json",
+          "bytes": 47984,
+          "sha256": "87ced7bb54b560599d05e7d429d3766ff2e95556f175d670ea7c299aeeaeb161"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "returningSourceGraphControls": 39,
+        "pipelineTests": 141,
+        "observerTests": 15,
+        "sourceOnlyUnits": 547,
+        "fullCanonicalColdFragmentsIncluded": true,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "limits": [
+          "Vertex and attribute domains retain the explicit available-binding and index preconditions.",
+          "Constant floating values are compared as opaque bit patterns; rendering is unproved.",
+          "Texture dimensions through 32x32 retain complete backing and a 4096-byte usable scratch allocation even for zero requests.",
+          "Serialized U32 offsets, device words and actual widened native pointers remain separately typed.",
+          "The main resource constructor/finalizer, supplemental entries, SDK cold startup, GPU, physical Android and complete native games remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data extents including discontiguous cold fragments; original/source/model CPU comparisons; independent committed replay; all 461 raw artifacts reproduce; 39 wrong-source controls genuinely return and reject. No universal or exact matching claim."
+      }
+    },
+    {
+      "symbol": "fn_001830e0",
+      "source": {
+        "path": "src/native/wave065-resource/effect_commands.c",
+        "bytes": 5991,
+        "sha256": "ebb3cd9cf39fdd3352b85658a37085280cbf7329cd8c4d200e1fe53ca21fafab"
+      },
+      "canonicalIdentity": {
+        "address": 1585376,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 1244,
+      "originalInstructionRanges": [
+        {
+          "start": 1585376,
+          "endExclusive": 1585596,
+          "bytes": 220
+        },
+        {
+          "start": 1585652,
+          "endExclusive": 1586676,
+          "bytes": 1024
+        }
+      ],
+      "originalBodySha256": "a2bf23030ffe6652918dcb65e3398309e553b43916be66a5ea8ac4cfa219485c",
+      "reportEntryBytes": 220,
+      "originalDataWitnesses": {
+        "fixedPCRelativeDataReads": [
+          {
+            "start": 1586676,
+            "endExclusive": 1586680,
+            "bytes": 4,
+            "sha256": "1aec590d49cab8a3a8035cc177af20b9393b10090142de9ee23b7e952e61bf6e",
+            "actualPCRelativeReadWitness": 1585396
+          },
+          {
+            "start": 1586680,
+            "endExclusive": 1586684,
+            "bytes": 4,
+            "sha256": "d7d800376e3253384c5e0faf0fbb71416a82e7ed71defd0ce7aca4f1e745fa89",
+            "actualPCRelativeReadWitness": 1585412
+          },
+          {
+            "start": 1586684,
+            "endExclusive": 1586688,
+            "bytes": 4,
+            "sha256": "40a89d8f8e20fdd2ef7fbebf282a288ad8da18906f34072e73aafe96e038b405",
+            "actualPCRelativeReadWitness": 1585400
+          },
+          {
+            "start": 1586688,
+            "endExclusive": 1586692,
+            "bytes": 4,
+            "sha256": "b8f0ef9e9220c40abe5693df9266eefd08ac116adae9d9ad89de9812c3a6a7fe",
+            "actualPCRelativeReadWitness": 1585404
+          },
+          {
+            "start": 1586692,
+            "endExclusive": 1586696,
+            "bytes": 4,
+            "sha256": "17615ad06b1537047c6db256de1fd0ae6212737ef9b473b02b0f62d95354ce14",
+            "actualPCRelativeReadWitness": 1586024
+          },
+          {
+            "start": 1586696,
+            "endExclusive": 1586700,
+            "bytes": 4,
+            "sha256": "725e32e71883e9c74693153bc05901f2923ab66dc160dfdeb45c8ff2076561d6",
+            "actualPCRelativeReadWitness": 1586064
+          }
+        ],
+        "indexedPCDataReadSitesRequiringExplicitDomain": [
+          1585588
+        ],
+        "interiorNoninstructionRanges": [
+          {
+            "start": 1585596,
+            "endExclusive": 1585652,
+            "bytes": 56,
+            "sha256": "7eab95338cb959083cfe08f9515da69c862da2b04bb7e080a8b4cb721aadd0d9"
+          }
+        ]
+      },
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/resource065-coordinator-5c2b215.json",
+          "bytes": 1566,
+          "sha256": "5979756423c01b99a8f59c4943caca194ea566c41bdddb4e6cc05c5a1b4056aa"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-effect065/resource-cpu-v1/boundaries-and-coverage.json",
+          "bytes": 47984,
+          "sha256": "87ced7bb54b560599d05e7d429d3766ff2e95556f175d670ea7c299aeeaeb161"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "returningSourceGraphControls": 39,
+        "pipelineTests": 141,
+        "observerTests": 15,
+        "sourceOnlyUnits": 547,
+        "fullCanonicalColdFragmentsIncluded": true,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "limits": [
+          "Vertex and attribute domains retain the explicit available-binding and index preconditions.",
+          "Constant floating values are compared as opaque bit patterns; rendering is unproved.",
+          "Texture dimensions through 32x32 retain complete backing and a 4096-byte usable scratch allocation even for zero requests.",
+          "Serialized U32 offsets, device words and actual widened native pointers remain separately typed.",
+          "The main resource constructor/finalizer, supplemental entries, SDK cold startup, GPU, physical Android and complete native games remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data extents including discontiguous cold fragments; original/source/model CPU comparisons; independent committed replay; all 461 raw artifacts reproduce; 39 wrong-source controls genuinely return and reject. No universal or exact matching claim."
+      }
+    },
+    {
+      "symbol": "fn_006cf79c",
+      "source": {
+        "path": "src/native/wave065-resource/effect_commands.c",
+        "bytes": 5991,
+        "sha256": "ebb3cd9cf39fdd3352b85658a37085280cbf7329cd8c4d200e1fe53ca21fafab"
+      },
+      "canonicalIdentity": {
+        "address": 7141276,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 144,
+      "originalInstructionRanges": [
+        {
+          "start": 7141276,
+          "endExclusive": 7141420,
+          "bytes": 144
+        }
+      ],
+      "originalBodySha256": "dd248ae8bf2b8f8e678a5f601419a70693bb19777c06d2453a81baea9dbab04d",
+      "reportEntryBytes": 144,
+      "originalDataWitnesses": {
+        "fixedPCRelativeDataReads": [
+          {
+            "start": 7141420,
+            "endExclusive": 7141424,
+            "bytes": 4,
+            "sha256": "b8f0ef9e9220c40abe5693df9266eefd08ac116adae9d9ad89de9812c3a6a7fe",
+            "actualPCRelativeReadWitness": 7141296
+          },
+          {
+            "start": 7141424,
+            "endExclusive": 7141428,
+            "bytes": 4,
+            "sha256": "d1319f369eab42b74aabcbfb4b20aaecde7396185316a4f773f8319d82e907fe",
+            "actualPCRelativeReadWitness": 7141288
+          },
+          {
+            "start": 7141428,
+            "endExclusive": 7141432,
+            "bytes": 4,
+            "sha256": "104de51f75a88370219a000b1380200b27289ffbb42d9217427c7bed8a061720",
+            "actualPCRelativeReadWitness": 7141344
+          },
+          {
+            "start": 7141432,
+            "endExclusive": 7141436,
+            "bytes": 4,
+            "sha256": "ad05563325cb037037e875133bd1cfa10e8912692b59c74e3af1047a474314a7",
+            "actualPCRelativeReadWitness": 7141400
+          }
+        ],
+        "indexedPCDataReadSitesRequiringExplicitDomain": [],
+        "interiorNoninstructionRanges": []
+      },
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/resource065-coordinator-5c2b215.json",
+          "bytes": 1566,
+          "sha256": "5979756423c01b99a8f59c4943caca194ea566c41bdddb4e6cc05c5a1b4056aa"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-effect065/resource-cpu-v1/boundaries-and-coverage.json",
+          "bytes": 47984,
+          "sha256": "87ced7bb54b560599d05e7d429d3766ff2e95556f175d670ea7c299aeeaeb161"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "returningSourceGraphControls": 39,
+        "pipelineTests": 141,
+        "observerTests": 15,
+        "sourceOnlyUnits": 547,
+        "fullCanonicalColdFragmentsIncluded": true,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "limits": [
+          "Vertex and attribute domains retain the explicit available-binding and index preconditions.",
+          "Constant floating values are compared as opaque bit patterns; rendering is unproved.",
+          "Texture dimensions through 32x32 retain complete backing and a 4096-byte usable scratch allocation even for zero requests.",
+          "Serialized U32 offsets, device words and actual widened native pointers remain separately typed.",
+          "The main resource constructor/finalizer, supplemental entries, SDK cold startup, GPU, physical Android and complete native games remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data extents including discontiguous cold fragments; original/source/model CPU comparisons; independent committed replay; all 461 raw artifacts reproduce; 39 wrong-source controls genuinely return and reject. No universal or exact matching claim."
+      }
+    },
+    {
+      "symbol": "fn_0044e7b4",
+      "source": {
+        "path": "src/native/wave065-resource/effect_texture.c",
+        "bytes": 5440,
+        "sha256": "22cf0b0f8d73d3011b1332a7e90a146e5f3f63e9ee7d0dc59617128a6adcdbd5"
+      },
+      "canonicalIdentity": {
+        "address": 4515764,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 1192,
+      "originalInstructionRanges": [
+        {
+          "start": 4515764,
+          "endExclusive": 4515900,
+          "bytes": 136
+        },
+        {
+          "start": 4515948,
+          "endExclusive": 4516972,
+          "bytes": 1024
+        },
+        {
+          "start": 4516996,
+          "endExclusive": 4517028,
+          "bytes": 32
+        }
+      ],
+      "originalBodySha256": "72e52cd40acf72cc02c5e9291e162567df41403043e543cf3c0d100504411d2c",
+      "reportEntryBytes": 136,
+      "originalDataWitnesses": {
+        "fixedPCRelativeDataReads": [
+          {
+            "start": 4516972,
+            "endExclusive": 4516976,
+            "bytes": 4,
+            "sha256": "6429d2c810ad248a605c564c1fec3d40b4626a809fa97aa117120868e84bb8c1",
+            "actualPCRelativeReadWitness": 4515832
+          },
+          {
+            "start": 4516976,
+            "endExclusive": 4516980,
+            "bytes": 4,
+            "sha256": "d4c8d7a762a9152a920039907c269faa073bbd134fa23bd80b76fe5137907b24",
+            "actualPCRelativeReadWitness": 4515864
+          },
+          {
+            "start": 4516980,
+            "endExclusive": 4516984,
+            "bytes": 4,
+            "sha256": "73ffea46ba953393480fabfad86975ae257043da744e617a38114c17753b7482",
+            "actualPCRelativeReadWitness": 4516224
+          },
+          {
+            "start": 4516984,
+            "endExclusive": 4516988,
+            "bytes": 4,
+            "sha256": "6de138debec855cccf0a925e1f95ca0d95391dc831b738dd1c6cddd3e06656c2",
+            "actualPCRelativeReadWitness": 4516308
+          },
+          {
+            "start": 4516988,
+            "endExclusive": 4516992,
+            "bytes": 4,
+            "sha256": "32ccc80a8916a41b7acf912b6ea00c7b762f48ea5455e08abd6efe2d49ad8899",
+            "actualPCRelativeReadWitness": 4516336
+          },
+          {
+            "start": 4516992,
+            "endExclusive": 4516996,
+            "bytes": 4,
+            "sha256": "7bda6e65e2d1bb21bc2500197d5a21f01c17ed45688e49b4d2bce07715f48f9f",
+            "actualPCRelativeReadWitness": 4516840
+          },
+          {
+            "start": 4517028,
+            "endExclusive": 4517032,
+            "bytes": 4,
+            "sha256": "e4f9f4397bbe2ee02458e6e2f551ceb5a2c9d7976507a2d1ce4b9cb216aa1801",
+            "actualPCRelativeReadWitness": 4516996
+          }
+        ],
+        "indexedPCDataReadSitesRequiringExplicitDomain": [
+          4515892
+        ],
+        "interiorNoninstructionRanges": [
+          {
+            "start": 4515900,
+            "endExclusive": 4515948,
+            "bytes": 48,
+            "sha256": "11378fcc7ee6a9a3ca755950a711b7c71d0e3a2f3e986edaf6b6af4130678c47"
+          },
+          {
+            "start": 4516972,
+            "endExclusive": 4516996,
+            "bytes": 24,
+            "sha256": "3a73c5654d11a00bc2547a401ae67d33bb950b0a9d6170d519b9e0c5d8a4b191"
+          }
+        ]
+      },
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/resource065-coordinator-5c2b215.json",
+          "bytes": 1566,
+          "sha256": "5979756423c01b99a8f59c4943caca194ea566c41bdddb4e6cc05c5a1b4056aa"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-effect065/resource-cpu-v1/boundaries-and-coverage.json",
+          "bytes": 47984,
+          "sha256": "87ced7bb54b560599d05e7d429d3766ff2e95556f175d670ea7c299aeeaeb161"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "returningSourceGraphControls": 39,
+        "pipelineTests": 141,
+        "observerTests": 15,
+        "sourceOnlyUnits": 547,
+        "fullCanonicalColdFragmentsIncluded": true,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "limits": [
+          "Vertex and attribute domains retain the explicit available-binding and index preconditions.",
+          "Constant floating values are compared as opaque bit patterns; rendering is unproved.",
+          "Texture dimensions through 32x32 retain complete backing and a 4096-byte usable scratch allocation even for zero requests.",
+          "Serialized U32 offsets, device words and actual widened native pointers remain separately typed.",
+          "The main resource constructor/finalizer, supplemental entries, SDK cold startup, GPU, physical Android and complete native games remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data extents including discontiguous cold fragments; original/source/model CPU comparisons; independent committed replay; all 461 raw artifacts reproduce; 39 wrong-source controls genuinely return and reject. No universal or exact matching claim."
+      }
+    },
+    {
+      "symbol": "fn_00535da8",
+      "source": {
+        "path": "src/native/wave065-resource/effect_texture.c",
+        "bytes": 5440,
+        "sha256": "22cf0b0f8d73d3011b1332a7e90a146e5f3f63e9ee7d0dc59617128a6adcdbd5"
+      },
+      "canonicalIdentity": {
+        "address": 5463464,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 68,
+      "originalInstructionRanges": [
+        {
+          "start": 5463464,
+          "endExclusive": 5463532,
+          "bytes": 68
+        }
+      ],
+      "originalBodySha256": "86ede48d8172a4889c63e5c1879a7a73ac4b1260340fa469eafcf4f59e76f19b",
+      "reportEntryBytes": 68,
+      "originalDataWitnesses": {
+        "fixedPCRelativeDataReads": [],
+        "indexedPCDataReadSitesRequiringExplicitDomain": [],
+        "interiorNoninstructionRanges": []
+      },
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/resource065-coordinator-5c2b215.json",
+          "bytes": 1566,
+          "sha256": "5979756423c01b99a8f59c4943caca194ea566c41bdddb4e6cc05c5a1b4056aa"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-effect065/resource-cpu-v1/boundaries-and-coverage.json",
+          "bytes": 47984,
+          "sha256": "87ced7bb54b560599d05e7d429d3766ff2e95556f175d670ea7c299aeeaeb161"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "returningSourceGraphControls": 39,
+        "pipelineTests": 141,
+        "observerTests": 15,
+        "sourceOnlyUnits": 547,
+        "fullCanonicalColdFragmentsIncluded": true,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "limits": [
+          "Vertex and attribute domains retain the explicit available-binding and index preconditions.",
+          "Constant floating values are compared as opaque bit patterns; rendering is unproved.",
+          "Texture dimensions through 32x32 retain complete backing and a 4096-byte usable scratch allocation even for zero requests.",
+          "Serialized U32 offsets, device words and actual widened native pointers remain separately typed.",
+          "The main resource constructor/finalizer, supplemental entries, SDK cold startup, GPU, physical Android and complete native games remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data extents including discontiguous cold fragments; original/source/model CPU comparisons; independent committed replay; all 461 raw artifacts reproduce; 39 wrong-source controls genuinely return and reject. No universal or exact matching claim."
+      }
+    },
+    {
+      "symbol": "fn_00535dec",
+      "source": {
+        "path": "src/native/wave065-resource/effect_texture.c",
+        "bytes": 5440,
+        "sha256": "22cf0b0f8d73d3011b1332a7e90a146e5f3f63e9ee7d0dc59617128a6adcdbd5"
+      },
+      "canonicalIdentity": {
+        "address": 5463532,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 32,
+      "originalInstructionRanges": [
+        {
+          "start": 5463532,
+          "endExclusive": 5463564,
+          "bytes": 32
+        }
+      ],
+      "originalBodySha256": "8f95478f91b1e8bb4c5a5aa9f9f4a062b2386873e26df852565552ff8b36de6f",
+      "reportEntryBytes": 32,
+      "originalDataWitnesses": {
+        "fixedPCRelativeDataReads": [],
+        "indexedPCDataReadSitesRequiringExplicitDomain": [],
+        "interiorNoninstructionRanges": []
+      },
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/resource065-coordinator-5c2b215.json",
+          "bytes": 1566,
+          "sha256": "5979756423c01b99a8f59c4943caca194ea566c41bdddb4e6cc05c5a1b4056aa"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-effect065/resource-cpu-v1/boundaries-and-coverage.json",
+          "bytes": 47984,
+          "sha256": "87ced7bb54b560599d05e7d429d3766ff2e95556f175d670ea7c299aeeaeb161"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "returningSourceGraphControls": 39,
+        "pipelineTests": 141,
+        "observerTests": 15,
+        "sourceOnlyUnits": 547,
+        "fullCanonicalColdFragmentsIncluded": true,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "limits": [
+          "Vertex and attribute domains retain the explicit available-binding and index preconditions.",
+          "Constant floating values are compared as opaque bit patterns; rendering is unproved.",
+          "Texture dimensions through 32x32 retain complete backing and a 4096-byte usable scratch allocation even for zero requests.",
+          "Serialized U32 offsets, device words and actual widened native pointers remain separately typed.",
+          "The main resource constructor/finalizer, supplemental entries, SDK cold startup, GPU, physical Android and complete native games remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/data extents including discontiguous cold fragments; original/source/model CPU comparisons; independent committed replay; all 461 raw artifacts reproduce; 39 wrong-source controls genuinely return and reject. No universal or exact matching claim."
+      }
+    }
+  ],
+  "sourceDependencies": [
+    {
+      "path": "src/native/wave065-resource/effect_commands.c",
+      "bytes": 5991,
+      "sha256": "ebb3cd9cf39fdd3352b85658a37085280cbf7329cd8c4d200e1fe53ca21fafab"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_commands.h",
+      "bytes": 885,
+      "sha256": "707e55cd92764ac2085e3071293911998a5db1f365b0166831d72dc3a40ad7fe"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_device.c",
+      "bytes": 1657,
+      "sha256": "5d1eca97c5e3ad3bb1888dc1661b669a85e10083caa4f4bb3a0192309d2e332f"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_device.h",
+      "bytes": 1098,
+      "sha256": "284d8a6ae7918d9ae5c083351c4df293feae7ec839217a5e13a048fc49d4cc64"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_port_runtime.c",
+      "bytes": 344,
+      "sha256": "22036544b4956205983c5147ee7c3c50cd7158d31200e660f3b5a26e14fb23fb"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource.c",
+      "bytes": 2743,
+      "sha256": "c0df7d80f452ac9a70ea0542d2677909fc00892d719de1df777158cc8a250597"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource.h",
+      "bytes": 4527,
+      "sha256": "27856b081a4cbc7fffd99bdf4207a0f50297a823e1be9bc383299e6f3378fe1e"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_internal.h",
+      "bytes": 1158,
+      "sha256": "4180f9e4989373c5b6f1d9f2a1638033e2422319628a1b4be4051e16d552a68f"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_memory.c",
+      "bytes": 2449,
+      "sha256": "9435650539a05de15b212d54aa334b0247449fc1553741ac887ec292cb4270c8"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_memory.h",
+      "bytes": 1915,
+      "sha256": "556a8706a752115547e7d66dd03ab0d447e5aba45e8cc2fa24c4ac940dfe4437"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_primitives.c",
+      "bytes": 11904,
+      "sha256": "a303514b8f156c963d10ca098a96c2fdc19d840527d4738b13a2985e517d855a"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_release.c",
+      "bytes": 4042,
+      "sha256": "5bbdfc210138141c4232dd57176a3bbf6c10b04bbe95756fd1891120c5ab6fbe"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_sets.c",
+      "bytes": 9330,
+      "sha256": "e90be26d9dab200e33f07f8800f5a4c12abc20ce05d1f52518bbff7d40511678"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_shaders.c",
+      "bytes": 1071,
+      "sha256": "6b8252fa137ffbe0cd91c8b51ffcc7a55a8daaad127f5f5b73fd69f39d65a50c"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_serialized.h",
+      "bytes": 700,
+      "sha256": "6de80450ceea9d5eebad58df3a90df0b0e7177c24b739c7cd796e3f3d1fc2c2a"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_texture.c",
+      "bytes": 5440,
+      "sha256": "22cf0b0f8d73d3011b1332a7e90a146e5f3f63e9ee7d0dc59617128a6adcdbd5"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_texture.h",
+      "bytes": 1126,
+      "sha256": "e7214e034d51ec6d91cb307665a744582bb21e39f63e982aea62992a81f73742"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_vertex.c",
+      "bytes": 3159,
+      "sha256": "2f6862b7705ac9ce9870ce3b2edb34d9ca6ae738b96eb30c43312550ebb52d05"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_vertex.h",
+      "bytes": 2099,
+      "sha256": "4fa83e9f114e8bfbda79628cd0405ee44dce673f8ba4f6c551ae63b3f216cf87"
+    },
+    {
+      "path": "src/native/wave065/effect_services.h",
+      "bytes": 520,
+      "sha256": "ca1a247f8b3421b17ea848b38029fa5b74f40576588c8b9efd630b2a47235ef9"
+    },
+    {
+      "path": "src/native/wave065/effect_shader.c",
+      "bytes": 1511,
+      "sha256": "35db548068499b99bfd7c52b337a6dfa2568ebb5847c53db31a1c0d6585cfb33"
+    },
+    {
+      "path": "src/native/wave065/effect_shader.h",
+      "bytes": 1381,
+      "sha256": "26c4310b9bceb3e6d6a45c1923679312b164bd686ff285e5e36aa37e2e3895fd"
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave065-resource/effect_commands.h",
+      "bytes": 885,
+      "sha256": "707e55cd92764ac2085e3071293911998a5db1f365b0166831d72dc3a40ad7fe"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_device.h",
+      "bytes": 1098,
+      "sha256": "284d8a6ae7918d9ae5c083351c4df293feae7ec839217a5e13a048fc49d4cc64"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource.h",
+      "bytes": 4527,
+      "sha256": "27856b081a4cbc7fffd99bdf4207a0f50297a823e1be9bc383299e6f3378fe1e"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_internal.h",
+      "bytes": 1158,
+      "sha256": "4180f9e4989373c5b6f1d9f2a1638033e2422319628a1b4be4051e16d552a68f"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_memory.h",
+      "bytes": 1915,
+      "sha256": "556a8706a752115547e7d66dd03ab0d447e5aba45e8cc2fa24c4ac940dfe4437"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_serialized.h",
+      "bytes": 700,
+      "sha256": "6de80450ceea9d5eebad58df3a90df0b0e7177c24b739c7cd796e3f3d1fc2c2a"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_texture.h",
+      "bytes": 1126,
+      "sha256": "e7214e034d51ec6d91cb307665a744582bb21e39f63e982aea62992a81f73742"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_vertex.h",
+      "bytes": 2099,
+      "sha256": "4fa83e9f114e8bfbda79628cd0405ee44dce673f8ba4f6c551ae63b3f216cf87"
+    },
+    {
+      "path": "src/native/wave065/effect_services.h",
+      "bytes": 520,
+      "sha256": "ca1a247f8b3421b17ea848b38029fa5b74f40576588c8b9efd630b2a47235ef9"
+    },
+    {
+      "path": "src/native/wave065/effect_shader.h",
+      "bytes": 1381,
+      "sha256": "26c4310b9bceb3e6d6a45c1923679312b164bd686ff285e5e36aa37e2e3895fd"
+    }
+  ],
+  "qualificationOnlySources": [
+    "toolscripts/effect_resource065_graph_fixture.c",
+    "toolscripts/effect_resource065_runtime.c",
+    "toolscripts/effect_resource065_texture_fixture.c"
+  ],
+  "producer": {
+    "path": "evidence/verification/producers/review_resource065_functional.py",
+    "bytes": 9742,
+    "sha256": "0db5b9d21b6a911416199149c5437955d884fa6e068299d0736df959fa2c73c8"
+  },
+  "originalPackets": [
+    {
+      "path": "evidence/verification/resource065-coordinator-5c2b215.json",
+      "bytes": 1566,
+      "sha256": "5979756423c01b99a8f59c4943caca194ea566c41bdddb4e6cc05c5a1b4056aa"
+    },
+    {
+      "path": "evidence/lanes/native-effect065/resource-cpu-v1/intake-proposal.json",
+      "bytes": 2223,
+      "sha256": "29ad2f25c0948ab6b99ec59910aa5638535646d884b908f43e2d55718c7333b4"
+    },
+    {
+      "path": "evidence/lanes/native-effect065/resource-cpu-v1/boundaries-and-coverage.json",
+      "bytes": 47984,
+      "sha256": "87ced7bb54b560599d05e7d429d3766ff2e95556f175d670ea7c299aeeaeb161"
+    }
+  ],
+  "acceptedSourceCreditGranted": 0,
+  "exactMatchingClaimed": false,
+  "confirmedOverallSourceCoverageClaimed": false,
+  "fullResourceCtorFinalizerGpuPhysicalAndroidOrGameClaimed": false
+}
