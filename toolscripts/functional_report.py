@@ -99,6 +99,16 @@ def generate(root, report, registry):
             if (proof.get('originalInstructionRanges') != original['ranges']
                     or proof.get('reportEntryBytes') != entry_bytes):
                 raise ValueError('Fragmented functional proof needs complete ranges and explicit report entry extent')
+        if 'originalInstructionRanges' in proof:
+            declared = proof['originalInstructionRanges']
+            keys = ('start', 'endExclusive', 'bytes')
+            if (not isinstance(declared, list) or any(not isinstance(part, dict)
+                    or not all(key in part for key in keys) for part in declared)
+                    or [tuple(part[key] for key in keys) for part in declared]
+                    != [tuple(part[key] for key in keys) for part in original['ranges']]):
+                raise ValueError('Explicit functional ranges differ from the canonical body')
+        if 'reportEntryBytes' in proof and proof['reportEntryBytes'] != entry_bytes:
+            raise ValueError('Explicit functional entry extent differs from the canonical body')
         if proof['exactObjectSpan'] is not False or proof['exactLinkedSpan'] is not False:
             raise ValueError('An exact candidate requires separate source admission')
         if proof['functionalConfidence'] != confidence or proof['behavior']['allPassed'] is not True:

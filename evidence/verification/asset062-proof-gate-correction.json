@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "status": "explicit-contiguous-range-validation-strengthened",
+  "trigger": "missing-thumb-range negative proof was accepted before correction",
+  "correction": "Supplied ranges and entry extents are now compared to canonical body for contiguous functions as well as fragmented ones",
+  "historicalProofsWithoutOptionalFieldsRemainSupported": true,
+  "regressionTestsAdded": 4,
+  "functionalUnitTests": 28,
+  "malformedProviderProofsRejected": 5,
+  "productionCChanged": false,
+  "sourceCreditGranted": 0,
+  "finalMalformedProofControls": [
+    {
+      "case": "missing-thumb-range",
+      "rejected": true,
+      "reason": "Explicit functional ranges differ from the canonical body"
+    },
+    {
+      "case": "unsupported-confidence",
+      "rejected": true,
+      "reason": "Reviewed confidence or bounded behavior proof differs"
+    },
+    {
+      "case": "wrong-byte-count",
+      "rejected": true,
+      "reason": "Functional proof omits part of the canonical function body"
+    },
+    {
+      "case": "wrong-mode",
+      "rejected": true,
+      "reason": "Functional canonical identity differs"
+    },
+    {
+      "case": "wrong-source",
+      "rejected": true,
+      "reason": "Reviewed source lacks the reported C definition"
+    }
+  ],
+  "rangeExtentComparisonPreservesAdditionalHashMetadata": true
+}

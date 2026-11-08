@@ -1,0 +1,1571 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-resource-and-sdk-providers",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "functions": [
+    {
+      "symbol": "fn_00444000",
+      "source": {
+        "path": "src/native/wave062/packets062.c",
+        "bytes": 2707,
+        "sha256": "c03b1ba92457157da240e5e6f52e6c63ff697755e9e056416397440b6bf2cb9b"
+      },
+      "sourceName": "resource_packet_slice062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 4472832,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 152,
+      "originalInstructionRanges": [
+        {
+          "start": 4472832,
+          "endExclusive": 4472984,
+          "bytes": 152
+        }
+      ],
+      "originalBodySha256": "fe20e3df428e1494ea78b333ad2dfadb1512469116313ddd242f07dd7b8077e8",
+      "reportEntryBytes": 152,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 38,
+        "originalInstructionPcsVisited": 38,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_006ce720",
+      "source": {
+        "path": "src/native/wave062/packets062.c",
+        "bytes": 2707,
+        "sha256": "c03b1ba92457157da240e5e6f52e6c63ff697755e9e056416397440b6bf2cb9b"
+      },
+      "sourceName": "resource_packet_receive062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 7137056,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 208,
+      "originalInstructionRanges": [
+        {
+          "start": 7137056,
+          "endExclusive": 7137264,
+          "bytes": 208
+        }
+      ],
+      "originalBodySha256": "40e1a3bd4cf51f5f6fdc9a498062ef5a86fd6dd204791175bb230402698a10d0",
+      "reportEntryBytes": 208,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 52,
+        "originalInstructionPcsVisited": 52,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_0079a3ec",
+      "source": {
+        "path": "src/native/wave062/records062.c",
+        "bytes": 1342,
+        "sha256": "8d4d70bceb72a5507b7bc6c7023a6fd63836ad1eb9a5af0334617bf223de7664"
+      },
+      "sourceName": "resource_record_append062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 7971820,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 712,
+      "originalInstructionRanges": [
+        {
+          "start": 7971820,
+          "endExclusive": 7972532,
+          "bytes": 712
+        }
+      ],
+      "originalBodySha256": "de09f36e310ab9beb1e6ba8d130e73968d3c55724a94abec56effc4d0c74597a",
+      "reportEntryBytes": 712,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 178,
+        "originalInstructionPcsVisited": 111,
+        "unexecutedOriginalPcs": [
+          7971944,
+          7971948,
+          7971952,
+          7971956,
+          7971960,
+          7971964,
+          7971968,
+          7971972,
+          7971976,
+          7971980,
+          7971984,
+          7971988,
+          7971992,
+          7971996,
+          7972000,
+          7972004,
+          7972008,
+          7972012,
+          7972016,
+          7972020,
+          7972024,
+          7972028,
+          7972032,
+          7972036,
+          7972040,
+          7972044,
+          7972048,
+          7972052,
+          7972056,
+          7972060,
+          7972064,
+          7972068,
+          7972072,
+          7972076,
+          7972080,
+          7972084,
+          7972088,
+          7972092,
+          7972096,
+          7972100,
+          7972104,
+          7972108,
+          7972112,
+          7972116,
+          7972120,
+          7972124,
+          7972128,
+          7972132,
+          7972136,
+          7972140,
+          7972144,
+          7972148,
+          7972368,
+          7972372,
+          7972376,
+          7972380,
+          7972384,
+          7972388,
+          7972392,
+          7972396,
+          7972400,
+          7972404,
+          7972408,
+          7972412,
+          7972448,
+          7972452,
+          7972456
+        ],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/verification/asset062-append-entry-invariants.json",
+          "bytes": 3582,
+          "sha256": "38b98922b40f7682ec6802805eb2fa879b789be229faabdc63c99a488da0b61b"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_00370438",
+      "source": {
+        "path": "src/native/wave062/commands062.c",
+        "bytes": 1618,
+        "sha256": "46b82425fa576fcf726cf8613fa9ddd2309856eea630ccf190efd643efb9f0e6"
+      },
+      "sourceName": "resource_queue_header062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 3605560,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 68,
+      "originalInstructionRanges": [
+        {
+          "start": 3605560,
+          "endExclusive": 3605628,
+          "bytes": 68
+        }
+      ],
+      "originalBodySha256": "334cc3abd29813a4bf7faf10290554a3b3189376a5f6d414d6b849aa7414a241",
+      "reportEntryBytes": 68,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 17,
+        "originalInstructionPcsVisited": 17,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_003704a4",
+      "source": {
+        "path": "src/native/wave062/commands062.c",
+        "bytes": 1618,
+        "sha256": "46b82425fa576fcf726cf8613fa9ddd2309856eea630ccf190efd643efb9f0e6"
+      },
+      "sourceName": "resource_queue_header062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 3605668,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 68,
+      "originalInstructionRanges": [
+        {
+          "start": 3605668,
+          "endExclusive": 3605736,
+          "bytes": 68
+        }
+      ],
+      "originalBodySha256": "18c763a2fa318f91847a8d915179b806b6f3341e7b71b6fb729ccc26ba018f8d",
+      "reportEntryBytes": 68,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 17,
+        "originalInstructionPcsVisited": 17,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_006ce7f8",
+      "source": {
+        "path": "src/native/wave062/packets062.c",
+        "bytes": 2707,
+        "sha256": "c03b1ba92457157da240e5e6f52e6c63ff697755e9e056416397440b6bf2cb9b"
+      },
+      "sourceName": "resource_metadata_receive062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 7137272,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 164,
+      "originalInstructionRanges": [
+        {
+          "start": 7137272,
+          "endExclusive": 7137436,
+          "bytes": 164
+        }
+      ],
+      "originalBodySha256": "e3972ff55a5b8925707e47d072dafd7dcaf4dd12cfc386b23e8c8b03e1c7f2d6",
+      "reportEntryBytes": 164,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 41,
+        "originalInstructionPcsVisited": 41,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_006b6530",
+      "source": {
+        "path": "src/native/wave062/commands062.c",
+        "bytes": 1618,
+        "sha256": "46b82425fa576fcf726cf8613fa9ddd2309856eea630ccf190efd643efb9f0e6"
+      },
+      "sourceName": "resource_manager_matches062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 7038256,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 68,
+      "originalInstructionRanges": [
+        {
+          "start": 7038256,
+          "endExclusive": 7038324,
+          "bytes": 68
+        }
+      ],
+      "originalBodySha256": "3804619ae10dc40f76fff7386d4cffc8c5282b8a387c2894a5b4754a822afea2",
+      "reportEntryBytes": 68,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 17,
+        "originalInstructionPcsVisited": 17,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_006cb234",
+      "source": {
+        "path": "src/native/wave062/commands062.c",
+        "bytes": 1618,
+        "sha256": "46b82425fa576fcf726cf8613fa9ddd2309856eea630ccf190efd643efb9f0e6"
+      },
+      "sourceName": "resource_manager_query062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 7123508,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 20,
+      "originalInstructionRanges": [
+        {
+          "start": 7123508,
+          "endExclusive": 7123528,
+          "bytes": 20
+        }
+      ],
+      "originalBodySha256": "5f80602e294273061090409b6baed9b14baacb8678b2fffd36a899233ed841c3",
+      "reportEntryBytes": 20,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 5,
+        "originalInstructionPcsVisited": 5,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_006cb1f8",
+      "source": {
+        "path": "src/native/wave062/commands062.c",
+        "bytes": 1618,
+        "sha256": "46b82425fa576fcf726cf8613fa9ddd2309856eea630ccf190efd643efb9f0e6"
+      },
+      "sourceName": "resource_manager_record062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 7123448,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 20,
+      "originalInstructionRanges": [
+        {
+          "start": 7123448,
+          "endExclusive": 7123468,
+          "bytes": 20
+        }
+      ],
+      "originalBodySha256": "3ba0234baa5527ede43106bda2f84fc656e943b8dc7ec64fdb342a4753ff1890",
+      "reportEntryBytes": 20,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 5,
+        "originalInstructionPcsVisited": 5,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_003dccb4",
+      "source": {
+        "path": "src/native/wave062/commands062.c",
+        "bytes": 1618,
+        "sha256": "46b82425fa576fcf726cf8613fa9ddd2309856eea630ccf190efd643efb9f0e6"
+      },
+      "sourceName": "resource_manager_post_word062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 4050100,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 24,
+      "originalInstructionRanges": [
+        {
+          "start": 4050100,
+          "endExclusive": 4050124,
+          "bytes": 24
+        }
+      ],
+      "originalBodySha256": "0156f3cf3c8f8f70c97e9947ab0894c4326d9211ecde2f5f87c3d951010bc35b",
+      "reportEntryBytes": 24,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 6,
+        "originalInstructionPcsVisited": 6,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_003dce7c",
+      "source": {
+        "path": "src/native/wave062/commands062.c",
+        "bytes": 1618,
+        "sha256": "46b82425fa576fcf726cf8613fa9ddd2309856eea630ccf190efd643efb9f0e6"
+      },
+      "sourceName": "resource_manager_post_block062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 4050556,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 40,
+      "originalInstructionRanges": [
+        {
+          "start": 4050556,
+          "endExclusive": 4050596,
+          "bytes": 40
+        }
+      ],
+      "originalBodySha256": "0ea7f75e4b95cfa07480b66c8e0f17fef8b440e04aecfb4502a3b50ae0d08ddb",
+      "reportEntryBytes": 40,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 10,
+        "originalInstructionPcsVisited": 10,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_003dcea4",
+      "source": {
+        "path": "src/native/wave062/commands062.c",
+        "bytes": 1618,
+        "sha256": "46b82425fa576fcf726cf8613fa9ddd2309856eea630ccf190efd643efb9f0e6"
+      },
+      "sourceName": "resource_manager_post_block062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 4050596,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 40,
+      "originalInstructionRanges": [
+        {
+          "start": 4050596,
+          "endExclusive": 4050636,
+          "bytes": 40
+        }
+      ],
+      "originalBodySha256": "bcdd9a2ef9ec90e2a12d72d27cf963d161ec317fd7b447f488f4ffea6e93ada0",
+      "reportEntryBytes": 40,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 10,
+        "originalInstructionPcsVisited": 10,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_00251e64",
+      "source": {
+        "path": "src/native/wave062/lifetime062.c",
+        "bytes": 1206,
+        "sha256": "564197aaf9da6aee42936bfea7e3888fe4f6480e8e5f24c7138b3796b853cca3"
+      },
+      "sourceName": "resource_initialize062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 2432612,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 96,
+      "originalInstructionRanges": [
+        {
+          "start": 2432612,
+          "endExclusive": 2432708,
+          "bytes": 96
+        }
+      ],
+      "originalBodySha256": "525f41ce51a5cb065c1d614bb40bc0ffa2f07667abe4a584a9e75faa4b3ae1aa",
+      "reportEntryBytes": 96,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 24,
+        "originalInstructionPcsVisited": 24,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_00251ec8",
+      "source": {
+        "path": "src/native/wave062/lifetime062.c",
+        "bytes": 1206,
+        "sha256": "564197aaf9da6aee42936bfea7e3888fe4f6480e8e5f24c7138b3796b853cca3"
+      },
+      "sourceName": "resource_destroy062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 2432712,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 80,
+      "originalInstructionRanges": [
+        {
+          "start": 2432712,
+          "endExclusive": 2432792,
+          "bytes": 80
+        }
+      ],
+      "originalBodySha256": "3b8b3053104b0063a8df048183f77aa188f619f3ecf4c02c083084147e8fd9f5",
+      "reportEntryBytes": 80,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 20,
+        "originalInstructionPcsVisited": 20,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_00662a34",
+      "source": {
+        "path": "src/native/wave062/lifetime062.c",
+        "bytes": 1206,
+        "sha256": "564197aaf9da6aee42936bfea7e3888fe4f6480e8e5f24c7138b3796b853cca3"
+      },
+      "sourceName": "resource_snapshot_initialize062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 6695476,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 16,
+      "originalInstructionRanges": [
+        {
+          "start": 6695476,
+          "endExclusive": 6695492,
+          "bytes": 16
+        }
+      ],
+      "originalBodySha256": "2e7a26d966b30e4cb5a832204530675d905f6cb185ae49e4ddd74b795e0f69b1",
+      "reportEntryBytes": 16,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 4,
+        "originalInstructionPcsVisited": 4,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_00664800",
+      "source": {
+        "path": "src/native/wave062/lifetime062.c",
+        "bytes": 1206,
+        "sha256": "564197aaf9da6aee42936bfea7e3888fe4f6480e8e5f24c7138b3796b853cca3"
+      },
+      "sourceName": "resource_snapshot_member_initialize062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 6703104,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 24,
+      "originalInstructionRanges": [
+        {
+          "start": 6703104,
+          "endExclusive": 6703128,
+          "bytes": 24
+        }
+      ],
+      "originalBodySha256": "e27f8ebf9b49d9cd43c4527190d7f390caa70dcdfccb3ed25776926eba3f3dc9",
+      "reportEntryBytes": 24,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 6,
+        "originalInstructionPcsVisited": 6,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_00615ecc",
+      "source": {
+        "path": "src/native/wave062/random062.c",
+        "bytes": 1132,
+        "sha256": "046dc0fffe06d463c5c666bd9d4ef18d668d149f8d02565ae5812b91d0c72268"
+      },
+      "sourceName": "resource_seed062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 6381260,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 24,
+      "originalInstructionRanges": [
+        {
+          "start": 6381260,
+          "endExclusive": 6381284,
+          "bytes": 24
+        }
+      ],
+      "originalBodySha256": "9e70ce5d1c6aa4e0e63dec3b37a7330bb730cafe3613fc063a49ad87384620dc",
+      "reportEntryBytes": 24,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 6,
+        "originalInstructionPcsVisited": 6,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_00107aac",
+      "source": {
+        "path": "src/native/wave062/random062.c",
+        "bytes": 1132,
+        "sha256": "046dc0fffe06d463c5c666bd9d4ef18d668d149f8d02565ae5812b91d0c72268"
+      },
+      "sourceName": "sdk_seed062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 1079980,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 20,
+      "originalInstructionRanges": [
+        {
+          "start": 1050216,
+          "endExclusive": 1050224,
+          "bytes": 8
+        },
+        {
+          "start": 1079980,
+          "endExclusive": 1079992,
+          "bytes": 12
+        }
+      ],
+      "originalBodySha256": "66bb27a94b63f2ce511f7d3754bcdc3528672c2cf32fcab817a0055efab628ed",
+      "reportEntryBytes": 12,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 5,
+        "originalInstructionPcsVisited": 5,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_0010d9d4",
+      "source": {
+        "path": "src/native/wave062/random062.c",
+        "bytes": 1132,
+        "sha256": "046dc0fffe06d463c5c666bd9d4ef18d668d149f8d02565ae5812b91d0c72268"
+      },
+      "sourceName": "xorshift_seed062",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 1104340,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 112,
+      "originalInstructionRanges": [
+        {
+          "start": 1104340,
+          "endExclusive": 1104452,
+          "bytes": 112
+        }
+      ],
+      "originalBodySha256": "346319333dbc344f8b15a596e8d95c742cae2d7d7e279b12ad73609b2fa4dbcd",
+      "reportEntryBytes": 112,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 28,
+        "originalInstructionPcsVisited": 28,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": false,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    },
+    {
+      "symbol": "fn_00100670",
+      "source": {
+        "path": "src/native/wave063/sdk_words063.c",
+        "bytes": 361,
+        "sha256": "4b4624cbce033c987f6d9e940d3f6426f1ea5053959dd1e0b064e28f8d628739"
+      },
+      "sourceName": "resource_sdk_words063",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 4592,
+        "sha256": "1aedf74615d6d7a161428fce90eb31e14b626c8ed94f1b4bcd31b70f4c209481"
+      },
+      "canonicalIdentity": {
+        "address": 1050224,
+        "mode": "Thumb",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 44,
+      "originalInstructionRanges": [
+        {
+          "start": 1050224,
+          "endExclusive": 1050268,
+          "bytes": 44
+        }
+      ],
+      "originalBodySha256": "79c741007494e0e1f9cac03b551da5eaea32fcd78761095b83db21c52d4d7389",
+      "reportEntryBytes": 44,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+          "bytes": 2846,
+          "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+        },
+        "originalInstructionPcs": 22,
+        "originalInstructionPcsVisited": 22,
+        "unexecutedOriginalPcs": [],
+        "unexecutedInstructionsNeverClaimedExecuted": true,
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+          "bytes": 8411,
+          "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "returningSourceControlExecutions": 48,
+        "wholeResourceCallerQualified": false,
+        "metadataSenderWholeFunctionQualified": false,
+        "physicalAndroidOrWholeGameClaimed": false,
+        "portableExplicitStateApi": true,
+        "volatileReturnEqualityClaimed": false,
+        "domain": "Valid initialized aligned live storage; nonalias bounded buffers and representable vector/array sizes. Record append uses a distinct successful nonreentrant allocation service; full canonical append scope includes67 invariant-only instructions. Resource destruction reentry/release-before-clear is qualified. Manager/sink providers are typed partial views, not complete startup. Serialized words remainU32; native pointers retain full width. Seed state effects are qualified under the explicit-state portable API; raw volatile-return-register equality is not claimed. Whole251a50 resource caller, metadata sender stack tail, arbitrary allocation failure and unsupported SDK/startup remain unqualified.",
+        "confidenceJustification": "Medium: complete canonical extents and original-byte identity; independent committed-source replay, complete declared raw arenas against separate models, native Windows/highA64 execution, byte-identical source-copy artifacts and returning wrong-source controls. All exclusions and67 append invariants remain explicit."
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave009/interval_set.h",
+      "bytes": 987,
+      "sha256": "c9f8ea99061aaf09e3b82c8a75d3049282f14bdbf7e201a429c1064348853419"
+    },
+    {
+      "path": "src/native/wave010/match_state.h",
+      "bytes": 1055,
+      "sha256": "c5331ad810d5fc508c5df281ece4f5b8f70a998cc5d226d2e7157593137d035b"
+    },
+    {
+      "path": "src/native/wave012/compile_graph.h",
+      "bytes": 1657,
+      "sha256": "d496139a253186af9849862e764fcc1b50d77f432fe8e6e9dd4c6b4ce84f8ee5"
+    },
+    {
+      "path": "src/native/wave012/fixed_arena.h",
+      "bytes": 689,
+      "sha256": "576604e9c5fde42d82ada3fa977fa33591421711f129bd5cae1b3c45240eec4a"
+    },
+    {
+      "path": "src/native/wave012/label_ops.h",
+      "bytes": 939,
+      "sha256": "0d96df2ffe4d5c6f404cbbe688e86f3f644fbc7fecfe9fe6ab0c03a43b2f5be1"
+    },
+    {
+      "path": "src/native/wave013/control_compile.h",
+      "bytes": 288,
+      "sha256": "323e2786580a834a869dfd5a15d22edd58f84dc8d909322dbf3d99902937e8b0"
+    },
+    {
+      "path": "src/native/wave013/dfa_compile.h",
+      "bytes": 830,
+      "sha256": "83f3627463a010ec5b5d561f1d443c25995be6dc8f4f86cbc28d534f1d2fe334"
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa.h",
+      "bytes": 4884,
+      "sha256": "76dddc817728b69b544e927320f5c1564a6a390ba6259adae837a324d3a07c36"
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa_api.h",
+      "bytes": 386,
+      "sha256": "974523189a56560a598aca0f00ef26cd7b50c3a12bb5c0bb1f0789e5ba82d8bb"
+    },
+    {
+      "path": "src/native/wave013/pattern_outer.h",
+      "bytes": 1605,
+      "sha256": "2e79c5635b7b411271ff28684f7349b0daf076e05473e2b997b6ccf21ea68e9a"
+    },
+    {
+      "path": "src/native/wave013/pattern_ranges.h",
+      "bytes": 521,
+      "sha256": "6eb248d90a59fc8f50469f8735a4b6ad224ca067b68ce66295ccd5de765abeee"
+    },
+    {
+      "path": "src/native/wave013/pattern_tokens.h",
+      "bytes": 4191,
+      "sha256": "2a06bf5d5efd04ef077298a341aaead1a5ef6e20ace3969363ff35b1ba78a9ae"
+    },
+    {
+      "path": "src/native/wave013/pattern_unicode.h",
+      "bytes": 1109,
+      "sha256": "5a0f6e2c1824e58392c5d347108ff9b088ae256e684fcff613a9aaceb28f709b"
+    },
+    {
+      "path": "src/native/wave062/packets062.h",
+      "bytes": 904,
+      "sha256": "fda3351a6ba66adc6ae0823396f007df7e854d677011e0fccc1b8e25aa9a22c1"
+    },
+    {
+      "path": "src/native/wave062/random062.h",
+      "bytes": 342,
+      "sha256": "43772286e5d9d0727f486974723eb64f525ac909d5540c20eec329243a186e00"
+    },
+    {
+      "path": "src/native/wave062/record_provider062.h",
+      "bytes": 1235,
+      "sha256": "baea835c3ad425337e3021d72f8b1020c1122e53448226a3ba728eab949c2bd3"
+    },
+    {
+      "path": "src/native/wave062/records062.h",
+      "bytes": 682,
+      "sha256": "0c5c51cc3d4c38aff3258ce50a802f0fc6027ac93114d65fa914754b7ff93bb2"
+    },
+    {
+      "path": "src/native/wave062/resource062.h",
+      "bytes": 3132,
+      "sha256": "2afa89320b5e21e4426e5a2c3f082e8138822c753c85227e420ccbe943ad0f64"
+    },
+    {
+      "path": "src/native/wave063/sdk_words063.h",
+      "bytes": 138,
+      "sha256": "1f0e7645a4753d992321dfa0cf843779cb0874100875eb4d077341f1fa0ed4d5"
+    }
+  ],
+  "sourceDependencies": [
+    {
+      "path": "src/native/wave009/interval_set.h",
+      "bytes": 987,
+      "sha256": "c9f8ea99061aaf09e3b82c8a75d3049282f14bdbf7e201a429c1064348853419"
+    },
+    {
+      "path": "src/native/wave010/match_state.h",
+      "bytes": 1055,
+      "sha256": "c5331ad810d5fc508c5df281ece4f5b8f70a998cc5d226d2e7157593137d035b"
+    },
+    {
+      "path": "src/native/wave012/compile_graph.h",
+      "bytes": 1657,
+      "sha256": "d496139a253186af9849862e764fcc1b50d77f432fe8e6e9dd4c6b4ce84f8ee5"
+    },
+    {
+      "path": "src/native/wave012/fixed_arena.h",
+      "bytes": 689,
+      "sha256": "576604e9c5fde42d82ada3fa977fa33591421711f129bd5cae1b3c45240eec4a"
+    },
+    {
+      "path": "src/native/wave012/label_ops.h",
+      "bytes": 939,
+      "sha256": "0d96df2ffe4d5c6f404cbbe688e86f3f644fbc7fecfe9fe6ab0c03a43b2f5be1"
+    },
+    {
+      "path": "src/native/wave012/memory_ops.c",
+      "bytes": 1951,
+      "sha256": "2110c115a64ddc3cfa867787bd64cbbc65a35643cef10f5afc27971215c24516"
+    },
+    {
+      "path": "src/native/wave013/control_compile.h",
+      "bytes": 288,
+      "sha256": "323e2786580a834a869dfd5a15d22edd58f84dc8d909322dbf3d99902937e8b0"
+    },
+    {
+      "path": "src/native/wave013/dfa_compile.h",
+      "bytes": 830,
+      "sha256": "83f3627463a010ec5b5d561f1d443c25995be6dc8f4f86cbc28d534f1d2fe334"
+    },
+    {
+      "path": "src/native/wave013/outer_arena.c",
+      "bytes": 1116,
+      "sha256": "520818862f8faf779ee3083698e1ee29b614d8e19358453f880f42e99f6ce192"
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa.h",
+      "bytes": 4884,
+      "sha256": "76dddc817728b69b544e927320f5c1564a6a390ba6259adae837a324d3a07c36"
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa_api.h",
+      "bytes": 386,
+      "sha256": "974523189a56560a598aca0f00ef26cd7b50c3a12bb5c0bb1f0789e5ba82d8bb"
+    },
+    {
+      "path": "src/native/wave013/pattern_outer.h",
+      "bytes": 1605,
+      "sha256": "2e79c5635b7b411271ff28684f7349b0daf076e05473e2b997b6ccf21ea68e9a"
+    },
+    {
+      "path": "src/native/wave013/pattern_ranges.h",
+      "bytes": 521,
+      "sha256": "6eb248d90a59fc8f50469f8735a4b6ad224ca067b68ce66295ccd5de765abeee"
+    },
+    {
+      "path": "src/native/wave013/pattern_tokens.h",
+      "bytes": 4191,
+      "sha256": "2a06bf5d5efd04ef077298a341aaead1a5ef6e20ace3969363ff35b1ba78a9ae"
+    },
+    {
+      "path": "src/native/wave013/pattern_unicode.h",
+      "bytes": 1109,
+      "sha256": "5a0f6e2c1824e58392c5d347108ff9b088ae256e684fcff613a9aaceb28f709b"
+    },
+    {
+      "path": "src/native/wave062/commands062.c",
+      "bytes": 1618,
+      "sha256": "46b82425fa576fcf726cf8613fa9ddd2309856eea630ccf190efd643efb9f0e6"
+    },
+    {
+      "path": "src/native/wave062/lifetime062.c",
+      "bytes": 1206,
+      "sha256": "564197aaf9da6aee42936bfea7e3888fe4f6480e8e5f24c7138b3796b853cca3"
+    },
+    {
+      "path": "src/native/wave062/packets062.c",
+      "bytes": 2707,
+      "sha256": "c03b1ba92457157da240e5e6f52e6c63ff697755e9e056416397440b6bf2cb9b"
+    },
+    {
+      "path": "src/native/wave062/packets062.h",
+      "bytes": 904,
+      "sha256": "fda3351a6ba66adc6ae0823396f007df7e854d677011e0fccc1b8e25aa9a22c1"
+    },
+    {
+      "path": "src/native/wave062/random062.c",
+      "bytes": 1132,
+      "sha256": "046dc0fffe06d463c5c666bd9d4ef18d668d149f8d02565ae5812b91d0c72268"
+    },
+    {
+      "path": "src/native/wave062/random062.h",
+      "bytes": 342,
+      "sha256": "43772286e5d9d0727f486974723eb64f525ac909d5540c20eec329243a186e00"
+    },
+    {
+      "path": "src/native/wave062/record_provider062.h",
+      "bytes": 1235,
+      "sha256": "baea835c3ad425337e3021d72f8b1020c1122e53448226a3ba728eab949c2bd3"
+    },
+    {
+      "path": "src/native/wave062/records062.c",
+      "bytes": 1342,
+      "sha256": "8d4d70bceb72a5507b7bc6c7023a6fd63836ad1eb9a5af0334617bf223de7664"
+    },
+    {
+      "path": "src/native/wave062/records062.h",
+      "bytes": 682,
+      "sha256": "0c5c51cc3d4c38aff3258ce50a802f0fc6027ac93114d65fa914754b7ff93bb2"
+    },
+    {
+      "path": "src/native/wave062/resource062.h",
+      "bytes": 3132,
+      "sha256": "2afa89320b5e21e4426e5a2c3f082e8138822c753c85227e420ccbe943ad0f64"
+    },
+    {
+      "path": "src/native/wave063/sdk_words063.c",
+      "bytes": 361,
+      "sha256": "4b4624cbce033c987f6d9e940d3f6426f1ea5053959dd1e0b064e28f8d628739"
+    },
+    {
+      "path": "src/native/wave063/sdk_words063.h",
+      "bytes": 138,
+      "sha256": "1f0e7645a4753d992321dfa0cf843779cb0874100875eb4d077341f1fa0ed4d5"
+    }
+  ],
+  "qualificationOnlySourceNames": [
+    "fixture062.c",
+    "heap_fixture062.c",
+    "command_fixture062.c",
+    "lifetime_fixture062.c",
+    "fixture063.c"
+  ],
+  "originalPackets": [
+    {
+      "path": "evidence/verification/asset062-sdk063-coordinator-873f53b.json",
+      "bytes": 2846,
+      "sha256": "4084f46a16b19f6cf01ab738a629a4126c6c0c904858eedccc69640c42acae94"
+    },
+    {
+      "path": "evidence/lanes/native-asset062/stage-v1/provider-scope-review.json",
+      "bytes": 8411,
+      "sha256": "62f8254cc2a3eec45f99c83772563f293bdbc6dacb472949e137d0dcd42d371e"
+    },
+    {
+      "path": "evidence/verification/asset062-append-entry-invariants.json",
+      "bytes": 3582,
+      "sha256": "38b98922b40f7682ec6802805eb2fa879b789be229faabdc63c99a488da0b61b"
+    },
+    {
+      "path": "evidence/verification/sdk063-peer-review.json",
+      "bytes": 1209,
+      "sha256": "64e81c596810346902b7894ab25575f2fca2e3ff86d1c5c77184973773a159a6"
+    }
+  ],
+  "producer": {
+    "path": "evidence/verification/producers/review_asset062_sdk063_functional.py",
+    "bytes": 9592,
+    "sha256": "5815e591be5ec3c7d77b76a429a42eefb176d32ed523841ed3a462cb48a76755"
+  },
+  "acceptedSourceCreditGranted": 0,
+  "exactMatchingClaimed": false,
+  "confirmedOverallSourceCoverageClaimed": false
+}

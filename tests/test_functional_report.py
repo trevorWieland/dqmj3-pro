@@ -72,6 +72,30 @@ class FunctionalReportTests(unittest.TestCase):
     def test_emits_only_requested_schema(self):
         self.assertEqual(self.generate(), {'functions': [{'name': 'fn_00100000', 'confidence': 'medium'}]})
 
+    def test_contiguous_explicit_ranges_are_verified(self):
+        self.proof['originalInstructionRanges'] = self.census['functions'][0]['ranges']
+        self.proof['reportEntryBytes'] = 4
+        self.update_packet()
+        self.assertEqual(len(self.generate()['functions']), 1)
+
+    def test_contiguous_ranges_can_retain_additional_body_hash_metadata(self):
+        part = dict(self.census['functions'][0]['ranges'][0], sha256='a' * 64)
+        self.proof['originalInstructionRanges'] = [part]
+        self.update_packet()
+        self.assertEqual(len(self.generate()['functions']), 1)
+
+    def test_empty_explicit_ranges_cannot_hide_a_contiguous_body(self):
+        self.proof['originalInstructionRanges'] = []
+        self.update_packet()
+        with self.assertRaisesRegex(ValueError, 'Explicit functional ranges'):
+            self.generate()
+
+    def test_changed_explicit_entry_extent_rejected_for_contiguous_body(self):
+        self.proof['reportEntryBytes'] = 2
+        self.update_packet()
+        with self.assertRaisesRegex(ValueError, 'entry extent'):
+            self.generate()
+
     def indexed_source(self):
         destination = self.root / 'source/squirrel-wave007/array_release.c'
         destination.parent.mkdir(parents=True)
