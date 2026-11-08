@@ -35,6 +35,10 @@ jobs:
         run: python -I -S -m unittest discover -s tests -p 'test_compile_source*.py' -v
       - name: Check guarded SDK source bootstrap
         run: python -I -S -m unittest discover -s tests -p test_native_sdk063_stage.py -v
+      - name: Check public SDK source-input boundaries
+        run: python -I -S -m unittest discover -s tests -p test_public_sdk062_inputs.py -v
+      - name: Check public SDK import audit failures
+        run: python -I -S -m unittest discover -s tests -p test_public_sdk062_replay.py -v
       - name: Compile native sources and bounded VM components for reviewed targets
         run: python -I -S toolscripts/compile_sources.py
       - name: Upload compile diagnostics and manifests

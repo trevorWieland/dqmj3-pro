@@ -1,0 +1,54 @@
+{
+  "status": "coordinator-reviewed-real-shared-tail;inventory-change-pending",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "originalCandidateParent": {
+    "address": 1295400,
+    "instructionBytes": 180,
+    "rangeEndExclusive": 1295580
+  },
+  "proposedExclusiveOwnership": {
+    "parentOwnedInstructionBytes": 100,
+    "releaseEntry": 1295500,
+    "releaseInstructionBytes": 80,
+    "totalInstructionBytesPreserved": 180
+  },
+  "spanWitnesses": [
+    {
+      "start": 1295400,
+      "endExclusive": 1295500,
+      "bytes": 100,
+      "sha256": "90a4866b1c27347af6a561e70bf592371fbd0b45755def266054e21923021e29"
+    },
+    {
+      "start": 1295500,
+      "endExclusive": 1295580,
+      "bytes": 80,
+      "sha256": "54138378bb8a499a7e3a87f27c5bdedf2a09d6e28a4df857df7c0852eb2dd2ac"
+    },
+    {
+      "start": 1295580,
+      "endExclusive": 1295584,
+      "bytes": 4,
+      "sha256": "8bd18d3da9ef6f6c5da02e87a896bf65642c823a81ffdada1a5437513e0e8a0c"
+    }
+  ],
+  "actualExternalTailCalls": [
+    {
+      "callerEntry": 1509300,
+      "pc": 1509324,
+      "target": 1295500,
+      "mode": "ARM",
+      "instructionSha256": "ec6df265d3468821ed22248327ef69f39fdf06978c49aed8985cb8936bcbf43c"
+    }
+  ],
+  "parentFallthrough": {
+    "restorePc": 1295492,
+    "nopPc": 1295496,
+    "target": 1295500,
+    "restoredCallerLrBeforeTailPrologue": true,
+    "fullParentBehaviorRequiresTailDependency": true
+  },
+  "originalImagePatched": false,
+  "duplicateInstructionOwnershipPermitted": false,
+  "sourceCreditGranted": 0
+}

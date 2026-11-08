@@ -9,10 +9,21 @@ BASELINES = dict(context='build', arbiter='build', object='final-attempt-v4/buil
                  startup='final-stage-v1/build')
 
 
+def public_paths(root, output, paths):
+    retained = []
+    for entry in sys.path:
+        resolved = Path(entry or '.').resolve()
+        if resolved.is_relative_to(root / 'work') and not resolved.is_relative_to(output):
+            continue
+        if entry not in paths and entry not in retained:
+            retained.append(entry)
+    sys.path[:] = [*paths, *retained]
+
+
 def bind(root, output, stage, selected):
     folders = [output / name for name in ('context', 'object', 'startup', 'arbiter', 'legacy')]
     paths = [str(path) for path in folders] + [str(root / 'toolscripts')]
-    sys.path[:0] = paths
+    public_paths(root, output, paths)
     import sdk062_original_v1 as oracle
     alias = types.ModuleType('native_stream058_original')
     alias.__file__, alias.Original = oracle.__file__, oracle.Original
@@ -22,6 +33,7 @@ def bind(root, output, stage, selected):
         module = importlib.import_module(name)
         if not Path(module.__file__).resolve().is_relative_to(output):
             raise ValueError('SDK runtime resolved outside its public snapshot: ' + name)
+        public_paths(root, output, paths)
     import digest024_build as compiler
     old_command = compiler.command
     allowed = [path / 'source' for path in folders]
@@ -49,8 +61,9 @@ def bind(root, output, stage, selected):
 
         module.build = build
         builders[name] = module
-        sys.path[:0] = paths
+        public_paths(root, output, paths)
     baseline = output / stage / BASELINES[stage]
     oracle.install(baseline)
+    public_paths(root, output, paths)
     chosen = dict(context='build062s', arbiter='build062a', object='build062t', startup='build062u')[stage]
     return builders[chosen], baseline

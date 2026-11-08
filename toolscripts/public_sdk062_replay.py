@@ -127,6 +127,8 @@ def child(output, stage, mode):
             raise ValueError('SDK declared sources/producers changed during replay')
         if runtime.verify(ROOT) != runtime_before or runtime.identity() != effective_runtime:
             raise ValueError('SDK effective runtime/tool inputs changed during replay')
+        if rejected:
+            raise ValueError('SDK attempted forbidden historical work access during replay')
         record.update(status='passed', publicAndCopiedSourcePins=len(before),
             declaredSourceInputsUnchanged=True, oldWorkInputsRead=False,
             historicalOriginalFixtureMapped=False, fullSdkFactoryStartupOrGameClaimed=False)
