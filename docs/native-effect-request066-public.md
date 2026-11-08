@@ -21,3 +21,7 @@ tools/python/Scripts/python.exe -B toolscripts/effect_file066_intake.py --root .
 ```
 
 The coordinator owns publication, committed-source replay and any later source-credit decision. The adapter itself grants zero source or matching credit.
+
+The independent committed replay at `06fa4e1` passed 125 pipeline tests and reproduced all 686 raw native artifacts including control builds and import libraries. Eight complete logical corpus files match the public preflight byte-for-byte; fresh original/source observations agree. All 18 semantic-control executions return normally; 17 are applicable and reject. U32 pointer truncation is explicitly inapplicable on ARM32. Six persistent provenance controls reject caught attempts.
+
+Coordinator admission covers only six complete bodies: task dispatch, provider reset/data pointer, U64 length and task selector/path getters. They add 192 instruction bytes; the dispatch table 20 bytes remain data. The source-name configuration and metadata header append six aliases, with the existing mixed-newline byte prefix preserved and prior proof changes restricted to the header pin. The working-C registry becomes 473 (459 medium, 14 low), representing 188,424 bounded instruction bytes; exact source-linked bytes remain 5,128. The incomplete factory/resolver/async queue, complete renderer, physical Android and whole games are excluded.

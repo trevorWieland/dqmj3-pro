@@ -1,0 +1,62 @@
+{
+  "status": "complete-public-file066-CPU-replay-reviewed-by-coordinator",
+  "sourceRevision": "06fa4e1725305319ef18325c3f9af70ed2ea7b68",
+  "pipelineTests": 125,
+  "frozenSourceTests": 10,
+  "publicGuardTests": 10,
+  "persistentCaughtAttemptControls": 6,
+  "returningSemanticObservations": 18,
+  "applicableSemanticRejections": 17,
+  "arm32PointerTruncationInapplicable": true,
+  "frozenGoldenArtifacts": 97,
+  "completeIdenticalNativeArtifacts": 686,
+  "identicalCorpora": [
+    "original/original.json",
+    "original/original-dispatch.json",
+    "source/arm.json",
+    "source/arm-dispatch.json",
+    "source/windows.json",
+    "source/windows-dispatch.json",
+    "source/a64.json",
+    "source/a64-dispatch.json"
+  ],
+  "productionC": 30,
+  "headers": 29,
+  "qualificationC": 9,
+  "selectedSupportFiles": 48,
+  "runtimeFiles": 277,
+  "positiveChildren": [
+    {
+      "mode": "build",
+      "freshPythonModules": 5,
+      "forbiddenAttempts": 0,
+      "originalMapped": false
+    },
+    {
+      "mode": "original",
+      "freshPythonModules": 28,
+      "forbiddenAttempts": 0,
+      "originalMapped": true
+    },
+    {
+      "mode": "source",
+      "freshPythonModules": 33,
+      "forbiddenAttempts": 0,
+      "originalMapped": false
+    }
+  ],
+  "originalImagesMappedBySource": false,
+  "normalizedTypedCorporaNotRawCrossPointerAddressEquality": true,
+  "sourceCreditGranted": 0,
+  "wholeQueueBootstrapGpuPhysicalAndroidOrGameClaimed": false,
+  "rawPipelineReceipt": {
+    "path": "evidence/verification/file066-isolated-06fa4e1.json",
+    "bytes": 21724,
+    "sha256": "2e7a7bd3b1c5899ac95fea07500286f4f76fb7d38d762216d3c3fb26027bd75f"
+  },
+  "producer": {
+    "path": "evidence/verification/producers/review_file066_replay.py",
+    "bytes": 9123,
+    "sha256": "fc9d27b0cb409d6ac763876ac772f9cc3d5235538531b9002c55c6597dde8e66"
+  }
+}

@@ -172,3 +172,9 @@
 #define fn_0045e504 sdk_timer_set062aa
 #define fn_0045e3dc sdk_timer_update062aa
 #define fn_00765620 sdk_timer_insert062aa
+#define fn_005f35bc effect_request_load066
+#define fn_005f3324 effect_request_provider_reset066
+#define fn_006ec778 effect_request_provider_bytes066
+#define fn_006ec780 effect_request_length066
+#define fn_006ec748 effect_request_selector066
+#define fn_006ec754 effect_request_path066

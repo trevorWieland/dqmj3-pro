@@ -1,0 +1,902 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-file-dispatch-provider-getters",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "functions": [
+    {
+      "symbol": "fn_005f35bc",
+      "source": {
+        "path": "src/native/wave066-request/request_task.c",
+        "bytes": 3122,
+        "sha256": "a50f459a9a5941c5c3eb571a0fe2ab86a4ead9624e143e55c49ae04aec243fd9"
+      },
+      "sourceName": "effect_request_load066",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7729,
+        "sha256": "8af11e2221523345cdd8698782888f6acdd49b3a4a420bc6d583d0d1303b09b9"
+      },
+      "canonicalIdentity": {
+        "address": 6239676,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 100,
+      "originalInstructionRanges": [
+        {
+          "start": 6239676,
+          "endExclusive": 6239716,
+          "bytes": 40
+        },
+        {
+          "start": 6239736,
+          "endExclusive": 6239796,
+          "bytes": 60
+        }
+      ],
+      "originalBodySha256": "4fd884566485466ee22781d2e6423f56a3dad9ea9b3bf880f555d64a6a45f848",
+      "reportEntryBytes": 40,
+      "indexedDispatchData": {
+        "data": {
+          "start": 6239716,
+          "endExclusive": 6239736,
+          "bytes": 20,
+          "sha256": "29ba868ed8268ae12a1bbc34430467459f7f832d0676dd7c204590f170ad79ad"
+        },
+        "guard": {
+          "start": 6239704,
+          "endExclusive": 6239712,
+          "bytes": 8,
+          "sha256": "f42a732621b6d87bb5933b9610c6e3f1f6a5da2a78681cae4568c83f64e007fd"
+        }
+      },
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/file066-coordinator-06fa4e1.json",
+          "bytes": 1906,
+          "sha256": "ba24d1eda412447d3080130a16800edc10b6a9cf3b449c23771880273d479405"
+        },
+        "completeOriginalEntryAndTableWitnesses": {
+          "path": "evidence/verification/file-callable-inventory-witnesses.json",
+          "bytes": 8388,
+          "sha256": "d3b6faa62b3e1df0c3a65ccbf92b15d01d9ba44c53f23bff1f12ca4882ff9612"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSemanticObservations": 18,
+        "applicableSemanticRejections": 17,
+        "arm32PointerTruncationMutationInapplicable": true,
+        "persistentCaughtAttemptControls": 6,
+        "pipelineTests": 125,
+        "sourceOnlyProductionUnits": 577,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "domain": "Valid initialized live task/control/provider objects with the measured base operation tables; exact typed pointer fields and unsigned selector/length words. Dispatcher uses qualified base-provider load/reset callbacks under the frozen synchronous file domains. Getter U64 values retain both words; void volatile-register returns are excluded.",
+        "limits": [
+          "Derived, reentrant or concurrently replaced operation tables are unqualified.",
+          "The load/reset dependencies retain explicit memory-filesystem, allocator and normal-return domains.",
+          "Source resolver modes outside5, factory error/async startup, full queue, cache teardown and populated lower renderer remain unqualified.",
+          "The20-byte indexed table is data and adds no instruction/source credit.",
+          "Physical Android, GPU and complete native game execution are not established by this CPU replay."
+        ],
+        "confidenceJustification": "Medium: complete original instruction extents and table/caller identity; independent committed original/ARM/native Windows/high-A64 replay;686 identical raw native artifacts; full declared typed observations and returning semantic/provenance controls. No exact or universal equivalence claim."
+      }
+    },
+    {
+      "symbol": "fn_005f3324",
+      "source": {
+        "path": "src/native/wave066-request/request_provider.c",
+        "bytes": 3963,
+        "sha256": "2a1efd9c5b940c913c6ffa6aad02d98b04bfef73effd532d78452e7104103fb7"
+      },
+      "sourceName": "effect_request_provider_reset066",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7729,
+        "sha256": "8af11e2221523345cdd8698782888f6acdd49b3a4a420bc6d583d0d1303b09b9"
+      },
+      "canonicalIdentity": {
+        "address": 6239012,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 44,
+      "originalInstructionRanges": [
+        {
+          "start": 6239012,
+          "endExclusive": 6239056,
+          "bytes": 44
+        }
+      ],
+      "originalBodySha256": "5e85c8c14fca80d20204cc464a1c47407ee92a4206d5ced75abcad1760eaa8c3",
+      "reportEntryBytes": 44,
+      "indexedDispatchData": null,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/file066-coordinator-06fa4e1.json",
+          "bytes": 1906,
+          "sha256": "ba24d1eda412447d3080130a16800edc10b6a9cf3b449c23771880273d479405"
+        },
+        "completeOriginalEntryAndTableWitnesses": {
+          "path": "evidence/verification/file-callable-inventory-witnesses.json",
+          "bytes": 8388,
+          "sha256": "d3b6faa62b3e1df0c3a65ccbf92b15d01d9ba44c53f23bff1f12ca4882ff9612"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSemanticObservations": 18,
+        "applicableSemanticRejections": 17,
+        "arm32PointerTruncationMutationInapplicable": true,
+        "persistentCaughtAttemptControls": 6,
+        "pipelineTests": 125,
+        "sourceOnlyProductionUnits": 577,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "domain": "Valid initialized live task/control/provider objects with the measured base operation tables; exact typed pointer fields and unsigned selector/length words. Dispatcher uses qualified base-provider load/reset callbacks under the frozen synchronous file domains. Getter U64 values retain both words; void volatile-register returns are excluded.",
+        "limits": [
+          "Derived, reentrant or concurrently replaced operation tables are unqualified.",
+          "The load/reset dependencies retain explicit memory-filesystem, allocator and normal-return domains.",
+          "Source resolver modes outside5, factory error/async startup, full queue, cache teardown and populated lower renderer remain unqualified.",
+          "The20-byte indexed table is data and adds no instruction/source credit.",
+          "Physical Android, GPU and complete native game execution are not established by this CPU replay."
+        ],
+        "confidenceJustification": "Medium: complete original instruction extents and table/caller identity; independent committed original/ARM/native Windows/high-A64 replay;686 identical raw native artifacts; full declared typed observations and returning semantic/provenance controls. No exact or universal equivalence claim."
+      }
+    },
+    {
+      "symbol": "fn_006ec778",
+      "source": {
+        "path": "src/native/wave066-request/request_provider.c",
+        "bytes": 3963,
+        "sha256": "2a1efd9c5b940c913c6ffa6aad02d98b04bfef73effd532d78452e7104103fb7"
+      },
+      "sourceName": "effect_request_provider_bytes066",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7729,
+        "sha256": "8af11e2221523345cdd8698782888f6acdd49b3a4a420bc6d583d0d1303b09b9"
+      },
+      "canonicalIdentity": {
+        "address": 7260024,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 8,
+      "originalInstructionRanges": [
+        {
+          "start": 7260024,
+          "endExclusive": 7260032,
+          "bytes": 8
+        }
+      ],
+      "originalBodySha256": "687b83fbb1b1084c4b61325547b5f8fadfb354f0d8aa39fcef5ecb6ba6b86ed1",
+      "reportEntryBytes": 8,
+      "indexedDispatchData": null,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/file066-coordinator-06fa4e1.json",
+          "bytes": 1906,
+          "sha256": "ba24d1eda412447d3080130a16800edc10b6a9cf3b449c23771880273d479405"
+        },
+        "completeOriginalEntryAndTableWitnesses": {
+          "path": "evidence/verification/file-callable-inventory-witnesses.json",
+          "bytes": 8388,
+          "sha256": "d3b6faa62b3e1df0c3a65ccbf92b15d01d9ba44c53f23bff1f12ca4882ff9612"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSemanticObservations": 18,
+        "applicableSemanticRejections": 17,
+        "arm32PointerTruncationMutationInapplicable": true,
+        "persistentCaughtAttemptControls": 6,
+        "pipelineTests": 125,
+        "sourceOnlyProductionUnits": 577,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "domain": "Valid initialized live task/control/provider objects with the measured base operation tables; exact typed pointer fields and unsigned selector/length words. Dispatcher uses qualified base-provider load/reset callbacks under the frozen synchronous file domains. Getter U64 values retain both words; void volatile-register returns are excluded.",
+        "limits": [
+          "Derived, reentrant or concurrently replaced operation tables are unqualified.",
+          "The load/reset dependencies retain explicit memory-filesystem, allocator and normal-return domains.",
+          "Source resolver modes outside5, factory error/async startup, full queue, cache teardown and populated lower renderer remain unqualified.",
+          "The20-byte indexed table is data and adds no instruction/source credit.",
+          "Physical Android, GPU and complete native game execution are not established by this CPU replay."
+        ],
+        "confidenceJustification": "Medium: complete original instruction extents and table/caller identity; independent committed original/ARM/native Windows/high-A64 replay;686 identical raw native artifacts; full declared typed observations and returning semantic/provenance controls. No exact or universal equivalence claim."
+      }
+    },
+    {
+      "symbol": "fn_006ec780",
+      "source": {
+        "path": "src/native/wave066-request/request_control.c",
+        "bytes": 1411,
+        "sha256": "3fce347487d987b2880a3001c87810f88d5d6ed0e29a4d5132b1db47cb04d8f7"
+      },
+      "sourceName": "effect_request_length066",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7729,
+        "sha256": "8af11e2221523345cdd8698782888f6acdd49b3a4a420bc6d583d0d1303b09b9"
+      },
+      "canonicalIdentity": {
+        "address": 7260032,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 16,
+      "originalInstructionRanges": [
+        {
+          "start": 7260032,
+          "endExclusive": 7260048,
+          "bytes": 16
+        }
+      ],
+      "originalBodySha256": "6a42c509041bfe7ebedf865624a21eb2ec8cf5b917424cc99df5282908fbd9d3",
+      "reportEntryBytes": 16,
+      "indexedDispatchData": null,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/file066-coordinator-06fa4e1.json",
+          "bytes": 1906,
+          "sha256": "ba24d1eda412447d3080130a16800edc10b6a9cf3b449c23771880273d479405"
+        },
+        "completeOriginalEntryAndTableWitnesses": {
+          "path": "evidence/verification/file-callable-inventory-witnesses.json",
+          "bytes": 8388,
+          "sha256": "d3b6faa62b3e1df0c3a65ccbf92b15d01d9ba44c53f23bff1f12ca4882ff9612"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSemanticObservations": 18,
+        "applicableSemanticRejections": 17,
+        "arm32PointerTruncationMutationInapplicable": true,
+        "persistentCaughtAttemptControls": 6,
+        "pipelineTests": 125,
+        "sourceOnlyProductionUnits": 577,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "domain": "Valid initialized live task/control/provider objects with the measured base operation tables; exact typed pointer fields and unsigned selector/length words. Dispatcher uses qualified base-provider load/reset callbacks under the frozen synchronous file domains. Getter U64 values retain both words; void volatile-register returns are excluded.",
+        "limits": [
+          "Derived, reentrant or concurrently replaced operation tables are unqualified.",
+          "The load/reset dependencies retain explicit memory-filesystem, allocator and normal-return domains.",
+          "Source resolver modes outside5, factory error/async startup, full queue, cache teardown and populated lower renderer remain unqualified.",
+          "The20-byte indexed table is data and adds no instruction/source credit.",
+          "Physical Android, GPU and complete native game execution are not established by this CPU replay."
+        ],
+        "confidenceJustification": "Medium: complete original instruction extents and table/caller identity; independent committed original/ARM/native Windows/high-A64 replay;686 identical raw native artifacts; full declared typed observations and returning semantic/provenance controls. No exact or universal equivalence claim."
+      }
+    },
+    {
+      "symbol": "fn_006ec748",
+      "source": {
+        "path": "src/native/wave066-request/request_control.c",
+        "bytes": 1411,
+        "sha256": "3fce347487d987b2880a3001c87810f88d5d6ed0e29a4d5132b1db47cb04d8f7"
+      },
+      "sourceName": "effect_request_selector066",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7729,
+        "sha256": "8af11e2221523345cdd8698782888f6acdd49b3a4a420bc6d583d0d1303b09b9"
+      },
+      "canonicalIdentity": {
+        "address": 7259976,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 12,
+      "originalInstructionRanges": [
+        {
+          "start": 7259976,
+          "endExclusive": 7259988,
+          "bytes": 12
+        }
+      ],
+      "originalBodySha256": "a9959b17c3b1a7bf2e385f0fb097d22b384d0e45f1e6a5ea33b22e6670a9be7d",
+      "reportEntryBytes": 12,
+      "indexedDispatchData": null,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/file066-coordinator-06fa4e1.json",
+          "bytes": 1906,
+          "sha256": "ba24d1eda412447d3080130a16800edc10b6a9cf3b449c23771880273d479405"
+        },
+        "completeOriginalEntryAndTableWitnesses": {
+          "path": "evidence/verification/file-callable-inventory-witnesses.json",
+          "bytes": 8388,
+          "sha256": "d3b6faa62b3e1df0c3a65ccbf92b15d01d9ba44c53f23bff1f12ca4882ff9612"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSemanticObservations": 18,
+        "applicableSemanticRejections": 17,
+        "arm32PointerTruncationMutationInapplicable": true,
+        "persistentCaughtAttemptControls": 6,
+        "pipelineTests": 125,
+        "sourceOnlyProductionUnits": 577,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "domain": "Valid initialized live task/control/provider objects with the measured base operation tables; exact typed pointer fields and unsigned selector/length words. Dispatcher uses qualified base-provider load/reset callbacks under the frozen synchronous file domains. Getter U64 values retain both words; void volatile-register returns are excluded.",
+        "limits": [
+          "Derived, reentrant or concurrently replaced operation tables are unqualified.",
+          "The load/reset dependencies retain explicit memory-filesystem, allocator and normal-return domains.",
+          "Source resolver modes outside5, factory error/async startup, full queue, cache teardown and populated lower renderer remain unqualified.",
+          "The20-byte indexed table is data and adds no instruction/source credit.",
+          "Physical Android, GPU and complete native game execution are not established by this CPU replay."
+        ],
+        "confidenceJustification": "Medium: complete original instruction extents and table/caller identity; independent committed original/ARM/native Windows/high-A64 replay;686 identical raw native artifacts; full declared typed observations and returning semantic/provenance controls. No exact or universal equivalence claim."
+      }
+    },
+    {
+      "symbol": "fn_006ec754",
+      "source": {
+        "path": "src/native/wave066-request/request_control.c",
+        "bytes": 1411,
+        "sha256": "3fce347487d987b2880a3001c87810f88d5d6ed0e29a4d5132b1db47cb04d8f7"
+      },
+      "sourceName": "effect_request_path066",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7729,
+        "sha256": "8af11e2221523345cdd8698782888f6acdd49b3a4a420bc6d583d0d1303b09b9"
+      },
+      "canonicalIdentity": {
+        "address": 7259988,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 12,
+      "originalInstructionRanges": [
+        {
+          "start": 7259988,
+          "endExclusive": 7260000,
+          "bytes": 12
+        }
+      ],
+      "originalBodySha256": "eb9055423f2cb64d0a6e481612ae5bef6ee8bda0a670b39548790f04be44d205",
+      "reportEntryBytes": 12,
+      "indexedDispatchData": null,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/file066-coordinator-06fa4e1.json",
+          "bytes": 1906,
+          "sha256": "ba24d1eda412447d3080130a16800edc10b6a9cf3b449c23771880273d479405"
+        },
+        "completeOriginalEntryAndTableWitnesses": {
+          "path": "evidence/verification/file-callable-inventory-witnesses.json",
+          "bytes": 8388,
+          "sha256": "d3b6faa62b3e1df0c3a65ccbf92b15d01d9ba44c53f23bff1f12ca4882ff9612"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSemanticObservations": 18,
+        "applicableSemanticRejections": 17,
+        "arm32PointerTruncationMutationInapplicable": true,
+        "persistentCaughtAttemptControls": 6,
+        "pipelineTests": 125,
+        "sourceOnlyProductionUnits": 577,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "domain": "Valid initialized live task/control/provider objects with the measured base operation tables; exact typed pointer fields and unsigned selector/length words. Dispatcher uses qualified base-provider load/reset callbacks under the frozen synchronous file domains. Getter U64 values retain both words; void volatile-register returns are excluded.",
+        "limits": [
+          "Derived, reentrant or concurrently replaced operation tables are unqualified.",
+          "The load/reset dependencies retain explicit memory-filesystem, allocator and normal-return domains.",
+          "Source resolver modes outside5, factory error/async startup, full queue, cache teardown and populated lower renderer remain unqualified.",
+          "The20-byte indexed table is data and adds no instruction/source credit.",
+          "Physical Android, GPU and complete native game execution are not established by this CPU replay."
+        ],
+        "confidenceJustification": "Medium: complete original instruction extents and table/caller identity; independent committed original/ARM/native Windows/high-A64 replay;686 identical raw native artifacts; full declared typed observations and returning semantic/provenance controls. No exact or universal equivalence claim."
+      }
+    }
+  ],
+  "sourceDependencies": [
+    {
+      "path": "src/native/wave009/interval_set.h",
+      "bytes": 987,
+      "sha256": "c9f8ea99061aaf09e3b82c8a75d3049282f14bdbf7e201a429c1064348853419"
+    },
+    {
+      "path": "src/native/wave010/match_state.h",
+      "bytes": 1055,
+      "sha256": "c5331ad810d5fc508c5df281ece4f5b8f70a998cc5d226d2e7157593137d035b"
+    },
+    {
+      "path": "src/native/wave012/compile_graph.h",
+      "bytes": 1657,
+      "sha256": "d496139a253186af9849862e764fcc1b50d77f432fe8e6e9dd4c6b4ce84f8ee5"
+    },
+    {
+      "path": "src/native/wave012/fixed_arena.h",
+      "bytes": 689,
+      "sha256": "576604e9c5fde42d82ada3fa977fa33591421711f129bd5cae1b3c45240eec4a"
+    },
+    {
+      "path": "src/native/wave012/label_ops.h",
+      "bytes": 939,
+      "sha256": "0d96df2ffe4d5c6f404cbbe688e86f3f644fbc7fecfe9fe6ab0c03a43b2f5be1"
+    },
+    {
+      "path": "src/native/wave012/memory_ops.c",
+      "bytes": 1951,
+      "sha256": "2110c115a64ddc3cfa867787bd64cbbc65a35643cef10f5afc27971215c24516"
+    },
+    {
+      "path": "src/native/wave013/control_compile.h",
+      "bytes": 288,
+      "sha256": "323e2786580a834a869dfd5a15d22edd58f84dc8d909322dbf3d99902937e8b0"
+    },
+    {
+      "path": "src/native/wave013/dfa_compile.h",
+      "bytes": 830,
+      "sha256": "83f3627463a010ec5b5d561f1d443c25995be6dc8f4f86cbc28d534f1d2fe334"
+    },
+    {
+      "path": "src/native/wave013/outer_arena.c",
+      "bytes": 1116,
+      "sha256": "520818862f8faf779ee3083698e1ee29b614d8e19358453f880f42e99f6ce192"
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa.h",
+      "bytes": 4884,
+      "sha256": "76dddc817728b69b544e927320f5c1564a6a390ba6259adae837a324d3a07c36"
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa_api.h",
+      "bytes": 386,
+      "sha256": "974523189a56560a598aca0f00ef26cd7b50c3a12bb5c0bb1f0789e5ba82d8bb"
+    },
+    {
+      "path": "src/native/wave013/pattern_outer.h",
+      "bytes": 1605,
+      "sha256": "2e79c5635b7b411271ff28684f7349b0daf076e05473e2b997b6ccf21ea68e9a"
+    },
+    {
+      "path": "src/native/wave013/pattern_ranges.h",
+      "bytes": 521,
+      "sha256": "6eb248d90a59fc8f50469f8735a4b6ad224ca067b68ce66295ccd5de765abeee"
+    },
+    {
+      "path": "src/native/wave013/pattern_tokens.h",
+      "bytes": 4191,
+      "sha256": "2a06bf5d5efd04ef077298a341aaead1a5ef6e20ace3969363ff35b1ba78a9ae"
+    },
+    {
+      "path": "src/native/wave013/pattern_unicode.h",
+      "bytes": 1109,
+      "sha256": "5a0f6e2c1824e58392c5d347108ff9b088ae256e684fcff613a9aaceb28f709b"
+    },
+    {
+      "path": "src/native/wave032/archive.h",
+      "bytes": 2058,
+      "sha256": "898228acad7e6c345af740679090ecfb27e05a15fcd8326c15c134a25099eb9c"
+    },
+    {
+      "path": "src/native/wave032/archive_lookup.c",
+      "bytes": 2147,
+      "sha256": "77447d1f84669ef96e98a0bdbf8974b33bf6d37fea2502c67ba84c1a198bcaae"
+    },
+    {
+      "path": "src/native/wave032/archive_members.c",
+      "bytes": 1657,
+      "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a"
+    },
+    {
+      "path": "src/native/wave032/archive_owner.c",
+      "bytes": 1635,
+      "sha256": "5e8cba4615a2aa54073d1336d9bb4487d2db3f11cadf7f413c7212832e6d18c8"
+    },
+    {
+      "path": "src/native/wave065/effect_preview.c",
+      "bytes": 4275,
+      "sha256": "b317784d97063cd8d7ae05b74c376e443470352fc9ec8b561b9a6251d29db0ef"
+    },
+    {
+      "path": "src/native/wave065/effect_preview.h",
+      "bytes": 3054,
+      "sha256": "f4107777d62b1087c265b4f7a92e41964cd10e406b50f28564d2a7b745219cde"
+    },
+    {
+      "path": "src/native/wave065/effect_services.h",
+      "bytes": 520,
+      "sha256": "ca1a247f8b3421b17ea848b38029fa5b74f40576588c8b9efd630b2a47235ef9"
+    },
+    {
+      "path": "src/native/wave065/effect_shader.c",
+      "bytes": 1511,
+      "sha256": "35db548068499b99bfd7c52b337a6dfa2568ebb5847c53db31a1c0d6585cfb33"
+    },
+    {
+      "path": "src/native/wave065/effect_shader.h",
+      "bytes": 1381,
+      "sha256": "26c4310b9bceb3e6d6a45c1923679312b164bd686ff285e5e36aa37e2e3895fd"
+    },
+    {
+      "path": "src/native/wave065-cached/effect_cached.h",
+      "bytes": 2804,
+      "sha256": "ad83bd4336187d51d5f197ccb924631eb80a2dc85465f9b4013798ef0a1e3592"
+    },
+    {
+      "path": "src/native/wave065-cached/effect_cached_fetch.c",
+      "bytes": 2390,
+      "sha256": "d058638689714953570a9c4bbe8eb292618eabe6eb3e7bf0b879918120aac945"
+    },
+    {
+      "path": "src/native/wave065-cached/effect_cached_format.c",
+      "bytes": 1326,
+      "sha256": "d9079abce9373eb04bc08ef030aba7ba5f0a4afdbdd060003b6f4c584bce8244"
+    },
+    {
+      "path": "src/native/wave065-cached/effect_cached_request.c",
+      "bytes": 2570,
+      "sha256": "5c9d27f374579fe7aff96d46275dac982dd577ca366a7203f3ba2d2fc64a186e"
+    },
+    {
+      "path": "src/native/wave065-cached/effect_cached_services.c",
+      "bytes": 366,
+      "sha256": "c825c8a04c8b34fbfa6a98c8904b57a417532ad97dc1d6368e077e7d00eb8e6c"
+    },
+    {
+      "path": "src/native/wave065-owner/effect_owner.h",
+      "bytes": 1306,
+      "sha256": "d2424ade961e16cd32aa6ef942f65accbbbde55dc724e39e43ac85aadb37632d"
+    },
+    {
+      "path": "src/native/wave065-owner/effect_registration.c",
+      "bytes": 586,
+      "sha256": "8919479a5f7e8dadff06585234ee918cba177c7b76a5383bac3371b9e9826a98"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_commands.c",
+      "bytes": 5991,
+      "sha256": "ebb3cd9cf39fdd3352b85658a37085280cbf7329cd8c4d200e1fe53ca21fafab"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_commands.h",
+      "bytes": 885,
+      "sha256": "707e55cd92764ac2085e3071293911998a5db1f365b0166831d72dc3a40ad7fe"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_device.c",
+      "bytes": 1657,
+      "sha256": "5d1eca97c5e3ad3bb1888dc1661b669a85e10083caa4f4bb3a0192309d2e332f"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_device.h",
+      "bytes": 1098,
+      "sha256": "284d8a6ae7918d9ae5c083351c4df293feae7ec839217a5e13a048fc49d4cc64"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_port_runtime.c",
+      "bytes": 344,
+      "sha256": "22036544b4956205983c5147ee7c3c50cd7158d31200e660f3b5a26e14fb23fb"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource.c",
+      "bytes": 2743,
+      "sha256": "c0df7d80f452ac9a70ea0542d2677909fc00892d719de1df777158cc8a250597"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource.h",
+      "bytes": 4527,
+      "sha256": "27856b081a4cbc7fffd99bdf4207a0f50297a823e1be9bc383299e6f3378fe1e"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_internal.h",
+      "bytes": 1158,
+      "sha256": "4180f9e4989373c5b6f1d9f2a1638033e2422319628a1b4be4051e16d552a68f"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_memory.c",
+      "bytes": 2449,
+      "sha256": "9435650539a05de15b212d54aa334b0247449fc1553741ac887ec292cb4270c8"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_memory.h",
+      "bytes": 1915,
+      "sha256": "556a8706a752115547e7d66dd03ab0d447e5aba45e8cc2fa24c4ac940dfe4437"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_primitives.c",
+      "bytes": 11904,
+      "sha256": "a303514b8f156c963d10ca098a96c2fdc19d840527d4738b13a2985e517d855a"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_release.c",
+      "bytes": 4042,
+      "sha256": "5bbdfc210138141c4232dd57176a3bbf6c10b04bbe95756fd1891120c5ab6fbe"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_sets.c",
+      "bytes": 9330,
+      "sha256": "e90be26d9dab200e33f07f8800f5a4c12abc20ce05d1f52518bbff7d40511678"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_shaders.c",
+      "bytes": 1071,
+      "sha256": "6b8252fa137ffbe0cd91c8b51ffcc7a55a8daaad127f5f5b73fd69f39d65a50c"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_serialized.h",
+      "bytes": 700,
+      "sha256": "6de80450ceea9d5eebad58df3a90df0b0e7177c24b739c7cd796e3f3d1fc2c2a"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_texture.c",
+      "bytes": 5440,
+      "sha256": "22cf0b0f8d73d3011b1332a7e90a146e5f3f63e9ee7d0dc59617128a6adcdbd5"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_texture.h",
+      "bytes": 1126,
+      "sha256": "e7214e034d51ec6d91cb307665a744582bb21e39f63e982aea62992a81f73742"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_vertex.c",
+      "bytes": 3159,
+      "sha256": "2f6862b7705ac9ce9870ce3b2edb34d9ca6ae738b96eb30c43312550ebb52d05"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_vertex.h",
+      "bytes": 2099,
+      "sha256": "4fa83e9f114e8bfbda79628cd0405ee44dce673f8ba4f6c551ae63b3f216cf87"
+    },
+    {
+      "path": "src/native/wave066-request/request.h",
+      "bytes": 7289,
+      "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+    },
+    {
+      "path": "src/native/wave066-request/request_control.c",
+      "bytes": 1411,
+      "sha256": "3fce347487d987b2880a3001c87810f88d5d6ed0e29a4d5132b1db47cb04d8f7"
+    },
+    {
+      "path": "src/native/wave066-request/request_factory.c",
+      "bytes": 2656,
+      "sha256": "717e683e98d4f9e324b02d0a52521a4076e9111c0298969e3e322a1e59155a5d"
+    },
+    {
+      "path": "src/native/wave066-request/request_lower.c",
+      "bytes": 1925,
+      "sha256": "79a4b8710fe0c620efc4d35a036b88e00618dc68e85ae4e423736ef0c9f2557e"
+    },
+    {
+      "path": "src/native/wave066-request/request_lower.h",
+      "bytes": 1430,
+      "sha256": "f90ee5fa23ca791fc9cb2e48cb25ee6898f1f056377b0b763372e9cbd935690f"
+    },
+    {
+      "path": "src/native/wave066-request/request_memory.c",
+      "bytes": 328,
+      "sha256": "f165e2012d2629d49eb9e9284652db3ae1475d0ea19dd65b09981f92b40fc996"
+    },
+    {
+      "path": "src/native/wave066-request/request_provider.c",
+      "bytes": 3963,
+      "sha256": "2a1efd9c5b940c913c6ffa6aad02d98b04bfef73effd532d78452e7104103fb7"
+    },
+    {
+      "path": "src/native/wave066-request/request_strings.c",
+      "bytes": 2655,
+      "sha256": "b04976ead7979b5d471b374f7ca311306d8d252c17e911d1244c6c9e5bc246f7"
+    },
+    {
+      "path": "src/native/wave066-request/request_task.c",
+      "bytes": 3122,
+      "sha256": "a50f459a9a5941c5c3eb571a0fe2ab86a4ead9624e143e55c49ae04aec243fd9"
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave009/interval_set.h",
+      "bytes": 987,
+      "sha256": "c9f8ea99061aaf09e3b82c8a75d3049282f14bdbf7e201a429c1064348853419"
+    },
+    {
+      "path": "src/native/wave010/match_state.h",
+      "bytes": 1055,
+      "sha256": "c5331ad810d5fc508c5df281ece4f5b8f70a998cc5d226d2e7157593137d035b"
+    },
+    {
+      "path": "src/native/wave012/compile_graph.h",
+      "bytes": 1657,
+      "sha256": "d496139a253186af9849862e764fcc1b50d77f432fe8e6e9dd4c6b4ce84f8ee5"
+    },
+    {
+      "path": "src/native/wave012/fixed_arena.h",
+      "bytes": 689,
+      "sha256": "576604e9c5fde42d82ada3fa977fa33591421711f129bd5cae1b3c45240eec4a"
+    },
+    {
+      "path": "src/native/wave012/label_ops.h",
+      "bytes": 939,
+      "sha256": "0d96df2ffe4d5c6f404cbbe688e86f3f644fbc7fecfe9fe6ab0c03a43b2f5be1"
+    },
+    {
+      "path": "src/native/wave013/control_compile.h",
+      "bytes": 288,
+      "sha256": "323e2786580a834a869dfd5a15d22edd58f84dc8d909322dbf3d99902937e8b0"
+    },
+    {
+      "path": "src/native/wave013/dfa_compile.h",
+      "bytes": 830,
+      "sha256": "83f3627463a010ec5b5d561f1d443c25995be6dc8f4f86cbc28d534f1d2fe334"
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa.h",
+      "bytes": 4884,
+      "sha256": "76dddc817728b69b544e927320f5c1564a6a390ba6259adae837a324d3a07c36"
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa_api.h",
+      "bytes": 386,
+      "sha256": "974523189a56560a598aca0f00ef26cd7b50c3a12bb5c0bb1f0789e5ba82d8bb"
+    },
+    {
+      "path": "src/native/wave013/pattern_outer.h",
+      "bytes": 1605,
+      "sha256": "2e79c5635b7b411271ff28684f7349b0daf076e05473e2b997b6ccf21ea68e9a"
+    },
+    {
+      "path": "src/native/wave013/pattern_ranges.h",
+      "bytes": 521,
+      "sha256": "6eb248d90a59fc8f50469f8735a4b6ad224ca067b68ce66295ccd5de765abeee"
+    },
+    {
+      "path": "src/native/wave013/pattern_tokens.h",
+      "bytes": 4191,
+      "sha256": "2a06bf5d5efd04ef077298a341aaead1a5ef6e20ace3969363ff35b1ba78a9ae"
+    },
+    {
+      "path": "src/native/wave013/pattern_unicode.h",
+      "bytes": 1109,
+      "sha256": "5a0f6e2c1824e58392c5d347108ff9b088ae256e684fcff613a9aaceb28f709b"
+    },
+    {
+      "path": "src/native/wave032/archive.h",
+      "bytes": 2058,
+      "sha256": "898228acad7e6c345af740679090ecfb27e05a15fcd8326c15c134a25099eb9c"
+    },
+    {
+      "path": "src/native/wave065/effect_preview.h",
+      "bytes": 3054,
+      "sha256": "f4107777d62b1087c265b4f7a92e41964cd10e406b50f28564d2a7b745219cde"
+    },
+    {
+      "path": "src/native/wave065/effect_services.h",
+      "bytes": 520,
+      "sha256": "ca1a247f8b3421b17ea848b38029fa5b74f40576588c8b9efd630b2a47235ef9"
+    },
+    {
+      "path": "src/native/wave065/effect_shader.h",
+      "bytes": 1381,
+      "sha256": "26c4310b9bceb3e6d6a45c1923679312b164bd686ff285e5e36aa37e2e3895fd"
+    },
+    {
+      "path": "src/native/wave065-cached/effect_cached.h",
+      "bytes": 2804,
+      "sha256": "ad83bd4336187d51d5f197ccb924631eb80a2dc85465f9b4013798ef0a1e3592"
+    },
+    {
+      "path": "src/native/wave065-owner/effect_owner.h",
+      "bytes": 1306,
+      "sha256": "d2424ade961e16cd32aa6ef942f65accbbbde55dc724e39e43ac85aadb37632d"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_commands.h",
+      "bytes": 885,
+      "sha256": "707e55cd92764ac2085e3071293911998a5db1f365b0166831d72dc3a40ad7fe"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_device.h",
+      "bytes": 1098,
+      "sha256": "284d8a6ae7918d9ae5c083351c4df293feae7ec839217a5e13a048fc49d4cc64"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource.h",
+      "bytes": 4527,
+      "sha256": "27856b081a4cbc7fffd99bdf4207a0f50297a823e1be9bc383299e6f3378fe1e"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_internal.h",
+      "bytes": 1158,
+      "sha256": "4180f9e4989373c5b6f1d9f2a1638033e2422319628a1b4be4051e16d552a68f"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_memory.h",
+      "bytes": 1915,
+      "sha256": "556a8706a752115547e7d66dd03ab0d447e5aba45e8cc2fa24c4ac940dfe4437"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_serialized.h",
+      "bytes": 700,
+      "sha256": "6de80450ceea9d5eebad58df3a90df0b0e7177c24b739c7cd796e3f3d1fc2c2a"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_texture.h",
+      "bytes": 1126,
+      "sha256": "e7214e034d51ec6d91cb307665a744582bb21e39f63e982aea62992a81f73742"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_vertex.h",
+      "bytes": 2099,
+      "sha256": "4fa83e9f114e8bfbda79628cd0405ee44dce673f8ba4f6c551ae63b3f216cf87"
+    },
+    {
+      "path": "src/native/wave066-request/request.h",
+      "bytes": 7289,
+      "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+    },
+    {
+      "path": "src/native/wave066-request/request_lower.h",
+      "bytes": 1430,
+      "sha256": "f90ee5fa23ca791fc9cb2e48cb25ee6898f1f056377b0b763372e9cbd935690f"
+    },
+    {
+      "path": "include/bytematch_names.h",
+      "bytes": 7729,
+      "sha256": "8af11e2221523345cdd8698782888f6acdd49b3a4a420bc6d583d0d1303b09b9"
+    }
+  ],
+  "qualificationOnlySources": [
+    "toolscripts/file066/fixtures/effect065_cached_composed_fixture.c",
+    "toolscripts/file066/fixtures/effect065_cached_fixture.c",
+    "toolscripts/file066/fixtures/effect065_owner_fixture.c",
+    "toolscripts/file066/fixtures/effect_request066_cache_fixture.c",
+    "toolscripts/file066/fixtures/effect_request066_device_fixture.c",
+    "toolscripts/file066/fixtures/effect_request066_fixture.c",
+    "toolscripts/file066/fixtures/effect_request066_port_fixture.c",
+    "toolscripts/file066/fixtures/native_effect065_resource_graph_fixture.c",
+    "toolscripts/file066/fixtures/native_effect065_resource_runtime.c"
+  ],
+  "originalPackets": [
+    {
+      "path": "evidence/verification/file066-coordinator-06fa4e1.json",
+      "bytes": 1906,
+      "sha256": "ba24d1eda412447d3080130a16800edc10b6a9cf3b449c23771880273d479405"
+    },
+    {
+      "path": "evidence/verification/file-callable-inventory-witnesses.json",
+      "bytes": 8388,
+      "sha256": "d3b6faa62b3e1df0c3a65ccbf92b15d01d9ba44c53f23bff1f12ca4882ff9612"
+    }
+  ],
+  "producer": {
+    "path": "evidence/verification/producers/review_file066_functional.py",
+    "bytes": 10614,
+    "sha256": "59cc02ee731645e622da45270290e30bc8e4343507757f2b9b94e7e60827001f"
+  },
+  "acceptedSourceCreditGranted": 0,
+  "exactMatchingClaimed": false,
+  "confirmedOverallSourceCoverageClaimed": false,
+  "partialResolverFactoryQueueRendererOrWholeGameClaimed": false
+}
