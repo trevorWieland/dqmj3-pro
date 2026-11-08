@@ -1,0 +1,67 @@
+{
+  "status": "two-medium-construction-functions-schema-validated-pending-registry",
+  "packet": {
+    "path": "evidence/functional/init78.json",
+    "bytes": 13325,
+    "sha256": "2d447992390bdf61d582c6406501b97ca5c34ab7b9888c48701d8866aec1e8a8"
+  },
+  "functions": [
+    {
+      "name": "fn_0012ab74",
+      "confidence": "medium",
+      "packet": {
+        "path": "evidence/functional/init78.json",
+        "bytes": 13325,
+        "sha256": "2d447992390bdf61d582c6406501b97ca5c34ab7b9888c48701d8866aec1e8a8"
+      },
+      "sourceLookup": "repository-function-index"
+    },
+    {
+      "name": "fn_0012a32c",
+      "confidence": "medium",
+      "packet": {
+        "path": "evidence/functional/init78.json",
+        "bytes": 13325,
+        "sha256": "2d447992390bdf61d582c6406501b97ca5c34ab7b9888c48701d8866aec1e8a8"
+      },
+      "sourceLookup": "repository-function-index"
+    }
+  ],
+  "controls": [
+    {
+      "case": "missing-fragment",
+      "rejected": true,
+      "reason": "Fragmented functional proof needs complete ranges and explicit report entry extent"
+    },
+    {
+      "case": "wrong-byte-count",
+      "rejected": true,
+      "reason": "Functional proof omits part of the canonical function body"
+    },
+    {
+      "case": "wrong-source",
+      "rejected": true,
+      "reason": "Reviewed source lacks the reported C definition"
+    },
+    {
+      "case": "wrong-mode",
+      "rejected": true,
+      "reason": "Functional canonical identity differs"
+    },
+    {
+      "case": "wrong-entry-extent",
+      "rejected": true,
+      "reason": "Fragmented functional proof needs complete ranges and explicit report entry extent"
+    }
+  ],
+  "instructionFootprintBytes": 3144,
+  "sourceCreditGranted": 0,
+  "exactMatchingCreditGranted": 0,
+  "resource7FunctionsAdmitted": false,
+  "wholeOwnerGpuOrGameClaim": false,
+  "producer": {
+    "path": "evidence/verification/producers/review_init78_functional.py",
+    "bytes": 10393,
+    "sha256": "4783e6769fea5818fc7d9d6309fc8f1977b8258e946febaf7b539fb1e82d16db"
+  }
+}

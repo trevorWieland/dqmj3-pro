@@ -108,3 +108,5 @@
 #define fn_0010d9d4 xorshift_seed062
 #define fn_00100670 resource_sdk_words063
 #define fn_0073b7a4 state_dispatch6
+#define fn_0012ab74 state_construct_context7
+#define fn_0012a32c state_cache_construct8
