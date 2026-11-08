@@ -33,7 +33,8 @@
       "wave062",
       "wave063",
       "wave065",
-      "wave062-sdk"
+      "wave062-sdk",
+      "wave065-resource"
     ]
   },
   "units": [
@@ -10570,6 +10571,129 @@
       ],
       "includeDirectories": [
         "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065-resource/effect_commands.c",
+      "headers": [
+        "src/native/wave065-resource/effect_commands.h",
+        "src/native/wave065-resource/effect_vertex.h",
+        "src/native/wave065/effect_services.h",
+        "src/native/wave065/effect_shader.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065-resource/effect_device.c",
+      "headers": [
+        "src/native/wave065-resource/effect_device.h",
+        "src/native/wave065-resource/effect_texture.h",
+        "src/native/wave065/effect_services.h",
+        "src/native/wave065/effect_shader.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065-resource/effect_port_runtime.c",
+      "headers": [],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065-resource/effect_resource.c",
+      "headers": [
+        "src/native/wave065-resource/effect_commands.h",
+        "src/native/wave065-resource/effect_resource.h",
+        "src/native/wave065-resource/effect_resource_internal.h",
+        "src/native/wave065-resource/effect_resource_memory.h",
+        "src/native/wave065-resource/effect_serialized.h",
+        "src/native/wave065-resource/effect_vertex.h",
+        "src/native/wave065/effect_services.h",
+        "src/native/wave065/effect_shader.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065-resource/effect_resource_memory.c",
+      "headers": [
+        "src/native/wave065-resource/effect_resource_memory.h",
+        "src/native/wave065/effect_services.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065-resource/effect_resource_primitives.c",
+      "headers": [
+        "src/native/wave065-resource/effect_commands.h",
+        "src/native/wave065-resource/effect_device.h",
+        "src/native/wave065-resource/effect_resource.h",
+        "src/native/wave065-resource/effect_resource_internal.h",
+        "src/native/wave065-resource/effect_resource_memory.h",
+        "src/native/wave065-resource/effect_serialized.h",
+        "src/native/wave065-resource/effect_vertex.h",
+        "src/native/wave065/effect_services.h",
+        "src/native/wave065/effect_shader.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065-resource/effect_resource_release.c",
+      "headers": [
+        "src/native/wave065-resource/effect_commands.h",
+        "src/native/wave065-resource/effect_device.h",
+        "src/native/wave065-resource/effect_resource.h",
+        "src/native/wave065-resource/effect_resource_internal.h",
+        "src/native/wave065-resource/effect_resource_memory.h",
+        "src/native/wave065-resource/effect_serialized.h",
+        "src/native/wave065-resource/effect_vertex.h",
+        "src/native/wave065/effect_services.h",
+        "src/native/wave065/effect_shader.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065-resource/effect_resource_sets.c",
+      "headers": [
+        "src/native/wave065-resource/effect_commands.h",
+        "src/native/wave065-resource/effect_device.h",
+        "src/native/wave065-resource/effect_resource.h",
+        "src/native/wave065-resource/effect_resource_internal.h",
+        "src/native/wave065-resource/effect_resource_memory.h",
+        "src/native/wave065-resource/effect_serialized.h",
+        "src/native/wave065-resource/effect_texture.h",
+        "src/native/wave065-resource/effect_vertex.h",
+        "src/native/wave065/effect_services.h",
+        "src/native/wave065/effect_shader.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065-resource/effect_resource_shaders.c",
+      "headers": [
+        "src/native/wave065-resource/effect_commands.h",
+        "src/native/wave065-resource/effect_resource.h",
+        "src/native/wave065-resource/effect_resource_internal.h",
+        "src/native/wave065-resource/effect_resource_memory.h",
+        "src/native/wave065-resource/effect_serialized.h",
+        "src/native/wave065-resource/effect_vertex.h",
+        "src/native/wave065/effect_services.h",
+        "src/native/wave065/effect_shader.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065-resource/effect_texture.c",
+      "headers": [
+        "src/native/wave065-resource/effect_texture.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065-resource/effect_vertex.c",
+      "headers": [
+        "src/native/wave065-resource/effect_vertex.h",
+        "src/native/wave065/effect_services.h",
+        "src/native/wave065/effect_shader.h"
       ],
       "role": "bounded-component"
     }

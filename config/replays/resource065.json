@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "name": "resource065",
+  "producerSteps": [
+    {
+      "name": "resource065-proof",
+      "args": [
+        "toolscripts/public_resource065_replay.py",
+        "--output",
+        "work/resource065-public-replay-v1"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "public_resource065_replay",
+    "effect_resource065_conditions",
+    "effect_resource065_graph",
+    "effect_resource065_header_review",
+    "c_function_definitions",
+    "native_sdk_inventory",
+    "native_provider_inventory",
+    "native_callback_inventory",
+    "compile_source_include_dirs"
+  ],
+  "packets": [
+    "work/resource065-public-replay-v1/public-replay.json",
+    "work/resource065-public-replay-v1/packet.json",
+    "work/resource065-public-replay-v1/ready.json",
+    "work/resource065-public-replay-v1/kernel-build/build.json",
+    "work/resource065-public-replay-v1/vertex/report.json",
+    "work/resource065-public-replay-v1/commands/report.json",
+    "work/resource065-public-replay-v1/constants/report.json",
+    "work/resource065-public-replay-v1/texture/report.json",
+    "work/resource065-public-replay-v1/vertex-negative/report.json",
+    "work/resource065-public-replay-v1/graph-build/build.json",
+    "work/resource065-public-replay-v1/graph/report.json",
+    "work/resource065-public-replay-v1/lifecycle/report.json",
+    "work/resource065-public-replay-v1/negative/report.json",
+    "work/resource065-public-replay-v1/source-only/report.json",
+    "work/resource065-public-replay-v1/header-review/report.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

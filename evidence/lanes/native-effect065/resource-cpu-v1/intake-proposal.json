@@ -1,0 +1,69 @@
+{
+  "status": "resource-CPU-kernel-and-joined-graph-coordinator-review-only",
+  "stageReady": {
+    "path": "work/native-effect065/resource/sealing-v1/ready.json",
+    "bytes": 314,
+    "sha256": "4a72f21fdd3b8fd54bd36680c951e956c8b6c10233bd5bb4d9f9d29198eec513"
+  },
+  "boundaries": {
+    "path": "evidence/lanes/native-effect065/resource-cpu-v1/boundaries-and-coverage.json",
+    "bytes": 47984,
+    "sha256": "87ced7bb54b560599d05e7d429d3766ff2e95556f175d670ea7c299aeeaeb161"
+  },
+  "sourceObjects": {
+    "path": "evidence/lanes/native-effect065/resource-cpu-v1/source-objects.json",
+    "bytes": 174896,
+    "sha256": "8d1da6d769ca6ef321fe38096b299545133173df11cc6b322ea4db57683a59db"
+  },
+  "runtimeClosure": {
+    "path": "work/native-effect065/resource/sealing-v1/runtime-before.json",
+    "bytes": 74043,
+    "sha256": "d482e406fc5b1debb65d585f79a97fd140ecdfebf458a8eec1720d0806af7ab9"
+  },
+  "canonicalKernelCandidates": [
+    1366820,
+    1429728,
+    1430044,
+    4518840,
+    1585376,
+    7141276,
+    4515764,
+    5463464,
+    5463532
+  ],
+  "canonicalKernelInstructionBytes": 3396,
+  "supplemental52InstructionBytesRequireIndependentInventoryReview": true,
+  "resourceCtorAndFinalizerJoinedEvidenceOnly": [
+    5504604,
+    1444968
+  ],
+  "factoryWrapperAndTransferNotBehaviorQualified": [
+    5499420,
+    5509540,
+    5509612
+  ],
+  "replayArgv": [
+    "tools/python/Scripts/python.exe",
+    "toolscripts/native_effect065_resource_stage.py",
+    "--output",
+    "work/native-effect065/resource/coordinator-stage-v1"
+  ],
+  "requiredPrivateOriginalInputs": [
+    {
+      "path": "generated/update-content0/code.bin",
+      "bytes": 8159232,
+      "sha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+    },
+    {
+      "path": "generated/update-content0/exheader.bin",
+      "bytes": 2048,
+      "sha256": "32fcbe9adf7ea39c01c825af0d41c5ecb933549917ccc903a102eb83fb21f435"
+    }
+  ],
+  "fullArchiveAssetsOrToolCopiesRequired": false,
+  "publicSourceRoot": "src/native/wave065-resource",
+  "sourceCreditGranted": 0,
+  "matchingCreditGranted": 0,
+  "fullEffectGraphQualified": false,
+  "nativeGPUQualified": false
+}
