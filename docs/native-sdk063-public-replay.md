@@ -1,0 +1,11 @@
+# Standalone SDK word-seeding provider
+
+The Thumb entry at `0x100670` initializes 55 words and two table pointers. It is reached through the measured ARM seed wrapper and an interworking veneer. It does not write the wrapper's separate seed word or the independent xorshift state. The new ordinary C entry preserves those distinctions; it does not infer standalone behavior from the combined 062 wrapper test.
+
+`resource_sdk_words063(state, seed)` is a portable explicit-state interface. The original takes the seed in R0 and accesses fixed global regions. Its volatile R0 contains the next LCG value on return; the proof compares state, not volatile-register return equality. The measured resource seed caller reloads its saved input before the next call. The portable interface is deliberately void, and no universal return-type or raw ABI equivalence is claimed.
+
+The current standalone packet exercises 408 seed/sentinel combinations on original Thumb, source ARM, actual Windows x64 and high-address AArch64. All 22 original instructions execute. Complete original data/BSS and native caller arenas match independent images, including untouched seed/xorshift fields. A separate process using four byte-identical copied files reproduces the complete result rows and ten object/linked artifacts. Nine wrong-source executions normally return and are rejected: wrong table pointer, wrong multiplier and an extra seed-word write.
+
+The four copied files are the small owned source snapshot, not a complete dependency closure. The public random062/packets062 headers, imported loader/runtime/build modules, frozen 059/061/062 prerequisite inputs and pinned tool/native-library environment remain dependencies. The combined `asset062-sdk063` clean replay stages these inputs, runs the full 062 provider proof, and checks inherited input hashes before and after 063 qualification.
+
+The original separate linker executable name and a relative output path caused two early setup failures before provider execution. Their compiled attempt outputs remain private; prior producer files were not retained. The initial struct-state proof is superseded by complete caller-arena checks. No exact matching, physical Android execution, complete resource caller or working native game is claimed by this component.

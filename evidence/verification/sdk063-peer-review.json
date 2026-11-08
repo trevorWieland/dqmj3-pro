@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "status": "read-only-peer-review-no-production-source-defect-found",
+  "reviewer": "contribution_review",
+  "source": [
+    {
+      "path": "src/native/wave063/sdk_words063.c",
+      "bytes": 361,
+      "sha256": "4b4624cbce033c987f6d9e940d3f6426f1ea5053959dd1e0b064e28f8d628739"
+    },
+    {
+      "path": "src/native/wave063/sdk_words063.h",
+      "bytes": 138,
+      "sha256": "1f0e7645a4753d992321dfa0cf843779cb0874100875eb4d077341f1fa0ed4d5"
+    }
+  ],
+  "scope": "22-instruction Thumb word-seeding side effects",
+  "supported": [
+    "descending55-word U32 recurrence and pointers31/0",
+    "separate seed-word and xorshift storage preserved",
+    "native pointer widths and full declared arena checks",
+    "nine normally returning wrong-source controls"
+  ],
+  "qualifications": [
+    "Four copied files are owned sources, not complete dependencies; combined bootstrap now guards153 inherited input pins before and after",
+    "Original fixed-global seed-inR0 API differs from explicit-state portable API; volatile return equality not claimed",
+    "The real parent reloads its saved seed before the next call"
+  ],
+  "sourceCreditGranted": 0
+}

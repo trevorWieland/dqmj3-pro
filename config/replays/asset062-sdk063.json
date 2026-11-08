@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "name": "asset062-sdk063",
+  "producerSteps": [
+    {
+      "name": "asset062-prepare",
+      "args": [
+        "toolscripts/native_asset062_stage.py",
+        "prepare"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "asset062-proof",
+      "args": [
+        "toolscripts/native_asset062_stage.py",
+        "proof"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "sdk063-prepare",
+      "args": [
+        "toolscripts/native_sdk063_stage.py",
+        "prepare"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "sdk063-proof",
+      "args": [
+        "toolscripts/native_sdk063_stage.py",
+        "proof"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "native_asset062_stage",
+    "compile_source_include_dirs",
+    "native_callback_inventory",
+    "native_census_overlay",
+    "native_provider_inventory",
+    "native_sdk063_stage"
+  ],
+  "packets": [
+    "work/native-asset062-public/v1/staged-inputs.json",
+    "work/native-asset062-public/v1/proof/proof.log",
+    "work/native-asset062-public/v1/proof/prerequisite-build.log",
+    "work/native-asset062-public/v1/proof/public-input-guard.json",
+    "work/native-asset062/verification.json",
+    "work/native-asset062/qualification-attempt002/summary.json",
+    "work/native-asset062/qualification-attempt002/controls/report.json",
+    "work/native-asset062/qualification-attempt002/input-guard.json",
+    "work/native-asset062/own-source-checkpoint.json",
+    "work/native-sdk063-public/v1/staged-inputs.json",
+    "work/native-sdk063-public/v1/positive.log",
+    "work/native-sdk063-public/v1/copy-and-controls.log",
+    "work/native-sdk063-public/v1/public-input-guard.json",
+    "work/native-sdk063/attempt004/report.json",
+    "work/native-sdk063/verification.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

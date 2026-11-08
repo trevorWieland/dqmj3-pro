@@ -1,0 +1,24 @@
+{
+  "firstTwoAttemptsStoppedBeforeProviderExecution": true,
+  "productionSourceChanged": false,
+  "attempts": [
+    {
+      "attempt": "attempt001",
+      "exception": "FileNotFoundError",
+      "reason": "Separate lld-link.exe unavailable; pinned ld.lld.exe link flavor is the actual tool"
+    },
+    {
+      "attempt": "attempt002",
+      "exception": "ValueError",
+      "reason": "Relative CLI output path rejected by artifact pin; resolve output path"
+    },
+    {
+      "attempt": "attempt003",
+      "status": "passed-struct-state-observation",
+      "supersededBy": "attempt004 with complete native caller arenas"
+    }
+  ],
+  "priorProducerFilesNotRetained": true,
+  "currentCompleteProof": "attempt004",
+  "sourceCreditGranted": 0
+}
