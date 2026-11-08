@@ -225,3 +225,4 @@
 #define fn_0044dfac effect_file_device_pool_release068
 #define fn_0010555c effect_file_bootstrap_shutdown068
 #define fn_0010c4f4 effect_file_filesystem_shutdown068
+#define fn_005354a4 particle_velocity_scale019

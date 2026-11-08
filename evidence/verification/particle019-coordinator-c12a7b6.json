@@ -1,0 +1,199 @@
+{
+  "status": "coordinator-reviewed-committed-particle019-replay-passed",
+  "sourceRevision": "c12a7b64677f7c241e28264ab62be20573706bc8",
+  "producer": {
+    "path": "evidence/verification/producers/review_particle019_replay.py",
+    "bytes": 5804,
+    "sha256": "f89c59da910d4f9b99bb81741f97184797806433b654e691970205ff323356d7"
+  },
+  "rawReplay": {
+    "path": "evidence/verification/particle019-isolated-c12a7b6.json",
+    "bytes": 58893,
+    "sha256": "9f7bc31954b43f0ab415d29ac864c51401328f0dd93bf73259a7e89c4efd0658"
+  },
+  "mandatoryPackets": 124,
+  "pipelineStages": 16,
+  "pipelineTests": 95,
+  "scopes": [
+    {
+      "mode": "public-only",
+      "positiveCases": 57,
+      "returningControlCases": 114,
+      "boundaryPrograms": 20,
+      "cleanExitFinalizerButParentRejected": 3,
+      "receipt": {
+        "path": "work/particle019-public-replay-v1/adapter/replay/transport-receipt.public.json",
+        "bytes": 65030,
+        "sha256": "2700f53b109bdab09b13d467c9f8442403930eb9211b99bf19563b874bc69e07"
+      }
+    },
+    {
+      "mode": "full",
+      "positiveCases": 117,
+      "returningControlCases": 120,
+      "boundaryPrograms": 20,
+      "cleanExitFinalizerButParentRejected": 3,
+      "receipt": {
+        "path": "work/particle019-independent-full-v1/adapter/replay/transport-receipt.public.json",
+        "bytes": 70650,
+        "sha256": "4747dbe55f7532ec4d95959499bad156b8e9cc8725f4e3888ffa671e8a2b467f"
+      }
+    },
+    {
+      "mode": "source-only",
+      "positiveCases": 117,
+      "returningControlCases": 120,
+      "boundaryPrograms": 20,
+      "cleanExitFinalizerButParentRejected": 3,
+      "receipt": {
+        "path": "work/particle019-independent-source-only-v1/adapter/replay/transport-receipt.public.json",
+        "bytes": 71416,
+        "sha256": "2b8b63ffa283bb9332ecb08aea831d0b57291f1fb6fa4ae7c869cc8e8a41caa0"
+      }
+    }
+  ],
+  "completeNativeArtifactsChecked": 90,
+  "allRawNativeArtifactsEqualAcrossModes": true,
+  "publicClosure": [
+    {
+      "path": "src/native/particle019-velocity/particle_velocity.c",
+      "bytes": 482,
+      "sha256": "a6115dbdddbf4861f15890e756e1826a764e2b4cdc4ca428ae05d4fcc3b8e4c5"
+    },
+    {
+      "path": "src/native/particle019-velocity/particle_velocity.h",
+      "bytes": 791,
+      "sha256": "333c02baee073628e822e34bbdee10ccc3fd37503d933938ea15f41061c64391"
+    },
+    {
+      "path": "toolscripts/fixtures/particle019-velocity/velocity_fixture.c",
+      "bytes": 2947,
+      "sha256": "f7bf9a61383d760ce31a4df6d20313c1b32edffba6318d3cd39c4f9f2948e2e4"
+    },
+    {
+      "path": "toolscripts/fixtures/particle019-velocity/controls/algebraic.c",
+      "bytes": 342,
+      "sha256": "da3db2f9a3bc823689f5a16bf28fc9cb1e031543bcfc291b5e08fe68b57a29f8"
+    },
+    {
+      "path": "toolscripts/fixtures/particle019-velocity/controls/skip_z.c",
+      "bytes": 353,
+      "sha256": "d3c1b0a88451baa96d4abe881a0303edbfca151dd53e62d1faebbe117cfb0651"
+    },
+    {
+      "path": "toolscripts/particle019_velocity_support/build_source.py",
+      "bytes": 3458,
+      "sha256": "9171f10cb294e2361da0dcb2ab733d5c4d1b519cd1894ac046b1b3da7871051c"
+    },
+    {
+      "path": "toolscripts/particle019_velocity_support/run_source.py",
+      "bytes": 6927,
+      "sha256": "eb22c334766a1aad63c59f939b1f756c5edc84bd5f3cad5f78f134491f0e97e7"
+    },
+    {
+      "path": "toolscripts/particle019_velocity_support/velocity_machine019.py",
+      "bytes": 5922,
+      "sha256": "1b47ae7c46d5941472c1095f20f6d4cba847a618240bd86af4065e523682773b"
+    },
+    {
+      "path": "toolscripts/particle019_velocity_support/reference_units.py",
+      "bytes": 3370,
+      "sha256": "fde5b21ba36383d54f1a6a0155a6125b9903c6579e00d0902363b4a29e972c51"
+    },
+    {
+      "path": "evidence/lanes/native-particle019-velocity/public-inputs-v1/contract-v1.json",
+      "bytes": 1742,
+      "sha256": "00684a43287e23dcc2c3eaf01645b769919fa934cfea0be835075628d8eeecd6"
+    },
+    {
+      "path": "evidence/lanes/native-particle019-velocity/public-inputs-v1/cases-v1.json",
+      "bytes": 4640,
+      "sha256": "5534846dcb088b867e94e5372738c4d7b885868a6d6b665b8e4904e3ade929e9"
+    },
+    {
+      "path": "evidence/lanes/native-particle019-velocity/public-inputs-v1/original-unit-results-v1.public.json",
+      "bytes": 21258,
+      "sha256": "bb63c2712aa033ae166e56a9b2bd60ec65acd5d14845cdb5b880dadd2befcb07"
+    },
+    {
+      "path": "evidence/lanes/native-particle019-velocity/public-inputs-v1/fields-v2.public.json",
+      "bytes": 2954,
+      "sha256": "6ae893c916b4e1fd07b48e4e42ac9b6a6e29ecc195f3fb18c646dd1c7f4ed873"
+    },
+    {
+      "path": "toolscripts/particle019_velocity_support/guard.py",
+      "bytes": 6529,
+      "sha256": "1bbfcef57286ef5844164f42016ae6364eb9a787ceaf8a1294e4a1d15955d0ac"
+    },
+    {
+      "path": "toolscripts/particle019_velocity_support/loader.py",
+      "bytes": 2115,
+      "sha256": "a7bc91e43b24b588564f0c8ddc51d12d6cfa810a5b5f2d37aac22670e9fc5dc2"
+    },
+    {
+      "path": "toolscripts/particle019_velocity_transport/transport.py",
+      "bytes": 7977,
+      "sha256": "f8f01d58ffc9916677272827ca21b9b194bca54f40d0f445d8a2f57ecadb51a7"
+    },
+    {
+      "path": "toolscripts/particle019_velocity_transport/child_replay.py",
+      "bytes": 6288,
+      "sha256": "2378445dbd3818f5cbc78fe7c98f010c39f783d749917fe596282875ae61f8ba"
+    },
+    {
+      "path": "toolscripts/particle019_velocity_transport/boundary_watch.py",
+      "bytes": 3121,
+      "sha256": "4c998e333f4d32c6029cb1558e5930a646fe96d80e748b3290e348db09fd3031"
+    }
+  ],
+  "additionalPrivateDataFiles": [
+    {
+      "path": "work/particle019-velocity-v1/reference-normal-v1/profile1-stack0-saved42-frames1-set0-group0/velocity-particle0.private.bin.xz",
+      "bytes": 128,
+      "sha256": "7e5a77ca387b91ce0e519ec1c679d323c1528649214560f74251e803261b6987"
+    },
+    {
+      "path": "work/particle019-velocity-v1/reference-normal-v1/profile1-stack0-saved42-frames1-set0-group0/velocity-resource0.private.bin.xz",
+      "bytes": 100,
+      "sha256": "7fec472c4a7978ca25c3de222fafd4822feb872bb1898642649c5d9edec1679e"
+    },
+    {
+      "path": "work/particle019-velocity-v1/reference-normal-v1/profile1-stack0-saved42-frames1-set0-group0/velocity-after0.private.bin.xz",
+      "bytes": 128,
+      "sha256": "7e5a77ca387b91ce0e519ec1c679d323c1528649214560f74251e803261b6987"
+    }
+  ],
+  "additionalPrivateDataBytes": 356,
+  "additionalDataMaterialization": {
+    "path": "work/particle019-independent-data-materialization-v1.json",
+    "bytes": 1244,
+    "sha256": "d5e6975d39a5f9d6c7b55331c47de776b33d20fbb68b8a9be487360671fd0605"
+  },
+  "actualOriginalCases": 20,
+  "originalInstructionPositions": [
+    5461156,
+    5461160,
+    5461164,
+    5461168,
+    5461172,
+    5461176,
+    5461180,
+    5461184,
+    5461188,
+    5461192,
+    5461196,
+    5461200,
+    5461204,
+    5461208,
+    5461212
+  ],
+  "originalInstructionBytes": 60,
+  "originalLiteralBytesExcluded": 4,
+  "sourceOriginalImageReadsOrCpuConstructors": 0,
+  "actualWindowsExecution": true,
+  "androidA64HighAddressCpuExecution": true,
+  "physicalAndroidExecutionClaimed": false,
+  "sourceCreditGranted": 0,
+  "overallConfirmedSourceCoverageClaimed": false,
+  "wholeGameClaimed": false
+}

@@ -1,0 +1,1172 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "sourceRevision": "c12a7b64677f7c241e28264ab62be20573706bc8",
+  "sourceArchiveSha256": "12183cce930a3da3579dfcf6f140ca7fa5d6422f0e15733b8212c17df5c13b96",
+  "replayRoot": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6",
+  "plan": {
+    "schemaVersion": 1,
+    "name": "particle019",
+    "producerSteps": [
+      {
+        "name": "particle019-public-replay",
+        "args": [
+          "toolscripts/public_particle019_replay.py",
+          "--public-root",
+          ".",
+          "--output",
+          "work/particle019-public-replay-v1",
+          "--mode",
+          "public-only",
+          "--boundaries"
+        ],
+        "inputKinds": [
+          "none"
+        ]
+      },
+      {
+        "name": "particle019-scope-review",
+        "args": [
+          "toolscripts/verify_particle019_replay.py",
+          "--output",
+          "work/particle019-public-replay-v1",
+          "--mode",
+          "public-only"
+        ],
+        "inputKinds": [
+          "none"
+        ]
+      }
+    ],
+    "tests": [
+      "native_particle_inventory",
+      "compile_source_include_dirs",
+      "c_function_definitions"
+    ],
+    "packets": [
+      "work/particle019-public-replay-v1/public-replay-receipt.public.json",
+      "work/particle019-public-replay-v1/adapter/replay/transport-receipt.public.json",
+      "work/particle019-public-replay-v1/coordinator-scope-verification.json",
+      "work/particle019-public-replay-v1/adapter/replay/intake/build-v1/build.json",
+      "work/particle019-public-replay-v1/adapter/replay/intake/algebraic-build-v1/build.json",
+      "work/particle019-public-replay-v1/adapter/replay/intake/skip-z-build-v1/build.json",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/public-arm/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/public-arm.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/public-arm.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/public-arm.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/returning-algebraic-arm/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-algebraic-arm.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-algebraic-arm.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/returning-algebraic-arm.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/returning-skip-z-arm/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-skip-z-arm.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-skip-z-arm.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/returning-skip-z-arm.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/public-windows/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/public-windows.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/public-windows.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/public-windows.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/returning-algebraic-windows/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-algebraic-windows.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-algebraic-windows.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/returning-algebraic-windows.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/returning-skip-z-windows/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-skip-z-windows.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-skip-z-windows.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/returning-skip-z-windows.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/public-a64/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/public-a64.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/public-a64.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/public-a64.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/returning-algebraic-a64/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-algebraic-a64.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-algebraic-a64.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/returning-algebraic-a64.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/returning-skip-z-a64/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-skip-z-a64.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-skip-z-a64.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/returning-skip-z-a64.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-open/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-open.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-open.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-open.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-io-open/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-io-open.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-io-open.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-io-open.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-os-open/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-os-open.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-os-open.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-os-open.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-stat/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-stat.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-stat.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-stat.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-lstat/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-lstat.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-lstat.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-lstat.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-listdir/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-listdir.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-listdir.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-listdir.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-scandir/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-scandir.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-scandir.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-scandir.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-resolve/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-resolve.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-resolve.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-resolve.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-original-constructor/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-original-constructor.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-original-constructor.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-original-constructor.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-original-cpu/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-original-cpu.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-original-cpu.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-original-cpu.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-undeclared-library/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-undeclared-library.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-undeclared-library.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-undeclared-library.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-whole-private-arena/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-whole-private-arena.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-whole-private-arena.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-whole-private-arena.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-old-helper/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-old-helper.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-old-helper.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-old-helper.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-original-library/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-original-library.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-original-library.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-original-library.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-private-normal-snapshot/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-private-normal-snapshot.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-private-normal-snapshot.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-private-normal-snapshot.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-atexit/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-atexit.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-atexit.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-atexit.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-cleared-rejection/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-cleared-rejection.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-cleared-rejection.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-cleared-rejection.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-after-finalizer/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-after-finalizer.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-after-finalizer.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-after-finalizer.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-after-finalizer-global-teardown/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-after-finalizer-global-teardown.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-after-finalizer-global-teardown.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-after-finalizer-global-teardown.log",
+      "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-after-finalizer-json-teardown/receipt.json",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-after-finalizer-json-teardown.events.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-after-finalizer-json-teardown.finalizer.jsonl",
+      "work/particle019-public-replay-v1/adapter/replay/logs/boundary-after-finalizer-json-teardown.log"
+    ],
+    "intakeCleanup": {
+      "mode": "code-exheader-only",
+      "producerInputs": [
+        "code",
+        "exheader"
+      ]
+    }
+  },
+  "planSha256": "fa46f3fccec2dcbe2a9785e64a62194a511acdc1d8c5f9d3e193b3071b78a2e5",
+  "replayDriverSha256": "fd91f0fe8756b643c903913b74d05ddc742eddc49c8a3b47d3c7e5be989e28de",
+  "nativeLibraries": [
+    {
+      "path": "tools/python/Lib/site-packages/capstone/lib/capstone.dll",
+      "size": 7576576,
+      "sha256": "76958e18380023a68fd1714fa2e01c594cc6db1955a07ad6937b66e66dc5d6c3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/lib/unicorn.dll",
+      "size": 9598976,
+      "sha256": "010d85dce84b8f6ffaec3d5420f1b5f7768f859eb831be574c7da23e656ee8f1"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/z3/lib/libz3.dll",
+      "size": 17490432,
+      "sha256": "b6a30c2922293c2a2cab4299637935302d8fb0427762b5a3d2dc16f392f27b8c"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5/cvc5_python_base.cp313-win_amd64.pyd",
+      "size": 1310720,
+      "sha256": "810e9b9f4a9df25e3edeb27b08a373a5a61169ed269f2ae40b9c8c0f9261730a"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5.libs/libc++-8a9deaac6d2f4d2de468a544d1f35cd0.dll",
+      "size": 1659392,
+      "sha256": "8a9deaac6d2f4d2de468a544d1f35cd0dd4bcde03cda3cfb76fb9674749828d4"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5.libs/libcvc5-b3ddd8d0b36e795253fd2e6698441eea.dll",
+      "size": 29992448,
+      "sha256": "6abfaabb88587f543e31c24d261246b4d5014fb7424e7efff54604f1b7f53cab"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5.libs/libcvc5parser-5a140a2cd1789e9177c20f9e46be8c97.dll",
+      "size": 912896,
+      "sha256": "f6756dfae9bd483bb425e8239ee52a932a1807a09add36e7b0db57e585287bf8"
+    }
+  ],
+  "freshEnvironment": true,
+  "sharedGeneratedOrWorkInputs": false,
+  "copiedToolAndWheelFiles": [
+    {
+      "path": "tools/clang-21/clang.exe",
+      "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+    },
+    {
+      "path": "tools/clang-21/ld.lld.exe",
+      "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3"
+    },
+    {
+      "path": "tools/clang-21/libwinpthread-1.dll",
+      "sha256": "c9019ab753c2faa5e5da94e3fd4395f1d3d0e7d2509f5ed2d96cccff7f8b9357"
+    },
+    {
+      "path": "tools/clang-21/libxml2.dll",
+      "sha256": "e15a377aa308e3f7ba948e6d6622a5dea2308256dbc65858074b61d867af6148"
+    },
+    {
+      "path": "tools/ctrtool-1.3.0/ctrtool.exe",
+      "sha256": "79021f283b2199950eb22cf3c459806b9c8aaaf68f65c80100107d3454a1c224"
+    },
+    {
+      "path": "tools/objdiff-3.8.3/objdiff-cli.exe",
+      "sha256": "dd12dfb5e9e94a7f6c949a37e1815963cf2cffe4c87b4999b7ebc8c15b398a1f"
+    },
+    {
+      "path": "tools/android-r30-minimal/provenance.json",
+      "sha256": "42a7f16caf038712bfa917dfe2adaad22dc7f6044c43e3d8094b3c70aba06e29"
+    },
+    {
+      "path": "tools/android-r30-minimal/source.properties",
+      "sha256": "e73b7dc557cea2da9212c09ee1795434957d62e63b7550eef69fd1887a355d94"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/crtbegin_dynamic.o",
+      "sha256": "9087e4b58fd8aadc225d062e8750260079fce2f0a3cd4d0b46b8c2440eedb03a"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/crtend_android.o",
+      "sha256": "47cb49c3d286915f19287b94a7242f668fe62d0b2ae7c4256c7203ba0d179427"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/libc.so",
+      "sha256": "29a129043e28ba808e3bd69750242d71241a3e05581809551f0e371f4894b687"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/libdl.so",
+      "sha256": "b9d8f21c840570a4fe41b5a24c37651d1980fcda7d323003afcbd8483d3da51a"
+    },
+    {
+      "path": "tools/wheels/capstone-5.0.9-py3-none-win_amd64.whl",
+      "sha256": "732cedbbb56d42e723f14d7af6387f1454194a820b4b96b56d1e53f865ef85d0"
+    },
+    {
+      "path": "tools/wheels/pycryptodomex-3.24.2-cp37-abi3-win_amd64.whl",
+      "sha256": "6e912e3a21061bf8f4ce89223cb46f5e98a6b32420d08d770605891a2be266c6"
+    },
+    {
+      "path": "tools/wheels/pyctr-0.7.6-py3-none-any.whl",
+      "sha256": "60fe1dfa2af9fc518a2e4b38e39f42e48eae1f27c594e677836fd04726bb2323"
+    },
+    {
+      "path": "tools/wheels/pyelftools-0.33-py3-none-any.whl",
+      "sha256": "f215ad5f47d3f1373a21496a6c9e0707c622840d0622f23ff7ce08678b020036"
+    },
+    {
+      "path": "tools/wheels/unicorn-2.1.4-cp37-abi3-win_amd64.whl",
+      "sha256": "d7107500c64ce5c168fbff6bef9485b5db1350050036f4cea568650cf8bdbdf5"
+    },
+    {
+      "path": "tools/wheels/z3_solver-5.3.3.0-py3-none-win_amd64.whl",
+      "sha256": "d189844a586242fe3d2a701c09751a80d518645931931a7c6bf29df679044215"
+    },
+    {
+      "path": "tools/wheels/cvc5-1.4.2-cp313-cp313-win_amd64.whl",
+      "sha256": "0ee0a51862d9e8ae8a38572909641a88cdf8d5e1640dee481b24289b6811b9da"
+    },
+    {
+      "path": "inputs/archive/dqmj3pro/DQMJ3P.cia",
+      "sha256": "864d1c35ba6908bed94d9c5f09a148b3355c41794f1d126086dafe1876665f47"
+    },
+    {
+      "path": "inputs/archive/dqmj3pro/DQMJ3P_Update.cia",
+      "sha256": "e19f07d67165bf5bf5c3c226064433cf2e36e2cc489742c69b0c2efa28447c55"
+    }
+  ],
+  "steps": [
+    {
+      "name": "offline-dependencies",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\wheels\\capstone-5.0.9-py3-none-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\wheels\\pycryptodomex-3.24.2-cp37-abi3-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\wheels\\pyctr-0.7.6-py3-none-any.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\wheels\\pyelftools-0.33-py3-none-any.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\wheels\\unicorn-2.1.4-cp37-abi3-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\wheels\\z3_solver-5.3.3.0-py3-none-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\wheels\\cvc5-1.4.2-cp313-cp313-win_amd64.whl"
+      ],
+      "returncode": 0,
+      "log": "offline-dependencies.log",
+      "logSha256": "3a49e634ca7dc5c32bb07f14a020dcf19b9810a80cfc7a76be387b2d3e6e1a04"
+    },
+    {
+      "name": "fresh-original-intake",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\python\\Scripts\\python.exe",
+        "-c",
+        "import sys;from pathlib import Path;sys.path.insert(0,\"toolscripts\");import ci_native_build as ci;ci.extract_inputs(Path.cwd(),Path(\"work/component-intake\"))"
+      ],
+      "returncode": 0,
+      "log": "fresh-original-intake.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "particle019-public-replay",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/public_particle019_replay.py",
+        "--public-root",
+        ".",
+        "--output",
+        "work/particle019-public-replay-v1",
+        "--mode",
+        "public-only",
+        "--boundaries"
+      ],
+      "returncode": 0,
+      "log": "particle019-public-replay.log",
+      "logSha256": "91d88feb8cff12430032e113d7a04aad54ddf834c4fe195f1133ae4081346050"
+    },
+    {
+      "name": "particle019-scope-review",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/verify_particle019_replay.py",
+        "--output",
+        "work/particle019-public-replay-v1",
+        "--mode",
+        "public-only"
+      ],
+      "returncode": 0,
+      "log": "particle019-scope-review.log",
+      "logSha256": "901576d6b55b4189b9ae2f059931ddebb3595a093f986487ba310256e6a32b4e"
+    },
+    {
+      "name": "public-compilation",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/compile_sources.py",
+        "--output",
+        "work/source-compile-ci/committed-replay"
+      ],
+      "returncode": 0,
+      "log": "public-compilation.log",
+      "logSha256": "e6fd8eb02c5a051b59a4aea41753ddd80e9ed96fa5c1192e5f4c55e8527fccd5"
+    },
+    {
+      "name": "native_particle_inventory-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_native_particle_inventory.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "native_particle_inventory-tests.log",
+      "logSha256": "14420e613929b2d6c888b71999593aafe0f7c636e31a660d088378c634653179"
+    },
+    {
+      "name": "compile_source_include_dirs-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_compile_source_include_dirs.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "compile_source_include_dirs-tests.log",
+      "logSha256": "504940647470c05cbeca9a4b35f18e6b776b6660c276cd1a532ea889b0340add"
+    },
+    {
+      "name": "c_function_definitions-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_c_function_definitions.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "c_function_definitions-tests.log",
+      "logSha256": "4b3b38bbc32bd37c860472988d06123fc465f15eda02037c2e916885f3c4ebc2"
+    },
+    {
+      "name": "compile_sources-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_compile_sources.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "compile_sources-tests.log",
+      "logSha256": "40c4ef03ee221ba16c520cad84d265c2f6a9fe9482576274311951a8e8b4f74a"
+    },
+    {
+      "name": "functional_report-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_functional_report.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "functional_report-tests.log",
+      "logSha256": "1b7f2d11a575a2e14edcdd2f5c70a4e4a669ad3c4686b0923056c5cb40629956"
+    },
+    {
+      "name": "native_census_overlay-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_native_census_overlay.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "native_census_overlay-tests.log",
+      "logSha256": "4745b05fcbfdfb718ba9e9d29f50df4fe367b5d373495e2dd677710a1a76845a"
+    },
+    {
+      "name": "reporting-objects",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/objdiff_objects.py"
+      ],
+      "returncode": 0,
+      "log": "reporting-objects.log",
+      "logSha256": "e8aeb8d16272a1385ccb9bc7769106c28bba286a60fed46ba01ced7eebcf20f2"
+    },
+    {
+      "name": "report-configuration",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/configure_objdiff.py",
+        "--version",
+        "update-content0",
+        "--output",
+        "objdiff.json"
+      ],
+      "returncode": 0,
+      "log": "report-configuration.log",
+      "logSha256": "5b4ee49079572b96586a596615a0c3e75fc3380b36527e6aeb49778895dc52d5"
+    },
+    {
+      "name": "stock-report",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\objdiff-3.8.3\\objdiff-cli.exe",
+        "report",
+        "generate",
+        "-o",
+        "build/update-content0/report.raw.json"
+      ],
+      "returncode": 0,
+      "log": "stock-report.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "normalized-report",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/finalize_objdiff_report.py",
+        "--input",
+        "build/update-content0/report.raw.json"
+      ],
+      "returncode": 0,
+      "log": "normalized-report.log",
+      "logSha256": "431641a6a7b859f99f62a4dbd9cbd9401a684c395b086a0a917b639a3f1abcab"
+    },
+    {
+      "name": "functional-companion",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\particle019-c12a7b6\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/functional_report.py"
+      ],
+      "returncode": 0,
+      "log": "functional-companion.log",
+      "logSha256": "45ce9c6caeead2f6e5660f2bab75da23a43eb18859912945675dee5dc5346d05"
+    }
+  ],
+  "sourceAdmissionGranted": false,
+  "wholeGameClaimed": false,
+  "intakeCleanupReceipt": {
+    "path": "intake-cleanup.json",
+    "bytes": 3812,
+    "sha256": "057e0dd5352f46edf6422a90ba14335d20381fa1aba52b341c86396c6bc986c7"
+  },
+  "packets": [
+    {
+      "path": "work/particle019-public-replay-v1/public-replay-receipt.public.json",
+      "sha256": "57a403ca47ceeaf85edb77207dc5ed700b5667c309c2cd66ad3fcbd0ca490707",
+      "bytes": 503
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/transport-receipt.public.json",
+      "sha256": "2700f53b109bdab09b13d467c9f8442403930eb9211b99bf19563b874bc69e07",
+      "bytes": 65030
+    },
+    {
+      "path": "work/particle019-public-replay-v1/coordinator-scope-verification.json",
+      "sha256": "ab0c13af90ee004b1ce233ec9d64b63475bfb8c196c9e40b61c6aea2a9d2babd",
+      "bytes": 546
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/build-v1/build.json",
+      "sha256": "97da1d02ee1be129336c4e7631919cf196c9a0c48a124b6e3d9a5be1620aa314",
+      "bytes": 17750
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/algebraic-build-v1/build.json",
+      "sha256": "075ffea8216399152b84149dd9879695eb8c80f9f95d22e20e9dd387816ba238",
+      "bytes": 18195
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/skip-z-build-v1/build.json",
+      "sha256": "9d5a5746ac9708b01f120e79bfc0176b6fc7cd60090bdf75c05ec0d4082de2ae",
+      "bytes": 18096
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/public-arm/receipt.json",
+      "sha256": "da3a9b660b05c0d60c244cb1dce5cc3dd73d586dc82f6c36c0dd2f628676c0b8",
+      "bytes": 119143
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/public-arm.events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/public-arm.finalizer.jsonl",
+      "sha256": "4e511413185a713864b3435f53525275b9cbd38d5b6b61676c3ba40d416653ec",
+      "bytes": 165
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/public-arm.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/returning-algebraic-arm/receipt.json",
+      "sha256": "4e8f8cc9630f2cc66dfaaa1f8f42095bf2d845a6f7f25da220a9d391de2ed7ed",
+      "bytes": 122896
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-algebraic-arm.events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-algebraic-arm.finalizer.jsonl",
+      "sha256": "4e511413185a713864b3435f53525275b9cbd38d5b6b61676c3ba40d416653ec",
+      "bytes": 165
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/returning-algebraic-arm.log",
+      "sha256": "79a114260c3f5cabb8005d33e08d9778a468a94a804338c167d442b89cca103a",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/returning-skip-z-arm/receipt.json",
+      "sha256": "9d72629183bdc292d87d239dab00a5fef80dea605639140fff857e554d666fdd",
+      "bytes": 122052
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-skip-z-arm.events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-skip-z-arm.finalizer.jsonl",
+      "sha256": "4e511413185a713864b3435f53525275b9cbd38d5b6b61676c3ba40d416653ec",
+      "bytes": 165
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/returning-skip-z-arm.log",
+      "sha256": "87428db6b76165b384435ec14acdf7fe8b2a83d4f7607c9aa22aaa97bcc51082",
+      "bytes": 147
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/public-windows/receipt.json",
+      "sha256": "7399ec5bae81917a94b2c5f232d2163e220039001470e6037fa4f86f9c8fecce",
+      "bytes": 110495
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/public-windows.events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/public-windows.finalizer.jsonl",
+      "sha256": "4e511413185a713864b3435f53525275b9cbd38d5b6b61676c3ba40d416653ec",
+      "bytes": 165
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/public-windows.log",
+      "sha256": "d8eb6e435fdb99c9d972da2f1bd0f711a1090dd298607db2d8ce95b438efb63f",
+      "bytes": 147
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/returning-algebraic-windows/receipt.json",
+      "sha256": "3d385ca4a123d8319a0c1151970734f2403a195ea2a079c394b7405641ba5774",
+      "bytes": 114248
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-algebraic-windows.events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-algebraic-windows.finalizer.jsonl",
+      "sha256": "4e511413185a713864b3435f53525275b9cbd38d5b6b61676c3ba40d416653ec",
+      "bytes": 165
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/returning-algebraic-windows.log",
+      "sha256": "039bb2f677ba6c5d98737a29898f5a8e70e5ba6404033b4de6c0afa503183f53",
+      "bytes": 147
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/returning-skip-z-windows/receipt.json",
+      "sha256": "bdee226f16cf1b300f4a65c721cc8f743cf45be11fc3793ef87cc02910f62f49",
+      "bytes": 113404
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-skip-z-windows.events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-skip-z-windows.finalizer.jsonl",
+      "sha256": "4e511413185a713864b3435f53525275b9cbd38d5b6b61676c3ba40d416653ec",
+      "bytes": 165
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/returning-skip-z-windows.log",
+      "sha256": "b774a614672c9ea6e56110cecdd25a4e126da79df9c06186d68705931795360b",
+      "bytes": 146
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/public-a64/receipt.json",
+      "sha256": "98dce4aacfdff35df206b3f91dc516dd7d295738eb96135ee5ff03747383c1d2",
+      "bytes": 119179
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/public-a64.events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/public-a64.finalizer.jsonl",
+      "sha256": "4e511413185a713864b3435f53525275b9cbd38d5b6b61676c3ba40d416653ec",
+      "bytes": 165
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/public-a64.log",
+      "sha256": "04629acf18d3f844838f4b3c8798c3e14e810257216a1508ee54006fa364492a",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/returning-algebraic-a64/receipt.json",
+      "sha256": "f5115e0f3ea13d79e10e777a9c56124e41e654d65d3abd487246c2d0590bc150",
+      "bytes": 122932
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-algebraic-a64.events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-algebraic-a64.finalizer.jsonl",
+      "sha256": "4e511413185a713864b3435f53525275b9cbd38d5b6b61676c3ba40d416653ec",
+      "bytes": 165
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/returning-algebraic-a64.log",
+      "sha256": "d96e581a58a80e0c57f431c3becb85a150b5abfac6ac6b0e48318719281c8ad2",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/returning-skip-z-a64/receipt.json",
+      "sha256": "823fb81880cc049714079dd5cc197bfd1ad2bf3f4f52b51e653a1fa475732ea2",
+      "bytes": 122088
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-skip-z-a64.events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/returning-skip-z-a64.finalizer.jsonl",
+      "sha256": "4e511413185a713864b3435f53525275b9cbd38d5b6b61676c3ba40d416653ec",
+      "bytes": 165
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/returning-skip-z-a64.log",
+      "sha256": "c2074ded71e3575f486ff22d693a439383568bc1f9862682d953a1dc7bab0b81",
+      "bytes": 147
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-open/receipt.json",
+      "sha256": "cd7e436f790a222f99f34ac7434feca1bc331bf933437b6cfca720f3978a6230",
+      "bytes": 120004
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-open.events.jsonl",
+      "sha256": "491bfd105319df7a2e7d0e0699eb9aecd475c5662ff1c3afb3c454ade53655d5",
+      "bytes": 270
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-open.finalizer.jsonl",
+      "sha256": "3731e493737be6c044cdd8716cf3e0516bd792011b8b7f13e4ecc6728f9ebbd1",
+      "bytes": 371
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-open.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-io-open/receipt.json",
+      "sha256": "35d4d3c9b053e41e1f7991de38d793024db0e7b8a73d92abfbc8684613c7c991",
+      "bytes": 120865
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-io-open.events.jsonl",
+      "sha256": "d362978a54a1f0c97a0c31d08440ab31428edba826d6502f823500504786fbd8",
+      "bytes": 273
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-io-open.finalizer.jsonl",
+      "sha256": "a1ef3eac4e9a54f26f03ec9df2d95d2a038f56f5432d1cfcd5301fc5422e8f1e",
+      "bytes": 374
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-io-open.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-os-open/receipt.json",
+      "sha256": "709f019dca9f8c24c9dca467babe908970baf2e53d421e85cb0ee56c86c5ec3a",
+      "bytes": 120865
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-os-open.events.jsonl",
+      "sha256": "f3d4c27951d9341c9c34b1f5bd79214603a3be9075f3ea602e6a034115c5b25f",
+      "bytes": 262
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-os-open.finalizer.jsonl",
+      "sha256": "c154dbba7522beedd19e8396ba88de5eacfcb74a4773af6c18658ce4c831b8e0",
+      "bytes": 363
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-os-open.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-stat/receipt.json",
+      "sha256": "15fa51abc4c3e44a83a27bda1af3e3035036fd2e4384f2638d355b7518088df9",
+      "bytes": 120004
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-stat.events.jsonl",
+      "sha256": "4c0de983d2760768e3f87f4ec7ef3dcf300d700a7278d45efb929d841259acef",
+      "bytes": 262
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-stat.finalizer.jsonl",
+      "sha256": "31f584825919ae36d9cd4df377fa78509674f60dfcb9e0e7d1bb291a759338cf",
+      "bytes": 363
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-stat.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-lstat/receipt.json",
+      "sha256": "6887eb6859474d0efe0f4cc5e9961944b9098463eff4fa0f48229519a0ef1845",
+      "bytes": 120291
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-lstat.events.jsonl",
+      "sha256": "c7d8f53de1fb73a38c1cec1a48ae163d1a22aee6908bfed8c5b8ffdd8297ab1b",
+      "bytes": 263
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-lstat.finalizer.jsonl",
+      "sha256": "0fc68ef1a4bb4f2557550c8808067a0257561213efa094189bf3265ce32d303f",
+      "bytes": 364
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-lstat.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-listdir/receipt.json",
+      "sha256": "6cc2b460aec1d138f15a8b331e54a3ff184911d2b79817159d48ab08156d5646",
+      "bytes": 120865
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-listdir.events.jsonl",
+      "sha256": "8926c0d9015eec1651f84e2ff7dc141a9232c6c241344e3d2e486070ce50deef",
+      "bytes": 247
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-listdir.finalizer.jsonl",
+      "sha256": "bae13ff880e33df23560a2ca5871320e84c934288cd9c20ea89897699dc09894",
+      "bytes": 348
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-listdir.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-scandir/receipt.json",
+      "sha256": "8d4ef5e8041db021749b444b902caee9f90d08f74cec0549daa3f8a8d59614fc",
+      "bytes": 120865
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-scandir.events.jsonl",
+      "sha256": "9ba1702d54b6f0c5d488fe2a20a78a49f6094cdd19b890cfae336a2f5b62ee7d",
+      "bytes": 247
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-scandir.finalizer.jsonl",
+      "sha256": "05fd6ce5f0a7cf9f27f920847d257eb9c5f94b94a63c675475d9a1b7e90fab3c",
+      "bytes": 348
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-scandir.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-resolve/receipt.json",
+      "sha256": "4e1478c91863ddc412780c7cb16268bd9c6dc0a0d5714709b1fe6597f382542d",
+      "bytes": 120865
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-resolve.events.jsonl",
+      "sha256": "1521c00aabfda32412ad3c62905a46739ecf75c981373071dbc64938b1eca403",
+      "bytes": 265
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-resolve.finalizer.jsonl",
+      "sha256": "ca3fcbe248ed7bb03e927c2778736327945f4c547d7a6c1d626b05fade3664af",
+      "bytes": 366
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-resolve.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-original-constructor/receipt.json",
+      "sha256": "2a5d3caa47a82d47ab58206ee8af3af38765bcd548100f8ed463c6614ef5092c",
+      "bytes": 124596
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-original-constructor.events.jsonl",
+      "sha256": "9833e61ba2deb3b174a14939d7f866df9723ec21691cabe7abbc9a8561ccaf68",
+      "bytes": 123
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-original-constructor.finalizer.jsonl",
+      "sha256": "ff9298b5ec9a6775ecde5262b7e66a7b5b07583726b2f68c337b112027db7b12",
+      "bytes": 224
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-original-constructor.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-original-cpu/receipt.json",
+      "sha256": "710f7da198af1bd117e9900b9727621045658f9fbf597e121c24f9f002df7520",
+      "bytes": 122300
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-original-cpu.events.jsonl",
+      "sha256": "5ec1876fb39679e56b4424a2b797960a5ef5d188bbfd2c54c3ed4f7071cf224e",
+      "bytes": 111
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-original-cpu.finalizer.jsonl",
+      "sha256": "25374d7c3e7cccae98f34afa52eae0bd32249b521376fb6810b72f272c1fa3ad",
+      "bytes": 212
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-original-cpu.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-undeclared-library/receipt.json",
+      "sha256": "8961764a7a38c0db893cc8ea3644b27792cf3259b69b0740f44745644bc54420",
+      "bytes": 124022
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-undeclared-library.events.jsonl",
+      "sha256": "ebf77ff6304cb7a6164572398d3248139ada634b1de2e5dbf0986689a600a9f6",
+      "bytes": 283
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-undeclared-library.finalizer.jsonl",
+      "sha256": "0bc02670cf09b990bf511b42898630778338cbec4c37e4ee076fb4dbda073a4d",
+      "bytes": 384
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-undeclared-library.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-whole-private-arena/receipt.json",
+      "sha256": "4092465b8c03c4e6fff6138d336ef54aba0273b6a74cced7f6d88532c3d76383",
+      "bytes": 124309
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-whole-private-arena.events.jsonl",
+      "sha256": "be36592952d2ec93f4417aab8f0b2abf72a14f240be264c86f4565e8c9bec854",
+      "bytes": 347
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-whole-private-arena.finalizer.jsonl",
+      "sha256": "93eafeed8ea75b301338c9772f2ed300fee7d303f38bd6a250f368934532fe4d",
+      "bytes": 448
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-whole-private-arena.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-old-helper/receipt.json",
+      "sha256": "3f77cc9dc87b5c9e76909e627a5891fb2d945f4c0f0f0b04895846db446fe76c",
+      "bytes": 121726
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-old-helper.events.jsonl",
+      "sha256": "dcac0ca998f1c8a88d2c1c0c542ece64cde0d7b3448dd24071ffb5a7e8864473",
+      "bytes": 279
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-old-helper.finalizer.jsonl",
+      "sha256": "c5af4defb0acfb4520f63b1f82b8264589cb80e5df49c3d4840dcb3ba8bfd97b",
+      "bytes": 380
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-old-helper.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-original-library/receipt.json",
+      "sha256": "99626a6ab818cd803eeb7c047528ede37a64f97d081c48f0d3699898e969d445",
+      "bytes": 123448
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-original-library.events.jsonl",
+      "sha256": "08dfdbb3943aa38c8c75cb50475243cf797169a5de92ca0455f2bd5aa953e83c",
+      "bytes": 257
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-original-library.finalizer.jsonl",
+      "sha256": "0990e1acce7da3c31b2d41c459b9fcf50e04f9fabc2cf0a98af03e272ed154e1",
+      "bytes": 358
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-original-library.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-private-normal-snapshot/receipt.json",
+      "sha256": "697b4272e4bdd832cb6f1de8dcdbda5d39f0ec112ee5d85276c4b8a3dfdd6eab",
+      "bytes": 125457
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-private-normal-snapshot.events.jsonl",
+      "sha256": "85a8f97b896c268deddf7fc86148e783415c67f19900d49df45894fd18712777",
+      "bytes": 356
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-private-normal-snapshot.finalizer.jsonl",
+      "sha256": "8aaa3580a1ffb04499c2105240c7681d0c9df14698f5a55092e73f4be32a7448",
+      "bytes": 457
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-private-normal-snapshot.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-atexit/receipt.json",
+      "sha256": "927a11003d3e8b488156ae36870425053b4d441163eebdbc79cc4efb0c241198",
+      "bytes": 120578
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-atexit.events.jsonl",
+      "sha256": "491bfd105319df7a2e7d0e0699eb9aecd475c5662ff1c3afb3c454ade53655d5",
+      "bytes": 270
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-atexit.finalizer.jsonl",
+      "sha256": "3731e493737be6c044cdd8716cf3e0516bd792011b8b7f13e4ecc6728f9ebbd1",
+      "bytes": 371
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-atexit.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-cleared-rejection/receipt.json",
+      "sha256": "b3e89908ba9a618b05fcc1ac1922923876409cc6594fd8266028b8a0bf177204",
+      "bytes": 123735
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-cleared-rejection.events.jsonl",
+      "sha256": "491bfd105319df7a2e7d0e0699eb9aecd475c5662ff1c3afb3c454ade53655d5",
+      "bytes": 270
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-cleared-rejection.finalizer.jsonl",
+      "sha256": "d04c5439e3a787cea7895d127e5bd7d117f66b6ea35478c02552679bba8acd82",
+      "bytes": 158
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-cleared-rejection.log",
+      "sha256": "97836162182846242489803436493d85f21e7d4d533a444c4e23383a5aa0042f",
+      "bytes": 148
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-after-finalizer/receipt.json",
+      "sha256": "70e99f140f4c8a349e6ee333837b2271f41016db1c4ee1f5eb03269ce9739469",
+      "bytes": 113365
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-after-finalizer.events.jsonl",
+      "sha256": "1c96cd5b1bb9d2af8f53bc2a3990ee50e1e7c8a0a8ca1e88d8db134522dece04",
+      "bytes": 275
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-after-finalizer.finalizer.jsonl",
+      "sha256": "4e511413185a713864b3435f53525275b9cbd38d5b6b61676c3ba40d416653ec",
+      "bytes": 165
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-after-finalizer.log",
+      "sha256": "d8eb6e435fdb99c9d972da2f1bd0f711a1090dd298607db2d8ce95b438efb63f",
+      "bytes": 147
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-after-finalizer-global-teardown/receipt.json",
+      "sha256": "f3455e379b74f841a17b6470a2b957cba757a2dd22e4742886e2bd1ac1c80fcf",
+      "bytes": 117957
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-after-finalizer-global-teardown.events.jsonl",
+      "sha256": "1c96cd5b1bb9d2af8f53bc2a3990ee50e1e7c8a0a8ca1e88d8db134522dece04",
+      "bytes": 275
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-after-finalizer-global-teardown.finalizer.jsonl",
+      "sha256": "4e511413185a713864b3435f53525275b9cbd38d5b6b61676c3ba40d416653ec",
+      "bytes": 165
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-after-finalizer-global-teardown.log",
+      "sha256": "d8eb6e435fdb99c9d972da2f1bd0f711a1090dd298607db2d8ce95b438efb63f",
+      "bytes": 147
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/intake/runs/boundary-after-finalizer-json-teardown/receipt.json",
+      "sha256": "295183fb1cee800f62d9f82015eef3f899c2ec36e0d0862d6c9120dc9f51c36b",
+      "bytes": 117383
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-after-finalizer-json-teardown.events.jsonl",
+      "sha256": "1c96cd5b1bb9d2af8f53bc2a3990ee50e1e7c8a0a8ca1e88d8db134522dece04",
+      "bytes": 275
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/parent-owned-monitor/boundary-after-finalizer-json-teardown.finalizer.jsonl",
+      "sha256": "4e511413185a713864b3435f53525275b9cbd38d5b6b61676c3ba40d416653ec",
+      "bytes": 165
+    },
+    {
+      "path": "work/particle019-public-replay-v1/adapter/replay/logs/boundary-after-finalizer-json-teardown.log",
+      "sha256": "d8eb6e435fdb99c9d972da2f1bd0f711a1090dd298607db2d8ce95b438efb63f",
+      "bytes": 147
+    },
+    {
+      "path": "build/update-content0/report.json",
+      "sha256": "bb69a6c0f50221d8a2c4601bb0ee88458e38f204af5f15563313ea4b785a339f",
+      "bytes": 2746113
+    },
+    {
+      "path": "build/update-content0/functional.json",
+      "sha256": "17216c0e74318ae3db10655e2e3968056cde410c520b2c45bde63c1288d827bf",
+      "bytes": 38986
+    }
+  ]
+}
