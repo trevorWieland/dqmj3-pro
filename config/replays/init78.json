@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "name": "init78",
+  "producerSteps": [
+    {
+      "name": "init78-prepare",
+      "args": [
+        "toolscripts/native_init78_stage.py",
+        "prepare"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "init78-proof",
+      "args": [
+        "toolscripts/native_init78_stage.py",
+        "proof"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "native_init78_stage",
+    "compile_source_include_dirs",
+    "native_provider_inventory",
+    "native_callback_inventory",
+    "native_census_overlay"
+  ],
+  "packets": [
+    "work/init78-public/v1/staged-inputs.json",
+    "work/init78-public/v1/public-input-guard.json",
+    "work/init78-public/v1/controller7_context_reference.log",
+    "work/init78-public/v1/controller7_context_replay.log",
+    "work/init78-public/v1/controller7_context_coverage.log",
+    "work/init78-public/v1/controller7_resource_reference.log",
+    "work/init78-public/v1/controller7_resource_replay.log",
+    "work/init78-public/v1/controller7_resource_arm_replay.log",
+    "work/init78-public/v1/controller7_resource_coverage.log",
+    "work/init78-public/v1/controller7-tests.log",
+    "work/init78-public/v1/controller7_cache_reference.log",
+    "work/init78-public/v1/controller8_measure.log",
+    "work/init78-public/v1/controller8_replay_v2.log",
+    "work/init78-public/v1/controller8_high_a64.log",
+    "work/init78-public/v1/controller8_data_comparison_v2.log",
+    "work/init78-public/v1/controller8-tests.log",
+    "work/native-state055/controller-init-v7/context-replay-comparison-v1.json",
+    "work/native-state055/controller-init-v7/resource-replay-comparison-v1.json",
+    "work/native-state055/controller-init-v7/resource-arm-replay-comparison-v1.json",
+    "work/native-state055/controller-init-v7/resource-coverage-v1.json",
+    "work/native-state055/controller-init-v8/source-replay-comparison-v2.json",
+    "work/native-state055/controller-init-v8/descriptor-data-comparison-v2.json",
+    "work/native-state055/controller-init-v8/high-a64-comparison-v2.json",
+    "work/native-state055/controller-init-v7/cache-constructor-reference.private.json",
+    "work/native-state055/controller-init-v7/context-coverage-v1.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

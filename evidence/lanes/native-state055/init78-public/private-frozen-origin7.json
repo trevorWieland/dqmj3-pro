@@ -1,0 +1,1096 @@
+{
+  "schemaVersion": 1,
+  "status": "frozen-bounded-context-resource-construction-core-for-coordinator-review",
+  "version": "update-content0",
+  "module": "main",
+  "sourceFiles": [
+    {
+      "path": "work/native-state055/controller-init-v7/source/context7.c",
+      "bytes": 2966,
+      "sha256": "4c8c0814bc8b6d0a0f479c1388478b6d33be79a53feb4a316fada14e54eaccc6"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/source/context7.h",
+      "bytes": 218,
+      "sha256": "c74de74b8cc2509a64bcfaa03579d793335ac121c74f05227cad7103878a04e2"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-v1/resource7.c",
+      "bytes": 5121,
+      "sha256": "85c705f99924aa6063e0381a499322e8026838dbb544a2395bc6621e7b1f8570"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-v1/resource7.h",
+      "bytes": 3262,
+      "sha256": "a9434dd650270b0ef9e004064f47985b06ca6f7f30791d91769e424c94b9087c"
+    }
+  ],
+  "fixtureSource": {
+    "path": "work/native-state055/controller-init-v7/resource-source-v1/native_fixture7.c",
+    "bytes": 3205,
+    "sha256": "f1fd1764f7b5b164bcc805785db9a025d65858bcc8ebf8225f5de8b3de4428fe"
+  },
+  "effectiveInputs": {
+    "path": "work/native-state055/controller-init-v7/core-effective-inputs-v1.json",
+    "bytes": 9393,
+    "sha256": "4880467a773e68ea33b481f06d3f08626aa95346ac4e9ceb8355bd822fea6361"
+  },
+  "predecessors": [
+    {
+      "path": "work/native-state055/controller-v5/ready.json",
+      "bytes": 183407,
+      "sha256": "6dead72e66105d8f234a4c13699ee8e97de7c5f0246d07696af5d98b88bfe6ad"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/ready.json",
+      "bytes": 74178,
+      "sha256": "f24b7d59ad8a2524a42b0137c1d75b4332b1fd1c81f5d3b0b9a4e3b35a9d3bbe"
+    }
+  ],
+  "contextComparisons": 9,
+  "contextCopiedComparisons": 9,
+  "contextReturningControls": 3,
+  "contextControlExecutions": 9,
+  "resourceArmOriginalSourceCases": 12,
+  "resourceArmCopiedCases": 12,
+  "resourceArmReturningCases": 9,
+  "resourceArmTerminalCases": 3,
+  "resourceNativeObservations": 54,
+  "resourceNativeCopiedObservations": 54,
+  "resourceReturningControls": 3,
+  "resourceControlExecutions": 9,
+  "contextExecutedPcs": 275,
+  "contextInvariantOnlyPcs": 9,
+  "resourcePcCoverage": {
+    "path": "work/native-state055/controller-init-v7/resource-coverage-v1.json",
+    "bytes": 11376,
+    "sha256": "8cd70e01c3f23d3bc964a033cd5804cf89940f28e3d3a18ac8646b71aba77b62"
+  },
+  "contextReplay": {
+    "path": "work/native-state055/controller-init-v7/context-replay-comparison-v1.json",
+    "bytes": 110118,
+    "sha256": "d23b900921dc6a9e9d0ff5407a530f825a973c9a154009f6364b5642c9f722af"
+  },
+  "resourceReplay": {
+    "path": "work/native-state055/controller-init-v7/resource-replay-comparison-v1.json",
+    "bytes": 954115,
+    "sha256": "00302360a70f9cc749c82eac1ba7f9c7f9ef69207c3b36445ffeedae77d2883a"
+  },
+  "resourceArmReplay": {
+    "path": "work/native-state055/controller-init-v7/resource-arm-replay-comparison-v1.json",
+    "bytes": 750196,
+    "sha256": "229982379e7a886a6a40c3263c9b0436c8c0cfacff6739512e9642a653d4ce4b"
+  },
+  "mainArtifactsByteIdentical": 6,
+  "tinyContextSnapshotBytes": 12429,
+  "tinyResourceSnapshotBytes": 24017,
+  "tests": {
+    "count": 17,
+    "returncode": 0,
+    "argv": [
+      "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\tools\\python\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "work/native-state055/test_controller7_context.py",
+      "work/native-state055/test_controller7_resource.py",
+      "-v"
+    ],
+    "output": {
+      "path": "work/native-state055/controller-init-v7/core-tests-v1.txt",
+      "bytes": 2937,
+      "sha256": "922075b1f98ea6ce0fdd71cc01c44d0afc364f60ed3d4abb4de55136f8a94b60"
+    }
+  },
+  "originalInput": {
+    "path": "generated/update-content0/code.bin",
+    "bytes": 8159232,
+    "sha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+  },
+  "originalExecutableOrCompilerTreesCopied": false,
+  "sourceExecutesWithoutOriginalImage": true,
+  "originalCallsSkippedOrResultsSubstituted": false,
+  "domain": "Owned naturally aligned objects disjoint from globals/code/stack; explicit nonreentrant typed allocation/release services; release requests retain physical backing through return. Input/output schemas and native pointer widths are declared.",
+  "excluded": [
+    "complete upstream owner11a6a8 return and platform13dc94 closure",
+    "cache1774B source constructor and shader/program ownership",
+    "nonzero-kind buffer-release and live linked-record invalidation qualification",
+    "actual SDK allocation/deallocation or hardware",
+    "third allocation failure returning behavior or identical fault mechanism",
+    "Android OS/device, renderer, whole game, matching or95percent"
+  ],
+  "sourceCreditGranted": 0,
+  "canonicalInventoryOrSharedMetadataChanged": false,
+  "noSelfAdmission": true,
+  "files": [
+    {
+      "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+      "bytes": 20574405,
+      "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55"
+    },
+    {
+      "path": "src/native/wave055/address055.h",
+      "bytes": 1737,
+      "sha256": "552153305ec11808d94197d58ee68076fd6bc1eb188713e5d0e71063d143eb8c"
+    },
+    {
+      "path": "src/native/wave055/controller-deps-v1/resource055.h",
+      "bytes": 832,
+      "sha256": "7c886fdd977ebc5aff02219b2199844caff007166f358106bb8a5582f06a59da"
+    },
+    {
+      "path": "src/native/wave055/selector055.h",
+      "bytes": 1597,
+      "sha256": "83623f1980e8f220315cfb616e22cde6289c7f0e0563da9ea6c27bcfc1929e72"
+    },
+    {
+      "path": "src/native/wave055/state055.h",
+      "bytes": 659,
+      "sha256": "45fe75a1f18fcf918a01f538f63be98ba8a342ff6f6c294bb25fa05b5f222dc1"
+    },
+    {
+      "path": "toolscripts/module_link.py",
+      "bytes": 9773,
+      "sha256": "936cacb42571da8fddaa3ba66c7f704703a6517f814598052b28bb71952258c7"
+    },
+    {
+      "path": "toolscripts/module_link_graph.py",
+      "bytes": 13578,
+      "sha256": "a750984d287d605e3143aa68d9bba26a3bc9d464f9d3db9a5e15b1afaa10038c"
+    },
+    {
+      "path": "toolscripts/native_material_wave011_build.py",
+      "bytes": 4309,
+      "sha256": "1f25dd87136c2dca2c159011aa8323b844900f02c6befd6cd42b61c0d5e64e69"
+    },
+    {
+      "path": "toolscripts/native_state055_build.py",
+      "bytes": 3533,
+      "sha256": "2fea6f837333f7775933a0a5d2cf416f771870a0d76a6853ae08b8b235bbed0e"
+    },
+    {
+      "path": "toolscripts/native_state055_measure.py",
+      "bytes": 3768,
+      "sha256": "0b0c1ba1023cccae41150a759ce789163768eeb4c24abea49091c9eac329aece"
+    },
+    {
+      "path": "toolscripts/native_wave014_build.py",
+      "bytes": 5861,
+      "sha256": "770e0de9a9b51d84f792c844095e53c760499f748e5919126b66e3e2b89a395e"
+    },
+    {
+      "path": "toolscripts/native_wave014_oracle.py",
+      "bytes": 6834,
+      "sha256": "35433a60ccec7968fe6a1d1b51aec4848c03119654f3c11254b57928877b1b63"
+    },
+    {
+      "path": "toolscripts/native_wave014_vectors.py",
+      "bytes": 8028,
+      "sha256": "d7e5ca8856090d45085b18406da447167ec52cd189b1f580fd3ff94358ad7c7e"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/attempts/cache-copy-guard.json",
+      "bytes": 717,
+      "sha256": "e4f9d41c1abdc6e4ee683aa5421def193c0f99825546a1a5b5dde0ad3a93dac9"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/attempts/resource-index-without-queue/controller7_resource_reference.py",
+      "bytes": 6681,
+      "sha256": "e6efa47f13baabd9609aad2c241699952893c96d53ab6f8d7a5cee7540ea5994"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/attempts/resource-index-without-queue/resource-index-reference.private.json",
+      "bytes": 154033,
+      "sha256": "2761f65abb81fbb479d16c5d153d2c525db1c425c000a70e9d48c0bc5fe1b6f3"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/attempts/resource-index-without-queue/status.json",
+      "bytes": 625,
+      "sha256": "fcd5a6a885680891fea05a72b2f2d4aa939296d8bf968cf605138dd0cde2ec66"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/attempts/resource-release-observer-classifier/controller7_resource_reference.py",
+      "bytes": 7182,
+      "sha256": "8628cd1f58849ba65a0f27d3562f9bfdbd6b4569a4b811617d4271bdca7cec03"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/attempts/resource-release-observer-classifier/resource-index-queue-reference-v2.private.json",
+      "bytes": 239530,
+      "sha256": "138edba65fa6cf95d4502607751116cb37e8b72aa63e4e224e307296e6b3508e"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/attempts/resource-release-observer-classifier/status.txt",
+      "bytes": 311,
+      "sha256": "fe14bfd221f82d1fc8c64031881f29637e103b3ec9b5532f2fa1d5d4a5553541"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/constructor-ownership-claim-v1.json",
+      "bytes": 42524,
+      "sha256": "2d122c02caeac807769e6bb7bac5e60d77f348f9c0a0b1d95e8feaf43745cace"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-build/a64.elf",
+      "bytes": 197576,
+      "sha256": "85917a7946f413a94b32143d7f4e54dfa2432aba28f149edde6a6fe4dfa012d1"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-build/a64.ld",
+      "bytes": 276,
+      "sha256": "f93875bbd170b04a5eecebc83a52e9eb7dafb8aee22ae22ee9b1055a5b66226b"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-build/arm.elf",
+      "bytes": 67336,
+      "sha256": "b21d0adef83f1712e1951c112250519bdb83a781318f97433a740ce8c3453f9a"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-build/arm.ld",
+      "bytes": 275,
+      "sha256": "931cfcdad2de2dab13d463ea95e35bd56e347e265bb6cea1025ee3a91ec740df"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-build/build.json",
+      "bytes": 12074,
+      "sha256": "954c376d80b979d9950bb10e2dd749870928eda54c7ead7a06c8bf504fb52911"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-build/context7.dll",
+      "bytes": 2560,
+      "sha256": "6981967d296122a35611b1cee2d0085f227fcb15be766f7a05a1f567d232e86d"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-build/context_global7.c",
+      "bytes": 70,
+      "sha256": "2d530287042c966dd7c3a5584fbd760148bdf25d1bee1d52734ad017aec315a4"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-build-successor/a64.elf",
+      "bytes": 197576,
+      "sha256": "85917a7946f413a94b32143d7f4e54dfa2432aba28f149edde6a6fe4dfa012d1"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-build-successor/a64.ld",
+      "bytes": 276,
+      "sha256": "f93875bbd170b04a5eecebc83a52e9eb7dafb8aee22ae22ee9b1055a5b66226b"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-build-successor/arm.elf",
+      "bytes": 67336,
+      "sha256": "b21d0adef83f1712e1951c112250519bdb83a781318f97433a740ce8c3453f9a"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-build-successor/arm.ld",
+      "bytes": 275,
+      "sha256": "931cfcdad2de2dab13d463ea95e35bd56e347e265bb6cea1025ee3a91ec740df"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-build-successor/build.json",
+      "bytes": 12515,
+      "sha256": "f622dedaa3717226f8485cd8ef1915cb5a3daefe69f1a2b0ed36e85267ac6f0c"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-build-successor/context7.dll",
+      "bytes": 2560,
+      "sha256": "6981967d296122a35611b1cee2d0085f227fcb15be766f7a05a1f567d232e86d"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-build-successor/context_global7.c",
+      "bytes": 70,
+      "sha256": "2d530287042c966dd7c3a5584fbd760148bdf25d1bee1d52734ad017aec315a4"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-constructor-reference.private.json",
+      "bytes": 41570,
+      "sha256": "40aa1959324543b710585393b4cf29cf2766b29264d9358c1e685cef6e82b374"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-coverage-v1.json",
+      "bytes": 9455,
+      "sha256": "5ef6f9fea4219da653dd8e123d3ba541f766e0642353aad3d9bb17118010269a"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-replay-comparison-v1.json",
+      "bytes": 110118,
+      "sha256": "d23b900921dc6a9e9d0ff5407a530f825a973c9a154009f6364b5642c9f722af"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-execution-v1.json",
+      "bytes": 33109,
+      "sha256": "4a1b42711ed76ffa97ded70e263c73c56790b0ed850dbcfee699fd18becbd2a9"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/build/a64.elf",
+      "bytes": 197576,
+      "sha256": "85917a7946f413a94b32143d7f4e54dfa2432aba28f149edde6a6fe4dfa012d1"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/build/a64.ld",
+      "bytes": 276,
+      "sha256": "f93875bbd170b04a5eecebc83a52e9eb7dafb8aee22ae22ee9b1055a5b66226b"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/build/arm.elf",
+      "bytes": 67336,
+      "sha256": "b21d0adef83f1712e1951c112250519bdb83a781318f97433a740ce8c3453f9a"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/build/arm.ld",
+      "bytes": 275,
+      "sha256": "931cfcdad2de2dab13d463ea95e35bd56e347e265bb6cea1025ee3a91ec740df"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/build/build.json",
+      "bytes": 14579,
+      "sha256": "41d348e278b9412023409fb979229a63fe74ab735df9fe626674f0c0f6c68107"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/build/context7.dll",
+      "bytes": 2560,
+      "sha256": "6981967d296122a35611b1cee2d0085f227fcb15be766f7a05a1f567d232e86d"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/build/context_global7.c",
+      "bytes": 70,
+      "sha256": "2d530287042c966dd7c3a5584fbd760148bdf25d1bee1d52734ad017aec315a4"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/omit-ff-tail/build/a64.elf",
+      "bytes": 197576,
+      "sha256": "56b741e5a5c63cdfefa7c22bf6d156c8f2ce18ba1ef389f12438b8ea5a7810ea"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/omit-ff-tail/build/a64.ld",
+      "bytes": 276,
+      "sha256": "f93875bbd170b04a5eecebc83a52e9eb7dafb8aee22ae22ee9b1055a5b66226b"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/omit-ff-tail/build/arm.elf",
+      "bytes": 67336,
+      "sha256": "e57279688f1e1c3e3cd90bc20856399ffbcc92a8dfc6d0ddf7b2696596eba2fb"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/omit-ff-tail/build/arm.ld",
+      "bytes": 275,
+      "sha256": "931cfcdad2de2dab13d463ea95e35bd56e347e265bb6cea1025ee3a91ec740df"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/omit-ff-tail/build/build.json",
+      "bytes": 14990,
+      "sha256": "ecf6d55bff9fc8633774503a902d33334328404628e0bbc24b91b0b06ea83c0c"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/omit-ff-tail/build/context7.dll",
+      "bytes": 2560,
+      "sha256": "6d4a860e7ae95deb4d0188752ab301628c3a819a30d2b3e56834251ee71ababd"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/omit-ff-tail/build/context_global7.c",
+      "bytes": 70,
+      "sha256": "2d530287042c966dd7c3a5584fbd760148bdf25d1bee1d52734ad017aec315a4"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/omit-ff-tail/context7.c",
+      "bytes": 3038,
+      "sha256": "e5bfa5d9824b8aebb0605b104857565592fd486242d2b65814cde6e8912ade4e"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/omit-global-publication/build/a64.elf",
+      "bytes": 131976,
+      "sha256": "60c60027ff9a932b355708ef683ee7c77b12f324684528da41df1c47831f339d"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/omit-global-publication/build/a64.ld",
+      "bytes": 276,
+      "sha256": "f93875bbd170b04a5eecebc83a52e9eb7dafb8aee22ae22ee9b1055a5b66226b"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/omit-global-publication/build/arm.elf",
+      "bytes": 67308,
+      "sha256": "b7eed4666317a40ef7b465a8824bf0815f350c09c65e85355b29b574d6277d9a"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/omit-global-publication/build/arm.ld",
+      "bytes": 275,
+      "sha256": "931cfcdad2de2dab13d463ea95e35bd56e347e265bb6cea1025ee3a91ec740df"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/omit-global-publication/build/build.json",
+      "bytes": 15298,
+      "sha256": "1c45c723fd9412c070da2786e40d6b33d7493dbf7599008e5cc1a9c74f8a8997"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/omit-global-publication/build/context7.dll",
+      "bytes": 2560,
+      "sha256": "6291d1c15bd122c8156433d254ac16f178839ca966c03d07e53599c6337aace0"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/omit-global-publication/build/context_global7.c",
+      "bytes": 70,
+      "sha256": "2d530287042c966dd7c3a5584fbd760148bdf25d1bee1d52734ad017aec315a4"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/omit-global-publication/context7.c",
+      "bytes": 3006,
+      "sha256": "f0c77a356d86efecf23a0062dffcbff9ae8ca840fa9b0ff29eaf5cb401031583"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/wrong-attribute-alpha/build/a64.elf",
+      "bytes": 197576,
+      "sha256": "2eaaa4aaed8184030299c7b272c8ba6b87f53a4c0ca563422b3667477acf5987"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/wrong-attribute-alpha/build/a64.ld",
+      "bytes": 276,
+      "sha256": "f93875bbd170b04a5eecebc83a52e9eb7dafb8aee22ae22ee9b1055a5b66226b"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/wrong-attribute-alpha/build/arm.elf",
+      "bytes": 67336,
+      "sha256": "f2f9e034bde92da800ca29f782c28cf2f32e9d5059d210d178f1af7d18b7ac4c"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/wrong-attribute-alpha/build/arm.ld",
+      "bytes": 275,
+      "sha256": "931cfcdad2de2dab13d463ea95e35bd56e347e265bb6cea1025ee3a91ec740df"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/wrong-attribute-alpha/build/build.json",
+      "bytes": 15242,
+      "sha256": "57b3e2ee04cd29951aea0821759d9281a65e3e0b85471d38689e48f3ba235d3b"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/wrong-attribute-alpha/build/context7.dll",
+      "bytes": 2560,
+      "sha256": "41154c8976a25bae40053ddef5de84893b3b94c09fff8ade57de93e6c7eeb198"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/wrong-attribute-alpha/build/context_global7.c",
+      "bytes": 70,
+      "sha256": "2d530287042c966dd7c3a5584fbd760148bdf25d1bee1d52734ad017aec315a4"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/controls/wrong-attribute-alpha/context7.c",
+      "bytes": 3032,
+      "sha256": "cc642ace6ee53cfbe2103f176b877998e8e8ad0f2d77ee3c1a55f0aa2d11b564"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/source-tree/src/native/wave055/address055.h",
+      "bytes": 1737,
+      "sha256": "552153305ec11808d94197d58ee68076fd6bc1eb188713e5d0e71063d143eb8c"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/source-tree/src/native/wave055/controller-deps-v1/resource055.h",
+      "bytes": 832,
+      "sha256": "7c886fdd977ebc5aff02219b2199844caff007166f358106bb8a5582f06a59da"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/source-tree/src/native/wave055/selector055.h",
+      "bytes": 1597,
+      "sha256": "83623f1980e8f220315cfb616e22cde6289c7f0e0563da9ea6c27bcfc1929e72"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/source-tree/src/native/wave055/state055.h",
+      "bytes": 659,
+      "sha256": "45fe75a1f18fcf918a01f538f63be98ba8a342ff6f6c294bb25fa05b5f222dc1"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/source-tree/work/native-state055/controller-init-v7/source/context7.c",
+      "bytes": 2966,
+      "sha256": "4c8c0814bc8b6d0a0f479c1388478b6d33be79a53feb4a316fada14e54eaccc6"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/source-tree/work/native-state055/controller-init-v7/source/context7.h",
+      "bytes": 218,
+      "sha256": "c74de74b8cc2509a64bcfaa03579d793335ac121c74f05227cad7103878a04e2"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/source-tree/work/native-state055/controller-v5/source/apply_types055.h",
+      "bytes": 3287,
+      "sha256": "74c9379c55718c72e1420eb22e1dd28a4ebf756834f2b1d51693b5be26aa10af"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/context-source-replay-v1/source-tree/work/native-state055/controller-v5/source/resource_view055.h",
+      "bytes": 1133,
+      "sha256": "3d049a95f29d8a4cd910c86f0cf4d41e16972dd5d5a23cc642862c16cd7699e3"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/core-effective-inputs-v1.json",
+      "bytes": 9393,
+      "sha256": "4880467a773e68ea33b481f06d3f08626aa95346ac4e9ceb8355bd822fea6361"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/CORE-README.md",
+      "bytes": 3555,
+      "sha256": "885004620cb0ff2b31a0bf4cc3830c989b2fa1305c4cc027bd0fe4862f7e969b"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/core-tests-v1.txt",
+      "bytes": 2937,
+      "sha256": "922075b1f98ea6ce0fdd71cc01c44d0afc364f60ed3d4abb4de55136f8a94b60"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/reference-allocation-service/allocation_service7.c",
+      "bytes": 1054,
+      "sha256": "2a82d4e6693d46d05a77c8c5ee0a6395df59f6d96ca6fddf1b9de22d5ad44569"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/reference-allocation-service/build.json",
+      "bytes": 2706,
+      "sha256": "67a02397ad3d828ccc9ad057cc2f086610e82186f6d728b7437a5ce3f731589c"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/reference-allocation-service/service.elf",
+      "bytes": 131704,
+      "sha256": "4c712da3e4e299902c7732a1a093b95c0b74533a6ed24fb36215b342436d85d2"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/reference-allocation-service/service.ld",
+      "bytes": 222,
+      "sha256": "2681ebd174f62d399a8f8383db1c2ddd4b91a08150d652eb4dac10505656c9c6"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-arm-build-successor/build.json",
+      "bytes": 7203,
+      "sha256": "0bda9c9553d24200c2444a040d416743c5bbfc3a3929e99cf6b61e62b3c2ee73"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-arm-build-successor/globals7.c",
+      "bytes": 144,
+      "sha256": "889f4a12473171b92c9f981a5b7bd6a5b3687c8dc2cd851aefb8eac711d78efb"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-arm-build-successor/source.elf",
+      "bytes": 136924,
+      "sha256": "6d4485add7d27336ee3120ca014f69f81c7e8d164257a736231781840f114160"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-arm-build-successor/source.ld",
+      "bytes": 627,
+      "sha256": "dc15dc4927fd1e9f139198dbdb67ae0eddd31d5885413c8755feeaffee710dd3"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-arm-replay-comparison-v1.json",
+      "bytes": 750196,
+      "sha256": "229982379e7a886a6a40c3263c9b0436c8c0cfacff6739512e9642a653d4ce4b"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-build-v1/build.json",
+      "bytes": 7068,
+      "sha256": "c539be460d2ddec91193b103ad456f6773e651787397d2d98ab7fd2b7a608727"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-build-v1/globals7.c",
+      "bytes": 144,
+      "sha256": "889f4a12473171b92c9f981a5b7bd6a5b3687c8dc2cd851aefb8eac711d78efb"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-build-v1/source.elf",
+      "bytes": 136924,
+      "sha256": "6d4485add7d27336ee3120ca014f69f81c7e8d164257a736231781840f114160"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-build-v1/source.ld",
+      "bytes": 627,
+      "sha256": "dc15dc4927fd1e9f139198dbdb67ae0eddd31d5885413c8755feeaffee710dd3"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-coverage-v1.json",
+      "bytes": 11376,
+      "sha256": "8cd70e01c3f23d3bc964a033cd5804cf89940f28e3d3a18ac8646b71aba77b62"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-index-queue-reference-v2.private.json",
+      "bytes": 239530,
+      "sha256": "138edba65fa6cf95d4502607751116cb37e8b72aa63e4e224e307296e6b3508e"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-index-queue-reference-v3.private.json",
+      "bytes": 236761,
+      "sha256": "ae4a63def416a36ff752302747376c5e2645e3f11d65d37ea6158404c1405f29"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-index-reference.private.json",
+      "bytes": 154033,
+      "sha256": "2761f65abb81fbb479d16c5d153d2c525db1c425c000a70e9d48c0bc5fe1b6f3"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-native-build-successor/a64.elf",
+      "bytes": 198840,
+      "sha256": "ce960e9659c1bea4f5ba784990bee86e85ae85cabc02e378d4f0017192e49672"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-native-build-successor/a64.ld",
+      "bytes": 192,
+      "sha256": "33435ef9377cd8527687abf9ee8125aa1f49c9ff318b763df5bd3d4c2b03877c"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-native-build-successor/build.json",
+      "bytes": 12236,
+      "sha256": "3c34740868bc528c6faece2458516dfbaeaa0ff2adfeb65681bffd0aeacf258a"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-native-build-successor/resource7.dll",
+      "bytes": 5632,
+      "sha256": "192f8c487e542625d6852dac6d8fd1fee0e2f31611e15e1b4665a500735c2fb1"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-native-build-v1/a64.elf",
+      "bytes": 198840,
+      "sha256": "ce960e9659c1bea4f5ba784990bee86e85ae85cabc02e378d4f0017192e49672"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-native-build-v1/a64.ld",
+      "bytes": 192,
+      "sha256": "33435ef9377cd8527687abf9ee8125aa1f49c9ff318b763df5bd3d4c2b03877c"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-native-build-v1/build.json",
+      "bytes": 12107,
+      "sha256": "d88477394abdc4887ba9628f80aee98f94e9e75e1e7cf6e09da4e8915839ea33"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-native-build-v1/resource7.dll",
+      "bytes": 5632,
+      "sha256": "192f8c487e542625d6852dac6d8fd1fee0e2f31611e15e1b4665a500735c2fb1"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-native-execution-v1.json",
+      "bytes": 457082,
+      "sha256": "ada0d9545139f0923a7eef30550859f98efcd18ba958febb1faf2fb643eac111"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-preflight-v1/preflight.json",
+      "bytes": 4657,
+      "sha256": "0bcdf20af8c26e8cbd925952b69bb61ec0cad35984d76df4ce5a6c881f1f638e"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-replay-comparison-v1.json",
+      "bytes": 954115,
+      "sha256": "00302360a70f9cc749c82eac1ba7f9c7f9ef69207c3b36445ffeedae77d2883a"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-arm-v1.json",
+      "bytes": 225048,
+      "sha256": "a93f91afce8baedac996458ff7f0ae1d1276058853bc73b4692f0f404a2ef9ed"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/arm-build/build.json",
+      "bytes": 8514,
+      "sha256": "38ecc03f5f8d0756f28861fc05d932748896813c78a29c001258188daa9e7e02"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/arm-build/globals7.c",
+      "bytes": 144,
+      "sha256": "889f4a12473171b92c9f981a5b7bd6a5b3687c8dc2cd851aefb8eac711d78efb"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/arm-build/source.elf",
+      "bytes": 136924,
+      "sha256": "6d4485add7d27336ee3120ca014f69f81c7e8d164257a736231781840f114160"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/arm-build/source.ld",
+      "bytes": 627,
+      "sha256": "dc15dc4927fd1e9f139198dbdb67ae0eddd31d5885413c8755feeaffee710dd3"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/build/a64.elf",
+      "bytes": 198840,
+      "sha256": "ce960e9659c1bea4f5ba784990bee86e85ae85cabc02e378d4f0017192e49672"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/build/a64.ld",
+      "bytes": 192,
+      "sha256": "33435ef9377cd8527687abf9ee8125aa1f49c9ff318b763df5bd3d4c2b03877c"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/build/build.json",
+      "bytes": 14633,
+      "sha256": "acdd23c243392f3856999aecdb475a9d4ce2616cb61038dac1dbe9d92841b51d"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/build/resource7.dll",
+      "bytes": 5632,
+      "sha256": "192f8c487e542625d6852dac6d8fd1fee0e2f31611e15e1b4665a500735c2fb1"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/missing-head-publication/arm-build/build.json",
+      "bytes": 8829,
+      "sha256": "5fd7f5679ebcfc9b0cf72f22ca0c1d2d3a5c8573316ac485ff7099d94b8631e0"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/missing-head-publication/arm-build/globals7.c",
+      "bytes": 144,
+      "sha256": "889f4a12473171b92c9f981a5b7bd6a5b3687c8dc2cd851aefb8eac711d78efb"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/missing-head-publication/arm-build/source.elf",
+      "bytes": 136928,
+      "sha256": "e170caedf819f9e5c0011e6c4fdf2f711c32a7e5607ffe159b933771823ff13e"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/missing-head-publication/arm-build/source.ld",
+      "bytes": 627,
+      "sha256": "dc15dc4927fd1e9f139198dbdb67ae0eddd31d5885413c8755feeaffee710dd3"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/missing-head-publication/build/a64.elf",
+      "bytes": 198840,
+      "sha256": "b92b8adf0ba6470d09b75f01c94665dcb4544faf97d1e31107923fa5ca6d7dcb"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/missing-head-publication/build/a64.ld",
+      "bytes": 192,
+      "sha256": "33435ef9377cd8527687abf9ee8125aa1f49c9ff318b763df5bd3d4c2b03877c"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/missing-head-publication/build/build.json",
+      "bytes": 15124,
+      "sha256": "291a3bd3b30d1a8028f3ac664a7961615013fc775464723f8420e6656d74fcda"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/missing-head-publication/build/resource7.dll",
+      "bytes": 5632,
+      "sha256": "8bcb1eb661a8b9001208981811fc2f835e5fcf41209654743eff7e9f784959d7"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/missing-head-publication/resource7.c",
+      "bytes": 5266,
+      "sha256": "7c815ed683c239da34bf0f629f28771663259f40911254cbd26b82d5a3e646e2"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/swap-extra-index-release-order/arm-build/build.json",
+      "bytes": 8907,
+      "sha256": "6583e460d991e160f74fba91231af2c6d26630c1ca1ed73147e86e0043f612a1"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/swap-extra-index-release-order/arm-build/globals7.c",
+      "bytes": 144,
+      "sha256": "889f4a12473171b92c9f981a5b7bd6a5b3687c8dc2cd851aefb8eac711d78efb"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/swap-extra-index-release-order/arm-build/source.elf",
+      "bytes": 136924,
+      "sha256": "0f17cd0af5350f2868969b711784e7f7cba1631e06f7994fef5aa39121b4d472"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/swap-extra-index-release-order/arm-build/source.ld",
+      "bytes": 627,
+      "sha256": "dc15dc4927fd1e9f139198dbdb67ae0eddd31d5885413c8755feeaffee710dd3"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/swap-extra-index-release-order/build/a64.elf",
+      "bytes": 198840,
+      "sha256": "1399d76dbfaeaeff9daaada4bbb145d75dd79fdb4df169306f9245696c96ed10"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/swap-extra-index-release-order/build/a64.ld",
+      "bytes": 192,
+      "sha256": "33435ef9377cd8527687abf9ee8125aa1f49c9ff318b763df5bd3d4c2b03877c"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/swap-extra-index-release-order/build/build.json",
+      "bytes": 15244,
+      "sha256": "3ba201550f8e038200cc6855341f16d7ee9dbc66efaf0e83a4668d948839ee35"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/swap-extra-index-release-order/build/resource7.dll",
+      "bytes": 5632,
+      "sha256": "739579e559e6ff047c1f73f18e43b9ac91f6868487b4b0952e025fd2e4a131ba"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/swap-extra-index-release-order/resource7.c",
+      "bytes": 5269,
+      "sha256": "65dca25aba6ab5336999f8adb0d6dce23a3a59e0daf11ce654a9ee87ce39cfc1"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/wrong-default-level/arm-build/build.json",
+      "bytes": 8764,
+      "sha256": "8423788883f3de578019aea934eaf465135fac0dd4583d489bc247ace1d5dfe9"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/wrong-default-level/arm-build/globals7.c",
+      "bytes": 144,
+      "sha256": "889f4a12473171b92c9f981a5b7bd6a5b3687c8dc2cd851aefb8eac711d78efb"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/wrong-default-level/arm-build/source.elf",
+      "bytes": 136908,
+      "sha256": "0ef367c3f025e057821525852d9327d631a4502f84773274a85e4cc0673d008c"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/wrong-default-level/arm-build/source.ld",
+      "bytes": 627,
+      "sha256": "dc15dc4927fd1e9f139198dbdb67ae0eddd31d5885413c8755feeaffee710dd3"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/wrong-default-level/build/a64.elf",
+      "bytes": 198840,
+      "sha256": "5da435e8f2083ed1024b520627c5522fdad0978b2ad11438a6bb958813025f10"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/wrong-default-level/build/a64.ld",
+      "bytes": 192,
+      "sha256": "33435ef9377cd8527687abf9ee8125aa1f49c9ff318b763df5bd3d4c2b03877c"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/wrong-default-level/build/build.json",
+      "bytes": 15024,
+      "sha256": "a86421b3ee0b055a043826a3bb7b856df4f6b73bbe099788b10c33c0aa6a8b5b"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/wrong-default-level/build/resource7.dll",
+      "bytes": 5632,
+      "sha256": "7906dfb344dfb7d2c6cf66136371ff6c1f1416edaded98a0991a2aa3beac7792"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/controls/wrong-default-level/resource7.c",
+      "bytes": 5265,
+      "sha256": "b96b461b73c963290f8eedf8f4fbb3122dd50ed199f8e3993205531fcfe18c6c"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/source-tree/src/native/wave055/address055.h",
+      "bytes": 1737,
+      "sha256": "552153305ec11808d94197d58ee68076fd6bc1eb188713e5d0e71063d143eb8c"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/source-tree/src/native/wave055/controller-deps-v1/resource055.h",
+      "bytes": 832,
+      "sha256": "7c886fdd977ebc5aff02219b2199844caff007166f358106bb8a5582f06a59da"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/source-tree/src/native/wave055/selector055.h",
+      "bytes": 1597,
+      "sha256": "83623f1980e8f220315cfb616e22cde6289c7f0e0563da9ea6c27bcfc1929e72"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/source-tree/src/native/wave055/state055.h",
+      "bytes": 659,
+      "sha256": "45fe75a1f18fcf918a01f538f63be98ba8a342ff6f6c294bb25fa05b5f222dc1"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/source-tree/work/native-state055/controller-init-v7/resource-source-v1/native_fixture7.c",
+      "bytes": 3205,
+      "sha256": "f1fd1764f7b5b164bcc805785db9a025d65858bcc8ebf8225f5de8b3de4428fe"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/source-tree/work/native-state055/controller-init-v7/resource-source-v1/resource7.c",
+      "bytes": 5121,
+      "sha256": "85c705f99924aa6063e0381a499322e8026838dbb544a2395bc6621e7b1f8570"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/source-tree/work/native-state055/controller-init-v7/resource-source-v1/resource7.h",
+      "bytes": 3262,
+      "sha256": "a9434dd650270b0ef9e004064f47985b06ca6f7f30791d91769e424c94b9087c"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/source-tree/work/native-state055/controller-init-v7/source/context7.c",
+      "bytes": 2966,
+      "sha256": "4c8c0814bc8b6d0a0f479c1388478b6d33be79a53feb4a316fada14e54eaccc6"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/source-tree/work/native-state055/controller-init-v7/source/context7.h",
+      "bytes": 218,
+      "sha256": "c74de74b8cc2509a64bcfaa03579d793335ac121c74f05227cad7103878a04e2"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/source-tree/work/native-state055/controller-v5/source/apply_types055.h",
+      "bytes": 3287,
+      "sha256": "74c9379c55718c72e1420eb22e1dd28a4ebf756834f2b1d51693b5be26aa10af"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-replay-v1/source-tree/work/native-state055/controller-v5/source/resource_view055.h",
+      "bytes": 1133,
+      "sha256": "3d049a95f29d8a4cd910c86f0cf4d41e16972dd5d5a23cc642862c16cd7699e3"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-v1/native_fixture7.c",
+      "bytes": 3205,
+      "sha256": "f1fd1764f7b5b164bcc805785db9a025d65858bcc8ebf8225f5de8b3de4428fe"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-v1/resource7.c",
+      "bytes": 5121,
+      "sha256": "85c705f99924aa6063e0381a499322e8026838dbb544a2395bc6621e7b1f8570"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/resource-source-v1/resource7.h",
+      "bytes": 3262,
+      "sha256": "a9434dd650270b0ef9e004064f47985b06ca6f7f30791d91769e424c94b9087c"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/source/context7.c",
+      "bytes": 2966,
+      "sha256": "4c8c0814bc8b6d0a0f479c1388478b6d33be79a53feb4a316fada14e54eaccc6"
+    },
+    {
+      "path": "work/native-state055/controller-init-v7/source/context7.h",
+      "bytes": 218,
+      "sha256": "c74de74b8cc2509a64bcfaa03579d793335ac121c74f05227cad7103878a04e2"
+    },
+    {
+      "path": "work/native-state055/controller-v5/ready.json",
+      "bytes": 183407,
+      "sha256": "6dead72e66105d8f234a4c13699ee8e97de7c5f0246d07696af5d98b88bfe6ad"
+    },
+    {
+      "path": "work/native-state055/controller-v5/source/apply_types055.h",
+      "bytes": 3287,
+      "sha256": "74c9379c55718c72e1420eb22e1dd28a4ebf756834f2b1d51693b5be26aa10af"
+    },
+    {
+      "path": "work/native-state055/controller-v5/source/resource_view055.h",
+      "bytes": 1133,
+      "sha256": "3d049a95f29d8a4cd910c86f0cf4d41e16972dd5d5a23cc642862c16cd7699e3"
+    },
+    {
+      "path": "work/native-state055/controller6_inputs.py",
+      "bytes": 2763,
+      "sha256": "d920448b4b2aa347e10c05431e4455e334fd0b9719b9fb150ae411f5f964c4b8"
+    },
+    {
+      "path": "work/native-state055/controller6_measure.py",
+      "bytes": 4643,
+      "sha256": "6fd087c1cbe95ed2c265cf5bd0e5f2574f7fe75cd0798a362473c79a6af434b2"
+    },
+    {
+      "path": "work/native-state055/controller7_allocation_fixture.py",
+      "bytes": 2597,
+      "sha256": "c368c95f14ffd8147bc52c23724f4558bd1f16e595312abdf3091b05a885e36a"
+    },
+    {
+      "path": "work/native-state055/controller7_constructor_claim.py",
+      "bytes": 4935,
+      "sha256": "1ec559b0f20fbbfb4f6caf73427879c032fa835ab784f45d65bd70286174256d"
+    },
+    {
+      "path": "work/native-state055/controller7_context_build.py",
+      "bytes": 2406,
+      "sha256": "cfb582dba4b7f260a536c45fe4dc4a56f4c009d15f210f3c14900d09dd82adf0"
+    },
+    {
+      "path": "work/native-state055/controller7_context_build_successor.py",
+      "bytes": 2740,
+      "sha256": "9352628f47b2d305db309567eb8116ecce369fd572d28f1ea53acd6f7d585efc"
+    },
+    {
+      "path": "work/native-state055/controller7_context_coverage.py",
+      "bytes": 3197,
+      "sha256": "dfb4ae30356b1a6d69d9ccf4fc5c68acff56340e925ac552a085f3ce83c6c569"
+    },
+    {
+      "path": "work/native-state055/controller7_context_execution.py",
+      "bytes": 6771,
+      "sha256": "d320cfaac3bd8f1229e7133cc9ee7d10ca3c7ff3818fa455ecd5ca749c6d5234"
+    },
+    {
+      "path": "work/native-state055/controller7_context_reference.py",
+      "bytes": 4563,
+      "sha256": "fe9c8553fe17a14418ce37080f672292ac7ab5e73de6058bf736d1bf88b18020"
+    },
+    {
+      "path": "work/native-state055/controller7_context_replay.py",
+      "bytes": 4821,
+      "sha256": "f229963abbc73891ac0735cdbd5f786963393c04ea26319924a555399d10570c"
+    },
+    {
+      "path": "work/native-state055/controller7_context_targets.py",
+      "bytes": 7010,
+      "sha256": "6aff0cddc1a378d7c96ae6a38bc8e7dd35de887911d576eb273cf9f0b917aa8f"
+    },
+    {
+      "path": "work/native-state055/controller7_core_inputs.py",
+      "bytes": 2405,
+      "sha256": "b69a2f875bd5769ba438833d1b24f0a3186ee4c2273c92091036817666df720e"
+    },
+    {
+      "path": "work/native-state055/controller7_core_packet.py",
+      "bytes": 5731,
+      "sha256": "d1ad86c4bc78828b609d0df31b0662e3f9e83f7855171488a6d66b495518596a"
+    },
+    {
+      "path": "work/native-state055/controller7_measure.py",
+      "bytes": 4016,
+      "sha256": "d7ac5ef7926ba3ba2c12ca7c8a0b0e22a7927e69fa544f76d7bae9cb568dd389"
+    },
+    {
+      "path": "work/native-state055/controller7_resource_arm_build_successor.py",
+      "bytes": 2969,
+      "sha256": "a951adfce220a74b98647798ba86d5c958e54f111cf1b01bd2a6f8a9563e139c"
+    },
+    {
+      "path": "work/native-state055/controller7_resource_arm_replay.py",
+      "bytes": 3138,
+      "sha256": "49f9867bad94f092065f8b1482cef63c24812724a0fe32752d48264722adb0e4"
+    },
+    {
+      "path": "work/native-state055/controller7_resource_arm_targets.py",
+      "bytes": 8863,
+      "sha256": "30243af9f4ecfc4a5bf0430ac3a3456534ec4b2f4233c1a616b3e8abc75fe6be"
+    },
+    {
+      "path": "work/native-state055/controller7_resource_build.py",
+      "bytes": 2545,
+      "sha256": "69f166d05028eb99c5d36fce9eb18e73a5fae07940160651d366b381f1da24fe"
+    },
+    {
+      "path": "work/native-state055/controller7_resource_coverage.py",
+      "bytes": 3097,
+      "sha256": "2c00a8e155428466b7acf5bf83025da0389873ad3d5eb48fa1ea9be8e819e729"
+    },
+    {
+      "path": "work/native-state055/controller7_resource_native_build.py",
+      "bytes": 2124,
+      "sha256": "f38e1a3902bfa5ef2cbfa60088b07ed56dcd58b36364e7d16f7b5f1ec1bafb21"
+    },
+    {
+      "path": "work/native-state055/controller7_resource_native_build_successor.py",
+      "bytes": 2547,
+      "sha256": "b2cc8660aa8a023db99c20766f2baa2e86bcf9ac967f5372fb7590edee23e39c"
+    },
+    {
+      "path": "work/native-state055/controller7_resource_native_execution.py",
+      "bytes": 6331,
+      "sha256": "c58e1d8192f2b1c98102e1cd23e42db2b2406004ef5c1c834bb861f642aa8896"
+    },
+    {
+      "path": "work/native-state055/controller7_resource_native_model.py",
+      "bytes": 2647,
+      "sha256": "7a7465a7b748762e41263beaf9b36d2d74aaf70e442629a5aead50ee88848267"
+    },
+    {
+      "path": "work/native-state055/controller7_resource_native_targets.py",
+      "bytes": 6559,
+      "sha256": "75a4654a317f6dfa98f6b648e8d27773866f2bd43c574336fa97012b346f9568"
+    },
+    {
+      "path": "work/native-state055/controller7_resource_reference.py",
+      "bytes": 8105,
+      "sha256": "711aca65eefc38830861ac7f7cc3868bfc7e4f1fb8b729a0e9d9fc1247b374e8"
+    },
+    {
+      "path": "work/native-state055/controller7_resource_replay.py",
+      "bytes": 5095,
+      "sha256": "edb2f851b033bb7a64e3163f0b3a0078e214cb571766fab11eca103f319cc9a2"
+    },
+    {
+      "path": "work/native-state055/controller7_resource_source_arm.py",
+      "bytes": 8850,
+      "sha256": "f9f08c7f049758932225e6a7bf91f6d1fe77147f9da38821d763883904c3517a"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/ready.json",
+      "bytes": 74178,
+      "sha256": "f24b7d59ad8a2524a42b0137c1d75b4332b1fd1c81f5d3b0b9a4e3b35a9d3bbe"
+    },
+    {
+      "path": "work/native-state055/test_controller7_context.py",
+      "bytes": 3377,
+      "sha256": "0d149062c64ee41ed300ea0f1b9edcd4d6be94482dc07a53ed09957428302965"
+    },
+    {
+      "path": "work/native-state055/test_controller7_resource.py",
+      "bytes": 3858,
+      "sha256": "601221cc068c46ba1eb00c9986d649f8b468d25242f8c4e620401433fa45a3a3"
+    }
+  ]
+}
