@@ -79,5 +79,53 @@ class PublicReportDownloadTests(unittest.TestCase):
         open_url.assert_not_called()
 
 
+class OfficialObjdiffAssetTests(unittest.TestCase):
+    def setUp(self):
+        PublicReportDownloadTests.setUp(self)
+        import json
+        self.root = Path(self.folder.name)
+        (self.root / 'config').mkdir()
+        source = Path(__file__).resolve().parents[1] / 'config/report-objdiff-asset.json'
+        self.endpoint = json.loads(source.read_text(encoding='utf-8'))
+        self.endpoint['sha256'] = self.digest
+        self.endpoint['size'] = len(self.data)
+        self.distribution = dict(url=self.endpoint['canonicalUrl'], sha256=self.digest)
+        self.save_endpoint()
+
+    def save_endpoint(self):
+        import json
+        (self.root / 'config/report-objdiff-asset.json').write_text(json.dumps(self.endpoint), encoding='utf-8')
+
+    def test_official_api_download_requests_binary_without_credentials(self):
+        with patch.object(bootstrap.urllib.request, 'urlopen', return_value=io.BytesIO(self.data)) as open_url:
+            bootstrap.fetch_objdiff(self.root, self.distribution, self.path, len(self.data))
+        request = open_url.call_args.args[0]
+        self.assertEqual(request.full_url, self.endpoint['apiUrl'])
+        self.assertEqual(request.get_header('Accept'), 'application/octet-stream')
+        self.assertEqual(request.get_header('X-github-api-version'), '2022-11-28')
+        self.assertIsNone(request.get_header('Authorization'))
+        self.assertEqual(self.path.read_bytes(), self.data)
+
+    def test_disagreeing_or_nonofficial_asset_fails_before_network(self):
+        import copy
+        baseline = copy.deepcopy(self.endpoint)
+        for key, value in [('canonicalUrl', 'https://example.test/tool'), ('sha256', '0' * 64),
+                           ('size', len(self.data) + 1), ('apiUrl', 'https://example.test/asset'),
+                           ('apiUrl', baseline['apiUrl'] + '?redirect=other')]:
+            with self.subTest(key=key, value=value):
+                self.endpoint = dict(baseline, **{key: value})
+                self.save_endpoint()
+                with patch.object(bootstrap.urllib.request, 'urlopen') as open_url:
+                    with self.assertRaises(RuntimeError):
+                        bootstrap.fetch_objdiff(self.root, self.distribution, self.path, len(self.data))
+                open_url.assert_not_called()
+
+    def test_api_metadata_response_cannot_replace_pinned_executable(self):
+        with patch.object(bootstrap.urllib.request, 'urlopen', return_value=io.BytesIO(b'{"id":657354510}')):
+            with self.assertRaises(RuntimeError):
+                bootstrap.fetch_objdiff(self.root, self.distribution, self.path, len(self.data))
+        self.assertFalse(self.path.exists())
+
+
 if __name__ == '__main__':
     unittest.main()

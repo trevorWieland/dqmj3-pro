@@ -25,3 +25,5 @@ Reproduce with `python -I -S toolscripts/bootstrap_report_python.py`; add
 The [CPython Windows documentation](https://docs.python.org/3.13/using/windows.html#the-nuget-org-packages)
 describes these packages for build/CI use. The fixed package is the CPython-owned
 [Python 3.13.5 NuGet release](https://www.nuget.org/packages/python/3.13.5).
+
+The first CI run with this runtime passed its installation and integrity checks, then encountered HTTP 504 responses from the separate objdiff release-download endpoint. The report bootstrap now requests the same upstream asset through GitHub's official binary asset API. `config/report-objdiff-asset.json` must agree with the canonical URL, size and SHA-256 in the existing tool lock. It selects asset 657354510 with an unauthenticated octet-stream request. All 7,164,416 bytes match the existing SHA-256 `dd12dfb5e9e94a7f6c949a37e1815963cf2cffe4c87b4999b7ebc8c15b398a1f`; the tool version, executable and lock remain unchanged. An API metadata JSON response fails the checksum check. No token or new secret is required.

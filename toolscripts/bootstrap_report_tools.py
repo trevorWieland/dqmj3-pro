@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PACKAGES = {"pyctr", "pycryptodomex", "capstone", "pyelftools"}
 
 
-def fetch(url, path, expected, verify_only=False):
+def fetch(url, path, expected, verify_only=False, headers=None):
     if path.exists():
         if compiler.digest(path) != expected:
             raise RuntimeError("Existing public tool differs from frozen identity")
@@ -29,7 +29,7 @@ def fetch(url, path, expected, verify_only=False):
     partial = path.with_suffix(path.suffix + ".download")
     for attempt in range(3):
         try:
-            request = urllib.request.Request(url, headers={"Cache-Control": "no-cache", "User-Agent": "dqmj3-pro-report-bootstrap"})
+            request = urllib.request.Request(url, headers={"Cache-Control": "no-cache", "User-Agent": "dqmj3-pro-report-bootstrap", **(headers or {})})
             with urllib.request.urlopen(request, timeout=120) as response, partial.open("wb") as output:
                 while block := response.read(1024 * 1024):
                     output.write(block)
@@ -44,6 +44,18 @@ def fetch(url, path, expected, verify_only=False):
     if compiler.digest(partial) != expected:
         raise RuntimeError("Public report tool download hash mismatch")
     partial.replace(path)
+
+
+def fetch_objdiff(root, distribution, path, expected_size, verify_only=False):
+    endpoint = json.loads((root / "config/report-objdiff-asset.json").read_text(encoding="utf-8"))
+    prefix = "https://api.github.com/repos/encounter/objdiff/releases/assets/"
+    if (set(endpoint) != {"schemaVersion", "canonicalUrl", "apiUrl", "sha256", "size"}
+            or endpoint["schemaVersion"] != 1 or endpoint["canonicalUrl"] != distribution["url"]
+            or endpoint["sha256"] != distribution["sha256"] or endpoint["size"] != expected_size
+            or not endpoint["apiUrl"].startswith(prefix) or not endpoint["apiUrl"][len(prefix):].isdigit()):
+        raise RuntimeError("Official objdiff API asset disagrees with frozen distribution")
+    fetch(endpoint["apiUrl"], path, distribution["sha256"], verify_only,
+          {"Accept": "application/octet-stream", "X-GitHub-Api-Version": "2022-11-28"})
 
 
 def bootstrap(root, verify_only=False):
@@ -66,7 +78,7 @@ def bootstrap(root, verify_only=False):
     identity = [row for row in lock["files"] if row["path"] == objdiff.relative_to(root).as_posix()]
     if len(identity) != 1 or identity[0]["sha256"] != distribution["sha256"]:
         raise RuntimeError("Objdiff distribution identity disagrees with lock")
-    fetch(distribution["url"], objdiff, distribution["sha256"], verify_only)
+    fetch_objdiff(root, distribution, objdiff, identity[0]["size"], verify_only)
     if objdiff.stat().st_size != identity[0]["size"]:
         raise RuntimeError("Frozen objdiff size mismatch")
     environment = root / "tools/report-python"
