@@ -1,0 +1,746 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "sourceRevision": "fa94f6172cceeaa49bb93b3ff00c0dd9db72813a",
+  "sourceArchiveSha256": "d333d1c9354ab21c08018fa94ae0caafe174fe28f9da82f7cc21a24d1aed8943",
+  "replayRoot": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61",
+  "plan": {
+    "schemaVersion": 1,
+    "name": "bootstrap068",
+    "producerSteps": [
+      {
+        "name": "bootstrap068-proof",
+        "args": [
+          "toolscripts/bootstrap_file068_intake.py",
+          "--output",
+          "work/bootstrap068-public-replay-v1"
+        ],
+        "inputKinds": [
+          "code",
+          "exheader"
+        ]
+      }
+    ],
+    "tests": [
+      "bootstrap_file068_public",
+      "native_heap_inventory",
+      "native_shader_inventory",
+      "native_file_inventory",
+      "compile_source_include_dirs",
+      "c_function_definitions"
+    ],
+    "packets": [
+      "work/bootstrap068-public-replay-v1/ready.json",
+      "work/bootstrap068-public-replay-v1/actual-original-observation.json",
+      "work/bootstrap068-public-replay-v1/receipt-absolute-library.json",
+      "work/bootstrap068-public-replay-v1/receipt-build.json",
+      "work/bootstrap068-public-replay-v1/receipt-control-allocation-order-a64.json",
+      "work/bootstrap068-public-replay-v1/receipt-control-allocation-order-arm.json",
+      "work/bootstrap068-public-replay-v1/receipt-control-allocation-order-windows.json",
+      "work/bootstrap068-public-replay-v1/receipt-control-cache-count-a64.json",
+      "work/bootstrap068-public-replay-v1/receipt-control-cache-count-arm.json",
+      "work/bootstrap068-public-replay-v1/receipt-control-cache-count-windows.json",
+      "work/bootstrap068-public-replay-v1/receipt-control-patch-name-a64.json",
+      "work/bootstrap068-public-replay-v1/receipt-control-patch-name-arm.json",
+      "work/bootstrap068-public-replay-v1/receipt-control-patch-name-windows.json",
+      "work/bootstrap068-public-replay-v1/receipt-controls-build.json",
+      "work/bootstrap068-public-replay-v1/receipt-image-read.json",
+      "work/bootstrap068-public-replay-v1/receipt-listdir.json",
+      "work/bootstrap068-public-replay-v1/receipt-lstat.json",
+      "work/bootstrap068-public-replay-v1/receipt-metadata-write.json",
+      "work/bootstrap068-public-replay-v1/receipt-named-library.json",
+      "work/bootstrap068-public-replay-v1/receipt-open.json",
+      "work/bootstrap068-public-replay-v1/receipt-original-constructor.json",
+      "work/bootstrap068-public-replay-v1/receipt-original.json",
+      "work/bootstrap068-public-replay-v1/receipt-resolve.json",
+      "work/bootstrap068-public-replay-v1/receipt-scandir.json",
+      "work/bootstrap068-public-replay-v1/receipt-source-a64.json",
+      "work/bootstrap068-public-replay-v1/receipt-source-arm.json",
+      "work/bootstrap068-public-replay-v1/receipt-source-windows.json",
+      "work/bootstrap068-public-replay-v1/receipt-stat.json",
+      "work/bootstrap068-public-replay-v1/receipt-tiny-a64.json",
+      "work/bootstrap068-public-replay-v1/receipt-tiny-arm.json",
+      "work/bootstrap068-public-replay-v1/receipt-tiny-build.json",
+      "work/bootstrap068-public-replay-v1/receipt-tiny-history.json",
+      "work/bootstrap068-public-replay-v1/receipt-tiny-windows.json",
+      "work/bootstrap068-public-replay-v1/profiles/arm/report.json",
+      "work/bootstrap068-public-replay-v1/profiles/windows/report.json",
+      "work/bootstrap068-public-replay-v1/profiles/a64/report.json",
+      "work/bootstrap068-public-replay-v1/tiny/profiles/arm/report.json",
+      "work/bootstrap068-public-replay-v1/tiny/profiles/windows/report.json",
+      "work/bootstrap068-public-replay-v1/tiny/profiles/a64/report.json",
+      "work/bootstrap068-public-replay-v1/controls/cache-count/profiles/arm/report.json",
+      "work/bootstrap068-public-replay-v1/controls/cache-count/profiles/windows/report.json",
+      "work/bootstrap068-public-replay-v1/controls/cache-count/profiles/a64/report.json",
+      "work/bootstrap068-public-replay-v1/controls/patch-name/profiles/arm/report.json",
+      "work/bootstrap068-public-replay-v1/controls/patch-name/profiles/windows/report.json",
+      "work/bootstrap068-public-replay-v1/controls/patch-name/profiles/a64/report.json",
+      "work/bootstrap068-public-replay-v1/controls/allocation-order/profiles/arm/report.json",
+      "work/bootstrap068-public-replay-v1/controls/allocation-order/profiles/windows/report.json",
+      "work/bootstrap068-public-replay-v1/controls/allocation-order/profiles/a64/report.json"
+    ],
+    "intakeCleanup": {
+      "mode": "code-exheader-only",
+      "producerInputs": [
+        "code",
+        "exheader"
+      ]
+    }
+  },
+  "planSha256": "adf8cfc341a471370544c1679e96b0dffa0f6a76c6deed0bf1c98c421e0ea27a",
+  "replayDriverSha256": "fd91f0fe8756b643c903913b74d05ddc742eddc49c8a3b47d3c7e5be989e28de",
+  "nativeLibraries": [
+    {
+      "path": "tools/python/Lib/site-packages/capstone/lib/capstone.dll",
+      "size": 7576576,
+      "sha256": "76958e18380023a68fd1714fa2e01c594cc6db1955a07ad6937b66e66dc5d6c3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/lib/unicorn.dll",
+      "size": 9598976,
+      "sha256": "010d85dce84b8f6ffaec3d5420f1b5f7768f859eb831be574c7da23e656ee8f1"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/z3/lib/libz3.dll",
+      "size": 17490432,
+      "sha256": "b6a30c2922293c2a2cab4299637935302d8fb0427762b5a3d2dc16f392f27b8c"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5/cvc5_python_base.cp313-win_amd64.pyd",
+      "size": 1310720,
+      "sha256": "810e9b9f4a9df25e3edeb27b08a373a5a61169ed269f2ae40b9c8c0f9261730a"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5.libs/libc++-8a9deaac6d2f4d2de468a544d1f35cd0.dll",
+      "size": 1659392,
+      "sha256": "8a9deaac6d2f4d2de468a544d1f35cd0dd4bcde03cda3cfb76fb9674749828d4"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5.libs/libcvc5-b3ddd8d0b36e795253fd2e6698441eea.dll",
+      "size": 29992448,
+      "sha256": "6abfaabb88587f543e31c24d261246b4d5014fb7424e7efff54604f1b7f53cab"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5.libs/libcvc5parser-5a140a2cd1789e9177c20f9e46be8c97.dll",
+      "size": 912896,
+      "sha256": "f6756dfae9bd483bb425e8239ee52a932a1807a09add36e7b0db57e585287bf8"
+    }
+  ],
+  "freshEnvironment": true,
+  "sharedGeneratedOrWorkInputs": false,
+  "copiedToolAndWheelFiles": [
+    {
+      "path": "tools/clang-21/clang.exe",
+      "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+    },
+    {
+      "path": "tools/clang-21/ld.lld.exe",
+      "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3"
+    },
+    {
+      "path": "tools/clang-21/libwinpthread-1.dll",
+      "sha256": "c9019ab753c2faa5e5da94e3fd4395f1d3d0e7d2509f5ed2d96cccff7f8b9357"
+    },
+    {
+      "path": "tools/clang-21/libxml2.dll",
+      "sha256": "e15a377aa308e3f7ba948e6d6622a5dea2308256dbc65858074b61d867af6148"
+    },
+    {
+      "path": "tools/ctrtool-1.3.0/ctrtool.exe",
+      "sha256": "79021f283b2199950eb22cf3c459806b9c8aaaf68f65c80100107d3454a1c224"
+    },
+    {
+      "path": "tools/objdiff-3.8.3/objdiff-cli.exe",
+      "sha256": "dd12dfb5e9e94a7f6c949a37e1815963cf2cffe4c87b4999b7ebc8c15b398a1f"
+    },
+    {
+      "path": "tools/android-r30-minimal/provenance.json",
+      "sha256": "42a7f16caf038712bfa917dfe2adaad22dc7f6044c43e3d8094b3c70aba06e29"
+    },
+    {
+      "path": "tools/android-r30-minimal/source.properties",
+      "sha256": "e73b7dc557cea2da9212c09ee1795434957d62e63b7550eef69fd1887a355d94"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/crtbegin_dynamic.o",
+      "sha256": "9087e4b58fd8aadc225d062e8750260079fce2f0a3cd4d0b46b8c2440eedb03a"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/crtend_android.o",
+      "sha256": "47cb49c3d286915f19287b94a7242f668fe62d0b2ae7c4256c7203ba0d179427"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/libc.so",
+      "sha256": "29a129043e28ba808e3bd69750242d71241a3e05581809551f0e371f4894b687"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/libdl.so",
+      "sha256": "b9d8f21c840570a4fe41b5a24c37651d1980fcda7d323003afcbd8483d3da51a"
+    },
+    {
+      "path": "tools/wheels/capstone-5.0.9-py3-none-win_amd64.whl",
+      "sha256": "732cedbbb56d42e723f14d7af6387f1454194a820b4b96b56d1e53f865ef85d0"
+    },
+    {
+      "path": "tools/wheels/pycryptodomex-3.24.2-cp37-abi3-win_amd64.whl",
+      "sha256": "6e912e3a21061bf8f4ce89223cb46f5e98a6b32420d08d770605891a2be266c6"
+    },
+    {
+      "path": "tools/wheels/pyctr-0.7.6-py3-none-any.whl",
+      "sha256": "60fe1dfa2af9fc518a2e4b38e39f42e48eae1f27c594e677836fd04726bb2323"
+    },
+    {
+      "path": "tools/wheels/pyelftools-0.33-py3-none-any.whl",
+      "sha256": "f215ad5f47d3f1373a21496a6c9e0707c622840d0622f23ff7ce08678b020036"
+    },
+    {
+      "path": "tools/wheels/unicorn-2.1.4-cp37-abi3-win_amd64.whl",
+      "sha256": "d7107500c64ce5c168fbff6bef9485b5db1350050036f4cea568650cf8bdbdf5"
+    },
+    {
+      "path": "tools/wheels/z3_solver-5.3.3.0-py3-none-win_amd64.whl",
+      "sha256": "d189844a586242fe3d2a701c09751a80d518645931931a7c6bf29df679044215"
+    },
+    {
+      "path": "tools/wheels/cvc5-1.4.2-cp313-cp313-win_amd64.whl",
+      "sha256": "0ee0a51862d9e8ae8a38572909641a88cdf8d5e1640dee481b24289b6811b9da"
+    },
+    {
+      "path": "inputs/archive/dqmj3pro/DQMJ3P.cia",
+      "sha256": "864d1c35ba6908bed94d9c5f09a148b3355c41794f1d126086dafe1876665f47"
+    },
+    {
+      "path": "inputs/archive/dqmj3pro/DQMJ3P_Update.cia",
+      "sha256": "e19f07d67165bf5bf5c3c226064433cf2e36e2cc489742c69b0c2efa28447c55"
+    }
+  ],
+  "steps": [
+    {
+      "name": "offline-dependencies",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\wheels\\capstone-5.0.9-py3-none-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\wheels\\pycryptodomex-3.24.2-cp37-abi3-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\wheels\\pyctr-0.7.6-py3-none-any.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\wheels\\pyelftools-0.33-py3-none-any.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\wheels\\unicorn-2.1.4-cp37-abi3-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\wheels\\z3_solver-5.3.3.0-py3-none-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\wheels\\cvc5-1.4.2-cp313-cp313-win_amd64.whl"
+      ],
+      "returncode": 0,
+      "log": "offline-dependencies.log",
+      "logSha256": "9e88f06880fe05f411471e287208bf65038a227b0a80c1689353330571a7288f"
+    },
+    {
+      "name": "fresh-original-intake",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\python\\Scripts\\python.exe",
+        "-c",
+        "import sys;from pathlib import Path;sys.path.insert(0,\"toolscripts\");import ci_native_build as ci;ci.extract_inputs(Path.cwd(),Path(\"work/component-intake\"))"
+      ],
+      "returncode": 0,
+      "log": "fresh-original-intake.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "bootstrap068-proof",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/bootstrap_file068_intake.py",
+        "--output",
+        "work/bootstrap068-public-replay-v1"
+      ],
+      "returncode": 0,
+      "log": "bootstrap068-proof.log",
+      "logSha256": "47bd8f067be791a5723d58fa284d2b13cf74584f3a644de0166a9eb8270da3de"
+    },
+    {
+      "name": "public-compilation",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/compile_sources.py",
+        "--output",
+        "work/source-compile-ci/committed-replay"
+      ],
+      "returncode": 0,
+      "log": "public-compilation.log",
+      "logSha256": "c38d299a802ff8fa31f43c6cfac766c24a600b90d1fc4b535596105da7e7b799"
+    },
+    {
+      "name": "bootstrap_file068_public-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_bootstrap_file068_public.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "bootstrap_file068_public-tests.log",
+      "logSha256": "ef98ee6691d0db12aa0114dfb189de681ae45118cb125ce8d728f80632f8cfb9"
+    },
+    {
+      "name": "native_heap_inventory-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_native_heap_inventory.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "native_heap_inventory-tests.log",
+      "logSha256": "f2c25c20bfec10cc5e6651bca60a6eae2ba8d59945ff6c0378df834e50be95c5"
+    },
+    {
+      "name": "native_shader_inventory-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_native_shader_inventory.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "native_shader_inventory-tests.log",
+      "logSha256": "c72df056827c98c3453dde8dc6b1a9122937f1afbcef4959e3b68867dae9405d"
+    },
+    {
+      "name": "native_file_inventory-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_native_file_inventory.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "native_file_inventory-tests.log",
+      "logSha256": "a169b7eda3f195bfb17cb635450c9bf04dca70123d2b42d76d0d0f77f2108ef8"
+    },
+    {
+      "name": "compile_source_include_dirs-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_compile_source_include_dirs.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "compile_source_include_dirs-tests.log",
+      "logSha256": "621894151c13e5060af6a19304581fc3f435911ef5c121ba142debf757794daf"
+    },
+    {
+      "name": "c_function_definitions-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_c_function_definitions.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "c_function_definitions-tests.log",
+      "logSha256": "4b3b38bbc32bd37c860472988d06123fc465f15eda02037c2e916885f3c4ebc2"
+    },
+    {
+      "name": "compile_sources-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_compile_sources.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "compile_sources-tests.log",
+      "logSha256": "a0757f9290c8d6681c6d7e5a0ba8aa24faf34dc42ed55c1440bce4b4a1f2dd2c"
+    },
+    {
+      "name": "functional_report-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_functional_report.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "functional_report-tests.log",
+      "logSha256": "0fc28fe992721399d0717c91a6350c26d869dba5dba76f9fc1426515390a3e50"
+    },
+    {
+      "name": "native_census_overlay-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_native_census_overlay.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "native_census_overlay-tests.log",
+      "logSha256": "15ce8e418274333bc17bbe36ce220ef141cb838727584c9af76da81b0f734a5e"
+    },
+    {
+      "name": "reporting-objects",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/objdiff_objects.py"
+      ],
+      "returncode": 0,
+      "log": "reporting-objects.log",
+      "logSha256": "2b4d2d5eb4dec0b34863142896c670e7de23faed971640d2317e3b1c19246eb3"
+    },
+    {
+      "name": "report-configuration",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/configure_objdiff.py",
+        "--version",
+        "update-content0",
+        "--output",
+        "objdiff.json"
+      ],
+      "returncode": 0,
+      "log": "report-configuration.log",
+      "logSha256": "5b4ee49079572b96586a596615a0c3e75fc3380b36527e6aeb49778895dc52d5"
+    },
+    {
+      "name": "stock-report",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\objdiff-3.8.3\\objdiff-cli.exe",
+        "report",
+        "generate",
+        "-o",
+        "build/update-content0/report.raw.json"
+      ],
+      "returncode": 0,
+      "log": "stock-report.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "normalized-report",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/finalize_objdiff_report.py",
+        "--input",
+        "build/update-content0/report.raw.json"
+      ],
+      "returncode": 0,
+      "log": "normalized-report.log",
+      "logSha256": "2a4bf0863029b8cd8e41b2c237960e80dde53b67c83204eaa2cbc07a60530ab7"
+    },
+    {
+      "name": "functional-companion",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\bootstrap068-fa94f61\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/functional_report.py"
+      ],
+      "returncode": 0,
+      "log": "functional-companion.log",
+      "logSha256": "9b34298c41c19ad7655d61fd8c61fc43d2d11e0f650fe684dbcb3af79509eb71"
+    }
+  ],
+  "sourceAdmissionGranted": false,
+  "wholeGameClaimed": false,
+  "intakeCleanupReceipt": {
+    "path": "intake-cleanup.json",
+    "bytes": 3812,
+    "sha256": "91f0c8d519bd4b10b9bd81b4ad22de9f7616541c396aa8bae2f70dd1fb439a00"
+  },
+  "packets": [
+    {
+      "path": "work/bootstrap068-public-replay-v1/ready.json",
+      "sha256": "f97d784dba4e7f5ca55d3d15a7fc40bb01e0f14d08b0242b07f39cf8c27e4aa4",
+      "bytes": 3805
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/actual-original-observation.json",
+      "sha256": "7345a7799f318336dbc2127019c2c70d07f8d4457d0c516d0582be3aa265f14f",
+      "bytes": 314812
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-absolute-library.json",
+      "sha256": "88bdf77e1af256648d3caa26e0ee7df2379cebb2cff0fffbfc5389b331b10e53",
+      "bytes": 249604
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-build.json",
+      "sha256": "7a0f75e820442956729dc76b4d4c249255874d7e6c1f50b2f4346bb6b911f36b",
+      "bytes": 286928
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-control-allocation-order-a64.json",
+      "sha256": "c5602503a5af69e73c70a7d329a7fac7dd382ee2eb86bd67187c3cb808ae0daa",
+      "bytes": 454939
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-control-allocation-order-arm.json",
+      "sha256": "348c160d1993186af8ba760ac78f9dd0310a8b5e4343148c347fde8612acad3f",
+      "bytes": 454934
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-control-allocation-order-windows.json",
+      "sha256": "5140f618c3c9c3775ad3c0056474210e7cd982088e64ae52342164f63f965c33",
+      "bytes": 454857
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-control-cache-count-a64.json",
+      "sha256": "f1781d939ab2682e2c237c56286aafbf74f300725e3e524bf0694a6419ae6409",
+      "bytes": 454924
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-control-cache-count-arm.json",
+      "sha256": "12d51a0f8b3f7d3de72b3d9e699d951176024f1d3f54afeb1987b4c3bfbc0eae",
+      "bytes": 454919
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-control-cache-count-windows.json",
+      "sha256": "5560b37bdd7daca69f9c57d0f858f56a8bf46bcdc557cd2c9cfb6f6aecf2194f",
+      "bytes": 454832
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-control-patch-name-a64.json",
+      "sha256": "08abdca16df5678b4754b3c09905a3de5d799a7f58aec7cda198012bd3ce651a",
+      "bytes": 454921
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-control-patch-name-arm.json",
+      "sha256": "f70d471fa75ec065595fc99ab7b10b37bc93b47773528fb1284fce80e73faaec",
+      "bytes": 454916
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-control-patch-name-windows.json",
+      "sha256": "1260ff7b7700edf67f165c3ab2f972bf94cb363df6a3afd0e0f2ffa050e03c11",
+      "bytes": 454827
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-controls-build.json",
+      "sha256": "bc4164eb118f1302678e0eba69102b2b8ac64ae17234f408c7a0345a914a72b9",
+      "bytes": 548022
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-image-read.json",
+      "sha256": "1ecf8aa85f5f99663f2c0341b8497bccf9df60f1f446eabfb3ee26b27b4333b4",
+      "bytes": 249582
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-listdir.json",
+      "sha256": "c7491a139a3d3421153f31d415983a249d2ffc238d4d7e880202cfc110c39546",
+      "bytes": 249572
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-lstat.json",
+      "sha256": "0a55ff7dd3f28feb7e56a40f3df194e1f191ce940d7874836eb764016635f8ab",
+      "bytes": 249583
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-metadata-write.json",
+      "sha256": "be09cf80e71f761c8c246262613a69e5c28a22339d20690cb5b506c715f86df9",
+      "bytes": 249620
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-named-library.json",
+      "sha256": "bc5a4da721efb0b3ed71e0571dae3b185859bd681a38518f32e851b901c8cb9d",
+      "bytes": 249465
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-open.json",
+      "sha256": "f40174f3af260970894d788933ee28dfb18e336a367004f3fae644b308463c4e",
+      "bytes": 249585
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-original-constructor.json",
+      "sha256": "ae0eefbf8f89d0087b1a3ffd760c08bf284ddd1e28f70377d0ee119a18fa7cee",
+      "bytes": 299568
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-original.json",
+      "sha256": "7280af0ce26f5b42235cbb5ad50f2ce665c91ac3fe8d448a062461b2f7e1400f",
+      "bytes": 372171
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-resolve.json",
+      "sha256": "7c72887959739fa3cb6e2ebd40f01c3a1ded13529b9b2830b9643b3601ac561c",
+      "bytes": 249588
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-scandir.json",
+      "sha256": "bd74da39fad0df9ab9ad50b1cc92c0c74742420b0c767db0453b61c5092ae0a3",
+      "bytes": 249571
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-source-a64.json",
+      "sha256": "dc810e6ad162e3040936d7f1032c019c50b3a78d682668d2e9075e5058d0fcef",
+      "bytes": 333284
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-source-arm.json",
+      "sha256": "96284dc7e6b53b8c541f4b8de57bd64c785b8bafbd26d042fbab24fc3b68e3a6",
+      "bytes": 333281
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-source-windows.json",
+      "sha256": "e3e5da5149ca413f23a480e61c99f54645a27766d35c6ae2de4adce2bd0526dc",
+      "bytes": 333146
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-stat.json",
+      "sha256": "2a574d4710b2f078dc83b9fa773636a49072a1a12fb39c4b5b71c5f19a3ea7c3",
+      "bytes": 249583
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-tiny-a64.json",
+      "sha256": "667d1cc20b6e7f0545ebd4f5df913dae0e529e52dd52429fa986579de2a47dbb",
+      "bytes": 339382
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-tiny-arm.json",
+      "sha256": "05baee9ec6c2dd6b835c17dad23c0a9c903900b596f00ce3703febd179cfb626",
+      "bytes": 339377
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-tiny-build.json",
+      "sha256": "48b19a827e3e4c389cea02e7cfb4dd7794c33c2e560c03a9dc3de132d7dbbb10",
+      "bytes": 291897
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-tiny-history.json",
+      "sha256": "0cec7fdd321885a8c0f89a8884e745769cd572a007c03d81eb9a014e2811d48f",
+      "bytes": 249636
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/receipt-tiny-windows.json",
+      "sha256": "e5c344ef369de2f860cdf00dfc6ea9f221245f9f8b88969d286aaa38d9395cf4",
+      "bytes": 339249
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/profiles/arm/report.json",
+      "sha256": "62dfc25e5432f2242cb752f471a7c7a45617508b2fd51b1b336203b9a0d0073b",
+      "bytes": 108778
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/profiles/windows/report.json",
+      "sha256": "7f014bbcd8c0dd30ee5568b5dde851c62cf8953f6386aa5ec15ffa500895108e",
+      "bytes": 108536
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/profiles/a64/report.json",
+      "sha256": "98213ff9fc96faf091938e5a957805ff003377c957d96090ad2351ddb5370cb3",
+      "bytes": 108809
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/tiny/profiles/arm/report.json",
+      "sha256": "d720b77b411f2e5c93829476a8c22e464b8edddf9751b7d995658514de60adce",
+      "bytes": 110452
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/tiny/profiles/windows/report.json",
+      "sha256": "85cdc12ad46b255e87255571bee9434156448ef0a2c21540c60de5d35e6980b6",
+      "bytes": 110210
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/tiny/profiles/a64/report.json",
+      "sha256": "aa0232cb3d9c819a0333f402329f4f441ceeb67cb4622c4c1552e6da29955129",
+      "bytes": 110483
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/controls/cache-count/profiles/arm/report.json",
+      "sha256": "f65c2f6363acfafda9690441cd249fb6b20d4601365bc985c4c2b1f47c921a83",
+      "bytes": 108819
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/controls/cache-count/profiles/windows/report.json",
+      "sha256": "9652db54f5b49f3ea3abedfc5b4e9b3da463806d6ff78c7d67b960770d463959",
+      "bytes": 108600
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/controls/cache-count/profiles/a64/report.json",
+      "sha256": "3fd44e8837f1711bbba90272ac15b3d5273023b2ada456fa61b27b61c18b9ddd",
+      "bytes": 108850
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/controls/patch-name/profiles/arm/report.json",
+      "sha256": "a26fa07ff0e0a3b317dabf4f0e2307fad1f7d63833bee282deb24f6d0509fb29",
+      "bytes": 108816
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/controls/patch-name/profiles/windows/report.json",
+      "sha256": "80f939f2c8f0392801a2910a5d5496a43b0689c82a4303ff1ff31ad4d0e9c5c2",
+      "bytes": 108596
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/controls/patch-name/profiles/a64/report.json",
+      "sha256": "e4036858ca6837bca45a347400f24b5ee42b3e0b4e4f59f1fcbee316ff445434",
+      "bytes": 108847
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/controls/allocation-order/profiles/arm/report.json",
+      "sha256": "09558cdd1b5609a5f8b6ebca5e7b5430c21b6594ad0f26607d7a3ac375f9d9b2",
+      "bytes": 108824
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/controls/allocation-order/profiles/windows/report.json",
+      "sha256": "7b2f48fed5a3a8077c0b7534f2f9b12843027a1b6af790c02cda2080bcdc81fa",
+      "bytes": 108610
+    },
+    {
+      "path": "work/bootstrap068-public-replay-v1/controls/allocation-order/profiles/a64/report.json",
+      "sha256": "02acdb351b455f4346ef37e5493fc7cba90a08e14148e5179f74106eca505d96",
+      "bytes": 108855
+    },
+    {
+      "path": "build/update-content0/report.json",
+      "sha256": "eab51f535730dc1a72071e0769634f0218549095b6530472a0e546358493750a",
+      "bytes": 2744787
+    },
+    {
+      "path": "build/update-content0/functional.json",
+      "sha256": "f9b0d530a4bba66db6bd5a279e2d9162876f45eb56db782dcad530306f81ba26",
+      "bytes": 38011
+    }
+  ]
+}

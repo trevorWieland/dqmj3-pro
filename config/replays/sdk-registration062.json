@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "name": "sdk-registration062",
+  "producerSteps": [
+    {
+      "name": "sdk-registration062-proof",
+      "args": [
+        "toolscripts/public_sdk_registration062_replay.py",
+        "--output",
+        "work/registration062-public-replay-v1"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "public_sdk_registration062_replay",
+    "native_heap_inventory",
+    "compile_source_include_dirs",
+    "c_function_definitions"
+  ],
+  "packets": [
+    "work/registration062-public-replay-v1/public-replay.json",
+    "work/registration062-public-replay-v1/source-map-v1.json",
+    "work/registration062-public-replay-v1/native-artifacts.json",
+    "work/registration062-public-replay-v1/report-archive.json",
+    "work/registration062-public-replay-v1/reports.zip",
+    "work/registration062-public-replay-v1/boundary-controls-v1/report.json",
+    "work/registration062-public-replay-v1/full/input-manifest.json",
+    "work/registration062-public-replay-v1/full/process-completion.json",
+    "work/registration062-public-replay-v1/full/controls-attempt001/report.json",
+    "work/registration062-public-replay-v1/sourceOnly/input-manifest.json",
+    "work/registration062-public-replay-v1/sourceOnly/process-completion.json",
+    "work/registration062-public-replay-v1/tiny/input-manifest.json",
+    "work/registration062-public-replay-v1/tiny/process-completion.json",
+    "work/registration062-public-replay-v1/tiny/controls-attempt001/report.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/stat/process-completion.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/stat/report.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/stat/audit-rejections.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/lstat/process-completion.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/lstat/report.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/lstat/audit-rejections.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/listdir/process-completion.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/listdir/report.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/listdir/audit-rejections.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/scandir/process-completion.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/scandir/report.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/scandir/audit-rejections.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/open/process-completion.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/open/report.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/open/audit-rejections.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/original/process-completion.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/original/report.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/original/audit-rejections.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/cached/process-completion.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/cached/report.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/cached/audit-rejections.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/library/process-completion.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/library/report.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/library/audit-rejections.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/source-write/process-completion.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/source-write/report.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/source-write/audit-rejections.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/generated-stat/process-completion.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/generated-stat/report.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/generated-stat/audit-rejections.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/caught-at-exit-child-zero/process-completion.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/caught-at-exit-child-zero/report.json",
+    "work/registration062-public-replay-v1/boundary-controls-v1/caught-at-exit-child-zero/audit-rejections.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

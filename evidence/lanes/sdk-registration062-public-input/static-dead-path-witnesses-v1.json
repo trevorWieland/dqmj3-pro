@@ -1,0 +1,131 @@
+{
+  "status": "auditable-invariants-pending-independent-review",
+  "constructor": {
+    "entry": "0x495e28",
+    "zeroStores": [
+      {
+        "address": "0x495e3c",
+        "instructionSha256": "5ec95306cddac064eafeef2d2a3c034afc427dad5a6c6abde4fa1a3d0f162725"
+      },
+      {
+        "address": "0x495e40",
+        "instructionSha256": "c25d30baa834d236ba78b3c42a91fd0e505df236e38bdc9c2dc444ca38da6b00"
+      },
+      {
+        "address": "0x495e48",
+        "instructionSha256": "49db1dc64b2f1f50deec4e5abdc8f38dfbd3d3b185f1ccb121b7bc930d9f9ac7"
+      },
+      {
+        "address": "0x495e4c",
+        "instructionSha256": "4c48090a0a10d6404f826dd22dc42d3ec96440573436fdd8255b20d45c433808"
+      }
+    ],
+    "invariant": "before allocator entry, begin=end=limit=0; qualified allocator does not reenter/mutate registry",
+    "dominatedGroups": [
+      {
+        "pcs": [
+          "0x495ec0",
+          "0x495ec4",
+          "0x495ec8",
+          "0x495ecc",
+          "0x495ed0",
+          "0x495ed4",
+          "0x495ed8",
+          "0x495edc",
+          "0x495ee0",
+          "0x495ee4"
+        ],
+        "reason": "begin==end==0 skips copy loop"
+      },
+      {
+        "pcs": [
+          "0x495efc",
+          "0x495f00",
+          "0x495f04"
+        ],
+        "reason": "end<=begin from zero vector skips positive-count parity work"
+      },
+      {
+        "pcs": [
+          "0x495f24",
+          "0x495f28",
+          "0x495f2c"
+        ],
+        "reason": "count0 yields loop bounds1 and1; repeated destruction loop skipped"
+      },
+      {
+        "pcs": [
+          "0x495f38",
+          "0x495f3c",
+          "0x495f40",
+          "0x495f44",
+          "0x495f48",
+          "0x495f4c",
+          "0x495f50",
+          "0x495f54"
+        ],
+        "reason": "old begin remainsNULL, so no prior allocation exists to dispose"
+      }
+    ]
+  },
+  "destructor": {
+    "entry": "0x495f88",
+    "controlWitnesses": [
+      {
+        "address": "0x495f98",
+        "instructionSha256": "78c8458419ba46d61b21b71a705b1e3606714f4233eb26287aa46a2178352500"
+      },
+      {
+        "address": "0x495f9c",
+        "instructionSha256": "27f02ccf7ea5b0a353fb2f440c37bb29bb4594580da3b4c15ec91e8222eaa40e"
+      },
+      {
+        "address": "0x495fa0",
+        "instructionSha256": "54fc011ca687a396c4a6463ece458cf14aa86cebcac590bd136956f3f01c52eb"
+      },
+      {
+        "address": "0x496008",
+        "instructionSha256": "8aab9e2ea7e503dcf4f1b57c748637a993d76f94f4336ab785facecdb2001ab5"
+      },
+      {
+        "address": "0x49600c",
+        "instructionSha256": "8f1462cce4545b402a1adea34966b52a32120312e9295fe305b4dd3121505547"
+      },
+      {
+        "address": "0x496010",
+        "instructionSha256": "73f3bf3c3ba088781bb2acc427834379ca4f46c176f055bca6d06633d20b4b0e"
+      },
+      {
+        "address": "0x496014",
+        "instructionSha256": "53bcce673db7e525e8748572082ff0d489d9104c4c426e0619fc4b447ac41714"
+      },
+      {
+        "address": "0x496018",
+        "instructionSha256": "fc19b7ef24fe5d9c5ad36bec564b4167e54a120199f9f9ae11308e8880a539f2"
+      },
+      {
+        "address": "0x49601c",
+        "instructionSha256": "2caf82b0c9211dfcfd6bd6c3fd9d26e474f756a271435cffba3b02062d310d36"
+      },
+      {
+        "address": "0x496028",
+        "instructionSha256": "eeb0dc08f78f8618e39569290b36ea8eab96db78408ca518157da93042af8ae5"
+      }
+    ],
+    "invariant": "sorted unique keys with nonnull borrowed values; stable mutex/allocator callbacks; unregister(firstKey>>4,firstKey&15) always removes exactly the first element, reducing count by1 until0",
+    "unvisitedPcs": [
+      "0x495fe0",
+      "0x495fe4",
+      "0x495fe8"
+    ],
+    "reason": "generic vector destruction is reached only when begin==end, so its repeated count loop cannot execute"
+  },
+  "notProven": [
+    "arbitrary fabricated noncanonical vectors",
+    "reentrant mutation",
+    "nonnull disposer semantics beyond actualdefaultfree callback",
+    "allocation failure returning normally",
+    "all predicated instruction outcomes"
+  ],
+  "sourceCreditGranted": 0
+}

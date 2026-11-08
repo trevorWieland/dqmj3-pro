@@ -42,7 +42,8 @@
       "wave062-owner",
       "wave067-queue",
       "wave062-heap",
-      "wave068-bootstrap"
+      "wave068-bootstrap",
+      "wave062-registration"
     ]
   },
   "units": [
@@ -11449,6 +11450,93 @@
         "src/native/wave066-request/request.h"
       ],
       "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave062-registration/bindings062ad.c",
+      "headers": [
+        "src/native/wave062-heap/heap062ac.h",
+        "src/native/wave062-owner/include/config062ab.h",
+        "src/native/wave062-owner/include/owner062ab.h",
+        "src/native/wave062-registration/registry062ad.h",
+        "src/native/wave062-runtime/include/timer062aa.h",
+        "src/native/wave062-sdk/include/clock062u.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "role": "bounded-component",
+      "includeDirectories": [
+        "src/native/wave062-owner/include",
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include",
+        "src/native/wave062-heap"
+      ]
+    },
+    {
+      "source": "src/native/wave062-registration/lifetime062ad.c",
+      "headers": [
+        "src/native/wave062-owner/include/config062ab.h",
+        "src/native/wave062-owner/include/owner062ab.h",
+        "src/native/wave062-registration/registry062ad.h",
+        "src/native/wave062-runtime/include/timer062aa.h",
+        "src/native/wave062-sdk/include/clock062u.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "role": "bounded-component",
+      "includeDirectories": [
+        "src/native/wave062-owner/include",
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ]
+    },
+    {
+      "source": "src/native/wave062-registration/lookup062ad.c",
+      "headers": [
+        "src/native/wave062-owner/include/config062ab.h",
+        "src/native/wave062-owner/include/owner062ab.h",
+        "src/native/wave062-registration/registry062ad.h",
+        "src/native/wave062-runtime/include/timer062aa.h",
+        "src/native/wave062-sdk/include/clock062u.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "role": "bounded-component",
+      "includeDirectories": [
+        "src/native/wave062-owner/include",
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ]
+    },
+    {
+      "source": "src/native/wave062-registration/register062ad.c",
+      "headers": [
+        "src/native/wave062-owner/include/config062ab.h",
+        "src/native/wave062-owner/include/owner062ab.h",
+        "src/native/wave062-registration/registry062ad.h",
+        "src/native/wave062-runtime/include/timer062aa.h",
+        "src/native/wave062-sdk/include/clock062u.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "role": "bounded-component",
+      "includeDirectories": [
+        "src/native/wave062-owner/include",
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ]
+    },
+    {
+      "source": "src/native/wave062-registration/remove062ad.c",
+      "headers": [
+        "src/native/wave062-owner/include/config062ab.h",
+        "src/native/wave062-owner/include/owner062ab.h",
+        "src/native/wave062-registration/registry062ad.h",
+        "src/native/wave062-runtime/include/timer062aa.h",
+        "src/native/wave062-sdk/include/clock062u.h",
+        "src/native/wave062-sdk/include/sdk062s.h"
+      ],
+      "role": "bounded-component",
+      "includeDirectories": [
+        "src/native/wave062-owner/include",
+        "src/native/wave062-runtime/include",
+        "src/native/wave062-sdk/include"
+      ]
     }
   ],
   "excludedSources": [
