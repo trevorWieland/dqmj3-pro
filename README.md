@@ -10,6 +10,8 @@ The separate working-C registry contains **479 functions** (465 medium confidenc
 
 The [public SDK sources](docs/native-sdk062-public-replay.md) contain 19 production C units; their committed independent replay and 43-function bounded admission are complete. The [binding inventory](docs/native-binding-inventory.md) adds seven measured entries while preserving the initialized-text denominator and source-credit totals. The [file callable inventory](docs/native-file-inventory.md) adds nine further entries, separating 224 instruction bytes from a 20-byte indexed table without granting source credit.
 
+The [shader callback inventory](docs/native-shader-inventory.md) adds one observed ARM array-constructor callback, bringing discovered canonical entries to 26,659. Its 112 instruction bytes and excluded 8-byte literal pool grant no source credit; historical inventory completeness remains unproved.
+
 ## Established inputs
 
 The [resource CPU replay](docs/native-resource065-public-replay.md) independently qualifies nine bounded kernels with complete canonical extents, including discontiguous cold fragments. It passed 141 pipeline tests, 39 returning controls and byte-identical reproduction of all 461 native artifacts; the main resource constructor/finalizer and complete effect graph remain open.

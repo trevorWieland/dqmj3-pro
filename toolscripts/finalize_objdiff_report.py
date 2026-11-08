@@ -9,7 +9,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from configure_objdiff import contained
-import native_file_inventory as native_census_overlay
+import native_shader_inventory as native_census_overlay
 
 
 ROOT = Path(__file__).resolve().parents[1]
