@@ -226,3 +226,15 @@
 #define fn_0010555c effect_file_bootstrap_shutdown068
 #define fn_0010c4f4 effect_file_filesystem_shutdown068
 #define fn_005354a4 particle_velocity_scale019
+#define fn_0044da8c effect_file_namespace_construct071
+#define fn_00123114 effect_file_namespace_alias071
+#define fn_0014d7ec effect_file_device_allocate072
+#define fn_0014d8d4 effect_file_device_construct072
+#define fn_0014d2ec effect_file_device_initialize072
+#define fn_0013b294 effect_file_open_direct072
+#define fn_0044dcc8 effect_file_stream_read072
+#define fn_0044e680 effect_file_read_ipc072
+#define fn_0015e5e0 effect_file_pool_initialize072
+#define fn_0015cf6c effect_file_priority072
+#define fn_0014d9b8 effect_file_cached_service072
+#define fn_0016e9a8 effect_file_priority_ipc072

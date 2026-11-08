@@ -31,6 +31,19 @@ def generate(root):
     return '\n'.join(lines) + '\n'
 
 
+def write_generated(target,content):
+    raw=target.read_bytes() if target.is_file() else b''
+    previous=raw.decode('utf-8').replace('\r\n','\n').replace('\r','\n')
+    if previous==content:
+        return False
+    target.parent.mkdir(parents=True,exist_ok=True)
+    if previous and previous.endswith('\n') and content.startswith(previous):
+        target.write_bytes(raw+content[len(previous):].encode('utf-8'))
+    else:
+        target.write_bytes(content.encode('utf-8'))
+    return True
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--check', action='store_true')
@@ -47,7 +60,5 @@ if __name__ == '__main__':
             if not target.is_file() or target.read_text(encoding='utf-8') != content:
                 raise ValueError('Generated source names header is stale: ' + target.name)
         else:
-            target.parent.mkdir(exist_ok=True)
-            if not target.is_file() or target.read_text(encoding='utf-8') != content:
-                target.write_bytes(content.encode('utf-8'))
+            write_generated(target,content)
     print(json.dumps({'mappings': len(generated.splitlines()), 'headers': len(targets), 'buildOutputChanged': False}))

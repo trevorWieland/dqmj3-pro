@@ -32,6 +32,8 @@ jobs:
         run: python -I -S toolscripts/bootstrap_report_python.py
       - name: Check generated source-link names
         run: tools/ci-python-3.13.5/python.exe -I -S toolscripts/generate_source_names.py --check
+      - name: Check source-name output preserves existing proof bytes
+        run: tools/ci-python-3.13.5/python.exe -I -S -m unittest discover -s tests -p test_generate_source_names_output.py -v
       - name: Check frozen public download integrity and retries
         run: tools/ci-python-3.13.5/python.exe -I -S -m unittest discover -s tests -p test_bootstrap_report_tools.py -v
       - name: Materialize frozen public report tools
