@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "name": "effect065",
+  "producerSteps": [
+    {
+      "name": "effect065-proof",
+      "args": [
+        "toolscripts/public_effect065_replay.py",
+        "proof"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "public_effect065_replay",
+    "native_effect065",
+    "native_provider_inventory",
+    "native_callback_inventory",
+    "compile_source_include_dirs"
+  ],
+  "packets": [
+    "work/native-effect065/public-replay-v1/ready.json",
+    "work/native-effect065/public-replay-v1/packet.json",
+    "work/native-effect065/public-replay-v1/input-manifest.json",
+    "work/native-effect065/public-replay-v1/tests.log",
+    "work/native-effect065/public-replay-v1/shader-corpus/report.json",
+    "work/native-effect065/public-replay-v1/shader-lifetime.json",
+    "work/native-effect065/public-replay-v1/shader-negative/report.json",
+    "work/native-effect065/public-replay-v1/preview-corpus/report.json",
+    "work/native-effect065/public-replay-v1/preview-reuse/report.json",
+    "work/native-effect065/public-replay-v1/preview-negative/report.json",
+    "work/native-effect065/public-replay-v1/preview-source-only/report.json",
+    "work/native-effect065/public-replay-v1/preview-corpus/reference-inputs.json",
+    "work/effect065-public/v1/input-guard.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

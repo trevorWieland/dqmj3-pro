@@ -31,7 +31,8 @@
       "wave059",
       "wave061",
       "wave062",
-      "wave063"
+      "wave063",
+      "wave065"
     ]
   },
   "units": [
@@ -10345,6 +10346,21 @@
       "includeDirectories": [
         "src/native/wave055",
         "src/native/wave055/controller-deps-v1"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065/effect_shader.c",
+      "headers": [
+        "src/native/wave065/effect_services.h",
+        "src/native/wave065/effect_shader.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065/effect_preview.c",
+      "headers": [
+        "src/native/wave065/effect_preview.h"
       ],
       "role": "bounded-component"
     }
