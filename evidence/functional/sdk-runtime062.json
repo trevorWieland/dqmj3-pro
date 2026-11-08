@@ -1,0 +1,1854 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-sdk-runtime-CPU",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "functions": [
+    {
+      "symbol": "fn_0047a008",
+      "source": {
+        "path": "src/native/wave062-runtime/binding/binding_active062v.c",
+        "bytes": 239,
+        "sha256": "84d755f229ff6751916f8fdb7e6d99a2ae1348850296d4a28d3b8a873a67b64a"
+      },
+      "sourceName": "sdk_binding_active062v",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 4694024,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 24,
+      "originalInstructionRanges": [
+        {
+          "start": 4694024,
+          "endExclusive": 4694048,
+          "bytes": 24
+        }
+      ],
+      "originalBodySha256": "8663a05153d75c35af8139fd83c7b8104c60170eb035ed061d94b82d7cce38f2",
+      "reportEntryBytes": 24,
+      "originalReferencedLiteralWords": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Measured selected base-vtable policy/active/no-op notification;state is U16 at target20/native32,dependents U32 at24/native36;requested state and scalar return are U32.",
+        "limits": [
+          "No full484660 caller/task/startup or arbitrary derived-vtable behavior."
+        ],
+        "originalStagePcAccounting": {
+          "selectedInstructionBytes": 264,
+          "totalPcs": 66,
+          "pcVisits": 66,
+          "unvisited": []
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_0047a028",
+      "source": {
+        "path": "src/native/wave062-runtime/binding/binding_active062v.c",
+        "bytes": 239,
+        "sha256": "84d755f229ff6751916f8fdb7e6d99a2ae1348850296d4a28d3b8a873a67b64a"
+      },
+      "sourceName": "sdk_binding_notify062v",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 4694056,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 4,
+      "originalInstructionRanges": [
+        {
+          "start": 4694056,
+          "endExclusive": 4694060,
+          "bytes": 4
+        }
+      ],
+      "originalBodySha256": "379bec29dccd0a93c94826144d7ef6e42fab64ef195a3b8313a16926f66f388f",
+      "reportEntryBytes": 4,
+      "originalReferencedLiteralWords": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Measured selected base-vtable policy/active/no-op notification;state is U16 at target20/native32,dependents U32 at24/native36;requested state and scalar return are U32.",
+        "limits": [
+          "No full484660 caller/task/startup or arbitrary derived-vtable behavior."
+        ],
+        "originalStagePcAccounting": {
+          "selectedInstructionBytes": 264,
+          "totalPcs": 66,
+          "pcVisits": 66,
+          "unvisited": []
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_0047a02c",
+      "source": {
+        "path": "src/native/wave062-runtime/binding/binding_policy062v.c",
+        "bytes": 774,
+        "sha256": "6f6985d9b2be929949894a442e4730927b8dfe09bd17bfd7858d030ab3c41f3a"
+      },
+      "sourceName": "sdk_binding_can_transition062v",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 4694060,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 236,
+      "originalInstructionRanges": [
+        {
+          "start": 4694060,
+          "endExclusive": 4694296,
+          "bytes": 236
+        }
+      ],
+      "originalBodySha256": "06ed267eae298d4546bd8a2d5872b7e82222a9c003506a3a9dc52091db2019b9",
+      "reportEntryBytes": 236,
+      "originalReferencedLiteralWords": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Measured selected base-vtable policy/active/no-op notification;state is U16 at target20/native32,dependents U32 at24/native36;requested state and scalar return are U32. NULL object is allowed only for original early-success requested128or256;other requests require valid complete prefix.",
+        "limits": [
+          "No full484660 caller/task/startup or arbitrary derived-vtable behavior."
+        ],
+        "originalStagePcAccounting": {
+          "selectedInstructionBytes": 264,
+          "totalPcs": 66,
+          "pcVisits": 66,
+          "unvisited": []
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_00479edc",
+      "source": {
+        "path": "src/native/wave062-runtime/binding-start/binding_start062w.c",
+        "bytes": 1075,
+        "sha256": "7b32769b8c24e0787abb72d7c4b9fc44996c4408c29ae632bc7f5a93194e5653"
+      },
+      "sourceName": "sdk_binding_start062w",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 4693724,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 276,
+      "originalInstructionRanges": [
+        {
+          "start": 4693724,
+          "endExclusive": 4694000,
+          "bytes": 276
+        }
+      ],
+      "originalBodySha256": "2f81c50ceba877ac8650262f58f93e3da61da0930192af3254a1d18018768f9a",
+      "reportEntryBytes": 276,
+      "originalReferencedLiteralWords": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Exact32-byte target/48-byte native binding object and measured actual base ready/state methods.",
+        "limits": [
+          "False/reentrant derived providers are not qualified;unreachable failure arms remain authored.",
+          "No full481940/484660 owner."
+        ],
+        "originalStagePcAccounting": {
+          "totalPcs": 78,
+          "pcVisits": 78,
+          "unvisited": []
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_00479ffc",
+      "source": {
+        "path": "src/native/wave062-runtime/binding-start/binding_providers062w.c",
+        "bytes": 574,
+        "sha256": "f2a7fb3c9031d19ee812e46f34428ebb1d4148e5ecfefa43df9c5661366a44ed"
+      },
+      "sourceName": "sdk_binding_query062w",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 4694012,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 12,
+      "originalInstructionRanges": [
+        {
+          "start": 4694012,
+          "endExclusive": 4694024,
+          "bytes": 12
+        }
+      ],
+      "originalBodySha256": "abbaa29604d1090deeb7aa18ec57c57b89d2108c55beaa972a5db8f0c3ce9c03",
+      "reportEntryBytes": 12,
+      "originalReferencedLiteralWords": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Exact32-byte target/48-byte native binding object and measured actual base ready/state methods.",
+        "limits": [
+          "False/reentrant derived providers are not qualified;unreachable failure arms remain authored.",
+          "No full481940/484660 owner."
+        ],
+        "originalStagePcAccounting": {
+          "totalPcs": 78,
+          "pcVisits": 78,
+          "unvisited": []
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_0047a120",
+      "source": {
+        "path": "src/native/wave062-runtime/binding-start/binding_providers062w.c",
+        "bytes": 574,
+        "sha256": "f2a7fb3c9031d19ee812e46f34428ebb1d4148e5ecfefa43df9c5661366a44ed"
+      },
+      "sourceName": "sdk_binding_poll_ready062w",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 4694304,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 8,
+      "originalInstructionRanges": [
+        {
+          "start": 4694304,
+          "endExclusive": 4694312,
+          "bytes": 8
+        }
+      ],
+      "originalBodySha256": "007f34a6c3441b0240da53f253e513b959105da2d8803255e1856aa48f48db47",
+      "reportEntryBytes": 8,
+      "originalReferencedLiteralWords": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Exact32-byte target/48-byte native binding object and measured actual base ready/state methods.",
+        "limits": [
+          "False/reentrant derived providers are not qualified;unreachable failure arms remain authored.",
+          "No full481940/484660 owner."
+        ],
+        "originalStagePcAccounting": {
+          "totalPcs": 78,
+          "pcVisits": 78,
+          "unvisited": []
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_0047a128",
+      "source": {
+        "path": "src/native/wave062-runtime/binding-start/binding_providers062w.c",
+        "bytes": 574,
+        "sha256": "f2a7fb3c9031d19ee812e46f34428ebb1d4148e5ecfefa43df9c5661366a44ed"
+      },
+      "sourceName": "sdk_binding_start_ready062w",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 4694312,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 8,
+      "originalInstructionRanges": [
+        {
+          "start": 4694312,
+          "endExclusive": 4694320,
+          "bytes": 8
+        }
+      ],
+      "originalBodySha256": "007f34a6c3441b0240da53f253e513b959105da2d8803255e1856aa48f48db47",
+      "reportEntryBytes": 8,
+      "originalReferencedLiteralWords": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Exact32-byte target/48-byte native binding object and measured actual base ready/state methods.",
+        "limits": [
+          "False/reentrant derived providers are not qualified;unreachable failure arms remain authored.",
+          "No full481940/484660 owner."
+        ],
+        "originalStagePcAccounting": {
+          "totalPcs": 78,
+          "pcVisits": 78,
+          "unvisited": []
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_0047a49c",
+      "source": {
+        "path": "src/native/wave062-runtime/binding-start/binding_providers062w.c",
+        "bytes": 574,
+        "sha256": "f2a7fb3c9031d19ee812e46f34428ebb1d4148e5ecfefa43df9c5661366a44ed"
+      },
+      "sourceName": "sdk_binding_state062w",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 4695196,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 8,
+      "originalInstructionRanges": [
+        {
+          "start": 4695196,
+          "endExclusive": 4695204,
+          "bytes": 8
+        }
+      ],
+      "originalBodySha256": "d9b0b5a5cbd3294c9c224137c64792b79b8445e8429e834f3b75247587f9e764",
+      "reportEntryBytes": 8,
+      "originalReferencedLiteralWords": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Exact32-byte target/48-byte native binding object and measured actual base ready/state methods.",
+        "limits": [
+          "False/reentrant derived providers are not qualified;unreachable failure arms remain authored.",
+          "No full481940/484660 owner."
+        ],
+        "originalStagePcAccounting": {
+          "totalPcs": 78,
+          "pcVisits": 78,
+          "unvisited": []
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_0015e6f0",
+      "source": {
+        "path": "src/native/wave062-runtime/construction/wide_owner062x.c",
+        "bytes": 1042,
+        "sha256": "6e8bccc7d39dbca6a591d868d9246993145088bbf8cdb2a9b07fa4f97a4ffec5"
+      },
+      "sourceName": "sdk_wide_create062x",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 1435376,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 80,
+      "originalInstructionRanges": [
+        {
+          "start": 1435376,
+          "endExclusive": 1435456,
+          "bytes": 80
+        }
+      ],
+      "originalBodySha256": "2e29fcfe9036729db504d81fa219c20b488c8e8d8acad3d7e45a233f995485de",
+      "reportEntryBytes": 80,
+      "originalReferencedLiteralWords": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Aligned bounded raw16-bit NUL-terminated storage;successful allocation;exact binding prefix and separate methods-prefixed pointer-list.",
+        "limits": [
+          "No wchar_t/Unicode-normalization claim.",
+          "Wide default disposal remains a typed unqualified dependency;nonnull observer disposal is qualified.",
+          "Pointer-list payload is opaque,not112-byte full-address nodes or52/88/56-byte trees."
+        ],
+        "originalStagePcAccounting": {
+          "totalPcs": 108,
+          "visitedPcs": 106,
+          "unvisited": [
+            1511304,
+            1511308
+          ],
+          "reason": "default SDK disposal branch unqualified;source retains typed dependency"
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_00170f54",
+      "source": {
+        "path": "src/native/wave062-runtime/construction/wide_owner062x.c",
+        "bytes": 1042,
+        "sha256": "6e8bccc7d39dbca6a591d868d9246993145088bbf8cdb2a9b07fa4f97a4ffec5"
+      },
+      "sourceName": "sdk_wide_destroy062x",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 1511252,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 68,
+      "originalInstructionRanges": [
+        {
+          "start": 1511252,
+          "endExclusive": 1511320,
+          "bytes": 68
+        }
+      ],
+      "originalBodySha256": "76b811e445afed3d3f792a2cfa097ba4aa2a1144f481dce9c94d9b112cb62d16",
+      "reportEntryBytes": 68,
+      "originalReferencedLiteralWords": [
+        {
+          "reader": 1511264,
+          "address": 1511320,
+          "bytes": 4,
+          "sha256": "9ede7038d283ea099acc9d421af2aa1eb68ca52f004596646bb8370abfd2a941",
+          "separateOwnershipClaim": false
+        }
+      ],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Aligned bounded raw16-bit NUL-terminated storage;successful allocation;exact binding prefix and separate methods-prefixed pointer-list.",
+        "limits": [
+          "No wchar_t/Unicode-normalization claim.",
+          "Wide default disposal remains a typed unqualified dependency;nonnull observer disposal is qualified.",
+          "Pointer-list payload is opaque,not112-byte full-address nodes or52/88/56-byte trees."
+        ],
+        "originalStagePcAccounting": {
+          "totalPcs": 108,
+          "visitedPcs": 106,
+          "unvisited": [
+            1511304,
+            1511308
+          ],
+          "reason": "default SDK disposal branch unqualified;source retains typed dependency"
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_0047a4a4",
+      "source": {
+        "path": "src/native/wave062-runtime/construction/binding_initialize062x.c",
+        "bytes": 612,
+        "sha256": "b380e6302432b65ae01661e569b2eb022eb86d6d34ccc9f937b3045661867f1a"
+      },
+      "sourceName": "sdk_binding_initialize062x",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 4695204,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 80,
+      "originalInstructionRanges": [
+        {
+          "start": 4695204,
+          "endExclusive": 4695284,
+          "bytes": 80
+        }
+      ],
+      "originalBodySha256": "6201d0afec689ea381c9147bbad90edafd6191be5eb3ac68b814e1d3bdcedefc",
+      "reportEntryBytes": 80,
+      "originalReferencedLiteralWords": [
+        {
+          "reader": 4695228,
+          "address": 4695284,
+          "bytes": 4,
+          "sha256": "add04c86698daac01ba289db59019408bfef6579270996db034321f95f25771c",
+          "separateOwnershipClaim": false
+        },
+        {
+          "reader": 4695232,
+          "address": 4695288,
+          "bytes": 4,
+          "sha256": "9ede7038d283ea099acc9d421af2aa1eb68ca52f004596646bb8370abfd2a941",
+          "separateOwnershipClaim": false
+        }
+      ],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Aligned bounded raw16-bit NUL-terminated storage;successful allocation;exact binding prefix and separate methods-prefixed pointer-list.",
+        "limits": [
+          "No wchar_t/Unicode-normalization claim.",
+          "Wide default disposal remains a typed unqualified dependency;nonnull observer disposal is qualified.",
+          "Pointer-list payload is opaque,not112-byte full-address nodes or52/88/56-byte trees."
+        ],
+        "originalStagePcAccounting": {
+          "totalPcs": 108,
+          "visitedPcs": 106,
+          "unvisited": [
+            1511304,
+            1511308
+          ],
+          "reason": "default SDK disposal branch unqualified;source retains typed dependency"
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_0045a21c",
+      "source": {
+        "path": "src/native/wave062-runtime/construction/list_initialize062x.c",
+        "bytes": 727,
+        "sha256": "b7bc84861d77a6930a2612177230413c8166b76f8ffd4d561391ff2acaed8264"
+      },
+      "sourceName": "sdk_address_list_initialize062x",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 4563484,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 132,
+      "originalInstructionRanges": [
+        {
+          "start": 4563484,
+          "endExclusive": 4563616,
+          "bytes": 132
+        }
+      ],
+      "originalBodySha256": "37c6f9e490c92d4609019c9f9d215494d8aee3872eda3841449ab3d4c2e59a09",
+      "reportEntryBytes": 132,
+      "originalReferencedLiteralWords": [
+        {
+          "reader": 4563496,
+          "address": 4563616,
+          "bytes": 4,
+          "sha256": "42b332e94bdbad24719309344750415a43fcfe10199b704198a1d8748e3b0473",
+          "separateOwnershipClaim": false
+        }
+      ],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Aligned bounded raw16-bit NUL-terminated storage;successful allocation;exact binding prefix and separate methods-prefixed pointer-list.",
+        "limits": [
+          "No wchar_t/Unicode-normalization claim.",
+          "Wide default disposal remains a typed unqualified dependency;nonnull observer disposal is qualified.",
+          "Pointer-list payload is opaque,not112-byte full-address nodes or52/88/56-byte trees."
+        ],
+        "originalStagePcAccounting": {
+          "totalPcs": 108,
+          "visitedPcs": 106,
+          "unvisited": [
+            1511304,
+            1511308
+          ],
+          "reason": "default SDK disposal branch unqualified;source retains typed dependency"
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_001003e0",
+      "source": {
+        "path": "src/native/wave062-runtime/construction/wide_units062x.c",
+        "bytes": 515,
+        "sha256": "4dad75f4c980a6f8bde8a00f22353c02bce8e1611d65b4c39831e5a9192258ce"
+      },
+      "sourceName": "sdk_wide_copy062x",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 1049568,
+        "mode": "Thumb",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 18,
+      "originalInstructionRanges": [
+        {
+          "start": 1049568,
+          "endExclusive": 1049586,
+          "bytes": 18
+        }
+      ],
+      "originalBodySha256": "bdf215b5cb438a1f0c07f469439f5d201fc4b90ae88de7f9877a08e657fe1244",
+      "reportEntryBytes": 18,
+      "originalReferencedLiteralWords": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Aligned bounded raw16-bit NUL-terminated storage;successful allocation;exact binding prefix and separate methods-prefixed pointer-list.",
+        "limits": [
+          "No wchar_t/Unicode-normalization claim.",
+          "Wide default disposal remains a typed unqualified dependency;nonnull observer disposal is qualified.",
+          "Pointer-list payload is opaque,not112-byte full-address nodes or52/88/56-byte trees."
+        ],
+        "originalStagePcAccounting": {
+          "totalPcs": 108,
+          "visitedPcs": 106,
+          "unvisited": [
+            1511304,
+            1511308
+          ],
+          "reason": "default SDK disposal branch unqualified;source retains typed dependency"
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_001775e8",
+      "source": {
+        "path": "src/native/wave062-runtime/manager/thread_index062y.c",
+        "bytes": 1412,
+        "sha256": "9a30bcffb19b3c415470bd192b85f05eea9e0a4cded4e97eb8af2d3b15102fab"
+      },
+      "sourceName": "sdk_thread_index062y",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 1537512,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 340,
+      "originalInstructionRanges": [
+        {
+          "start": 1537512,
+          "endExclusive": 1537852,
+          "bytes": 340
+        }
+      ],
+      "originalBodySha256": "24c1c956af43d352bb0bc466bc4ff3c212111acc18b67d6387fdd4e6149adc85",
+      "reportEntryBytes": 340,
+      "originalReferencedLiteralWords": [
+        {
+          "reader": 1537544,
+          "address": 1537852,
+          "bytes": 4,
+          "sha256": "0b1f4cc15e5bccc7c7914cbb3a8fb0ad26d38e67f19cf03136cd7d9e830c82f6",
+          "separateOwnershipClaim": false
+        }
+      ],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Existing exact numeric SDK map/context;actual Windows thread/TLS plus original SVC primitive route;context-index value is U32.",
+        "limits": [
+          "Negative SDK status15e294 remains a typed unqualified error dependency.",
+          "Selector predecessor-left-subtree arm is entry-unreachable by last-search-left-null invariant;source arm retained.",
+          "No duplicate or whole-entry17790c insertion credit."
+        ],
+        "originalStagePcAccounting": {
+          "totalPcs": 160,
+          "pcVisits": 152,
+          "unvisited": [
+            1538180,
+            1538184,
+            1538188,
+            1538192,
+            1538196,
+            1538200,
+            1538204,
+            1538208
+          ],
+          "reason": "left=true means final BST search followed parent.left toNULL;no intervening write or call;the generic predecessor left-subtree arm remains in C but is unreachable at this entry",
+          "negativeSdkStatusBranch": "conditional BL PCs may be visited with conditionfalse;actual15e294 negative-status execution is excluded"
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_001777e0",
+      "source": {
+        "path": "src/native/wave062-runtime/manager/map_select062y.c",
+        "bytes": 1419,
+        "sha256": "997b0da982220db77ccfc62a72022932dffa20b51134c76f2d1b5f9ef7e2977a"
+      },
+      "sourceName": "sdk_map_select062y",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 1538016,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 300,
+      "originalInstructionRanges": [
+        {
+          "start": 1538016,
+          "endExclusive": 1538316,
+          "bytes": 300
+        }
+      ],
+      "originalBodySha256": "e1a7af72b7c9702cb09df2bb3820f33e8267e339d79546bb4fa4d1f93f046970",
+      "reportEntryBytes": 300,
+      "originalReferencedLiteralWords": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Existing exact numeric SDK map/context;actual Windows thread/TLS plus original SVC primitive route;context-index value is U32.",
+        "limits": [
+          "Negative SDK status15e294 remains a typed unqualified error dependency.",
+          "Selector predecessor-left-subtree arm is entry-unreachable by last-search-left-null invariant;source arm retained.",
+          "No duplicate or whole-entry17790c insertion credit."
+        ],
+        "originalStagePcAccounting": {
+          "totalPcs": 160,
+          "pcVisits": 152,
+          "unvisited": [
+            1538180,
+            1538184,
+            1538188,
+            1538192,
+            1538196,
+            1538200,
+            1538204,
+            1538208
+          ],
+          "reason": "left=true means final BST search followed parent.left toNULL;no intervening write or call;the generic predecessor left-subtree arm remains in C but is unreachable at this entry",
+          "negativeSdkStatusBranch": "conditional BL PCs may be visited with conditionfalse;actual15e294 negative-status execution is excluded"
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_0045e880",
+      "source": {
+        "path": "src/native/wave062-runtime/timer/timer_initialize062aa.c",
+        "bytes": 973,
+        "sha256": "d85a14cb0dc79339d1c438be576897989b922778b7564e7eff18aea06efd346b"
+      },
+      "sourceName": "sdk_timer_initialize062aa",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 4581504,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 176,
+      "originalInstructionRanges": [
+        {
+          "start": 4581504,
+          "endExclusive": 4581680,
+          "bytes": 176
+        }
+      ],
+      "originalBodySha256": "f1bf7a46809e15588c59a255b012c8edfb5bfa6a4d94ce617b6aa67468f603bb",
+      "reportEntryBytes": 176,
+      "originalReferencedLiteralWords": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Valid nonaliased finite endpoint-pair trees;successful bounded allocation;actual original/frozen SDK current body and explicit compiled deterministic backend. Constructor-initialized duplicate-policy byte is0 throughout the qualified API sequences;external mutation to nonzero is not qualified.",
+        "limits": [
+          "No allocation failure/concurrent or reentrant callbacks.",
+          "No removal45e744/wrapper7654a4/full4b5afc/46ad80/481940/484660 owner.",
+          "Actual pointer-low-byte metadata retained;no cross-process raw-memory identity."
+        ],
+        "originalStagePcAccounting": {
+          "totalPcs": 505,
+          "pcVisits": 496,
+          "unvisited": [
+            4580956,
+            4580960,
+            4580964,
+            4580968,
+            4580972,
+            4580976,
+            4580980,
+            4580984,
+            4580988
+          ]
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_0045e504",
+      "source": {
+        "path": "src/native/wave062-runtime/timer/timer_set062aa.c",
+        "bytes": 1967,
+        "sha256": "e0128475f7f3eedb7404432260acdf75592aa403547afc510c2798b7eee99c15"
+      },
+      "sourceName": "sdk_timer_set062aa",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 4580612,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 572,
+      "originalInstructionRanges": [
+        {
+          "start": 4580612,
+          "endExclusive": 4581184,
+          "bytes": 572
+        }
+      ],
+      "originalBodySha256": "6521c8b475c67156229234e8dd903a76407552306e2aa198811266eb9309f0e9",
+      "reportEntryBytes": 572,
+      "originalReferencedLiteralWords": [
+        {
+          "reader": 4580708,
+          "address": 4581184,
+          "bytes": 4,
+          "sha256": "b9f0143c30f5cf21fbc176bec3b3098f78ae8905395429fff4f1f91dc541fb45",
+          "separateOwnershipClaim": false
+        }
+      ],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Valid nonaliased finite endpoint-pair trees;successful bounded allocation;actual original/frozen SDK current body and explicit compiled deterministic backend. Constructor-initialized duplicate-policy byte is0 throughout the qualified API sequences;external mutation to nonzero is not qualified.",
+        "limits": [
+          "No allocation failure/concurrent or reentrant callbacks.",
+          "No removal45e744/wrapper7654a4/full4b5afc/46ad80/481940/484660 owner.",
+          "Actual pointer-low-byte metadata retained;no cross-process raw-memory identity.",
+          "Nine predecessor-left-subtree PCs are entry-unreachable without an intervening write/call;source arm retained."
+        ],
+        "originalStagePcAccounting": {
+          "totalPcs": 505,
+          "pcVisits": 496,
+          "unvisited": [
+            4580956,
+            4580960,
+            4580964,
+            4580968,
+            4580972,
+            4580976,
+            4580980,
+            4580984,
+            4580988
+          ]
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_0045e3dc",
+      "source": {
+        "path": "src/native/wave062-runtime/timer/timer_update062aa.c",
+        "bytes": 1288,
+        "sha256": "8ffc453c33e511d4a64add26313fb67ffdbbe3ec7e3a7121cd42fd9df2327bd8"
+      },
+      "sourceName": "sdk_timer_update062aa",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 4580316,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 296,
+      "originalInstructionRanges": [
+        {
+          "start": 4580316,
+          "endExclusive": 4580612,
+          "bytes": 296
+        }
+      ],
+      "originalBodySha256": "e59e0fa85214d45e34d8f63decf4376ede7f8cac11b40a8e6ef69dc28b48931e",
+      "reportEntryBytes": 296,
+      "originalReferencedLiteralWords": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Valid nonaliased finite endpoint-pair trees;successful bounded allocation;actual original/frozen SDK current body and explicit compiled deterministic backend. Constructor-initialized duplicate-policy byte is0 throughout the qualified API sequences;external mutation to nonzero is not qualified.",
+        "limits": [
+          "No allocation failure/concurrent or reentrant callbacks.",
+          "No removal45e744/wrapper7654a4/full4b5afc/46ad80/481940/484660 owner.",
+          "Actual pointer-low-byte metadata retained;no cross-process raw-memory identity."
+        ],
+        "originalStagePcAccounting": {
+          "totalPcs": 505,
+          "pcVisits": 496,
+          "unvisited": [
+            4580956,
+            4580960,
+            4580964,
+            4580968,
+            4580972,
+            4580976,
+            4580980,
+            4580984,
+            4580988
+          ]
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    },
+    {
+      "symbol": "fn_00765620",
+      "source": {
+        "path": "src/native/wave062-runtime/timer/timer_insert062aa.c",
+        "bytes": 4626,
+        "sha256": "75c9f5f4b4950e65f32e999366d96f89572c17322aaa86a95e1b8524cf3a622d"
+      },
+      "sourceName": "sdk_timer_insert062aa",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7445,
+        "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+      },
+      "canonicalIdentity": {
+        "address": 7755296,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 976,
+      "originalInstructionRanges": [
+        {
+          "start": 7755296,
+          "endExclusive": 7756272,
+          "bytes": 976
+        }
+      ],
+      "originalBodySha256": "18c659378ac801d565ebee0ec507541b901c85c5267153db50424aad1626694d",
+      "reportEntryBytes": 976,
+      "originalReferencedLiteralWords": [
+        {
+          "reader": 7755500,
+          "address": 7756272,
+          "bytes": 4,
+          "sha256": "b9f0143c30f5cf21fbc176bec3b3098f78ae8905395429fff4f1f91dc541fb45",
+          "separateOwnershipClaim": false
+        }
+      ],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+          "bytes": 3885,
+          "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+        },
+        "originalEntryAndDataWitnesses": {
+          "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+          "bytes": 31490,
+          "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalImageMapped": false,
+        "returningSourceGraphControls": 165,
+        "sameFinalArenaControls": 48,
+        "pipelineTests": 137,
+        "freshPredecessorTests": 69,
+        "guardTests": 6,
+        "sourceOnlyUnits": 565,
+        "functionSpecificDomain": "Valid nonaliased finite endpoint-pair trees;successful bounded allocation;actual original/frozen SDK current body and explicit compiled deterministic backend. Constructor-initialized duplicate-policy byte is0 throughout the qualified API sequences;external mutation to nonzero is not qualified.",
+        "limits": [
+          "No allocation failure/concurrent or reentrant callbacks.",
+          "No removal45e744/wrapper7654a4/full4b5afc/46ad80/481940/484660 owner.",
+          "Actual pointer-low-byte metadata retained;no cross-process raw-memory identity.",
+          "Only genuine45e504 caller force-left-zero is qualified;nonzero force-left remains unqualified.",
+          "Actual caller ignores volatileR0;authored ABI is void plus real output pointer."
+        ],
+        "originalStagePcAccounting": {
+          "totalPcs": 505,
+          "pcVisits": 496,
+          "unvisited": [
+            4580956,
+            4580960,
+            4580964,
+            4580968,
+            4580972,
+            4580976,
+            4580980,
+            4580984,
+            4580988
+          ]
+        },
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "globalDomain": [
+          "Normal-return behavior in declared initialized aligned bounded storage; callbacks, disposals, status errors and OS services retain explicit typed dependency boundaries.",
+          "Actual native pointers retain full width and are checked by independent complete-arena models; serialized U32 payloads remain opaque words.",
+          "Timer duplicate policy is the constructor-initialized zero domain; arbitrary nonzero policy is unqualified.",
+          "The full SDK factory/task/startup owners, physical Android, GPU and complete native game builds remain unqualified."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction/literal witnesses; independent committed four-profile CPU replay; native Windows/high-address A64 and complete typed arena models; all 165 wrong-source controls return and reject; all 2809 raw native artifacts reproduce. Bounded behavior is not universal or exact matching."
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave062-runtime/include/binding062v.h",
+      "bytes": 851,
+      "sha256": "a089d9901a6590bca4295aff3ffb7a979cf952f95e2b0c855719a561ed70c2d7"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/binding_start062w.h",
+      "bytes": 1127,
+      "sha256": "ca6f1fffc565d1c72bb41e7dacae0f6f4809c77631d9162211a5ff2ef083e0be"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/construction062x.h",
+      "bytes": 1742,
+      "sha256": "14fba2a134c8509888e21a36bcb7b9a71813b36f62f9b4685aa4a4417e9d9722"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/thread_map062y.h",
+      "bytes": 474,
+      "sha256": "936d879b9deedaa8c44681ff7b30d4a10f2217bfd30c78dae854993a1e88cab8"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/tree_erase062z.h",
+      "bytes": 1030,
+      "sha256": "a6cd87e6e7128d9de7652d40929a97cc83637616747b011c705a8dcc36ec3def"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/timer062aa.h",
+      "bytes": 1816,
+      "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/sdk062s.h",
+      "bytes": 4076,
+      "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/object062t.h",
+      "bytes": 5023,
+      "sha256": "2a63ad6ffe06386f362b68be6a883075e8517e523893f271a1b7d0860aeff12d"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/clock062u.h",
+      "bytes": 1764,
+      "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+    },
+    {
+      "path": "include/bytematch_names.h",
+      "bytes": 7445,
+      "sha256": "59f185a5fb92bff87c9dae6ae158663dd858d5298e51d44bf036a929bcbcb386"
+    }
+  ],
+  "sourceDependencies": [
+    {
+      "path": "src/native/wave062-runtime/include/binding062v.h",
+      "bytes": 851,
+      "sha256": "a089d9901a6590bca4295aff3ffb7a979cf952f95e2b0c855719a561ed70c2d7"
+    },
+    {
+      "path": "src/native/wave062-runtime/binding/binding_active062v.c",
+      "bytes": 239,
+      "sha256": "84d755f229ff6751916f8fdb7e6d99a2ae1348850296d4a28d3b8a873a67b64a"
+    },
+    {
+      "path": "src/native/wave062-runtime/binding/binding_policy062v.c",
+      "bytes": 774,
+      "sha256": "6f6985d9b2be929949894a442e4730927b8dfe09bd17bfd7858d030ab3c41f3a"
+    },
+    {
+      "path": "src/native/wave062-runtime/binding-start/binding_providers062w.c",
+      "bytes": 574,
+      "sha256": "f2a7fb3c9031d19ee812e46f34428ebb1d4148e5ecfefa43df9c5661366a44ed"
+    },
+    {
+      "path": "src/native/wave062-runtime/binding-start/binding_start062w.c",
+      "bytes": 1075,
+      "sha256": "7b32769b8c24e0787abb72d7c4b9fc44996c4408c29ae632bc7f5a93194e5653"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/binding_start062w.h",
+      "bytes": 1127,
+      "sha256": "ca6f1fffc565d1c72bb41e7dacae0f6f4809c77631d9162211a5ff2ef083e0be"
+    },
+    {
+      "path": "src/native/wave062-runtime/construction/binding_initialize062x.c",
+      "bytes": 612,
+      "sha256": "b380e6302432b65ae01661e569b2eb022eb86d6d34ccc9f937b3045661867f1a"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/construction062x.h",
+      "bytes": 1742,
+      "sha256": "14fba2a134c8509888e21a36bcb7b9a71813b36f62f9b4685aa4a4417e9d9722"
+    },
+    {
+      "path": "src/native/wave062-runtime/construction/list_initialize062x.c",
+      "bytes": 727,
+      "sha256": "b7bc84861d77a6930a2612177230413c8166b76f8ffd4d561391ff2acaed8264"
+    },
+    {
+      "path": "src/native/wave062-runtime/construction/wide_owner062x.c",
+      "bytes": 1042,
+      "sha256": "6e8bccc7d39dbca6a591d868d9246993145088bbf8cdb2a9b07fa4f97a4ffec5"
+    },
+    {
+      "path": "src/native/wave062-runtime/construction/wide_units062x.c",
+      "bytes": 515,
+      "sha256": "4dad75f4c980a6f8bde8a00f22353c02bce8e1611d65b4c39831e5a9192258ce"
+    },
+    {
+      "path": "src/native/wave062-runtime/manager/map_select062y.c",
+      "bytes": 1419,
+      "sha256": "997b0da982220db77ccfc62a72022932dffa20b51134c76f2d1b5f9ef7e2977a"
+    },
+    {
+      "path": "src/native/wave062-runtime/manager/thread_index062y.c",
+      "bytes": 1412,
+      "sha256": "9a30bcffb19b3c415470bd192b85f05eea9e0a4cded4e97eb8af2d3b15102fab"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/thread_map062y.h",
+      "bytes": 474,
+      "sha256": "936d879b9deedaa8c44681ff7b30d4a10f2217bfd30c78dae854993a1e88cab8"
+    },
+    {
+      "path": "src/native/wave062-runtime/erase/tree_access062z.c",
+      "bytes": 2481,
+      "sha256": "12a1975f5853bd3040dbbf7ddc54eb72c849d734d109400f92b35d558533212d"
+    },
+    {
+      "path": "src/native/wave062-runtime/erase/tree_erase062z.c",
+      "bytes": 4436,
+      "sha256": "2eb189edc3194a28335cbc7b0f3ab2498ed5689c91b413baeeb128a7a7ba9640"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/tree_erase062z.h",
+      "bytes": 1030,
+      "sha256": "a6cd87e6e7128d9de7652d40929a97cc83637616747b011c705a8dcc36ec3def"
+    },
+    {
+      "path": "src/native/wave062-runtime/erase/tree_rebalance062z.c",
+      "bytes": 2311,
+      "sha256": "7d17d5fb4944085db61e1f48cb818e438cf4f7c879b327ffaec4c0891a4d84bf"
+    },
+    {
+      "path": "src/native/wave062-runtime/timer/endpoint062aa.c",
+      "bytes": 772,
+      "sha256": "204b7895651d3e19f372399a8a46f0359fa638d04541a8e0e62e8935a787a109"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/timer062aa.h",
+      "bytes": 1816,
+      "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+    },
+    {
+      "path": "src/native/wave062-runtime/timer/timer_initialize062aa.c",
+      "bytes": 973,
+      "sha256": "d85a14cb0dc79339d1c438be576897989b922778b7564e7eff18aea06efd346b"
+    },
+    {
+      "path": "src/native/wave062-runtime/timer/timer_insert062aa.c",
+      "bytes": 4626,
+      "sha256": "75c9f5f4b4950e65f32e999366d96f89572c17322aaa86a95e1b8524cf3a622d"
+    },
+    {
+      "path": "src/native/wave062-runtime/timer/timer_set062aa.c",
+      "bytes": 1967,
+      "sha256": "e0128475f7f3eedb7404432260acdf75592aa403547afc510c2798b7eee99c15"
+    },
+    {
+      "path": "src/native/wave062-runtime/timer/timer_update062aa.c",
+      "bytes": 1288,
+      "sha256": "8ffc453c33e511d4a64add26313fb67ffdbbe3ec7e3a7121cd42fd9df2327bd8"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/allocate062s.c",
+      "bytes": 530,
+      "sha256": "233d7668845739f5b897deb558c486eb8b3cab6c4f5e00065caed268f4b9528c"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/context062s.c",
+      "bytes": 2007,
+      "sha256": "d9130340bec329b1466f60c55192f1490b54513fdcbad24473857775781fbf4b"
+    },
+    {
+      "path": "toolscripts/fixtures/sdk062/context/fixture062s.c",
+      "bytes": 3354,
+      "sha256": "c065cef741f9402404f4dc878bcd2dc75ef516a718378f20bd89fbe725b5f2ad"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/map062s.c",
+      "bytes": 4931,
+      "sha256": "4988a3cd066383fe9c31cad09f50ce8ab0c7ea2ac7db84eb7e51b337aec2cd5e"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/map_initialize062s.c",
+      "bytes": 906,
+      "sha256": "4d55295125b6ed49390be7bea8e48134a15fa336765d700c7b41d96b828b617d"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/mutex062s.c",
+      "bytes": 2170,
+      "sha256": "796b69eb236287be917731074248d7e7ee8161745d88bbb635a45641efac8382"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/sdk062s.h",
+      "bytes": 4076,
+      "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/object062t.h",
+      "bytes": 5023,
+      "sha256": "2a63ad6ffe06386f362b68be6a883075e8517e523893f271a1b7d0860aeff12d"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/clock062u.h",
+      "bytes": 1764,
+      "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/clock_math062u.c",
+      "bytes": 998,
+      "sha256": "16f7378066cca9f8eaac5e33a24900eaceaa5a613321025c3e59d8dae48b5eab"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/clock_monotonic062u.c",
+      "bytes": 1421,
+      "sha256": "b878342e1365fd81ee8805d18c52a997c8dd05b03028a4aa141b1c03ddee1708"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/clock_read062u.c",
+      "bytes": 1855,
+      "sha256": "bd884a5ccc93f9c842a3d6396b5e8992c4b6daaf3e6a6525512c5527d6bc3611"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/mutex_initialize062u.c",
+      "bytes": 958,
+      "sha256": "df03183ae626d46cca649dda4a0e8710d8041f969ea85fe18d2c394d50aeedde"
+    }
+  ],
+  "requalifiedWithoutAdditionalCredit": [
+    {
+      "address": 1051480,
+      "instructionBytes": 18,
+      "source": {
+        "path": "src/native/wave062-runtime/construction/wide_units062x.c",
+        "bytes": 515,
+        "sha256": "4dad75f4c980a6f8bde8a00f22353c02bce8e1611d65b4c39831e5a9192258ce"
+      },
+      "additionalCredit": 0
+    },
+    {
+      "address": 7753288,
+      "instructionBytes": 1628,
+      "source": {
+        "path": "src/native/wave062-runtime/erase/tree_erase062z.c",
+        "bytes": 4436,
+        "sha256": "2eb189edc3194a28335cbc7b0f3ab2498ed5689c91b413baeeb128a7a7ba9640"
+      },
+      "additionalCredit": 0
+    }
+  ],
+  "qualificationOnlySources": [
+    "toolscripts/fixtures/sdk062_runtime_v1/binding/fixture062v.c",
+    "toolscripts/fixtures/sdk062_runtime_v1/binding-start/fixture062w.c",
+    "toolscripts/fixtures/sdk062_runtime_v1/construction/fixture062x.c",
+    "toolscripts/fixtures/sdk062_runtime_v1/manager/fixture062y.c",
+    "toolscripts/fixtures/sdk062_runtime_v1/erase/fixture062z.c",
+    "toolscripts/fixtures/sdk062_runtime_v1/timer/fixture062aa.c"
+  ],
+  "producer": {
+    "path": "evidence/verification/producers/review_sdk_runtime062_functional.py",
+    "bytes": 10708,
+    "sha256": "87ab3d16757c63d82a7d619754f2910c10874d5c6d6b4b85bdb3b0d7215f4107"
+  },
+  "originalPackets": [
+    {
+      "path": "evidence/verification/sdk-runtime062-coordinator-4faa511.json",
+      "bytes": 3885,
+      "sha256": "c045ec938bb8904705d9ecbc16c1f5afb74ee8f442ac95796a7486394839e227"
+    },
+    {
+      "path": "evidence/lanes/native-sdk-runtime062/public-inputs-v3/entry-roster-v2.json",
+      "bytes": 31490,
+      "sha256": "8cee6cc3d75451c985274aa8510f336ad2230a49e1c0a2fd436e1b6ed8cfbbae"
+    }
+  ],
+  "acceptedSourceCreditGranted": 0,
+  "exactMatchingClaimed": false,
+  "confirmedOverallSourceCoverageClaimed": false,
+  "fullSdkStartupFactoryTaskGpuPhysicalAndroidOrGameClaimed": false
+}
