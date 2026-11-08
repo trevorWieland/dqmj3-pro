@@ -1,0 +1,80 @@
+{
+  "status": "reviewable-preview-static-exclusions-under-explicit-live-vector-and-provider-contract",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "canonicalPCs": 179,
+  "observedCanonicalPCs": 141,
+  "unhitCanonicalPCs": [
+    2769632,
+    2769636,
+    2769640,
+    2769644,
+    2769648,
+    2769652,
+    2769656,
+    2769660,
+    2769664,
+    2769668,
+    2769672,
+    2769676,
+    2769680,
+    2769684,
+    2769688,
+    2769692,
+    2769696,
+    2769700,
+    2769704,
+    2769708,
+    2769712,
+    2769716,
+    2769720,
+    2769724,
+    2769728,
+    2769732,
+    2769736,
+    2769740,
+    2769872,
+    2769876,
+    2769880,
+    2769884,
+    2769888,
+    2769892,
+    2769896,
+    2769924,
+    2769928,
+    2769932
+  ],
+  "exclusions": [
+    {
+      "witnessStart": 2769572,
+      "witnessEndExclusive": 2769632,
+      "witnessSha256": "b3c4672c901bf934a4048758db95c6153e98df76ea481d058233bb4077c28ba7",
+      "reason": "The outer equality loads end/capacity together. At the inner comparison both differences use the same unchanged begin and equal end/capacity, so unsigned BHS always branches to growth.",
+      "excludedStart": 2769632,
+      "excludedEndExclusive": 2769744,
+      "pcs": 28
+    },
+    {
+      "witnessStart": 2769604,
+      "witnessEndExclusive": 2769900,
+      "witnessSha256": "eb007dece15adab5a65629fca8f81794a747f1b86268618578dc835b55d9c138",
+      "reason": "R4 preserves the old end; after copying prefix and new entry, LDRD reloads the same begin/end. Under a provider that does not mutate caller vector fields, CMP R4,oldEnd is equal and the suffix loop is skipped.",
+      "excludedStart": 2769872,
+      "excludedEndExclusive": 2769900,
+      "pcs": 7
+    },
+    {
+      "witnessStart": 2769900,
+      "witnessEndExclusive": 2769936,
+      "witnessSha256": "dfc58cb5500827490df16b271e6aa11e71eff9993e74fe272894b07b6e98d247",
+      "reason": "The unsigned BLS skips the empty pointer-destruction loop whenever begin<=end, including the null empty vector. The qualified domain requires a single valid allocation with begin<=end<=capacity.",
+      "excludedStart": 2769924,
+      "excludedEndExclusive": 2769936,
+      "pcs": 3
+    }
+  ],
+  "limits": [
+    "Static exclusion is specific to well-formed live vectors and allocator providers that do not mutate caller fields.",
+    "Allocator failure/invalid pointer triples/overflow remain outside this proof; no universal reachability or whole-game claim."
+  ],
+  "sourceCreditGranted": 0
+}

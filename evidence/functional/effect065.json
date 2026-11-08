@@ -1,0 +1,571 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-effect-foundation",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "functions": [
+    {
+      "symbol": "fn_0053a688",
+      "source": {
+        "path": "src/native/wave065/effect_shader.c",
+        "bytes": 1511,
+        "sha256": "35db548068499b99bfd7c52b337a6dfa2568ebb5847c53db31a1c0d6585cfb33"
+      },
+      "canonicalIdentity": {
+        "address": 5482120,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 24,
+      "originalInstructionRanges": [
+        {
+          "start": 5482120,
+          "endExclusive": 5482144,
+          "bytes": 24
+        }
+      ],
+      "originalBodySha256": "4fc90a61489122725e8b04d4041e74eb8bb8768ba8a40f6c77dca6553c53ee14",
+      "reportEntryBytes": 24,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/effect065-coordinator-81fb34b.json",
+          "bytes": 59311,
+          "sha256": "4d860e365b1b1f46dfe1849b3662854c759ac24675a7276e0e2020c64e2e15d1"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "completeWorkerLogicalCorporaIdentical": true,
+        "sourceCopyFiles": 18,
+        "sourceCopyBytes": 35009,
+        "returningSourceGraphControls": 39,
+        "semanticallyRejectedSourceGraphControls": 37,
+        "inapplicableWidthControls": 2,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "domain": "Live complete typed binding and thirty-entry shader pool, with stable borrowed command buffers. Constructor clears only its measured owned fields; selection reads packed integer keys and sets borrowed ownership. Release invokes the actual declared allocator release operation only for nonnull, nonempty owned storage. Logical release retains fixture backing; repeated owned destruction, arbitrary allocator callbacks and GPU execution are not qualified.",
+        "shaderSets": 16544,
+        "releaseSets": 93,
+        "previewSets": 14,
+        "reuseSets": 7,
+        "physicalAndroidGpuFullEffectFamilyOrGameClaimed": false,
+        "confidenceJustification": "Medium: complete canonical bodies and original instruction/data witnesses, actual original execution, independent committed-source replay, native Windows and high-address A64, complete logical observation equality, independent tiny source-copy rebuild and returning wrong-source controls. All 124 pipeline tests and 10 producer tests passed. The original instruction-hook counts are visited addresses; static exclusions are scoped separately. Raw Windows COFF timestamps differ only in header bytes 4..7; no compiler outputs were patched. Exact object or universal equivalence is not established."
+      }
+    },
+    {
+      "symbol": "fn_0053e2c4",
+      "source": {
+        "path": "src/native/wave065/effect_shader.c",
+        "bytes": 1511,
+        "sha256": "35db548068499b99bfd7c52b337a6dfa2568ebb5847c53db31a1c0d6585cfb33"
+      },
+      "canonicalIdentity": {
+        "address": 5497540,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 296,
+      "originalInstructionRanges": [
+        {
+          "start": 5497540,
+          "endExclusive": 5497836,
+          "bytes": 296
+        }
+      ],
+      "originalBodySha256": "72dd72beaf42e695e6950e84fd7611798be7104888846d1468876444e9dad9ed",
+      "reportEntryBytes": 296,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/effect065-coordinator-81fb34b.json",
+          "bytes": 59311,
+          "sha256": "4d860e365b1b1f46dfe1849b3662854c759ac24675a7276e0e2020c64e2e15d1"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "completeWorkerLogicalCorporaIdentical": true,
+        "sourceCopyFiles": 18,
+        "sourceCopyBytes": 35009,
+        "returningSourceGraphControls": 39,
+        "semanticallyRejectedSourceGraphControls": 37,
+        "inapplicableWidthControls": 2,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "domain": "Live complete typed binding and thirty-entry shader pool, with stable borrowed command buffers. Constructor clears only its measured owned fields; selection reads packed integer keys and sets borrowed ownership. Release invokes the actual declared allocator release operation only for nonnull, nonempty owned storage. Logical release retains fixture backing; repeated owned destruction, arbitrary allocator callbacks and GPU execution are not qualified.",
+        "shaderSets": 16544,
+        "releaseSets": 93,
+        "previewSets": 14,
+        "reuseSets": 7,
+        "physicalAndroidGpuFullEffectFamilyOrGameClaimed": false,
+        "confidenceJustification": "Medium: complete canonical bodies and original instruction/data witnesses, actual original execution, independent committed-source replay, native Windows and high-address A64, complete logical observation equality, independent tiny source-copy rebuild and returning wrong-source controls. All 124 pipeline tests and 10 producer tests passed. The original instruction-hook counts are visited addresses; static exclusions are scoped separately. Raw Windows COFF timestamps differ only in header bytes 4..7; no compiler outputs were patched. Exact object or universal equivalence is not established."
+      }
+    },
+    {
+      "symbol": "fn_0017db84",
+      "source": {
+        "path": "src/native/wave065/effect_shader.c",
+        "bytes": 1511,
+        "sha256": "35db548068499b99bfd7c52b337a6dfa2568ebb5847c53db31a1c0d6585cfb33"
+      },
+      "canonicalIdentity": {
+        "address": 1563524,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 60,
+      "originalInstructionRanges": [
+        {
+          "start": 1563524,
+          "endExclusive": 1563584,
+          "bytes": 60
+        }
+      ],
+      "originalBodySha256": "0e44783dde2c0c9b18ba5e8507b05405a62ba7ba05bbf060e7fba1e6fcccb6ab",
+      "reportEntryBytes": 60,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/effect065-coordinator-81fb34b.json",
+          "bytes": 59311,
+          "sha256": "4d860e365b1b1f46dfe1849b3662854c759ac24675a7276e0e2020c64e2e15d1"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "completeWorkerLogicalCorporaIdentical": true,
+        "sourceCopyFiles": 18,
+        "sourceCopyBytes": 35009,
+        "returningSourceGraphControls": 39,
+        "semanticallyRejectedSourceGraphControls": 37,
+        "inapplicableWidthControls": 2,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "domain": "Live complete typed binding and thirty-entry shader pool, with stable borrowed command buffers. Constructor clears only its measured owned fields; selection reads packed integer keys and sets borrowed ownership. Release invokes the actual declared allocator release operation only for nonnull, nonempty owned storage. Logical release retains fixture backing; repeated owned destruction, arbitrary allocator callbacks and GPU execution are not qualified.",
+        "shaderSets": 16544,
+        "releaseSets": 93,
+        "previewSets": 14,
+        "reuseSets": 7,
+        "physicalAndroidGpuFullEffectFamilyOrGameClaimed": false,
+        "confidenceJustification": "Medium: complete canonical bodies and original instruction/data witnesses, actual original execution, independent committed-source replay, native Windows and high-address A64, complete logical observation equality, independent tiny source-copy rebuild and returning wrong-source controls. All 124 pipeline tests and 10 producer tests passed. The original instruction-hook counts are visited addresses; static exclusions are scoped separately. Raw Windows COFF timestamps differ only in header bytes 4..7; no compiler outputs were patched. Exact object or universal equivalence is not established."
+      }
+    },
+    {
+      "symbol": "fn_002a41c4",
+      "source": {
+        "path": "src/native/wave065/effect_preview.c",
+        "bytes": 4275,
+        "sha256": "b317784d97063cd8d7ae05b74c376e443470352fc9ec8b561b9a6251d29db0ef"
+      },
+      "canonicalIdentity": {
+        "address": 2769348,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 716,
+      "originalInstructionRanges": [
+        {
+          "start": 2769348,
+          "endExclusive": 2770064,
+          "bytes": 716
+        }
+      ],
+      "originalBodySha256": "d788127e6cdbf1e1f085fa38e13577ed9d58ef4d7736c9bbad755bf15bf9ce78",
+      "reportEntryBytes": 716,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/effect065-coordinator-81fb34b.json",
+          "bytes": 59311,
+          "sha256": "4d860e365b1b1f46dfe1849b3662854c759ac24675a7276e0e2020c64e2e15d1"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "completeWorkerLogicalCorporaIdentical": true,
+        "sourceCopyFiles": 18,
+        "sourceCopyBytes": 35009,
+        "returningSourceGraphControls": 39,
+        "semanticallyRejectedSourceGraphControls": 37,
+        "inapplicableWidthControls": 2,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "domain": "Live naturally aligned typed cache, entry, primary preview and pointer vector; begin<=end<=capacity within one allocation. Serialized input is complete and disjoint from outputs, with supported signed counts, allocation success and growth below overflow limits. Providers preserve caller vector fields and expose logical target budgets separately from actual native pointer storage. Real scalar translation uses the measured floating-point mode and supported finite inputs. Null input clears the primary preview; existing vector elements survive reuse/growth, with old backing retained only by the fixture after logical release. Thirty-eight original sites have reviewed byte-bound static exclusions under these preconditions; they are not dynamically executed coverage. Heap signatures/readiness are supplied fixture preconditions, without a heap-startup or general allocator qualification.",
+        "shaderSets": 16544,
+        "releaseSets": 93,
+        "previewSets": 14,
+        "reuseSets": 7,
+        "physicalAndroidGpuFullEffectFamilyOrGameClaimed": false,
+        "confidenceJustification": "Medium: complete canonical bodies and original instruction/data witnesses, actual original execution, independent committed-source replay, native Windows and high-address A64, complete logical observation equality, independent tiny source-copy rebuild and returning wrong-source controls. All 124 pipeline tests and 10 producer tests passed. The original instruction-hook counts are visited addresses; static exclusions are scoped separately. Raw Windows COFF timestamps differ only in header bytes 4..7; no compiler outputs were patched. Exact object or universal equivalence is not established.",
+        "originalInstructionPcs": 179,
+        "originalInstructionPcsVisited": 141,
+        "staticallyExcludedOriginalPcs": [
+          2769632,
+          2769636,
+          2769640,
+          2769644,
+          2769648,
+          2769652,
+          2769656,
+          2769660,
+          2769664,
+          2769668,
+          2769672,
+          2769676,
+          2769680,
+          2769684,
+          2769688,
+          2769692,
+          2769696,
+          2769700,
+          2769704,
+          2769708,
+          2769712,
+          2769716,
+          2769720,
+          2769724,
+          2769728,
+          2769732,
+          2769736,
+          2769740,
+          2769872,
+          2769876,
+          2769880,
+          2769884,
+          2769888,
+          2769892,
+          2769896,
+          2769924,
+          2769928,
+          2769932
+        ],
+        "conditionalClosedGraphArgument": {
+          "path": "evidence/verification/effect065-preview-invariants.json",
+          "bytes": 2594,
+          "sha256": "3e565f49c5c4b9d5b6d3d5cb7ce00bc38d10808e7fd0793f4f400d294fe2ccc0"
+        }
+      }
+    },
+    {
+      "symbol": "fn_005e6a68",
+      "source": {
+        "path": "src/native/wave065/effect_preview.c",
+        "bytes": 4275,
+        "sha256": "b317784d97063cd8d7ae05b74c376e443470352fc9ec8b561b9a6251d29db0ef"
+      },
+      "canonicalIdentity": {
+        "address": 6187624,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 32,
+      "originalInstructionRanges": [
+        {
+          "start": 6187624,
+          "endExclusive": 6187656,
+          "bytes": 32
+        }
+      ],
+      "originalBodySha256": "f3481acb4a638783c89d97a09f3fe3029f989c59bcd1aa152341c014ccd4b41f",
+      "reportEntryBytes": 32,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/effect065-coordinator-81fb34b.json",
+          "bytes": 59311,
+          "sha256": "4d860e365b1b1f46dfe1849b3662854c759ac24675a7276e0e2020c64e2e15d1"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "completeWorkerLogicalCorporaIdentical": true,
+        "sourceCopyFiles": 18,
+        "sourceCopyBytes": 35009,
+        "returningSourceGraphControls": 39,
+        "semanticallyRejectedSourceGraphControls": 37,
+        "inapplicableWidthControls": 2,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "domain": "Live naturally aligned typed cache, entry, primary preview and pointer vector; begin<=end<=capacity within one allocation. Serialized input is complete and disjoint from outputs, with supported signed counts, allocation success and growth below overflow limits. Providers preserve caller vector fields and expose logical target budgets separately from actual native pointer storage. Real scalar translation uses the measured floating-point mode and supported finite inputs. Null input clears the primary preview; existing vector elements survive reuse/growth, with old backing retained only by the fixture after logical release. Thirty-eight original sites have reviewed byte-bound static exclusions under these preconditions; they are not dynamically executed coverage. Heap signatures/readiness are supplied fixture preconditions, without a heap-startup or general allocator qualification.",
+        "shaderSets": 16544,
+        "releaseSets": 93,
+        "previewSets": 14,
+        "reuseSets": 7,
+        "physicalAndroidGpuFullEffectFamilyOrGameClaimed": false,
+        "confidenceJustification": "Medium: complete canonical bodies and original instruction/data witnesses, actual original execution, independent committed-source replay, native Windows and high-address A64, complete logical observation equality, independent tiny source-copy rebuild and returning wrong-source controls. All 124 pipeline tests and 10 producer tests passed. The original instruction-hook counts are visited addresses; static exclusions are scoped separately. Raw Windows COFF timestamps differ only in header bytes 4..7; no compiler outputs were patched. Exact object or universal equivalence is not established."
+      }
+    },
+    {
+      "symbol": "fn_005e7318",
+      "source": {
+        "path": "src/native/wave065/effect_preview.c",
+        "bytes": 4275,
+        "sha256": "b317784d97063cd8d7ae05b74c376e443470352fc9ec8b561b9a6251d29db0ef"
+      },
+      "canonicalIdentity": {
+        "address": 6189848,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 16,
+      "originalInstructionRanges": [
+        {
+          "start": 6189848,
+          "endExclusive": 6189864,
+          "bytes": 16
+        }
+      ],
+      "originalBodySha256": "3f7b096acf101cca0e2ce77fa66519789bc4955de4ba0c7359f08f741aa5ab3e",
+      "reportEntryBytes": 16,
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/effect065-coordinator-81fb34b.json",
+          "bytes": 59311,
+          "sha256": "4d860e365b1b1f46dfe1849b3662854c759ac24675a7276e0e2020c64e2e15d1"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceGraphOriginalCodeMapped": false,
+        "completeWorkerLogicalCorporaIdentical": true,
+        "sourceCopyFiles": 18,
+        "sourceCopyBytes": 35009,
+        "returningSourceGraphControls": 39,
+        "semanticallyRejectedSourceGraphControls": 37,
+        "inapplicableWidthControls": 2,
+        "hookVisitsDoNotProvePredicateSatisfiedExecution": true,
+        "domain": "Live naturally aligned typed cache, entry, primary preview and pointer vector; begin<=end<=capacity within one allocation. Serialized input is complete and disjoint from outputs, with supported signed counts, allocation success and growth below overflow limits. Providers preserve caller vector fields and expose logical target budgets separately from actual native pointer storage. Real scalar translation uses the measured floating-point mode and supported finite inputs. Null input clears the primary preview; existing vector elements survive reuse/growth, with old backing retained only by the fixture after logical release. Thirty-eight original sites have reviewed byte-bound static exclusions under these preconditions; they are not dynamically executed coverage. Heap signatures/readiness are supplied fixture preconditions, without a heap-startup or general allocator qualification.",
+        "shaderSets": 16544,
+        "releaseSets": 93,
+        "previewSets": 14,
+        "reuseSets": 7,
+        "physicalAndroidGpuFullEffectFamilyOrGameClaimed": false,
+        "confidenceJustification": "Medium: complete canonical bodies and original instruction/data witnesses, actual original execution, independent committed-source replay, native Windows and high-address A64, complete logical observation equality, independent tiny source-copy rebuild and returning wrong-source controls. All 124 pipeline tests and 10 producer tests passed. The original instruction-hook counts are visited addresses; static exclusions are scoped separately. Raw Windows COFF timestamps differ only in header bytes 4..7; no compiler outputs were patched. Exact object or universal equivalence is not established."
+      }
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave009/interval_set.h",
+      "bytes": 987,
+      "sha256": "c9f8ea99061aaf09e3b82c8a75d3049282f14bdbf7e201a429c1064348853419"
+    },
+    {
+      "path": "src/native/wave010/match_state.h",
+      "bytes": 1055,
+      "sha256": "c5331ad810d5fc508c5df281ece4f5b8f70a998cc5d226d2e7157593137d035b"
+    },
+    {
+      "path": "src/native/wave012/compile_graph.h",
+      "bytes": 1657,
+      "sha256": "d496139a253186af9849862e764fcc1b50d77f432fe8e6e9dd4c6b4ce84f8ee5"
+    },
+    {
+      "path": "src/native/wave012/fixed_arena.h",
+      "bytes": 689,
+      "sha256": "576604e9c5fde42d82ada3fa977fa33591421711f129bd5cae1b3c45240eec4a"
+    },
+    {
+      "path": "src/native/wave012/label_ops.h",
+      "bytes": 939,
+      "sha256": "0d96df2ffe4d5c6f404cbbe688e86f3f644fbc7fecfe9fe6ab0c03a43b2f5be1"
+    },
+    {
+      "path": "src/native/wave013/control_compile.h",
+      "bytes": 288,
+      "sha256": "323e2786580a834a869dfd5a15d22edd58f84dc8d909322dbf3d99902937e8b0"
+    },
+    {
+      "path": "src/native/wave013/dfa_compile.h",
+      "bytes": 830,
+      "sha256": "83f3627463a010ec5b5d561f1d443c25995be6dc8f4f86cbc28d534f1d2fe334"
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa.h",
+      "bytes": 4884,
+      "sha256": "76dddc817728b69b544e927320f5c1564a6a390ba6259adae837a324d3a07c36"
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa_api.h",
+      "bytes": 386,
+      "sha256": "974523189a56560a598aca0f00ef26cd7b50c3a12bb5c0bb1f0789e5ba82d8bb"
+    },
+    {
+      "path": "src/native/wave013/pattern_outer.h",
+      "bytes": 1605,
+      "sha256": "2e79c5635b7b411271ff28684f7349b0daf076e05473e2b997b6ccf21ea68e9a"
+    },
+    {
+      "path": "src/native/wave013/pattern_ranges.h",
+      "bytes": 521,
+      "sha256": "6eb248d90a59fc8f50469f8735a4b6ad224ca067b68ce66295ccd5de765abeee"
+    },
+    {
+      "path": "src/native/wave013/pattern_tokens.h",
+      "bytes": 4191,
+      "sha256": "2a06bf5d5efd04ef077298a341aaead1a5ef6e20ace3969363ff35b1ba78a9ae"
+    },
+    {
+      "path": "src/native/wave013/pattern_unicode.h",
+      "bytes": 1109,
+      "sha256": "5a0f6e2c1824e58392c5d347108ff9b088ae256e684fcff613a9aaceb28f709b"
+    },
+    {
+      "path": "src/native/wave065/effect_preview.h",
+      "bytes": 3054,
+      "sha256": "f4107777d62b1087c265b4f7a92e41964cd10e406b50f28564d2a7b745219cde"
+    },
+    {
+      "path": "src/native/wave065/effect_shader.h",
+      "bytes": 1381,
+      "sha256": "26c4310b9bceb3e6d6a45c1923679312b164bd686ff285e5e36aa37e2e3895fd"
+    },
+    {
+      "path": "src/native/wave065/effect_services.h",
+      "bytes": 520,
+      "sha256": "ca1a247f8b3421b17ea848b38029fa5b74f40576588c8b9efd630b2a47235ef9"
+    }
+  ],
+  "sourceDependencies": [
+    {
+      "path": "src/native/wave009/interval_set.h",
+      "bytes": 987,
+      "sha256": "c9f8ea99061aaf09e3b82c8a75d3049282f14bdbf7e201a429c1064348853419"
+    },
+    {
+      "path": "src/native/wave010/match_state.h",
+      "bytes": 1055,
+      "sha256": "c5331ad810d5fc508c5df281ece4f5b8f70a998cc5d226d2e7157593137d035b"
+    },
+    {
+      "path": "src/native/wave012/compile_graph.h",
+      "bytes": 1657,
+      "sha256": "d496139a253186af9849862e764fcc1b50d77f432fe8e6e9dd4c6b4ce84f8ee5"
+    },
+    {
+      "path": "src/native/wave012/fixed_arena.h",
+      "bytes": 689,
+      "sha256": "576604e9c5fde42d82ada3fa977fa33591421711f129bd5cae1b3c45240eec4a"
+    },
+    {
+      "path": "src/native/wave012/label_ops.h",
+      "bytes": 939,
+      "sha256": "0d96df2ffe4d5c6f404cbbe688e86f3f644fbc7fecfe9fe6ab0c03a43b2f5be1"
+    },
+    {
+      "path": "src/native/wave012/memory_ops.c",
+      "bytes": 1951,
+      "sha256": "2110c115a64ddc3cfa867787bd64cbbc65a35643cef10f5afc27971215c24516"
+    },
+    {
+      "path": "src/native/wave013/control_compile.h",
+      "bytes": 288,
+      "sha256": "323e2786580a834a869dfd5a15d22edd58f84dc8d909322dbf3d99902937e8b0"
+    },
+    {
+      "path": "src/native/wave013/dfa_compile.h",
+      "bytes": 830,
+      "sha256": "83f3627463a010ec5b5d561f1d443c25995be6dc8f4f86cbc28d534f1d2fe334"
+    },
+    {
+      "path": "src/native/wave013/outer_arena.c",
+      "bytes": 1116,
+      "sha256": "520818862f8faf779ee3083698e1ee29b614d8e19358453f880f42e99f6ce192"
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa.h",
+      "bytes": 4884,
+      "sha256": "76dddc817728b69b544e927320f5c1564a6a390ba6259adae837a324d3a07c36"
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa_api.h",
+      "bytes": 386,
+      "sha256": "974523189a56560a598aca0f00ef26cd7b50c3a12bb5c0bb1f0789e5ba82d8bb"
+    },
+    {
+      "path": "src/native/wave013/pattern_outer.h",
+      "bytes": 1605,
+      "sha256": "2e79c5635b7b411271ff28684f7349b0daf076e05473e2b997b6ccf21ea68e9a"
+    },
+    {
+      "path": "src/native/wave013/pattern_ranges.h",
+      "bytes": 521,
+      "sha256": "6eb248d90a59fc8f50469f8735a4b6ad224ca067b68ce66295ccd5de765abeee"
+    },
+    {
+      "path": "src/native/wave013/pattern_tokens.h",
+      "bytes": 4191,
+      "sha256": "2a06bf5d5efd04ef077298a341aaead1a5ef6e20ace3969363ff35b1ba78a9ae"
+    },
+    {
+      "path": "src/native/wave013/pattern_unicode.h",
+      "bytes": 1109,
+      "sha256": "5a0f6e2c1824e58392c5d347108ff9b088ae256e684fcff613a9aaceb28f709b"
+    },
+    {
+      "path": "src/native/wave065/effect_preview.c",
+      "bytes": 4275,
+      "sha256": "b317784d97063cd8d7ae05b74c376e443470352fc9ec8b561b9a6251d29db0ef"
+    },
+    {
+      "path": "src/native/wave065/effect_preview.h",
+      "bytes": 3054,
+      "sha256": "f4107777d62b1087c265b4f7a92e41964cd10e406b50f28564d2a7b745219cde"
+    },
+    {
+      "path": "toolscripts/native_effect065_preview_fixture.c",
+      "bytes": 5472,
+      "sha256": "6d186d09072a50c6b5307f56b21b191c91005de8eddd15f386331db0944f4e61"
+    },
+    {
+      "path": "src/native/wave065/effect_shader.c",
+      "bytes": 1511,
+      "sha256": "35db548068499b99bfd7c52b337a6dfa2568ebb5847c53db31a1c0d6585cfb33"
+    },
+    {
+      "path": "src/native/wave065/effect_shader.h",
+      "bytes": 1381,
+      "sha256": "26c4310b9bceb3e6d6a45c1923679312b164bd686ff285e5e36aa37e2e3895fd"
+    },
+    {
+      "path": "src/native/wave065/effect_services.h",
+      "bytes": 520,
+      "sha256": "ca1a247f8b3421b17ea848b38029fa5b74f40576588c8b9efd630b2a47235ef9"
+    }
+  ],
+  "originalPackets": [
+    {
+      "path": "evidence/verification/effect065-coordinator-81fb34b.json",
+      "bytes": 59311,
+      "sha256": "4d860e365b1b1f46dfe1849b3662854c759ac24675a7276e0e2020c64e2e15d1"
+    }
+  ],
+  "producer": {
+    "path": "evidence/verification/producers/review_effect065_functional.py",
+    "bytes": 10246,
+    "sha256": "077da6fb69c4155eb9e6b3cb28e7bbc7842576406e0383546ebda2ccc75bd0ba"
+  },
+  "acceptedSourceCreditGranted": 0,
+  "exactMatchingClaimed": false,
+  "confirmedOverallSourceCoverageClaimed": false,
+  "fullResourceConstructorClaimed": false
+}

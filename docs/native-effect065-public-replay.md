@@ -10,10 +10,14 @@ The selected corpus includes 16,544 shader sets, 93 release cases and 21 preview
 
 The candidate passed six source-only compilations across ARM, native Windows and Android ARM64, plus nine public-input guard tests. A fresh committed-source replay and coordinator review are required before any working-C admission.
 
-The first independent run completed the behavioral producers and their tests, then failed while writing the final guard receipt because its parent directory was missing. That failed attempt remains retained. The wrapper now creates its owned receipt directory and a regression test covers that final write; all ten guard tests pass. A new committed replay must pass before admission. The original six production C files and frozen producers were not changed.
+The first independent run completed the behavioral producers and their tests, then failed while writing the final guard receipt because its parent directory was missing. That failed attempt remains retained. The wrapper now creates its owned receipt directory and a regression test covers that final write; all ten guard tests pass. A new committed replay must pass before admission. The six recovered bodies, two production C files and frozen producers were not changed.
 
 ```text
 tools/python/Scripts/python.exe toolscripts/isolated_component_replay.py --plan config/replays/effect065.json --revision COMMITTED_SOURCE_REVISION
 ```
 
 Use a fresh output. Preserve failed attempts and raw evidence; compact the reviewed replay before removing its redundant build tree.
+
+The corrected committed replay at `81fb34b` passed the complete 124-test pipeline and all ten producer tests. Coordinator review compared both complete logical corpora and every selected source-copy observation with the worker run: 144 binary artifacts were identical, while 48 raw Windows COFF objects differed only in header timestamp bytes 4 through 7. The 39 returning wrong-source checks yielded 37 applicable semantic rejections; two ARM32 width controls remain inapplicable. The three original control-flow witnesses account for the 38 unvisited preview addresses under the stated vector/provider invariants.
+
+Six functions are admitted to the medium-confidence working-C registry, adding a 1,144-byte bounded instruction footprint. Their canonical C names already match the report symbols, so no rename aliases were added. This does not increase the 5,128 exactly linked source bytes or establish overall confirmed source coverage. The full resource constructor, GPU execution, physical Android execution of this component and complete native game builds remain unproved.
