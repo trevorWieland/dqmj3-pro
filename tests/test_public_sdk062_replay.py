@@ -13,6 +13,19 @@ import public_sdk062_replay as replay
 
 
 class PublicSdkReplayTests(unittest.TestCase):
+    def test_proof_import_cannot_leave_a_legacy_directory_on_search_path(self):
+        output = ROOT / 'work/path-cleanup-selected'
+        stale = str(ROOT / 'work/native-asset062-sdk')
+        selected = SimpleNamespace(name='public-proof')
+
+        def imported(name):
+            sys.path.insert(0, stale)
+            return selected
+
+        with patch.object(sys, 'path', []), patch.object(replay.importlib, 'import_module', side_effect=imported):
+            self.assertIs(replay.clean_import('proof', output), selected)
+            self.assertNotIn(stale, sys.path)
+
     def test_historical_paths_removed_and_public_snapshot_retained(self):
         root = ROOT / 'work/path-cleanup-fixture'
         output = root / 'work/selected'

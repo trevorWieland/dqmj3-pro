@@ -70,28 +70,36 @@ def audited(root, output):
     return reads, libraries, rejected
 
 
+def clean_import(name, output):
+    module = importlib.import_module(name)
+    paths = [str(output / item) for item in ('context', 'object', 'startup', 'arbiter', 'legacy')]
+    bindings.public_paths(ROOT, output, [*paths, str(ROOT / 'toolscripts')])
+    return module
+
+
 def run_proofs(stage, folder):
+    output = folder.parent
     if stage == 'context':
         for name in ('map_proof062s', 'context_proof062s', 'mutex_proof062s', 'controls062s'):
-            importlib.import_module(name).main()
+            clean_import(name, output).main()
     elif stage == 'arbiter':
-        reference = importlib.import_module('reference_probe062a')
-        windows = importlib.import_module('windows_probe062a')
-        cpu = importlib.import_module('cpu_probe062a')
+        reference = clean_import('reference_probe062a', output)
+        windows = clean_import('windows_probe062a', output)
+        cpu = clean_import('cpu_probe062a', output)
         rows = []
         for depth in (1, 2, 3, 8):
             rows.append(dict(depth=depth, original=reference.main(depth, folder / f'original-depth{depth}.json'),
                 windows=windows.main(depth, folder / f'windows-depth{depth}.json'),
                 arm=cpu.program('arm', depth), a64=cpu.program('a64', depth)))
-        importlib.import_module('controls062a').main()
+        clean_import('controls062a', output).main()
         write(folder / 'handoff-programs.json', dict(programs=rows, sourceCreditGranted=0))
     elif stage == 'object':
-        importlib.import_module('suite062t').run(rebuild=False)
-        importlib.import_module('controls062t').main()
+        clean_import('suite062t', output).run(rebuild=False)
+        clean_import('controls062t', output).main()
     else:
-        importlib.import_module('suite062u').run()
-        importlib.import_module('controls062u').main()
-        importlib.import_module('constructor_math_proof062u').main()
+        clean_import('suite062u', output).run()
+        clean_import('controls062u', output).main()
+        clean_import('constructor_math_proof062u', output).main()
         script = folder / 'tools/default_work_coverage062u.py'
         runpy.run_path(str(script), run_name='__main__')
 
@@ -107,6 +115,7 @@ def child(output, stage, mode):
         builder, baseline = bindings.bind(ROOT, output, stage, selected)
         if mode == 'tests':
             tests = unittest.defaultTestLoader.discover(str(output / stage / 'tests'))
+            bindings.public_paths(ROOT, output, [str(output / stage), str(ROOT / 'toolscripts')])
             result = unittest.TextTestRunner(verbosity=2).run(tests)
             expected = dict(context=14, arbiter=11, object=16, startup=18)[stage]
             if not result.wasSuccessful() or result.testsRun != expected:
