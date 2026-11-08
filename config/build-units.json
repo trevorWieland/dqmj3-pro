@@ -43,7 +43,9 @@
       "wave067-queue",
       "wave062-heap",
       "wave068-bootstrap",
-      "wave062-registration"
+      "wave062-registration",
+      "wave068-teardown",
+      "wave069-device"
     ]
   },
   "units": [
@@ -11537,6 +11539,52 @@
         "src/native/wave062-runtime/include",
         "src/native/wave062-sdk/include"
       ]
+    },
+    {
+      "source": "src/native/wave068-teardown/device_pool.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h",
+        "src/native/wave068-teardown/device_pool.h",
+        "src/native/wave069-device/device069.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave069-device/device_destroy069.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h",
+        "src/native/wave069-device/device069.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave069-device/embedded069.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h",
+        "src/native/wave069-device/device069.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave069-device/ipc069.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h",
+        "src/native/wave069-device/device069.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave069-device/stream_destroy069.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h",
+        "src/native/wave069-device/device069.h"
+      ],
+      "role": "bounded-component"
     }
   ],
   "excludedSources": [

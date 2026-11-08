@@ -1,0 +1,915 @@
+{
+  "status": "five-coupled-filesystem-source-units-compile-passed",
+  "units": [
+    {
+      "source": "src/native/wave068-teardown/device_pool.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h",
+        "src/native/wave068-teardown/device_pool.h",
+        "src/native/wave069-device/device069.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave069-device/device_destroy069.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h",
+        "src/native/wave069-device/device069.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave069-device/embedded069.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h",
+        "src/native/wave069-device/device069.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave069-device/ipc069.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h",
+        "src/native/wave069-device/device069.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave069-device/stream_destroy069.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h",
+        "src/native/wave069-device/device069.h"
+      ],
+      "role": "bounded-component"
+    }
+  ],
+  "targetCompilations": 15,
+  "totalSourceUnits": 611,
+  "totalTargetCompilations": 1761,
+  "qualificationFixturesInPublicCompilation": false,
+  "sourceAdmissionGranted": false,
+  "results": [
+    {
+      "source": "src/native/wave068-teardown/device_pool.c",
+      "role": "bounded-component",
+      "target": "arm32-mpcore",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfloat-abi=soft",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-c",
+        "src/native/wave068-teardown/device_pool.c",
+        "-o",
+        "work/coupled070-local-compile-v1/objects/arm32-mpcore/src--native--wave068-teardown--device_pool.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave068-teardown/device_pool.c",
+          "sha256": "7cd2d6a5c3506e37e453d0db554a88e5ce78b57efd236c255d93969f9a567499"
+        },
+        {
+          "path": "src/native/wave066-request/request.h",
+          "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+        },
+        {
+          "path": "src/native/wave067-queue/file_queue.h",
+          "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d"
+        },
+        {
+          "path": "src/native/wave068-teardown/device_pool.h",
+          "sha256": "50158a0aa58f6a0c4e7e3681c8a0e8b56079aac3c0f51455246d7e820b539650"
+        },
+        {
+          "path": "src/native/wave069-device/device069.h",
+          "sha256": "bf5022b81e7d9e3a38e11c5e6a9a024dc818ab851c5ea18637c9fbd275633861"
+        }
+      ],
+      "diagnostics": "work/coupled070-local-compile-v1/diagnostics/arm32-mpcore--src--native--wave068-teardown--device_pool.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/coupled070-local-compile-v1/objects/arm32-mpcore/src--native--wave068-teardown--device_pool.o",
+        "bytes": 1052,
+        "sha256": "9a483c550b7a420eadf72fb5736a185227a948fd9e9a9f3fa94b23699e5b0948",
+        "format": "ELF32",
+        "machine": 40,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave068-teardown/device_pool.c",
+      "role": "bounded-component",
+      "target": "windows-x64",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-c",
+        "src/native/wave068-teardown/device_pool.c",
+        "-o",
+        "work/coupled070-local-compile-v1/objects/windows-x64/src--native--wave068-teardown--device_pool.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave068-teardown/device_pool.c",
+          "sha256": "7cd2d6a5c3506e37e453d0db554a88e5ce78b57efd236c255d93969f9a567499"
+        },
+        {
+          "path": "src/native/wave066-request/request.h",
+          "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+        },
+        {
+          "path": "src/native/wave067-queue/file_queue.h",
+          "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d"
+        },
+        {
+          "path": "src/native/wave068-teardown/device_pool.h",
+          "sha256": "50158a0aa58f6a0c4e7e3681c8a0e8b56079aac3c0f51455246d7e820b539650"
+        },
+        {
+          "path": "src/native/wave069-device/device069.h",
+          "sha256": "bf5022b81e7d9e3a38e11c5e6a9a024dc818ab851c5ea18637c9fbd275633861"
+        }
+      ],
+      "diagnostics": "work/coupled070-local-compile-v1/diagnostics/windows-x64--src--native--wave068-teardown--device_pool.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/coupled070-local-compile-v1/objects/windows-x64/src--native--wave068-teardown--device_pool.o",
+        "bytes": 607,
+        "sha256": "cf4fcdb86817095c42bc5b1c43469c1601dfa1d37e62d6661afec839a81e5535",
+        "format": "COFF",
+        "machine": 34404,
+        "sections": 5
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave068-teardown/device_pool.c",
+      "role": "bounded-component",
+      "target": "android-arm64-api29",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=aarch64-linux-android29",
+        "-fPIC",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-c",
+        "src/native/wave068-teardown/device_pool.c",
+        "-o",
+        "work/coupled070-local-compile-v1/objects/android-arm64-api29/src--native--wave068-teardown--device_pool.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave068-teardown/device_pool.c",
+          "sha256": "7cd2d6a5c3506e37e453d0db554a88e5ce78b57efd236c255d93969f9a567499"
+        },
+        {
+          "path": "src/native/wave066-request/request.h",
+          "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+        },
+        {
+          "path": "src/native/wave067-queue/file_queue.h",
+          "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d"
+        },
+        {
+          "path": "src/native/wave068-teardown/device_pool.h",
+          "sha256": "50158a0aa58f6a0c4e7e3681c8a0e8b56079aac3c0f51455246d7e820b539650"
+        },
+        {
+          "path": "src/native/wave069-device/device069.h",
+          "sha256": "bf5022b81e7d9e3a38e11c5e6a9a024dc818ab851c5ea18637c9fbd275633861"
+        }
+      ],
+      "diagnostics": "work/coupled070-local-compile-v1/diagnostics/android-arm64-api29--src--native--wave068-teardown--device_pool.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/coupled070-local-compile-v1/objects/android-arm64-api29/src--native--wave068-teardown--device_pool.o",
+        "bytes": 1016,
+        "sha256": "7eb9fd77aeb1c405e2031bf1f465c11c65137929e775812dfe6654b55dc9104b",
+        "format": "ELF64",
+        "machine": 183,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave069-device/device_destroy069.c",
+      "role": "bounded-component",
+      "target": "arm32-mpcore",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfloat-abi=soft",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-c",
+        "src/native/wave069-device/device_destroy069.c",
+        "-o",
+        "work/coupled070-local-compile-v1/objects/arm32-mpcore/src--native--wave069-device--device_destroy069.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave069-device/device_destroy069.c",
+          "sha256": "f64dc84ecc27d047c7374ff0fe1552b928e6ae52111064e89eac2a6fe1d876d5"
+        },
+        {
+          "path": "src/native/wave066-request/request.h",
+          "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+        },
+        {
+          "path": "src/native/wave067-queue/file_queue.h",
+          "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d"
+        },
+        {
+          "path": "src/native/wave069-device/device069.h",
+          "sha256": "bf5022b81e7d9e3a38e11c5e6a9a024dc818ab851c5ea18637c9fbd275633861"
+        }
+      ],
+      "diagnostics": "work/coupled070-local-compile-v1/diagnostics/arm32-mpcore--src--native--wave069-device--device_destroy069.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/coupled070-local-compile-v1/objects/arm32-mpcore/src--native--wave069-device--device_destroy069.o",
+        "bytes": 1224,
+        "sha256": "e7b200e9896059a2fcd7be0a929d7fce630ebcb99a307e700c3579bc9cf58f8b",
+        "format": "ELF32",
+        "machine": 40,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave069-device/device_destroy069.c",
+      "role": "bounded-component",
+      "target": "windows-x64",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-c",
+        "src/native/wave069-device/device_destroy069.c",
+        "-o",
+        "work/coupled070-local-compile-v1/objects/windows-x64/src--native--wave069-device--device_destroy069.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave069-device/device_destroy069.c",
+          "sha256": "f64dc84ecc27d047c7374ff0fe1552b928e6ae52111064e89eac2a6fe1d876d5"
+        },
+        {
+          "path": "src/native/wave066-request/request.h",
+          "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+        },
+        {
+          "path": "src/native/wave067-queue/file_queue.h",
+          "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d"
+        },
+        {
+          "path": "src/native/wave069-device/device069.h",
+          "sha256": "bf5022b81e7d9e3a38e11c5e6a9a024dc818ab851c5ea18637c9fbd275633861"
+        }
+      ],
+      "diagnostics": "work/coupled070-local-compile-v1/diagnostics/windows-x64--src--native--wave069-device--device_destroy069.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/coupled070-local-compile-v1/objects/windows-x64/src--native--wave069-device--device_destroy069.o",
+        "bytes": 764,
+        "sha256": "66a7a5b80cac10f07d9c49f32c3176efa566e6e769180822fc7f65988d0ecca1",
+        "format": "COFF",
+        "machine": 34404,
+        "sections": 5
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave069-device/device_destroy069.c",
+      "role": "bounded-component",
+      "target": "android-arm64-api29",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=aarch64-linux-android29",
+        "-fPIC",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-c",
+        "src/native/wave069-device/device_destroy069.c",
+        "-o",
+        "work/coupled070-local-compile-v1/objects/android-arm64-api29/src--native--wave069-device--device_destroy069.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave069-device/device_destroy069.c",
+          "sha256": "f64dc84ecc27d047c7374ff0fe1552b928e6ae52111064e89eac2a6fe1d876d5"
+        },
+        {
+          "path": "src/native/wave066-request/request.h",
+          "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+        },
+        {
+          "path": "src/native/wave067-queue/file_queue.h",
+          "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d"
+        },
+        {
+          "path": "src/native/wave069-device/device069.h",
+          "sha256": "bf5022b81e7d9e3a38e11c5e6a9a024dc818ab851c5ea18637c9fbd275633861"
+        }
+      ],
+      "diagnostics": "work/coupled070-local-compile-v1/diagnostics/android-arm64-api29--src--native--wave069-device--device_destroy069.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/coupled070-local-compile-v1/objects/android-arm64-api29/src--native--wave069-device--device_destroy069.o",
+        "bytes": 1152,
+        "sha256": "56b4fc700d36b8b4340909c81bee1c191a5785e0b2e6f123ef082b4209d6d3af",
+        "format": "ELF64",
+        "machine": 183,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave069-device/embedded069.c",
+      "role": "bounded-component",
+      "target": "arm32-mpcore",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfloat-abi=soft",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-c",
+        "src/native/wave069-device/embedded069.c",
+        "-o",
+        "work/coupled070-local-compile-v1/objects/arm32-mpcore/src--native--wave069-device--embedded069.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave069-device/embedded069.c",
+          "sha256": "a2388593eba4c1007da6f30eec18b6d5a30358c66c53582e9b60949dc71356ea"
+        },
+        {
+          "path": "src/native/wave066-request/request.h",
+          "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+        },
+        {
+          "path": "src/native/wave067-queue/file_queue.h",
+          "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d"
+        },
+        {
+          "path": "src/native/wave069-device/device069.h",
+          "sha256": "bf5022b81e7d9e3a38e11c5e6a9a024dc818ab851c5ea18637c9fbd275633861"
+        }
+      ],
+      "diagnostics": "work/coupled070-local-compile-v1/diagnostics/arm32-mpcore--src--native--wave069-device--embedded069.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/coupled070-local-compile-v1/objects/arm32-mpcore/src--native--wave069-device--embedded069.o",
+        "bytes": 1016,
+        "sha256": "c6712865a762f203f9fba2b9e6e7643a4b12e214ad61cfecb50efe033885d605",
+        "format": "ELF32",
+        "machine": 40,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave069-device/embedded069.c",
+      "role": "bounded-component",
+      "target": "windows-x64",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-c",
+        "src/native/wave069-device/embedded069.c",
+        "-o",
+        "work/coupled070-local-compile-v1/objects/windows-x64/src--native--wave069-device--embedded069.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave069-device/embedded069.c",
+          "sha256": "a2388593eba4c1007da6f30eec18b6d5a30358c66c53582e9b60949dc71356ea"
+        },
+        {
+          "path": "src/native/wave066-request/request.h",
+          "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+        },
+        {
+          "path": "src/native/wave067-queue/file_queue.h",
+          "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d"
+        },
+        {
+          "path": "src/native/wave069-device/device069.h",
+          "sha256": "bf5022b81e7d9e3a38e11c5e6a9a024dc818ab851c5ea18637c9fbd275633861"
+        }
+      ],
+      "diagnostics": "work/coupled070-local-compile-v1/diagnostics/windows-x64--src--native--wave069-device--embedded069.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/coupled070-local-compile-v1/objects/windows-x64/src--native--wave069-device--embedded069.o",
+        "bytes": 571,
+        "sha256": "e3fb1a883879458d70ef0540dcf900275d47053a36181bd3e423d73d369c39af",
+        "format": "COFF",
+        "machine": 34404,
+        "sections": 5
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave069-device/embedded069.c",
+      "role": "bounded-component",
+      "target": "android-arm64-api29",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=aarch64-linux-android29",
+        "-fPIC",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-c",
+        "src/native/wave069-device/embedded069.c",
+        "-o",
+        "work/coupled070-local-compile-v1/objects/android-arm64-api29/src--native--wave069-device--embedded069.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave069-device/embedded069.c",
+          "sha256": "a2388593eba4c1007da6f30eec18b6d5a30358c66c53582e9b60949dc71356ea"
+        },
+        {
+          "path": "src/native/wave066-request/request.h",
+          "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+        },
+        {
+          "path": "src/native/wave067-queue/file_queue.h",
+          "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d"
+        },
+        {
+          "path": "src/native/wave069-device/device069.h",
+          "sha256": "bf5022b81e7d9e3a38e11c5e6a9a024dc818ab851c5ea18637c9fbd275633861"
+        }
+      ],
+      "diagnostics": "work/coupled070-local-compile-v1/diagnostics/android-arm64-api29--src--native--wave069-device--embedded069.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/coupled070-local-compile-v1/objects/android-arm64-api29/src--native--wave069-device--embedded069.o",
+        "bytes": 968,
+        "sha256": "a730aac4df7e6e6ed81abb30cafda241f49259eec4162f0326039fb69e1cf454",
+        "format": "ELF64",
+        "machine": 183,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave069-device/ipc069.c",
+      "role": "bounded-component",
+      "target": "arm32-mpcore",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfloat-abi=soft",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-c",
+        "src/native/wave069-device/ipc069.c",
+        "-o",
+        "work/coupled070-local-compile-v1/objects/arm32-mpcore/src--native--wave069-device--ipc069.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave069-device/ipc069.c",
+          "sha256": "24f758c55b1203f76f24ce16cbbee933f0d8fdcffa2c1265765fba47e46c662b"
+        },
+        {
+          "path": "src/native/wave066-request/request.h",
+          "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+        },
+        {
+          "path": "src/native/wave067-queue/file_queue.h",
+          "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d"
+        },
+        {
+          "path": "src/native/wave069-device/device069.h",
+          "sha256": "bf5022b81e7d9e3a38e11c5e6a9a024dc818ab851c5ea18637c9fbd275633861"
+        }
+      ],
+      "diagnostics": "work/coupled070-local-compile-v1/diagnostics/arm32-mpcore--src--native--wave069-device--ipc069.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/coupled070-local-compile-v1/objects/arm32-mpcore/src--native--wave069-device--ipc069.o",
+        "bytes": 1000,
+        "sha256": "c72d2223084a607e0de10f348c8f4065616cb882ba29931e58ccee71402af8c4",
+        "format": "ELF32",
+        "machine": 40,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave069-device/ipc069.c",
+      "role": "bounded-component",
+      "target": "windows-x64",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-c",
+        "src/native/wave069-device/ipc069.c",
+        "-o",
+        "work/coupled070-local-compile-v1/objects/windows-x64/src--native--wave069-device--ipc069.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave069-device/ipc069.c",
+          "sha256": "24f758c55b1203f76f24ce16cbbee933f0d8fdcffa2c1265765fba47e46c662b"
+        },
+        {
+          "path": "src/native/wave066-request/request.h",
+          "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+        },
+        {
+          "path": "src/native/wave067-queue/file_queue.h",
+          "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d"
+        },
+        {
+          "path": "src/native/wave069-device/device069.h",
+          "sha256": "bf5022b81e7d9e3a38e11c5e6a9a024dc818ab851c5ea18637c9fbd275633861"
+        }
+      ],
+      "diagnostics": "work/coupled070-local-compile-v1/diagnostics/windows-x64--src--native--wave069-device--ipc069.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/coupled070-local-compile-v1/objects/windows-x64/src--native--wave069-device--ipc069.o",
+        "bytes": 563,
+        "sha256": "efa994aed6f7e7c48d4ff7109128bd490063920a73ed97c710a920b9861ebbf7",
+        "format": "COFF",
+        "machine": 34404,
+        "sections": 5
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave069-device/ipc069.c",
+      "role": "bounded-component",
+      "target": "android-arm64-api29",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=aarch64-linux-android29",
+        "-fPIC",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-c",
+        "src/native/wave069-device/ipc069.c",
+        "-o",
+        "work/coupled070-local-compile-v1/objects/android-arm64-api29/src--native--wave069-device--ipc069.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave069-device/ipc069.c",
+          "sha256": "24f758c55b1203f76f24ce16cbbee933f0d8fdcffa2c1265765fba47e46c662b"
+        },
+        {
+          "path": "src/native/wave066-request/request.h",
+          "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+        },
+        {
+          "path": "src/native/wave067-queue/file_queue.h",
+          "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d"
+        },
+        {
+          "path": "src/native/wave069-device/device069.h",
+          "sha256": "bf5022b81e7d9e3a38e11c5e6a9a024dc818ab851c5ea18637c9fbd275633861"
+        }
+      ],
+      "diagnostics": "work/coupled070-local-compile-v1/diagnostics/android-arm64-api29--src--native--wave069-device--ipc069.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/coupled070-local-compile-v1/objects/android-arm64-api29/src--native--wave069-device--ipc069.o",
+        "bytes": 960,
+        "sha256": "9405e50ea8f5e4bb6b10e796447d74f672238d4c5e329b02641a80474d4cdccd",
+        "format": "ELF64",
+        "machine": 183,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave069-device/stream_destroy069.c",
+      "role": "bounded-component",
+      "target": "arm32-mpcore",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfloat-abi=soft",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-c",
+        "src/native/wave069-device/stream_destroy069.c",
+        "-o",
+        "work/coupled070-local-compile-v1/objects/arm32-mpcore/src--native--wave069-device--stream_destroy069.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave069-device/stream_destroy069.c",
+          "sha256": "4c812a0e6fc69de58e8f29e30f471f7c7f45c464182e1d3f95abc18a291b1ef9"
+        },
+        {
+          "path": "src/native/wave066-request/request.h",
+          "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+        },
+        {
+          "path": "src/native/wave067-queue/file_queue.h",
+          "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d"
+        },
+        {
+          "path": "src/native/wave069-device/device069.h",
+          "sha256": "bf5022b81e7d9e3a38e11c5e6a9a024dc818ab851c5ea18637c9fbd275633861"
+        }
+      ],
+      "diagnostics": "work/coupled070-local-compile-v1/diagnostics/arm32-mpcore--src--native--wave069-device--stream_destroy069.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/coupled070-local-compile-v1/objects/arm32-mpcore/src--native--wave069-device--stream_destroy069.o",
+        "bytes": 1808,
+        "sha256": "a884ebc6236c51f51ce024e7384940e880addc81b1c3ea8629ad2817fba5001a",
+        "format": "ELF32",
+        "machine": 40,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave069-device/stream_destroy069.c",
+      "role": "bounded-component",
+      "target": "windows-x64",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-c",
+        "src/native/wave069-device/stream_destroy069.c",
+        "-o",
+        "work/coupled070-local-compile-v1/objects/windows-x64/src--native--wave069-device--stream_destroy069.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave069-device/stream_destroy069.c",
+          "sha256": "4c812a0e6fc69de58e8f29e30f471f7c7f45c464182e1d3f95abc18a291b1ef9"
+        },
+        {
+          "path": "src/native/wave066-request/request.h",
+          "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+        },
+        {
+          "path": "src/native/wave067-queue/file_queue.h",
+          "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d"
+        },
+        {
+          "path": "src/native/wave069-device/device069.h",
+          "sha256": "bf5022b81e7d9e3a38e11c5e6a9a024dc818ab851c5ea18637c9fbd275633861"
+        }
+      ],
+      "diagnostics": "work/coupled070-local-compile-v1/diagnostics/windows-x64--src--native--wave069-device--stream_destroy069.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/coupled070-local-compile-v1/objects/windows-x64/src--native--wave069-device--stream_destroy069.o",
+        "bytes": 1030,
+        "sha256": "a73b32e3d334296a4244f44e8b4fba6c7e100ab6d82016704ab5f8359c5e2c94",
+        "format": "COFF",
+        "machine": 34404,
+        "sections": 7
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave069-device/stream_destroy069.c",
+      "role": "bounded-component",
+      "target": "android-arm64-api29",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=aarch64-linux-android29",
+        "-fPIC",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-c",
+        "src/native/wave069-device/stream_destroy069.c",
+        "-o",
+        "work/coupled070-local-compile-v1/objects/android-arm64-api29/src--native--wave069-device--stream_destroy069.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave069-device/stream_destroy069.c",
+          "sha256": "4c812a0e6fc69de58e8f29e30f471f7c7f45c464182e1d3f95abc18a291b1ef9"
+        },
+        {
+          "path": "src/native/wave066-request/request.h",
+          "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+        },
+        {
+          "path": "src/native/wave067-queue/file_queue.h",
+          "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d"
+        },
+        {
+          "path": "src/native/wave069-device/device069.h",
+          "sha256": "bf5022b81e7d9e3a38e11c5e6a9a024dc818ab851c5ea18637c9fbd275633861"
+        }
+      ],
+      "diagnostics": "work/coupled070-local-compile-v1/diagnostics/android-arm64-api29--src--native--wave069-device--stream_destroy069.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/coupled070-local-compile-v1/objects/android-arm64-api29/src--native--wave069-device--stream_destroy069.o",
+        "bytes": 1616,
+        "sha256": "4a09d092228c47a7b1bd2931b4ad63272bdff83840d08a8075ba4ef1ebc1ad32",
+        "format": "ELF64",
+        "machine": 183,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

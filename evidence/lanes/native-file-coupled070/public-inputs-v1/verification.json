@@ -1,0 +1,1367 @@
+{
+  "status": "coupled069070-public-transport-independently-verified-locally-awaiting-coordinator-replay",
+  "scopes": {
+    "full-v2": {
+      "status": "all-coupled070-post-exit-receipts-and-selected-inputs-verified",
+      "positiveProfiles": 24,
+      "returningControls": 30,
+      "boundaryProbes": 15,
+      "originalProfiles": 4,
+      "builds": 14,
+      "actualPerPlatformSourceImportCounts": {
+        "sdk": {
+          "arm": 23,
+          "windows": 23,
+          "a64": 23
+        },
+        "branch": {
+          "arm": 24,
+          "windows": 22,
+          "a64": 24
+        }
+      },
+      "selectedCHeaderInputs": 93,
+      "sourceCreditGranted": 0,
+      "matchingCreditGranted": 0
+    },
+    "source-only-v3": {
+      "status": "all-coupled070-post-exit-receipts-and-selected-inputs-verified",
+      "positiveProfiles": 24,
+      "returningControls": 30,
+      "boundaryProbes": 15,
+      "originalProfiles": 0,
+      "builds": 14,
+      "actualPerPlatformSourceImportCounts": {
+        "sdk": {
+          "arm": 23,
+          "windows": 23,
+          "a64": 23
+        },
+        "branch": {
+          "arm": 24,
+          "windows": 22,
+          "a64": 24
+        }
+      },
+      "selectedCHeaderInputs": 93,
+      "sourceCreditGranted": 0,
+      "matchingCreditGranted": 0
+    }
+  },
+  "frozenPredecessorPacketsVerifiedUnchanged": [
+    {
+      "ready": {
+        "path": "work/native-file069-device-destructor-v1/packet-v1/ready.json",
+        "bytes": 670,
+        "sha256": "2b1be2f5b92e283725f360047f068898338d10fba2805bc48eff5abd269a0e01"
+      },
+      "unchangedArtifactPins": 3366
+    },
+    {
+      "ready": {
+        "path": "work/native-file070-branches-v1/packet-v1/ready.json",
+        "bytes": 648,
+        "sha256": "6635aaa3c825de6dbcba8bfa537be89f4b7c4309c34a39ed8d5812435adce14c"
+      },
+      "unchangedArtifactPins": 2679
+    }
+  ],
+  "existingPublicProviderPins": [
+    {
+      "proposedPublicPath": "toolscripts/file067/support/test_effect_queue067.py",
+      "bytes": 4327,
+      "sha256": "242af3127288923a64701304eca45f45023194fbc4090eee9bbd087f9d5dcc94",
+      "publicGitBlob": "144272805a50466b18079f6e35c4d1eeac414da0"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/support/app_shell_build.py",
+      "bytes": 13554,
+      "sha256": "3a42f04edb1332dd3ee52313687f2f62ce46137361b460908e81aa2c483d784b",
+      "publicGitBlob": "c3583c6e4b9fa0ee8f04d7ab8f625693119778ee"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/bootstrap_public_compiler.py",
+      "bytes": 6371,
+      "sha256": "6782fdeecc42477e9a8a3cf65441313ce6e2ffef6c9f0ae38ad4b0823f6ff44d",
+      "publicGitBlob": "ba67c45c07e9dbd68a4f752507e470ea3f11cca9"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/effect065_cached_build.py",
+      "bytes": 4943,
+      "sha256": "39a494156ba999030e556260496c6855f29b79e0a59bdb75f5f9ae937ec69cbb",
+      "publicGitBlob": "02592d7c4a1bf256a26a181257f5377f16bcbc1e"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/effect065_cached_oracle.py",
+      "bytes": 11113,
+      "sha256": "d56e40d7c41482d4776c1690d671617a12bbe81cf84db3f46e4e1c0d9df97c7a",
+      "publicGitBlob": "e7c83d7274a750d9bf716c12a77720e57a0bb97b"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/effect065_cached_reference.py",
+      "bytes": 6657,
+      "sha256": "989422f7b29d830f265c401c44280b7f13877159b3950c66e26ceeff40a5d39a",
+      "publicGitBlob": "d8225187f9eba9768faa97beb69282dbfea4db9c"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/effect065_owner_build.py",
+      "bytes": 2101,
+      "sha256": "55ffe4ef0b7dfe6059c1d0b131f2e580fa9406cedd4440394cc325006cdb277a",
+      "publicGitBlob": "e916bef623ed8a323b8ffb3352d1f0344bd53064"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/effect065_owner_oracle.py",
+      "bytes": 11331,
+      "sha256": "41a728317a2b22042640a520221caac9b444d50ac51a273a4ba53b555af92db2",
+      "publicGitBlob": "dcd24c95153304b1161c99394bb0b1fcdaa3d4cd"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/support/effect_queue067_android_build.py",
+      "bytes": 7521,
+      "sha256": "d6226999e0a209cf8eebef61de6b9bcd9f56880df30731c3491841ce9fbf88e1",
+      "publicGitBlob": "0135cff2a4f4712b7958844322ba3d2e3e11cc09"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/support/effect_queue067_cohort.py",
+      "bytes": 12000,
+      "sha256": "ea9d749b52f4241531aadde2b2f5bed815f5f47d9d42f7fa7e8f9143c6ead5a8",
+      "publicGitBlob": "ffb8e7e93df65cf03bdf4455c27f5247975da560"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/support/effect_queue067_controls.py",
+      "bytes": 5491,
+      "sha256": "bb650b721dcff6a75cd8107d6943fd4fe84bd6df58f1e43ecb0a77ea3646e3bc",
+      "publicGitBlob": "f4ce0da7ed58c28a32b65eebaa0fa3b655e9b5a3"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/support/effect_queue067_coverage.py",
+      "bytes": 6971,
+      "sha256": "3267105bc98f01e34762c21734337e2ef6d03123cd0eb70203fbf71869d9963a",
+      "publicGitBlob": "e611b763f784722ab2d3ac6dd4d166b76e518ae7"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/support/effect_queue067_lifetime.py",
+      "bytes": 6717,
+      "sha256": "2a9068c83bfff26dc100d519730e3d6c8c1352e56771baddfdbf938cfde905ce",
+      "publicGitBlob": "7203b17da7dd6d1f5878ff418f480d9ecaa6d984"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/support/effect_queue067_native.py",
+      "bytes": 8465,
+      "sha256": "63648e9422f7d4a2421c5e6cdb0b12e6d84162455fa592a4f2846bf97c9562a1",
+      "publicGitBlob": "216265fcc6d95d69fbc5d606570b1bf4d91dd03c"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/support/effect_queue067_observation.py",
+      "bytes": 9073,
+      "sha256": "ba302665b3200402090e45c525d586fc887b25730a4454f9bdcc731c09cc6ee3",
+      "publicGitBlob": "c006bd31c448fa9f456bcd14a3264b05b958f5ca"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/support/effect_queue067_reference.py",
+      "bytes": 7315,
+      "sha256": "e970caf803281b84b1ef41ca990013cf61d4ccaed082650b10819abf0032497d",
+      "publicGitBlob": "c2414cc187b74b21cbcb4e0436c26f14844bc266"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/support/effect_queue067_source_build.py",
+      "bytes": 1783,
+      "sha256": "c2956a541224da6a0af16e7435a1dc25845381505817961027a0053dd54e35f0",
+      "publicGitBlob": "8133055ce4beffbf638cd2d0a9b42b47f97342df"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/support/effect_queue067_source_cpu.py",
+      "bytes": 9886,
+      "sha256": "29590d489f0506ad0b44631bcc9266efe14c1d56860e91aaefea601a908a6744",
+      "publicGitBlob": "fe69e008381d0d4221dc4f11aad70f79b5c7218c"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/support/effect_queue067_source_guard.py",
+      "bytes": 1615,
+      "sha256": "d15e80d92524ece5e502701626982537ddb5a7949000dea8e22d391077653578",
+      "publicGitBlob": "9cf1a47dd38e83c856e6ee8b9faf4a9cff3705fa"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/support/effect_queue067_tiny.py",
+      "bytes": 8407,
+      "sha256": "ba4813aa95797528b5962e9266e3936ad323565b9d91e4d8f99493621bf7f5c3",
+      "publicGitBlob": "742a37bc3672ccdf07bd5aab155b621da39c8eb6"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/support/effect_queue067_worker_reference.py",
+      "bytes": 5357,
+      "sha256": "4fb62c05d00c1f2b0fc62ecc3a057c743948679abb3cd8e964904aff5971e5cf",
+      "publicGitBlob": "c74d7fac0e091678759e3b962be84348bb09a0e5"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/effect_request066_build.py",
+      "bytes": 2025,
+      "sha256": "2bfb1595459f94f1a4e34784d4d5e6bff9bfea1eec74d6c69c9389dd369cfc04",
+      "publicGitBlob": "f5ade8298ec4741ff2800440a6ef989640941c81"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/effect_request066_device_reference.py",
+      "bytes": 5230,
+      "sha256": "644773d20a6dde61b95fedf67f8fa56dfd262f7827f727f5a465841943a1571c",
+      "publicGitBlob": "a25f901ab08e536bccac54e24236463866e463d4"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/effect_request066_errors.py",
+      "bytes": 13848,
+      "sha256": "ba6876ff985aa03ddea72c60119123eeeebfa4ef1267b3655d24c12917d1d1ef",
+      "publicGitBlob": "8f37940afed60973810d4d5b31864ed2de09ab40"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/effect_request066_oracle.py",
+      "bytes": 13441,
+      "sha256": "f6480bba2eed3a68173b8c95713677d67e08610e7912ba732880ba65e30214c7",
+      "publicGitBlob": "1c797ac9bba4d9ffedaf75a10d1ea8c6021220ed"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/effect_request066_reference.py",
+      "bytes": 10404,
+      "sha256": "e48f9d530679676de5733a2db783a8fb24245fd798c4b7caa06c625b3358c3c1",
+      "publicGitBlob": "8a02be13ca4a14995751bcec866980cbb72f3a82"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/effect_request066_session.py",
+      "bytes": 12362,
+      "sha256": "ba4944bb1ce812348cea9c0e8d578d75173b374426c83d675ba607c0c1e76d89",
+      "publicGitBlob": "7f20c79d136a55c1725dd53d484dfd68a446f35e"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/inventory.py",
+      "bytes": 9687,
+      "sha256": "32c3d637553cff27c10ffcf7142e3d1c33465bcff4338525fd6886e90e5d1cbd",
+      "publicGitBlob": "464805c69a93415b969a3b7dcc3a1675f31866ec"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/native_archive032_fixtures.py",
+      "bytes": 3220,
+      "sha256": "738f08949ae658eb3eaa580b7dfd872613d3f53e12c5feb41fca94cdc72c2402",
+      "publicGitBlob": "bed96a4ffd9f6a40bb2361a6d23de16db51d6861"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/native_census_overlay.py",
+      "bytes": 11252,
+      "sha256": "1cc0fd82de21675e81981ecde7005a94858c1e085a675f39345f7bc66ee6ed4c",
+      "publicGitBlob": "03084bb7f0ad62dc9387fa89d07f4e7f0055bf1d"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/native_effect065_build.py",
+      "bytes": 6657,
+      "sha256": "34faec34e6f872bf29fe362f3952914b5c178ae4299105f31bb9b09bfda89c22",
+      "publicGitBlob": "3a979372cc30bfa37655acb85c0127e90b4fe719"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/native_effect065_resource_conditions.py",
+      "bytes": 1885,
+      "sha256": "ab15c6fdf1fe84c67302d34b2656e0d165a1911379adf235fcc619e6d010c5d7",
+      "publicGitBlob": "cc57e6e3ffb4191af24e9390cbcd26477edd006d"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/native_effect065_resource_graph_build.py",
+      "bytes": 4665,
+      "sha256": "4989bcafa4deea207b1482c5f421ce8aaa3c5cbc15258d3dcb5c572db9986ea0",
+      "publicGitBlob": "bb7c92206ebb9f5c2461958ca8f116a8c862bbe5"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/native_effect065_resource_graph_cases.py",
+      "bytes": 8270,
+      "sha256": "db4bc24e3293ff64ca62d60206a03f136e6c8ccfa09a6a785788950d063867f5",
+      "publicGitBlob": "12625e58286dd16cfea90b75b75dcd699998c07f"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/native_effect065_resource_graph_observation.py",
+      "bytes": 14850,
+      "sha256": "5afa3205caa1e5cefee589674b6a77ca33719e0bda21acd6ee1e41fd80b7e7c3",
+      "publicGitBlob": "1d78e6785c1d66526e5ad55c56426516cd237410"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/native_effect065_resource_graph_oracle.py",
+      "bytes": 14286,
+      "sha256": "fe2d6373468a12a96b5d6b5f0c72091a2f0b89b6716eb0d5979902c9c8b15eae",
+      "publicGitBlob": "5319acdc2d593ae02d7064e35976d6afb9ec263d"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/native_effect065_resource_texture_oracle.py",
+      "bytes": 10861,
+      "sha256": "0b1acd5c006f5e0c8a805a3790702688183469fa2346d33f1a81874955a2150e",
+      "publicGitBlob": "adafc0fc8dd0c3e6443713b27dfeb5b8d51d499b"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/native_effect065_resource_vertex_oracle.py",
+      "bytes": 9594,
+      "sha256": "5a9307ccbc8b025ef6fc2c394bbab9712e4da4d3a5884d43b06a104fbf014731",
+      "publicGitBlob": "99f8de6177b65630785bb5fdf6e36bb65bc30089"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/native_wave013_common.py",
+      "bytes": 1350,
+      "sha256": "555c3a4aa9655925f4dc9288c8baa27ff894ba0446d4ad795901c6826a011961",
+      "publicGitBlob": "560f991df1e7b3a006f9bd808358c82c7f506833"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/support/native_wave013_file_owner_reference_image.py",
+      "bytes": 6556,
+      "sha256": "64b98ad65704fb769eaa3eaecedb53b30baea89b710a1331942446c46a89d378",
+      "publicGitBlob": "72cdfebd1e47a345595eff0fb192e3690de0d792"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/frontier.py",
+      "bytes": 4126,
+      "sha256": "8cec4a402df216100be1d2b6a25f3679bf3be3d789351933003166d038a944cc",
+      "publicGitBlob": "3c359d5bd7fbcbafbd9076b6074fa479886c1002"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/bootstrap_cells.py",
+      "bytes": 3416,
+      "sha256": "5625b77c8e0f7ef81962968e07551a4a5a517891bf3db9a94fed3abecbf1a114",
+      "publicGitBlob": "422e9b03018d452092e7c103e4f48bf783154e96"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/service_frontier.py",
+      "bytes": 4857,
+      "sha256": "a87cba5b1c4a3b28d84186bb72a44fe0853f0bc788b927188328fd187f12b301",
+      "publicGitBlob": "6b86a817d6c96285af76b4bc08892be83260ed6b"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/service_initialize.py",
+      "bytes": 1954,
+      "sha256": "65818036216bae6a14b99bd1c10c45df6c39aa1ce3b1cd4a39080b4035666638",
+      "publicGitBlob": "08351b64dc979a8ba7b502f45d8ae2fcb27b669f"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/service_handle.py",
+      "bytes": 2102,
+      "sha256": "4273072bc7ea58b8f9a8c938fc97b96ba9fcb01823b542fa98a8455ab7f365db",
+      "publicGitBlob": "2e91c64160b15c8c1bf5d0a672558e638edeac5a"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/fs_service_frontier.py",
+      "bytes": 1507,
+      "sha256": "76f8c52d34522499dc17fe9472054d1815f3727f01d91ee9c314ce936c593347",
+      "publicGitBlob": "685d503b7fc6c24e793418206af92450003ee6dd"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/fs_initialize_frontier.py",
+      "bytes": 3054,
+      "sha256": "85ab03838e2c47d951e3a06c97cd194878d331de52ff283e4eaf1873c6e775b3",
+      "publicGitBlob": "46590369a6fffddf8822d5f179d08484f6f1d12e"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/fs_contract.py",
+      "bytes": 2887,
+      "sha256": "cb53f0f337465fd6aa9283d5008c8af11d4f06853751ad5d79a38e2bfbd14d19",
+      "publicGitBlob": "a58e6ab17e002f259e02299d47970d17e6729c04"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/ipc_buffers.py",
+      "bytes": 2388,
+      "sha256": "a3d143d1b732277f15c594b8d932fe27d3c263a9d4aaa2af5788329d6feca787",
+      "publicGitBlob": "5eb66099ca1061c682c9f9ff2eea6d7857f647c2"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/romfs_handle.py",
+      "bytes": 2629,
+      "sha256": "f0dd96897878694a87aff9ce48db6628cd869b6932b37cfb49c249266d257704",
+      "publicGitBlob": "c2c1c2879abe8211f33b6b633102800ef59523d8"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/sdk_initialized.py",
+      "bytes": 2728,
+      "sha256": "b54e9548c50c64da19ca835d350632da0035be5ea385253441c43d9edb741ebc",
+      "publicGitBlob": "41148243a75110e2324935806cfdc8b68c6d4a5c"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/sdk_initialized_v2.py",
+      "bytes": 3429,
+      "sha256": "8cc4e7c0613b64c05d606967da1fa1ae5138247756311e4fb37b98c0ec0de66e",
+      "publicGitBlob": "213e229b38a776bf112c9c864b2dced369798e50"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/romfs_fixture.py",
+      "bytes": 347,
+      "sha256": "f70bfbd88ba86e94faf6d1d0786ab5512718c0082dfc389b09772fb6e3bb0afa",
+      "publicGitBlob": "19d935d754fe6417539fcf52eec45f87a1387ee9"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/romfs_read.py",
+      "bytes": 3743,
+      "sha256": "240cca80c2a2b7baef3d0e55d2cd2a2d434defcab50dbeb5ce16660f0b75eae0",
+      "publicGitBlob": "721789c30a3d1e39cc814b58e4fb5d93a95df6c2"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/romfs_close.py",
+      "bytes": 3340,
+      "sha256": "bf1e1d987eafb7f27c454baca5a09f4a72296a9378d12d46c900e8d42b072d37",
+      "publicGitBlob": "3e0fd6c0167989c18c38465d3caa13d4db5d5157"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/romfs_large.py",
+      "bytes": 2262,
+      "sha256": "a5540f320b7ddcda236425a03d6aa8b2dccf3855dd26657f03d91bdc74db1b7d",
+      "publicGitBlob": "59c13b28482fa29502d3337b51e3a466abb78464"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/romfs_mount_frontier.py",
+      "bytes": 2401,
+      "sha256": "586f53d5ebc78328c9935994cde3fb34b52d90c594818bd2a950877a32ee7f49",
+      "publicGitBlob": "93ee444d36a0a96b82bb8fdfdf19c1c8f8da1efe"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/romfs_mount_pool_v3.py",
+      "bytes": 2544,
+      "sha256": "817bcedb390a344c213f611d27d26f521cbbd9a3a667ab22f952401dd7f7fe0e",
+      "publicGitBlob": "838a8d340ba2167b1152a7d8f841626f0fdb7d3e"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/generated_romfs_provider.py",
+      "bytes": 7029,
+      "sha256": "2274bbdecc0ca6f39ee4df808b50484fcc1a1c69d80f19967b2d751f1fcd6c56",
+      "publicGitBlob": "395db28d96bec99b56773340a7f48ca08ff12169"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/romfs_constructor_view.py",
+      "bytes": 3955,
+      "sha256": "7f9da0c12f21fa0250e749bbb56e50f05d7add0b60f7a99977f68d70cba983c4",
+      "publicGitBlob": "153d0733331d7a3bba4281dbc9dc624d60be2ac0"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/run_component.py",
+      "bytes": 1935,
+      "sha256": "cccc18a1ca783cf00ca1b7564af8198eaf7087810dfaecb00d7af42305ac19d1",
+      "publicGitBlob": "ddb350d566e51e94c07816c595b4f13bf00f0103"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/fs_priority.py",
+      "bytes": 1385,
+      "sha256": "2769aebf9c39e3f7d32d29e9f8767d0baab7adca0ad56c52a8d0f9536ed86be9",
+      "publicGitBlob": "230e035b5d7c66291cb3467a5545308f3a616fa5"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/patch_provider.py",
+      "bytes": 2219,
+      "sha256": "9aefe0b336f617a61de1f47dc04c7de72e6aa1fc983460ccd058221fd67a2cf9",
+      "publicGitBlob": "e4a04d8c94e86d0ebaa5d497cfb99ef7de85f966"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/singleton_bootstrap.py",
+      "bytes": 878,
+      "sha256": "51dfc222591b5d4830c1d718795a2dac66623868df7aa10e54b67abcf4223c11",
+      "publicGitBlob": "6033753db096c6df5db28147bc480936888aee37"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/reference/singleton_replay.py",
+      "bytes": 3108,
+      "sha256": "f7cdc39733703cc59b86a946d530f8cf22a755bc4c7c4752edf3524616f3c3bb",
+      "publicGitBlob": "2c7daff0e86b5549a8d35dbe652a387d3192bda8"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/source/build.py",
+      "bytes": 2405,
+      "sha256": "05c236de9966561d664440a9930119ba262722a76d01c90c2f015c723faaa1d4",
+      "publicGitBlob": "b11ab4e37e0532048df1c84ad901d43339136377"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/source/cohort.py",
+      "bytes": 10599,
+      "sha256": "902e2e62d30e0d6b9d5ae695e1c4304663ca5dfc74d39b56ae745710814262ab",
+      "publicGitBlob": "45d5f1f9b93db715a950f7ceca62680176cc06b0"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/source/controls.py",
+      "bytes": 3298,
+      "sha256": "8532592d30cd9dd6f776b8749e97fb24336b11cb375dccab5ea607b95835099a",
+      "publicGitBlob": "25bf0475795a2cb02835a520c90acada5735d980"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/support/source/original_trace.py",
+      "bytes": 2943,
+      "sha256": "566d52ad081ae81477dbde346ff4f648d95bdc1930170f3226f7332827154479",
+      "publicGitBlob": "58b408b220daca5f0533b503c5b99c757dc88806"
+    },
+    {
+      "proposedPublicPath": "src/native/wave009/interval_set.h",
+      "bytes": 987,
+      "sha256": "c9f8ea99061aaf09e3b82c8a75d3049282f14bdbf7e201a429c1064348853419",
+      "publicGitBlob": "41bff9be8f2059b152ee35292f62f5612c61ba86"
+    },
+    {
+      "proposedPublicPath": "src/native/wave010/match_state.h",
+      "bytes": 1055,
+      "sha256": "c5331ad810d5fc508c5df281ece4f5b8f70a998cc5d226d2e7157593137d035b",
+      "publicGitBlob": "9fa7ce167753fbbba43786ef8ff7b743a6b4a003"
+    },
+    {
+      "proposedPublicPath": "src/native/wave012/compile_graph.h",
+      "bytes": 1657,
+      "sha256": "d496139a253186af9849862e764fcc1b50d77f432fe8e6e9dd4c6b4ce84f8ee5",
+      "publicGitBlob": "a59e2a0aaef2ae27fe91d00a19ddfac753f4387f"
+    },
+    {
+      "proposedPublicPath": "src/native/wave012/fixed_arena.h",
+      "bytes": 689,
+      "sha256": "576604e9c5fde42d82ada3fa977fa33591421711f129bd5cae1b3c45240eec4a",
+      "publicGitBlob": "cb2382c1a6d5faa597e994f514f37c1a27b50f87"
+    },
+    {
+      "proposedPublicPath": "src/native/wave012/label_ops.h",
+      "bytes": 939,
+      "sha256": "0d96df2ffe4d5c6f404cbbe688e86f3f644fbc7fecfe9fe6ab0c03a43b2f5be1",
+      "publicGitBlob": "d64db8f653b6c896614dd186efe447da0c67faf4"
+    },
+    {
+      "proposedPublicPath": "src/native/wave012/memory_ops.c",
+      "bytes": 1951,
+      "sha256": "2110c115a64ddc3cfa867787bd64cbbc65a35643cef10f5afc27971215c24516",
+      "publicGitBlob": "8d2a45fed4a8b386fdb7fd9603a657d924fcc2f5"
+    },
+    {
+      "proposedPublicPath": "src/native/wave013/control_compile.h",
+      "bytes": 288,
+      "sha256": "323e2786580a834a869dfd5a15d22edd58f84dc8d909322dbf3d99902937e8b0",
+      "publicGitBlob": "d2d455d4931473d0eace60cc6c09104cc71a9d1e"
+    },
+    {
+      "proposedPublicPath": "src/native/wave013/dfa_compile.h",
+      "bytes": 830,
+      "sha256": "83f3627463a010ec5b5d561f1d443c25995be6dc8f4f86cbc28d534f1d2fe334",
+      "publicGitBlob": "6bede39e7fffdc72156fbb45a98f398555ef90da"
+    },
+    {
+      "proposedPublicPath": "src/native/wave013/outer_arena.c",
+      "bytes": 1116,
+      "sha256": "520818862f8faf779ee3083698e1ee29b614d8e19358453f880f42e99f6ce192",
+      "publicGitBlob": "5a639d5253f131f4eab1b132633b12f867c46be0"
+    },
+    {
+      "proposedPublicPath": "src/native/wave013/pattern_nfa.h",
+      "bytes": 4884,
+      "sha256": "76dddc817728b69b544e927320f5c1564a6a390ba6259adae837a324d3a07c36",
+      "publicGitBlob": "c3ef395553dd4a1cfdaa7060218e09ea9508be8e"
+    },
+    {
+      "proposedPublicPath": "src/native/wave013/pattern_nfa_api.h",
+      "bytes": 386,
+      "sha256": "974523189a56560a598aca0f00ef26cd7b50c3a12bb5c0bb1f0789e5ba82d8bb",
+      "publicGitBlob": "20246db23e84fba187097233e2651a5cea53cd08"
+    },
+    {
+      "proposedPublicPath": "src/native/wave013/pattern_outer.h",
+      "bytes": 1605,
+      "sha256": "2e79c5635b7b411271ff28684f7349b0daf076e05473e2b997b6ccf21ea68e9a",
+      "publicGitBlob": "b6d772cbaedbad01985bcb7fb846b5b14d1d247a"
+    },
+    {
+      "proposedPublicPath": "src/native/wave013/pattern_ranges.h",
+      "bytes": 521,
+      "sha256": "6eb248d90a59fc8f50469f8735a4b6ad224ca067b68ce66295ccd5de765abeee",
+      "publicGitBlob": "e024578bcf29084a475e1089696371f78131ea21"
+    },
+    {
+      "proposedPublicPath": "src/native/wave013/pattern_tokens.h",
+      "bytes": 4191,
+      "sha256": "2a06bf5d5efd04ef077298a341aaead1a5ef6e20ace3969363ff35b1ba78a9ae",
+      "publicGitBlob": "df3f013778f664c43869123aae4113bc1daf4d1f"
+    },
+    {
+      "proposedPublicPath": "src/native/wave013/pattern_unicode.h",
+      "bytes": 1109,
+      "sha256": "5a0f6e2c1824e58392c5d347108ff9b088ae256e684fcff613a9aaceb28f709b",
+      "publicGitBlob": "3adcc9f85f92fa074fed26c6f3e95fdc587f2ea9"
+    },
+    {
+      "proposedPublicPath": "src/native/wave032/archive.h",
+      "bytes": 2058,
+      "sha256": "898228acad7e6c345af740679090ecfb27e05a15fcd8326c15c134a25099eb9c",
+      "publicGitBlob": "15f1281df93651dba54c6b457d7c18f1d9be6c34"
+    },
+    {
+      "proposedPublicPath": "src/native/wave032/archive_lookup.c",
+      "bytes": 2147,
+      "sha256": "77447d1f84669ef96e98a0bdbf8974b33bf6d37fea2502c67ba84c1a198bcaae",
+      "publicGitBlob": "0952d2e3a0e6a3e08097cc7e0e473219f24fa24e"
+    },
+    {
+      "proposedPublicPath": "src/native/wave032/archive_members.c",
+      "bytes": 1657,
+      "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+      "publicGitBlob": "28bfa19ef1d2d83246078cb6c7e50c8df9d81f8c"
+    },
+    {
+      "proposedPublicPath": "src/native/wave032/archive_owner.c",
+      "bytes": 1635,
+      "sha256": "5e8cba4615a2aa54073d1336d9bb4487d2db3f11cadf7f413c7212832e6d18c8",
+      "publicGitBlob": "aa03debffe3a6f4761eb116cfdce61a6873fb397"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065/effect_preview.c",
+      "bytes": 4275,
+      "sha256": "b317784d97063cd8d7ae05b74c376e443470352fc9ec8b561b9a6251d29db0ef",
+      "publicGitBlob": "a83773b052070bff0581e550f0e5d1d91d849779"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065/effect_preview.h",
+      "bytes": 3054,
+      "sha256": "f4107777d62b1087c265b4f7a92e41964cd10e406b50f28564d2a7b745219cde",
+      "publicGitBlob": "da748a826450a4ca2c7493728ab03943a956df74"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065/effect_services.h",
+      "bytes": 520,
+      "sha256": "ca1a247f8b3421b17ea848b38029fa5b74f40576588c8b9efd630b2a47235ef9",
+      "publicGitBlob": "6f04deba1601ed9552f4ed2265350b0556291a04"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065/effect_shader.c",
+      "bytes": 1511,
+      "sha256": "35db548068499b99bfd7c52b337a6dfa2568ebb5847c53db31a1c0d6585cfb33",
+      "publicGitBlob": "3673a89b0227cc5d564797f1477ecd96e56e51b9"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065/effect_shader.h",
+      "bytes": 1381,
+      "sha256": "26c4310b9bceb3e6d6a45c1923679312b164bd686ff285e5e36aa37e2e3895fd",
+      "publicGitBlob": "54563211c37c060881ba3ada437c514c697cb3fa"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-cached/effect_cached.h",
+      "bytes": 2804,
+      "sha256": "ad83bd4336187d51d5f197ccb924631eb80a2dc85465f9b4013798ef0a1e3592",
+      "publicGitBlob": "74670318b13d1e87550ef8feb9d7d88bb997f0eb"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-cached/effect_cached_fetch.c",
+      "bytes": 2390,
+      "sha256": "d058638689714953570a9c4bbe8eb292618eabe6eb3e7bf0b879918120aac945",
+      "publicGitBlob": "4a90950be44f3b203839d027090285f788df798e"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-cached/effect_cached_format.c",
+      "bytes": 1326,
+      "sha256": "d9079abce9373eb04bc08ef030aba7ba5f0a4afdbdd060003b6f4c584bce8244",
+      "publicGitBlob": "9e055cccecdda4098d7a8a9d2b7ac8d2259bfc8a"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-cached/effect_cached_request.c",
+      "bytes": 2570,
+      "sha256": "5c9d27f374579fe7aff96d46275dac982dd577ca366a7203f3ba2d2fc64a186e",
+      "publicGitBlob": "9b5915ac047529ee5ca9a0f406d4e43d1c586ec3"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-cached/effect_cached_services.c",
+      "bytes": 366,
+      "sha256": "c825c8a04c8b34fbfa6a98c8904b57a417532ad97dc1d6368e077e7d00eb8e6c",
+      "publicGitBlob": "e06a08e760f875062a12a0179009974b976941d7"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-owner/effect_owner.h",
+      "bytes": 1306,
+      "sha256": "d2424ade961e16cd32aa6ef942f65accbbbde55dc724e39e43ac85aadb37632d",
+      "publicGitBlob": "71d3fe8d0deec7fa270e4a83a0091234f1023780"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-owner/effect_registration.c",
+      "bytes": 586,
+      "sha256": "8919479a5f7e8dadff06585234ee918cba177c7b76a5383bac3371b9e9826a98",
+      "publicGitBlob": "fe18187585d88b93ed37ed81d80d01fe0fa4a42e"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_commands.c",
+      "bytes": 5991,
+      "sha256": "ebb3cd9cf39fdd3352b85658a37085280cbf7329cd8c4d200e1fe53ca21fafab",
+      "publicGitBlob": "1df9cc530f0976095264fd86f1ed16eddf491ecd"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_commands.h",
+      "bytes": 885,
+      "sha256": "707e55cd92764ac2085e3071293911998a5db1f365b0166831d72dc3a40ad7fe",
+      "publicGitBlob": "fb20350f3f7a4f1b86ba50b24c61af13350200a0"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_device.c",
+      "bytes": 1657,
+      "sha256": "5d1eca97c5e3ad3bb1888dc1661b669a85e10083caa4f4bb3a0192309d2e332f",
+      "publicGitBlob": "64e10fc0100233ca538a899e5229e93bd52b350c"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_device.h",
+      "bytes": 1098,
+      "sha256": "284d8a6ae7918d9ae5c083351c4df293feae7ec839217a5e13a048fc49d4cc64",
+      "publicGitBlob": "6d51f898d980709ac2d041f46c79814ba66fb8fb"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_port_runtime.c",
+      "bytes": 344,
+      "sha256": "22036544b4956205983c5147ee7c3c50cd7158d31200e660f3b5a26e14fb23fb",
+      "publicGitBlob": "6851c7ecebc708be29cf7b82ba85e0358bcd856c"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_resource.c",
+      "bytes": 2743,
+      "sha256": "c0df7d80f452ac9a70ea0542d2677909fc00892d719de1df777158cc8a250597",
+      "publicGitBlob": "b5e005bd1cf48e2dc47cafbe496896f4e237f130"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_resource.h",
+      "bytes": 4527,
+      "sha256": "27856b081a4cbc7fffd99bdf4207a0f50297a823e1be9bc383299e6f3378fe1e",
+      "publicGitBlob": "e5cf4f76f824c4e6687ce5f1bd608cb125522116"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_resource_internal.h",
+      "bytes": 1158,
+      "sha256": "4180f9e4989373c5b6f1d9f2a1638033e2422319628a1b4be4051e16d552a68f",
+      "publicGitBlob": "c8ef9e1b1bda5638d6ae8ce9bbfd0e88a6ef40df"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_resource_memory.c",
+      "bytes": 2449,
+      "sha256": "9435650539a05de15b212d54aa334b0247449fc1553741ac887ec292cb4270c8",
+      "publicGitBlob": "eeb42beb2cc3a43967d4551ecbeff46946c848d7"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_resource_memory.h",
+      "bytes": 1915,
+      "sha256": "556a8706a752115547e7d66dd03ab0d447e5aba45e8cc2fa24c4ac940dfe4437",
+      "publicGitBlob": "f533d812dec16a0d5209ad7032b176210f41590c"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_resource_primitives.c",
+      "bytes": 11904,
+      "sha256": "a303514b8f156c963d10ca098a96c2fdc19d840527d4738b13a2985e517d855a",
+      "publicGitBlob": "e465aaf13489f40c5ceb2538494ef4ca9b452a96"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_resource_release.c",
+      "bytes": 4042,
+      "sha256": "5bbdfc210138141c4232dd57176a3bbf6c10b04bbe95756fd1891120c5ab6fbe",
+      "publicGitBlob": "964a108faf276500a0130392c629b6ff1c6d94e5"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_resource_sets.c",
+      "bytes": 9330,
+      "sha256": "e90be26d9dab200e33f07f8800f5a4c12abc20ce05d1f52518bbff7d40511678",
+      "publicGitBlob": "221ed1ff9dfa0a3fae503a12fc270a059ec86f4a"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_resource_shaders.c",
+      "bytes": 1071,
+      "sha256": "6b8252fa137ffbe0cd91c8b51ffcc7a55a8daaad127f5f5b73fd69f39d65a50c",
+      "publicGitBlob": "094dcf5c37bf3b84ee4f62b1e296e055edae2b3f"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_serialized.h",
+      "bytes": 700,
+      "sha256": "6de80450ceea9d5eebad58df3a90df0b0e7177c24b739c7cd796e3f3d1fc2c2a",
+      "publicGitBlob": "c2c011562c20d2fc9eb78d0b1a430e104647d929"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_texture.c",
+      "bytes": 5440,
+      "sha256": "22cf0b0f8d73d3011b1332a7e90a146e5f3f63e9ee7d0dc59617128a6adcdbd5",
+      "publicGitBlob": "11ec10a3557d07847a308408ecdfb221bf08a92a"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_texture.h",
+      "bytes": 1126,
+      "sha256": "e7214e034d51ec6d91cb307665a744582bb21e39f63e982aea62992a81f73742",
+      "publicGitBlob": "e3b9016c5f92c94cec43f011207cfff10e3b8f3c"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_vertex.c",
+      "bytes": 3159,
+      "sha256": "2f6862b7705ac9ce9870ce3b2edb34d9ca6ae738b96eb30c43312550ebb52d05",
+      "publicGitBlob": "e710b8f6539b98c4802e672a0bcf60caeded0e09"
+    },
+    {
+      "proposedPublicPath": "src/native/wave065-resource/effect_vertex.h",
+      "bytes": 2099,
+      "sha256": "4fa83e9f114e8bfbda79628cd0405ee44dce673f8ba4f6c551ae63b3f216cf87",
+      "publicGitBlob": "17e82923711a7ec50832b757d95f5d6b5b293188"
+    },
+    {
+      "proposedPublicPath": "src/native/wave066-request/request.h",
+      "bytes": 7289,
+      "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc",
+      "publicGitBlob": "49fab6605d14a4d206959ce2323378e5b0c15b51"
+    },
+    {
+      "proposedPublicPath": "src/native/wave066-request/request_control.c",
+      "bytes": 1411,
+      "sha256": "3fce347487d987b2880a3001c87810f88d5d6ed0e29a4d5132b1db47cb04d8f7",
+      "publicGitBlob": "3b49b421f603d1b157a5317932b42de273e34798"
+    },
+    {
+      "proposedPublicPath": "src/native/wave066-request/request_factory.c",
+      "bytes": 2656,
+      "sha256": "717e683e98d4f9e324b02d0a52521a4076e9111c0298969e3e322a1e59155a5d",
+      "publicGitBlob": "2215dbfddbf614e3167402da50d798e6f60a0998"
+    },
+    {
+      "proposedPublicPath": "src/native/wave066-request/request_lower.c",
+      "bytes": 1925,
+      "sha256": "79a4b8710fe0c620efc4d35a036b88e00618dc68e85ae4e423736ef0c9f2557e",
+      "publicGitBlob": "31efcbc923ef00e475a9cdf6b0c83182c85cdaa9"
+    },
+    {
+      "proposedPublicPath": "src/native/wave066-request/request_lower.h",
+      "bytes": 1430,
+      "sha256": "f90ee5fa23ca791fc9cb2e48cb25ee6898f1f056377b0b763372e9cbd935690f",
+      "publicGitBlob": "2a7656e7a06d455bdd2a2d391843336f64dd4b0a"
+    },
+    {
+      "proposedPublicPath": "src/native/wave066-request/request_memory.c",
+      "bytes": 328,
+      "sha256": "f165e2012d2629d49eb9e9284652db3ae1475d0ea19dd65b09981f92b40fc996",
+      "publicGitBlob": "f49c429c4d17f76d3b23a6a86ed2a1dfca5fc129"
+    },
+    {
+      "proposedPublicPath": "src/native/wave066-request/request_provider.c",
+      "bytes": 3963,
+      "sha256": "2a1efd9c5b940c913c6ffa6aad02d98b04bfef73effd532d78452e7104103fb7",
+      "publicGitBlob": "93d4eff47805a58df5b9cbec31fc2d33cbb00f34"
+    },
+    {
+      "proposedPublicPath": "src/native/wave066-request/request_strings.c",
+      "bytes": 2655,
+      "sha256": "b04976ead7979b5d471b374f7ca311306d8d252c17e911d1244c6c9e5bc246f7",
+      "publicGitBlob": "6e487fcffe00ab5cff80d365d46527eef3aed274"
+    },
+    {
+      "proposedPublicPath": "src/native/wave066-request/request_task.c",
+      "bytes": 3122,
+      "sha256": "a50f459a9a5941c5c3eb571a0fe2ab86a4ead9624e143e55c49ae04aec243fd9",
+      "publicGitBlob": "e4da7ce30676ca4b05ce489829bdecbf59c830b3"
+    },
+    {
+      "proposedPublicPath": "src/native/wave067-queue/file_queue.h",
+      "bytes": 4616,
+      "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d",
+      "publicGitBlob": "43e14efbfb1f59e857baa8a4e3f60fe10a25f566"
+    },
+    {
+      "proposedPublicPath": "src/native/wave067-queue/queue_manager.c",
+      "bytes": 2331,
+      "sha256": "76d72cbd4d5a3708d3ccc6e21c6d9060d2fdf223295ab23573c6b4f2b35452f3",
+      "publicGitBlob": "dc8490b923c8059c1b362ddca76721858e6d6733"
+    },
+    {
+      "proposedPublicPath": "src/native/wave067-queue/queue_memory.c",
+      "bytes": 904,
+      "sha256": "eb0adda217abfde481adc228e6ea54f622893610b46049b2c7894df081cc2dfc",
+      "publicGitBlob": "ca5259d2bdbc0f7eb82de67e5129a0ee088ccbaa"
+    },
+    {
+      "proposedPublicPath": "src/native/wave067-queue/queue_store.c",
+      "bytes": 3810,
+      "sha256": "7af751e0daf47c4aa7fbfede586399098d906827e8d9c99318572a611aceff78",
+      "publicGitBlob": "76fa5b0fc7df4e5cbc5472f10a9fb73e2425f2a8"
+    },
+    {
+      "proposedPublicPath": "src/native/wave067-queue/queue_worker.c",
+      "bytes": 3006,
+      "sha256": "ad17c5b21ed58c3948facfc1f99d412b170cdf673279bf3ae895cc2478a8c3de",
+      "publicGitBlob": "693dbc5f9cb08641ff89ff15c02b9173519f5421"
+    },
+    {
+      "proposedPublicPath": "src/native/wave068-bootstrap/bootstrap.h",
+      "bytes": 2136,
+      "sha256": "e9f70d6849170a0ef94f9a7ef8861c24e2457cd4572bb822ce9ca1b31ed3f52d",
+      "publicGitBlob": "b6a098fb0a700eb4deb16d368eea1309cdc9c7c5"
+    },
+    {
+      "proposedPublicPath": "src/native/wave068-bootstrap/filesystem.c",
+      "bytes": 1521,
+      "sha256": "238ad4bb45a13dfb87cb2e15f8129ab7efa0156bbb22b5e3ff23eab709c91b4e",
+      "publicGitBlob": "487ee4447391b00dcfe8eeb24ab7d2dbe63205bb"
+    },
+    {
+      "proposedPublicPath": "src/native/wave068-bootstrap/requests.c",
+      "bytes": 322,
+      "sha256": "a97d207edfa7e00550f3ccabb0f44f166afcf56ec110fb2c76e069ce502f49b4",
+      "publicGitBlob": "9d212e3399c106e6f1020c332da05cadfcfc0679"
+    },
+    {
+      "proposedPublicPath": "src/native/wave068-bootstrap/singleton.c",
+      "bytes": 758,
+      "sha256": "5303819192d2a7a3c68c8cf10333a2876fef59ed8e093b58e6b1803c46e9b722",
+      "publicGitBlob": "b9c0277d177030d4555995ee147f4df5f6ac8c01"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/fixtures/effect065_cached_composed_fixture.c",
+      "bytes": 4533,
+      "sha256": "bcec5b3e83ce715b1ff82fd00ad89414e1bae8fcc12734e7bff8593a738220a6",
+      "publicGitBlob": "bc74d1c419183ef44435273d4f9d0bb672c4f64a"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/fixtures/effect065_cached_fixture.c",
+      "bytes": 5884,
+      "sha256": "f80649865eedcf13d31884ef4d92f3bee4225861970341a55e45aedbcee8e2f2",
+      "publicGitBlob": "05c6f6e7ad2127795c4e911b6c726f6fe25f1960"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/fixtures/effect065_owner_fixture.c",
+      "bytes": 4607,
+      "sha256": "f00c9455c7f4690a1f0af2aab73198631910b39b78b9ce03a02df4395d9e727d",
+      "publicGitBlob": "298968d68235fbb444a7964d06f924907c30963a"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/fixtures/effect_queue067_android_api.h",
+      "bytes": 777,
+      "sha256": "7e6f2c093d109031c0bed74f2d27fc23306d0db2370dc8f48b190a8626064c5f",
+      "publicGitBlob": "18e00e664d8b062616ea9f3b7e61795dee819ee3"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/fixtures/effect_queue067_android_probe.c",
+      "bytes": 5933,
+      "sha256": "1788cb6fa21ccaca45a449afa37f3c0dce369f73fccb302721c5ea7fab6ec284",
+      "publicGitBlob": "6e50d0542982248d8575f443f9eb25b5ff1d30d5"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/fixtures/effect_queue067_android_pthread.c",
+      "bytes": 7909,
+      "sha256": "6abcf45ee6faff1497786b3e1eef43c24bb9e3fbacb6ea72941c89095083c63c",
+      "publicGitBlob": "c1a72e06e85a8467b8fb34f5883ec85ff885a7ba"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/fixtures/effect_queue067_io_fixture.h",
+      "bytes": 3219,
+      "sha256": "ca15838b288cfbbbc28fdcf8dca79341bf29f1f532f0d270e85655767ebb9495",
+      "publicGitBlob": "f5f877a459b1fbf02d9277103eb7458626174163"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file067/fixtures/effect_queue067_source_fixture.c",
+      "bytes": 10978,
+      "sha256": "ab70d01084d68ef3cd7026f2056c2bb6ce3cb42a1b8148e52d5bf7a1bbfd2db8",
+      "publicGitBlob": "d04734f165b32df002e2e0662940c9c8ae4d9ef7"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/fixtures/effect_request066_cache_fixture.c",
+      "bytes": 4087,
+      "sha256": "1afd20d5295b131f9939be86531ca82bcf11bb8bdb7f001219262b8f5464e118",
+      "publicGitBlob": "6f7229a7c2ad34374571e177e3b8a2ad81f8665d"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/fixtures/effect_request066_device_fixture.c",
+      "bytes": 7054,
+      "sha256": "a6fe9f42e4e6806be334cb7ff91eeb74a58a91d8f8b0d264492582151d22b02e",
+      "publicGitBlob": "b79d80fbc71b26730ef1f3b006f9afc090e05180"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/fixtures/effect_request066_fixture.c",
+      "bytes": 3790,
+      "sha256": "1586cafd7ae1473602b9bc0df7bfadb33d50502913546df1e2de30cac261a61e",
+      "publicGitBlob": "9c6b8c531332be55e3b226a4e3d14846d255ba1c"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/fixtures/effect_request066_port_fixture.c",
+      "bytes": 4216,
+      "sha256": "aa5a3b2213ec53bf760788dc002c17812e62578458912978e4357fb2a59689f2",
+      "publicGitBlob": "14b3cd0ba3978629b0ccbc905ab47b83ced2f8cf"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/fixtures/file068_source_fixture.c",
+      "bytes": 6872,
+      "sha256": "69c0afc1e3fb320641d9a553a06683c312c1c52295823adbea39a76d59e93cc6",
+      "publicGitBlob": "cb901840481b7d9e406fa63f1d305c7bd1a10ff2"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file068/fixtures/native_effect065_resource_graph_fixture.c",
+      "bytes": 13465,
+      "sha256": "2a5b08b453b7ff493a9f59e794fa4f1448191bd73aebf2191c1c17baf074c30c",
+      "publicGitBlob": "97fe11aa411c7beebf895361d274933799620608"
+    },
+    {
+      "proposedPublicPath": "toolscripts/file066/fixtures/native_effect065_resource_runtime.c",
+      "bytes": 41,
+      "sha256": "682133feb94f6be1f023621484cffd53d035e283236fe240426924f19694f2a2",
+      "publicGitBlob": "6b47259fa24f28fdd93fdaa29d34976b12d49eef"
+    },
+    {
+      "proposedPublicPath": "toolscripts/effect_file066_public_guard.py",
+      "bytes": 7138,
+      "sha256": "caa32a645c7efb1f849f4af8fa36c574886c5e5b9c430d126cc39aee5c0c5e41",
+      "publicGitBlob": "5df28e98b90eabac2b0a434176c3836a302baf30"
+    },
+    {
+      "proposedPublicPath": "toolscripts/queue_file067_guard.py",
+      "bytes": 2288,
+      "sha256": "41c62f24168b1263ba8853cb22851caeb7ea45abcee05e23cde4e38248863cb4",
+      "publicGitBlob": "2f6f7f56412fb3eb994813f0dc178e54500c9b52"
+    }
+  ],
+  "publicProviderMainGitTree": "9e61dd4d22a0669ed90508fa5c130e266e1ea112",
+  "publicProviderBlobsVerifiedThroughAuthenticatedReadOnlyCLI": true,
+  "counts": {
+    "existingSourceHelperReferences": 152,
+    "unchangedBaseGuards": 2,
+    "newSelectedSourceInputs": 26,
+    "selectedCHeaderInputs": 93,
+    "selectedHelperSources": 85,
+    "boundedMetadataSnapshots": 23,
+    "fullReplayChildren": 87,
+    "sourceOnlyReplayChildren": 83,
+    "positiveProfilesPerScope": 24,
+    "returningControlsPerScope": 30,
+    "persistentBoundaryProbesPerScope": 15,
+    "buildsPerScope": 14,
+    "exactArtifactsPerBuild": 133,
+    "candidateFunctions": 11,
+    "instructionBytes": 904,
+    "literalPoolBytes": 64,
+    "observedInstructionPositions": 219,
+    "totalInstructionPositions": 226
+  },
+  "sourceRolesByFixtureFamily": {
+    "sdk": {
+      "quoted-include-or-qualification-only": 47,
+      "translation-unit": 43,
+      "windows-translation-unit": 1
+    },
+    "branch": {
+      "quoted-include-or-qualification-only": 49,
+      "translation-unit": 43,
+      "windows-translation-unit": 1
+    }
+  },
+  "actualOriginalReports": [
+    {
+      "path": "work/native-file070-public-input-v1/full-v2/actual-original-branch-alias.json",
+      "bytes": 25549,
+      "sha256": "28dde61103bcd14760e5a7cddd42c09a6359efae769d133ded9ee702fde30fd4"
+    },
+    {
+      "path": "work/native-file070-public-input-v1/full-v2/actual-original-branch-null-equal.json",
+      "bytes": 27445,
+      "sha256": "adcbdb7010e130681fe628ba459c88c41a16cc222aecc6576f6f6e4a6c5d3e15"
+    },
+    {
+      "path": "work/native-file070-public-input-v1/full-v2/actual-original-branch-warm.json",
+      "bytes": 39124,
+      "sha256": "716591cd00daee957282b27b15eb4db7d326cafc2f8b7a223d01651d0459e5c4"
+    },
+    {
+      "path": "work/native-file070-public-input-v1/full-v2/actual-original-sdk-None.json",
+      "bytes": 32508,
+      "sha256": "f3f93582096b58545175a5236f6e8215aa7054a52105aca019adbc7b338ff86a"
+    }
+  ],
+  "instructionCoverage": [
+    {
+      "entry": 1070328,
+      "mode": "ARM",
+      "sourceFunction": "effect_file_bootstrap_initialize068",
+      "instructionRanges": [
+        {
+          "start": 1070328,
+          "endExclusive": 1070420,
+          "bytes": 92,
+          "sha256": "04c355ff0390318b8ad25e24116d9cfcce255ff4e26f0bf645d7862f72e126b8"
+        }
+      ],
+      "dataRanges": [
+        {
+          "start": 1070420,
+          "endExclusive": 1070428,
+          "bytes": 8,
+          "sha256": "86d18205f4106de3357aff4f3c4f620d6bd7f187c7286f88f378bbd9724d4497"
+        }
+      ],
+      "observedInstructionPositions": 23,
+      "totalInstructionPositions": 23,
+      "unseenInstructionPositions": [],
+      "poolBytes": 8
+    },
+    {
+      "entry": 1098820,
+      "mode": "ARM",
+      "sourceFunction": "effect_file_filesystem_initialize068",
+      "instructionRanges": [
+        {
+          "start": 1098820,
+          "endExclusive": 1098984,
+          "bytes": 164,
+          "sha256": "8e1e965a18a2a91f52de15b48a2677ea4cbc875bd5e034ea97e33b318d418875"
+        }
+      ],
+      "dataRanges": [
+        {
+          "start": 1098984,
+          "endExclusive": 1098996,
+          "bytes": 12,
+          "sha256": "6a9036b8f8ee13af8fecdb4a5e79cdc64030f31d573706d03449defe689bb3c2"
+        }
+      ],
+      "observedInstructionPositions": 41,
+      "totalInstructionPositions": 41,
+      "unseenInstructionPositions": [],
+      "poolBytes": 12
+    },
+    {
+      "entry": 4513792,
+      "mode": "ARM",
+      "sourceFunction": "effect_file_sdk_device_destroy069",
+      "instructionRanges": [
+        {
+          "start": 4513792,
+          "endExclusive": 4513916,
+          "bytes": 124,
+          "sha256": "9291cb4909b30b4740107015c2e0d89c9d093e5fea28fadad1cfae4646cd3a83"
+        }
+      ],
+      "dataRanges": [
+        {
+          "start": 4513916,
+          "endExclusive": 4513924,
+          "bytes": 8,
+          "sha256": "6972563e74bbe8750412b52422e7e9a6f15f84876f294c683b1165780dcb41fb"
+        }
+      ],
+      "observedInstructionPositions": 31,
+      "totalInstructionPositions": 31,
+      "unseenInstructionPositions": [],
+      "poolBytes": 8
+    },
+    {
+      "entry": 4512856,
+      "mode": "ARM",
+      "sourceFunction": "effect_file_sdk_stream_release069",
+      "instructionRanges": [
+        {
+          "start": 4512856,
+          "endExclusive": 4512964,
+          "bytes": 108,
+          "sha256": "1ab9af63c8dca228e72db35b319ca8f117149e391b1d7cc2442ada1835d53099"
+        }
+      ],
+      "dataRanges": [
+        {
+          "start": 4512964,
+          "endExclusive": 4512968,
+          "bytes": 4,
+          "sha256": "a598dc847f0587031670aac339f1169969234f5f4d09821707d35866921ffb70"
+        }
+      ],
+      "observedInstructionPositions": 27,
+      "totalInstructionPositions": 27,
+      "unseenInstructionPositions": [],
+      "poolBytes": 4
+    },
+    {
+      "entry": 1510460,
+      "mode": "ARM",
+      "sourceFunction": "effect_file_sdk_embedded_destroy069",
+      "instructionRanges": [
+        {
+          "start": 1510460,
+          "endExclusive": 1510552,
+          "bytes": 92,
+          "sha256": "192fa354abaee66792585ebc0aa31d06bcff75a26dfac485fd291a5ff844706e"
+        }
+      ],
+      "dataRanges": [
+        {
+          "start": 1510552,
+          "endExclusive": 1510556,
+          "bytes": 4,
+          "sha256": "6f84e230290370bacecb2304256f86536746a53a6470549b0c1d06244e0bb50f"
+        }
+      ],
+      "observedInstructionPositions": 16,
+      "totalInstructionPositions": 23,
+      "unseenInstructionPositions": [
+        1510516,
+        1510520,
+        1510524,
+        1510528,
+        1510532,
+        1510536,
+        1510540
+      ],
+      "poolBytes": 4
+    },
+    {
+      "entry": 4513312,
+      "mode": "ARM",
+      "sourceFunction": "effect_file_sdk_stream_destroy069",
+      "instructionRanges": [
+        {
+          "start": 4513312,
+          "endExclusive": 4513352,
+          "bytes": 40,
+          "sha256": "458c4b56e466c9882a1b2dae55e8b4d543952bb5920113557f83b4c87503c5f3"
+        }
+      ],
+      "dataRanges": [],
+      "observedInstructionPositions": 10,
+      "totalInstructionPositions": 10,
+      "unseenInstructionPositions": [],
+      "poolBytes": 0
+    },
+    {
+      "entry": 7138108,
+      "mode": "ARM",
+      "sourceFunction": "effect_file_sdk_stream_handle069",
+      "instructionRanges": [
+        {
+          "start": 7138108,
+          "endExclusive": 7138144,
+          "bytes": 36,
+          "sha256": "2b18f43b74371e20dd83da65cd82776bef9ce88c38d8f54bc6a53f578efc6107"
+        }
+      ],
+      "dataRanges": [
+        {
+          "start": 7138144,
+          "endExclusive": 7138148,
+          "bytes": 4,
+          "sha256": "3ee598e28078cf1a8f03f4d561c01ce4190e5c65dd24e3ebab32b787e9d305ff"
+        }
+      ],
+      "observedInstructionPositions": 9,
+      "totalInstructionPositions": 9,
+      "unseenInstructionPositions": [],
+      "poolBytes": 4
+    },
+    {
+      "entry": 4515544,
+      "mode": "ARM",
+      "sourceFunction": "effect_file_sdk_file_close069",
+      "instructionRanges": [
+        {
+          "start": 4515544,
+          "endExclusive": 4515584,
+          "bytes": 40,
+          "sha256": "808f183d4ac07d8685d65505f76ed6294926696963243c824e719ed5388bb80b"
+        }
+      ],
+      "dataRanges": [
+        {
+          "start": 4515584,
+          "endExclusive": 4515588,
+          "bytes": 4,
+          "sha256": "968dd7ad5ce71a152c7a640895992363d414a93e80d24f8fa04b3b16eaeab427"
+        }
+      ],
+      "observedInstructionPositions": 10,
+      "totalInstructionPositions": 10,
+      "unseenInstructionPositions": [],
+      "poolBytes": 4
+    },
+    {
+      "entry": 4513708,
+      "mode": "ARM",
+      "sourceFunction": "effect_file_device_pool_release068",
+      "instructionRanges": [
+        {
+          "start": 4513708,
+          "endExclusive": 4513788,
+          "bytes": 80,
+          "sha256": "c94d0cc38093760569565c598128879da7c9aaa72e94ac83cdc8b6182b4f2821"
+        }
+      ],
+      "dataRanges": [
+        {
+          "start": 4513788,
+          "endExclusive": 4513792,
+          "bytes": 4,
+          "sha256": "138116eddcfd2bfca4b6bdad577b12d1f68f797d7bfb8584655d88d3c49db6a5"
+        }
+      ],
+      "observedInstructionPositions": 20,
+      "totalInstructionPositions": 20,
+      "unseenInstructionPositions": [],
+      "poolBytes": 4
+    },
+    {
+      "entry": 1070428,
+      "mode": "ARM",
+      "sourceFunction": "effect_file_bootstrap_shutdown068",
+      "instructionRanges": [
+        {
+          "start": 1070428,
+          "endExclusive": 1070476,
+          "bytes": 48,
+          "sha256": "2dbca228270c7fa0a8d52047a58992f54508d5ac60e481e1bf850fee7033b34e"
+        }
+      ],
+      "dataRanges": [
+        {
+          "start": 1070476,
+          "endExclusive": 1070480,
+          "bytes": 4,
+          "sha256": "7e82ae7c1c98f63520ff75281d9931528d30275ee22b13658801fae0fc8a69ea"
+        }
+      ],
+      "observedInstructionPositions": 12,
+      "totalInstructionPositions": 12,
+      "unseenInstructionPositions": [],
+      "poolBytes": 4
+    },
+    {
+      "entry": 1098996,
+      "mode": "ARM",
+      "sourceFunction": "effect_file_filesystem_shutdown068",
+      "instructionRanges": [
+        {
+          "start": 1098996,
+          "endExclusive": 1099076,
+          "bytes": 80,
+          "sha256": "73ac48721abda40157288c01d574b89e007b0467c2bcc642f7b4e08bf2366325"
+        }
+      ],
+      "dataRanges": [
+        {
+          "start": 1099076,
+          "endExclusive": 1099088,
+          "bytes": 12,
+          "sha256": "bb8ad24644428b4db9eb22334c75e5f38583702f1d0d9c65aa8dbaf23bb6cbce"
+        }
+      ],
+      "observedInstructionPositions": 20,
+      "totalInstructionPositions": 20,
+      "unseenInstructionPositions": [],
+      "poolBytes": 12
+    }
+  ],
+  "terminalAfterProcessExitJournalsVerified": true,
+  "lateCaughtAttemptsAfterCleanReceiptRejected": true,
+  "exactSourceArtifactPinsBeforeAndAfterExecution": true,
+  "exactSelectedGeneratedDLLPathGate": true,
+  "publicProvidersReadOnly": true,
+  "originalToolRepositoryOrArtifactTreesCopied": false,
+  "SDKConstructorNamespaceAndKernelBoundariesRemainQualificationPorts": true,
+  "sourceCreditGranted": 0,
+  "matchingCreditGranted": 0,
+  "nativeTextByteDenominatorChanged": false,
+  "wholeNativeGameQualified": false,
+  "physicalAndroidExecuted": false,
+  "hostFilesystemMounted": false,
+  "taskObservationDomain": "before-start/paused-event/join",
+  "limits": [
+    "Successful warm replacement requires filesystem namespaces already unmounted, old worker paused idle and no jobs.",
+    "Ordinary repeated full startup with namespaces still mounted enters genuine fatal15e590; this is preserved and excluded.",
+    "Equal-pointer outcome is valid NULL==NULL after manager allocation failure; a nonnull fresh allocation aliasing live old manager is not qualified.",
+    "Instruction-position union is complete23/23 and41/41; this does not imply every possible predicate/failure/input outcome.",
+    "No original global/registry seeding, original instruction modification, physical host filesystem, physicalAndroid or whole-game claim.",
+    "Source namespace mount/alias/registration and OS calls remain explicit typed compiled C qualification ports; no SDK constructor/alias-source credit.",
+    "Wrong warm source variants may leave only paused/before-start native workers; isolated child exit disposes them. No positive lifecycle credit is granted for negatives.",
+    "Only first cold enabled-patch shutdown after one idle worker pause and no queued/current jobs.",
+    "Embedded+0xc/+0x10 are null. Intrusive-list positions170c74..170c8c, nonempty/fatal inputs, zero stream handles and negative SVC results remain unqualified.",
+    "103/110 instruction positions are observed. Position witnesses do not imply both conditional outcomes.",
+    "Kernel/service contracts remain explicit synthetic fixtures; no actual host filesystem or physicalAndroid SDK teardown.",
+    "Context/TLS and native64 layout adaptation is component qualification; no object-byte matching or historical compiler/SDK lineage claim.",
+    "Alias, warm replacement, equal-pointer/no-replacement and allocation failures remain outside this packet."
+  ],
+  "rootOwnsSharedIntegrationAndPublication": true,
+  "preservedAttempts": [
+    "smoke-v1 initial driver imported the existing guard before materialization; deferred import fixes adapter bootstrap only.",
+    "smoke-v2 source-only preliminary adapter passed all8 Windows base/tiny source cases and12 persistent boundary probes.",
+    "smoke-v3 original diagnostic subclass accessed teardown observer state before superclass construction finished.",
+    "smoke-v4 SDK original passed; branch observer used a separately imported trace singleton. Corrected only diagnostic binding.",
+    "full-v1 and source-only-v2 exploratory adapters were superseded by exact generated-artifact/DLL gating. Partial files and scoped stopped-process receipts are preserved.",
+    "source-only-v1 is an earlier exploratory adapter and has no authority over canonical full-v2/source-only-v3."
+  ]
+}

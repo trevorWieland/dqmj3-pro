@@ -1,0 +1,66 @@
+import argparse
+import importlib.util
+import json
+from pathlib import Path
+import shutil
+import sys
+
+
+ROOT = Path(__file__).resolve().parents[2]
+BASE = Path(__file__).resolve().parent
+PREVIOUS = ROOT / 'work/native-file068/recovered-v1'
+
+
+def run(output, source_root):
+    spec = importlib.util.spec_from_file_location('frozen068_builder', PREVIOUS / 'build.py')
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    cached = module.builder.predecessor.cached
+    extra, exports = cached.EXTRA, cached.EXPORTS
+    cached.EXTRA = extra + ['../wave069-device/' + name for name in ['device_destroy069', 'stream_destroy069', 'embedded069', 'ipc069']] + ['../wave068-teardown/device_pool', '../wave068-bootstrap/filesystem',
+        '../wave068-bootstrap/singleton', '../wave068-bootstrap/requests']
+    cached.EXPORTS = exports + ['effect_file_bootstrap_initialize068', 'effect_file_bootstrap_shutdown068',
+        'effect_file_filesystem_initialize068', 'effect_file_filesystem_shutdown068', 'effect_file_request_async068',
+        'effect_file_device_pool_release068', 'effect_file_fixture_start068', 'effect_file_fixture_observe068',
+        'effect_file_fixture_count068', 'effect_file_fixture_trace068', 'effect_file_fixture_teardown_prepare068',
+        'effect_file_fixture_shutdown068', 'effect_file_fixture_pool_count068',
+        'effect_file_fixture_pool_trace068', 'effect_file_fixture_pool_observe068', 'effect_file_sdk_device_destroy069', 'effect_file_sdk_stream_release069', 'effect_file_sdk_stream_destroy069', 'effect_file_sdk_stream_handle069', 'effect_file_sdk_embedded_destroy069', 'effect_file_sdk_file_close069', 'effect_file_fixture_sdk_count069', 'effect_file_fixture_sdk_trace069', 'effect_file_fixture_sdk_observe069']
+    try:
+        return module.builder.build(output, {source_root / 'toolscripts/effect065_cached_composed_fixture.c':
+            source_root / 'toolscripts/device069_source_fixture.c'}, source_root=source_root)
+    finally:
+        cached.EXTRA, cached.EXPORTS = extra, exports
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--source', type=Path, default=BASE / 'source')
+    parser.add_argument('--output', type=Path, default=BASE / 'build-v1')
+    parser.add_argument('--stage', action='store_true')
+    args = parser.parse_args()
+    source = args.source.resolve()
+    output = args.output.resolve()
+    if args.stage:
+        assert not source.exists()
+        previous = ROOT / 'work/native-file068-successor-v2/source-v2'
+        for path in previous.rglob('*'):
+            if path.is_file() and path.name != 'teardown068_source_fixture.c':
+                destination = source / path.relative_to(previous)
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(path, destination)
+        for path in (BASE / 'production').glob('*'):
+            destination = source / 'src/native/wave069-device' / path.name
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(path, destination)
+        header = source / 'src/native/wave068-teardown/device_pool.h'
+        text = header.read_text()
+        first = text.index('typedef struct EffectFileDevice068')
+        last = text.index('typedef struct EffectFileDevicePoolServices068')
+        text = text[:first] + '#include "../wave069-device/device069.h"\n\n' + text[last:]
+        text = text.replace('304 : 312', '304 : 392')
+        header.write_text(text)
+        shutil.copyfile(BASE / 'device069_source_fixture.c', source / 'toolscripts/device069_source_fixture.c')
+    result = run(output, source)
+    print(json.dumps({'profiles': list(result['artifacts']),
+        'artifacts': sum(len(row['objects']) + 1 for row in result['artifacts'].values()),
+        'sourceCreditGranted': 0}))
