@@ -1,0 +1,9 @@
+# Complete graphics dispatcher candidate
+
+This candidate preserves the full 18,296-byte canonical dispatcher at `0x73b7a4`, including its 4,574 instruction PCs. Its ten new production C files and quoted-header dependencies are byte-identical to the frozen worker inputs. Small header snapshots preserve the original relative include topology; qualification fixtures remain separate from production units. Publishing/compiling these files grants no source or exact-match credit.
+
+The public `dispatcher6` replay stages 54 small declared inputs into a fresh `work/native-state055` namespace, refuses an existing private namespace and verifies their membership in the frozen 261-file packet. It stages only the required controller-v5 source/receipt prerequisites. Compiler, original-image and runtime provisioning belong to the existing isolated replay driver; the dispatcher bootstrap copies none of those trees or archives.
+
+The unchanged producers run 3,086 primary cases / 12,344 observations and the same independently rebuilt source-copy corpus, eight normally returning controls / 24 executions per source copy, two final-path cases, eight actual original-wrapper cases and twelve producer tests. Verification compares complete raw runtime rows, three main linked artifacts and 24 control artifacts byte for byte. Build/control envelopes retain their distinct paths.
+
+The original observes 4,569 instruction PCs after the final-path supplement. Five remaining PCs have individually hash-bound selector/dominance invariants; they are never relabeled as executed. These are bounded data/state contracts, including explicit unsupported aliasing/nonfinite-product/FP-status conditions. Resource/controller construction, allocator startup, actual GPU execution, physical-device behavior and a native game are separate claims.

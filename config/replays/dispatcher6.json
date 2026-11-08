@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "name": "dispatcher6",
+  "producerSteps": [
+    {
+      "name": "dispatcher6-prepare",
+      "args": [
+        "toolscripts/native_dispatcher6_stage.py",
+        "prepare"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    },
+    {
+      "name": "dispatcher6-proof",
+      "args": [
+        "toolscripts/native_dispatcher6_stage.py",
+        "proof"
+      ],
+      "inputKinds": [
+        "code",
+        "exheader"
+      ]
+    }
+  ],
+  "tests": [
+    "native_dispatcher6_stage",
+    "compile_source_include_dirs",
+    "native_provider_inventory",
+    "native_callback_inventory",
+    "native_census_overlay"
+  ],
+  "packets": [
+    "work/dispatcher6-public/v1/staged-inputs.json",
+    "work/dispatcher6-public/v1/public-input-guard.json",
+    "work/dispatcher6-public/v1/source-audit.log",
+    "work/dispatcher6-public/v1/build.log",
+    "work/dispatcher6-public/v1/positive.log",
+    "work/dispatcher6-public/v1/copy.log",
+    "work/dispatcher6-public/v1/copied-positive.log",
+    "work/dispatcher6-public/v1/controls.log",
+    "work/dispatcher6-public/v1/copied-controls.log",
+    "work/dispatcher6-public/v1/supplement.log",
+    "work/dispatcher6-public/v1/wrapper.log",
+    "work/dispatcher6-public/v1/invariants.log",
+    "work/dispatcher6-public/v1/verify.log",
+    "work/dispatcher6-public/v1/producer-tests.log",
+    "work/native-state055/dispatcher-v6/execution.json",
+    "work/native-state055/dispatcher-v6/replay-v1/execution.json",
+    "work/native-state055/dispatcher-v6/source-replay-comparison.json",
+    "work/native-state055/dispatcher-v6/controls-primary-v2/returning-controls.json",
+    "work/native-state055/dispatcher-v6/replay-v1/returning-controls.json",
+    "work/native-state055/dispatcher-v6/final-path-supplement.json",
+    "work/native-state055/dispatcher-v6/control-invariants.json",
+    "work/native-state055/dispatcher-v6/actual-wrapper-frontier.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": [
+      "code",
+      "exheader"
+    ]
+  }
+}

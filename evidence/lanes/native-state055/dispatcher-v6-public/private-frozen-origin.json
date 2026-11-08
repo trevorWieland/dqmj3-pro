@@ -1,0 +1,1702 @@
+{
+  "schemaVersion": 1,
+  "status": "frozen-complete-dispatcher-source-component-for-coordinator-review",
+  "version": "update-content0",
+  "module": "main",
+  "mode": "ARM",
+  "entry": 7583652,
+  "instructionBytes": 18296,
+  "instructionCount": 4574,
+  "canonicalCName": "state_dispatch6",
+  "source": {
+    "path": "work/native-state055/dispatcher-v6/source/dispatch6.c",
+    "bytes": 486,
+    "sha256": "b439cd67cd1a8f33fea08aaeddcbb85020ea8f34d44cc22bb6b7b01e5ae88e85"
+  },
+  "sourceFiles": [
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch6.c",
+      "bytes": 486,
+      "sha256": "b439cd67cd1a8f33fea08aaeddcbb85020ea8f34d44cc22bb6b7b01e5ae88e85"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_bindings6.c",
+      "bytes": 1756,
+      "sha256": "e4e85addfcafba57860962c60be72ecab43ddb94cc0bf5037a46a922fbd59bf8"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_enum6.c",
+      "bytes": 1132,
+      "sha256": "26cfc413371190b0d6778ecc2eaf2330131aaa78f824994a6da38b366a34d83f"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_fixed6.c",
+      "bytes": 2125,
+      "sha256": "a75761c232b500032f1e2c8a4772a74cb930e4020d91d1eeed19be415c1992e7"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_fixture6.c",
+      "bytes": 879,
+      "sha256": "2d020edf01ab4ef73f5cbde11cff5b863ac2ab3ac19b55de10bf77bd1d4af29d"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_global6.c",
+      "bytes": 2366,
+      "sha256": "4d1cbe3d6d8e7f3134dbada277b2080bdb8ffb7b67591b87010c6922967673ff"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_light6.c",
+      "bytes": 1781,
+      "sha256": "73df882a4cab405693c0dad411d962da99f88c458794341180d87257c643d795"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_property6.c",
+      "bytes": 5344,
+      "sha256": "a03bc5dbd1e87b227d226eda74948a2c0968be9b0512da22c3f9a681fed2dbb4"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_reduced6.c",
+      "bytes": 1841,
+      "sha256": "0545831eb38019c966e5be8fdcf728be5ac5b3825237bef0941d2f0d142b25e7"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_scalar6.c",
+      "bytes": 4913,
+      "sha256": "559e731ee86c19f185a3f0c4fdf08fc3b84550b2fecb87b31cf5f1725408e130"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_uniform6.c",
+      "bytes": 2312,
+      "sha256": "c334b6946b0345addd41bf654fb27de7b1eea8f7f5d802842b879a6028b3752f"
+    },
+    {
+      "path": "work/native-state055/controller-v5/source/apply_bindings055.c",
+      "bytes": 7814,
+      "sha256": "b292d1613e74759951690cd234bd407142de59358f06134ad79ddddd01a31fa0"
+    },
+    {
+      "path": "src/native/wave055/state055.c",
+      "bytes": 988,
+      "sha256": "0dc88d3e60de5bf1595385441b43b4bf5954a4cf521a6fd2a0967ca5ee73521f"
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave055/address055.h",
+      "bytes": 1737,
+      "sha256": "552153305ec11808d94197d58ee68076fd6bc1eb188713e5d0e71063d143eb8c"
+    },
+    {
+      "path": "src/native/wave055/controller-deps-v1/resource055.h",
+      "bytes": 832,
+      "sha256": "7c886fdd977ebc5aff02219b2199844caff007166f358106bb8a5582f06a59da"
+    },
+    {
+      "path": "src/native/wave055/selector055.h",
+      "bytes": 1597,
+      "sha256": "83623f1980e8f220315cfb616e22cde6289c7f0e0563da9ea6c27bcfc1929e72"
+    },
+    {
+      "path": "src/native/wave055/state055.h",
+      "bytes": 659,
+      "sha256": "45fe75a1f18fcf918a01f538f63be98ba8a342ff6f6c294bb25fa05b5f222dc1"
+    },
+    {
+      "path": "work/native-state055/controller-v5/source/apply_bindings055.h",
+      "bytes": 1578,
+      "sha256": "469369104ce395387ecae968eaa5a054217bb3a20f4fad7da9a1f3cf12ec3ea7"
+    },
+    {
+      "path": "work/native-state055/controller-v5/source/apply_types055.h",
+      "bytes": 3287,
+      "sha256": "74c9379c55718c72e1420eb22e1dd28a4ebf756834f2b1d51693b5be26aa10af"
+    },
+    {
+      "path": "work/native-state055/controller-v5/source/resource_view055.h",
+      "bytes": 1133,
+      "sha256": "3d049a95f29d8a4cd910c86f0cf4d41e16972dd5d5a23cc642862c16cd7699e3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_types6.h",
+      "bytes": 3669,
+      "sha256": "494488caf918a2727a2469ef1cfff665cb4fede155df0417be5f5bcf4ba9d131"
+    }
+  ],
+  "originalInputIdentity": {
+    "path": "generated/update-content0/code.bin",
+    "bytes": 8159232,
+    "sha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+  },
+  "originalInputsOrCompilerToolTreesCopied": false,
+  "predecessor": {
+    "path": "work/native-state055/controller-v5/ready.json",
+    "bytes": 183407,
+    "sha256": "6dead72e66105d8f234a4c13699ee8e97de7c5f0246d07696af5d98b88bfe6ad"
+  },
+  "predecessorOrPublicSharedInputsEdited": false,
+  "primary": {
+    "path": "work/native-state055/dispatcher-v6/execution.json",
+    "bytes": 46206071,
+    "sha256": "04abae71d7eff66ecc800d506be530c2f932e956647c54f5a21659c0659e0f4a"
+  },
+  "copied": {
+    "path": "work/native-state055/dispatcher-v6/replay-v1/execution.json",
+    "bytes": 46206071,
+    "sha256": "04abae71d7eff66ecc800d506be530c2f932e956647c54f5a21659c0659e0f4a"
+  },
+  "sourceReplay": {
+    "path": "work/native-state055/dispatcher-v6/source-replay-comparison.json",
+    "bytes": 19304,
+    "sha256": "1c4522c4bc957a3b0a7f757a2b80139f9f46477b143499ba511744f06397a710"
+  },
+  "primaryCaseSets": 3086,
+  "primaryObservations": 12344,
+  "copiedCaseSets": 3086,
+  "copiedObservations": 12344,
+  "additionalCanonicalDataConditions": 2,
+  "supplementSourceExecutions": 12,
+  "supplementOriginalExecutions": 2,
+  "canonicalUniqueCaseSets": 3088,
+  "actualOriginalWrapperCaseSets": 8,
+  "actualWrapperObservations": 32,
+  "wrapperOrHelperCreditGranted": 0,
+  "originalExecutedInstructions": 4569,
+  "invariantAccountedInstructions": 5,
+  "allCanonicalInstructionBytesAccounted": true,
+  "invariantOnlyOriginalByteWitnesses": [
+    {
+      "start": 7583780,
+      "endExclusive": 7583784,
+      "bytes": 4,
+      "sha256": "895655ef24dbf54edfd37edcd675385e0b587828f5d6561d1c925108f43d4a23"
+    },
+    {
+      "start": 7585080,
+      "endExclusive": 7585084,
+      "bytes": 4,
+      "sha256": "0e14c7716882a6e864718d16adec93a04944ebdae67d226f033123e0cf38e6c3"
+    },
+    {
+      "start": 7585136,
+      "endExclusive": 7585140,
+      "bytes": 4,
+      "sha256": "d579e7f11e13bd2bea4366d598f20333c637508c134ab83c36f1503330e38145"
+    },
+    {
+      "start": 7585140,
+      "endExclusive": 7585144,
+      "bytes": 4,
+      "sha256": "facba515962332efee595cd996a040215c5cf047a05c1a8bd91939d2d5e22c94"
+    },
+    {
+      "start": 7585176,
+      "endExclusive": 7585180,
+      "bytes": 4,
+      "sha256": "3ad36a61aa03faad5f13cefb2bb8d08cbed1fcb84e36d17bd2aa4ce61d332e82"
+    }
+  ],
+  "returningControls": 8,
+  "returningControlExecutionsPerSourceCopy": 24,
+  "allNegativeExecutionsNormallyReturned": true,
+  "compilerArtifactsByteIdentical": 3,
+  "controlArtifactsByteIdentical": 24,
+  "rawPrimaryCopiedRuntimeRowsExactlyEqual": true,
+  "rawExecutionEnvelopesByteIdentical": true,
+  "buildAndControlEnvelopePathsRemainDifferent": true,
+  "tests": {
+    "path": "work/native-state055/dispatcher-v6/tests.json",
+    "bytes": 464,
+    "sha256": "9aea105fda59b57057198e9a35a1d5d4069250cd1b6c07bb545659f8a420fa5c"
+  },
+  "effectiveInputs": {
+    "path": "work/native-state055/dispatcher-v6/effective-inputs.json",
+    "bytes": 9002,
+    "sha256": "7ab5fe4c342b00e5e21a2142e760a6457c6296b86db9845d37563ebbb943318a"
+  },
+  "tinySnapshotFiles": 21,
+  "tinySnapshotBytes": 48229,
+  "sourceAlignment": "Natural8-byte native owner/cache and4-byte descriptor/word pointees; no256-byte arena precondition",
+  "typedOwnerContract": "The active common is a genuine first member of a complete declared StateDispatchSelection6. Scalar tail mapping and native pointers are separate. No reinterpretation of standalone frozen/native game objects.",
+  "sourceDependencyBoundary": "Pure state mutation using declared complete component storage, mutable U32 buffer views, immutable descriptor records and frozen055 data bindings. No allocator or SDK call exists in the original body.",
+  "supportedDomains": [
+    "all112 measured mutating selectors and the default/no-op selector partition",
+    "physically backed untagged vector/matrix spans with signed loop predicates and wrapped U32 row multiplication",
+    "finite RGB and scale multiplication; raw coefficients, packed encodings and moves include special binary32 values",
+    "nearest binary32 rounding, masked exceptions, flushing disabled; floating exception status is recorded without equality claim",
+    "inputs disjoint from mutable owner/context/cache/output state"
+  ],
+  "unsupported": [
+    "actual global/context/selection/shader-resource construction and ownership",
+    "nonfinite multiplication payload propagation across architectures",
+    "input/state overlap or asynchronous storage/register/debug observers",
+    "unbacked metadata or output spans",
+    "observable floating exception status",
+    "hardware/GPU/renderer/whole-game or Android OS/device execution",
+    "unknown indirect callers or an undeclared return-value ABI"
+  ],
+  "failedAndHistoricalAttempts": [
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/enum-input-correction.json",
+      "bytes": 751,
+      "sha256": "4585e3e66d3a003835bae92602208b8397ad3ebc97908dcb5ba7c0e9053289d8"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/enum-raw-input-failure.json",
+      "bytes": 6625,
+      "sha256": "ac3c1c48acc0abd7b41f9cc9cfee4ef63aa17ba2d88c6d706e85261177da23e1"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/enum-raw-input-rejected.c",
+      "bytes": 4767,
+      "sha256": "6de5f84be68153d52d77086bb57ab08979a13369ce5d0c17c89c6832b963bb07"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/float-marker-missing.json",
+      "bytes": 287,
+      "sha256": "3203ad51e0e9cda4d5b3c4248617095dab1e1c6c11462db495219fc6686da6d0"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/mnemonic-call-classification.json",
+      "bytes": 320,
+      "sha256": "326219e2b5722f34a7a0bd31446d741f79ff6861da340eeee0f666fe8c23d182"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/noop-model-key-correction.json",
+      "bytes": 481,
+      "sha256": "693c511715931f336af98de400d9c1d61a424b3832d705a00390c26abbbf3c12"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/noop-model-key-failure.json",
+      "bytes": 168,
+      "sha256": "ce8af3624d069febdd4bea0379ce8b1f32c7819472a05e59bffd5b58737ce956"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/property-frontier-failure.json",
+      "bytes": 6625,
+      "sha256": "ac3c1c48acc0abd7b41f9cc9cfee4ef63aa17ba2d88c6d706e85261177da23e1"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/scalar-frontier-failure.json",
+      "bytes": 6882,
+      "sha256": "55eab8fe0703a7250607876b4955626108ad5a4f9a1d349ea5d8ca4953aa362f"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/scalar-snan-initial-failure.json",
+      "bytes": 6882,
+      "sha256": "55eab8fe0703a7250607876b4955626108ad5a4f9a1d349ea5d8ca4953aa362f"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/scalar-snan-model-diagnostic.json",
+      "bytes": 24371,
+      "sha256": "2778379bd640279c34f36e7f2ae40e76cee3201a9ae79eb0fd8969283cbb2d92"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/scalar-snan-model-rejected.py",
+      "bytes": 11193,
+      "sha256": "c7a9f5f9a32f747ff6946b3e659eb97dd5c86070b87a170516be3aee38a4f761"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/supplement-simultaneous-arena.json",
+      "bytes": 332,
+      "sha256": "a825c82621c5ab7b6e287ad3fcf83d50f42da52d8f7e7a6c72a31d4bd7f026a9"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/whole-entry-failure.json",
+      "bytes": 282,
+      "sha256": "95a9c62c334bd4bdc5148c528405d17808787d9fb98cab3f17e9b48dd8caface"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/wrapper-external-mapping.json",
+      "bytes": 334,
+      "sha256": "c830182ae9c6bd040ac174b7ebe4998bbfb6d034aaa3e621c99cc557219c3e56"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/zero-dimension-model-copy-failure.json",
+      "bytes": 282,
+      "sha256": "95a9c62c334bd4bdc5148c528405d17808787d9fb98cab3f17e9b48dd8caface"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/zero-dimension-model-primary-failure.json",
+      "bytes": 282,
+      "sha256": "95a9c62c334bd4bdc5148c528405d17808787d9fb98cab3f17e9b48dd8caface"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/producer-history/controller6_controls_initial.py",
+      "bytes": 4941,
+      "sha256": "3e1a2f6d97a2a0d10d2a20e95df7f86665b0522bb17e41d4cf52c137e338ae90"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/producer-history/controller6_reference_initial.py",
+      "bytes": 5672,
+      "sha256": "86a77cf69a2bfbeae102791b61888adcc1b90a17c4136435e7c5a97a321f7c07"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/producer-history/receipt.json",
+      "bytes": 703,
+      "sha256": "44275d59d44b0af7dd9279e217755a8b78600d83a38f34bcc702ce88ccdfaf12"
+    }
+  ],
+  "historicalProducerPolicy": "Failed records are retained unchanged, including historical producer hashes; exact prior producer bytes are preserved where pinned. Current runtime/compilation closure is listed independently in files/effective-inputs.",
+  "sourceCreditGranted": 0,
+  "matchingClaimed": false,
+  "wholeGameOr95PercentClaimed": false,
+  "noSelfAdmission": true,
+  "reproduction": [
+    [
+      "tools/python/Scripts/python.exe",
+      "work/native-state055/controller6_build.py"
+    ],
+    [
+      "tools/python/Scripts/python.exe",
+      "work/native-state055/controller6_execution.py"
+    ],
+    [
+      "tools/python/Scripts/python.exe",
+      "work/native-state055/controller6_copy.py",
+      "--stage",
+      "<new absolute owned replay path>"
+    ],
+    [
+      "tools/python/Scripts/python.exe",
+      "work/native-state055/controller6_execution.py",
+      "--stage",
+      "<same replay path>"
+    ],
+    [
+      "tools/python/Scripts/python.exe",
+      "work/native-state055/controller6_controls.py",
+      "--stage",
+      "<new owned primary control path>"
+    ],
+    [
+      "tools/python/Scripts/python.exe",
+      "work/native-state055/controller6_controls.py",
+      "--stage",
+      "<copied source replay path>"
+    ],
+    [
+      "tools/python/Scripts/python.exe",
+      "work/native-state055/controller6_final_paths.py"
+    ],
+    [
+      "tools/python/Scripts/python.exe",
+      "work/native-state055/controller6_wrapper_probe.py"
+    ],
+    [
+      "tools/python/Scripts/python.exe",
+      "work/native-state055/controller6_invariants.py"
+    ],
+    [
+      "tools/python/Scripts/python.exe",
+      "work/native-state055/controller6_verify.py"
+    ]
+  ],
+  "pythonPath": "toolscripts;work/native-state055",
+  "files": [
+    {
+      "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+      "bytes": 20574405,
+      "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55"
+    },
+    {
+      "path": "src/native/wave055/address055.h",
+      "bytes": 1737,
+      "sha256": "552153305ec11808d94197d58ee68076fd6bc1eb188713e5d0e71063d143eb8c"
+    },
+    {
+      "path": "src/native/wave055/controller-deps-v1/resource055.h",
+      "bytes": 832,
+      "sha256": "7c886fdd977ebc5aff02219b2199844caff007166f358106bb8a5582f06a59da"
+    },
+    {
+      "path": "src/native/wave055/selector055.h",
+      "bytes": 1597,
+      "sha256": "83623f1980e8f220315cfb616e22cde6289c7f0e0563da9ea6c27bcfc1929e72"
+    },
+    {
+      "path": "src/native/wave055/state055.c",
+      "bytes": 988,
+      "sha256": "0dc88d3e60de5bf1595385441b43b4bf5954a4cf521a6fd2a0967ca5ee73521f"
+    },
+    {
+      "path": "src/native/wave055/state055.h",
+      "bytes": 659,
+      "sha256": "45fe75a1f18fcf918a01f538f63be98ba8a342ff6f6c294bb25fa05b5f222dc1"
+    },
+    {
+      "path": "toolscripts/module_link.py",
+      "bytes": 9773,
+      "sha256": "936cacb42571da8fddaa3ba66c7f704703a6517f814598052b28bb71952258c7"
+    },
+    {
+      "path": "toolscripts/module_link_graph.py",
+      "bytes": 13578,
+      "sha256": "a750984d287d605e3143aa68d9bba26a3bc9d464f9d3db9a5e15b1afaa10038c"
+    },
+    {
+      "path": "toolscripts/native_material_wave011_build.py",
+      "bytes": 4309,
+      "sha256": "1f25dd87136c2dca2c159011aa8323b844900f02c6befd6cd42b61c0d5e64e69"
+    },
+    {
+      "path": "toolscripts/native_state055_build.py",
+      "bytes": 3533,
+      "sha256": "2fea6f837333f7775933a0a5d2cf416f771870a0d76a6853ae08b8b235bbed0e"
+    },
+    {
+      "path": "toolscripts/native_state055_measure.py",
+      "bytes": 3768,
+      "sha256": "0b0c1ba1023cccae41150a759ce789163768eeb4c24abea49091c9eac329aece"
+    },
+    {
+      "path": "toolscripts/native_wave014_build.py",
+      "bytes": 5861,
+      "sha256": "770e0de9a9b51d84f792c844095e53c760499f748e5919126b66e3e2b89a395e"
+    },
+    {
+      "path": "toolscripts/native_wave014_oracle.py",
+      "bytes": 6834,
+      "sha256": "35433a60ccec7968fe6a1d1b51aec4848c03119654f3c11254b57928877b1b63"
+    },
+    {
+      "path": "toolscripts/native_wave014_vectors.py",
+      "bytes": 8028,
+      "sha256": "d7e5ca8856090d45085b18406da447167ec52cd189b1f580fd3ff94358ad7c7e"
+    },
+    {
+      "path": "work/native-state055/claim.json",
+      "bytes": 162063,
+      "sha256": "7e1f58a594290a13ab0ce15cf12748910a6401b0d11ca56c07fee8b216e6ef7d"
+    },
+    {
+      "path": "work/native-state055/controller-v5/ready.json",
+      "bytes": 183407,
+      "sha256": "6dead72e66105d8f234a4c13699ee8e97de7c5f0246d07696af5d98b88bfe6ad"
+    },
+    {
+      "path": "work/native-state055/controller-v5/source/apply_bindings055.c",
+      "bytes": 7814,
+      "sha256": "b292d1613e74759951690cd234bd407142de59358f06134ad79ddddd01a31fa0"
+    },
+    {
+      "path": "work/native-state055/controller-v5/source/apply_bindings055.h",
+      "bytes": 1578,
+      "sha256": "469369104ce395387ecae968eaa5a054217bb3a20f4fad7da9a1f3cf12ec3ea7"
+    },
+    {
+      "path": "work/native-state055/controller-v5/source/apply_types055.h",
+      "bytes": 3287,
+      "sha256": "74c9379c55718c72e1420eb22e1dd28a4ebf756834f2b1d51693b5be26aa10af"
+    },
+    {
+      "path": "work/native-state055/controller-v5/source/resource_view055.h",
+      "bytes": 1133,
+      "sha256": "3d049a95f29d8a4cd910c86f0cf4d41e16972dd5d5a23cc642862c16cd7699e3"
+    },
+    {
+      "path": "work/native-state055/controller5_fixture.py",
+      "bytes": 4019,
+      "sha256": "d98c74678d9eb683a90baf7996c2bd548c405e33fc8adba223df1f3bf6cd1710"
+    },
+    {
+      "path": "work/native-state055/controller5_measure.py",
+      "bytes": 2373,
+      "sha256": "147b1e46e52c94875d6e44d0c5ba489b695b13f0a6fd531f2a28f35170a5ac3c"
+    },
+    {
+      "path": "work/native-state055/controller6_abi.py",
+      "bytes": 3055,
+      "sha256": "41b00dc36b7e947ab5c8c7b81bd630993f2b58ab4b183b946d4cbf13f9dd092a"
+    },
+    {
+      "path": "work/native-state055/controller6_boundaries_probe.py",
+      "bytes": 1214,
+      "sha256": "9e589501d041091edb14c19dee035d0d74efacaff0f2506d0eb2e8a62dfa5d31"
+    },
+    {
+      "path": "work/native-state055/controller6_build.py",
+      "bytes": 3853,
+      "sha256": "770b890b9a5cb5fbbcc4aad77b00a02f9d40b93d43a26fa63ebfec9bf4068901"
+    },
+    {
+      "path": "work/native-state055/controller6_controls.py",
+      "bytes": 5339,
+      "sha256": "093955e12c15815705129919ba40d231b73fa5cc14f11790b536e2ab93ebe045"
+    },
+    {
+      "path": "work/native-state055/controller6_copy.py",
+      "bytes": 1848,
+      "sha256": "1a8363ab145ac691ae7c053d12a7c0774c13842ba021813a14d39a9d5d302d8f"
+    },
+    {
+      "path": "work/native-state055/controller6_effects.py",
+      "bytes": 1706,
+      "sha256": "ccb80bbab84f2de2c40697568e5ea081ac5ab82515dea27d21e43209e12b0be4"
+    },
+    {
+      "path": "work/native-state055/controller6_enum_probe.py",
+      "bytes": 2425,
+      "sha256": "8ee22ec1389cff2c9e5ce152a237c0f8740993250d26bc7df7a7476a3844ea47"
+    },
+    {
+      "path": "work/native-state055/controller6_execution.py",
+      "bytes": 4625,
+      "sha256": "509a8571b35f76fae93b4fe34972502d58afcc9844bea2a318931a3523f928c1"
+    },
+    {
+      "path": "work/native-state055/controller6_final_paths.py",
+      "bytes": 2339,
+      "sha256": "e81a7e9db506e4434337063b259e25c5dcc1372b31d9c8fad4155ef0ebd4848f"
+    },
+    {
+      "path": "work/native-state055/controller6_fixed_probe.py",
+      "bytes": 2555,
+      "sha256": "e88b0b5850bf547d0ff00f753a16afe5a620e606b19eb3d60abbb50defbc3024"
+    },
+    {
+      "path": "work/native-state055/controller6_fixture.py",
+      "bytes": 1112,
+      "sha256": "db0210ee34baaacf2b3d0313b182823ad45eb4c9363dfc3e3c58fe828657f3fd"
+    },
+    {
+      "path": "work/native-state055/controller6_global_probe.py",
+      "bytes": 2979,
+      "sha256": "3c229dd27e99198ec13718c617a85f6d3cd4e5dadd7a06e176931dda94d4b011"
+    },
+    {
+      "path": "work/native-state055/controller6_inputs.py",
+      "bytes": 2763,
+      "sha256": "d920448b4b2aa347e10c05431e4455e334fd0b9719b9fb150ae411f5f964c4b8"
+    },
+    {
+      "path": "work/native-state055/controller6_invariants.py",
+      "bytes": 3859,
+      "sha256": "01e0648ceb2121956391ba9e0fee7f328f70aaf831c228b360d9b11c7c08ed22"
+    },
+    {
+      "path": "work/native-state055/controller6_light_probe.py",
+      "bytes": 3044,
+      "sha256": "637b1787efe63d7689649528d78f8de5043ecada2a601c6ea76cef3a7eecc537"
+    },
+    {
+      "path": "work/native-state055/controller6_measure.py",
+      "bytes": 4643,
+      "sha256": "6fd087c1cbe95ed2c265cf5bd0e5f2574f7fe75cd0798a362473c79a6af434b2"
+    },
+    {
+      "path": "work/native-state055/controller6_packet.py",
+      "bytes": 8440,
+      "sha256": "35a3fccdbcafe62d3ae485da12c072fb227fbd7a2151d7e24661ec1f090baec5"
+    },
+    {
+      "path": "work/native-state055/controller6_property_probe.py",
+      "bytes": 12654,
+      "sha256": "3fc4c54c699ca2f6aba4d78a414f0b1085867b184b9e9e50d840847c2130fd77"
+    },
+    {
+      "path": "work/native-state055/controller6_reduced_probe.py",
+      "bytes": 2490,
+      "sha256": "a08fec6103265c9afb97c06fc59f9536794bed331bc5d5cc83ec70014ebc4fee"
+    },
+    {
+      "path": "work/native-state055/controller6_reference.py",
+      "bytes": 5811,
+      "sha256": "8b70e674191c9158db28d805fdb4e465b93cba2e3804dfd32a113eb190ae5351"
+    },
+    {
+      "path": "work/native-state055/controller6_scalar_probe.py",
+      "bytes": 2736,
+      "sha256": "3265c55b41cde28c1fa284aaf67456b2724fcdc91487747900fcd254177ac5de"
+    },
+    {
+      "path": "work/native-state055/controller6_source_audit.py",
+      "bytes": 1730,
+      "sha256": "c9eaf78a243bace08c82cb174aebb3a3430f5eaf01f4a3b9d2687bf2d10ee406"
+    },
+    {
+      "path": "work/native-state055/controller6_uniform_probe.py",
+      "bytes": 12234,
+      "sha256": "fa8f0292232c133bee0596bdb87195a324104739a908208a89e4569e2a136e68"
+    },
+    {
+      "path": "work/native-state055/controller6_verify.py",
+      "bytes": 6280,
+      "sha256": "3c2cc7fd2fcefde19ac03d7b4c99888281b81b947fcbb5b5aa838e6bbda2cc61"
+    },
+    {
+      "path": "work/native-state055/controller6_wrapper_probe.py",
+      "bytes": 5103,
+      "sha256": "0d52e7840b47e439e6673774a358164c9c2fe917b79d8d83fe6afa4fde93d65b"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/abi-contract.json",
+      "bytes": 2890,
+      "sha256": "da09bc2f741aed081cf84c39da466c284dc52144c6249289afdd26e506353f0e"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/actual-wrapper-frontier.json",
+      "bytes": 51878,
+      "sha256": "800eea9a79808b606adb6a0cb90df3dac4bb5d024775393555963d5655c2b655"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/enum-input-correction.json",
+      "bytes": 751,
+      "sha256": "4585e3e66d3a003835bae92602208b8397ad3ebc97908dcb5ba7c0e9053289d8"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/enum-raw-input-failure.json",
+      "bytes": 6625,
+      "sha256": "ac3c1c48acc0abd7b41f9cc9cfee4ef63aa17ba2d88c6d706e85261177da23e1"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/enum-raw-input-rejected.c",
+      "bytes": 4767,
+      "sha256": "6de5f84be68153d52d77086bb57ab08979a13369ce5d0c17c89c6832b963bb07"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/float-marker-missing.json",
+      "bytes": 287,
+      "sha256": "3203ad51e0e9cda4d5b3c4248617095dab1e1c6c11462db495219fc6686da6d0"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/mnemonic-call-classification.json",
+      "bytes": 320,
+      "sha256": "326219e2b5722f34a7a0bd31446d741f79ff6861da340eeee0f666fe8c23d182"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/noop-model-key-correction.json",
+      "bytes": 481,
+      "sha256": "693c511715931f336af98de400d9c1d61a424b3832d705a00390c26abbbf3c12"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/noop-model-key-failure.json",
+      "bytes": 168,
+      "sha256": "ce8af3624d069febdd4bea0379ce8b1f32c7819472a05e59bffd5b58737ce956"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/property-frontier-failure.json",
+      "bytes": 6625,
+      "sha256": "ac3c1c48acc0abd7b41f9cc9cfee4ef63aa17ba2d88c6d706e85261177da23e1"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/scalar-frontier-failure.json",
+      "bytes": 6882,
+      "sha256": "55eab8fe0703a7250607876b4955626108ad5a4f9a1d349ea5d8ca4953aa362f"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/scalar-snan-initial-failure.json",
+      "bytes": 6882,
+      "sha256": "55eab8fe0703a7250607876b4955626108ad5a4f9a1d349ea5d8ca4953aa362f"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/scalar-snan-model-diagnostic.json",
+      "bytes": 24371,
+      "sha256": "2778379bd640279c34f36e7f2ae40e76cee3201a9ae79eb0fd8969283cbb2d92"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/scalar-snan-model-rejected.py",
+      "bytes": 11193,
+      "sha256": "c7a9f5f9a32f747ff6946b3e659eb97dd5c86070b87a170516be3aee38a4f761"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/supplement-simultaneous-arena.json",
+      "bytes": 332,
+      "sha256": "a825c82621c5ab7b6e287ad3fcf83d50f42da52d8f7e7a6c72a31d4bd7f026a9"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/whole-entry-failure.json",
+      "bytes": 282,
+      "sha256": "95a9c62c334bd4bdc5148c528405d17808787d9fb98cab3f17e9b48dd8caface"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/wrapper-external-mapping.json",
+      "bytes": 334,
+      "sha256": "c830182ae9c6bd040ac174b7ebe4998bbfb6d034aaa3e621c99cc557219c3e56"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/zero-dimension-model-copy-failure.json",
+      "bytes": 282,
+      "sha256": "95a9c62c334bd4bdc5148c528405d17808787d9fb98cab3f17e9b48dd8caface"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/attempts/zero-dimension-model-primary-failure.json",
+      "bytes": 282,
+      "sha256": "95a9c62c334bd4bdc5148c528405d17808787d9fb98cab3f17e9b48dd8caface"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/boundary-frontier.json",
+      "bytes": 2195989,
+      "sha256": "67c2f439be8eef675ca4ef51222a12fd0fbb9c2a4e4db55510d1d882e0c8a4cd"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/claim.json",
+      "bytes": 42150,
+      "sha256": "d203579458a9d0cb3e8b9e1d61306d52ab79222e8628cb6a309d9c566669a808"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/control-invariants.json",
+      "bytes": 6165,
+      "sha256": "e8e64d7af3fcb3be0cae011161b7f9ac11103fa5b90d1b8e78e1213909668a24"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/ignore-forced-cache/source/dispatch_property6.c",
+      "bytes": 5468,
+      "sha256": "a8d4f7863a1b3e8e2f568467c571f6d53ea21b9ac733bf798bc1f8085dc0923c"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/ignore-forced-cache/uniform-build/a64.elf",
+      "bytes": 267448,
+      "sha256": "1f70b68ebeab1813f1394ed4697f6d64b2e14c630a38906dca494cf76202e62b"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/ignore-forced-cache/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/ignore-forced-cache/uniform-build/arm.elf",
+      "bytes": 201172,
+      "sha256": "d903e58e0800530282357bb90d46757421f5572b0dc349a7306ebdb2a5688487"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/ignore-forced-cache/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/ignore-forced-cache/uniform-build/build.json",
+      "bytes": 69657,
+      "sha256": "b993db3066c9b68f062533a358065f24286202ca9389f82ac90d04403c20688a"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/ignore-forced-cache/uniform-build/uniform6.dll",
+      "bytes": 11776,
+      "sha256": "04b5ec6635ed8474e59472f885f83b281114978a8e9cf1101020837ce36578aa"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/ignore-forced-cache/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/ignore-transpose/source/dispatch_uniform6.c",
+      "bytes": 2364,
+      "sha256": "11fd5518cfc79fdc5f829ef561457aff7832d77bb219aa521924db0d2440679e"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/ignore-transpose/uniform-build/a64.elf",
+      "bytes": 267448,
+      "sha256": "38f5b937737d43e481312e22ba7bfde60b5af784268d695a2aee929592918848"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/ignore-transpose/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/ignore-transpose/uniform-build/arm.elf",
+      "bytes": 201172,
+      "sha256": "08d5580cc0ff3233f840900bf6f88ffa0baeb8a5d4f9d7c14a30bf39ac5ba081"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/ignore-transpose/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/ignore-transpose/uniform-build/build.json",
+      "bytes": 69378,
+      "sha256": "9143fdc988c6f2117f71ca0ba470a4635f03282390fe1098e5e8776d28572898"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/ignore-transpose/uniform-build/uniform6.dll",
+      "bytes": 11264,
+      "sha256": "3a2ce05108c209a09b6b7df1d7963b7dabfab14ea520fa89f53e0b228eb33c3e"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/ignore-transpose/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-context-dirty/source/dispatch_property6.c",
+      "bytes": 5457,
+      "sha256": "c4cd60256039a24d730ab330b6cff4edcc0d821e8e0f468f0b65ff053d859e1c"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-context-dirty/uniform-build/a64.elf",
+      "bytes": 267448,
+      "sha256": "89c0496dbb0daa55d0909be8a3a7c4dcac373d480505add55f696767ba1bca1c"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-context-dirty/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-context-dirty/uniform-build/arm.elf",
+      "bytes": 201172,
+      "sha256": "b53bf0063dbaef1287ade971fda349a514b84057cd632b4d738a1040b9d2263c"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-context-dirty/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-context-dirty/uniform-build/build.json",
+      "bytes": 69564,
+      "sha256": "773f5a5f4bf2b6ed678642f48da6f38e435ab2369441df9a3cb3e1b81cb18ca8"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-context-dirty/uniform-build/uniform6.dll",
+      "bytes": 11776,
+      "sha256": "1999a0290700e04da2e9480ced1b484ab91902799918d44dcac47681e6d2d2b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-context-dirty/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-coupled-recompute/source/dispatch_global6.c",
+      "bytes": 2421,
+      "sha256": "14e6687590eb3f8620a63ca76003d1a621e5d514d3875d913534c4ff6da9987e"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-coupled-recompute/uniform-build/a64.elf",
+      "bytes": 267288,
+      "sha256": "d7e716be02721fcf018e745386ee543e4573cbdfea70b3d5aab76285e4f9b6a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-coupled-recompute/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-coupled-recompute/uniform-build/arm.elf",
+      "bytes": 201048,
+      "sha256": "a92ee8b7bc489d1365fe15de40bab4347072986d7698bb6eb11a5c4a4b806b14"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-coupled-recompute/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-coupled-recompute/uniform-build/build.json",
+      "bytes": 69936,
+      "sha256": "10cd919ee9c432f6aa3f443fc9ac7ce9beba866bd60697d11f32af7a51f115f7"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-coupled-recompute/uniform-build/uniform6.dll",
+      "bytes": 11264,
+      "sha256": "b99545a95d7ae4e495c68c4b49a85758a9f3a0997c011f92331f2fbb544c2a8e"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-coupled-recompute/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-format/source/dispatch_property6.c",
+      "bytes": 5467,
+      "sha256": "cf4b1b3393e109c0b37e1570f049047d5ebff7bd120cde3e9e2c624c4eb55826"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-format/uniform-build/a64.elf",
+      "bytes": 267448,
+      "sha256": "5d74383402b5f022e3b4ba9c817d725b42e1d8939879f20f1f1b9143cb0c60d9"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-format/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-format/uniform-build/arm.elf",
+      "bytes": 201172,
+      "sha256": "58d1ea809eceb65d36d920ac6f256155d85fa4495d29bb9b50406a1cfab0be98"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-format/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-format/uniform-build/build.json",
+      "bytes": 68913,
+      "sha256": "b1a82840af1ac1d7d55b9c346a69af0bb257b8377745bb10fee76871aa208d77"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-format/uniform-build/uniform6.dll",
+      "bytes": 11264,
+      "sha256": "8ffdb67a8a171f79b34d85e25dd4975f5210bb43ac30177f6e3b998b40af2eab"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/omit-format/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/short-dirty-span/source/dispatch_uniform6.c",
+      "bytes": 2356,
+      "sha256": "deb665ed2f2acb23a3772157c247e767a0ef223d629d9c781e311b23fd405c56"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/short-dirty-span/uniform-build/a64.elf",
+      "bytes": 267448,
+      "sha256": "a99fedf066ea96fc42ea722d8575fb756896ed6fbbc64160db71c5750da5541e"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/short-dirty-span/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/short-dirty-span/uniform-build/arm.elf",
+      "bytes": 201172,
+      "sha256": "19492aa2e061fe074b05fc3ca513360310b4d55317f805ecbb277ebf3b5ba137"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/short-dirty-span/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/short-dirty-span/uniform-build/build.json",
+      "bytes": 69378,
+      "sha256": "bdcd8850b71423a739577d01841792bda96fb978ffef03e29739784073207ee3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/short-dirty-span/uniform-build/uniform6.dll",
+      "bytes": 11776,
+      "sha256": "b28da25aa1be33a9ccddb508fc885f7cfbeb93a57aad8f0e332884152ad24e85"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/short-dirty-span/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/wrong-cache-slot/source/dispatch_property6.c",
+      "bytes": 5471,
+      "sha256": "d194cda441bdd845a73b80ebb51624f7333d1f12d53fcfefeeae29611596d085"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/wrong-cache-slot/uniform-build/a64.elf",
+      "bytes": 267448,
+      "sha256": "0bc5ec5a3c12530e75be719ec3b4d58a8fce5c0bad63ee0c03fcfa5db8c3cebe"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/wrong-cache-slot/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/wrong-cache-slot/uniform-build/arm.elf",
+      "bytes": 201172,
+      "sha256": "f82e3b1ed40b4dc09431fb860d1f1265ee64695804083451cbd468e31f6f1591"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/wrong-cache-slot/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/wrong-cache-slot/uniform-build/build.json",
+      "bytes": 69378,
+      "sha256": "e5c6a707debf287897983589fa6f7fbab33006b6e0448c548b52dacbb559827c"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/wrong-cache-slot/uniform-build/uniform6.dll",
+      "bytes": 11776,
+      "sha256": "3b454e0c362ff3b655f94ea222f6ddc88bb1d7827c90e7f4e638bcd9b761d14f"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/wrong-cache-slot/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/wrong-float-bias/source/dispatch_reduced6.c",
+      "bytes": 1876,
+      "sha256": "8f21a3bb8860f2b6f429885a67573516889a03a36c36113a4179779c649d12fd"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/wrong-float-bias/uniform-build/a64.elf",
+      "bytes": 267448,
+      "sha256": "36b42a62720ba9d6f21f3e812ed836ece2833a93ccbeb890bd9428c515fa697e"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/wrong-float-bias/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/wrong-float-bias/uniform-build/arm.elf",
+      "bytes": 201172,
+      "sha256": "c4a9ae2f32ebc33997d13c8d46828c3e602c35d075c5d8e2d271c487547adb75"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/wrong-float-bias/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/wrong-float-bias/uniform-build/build.json",
+      "bytes": 69378,
+      "sha256": "8faf9d16977b655fca284439ba3b65adbbd2cc436b99fd4a23c9e4720df5d599"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/wrong-float-bias/uniform-build/uniform6.dll",
+      "bytes": 11776,
+      "sha256": "1888e6d6a5c899742f02723b1cc8b0310be8932f967412a71307fa286810cbee"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/controls-v1/wrong-float-bias/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/controls-primary-v2/returning-controls.json",
+      "bytes": 162241,
+      "sha256": "61fec38b82286077c7a26b6138ac1567ffb0c91059bcc9e2b30de781550fafbc"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/effective-inputs.json",
+      "bytes": 9002,
+      "sha256": "7ab5fe4c342b00e5e21a2142e760a6457c6296b86db9845d37563ebbb943318a"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/execution.json",
+      "bytes": 46206071,
+      "sha256": "04abae71d7eff66ecc800d506be530c2f932e956647c54f5a21659c0659e0f4a"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/final-path-supplement.json",
+      "bytes": 59484,
+      "sha256": "8fa8f8d8710c52b93fa9a357116e6c5f7d9a28836178fb18d788b705f3870e69"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/producer-history/controller6_controls_initial.py",
+      "bytes": 4941,
+      "sha256": "3e1a2f6d97a2a0d10d2a20e95df7f86665b0522bb17e41d4cf52c137e338ae90"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/producer-history/controller6_reference_initial.py",
+      "bytes": 5672,
+      "sha256": "86a77cf69a2bfbeae102791b61888adcc1b90a17c4136435e7c5a97a321f7c07"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/producer-history/receipt.json",
+      "bytes": 703,
+      "sha256": "44275d59d44b0af7dd9279e217755a8b78600d83a38f34bcc702ce88ccdfaf12"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/README.md",
+      "bytes": 4390,
+      "sha256": "ff15afb0e4018a81b3e5e48fd52cd2966dab862a83f1bf6e118271766f188e81"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/ignore-forced-cache/source/dispatch_property6.c",
+      "bytes": 5468,
+      "sha256": "a8d4f7863a1b3e8e2f568467c571f6d53ea21b9ac733bf798bc1f8085dc0923c"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/ignore-forced-cache/uniform-build/a64.elf",
+      "bytes": 267448,
+      "sha256": "1f70b68ebeab1813f1394ed4697f6d64b2e14c630a38906dca494cf76202e62b"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/ignore-forced-cache/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/ignore-forced-cache/uniform-build/arm.elf",
+      "bytes": 201172,
+      "sha256": "d903e58e0800530282357bb90d46757421f5572b0dc349a7306ebdb2a5688487"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/ignore-forced-cache/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/ignore-forced-cache/uniform-build/build.json",
+      "bytes": 79140,
+      "sha256": "771cab7f7cb0e9f772254255332280aeab1aa73e7629263df025ac529c58838a"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/ignore-forced-cache/uniform-build/uniform6.dll",
+      "bytes": 11776,
+      "sha256": "04b5ec6635ed8474e59472f885f83b281114978a8e9cf1101020837ce36578aa"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/ignore-forced-cache/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/ignore-transpose/source/dispatch_uniform6.c",
+      "bytes": 2364,
+      "sha256": "11fd5518cfc79fdc5f829ef561457aff7832d77bb219aa521924db0d2440679e"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/ignore-transpose/uniform-build/a64.elf",
+      "bytes": 267448,
+      "sha256": "38f5b937737d43e481312e22ba7bfde60b5af784268d695a2aee929592918848"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/ignore-transpose/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/ignore-transpose/uniform-build/arm.elf",
+      "bytes": 201172,
+      "sha256": "08d5580cc0ff3233f840900bf6f88ffa0baeb8a5d4f9d7c14a30bf39ac5ba081"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/ignore-transpose/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/ignore-transpose/uniform-build/build.json",
+      "bytes": 78861,
+      "sha256": "12a1628922c8ed14138a9234d46db09a86312870f03f5ef336f6aeb75bac55c2"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/ignore-transpose/uniform-build/uniform6.dll",
+      "bytes": 11264,
+      "sha256": "3a2ce05108c209a09b6b7df1d7963b7dabfab14ea520fa89f53e0b228eb33c3e"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/ignore-transpose/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-context-dirty/source/dispatch_property6.c",
+      "bytes": 5457,
+      "sha256": "c4cd60256039a24d730ab330b6cff4edcc0d821e8e0f468f0b65ff053d859e1c"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-context-dirty/uniform-build/a64.elf",
+      "bytes": 267448,
+      "sha256": "89c0496dbb0daa55d0909be8a3a7c4dcac373d480505add55f696767ba1bca1c"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-context-dirty/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-context-dirty/uniform-build/arm.elf",
+      "bytes": 201172,
+      "sha256": "b53bf0063dbaef1287ade971fda349a514b84057cd632b4d738a1040b9d2263c"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-context-dirty/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-context-dirty/uniform-build/build.json",
+      "bytes": 79047,
+      "sha256": "b3777dc9fa3a2b3c1b06a9b350adc6ef9ac73cdb0a71f16ad81b51fab2532096"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-context-dirty/uniform-build/uniform6.dll",
+      "bytes": 11776,
+      "sha256": "1999a0290700e04da2e9480ced1b484ab91902799918d44dcac47681e6d2d2b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-context-dirty/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-coupled-recompute/source/dispatch_global6.c",
+      "bytes": 2421,
+      "sha256": "14e6687590eb3f8620a63ca76003d1a621e5d514d3875d913534c4ff6da9987e"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-coupled-recompute/uniform-build/a64.elf",
+      "bytes": 267288,
+      "sha256": "d7e716be02721fcf018e745386ee543e4573cbdfea70b3d5aab76285e4f9b6a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-coupled-recompute/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-coupled-recompute/uniform-build/arm.elf",
+      "bytes": 201048,
+      "sha256": "a92ee8b7bc489d1365fe15de40bab4347072986d7698bb6eb11a5c4a4b806b14"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-coupled-recompute/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-coupled-recompute/uniform-build/build.json",
+      "bytes": 79419,
+      "sha256": "01f9e7e1bc7e3287b2c020dd3f70afe42734897965f07911c8deaabfcfa50094"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-coupled-recompute/uniform-build/uniform6.dll",
+      "bytes": 11264,
+      "sha256": "b99545a95d7ae4e495c68c4b49a85758a9f3a0997c011f92331f2fbb544c2a8e"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-coupled-recompute/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-format/source/dispatch_property6.c",
+      "bytes": 5467,
+      "sha256": "cf4b1b3393e109c0b37e1570f049047d5ebff7bd120cde3e9e2c624c4eb55826"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-format/uniform-build/a64.elf",
+      "bytes": 267448,
+      "sha256": "5d74383402b5f022e3b4ba9c817d725b42e1d8939879f20f1f1b9143cb0c60d9"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-format/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-format/uniform-build/arm.elf",
+      "bytes": 201172,
+      "sha256": "58d1ea809eceb65d36d920ac6f256155d85fa4495d29bb9b50406a1cfab0be98"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-format/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-format/uniform-build/build.json",
+      "bytes": 78396,
+      "sha256": "80563bfd01081a9cb712bb23e7f41ec0df2987c45bc9a2a18be47baf18927e68"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-format/uniform-build/uniform6.dll",
+      "bytes": 11264,
+      "sha256": "8ffdb67a8a171f79b34d85e25dd4975f5210bb43ac30177f6e3b998b40af2eab"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/omit-format/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/short-dirty-span/source/dispatch_uniform6.c",
+      "bytes": 2356,
+      "sha256": "deb665ed2f2acb23a3772157c247e767a0ef223d629d9c781e311b23fd405c56"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/short-dirty-span/uniform-build/a64.elf",
+      "bytes": 267448,
+      "sha256": "a99fedf066ea96fc42ea722d8575fb756896ed6fbbc64160db71c5750da5541e"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/short-dirty-span/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/short-dirty-span/uniform-build/arm.elf",
+      "bytes": 201172,
+      "sha256": "19492aa2e061fe074b05fc3ca513360310b4d55317f805ecbb277ebf3b5ba137"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/short-dirty-span/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/short-dirty-span/uniform-build/build.json",
+      "bytes": 78861,
+      "sha256": "7da78a0c75565f86979c14f200d6221216aa2632c6522879f8f655849e1fcf78"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/short-dirty-span/uniform-build/uniform6.dll",
+      "bytes": 11776,
+      "sha256": "b28da25aa1be33a9ccddb508fc885f7cfbeb93a57aad8f0e332884152ad24e85"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/short-dirty-span/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/wrong-cache-slot/source/dispatch_property6.c",
+      "bytes": 5471,
+      "sha256": "d194cda441bdd845a73b80ebb51624f7333d1f12d53fcfefeeae29611596d085"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/wrong-cache-slot/uniform-build/a64.elf",
+      "bytes": 267448,
+      "sha256": "0bc5ec5a3c12530e75be719ec3b4d58a8fce5c0bad63ee0c03fcfa5db8c3cebe"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/wrong-cache-slot/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/wrong-cache-slot/uniform-build/arm.elf",
+      "bytes": 201172,
+      "sha256": "f82e3b1ed40b4dc09431fb860d1f1265ee64695804083451cbd468e31f6f1591"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/wrong-cache-slot/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/wrong-cache-slot/uniform-build/build.json",
+      "bytes": 78861,
+      "sha256": "ce0ad91a731f6043e3c76af8ffa0b7a7ffff60b2274c8e5fc3a2d32f326a138e"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/wrong-cache-slot/uniform-build/uniform6.dll",
+      "bytes": 11776,
+      "sha256": "3b454e0c362ff3b655f94ea222f6ddc88bb1d7827c90e7f4e638bcd9b761d14f"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/wrong-cache-slot/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/wrong-float-bias/source/dispatch_reduced6.c",
+      "bytes": 1876,
+      "sha256": "8f21a3bb8860f2b6f429885a67573516889a03a36c36113a4179779c649d12fd"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/wrong-float-bias/uniform-build/a64.elf",
+      "bytes": 267448,
+      "sha256": "36b42a62720ba9d6f21f3e812ed836ece2833a93ccbeb890bd9428c515fa697e"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/wrong-float-bias/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/wrong-float-bias/uniform-build/arm.elf",
+      "bytes": 201172,
+      "sha256": "c4a9ae2f32ebc33997d13c8d46828c3e602c35d075c5d8e2d271c487547adb75"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/wrong-float-bias/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/wrong-float-bias/uniform-build/build.json",
+      "bytes": 78861,
+      "sha256": "3568b84e879a49fe7bbcd3dbcee08b5074f3e8ced4d6a118cdb810037cba3f9d"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/wrong-float-bias/uniform-build/uniform6.dll",
+      "bytes": 11776,
+      "sha256": "1888e6d6a5c899742f02723b1cc8b0310be8932f967412a71307fa286810cbee"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/controls-v1/wrong-float-bias/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/copy-inputs.json",
+      "bytes": 11101,
+      "sha256": "62178517955545dc02ad242d2a0fef973b81632c85d31bb75260970b2bfef520"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/execution.json",
+      "bytes": 46206071,
+      "sha256": "04abae71d7eff66ecc800d506be530c2f932e956647c54f5a21659c0659e0f4a"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/returning-controls.json",
+      "bytes": 162537,
+      "sha256": "b210dcfdcc3a4a358b327ba0b3e65dcc9eb5b830ab74a08619177d8980b332af"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/src/native/wave055/address055.h",
+      "bytes": 1737,
+      "sha256": "552153305ec11808d94197d58ee68076fd6bc1eb188713e5d0e71063d143eb8c"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/src/native/wave055/controller-deps-v1/resource055.h",
+      "bytes": 832,
+      "sha256": "7c886fdd977ebc5aff02219b2199844caff007166f358106bb8a5582f06a59da"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/src/native/wave055/selector055.h",
+      "bytes": 1597,
+      "sha256": "83623f1980e8f220315cfb616e22cde6289c7f0e0563da9ea6c27bcfc1929e72"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/src/native/wave055/state055.c",
+      "bytes": 988,
+      "sha256": "0dc88d3e60de5bf1595385441b43b4bf5954a4cf521a6fd2a0967ca5ee73521f"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/src/native/wave055/state055.h",
+      "bytes": 659,
+      "sha256": "45fe75a1f18fcf918a01f538f63be98ba8a342ff6f6c294bb25fa05b5f222dc1"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/work/native-state055/controller-v5/source/apply_bindings055.c",
+      "bytes": 7814,
+      "sha256": "b292d1613e74759951690cd234bd407142de59358f06134ad79ddddd01a31fa0"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/work/native-state055/controller-v5/source/apply_bindings055.h",
+      "bytes": 1578,
+      "sha256": "469369104ce395387ecae968eaa5a054217bb3a20f4fad7da9a1f3cf12ec3ea7"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/work/native-state055/controller-v5/source/apply_types055.h",
+      "bytes": 3287,
+      "sha256": "74c9379c55718c72e1420eb22e1dd28a4ebf756834f2b1d51693b5be26aa10af"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/work/native-state055/controller-v5/source/resource_view055.h",
+      "bytes": 1133,
+      "sha256": "3d049a95f29d8a4cd910c86f0cf4d41e16972dd5d5a23cc642862c16cd7699e3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/work/native-state055/dispatcher-v6/source/dispatch6.c",
+      "bytes": 486,
+      "sha256": "b439cd67cd1a8f33fea08aaeddcbb85020ea8f34d44cc22bb6b7b01e5ae88e85"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/work/native-state055/dispatcher-v6/source/dispatch_bindings6.c",
+      "bytes": 1756,
+      "sha256": "e4e85addfcafba57860962c60be72ecab43ddb94cc0bf5037a46a922fbd59bf8"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/work/native-state055/dispatcher-v6/source/dispatch_enum6.c",
+      "bytes": 1132,
+      "sha256": "26cfc413371190b0d6778ecc2eaf2330131aaa78f824994a6da38b366a34d83f"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/work/native-state055/dispatcher-v6/source/dispatch_fixed6.c",
+      "bytes": 2125,
+      "sha256": "a75761c232b500032f1e2c8a4772a74cb930e4020d91d1eeed19be415c1992e7"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/work/native-state055/dispatcher-v6/source/dispatch_fixture6.c",
+      "bytes": 879,
+      "sha256": "2d020edf01ab4ef73f5cbde11cff5b863ac2ab3ac19b55de10bf77bd1d4af29d"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/work/native-state055/dispatcher-v6/source/dispatch_global6.c",
+      "bytes": 2366,
+      "sha256": "4d1cbe3d6d8e7f3134dbada277b2080bdb8ffb7b67591b87010c6922967673ff"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/work/native-state055/dispatcher-v6/source/dispatch_light6.c",
+      "bytes": 1781,
+      "sha256": "73df882a4cab405693c0dad411d962da99f88c458794341180d87257c643d795"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/work/native-state055/dispatcher-v6/source/dispatch_property6.c",
+      "bytes": 5344,
+      "sha256": "a03bc5dbd1e87b227d226eda74948a2c0968be9b0512da22c3f9a681fed2dbb4"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/work/native-state055/dispatcher-v6/source/dispatch_reduced6.c",
+      "bytes": 1841,
+      "sha256": "0545831eb38019c966e5be8fdcf728be5ac5b3825237bef0941d2f0d142b25e7"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/work/native-state055/dispatcher-v6/source/dispatch_scalar6.c",
+      "bytes": 4913,
+      "sha256": "559e731ee86c19f185a3f0c4fdf08fc3b84550b2fecb87b31cf5f1725408e130"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/work/native-state055/dispatcher-v6/source/dispatch_types6.h",
+      "bytes": 3669,
+      "sha256": "494488caf918a2727a2469ef1cfff665cb4fede155df0417be5f5bcf4ba9d131"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/source-root/work/native-state055/dispatcher-v6/source/dispatch_uniform6.c",
+      "bytes": 2312,
+      "sha256": "c334b6946b0345addd41bf654fb27de7b1eea8f7f5d802842b879a6028b3752f"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/uniform-build/a64.elf",
+      "bytes": 267448,
+      "sha256": "695de031dbeb3c4d7ed39e3a04913e17c3379712285462fffe022828c5e18dee"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/uniform-build/arm.elf",
+      "bytes": 201172,
+      "sha256": "5dac04570c2780fd5caebf59440de28c4dfa144e5b1cab59561e1e93f8cc2bbd"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/uniform-build/build.json",
+      "bytes": 76186,
+      "sha256": "708357ea89354e7eefa1a6946ce08005442e21884a8031ddf9e16da127dccdd4"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/uniform-build/uniform6.dll",
+      "bytes": 11776,
+      "sha256": "2ac98cbdb452e3874fc125261e7f000bca6d39b2e01bd99f87a8de3c19c61eb3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/replay-v1/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch6.c",
+      "bytes": 486,
+      "sha256": "b439cd67cd1a8f33fea08aaeddcbb85020ea8f34d44cc22bb6b7b01e5ae88e85"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_bindings6.c",
+      "bytes": 1756,
+      "sha256": "e4e85addfcafba57860962c60be72ecab43ddb94cc0bf5037a46a922fbd59bf8"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_enum6.c",
+      "bytes": 1132,
+      "sha256": "26cfc413371190b0d6778ecc2eaf2330131aaa78f824994a6da38b366a34d83f"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_fixed6.c",
+      "bytes": 2125,
+      "sha256": "a75761c232b500032f1e2c8a4772a74cb930e4020d91d1eeed19be415c1992e7"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_fixture6.c",
+      "bytes": 879,
+      "sha256": "2d020edf01ab4ef73f5cbde11cff5b863ac2ab3ac19b55de10bf77bd1d4af29d"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_global6.c",
+      "bytes": 2366,
+      "sha256": "4d1cbe3d6d8e7f3134dbada277b2080bdb8ffb7b67591b87010c6922967673ff"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_light6.c",
+      "bytes": 1781,
+      "sha256": "73df882a4cab405693c0dad411d962da99f88c458794341180d87257c643d795"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_property6.c",
+      "bytes": 5344,
+      "sha256": "a03bc5dbd1e87b227d226eda74948a2c0968be9b0512da22c3f9a681fed2dbb4"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_reduced6.c",
+      "bytes": 1841,
+      "sha256": "0545831eb38019c966e5be8fdcf728be5ac5b3825237bef0941d2f0d142b25e7"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_scalar6.c",
+      "bytes": 4913,
+      "sha256": "559e731ee86c19f185a3f0c4fdf08fc3b84550b2fecb87b31cf5f1725408e130"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_types6.h",
+      "bytes": 3669,
+      "sha256": "494488caf918a2727a2469ef1cfff665cb4fede155df0417be5f5bcf4ba9d131"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source/dispatch_uniform6.c",
+      "bytes": 2312,
+      "sha256": "c334b6946b0345addd41bf654fb27de7b1eea8f7f5d802842b879a6028b3752f"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source-replay-comparison.json",
+      "bytes": 19304,
+      "sha256": "1c4522c4bc957a3b0a7f757a2b80139f9f46477b143499ba511744f06397a710"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/source-roster-frontier.json",
+      "bytes": 4755,
+      "sha256": "8ef3ed43aca41e7a5dd9952540eb2e0fa0438d049efddfa42c4548b0dadb014a"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/storage-contract.json",
+      "bytes": 8373,
+      "sha256": "8b835101caa86fa9d993c6d53a26d52e32e432b7624c97c06bb8d58f06e9fc13"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/tests.json",
+      "bytes": 464,
+      "sha256": "9aea105fda59b57057198e9a35a1d5d4069250cd1b6c07bb545659f8a420fa5c"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/tests.txt",
+      "bytes": 1542,
+      "sha256": "856a6b7ebe3185e20db816b4d48d738c28b26ecec3e71e3a9910d445fee847a0"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/uniform-build/a64.elf",
+      "bytes": 267448,
+      "sha256": "695de031dbeb3c4d7ed39e3a04913e17c3379712285462fffe022828c5e18dee"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/uniform-build/a64.ld",
+      "bytes": 307,
+      "sha256": "7a38ad04bc80f70f871b4e6137442f7c099fa4748e9fdc545de1ae9c7b76f4b3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/uniform-build/arm.elf",
+      "bytes": 201172,
+      "sha256": "5dac04570c2780fd5caebf59440de28c4dfa144e5b1cab59561e1e93f8cc2bbd"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/uniform-build/arm.ld",
+      "bytes": 332,
+      "sha256": "050fd1e00e8e6ef7f155988f9384d04e3ca863bf6b4f520664312e45a76ed9a5"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/uniform-build/build.json",
+      "bytes": 64554,
+      "sha256": "51ee8fe63369766b1c0b7989ffeb0ec9ef97be9fc0e3b932c5fc53a4e4ca7817"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/uniform-build/uniform6.dll",
+      "bytes": 11776,
+      "sha256": "2ac98cbdb452e3874fc125261e7f000bca6d39b2e01bd99f87a8de3c19c61eb3"
+    },
+    {
+      "path": "work/native-state055/dispatcher-v6/uniform-build/windows_float_marker.c",
+      "bytes": 19,
+      "sha256": "c829ad61f45997a2cc659dcc3ce79f7df099815b8a3bb462d5c6fc29fb2cc663"
+    },
+    {
+      "path": "work/native-state055/test_controller6.py",
+      "bytes": 3544,
+      "sha256": "97c5f6e849490b8195996b2e77c9c529968650c2852a3db90485962ed930edd7"
+    }
+  ]
+}
