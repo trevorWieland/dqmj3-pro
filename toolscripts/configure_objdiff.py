@@ -7,7 +7,7 @@ import sys
 from pathlib import Path, PurePosixPath
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import native_particle_inventory as native_census_overlay
+import native_namespace_inventory as native_census_overlay
 
 
 ROOT = Path(__file__).resolve().parents[1]

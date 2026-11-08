@@ -1,0 +1,985 @@
+{
+  "status": "exact-external-original-fixture-and-reference-helper-boundary",
+  "privateOriginalInputs": [
+    {
+      "path": "generated/update-content0/code.bin",
+      "bytes": 8159232,
+      "sha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+    }
+  ],
+  "externalReferenceFixtures": [
+    {
+      "path": "work/native-file068/build-v2/arm/effect_resource.elf",
+      "bytes": 127552,
+      "sha256": "2aadeb79ff30bba796ca0f278c7609833008a8a53b12360d0c9e0cc493d9f3d1"
+    }
+  ],
+  "privateRuntimeObservations": [
+    {
+      "path": "work/filesystem071072-inventory-v1/original-holes-v1/inventory-observation-v1.json",
+      "bytes": 106029,
+      "sha256": "4e38508adbbc9b25221089cd4d36224fe79cb3a832879fb6efc03492b79f1688"
+    },
+    {
+      "path": "work/filesystem071072-inventory-v1/original-bytes-v1/inventory-observation-v1.json",
+      "bytes": 105448,
+      "sha256": "ccefe0384b4d07f058ac02d5f7ff970f9288d3e73b12fd103b92b7b8e6561789"
+    },
+    {
+      "path": "work/filesystem071072-inventory-v1/original-normal-caller-v1/inventory-observation-v1.json",
+      "bytes": 105153,
+      "sha256": "0bd45c55fc19085d0d8a0ac3b10ffe48a2b92e993b40a80aed96ee9982a6652f"
+    }
+  ],
+  "referencePythonSources": [
+    {
+      "path": "tools/python/Lib/site-packages/Cryptodome/__init__.py",
+      "bytes": 191,
+      "sha256": "48a431ca62870936e97168ab313ac22d0982a536bd9e754ea647b8521a8d2fae"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/Cryptodome/Cipher/__init__.py",
+      "bytes": 3733,
+      "sha256": "f78b5dd0f54af9d78107f27bb5d0e6605fc64bc21bb940cb52bb88ac335fb3f0"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/Cryptodome/Cipher/AES.py",
+      "bytes": 9292,
+      "sha256": "d2a4192cf60f569986d394010d2fdfd648143de06fc34c9f82324216b92f4368"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/Cryptodome/Hash/__init__.py",
+      "bytes": 3008,
+      "sha256": "79aa947f1c29d838adf9fb696fe5efc169fa67c73ccee8abb89fd65985d6b440"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/Cryptodome/Hash/BLAKE2s.py",
+      "bytes": 9697,
+      "sha256": "d74f1ab750f01aa9226901b59ec16a5accf1c1f82deca62c84bd893f6dc0877e"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/Cryptodome/Hash/CMAC.py",
+      "bytes": 10838,
+      "sha256": "4f7813ffc544ffaa03acf5611948bd992714461d7f9f527c289f8a1bf8bf7ac1"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/Cryptodome/Random/__init__.py",
+      "bytes": 1870,
+      "sha256": "6970818adb817aa3021e624c7bfaeac0ebe70179f38d832ecb8fb82f77f9cf69"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/Cryptodome/Util/__init__.py",
+      "bytes": 1992,
+      "sha256": "089f8ec508f03dec008884e1824b9793f9f37a486aed7eafef943cc365f8fccd"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/Cryptodome/Util/Counter.py",
+      "bytes": 3292,
+      "sha256": "3bf557288883a4d778ad2156b5ad5f20f4e111aeae00d26b05b2676fa592e7df"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/Cryptodome/Util/_cpu_features.py",
+      "bytes": 2043,
+      "sha256": "4a489250ae5c59c2ba6ad9f0727e88b0ddfbbbc079d236fa342905f58f9981c4"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/Cryptodome/Util/_file_system.py",
+      "bytes": 2237,
+      "sha256": "33a36137b3f9b3cf48eccd7012dae2ac898e593888b60206ba4c320b13c87573"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/Cryptodome/Util/_raw_api.py",
+      "bytes": 10966,
+      "sha256": "54bb681d15d64b7f17cce32e27d53dd2102a7bcb5c7b59bd06a423a30abb2e50"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/Cryptodome/Util/number.py",
+      "bytes": 97896,
+      "sha256": "b8a08b1d91ad11c28f6b4580d0dead14d7cbc9ecd34a765dc09fbfee9add2d3f"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/Cryptodome/Util/py3compat.py",
+      "bytes": 6014,
+      "sha256": "12db063125825cabea85697faa72bfd7ee5a5a36a5777eceff82713df67e6902"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/Cryptodome/Util/strxor.py",
+      "bytes": 5595,
+      "sha256": "23e79442b11d45c61cc4d2e047f7981e73d3b44b5697cc2fc2210da53c239604"
+    },
+    {
+      "path": "work/filesystem071072-inventory-v1/replay_fs_inventory.py",
+      "bytes": 6720,
+      "sha256": "1472e6df1352fb724350d42c4b6c726282b93901a59a9a1d304e11203bf88df2"
+    },
+    {
+      "path": "work/native-file068/bootstrap_cells.py",
+      "bytes": 3416,
+      "sha256": "5625b77c8e0f7ef81962968e07551a4a5a517891bf3db9a94fed3abecbf1a114"
+    },
+    {
+      "path": "toolscripts/bootstrap_public_compiler.py",
+      "bytes": 6371,
+      "sha256": "6782fdeecc42477e9a8a3cf65441313ce6e2ffef6c9f0ae38ad4b0823f6ff44d"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/__init__.py",
+      "bytes": 43853,
+      "sha256": "94571d1314355e261aff0ddfc94985fe8761232ddff6874181fd21efa9fab47f"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/arm.py",
+      "bytes": 2154,
+      "sha256": "00ea7442a1496d84aca469bfa3542290eafe22898b5be0dece9294865b9508ba"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/arm64.py",
+      "bytes": 2428,
+      "sha256": "834979e887315fae9a447698502f6866c246cb99b65c84b8b6fdef8087181284"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/arm64_const.py",
+      "bytes": 81768,
+      "sha256": "f358d461b1f45a8d91d8e308ca82e5b35c5d2e5c135d8ed07d8cdc86456a5418"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/arm_const.py",
+      "bytes": 17295,
+      "sha256": "1b00d7b48be4b72b730272486d4fd2057cb8019e67f1bd145bcabb1b988d1c67"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/bpf.py",
+      "bytes": 1438,
+      "sha256": "f879595fbc413bfa74600b4cbaa7a2cdd7200b2f92e718ad31fb36844e7c0f9d"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/bpf_const.py",
+      "bytes": 2160,
+      "sha256": "070717e28a68ee7e1e8b29cb9a299f5e462be81d9ad6c83dccce5f771fe22e7e"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/evm.py",
+      "bytes": 383,
+      "sha256": "29f35d3953b2eeb976e02af3cdbf3a78066d4d5a750588da0672e48bc5aa0385"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/evm_const.py",
+      "bytes": 3292,
+      "sha256": "b3a60498c0ac455098d884574829875deb83a4176a052480249a9d3e93f42b6d"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/m680x.py",
+      "bytes": 2065,
+      "sha256": "24d56b8f6e9c12d73f830f26de36d02461e4d73a3091943e6c90884181efe41d"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/m680x_const.py",
+      "bytes": 8885,
+      "sha256": "a8ceebe6e6213da834406e7a56c1f808fad554c5ed85a986b0ef8647db3718da"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/m68k.py",
+      "bytes": 2438,
+      "sha256": "0567bf26e32a274b086d296fdcc078dcbda2c66280f941e5986b30eecc647bc8"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/m68k_const.py",
+      "bytes": 10489,
+      "sha256": "79de0ea42977ad2875fd73a34ddb55fc2ace58dac45b0ee8aff0ae138c7a8faa"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/mips.py",
+      "bytes": 1001,
+      "sha256": "c23b6e5d5df2be6f728dda2da2a8f805d4d1500e383aebf555da1fa9650639e8"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/mips_const.py",
+      "bytes": 18592,
+      "sha256": "80a325c59a8a88918d1ebc55268e07461841ddde50d034a545d31cdf44668324"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/mos65xx.py",
+      "bytes": 998,
+      "sha256": "f9b525569fcae4768ac4b2230a46468a571e934717f14d52910e243d0b279e9a"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/mos65xx_const.py",
+      "bytes": 3393,
+      "sha256": "22762e23dec6d011f75068cac995f4c05f6cf5c93c207502eeb11d0cd4a136f3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/ppc.py",
+      "bytes": 1384,
+      "sha256": "1ee21161d21902744379624d87048138272a99c6bd98623256baa065038bf03d"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/ppc_const.py",
+      "bytes": 45023,
+      "sha256": "4284db74b7db3a0e3eda043970096c047df81d9b0a81c13b3b5b70ca623d4b0b"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/riscv.py",
+      "bytes": 1104,
+      "sha256": "c40beee7bd99d3f1cc329203020def06140a786d17e2ec963feefb12e0c8e872"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/riscv_const.py",
+      "bytes": 10953,
+      "sha256": "6ac81243404207d74b3190c37180b6353a001191c7df5d04fd25f89b624abdd1"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/sh.py",
+      "bytes": 1478,
+      "sha256": "d50212075a918e94b41f1e67f838a3b70bc44d19941f33b6d502e5359c967592"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/sh_const.py",
+      "bytes": 7154,
+      "sha256": "a19a1837892a0eaa9bc3e5cd3638625471d705a35b08aa26994ad108928125be"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/sparc.py",
+      "bytes": 1127,
+      "sha256": "389867d194a7bef779466a5283953cb2b30d2e84368e80112677cfaa0334097c"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/sparc_const.py",
+      "bytes": 9738,
+      "sha256": "aef73803efe9a2e0e109fe05e0b791f33e62d41c54ed32cd2773837960d1ddae"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/systemz.py",
+      "bytes": 1115,
+      "sha256": "9e75611fb8930ef665b04a80e14ca0735953f69d2f0fdb608f96ea172cef7f2d"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/sysz_const.py",
+      "bytes": 56291,
+      "sha256": "98ad76240b48eff060f96fc0986933c904cbdfd654866eb49e7ee5879db2908e"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/tms320c64x.py",
+      "bytes": 1672,
+      "sha256": "597bf661d25e283c007c9ee76defb422f41e4279aae5bbd8b5736400109cf6b3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/tms320c64x_const.py",
+      "bytes": 7257,
+      "sha256": "643aeb59e96e2eb10f6ca4e9d27db9c00d83195cf442dea453418ac2df0cb94b"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/tricore.py",
+      "bytes": 1123,
+      "sha256": "6716ed4579dadec5c476a0a704c35421860cdaaf20796c7d9c5ebfceb5c4e3cb"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/tricore_const.py",
+      "bytes": 12010,
+      "sha256": "95d640cfc8d698f162edc68646c4829cd25289ee47d2869815b33b7839d32bae"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/wasm.py",
+      "bytes": 1627,
+      "sha256": "8fb19dfb59cd7175ab0e55b8b7c2d37e150c237ed6060862be6ec3e98bf21d6d"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/wasm_const.py",
+      "bytes": 5132,
+      "sha256": "e03e231892153456070055f39a53ed3205feeb24e7d768a2b193adcbe26cffc5"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/x86.py",
+      "bytes": 2816,
+      "sha256": "08cbb0a02ff152bcf1fbd7c4f8850b3ade38c25b9f0a6a9b900a55ee75e87c67"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/x86_const.py",
+      "bytes": 45756,
+      "sha256": "83cf4550d9256f5f9b8e218b9b732e46d83ef602b463a01d6eeb778deb28e040"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/xcore.py",
+      "bytes": 1082,
+      "sha256": "67a3bab5ec77998bf88f320b61be7110318454be2252ff2a02f42ca4aab56a8c"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/xcore_const.py",
+      "bytes": 3424,
+      "sha256": "34367710ee0501621fb8b325890cae740ff38075d3ef66b36de9b8b4dcec227f"
+    },
+    {
+      "path": "work/native-file068-successor-v2/destructor_reference.py",
+      "bytes": 4573,
+      "sha256": "f9de70406f95d87d35ea739c4cae50e6d0df6f89be9f9fea866b8825611994d9"
+    },
+    {
+      "path": "work/native-file068-successor-v2/device_destructor_reference.py",
+      "bytes": 2053,
+      "sha256": "b5c7c517b4f5f77057ad8b37801f3ad3ead3e47253b09836f95748c446eb3731"
+    },
+    {
+      "path": "toolscripts/effect065_cached_reference.py",
+      "bytes": 6657,
+      "sha256": "989422f7b29d830f265c401c44280b7f13877159b3950c66e26ceeff40a5d39a"
+    },
+    {
+      "path": "toolscripts/effect065_owner_oracle.py",
+      "bytes": 11331,
+      "sha256": "41a728317a2b22042640a520221caac9b444d50ac51a273a4ba53b555af92db2"
+    },
+    {
+      "path": "toolscripts/effect_queue067_reference.py",
+      "bytes": 7315,
+      "sha256": "e970caf803281b84b1ef41ca990013cf61d4ccaed082650b10819abf0032497d"
+    },
+    {
+      "path": "toolscripts/effect_queue067_worker_reference.py",
+      "bytes": 5357,
+      "sha256": "4fb62c05d00c1f2b0fc62ecc3a057c743948679abb3cd8e964904aff5971e5cf"
+    },
+    {
+      "path": "toolscripts/effect_request066_device_reference.py",
+      "bytes": 5230,
+      "sha256": "644773d20a6dde61b95fedf67f8fa56dfd262f7827f727f5a465841943a1571c"
+    },
+    {
+      "path": "toolscripts/effect_request066_reference.py",
+      "bytes": 10404,
+      "sha256": "e48f9d530679676de5733a2db783a8fb24245fd798c4b7caa06c625b3358c3c1"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/__init__.py",
+      "bytes": 267,
+      "sha256": "d8a071e9e68576ceab6ed200c5f4718119f7d61ee0fae337a867b095f1d5c5d9"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/common/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/common/construct_utils.py",
+      "bytes": 5070,
+      "sha256": "9529375fbb5a6662a482e8ff4b6c1eca486e9011624a3008a55af76b0c581eb6"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/common/exceptions.py",
+      "bytes": 512,
+      "sha256": "ce89c2d8b856b6615f5dce6f5b6b6eeba9be278eaac34d1f2f854b23bb25abe1"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/common/utils.py",
+      "bytes": 4660,
+      "sha256": "3858dfe8156798e35f9502f4031acc2d76dce95dacf78f040719cc0e3934756f"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/__init__.py",
+      "bytes": 5031,
+      "sha256": "15104eb011a640e4268a9b9221d07201a0360ff0b1c8b49e252ef41fdfbb35de"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/adapters.py",
+      "bytes": 19495,
+      "sha256": "5745745b25eb849174ee5c3179b9867b03e0471633e9eac8276aa439fe4c8841"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/core.py",
+      "bytes": 49248,
+      "sha256": "86c7c9ef0303beb7bfe7b310c52e44697cc31b6cec7435eb33168216b70a965f"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/debug.py",
+      "bytes": 4304,
+      "sha256": "491486779e464e0f4a59cfd429d8e93c577a0f0d9b969847e69400a3c86acb1c"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/lib/__init__.py",
+      "bytes": 264,
+      "sha256": "322a9b5b2cbe036a5ccf8e939dcbc3734203073db70fc4f2cb00f0f98ba107cf"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/lib/binary.py",
+      "bytes": 2780,
+      "sha256": "f18e4161a11bc95732bd01c577cbe98373081afd5b4112b02fec51a0e1df2e11"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/lib/bitstream.py",
+      "bytes": 2641,
+      "sha256": "ee8081769bed1d00a086399c8749a847c1a48b8d08637506bf7d1229b6e1808a"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/lib/container.py",
+      "bytes": 5363,
+      "sha256": "0385a420febf5bac714153ceaadd192ff9d09862bc7e17c203bf759aa18b2bb4"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/lib/hex.py",
+      "bytes": 1368,
+      "sha256": "55f82dc36f273347c08e9e469fd497368241453b7a63e69e167ad6b316e5e2c7"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/construct/macros.py",
+      "bytes": 24996,
+      "sha256": "0244e84cf4f598ac8da7c3d8f1f09b06112a508e71fb8d381b377f1c0472a4e3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/abbrevtable.py",
+      "bytes": 3036,
+      "sha256": "cbe4a69fb4ced4ae87eb4694818ccf6c49302b8158bb8bb08b6e3864cee7aad4"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/aranges.py",
+      "bytes": 5559,
+      "sha256": "bbfa73cd13e89665b2b808c0c3b6dfc98978316e0f39a9b392768505f6263d36"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/callframe.py",
+      "bytes": 32237,
+      "sha256": "e5aae743714801ee80d5dc4b71c43007a8cb1638ed3cd0bf825dde2b298e70b0"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/compileunit.py",
+      "bytes": 11322,
+      "sha256": "bfff5b0da5a081390b0d0505f18d19ef5c70287b7ebd2fa094671a7139dfdef5"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/constants.py",
+      "bytes": 6576,
+      "sha256": "1b9b0e320c5cb7aa3a0117564431a73ce964d79a3a44ff0b74af7218e96f3f32"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/die.py",
+      "bytes": 16485,
+      "sha256": "fe9f146dc9236a17b05376afbd1e4df901ad7735454cd699c8ce91277d3c0b8e"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/dwarf_util.py",
+      "bytes": 3494,
+      "sha256": "4f0af20941ed2da56666b3c9fb42600d956c3b147017d1a57b2a3fe95e5ec8b0"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/dwarfinfo.py",
+      "bytes": 32693,
+      "sha256": "d8b16c376f3a3ccf2a41f86105df70e50368d03f973801e684185d315f357207"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/enums.py",
+      "bytes": 22908,
+      "sha256": "1e236370193e698513fafe29cd44afde8f9fc6b64d6dc6d5249bc6abdc8e6bf3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/lineprogram.py",
+      "bytes": 12528,
+      "sha256": "3e85191a28d2d61539f52569c314101a29a9cbaac7837760ae2bb42e7b72e0f8"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/locationlists.py",
+      "bytes": 21017,
+      "sha256": "9a9ea693f0a84f446e503e64b367702afd1ce81a80940710064b7f7d8fa33267"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/namelut.py",
+      "bytes": 7419,
+      "sha256": "cdb08d65cef4384f04f60d071b27bcdd5a76d7630e60579d85d59766171e6586"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/ranges.py",
+      "bytes": 10778,
+      "sha256": "44cf61af9ffa970646732cc17a1a806eb44a43176a9ca2ae9049e266031d5b65"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/structs.py",
+      "bytes": 27067,
+      "sha256": "6469b6d08f3a2628756ce7966c43fb13cdae74be2e034adc5daa5e9e5091515f"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/dwarf/typeunit.py",
+      "bytes": 10776,
+      "sha256": "4b133343d9af443bb42302363ea32f0b6c576a93a3c1c28915ff9a47c26214a8"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/ehabi/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/ehabi/constants.py",
+      "bytes": 32,
+      "sha256": "a386df95ebe53338db1cdfe498a06acf8e976007b5fab5c4eed2b8904932caa8"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/ehabi/decoder.py",
+      "bytes": 12287,
+      "sha256": "ab3bd609bd96582b44e507da614881b477491d3be235cd7d154516697e7c77f4"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/ehabi/ehabiinfo.py",
+      "bytes": 8859,
+      "sha256": "15a37115fb720208ae0daccd3d32447f0abb553a9ce9b3e6dab47c3f92e2747f"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/ehabi/structs.py",
+      "bytes": 1417,
+      "sha256": "cf381dc793d59cea78844f424b7a31dbf04513d9d7d318a962f6d25ef60f3e90"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/constants.py",
+      "bytes": 4888,
+      "sha256": "3a4a262a24a9ed7f796f80b6ddb54c31eba93e78293cb490b577dc8dcbca86b8"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/dynamic.py",
+      "bytes": 15775,
+      "sha256": "a31f7bd38236df432068feb81356e7245228491111b7e76d501fb5e107eda7ed"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/elffile.py",
+      "bytes": 44966,
+      "sha256": "2615f5052b79d8f5065f5739920b5f29aafd4831e4915a8983030ebe1cc978cf"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/enums.py",
+      "bytes": 50544,
+      "sha256": "4d975df4e75de4433cc673dfc7524a9a302792b1d2ec087a649dd24f120dad88"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/gnuversions.py",
+      "bytes": 9362,
+      "sha256": "0e553e59718df3d74d028aff795d9b44562dc648abfc787d75c27f0486cf8272"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/hash.py",
+      "bytes": 9078,
+      "sha256": "b8b10cd2c96814febc54bb122ccea5aef3ecf4270954ad661364a9368f2306d5"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/notes.py",
+      "bytes": 3483,
+      "sha256": "4c3f1bc337e3a808ae118cbebc92844dc1a1af74934659dfa14dd892376ce64a"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/relocation.py",
+      "bytes": 24376,
+      "sha256": "d9b4a0e47e5297bae9214f6ac40b9e2d779738777c8fe0cd1b31656cc605ed48"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/sections.py",
+      "bytes": 22016,
+      "sha256": "c90ce9f31e37cb714343256534e25603d2eefb732c0b41f1671ae7027abe4b36"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/segments.py",
+      "bytes": 5536,
+      "sha256": "8b808b2cee7976775e5ed8788970c2733f5dec859e2c0ef58aadcddcb2eef95a"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/elftools/elf/structs.py",
+      "bytes": 25390,
+      "sha256": "114b209e3b7cdd471ca2875d554781cf4a174acf93c080d38da52c24fb2332be"
+    },
+    {
+      "path": "work/native-file068/frontier.py",
+      "bytes": 4126,
+      "sha256": "8cec4a402df216100be1d2b6a25f3679bf3be3d789351933003166d038a944cc"
+    },
+    {
+      "path": "work/native-file068/fs_contract.py",
+      "bytes": 2887,
+      "sha256": "cb53f0f337465fd6aa9283d5008c8af11d4f06853751ad5d79a38e2bfbd14d19"
+    },
+    {
+      "path": "work/native-file068/fs_initialize_frontier.py",
+      "bytes": 3054,
+      "sha256": "85ab03838e2c47d951e3a06c97cd194878d331de52ff283e4eaf1873c6e775b3"
+    },
+    {
+      "path": "work/native-file068/fs_priority.py",
+      "bytes": 1385,
+      "sha256": "2769aebf9c39e3f7d32d29e9f8767d0baab7adca0ad56c52a8d0f9536ed86be9"
+    },
+    {
+      "path": "work/native-file068/fs_service_frontier.py",
+      "bytes": 1507,
+      "sha256": "76f8c52d34522499dc17fe9472054d1815f3727f01d91ee9c314ce936c593347"
+    },
+    {
+      "path": "work/native-file068/generated_romfs_provider.py",
+      "bytes": 7029,
+      "sha256": "2274bbdecc0ca6f39ee4df808b50484fcc1a1c69d80f19967b2d751f1fcd6c56"
+    },
+    {
+      "path": "toolscripts/inventory.py",
+      "bytes": 9687,
+      "sha256": "32c3d637553cff27c10ffcf7142e3d1c33465bcff4338525fd6886e90e5d1cbd"
+    },
+    {
+      "path": "work/native-file068/ipc_buffers.py",
+      "bytes": 2388,
+      "sha256": "a3d143d1b732277f15c594b8d932fe27d3c263a9d4aaa2af5788329d6feca787"
+    },
+    {
+      "path": "toolscripts/native_archive032_fixtures.py",
+      "bytes": 3220,
+      "sha256": "738f08949ae658eb3eaa580b7dfd872613d3f53e12c5feb41fca94cdc72c2402"
+    },
+    {
+      "path": "toolscripts/native_census_overlay.py",
+      "bytes": 11252,
+      "sha256": "1cc0fd82de21675e81981ecde7005a94858c1e085a675f39345f7bc66ee6ed4c"
+    },
+    {
+      "path": "toolscripts/native_effect065_build.py",
+      "bytes": 6657,
+      "sha256": "34faec34e6f872bf29fe362f3952914b5c178ae4299105f31bb9b09bfda89c22"
+    },
+    {
+      "path": "toolscripts/native_effect065_resource_conditions.py",
+      "bytes": 1885,
+      "sha256": "ab15c6fdf1fe84c67302d34b2656e0d165a1911379adf235fcc619e6d010c5d7"
+    },
+    {
+      "path": "toolscripts/native_effect065_resource_graph_cases.py",
+      "bytes": 8270,
+      "sha256": "db4bc24e3293ff64ca62d60206a03f136e6c8ccfa09a6a785788950d063867f5"
+    },
+    {
+      "path": "toolscripts/native_effect065_resource_graph_observation.py",
+      "bytes": 14850,
+      "sha256": "5afa3205caa1e5cefee589674b6a77ca33719e0bda21acd6ee1e41fd80b7e7c3"
+    },
+    {
+      "path": "toolscripts/native_effect065_resource_graph_oracle.py",
+      "bytes": 14286,
+      "sha256": "fe2d6373468a12a96b5d6b5f0c72091a2f0b89b6716eb0d5979902c9c8b15eae"
+    },
+    {
+      "path": "toolscripts/native_effect065_resource_texture_oracle.py",
+      "bytes": 10861,
+      "sha256": "0b1acd5c006f5e0c8a805a3790702688183469fa2346d33f1a81874955a2150e"
+    },
+    {
+      "path": "toolscripts/native_effect065_resource_vertex_oracle.py",
+      "bytes": 9594,
+      "sha256": "5a9307ccbc8b025ef6fc2c394bbab9712e4da4d3a5884d43b06a104fbf014731"
+    },
+    {
+      "path": "toolscripts/native_wave013_common.py",
+      "bytes": 1350,
+      "sha256": "555c3a4aa9655925f4dc9288c8baa27ff894ba0446d4ad795901c6826a011961"
+    },
+    {
+      "path": "toolscripts/native_wave013_file_owner_reference_image.py",
+      "bytes": 6556,
+      "sha256": "64b98ad65704fb769eaa3eaecedb53b30baea89b710a1331942446c46a89d378"
+    },
+    {
+      "path": "work/native-file069-device-destructor-v1/observe.py",
+      "bytes": 3920,
+      "sha256": "49f1eaf948f66b10c08ac5d08380de9b7d201d31e174ee06afea208e6c35106b"
+    },
+    {
+      "path": "work/native-file069-device-destructor-v1/observe_v2.py",
+      "bytes": 434,
+      "sha256": "cd38c04f27d32aabeb1093b9d774ffa4cb2269b486b779ccb72810295e336561"
+    },
+    {
+      "path": "work/native-file069-device-destructor-v1/observe_v3.py",
+      "bytes": 1242,
+      "sha256": "f517fdae7203429db1948a07239c83d57cf036da1a95c698b5a9c58b1a76431c"
+    },
+    {
+      "path": "work/native-file068/patch_provider.py",
+      "bytes": 2219,
+      "sha256": "9aefe0b336f617a61de1f47dc04c7de72e6aa1fc983460ccd058221fd67a2cf9"
+    },
+    {
+      "path": "work/native-file068-successor-v2/pool_observer.py",
+      "bytes": 1062,
+      "sha256": "8241a6ee1704e70680ed80c5ccdc876a5bac82aa282b0c500254061c3ec17b1b"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/pyctr/__init__.py",
+      "bytes": 528,
+      "sha256": "fb4d28d19264136b5d826e508c2927c694de6d9fe05c8b5f04fedd8ecbec30a3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/pyctr/common.py",
+      "bytes": 3286,
+      "sha256": "d21dc1a550897bd6fbccd8a41f7db55b3a1019434556babb4184e8b62d3641fc"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/pyctr/crypto/__init__.py",
+      "bytes": 247,
+      "sha256": "b4623c1d872d05efb961e35da48f73fe1183f586642961436c184f317672b305"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/pyctr/crypto/engine.py",
+      "bytes": 39821,
+      "sha256": "f81b74c3b6fa50d78906931317d7902c5e8347930454622f75ee11d120b83c20"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/pyctr/crypto/seeddb.py",
+      "bytes": 4655,
+      "sha256": "11d53509c324066b456acc1bf5cffc68e12f5189b56e8a1512bf0e2ddf964051"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/pyctr/fileio.py",
+      "bytes": 9209,
+      "sha256": "54b430c396aac295c7119edda51e1907902a8139e72546752827ad386d2a6e3c"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/pyctr/type/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/pyctr/type/base/__init__.py",
+      "bytes": 313,
+      "sha256": "35573c620e728b06ecb20c07a2fc99f1d4564779ed089644cf398f187b3fc108"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/pyctr/type/base/typereader.py",
+      "bytes": 5448,
+      "sha256": "a78625e344c6377562849c6e875ca7a0c1507d3570f7631c4124db8ced8ad584"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/pyctr/type/exefs.py",
+      "bytes": 12016,
+      "sha256": "fbf0920eda6e1b66c3b33803728d75e2b85a32e1d5813ec7ac0871584ddd0355"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/pyctr/type/romfs.py",
+      "bytes": 11676,
+      "sha256": "d8b1c1089357fadf37acfb9fc3b74e8660bcb706b17e504bdb0bd84898b2282e"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/pyctr/type/smdh.py",
+      "bytes": 9564,
+      "sha256": "a6c31434f2d1b4275b04217f6dcdc8a6a71b72383ee5410255926f2ee2bca14c"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/pyctr/type/tmd.py",
+      "bytes": 13374,
+      "sha256": "428009b3d6c1e1d3804fb7cdfb27b20d56ac043e261e1dc2829a473a4c9f4b3b"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/pyctr/util.py",
+      "bytes": 1172,
+      "sha256": "c08a6424efc20ef87a7007880cb0e5a362dd7ce7f0da78e49d22403d847de72c"
+    },
+    {
+      "path": "work/native-file068-successor-v2/qualifier_observer.py",
+      "bytes": 706,
+      "sha256": "25f8fd5e862667a3399f0315e02de32c8468cc8459ba40478c61163bd28f4aa0"
+    },
+    {
+      "path": "work/native-file068/romfs_close.py",
+      "bytes": 3340,
+      "sha256": "bf1e1d987eafb7f27c454baca5a09f4a72296a9378d12d46c900e8d42b072d37"
+    },
+    {
+      "path": "work/native-file068/romfs_constructor_view.py",
+      "bytes": 3955,
+      "sha256": "7f9da0c12f21fa0250e749bbb56e50f05d7add0b60f7a99977f68d70cba983c4"
+    },
+    {
+      "path": "work/native-file068/romfs_fixture.py",
+      "bytes": 347,
+      "sha256": "f70bfbd88ba86e94faf6d1d0786ab5512718c0082dfc389b09772fb6e3bb0afa"
+    },
+    {
+      "path": "work/native-file068/romfs_handle.py",
+      "bytes": 2629,
+      "sha256": "f0dd96897878694a87aff9ce48db6628cd869b6932b37cfb49c249266d257704"
+    },
+    {
+      "path": "work/native-file068/romfs_large.py",
+      "bytes": 2262,
+      "sha256": "a5540f320b7ddcda236425a03d6aa8b2dccf3855dd26657f03d91bdc74db1b7d"
+    },
+    {
+      "path": "work/native-file068/romfs_mount_frontier.py",
+      "bytes": 2401,
+      "sha256": "586f53d5ebc78328c9935994cde3fb34b52d90c594818bd2a950877a32ee7f49"
+    },
+    {
+      "path": "work/native-file068/romfs_mount_pool_v3.py",
+      "bytes": 2544,
+      "sha256": "817bcedb390a344c213f611d27d26f521cbbd9a3a667ab22f952401dd7f7fe0e"
+    },
+    {
+      "path": "work/native-file068/romfs_read.py",
+      "bytes": 3743,
+      "sha256": "240cca80c2a2b7baef3d0e55d2cd2a2d434defcab50dbeb5ce16660f0b75eae0"
+    },
+    {
+      "path": "work/native-file068/run_component.py",
+      "bytes": 1935,
+      "sha256": "cccc18a1ca783cf00ca1b7564af8198eaf7087810dfaecb00d7af42305ac19d1"
+    },
+    {
+      "path": "work/native-file068/sdk_initialized.py",
+      "bytes": 2728,
+      "sha256": "b54e9548c50c64da19ca835d350632da0035be5ea385253441c43d9edb741ebc"
+    },
+    {
+      "path": "work/native-file068/sdk_initialized_v2.py",
+      "bytes": 3429,
+      "sha256": "8cc4e7c0613b64c05d606967da1fa1ae5138247756311e4fb37b98c0ec0de66e"
+    },
+    {
+      "path": "work/native-file068/service_frontier.py",
+      "bytes": 4857,
+      "sha256": "a87cba5b1c4a3b28d84186bb72a44fe0853f0bc788b927188328fd187f12b301"
+    },
+    {
+      "path": "work/native-file068/service_handle.py",
+      "bytes": 2102,
+      "sha256": "4273072bc7ea58b8f9a8c938fc97b96ba9fcb01823b542fa98a8455ab7f365db"
+    },
+    {
+      "path": "work/native-file068/service_initialize.py",
+      "bytes": 1954,
+      "sha256": "65818036216bae6a14b99bd1c10c45df6c39aa1ce3b1cd4a39080b4035666638"
+    },
+    {
+      "path": "work/native-file068-successor-v2/service_observer.py",
+      "bytes": 1556,
+      "sha256": "cabf0594ef2d20e2db7dbd205b495301616fb276cad4cde6e0ff474f54bb1dda"
+    },
+    {
+      "path": "work/native-file068-successor-v1/shutdown_reference.py",
+      "bytes": 6758,
+      "sha256": "b4db5c5da73a8bb99e591b89f024a99d8daff5a7d5a7763558f73913f535ef2c"
+    },
+    {
+      "path": "work/native-file068/singleton_bootstrap.py",
+      "bytes": 878,
+      "sha256": "51dfc222591b5d4830c1d718795a2dac66623868df7aa10e54b67abcf4223c11"
+    },
+    {
+      "path": "work/native-file068/singleton_replay.py",
+      "bytes": 3108,
+      "sha256": "f7cdc39733703cc59b86a946d530f8cf22a755bc4c7c4752edf3524616f3c3bb"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/__init__.py",
+      "bytes": 305,
+      "sha256": "0e8ac7115c755994a968fa865bd1b2f2075edea715c17e91d62af2cc52c13392"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/arm64_const.py",
+      "bytes": 7873,
+      "sha256": "ddadd814eccd0a312bb43da7b4f2298690660bd5698c27edc306b1d981cff972"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/arm_const.py",
+      "bytes": 4284,
+      "sha256": "ace0c3e49f61649034a1bec4279576b67e064df146ea8062c67e68dc14e6eb7b"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/m68k_const.py",
+      "bytes": 1144,
+      "sha256": "af95f32f2810fe19888ac723db70c74c7fb1df2bc8ba3578ede0a28b8eca94a7"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/mips_const.py",
+      "bytes": 5160,
+      "sha256": "087925a25a128662e095bb861af3c38a2a6c522fc21e222e31b71aeacaaa63d3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/riscv_const.py",
+      "bytes": 7270,
+      "sha256": "86e08d5f6327d154306d5d02899331892de6f44020ff86900a84d2b212205925"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/s390x_const.py",
+      "bytes": 4101,
+      "sha256": "4f6194d1697d8684921782a81f494458dc859f8ebf2f78e30f673bd5f7cd590f"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/sparc_const.py",
+      "bytes": 3381,
+      "sha256": "9dd58fa5aeab225a0f8186f653f5c8fc5fd161b75ccc6a541e5af79f36af2698"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/tricore_const.py",
+      "bytes": 3199,
+      "sha256": "88310f61e12b731b2550031eb6423fbf815e66428b483132d3df47614c9d53ae"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/unicorn.py",
+      "bytes": 321,
+      "sha256": "2aed71e6d5bc60807198cdcc3ed43a485a7acae1f41f08d986137afc55df2029"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/unicorn_const.py",
+      "bytes": 3258,
+      "sha256": "c21d7c49f62296591a5f09ed0119ef95083b82f5f3f66b829578784c7b164368"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/unicorn_py3/__init__.py",
+      "bytes": 24,
+      "sha256": "2cd4a0d95ef236b5b9e3efb68b20fb6a6d1fb4190db2e9cc0a6447eb2c0aa755"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/unicorn_py3/arch/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/unicorn_py3/arch/arm.py",
+      "bytes": 4108,
+      "sha256": "d486ff4a9c3f797e5e57a5201a1e2304b97a54b6bc61e320062f1290f4e3dc33"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/unicorn_py3/arch/types.py",
+      "bytes": 2774,
+      "sha256": "525ed179db874a13291f9469bd6243e7293aba17454de9b10a9227106d093787"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/unicorn_py3/unicorn.py",
+      "bytes": 54301,
+      "sha256": "b4de7d560790a587157b17edd71c83b4f2d2bade2447d1a5433c497468ac8aeb"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/x86_const.py",
+      "bytes": 41605,
+      "sha256": "d7663db6425f52838f3e79e45a8fe22b6c02be7edb44367ea2118aec04ee5728"
+    },
+    {
+      "path": "work/filesystem071072-inventory-v1/replay_fs_bytes_inventory.py",
+      "bytes": 1209,
+      "sha256": "b26b35d8529a624be72abb93c63ef585a18aa6cabacd458df7c7abb589cfc415"
+    }
+  ],
+  "seededCensus": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "bytes": 20574405,
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55"
+  },
+  "candidateBindings": {
+    "path": "evidence/lanes/native-file071072/public-inputs-v1/candidate-bindings.json",
+    "bytes": 93590,
+    "sha256": "1a2a1fb1cb3b7eea104a933b502f35cd496028c342df0a46e06028142f88b91b"
+  },
+  "frozenPublicFilesystemPacket": {
+    "path": "evidence/lanes/native-file071072/public-inputs-v1/ready.json",
+    "bytes": 1645,
+    "sha256": "bba8aa332436a5a806387c1b2ab5f9e20a96d73fb965ead5bef657a0baee4fd5"
+  },
+  "sourceObserverRole": "Trusted original reference only; whole image is not allowed to any source-only helper profile",
+  "originalBytesOrFixtureBinariesPublished": false,
+  "sourceCreditGranted": 0,
+  "canonicalAdmissionPerformed": false
+}

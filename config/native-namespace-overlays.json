@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "baseCensus": {
+    "path": "evidence/lanes/native-inventory-completion/seeded/update-census.json",
+    "bytes": 20574405,
+    "sha256": "338f478921eef3955e17f7e6b438a65f58ec9aa183b0012a9ab7dd872878dc55"
+  },
+  "overlays": [
+    {
+      "packet": {
+        "path": "evidence/lanes/native-file071072-inventory/public-inputs-v1/inventory-proposal-v1.json",
+        "bytes": 34599,
+        "sha256": "bf59ee2b5b37674ca818ece0e0c745e8064a7473e025b4d523488def68d7ad38"
+      },
+      "dynamicProof": {
+        "path": "evidence/lanes/native-file071072-inventory/public-inputs-v1/dynamic-proof-v1.json",
+        "bytes": 3231,
+        "sha256": "f12a0ac9cc40b03b0429cb30ba135e3e80c628b4c0ba86dd11581d7424e1280e"
+      },
+      "referenceProducer": {
+        "path": "toolscripts/filesystem071072_inventory/static_fs_inventory.py",
+        "bytes": 9950,
+        "sha256": "ba8cb88a8f2621fdb9c91307c85c2897ae7391361357e5c8e47abe348282d869"
+      },
+      "coordinatorReview": {
+        "path": "evidence/verification/namespace-inventory-review.json",
+        "bytes": 1978,
+        "sha256": "163049d2cf883027a55a384f7df907d97d3c4ef70246345c1be424e5df922f4f"
+      },
+      "approvedForFunctionInventory": true,
+      "sourceCreditGranted": 0
+    }
+  ]
+}
