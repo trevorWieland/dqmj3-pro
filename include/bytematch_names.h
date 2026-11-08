@@ -238,3 +238,7 @@
 #define fn_0015cf6c effect_file_priority072
 #define fn_0014d9b8 effect_file_cached_service072
 #define fn_0016e9a8 effect_file_priority_ipc072
+#define fn_00160094 sdk_md5_initialize062ag
+#define fn_001600c4 sdk_md5_update062ag
+#define fn_00160190 sdk_md5_finish062ag
+#define fn_00526ad0 sdk_md5_block062ag

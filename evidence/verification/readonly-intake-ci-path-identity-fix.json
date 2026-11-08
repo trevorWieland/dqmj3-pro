@@ -1,0 +1,10 @@
+{
+  "status": "CI-short-path-identity-assertion-fixed-locally",
+  "failedRun": 42494898322,
+  "failedRevision": "6c418946c3aedecf8a2ae8700d4ba1d6005a0361",
+  "cause": "Windows runner temporary directory uses RUNNER~1 while contained() resolves runneradmin; both name the same file",
+  "repair": "Compare Path.samefile rather than lexical Path equality",
+  "extractorBehaviorChangedByRepair": false,
+  "failureLogSha256": "537266a7cf993fe816979e6683264bf1e2f996e7d197ec926ae41ea75be7a0c7",
+  "replacementCiRequired": true
+}

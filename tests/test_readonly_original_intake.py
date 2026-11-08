@@ -35,7 +35,7 @@ class ReadOnlyOriginalIntakeTests(unittest.TestCase):
         self.project=project;self.seen=[]
 
     def inspect(self,source,label):
-        self.assertEqual(source,self.owner/self.project['inputs'][label])
+        self.assertTrue(source.samefile(self.owner/self.project['inputs'][label]))
         self.seen.append(label)
         output=inventory.ROOT/'generated'/(label+'-content0');output.mkdir(parents=True)
         (output/'code.bin').write_bytes(('newly extracted '+label).encode())

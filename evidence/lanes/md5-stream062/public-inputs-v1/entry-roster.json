@@ -1,0 +1,89 @@
+{
+  "status": "four-complete-entry-candidates-awaiting-independent-review",
+  "entries": [
+    {
+      "canonicalAddress": 1441940,
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": "0x160094",
+          "endExclusive": "0x1600bc",
+          "bytes": 40,
+          "sha256": "988cdc5b66eeba827516d9568009ec9ca23ecaf8fbaa5a93c078a17ae22558ae"
+        }
+      ],
+      "instructionBytes": 40,
+      "sourceFunction": "sdk_md5_initialize062ag",
+      "productionPath": "src/native/md5-stream062/md5_stream062ag.c",
+      "sourceSha256": "c0f46952b12e612b275d269af123c32456a3a4c697b9037882e1e449739a7609",
+      "domain": "fixed actual SDK MD5 method contract; aligned fully backed context and disjoint input; exact documented32-bit count semantics; void return qualification",
+      "sourceCreditGranted": 0
+    },
+    {
+      "canonicalAddress": 1441988,
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": "0x1600c4",
+          "endExclusive": "0x160190",
+          "bytes": 204,
+          "sha256": "f23ef3cccfb6c9c9fdf2b3dd92f4ec2674f787c956d30da5a3ae421f0aec82ee"
+        }
+      ],
+      "instructionBytes": 204,
+      "sourceFunction": "sdk_md5_update062ag",
+      "productionPath": "src/native/md5-stream062/md5_stream062ag.c",
+      "sourceSha256": "c0f46952b12e612b275d269af123c32456a3a4c697b9037882e1e449739a7609",
+      "domain": "fixed actual SDK MD5 method contract; aligned fully backed context and disjoint input; exact documented32-bit count semantics; void return qualification",
+      "sourceCreditGranted": 0
+    },
+    {
+      "canonicalAddress": 1442192,
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": "0x160190",
+          "endExclusive": "0x160310",
+          "bytes": 384,
+          "sha256": "9b7b08382183a933acad90b2f832e5aecf40c66a7acd9d7eab60abb112798c81"
+        }
+      ],
+      "instructionBytes": 384,
+      "sourceFunction": "sdk_md5_finish062ag",
+      "productionPath": "src/native/md5-stream062/md5_stream062ag.c",
+      "sourceSha256": "c0f46952b12e612b275d269af123c32456a3a4c697b9037882e1e449739a7609",
+      "domain": "fixed actual SDK MD5 method contract; aligned fully backed context and disjoint input; exact documented32-bit count semantics; void return qualification",
+      "sourceCreditGranted": 0
+    },
+    {
+      "canonicalAddress": 5401296,
+      "mode": "ARM",
+      "instructionRanges": [
+        {
+          "start": "0x526ad0",
+          "endExclusive": "0x526e00",
+          "bytes": 816,
+          "sha256": "c721334c2453bc18500db56ed1f36d984c210e1984bbabcac84e71dd335c65d4"
+        }
+      ],
+      "instructionBytes": 816,
+      "sourceFunction": "sdk_md5_block062ag",
+      "productionPath": "src/native/md5-stream062/md5_block062ag.c",
+      "sourceSha256": "df8f57312dc0ce51d0dafe86cf25564df85af5303eb9fed0757bfa656733a901",
+      "domain": "fixed actual SDK MD5 method contract; aligned fully backed context and disjoint input; exact documented32-bit count semantics; void return qualification",
+      "sourceCreditGranted": 0
+    }
+  ],
+  "functions": 4,
+  "instructionBytes": 1444,
+  "observedPcs": 355,
+  "unvisitedPcs": 6,
+  "unvisitedProof": "padding-unvisited-proof-v1.json",
+  "noTaskWrapperOrStartupAdmission": true,
+  "noExistingCompressionPhysicalBytesDuplicated": true,
+  "frozenCanonicalPacket": {
+    "path": "work/native-asset062-hash-task-v1/ready-v1.json",
+    "sha256": "53ca86f64bb4caedf955cd8980277f1fa4182ac14ee2e5cdb9aa8e425085dd85"
+  },
+  "linkageChange": "qualification-only layout C now compiled as a separate actual ELF/COFF object, absent from production links; all production C/H bytes unchanged"
+}
