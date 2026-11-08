@@ -39,7 +39,8 @@
       "wave065-cached",
       "wave065-owner",
       "wave066-request",
-      "wave062-owner"
+      "wave062-owner",
+      "wave067-queue"
     ]
   },
   "units": [
@@ -11249,6 +11250,54 @@
         "src/native/wave062-owner/include",
         "src/native/wave062-sdk/include",
         "src/native/wave062-runtime/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave067-queue/queue_manager.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave067-queue",
+        "src/native/wave066-request"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave067-queue/queue_memory.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave067-queue",
+        "src/native/wave066-request"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave067-queue/queue_store.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave067-queue",
+        "src/native/wave066-request"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave067-queue/queue_worker.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave067-queue",
+        "src/native/wave066-request"
       ],
       "role": "bounded-component"
     }

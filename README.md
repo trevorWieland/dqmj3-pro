@@ -12,6 +12,8 @@ The [public SDK sources](docs/native-sdk062-public-replay.md) contain 19 product
 
 The [shader callback inventory](docs/native-shader-inventory.md) adds one observed ARM array-constructor callback, bringing discovered canonical entries to 26,659. Its 112 instruction bytes and excluded 8-byte literal pool grant no source credit; historical inventory completeness remains unproved.
 
+The [public queue transport](docs/native-file-queue067-public.md) adds four production C units with separate qualification fixtures. Its guarded replay preserves the original queue ownership and file-operation order, including allocation failures and the original read-error leak. Task observations require the documented event-synchronized or joined state; publication grants no additional functional credit before independent committed replay.
+
 ## Established inputs
 
 The [resource CPU replay](docs/native-resource065-public-replay.md) independently qualifies nine bounded kernels with complete canonical extents, including discontiguous cold fragments. It passed 141 pipeline tests, 39 returning controls and byte-identical reproduction of all 461 native artifacts; the main resource constructor/finalizer and complete effect graph remain open.

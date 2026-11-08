@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "sourceRevision": "8e0199d07949e779fc9d0b6c5fc7531bf009dc8e",
+  "runs": [
+    {
+      "conclusion": "success",
+      "databaseId": 42461507814,
+      "headSha": "8e0199d07949e779fc9d0b6c5fc7531bf009dc8e",
+      "status": "completed",
+      "url": "https://github.com/trevorWieland/dqmj3-pro/actions/runs/42461507814",
+      "workflowName": "Compile public native sources"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 42461507951,
+      "headSha": "8e0199d07949e779fc9d0b6c5fc7531bf009dc8e",
+      "status": "completed",
+      "url": "https://github.com/trevorWieland/dqmj3-pro/actions/runs/42461507951",
+      "workflowName": "Verify native sources with private originals"
+    }
+  ],
+  "functionalFunctions": 479,
+  "functionalConfidence": {
+    "medium": 465,
+    "low": 14
+  },
+  "boundedFunctionalInstructionBytes": 190792,
+  "sourceOnlyUnits": 584,
+  "sourceOnlyCompilations": 1680,
+  "report": {
+    "path": "work/ci-review-8e0199d/artifact/update-content0_report/report.json",
+    "bytes": 2744684,
+    "sha256": "d9ee97e12acf957d814ea83d4c8a54d421bd3c11a9569280b8a8dde70f1bd64b"
+  },
+  "functional": {
+    "path": "work/ci-review-8e0199d/artifact/update-content0_report/functional.json",
+    "bytes": 35911,
+    "sha256": "86c9419959243113eb21e13bb5cdcc53b3a951da6c75bcafea855de973d31ef0"
+  },
+  "sourceCompileManifest": {
+    "path": "work/ci-review-8e0199d/public/source-compile-diagnostics/manifests/compilation.json",
+    "bytes": 6203191,
+    "sha256": "fd36a4839d31cdad97e7e786998b917e528d4b736e1d90a6250d169f00b638d4"
+  },
+  "publicationAudit": {
+    "passed": true,
+    "findings": 0,
+    "privateFullReport": {
+      "path": "work/publication-audit/8e0199d-report.json",
+      "bytes": 2683205,
+      "sha256": "5f35bb93b79465dec7dff252c76ba7e83e2c2a2e709b3d45c3d9181769b35658"
+    }
+  },
+  "overallSourceCoveragePercent": null,
+  "wholeGameWindowsAndroidOrThorClaimed": false
+}

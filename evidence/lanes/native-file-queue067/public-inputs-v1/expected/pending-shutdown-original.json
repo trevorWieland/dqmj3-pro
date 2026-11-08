@@ -1,0 +1,1538 @@
+{
+  "case": "pending-shutdown",
+  "snapshots": [
+    {
+      "threadToken": 108004352,
+      "flags": "0000",
+      "running": 1,
+      "mutex": [
+        1,
+        0,
+        0
+      ],
+      "pending": null,
+      "deferred": null,
+      "current": null,
+      "tasks": [],
+      "operations": {
+        "allocationReleaseEvents": [
+          [
+            1,
+            8,
+            4,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            4136,
+            4,
+            0,
+            1,
+            2
+          ]
+        ],
+        "orderedFileProviderEvents": []
+      },
+      "allocations": [
+        {
+          "logicalBytes": 8,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 4136,
+          "alignment": 4,
+          "live": 1
+        }
+      ]
+    },
+    {
+      "threadToken": 108004352,
+      "flags": "0000",
+      "running": 1,
+      "mutex": [
+        1,
+        0,
+        0
+      ],
+      "pending": {
+        "allocation": [
+          6,
+          0
+        ],
+        "blocks": [
+          {
+            "allocation": [
+              9,
+              0
+            ],
+            "capacity": 33,
+            "nodes": [
+              10,
+              0
+            ]
+          },
+          {
+            "allocation": [
+              7,
+              0
+            ],
+            "capacity": 1,
+            "nodes": [
+              8,
+              0
+            ]
+          }
+        ],
+        "sentinel": [
+          8,
+          0
+        ],
+        "free": null,
+        "freeNodes": [],
+        "unusedBegin": [
+          10,
+          3
+        ],
+        "unusedEnd": [
+          10,
+          33
+        ],
+        "nodes": [
+          {
+            "node": [
+              10,
+              0
+            ],
+            "task": [
+              3,
+              0
+            ]
+          },
+          {
+            "node": [
+              10,
+              1
+            ],
+            "task": [
+              12,
+              0
+            ]
+          },
+          {
+            "node": [
+              10,
+              2
+            ],
+            "task": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      "deferred": null,
+      "current": null,
+      "tasks": [
+        {
+          "task": [
+            3,
+            0
+          ],
+          "control": [
+            4,
+            0
+          ],
+          "provider": [
+            3,
+            2
+          ],
+          "stateSelector": "0000",
+          "pathOwner": [
+            5,
+            0
+          ],
+          "pathSha256": "2dc377a8569b9f90d38b091a6696f63fb1cd6c87f05bdba81d5902d18e271f94",
+          "data": null,
+          "lengthWords": [
+            0,
+            0,
+            4294967295,
+            4294967295
+          ],
+          "payloadSha256": null
+        },
+        {
+          "task": [
+            12,
+            0
+          ],
+          "control": [
+            13,
+            0
+          ],
+          "provider": [
+            12,
+            2
+          ],
+          "stateSelector": "0000",
+          "pathOwner": [
+            14,
+            0
+          ],
+          "pathSha256": "2dc377a8569b9f90d38b091a6696f63fb1cd6c87f05bdba81d5902d18e271f94",
+          "data": null,
+          "lengthWords": [
+            0,
+            0,
+            4294967295,
+            4294967295
+          ],
+          "payloadSha256": null
+        },
+        {
+          "task": [
+            16,
+            0
+          ],
+          "control": [
+            17,
+            0
+          ],
+          "provider": [
+            16,
+            2
+          ],
+          "stateSelector": "0000",
+          "pathOwner": [
+            18,
+            0
+          ],
+          "pathSha256": "2dc377a8569b9f90d38b091a6696f63fb1cd6c87f05bdba81d5902d18e271f94",
+          "data": null,
+          "lengthWords": [
+            0,
+            0,
+            4294967295,
+            4294967295
+          ],
+          "payloadSha256": null
+        }
+      ],
+      "operations": {
+        "allocationReleaseEvents": [
+          [
+            1,
+            8,
+            4,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            4136,
+            4,
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            272,
+            4,
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            60,
+            4,
+            0,
+            3,
+            4
+          ],
+          [
+            1,
+            8,
+            4,
+            0,
+            4,
+            5
+          ],
+          [
+            1,
+            80,
+            4,
+            0,
+            5,
+            6
+          ],
+          [
+            2,
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            1,
+            24,
+            4,
+            0,
+            6,
+            7
+          ],
+          [
+            1,
+            12,
+            4,
+            0,
+            7,
+            8
+          ],
+          [
+            1,
+            12,
+            4,
+            0,
+            8,
+            9
+          ],
+          [
+            1,
+            12,
+            4,
+            0,
+            9,
+            10
+          ],
+          [
+            1,
+            396,
+            4,
+            0,
+            10,
+            11
+          ],
+          [
+            1,
+            272,
+            4,
+            0,
+            11,
+            12
+          ],
+          [
+            1,
+            60,
+            4,
+            0,
+            12,
+            13
+          ],
+          [
+            1,
+            8,
+            4,
+            0,
+            13,
+            14
+          ],
+          [
+            1,
+            80,
+            4,
+            0,
+            14,
+            15
+          ],
+          [
+            2,
+            0,
+            0,
+            11,
+            0,
+            0
+          ],
+          [
+            1,
+            272,
+            4,
+            0,
+            15,
+            16
+          ],
+          [
+            1,
+            60,
+            4,
+            0,
+            16,
+            17
+          ],
+          [
+            1,
+            8,
+            4,
+            0,
+            17,
+            18
+          ],
+          [
+            1,
+            80,
+            4,
+            0,
+            18,
+            19
+          ],
+          [
+            2,
+            0,
+            0,
+            15,
+            0,
+            0
+          ]
+        ],
+        "orderedFileProviderEvents": []
+      },
+      "allocations": [
+        {
+          "logicalBytes": 8,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 4136,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 272,
+          "alignment": 4,
+          "live": 0
+        },
+        {
+          "logicalBytes": 60,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 8,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 80,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 24,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 12,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 12,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 12,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 396,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 272,
+          "alignment": 4,
+          "live": 0
+        },
+        {
+          "logicalBytes": 60,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 8,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 80,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 272,
+          "alignment": 4,
+          "live": 0
+        },
+        {
+          "logicalBytes": 60,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 8,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 80,
+          "alignment": 4,
+          "live": 1
+        }
+      ]
+    },
+    {
+      "threadToken": 108004352,
+      "flags": "0000",
+      "running": 1,
+      "mutex": [
+        1,
+        0,
+        0
+      ],
+      "pending": {
+        "allocation": [
+          6,
+          0
+        ],
+        "blocks": [
+          {
+            "allocation": [
+              9,
+              0
+            ],
+            "capacity": 33,
+            "nodes": [
+              10,
+              0
+            ]
+          },
+          {
+            "allocation": [
+              7,
+              0
+            ],
+            "capacity": 1,
+            "nodes": [
+              8,
+              0
+            ]
+          }
+        ],
+        "sentinel": [
+          8,
+          0
+        ],
+        "free": [
+          10,
+          0
+        ],
+        "freeNodes": [
+          {
+            "node": [
+              10,
+              0
+            ],
+            "previous": [
+              8,
+              0
+            ],
+            "retiredTaskIdentity": [
+              3,
+              0
+            ]
+          }
+        ],
+        "unusedBegin": [
+          10,
+          3
+        ],
+        "unusedEnd": [
+          10,
+          33
+        ],
+        "nodes": [
+          {
+            "node": [
+              10,
+              1
+            ],
+            "task": [
+              12,
+              0
+            ]
+          },
+          {
+            "node": [
+              10,
+              2
+            ],
+            "task": [
+              16,
+              0
+            ]
+          }
+        ]
+      },
+      "deferred": null,
+      "current": null,
+      "tasks": [
+        {
+          "task": [
+            12,
+            0
+          ],
+          "control": [
+            13,
+            0
+          ],
+          "provider": [
+            12,
+            2
+          ],
+          "stateSelector": "0000",
+          "pathOwner": [
+            14,
+            0
+          ],
+          "pathSha256": "2dc377a8569b9f90d38b091a6696f63fb1cd6c87f05bdba81d5902d18e271f94",
+          "data": null,
+          "lengthWords": [
+            0,
+            0,
+            4294967295,
+            4294967295
+          ],
+          "payloadSha256": null
+        },
+        {
+          "task": [
+            16,
+            0
+          ],
+          "control": [
+            17,
+            0
+          ],
+          "provider": [
+            16,
+            2
+          ],
+          "stateSelector": "0000",
+          "pathOwner": [
+            18,
+            0
+          ],
+          "pathSha256": "2dc377a8569b9f90d38b091a6696f63fb1cd6c87f05bdba81d5902d18e271f94",
+          "data": null,
+          "lengthWords": [
+            0,
+            0,
+            4294967295,
+            4294967295
+          ],
+          "payloadSha256": null
+        }
+      ],
+      "operations": {
+        "allocationReleaseEvents": [
+          [
+            1,
+            8,
+            4,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            4136,
+            4,
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            272,
+            4,
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            60,
+            4,
+            0,
+            3,
+            4
+          ],
+          [
+            1,
+            8,
+            4,
+            0,
+            4,
+            5
+          ],
+          [
+            1,
+            80,
+            4,
+            0,
+            5,
+            6
+          ],
+          [
+            2,
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            1,
+            24,
+            4,
+            0,
+            6,
+            7
+          ],
+          [
+            1,
+            12,
+            4,
+            0,
+            7,
+            8
+          ],
+          [
+            1,
+            12,
+            4,
+            0,
+            8,
+            9
+          ],
+          [
+            1,
+            12,
+            4,
+            0,
+            9,
+            10
+          ],
+          [
+            1,
+            396,
+            4,
+            0,
+            10,
+            11
+          ],
+          [
+            1,
+            272,
+            4,
+            0,
+            11,
+            12
+          ],
+          [
+            1,
+            60,
+            4,
+            0,
+            12,
+            13
+          ],
+          [
+            1,
+            8,
+            4,
+            0,
+            13,
+            14
+          ],
+          [
+            1,
+            80,
+            4,
+            0,
+            14,
+            15
+          ],
+          [
+            2,
+            0,
+            0,
+            11,
+            0,
+            0
+          ],
+          [
+            1,
+            272,
+            4,
+            0,
+            15,
+            16
+          ],
+          [
+            1,
+            60,
+            4,
+            0,
+            16,
+            17
+          ],
+          [
+            1,
+            8,
+            4,
+            0,
+            17,
+            18
+          ],
+          [
+            1,
+            80,
+            4,
+            0,
+            18,
+            19
+          ],
+          [
+            2,
+            0,
+            0,
+            15,
+            0,
+            0
+          ],
+          [
+            1,
+            2048,
+            128,
+            0,
+            19,
+            20
+          ],
+          [
+            6684690,
+            19,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            19,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            5,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            3,
+            0,
+            0
+          ]
+        ],
+        "orderedFileProviderEvents": [
+          [
+            1,
+            0,
+            0,
+            1,
+            4,
+            50,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            2048,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            2048,
+            2048,
+            19,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "allocations": [
+        {
+          "logicalBytes": 8,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 4136,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 272,
+          "alignment": 4,
+          "live": 0
+        },
+        {
+          "logicalBytes": 60,
+          "alignment": 4,
+          "live": 0
+        },
+        {
+          "logicalBytes": 8,
+          "alignment": 4,
+          "live": 0
+        },
+        {
+          "logicalBytes": 80,
+          "alignment": 4,
+          "live": 0
+        },
+        {
+          "logicalBytes": 24,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 12,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 12,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 12,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 396,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 272,
+          "alignment": 4,
+          "live": 0
+        },
+        {
+          "logicalBytes": 60,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 8,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 80,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 272,
+          "alignment": 4,
+          "live": 0
+        },
+        {
+          "logicalBytes": 60,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 8,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 80,
+          "alignment": 4,
+          "live": 1
+        },
+        {
+          "logicalBytes": 2048,
+          "alignment": 128,
+          "live": 0
+        }
+      ]
+    }
+  ],
+  "operations": {
+    "allocationReleaseEvents": [
+      [
+        1,
+        8,
+        4,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        4136,
+        4,
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        272,
+        4,
+        0,
+        2,
+        3
+      ],
+      [
+        1,
+        60,
+        4,
+        0,
+        3,
+        4
+      ],
+      [
+        1,
+        8,
+        4,
+        0,
+        4,
+        5
+      ],
+      [
+        1,
+        80,
+        4,
+        0,
+        5,
+        6
+      ],
+      [
+        2,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        24,
+        4,
+        0,
+        6,
+        7
+      ],
+      [
+        1,
+        12,
+        4,
+        0,
+        7,
+        8
+      ],
+      [
+        1,
+        12,
+        4,
+        0,
+        8,
+        9
+      ],
+      [
+        1,
+        12,
+        4,
+        0,
+        9,
+        10
+      ],
+      [
+        1,
+        396,
+        4,
+        0,
+        10,
+        11
+      ],
+      [
+        1,
+        272,
+        4,
+        0,
+        11,
+        12
+      ],
+      [
+        1,
+        60,
+        4,
+        0,
+        12,
+        13
+      ],
+      [
+        1,
+        8,
+        4,
+        0,
+        13,
+        14
+      ],
+      [
+        1,
+        80,
+        4,
+        0,
+        14,
+        15
+      ],
+      [
+        2,
+        0,
+        0,
+        11,
+        0,
+        0
+      ],
+      [
+        1,
+        272,
+        4,
+        0,
+        15,
+        16
+      ],
+      [
+        1,
+        60,
+        4,
+        0,
+        16,
+        17
+      ],
+      [
+        1,
+        8,
+        4,
+        0,
+        17,
+        18
+      ],
+      [
+        1,
+        80,
+        4,
+        0,
+        18,
+        19
+      ],
+      [
+        2,
+        0,
+        0,
+        15,
+        0,
+        0
+      ],
+      [
+        1,
+        2048,
+        128,
+        0,
+        19,
+        20
+      ],
+      [
+        6684690,
+        19,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        19,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        5,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      [
+        6684690,
+        4294967295,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        14,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        13,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        12,
+        0,
+        0
+      ],
+      [
+        6684690,
+        4294967295,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        18,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        17,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        16,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        10,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        9,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        8,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        7,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "orderedFileProviderEvents": [
+      [
+        1,
+        0,
+        0,
+        1,
+        4,
+        50,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        2048,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        2048,
+        2048,
+        19,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "finalBudgets": [
+    {
+      "logicalBytes": 8,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 4136,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 272,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 60,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 8,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 80,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 24,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 12,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 12,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 12,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 396,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 272,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 60,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 8,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 80,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 272,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 60,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 8,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 80,
+      "alignment": 4,
+      "live": 0
+    },
+    {
+      "logicalBytes": 2048,
+      "alignment": 128,
+      "live": 0
+    }
+  ]
+}
