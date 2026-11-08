@@ -215,3 +215,13 @@
 #define fn_004955f0 registry_register062ad
 #define fn_0049599c registry_unregister062ad
 #define fn_00495d00 registry_find062ad
+#define fn_001054f8 effect_file_bootstrap_initialize068
+#define fn_0010c444 effect_file_filesystem_initialize068
+#define fn_0044e000 effect_file_sdk_device_destroy069
+#define fn_0044dc58 effect_file_sdk_stream_release069
+#define fn_0044de20 effect_file_sdk_stream_destroy069
+#define fn_006ceb3c effect_file_sdk_stream_handle069
+#define fn_0044e6d8 effect_file_sdk_file_close069
+#define fn_0044dfac effect_file_device_pool_release068
+#define fn_0010555c effect_file_bootstrap_shutdown068
+#define fn_0010c4f4 effect_file_filesystem_shutdown068

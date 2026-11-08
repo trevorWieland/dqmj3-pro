@@ -49,5 +49,5 @@ if __name__ == '__main__':
         else:
             target.parent.mkdir(exist_ok=True)
             if not target.is_file() or target.read_text(encoding='utf-8') != content:
-                target.write_text(content, encoding='utf-8')
+                target.write_bytes(content.encode('utf-8'))
     print(json.dumps({'mappings': len(generated.splitlines()), 'headers': len(targets), 'buildOutputChanged': False}))
