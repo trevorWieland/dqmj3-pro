@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "status": "ci-fixture-root-canonicalized-pending-new-run",
+  "failedCommit": "873f53b824f1aa8b336344b664f5407b29792e57",
+  "failedRun": 42428645380,
+  "failedStep": "Check guarded SDK source bootstrap",
+  "failedCase": "test_fresh_source_only_stage_retains_exact_declared_inputs",
+  "observedError": "063 public source or staged path differs",
+  "correction": "Resolve temporary fixture root before forming expected public/staged paths, matching production root canonicalization",
+  "shortPathCauseInferredNotLogged": true,
+  "productionContainmentGuardsChanged": false,
+  "gameOrSdkCChanged": false,
+  "localTests": 7,
+  "localShortPathTestSkipped": "Volume supplies no distinct short path",
+  "sourceCreditGranted": 0
+}

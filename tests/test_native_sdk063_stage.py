@@ -12,7 +12,7 @@ import native_sdk063_stage as stage
 class Sdk063StageTests(unittest.TestCase):
     def setUp(self):
         temporary=tempfile.TemporaryDirectory();self.addCleanup(temporary.cleanup)
-        self.root=Path(temporary.name);self.lane=self.root/'work/native-sdk063';self.base=self.root/'work/public'
+        self.root=Path(temporary.name).resolve();self.lane=self.root/'work/native-sdk063';self.base=self.root/'work/public'
         self.manifest=self.root/'stage-inputs.json';self.source=self.root/'source.c';self.source.write_bytes(b'int candidate;\n')
         for module,key,value in [(stage,'ROOT',self.root),(stage,'LANE',self.lane),(stage,'BASE',self.base),
                 (stage,'MANIFEST',self.manifest),(stage.common,'ROOT',self.root)]:
@@ -43,6 +43,22 @@ class Sdk063StageTests(unittest.TestCase):
     def test_duplicate_destination_rejected(self):
         self.data['files'][1]['stagedRelativePath']=self.data['files'][0]['stagedRelativePath'];self.save()
         with self.assertRaises(ValueError):stage.contract()
+
+    @unittest.skipUnless(sys.platform == 'win32', 'Native Windows path alias')
+    def test_short_temporary_root_uses_the_same_guarded_namespace(self):
+        import ctypes
+        function=ctypes.windll.kernel32.GetShortPathNameW
+        function.argtypes=[ctypes.c_wchar_p,ctypes.c_wchar_p,ctypes.c_uint32]
+        function.restype=ctypes.c_uint32
+        buffer=ctypes.create_unicode_buffer(32768)
+        if not function(str(self.root),buffer,len(buffer)):
+            self.skipTest('Short path unavailable')
+        alias=Path(buffer.value)
+        if alias==self.root:self.skipTest('Volume supplies no distinct short path')
+        canonical=alias.resolve()
+        self.assertEqual(canonical,self.root)
+        with patch.object(stage,'ROOT',canonical),patch.object(stage.common,'ROOT',canonical):
+            stage.prepare();stage.common.verify(stage.contract())
 
     def test_missing_declared_source_rejected(self):
         self.data['files'].pop();self.save()
