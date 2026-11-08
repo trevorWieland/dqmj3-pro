@@ -28,6 +28,8 @@ jobs:
           python-version: '3.13.5'
       - name: Check generated source-link names
         run: python -I -S toolscripts/generate_source_names.py --check
+      - name: Check frozen public download integrity and retries
+        run: python -I -S -m unittest discover -s tests -p test_bootstrap_report_tools.py -v
       - name: Materialize frozen public report tools
         run: python -I -S toolscripts/bootstrap_report_tools.py
       - name: Test private intake and build guards
@@ -81,6 +83,8 @@ jobs:
           & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_native_file_inventory.py -v
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_native_shader_inventory.py -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_native_heap_inventory.py -v
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_functional_report.py -v
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

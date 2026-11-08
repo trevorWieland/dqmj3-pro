@@ -43,4 +43,12 @@ standalone compilation targets for their separately qualified historical cohorts
 Default SDK selection retains its measured global-flag precondition and writer;
 whole startup, owner/task coupling and general allocator safety are unproved.
 All original entries retain explicit instruction/pool and predicate boundaries.
+The committed source replay at `c9a8c549b757f617d317115a7f34d9199406225b`
+passed 116 pipeline tests. Independent coordinator review checked all 1,222
+native artifacts across the local and fresh primary/copied/source-only roots,
+all 58 mandatory reports/receipts and the exact six modeled observation corpora.
+The completed clean tree was archived with every archived file hash checked
+before pruning. One policy setter already has working-C admission through its
+older implementation; at most 21 entries/2,408 instruction bytes can receive
+additional admission. The initializer inventory split is reviewed separately.
 This batch does not establish overall confirmed source coverage or native games.

@@ -1,0 +1,776 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "sourceRevision": "c9a8c549b757f617d317115a7f34d9199406225b",
+  "sourceArchiveSha256": "bcdd0d31f4bf2363fda3a1c403a25520dd7912decef98984d044fb20d025729d",
+  "replayRoot": "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54",
+  "plan": {
+    "schemaVersion": 1,
+    "name": "sdk-heap062",
+    "producerSteps": [
+      {
+        "name": "sdk-heap062-proof",
+        "args": [
+          "toolscripts/public_sdk_heap062_replay.py",
+          "--output",
+          "work/heap062-public-replay-v1"
+        ],
+        "inputKinds": [
+          "code",
+          "exheader"
+        ]
+      }
+    ],
+    "tests": [
+      "public_sdk_heap062_replay",
+      "native_shader_inventory",
+      "native_file_inventory",
+      "compile_source_include_dirs",
+      "c_function_definitions"
+    ],
+    "packets": [
+      "work/heap062-public-replay-v1/public-replay.json",
+      "work/heap062-public-replay-v1/source-map-v1.json",
+      "work/heap062-public-replay-v1/copy-verification-v2.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/report.json",
+      "work/heap062-public-replay-v1/qualification-final-v2/receipt.json",
+      "work/heap062-public-replay-v1/qualification-final-v2/process-completion.json",
+      "work/heap062-public-replay-v1/qualification-final-v2/generic/report.json",
+      "work/heap062-public-replay-v1/qualification-final-v2/default/report.json",
+      "work/heap062-public-replay-v1/qualification-final-v2/registry/report.json",
+      "work/heap062-public-replay-v1/qualification-final-v2/setters/report.json",
+      "work/heap062-public-replay-v1/qualification-final-v2/disabled/report.json",
+      "work/heap062-public-replay-v1/qualification-final-v2/controls/report.json",
+      "work/heap062-public-replay-v1/source-only-final-v2/receipt.json",
+      "work/heap062-public-replay-v1/source-only-final-v2/process-completion.json",
+      "work/heap062-public-replay-v1/source-only-final-v2/source-only.json",
+      "work/heap062-public-replay-v1/copied-final-v2/receipt.json",
+      "work/heap062-public-replay-v1/copied-final-v2/process-completion.json",
+      "work/heap062-public-replay-v1/copied-final-v2/generic/report.json",
+      "work/heap062-public-replay-v1/copied-final-v2/default/report.json",
+      "work/heap062-public-replay-v1/copied-final-v2/registry/report.json",
+      "work/heap062-public-replay-v1/copied-final-v2/setters/report.json",
+      "work/heap062-public-replay-v1/copied-final-v2/disabled/report.json",
+      "work/heap062-public-replay-v1/copied-final-v2/controls/report.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/cached-bytecode/receipt.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/cached-bytecode/process-completion.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/cached-bytecode/audit-rejections.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/generated-stat/receipt.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/generated-stat/process-completion.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/generated-stat/audit-rejections.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/late-caught/receipt.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/late-caught/process-completion.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/late-caught/audit-rejections.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/library/receipt.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/library/process-completion.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/library/audit-rejections.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/listdir/receipt.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/listdir/process-completion.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/listdir/audit-rejections.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/lstat/receipt.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/lstat/process-completion.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/lstat/audit-rejections.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/open/receipt.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/open/process-completion.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/open/audit-rejections.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/original/receipt.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/original/process-completion.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/original/audit-rejections.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/scandir/receipt.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/scandir/process-completion.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/scandir/audit-rejections.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/source-write/receipt.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/source-write/process-completion.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/source-write/audit-rejections.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/stat/receipt.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/stat/process-completion.json",
+      "work/heap062-public-replay-v1/boundary-controls-v1/stat/audit-rejections.json"
+    ],
+    "intakeCleanup": {
+      "mode": "code-exheader-only",
+      "producerInputs": [
+        "code",
+        "exheader"
+      ]
+    }
+  },
+  "planSha256": "0d9fdaa9e0b9710a464d93eb9bc00eb8a8421d6627b1ab9ecc010c417bc01dbb",
+  "replayDriverSha256": "fd91f0fe8756b643c903913b74d05ddc742eddc49c8a3b47d3c7e5be989e28de",
+  "nativeLibraries": [
+    {
+      "path": "tools/python/Lib/site-packages/capstone/lib/capstone.dll",
+      "size": 7576576,
+      "sha256": "76958e18380023a68fd1714fa2e01c594cc6db1955a07ad6937b66e66dc5d6c3"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/lib/unicorn.dll",
+      "size": 9598976,
+      "sha256": "010d85dce84b8f6ffaec3d5420f1b5f7768f859eb831be574c7da23e656ee8f1"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/z3/lib/libz3.dll",
+      "size": 17490432,
+      "sha256": "b6a30c2922293c2a2cab4299637935302d8fb0427762b5a3d2dc16f392f27b8c"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5/cvc5_python_base.cp313-win_amd64.pyd",
+      "size": 1310720,
+      "sha256": "810e9b9f4a9df25e3edeb27b08a373a5a61169ed269f2ae40b9c8c0f9261730a"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5.libs/libc++-8a9deaac6d2f4d2de468a544d1f35cd0.dll",
+      "size": 1659392,
+      "sha256": "8a9deaac6d2f4d2de468a544d1f35cd0dd4bcde03cda3cfb76fb9674749828d4"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5.libs/libcvc5-b3ddd8d0b36e795253fd2e6698441eea.dll",
+      "size": 29992448,
+      "sha256": "6abfaabb88587f543e31c24d261246b4d5014fb7424e7efff54604f1b7f53cab"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/cvc5.libs/libcvc5parser-5a140a2cd1789e9177c20f9e46be8c97.dll",
+      "size": 912896,
+      "sha256": "f6756dfae9bd483bb425e8239ee52a932a1807a09add36e7b0db57e585287bf8"
+    }
+  ],
+  "freshEnvironment": true,
+  "sharedGeneratedOrWorkInputs": false,
+  "copiedToolAndWheelFiles": [
+    {
+      "path": "tools/clang-21/clang.exe",
+      "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+    },
+    {
+      "path": "tools/clang-21/ld.lld.exe",
+      "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3"
+    },
+    {
+      "path": "tools/clang-21/libwinpthread-1.dll",
+      "sha256": "c9019ab753c2faa5e5da94e3fd4395f1d3d0e7d2509f5ed2d96cccff7f8b9357"
+    },
+    {
+      "path": "tools/clang-21/libxml2.dll",
+      "sha256": "e15a377aa308e3f7ba948e6d6622a5dea2308256dbc65858074b61d867af6148"
+    },
+    {
+      "path": "tools/ctrtool-1.3.0/ctrtool.exe",
+      "sha256": "79021f283b2199950eb22cf3c459806b9c8aaaf68f65c80100107d3454a1c224"
+    },
+    {
+      "path": "tools/objdiff-3.8.3/objdiff-cli.exe",
+      "sha256": "dd12dfb5e9e94a7f6c949a37e1815963cf2cffe4c87b4999b7ebc8c15b398a1f"
+    },
+    {
+      "path": "tools/android-r30-minimal/provenance.json",
+      "sha256": "42a7f16caf038712bfa917dfe2adaad22dc7f6044c43e3d8094b3c70aba06e29"
+    },
+    {
+      "path": "tools/android-r30-minimal/source.properties",
+      "sha256": "e73b7dc557cea2da9212c09ee1795434957d62e63b7550eef69fd1887a355d94"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/crtbegin_dynamic.o",
+      "sha256": "9087e4b58fd8aadc225d062e8750260079fce2f0a3cd4d0b46b8c2440eedb03a"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/crtend_android.o",
+      "sha256": "47cb49c3d286915f19287b94a7242f668fe62d0b2ae7c4256c7203ba0d179427"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/libc.so",
+      "sha256": "29a129043e28ba808e3bd69750242d71241a3e05581809551f0e371f4894b687"
+    },
+    {
+      "path": "tools/android-r30-minimal/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/29/libdl.so",
+      "sha256": "b9d8f21c840570a4fe41b5a24c37651d1980fcda7d323003afcbd8483d3da51a"
+    },
+    {
+      "path": "tools/wheels/capstone-5.0.9-py3-none-win_amd64.whl",
+      "sha256": "732cedbbb56d42e723f14d7af6387f1454194a820b4b96b56d1e53f865ef85d0"
+    },
+    {
+      "path": "tools/wheels/pycryptodomex-3.24.2-cp37-abi3-win_amd64.whl",
+      "sha256": "6e912e3a21061bf8f4ce89223cb46f5e98a6b32420d08d770605891a2be266c6"
+    },
+    {
+      "path": "tools/wheels/pyctr-0.7.6-py3-none-any.whl",
+      "sha256": "60fe1dfa2af9fc518a2e4b38e39f42e48eae1f27c594e677836fd04726bb2323"
+    },
+    {
+      "path": "tools/wheels/pyelftools-0.33-py3-none-any.whl",
+      "sha256": "f215ad5f47d3f1373a21496a6c9e0707c622840d0622f23ff7ce08678b020036"
+    },
+    {
+      "path": "tools/wheels/unicorn-2.1.4-cp37-abi3-win_amd64.whl",
+      "sha256": "d7107500c64ce5c168fbff6bef9485b5db1350050036f4cea568650cf8bdbdf5"
+    },
+    {
+      "path": "tools/wheels/z3_solver-5.3.3.0-py3-none-win_amd64.whl",
+      "sha256": "d189844a586242fe3d2a701c09751a80d518645931931a7c6bf29df679044215"
+    },
+    {
+      "path": "tools/wheels/cvc5-1.4.2-cp313-cp313-win_amd64.whl",
+      "sha256": "0ee0a51862d9e8ae8a38572909641a88cdf8d5e1640dee481b24289b6811b9da"
+    },
+    {
+      "path": "inputs/archive/dqmj3pro/DQMJ3P.cia",
+      "sha256": "864d1c35ba6908bed94d9c5f09a148b3355c41794f1d126086dafe1876665f47"
+    },
+    {
+      "path": "inputs/archive/dqmj3pro/DQMJ3P_Update.cia",
+      "sha256": "e19f07d67165bf5bf5c3c226064433cf2e36e2cc489742c69b0c2efa28447c55"
+    }
+  ],
+  "steps": [
+    {
+      "name": "offline-dependencies",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\wheels\\capstone-5.0.9-py3-none-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\wheels\\pycryptodomex-3.24.2-cp37-abi3-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\wheels\\pyctr-0.7.6-py3-none-any.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\wheels\\pyelftools-0.33-py3-none-any.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\wheels\\unicorn-2.1.4-cp37-abi3-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\wheels\\z3_solver-5.3.3.0-py3-none-win_amd64.whl",
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\wheels\\cvc5-1.4.2-cp313-cp313-win_amd64.whl"
+      ],
+      "returncode": 0,
+      "log": "offline-dependencies.log",
+      "logSha256": "a75bdb9abecfea1c77d802e1e9484813402147bed968611ed70a6973fb75f164"
+    },
+    {
+      "name": "fresh-original-intake",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\python\\Scripts\\python.exe",
+        "-c",
+        "import sys;from pathlib import Path;sys.path.insert(0,\"toolscripts\");import ci_native_build as ci;ci.extract_inputs(Path.cwd(),Path(\"work/component-intake\"))"
+      ],
+      "returncode": 0,
+      "log": "fresh-original-intake.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "sdk-heap062-proof",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/public_sdk_heap062_replay.py",
+        "--output",
+        "work/heap062-public-replay-v1"
+      ],
+      "returncode": 0,
+      "log": "sdk-heap062-proof.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "public-compilation",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/compile_sources.py",
+        "--output",
+        "work/source-compile-ci/committed-replay"
+      ],
+      "returncode": 0,
+      "log": "public-compilation.log",
+      "logSha256": "df9d75cbc96732cb3e3f726c694daae0c4c770fabde61c8e79d524c625a0789c"
+    },
+    {
+      "name": "public_sdk_heap062_replay-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_public_sdk_heap062_replay.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "public_sdk_heap062_replay-tests.log",
+      "logSha256": "ec129db80a163cf4f2c5b264b195e17d418a77a965a2f20b541a37567943d1a6"
+    },
+    {
+      "name": "native_shader_inventory-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_native_shader_inventory.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "native_shader_inventory-tests.log",
+      "logSha256": "e02e717f2b4407a34d3005fd5c62d15cdde16b7790b8f34bc96a052b2d79adb8"
+    },
+    {
+      "name": "native_file_inventory-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_native_file_inventory.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "native_file_inventory-tests.log",
+      "logSha256": "a8b74ef6c34a7228c22279eb940a6b48d5ca487b4476ad570ee3b11d7c84b03e"
+    },
+    {
+      "name": "compile_source_include_dirs-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_compile_source_include_dirs.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "compile_source_include_dirs-tests.log",
+      "logSha256": "7127778d1557eac55c0647cc65b4e678280f5931918c21de28293de0c0893bb5"
+    },
+    {
+      "name": "c_function_definitions-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_c_function_definitions.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "c_function_definitions-tests.log",
+      "logSha256": "4b3b38bbc32bd37c860472988d06123fc465f15eda02037c2e916885f3c4ebc2"
+    },
+    {
+      "name": "compile_sources-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_compile_sources.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "compile_sources-tests.log",
+      "logSha256": "db30a169289bfeef463c9cb0ef845210fab63446ff533f303b927f71ac6992a3"
+    },
+    {
+      "name": "functional_report-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_functional_report.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "functional_report-tests.log",
+      "logSha256": "027d7d3edbfd24fa311026f2a62847e389b6dc913b74ffb143bd9ac7bcff9d55"
+    },
+    {
+      "name": "native_census_overlay-tests",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\python\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_native_census_overlay.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "native_census_overlay-tests.log",
+      "logSha256": "1a4323c9f583bcf0a56b5f4e39d4e45675aade3d1324fdbbdbf8f9699c0d5049"
+    },
+    {
+      "name": "reporting-objects",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/objdiff_objects.py"
+      ],
+      "returncode": 0,
+      "log": "reporting-objects.log",
+      "logSha256": "cc8f6b38ce84c08f3002343c12feeef509cc79caa65eb598678a668931c3b3fb"
+    },
+    {
+      "name": "report-configuration",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/configure_objdiff.py",
+        "--version",
+        "update-content0",
+        "--output",
+        "objdiff.json"
+      ],
+      "returncode": 0,
+      "log": "report-configuration.log",
+      "logSha256": "5b4ee49079572b96586a596615a0c3e75fc3380b36527e6aeb49778895dc52d5"
+    },
+    {
+      "name": "stock-report",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\objdiff-3.8.3\\objdiff-cli.exe",
+        "report",
+        "generate",
+        "-o",
+        "build/update-content0/report.raw.json"
+      ],
+      "returncode": 0,
+      "log": "stock-report.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "normalized-report",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/finalize_objdiff_report.py",
+        "--input",
+        "build/update-content0/report.raw.json"
+      ],
+      "returncode": 0,
+      "log": "normalized-report.log",
+      "logSha256": "5cf489568e5552873d00650fb35712abf7642ce74d26da82cdd6fb4a6c85c5db"
+    },
+    {
+      "name": "functional-companion",
+      "argv": [
+        "C:\\Users\\trevo\\Documents\\RecProgramming\\DQM\\dqmj3pro-decomp\\work\\clean-replay\\sdk-heap062-c9a8c54\\tools\\python\\Scripts\\python.exe",
+        "toolscripts/functional_report.py"
+      ],
+      "returncode": 0,
+      "log": "functional-companion.log",
+      "logSha256": "c3a2c8a63c9366f6a7446f33fa317f84fc570d80b327eaddc76ebb8f496db7db"
+    }
+  ],
+  "sourceAdmissionGranted": false,
+  "wholeGameClaimed": false,
+  "intakeCleanupReceipt": {
+    "path": "intake-cleanup.json",
+    "bytes": 3812,
+    "sha256": "edb35b05af408269a707285343b0c241e9ebb80d921f9ac256711843fee1aa2f"
+  },
+  "packets": [
+    {
+      "path": "work/heap062-public-replay-v1/public-replay.json",
+      "sha256": "9f3220633aa3efe78cece70a086cf54b95ea43c67da3f3bdf0bcb39be45f5330",
+      "bytes": 2576
+    },
+    {
+      "path": "work/heap062-public-replay-v1/source-map-v1.json",
+      "sha256": "13fe6ef75f6b745112fa7ec3f3f2d2cbb9d209bc9a622cb7632028b506e64e4b",
+      "bytes": 13095
+    },
+    {
+      "path": "work/heap062-public-replay-v1/copy-verification-v2.json",
+      "sha256": "d17504d2a7feb86a974b856863be46a4e7ab5e039d632a4b63c2570432ef0079",
+      "bytes": 75402
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/report.json",
+      "sha256": "9d85ef575ffcfe6d6850c7224da33fd894b2f577852e1a761e2b6221427fb6c2",
+      "bytes": 6521
+    },
+    {
+      "path": "work/heap062-public-replay-v1/qualification-final-v2/receipt.json",
+      "sha256": "744b7ebaaa3a632a0f3ad69808da16aea5c1959e530bba59eccb80d03d5a7b9b",
+      "bytes": 54336
+    },
+    {
+      "path": "work/heap062-public-replay-v1/qualification-final-v2/process-completion.json",
+      "sha256": "43cd01e14be4eabf601a19929cd3db5ce468fc5527bc826658bea30237108ed8",
+      "bytes": 168
+    },
+    {
+      "path": "work/heap062-public-replay-v1/qualification-final-v2/generic/report.json",
+      "sha256": "ada9bb9b94b7da42fc2b6d0ce7e231f8f574533dfae7710fa45e14a6635d8cf0",
+      "bytes": 23122372
+    },
+    {
+      "path": "work/heap062-public-replay-v1/qualification-final-v2/default/report.json",
+      "sha256": "840bc175c7f39959e20df4545ecd1d1e56ac2497c507eda6bcf3597e8909613f",
+      "bytes": 11074792
+    },
+    {
+      "path": "work/heap062-public-replay-v1/qualification-final-v2/registry/report.json",
+      "sha256": "18d51de07550103d18477a63d5742f086c047ae822e686425ac1c81410b2e848",
+      "bytes": 8792
+    },
+    {
+      "path": "work/heap062-public-replay-v1/qualification-final-v2/setters/report.json",
+      "sha256": "8b048ea1de1d7acf2bcc179d5c312932e8508b4b073eec765bf02da1612023c5",
+      "bytes": 30942
+    },
+    {
+      "path": "work/heap062-public-replay-v1/qualification-final-v2/disabled/report.json",
+      "sha256": "8d1f97f2263d32d15fd4329d77fe0c6ea095c19c048aa420378b3401ebf37b3a",
+      "bytes": 2975
+    },
+    {
+      "path": "work/heap062-public-replay-v1/qualification-final-v2/controls/report.json",
+      "sha256": "8d6744360de09da2a525af71f7f2180ffd8147707f4475e6b79639c744c356bd",
+      "bytes": 7988
+    },
+    {
+      "path": "work/heap062-public-replay-v1/source-only-final-v2/receipt.json",
+      "sha256": "9360e9a209a17f9b9c40de1396b8522c9592ef3ad19a6f01a7b06ab02eb51d24",
+      "bytes": 32735
+    },
+    {
+      "path": "work/heap062-public-replay-v1/source-only-final-v2/process-completion.json",
+      "sha256": "af244a1d5166836f9e2f0439be52d1e3fef87891bd7ddb9c8550f5f06b106d7f",
+      "bytes": 168
+    },
+    {
+      "path": "work/heap062-public-replay-v1/source-only-final-v2/source-only.json",
+      "sha256": "098f9ee80cd88a96b7d781a3c775ff1eb23818530a517f52660f94d4d91b7a8a",
+      "bytes": 31946343
+    },
+    {
+      "path": "work/heap062-public-replay-v1/copied-final-v2/receipt.json",
+      "sha256": "ffd5e25b93c1dff1aacc9409e47c8590f4198143b37c12801bc50641ab6aa4ec",
+      "bytes": 56079
+    },
+    {
+      "path": "work/heap062-public-replay-v1/copied-final-v2/process-completion.json",
+      "sha256": "3f75f74a793676ac1ae5f78c0a0ba4378058dc8a97dce40a120f2c8cc423489b",
+      "bytes": 168
+    },
+    {
+      "path": "work/heap062-public-replay-v1/copied-final-v2/generic/report.json",
+      "sha256": "1a92cf1a0e8246eb05225157e3bb285dd51162e119951c0567034669c5d0bdd5",
+      "bytes": 23122371
+    },
+    {
+      "path": "work/heap062-public-replay-v1/copied-final-v2/default/report.json",
+      "sha256": "f04440266833e322a02b1224deea269b60444117cc587c28e1fbae580a2561bc",
+      "bytes": 11074792
+    },
+    {
+      "path": "work/heap062-public-replay-v1/copied-final-v2/registry/report.json",
+      "sha256": "c93c49525b0d0b76c64843dc1e9f61842b786308d72626ab312701f3bff80b69",
+      "bytes": 8792
+    },
+    {
+      "path": "work/heap062-public-replay-v1/copied-final-v2/setters/report.json",
+      "sha256": "96afec68338c844c225e85e09aa28359e9f93cd20ece7df7aa2ffc60a5b87eb1",
+      "bytes": 30942
+    },
+    {
+      "path": "work/heap062-public-replay-v1/copied-final-v2/disabled/report.json",
+      "sha256": "8d1f97f2263d32d15fd4329d77fe0c6ea095c19c048aa420378b3401ebf37b3a",
+      "bytes": 2975
+    },
+    {
+      "path": "work/heap062-public-replay-v1/copied-final-v2/controls/report.json",
+      "sha256": "72d140f953ea7575ebdf549e13cda29dd8397bd28fe327d920baa6933ba17af9",
+      "bytes": 7988
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/cached-bytecode/receipt.json",
+      "sha256": "d5aaa53dda8ed5197cdd411f57f839bc86873fc7b0eda51c459b77e7a8861833",
+      "bytes": 27970
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/cached-bytecode/process-completion.json",
+      "sha256": "1914e3ec86edc7999567f83a2f9c0d8098cb28fdb25a8c01604c157b9d355282",
+      "bytes": 578
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/cached-bytecode/audit-rejections.json",
+      "sha256": "3721c212349cceda280aedc3590b99342d6e37e63b22b8b8568f6d53f96b3114",
+      "bytes": 408
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/generated-stat/receipt.json",
+      "sha256": "57eacf214ed51d0ba6e9fef43e9d2ea1cac4d8d65504be85252b03fcf5d22394",
+      "bytes": 27892
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/generated-stat/process-completion.json",
+      "sha256": "5102c22ee677d6cc25b6aaef880dd5762f91c73da57c9c4fb13971b8ae98ba39",
+      "bytes": 544
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/generated-stat/audit-rejections.json",
+      "sha256": "15a37b5c8284fcaf6d09082f5aeec5b7c08573256106f49c8bf51aabbce375ff",
+      "bytes": 374
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/late-caught/receipt.json",
+      "sha256": "d2d3d412a2d0d16a92b1d9236b091d9c434dfcc90c6e6940c80034269b6df290",
+      "bytes": 44
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/late-caught/process-completion.json",
+      "sha256": "bb94345632210b3b0abad62bc0512480439d5fd67b3c035c6fca53e2d774625c",
+      "bytes": 386
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/late-caught/audit-rejections.json",
+      "sha256": "6307488f0c15afffd0fc3e1764dd7554b01c57a6326916a96e3a5db8eecba190",
+      "bytes": 218
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/library/receipt.json",
+      "sha256": "ddc1e3365d4eb2629eafc986f0c3701871cd0d761aef6ee6be2fe23bfb9dba23",
+      "bytes": 27820
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/library/process-completion.json",
+      "sha256": "15b1f6f884962de61c5aa0914eaa9e171157ba0c75ca206d48aaa0c4e9614d4b",
+      "bytes": 555
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/library/audit-rejections.json",
+      "sha256": "2de137fbac97a851ae666ffeccc4a6e5ea7a7acc5c93e07318f98cd07d33ad3b",
+      "bytes": 385
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/listdir/receipt.json",
+      "sha256": "e54dae5780af7d58ee7432328008012b45ac75dedeb676b2af8163e6f36bdb62",
+      "bytes": 27790
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/listdir/process-completion.json",
+      "sha256": "a81998fa761b7cbf0c25d40acc4d20c096aaacd3551de74536f2bb2956193dec",
+      "bytes": 540
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/listdir/audit-rejections.json",
+      "sha256": "ace344f84111156f8c0ec13b1f0c749ee41ba71fb90ba025de4541a068df8ee0",
+      "bytes": 370
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/lstat/receipt.json",
+      "sha256": "e2239e9a91973c3e56b8ca2c48c322154315164bc20e0184495afb1804884743",
+      "bytes": 27726
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/lstat/process-completion.json",
+      "sha256": "3cb499ab44b7535a65de07489363b0599e23d4ae76605daafb8a63bff4cd9859",
+      "bytes": 553
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/lstat/audit-rejections.json",
+      "sha256": "8847c01a9b7d9e9335561c1fff255fd1a4c90e578ebe75b0e69ace71a8330245",
+      "bytes": 383
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/open/receipt.json",
+      "sha256": "e2998260c3237c7676653c3f3a126636744349476e337ea0cd508ebf5df1693a",
+      "bytes": 27673
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/open/process-completion.json",
+      "sha256": "0dcc09e3c4804e77caaa5e802328c6ac678ab87d712129a0ec450b3efb34a9a3",
+      "bytes": 549
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/open/audit-rejections.json",
+      "sha256": "f28c5487bc1716a1efebd208e1a0853541d98d98c492848ee366019bd0fce626",
+      "bytes": 379
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/original/receipt.json",
+      "sha256": "e6b2d80dccea500c7702c619fbd3574a8634c2ddbe611e8f6907e4786a308fea",
+      "bytes": 27462
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/original/process-completion.json",
+      "sha256": "dd4128e38391ec8b6e52d308b82aeba4f768d2651f38b8b9f0eb1cf10624086f",
+      "bytes": 384
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/original/audit-rejections.json",
+      "sha256": "8c144611723f3d2d917b579c9a123790dd5dfc68d0dbcfa593c0e7ddd48cbfb6",
+      "bytes": 214
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/scandir/receipt.json",
+      "sha256": "abc79311ced377cffce9d140b24c507cd4aceba38278e9c37d851330017871be",
+      "bytes": 27790
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/scandir/process-completion.json",
+      "sha256": "faad7fbbde0c195fc3e5de884f8bd88a10a73b75e7e18d09225f108b43781504",
+      "bytes": 540
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/scandir/audit-rejections.json",
+      "sha256": "53a46171e952a7898aa31c42406dd1a961ae0f08a907afd44b1878a8e98431bc",
+      "bytes": 370
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/source-write/receipt.json",
+      "sha256": "9d261f2ee6927118f37222f59701c771250471c6476f520d96cc656fe66a62c2",
+      "bytes": 27839
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/source-write/process-completion.json",
+      "sha256": "8ae57f22b78bf05fbfa0c2986e6f8ca6559d5652ac0d5ad35a00286b04babdcc",
+      "bytes": 581
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/source-write/audit-rejections.json",
+      "sha256": "ecb40fd2ca3602fa29d5ffa248145ac059c543381c3aed0a6e6429a3a7ec2576",
+      "bytes": 411
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/stat/receipt.json",
+      "sha256": "4aa2ed5867e80f721c5a89c2a9902707910d160e3333bf52caa09a7f4a00290f",
+      "bytes": 27678
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/stat/process-completion.json",
+      "sha256": "f4cbc5c97e2c6be2c7afe94cf73244ce4bc7a7f0f22205e80f8d3a5ce0e5e41d",
+      "bytes": 552
+    },
+    {
+      "path": "work/heap062-public-replay-v1/boundary-controls-v1/stat/audit-rejections.json",
+      "sha256": "44396b684f9b8c3583416688eddae7147efdc2d4b904742adc7cae6bd04b91d1",
+      "bytes": 382
+    },
+    {
+      "path": "build/update-content0/report.json",
+      "sha256": "d9ee97e12acf957d814ea83d4c8a54d421bd3c11a9569280b8a8dde70f1bd64b",
+      "bytes": 2744684
+    },
+    {
+      "path": "build/update-content0/functional.json",
+      "sha256": "8fca0511a22d93cb22818dac8a446121f5e4a6cb16a7cbcd920d200a51591d76",
+      "bytes": 36436
+    }
+  ]
+}

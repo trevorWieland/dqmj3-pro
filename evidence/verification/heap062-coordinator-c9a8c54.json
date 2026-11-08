@@ -1,0 +1,43 @@
+{
+  "status": "coordinator-reviewed-committed-heap-source-replay-passed",
+  "sourceRevision": "c9a8c549b757f617d317115a7f34d9199406225b",
+  "producer": {
+    "path": "evidence/verification/producers/review_heap062_replay.py",
+    "bytes": 7114,
+    "sha256": "0e7ad968fac6aceb5607332e03a4845ca65737567b915cae6e73c2d33940a770"
+  },
+  "rawReplay": {
+    "path": "evidence/verification/sdk-heap062-isolated-c9a8c54.json",
+    "bytes": 34031,
+    "sha256": "0f4c748a284bdb70980e0f64d7796810ce7c67be3d2fef7444695418daa4da39"
+  },
+  "mandatoryPackets": 58,
+  "pipelineTests": 116,
+  "completeNativeArtifactsChecked": 1222,
+  "artifactIdentitiesPerFullRoot": 284,
+  "sourceOnlyArtifactIdentities": 43,
+  "sourceOnlyProfilesPerRoot": 117,
+  "normallyReturningSemanticRejectionsPerFullRoot": 27,
+  "equalFinalStateControlsPerFullRoot": 3,
+  "persistentBoundaryControlsPerRoot": 11,
+  "originalInstructionPcCorpus": 667,
+  "explicitNamedPointerProjection": true,
+  "arbitraryPointerWordNormalization": false,
+  "baselineParent": {
+    "path": "work/heap062-root-public-v1/public-replay.json",
+    "bytes": 2576,
+    "sha256": "5b9ebbda379fd10270de6c30762b18829abb258e40831cf91d1815de3737f898"
+  },
+  "freshParent": {
+    "path": "work/clean-replay/sdk-heap062-c9a8c54/work/heap062-public-replay-v1/public-replay.json",
+    "bytes": 2576,
+    "sha256": "9f3220633aa3efe78cece70a086cf54b95ea43c67da3f3bdf0bcb39be45f5330"
+  },
+  "sourceCreditGranted": 0,
+  "inventoryRepairRequired": [
+    "0x10b980 remote range currently owned by0x105408"
+  ],
+  "existingWorkingCEntryNotNew": "fn_00170b94",
+  "historicalFunctionInventoryComplete": false,
+  "wholeGameQualified": false
+}

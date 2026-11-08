@@ -4,6 +4,8 @@ import os
 import platform
 import subprocess
 import sys
+import time
+import urllib.error
 import urllib.request
 import venv
 from pathlib import Path
@@ -25,9 +27,20 @@ def fetch(url, path, expected, verify_only=False):
         raise RuntimeError("Missing frozen report tool")
     path.parent.mkdir(parents=True, exist_ok=True)
     partial = path.with_suffix(path.suffix + ".download")
-    with urllib.request.urlopen(url, timeout=120) as response, partial.open("wb") as output:
-        while block := response.read(1024 * 1024):
-            output.write(block)
+    for attempt in range(3):
+        try:
+            request = urllib.request.Request(url, headers={"Cache-Control": "no-cache", "User-Agent": "dqmj3-pro-report-bootstrap"})
+            with urllib.request.urlopen(request, timeout=120) as response, partial.open("wb") as output:
+                while block := response.read(1024 * 1024):
+                    output.write(block)
+            break
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as error:
+            partial.unlink(missing_ok=True)
+            if isinstance(error, urllib.error.HTTPError) and error.code not in (429, 500, 502, 503, 504):
+                raise
+            if attempt == 2:
+                raise
+            time.sleep(2 ** (attempt + 1))
     if compiler.digest(partial) != expected:
         raise RuntimeError("Public report tool download hash mismatch")
     partial.replace(path)
