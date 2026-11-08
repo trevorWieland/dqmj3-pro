@@ -1,0 +1,1238 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-file-queue-manager-worker",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "functions": [
+    {
+      "symbol": "fn_0010c550",
+      "source": {
+        "path": "src/native/wave067-queue/queue_manager.c",
+        "bytes": 2331,
+        "sha256": "76d72cbd4d5a3708d3ccc6e21c6d9060d2fdf223295ab23573c6b4f2b35452f3"
+      },
+      "sourceName": "effect_queue_manager_construct067",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 8339,
+        "sha256": "100128a29792704cddd2634265fabbf69ce455f97386874e2636f8b0c92c9e07"
+      },
+      "canonicalIdentity": {
+        "address": 1099088,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 268,
+      "originalInstructionRanges": [
+        {
+          "start": 1099088,
+          "endExclusive": 1099356,
+          "bytes": 268
+        }
+      ],
+      "originalBodySha256": "f999da11cd18a8eadf284bd3fea94a06e89f4c2826bac92fa141621edfd9fcc4",
+      "reportEntryBytes": 268,
+      "literalPoolsExcluded": [
+        {
+          "start": 1099356,
+          "endExclusive": 1099360,
+          "bytes": 4,
+          "sha256": "8f8cc0dc7099ed60c1d0b9cd0c107b80286a1473e070990ccfca13c8fc9f9f4d",
+          "loadWitness": 1099100,
+          "credit": "readonly-data-not-instruction"
+        },
+        {
+          "start": 1099360,
+          "endExclusive": 1099364,
+          "bytes": 4,
+          "sha256": "75ceae1c863f0acb0dace0d3a147748991ab6cb162275a5cd7a13cee13608f0e",
+          "loadWitness": 1099112,
+          "credit": "readonly-data-not-instruction"
+        },
+        {
+          "start": 1099364,
+          "endExclusive": 1099368,
+          "bytes": 4,
+          "sha256": "4bfbb7e53b503fe5d65e6249faaa77c37ef897ffa5a33d3292d8638c36a144b2",
+          "loadWitness": 1099116,
+          "credit": "readonly-data-not-instruction"
+        },
+        {
+          "start": 1099368,
+          "endExclusive": 1099372,
+          "bytes": 4,
+          "sha256": "c003616937c76f3340509d3930b13668cd53c843643d8718c5eeb97d28a768e7",
+          "loadWitness": 1099192,
+          "credit": "readonly-data-not-instruction"
+        },
+        {
+          "start": 1099376,
+          "endExclusive": 1099380,
+          "bytes": 4,
+          "sha256": "d9276de7464c2bc516e15bd93c1bc3eeb96398e2cd217a3157ec078a4bfc22d4",
+          "loadWitness": 1099224,
+          "credit": "readonly-data-not-instruction"
+        },
+        {
+          "start": 1099380,
+          "endExclusive": 1099384,
+          "bytes": 4,
+          "sha256": "16be1ccd24134a59fc537c44342ce55feb1fdc8cb17cc3685f249e45f17119c3",
+          "loadWitness": 1099240,
+          "credit": "readonly-data-not-instruction"
+        },
+        {
+          "start": 1099384,
+          "endExclusive": 1099388,
+          "bytes": 4,
+          "sha256": "e4a62d463f7bff76118fa127d7eac25d63422b98f21f6f7747bced1acb580d3c",
+          "loadWitness": 1099256,
+          "credit": "readonly-data-not-instruction"
+        },
+        {
+          "start": 1099372,
+          "endExclusive": 1099376,
+          "bytes": 4,
+          "sha256": "d04a3824370ea86ad8eb5d639823933804ff65b1e94451f51b155fdd2081532b",
+          "loadWitness": 1099280,
+          "credit": "readonly-data-not-instruction"
+        }
+      ],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/queue067-coordinator-000282d.json",
+          "bytes": 17671,
+          "sha256": "792e4807486f30cb92a8af4a8bed9e7ac55b2ba8f6e0ca787897bb61dd7d756c"
+        },
+        "completeCanonicalWitnesses": {
+          "path": "evidence/lanes/native-file-queue067/source-v1/candidate-functions.json",
+          "bytes": 31351,
+          "sha256": "7ca2bab10f42f19431fb14a2d7121e9f8142a3535505c18c40256be7ed9b6040"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceCodeOriginalImageMapped": false,
+        "pipelineTests": 120,
+        "completeNativeArtifactComparisons": 990,
+        "completeLogicalCaseFiles": 63,
+        "returningControlChecks": 21,
+        "applicableSemanticRejections": 20,
+        "arm32NarrowingControlInapplicable": true,
+        "persistentCaughtAttemptControls": 11,
+        "separatePhysicalAndroidCaptureReview": {
+          "path": "evidence/verification/thor-queue067-physical.json",
+          "bytes": 1775,
+          "sha256": "7993f81893a8a87fe47781215a1ce68c961b29089684a16371bbd7b9848dfc7a"
+        },
+        "quiescentTaskObservationsOnly": true,
+        "arbitraryConcurrentPollingQualified": false,
+        "unvisitedOriginalPCs": [
+          1099324,
+          1099328,
+          1099332,
+          1099336
+        ],
+        "noConditionSatisfiedWitnessPCs": [
+          1099300,
+          1099324,
+          1099328,
+          1099332,
+          1099336
+        ],
+        "domain": "Nine fresh, gated manager/worker sessions; seven complete canonical bodies implemented, finite behavior only.",
+        "limits": [
+          "Queue links/counts use the measured recursive mutex; clear is before start or after join.",
+          "Portable running/current fields are atomic; frozen066 ready/error/payload fields remain ordinary C.",
+          "Task reads/destruction require before-start, paused-event acquire or joined state; arbitrary polling is unqualified.",
+          "Source selectors use measured066 mode5 and explicit allocator/filesystem service domains.",
+          "Queue/block allocation and thread create/join services retain measured normal-return domains; terminal errors are separate.",
+          "The original asynchronous read-error lost-buffer leak is preserved; no universal memory-safety claim.",
+          "The partial15e304 join helper receives no independent source admission.",
+          "Missing and condition-false-only PCs are recorded explicitly, not treated as exercised paths.",
+          "Five physical pthread captures are separate component evidence; no historical scheduler, full bootstrap or native-game claim."
+        ],
+        "confidenceJustification": "Medium: complete implemented canonical bodies, independent committed original/source/native replay, exact typed ownership/budgets/file-operation order, returning wrong-source controls and persistent access boundaries. Finite domains; no exact or universal equivalence claim."
+      }
+    },
+    {
+      "symbol": "fn_001529b0",
+      "source": {
+        "path": "src/native/wave067-queue/queue_manager.c",
+        "bytes": 2331,
+        "sha256": "76d72cbd4d5a3708d3ccc6e21c6d9060d2fdf223295ab23573c6b4f2b35452f3"
+      },
+      "sourceName": "effect_queue_request_async067",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 8339,
+        "sha256": "100128a29792704cddd2634265fabbf69ce455f97386874e2636f8b0c92c9e07"
+      },
+      "canonicalIdentity": {
+        "address": 1386928,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 128,
+      "originalInstructionRanges": [
+        {
+          "start": 1386928,
+          "endExclusive": 1387056,
+          "bytes": 128
+        }
+      ],
+      "originalBodySha256": "0176d6d9eb7776674238427b92f2bed529259bc6a57156ca6fcbfd826b5c2740",
+      "reportEntryBytes": 128,
+      "literalPoolsExcluded": [
+        {
+          "start": 1387056,
+          "endExclusive": 1387060,
+          "bytes": 4,
+          "sha256": "17993204bf31c864df2799db19d689b22f8629a883695482d1f98320b7d1daa4",
+          "loadWitness": 1386940,
+          "credit": "readonly-data-not-instruction"
+        },
+        {
+          "start": 1387060,
+          "endExclusive": 1387064,
+          "bytes": 4,
+          "sha256": "ec2afa6a54bd7d38e0c28dfcc6483a2d65d982e7a2b168dc726add56735ae1ab",
+          "loadWitness": 1386960,
+          "credit": "readonly-data-not-instruction"
+        },
+        {
+          "start": 1387064,
+          "endExclusive": 1387068,
+          "bytes": 4,
+          "sha256": "75ceae1c863f0acb0dace0d3a147748991ab6cb162275a5cd7a13cee13608f0e",
+          "loadWitness": 1386980,
+          "credit": "readonly-data-not-instruction"
+        }
+      ],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/queue067-coordinator-000282d.json",
+          "bytes": 17671,
+          "sha256": "792e4807486f30cb92a8af4a8bed9e7ac55b2ba8f6e0ca787897bb61dd7d756c"
+        },
+        "completeCanonicalWitnesses": {
+          "path": "evidence/lanes/native-file-queue067/source-v1/candidate-functions.json",
+          "bytes": 31351,
+          "sha256": "7ca2bab10f42f19431fb14a2d7121e9f8142a3535505c18c40256be7ed9b6040"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceCodeOriginalImageMapped": false,
+        "pipelineTests": 120,
+        "completeNativeArtifactComparisons": 990,
+        "completeLogicalCaseFiles": 63,
+        "returningControlChecks": 21,
+        "applicableSemanticRejections": 20,
+        "arm32NarrowingControlInapplicable": true,
+        "persistentCaughtAttemptControls": 11,
+        "separatePhysicalAndroidCaptureReview": {
+          "path": "evidence/verification/thor-queue067-physical.json",
+          "bytes": 1775,
+          "sha256": "7993f81893a8a87fe47781215a1ce68c961b29089684a16371bbd7b9848dfc7a"
+        },
+        "quiescentTaskObservationsOnly": true,
+        "arbitraryConcurrentPollingQualified": false,
+        "unvisitedOriginalPCs": [],
+        "noConditionSatisfiedWitnessPCs": [],
+        "domain": "Nine fresh, gated manager/worker sessions; seven complete canonical bodies implemented, finite behavior only.",
+        "limits": [
+          "Queue links/counts use the measured recursive mutex; clear is before start or after join.",
+          "Portable running/current fields are atomic; frozen066 ready/error/payload fields remain ordinary C.",
+          "Task reads/destruction require before-start, paused-event acquire or joined state; arbitrary polling is unqualified.",
+          "Source selectors use measured066 mode5 and explicit allocator/filesystem service domains.",
+          "Queue/block allocation and thread create/join services retain measured normal-return domains; terminal errors are separate.",
+          "The original asynchronous read-error lost-buffer leak is preserved; no universal memory-safety claim.",
+          "The partial15e304 join helper receives no independent source admission.",
+          "Missing and condition-false-only PCs are recorded explicitly, not treated as exercised paths.",
+          "Five physical pthread captures are separate component evidence; no historical scheduler, full bootstrap or native-game claim."
+        ],
+        "confidenceJustification": "Medium: complete implemented canonical bodies, independent committed original/source/native replay, exact typed ownership/budgets/file-operation order, returning wrong-source controls and persistent access boundaries. Finite domains; no exact or universal equivalence claim."
+      }
+    },
+    {
+      "symbol": "fn_00162ad0",
+      "source": {
+        "path": "src/native/wave067-queue/queue_store.c",
+        "bytes": 3810,
+        "sha256": "7af751e0daf47c4aa7fbfede586399098d906827e8d9c99318572a611aceff78"
+      },
+      "sourceName": "effect_queue_push067",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 8339,
+        "sha256": "100128a29792704cddd2634265fabbf69ce455f97386874e2636f8b0c92c9e07"
+      },
+      "canonicalIdentity": {
+        "address": 1452752,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 392,
+      "originalInstructionRanges": [
+        {
+          "start": 1452752,
+          "endExclusive": 1453144,
+          "bytes": 392
+        }
+      ],
+      "originalBodySha256": "37c4c9888faffa4252e089d6389aec6e6b04c346208969a912da086d8e3f1649",
+      "reportEntryBytes": 392,
+      "literalPoolsExcluded": [
+        {
+          "start": 1453144,
+          "endExclusive": 1453148,
+          "bytes": 4,
+          "sha256": "75ceae1c863f0acb0dace0d3a147748991ab6cb162275a5cd7a13cee13608f0e",
+          "loadWitness": 1452800,
+          "credit": "readonly-data-not-instruction"
+        }
+      ],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/queue067-coordinator-000282d.json",
+          "bytes": 17671,
+          "sha256": "792e4807486f30cb92a8af4a8bed9e7ac55b2ba8f6e0ca787897bb61dd7d756c"
+        },
+        "completeCanonicalWitnesses": {
+          "path": "evidence/lanes/native-file-queue067/source-v1/candidate-functions.json",
+          "bytes": 31351,
+          "sha256": "7ca2bab10f42f19431fb14a2d7121e9f8142a3535505c18c40256be7ed9b6040"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceCodeOriginalImageMapped": false,
+        "pipelineTests": 120,
+        "completeNativeArtifactComparisons": 990,
+        "completeLogicalCaseFiles": 63,
+        "returningControlChecks": 21,
+        "applicableSemanticRejections": 20,
+        "arm32NarrowingControlInapplicable": true,
+        "persistentCaughtAttemptControls": 11,
+        "separatePhysicalAndroidCaptureReview": {
+          "path": "evidence/verification/thor-queue067-physical.json",
+          "bytes": 1775,
+          "sha256": "7993f81893a8a87fe47781215a1ce68c961b29089684a16371bbd7b9848dfc7a"
+        },
+        "quiescentTaskObservationsOnly": true,
+        "arbitraryConcurrentPollingQualified": false,
+        "unvisitedOriginalPCs": [],
+        "noConditionSatisfiedWitnessPCs": [
+          1452816,
+          1452984,
+          1452988
+        ],
+        "domain": "Nine fresh, gated manager/worker sessions; seven complete canonical bodies implemented, finite behavior only.",
+        "limits": [
+          "Queue links/counts use the measured recursive mutex; clear is before start or after join.",
+          "Portable running/current fields are atomic; frozen066 ready/error/payload fields remain ordinary C.",
+          "Task reads/destruction require before-start, paused-event acquire or joined state; arbitrary polling is unqualified.",
+          "Source selectors use measured066 mode5 and explicit allocator/filesystem service domains.",
+          "Queue/block allocation and thread create/join services retain measured normal-return domains; terminal errors are separate.",
+          "The original asynchronous read-error lost-buffer leak is preserved; no universal memory-safety claim.",
+          "The partial15e304 join helper receives no independent source admission.",
+          "Missing and condition-false-only PCs are recorded explicitly, not treated as exercised paths.",
+          "Five physical pthread captures are separate component evidence; no historical scheduler, full bootstrap or native-game claim."
+        ],
+        "confidenceJustification": "Medium: complete implemented canonical bodies, independent committed original/source/native replay, exact typed ownership/budgets/file-operation order, returning wrong-source controls and persistent access boundaries. Finite domains; no exact or universal equivalence claim."
+      }
+    },
+    {
+      "symbol": "fn_00117274",
+      "source": {
+        "path": "src/native/wave067-queue/queue_worker.c",
+        "bytes": 3006,
+        "sha256": "ad17c5b21ed58c3948facfc1f99d412b170cdf673279bf3ae895cc2478a8c3de"
+      },
+      "sourceName": "effect_queue_worker_run067",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 8339,
+        "sha256": "100128a29792704cddd2634265fabbf69ce455f97386874e2636f8b0c92c9e07"
+      },
+      "canonicalIdentity": {
+        "address": 1143412,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 256,
+      "originalInstructionRanges": [
+        {
+          "start": 1143412,
+          "endExclusive": 1143668,
+          "bytes": 256
+        }
+      ],
+      "originalBodySha256": "6566ca5d8d0d94380877b0b37ec9b4032171db2f5afed856f48704ac35389fc7",
+      "reportEntryBytes": 256,
+      "literalPoolsExcluded": [
+        {
+          "start": 1143668,
+          "endExclusive": 1143672,
+          "bytes": 4,
+          "sha256": "783f24eb34632521e09c99baf4eb2081877ac980e894d5d2cccabb9b4f971da0",
+          "loadWitness": 1143640,
+          "credit": "readonly-data-not-instruction"
+        }
+      ],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/queue067-coordinator-000282d.json",
+          "bytes": 17671,
+          "sha256": "792e4807486f30cb92a8af4a8bed9e7ac55b2ba8f6e0ca787897bb61dd7d756c"
+        },
+        "completeCanonicalWitnesses": {
+          "path": "evidence/lanes/native-file-queue067/source-v1/candidate-functions.json",
+          "bytes": 31351,
+          "sha256": "7ca2bab10f42f19431fb14a2d7121e9f8142a3535505c18c40256be7ed9b6040"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceCodeOriginalImageMapped": false,
+        "pipelineTests": 120,
+        "completeNativeArtifactComparisons": 990,
+        "completeLogicalCaseFiles": 63,
+        "returningControlChecks": 21,
+        "applicableSemanticRejections": 20,
+        "arm32NarrowingControlInapplicable": true,
+        "persistentCaughtAttemptControls": 11,
+        "separatePhysicalAndroidCaptureReview": {
+          "path": "evidence/verification/thor-queue067-physical.json",
+          "bytes": 1775,
+          "sha256": "7993f81893a8a87fe47781215a1ce68c961b29089684a16371bbd7b9848dfc7a"
+        },
+        "quiescentTaskObservationsOnly": true,
+        "arbitraryConcurrentPollingQualified": false,
+        "unvisitedOriginalPCs": [],
+        "noConditionSatisfiedWitnessPCs": [
+          1143428,
+          1143504
+        ],
+        "domain": "Nine fresh, gated manager/worker sessions; seven complete canonical bodies implemented, finite behavior only.",
+        "limits": [
+          "Queue links/counts use the measured recursive mutex; clear is before start or after join.",
+          "Portable running/current fields are atomic; frozen066 ready/error/payload fields remain ordinary C.",
+          "Task reads/destruction require before-start, paused-event acquire or joined state; arbitrary polling is unqualified.",
+          "Source selectors use measured066 mode5 and explicit allocator/filesystem service domains.",
+          "Queue/block allocation and thread create/join services retain measured normal-return domains; terminal errors are separate.",
+          "The original asynchronous read-error lost-buffer leak is preserved; no universal memory-safety claim.",
+          "The partial15e304 join helper receives no independent source admission.",
+          "Missing and condition-false-only PCs are recorded explicitly, not treated as exercised paths.",
+          "Five physical pthread captures are separate component evidence; no historical scheduler, full bootstrap or native-game claim."
+        ],
+        "confidenceJustification": "Medium: complete implemented canonical bodies, independent committed original/source/native replay, exact typed ownership/budgets/file-operation order, returning wrong-source controls and persistent access boundaries. Finite domains; no exact or universal equivalence claim."
+      }
+    },
+    {
+      "symbol": "fn_001173f8",
+      "source": {
+        "path": "src/native/wave067-queue/queue_worker.c",
+        "bytes": 3006,
+        "sha256": "ad17c5b21ed58c3948facfc1f99d412b170cdf673279bf3ae895cc2478a8c3de"
+      },
+      "sourceName": "effect_queue_worker_finalize067",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 8339,
+        "sha256": "100128a29792704cddd2634265fabbf69ce455f97386874e2636f8b0c92c9e07"
+      },
+      "canonicalIdentity": {
+        "address": 1143800,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 304,
+      "originalInstructionRanges": [
+        {
+          "start": 1143800,
+          "endExclusive": 1144104,
+          "bytes": 304
+        }
+      ],
+      "originalBodySha256": "cc974d44be3711b1e117531ca660bfad48aa9b80cf321f11d219d0122236eaf1",
+      "reportEntryBytes": 304,
+      "literalPoolsExcluded": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/queue067-coordinator-000282d.json",
+          "bytes": 17671,
+          "sha256": "792e4807486f30cb92a8af4a8bed9e7ac55b2ba8f6e0ca787897bb61dd7d756c"
+        },
+        "completeCanonicalWitnesses": {
+          "path": "evidence/lanes/native-file-queue067/source-v1/candidate-functions.json",
+          "bytes": 31351,
+          "sha256": "7ca2bab10f42f19431fb14a2d7121e9f8142a3535505c18c40256be7ed9b6040"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceCodeOriginalImageMapped": false,
+        "pipelineTests": 120,
+        "completeNativeArtifactComparisons": 990,
+        "completeLogicalCaseFiles": 63,
+        "returningControlChecks": 21,
+        "applicableSemanticRejections": 20,
+        "arm32NarrowingControlInapplicable": true,
+        "persistentCaughtAttemptControls": 11,
+        "separatePhysicalAndroidCaptureReview": {
+          "path": "evidence/verification/thor-queue067-physical.json",
+          "bytes": 1775,
+          "sha256": "7993f81893a8a87fe47781215a1ce68c961b29089684a16371bbd7b9848dfc7a"
+        },
+        "quiescentTaskObservationsOnly": true,
+        "arbitraryConcurrentPollingQualified": false,
+        "unvisitedOriginalPCs": [
+          1144048,
+          1144052,
+          1144056,
+          1144088,
+          1144092
+        ],
+        "noConditionSatisfiedWitnessPCs": [
+          1143840,
+          1143868,
+          1143924,
+          1143956,
+          1144048,
+          1144052,
+          1144056,
+          1144088,
+          1144092
+        ],
+        "domain": "Nine fresh, gated manager/worker sessions; seven complete canonical bodies implemented, finite behavior only.",
+        "limits": [
+          "Queue links/counts use the measured recursive mutex; clear is before start or after join.",
+          "Portable running/current fields are atomic; frozen066 ready/error/payload fields remain ordinary C.",
+          "Task reads/destruction require before-start, paused-event acquire or joined state; arbitrary polling is unqualified.",
+          "Source selectors use measured066 mode5 and explicit allocator/filesystem service domains.",
+          "Queue/block allocation and thread create/join services retain measured normal-return domains; terminal errors are separate.",
+          "The original asynchronous read-error lost-buffer leak is preserved; no universal memory-safety claim.",
+          "The partial15e304 join helper receives no independent source admission.",
+          "Missing and condition-false-only PCs are recorded explicitly, not treated as exercised paths.",
+          "Five physical pthread captures are separate component evidence; no historical scheduler, full bootstrap or native-game claim."
+        ],
+        "confidenceJustification": "Medium: complete implemented canonical bodies, independent committed original/source/native replay, exact typed ownership/budgets/file-operation order, returning wrong-source controls and persistent access boundaries. Finite domains; no exact or universal equivalence claim."
+      }
+    },
+    {
+      "symbol": "fn_00147090",
+      "source": {
+        "path": "src/native/wave067-queue/queue_store.c",
+        "bytes": 3810,
+        "sha256": "7af751e0daf47c4aa7fbfede586399098d906827e8d9c99318572a611aceff78"
+      },
+      "sourceName": "effect_queue_store_clear067",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 8339,
+        "sha256": "100128a29792704cddd2634265fabbf69ce455f97386874e2636f8b0c92c9e07"
+      },
+      "canonicalIdentity": {
+        "address": 1339536,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 232,
+      "originalInstructionRanges": [
+        {
+          "start": 1339536,
+          "endExclusive": 1339768,
+          "bytes": 232
+        }
+      ],
+      "originalBodySha256": "dfdfffc065a855600d865ef654fedbb93636e5525c0b85bddab3cfb060c08a49",
+      "reportEntryBytes": 232,
+      "literalPoolsExcluded": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/queue067-coordinator-000282d.json",
+          "bytes": 17671,
+          "sha256": "792e4807486f30cb92a8af4a8bed9e7ac55b2ba8f6e0ca787897bb61dd7d756c"
+        },
+        "completeCanonicalWitnesses": {
+          "path": "evidence/lanes/native-file-queue067/source-v1/candidate-functions.json",
+          "bytes": 31351,
+          "sha256": "7ca2bab10f42f19431fb14a2d7121e9f8142a3535505c18c40256be7ed9b6040"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceCodeOriginalImageMapped": false,
+        "pipelineTests": 120,
+        "completeNativeArtifactComparisons": 990,
+        "completeLogicalCaseFiles": 63,
+        "returningControlChecks": 21,
+        "applicableSemanticRejections": 20,
+        "arm32NarrowingControlInapplicable": true,
+        "persistentCaughtAttemptControls": 11,
+        "separatePhysicalAndroidCaptureReview": {
+          "path": "evidence/verification/thor-queue067-physical.json",
+          "bytes": 1775,
+          "sha256": "7993f81893a8a87fe47781215a1ce68c961b29089684a16371bbd7b9848dfc7a"
+        },
+        "quiescentTaskObservationsOnly": true,
+        "arbitraryConcurrentPollingQualified": false,
+        "unvisitedOriginalPCs": [],
+        "noConditionSatisfiedWitnessPCs": [
+          1339556,
+          1339576,
+          1339612,
+          1339712,
+          1339716
+        ],
+        "domain": "Nine fresh, gated manager/worker sessions; seven complete canonical bodies implemented, finite behavior only.",
+        "limits": [
+          "Queue links/counts use the measured recursive mutex; clear is before start or after join.",
+          "Portable running/current fields are atomic; frozen066 ready/error/payload fields remain ordinary C.",
+          "Task reads/destruction require before-start, paused-event acquire or joined state; arbitrary polling is unqualified.",
+          "Source selectors use measured066 mode5 and explicit allocator/filesystem service domains.",
+          "Queue/block allocation and thread create/join services retain measured normal-return domains; terminal errors are separate.",
+          "The original asynchronous read-error lost-buffer leak is preserved; no universal memory-safety claim.",
+          "The partial15e304 join helper receives no independent source admission.",
+          "Missing and condition-false-only PCs are recorded explicitly, not treated as exercised paths.",
+          "Five physical pthread captures are separate component evidence; no historical scheduler, full bootstrap or native-game claim."
+        ],
+        "confidenceJustification": "Medium: complete implemented canonical bodies, independent committed original/source/native replay, exact typed ownership/budgets/file-operation order, returning wrong-source controls and persistent access boundaries. Finite domains; no exact or universal equivalence claim."
+      }
+    },
+    {
+      "symbol": "fn_005e0a38",
+      "source": {
+        "path": "src/native/wave067-queue/queue_manager.c",
+        "bytes": 2331,
+        "sha256": "76d72cbd4d5a3708d3ccc6e21c6d9060d2fdf223295ab23573c6b4f2b35452f3"
+      },
+      "sourceName": "effect_queue_manager_destroy067",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 8339,
+        "sha256": "100128a29792704cddd2634265fabbf69ce455f97386874e2636f8b0c92c9e07"
+      },
+      "canonicalIdentity": {
+        "address": 6163000,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 48,
+      "originalInstructionRanges": [
+        {
+          "start": 6163000,
+          "endExclusive": 6163048,
+          "bytes": 48
+        }
+      ],
+      "originalBodySha256": "fd0b7dcabd2325c410af2eef1a67391ead022bcd9b082c2b49571234a238bf4c",
+      "reportEntryBytes": 48,
+      "literalPoolsExcluded": [
+        {
+          "start": 6163048,
+          "endExclusive": 6163052,
+          "bytes": 4,
+          "sha256": "8f8cc0dc7099ed60c1d0b9cd0c107b80286a1473e070990ccfca13c8fc9f9f4d",
+          "loadWitness": 6163008,
+          "credit": "readonly-data-not-instruction"
+        }
+      ],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/queue067-coordinator-000282d.json",
+          "bytes": 17671,
+          "sha256": "792e4807486f30cb92a8af4a8bed9e7ac55b2ba8f6e0ca787897bb61dd7d756c"
+        },
+        "completeCanonicalWitnesses": {
+          "path": "evidence/lanes/native-file-queue067/source-v1/candidate-functions.json",
+          "bytes": 31351,
+          "sha256": "7ca2bab10f42f19431fb14a2d7121e9f8142a3535505c18c40256be7ed9b6040"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceCodeOriginalImageMapped": false,
+        "pipelineTests": 120,
+        "completeNativeArtifactComparisons": 990,
+        "completeLogicalCaseFiles": 63,
+        "returningControlChecks": 21,
+        "applicableSemanticRejections": 20,
+        "arm32NarrowingControlInapplicable": true,
+        "persistentCaughtAttemptControls": 11,
+        "separatePhysicalAndroidCaptureReview": {
+          "path": "evidence/verification/thor-queue067-physical.json",
+          "bytes": 1775,
+          "sha256": "7993f81893a8a87fe47781215a1ce68c961b29089684a16371bbd7b9848dfc7a"
+        },
+        "quiescentTaskObservationsOnly": true,
+        "arbitraryConcurrentPollingQualified": false,
+        "unvisitedOriginalPCs": [],
+        "noConditionSatisfiedWitnessPCs": [],
+        "domain": "Nine fresh, gated manager/worker sessions; seven complete canonical bodies implemented, finite behavior only.",
+        "limits": [
+          "Queue links/counts use the measured recursive mutex; clear is before start or after join.",
+          "Portable running/current fields are atomic; frozen066 ready/error/payload fields remain ordinary C.",
+          "Task reads/destruction require before-start, paused-event acquire or joined state; arbitrary polling is unqualified.",
+          "Source selectors use measured066 mode5 and explicit allocator/filesystem service domains.",
+          "Queue/block allocation and thread create/join services retain measured normal-return domains; terminal errors are separate.",
+          "The original asynchronous read-error lost-buffer leak is preserved; no universal memory-safety claim.",
+          "The partial15e304 join helper receives no independent source admission.",
+          "Missing and condition-false-only PCs are recorded explicitly, not treated as exercised paths.",
+          "Five physical pthread captures are separate component evidence; no historical scheduler, full bootstrap or native-game claim."
+        ],
+        "confidenceJustification": "Medium: complete implemented canonical bodies, independent committed original/source/native replay, exact typed ownership/budgets/file-operation order, returning wrong-source controls and persistent access boundaries. Finite domains; no exact or universal equivalence claim."
+      }
+    }
+  ],
+  "sourceDependencies": [
+    {
+      "path": "src/native/wave009/interval_set.h",
+      "bytes": 987,
+      "sha256": "c9f8ea99061aaf09e3b82c8a75d3049282f14bdbf7e201a429c1064348853419"
+    },
+    {
+      "path": "src/native/wave010/match_state.h",
+      "bytes": 1055,
+      "sha256": "c5331ad810d5fc508c5df281ece4f5b8f70a998cc5d226d2e7157593137d035b"
+    },
+    {
+      "path": "src/native/wave012/compile_graph.h",
+      "bytes": 1657,
+      "sha256": "d496139a253186af9849862e764fcc1b50d77f432fe8e6e9dd4c6b4ce84f8ee5"
+    },
+    {
+      "path": "src/native/wave012/fixed_arena.h",
+      "bytes": 689,
+      "sha256": "576604e9c5fde42d82ada3fa977fa33591421711f129bd5cae1b3c45240eec4a"
+    },
+    {
+      "path": "src/native/wave012/label_ops.h",
+      "bytes": 939,
+      "sha256": "0d96df2ffe4d5c6f404cbbe688e86f3f644fbc7fecfe9fe6ab0c03a43b2f5be1"
+    },
+    {
+      "path": "src/native/wave012/memory_ops.c",
+      "bytes": 1951,
+      "sha256": "2110c115a64ddc3cfa867787bd64cbbc65a35643cef10f5afc27971215c24516"
+    },
+    {
+      "path": "src/native/wave013/control_compile.h",
+      "bytes": 288,
+      "sha256": "323e2786580a834a869dfd5a15d22edd58f84dc8d909322dbf3d99902937e8b0"
+    },
+    {
+      "path": "src/native/wave013/dfa_compile.h",
+      "bytes": 830,
+      "sha256": "83f3627463a010ec5b5d561f1d443c25995be6dc8f4f86cbc28d534f1d2fe334"
+    },
+    {
+      "path": "src/native/wave013/outer_arena.c",
+      "bytes": 1116,
+      "sha256": "520818862f8faf779ee3083698e1ee29b614d8e19358453f880f42e99f6ce192"
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa.h",
+      "bytes": 4884,
+      "sha256": "76dddc817728b69b544e927320f5c1564a6a390ba6259adae837a324d3a07c36"
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa_api.h",
+      "bytes": 386,
+      "sha256": "974523189a56560a598aca0f00ef26cd7b50c3a12bb5c0bb1f0789e5ba82d8bb"
+    },
+    {
+      "path": "src/native/wave013/pattern_outer.h",
+      "bytes": 1605,
+      "sha256": "2e79c5635b7b411271ff28684f7349b0daf076e05473e2b997b6ccf21ea68e9a"
+    },
+    {
+      "path": "src/native/wave013/pattern_ranges.h",
+      "bytes": 521,
+      "sha256": "6eb248d90a59fc8f50469f8735a4b6ad224ca067b68ce66295ccd5de765abeee"
+    },
+    {
+      "path": "src/native/wave013/pattern_tokens.h",
+      "bytes": 4191,
+      "sha256": "2a06bf5d5efd04ef077298a341aaead1a5ef6e20ace3969363ff35b1ba78a9ae"
+    },
+    {
+      "path": "src/native/wave013/pattern_unicode.h",
+      "bytes": 1109,
+      "sha256": "5a0f6e2c1824e58392c5d347108ff9b088ae256e684fcff613a9aaceb28f709b"
+    },
+    {
+      "path": "src/native/wave032/archive.h",
+      "bytes": 2058,
+      "sha256": "898228acad7e6c345af740679090ecfb27e05a15fcd8326c15c134a25099eb9c"
+    },
+    {
+      "path": "src/native/wave032/archive_lookup.c",
+      "bytes": 2147,
+      "sha256": "77447d1f84669ef96e98a0bdbf8974b33bf6d37fea2502c67ba84c1a198bcaae"
+    },
+    {
+      "path": "src/native/wave032/archive_members.c",
+      "bytes": 1657,
+      "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a"
+    },
+    {
+      "path": "src/native/wave032/archive_owner.c",
+      "bytes": 1635,
+      "sha256": "5e8cba4615a2aa54073d1336d9bb4487d2db3f11cadf7f413c7212832e6d18c8"
+    },
+    {
+      "path": "src/native/wave065-cached/effect_cached.h",
+      "bytes": 2804,
+      "sha256": "ad83bd4336187d51d5f197ccb924631eb80a2dc85465f9b4013798ef0a1e3592"
+    },
+    {
+      "path": "src/native/wave065-cached/effect_cached_fetch.c",
+      "bytes": 2390,
+      "sha256": "d058638689714953570a9c4bbe8eb292618eabe6eb3e7bf0b879918120aac945"
+    },
+    {
+      "path": "src/native/wave065-cached/effect_cached_format.c",
+      "bytes": 1326,
+      "sha256": "d9079abce9373eb04bc08ef030aba7ba5f0a4afdbdd060003b6f4c584bce8244"
+    },
+    {
+      "path": "src/native/wave065-cached/effect_cached_request.c",
+      "bytes": 2570,
+      "sha256": "5c9d27f374579fe7aff96d46275dac982dd577ca366a7203f3ba2d2fc64a186e"
+    },
+    {
+      "path": "src/native/wave065-cached/effect_cached_services.c",
+      "bytes": 366,
+      "sha256": "c825c8a04c8b34fbfa6a98c8904b57a417532ad97dc1d6368e077e7d00eb8e6c"
+    },
+    {
+      "path": "src/native/wave065-owner/effect_owner.h",
+      "bytes": 1306,
+      "sha256": "d2424ade961e16cd32aa6ef942f65accbbbde55dc724e39e43ac85aadb37632d"
+    },
+    {
+      "path": "src/native/wave065-owner/effect_registration.c",
+      "bytes": 586,
+      "sha256": "8919479a5f7e8dadff06585234ee918cba177c7b76a5383bac3371b9e9826a98"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_commands.c",
+      "bytes": 5991,
+      "sha256": "ebb3cd9cf39fdd3352b85658a37085280cbf7329cd8c4d200e1fe53ca21fafab"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_commands.h",
+      "bytes": 885,
+      "sha256": "707e55cd92764ac2085e3071293911998a5db1f365b0166831d72dc3a40ad7fe"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_device.c",
+      "bytes": 1657,
+      "sha256": "5d1eca97c5e3ad3bb1888dc1661b669a85e10083caa4f4bb3a0192309d2e332f"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_device.h",
+      "bytes": 1098,
+      "sha256": "284d8a6ae7918d9ae5c083351c4df293feae7ec839217a5e13a048fc49d4cc64"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_port_runtime.c",
+      "bytes": 344,
+      "sha256": "22036544b4956205983c5147ee7c3c50cd7158d31200e660f3b5a26e14fb23fb"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource.c",
+      "bytes": 2743,
+      "sha256": "c0df7d80f452ac9a70ea0542d2677909fc00892d719de1df777158cc8a250597"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource.h",
+      "bytes": 4527,
+      "sha256": "27856b081a4cbc7fffd99bdf4207a0f50297a823e1be9bc383299e6f3378fe1e"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_internal.h",
+      "bytes": 1158,
+      "sha256": "4180f9e4989373c5b6f1d9f2a1638033e2422319628a1b4be4051e16d552a68f"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_memory.c",
+      "bytes": 2449,
+      "sha256": "9435650539a05de15b212d54aa334b0247449fc1553741ac887ec292cb4270c8"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_memory.h",
+      "bytes": 1915,
+      "sha256": "556a8706a752115547e7d66dd03ab0d447e5aba45e8cc2fa24c4ac940dfe4437"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_primitives.c",
+      "bytes": 11904,
+      "sha256": "a303514b8f156c963d10ca098a96c2fdc19d840527d4738b13a2985e517d855a"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_release.c",
+      "bytes": 4042,
+      "sha256": "5bbdfc210138141c4232dd57176a3bbf6c10b04bbe95756fd1891120c5ab6fbe"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_sets.c",
+      "bytes": 9330,
+      "sha256": "e90be26d9dab200e33f07f8800f5a4c12abc20ce05d1f52518bbff7d40511678"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_shaders.c",
+      "bytes": 1071,
+      "sha256": "6b8252fa137ffbe0cd91c8b51ffcc7a55a8daaad127f5f5b73fd69f39d65a50c"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_serialized.h",
+      "bytes": 700,
+      "sha256": "6de80450ceea9d5eebad58df3a90df0b0e7177c24b739c7cd796e3f3d1fc2c2a"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_texture.c",
+      "bytes": 5440,
+      "sha256": "22cf0b0f8d73d3011b1332a7e90a146e5f3f63e9ee7d0dc59617128a6adcdbd5"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_texture.h",
+      "bytes": 1126,
+      "sha256": "e7214e034d51ec6d91cb307665a744582bb21e39f63e982aea62992a81f73742"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_vertex.c",
+      "bytes": 3159,
+      "sha256": "2f6862b7705ac9ce9870ce3b2edb34d9ca6ae738b96eb30c43312550ebb52d05"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_vertex.h",
+      "bytes": 2099,
+      "sha256": "4fa83e9f114e8bfbda79628cd0405ee44dce673f8ba4f6c551ae63b3f216cf87"
+    },
+    {
+      "path": "src/native/wave065/effect_preview.c",
+      "bytes": 4275,
+      "sha256": "b317784d97063cd8d7ae05b74c376e443470352fc9ec8b561b9a6251d29db0ef"
+    },
+    {
+      "path": "src/native/wave065/effect_preview.h",
+      "bytes": 3054,
+      "sha256": "f4107777d62b1087c265b4f7a92e41964cd10e406b50f28564d2a7b745219cde"
+    },
+    {
+      "path": "src/native/wave065/effect_services.h",
+      "bytes": 520,
+      "sha256": "ca1a247f8b3421b17ea848b38029fa5b74f40576588c8b9efd630b2a47235ef9"
+    },
+    {
+      "path": "src/native/wave065/effect_shader.c",
+      "bytes": 1511,
+      "sha256": "35db548068499b99bfd7c52b337a6dfa2568ebb5847c53db31a1c0d6585cfb33"
+    },
+    {
+      "path": "src/native/wave065/effect_shader.h",
+      "bytes": 1381,
+      "sha256": "26c4310b9bceb3e6d6a45c1923679312b164bd686ff285e5e36aa37e2e3895fd"
+    },
+    {
+      "path": "src/native/wave066-request/request.h",
+      "bytes": 7289,
+      "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+    },
+    {
+      "path": "src/native/wave066-request/request_control.c",
+      "bytes": 1411,
+      "sha256": "3fce347487d987b2880a3001c87810f88d5d6ed0e29a4d5132b1db47cb04d8f7"
+    },
+    {
+      "path": "src/native/wave066-request/request_factory.c",
+      "bytes": 2656,
+      "sha256": "717e683e98d4f9e324b02d0a52521a4076e9111c0298969e3e322a1e59155a5d"
+    },
+    {
+      "path": "src/native/wave066-request/request_lower.c",
+      "bytes": 1925,
+      "sha256": "79a4b8710fe0c620efc4d35a036b88e00618dc68e85ae4e423736ef0c9f2557e"
+    },
+    {
+      "path": "src/native/wave066-request/request_lower.h",
+      "bytes": 1430,
+      "sha256": "f90ee5fa23ca791fc9cb2e48cb25ee6898f1f056377b0b763372e9cbd935690f"
+    },
+    {
+      "path": "src/native/wave066-request/request_memory.c",
+      "bytes": 328,
+      "sha256": "f165e2012d2629d49eb9e9284652db3ae1475d0ea19dd65b09981f92b40fc996"
+    },
+    {
+      "path": "src/native/wave066-request/request_provider.c",
+      "bytes": 3963,
+      "sha256": "2a1efd9c5b940c913c6ffa6aad02d98b04bfef73effd532d78452e7104103fb7"
+    },
+    {
+      "path": "src/native/wave066-request/request_strings.c",
+      "bytes": 2655,
+      "sha256": "b04976ead7979b5d471b374f7ca311306d8d252c17e911d1244c6c9e5bc246f7"
+    },
+    {
+      "path": "src/native/wave066-request/request_task.c",
+      "bytes": 3122,
+      "sha256": "a50f459a9a5941c5c3eb571a0fe2ab86a4ead9624e143e55c49ae04aec243fd9"
+    },
+    {
+      "path": "src/native/wave067-queue/file_queue.h",
+      "bytes": 4616,
+      "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d"
+    },
+    {
+      "path": "src/native/wave067-queue/queue_manager.c",
+      "bytes": 2331,
+      "sha256": "76d72cbd4d5a3708d3ccc6e21c6d9060d2fdf223295ab23573c6b4f2b35452f3"
+    },
+    {
+      "path": "src/native/wave067-queue/queue_memory.c",
+      "bytes": 904,
+      "sha256": "eb0adda217abfde481adc228e6ea54f622893610b46049b2c7894df081cc2dfc"
+    },
+    {
+      "path": "src/native/wave067-queue/queue_store.c",
+      "bytes": 3810,
+      "sha256": "7af751e0daf47c4aa7fbfede586399098d906827e8d9c99318572a611aceff78"
+    },
+    {
+      "path": "src/native/wave067-queue/queue_worker.c",
+      "bytes": 3006,
+      "sha256": "ad17c5b21ed58c3948facfc1f99d412b170cdf673279bf3ae895cc2478a8c3de"
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave009/interval_set.h",
+      "bytes": 987,
+      "sha256": "c9f8ea99061aaf09e3b82c8a75d3049282f14bdbf7e201a429c1064348853419"
+    },
+    {
+      "path": "src/native/wave010/match_state.h",
+      "bytes": 1055,
+      "sha256": "c5331ad810d5fc508c5df281ece4f5b8f70a998cc5d226d2e7157593137d035b"
+    },
+    {
+      "path": "src/native/wave012/compile_graph.h",
+      "bytes": 1657,
+      "sha256": "d496139a253186af9849862e764fcc1b50d77f432fe8e6e9dd4c6b4ce84f8ee5"
+    },
+    {
+      "path": "src/native/wave012/fixed_arena.h",
+      "bytes": 689,
+      "sha256": "576604e9c5fde42d82ada3fa977fa33591421711f129bd5cae1b3c45240eec4a"
+    },
+    {
+      "path": "src/native/wave012/label_ops.h",
+      "bytes": 939,
+      "sha256": "0d96df2ffe4d5c6f404cbbe688e86f3f644fbc7fecfe9fe6ab0c03a43b2f5be1"
+    },
+    {
+      "path": "src/native/wave013/control_compile.h",
+      "bytes": 288,
+      "sha256": "323e2786580a834a869dfd5a15d22edd58f84dc8d909322dbf3d99902937e8b0"
+    },
+    {
+      "path": "src/native/wave013/dfa_compile.h",
+      "bytes": 830,
+      "sha256": "83f3627463a010ec5b5d561f1d443c25995be6dc8f4f86cbc28d534f1d2fe334"
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa.h",
+      "bytes": 4884,
+      "sha256": "76dddc817728b69b544e927320f5c1564a6a390ba6259adae837a324d3a07c36"
+    },
+    {
+      "path": "src/native/wave013/pattern_nfa_api.h",
+      "bytes": 386,
+      "sha256": "974523189a56560a598aca0f00ef26cd7b50c3a12bb5c0bb1f0789e5ba82d8bb"
+    },
+    {
+      "path": "src/native/wave013/pattern_outer.h",
+      "bytes": 1605,
+      "sha256": "2e79c5635b7b411271ff28684f7349b0daf076e05473e2b997b6ccf21ea68e9a"
+    },
+    {
+      "path": "src/native/wave013/pattern_ranges.h",
+      "bytes": 521,
+      "sha256": "6eb248d90a59fc8f50469f8735a4b6ad224ca067b68ce66295ccd5de765abeee"
+    },
+    {
+      "path": "src/native/wave013/pattern_tokens.h",
+      "bytes": 4191,
+      "sha256": "2a06bf5d5efd04ef077298a341aaead1a5ef6e20ace3969363ff35b1ba78a9ae"
+    },
+    {
+      "path": "src/native/wave013/pattern_unicode.h",
+      "bytes": 1109,
+      "sha256": "5a0f6e2c1824e58392c5d347108ff9b088ae256e684fcff613a9aaceb28f709b"
+    },
+    {
+      "path": "src/native/wave032/archive.h",
+      "bytes": 2058,
+      "sha256": "898228acad7e6c345af740679090ecfb27e05a15fcd8326c15c134a25099eb9c"
+    },
+    {
+      "path": "src/native/wave065-cached/effect_cached.h",
+      "bytes": 2804,
+      "sha256": "ad83bd4336187d51d5f197ccb924631eb80a2dc85465f9b4013798ef0a1e3592"
+    },
+    {
+      "path": "src/native/wave065-owner/effect_owner.h",
+      "bytes": 1306,
+      "sha256": "d2424ade961e16cd32aa6ef942f65accbbbde55dc724e39e43ac85aadb37632d"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_commands.h",
+      "bytes": 885,
+      "sha256": "707e55cd92764ac2085e3071293911998a5db1f365b0166831d72dc3a40ad7fe"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_device.h",
+      "bytes": 1098,
+      "sha256": "284d8a6ae7918d9ae5c083351c4df293feae7ec839217a5e13a048fc49d4cc64"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource.h",
+      "bytes": 4527,
+      "sha256": "27856b081a4cbc7fffd99bdf4207a0f50297a823e1be9bc383299e6f3378fe1e"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_internal.h",
+      "bytes": 1158,
+      "sha256": "4180f9e4989373c5b6f1d9f2a1638033e2422319628a1b4be4051e16d552a68f"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_resource_memory.h",
+      "bytes": 1915,
+      "sha256": "556a8706a752115547e7d66dd03ab0d447e5aba45e8cc2fa24c4ac940dfe4437"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_serialized.h",
+      "bytes": 700,
+      "sha256": "6de80450ceea9d5eebad58df3a90df0b0e7177c24b739c7cd796e3f3d1fc2c2a"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_texture.h",
+      "bytes": 1126,
+      "sha256": "e7214e034d51ec6d91cb307665a744582bb21e39f63e982aea62992a81f73742"
+    },
+    {
+      "path": "src/native/wave065-resource/effect_vertex.h",
+      "bytes": 2099,
+      "sha256": "4fa83e9f114e8bfbda79628cd0405ee44dce673f8ba4f6c551ae63b3f216cf87"
+    },
+    {
+      "path": "src/native/wave065/effect_preview.h",
+      "bytes": 3054,
+      "sha256": "f4107777d62b1087c265b4f7a92e41964cd10e406b50f28564d2a7b745219cde"
+    },
+    {
+      "path": "src/native/wave065/effect_services.h",
+      "bytes": 520,
+      "sha256": "ca1a247f8b3421b17ea848b38029fa5b74f40576588c8b9efd630b2a47235ef9"
+    },
+    {
+      "path": "src/native/wave065/effect_shader.h",
+      "bytes": 1381,
+      "sha256": "26c4310b9bceb3e6d6a45c1923679312b164bd686ff285e5e36aa37e2e3895fd"
+    },
+    {
+      "path": "src/native/wave066-request/request.h",
+      "bytes": 7289,
+      "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc"
+    },
+    {
+      "path": "src/native/wave066-request/request_lower.h",
+      "bytes": 1430,
+      "sha256": "f90ee5fa23ca791fc9cb2e48cb25ee6898f1f056377b0b763372e9cbd935690f"
+    },
+    {
+      "path": "src/native/wave067-queue/file_queue.h",
+      "bytes": 4616,
+      "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d"
+    },
+    {
+      "path": "include/bytematch_names.h",
+      "bytes": 8339,
+      "sha256": "100128a29792704cddd2634265fabbf69ce455f97386874e2636f8b0c92c9e07"
+    }
+  ],
+  "qualificationOnlySources": [
+    "toolscripts/file066/fixtures/effect065_cached_composed_fixture.c",
+    "toolscripts/file066/fixtures/effect065_cached_fixture.c",
+    "toolscripts/file066/fixtures/effect065_owner_fixture.c",
+    "toolscripts/file067/fixtures/effect_queue067_android_api.h",
+    "toolscripts/file067/fixtures/effect_queue067_android_probe.c",
+    "toolscripts/file067/fixtures/effect_queue067_android_pthread.c",
+    "toolscripts/file067/fixtures/effect_queue067_io_fixture.h",
+    "toolscripts/file067/fixtures/effect_queue067_source_fixture.c",
+    "toolscripts/file066/fixtures/effect_request066_cache_fixture.c",
+    "toolscripts/file066/fixtures/effect_request066_device_fixture.c",
+    "toolscripts/file066/fixtures/effect_request066_fixture.c",
+    "toolscripts/file066/fixtures/effect_request066_port_fixture.c",
+    "toolscripts/file066/fixtures/native_effect065_resource_graph_fixture.c",
+    "toolscripts/file066/fixtures/native_effect065_resource_runtime.c"
+  ],
+  "originalPackets": [
+    {
+      "path": "evidence/verification/queue067-coordinator-000282d.json",
+      "bytes": 17671,
+      "sha256": "792e4807486f30cb92a8af4a8bed9e7ac55b2ba8f6e0ca787897bb61dd7d756c"
+    },
+    {
+      "path": "evidence/lanes/native-file-queue067/source-v1/candidate-functions.json",
+      "bytes": 31351,
+      "sha256": "7ca2bab10f42f19431fb14a2d7121e9f8142a3535505c18c40256be7ed9b6040"
+    },
+    {
+      "path": "evidence/verification/thor-queue067-physical.json",
+      "bytes": 1775,
+      "sha256": "7993f81893a8a87fe47781215a1ce68c961b29089684a16371bbd7b9848dfc7a"
+    }
+  ],
+  "producer": {
+    "path": "evidence/verification/producers/review_queue067_functional.py",
+    "bytes": 11164,
+    "sha256": "9c11e9c07fc533da53be7c2218621c9c5fb65019e0549237d38ef3e6094bddb2"
+  },
+  "acceptedSourceCreditGranted": 0,
+  "exactMatchingClaimed": false,
+  "overallConfirmedSourceCoverageClaimed": false,
+  "wholeBootstrapFilesystemSchedulerOrGameClaimed": false
+}

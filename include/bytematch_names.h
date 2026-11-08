@@ -184,3 +184,10 @@
 #define fn_0076fd78 sdk_owner_insert88062ab
 #define fn_0046af48 sdk_owner_destroy062ab
 #define fn_0046af18 sdk_owner_release062ab
+#define fn_0010c550 effect_queue_manager_construct067
+#define fn_001529b0 effect_queue_request_async067
+#define fn_00162ad0 effect_queue_push067
+#define fn_00117274 effect_queue_worker_run067
+#define fn_001173f8 effect_queue_worker_finalize067
+#define fn_00147090 effect_queue_store_clear067
+#define fn_005e0a38 effect_queue_manager_destroy067
