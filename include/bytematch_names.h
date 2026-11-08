@@ -178,3 +178,9 @@
 #define fn_006ec780 effect_request_length066
 #define fn_006ec748 effect_request_selector066
 #define fn_006ec754 effect_request_path066
+#define fn_00471eb0 sdk_config_initialize062ab
+#define fn_004b616c sdk_config_select062ab
+#define fn_0046ad80 sdk_owner_initialize062ab
+#define fn_0076fd78 sdk_owner_insert88062ab
+#define fn_0046af48 sdk_owner_destroy062ab
+#define fn_0046af18 sdk_owner_release062ab

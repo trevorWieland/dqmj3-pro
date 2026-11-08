@@ -34,6 +34,8 @@ Target owner storage is 184 bytes, with typed native storage of 296 bytes. The
 target configuration is 208 bytes and native configuration 264 bytes. Native
 pointers retain their full width. Default allocator/free paths, the unresolved
 52/56-byte record producers, full factory/startup behavior and whole-game builds
-remain outside this packet. Any later functional admission requires a separate
-coordinator review and independent committed replay; this publication itself
-does not change the functional registry or the exact-match report.
+remain outside this packet. Independent committed replay and coordinator review passed 122 pipeline tests
+and all 3,708 raw native artifact comparisons. Six complete canonical bodies
+covering 2,368 instruction bytes receive bounded medium-confidence functional
+admission. The packet preserves the excluded default allocator/free and active
+record-producer domains; the exact-match report remains unchanged.

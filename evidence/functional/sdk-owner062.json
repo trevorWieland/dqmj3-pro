@@ -1,0 +1,695 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-bounded-owner-config-insert-destroy",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "functions": [
+    {
+      "symbol": "fn_00471eb0",
+      "source": {
+        "path": "src/native/wave062-owner/config_initialize062ab.c",
+        "bytes": 1511,
+        "sha256": "ef3b48d4bbbb23a78015ef471804452fa588d35ae56399c32d0531709e7856f0"
+      },
+      "sourceName": "sdk_config_initialize062ab",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7995,
+        "sha256": "a01ac322b5a2d296be5999c12bc835024253102753885c0ddef68624850af63d"
+      },
+      "canonicalIdentity": {
+        "address": 4660912,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 264,
+      "originalInstructionRanges": [
+        {
+          "start": 4660912,
+          "endExclusive": 4661176,
+          "bytes": 264
+        }
+      ],
+      "originalBodySha256": "5cd6e4c6fc2f5264d1448675fe60ad381f47126719e9d2686c4067d692a16fb3",
+      "reportEntryBytes": 264,
+      "literalPoolsExcluded": [
+        {
+          "start": "0x471fb8",
+          "endExclusive": "0x471fd0",
+          "bytes": 24,
+          "sha256": "8eec17b819855576fd02d73721b734ae95fb6ceecbf5226c8ef50eb15c97a31f"
+        }
+      ],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-owner062-coordinator-3208f36.json",
+          "bytes": 5047,
+          "sha256": "8b1ae64f1600ec0fbbce478ebd23074985d6e480aa7f8f89a053c157b24abb7a"
+        },
+        "completeOriginalEntryWitnesses": {
+          "path": "evidence/lanes/native-sdk-owner062/public-inputs-v2/provenance/entry-roster-v1.json",
+          "bytes": 4765,
+          "sha256": "5599873b2bc2dd0b9b516fd893367b22345332e833152d4f6ee1a220bfcfeff0"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceOnlyOriginalConstructions": 0,
+        "returningControlsPerReplay": 27,
+        "sameFinalPrimaryArenaControls": 9,
+        "metadataBoundaryTests": 21,
+        "pipelineTests": 122,
+        "completeRawNativeArtifactComparisons": 3708,
+        "primaryInsertionPcVisits": 206,
+        "combinedInsertionPcVisits": 246,
+        "domain": "nonnull aligned record; untouched bytes observable",
+        "limits": [
+          "Configuration selector uses provisioned slots and measured indices0/1/3; global startup is unqualified.",
+          "Owner initialization uses successful declared SDK allocation and context-disabled defaults.",
+          "The52/56-byte active-record producers and complete4b5afc/4b5c8c callers are unqualified.",
+          "Default allocator/free branches and null deleting-wrapper epilogue retain explicit exclusions.",
+          "Callbacks, timer transport and allocator services retain their measured fixture domains.",
+          "The primary insertion trace covers206 positions; only the combined rotation corpus covers246.",
+          "Native pointer-dependent arenas are checked against independent typed models per run.",
+          "No physical Android, GPU, complete SDK startup, universal equivalence or whole-game claim."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction extents, immutable original witnesses, independent committed source replay, full typed arena/ownership observations, returning semantic controls and persistent metadata/read boundaries; exact matching remains separate."
+      }
+    },
+    {
+      "symbol": "fn_004b616c",
+      "source": {
+        "path": "src/native/wave062-owner/config_select062ab.c",
+        "bytes": 481,
+        "sha256": "6cd1056c75d5aff351c77f4ca18a040ac619b49836e632226ffbdc819f13ae1a"
+      },
+      "sourceName": "sdk_config_select062ab",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7995,
+        "sha256": "a01ac322b5a2d296be5999c12bc835024253102753885c0ddef68624850af63d"
+      },
+      "canonicalIdentity": {
+        "address": 4940140,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 84,
+      "originalInstructionRanges": [
+        {
+          "start": 4940140,
+          "endExclusive": 4940224,
+          "bytes": 84
+        }
+      ],
+      "originalBodySha256": "8c69f1a299395835b255a0282c51c65ff145a2974d75654cc5a2faea751a113e",
+      "reportEntryBytes": 84,
+      "literalPoolsExcluded": [
+        {
+          "start": "0x4b61c0",
+          "endExclusive": "0x4b61c8",
+          "bytes": 8,
+          "sha256": "6093c948f8ea2fc8b7e2f5b7f76d3b6d4ca48225ea7e679190ce5a5cac655059"
+        }
+      ],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-owner062-coordinator-3208f36.json",
+          "bytes": 5047,
+          "sha256": "8b1ae64f1600ec0fbbce478ebd23074985d6e480aa7f8f89a053c157b24abb7a"
+        },
+        "completeOriginalEntryWitnesses": {
+          "path": "evidence/lanes/native-sdk-owner062/public-inputs-v2/provenance/entry-roster-v1.json",
+          "bytes": 4765,
+          "sha256": "5599873b2bc2dd0b9b516fd893367b22345332e833152d4f6ee1a220bfcfeff0"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceOnlyOriginalConstructions": 0,
+        "returningControlsPerReplay": 27,
+        "sameFinalPrimaryArenaControls": 9,
+        "metadataBoundaryTests": 21,
+        "pipelineTests": 122,
+        "completeRawNativeArtifactComparisons": 3708,
+        "primaryInsertionPcVisits": 206,
+        "combinedInsertionPcVisits": 246,
+        "domain": "component0..15; provisioned exact slots; disabled or real registered indices0/1/3",
+        "limits": [
+          "Configuration selector uses provisioned slots and measured indices0/1/3; global startup is unqualified.",
+          "Owner initialization uses successful declared SDK allocation and context-disabled defaults.",
+          "The52/56-byte active-record producers and complete4b5afc/4b5c8c callers are unqualified.",
+          "Default allocator/free branches and null deleting-wrapper epilogue retain explicit exclusions.",
+          "Callbacks, timer transport and allocator services retain their measured fixture domains.",
+          "The primary insertion trace covers206 positions; only the combined rotation corpus covers246.",
+          "Native pointer-dependent arenas are checked against independent typed models per run.",
+          "No physical Android, GPU, complete SDK startup, universal equivalence or whole-game claim."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction extents, immutable original witnesses, independent committed source replay, full typed arena/ownership observations, returning semantic controls and persistent metadata/read boundaries; exact matching remains separate."
+      }
+    },
+    {
+      "symbol": "fn_0046ad80",
+      "source": {
+        "path": "src/native/wave062-owner/owner_initialize062ab.c",
+        "bytes": 2321,
+        "sha256": "140729fa49c09ae8b139926bb052faca7b8d06f7f46bdd7e7ef4663e24c4911f"
+      },
+      "sourceName": "sdk_owner_initialize062ab",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7995,
+        "sha256": "a01ac322b5a2d296be5999c12bc835024253102753885c0ddef68624850af63d"
+      },
+      "canonicalIdentity": {
+        "address": 4631936,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 400,
+      "originalInstructionRanges": [
+        {
+          "start": 4631936,
+          "endExclusive": 4632336,
+          "bytes": 400
+        }
+      ],
+      "originalBodySha256": "8458171fb9d2447639b1862a7a77570b5e6a9c3a25996b71208201948b911669",
+      "reportEntryBytes": 400,
+      "literalPoolsExcluded": [
+        {
+          "start": "0x46af10",
+          "endExclusive": "0x46af18",
+          "bytes": 8,
+          "sha256": "1039c471719607118b570cd3e5a3b10a456a5e96e8e5f4c69fe8143a60026cb1"
+        }
+      ],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-owner062-coordinator-3208f36.json",
+          "bytes": 5047,
+          "sha256": "8b1ae64f1600ec0fbbce478ebd23074985d6e480aa7f8f89a053c157b24abb7a"
+        },
+        "completeOriginalEntryWitnesses": {
+          "path": "evidence/lanes/native-sdk-owner062/public-inputs-v2/provenance/entry-roster-v1.json",
+          "bytes": 4765,
+          "sha256": "5599873b2bc2dd0b9b516fd893367b22345332e833152d4f6ee1a220bfcfeff0"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceOnlyOriginalConstructions": 0,
+        "returningControlsPerReplay": 27,
+        "sameFinalPrimaryArenaControls": 9,
+        "metadataBoundaryTests": 21,
+        "pipelineTests": 122,
+        "completeRawNativeArtifactComparisons": 3708,
+        "primaryInsertionPcVisits": 206,
+        "combinedInsertionPcVisits": 246,
+        "domain": "successful SDK allocations; context-disabled initialized defaults; declared native empty56 slot ABI",
+        "limits": [
+          "Configuration selector uses provisioned slots and measured indices0/1/3; global startup is unqualified.",
+          "Owner initialization uses successful declared SDK allocation and context-disabled defaults.",
+          "The52/56-byte active-record producers and complete4b5afc/4b5c8c callers are unqualified.",
+          "Default allocator/free branches and null deleting-wrapper epilogue retain explicit exclusions.",
+          "Callbacks, timer transport and allocator services retain their measured fixture domains.",
+          "The primary insertion trace covers206 positions; only the combined rotation corpus covers246.",
+          "Native pointer-dependent arenas are checked against independent typed models per run.",
+          "No physical Android, GPU, complete SDK startup, universal equivalence or whole-game claim."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction extents, immutable original witnesses, independent committed source replay, full typed arena/ownership observations, returning semantic controls and persistent metadata/read boundaries; exact matching remains separate."
+      }
+    },
+    {
+      "symbol": "fn_0076fd78",
+      "source": {
+        "path": "src/native/wave062-owner/owner_insert88062ab.c",
+        "bytes": 4940,
+        "sha256": "fcbd75aefcdfb6d953a575dc07364b400ced72614a8cba1c01ad2dc91fd19af8"
+      },
+      "sourceName": "sdk_owner_insert88062ab",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7995,
+        "sha256": "a01ac322b5a2d296be5999c12bc835024253102753885c0ddef68624850af63d"
+      },
+      "canonicalIdentity": {
+        "address": 7798136,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 984,
+      "originalInstructionRanges": [
+        {
+          "start": 7798136,
+          "endExclusive": 7799120,
+          "bytes": 984
+        }
+      ],
+      "originalBodySha256": "bdc20cb23fa32075d5c3298113c84e5d8967c3c92afd122ec408d91133e4c471",
+      "reportEntryBytes": 984,
+      "literalPoolsExcluded": [
+        {
+          "start": "0x770150",
+          "endExclusive": "0x770154",
+          "bytes": 4,
+          "sha256": "b9f0143c30f5cf21fbc176bec3b3098f78ae8905395429fff4f1f91dc541fb45"
+        }
+      ],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-owner062-coordinator-3208f36.json",
+          "bytes": 5047,
+          "sha256": "8b1ae64f1600ec0fbbce478ebd23074985d6e480aa7f8f89a053c157b24abb7a"
+        },
+        "completeOriginalEntryWitnesses": {
+          "path": "evidence/lanes/native-sdk-owner062/public-inputs-v2/provenance/entry-roster-v1.json",
+          "bytes": 4765,
+          "sha256": "5599873b2bc2dd0b9b516fd893367b22345332e833152d4f6ee1a220bfcfeff0"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceOnlyOriginalConstructions": 0,
+        "returningControlsPerReplay": 27,
+        "sameFinalPrimaryArenaControls": 9,
+        "metadataBoundaryTests": 21,
+        "pipelineTests": 122,
+        "completeRawNativeArtifactComparisons": 3708,
+        "primaryInsertionPcVisits": 206,
+        "combinedInsertionPcVisits": 246,
+        "domain": "real constructed88 map; valid insertion parent; force-left0; unique pair keys; successful growth",
+        "limits": [
+          "Configuration selector uses provisioned slots and measured indices0/1/3; global startup is unqualified.",
+          "Owner initialization uses successful declared SDK allocation and context-disabled defaults.",
+          "The52/56-byte active-record producers and complete4b5afc/4b5c8c callers are unqualified.",
+          "Default allocator/free branches and null deleting-wrapper epilogue retain explicit exclusions.",
+          "Callbacks, timer transport and allocator services retain their measured fixture domains.",
+          "The primary insertion trace covers206 positions; only the combined rotation corpus covers246.",
+          "Native pointer-dependent arenas are checked against independent typed models per run.",
+          "No physical Android, GPU, complete SDK startup, universal equivalence or whole-game claim."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction extents, immutable original witnesses, independent committed source replay, full typed arena/ownership observations, returning semantic controls and persistent metadata/read boundaries; exact matching remains separate."
+      }
+    },
+    {
+      "symbol": "fn_0046af48",
+      "source": {
+        "path": "src/native/wave062-owner/owner_destroy062ab.c",
+        "bytes": 1361,
+        "sha256": "9da9ed257a9818d6f5164cee34c9c9ea4bc325e7ff66dc28bfd12e555df60486"
+      },
+      "sourceName": "sdk_owner_destroy062ab",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7995,
+        "sha256": "a01ac322b5a2d296be5999c12bc835024253102753885c0ddef68624850af63d"
+      },
+      "canonicalIdentity": {
+        "address": 4632392,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 588,
+      "originalInstructionRanges": [
+        {
+          "start": 4632392,
+          "endExclusive": 4632980,
+          "bytes": 588
+        }
+      ],
+      "originalBodySha256": "1cdb9f175ebda65cd3384712128de2b5650737a39ecb9cad322a1b4f0911640d",
+      "reportEntryBytes": 588,
+      "literalPoolsExcluded": [
+        {
+          "start": "0x46b194",
+          "endExclusive": "0x46b1a0",
+          "bytes": 12,
+          "sha256": "6c47c56f0e03ee59f4cb9c1c3644f83ede1e9eb6deaefdb325a72adf13113f43"
+        }
+      ],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-owner062-coordinator-3208f36.json",
+          "bytes": 5047,
+          "sha256": "8b1ae64f1600ec0fbbce478ebd23074985d6e480aa7f8f89a053c157b24abb7a"
+        },
+        "completeOriginalEntryWitnesses": {
+          "path": "evidence/lanes/native-sdk-owner062/public-inputs-v2/provenance/entry-roster-v1.json",
+          "bytes": 4765,
+          "sha256": "5599873b2bc2dd0b9b516fd893367b22345332e833152d4f6ee1a220bfcfeff0"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceOnlyOriginalConstructions": 0,
+        "returningControlsPerReplay": 27,
+        "sameFinalPrimaryArenaControls": 9,
+        "metadataBoundaryTests": 21,
+        "pipelineTests": 122,
+        "completeRawNativeArtifactComparisons": 3708,
+        "primaryInsertionPcVisits": 206,
+        "combinedInsertionPcVisits": 246,
+        "domain": "constructed owner; real populated timer/88; empty56; nonnull custom disposal prefix",
+        "limits": [
+          "Configuration selector uses provisioned slots and measured indices0/1/3; global startup is unqualified.",
+          "Owner initialization uses successful declared SDK allocation and context-disabled defaults.",
+          "The52/56-byte active-record producers and complete4b5afc/4b5c8c callers are unqualified.",
+          "Default allocator/free branches and null deleting-wrapper epilogue retain explicit exclusions.",
+          "Callbacks, timer transport and allocator services retain their measured fixture domains.",
+          "The primary insertion trace covers206 positions; only the combined rotation corpus covers246.",
+          "Native pointer-dependent arenas are checked against independent typed models per run.",
+          "No physical Android, GPU, complete SDK startup, universal equivalence or whole-game claim."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction extents, immutable original witnesses, independent committed source replay, full typed arena/ownership observations, returning semantic controls and persistent metadata/read boundaries; exact matching remains separate."
+      }
+    },
+    {
+      "symbol": "fn_0046af18",
+      "source": {
+        "path": "src/native/wave062-owner/owner_dispose062ab.c",
+        "bytes": 584,
+        "sha256": "9f6eea9a6533ccc61b873b5d0958aa88d675f637a21134f6ada89889484db0ab"
+      },
+      "sourceName": "sdk_owner_release062ab",
+      "symbolNames": {
+        "path": "include/bytematch_names.h",
+        "bytes": 7995,
+        "sha256": "a01ac322b5a2d296be5999c12bc835024253102753885c0ddef68624850af63d"
+      },
+      "canonicalIdentity": {
+        "address": 4632344,
+        "mode": "ARM",
+        "programId": "0004000e001acb00",
+        "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+      },
+      "originalInstructionBytes": 48,
+      "originalInstructionRanges": [
+        {
+          "start": 4632344,
+          "endExclusive": 4632392,
+          "bytes": 48
+        }
+      ],
+      "originalBodySha256": "0200aaf49993ba0055457424b0841d4a077bd6ab12032f26ab7e9734910bb240",
+      "reportEntryBytes": 48,
+      "literalPoolsExcluded": [],
+      "exactObjectSpan": false,
+      "exactLinkedSpan": false,
+      "functionalConfidence": "medium",
+      "behavior": {
+        "allPassed": true,
+        "boundedNotUniversalEquivalence": true,
+        "independentSourceComponentReplay": {
+          "path": "evidence/verification/sdk-owner062-coordinator-3208f36.json",
+          "bytes": 5047,
+          "sha256": "8b1ae64f1600ec0fbbce478ebd23074985d6e480aa7f8f89a053c157b24abb7a"
+        },
+        "completeOriginalEntryWitnesses": {
+          "path": "evidence/lanes/native-sdk-owner062/public-inputs-v2/provenance/entry-roster-v1.json",
+          "bytes": 4765,
+          "sha256": "5599873b2bc2dd0b9b516fd893367b22345332e833152d4f6ee1a220bfcfeff0"
+        },
+        "actualWindowsAndHighAddressA64": true,
+        "sourceOnlyOriginalConstructions": 0,
+        "returningControlsPerReplay": 27,
+        "sameFinalPrimaryArenaControls": 9,
+        "metadataBoundaryTests": 21,
+        "pipelineTests": 122,
+        "completeRawNativeArtifactComparisons": 3708,
+        "primaryInsertionPcVisits": 206,
+        "combinedInsertionPcVisits": 246,
+        "domain": "actual SDK-allocated owner; same destructor domain; void return",
+        "limits": [
+          "Configuration selector uses provisioned slots and measured indices0/1/3; global startup is unqualified.",
+          "Owner initialization uses successful declared SDK allocation and context-disabled defaults.",
+          "The52/56-byte active-record producers and complete4b5afc/4b5c8c callers are unqualified.",
+          "Default allocator/free branches and null deleting-wrapper epilogue retain explicit exclusions.",
+          "Callbacks, timer transport and allocator services retain their measured fixture domains.",
+          "The primary insertion trace covers206 positions; only the combined rotation corpus covers246.",
+          "Native pointer-dependent arenas are checked against independent typed models per run.",
+          "No physical Android, GPU, complete SDK startup, universal equivalence or whole-game claim."
+        ],
+        "confidenceJustification": "Medium: complete canonical instruction extents, immutable original witnesses, independent committed source replay, full typed arena/ownership observations, returning semantic controls and persistent metadata/read boundaries; exact matching remains separate."
+      }
+    }
+  ],
+  "sourceDependencies": [
+    {
+      "path": "src/native/wave062-owner/config_initialize062ab.c",
+      "bytes": 1511,
+      "sha256": "ef3b48d4bbbb23a78015ef471804452fa588d35ae56399c32d0531709e7856f0"
+    },
+    {
+      "path": "src/native/wave062-owner/config_select062ab.c",
+      "bytes": 481,
+      "sha256": "6cd1056c75d5aff351c77f4ca18a040ac619b49836e632226ffbdc819f13ae1a"
+    },
+    {
+      "path": "src/native/wave062-owner/owner_initialize062ab.c",
+      "bytes": 2321,
+      "sha256": "140729fa49c09ae8b139926bb052faca7b8d06f7f46bdd7e7ef4663e24c4911f"
+    },
+    {
+      "path": "src/native/wave062-owner/owner_insert88062ab.c",
+      "bytes": 4940,
+      "sha256": "fcbd75aefcdfb6d953a575dc07364b400ced72614a8cba1c01ad2dc91fd19af8"
+    },
+    {
+      "path": "src/native/wave062-owner/owner_clear062ab.c",
+      "bytes": 1678,
+      "sha256": "17a6257d91c8bf60234a9c093479871a54ea5c71c10875de64ef8516ca3e27e9"
+    },
+    {
+      "path": "src/native/wave062-owner/owner_destroy062ab.c",
+      "bytes": 1361,
+      "sha256": "9da9ed257a9818d6f5164cee34c9c9ea4bc325e7ff66dc28bfd12e555df60486"
+    },
+    {
+      "path": "src/native/wave062-owner/owner_dispose062ab.c",
+      "bytes": 584,
+      "sha256": "9f6eea9a6533ccc61b873b5d0958aa88d675f637a21134f6ada89889484db0ab"
+    },
+    {
+      "path": "src/native/wave062-owner/include/config062ab.h",
+      "bytes": 1907,
+      "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+    },
+    {
+      "path": "src/native/wave062-owner/include/owner062ab.h",
+      "bytes": 2725,
+      "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/allocate062s.c",
+      "bytes": 530,
+      "sha256": "233d7668845739f5b897deb558c486eb8b3cab6c4f5e00065caed268f4b9528c"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/map062s.c",
+      "bytes": 4931,
+      "sha256": "4988a3cd066383fe9c31cad09f50ce8ab0c7ea2ac7db84eb7e51b337aec2cd5e"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/map_initialize062s.c",
+      "bytes": 906,
+      "sha256": "4d55295125b6ed49390be7bea8e48134a15fa336765d700c7b41d96b828b617d"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/mutex062s.c",
+      "bytes": 2170,
+      "sha256": "796b69eb236287be917731074248d7e7ee8161745d88bbb635a45641efac8382"
+    },
+    {
+      "path": "src/native/wave062-sdk/context/context062s.c",
+      "bytes": 2007,
+      "sha256": "d9130340bec329b1466f60c55192f1490b54513fdcbad24473857775781fbf4b"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/mutex_initialize062u.c",
+      "bytes": 958,
+      "sha256": "df03183ae626d46cca649dda4a0e8710d8041f969ea85fe18d2c394d50aeedde"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/clock_math062u.c",
+      "bytes": 998,
+      "sha256": "16f7378066cca9f8eaac5e33a24900eaceaa5a613321025c3e59d8dae48b5eab"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/clock_read062u.c",
+      "bytes": 1855,
+      "sha256": "bd884a5ccc93f9c842a3d6396b5e8992c4b6daaf3e6a6525512c5527d6bc3611"
+    },
+    {
+      "path": "src/native/wave062-sdk/startup/clock_monotonic062u.c",
+      "bytes": 1421,
+      "sha256": "b878342e1365fd81ee8805d18c52a997c8dd05b03028a4aa141b1c03ddee1708"
+    },
+    {
+      "path": "src/native/wave062-runtime/manager/map_select062y.c",
+      "bytes": 1419,
+      "sha256": "997b0da982220db77ccfc62a72022932dffa20b51134c76f2d1b5f9ef7e2977a"
+    },
+    {
+      "path": "src/native/wave062-runtime/manager/thread_index062y.c",
+      "bytes": 1412,
+      "sha256": "9a30bcffb19b3c415470bd192b85f05eea9e0a4cded4e97eb8af2d3b15102fab"
+    },
+    {
+      "path": "src/native/wave062-runtime/timer/endpoint062aa.c",
+      "bytes": 772,
+      "sha256": "204b7895651d3e19f372399a8a46f0359fa638d04541a8e0e62e8935a787a109"
+    },
+    {
+      "path": "src/native/wave062-runtime/timer/timer_initialize062aa.c",
+      "bytes": 973,
+      "sha256": "d85a14cb0dc79339d1c438be576897989b922778b7564e7eff18aea06efd346b"
+    },
+    {
+      "path": "src/native/wave062-runtime/timer/timer_insert062aa.c",
+      "bytes": 4626,
+      "sha256": "75c9f5f4b4950e65f32e999366d96f89572c17322aaa86a95e1b8524cf3a622d"
+    },
+    {
+      "path": "src/native/wave062-runtime/timer/timer_set062aa.c",
+      "bytes": 1967,
+      "sha256": "e0128475f7f3eedb7404432260acdf75592aa403547afc510c2798b7eee99c15"
+    },
+    {
+      "path": "src/native/wave062-runtime/timer/timer_update062aa.c",
+      "bytes": 1288,
+      "sha256": "8ffc453c33e511d4a64add26313fb67ffdbbe3ec7e3a7121cd42fd9df2327bd8"
+    },
+    {
+      "path": "src/native/wave062-runtime/erase/tree_access062z.c",
+      "bytes": 2481,
+      "sha256": "12a1975f5853bd3040dbbf7ddc54eb72c849d734d109400f92b35d558533212d"
+    },
+    {
+      "path": "src/native/wave062-runtime/erase/tree_rebalance062z.c",
+      "bytes": 2311,
+      "sha256": "7d17d5fb4944085db61e1f48cb818e438cf4f7c879b327ffaec4c0891a4d84bf"
+    },
+    {
+      "path": "src/native/wave062-runtime/erase/tree_erase062z.c",
+      "bytes": 4436,
+      "sha256": "2eb189edc3194a28335cbc7b0f3ab2498ed5689c91b413baeeb128a7a7ba9640"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/sdk062s.h",
+      "bytes": 4076,
+      "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/clock062u.h",
+      "bytes": 1764,
+      "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/thread_map062y.h",
+      "bytes": 474,
+      "sha256": "936d879b9deedaa8c44681ff7b30d4a10f2217bfd30c78dae854993a1e88cab8"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/timer062aa.h",
+      "bytes": 1816,
+      "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/tree_erase062z.h",
+      "bytes": 1030,
+      "sha256": "a6cd87e6e7128d9de7652d40929a97cc83637616747b011c705a8dcc36ec3def"
+    }
+  ],
+  "headers": [
+    {
+      "path": "src/native/wave062-owner/include/config062ab.h",
+      "bytes": 1907,
+      "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+    },
+    {
+      "path": "src/native/wave062-owner/include/owner062ab.h",
+      "bytes": 2725,
+      "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/sdk062s.h",
+      "bytes": 4076,
+      "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+    },
+    {
+      "path": "src/native/wave062-sdk/include/clock062u.h",
+      "bytes": 1764,
+      "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/thread_map062y.h",
+      "bytes": 474,
+      "sha256": "936d879b9deedaa8c44681ff7b30d4a10f2217bfd30c78dae854993a1e88cab8"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/timer062aa.h",
+      "bytes": 1816,
+      "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+    },
+    {
+      "path": "src/native/wave062-runtime/include/tree_erase062z.h",
+      "bytes": 1030,
+      "sha256": "a6cd87e6e7128d9de7652d40929a97cc83637616747b011c705a8dcc36ec3def"
+    },
+    {
+      "path": "include/bytematch_names.h",
+      "bytes": 7995,
+      "sha256": "a01ac322b5a2d296be5999c12bc835024253102753885c0ddef68624850af63d"
+    }
+  ],
+  "qualificationOnlySources": [
+    "toolscripts/fixtures/sdk062_owner_v1/fixture062ab.c",
+    "toolscripts/fixtures/sdk062_owner_v1/owner_fixture062ab.c",
+    "toolscripts/fixtures/sdk062_owner_v1/layout_probe062ab.c",
+    "toolscripts/fixtures/sdk062_owner_v1/owner_layout_probe062ab.c",
+    "toolscripts/fixtures/sdk062/context/fixture062s.c",
+    "toolscripts/fixtures/sdk062_runtime_v1/manager/fixture062y.c",
+    "toolscripts/fixtures/sdk062_runtime_v1/timer/fixture062aa.c"
+  ],
+  "originalPackets": [
+    {
+      "path": "evidence/verification/sdk-owner062-coordinator-3208f36.json",
+      "bytes": 5047,
+      "sha256": "8b1ae64f1600ec0fbbce478ebd23074985d6e480aa7f8f89a053c157b24abb7a"
+    },
+    {
+      "path": "evidence/lanes/native-sdk-owner062/public-inputs-v2/provenance/entry-roster-v1.json",
+      "bytes": 4765,
+      "sha256": "5599873b2bc2dd0b9b516fd893367b22345332e833152d4f6ee1a220bfcfeff0"
+    }
+  ],
+  "producer": {
+    "path": "evidence/verification/producers/review_sdk_owner062_functional.py",
+    "bytes": 10376,
+    "sha256": "1039ce2b50810bd68650a9ae72e037c8201cfe5a8e130887220a79cee61366ee"
+  },
+  "acceptedSourceCreditGranted": 0,
+  "exactMatchingClaimed": false,
+  "confirmedOverallSourceCoverageClaimed": false,
+  "wholeFactoryAllocatorStartupOrGameClaimed": false
+}

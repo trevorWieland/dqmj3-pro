@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "status": "coordinator-reviewed-committed-owner-replay-passed",
+  "sourceRevision": "3208f366b4deb6e0fa06c949bbd50b3707c79551",
+  "rawReplay": {
+    "path": "evidence/verification/sdk-owner062-isolated-3208f36.json",
+    "bytes": 21488,
+    "sha256": "879c5a67549510f7b8a43e975a822ad8a8dac3b003eb4a0156a7426db89295e8"
+  },
+  "pipelineTests": 122,
+  "freshEnvironment": true,
+  "forbiddenPositiveAccesses": 0,
+  "metadataBoundaryTests": 21,
+  "sourceAndFixtures": {
+    "productionC": 7,
+    "headers": 2,
+    "qualificationC": 4
+  },
+  "cohorts": [
+    {
+      "name": "full-v2",
+      "originalPermitted": true,
+      "observations": {
+        "record": 20,
+        "selector": 24,
+        "owner": 40
+      },
+      "tests": 10,
+      "returningControls": 27,
+      "nativeArtifacts": 1236
+    },
+    {
+      "name": "source-only-v3",
+      "originalPermitted": false,
+      "observations": {
+        "record": 15,
+        "selector": 18,
+        "owner": 30
+      },
+      "tests": 8,
+      "returningControls": 27,
+      "nativeArtifacts": 1236
+    },
+    {
+      "name": "tiny-copy-v2/inputs/full",
+      "originalPermitted": true,
+      "observations": {
+        "record": 20,
+        "selector": 24,
+        "owner": 40
+      },
+      "tests": 10,
+      "returningControls": 27,
+      "nativeArtifacts": 1236
+    }
+  ],
+  "nativeArtifactComparisons": 3708,
+  "logicalCorpora": [
+    {
+      "path": "work/clean-replay/sdk-owner062-3208f36/work/sdk-owner062-public-replay-v2/intake/full-v2/record/report.json",
+      "bytes": 7908,
+      "sha256": "e957e4c2f4eab86a30406788a52dc9bb92d0e72de0ed935fa3ab9e1858b618f8"
+    },
+    {
+      "path": "work/clean-replay/sdk-owner062-3208f36/work/sdk-owner062-public-replay-v2/intake/full-v2/selector/report.json",
+      "bytes": 129133,
+      "sha256": "34843fdb19462087d4e59f9bfaca39d5167ce62870bb0ca14e6316d34f152be8"
+    },
+    {
+      "path": "work/clean-replay/sdk-owner062-3208f36/work/sdk-owner062-public-replay-v2/intake/full-v2/owner/report.json",
+      "bytes": 385435,
+      "sha256": "73ada88e1fd861037685bbc63ea7c599ea61bb9f75b53f8b595c1876f8e8fed9"
+    },
+    {
+      "path": "work/clean-replay/sdk-owner062-3208f36/work/sdk-owner062-public-replay-v2/intake/full-v2/rotation-report.json",
+      "bytes": 176265,
+      "sha256": "09ed32dde03db36810cb7beea694efbb97ddf9087f2115ec3d2b9264f69e558d"
+    },
+    {
+      "path": "work/clean-replay/sdk-owner062-3208f36/work/sdk-owner062-public-replay-v2/intake/source-only-v3/record/report.json",
+      "bytes": 5948,
+      "sha256": "33ee65b8c384e61f2cab52b7becd436342613d9639b80f4c6c14dd36d15b9de9"
+    },
+    {
+      "path": "work/clean-replay/sdk-owner062-3208f36/work/sdk-owner062-public-replay-v2/intake/source-only-v3/selector/report.json",
+      "bytes": 90589,
+      "sha256": "50c4394345ba1b3ef05dd7bd037d32b7522c31cc62f009d191318a584e1b5832"
+    },
+    {
+      "path": "work/clean-replay/sdk-owner062-3208f36/work/sdk-owner062-public-replay-v2/intake/source-only-v3/owner/report.json",
+      "bytes": 289389,
+      "sha256": "fb46bc0abf46bfa425d810e10b42789597125370af27784859218a9483124f84"
+    },
+    {
+      "path": "work/clean-replay/sdk-owner062-3208f36/work/sdk-owner062-public-replay-v2/intake/source-only-v3/rotation-report.json",
+      "bytes": 132554,
+      "sha256": "434ace1c71caf19ba83fac53dc53c535c9cc690c93b22d078a057fd0148e97b8"
+    },
+    {
+      "path": "work/clean-replay/sdk-owner062-3208f36/work/sdk-owner062-public-replay-v2/intake/tiny-copy-v2/inputs/full/record/report.json",
+      "bytes": 7908,
+      "sha256": "d1d156ec0d23e7769f2b948c3b663d689df068081714e4b357bd2eb8ebcea224"
+    },
+    {
+      "path": "work/clean-replay/sdk-owner062-3208f36/work/sdk-owner062-public-replay-v2/intake/tiny-copy-v2/inputs/full/selector/report.json",
+      "bytes": 129133,
+      "sha256": "11e9c580ede68123251dbf197600b88765f5fd3c96ed0d13934370f94d1ad952"
+    },
+    {
+      "path": "work/clean-replay/sdk-owner062-3208f36/work/sdk-owner062-public-replay-v2/intake/tiny-copy-v2/inputs/full/owner/report.json",
+      "bytes": 385435,
+      "sha256": "7748279b3378a232474c16ef1f3745fe76e1331be140940aac03420ffed504c5"
+    },
+    {
+      "path": "work/clean-replay/sdk-owner062-3208f36/work/sdk-owner062-public-replay-v2/intake/tiny-copy-v2/inputs/full/rotation-report.json",
+      "bytes": 176265,
+      "sha256": "64fd5c22d5c7865d8c9b2e3d87ae25946db385b1c1b9354f72f581a36eae26da"
+    }
+  ],
+  "windowsAddressHashesComparedAcrossProcesses": false,
+  "windowsArenaAndPointerRolesCheckedIndependently": true,
+  "primaryInsertionPcVisits": 206,
+  "combinedInsertionPcVisits": 246,
+  "sourceCreditGranted": 0,
+  "wholeFactoryDefaultAllocatorStartupOrGameClaimed": false,
+  "producer": {
+    "path": "evidence/verification/producers/review_sdk_owner062_replay.py",
+    "bytes": 9877,
+    "sha256": "de6db425e721c9e35949aac37604fdd5796ee373e09a6e5b2b61014edea54f3f"
+  }
+}
