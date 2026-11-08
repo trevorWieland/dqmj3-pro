@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "baseRevision": "91c712048e2fc9947f16d90bb350b282e48c13a3",
+  "status": "complete-public-owner-v2-path-replay-passed",
+  "sourceCreditGranted": 0,
+  "publicParentReceipt": {
+    "status": "complete-public-owner-v2-path-replay-passed",
+    "children": [
+      {
+        "mode": "full",
+        "exitCode": 0,
+        "log": "full.log",
+        "logPin": {
+          "bytes": 1263,
+          "sha256": "390f9a6e05331c67a936bef8a732110988c664e6c561eef586d6a0885123f18f"
+        },
+        "receipt": "intake/full-v2/transport.json",
+        "receiptPin": {
+          "bytes": 1075373,
+          "sha256": "d117210b4607adca1d0d79bfb0618db3b28a56a9ada9b43f07168fdb68f6a2b1"
+        }
+      },
+      {
+        "mode": "source-only",
+        "exitCode": 0,
+        "log": "source-only.log",
+        "logPin": {
+          "bytes": 1284,
+          "sha256": "8c69401d7a0349303721257274b25df011e0662c1aec634440842cd02c8365a5"
+        },
+        "receipt": "intake/source-only-v3/transport.json",
+        "receiptPin": {
+          "bytes": 1102803,
+          "sha256": "9212ad7b022e9e36dd56390685352f9bef611bef44956308f28fc00bc423d0c8"
+        }
+      }
+    ],
+    "sourceCreditGranted": 0,
+    "wholeGameClaimed": false,
+    "inputs": 51,
+    "fullAndCopiedTests": 20,
+    "sourceOnlyTests": 8,
+    "boundaryTests": 21,
+    "returningControlsPerReplay": 27,
+    "sameFinalPrimaryArenaControls": 9,
+    "goldenArtifacts": 1133,
+    "completeCopiedArtifacts": 1236,
+    "primaryInsertionPcVisits": 206,
+    "combinedInsertionPcVisits": 246,
+    "producer": {
+      "bytes": 7866,
+      "sha256": "77302fd036d18fdec9ac60585aabff2976093d25226efbf5f746a08639d0dbbc"
+    },
+    "manifest": {
+      "bytes": 14408,
+      "sha256": "94deedf89b52639d06f0c7428ce2c11203d7be48b5930da4f7adfbb95655bcc8"
+    },
+    "tinyCopy": {
+      "status": "tiny-public-owner-input-copy-and-full-replay-passed",
+      "copiedInputs": 43,
+      "copiedBytes": 377854,
+      "nativeArtifactsIdentical": 1236,
+      "primary": {
+        "bytes": 1075373,
+        "sha256": "d117210b4607adca1d0d79bfb0618db3b28a56a9ada9b43f07168fdb68f6a2b1"
+      },
+      "copied": {
+        "bytes": 1155256,
+        "sha256": "dcc1c8037d2273355a3b79c4f3e82bb2d594f79e965a6ec26857c7e440a44512"
+      },
+      "snapshot": {
+        "bytes": 7264,
+        "sha256": "896fbbb4150977bbbdfd2b012271802793dad2b0abed7fa2d70611fb184ca7ea"
+      },
+      "fullPrimaryAndCopyTests": 20,
+      "returningControlsPerReplay": 27,
+      "primaryInsertionPcs": 206,
+      "combinedInsertionPcs": 246,
+      "blockedReadsOrConstructions": 0,
+      "originalOrToolCopies": false
+    },
+    "wholeSdkFactoryOwnerStartupOrGameClaimed": false
+  },
+  "productionUnits": 7,
+  "headers": 2,
+  "qualificationOnlyUnits": 4,
+  "independentCommittedReplayPending": true,
+  "wholeGameClaimed": false
+}

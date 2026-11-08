@@ -47,6 +47,8 @@ jobs:
         run: python -I -S -m unittest discover -s tests -p test_public_sdk_runtime062_replay.py -v
       - name: Check public file request replay guards
         run: python -I -S -m unittest discover -s tests -p test_effect_file066_public.py -v
+      - name: Check public owner replay receipts and boundaries
+        run: python -I -S -m unittest discover -s tests -p test_public_sdk_owner062_replay.py -v
       - name: Compile native sources and bounded VM components for reviewed targets
         run: python -I -S toolscripts/compile_sources.py
       - name: Upload compile diagnostics and manifests

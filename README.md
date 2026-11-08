@@ -18,6 +18,8 @@ The [SDK runtime replay](docs/native-sdk-runtime062-public-replay.md) independen
 
 The [synchronous file-request replay](docs/native-effect-request066-public.md) adds twelve production C units. Its committed clean replay passed 125 pipeline tests, 97 baseline artifact comparisons and 686 total native artifact comparisons including controls. Six complete dispatcher/provider/getter bodies receive bounded medium-confidence admission; partial factory/resolver/queue/renderer paths remain unqualified.
 
+The [public owner source replay](docs/native-sdk-owner062-public.md) adds seven production C units with explicit typed native layouts and four separate qualification fixtures. Its guarded input recipe preserves the distinction between the primary insertion trace and supplemental rotation coverage. Publication and compilation grant no additional functional source credit; independent committed replay and coordinator admission remain separate gates.
+
 The owner archive `dqmj3pro.7z` has SHA-256 `8af8156afc1c69c3c3ad90cdd57a204417e27cef07b6b6958270b3c1c128bd7d` and contains a base CIA plus update CIA. All four NCCH contents match their TMD content hashes. Their ExeFS files also match recorded hashes. Independent CTRTool extraction reproduces both decompressed code images and extended headers exactly. These checks establish internal integrity and extraction agreement; signature authenticity and unmodified retail provenance have not been established.
 
 | Input | Title ID | Raw title version | Decompressed code SHA-256 |

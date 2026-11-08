@@ -1,0 +1,15 @@
+{
+  "status": "additional-coverage-assertion-failed-after-positive-programs",
+  "remainingPcs": [
+    "0x76fec0",
+    "0x76fec4",
+    "0x76fec8",
+    "0x76fecc",
+    "0x76fed0",
+    "0x76fed4",
+    "0x76fed8"
+  ],
+  "cause": "rotation-only cohort intentionally uses unique first endpoints and does not itself exercise second-endpoint tie comparison; primary immutable guarded cohort already covers these seven",
+  "correction": "require exact union of unchanged primary observations plus new rotation cohort, recording both counts separately",
+  "productSourceChanged": false
+}

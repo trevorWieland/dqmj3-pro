@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "name": "sdk-owner062",
+  "producerSteps": [
+    {
+      "name": "sdk-owner062-proof",
+      "args": [
+        "toolscripts/public_sdk_owner062_replay.py",
+        "--output",
+        "work/sdk-owner062-public-replay-v2"
+      ],
+      "inputKinds": ["code", "exheader"]
+    }
+  ],
+  "tests": [
+    "public_sdk_owner062_replay",
+    "native_file_inventory",
+    "native_binding_inventory",
+    "native_sdk_inventory",
+    "compile_source_include_dirs",
+    "c_function_definitions"
+  ],
+  "packets": [
+    "work/sdk-owner062-public-replay-v2/public-replay.json",
+    "work/sdk-owner062-public-replay-v2/transport-tests.log",
+    "work/sdk-owner062-public-replay-v2/intake/full-v2/transport.json",
+    "work/sdk-owner062-public-replay-v2/intake/full-v2/rotation-report.json",
+    "work/sdk-owner062-public-replay-v2/intake/full-v2/controls/report.json",
+    "work/sdk-owner062-public-replay-v2/intake/source-only-v3/transport.json",
+    "work/sdk-owner062-public-replay-v2/intake/source-only-v3/controls/report.json",
+    "work/sdk-owner062-public-replay-v2/intake/tiny-copy-v2/verification.json",
+    "work/sdk-owner062-public-replay-v2/intake/tiny-copy-v2/snapshot.json",
+    "work/sdk-owner062-public-replay-v2/intake/tiny-copy-v2/inputs/full/transport.json",
+    "work/sdk-owner062-public-replay-v2/intake/tiny-copy-v2/inputs/full/rotation-report.json",
+    "work/sdk-owner062-public-replay-v2/intake/tiny-copy-v2/inputs/full/controls/report.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": ["code", "exheader"]
+  }
+}

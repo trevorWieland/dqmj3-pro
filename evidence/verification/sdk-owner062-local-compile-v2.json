@@ -1,0 +1,1493 @@
+{
+  "schemaVersion": 1,
+  "status": "seven-public-owner-units-compile-on-three-reviewed-targets",
+  "units": 7,
+  "compilations": 21,
+  "sourceCredit": 0,
+  "overallSourceCoveragePercent": null,
+  "productionSources": [
+    "src/native/wave062-owner/config_initialize062ab.c",
+    "src/native/wave062-owner/config_select062ab.c",
+    "src/native/wave062-owner/owner_clear062ab.c",
+    "src/native/wave062-owner/owner_destroy062ab.c",
+    "src/native/wave062-owner/owner_dispose062ab.c",
+    "src/native/wave062-owner/owner_initialize062ab.c",
+    "src/native/wave062-owner/owner_insert88062ab.c"
+  ],
+  "targets": [
+    "android-arm64-api29",
+    "arm32-mpcore",
+    "windows-x64"
+  ],
+  "results": [
+    {
+      "source": "src/native/wave062-owner/config_initialize062ab.c",
+      "role": "bounded-component",
+      "target": "arm32-mpcore",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfloat-abi=soft",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/config_initialize062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/arm32-mpcore/src--native--wave062-owner--config_initialize062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/config_initialize062ab.c",
+          "sha256": "ef3b48d4bbbb23a78015ef471804452fa588d35ae56399c32d0531709e7856f0"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/arm32-mpcore--src--native--wave062-owner--config_initialize062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/arm32-mpcore/src--native--wave062-owner--config_initialize062ab.o",
+        "bytes": 1532,
+        "sha256": "151f2b29888a1846ee8da03d0feaef439adb133da1a9b7818cfd41b58555c3da",
+        "format": "ELF32",
+        "machine": 40,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/config_initialize062ab.c",
+      "role": "bounded-component",
+      "target": "windows-x64",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/config_initialize062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/windows-x64/src--native--wave062-owner--config_initialize062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/config_initialize062ab.c",
+          "sha256": "ef3b48d4bbbb23a78015ef471804452fa588d35ae56399c32d0531709e7856f0"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/windows-x64--src--native--wave062-owner--config_initialize062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/windows-x64/src--native--wave062-owner--config_initialize062ab.o",
+        "bytes": 1322,
+        "sha256": "179c7ebb44c28378b7d663d0c56869ed7263a4a8b13a990a296d8ed805f26f85",
+        "format": "COFF",
+        "machine": 34404,
+        "sections": 7
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/config_initialize062ab.c",
+      "role": "bounded-component",
+      "target": "android-arm64-api29",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=aarch64-linux-android29",
+        "-fPIC",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/config_initialize062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/android-arm64-api29/src--native--wave062-owner--config_initialize062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/config_initialize062ab.c",
+          "sha256": "ef3b48d4bbbb23a78015ef471804452fa588d35ae56399c32d0531709e7856f0"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/android-arm64-api29--src--native--wave062-owner--config_initialize062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/android-arm64-api29/src--native--wave062-owner--config_initialize062ab.o",
+        "bytes": 2056,
+        "sha256": "0ed7895ed8e516aeb661aee891973d38de73881e797ed9b24b8386f18a1ec731",
+        "format": "ELF64",
+        "machine": 183,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/config_select062ab.c",
+      "role": "bounded-component",
+      "target": "arm32-mpcore",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfloat-abi=soft",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/config_select062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/arm32-mpcore/src--native--wave062-owner--config_select062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/config_select062ab.c",
+          "sha256": "6cd1056c75d5aff351c77f4ca18a040ac619b49836e632226ffbdc819f13ae1a"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/thread_map062y.h",
+          "sha256": "936d879b9deedaa8c44681ff7b30d4a10f2217bfd30c78dae854993a1e88cab8"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/arm32-mpcore--src--native--wave062-owner--config_select062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/arm32-mpcore/src--native--wave062-owner--config_select062ab.o",
+        "bytes": 1316,
+        "sha256": "ab8861bca3102d3e3c585fdaa85d7e6e33ea6a9ecc366d5a9d1c15293e9acc6c",
+        "format": "ELF32",
+        "machine": 40,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/config_select062ab.c",
+      "role": "bounded-component",
+      "target": "windows-x64",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/config_select062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/windows-x64/src--native--wave062-owner--config_select062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/config_select062ab.c",
+          "sha256": "6cd1056c75d5aff351c77f4ca18a040ac619b49836e632226ffbdc819f13ae1a"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/thread_map062y.h",
+          "sha256": "936d879b9deedaa8c44681ff7b30d4a10f2217bfd30c78dae854993a1e88cab8"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/windows-x64--src--native--wave062-owner--config_select062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/windows-x64/src--native--wave062-owner--config_select062ab.o",
+        "bytes": 846,
+        "sha256": "77e177180043e0d8e7a618a90b82c0497ab3ee47b88c134a5f1d5a11820a522e",
+        "format": "COFF",
+        "machine": 34404,
+        "sections": 6
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/config_select062ab.c",
+      "role": "bounded-component",
+      "target": "android-arm64-api29",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=aarch64-linux-android29",
+        "-fPIC",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/config_select062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/android-arm64-api29/src--native--wave062-owner--config_select062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/config_select062ab.c",
+          "sha256": "6cd1056c75d5aff351c77f4ca18a040ac619b49836e632226ffbdc819f13ae1a"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/thread_map062y.h",
+          "sha256": "936d879b9deedaa8c44681ff7b30d4a10f2217bfd30c78dae854993a1e88cab8"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/android-arm64-api29--src--native--wave062-owner--config_select062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/android-arm64-api29/src--native--wave062-owner--config_select062ab.o",
+        "bytes": 1424,
+        "sha256": "566e41d61b364e7a442a32900cf9cb6fdcaed910b0df8bae9caebe5f361e4ffa",
+        "format": "ELF64",
+        "machine": 183,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/owner_clear062ab.c",
+      "role": "bounded-component",
+      "target": "arm32-mpcore",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfloat-abi=soft",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/owner_clear062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/arm32-mpcore/src--native--wave062-owner--owner_clear062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/owner_clear062ab.c",
+          "sha256": "17a6257d91c8bf60234a9c093479871a54ea5c71c10875de64ef8516ca3e27e9"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-owner/include/owner062ab.h",
+          "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/timer062aa.h",
+          "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/tree_erase062z.h",
+          "sha256": "a6cd87e6e7128d9de7652d40929a97cc83637616747b011c705a8dcc36ec3def"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/arm32-mpcore--src--native--wave062-owner--owner_clear062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/arm32-mpcore/src--native--wave062-owner--owner_clear062ab.o",
+        "bytes": 1960,
+        "sha256": "29d1d182f79877f66c404c0df852dbe47352509094321b20752652b04901ee4d",
+        "format": "ELF32",
+        "machine": 40,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/owner_clear062ab.c",
+      "role": "bounded-component",
+      "target": "windows-x64",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/owner_clear062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/windows-x64/src--native--wave062-owner--owner_clear062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/owner_clear062ab.c",
+          "sha256": "17a6257d91c8bf60234a9c093479871a54ea5c71c10875de64ef8516ca3e27e9"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-owner/include/owner062ab.h",
+          "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/timer062aa.h",
+          "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/tree_erase062z.h",
+          "sha256": "a6cd87e6e7128d9de7652d40929a97cc83637616747b011c705a8dcc36ec3def"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/windows-x64--src--native--wave062-owner--owner_clear062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/windows-x64/src--native--wave062-owner--owner_clear062ab.o",
+        "bytes": 1329,
+        "sha256": "6771d8c7eb8038fb092fa7f487bf76e465aba2b9cccd7cf34b988ea94014c86a",
+        "format": "COFF",
+        "machine": 34404,
+        "sections": 6
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/owner_clear062ab.c",
+      "role": "bounded-component",
+      "target": "android-arm64-api29",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=aarch64-linux-android29",
+        "-fPIC",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/owner_clear062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/android-arm64-api29/src--native--wave062-owner--owner_clear062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/owner_clear062ab.c",
+          "sha256": "17a6257d91c8bf60234a9c093479871a54ea5c71c10875de64ef8516ca3e27e9"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-owner/include/owner062ab.h",
+          "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/timer062aa.h",
+          "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/tree_erase062z.h",
+          "sha256": "a6cd87e6e7128d9de7652d40929a97cc83637616747b011c705a8dcc36ec3def"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/android-arm64-api29--src--native--wave062-owner--owner_clear062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/android-arm64-api29/src--native--wave062-owner--owner_clear062ab.o",
+        "bytes": 2144,
+        "sha256": "ca67ed492448b0f19b079871b36997d87ef4030c4ce886ff779b516052822ee6",
+        "format": "ELF64",
+        "machine": 183,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/owner_destroy062ab.c",
+      "role": "bounded-component",
+      "target": "arm32-mpcore",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfloat-abi=soft",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/owner_destroy062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/arm32-mpcore/src--native--wave062-owner--owner_destroy062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/owner_destroy062ab.c",
+          "sha256": "9da9ed257a9818d6f5164cee34c9c9ea4bc325e7ff66dc28bfd12e555df60486"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-owner/include/owner062ab.h",
+          "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/timer062aa.h",
+          "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/tree_erase062z.h",
+          "sha256": "a6cd87e6e7128d9de7652d40929a97cc83637616747b011c705a8dcc36ec3def"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/arm32-mpcore--src--native--wave062-owner--owner_destroy062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/arm32-mpcore/src--native--wave062-owner--owner_destroy062ab.o",
+        "bytes": 2056,
+        "sha256": "6cdd52cdcaf29288422e8561225ed65b244a4e19543a24d1b348868223f8cfb0",
+        "format": "ELF32",
+        "machine": 40,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/owner_destroy062ab.c",
+      "role": "bounded-component",
+      "target": "windows-x64",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/owner_destroy062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/windows-x64/src--native--wave062-owner--owner_destroy062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/owner_destroy062ab.c",
+          "sha256": "9da9ed257a9818d6f5164cee34c9c9ea4bc325e7ff66dc28bfd12e555df60486"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-owner/include/owner062ab.h",
+          "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/timer062aa.h",
+          "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/tree_erase062z.h",
+          "sha256": "a6cd87e6e7128d9de7652d40929a97cc83637616747b011c705a8dcc36ec3def"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/windows-x64--src--native--wave062-owner--owner_destroy062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/windows-x64/src--native--wave062-owner--owner_destroy062ab.o",
+        "bytes": 1447,
+        "sha256": "8ca44da86d643d6f8b912353c9650442ebe85e56d78ea5613885ea7ab26bd681",
+        "format": "COFF",
+        "machine": 34404,
+        "sections": 6
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/owner_destroy062ab.c",
+      "role": "bounded-component",
+      "target": "android-arm64-api29",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=aarch64-linux-android29",
+        "-fPIC",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/owner_destroy062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/android-arm64-api29/src--native--wave062-owner--owner_destroy062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/owner_destroy062ab.c",
+          "sha256": "9da9ed257a9818d6f5164cee34c9c9ea4bc325e7ff66dc28bfd12e555df60486"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-owner/include/owner062ab.h",
+          "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/timer062aa.h",
+          "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/tree_erase062z.h",
+          "sha256": "a6cd87e6e7128d9de7652d40929a97cc83637616747b011c705a8dcc36ec3def"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/android-arm64-api29--src--native--wave062-owner--owner_destroy062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/android-arm64-api29/src--native--wave062-owner--owner_destroy062ab.o",
+        "bytes": 2368,
+        "sha256": "151947ae101bd766ffaa8e0a326a364a0035490d844de186f7b780d8fcad34e6",
+        "format": "ELF64",
+        "machine": 183,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/owner_dispose062ab.c",
+      "role": "bounded-component",
+      "target": "arm32-mpcore",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfloat-abi=soft",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/owner_dispose062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/arm32-mpcore/src--native--wave062-owner--owner_dispose062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/owner_dispose062ab.c",
+          "sha256": "9f6eea9a6533ccc61b873b5d0958aa88d675f637a21134f6ada89889484db0ab"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-owner/include/owner062ab.h",
+          "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/timer062aa.h",
+          "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/arm32-mpcore--src--native--wave062-owner--owner_dispose062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/arm32-mpcore/src--native--wave062-owner--owner_dispose062ab.o",
+        "bytes": 1552,
+        "sha256": "f9c1853566eba26535ff7c1fbf9d66e3b73782d91b8350b6d9a2437333593041",
+        "format": "ELF32",
+        "machine": 40,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/owner_dispose062ab.c",
+      "role": "bounded-component",
+      "target": "windows-x64",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/owner_dispose062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/windows-x64/src--native--wave062-owner--owner_dispose062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/owner_dispose062ab.c",
+          "sha256": "9f6eea9a6533ccc61b873b5d0958aa88d675f637a21134f6ada89889484db0ab"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-owner/include/owner062ab.h",
+          "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/timer062aa.h",
+          "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/windows-x64--src--native--wave062-owner--owner_dispose062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/windows-x64/src--native--wave062-owner--owner_dispose062ab.o",
+        "bytes": 845,
+        "sha256": "e8c7d5fafcfc1195424b0e8f3ba6fe07aaf1b1ef8e6acc094113404a967f998e",
+        "format": "COFF",
+        "machine": 34404,
+        "sections": 6
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/owner_dispose062ab.c",
+      "role": "bounded-component",
+      "target": "android-arm64-api29",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=aarch64-linux-android29",
+        "-fPIC",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/owner_dispose062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/android-arm64-api29/src--native--wave062-owner--owner_dispose062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/owner_dispose062ab.c",
+          "sha256": "9f6eea9a6533ccc61b873b5d0958aa88d675f637a21134f6ada89889484db0ab"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-owner/include/owner062ab.h",
+          "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/timer062aa.h",
+          "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/android-arm64-api29--src--native--wave062-owner--owner_dispose062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/android-arm64-api29/src--native--wave062-owner--owner_dispose062ab.o",
+        "bytes": 1424,
+        "sha256": "005ffed740d46cc3a68317026c900668094a0fb69ae6f60c65786eff0e626d5c",
+        "format": "ELF64",
+        "machine": 183,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/owner_initialize062ab.c",
+      "role": "bounded-component",
+      "target": "arm32-mpcore",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfloat-abi=soft",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/owner_initialize062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/arm32-mpcore/src--native--wave062-owner--owner_initialize062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/owner_initialize062ab.c",
+          "sha256": "140729fa49c09ae8b139926bb052faca7b8d06f7f46bdd7e7ef4663e24c4911f"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-owner/include/owner062ab.h",
+          "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/timer062aa.h",
+          "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/arm32-mpcore--src--native--wave062-owner--owner_initialize062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/arm32-mpcore/src--native--wave062-owner--owner_initialize062ab.o",
+        "bytes": 1720,
+        "sha256": "178ff020fbbd0eb0f19766aa27c5d94350dfa0288e46df0a986644005573bf07",
+        "format": "ELF32",
+        "machine": 40,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/owner_initialize062ab.c",
+      "role": "bounded-component",
+      "target": "windows-x64",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/owner_initialize062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/windows-x64/src--native--wave062-owner--owner_initialize062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/owner_initialize062ab.c",
+          "sha256": "140729fa49c09ae8b139926bb052faca7b8d06f7f46bdd7e7ef4663e24c4911f"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-owner/include/owner062ab.h",
+          "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/timer062aa.h",
+          "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/windows-x64--src--native--wave062-owner--owner_initialize062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/windows-x64/src--native--wave062-owner--owner_initialize062ab.o",
+        "bytes": 1278,
+        "sha256": "2f2a7182cdd4dbdbdfad0e30db39cf166e49d64e16aba89d3cbe1259a66336f9",
+        "format": "COFF",
+        "machine": 34404,
+        "sections": 5
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/owner_initialize062ab.c",
+      "role": "bounded-component",
+      "target": "android-arm64-api29",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=aarch64-linux-android29",
+        "-fPIC",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/owner_initialize062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/android-arm64-api29/src--native--wave062-owner--owner_initialize062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/owner_initialize062ab.c",
+          "sha256": "140729fa49c09ae8b139926bb052faca7b8d06f7f46bdd7e7ef4663e24c4911f"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-owner/include/owner062ab.h",
+          "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/timer062aa.h",
+          "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/android-arm64-api29--src--native--wave062-owner--owner_initialize062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/android-arm64-api29/src--native--wave062-owner--owner_initialize062ab.o",
+        "bytes": 1880,
+        "sha256": "acc374640a6b09d4af507cdd2f2886384afd5f3060822df49d155ef12303559d",
+        "format": "ELF64",
+        "machine": 183,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/owner_insert88062ab.c",
+      "role": "bounded-component",
+      "target": "arm32-mpcore",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-mfloat-abi=soft",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/owner_insert88062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/arm32-mpcore/src--native--wave062-owner--owner_insert88062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/owner_insert88062ab.c",
+          "sha256": "fcbd75aefcdfb6d953a575dc07364b400ced72614a8cba1c01ad2dc91fd19af8"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-owner/include/owner062ab.h",
+          "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/timer062aa.h",
+          "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/arm32-mpcore--src--native--wave062-owner--owner_insert88062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/arm32-mpcore/src--native--wave062-owner--owner_insert88062ab.o",
+        "bytes": 2128,
+        "sha256": "4b48534a5dca6713eb88484262632e9ee6657d2f8b597ab5d07ef4d1deee5d75",
+        "format": "ELF32",
+        "machine": 40,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/owner_insert88062ab.c",
+      "role": "bounded-component",
+      "target": "windows-x64",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=x86_64-pc-windows-msvc",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/owner_insert88062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/windows-x64/src--native--wave062-owner--owner_insert88062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/owner_insert88062ab.c",
+          "sha256": "fcbd75aefcdfb6d953a575dc07364b400ced72614a8cba1c01ad2dc91fd19af8"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-owner/include/owner062ab.h",
+          "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/timer062aa.h",
+          "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/windows-x64--src--native--wave062-owner--owner_insert88062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/windows-x64/src--native--wave062-owner--owner_insert88062ab.o",
+        "bytes": 1604,
+        "sha256": "eec379dc33070bc049126fbb56cc93bd560773661ba93c7d9fa199afa2995216",
+        "format": "COFF",
+        "machine": 34404,
+        "sections": 5
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "src/native/wave062-owner/owner_insert88062ab.c",
+      "role": "bounded-component",
+      "target": "android-arm64-api29",
+      "argv": [
+        "tools/clang-21/clang.exe",
+        "--target=aarch64-linux-android29",
+        "-fPIC",
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fno-color-diagnostics",
+        "-fno-caret-diagnostics",
+        "-I",
+        "src/native/wave062-owner/include",
+        "-I",
+        "src/native/wave062-sdk/include",
+        "-I",
+        "src/native/wave062-runtime/include",
+        "-c",
+        "src/native/wave062-owner/owner_insert88062ab.c",
+        "-o",
+        "work/sdk-owner062-public-compile-v2/objects/android-arm64-api29/src--native--wave062-owner--owner_insert88062ab.o"
+      ],
+      "inputs": [
+        {
+          "path": "src/native/wave062-owner/owner_insert88062ab.c",
+          "sha256": "fcbd75aefcdfb6d953a575dc07364b400ced72614a8cba1c01ad2dc91fd19af8"
+        },
+        {
+          "path": "src/native/wave062-owner/include/config062ab.h",
+          "sha256": "14105b435e5a83497540f4c6176750bd5277ef1be6354a3580704bb399394aed"
+        },
+        {
+          "path": "src/native/wave062-owner/include/owner062ab.h",
+          "sha256": "67dcc558675c09c4a1944b4c93d9e238539f5f496a8208bffeaf0305e98c41ed"
+        },
+        {
+          "path": "src/native/wave062-runtime/include/timer062aa.h",
+          "sha256": "76b5069dc7a57fb9ab6add39966c362fa60e1d7cb137b08f1ec15afedf6dfdf0"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/clock062u.h",
+          "sha256": "f498c7b6faa4bebf1f0b087ed87ab482eb3e82b6f09b7877079da61fd59a9b01"
+        },
+        {
+          "path": "src/native/wave062-sdk/include/sdk062s.h",
+          "sha256": "44f263bef6f200146a747403afce17f1dda2fe96d6dc6e606b80ddbfdc08ca82"
+        }
+      ],
+      "diagnostics": "work/sdk-owner062-public-compile-v2/diagnostics/android-arm64-api29--src--native--wave062-owner--owner_insert88062ab.txt",
+      "status": "compiled",
+      "exitCode": 0,
+      "reviewedWarnings": [],
+      "object": {
+        "path": "work/sdk-owner062-public-compile-v2/objects/android-arm64-api29/src--native--wave062-owner--owner_insert88062ab.o",
+        "bytes": 2200,
+        "sha256": "5e5a65417b7a5209b3c3af771ac95a8cce516b88ebd93c69a1e1f636186b6589",
+        "format": "ELF64",
+        "machine": 183,
+        "type": 1
+      },
+      "diagnosticsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "receiptTests": 7,
+  "compileGuardTests": 30,
+  "workflowYamlValidated": true,
+  "wholeGameClaimed": false
+}

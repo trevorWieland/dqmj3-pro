@@ -1,0 +1,7 @@
+{
+  "status": "reference-harness-fifth-argument-failed",
+  "cause": "canonical frozen loader accepts only four register arguments; direct insert has fifth AAPCS stack argument which was not materialized by new adapter",
+  "productSourceChanged": false,
+  "originalError": "UC_ERR_READ_UNMAPPED",
+  "correction": "new disjoint adapter writes the actual fifth pointer at its known caller SP before entering the unchanged original"
+}
