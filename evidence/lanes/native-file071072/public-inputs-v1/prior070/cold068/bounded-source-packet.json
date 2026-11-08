@@ -1,0 +1,1239 @@
+{
+  "status": "frozen-bounded068-source-component-candidate-awaiting-independent-coordinator-replay",
+  "canonicalIdentity": {
+    "build": "owner-archive-update",
+    "programId": "0004000e001acb00",
+    "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+    "mode": "ARM"
+  },
+  "referenceReady": {
+    "path": "work/native-file068/reference-v1/ready.json",
+    "bytes": 603,
+    "sha256": "27675c6acaae7a065e877e091c09c437ce40332930ab0babb6d6ad9c652a8e0a"
+  },
+  "frozen067Ready": {
+    "path": "evidence/lanes/native-file-queue067/source-v1/ready.json",
+    "bytes": 540,
+    "sha256": "042419785247974656c737baca38cf89df582987bc01f7b00d4b347c2a968324"
+  },
+  "production": [
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave068-bootstrap/bootstrap.h",
+      "bytes": 2136,
+      "sha256": "e9f70d6849170a0ef94f9a7ef8861c24e2457cd4572bb822ce9ca1b31ed3f52d",
+      "logicalPath": "src/native/wave068-bootstrap/bootstrap.h",
+      "role": "production",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave067-queue/file_queue.h"
+      ],
+      "proposedPublicPath": "src/native/wave068-bootstrap/bootstrap.h",
+      "physicalLines": 50
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave068-bootstrap/filesystem.c",
+      "bytes": 1521,
+      "sha256": "238ad4bb45a13dfb87cb2e15f8129ab7efa0156bbb22b5e3ff23eab709c91b4e",
+      "logicalPath": "src/native/wave068-bootstrap/filesystem.c",
+      "role": "production",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave068-bootstrap/bootstrap.h"
+      ],
+      "proposedPublicPath": "src/native/wave068-bootstrap/filesystem.c",
+      "physicalLines": 32
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave068-bootstrap/requests.c",
+      "bytes": 322,
+      "sha256": "a97d207edfa7e00550f3ccabb0f44f166afcf56ec110fb2c76e069ce502f49b4",
+      "logicalPath": "src/native/wave068-bootstrap/requests.c",
+      "role": "production",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave068-bootstrap/bootstrap.h"
+      ],
+      "proposedPublicPath": "src/native/wave068-bootstrap/requests.c",
+      "physicalLines": 7
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave068-bootstrap/singleton.c",
+      "bytes": 758,
+      "sha256": "5303819192d2a7a3c68c8cf10333a2876fef59ed8e093b58e6b1803c46e9b722",
+      "logicalPath": "src/native/wave068-bootstrap/singleton.c",
+      "role": "production",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave068-bootstrap/bootstrap.h"
+      ],
+      "proposedPublicPath": "src/native/wave068-bootstrap/singleton.c",
+      "physicalLines": 23
+    }
+  ],
+  "selectedCHeaderClosure": [
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave009/interval_set.h",
+      "bytes": 987,
+      "sha256": "c9f8ea99061aaf09e3b82c8a75d3049282f14bdbf7e201a429c1064348853419",
+      "logicalPath": "src/native/wave009/interval_set.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": []
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave010/match_state.h",
+      "bytes": 1055,
+      "sha256": "c5331ad810d5fc508c5df281ece4f5b8f70a998cc5d226d2e7157593137d035b",
+      "logicalPath": "src/native/wave010/match_state.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave009/interval_set.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave012/compile_graph.h",
+      "bytes": 1657,
+      "sha256": "d496139a253186af9849862e764fcc1b50d77f432fe8e6e9dd4c6b4ce84f8ee5",
+      "logicalPath": "src/native/wave012/compile_graph.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave012/label_ops.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave012/fixed_arena.h",
+      "bytes": 689,
+      "sha256": "576604e9c5fde42d82ada3fa977fa33591421711f129bd5cae1b3c45240eec4a",
+      "logicalPath": "src/native/wave012/fixed_arena.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": []
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave012/label_ops.h",
+      "bytes": 939,
+      "sha256": "0d96df2ffe4d5c6f404cbbe688e86f3f644fbc7fecfe9fe6ab0c03a43b2f5be1",
+      "logicalPath": "src/native/wave012/label_ops.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave010/match_state.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave012/memory_ops.c",
+      "bytes": 1951,
+      "sha256": "2110c115a64ddc3cfa867787bd64cbbc65a35643cef10f5afc27971215c24516",
+      "logicalPath": "src/native/wave012/memory_ops.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave012/compile_graph.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave013/control_compile.h",
+      "bytes": 288,
+      "sha256": "323e2786580a834a869dfd5a15d22edd58f84dc8d909322dbf3d99902937e8b0",
+      "logicalPath": "src/native/wave013/control_compile.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave012/compile_graph.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave013/dfa_compile.h",
+      "bytes": 830,
+      "sha256": "83f3627463a010ec5b5d561f1d443c25995be6dc8f4f86cbc28d534f1d2fe334",
+      "logicalPath": "src/native/wave013/dfa_compile.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave013/pattern_nfa_api.h",
+        "src/native/wave013/control_compile.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave013/outer_arena.c",
+      "bytes": 1116,
+      "sha256": "520818862f8faf779ee3083698e1ee29b614d8e19358453f880f42e99f6ce192",
+      "logicalPath": "src/native/wave013/outer_arena.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave013/pattern_outer.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave013/pattern_nfa.h",
+      "bytes": 4884,
+      "sha256": "76dddc817728b69b544e927320f5c1564a6a390ba6259adae837a324d3a07c36",
+      "logicalPath": "src/native/wave013/pattern_nfa.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave013/pattern_tokens.h",
+        "src/native/wave013/pattern_unicode.h",
+        "src/native/wave013/pattern_ranges.h",
+        "src/native/wave012/compile_graph.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave013/pattern_nfa_api.h",
+      "bytes": 386,
+      "sha256": "974523189a56560a598aca0f00ef26cd7b50c3a12bb5c0bb1f0789e5ba82d8bb",
+      "logicalPath": "src/native/wave013/pattern_nfa_api.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave013/pattern_nfa.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave013/pattern_outer.h",
+      "bytes": 1605,
+      "sha256": "2e79c5635b7b411271ff28684f7349b0daf076e05473e2b997b6ccf21ea68e9a",
+      "logicalPath": "src/native/wave013/pattern_outer.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave013/pattern_tokens.h",
+        "src/native/wave013/dfa_compile.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave013/pattern_ranges.h",
+      "bytes": 521,
+      "sha256": "6eb248d90a59fc8f50469f8735a4b6ad224ca067b68ce66295ccd5de765abeee",
+      "logicalPath": "src/native/wave013/pattern_ranges.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave009/interval_set.h",
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave013/pattern_unicode.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave013/pattern_tokens.h",
+      "bytes": 4191,
+      "sha256": "2a06bf5d5efd04ef077298a341aaead1a5ef6e20ace3969363ff35b1ba78a9ae",
+      "logicalPath": "src/native/wave013/pattern_tokens.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave012/fixed_arena.h",
+        "src/native/wave009/interval_set.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave013/pattern_unicode.h",
+      "bytes": 1109,
+      "sha256": "5a0f6e2c1824e58392c5d347108ff9b088ae256e684fcff613a9aaceb28f709b",
+      "logicalPath": "src/native/wave013/pattern_unicode.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": []
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave032/archive.h",
+      "bytes": 2058,
+      "sha256": "898228acad7e6c345af740679090ecfb27e05a15fcd8326c15c134a25099eb9c",
+      "logicalPath": "src/native/wave032/archive.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": []
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave032/archive_lookup.c",
+      "bytes": 2147,
+      "sha256": "77447d1f84669ef96e98a0bdbf8974b33bf6d37fea2502c67ba84c1a198bcaae",
+      "logicalPath": "src/native/wave032/archive_lookup.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave032/archive.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave032/archive_members.c",
+      "bytes": 1657,
+      "sha256": "2ce8cd2c3c3340851a1940a1ab3e8c1d57dae7afc2a34cb9187c32c664c81f0a",
+      "logicalPath": "src/native/wave032/archive_members.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave032/archive.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave032/archive_owner.c",
+      "bytes": 1635,
+      "sha256": "5e8cba4615a2aa54073d1336d9bb4487d2db3f11cadf7f413c7212832e6d18c8",
+      "logicalPath": "src/native/wave032/archive_owner.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave032/archive.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065/effect_preview.c",
+      "bytes": 4275,
+      "sha256": "b317784d97063cd8d7ae05b74c376e443470352fc9ec8b561b9a6251d29db0ef",
+      "logicalPath": "src/native/wave065/effect_preview.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave065/effect_preview.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065/effect_preview.h",
+      "bytes": 3054,
+      "sha256": "f4107777d62b1087c265b4f7a92e41964cd10e406b50f28564d2a7b745219cde",
+      "logicalPath": "src/native/wave065/effect_preview.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": []
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065/effect_services.h",
+      "bytes": 520,
+      "sha256": "ca1a247f8b3421b17ea848b38029fa5b74f40576588c8b9efd630b2a47235ef9",
+      "logicalPath": "src/native/wave065/effect_services.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": []
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065/effect_shader.c",
+      "bytes": 1511,
+      "sha256": "35db548068499b99bfd7c52b337a6dfa2568ebb5847c53db31a1c0d6585cfb33",
+      "logicalPath": "src/native/wave065/effect_shader.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave065/effect_shader.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065/effect_shader.h",
+      "bytes": 1381,
+      "sha256": "26c4310b9bceb3e6d6a45c1923679312b164bd686ff285e5e36aa37e2e3895fd",
+      "logicalPath": "src/native/wave065/effect_shader.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave065/effect_services.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-cached/effect_cached.h",
+      "bytes": 2804,
+      "sha256": "ad83bd4336187d51d5f197ccb924631eb80a2dc85465f9b4013798ef0a1e3592",
+      "logicalPath": "src/native/wave065-cached/effect_cached.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave065/effect_preview.h",
+        "src/native/wave065-owner/effect_owner.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-cached/effect_cached_fetch.c",
+      "bytes": 2390,
+      "sha256": "d058638689714953570a9c4bbe8eb292618eabe6eb3e7bf0b879918120aac945",
+      "logicalPath": "src/native/wave065-cached/effect_cached_fetch.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave065-cached/effect_cached.h",
+        "src/native/wave032/archive.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-cached/effect_cached_format.c",
+      "bytes": 1326,
+      "sha256": "d9079abce9373eb04bc08ef030aba7ba5f0a4afdbdd060003b6f4c584bce8244",
+      "logicalPath": "src/native/wave065-cached/effect_cached_format.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave065-cached/effect_cached.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-cached/effect_cached_request.c",
+      "bytes": 2570,
+      "sha256": "5c9d27f374579fe7aff96d46275dac982dd577ca366a7203f3ba2d2fc64a186e",
+      "logicalPath": "src/native/wave065-cached/effect_cached_request.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave065-cached/effect_cached.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-cached/effect_cached_services.c",
+      "bytes": 366,
+      "sha256": "c825c8a04c8b34fbfa6a98c8904b57a417532ad97dc1d6368e077e7d00eb8e6c",
+      "logicalPath": "src/native/wave065-cached/effect_cached_services.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave065-cached/effect_cached.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-owner/effect_owner.h",
+      "bytes": 1306,
+      "sha256": "d2424ade961e16cd32aa6ef942f65accbbbde55dc724e39e43ac85aadb37632d",
+      "logicalPath": "src/native/wave065-owner/effect_owner.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave065-resource/effect_resource_internal.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-owner/effect_registration.c",
+      "bytes": 586,
+      "sha256": "8919479a5f7e8dadff06585234ee918cba177c7b76a5383bac3371b9e9826a98",
+      "logicalPath": "src/native/wave065-owner/effect_registration.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave065-owner/effect_owner.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_commands.c",
+      "bytes": 5991,
+      "sha256": "ebb3cd9cf39fdd3352b85658a37085280cbf7329cd8c4d200e1fe53ca21fafab",
+      "logicalPath": "src/native/wave065-resource/effect_commands.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave065-resource/effect_commands.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_commands.h",
+      "bytes": 885,
+      "sha256": "707e55cd92764ac2085e3071293911998a5db1f365b0166831d72dc3a40ad7fe",
+      "logicalPath": "src/native/wave065-resource/effect_commands.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave065-resource/effect_vertex.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_device.c",
+      "bytes": 1657,
+      "sha256": "5d1eca97c5e3ad3bb1888dc1661b669a85e10083caa4f4bb3a0192309d2e332f",
+      "logicalPath": "src/native/wave065-resource/effect_device.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave065-resource/effect_device.h",
+        "src/native/wave065-resource/effect_texture.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_device.h",
+      "bytes": 1098,
+      "sha256": "284d8a6ae7918d9ae5c083351c4df293feae7ec839217a5e13a048fc49d4cc64",
+      "logicalPath": "src/native/wave065-resource/effect_device.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave065/effect_shader.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_port_runtime.c",
+      "bytes": 344,
+      "sha256": "22036544b4956205983c5147ee7c3c50cd7158d31200e660f3b5a26e14fb23fb",
+      "logicalPath": "src/native/wave065-resource/effect_port_runtime.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": []
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_resource.c",
+      "bytes": 2743,
+      "sha256": "c0df7d80f452ac9a70ea0542d2677909fc00892d719de1df777158cc8a250597",
+      "logicalPath": "src/native/wave065-resource/effect_resource.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave065-resource/effect_resource_internal.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_resource.h",
+      "bytes": 4527,
+      "sha256": "27856b081a4cbc7fffd99bdf4207a0f50297a823e1be9bc383299e6f3378fe1e",
+      "logicalPath": "src/native/wave065-resource/effect_resource.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave065-resource/effect_commands.h",
+        "src/native/wave065-resource/effect_resource_memory.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_resource_internal.h",
+      "bytes": 1158,
+      "sha256": "4180f9e4989373c5b6f1d9f2a1638033e2422319628a1b4be4051e16d552a68f",
+      "logicalPath": "src/native/wave065-resource/effect_resource_internal.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave065-resource/effect_resource.h",
+        "src/native/wave065-resource/effect_serialized.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_resource_memory.c",
+      "bytes": 2449,
+      "sha256": "9435650539a05de15b212d54aa334b0247449fc1553741ac887ec292cb4270c8",
+      "logicalPath": "src/native/wave065-resource/effect_resource_memory.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave065-resource/effect_resource_memory.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_resource_memory.h",
+      "bytes": 1915,
+      "sha256": "556a8706a752115547e7d66dd03ab0d447e5aba45e8cc2fa24c4ac940dfe4437",
+      "logicalPath": "src/native/wave065-resource/effect_resource_memory.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave065/effect_services.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_resource_primitives.c",
+      "bytes": 11904,
+      "sha256": "a303514b8f156c963d10ca098a96c2fdc19d840527d4738b13a2985e517d855a",
+      "logicalPath": "src/native/wave065-resource/effect_resource_primitives.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave065-resource/effect_resource_internal.h",
+        "src/native/wave065-resource/effect_device.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_resource_release.c",
+      "bytes": 4042,
+      "sha256": "5bbdfc210138141c4232dd57176a3bbf6c10b04bbe95756fd1891120c5ab6fbe",
+      "logicalPath": "src/native/wave065-resource/effect_resource_release.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave065-resource/effect_resource_internal.h",
+        "src/native/wave065-resource/effect_device.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_resource_sets.c",
+      "bytes": 9330,
+      "sha256": "e90be26d9dab200e33f07f8800f5a4c12abc20ce05d1f52518bbff7d40511678",
+      "logicalPath": "src/native/wave065-resource/effect_resource_sets.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave065-resource/effect_resource_internal.h",
+        "src/native/wave065-resource/effect_device.h",
+        "src/native/wave065-resource/effect_texture.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_resource_shaders.c",
+      "bytes": 1071,
+      "sha256": "6b8252fa137ffbe0cd91c8b51ffcc7a55a8daaad127f5f5b73fd69f39d65a50c",
+      "logicalPath": "src/native/wave065-resource/effect_resource_shaders.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave065-resource/effect_resource_internal.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_serialized.h",
+      "bytes": 700,
+      "sha256": "6de80450ceea9d5eebad58df3a90df0b0e7177c24b739c7cd796e3f3d1fc2c2a",
+      "logicalPath": "src/native/wave065-resource/effect_serialized.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": []
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_texture.c",
+      "bytes": 5440,
+      "sha256": "22cf0b0f8d73d3011b1332a7e90a146e5f3f63e9ee7d0dc59617128a6adcdbd5",
+      "logicalPath": "src/native/wave065-resource/effect_texture.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave065-resource/effect_texture.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_texture.h",
+      "bytes": 1126,
+      "sha256": "e7214e034d51ec6d91cb307665a744582bb21e39f63e982aea62992a81f73742",
+      "logicalPath": "src/native/wave065-resource/effect_texture.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": []
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_vertex.c",
+      "bytes": 3159,
+      "sha256": "2f6862b7705ac9ce9870ce3b2edb34d9ca6ae738b96eb30c43312550ebb52d05",
+      "logicalPath": "src/native/wave065-resource/effect_vertex.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave065-resource/effect_vertex.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave065-resource/effect_vertex.h",
+      "bytes": 2099,
+      "sha256": "4fa83e9f114e8bfbda79628cd0405ee44dce673f8ba4f6c551ae63b3f216cf87",
+      "logicalPath": "src/native/wave065-resource/effect_vertex.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave065/effect_shader.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave066-request/request.h",
+      "bytes": 7289,
+      "sha256": "bfb294756524755f573ea64ac7b9be758bccb2603d829c69a6811fa8c15ca3bc",
+      "logicalPath": "src/native/wave066-request/request.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": []
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave066-request/request_control.c",
+      "bytes": 1411,
+      "sha256": "3fce347487d987b2880a3001c87810f88d5d6ed0e29a4d5132b1db47cb04d8f7",
+      "logicalPath": "src/native/wave066-request/request_control.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave066-request/request.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave066-request/request_factory.c",
+      "bytes": 2656,
+      "sha256": "717e683e98d4f9e324b02d0a52521a4076e9111c0298969e3e322a1e59155a5d",
+      "logicalPath": "src/native/wave066-request/request_factory.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave066-request/request.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave066-request/request_lower.c",
+      "bytes": 1925,
+      "sha256": "79a4b8710fe0c620efc4d35a036b88e00618dc68e85ae4e423736ef0c9f2557e",
+      "logicalPath": "src/native/wave066-request/request_lower.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave066-request/request_lower.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave066-request/request_lower.h",
+      "bytes": 1430,
+      "sha256": "f90ee5fa23ca791fc9cb2e48cb25ee6898f1f056377b0b763372e9cbd935690f",
+      "logicalPath": "src/native/wave066-request/request_lower.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave065-cached/effect_cached.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave066-request/request_memory.c",
+      "bytes": 328,
+      "sha256": "f165e2012d2629d49eb9e9284652db3ae1475d0ea19dd65b09981f92b40fc996",
+      "logicalPath": "src/native/wave066-request/request_memory.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave066-request/request.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave066-request/request_provider.c",
+      "bytes": 3963,
+      "sha256": "2a1efd9c5b940c913c6ffa6aad02d98b04bfef73effd532d78452e7104103fb7",
+      "logicalPath": "src/native/wave066-request/request_provider.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave066-request/request.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave066-request/request_strings.c",
+      "bytes": 2655,
+      "sha256": "b04976ead7979b5d471b374f7ca311306d8d252c17e911d1244c6c9e5bc246f7",
+      "logicalPath": "src/native/wave066-request/request_strings.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave066-request/request.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave066-request/request_task.c",
+      "bytes": 3122,
+      "sha256": "a50f459a9a5941c5c3eb571a0fe2ab86a4ead9624e143e55c49ae04aec243fd9",
+      "logicalPath": "src/native/wave066-request/request_task.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave066-request/request.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave067-queue/file_queue.h",
+      "bytes": 4616,
+      "sha256": "2bfb38a96f6da1dfdc8d7e2d70f3087193bd65f405e36f2fe154f739d344a50d",
+      "logicalPath": "src/native/wave067-queue/file_queue.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave066-request/request.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave067-queue/queue_manager.c",
+      "bytes": 2331,
+      "sha256": "76d72cbd4d5a3708d3ccc6e21c6d9060d2fdf223295ab23573c6b4f2b35452f3",
+      "logicalPath": "src/native/wave067-queue/queue_manager.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave067-queue/file_queue.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave067-queue/queue_memory.c",
+      "bytes": 904,
+      "sha256": "eb0adda217abfde481adc228e6ea54f622893610b46049b2c7894df081cc2dfc",
+      "logicalPath": "src/native/wave067-queue/queue_memory.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave067-queue/file_queue.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave067-queue/queue_store.c",
+      "bytes": 3810,
+      "sha256": "7af751e0daf47c4aa7fbfede586399098d906827e8d9c99318572a611aceff78",
+      "logicalPath": "src/native/wave067-queue/queue_store.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave067-queue/file_queue.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave067-queue/queue_worker.c",
+      "bytes": 3006,
+      "sha256": "ad17c5b21ed58c3948facfc1f99d412b170cdf673279bf3ae895cc2478a8c3de",
+      "logicalPath": "src/native/wave067-queue/queue_worker.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave067-queue/file_queue.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave068-bootstrap/bootstrap.h",
+      "bytes": 2136,
+      "sha256": "e9f70d6849170a0ef94f9a7ef8861c24e2457cd4572bb822ce9ca1b31ed3f52d",
+      "logicalPath": "src/native/wave068-bootstrap/bootstrap.h",
+      "role": "production",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave067-queue/file_queue.h"
+      ],
+      "proposedPublicPath": "src/native/wave068-bootstrap/bootstrap.h",
+      "physicalLines": 50
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave068-bootstrap/filesystem.c",
+      "bytes": 1521,
+      "sha256": "238ad4bb45a13dfb87cb2e15f8129ab7efa0156bbb22b5e3ff23eab709c91b4e",
+      "logicalPath": "src/native/wave068-bootstrap/filesystem.c",
+      "role": "production",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave068-bootstrap/bootstrap.h"
+      ],
+      "proposedPublicPath": "src/native/wave068-bootstrap/filesystem.c",
+      "physicalLines": 32
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave068-bootstrap/requests.c",
+      "bytes": 322,
+      "sha256": "a97d207edfa7e00550f3ccabb0f44f166afcf56ec110fb2c76e069ce502f49b4",
+      "logicalPath": "src/native/wave068-bootstrap/requests.c",
+      "role": "production",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave068-bootstrap/bootstrap.h"
+      ],
+      "proposedPublicPath": "src/native/wave068-bootstrap/requests.c",
+      "physicalLines": 7
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/src/native/wave068-bootstrap/singleton.c",
+      "bytes": 758,
+      "sha256": "5303819192d2a7a3c68c8cf10333a2876fef59ed8e093b58e6b1803c46e9b722",
+      "logicalPath": "src/native/wave068-bootstrap/singleton.c",
+      "role": "production",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "src/native/wave068-bootstrap/bootstrap.h"
+      ],
+      "proposedPublicPath": "src/native/wave068-bootstrap/singleton.c",
+      "physicalLines": 23
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/toolscripts/effect065_cached_composed_fixture.c",
+      "bytes": 4533,
+      "sha256": "bcec5b3e83ce715b1ff82fd00ad89414e1bae8fcc12734e7bff8593a738220a6",
+      "logicalPath": "toolscripts/effect065_cached_composed_fixture.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "toolscripts/effect065_cached_fixture.c",
+        "src/native/wave032/archive.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/toolscripts/effect065_cached_fixture.c",
+      "bytes": 5884,
+      "sha256": "f80649865eedcf13d31884ef4d92f3bee4225861970341a55e45aedbcee8e2f2",
+      "logicalPath": "toolscripts/effect065_cached_fixture.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "toolscripts/effect065_owner_fixture.c",
+        "src/native/wave065-cached/effect_cached.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/toolscripts/effect065_owner_fixture.c",
+      "bytes": 4607,
+      "sha256": "f00c9455c7f4690a1f0af2aab73198631910b39b78b9ce03a02df4395d9e727d",
+      "logicalPath": "toolscripts/effect065_owner_fixture.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "toolscripts/native_effect065_resource_graph_fixture.c",
+        "src/native/wave065-owner/effect_owner.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/toolscripts/effect_queue067_android_api.h",
+      "bytes": 777,
+      "sha256": "7e6f2c093d109031c0bed74f2d27fc23306d0db2370dc8f48b190a8626064c5f",
+      "logicalPath": "toolscripts/effect_queue067_android_api.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": []
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/toolscripts/effect_queue067_android_probe.c",
+      "bytes": 5933,
+      "sha256": "1788cb6fa21ccaca45a449afa37f3c0dce369f73fccb302721c5ea7fab6ec284",
+      "logicalPath": "toolscripts/effect_queue067_android_probe.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "toolscripts/effect_queue067_source_fixture.c"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/toolscripts/effect_queue067_android_pthread.c",
+      "bytes": 7909,
+      "sha256": "6abcf45ee6faff1497786b3e1eef43c24bb9e3fbacb6ea72941c89095083c63c",
+      "logicalPath": "toolscripts/effect_queue067_android_pthread.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "toolscripts/effect_queue067_android_api.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/toolscripts/effect_queue067_io_fixture.h",
+      "bytes": 3219,
+      "sha256": "ca15838b288cfbbbc28fdcf8dca79341bf29f1f532f0d270e85655767ebb9495",
+      "logicalPath": "toolscripts/effect_queue067_io_fixture.h",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": []
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/toolscripts/effect_queue067_source_fixture.c",
+      "bytes": 10978,
+      "sha256": "ab70d01084d68ef3cd7026f2056c2bb6ce3cb42a1b8148e52d5bf7a1bbfd2db8",
+      "logicalPath": "toolscripts/effect_queue067_source_fixture.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "toolscripts/effect_request066_cache_fixture.c",
+        "src/native/wave067-queue/file_queue.h",
+        "toolscripts/effect_queue067_io_fixture.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/toolscripts/effect_request066_cache_fixture.c",
+      "bytes": 4087,
+      "sha256": "1afd20d5295b131f9939be86531ca82bcf11bb8bdb7f001219262b8f5464e118",
+      "logicalPath": "toolscripts/effect_request066_cache_fixture.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "toolscripts/effect_request066_port_fixture.c",
+        "src/native/wave066-request/request_lower.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/toolscripts/effect_request066_device_fixture.c",
+      "bytes": 7054,
+      "sha256": "a6fe9f42e4e6806be334cb7ff91eeb74a58a91d8f8b0d264492582151d22b02e",
+      "logicalPath": "toolscripts/effect_request066_device_fixture.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "toolscripts/effect_request066_fixture.c"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/toolscripts/effect_request066_fixture.c",
+      "bytes": 3790,
+      "sha256": "1586cafd7ae1473602b9bc0df7bfadb33d50502913546df1e2de30cac261a61e",
+      "logicalPath": "toolscripts/effect_request066_fixture.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "toolscripts/effect065_cached_composed_fixture.c",
+        "src/native/wave066-request/request.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/toolscripts/effect_request066_port_fixture.c",
+      "bytes": 4216,
+      "sha256": "aa5a3b2213ec53bf760788dc002c17812e62578458912978e4357fb2a59689f2",
+      "logicalPath": "toolscripts/effect_request066_port_fixture.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "toolscripts/effect_request066_device_fixture.c"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/toolscripts/file068_source_fixture.c",
+      "bytes": 6872,
+      "sha256": "69c0afc1e3fb320641d9a553a06683c312c1c52295823adbea39a76d59e93cc6",
+      "logicalPath": "toolscripts/file068_source_fixture.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "translation-unit",
+      "quotedIncludes": [
+        "toolscripts/effect_queue067_source_fixture.c",
+        "src/native/wave068-bootstrap/bootstrap.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/toolscripts/native_effect065_resource_graph_fixture.c",
+      "bytes": 13465,
+      "sha256": "2a5b08b453b7ff493a9f59e794fa4f1448191bd73aebf2191c1c17baf074c30c",
+      "logicalPath": "toolscripts/native_effect065_resource_graph_fixture.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": [
+        "src/native/wave065-resource/effect_resource_internal.h",
+        "src/native/wave065-resource/effect_device.h",
+        "src/native/wave065-resource/effect_texture.h"
+      ]
+    },
+    {
+      "path": "work/native-file068/recovered-v1/source/toolscripts/native_effect065_resource_runtime.c",
+      "bytes": 41,
+      "sha256": "682133feb94f6be1f023621484cffd53d035e283236fe240426924f19694f2a2",
+      "logicalPath": "toolscripts/native_effect065_resource_runtime.c",
+      "role": "qualification-or-frozen-dependency",
+      "compilationRole": "quoted-include-or-qualification-only",
+      "quotedIncludes": []
+    }
+  ],
+  "candidateFunctions": [
+    {
+      "entry": 1070328,
+      "mode": "ARM",
+      "source": "src/native/wave068-bootstrap/singleton.c",
+      "symbol": "effect_file_bootstrap_initialize068",
+      "originalInstructionBytes": 92,
+      "completeRanges": [
+        {
+          "start": 1070328,
+          "endExclusive": 1070420,
+          "bytes": 92,
+          "role": "instructions",
+          "sha256": "04c355ff0390318b8ad25e24116d9cfcce255ff4e26f0bf645d7862f72e126b8"
+        },
+        {
+          "start": 1070420,
+          "endExclusive": 1070428,
+          "bytes": 8,
+          "role": "literal-pool",
+          "sha256": "86d18205f4106de3357aff4f3c4f620d6bd7f187c7286f88f378bbd9724d4497"
+        }
+      ],
+      "sourceSymbols": {
+        "arm": {
+          "address": 12077152,
+          "bytes": 92,
+          "sha256": "8b3dcd6382f4ae7f51c4f1257406c7febf6c53672f1486822069de19206a28ab",
+          "mappingSpans": [
+            {
+              "start": 12077152,
+              "endExclusive": 12077244,
+              "kind": "$a"
+            }
+          ]
+        },
+        "a64": {
+          "address": 4605363528,
+          "bytes": 100,
+          "sha256": "47d5fadcd0393051908cee4318dba2116af6fe057dcb2846a5ccae440d31d607",
+          "mappingSpans": [
+            {
+              "start": 4605363528,
+              "endExclusive": 4605363628,
+              "kind": "$x"
+            }
+          ]
+        }
+      },
+      "boundedDomain": "Cold successful initialization; enable_patch=1; typed compiled C filesystem service ports; no worker scheduling.",
+      "sourceCreditGranted": 0
+    },
+    {
+      "entry": 1098820,
+      "mode": "ARM",
+      "source": "src/native/wave068-bootstrap/filesystem.c",
+      "symbol": "effect_file_filesystem_initialize068",
+      "originalInstructionBytes": 164,
+      "completeRanges": [
+        {
+          "start": 1098820,
+          "endExclusive": 1098984,
+          "bytes": 164,
+          "role": "instructions",
+          "sha256": "8e1e965a18a2a91f52de15b48a2677ea4cbc875bd5e034ea97e33b318d418875"
+        },
+        {
+          "start": 1098984,
+          "endExclusive": 1098996,
+          "bytes": 12,
+          "role": "literal-pool",
+          "sha256": "6a9036b8f8ee13af8fecdb4a5e79cdc64030f31d573706d03449defe689bb3c2"
+        }
+      ],
+      "sourceSymbols": {
+        "arm": {
+          "address": 12076692,
+          "bytes": 320,
+          "sha256": "9497492f149ecc2d88ef5f366f2ee418e350411f829804d6de538458b3581f8b",
+          "mappingSpans": [
+            {
+              "start": 12076692,
+              "endExclusive": 12077004,
+              "kind": "$a"
+            },
+            {
+              "start": 12077004,
+              "endExclusive": 12077012,
+              "kind": "$d"
+            }
+          ]
+        },
+        "a64": {
+          "address": 4605363060,
+          "bytes": 320,
+          "sha256": "b1c6f1d9ddb8829f27c7b23100fecce9e48347db41127aafcaead55940ee96ab",
+          "mappingSpans": [
+            {
+              "start": 4605363060,
+              "endExclusive": 4605363380,
+              "kind": "$x"
+            }
+          ]
+        }
+      },
+      "boundedDomain": "Cold successful initialization; enable_patch=1; typed compiled C filesystem service ports; no worker scheduling.",
+      "sourceCreditGranted": 0
+    }
+  ],
+  "counts": {
+    "boundedCandidateFunctions": 2,
+    "candidateOriginalInstructionBytes": 256,
+    "positiveProfilePasses": 6,
+    "returningSourceControlRejections": 9,
+    "persistentTransportRejections": 12,
+    "copiedCHeaderInputs": 83,
+    "exactCopiedCompilerArtifacts": 118
+  },
+  "actualOriginalOracle": {
+    "path": "work/native-file068/recovered-v1/original-v2/report.json",
+    "bytes": 478556,
+    "sha256": "2d7eace26c0bdee2cca718f91b068a076e87234d9f2d428068294a1082159292"
+  },
+  "sourceAndControls": {
+    "path": "work/native-file068/recovered-v1/recheck-v3.json",
+    "bytes": 7121,
+    "sha256": "dc0a15a54983bb4da50db4e3abe91cb3bb139dd64fa1ce1b24c5077ebf756f6e"
+  },
+  "transportProbes": {
+    "path": "work/native-file068/recovered-v1/probes-v2/ready.json",
+    "bytes": 1092,
+    "sha256": "762be71d3943e0a257978c9538f43801a4c22cf4d89d5b11a05351cde1a491f1"
+  },
+  "copiedReplay": {
+    "path": "work/native-file068/recovered-v1/tiny-copy-v1/ready.json",
+    "bytes": 37850,
+    "sha256": "0750bbb893d17b9bd79c40ec374dbf843794d564e56116f278cd8e832ed0601a"
+  },
+  "originalSourceControls": {
+    "path": "work/native-file068/recovered-v1/controls-v1/report.json",
+    "bytes": 5982,
+    "sha256": "f9fdf41ae13d44cb44a5c6f8b34ae52898a5ba7dacffff286ab3a4a99d03fd35"
+  },
+  "build": {
+    "path": "work/native-file068/recovered-v1/build-v1/build.json",
+    "bytes": 209655,
+    "sha256": "333be51977029d7c655d942de58ea4e0c991213421a54aba28a84e23a80ac60f"
+  },
+  "compilerIdentity": {
+    "version": {
+      "path": "work/native-file068/recovered-v1/packet-v1/compiler-version.txt",
+      "bytes": 298,
+      "sha256": "3f8fa32d5fccbc281608e81ec67e2868115eb255eda606f915ff0d4fc705f7ff"
+    },
+    "tools": [
+      {
+        "path": "tools/clang-21/clang.exe",
+        "bytes": 99559064,
+        "sha256": "6b7a698ccd1d5ef7375b7733f0675a166c560112961d3e5df0f275565a9201bc"
+      },
+      {
+        "path": "tools/clang-21/ld.lld.exe",
+        "bytes": 69225112,
+        "sha256": "b64100b407a472f831caf2789f6c09d501e2e4c876ebc772997c294be7f9f8f3"
+      },
+      {
+        "path": "tools/clang-21/libwinpthread-1.dll",
+        "bytes": 96408,
+        "sha256": "c9019ab753c2faa5e5da94e3fd4395f1d3d0e7d2509f5ed2d96cccff7f8b9357"
+      },
+      {
+        "path": "tools/clang-21/libxml2.dll",
+        "bytes": 1200792,
+        "sha256": "e15a377aa308e3f7ba948e6d6622a5dea2308256dbc65858074b61d867af6148"
+      },
+      {
+        "path": "tools/python/Scripts/python.exe",
+        "bytes": 254800,
+        "sha256": "935016795f3e6908e75acbc2040a01e2e4cdb494a57c42f63a0d6eedb2372256"
+      }
+    ],
+    "historicalCompilerIdentityInferred": false
+  },
+  "pythonAndRuntimeProfile": {
+    "version": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "packages": {
+      "unicorn": "2.1.4",
+      "capstone": "5.0.9",
+      "pyelftools": "0.33"
+    }
+  },
+  "runtimeNativeLibraries": [
+    {
+      "path": "tools/python/Lib/site-packages/unicorn/lib/unicorn.dll",
+      "bytes": 9598976,
+      "sha256": "010d85dce84b8f6ffaec3d5420f1b5f7768f859eb831be574c7da23e656ee8f1"
+    },
+    {
+      "path": "tools/python/Lib/site-packages/capstone/lib/capstone.dll",
+      "bytes": 7576576,
+      "sha256": "76958e18380023a68fd1714fa2e01c594cc6db1955a07ad6937b66e66dc5d6c3"
+    }
+  ],
+  "qualified067RuntimeManifest": {
+    "path": "work/queue067-public-input-v1/full-v1/manifest.json",
+    "bytes": 162537,
+    "sha256": "280803a7b76e9676d568cd79b77551fe98a51289ca89724103203e476d7fe65b"
+  },
+  "supportHelpersFrom067": 40,
+  "sourceCreditGranted": 0,
+  "matchingCreditGranted": 0,
+  "nativeTextByteDenominatorChanged": false,
+  "sourceOnlyComponentBinaries": true,
+  "nativeWindowsComponentExecuted": true,
+  "nativeWindowsOSFilesystemMounted": false,
+  "physicalAndroidBootstrapExecuted": false,
+  "wholeNativeGameQualified": false,
+  "taskFieldConcurrentPollingQualified": false,
+  "workerScheduled": false,
+  "limits": [
+    "Only cold successful initialization with enabled patch storage and generated empty ROM/patch metadata is qualified.",
+    "C filesystem service callbacks are qualification fixtures; no SDK filesystem algorithms or host OS filesystem mount receives source credit.",
+    "Shutdown, alias, replacement, allocation/mount failures, warm startup and global request dispatch remain individually unqualified despite compiled drafts.",
+    "Source ARM/AArch64 profiles are CPU-model executions; Windows executes a real parked thread with gated scheduling.",
+    "All task ready/error/payload observation restrictions from frozen067 remain unchanged.",
+    "No exact object match, original SDK source recovery, renderer, game container or 95-percent milestone follows from these bounded candidates."
+  ],
+  "preservedAttempts": [
+    {
+      "path": "work/native-file068/recovered-v1/cohort-pre-hardening.private.py",
+      "bytes": 10243,
+      "sha256": "0eab6e358fe5099d91728eb411edca60615019ffc11fdf09fc44b46b2c764040"
+    },
+    {
+      "path": "work/native-file068/recovered-v1/recheck-v3.log",
+      "bytes": 1305,
+      "sha256": "9c2ea694347934d5da216b7f87cd06f44826a526f3d942055a2036cb75c45b61"
+    }
+  ],
+  "next": "Continue shutdown/alias/replacement/failure/dispatch in a new successor directory; never expand these two frozen candidates implicitly."
+}

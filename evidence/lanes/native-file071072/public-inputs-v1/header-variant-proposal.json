@@ -1,0 +1,28 @@
+{
+  "strategy": "versioned-public-type-headers-with-isolated-target-binding-templates",
+  "legacyHeadersRemainUnchanged": [
+    {
+      "path": "src/native/wave069-device/device069.h",
+      "bytes": 4320,
+      "sha256": "bf5022b81e7d9e3a38e11c5e6a9a024dc818ab851c5ea18637c9fbd275633861"
+    },
+    {
+      "path": "src/native/wave068-teardown/device_pool.h",
+      "bytes": 1608,
+      "sha256": "50158a0aa58f6a0c4e7e3681c8a0e8b56079aac3c0f51455246d7e820b539650"
+    }
+  ],
+  "versionedHeaders": [
+    "src/native/wave072-construction/device_types072.h",
+    "src/native/wave072-construction/device_pool_types072.h"
+  ],
+  "bindingTemplates": {
+    "toolscripts/file071072/bindings/device069.h": "src/native/wave069-device/device069.h",
+    "toolscripts/file071072/bindings/device_pool.h": "src/native/wave068-teardown/device_pool.h"
+  },
+  "canonicalHeaderReplacementProposed": false,
+  "oldProofManifestChangesRequired": false,
+  "coordinatorMustSelectConsistentTargetAndRebuildAllFiveDependentTranslationUnits": true,
+  "sourceCreditGranted": 0,
+  "matchingCreditGranted": 0
+}

@@ -1,0 +1,2714 @@
+{
+  "status": "independent-public-post-exit-verification-passed",
+  "children": 217,
+  "counts": {
+    "build": 2,
+    "abi": 1,
+    "source": 84,
+    "control-build": 28,
+    "control": 84,
+    "probe": 18
+  },
+  "actualFreshSourceImportCounts": {
+    "sdk": {
+      "arm": [
+        23
+      ],
+      "windows": [
+        23
+      ],
+      "a64": [
+        23
+      ]
+    },
+    "branch": {
+      "arm": [
+        24
+      ],
+      "windows": [
+        22
+      ],
+      "a64": [
+        24
+      ]
+    },
+    "namespace": {
+      "arm": [
+        23
+      ],
+      "windows": [
+        23
+      ],
+      "a64": [
+        23
+      ]
+    },
+    "construction": {
+      "arm": [
+        23
+      ],
+      "windows": [
+        23
+      ],
+      "a64": [
+        23
+      ]
+    }
+  },
+  "allUniquePinnedFilesRehashedAfterExit": 8049,
+  "copiedExactCompilerArtifacts": 290,
+  "receipts": [
+    {
+      "child": "build-branch",
+      "receipt": {
+        "bytes": 307437,
+        "sha256": "742a36667c839c6f98b592eccc467497ab25cb2e79e2c2c5275d39325e191426"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "64b3b9dddb21368e0c46cb3da5a5e31a1d5b411e245c4d7f6525480e68929708",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "abi-branch",
+      "receipt": {
+        "bytes": 288747,
+        "sha256": "70f58d9056998ead5d17c89e7c6ecbf68fca9a74640458704cfd3eb645345ab0"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "c30eb6c290257792996b12db01091bee81a411671eae781fa83de9b993f989ad",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-sdk-default-arm",
+      "receipt": {
+        "bytes": 405887,
+        "sha256": "6fd13c85ede41f2e85f76c1733a8b7f9148dfc1abf2172e1fd2b10489e3c5529"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "11823565dbbf28978a4c556ff5d93680edd9a29a77f1a5a2f33b6402807edcac",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-sdk-default-windows",
+      "receipt": {
+        "bytes": 405650,
+        "sha256": "3a5481586510f38e5ab9c4fc91a89dd5ee5cc7472f65e63eefee38d10c66e024"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "43f562d76ddf99827cad1b8adda8957707f6bf1f501e4e688ea5fc333273671c",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-sdk-default-a64",
+      "receipt": {
+        "bytes": 405891,
+        "sha256": "662b0ac3254b41c114ea7a1aa64a92e95a94747cf8a11db47721faf5d18e693f"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "e412ec9522adbc62d79838c48e6ebc59bcc7f5f8dda53bb62adf43476a97e00c",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-branch-alias-arm",
+      "receipt": {
+        "bytes": 409238,
+        "sha256": "82c08f4f1893593fe3b6796cd03e299c32c74175838d3fda2b288115e7c9c139"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "948b1247c11e2271078be92c0cd0eb64196c4bd248a0b9b48ca09316c3fa1bfa",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-branch-alias-windows",
+      "receipt": {
+        "bytes": 406845,
+        "sha256": "2a8708cc33c72c538be99297eb56d65bbd1fe2cc88d5aefdbdaec2fc1e17869d"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "af60e45045074c8a37af5946c9280c25da7121dfd41819df045f28b8783e0b1a",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-branch-alias-a64",
+      "receipt": {
+        "bytes": 409242,
+        "sha256": "427b57102a2f22fc63e0a70023e0b94f84e811c227830207d2dd285fd0f92916"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "9b0b339f50d4677dc14b123e656863cbae82b23281a91c412b8f29d8e7ae1469",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-branch-null-equal-arm",
+      "receipt": {
+        "bytes": 409253,
+        "sha256": "f6b9729e67c0b41d7fb94a076bcd2ecb117446f91ea1a37e92233e54742ab94a"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "3e728338661c4bcd9d28ab959af892ae40446bfb07b45e971e4a7765355ad37f",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-branch-null-equal-windows",
+      "receipt": {
+        "bytes": 406860,
+        "sha256": "6d29f66a65ef196e34744f7b03d937dae7b5808cd513f5f4609acc105fa1d2a3"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "9034fdaebb5309edcde62a3de1cfd47b187100185b277fce6f397ec420192651",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-branch-null-equal-a64",
+      "receipt": {
+        "bytes": 409257,
+        "sha256": "af215931a09e02c20d6d23e32ecf34b3ff40609c3bf3baa5c1d49404fef699b3"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "5b48d6e089ff1f9eacf212789189dd05ade5cbfd67b6018b89bedf4388cd9d21",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-branch-warm-arm",
+      "receipt": {
+        "bytes": 409235,
+        "sha256": "1da403ed064bfb194053baeb09b0eac92e91f0012d01ff7e734e6c1a81be28a4"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "c272ca345aa4616f1c5adf0c5aad743aa65355bca34209a1a7d112ae8fe04e7c",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-branch-warm-windows",
+      "receipt": {
+        "bytes": 406842,
+        "sha256": "4c77e00508bd10e344b1a23f3da90e0c9961fec00653a5db23d2c9cfbd9e0219"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "512f0d43ed3e63da20b34878ffa6a127be379a1980768fe20f78cfc2ca95bd20",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-branch-warm-a64",
+      "receipt": {
+        "bytes": 409239,
+        "sha256": "4925b83a8bdec141141c1b0e3533253a1284ed66be49439db2b1d8183f47176a"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "df0b7ae4d9201bda6d84bafbf44400b475b61f333907748ed16ba5bcd52c2397",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-namespace-holes-arm",
+      "receipt": {
+        "bytes": 405986,
+        "sha256": "5a56214dc32f59034007597f11549ed112f1da5f0956c7ec837d11aca2e7355b"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "338b3a97a48baf1f823f480dab981bde887be75cfbe7bcbc6242573230778bdc",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-namespace-holes-windows",
+      "receipt": {
+        "bytes": 405749,
+        "sha256": "e362d35818736dd3d467b493dee52d37d1aca7ba4d7b910100d8557fffd2f399"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "7fc0cbc04a94ce1b34cfd4a59bed14afe46be61b56a9b084979e12d1385db679",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-namespace-holes-a64",
+      "receipt": {
+        "bytes": 405990,
+        "sha256": "c9232e50508f20e8cbe7f253842d7a9b58f46cae9d5f8b270987d7ceda630b98"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "e02087940984c55809c2cd9715600e0a7fca5b59ee08c0117cf3e6ada7a308fd",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-namespace-capacity-arm",
+      "receipt": {
+        "bytes": 405995,
+        "sha256": "fd99d96e46a853a69d407574a3b2466d6238199367b38d4cebcbc8ba230c7529"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "0f2e319fa8fe65e514872cf9bc5abe7452e7697e67b97f44acb3aecace786779",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-namespace-capacity-windows",
+      "receipt": {
+        "bytes": 405758,
+        "sha256": "a88849795400620027898ff20d4290614a3acda37f139249a8757c742ea315c1"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "68227f1108fc641e03ae4142ca943adde0e53a5e31b90a020c1002478f03d05e",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-namespace-capacity-a64",
+      "receipt": {
+        "bytes": 405999,
+        "sha256": "7a3530a61298502462edaa7a4a5b40ac32e3fce92a1e4f45f48ae34ef28903ec"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "1b4f596671a0024b0496a2d3b1bf8d25fd0c486e0a720b00a48cb7d1eaae292d",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-namespace-bytes-arm",
+      "receipt": {
+        "bytes": 405986,
+        "sha256": "8ce702d92c48952e7cc2b24fdd1440c493786e19bf685438590b2766eb54df6b"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "edd0fa2a88109f1801db0886541a734ed190678062721049d0795fc22efc9a7b",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-namespace-bytes-windows",
+      "receipt": {
+        "bytes": 405749,
+        "sha256": "e4a509bcbc1fd1edbea72daa8a9e22b33e6403cdd7369ffacf004c71066d1fa9"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "f61d351343b4c299cc3e615fc7301d8592df16685430c212e773124386702fae",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-namespace-bytes-a64",
+      "receipt": {
+        "bytes": 405990,
+        "sha256": "9983fe386e143cac6bf8d9c0c60b8a1721ee8ed1b03b048f6204a40f18794bb5"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "350992a60f5acfbf79619b281442c344da778e58510c3fac4fa304d15613c4c3",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-copy-arm",
+      "receipt": {
+        "bytes": 406064,
+        "sha256": "a71ee0d94ab733d029d4f185209fc19ad9e68f5a9be9abf47a87f1dec7864313"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "83db89ebd1569d55a2b0fdded83bfe2af83e29e2c975f30d1ffab1c2d10142e6",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-copy-windows",
+      "receipt": {
+        "bytes": 405827,
+        "sha256": "f6b24fc8b18d458c08f58e16a602cdedbcd8615acb69ca6fc94084bed5fe9c1e"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "67941ea7e3de492f910497303ffaa22a158e9e31db9cb17686c3b9da90e874c9",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-copy-a64",
+      "receipt": {
+        "bytes": 406068,
+        "sha256": "e6af4b303c7b53b60687f1ce540c16b36f468971dc8bab412466544229fc1b56"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "be37f37455be8b9478b05f231bcf8bcbb07bbdd37f4791c9480eb17822034aca",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-borrow-arm",
+      "receipt": {
+        "bytes": 406070,
+        "sha256": "6533c0cb89cd68c283fe5c61a5b8c3112322535e9d118b2605b5fd105ba733a6"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "af4954911ae716a421b2d8d2e0f368ec003d7d0cc3e0b322feef3007c9a0e32c",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-borrow-windows",
+      "receipt": {
+        "bytes": 405833,
+        "sha256": "48c72a58baec84b512b9507249fbe7780c5444c6e2e2eebff56fc38ac7d67b3d"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "047da13bfa3385c0ee1d25e2c9dbd0994cd54f80382b65f64dd29fc424b75f50",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-borrow-a64",
+      "receipt": {
+        "bytes": 406074,
+        "sha256": "746c55fc2d692f4e1e1c969360653d0195f61c27c687fb473dfc83a32bdb6414"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "5b037ea6681c91934f1d8529b107c2586c9f65b00f82dd60d01d24a6ea4192f6",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-small-arm",
+      "receipt": {
+        "bytes": 406067,
+        "sha256": "7887739c60742645d6af8010f3afc7314112d6133d3d5b2a9b10e1e07b0e552c"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "d17ac270b985014cafba89c00a6b5d4520b53ac34e1b9c26348b5b3f44be465b",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-small-windows",
+      "receipt": {
+        "bytes": 405830,
+        "sha256": "efe03a0e6f90d6f7cb50deac09b9ca053c659de8b962bc952a7fbd101e07fc16"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "624574eec51e942f36f309a01040e37d66768dd99adb83ffb50deff2ee2960c6",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-small-a64",
+      "receipt": {
+        "bytes": 406071,
+        "sha256": "c0dab6031324c08401ed0d226c320a714d2eb3d40058fdbc401aabfdeed4fb0b"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "9d173604b56c72d82a2e649b4644c19702df41beb6d854a01314a0443b19c607",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-priority--9-arm",
+      "receipt": {
+        "bytes": 406085,
+        "sha256": "f6222a8f504c5012152be3973d0693d60604aa153ffba04c22271ef3a1fd0aec"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "f745d476d0b338b812ab3566292c0c538a14d5a7c98204537affe3340ffdc331",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-priority--9-windows",
+      "receipt": {
+        "bytes": 405848,
+        "sha256": "717b8f8d1ce37ed5202551f1346b6100e3050f0bebc3efa420d0b3c637ecfa1c"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "11bc5d2ffef9368d5c74f2eb3c442ddf4fbef9f8b860551f17bed312ea8b6732",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-priority--9-a64",
+      "receipt": {
+        "bytes": 406089,
+        "sha256": "d6a2992c21791dda0f5b53613d4e0e2206d3b79157641e6bcdee5268f4ac4da8"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "e3e8eee5436489b2cf1be16ddba0cb4b87a3f2d0863d7bfaf251c04882a9b9e1",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-priority--1-arm",
+      "receipt": {
+        "bytes": 406085,
+        "sha256": "ee9abec8009ff6ecddfbbaf3bcea6f91c0af812642d07ca4964479c37ad1f783"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "2c21615736a447399f8fef3aa24a76d9412fcb04be105cdda0552fca658dbc7d",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-priority--1-windows",
+      "receipt": {
+        "bytes": 405848,
+        "sha256": "99f441f37dee049c897517d9971c1ca7b59b94fd109333ee91e824b5e806c527"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "e8112fbbd826c00d58c1337e4521af937d590940973745254327f77f16b5a35c",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-priority--1-a64",
+      "receipt": {
+        "bytes": 406089,
+        "sha256": "b5f1d116c09367c29041e586ed66dc286f50be0d1e02e4d37f1e6519c154c046"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "b24ce487f08cbb3d37876f3624d0a16fcb1ccbaca16add870bcb549a105500c8",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-priority-1-arm",
+      "receipt": {
+        "bytes": 406082,
+        "sha256": "944ce57f71d117912606bb7121b80c969113f106cc79917caeffd5c34192f87f"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "7e2ce7bcd40c1f050c244583446a70af7b84acc943c4739bde717876437f1f4c",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-priority-1-windows",
+      "receipt": {
+        "bytes": 405845,
+        "sha256": "9107453e2bca3fc89bd25f989ddff2f16dadd95a04ec4da959bf7c938a54592a"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "7e3894eaa779807a29185f0e3584b7090fd0448d960f1eeeae479b5c67c97901",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-priority-1-a64",
+      "receipt": {
+        "bytes": 406086,
+        "sha256": "f8ed11c1dd9f5a27e6bede20fde6abddd9326e929bc62bb4e36b4bce6600ed2b"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "0f1a258896d666d3c9bf296bddb6bc2d18722a99903a64fef95c5ef36cb7fa40",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-priority-9-arm",
+      "receipt": {
+        "bytes": 406082,
+        "sha256": "6b9f9debff8e656c25c7601d788b7f675bfa4206bfbfb9b4dbeab14ed47565c0"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "cbc8fb9d5e190962e8ffd624f7f35595c6b5a8ea7f8f6c285a02729da8c02e9e",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-priority-9-windows",
+      "receipt": {
+        "bytes": 405845,
+        "sha256": "f0bb5db58e0f67717507cd30cf24e9cf8a2f78a3fafd2397644156125fbf0889"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "6112a5a76681d38bdd337f74fffd37462b89e349ef4e45e7e59a7a7aa3cf546c",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "source-construction-priority-9-a64",
+      "receipt": {
+        "bytes": 406086,
+        "sha256": "fba1027d8dd543a09368d5ed4ea0624eae7f3a92f83ae3dee870f23c738dea81"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "c2ef1e8ee4c64f6f99e0faf489a42fe16285bbe0f26ac4efdd065710cd2f32f0",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-sdk-device-child-loop-short",
+      "receipt": {
+        "bytes": 356238,
+        "sha256": "394eaf6161c0b9988c2dda202c54e39504d1f4f4d49999f0cc0cfce20d43aef9"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "fbf48112941c327ce1452a1df7534b4d948e69add25de8201336bce2236be500",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-device-child-loop-short-arm",
+      "receipt": {
+        "bytes": 480875,
+        "sha256": "847f737246045d67a0ade956aba6bb0ffdcf5f76b3b4ef653d0d5ce50cba6d9c"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "f0d3874c4367d079c936276818c89227d847d16ffb5d3c01e5847f565729e2f3",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-device-child-loop-short-windows",
+      "receipt": {
+        "bytes": 480669,
+        "sha256": "483bf51371e110e09aca8cc841fa4d05c46f9d1fae5ee89d39059845e3e2cd61"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "9795a25c46e1dd316e054bd213aa3db498b44eddb1781f6edbcf0bd769e10384",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-device-child-loop-short-a64",
+      "receipt": {
+        "bytes": 480879,
+        "sha256": "251ea61794f86f2b1df64b1282e7b47cdacdda57fbceeaff7cfe0838d56cf778"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "368755fb55c92d8f7808b186640433ceb0b885184edab4e344663c5ded9985a8",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-sdk-embedded-base-type-wrong",
+      "receipt": {
+        "bytes": 356803,
+        "sha256": "17ab4d2a8c0f281401a7c9f18c3e08fd4f5ea6cb8403f93bde642d0287dbd630"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "14f6fcdcc6c7d4a7bf1dea163bb7437dbb735e2f825b72c7af9177fa8d68a4a5",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-embedded-base-type-wrong-arm",
+      "receipt": {
+        "bytes": 481448,
+        "sha256": "299d310fb7a570a1ad2e0e7aaa02e5d886542714aa3a461bb023aa9a6eea9b07"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "1304ffa42fbf1124009f9dc640106e828f9cf9be1c8308d4abbf5d311866afe5",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-embedded-base-type-wrong-windows",
+      "receipt": {
+        "bytes": 481243,
+        "sha256": "ea4468610382f843880eb59c95cc24b6a601d6745e352a16a31ca2d24616438e"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "11738a0441556405a17b4f0366c05a50a8c5a30cfa21e4f01e2e8e18716654ce",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-embedded-base-type-wrong-a64",
+      "receipt": {
+        "bytes": 481452,
+        "sha256": "1ed77f405c29c9436a17d5dd9f3084ab652fbcc00035394b6d1ac3612829d794"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "4537868b28006b5320ca3a59d8de727cf6fb24204cb300df025798ab1b1eb6af",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-sdk-handle-getter-zero",
+      "receipt": {
+        "bytes": 353414,
+        "sha256": "1115905785d3b14050708c034f452cc02b8a8a4c755d9789bc417674366a587c"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "b1621d68115a717a4f299ba3bea0d67b017e2f62ab59bdbc219342afd209c694",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-handle-getter-zero-arm",
+      "receipt": {
+        "bytes": 477368,
+        "sha256": "a9a0442e2bae46d3a90f028863ac11207020d6accce28e7e3e6caaf608afb712"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "e6cf8620e68be04a593cb9d3d9990647f37e73b96a8c0b9630bee1c644763796",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-handle-getter-zero-windows",
+      "receipt": {
+        "bytes": 477157,
+        "sha256": "81452339f6985df0444332e9ee49c9e137b7299575cad7eb8bbeb3538b308010"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "9a0f6cb951826e97210c82bb588df8514d17ee08a32b18c94983adaa3aecd6ef",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-handle-getter-zero-a64",
+      "receipt": {
+        "bytes": 477372,
+        "sha256": "75c9ace0f3e82f8894db01df01be0640e680b41c573df551083d15059f310f7e"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "d0753da9b244017d4f1515c92c5f7107a89a2f9b6c1e685f6495cba974fbbb73",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-sdk-ipc-command-wrong",
+      "receipt": {
+        "bytes": 352848,
+        "sha256": "e010b8ef175139964f209c5621f2c065d72942046db0716f3d7264d37b70bbe9"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "55688865dd8d89a9bd7d70ba9873a749b898f2f8e87e15fc2cfeca64a35adeae",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-ipc-command-wrong-arm",
+      "receipt": {
+        "bytes": 476688,
+        "sha256": "2c8c028a43fc6f2b1f05615acd506241e184fa498cee4c581c57b0cf124fb469"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "d44820662b9353315ea92530ebb65f5966cbc3e9b8f9bc3f2f9ec740ccb93198",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-ipc-command-wrong-windows",
+      "receipt": {
+        "bytes": 476476,
+        "sha256": "d1ce22bddd2975a59466dfcfe2c384edb74fee1575d16e7db990bb51cd3d55f4"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "298236c5643258463b8d4b99d81dd649db330e3e17f3ee65443510abdefba9ce",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-ipc-command-wrong-a64",
+      "receipt": {
+        "bytes": 476692,
+        "sha256": "249d44e70134e7f514817ef1beacf74546d6559db5797ce42575d6bfea4a9c26"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "84b33ab1247ab428eabd4d04793f79369b468c17420f895b2413d09e0591e353",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-sdk-raw-handle-not-cleared",
+      "receipt": {
+        "bytes": 355674,
+        "sha256": "af6710353c43ce91080a43bdc65c53d21e53ddf0fb12588925505dfe0f88c229"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "273f37e5489335268e079a60bbb84812c41951defe8792d4605b05776a1edcb4",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-raw-handle-not-cleared-arm",
+      "receipt": {
+        "bytes": 480102,
+        "sha256": "7ccfd46daacb383e9ce6a2b20b2d16d9cf4649d25b1fed0467cd68979d734ae0"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "3779fba0a90990f8a3b370ee6c65222a8c650dacb05c27875ad965f278458739",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-raw-handle-not-cleared-windows",
+      "receipt": {
+        "bytes": 479895,
+        "sha256": "be182a0590c5ed0ce87d62d6209af6a195130542f1c1ca870fc6a0ee1714769c"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "7da6b6b971d2fad4e76a655909e274327b0612e70f161aca50c4a984bea86ba3",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-raw-handle-not-cleared-a64",
+      "receipt": {
+        "bytes": 480106,
+        "sha256": "f5f6050a1c20bc9999af5c533079b020ebdb624a192119c2e0940f86d270b896"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "109606507cf678e8e28f74e6bf0f97149716cdcad66ed9ed18b95ae4fd1a1cf6",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-sdk-stream-count-increment",
+      "receipt": {
+        "bytes": 355674,
+        "sha256": "25f561a47ac65755502268afab4ed224b7592befe5bc623c4c8b6a0d18a75f5b"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "11d264edc663faf826084ca2ea4a226bd5f159082cf86e2957e4947b6e97b5a5",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-stream-count-increment-arm",
+      "receipt": {
+        "bytes": 480108,
+        "sha256": "080e6dc30e35dfbab44efa41813497dd8d34925cc6d9fbd85f98310e34d33e8a"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "06ecbd592f901aa022771f1fd00e5b9aa116b91231ef236e6897e778d2fda60c",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-stream-count-increment-windows",
+      "receipt": {
+        "bytes": 479901,
+        "sha256": "17d1d0f8433938d8b19a7f61219a1a51c55b9efb2b75cfd4144ee72cec60b3b7"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "e84dff5429d21f17ce8fb1b8fd93555d0f9afd096cb9d97cfcb9edbd0ba3a6c8",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-sdk-default-stream-count-increment-a64",
+      "receipt": {
+        "bytes": 480112,
+        "sha256": "8d34e4cf7cd412f802c40c36c5a3476f703cbd9853ef265ba735e6d49857f8ae"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "c962f404d1991d24e90ac3588d4472efae844239f4d05417bf81d2e5723a176d",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-branch-alias-name-wrong",
+      "receipt": {
+        "bytes": 353979,
+        "sha256": "b6ecac08164ab35e9d749c2205ac93e87e5d6d342914fd47dc294dd8c036035a"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "05c59b4523574b16c0c8358cb689419aef4d070fd21b84b34a447fc0ea2dd52f",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-branch-alias-alias-name-wrong-arm",
+      "receipt": {
+        "bytes": 481012,
+        "sha256": "e4fb2e66a3ba3821626c33703944711d7b671c447607f6cac624f2c63c9818c5"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "912224bfa1e8dbf5cd446f1a9bfcc72c284ad2ea7dd9d9c33ea086404f8602c9",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-branch-alias-alias-name-wrong-windows",
+      "receipt": {
+        "bytes": 478646,
+        "sha256": "b6696bc20a7546e998b7f759c55fb7b4a912e84db3eb6a0641a880daf8132016"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "f77dc6f5f648f51a71586121d19adb9824395ba85405537c363cdc73fb7cb0b2",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-branch-alias-alias-name-wrong-a64",
+      "receipt": {
+        "bytes": 481016,
+        "sha256": "c81c22e4fc9b42c927f4a6b89faaf6034981a4ef6a7defe858cb13f3b603902b"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "6dd109e23b105464b47cf9085fa133fc33d4a9d52a9e8108227d488b53a43327",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-branch-alias-target-wrong",
+      "receipt": {
+        "bytes": 355109,
+        "sha256": "b15344fb778e1c698b2da2708ff57a9fe78a3134d88435a74f00b12d62a917eb"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "54cbc72dbb04e63e2319cb1e6fa3873b53e1658a2139e8822ebd11dfcfe1109d",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-branch-alias-alias-target-wrong-arm",
+      "receipt": {
+        "bytes": 482372,
+        "sha256": "3c6313dcf9faa4b34556927e1c5c05d546d6447f0d49ef03b15a1b404cf09337"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "43eea7acc315b6afbe9e9b25e353bb6515374d7cfa762f234443494ef7e4ed8c",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-branch-alias-alias-target-wrong-windows",
+      "receipt": {
+        "bytes": 480008,
+        "sha256": "599c941a998dc56a213d24830c74f82ccfd5e1bfe572e545cb01f9a2b8298dfb"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "9d744792edc8389e9aa7f34a54302ade0c7e90b6e14cc69714ef0ce8a0fa6c81",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-branch-alias-alias-target-wrong-a64",
+      "receipt": {
+        "bytes": 482376,
+        "sha256": "c5aabd05957d550af67bff5d8855a30b938c7aa7961565fe5ff64e308a5c0a53"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "44501c8e36e9b3dc92069662897bda3bd161b4d364982057069c9d11c7e0df4a",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-branch-warm-identity-check-wrong",
+      "receipt": {
+        "bytes": 359063,
+        "sha256": "e102b8413efee0793ac58cfef4393bff24f04edec6aca3aee8c1bb1f87e7d926"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "4ee4926f4bc02219fef014c073d00090c0739843bfd823ee5ff31e1f0a917eb4",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-branch-warm-warm-identity-check-wrong-arm",
+      "receipt": {
+        "bytes": 487123,
+        "sha256": "68408af3d3798730384311afa15431c7130452e5931044daa9379df0b8ddd0a3"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "2b7b703193cfffe66cdb2f530f41a7dfaaf9ae2a1c03d118e26d81bf190cd310",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-branch-warm-warm-identity-check-wrong-windows",
+      "receipt": {
+        "bytes": 484766,
+        "sha256": "a77124c6b8675f3e44b65a54840e7fb5b95f0d558299d1f047309fa066ae807b"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "c643d0f302ae48f28d40502c4d113ac4528f17d8a8fc3f82f2f913efe8965c56",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-branch-warm-warm-identity-check-wrong-a64",
+      "receipt": {
+        "bytes": 487127,
+        "sha256": "c2e1e899e17bc29744e92359be1e5f1a83f6c8f4f975e4d299257d7e811fe7a2"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "a78b2c4ef86d98fe3b063d7fb8443d50a8de05c53da4002948caa8ebff80c22e",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-branch-warm-old-destroy-skipped",
+      "receipt": {
+        "bytes": 358498,
+        "sha256": "1d5cd51bbecd382fe175ce9f19b1b8e8dd3a6be29cc2bb80c2f7a54e3d7e73e0"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "2dcfd1356e58fa3c6df61517a0e71147fccfbb4ce0260b374c0f560905b76c44",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-branch-warm-warm-old-destroy-skipped-arm",
+      "receipt": {
+        "bytes": 486425,
+        "sha256": "c10fae1631eec748ec2220f0878fbc296f6d2fdf5fe372dd42b509d258e32cb0"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "698b3039a19a1e65da255a6f597781c6d5dfae72d1a4cdd2f5cad1e26e23090e",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-branch-warm-warm-old-destroy-skipped-windows",
+      "receipt": {
+        "bytes": 484067,
+        "sha256": "393a52ffc7d00a0722dae38c0e2432b8b32e71e86d4f044ebf1e9251cbe847dd"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "9d3d134067b00ca7ed4bae78dda77b77be180e333a26049267ebac4dc97452ca",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-branch-warm-warm-old-destroy-skipped-a64",
+      "receipt": {
+        "bytes": 486429,
+        "sha256": "b470c1f57ea19561c21368e6b924385876d662579602d58186e7cf57cdc0187f"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "b9f0d4e148d20171d0de6df348530b3648255ddcb73330055b64557808fa3645",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-namespace-alias-NUL-accepted",
+      "receipt": {
+        "bytes": 356804,
+        "sha256": "cca7d2081e96f04048465d04ee732c930dfe483dc0a4cbd6d98f9a4365797aa6"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "de8f3b20d9c93e2867604354ec007f66a73a4812e1aeaecacba4fcbc65f465ef",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-bytes-alias-NUL-accepted-arm",
+      "receipt": {
+        "bytes": 481532,
+        "sha256": "40ab075b78d4da839f0fc464c04894d95bfcebb7e8f7ecf7566bf305c8d2b165"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "9494f78e84834c3edacbafccbdd382a67d1c12afca5fac562595e31e225b2ac7",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-bytes-alias-NUL-accepted-windows",
+      "receipt": {
+        "bytes": 481327,
+        "sha256": "7d1f0218ab6748ce293ab773a7342319914bac8524600b050f1754adab5711a8"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "c6b475886e82df14cd4a807ac54ec29183f8a2034724358f4e6bfb31a00164a8",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-bytes-alias-NUL-accepted-a64",
+      "receipt": {
+        "bytes": 481536,
+        "sha256": "01d5c8b318e83a22c59c430e6c4f0f76924be8eaa341e87c4b98aeac6b152275"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "63b9418741679b4651c2e35fdef41e32d28504a841f63d895c1cfa0da0c15080",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-namespace-alias-owns-device",
+      "receipt": {
+        "bytes": 356239,
+        "sha256": "ca86aea3b27cd4555c2a5096e998eec2776fa6a68f081ba3e8b7143858b8d32a"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "ceeae2f8c6769356740e8014c14ab4ae224369076f1745be96726f6de42411b0",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-holes-alias-owns-device-arm",
+      "receipt": {
+        "bytes": 480845,
+        "sha256": "56c5e537437ea3acde5aa51c5a5840d219248a9e4dfeff2b424db5b843119f62"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "ca72b1e19f79b3bdd2449b9d7fcf5b67db6e5ccd623f025c713e54432f69a1c7",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-holes-alias-owns-device-windows",
+      "receipt": {
+        "bytes": 480639,
+        "sha256": "0e32317f57c869d14be9c2baf608ab9a67ab87bca4f6ffe0ff61fcee6bcaecc6"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "d3107d26ec19bab182c4105533d3aaf2464f16d28f52d89d24a0d1c2f8a2bbaf",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-holes-alias-owns-device-a64",
+      "receipt": {
+        "bytes": 480849,
+        "sha256": "e8463f147989bd5630dce06118acf53ec77288b888b01aa421f6a9c2c38aeb00"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "558d5757ce81209aac0159d4e6354a1dd8f1255a0b2e7c070230fef345b76bcb",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-namespace-config-byte-cleared",
+      "receipt": {
+        "bytes": 357369,
+        "sha256": "309436ca22ab8f4b73ce6d97dab9b1d29de78b1a1d2ebefa40110bb5a2affd1d"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "22fb15d66ce83edd23a091a984715759471c84bc30fbf2e3a3831b8fc2ea13d3",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-bytes-config-byte-cleared-arm",
+      "receipt": {
+        "bytes": 482205,
+        "sha256": "e2d10b37952f3f796368f994a230f2a199ccecda9347ca1224cd4a8b8d514dc4"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "2786410654fc54ac9b6327788074606a68360e7aff6a606a0eb78824389015c1",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-bytes-config-byte-cleared-windows",
+      "receipt": {
+        "bytes": 482001,
+        "sha256": "b46f407131d5c568a467a386f3379e5f56371f69ae62baae59d5501216e5517f"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "ae90de7ef245635e44377bf64a7c224561efa07e63ff72b14fc28add7cc3148a",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-bytes-config-byte-cleared-a64",
+      "receipt": {
+        "bytes": 482209,
+        "sha256": "53f347f331a163499f67758cec792ca571647df36de3a5fc70af11b01b0767c2"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "551d00642e3dd4e89fa974f2923db3744ddaaadd75a7613d2ff234c989454857",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-namespace-constructor-flags-cleared",
+      "receipt": {
+        "bytes": 360759,
+        "sha256": "e8c8db4c7325a7deeadffe044cd79ac0527e830f4d98a57eb30dbb51628e4f2f"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "121baf8ac45177bbbc8f9ac0fce885c915a6f75c48b649214adab07df60d0be8",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-holes-constructor-flags-cleared-arm",
+      "receipt": {
+        "bytes": 486254,
+        "sha256": "db98df4d4af8ddec9c93e542f5125c64a9b3d074e29b8fc02a6e89259b64d91e"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "d790df468c6411040e8e1bb38219b369799710c7c12d8a60d7e0cb590880f420",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-holes-constructor-flags-cleared-windows",
+      "receipt": {
+        "bytes": 486056,
+        "sha256": "c6f59c65445d3f0aa9b104908155bbafe65399cbdd560d34839dafc242b3f956"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "7c885e1e5ec8e1eba32ac42cccd8faed691deaf60380b03a49e8178495e8f525",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-holes-constructor-flags-cleared-a64",
+      "receipt": {
+        "bytes": 486258,
+        "sha256": "b1ad728420145fbaa904405bdfe6a4cf84568c7f191b5400b701f24b2f500bef"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "2744cc5d1d6b8c00d00b66dc031c422de0401fa90f17ff2cde100589651c4acc",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-namespace-stale-alias-hole-skipped",
+      "receipt": {
+        "bytes": 360194,
+        "sha256": "f4323582650cd3e8233977885d9916c0a2fa9c0f27fb43e29990242b6251792e"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "7c68ada4bd5926c323fbd37ac56f9f7a5244a3b7a55c1782919f4a420067cacb",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-holes-stale-alias-hole-skipped-arm",
+      "receipt": {
+        "bytes": 485605,
+        "sha256": "94c2e337def6371cc2d0dc1791e5431aad02303f6f55cb55c935fe27938a56b2"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "e330dc74f3990394b9cd76c65cd614e432d67cf483697548ac0898036c31da19",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-holes-stale-alias-hole-skipped-windows",
+      "receipt": {
+        "bytes": 485406,
+        "sha256": "90b288289782224ef18563031ab5fdf8072c4ae33ea138eba7222f0db1aa87c4"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "6434758fd83d65433158d03daab396e6126c7990ef724d4833acf3b4a43f08c7",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-holes-stale-alias-hole-skipped-a64",
+      "receipt": {
+        "bytes": 485609,
+        "sha256": "5abf58379116207a328c9b5e5b65d9b032e9946c55601bb01bea792047823086"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "66d05cba23b44bb98b8e06af755e5b03665a816f7da2e0bcf2b81ce4027733f9",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-namespace-unmount-key-retained",
+      "receipt": {
+        "bytes": 357934,
+        "sha256": "fb3c8ef3877ee54e514f60e25a41512d28bc035821c3daaf410e1f62e1dfcd91"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "f644a74b074eee4349713b23bfb746428afcafbe6fd795912463ce057262ee58",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-holes-unmount-key-retained-arm",
+      "receipt": {
+        "bytes": 482885,
+        "sha256": "666a4ac2c980d848112a7b21b95c3f153c10259628bcdfea99774a2f390c7fdc"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "a370dab084f348279b35d98ae5319fa4fc576211f3564db7a8c6a8f1b1830cb7",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-holes-unmount-key-retained-windows",
+      "receipt": {
+        "bytes": 482682,
+        "sha256": "2af5962f1359784b97bf03ba2b1fc7063a1f60d76045111865d4a8f62c3386f9"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "d1611ef5d13f163a0c502affc6eb3b18868cff5d195247d0ad937b37a7504e10",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-namespace-holes-unmount-key-retained-a64",
+      "receipt": {
+        "bytes": 482889,
+        "sha256": "ba696eca1cc7ef4007714f91d22bcf501ac0b8053f9d6997ff1143f769296fe4"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "5f2120c711b3ee2a982f1105e2d10389ba24fd7b1ff69cc9db2babbfb3c6a9ba",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-construction-attach-result",
+      "receipt": {
+        "bytes": 355674,
+        "sha256": "fd5d3197a76a2967ecc68fb49707e04b320ec5e4780032bcf90d2a55a5db59fc"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "9b06c4e34c26c1ed65277f787bf68d6f5152ae4b2a86e139fc25fe98bff9f5f5",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-attach-result-arm",
+      "receipt": {
+        "bytes": 480229,
+        "sha256": "152654315181666f7a71be8fbe1b8678c0adcbdac116da33343abcbed90a35e9"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "4932beb944360d18992d1c2cae2cd85badb41d1240223e354bf7f25fcf891995",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-attach-result-windows",
+      "receipt": {
+        "bytes": 480022,
+        "sha256": "f41c0aeee43fad45376042284ae04b585f6a7a3b2b89a4c3d8c6814d7179008b"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "cf7397a4c14daf7ebe7e3f3f6535b6037f7d9b7d870d4973b1dbd8a201c8214a",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-attach-result-a64",
+      "receipt": {
+        "bytes": 480233,
+        "sha256": "b0d259549e5ca161a37c9fead94d61a69b1221c5814bc8de1bcd8c90796a3125"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "d93a54465bde4f45a082fb65faaa6299802c0ce8354897ef83d960483128f426",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-construction-constructor-priority",
+      "receipt": {
+        "bytes": 359629,
+        "sha256": "5f49c9618f74fbd552cf19c536689e8fcde979505f2a1ff4caa97955a2875018"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "f5f1465a4196f2ee8b1e7214ffbfc795ac5c575f390c9f11a68a24f43e049c5c",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-constructor-priority-arm",
+      "receipt": {
+        "bytes": 484955,
+        "sha256": "b2b4f110cebfaec5fc2060de097ce25711cf880792211e8b63f98418160a706f"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "28b3c426ce7fba23c5bcff7bac27558f3ea095461893bf36d707eb6030fa48f1",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-constructor-priority-windows",
+      "receipt": {
+        "bytes": 484755,
+        "sha256": "e30b4bca62f054d6ade2790ac02245e680740d200a2570397d58b466129689af"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "5799cf1a2f3e68b327d2ebdd23c3d7220e0968f915e83fa76e47b7efee0f0862",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-constructor-priority-a64",
+      "receipt": {
+        "bytes": 484959,
+        "sha256": "977b81a2039708e055f0ea60fec15effe9d17789f48154ae8f03489059a54ff7"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "b2b7d783fa3629a24ded8117fff19fca6e6fd077adeb2b88bf1458d232787bc5",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-construction-device-pool-count",
+      "receipt": {
+        "bytes": 357934,
+        "sha256": "71fa7eb484558e9f56ea3810d30fffcd58954cdae73b902f896e063f4809a908"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "82e7364d9a9c402791c531af3579f516b77e6a7fa5caaf46b91a4f04f395ad14",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-device-pool-count-arm",
+      "receipt": {
+        "bytes": 482891,
+        "sha256": "3e94d6f11f0ce48149a763e5627e36d152fecbd020359b21747873340ba35bea"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "5e3e82bcadba3dd8a7ed667cf4a688ce6fa4dcacd4f27379b7d2aa766932aaf0",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-device-pool-count-windows",
+      "receipt": {
+        "bytes": 482688,
+        "sha256": "b391d6bfc5ae30463ea1deb89d04045e7dca6f63c6d81c7dd3db4b8796df48d9"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "9dd2091a35de6cb9939375da8b34a9a8f3705bfba9f2238313ebab81a11a49a6",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-device-pool-count-a64",
+      "receipt": {
+        "bytes": 482895,
+        "sha256": "259c7cc5a9236d49956bcdc902cd6545f5e45de43d594b40c581959c86a9bb3d"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "17dc3e2080f0ea557d99552a27875a77e6987069a97db6aaeb5f08817f3a8e68",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-construction-factory-result",
+      "receipt": {
+        "bytes": 356239,
+        "sha256": "7887f9dc4622b79d11e299f5925e666c5c57eae31c2ac15a2a3f87ae4d8af474"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "f984cd2252a00197eb88efdfe336591eb449565fceb5fd1f322fba48515fa322",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-factory-result-arm",
+      "receipt": {
+        "bytes": 480884,
+        "sha256": "490289069770df21979bfc3e94829edeef8d0095b4b803a56027ec0245bc8ffa"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "5dcdcc58e1545cc3c4018da5003da970ea49c9cc2c2d4c9919a7a3477eea08dd",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-factory-result-windows",
+      "receipt": {
+        "bytes": 480678,
+        "sha256": "6605c6f4b3027ec2d27f78bd6a0efbce8d969a251d49cbe6970f9550d6117064"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "3d77951404dca8f832485545618742733a6c52be289f623610b111d7e9259845",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-factory-result-a64",
+      "receipt": {
+        "bytes": 480888,
+        "sha256": "2717ba1d01ef76200c3837748bbd3daed99bae01a55807d5fc8eeb044c09ad2e"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "722c6d34bc5c751a1b59b5ecfe4457706904add514dc88634ff300fd46d28659",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-construction-initialize-offset",
+      "receipt": {
+        "bytes": 357934,
+        "sha256": "c2062396dc0a5929bede8d3106b5ef1ef78631efa0a39486a58647080469109a"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "56f53a366d3ee9948a4657d3bd9c3beed45c5f08306da6d87862709f420270d9",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-initialize-offset-arm",
+      "receipt": {
+        "bytes": 482925,
+        "sha256": "748dcf9103db1c0ab1821131cef00972d7e8b57affa5cf6bd2d843acf6c851ed"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "9d6cc8331b6dce8386c71a3f71dd89015c314510aaaa19ab6d4952fd4e92153e",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-initialize-offset-windows",
+      "receipt": {
+        "bytes": 482722,
+        "sha256": "077da0c514ea2884e29b72757bd9d5fe7e1ad5053d534d85db87e64c204b0a0e"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "fd9830e37e7ab892c664a3cbf81d247e172921d408913ae8f7ad6c1475b2baf5",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-initialize-offset-a64",
+      "receipt": {
+        "bytes": 482929,
+        "sha256": "99bf6af6da3ba0f2a5c26b9fd5642b03115c96f0b71acdd46ad2cf188c2087fa"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "0f615fe0cc11c61724d3a9d546310150ea8a51353ac8f4afa84519362aaf5246",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-construction-open-result",
+      "receipt": {
+        "bytes": 354544,
+        "sha256": "16127d8d15ea13ff59df8b8fee5d8b6e117f7ca0a7879edd0336da88c86eb4ce"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "401f95c21f439bf2c34590de4260fd539e6c710a20bf6bab95acd2735eb68b93",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-open-result-arm",
+      "receipt": {
+        "bytes": 478880,
+        "sha256": "fd50d8dea81b8509ef6d6f21ffad1d7ed68bc24d2c47a299bcc3a29b4fc724b7"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "4cb917d9ce5f431bcad16e6468342bc58152060eeb9beb75f48c4a96ab41fc7d",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-open-result-windows",
+      "receipt": {
+        "bytes": 478671,
+        "sha256": "16be57379e3c75c2b0fad200a883926f9a7aec02326073dd1cbd4bec2ba7e779"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "0e119d02644b5178b2012f8ce304828767126cac6caaf3887b28bdda34046a89",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-open-result-a64",
+      "receipt": {
+        "bytes": 478884,
+        "sha256": "fa7c2d51424ad02b0b267afbcb64fed96377a3778ce2d3a623d72adb70f6919d"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "e5ea9d649b180e3c118bb8f8cc61580775a98337cec0444ba8742cd9d95b25bb",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-construction-pool-capacity",
+      "receipt": {
+        "bytes": 355674,
+        "sha256": "2c28e671887f55e6955e5314ff349c66aa727499ff60fd4dfe553d3e06a4826c"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "49ff8dbfd40ea27f4cc358d088c58bb264d0b1af49a17dec8c57cd0b7caa055f",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-pool-capacity-arm",
+      "receipt": {
+        "bytes": 480205,
+        "sha256": "4a8c4b89ec821eb4b9934f6774d9366dce44a828c66ff9c9bbf96e47130811ae"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "98dbd2645e1ea478b622b713bb19e2442fbf8f92935e09a23b667655f603f4fc",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-pool-capacity-windows",
+      "receipt": {
+        "bytes": 479998,
+        "sha256": "f90937d5f16d17816c512123e567a2431a0b718f636251a2747cb8111bbed248"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "fb1c7bc2b7952ff6e41dac6689cb82d51084a7075a48dbf0058b25447625f507",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-pool-capacity-a64",
+      "receipt": {
+        "bytes": 480209,
+        "sha256": "83fe6958e61f7f1ead568be581da7befff0e4c3acb171858783ceb17d40746e4"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "a2a6044016a493e529fa91821fb467671dfadfe554b0b0a0dac27bb4a176f249",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-construction-pool-live",
+      "receipt": {
+        "bytes": 353414,
+        "sha256": "63dfcc8f5ea9dfc7ead848439e8eb73d42ee62613daf9b673b9732fbb6c5c293"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "fa37f30cceb44bb0fabb310b59daef022e2000826a9cb7a3e9f5695fb2978c24",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-pool-live-arm",
+      "receipt": {
+        "bytes": 477499,
+        "sha256": "f4bb99529c15aa7f1dc892effea824dcdc78fbc4d1d465cc2d4a14cfe8e2c7ca"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "1be5c44ec64e26c93e0fbda73eca8cbcacd8a6bd19fd84cd46d6256dcbda432a",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-pool-live-windows",
+      "receipt": {
+        "bytes": 477288,
+        "sha256": "f0924f6f4016200d52acf93e5f4fdbffa48a6e6345808b8627e0582fcb3cb776"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "13b27fee693cc94e1dad605ce4a7ae524cef0045ad07583771954dbd50dbaf0e",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-pool-live-a64",
+      "receipt": {
+        "bytes": 477503,
+        "sha256": "8d0b77f3e9f8bcfa12b00b8dc3cc35a933e8761f5f619c9135b775d90a574149"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "fb3ec02fa2c875d3274e194fc72ac34637a06d46598e51a393ac78e33d7a4c77",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-construction-priority-getter",
+      "receipt": {
+        "bytes": 356804,
+        "sha256": "55fcbbf24cf2643ea201332d46cc8a700ae117d4efa27e70e6dcd61fbdce3c81"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "32c70d725fcd3bf6a806c8d2b04deef2fff9f9f652a3a3dabbc369e69a844f82",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-priority-getter-arm",
+      "receipt": {
+        "bytes": 481565,
+        "sha256": "1222306f3cdbeec6fb25c5ab447bf7f8760df763d51e65b3544bcb2ba6d45c9a"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "d8621d00eddca24ceebcd83250427080f1a265cc8ca77ff2de2c40e9fba58e89",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-priority-getter-windows",
+      "receipt": {
+        "bytes": 481360,
+        "sha256": "476f20407008c6c91ad53110cbf4819d06c9ed5e738d4565425cc95fd2e0f59d"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "8154d6790789e18803d13837a8fdd009a2f1aac86561a6a0d300d0148a342d8c",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-priority-getter-a64",
+      "receipt": {
+        "bytes": 481569,
+        "sha256": "506706f4ed1bfa2c4a08f0ef19d0437db6075cdcc79ec48f7892ba0b97f1863f"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "66d3b03d1ea10106ff738646d0c8950ba2a87bf72558f80beb61809c928c52ea",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-construction-priority-ipc",
+      "receipt": {
+        "bytes": 355109,
+        "sha256": "ae9915a2bfa06645fff9ebb2b60f310511953d6d09fcba3166e6fe4a2856887b"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "c6c45d93f90aec3d9d2e2dafcf071ffe6ac36d6657dec55499cb7e722de6e65b",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-priority-ipc-arm",
+      "receipt": {
+        "bytes": 479525,
+        "sha256": "18fcee1c9584291e439ac2c118c679b5e570ff560921f74e06c1db31fdd2adc6"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "03c11348d3f21ffa08b4af0705ab36d7469e2cb2739d40eb60d49c6d7bda834c",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-priority-ipc-windows",
+      "receipt": {
+        "bytes": 479317,
+        "sha256": "ec44f8e69ec44f12cfbf3d0f85c9c1de265456b8ff220e15c67b5ea7e82806fd"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "57ca18c803ee59fee41b858b9daedb07fb81cec366439e39da8eb0f1433bc335",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-priority-ipc-a64",
+      "receipt": {
+        "bytes": 479529,
+        "sha256": "44fa1327109579ba654c301bbe0ec20bccbafd3952656e4f6e4055596b3e43d2"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "6a9b61807f2960c370292c9e24e4ca1f2f16bdd909e1f43d7610bd1b7e9599f4",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-construction-read-count",
+      "receipt": {
+        "bytes": 353979,
+        "sha256": "bee5a040f980086d9d8080444549651a934ac5449c14b43ff4fa8fc402a9b59e"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "1d28e6b5c05d8bda9b7bac71a096e1fd01bf3f899db3f9c8e165bc272a929777",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-read-count-arm",
+      "receipt": {
+        "bytes": 478200,
+        "sha256": "4c2f0a871fec95870104d550b9896a8016c0f80266f42f7df54d1d6f2d8941fd"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "82f419a76b0f5d70ec18fc04d650ac8ad7e3050fb527220e90eb8263c2ccd3ca",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-read-count-windows",
+      "receipt": {
+        "bytes": 477990,
+        "sha256": "0766ae31bfb7fd0d7cb1830a42c505eaa32a076e3c9bfa5f9c5a61a7612f7415"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "53f6adf02a7231db216b0dc40d6cd712c26d6e9c7679dc4b846ba915d1d35c21",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-read-count-a64",
+      "receipt": {
+        "bytes": 478204,
+        "sha256": "c45b74f26f7e9e50ed7796901e8ac9419d18d5a4832b75d8277258f39f91c1ce"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "914b2ce843821befc81b2edb769016ccda7e486f241a7700bf49804be5d7971b",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-build-construction-stream-read-count",
+      "receipt": {
+        "bytes": 357934,
+        "sha256": "88f451394e434f661ce5568eba94bd2999f6bf41fc8a8b05cbc6d4b4e0440159"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "34c8be68fb76094ea56de6d21ab57a165972407c52bd026acf3b0c65355cca54",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-stream-read-count-arm",
+      "receipt": {
+        "bytes": 482960,
+        "sha256": "94b3b45b7c07da4533c4f4d975f0f5c552d1af4083ddc8b6c128a06da6e530e2"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "5792e845f26a4cd240955200abbb3afa0e0a962544839e2b1a5dbfe0929549db",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-stream-read-count-windows",
+      "receipt": {
+        "bytes": 482757,
+        "sha256": "0bdc4056fb80e23606ec5bfa10a4e591e9276269bdb3d44eb6988514cd6e201b"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "b2eaf22141feacb1fdedff1acb0a62003905e4dd84203a01c9ffd90faebfd559",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "control-construction-copy-stream-read-count-a64",
+      "receipt": {
+        "bytes": 482964,
+        "sha256": "6dd3f4de92b748db3671671893c26c52c6d436d3e846972b62210985c76eb14e"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "2f3962f0218819475f24e2ee05b91ce418a7d7e8b7b4eaba5ac9237c9a94fff7",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-build-branch",
+      "receipt": {
+        "bytes": 310977,
+        "sha256": "2931b20bb8a7b6484c827eb1c4c1e436286d48d74ef4bb84b4334c84357bab29"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "faaeb7dbab1b87555cc698b9ab794cecc236f13064d34a4a43ca6d4ac808db1b",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-sdk-default-arm",
+      "receipt": {
+        "bytes": 416437,
+        "sha256": "adf7f86ffecb3c0058ea2065a26bbdc77bc4f5e676058e27fbc72e3680190a91"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "8e1179ff7548ddffac5165646b48e60968ba9f62033560f81be4fcf0c6882e0d",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-sdk-default-windows",
+      "receipt": {
+        "bytes": 416200,
+        "sha256": "b335be763759ea5fe3069f7d0be44f89f0c637d190a270a20078aa03d4a25278"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "f8e34ea0f6fe07679ed3c492e3f0c9956508ab93091e5176b7d0873d6bd3b511",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-sdk-default-a64",
+      "receipt": {
+        "bytes": 416441,
+        "sha256": "da5af0b532d7cd4f64d4d710d657432f33126255c25a45d1f80d5ece3c0a9722"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "6df336d6c86cf76ffcff4772eafef8c897d9508789f3f4be29429d4703d53cae",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-branch-alias-arm",
+      "receipt": {
+        "bytes": 420079,
+        "sha256": "49023971ccd3b7fbf06050edfeb67c590bae2d71edc963cf99facfe0aeedfca0"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "4cf4e933b1ed1b1fbd58d66978de94de4eeb514167e23189e02dae3169808a72",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-branch-alias-windows",
+      "receipt": {
+        "bytes": 417301,
+        "sha256": "79d3087ea78488dc1c8cd501c0914fe6161747f29779ea035aa190ac1d5f4ad8"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "a9453b3390e9b5fa89db4ef5f7064820b18b0cd077960c72d759ad69cf3a32bd",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-branch-alias-a64",
+      "receipt": {
+        "bytes": 420083,
+        "sha256": "45e4f8e4a33505b654444c322e64a6c31e1538cbc7c14084702e53bdbe719cc9"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "e1ac5c3f13bb238f07b1e06b5e832abc035cf4ec39eb6c1b5f36bd5167ba43e3",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-branch-null-equal-arm",
+      "receipt": {
+        "bytes": 420094,
+        "sha256": "1041664daaab2af986fcdd9dd884286bda73539ea090c2fb8408c7347940808d"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "d0a30f86f2afda9548c2895a00ea687dffbd4f1f460e35f4fee7561e08624851",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-branch-null-equal-windows",
+      "receipt": {
+        "bytes": 417316,
+        "sha256": "f919220f3ea7c7c87c890aa4d892efe1027b9eab7dc18dec27193bbd4f370c69"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "3eab820516ec70aa0c4983bd0384bb036ccd32167ae2310e48adab4b450b342b",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-branch-null-equal-a64",
+      "receipt": {
+        "bytes": 420098,
+        "sha256": "798ac06c8724e0395fa05e9d62b20b013e9d8027f45063ef034e5a6999c6ca35"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "63d5835f950e172bda98e7f90067559d450942c2d4cf17a33b60889d70ef27f9",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-branch-warm-arm",
+      "receipt": {
+        "bytes": 420076,
+        "sha256": "91cbd1335ed25e15cfb4055a3b51e93868c78163691ab88ac5cafe1dabf0861d"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "35a22ae8acb9b13c54ab27954d47d58554dade53a766e70b6f4aecf2ab044bbc",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-branch-warm-windows",
+      "receipt": {
+        "bytes": 417298,
+        "sha256": "3999395c0ec524d202f87ad4f36afda25bfc8acc1dc5a178b369a06939f44649"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "f3a9693a4931291405220c641b494645165bfa6ea74ef67d36a9bb991e8fb8ca",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-branch-warm-a64",
+      "receipt": {
+        "bytes": 420080,
+        "sha256": "b39a8bb2a7e900fa5ad5fd1dc48f52049d995cd7ff8be1ce1a6d4afc70052820"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "44da750bd3f55a335d03d55ec3cbd08841864c41cc94ca5680f21c3bb2f9043e",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-namespace-holes-arm",
+      "receipt": {
+        "bytes": 416536,
+        "sha256": "d7ec1d42497678912ef91e07ffa71f8a10eedd065a92ab2704c4f556ad46dd9d"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "226f417d8dd4661c81838e33a6fbfc1c4dd2b944c25505f08676913ef1f0c491",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-namespace-holes-windows",
+      "receipt": {
+        "bytes": 416299,
+        "sha256": "bcf76b5db2adc7d621a762be90272e01299ab6f5dbf273be302f1bbed6e8e88b"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "e077c5db65ed97e6254e65cf79aa3c3fc7d5f7ab44ceabc33a73921e25d1f6c1",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-namespace-holes-a64",
+      "receipt": {
+        "bytes": 416540,
+        "sha256": "07ecd5076a091a6e52bb399b2b8824a2c8377917a01b969481d4b0644f609637"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "25c8831f1f42f9660db29fd4cd5df9c5443626eb2404034d15ac902ac47353d8",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-namespace-capacity-arm",
+      "receipt": {
+        "bytes": 416545,
+        "sha256": "e20ec49f0f2e210db544854f522d7b8710d0715576e9606233a2123df5897577"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "ebcf47139bb39f8392497ea1840e2747ac390c78466943f5ebff510467213b96",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-namespace-capacity-windows",
+      "receipt": {
+        "bytes": 416308,
+        "sha256": "8d7d13921b446b84adbbf604f4bd0f9bbd0f726ca2cb78f51efa4c919874f93c"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "28114a7f65de595dd523b40141f9bc50c773bdbf8ed20edba4edb4d6c5ccb9f2",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-namespace-capacity-a64",
+      "receipt": {
+        "bytes": 416549,
+        "sha256": "31d54b153eac46d90724b364bad0878c1396cc5a07b8ecb0dfb45a9936cb46d9"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "625685fc0e38939105bd239e0384437ed1d38b2a0032ff4b0c3ad3cb83703ee7",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-namespace-bytes-arm",
+      "receipt": {
+        "bytes": 416536,
+        "sha256": "1aa120c561b2742c75df1a5afb42b9c219615cfc64c79a675ec53a918c88ab45"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "1f1ce2a91abc438a1ade499b58bd3941fca8598e49e8fb7146f0322c1ddb8b56",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-namespace-bytes-windows",
+      "receipt": {
+        "bytes": 416299,
+        "sha256": "cb0b26170751361989c63637da6a7a41c2b83dc3d8f8390454bd2249531ba8d1"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "fcda24f3ecc0fab14a0b147931aed3d112cbe2da3e57413dcbf767eea62e777e",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-namespace-bytes-a64",
+      "receipt": {
+        "bytes": 416540,
+        "sha256": "d2d3435796968c201ba4f64016a5ab9f94a99320ed3eff3133c0f2ef7a3e9f55"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "8bf755e6fda3967befd5bc793666ace323098b31261178fcde0bb19ac54413a8",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-copy-arm",
+      "receipt": {
+        "bytes": 416614,
+        "sha256": "c78aa2cfce3a8157f84e06b795cd9414c3dfdc610cf6d47fb70a895f5b16e124"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "7a78c0c1353ebaa32b8891d5428d2f055d29d8ef967c459f6bef3ba0049fc350",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-copy-windows",
+      "receipt": {
+        "bytes": 416377,
+        "sha256": "821c3ff2854d6ba92d1f8a2c2c735effc16919932ce27a9386809362f9ad6bb6"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "e7122e0b3985e1e481ffcf90507d3600cd63f74a40e630b8fd5a6c8e9fe7751d",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-copy-a64",
+      "receipt": {
+        "bytes": 416618,
+        "sha256": "e75470c54dc649b8330e38e9cbd08ef1bbd1f07ae935c47f8f08e27e8a68e390"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "d1dac850b259db148d2f2d3e016da19c1b4d02f377abb9b3d3f402fab038db5f",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-borrow-arm",
+      "receipt": {
+        "bytes": 416620,
+        "sha256": "84661b454765d9f8ea6ddfa50df26d591a8a79d030bd527b4042b172686ce0a7"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "270f09fc03f5c3e7f42a69ca474d54d687dbeb7ff0d8a946419660a20a8e1ab0",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-borrow-windows",
+      "receipt": {
+        "bytes": 416383,
+        "sha256": "e0b57ff5e50f0bc1fa0cebed10999937233674f298e28accebd4d1e4b17ed784"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "6a7e4e52ef12f0d7db88f69571888838b3cdf1b2c21a2f61f9412d805ceca47f",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-borrow-a64",
+      "receipt": {
+        "bytes": 416624,
+        "sha256": "4f939975e745f53b2b243f6933fb52128bd3a49f900e6bfa17a69deb16ea10cc"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "a2cd96197611c23d73ecba9ce20dd8753397a95f76f44eb41f253ea13d97ea2a",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-small-arm",
+      "receipt": {
+        "bytes": 416617,
+        "sha256": "552dd34d085d5d39cfaae408db900fbf8b0c9c6382454bae4fbed77ede64f7a0"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "d619ec69d23c096d2098742fe64c9c60866173e57733327c526f120a75d4f5c5",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-small-windows",
+      "receipt": {
+        "bytes": 416380,
+        "sha256": "c2c37e8d6291826c0345062b4ae49ae7228cb8b6b7cfcb5959f31676df4f3294"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "2a97c68ca137ac508f7c2f03a6c793d48deadfe3fe5508fe732e26009fc4f297",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-small-a64",
+      "receipt": {
+        "bytes": 416621,
+        "sha256": "e1eefe2eab392a60477fc29c75dd6183f164e6c0931a4b736ac9bfa2888b71d1"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "209693d9d7ecff0becc3687190f3aa3f44d56566258c2ad966aaa055efd67624",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-priority--9-arm",
+      "receipt": {
+        "bytes": 416635,
+        "sha256": "0d982a4e5dc83beaf112479e0544201051ab703b93381b1c266138fecab099d9"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "aef24725831f98d71653433c330c7530582abe009a020c916bc8ba3269b227a0",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-priority--9-windows",
+      "receipt": {
+        "bytes": 416398,
+        "sha256": "7d7f2f9307c3e700683e11a45d82c808556b190673a5e188f46e36b6908e0261"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "a603f66aaae6c57b71a54544ca71cb19d533da4273e08f832bdd1268b48ae22c",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-priority--9-a64",
+      "receipt": {
+        "bytes": 416639,
+        "sha256": "fb1bd18c00822afcc802b87d89955d72439cab0d98af33217877bd8626120fe3"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "74ba3252e7df96a4d469bb31c621303aa534c9d458b2b5016ff370de862aa601",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-priority--1-arm",
+      "receipt": {
+        "bytes": 416635,
+        "sha256": "c7835a3a4bfe723d418220f0d05bf44cc90ff2843dc4a29f34db336482b9fc34"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "30b4e4b122dcbe570f1471ef99f662de3792581b212e5d49a0b58dcfe6e14cfd",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-priority--1-windows",
+      "receipt": {
+        "bytes": 416398,
+        "sha256": "b71e6acc1fd3d90cae9dbc67b1590ca2a705cc04db86393d4c22f72518270c99"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "c7dc27757367d9f07c6713dbeb7dc1ef9dd93294d876e6757e0bcb0bedcb99b9",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-priority--1-a64",
+      "receipt": {
+        "bytes": 416639,
+        "sha256": "a6c932247f9fa9b13097bc5a9355345d896607c91ce31b1fb1d4ec8cd223ab0e"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "70e919d64a6b2cfbdefd3326578d2cc2cc7b19f7320ce379f58563f844ee4629",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-priority-1-arm",
+      "receipt": {
+        "bytes": 416632,
+        "sha256": "ae5ab115c5749bb798cf2f0816dd73c5d4503b700c9b56c32a4781aa7e44dda0"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "5ff1e545f40a18e8f3a833d3eba7b68fae1d456dc3d31676b93df3432cfb6602",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-priority-1-windows",
+      "receipt": {
+        "bytes": 416395,
+        "sha256": "035cfc5b6758c18d42fbd2fbe37c73a393c043f4b70567d54dfddcfa36c57417"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "9c5035a56dd4256e3253c542d576c3a7aff34764360d78b9c8f052b26da10391",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-priority-1-a64",
+      "receipt": {
+        "bytes": 416636,
+        "sha256": "22ed7bf4718d488996ad52f0e26d6e7e02338998eaebb8ddae474e1425b132bd"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "d0c7402a4fa6150af919e8d73ca6270e77170df7a1448d5622e643ff13581287",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-priority-9-arm",
+      "receipt": {
+        "bytes": 416632,
+        "sha256": "c020a27b400a84a9cdd7ea1fabbf1f0d26e6fe20407235cf455f7893aeff7ed1"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "24f70fd23a0dff2c6412592b45d02010e28cbf96cd63fcff05b7d3a4185d3a17",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-priority-9-windows",
+      "receipt": {
+        "bytes": 416395,
+        "sha256": "98322635dd02e72655365abb79873357e12fd27a27a7dafd52156a8531a327c1"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "f45b89ede1cfbcf5086123f4404e8e53996333b4d938d93d0390fe3c98529d26",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "tiny-source-construction-priority-9-a64",
+      "receipt": {
+        "bytes": 416636,
+        "sha256": "d88da9035a5ea51de8f8030e2b30ce60948b72115ad64f00f43955c2b6403446"
+      },
+      "postExitJournal": {
+        "rows": 2,
+        "terminalSHA256": "6019558a98678d38446c01afc1756d5690acce1b72dee0a124c4d37f268f21b0",
+        "terminalStatus": "clean"
+      }
+    },
+    {
+      "child": "probe-branch-open",
+      "receipt": {
+        "bytes": 208089,
+        "sha256": "3b1d0385af12c2237fc1cc8949165ce539d92ca605eb64424ba56dffca1ce0fd"
+      },
+      "postExitJournal": {
+        "rows": 3,
+        "terminalSHA256": "f8150f1b40d4b5b33dcbadda00d4e2641acfb944fc1561c1b697422daf696933",
+        "terminalStatus": "failed:Replay attempted a forbidden read/original instance, including a caught attempt"
+      }
+    },
+    {
+      "child": "probe-branch-stat",
+      "receipt": {
+        "bytes": 208086,
+        "sha256": "e92e10a8301ac4c89766c72605c55d393a53c5c1bdd91f21c8469c918b8f914a"
+      },
+      "postExitJournal": {
+        "rows": 3,
+        "terminalSHA256": "6a70e8cda92194a9c00eff424c6c47c7630e6d9700b3629b7ef93b486eb8ff76",
+        "terminalStatus": "failed:Replay attempted a forbidden read/original instance, including a caught attempt"
+      }
+    },
+    {
+      "child": "probe-branch-lstat",
+      "receipt": {
+        "bytes": 208087,
+        "sha256": "a34ae384e632a1e4096cda86c5afcdd3638503a2682979c43ebd9e8000f7805e"
+      },
+      "postExitJournal": {
+        "rows": 3,
+        "terminalSHA256": "4207fefedc32d93cedea27d55e6faaef2de5922dd7c1d648a897252e37fbf8aa",
+        "terminalStatus": "failed:Replay attempted a forbidden read/original instance, including a caught attempt"
+      }
+    },
+    {
+      "child": "probe-branch-listdir",
+      "receipt": {
+        "bytes": 208075,
+        "sha256": "64868c7a23191abf0bb524c90ca4ea3a535d4036737f201ede6b003a3c45c4c7"
+      },
+      "postExitJournal": {
+        "rows": 3,
+        "terminalSHA256": "cc7b4d2b0104e56dd9b2b9f80a9f9d6bf08e53be66ae5096202e3aeae6857285",
+        "terminalStatus": "failed:Replay attempted a forbidden read/original instance, including a caught attempt"
+      }
+    },
+    {
+      "child": "probe-branch-scandir",
+      "receipt": {
+        "bytes": 208075,
+        "sha256": "0becda412a44537a5051409d696be21554686d6c31c45de54d65e7fcc1bb6bef"
+      },
+      "postExitJournal": {
+        "rows": 3,
+        "terminalSHA256": "2e08130b7368c2ae750f8108b73b9eb6128d61479124e99246208993b444310d",
+        "terminalStatus": "failed:Replay attempted a forbidden read/original instance, including a caught attempt"
+      }
+    },
+    {
+      "child": "probe-branch-resolve",
+      "receipt": {
+        "bytes": 208092,
+        "sha256": "a750ea103f4c48e37cbd5dc016cdde7acfa3d7f0502d3903dd4b9a3751e9248c"
+      },
+      "postExitJournal": {
+        "rows": 3,
+        "terminalSHA256": "8904f15e9e841989d2bda9c1cf5af3008ce4934508998c317759fd86be3b2e56",
+        "terminalStatus": "failed:Replay attempted a forbidden read/original instance, including a caught attempt"
+      }
+    },
+    {
+      "child": "probe-branch-original-constructor",
+      "receipt": {
+        "bytes": 250462,
+        "sha256": "b876ffa7da60ebe6e5c93ad59a5d67adccaba59f4875e0d3a0826fc66ef9455a"
+      },
+      "postExitJournal": {
+        "rows": 3,
+        "terminalSHA256": "4480f46878934289358dc3175101a560b875fb380d521a0af48414572bdc39d0",
+        "terminalStatus": "failed:Replay attempted a forbidden read/original instance, including a caught attempt"
+      }
+    },
+    {
+      "child": "probe-branch-image-read",
+      "receipt": {
+        "bytes": 208085,
+        "sha256": "e8ab48e6aeee8184c9a6bd845b7bcf756a082e2f94b9671188bbfebfd4797e0f"
+      },
+      "postExitJournal": {
+        "rows": 3,
+        "terminalSHA256": "66913385f94e55b9a28ac75ae124a12d3bf8f3cb484d50e6da3ae4fb75e89955",
+        "terminalStatus": "failed:Replay attempted a forbidden read/original instance, including a caught attempt"
+      }
+    },
+    {
+      "child": "probe-branch-metadata-write",
+      "receipt": {
+        "bytes": 208155,
+        "sha256": "f8ca2347724a645407a846972102abb060e181c35a7c7aee2fef8c82a2ccaa0a"
+      },
+      "postExitJournal": {
+        "rows": 3,
+        "terminalSHA256": "c09bc97fc43ca45341c9daa33f8569bb9f45705d8c716d64dc11a7d7297ca598",
+        "terminalStatus": "failed:Replay attempted a forbidden read/original instance, including a caught attempt"
+      }
+    },
+    {
+      "child": "probe-branch-named-library",
+      "receipt": {
+        "bytes": 208011,
+        "sha256": "a2d9ef580fdd5522b8073c1cb794bb9369ccaa819402cc733cff2a09f3baeb33"
+      },
+      "postExitJournal": {
+        "rows": 3,
+        "terminalSHA256": "2c88b7cf9071dd18b42e7e72ff71d11c3d5446d7a447b4380177bb96ec8f5f23",
+        "terminalStatus": "failed:Replay attempted a forbidden read/original instance, including a caught attempt"
+      }
+    },
+    {
+      "child": "probe-branch-absolute-library",
+      "receipt": {
+        "bytes": 208103,
+        "sha256": "b4f516b7b36c55b5689857889ebd3fdc3d11da25f4daecf76650f1da33993bab"
+      },
+      "postExitJournal": {
+        "rows": 3,
+        "terminalSHA256": "4735f1342073d9b7ba3ac675979824a13ac744b2526f30ae3df6a8c34ec64da7",
+        "terminalStatus": "failed:Replay attempted a forbidden read/original instance, including a caught attempt"
+      }
+    },
+    {
+      "child": "probe-branch-generated-library",
+      "receipt": {
+        "bytes": 208164,
+        "sha256": "697d630fc006d0ee4d3ace3a9efefeccb78919ed8c82ae47f5c00bec1a56e462"
+      },
+      "postExitJournal": {
+        "rows": 3,
+        "terminalSHA256": "cb903248c96797fccaca0bf0314d0d7cd0b904f7191918dbd778ca7c4eaf5f62",
+        "terminalStatus": "failed:Replay attempted a forbidden read/original instance, including a caught attempt"
+      }
+    },
+    {
+      "child": "tiny-probe-branch-tiny-history",
+      "receipt": {
+        "bytes": 209063,
+        "sha256": "07fdbb387580e2fc78188219011be4bf96d6eb86677bc35870acfb02bfdd7444"
+      },
+      "postExitJournal": {
+        "rows": 3,
+        "terminalSHA256": "12c7c57b020f7a678a58a9ae5a347485eb60e2551da51f4529ff75eb9e5131a3",
+        "terminalStatus": "failed:Replay attempted a forbidden read/original instance, including a caught attempt"
+      }
+    },
+    {
+      "child": "probe-branch-late-stat",
+      "receipt": {
+        "bytes": 406853,
+        "sha256": "8d96671f13e51d1e59ac1db3a82ef51732cfe2eea5039fe30ee34236197428e1"
+      },
+      "postExitJournal": {
+        "rows": 3,
+        "terminalSHA256": "7018fb305fd1a26469789b0988c3aea03e80ae2bbcf1df9fc13e6a2fdddc072d",
+        "terminalStatus": "failed:Replay attempted a forbidden read/original instance, including a caught attempt"
+      }
+    },
+    {
+      "child": "probe-branch-late-original-constructor",
+      "receipt": {
+        "bytes": 406901,
+        "sha256": "77895c0d7fa0a405c72cd620578c7fb126a33206b4de753d1faa1528753fe2a7"
+      },
+      "postExitJournal": {
+        "rows": 3,
+        "terminalSHA256": "a1199058e6deb698b4e9f6fcb8ba0690cecff98be6e6dd689750749cc13ecf44",
+        "terminalStatus": "failed:Replay attempted a forbidden read/original instance, including a caught attempt"
+      }
+    },
+    {
+      "child": "probe-branch-after-terminal-stat",
+      "receipt": {
+        "bytes": 406883,
+        "sha256": "cdb5e8c8ddc1a4ccd7ceb0df939d51af2a5b4d86457e25502cd1e0b80e41f063"
+      },
+      "postExitJournal": {
+        "rows": 4,
+        "terminalSHA256": "9b365c03333003a86ed28f21a6b95f738d2a22c667761aba7ad4b84d4d3474f3",
+        "terminalStatus": "invalidated-after-terminal",
+        "cleanReceiptRejected": true
+      }
+    },
+    {
+      "child": "probe-branch-after-terminal-original-constructor",
+      "receipt": {
+        "bytes": 406931,
+        "sha256": "23df176427a8c205a06cfe0930e51d691616f79e4f3dee2a15258a7eadc08c9d"
+      },
+      "postExitJournal": {
+        "rows": 4,
+        "terminalSHA256": "01825ae7928d7270464d470d9ec1424fae14b910b92c1a65575e603109797af5",
+        "terminalStatus": "invalidated-after-terminal",
+        "cleanReceiptRejected": true
+      }
+    },
+    {
+      "child": "probe-branch-compiler-runtime-input",
+      "receipt": {
+        "bytes": 208101,
+        "sha256": "81c211eb95d3eb7ed7321c9a968d07ae7601def5af084ec09e055374fb6f2a2c"
+      },
+      "postExitJournal": {
+        "rows": 3,
+        "terminalSHA256": "ca981195ed75947a2a905e64732cf100cf003b04472aaa85e36af2446645c90c",
+        "terminalStatus": "failed:Replay attempted a forbidden read/original instance, including a caught attempt"
+      }
+    }
+  ],
+  "sourceCreditGranted": 0,
+  "matchingCreditGranted": 0,
+  "frozenPredecessorsRehashedUnchanged": [
+    {
+      "ready": {
+        "path": "work/native-file071-namespace-v1/packet-v1/ready.json",
+        "bytes": 653,
+        "sha256": "5cbb895516855e8c560223fe1df62d2a0033f6833e59749aa9e183ca41777ca1"
+      },
+      "unchangedArtifactPins": 3134
+    },
+    {
+      "ready": {
+        "path": "work/native-file072-device-construction-v1/packet-v1/ready.json",
+        "bytes": 575,
+        "sha256": "165c9e3159483904104c1b0cede8701482a067c3fde5325eff25fb496bf5a346"
+      },
+      "unchangedArtifactPins": 8306
+    }
+  ],
+  "publicProviderCommit": "716e0d636f78175c0585db9d2b914b23987cc250",
+  "unchangedPublicProviders": 119,
+  "headerVariantProposal": {
+    "path": "work/native-file071072-public-input-v1/public-tree/evidence/lanes/native-file071072/public-inputs-v1/header-variant-proposal.json",
+    "bytes": 1110,
+    "sha256": "4dee2946b0fe21c179ff238810c0bd0b38f0b996b9a1cf7948917eff84aa9344"
+  },
+  "candidateBindings": {
+    "path": "work/native-file071072-public-input-v1/public-tree/evidence/lanes/native-file071072/public-inputs-v1/candidate-bindings.json",
+    "bytes": 93590,
+    "sha256": "1a2a1fb1cb3b7eea104a933b502f35cd496028c342df0a46e06028142f88b91b"
+  },
+  "originalCounts": {
+    "candidates": 19,
+    "originalInstructionBytes": 3444,
+    "originalLiteralPoolBytes": 132,
+    "originalObservedPositions": 815,
+    "originalTotalPositions": 861
+  },
+  "preservedAttempts": [
+    "smoke-v1: frozen guard logical-path resolution rejected before C; logical anchor repaired.",
+    "preflight-v3 namespace: a void shutdown adapter incorrectly trapped on a missing namespace result; corrected to preserve the caller ignoring that result.",
+    "control-smoke: variable shadowing in the artifact/C input selector rejected before C; corrected selector preserved.",
+    "source-only-v1: an observer asserted15 entries for the genuine early insufficient-workspace return; small now requires14, excluding the uncalled priority getter. No C body changed.",
+    "Stale exploratory generated compiler outputs were pruned only after preserving source, recipes, receipts and pre-delete hashes in prune-receipt-v1.json."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "device-child-loop-short": {
+    "file": "src/native/wave069-device/device_destroy069.c",
+    "before": "index < 5",
+    "after": "index < 2",
+    "bytes": 877,
+    "sha256": "4cbfda44782a116d36e83a21d27dad24863029d62ed3abb898f05a53691b5a7e",
+    "case": "default"
+  },
+  "embedded-base-type-wrong": {
+    "file": "src/native/wave069-device/embedded069.c",
+    "before": "    embedded->type = state->embedded_base_type;",
+    "after": "    embedded->type = state->embedded_subtype;",
+    "bytes": 647,
+    "sha256": "368226974349c1d57d3777ec18d322986498536574143b9b213e9ffc19da500c",
+    "case": "default"
+  },
+  "handle-getter-zero": {
+    "file": "src/native/wave069-device/stream_destroy069.c",
+    "before": "    return stream->handle;",
+    "after": "    return 0;",
+    "bytes": 1199,
+    "sha256": "02ce0dc22b2f71a4dc8aaa437f533d4aea3ebd6e9ca64a94c51bded263e2352a",
+    "case": "default"
+  },
+  "ipc-command-wrong": {
+    "file": "src/native/wave069-device/ipc069.c",
+    "before": "0x08080000",
+    "after": "0x08090000",
+    "bytes": 354,
+    "sha256": "14707589941c1de1364fb5c5e6763e653e93c3e5bda521f8732c21eedf49b56f",
+    "case": "default"
+  },
+  "raw-handle-not-cleared": {
+    "file": "src/native/wave069-device/stream_destroy069.c",
+    "before": "        stream->handle = 0;",
+    "after": "        (void)stream;",
+    "bytes": 1206,
+    "sha256": "cf15b88b92c17ebd7fd3b266ef07f1a7b385184b97004da970275ea5d97caf99",
+    "case": "default"
+  },
+  "stream-count-increment": {
+    "file": "src/native/wave069-device/stream_destroy069.c",
+    "before": "    --pool->live_count;",
+    "after": "    ++pool->live_count;",
+    "bytes": 1212,
+    "sha256": "53a386f4a8cab72fbb6b62ed190441cae9cdd12e1b4c9d819950433dbf214997",
+    "case": "default"
+  }
+}

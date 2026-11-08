@@ -45,7 +45,9 @@
       "wave068-bootstrap",
       "wave062-registration",
       "wave068-teardown",
-      "wave069-device"
+      "wave069-device",
+      "wave071-namespace",
+      "wave072-construction"
     ]
   },
   "units": [
@@ -11590,6 +11592,49 @@
       "source": "src/native/particle019-velocity/particle_velocity.c",
       "headers": [
         "src/native/particle019-velocity/particle_velocity.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave071-namespace/namespace071.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h",
+        "src/native/wave071-namespace/namespace071.h",
+        "src/native/wave072-construction/device_types072.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave072-construction/device072.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h",
+        "src/native/wave072-construction/device072.h",
+        "src/native/wave072-construction/device_pool_types072.h",
+        "src/native/wave072-construction/device_types072.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave072-construction/ipc072.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h",
+        "src/native/wave072-construction/device072.h",
+        "src/native/wave072-construction/device_pool_types072.h",
+        "src/native/wave072-construction/device_types072.h"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave072-construction/pool072.c",
+      "headers": [
+        "src/native/wave066-request/request.h",
+        "src/native/wave067-queue/file_queue.h",
+        "src/native/wave072-construction/device072.h",
+        "src/native/wave072-construction/device_pool_types072.h",
+        "src/native/wave072-construction/device_types072.h"
       ],
       "role": "bounded-component"
     }

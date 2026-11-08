@@ -1,0 +1,122 @@
+{
+  "attach-result": {
+    "function": "effect_file_stream_attach072",
+    "path": "work\\native-file072-device-construction-v1\\controls-v3\\attach-result\\source\\src\\native\\wave072-construction\\device072.c",
+    "before": "return 0;",
+    "after": "return (int)0xd8604659u;",
+    "sha256": "c09c8fe616aa2d614e705b5d1650a1d3929c24b4ba8ac5511ec072a354a5b764",
+    "case": "copy",
+    "file": "src/native/wave072-construction/device072.c",
+    "bytes": 6410
+  },
+  "constructor-priority": {
+    "function": "effect_file_device_construct072",
+    "path": "work\\native-file072-device-construction-v1\\controls-v3\\constructor-priority\\source\\src\\native\\wave072-construction\\device072.c",
+    "before": "device->unknown_04 = 0;",
+    "after": "device->unknown_04 = 1;",
+    "sha256": "91504561d808db637cdab2ac7cd3e62eb0c39bca3825a1201e9449e3341e4aa0",
+    "case": "copy",
+    "file": "src/native/wave072-construction/device072.c",
+    "bytes": 6395
+  },
+  "device-pool-count": {
+    "function": "effect_file_device_allocate072",
+    "path": "work\\native-file072-device-construction-v1\\controls-v3\\device-pool-count\\source\\src\\native\\wave072-construction\\pool072.c",
+    "before": "state->device_slots * sizeof(EffectFileDevice068)",
+    "after": "(state->device_slots - 1) * sizeof(EffectFileDevice068)",
+    "sha256": "4d80d404f4865b76565ffad9630d58014f137a024d987101a0e3a3dd38d6b520",
+    "case": "copy",
+    "file": "src/native/wave072-construction/pool072.c",
+    "bytes": 3503
+  },
+  "factory-result": {
+    "function": "effect_file_device_factory072",
+    "path": "work\\native-file072-device-construction-v1\\controls-v3\\factory-result\\source\\src\\native\\wave072-construction\\device072.c",
+    "before": "*output = device;\n        return 0;",
+    "after": "*output = device;\n        return 1;",
+    "sha256": "ab4f288159633ff28d9db66b98adf3375fc0b6c20a33748d75e9521ac2cc1fb1",
+    "case": "copy",
+    "file": "src/native/wave072-construction/device072.c",
+    "bytes": 6395
+  },
+  "initialize-offset": {
+    "function": "effect_file_device_initialize072",
+    "path": "work\\native-file072-device-construction-v1\\controls-v3\\initialize-offset\\source\\src\\native\\wave072-construction\\device072.c",
+    "before": "device->interior.data_offset = header[9];",
+    "after": "device->interior.data_offset = header[9] + 1;",
+    "sha256": "aa7d81a0721bcde12bd18ef5cf4f86386403d2798b79275be4944e23901f4492",
+    "case": "copy",
+    "file": "src/native/wave072-construction/device072.c",
+    "bytes": 6399
+  },
+  "open-result": {
+    "function": "effect_file_open_direct072",
+    "path": "work\\native-file072-device-construction-v1\\controls-v3\\open-result\\source\\src\\native\\wave072-construction\\ipc072.c",
+    "before": "result = (int)message.words[1];",
+    "after": "result = (int)message.words[1] - 1;",
+    "sha256": "83c6ba7bd034f761d06172965c3bdf7586ced5f9552ff5f401450e8ee0c5757a",
+    "case": "copy",
+    "file": "src/native/wave072-construction/ipc072.c",
+    "bytes": 2915
+  },
+  "pool-capacity": {
+    "function": "effect_file_pool_initialize072",
+    "path": "work\\native-file072-device-construction-v1\\controls-v3\\pool-capacity\\source\\src\\native\\wave072-construction\\pool072.c",
+    "before": "pool->capacity_bytes = capacity;",
+    "after": "pool->capacity_bytes = capacity + 4;",
+    "sha256": "d75061fcfb9527debf3ea0e32179181b25f0dc5be3763c7486bf0e7b7addb567",
+    "case": "copy",
+    "file": "src/native/wave072-construction/pool072.c",
+    "bytes": 3501
+  },
+  "pool-live": {
+    "function": "effect_file_pool_allocate072",
+    "path": "work\\native-file072-device-construction-v1\\controls-v3\\pool-live\\source\\src\\native\\wave072-construction\\pool072.c",
+    "before": "++pool->live_count;",
+    "after": "pool->live_count += 2;",
+    "sha256": "4d5e0f53d35b5b2543ee54b97b4d6caa0c7e79b476494dbb98c699af8ba43cf7",
+    "case": "copy",
+    "file": "src/native/wave072-construction/pool072.c",
+    "bytes": 3500
+  },
+  "priority-getter": {
+    "function": "effect_file_priority072",
+    "path": "work\\native-file072-device-construction-v1\\controls-v3\\priority-getter\\source\\src\\native\\wave072-construction\\ipc072.c",
+    "before": "return effect_file_priority_ipc072(state, &handle, priority);",
+    "after": "int result = effect_file_priority_ipc072(state, &handle, priority);\n    *priority ^= 1;\n    return result;",
+    "sha256": "b4984a687333c1a6ecbf999a534e3895a467a0e7c2ca57ff1813d4f09143a67d",
+    "case": "copy",
+    "file": "src/native/wave072-construction/ipc072.c",
+    "bytes": 2956
+  },
+  "priority-ipc": {
+    "function": "effect_file_priority_ipc072",
+    "path": "work\\native-file072-device-construction-v1\\controls-v3\\priority-ipc\\source\\src\\native\\wave072-construction\\ipc072.c",
+    "before": "*priority = (int)message.words[2];",
+    "after": "*priority = (int)message.words[2] + 1;",
+    "sha256": "c312aaf7d84505b09704650e41f31acf9b183695f7d958cd874ea65ac00b50d9",
+    "case": "copy",
+    "file": "src/native/wave072-construction/ipc072.c",
+    "bytes": 2915
+  },
+  "read-count": {
+    "function": "effect_file_read_ipc072",
+    "path": "work\\native-file072-device-construction-v1\\controls-v3\\read-count\\source\\src\\native\\wave072-construction\\ipc072.c",
+    "before": "*read_bytes = message.words[2];",
+    "after": "*read_bytes = message.words[2] - 1;",
+    "sha256": "2db80fc10946408da5a72889ac1efd5799d17adcdd97e36960d541615eb89465",
+    "case": "copy",
+    "file": "src/native/wave072-construction/ipc072.c",
+    "bytes": 2915
+  },
+  "stream-read-count": {
+    "function": "effect_file_stream_read072",
+    "path": "work\\native-file072-device-construction-v1\\controls-v3\\stream-read-count\\source\\src\\native\\wave072-construction\\ipc072.c",
+    "before": "&handle, read_bytes, offset, output, bytes);",
+    "after": "&handle, read_bytes, offset, output, bytes - 1);",
+    "sha256": "f880f66b037445a70ddc7921ef6df799258eb67fc41c03458be012832e729897",
+    "case": "copy",
+    "file": "src/native/wave072-construction/ipc072.c",
+    "bytes": 2915
+  }
+}

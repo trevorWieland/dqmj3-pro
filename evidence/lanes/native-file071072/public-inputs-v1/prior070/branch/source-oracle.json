@@ -1,0 +1,808 @@
+{
+  "alias": {
+    "start": {
+      "managerAllocation": null,
+      "filesystemAllocationIds": [
+        0,
+        null
+      ],
+      "allocationRecords": [
+        {
+          "bytes": 8608,
+          "live": true
+        }
+      ],
+      "namespaceDevices": [
+        0,
+        0
+      ],
+      "namespaceFlags": [
+        0,
+        256
+      ],
+      "mounted": [
+        true,
+        true
+      ],
+      "platform": {
+        "creates": 0,
+        "joins": 0,
+        "closes": 0,
+        "sleeps": 0,
+        "exited": 0
+      },
+      "sdkLive": [
+        1,
+        1
+      ],
+      "serviceTrace": [
+        {
+          "operation": "initialize"
+        },
+        {
+          "operation": "requirements",
+          "kind": 0,
+          "entries": 256,
+          "entryBytes": 16,
+          "option": 1
+        },
+        {
+          "operation": "allocate",
+          "kind": 0,
+          "logicalBytes": 8608
+        },
+        {
+          "operation": "mount",
+          "kind": 0,
+          "scheme": "rom:",
+          "entries": 256,
+          "entryBytes": 16,
+          "logicalBytes": 8608,
+          "option": 1
+        },
+        {
+          "operation": "alias",
+          "scheme": "patch:",
+          "target": "rom:"
+        }
+      ]
+    },
+    "final": {
+      "managerAllocation": null,
+      "filesystemAllocationIds": [
+        null,
+        null
+      ],
+      "allocationRecords": [
+        {
+          "bytes": 8608,
+          "live": false
+        }
+      ],
+      "namespaceDevices": [
+        null,
+        null
+      ],
+      "namespaceFlags": [
+        0,
+        256
+      ],
+      "mounted": [
+        false,
+        false
+      ],
+      "platform": {
+        "creates": 0,
+        "joins": 0,
+        "closes": 0,
+        "sleeps": 0,
+        "exited": 0
+      },
+      "sdkLive": [
+        0,
+        0
+      ],
+      "serviceTrace": [
+        {
+          "operation": "initialize"
+        },
+        {
+          "operation": "requirements",
+          "kind": 0,
+          "entries": 256,
+          "entryBytes": 16,
+          "option": 1
+        },
+        {
+          "operation": "allocate",
+          "kind": 0,
+          "logicalBytes": 8608
+        },
+        {
+          "operation": "mount",
+          "kind": 0,
+          "scheme": "rom:",
+          "entries": 256,
+          "entryBytes": 16,
+          "logicalBytes": 8608,
+          "option": 1
+        },
+        {
+          "operation": "alias",
+          "scheme": "patch:",
+          "target": "rom:"
+        },
+        {
+          "operation": "unmount",
+          "scheme": "patch:"
+        },
+        {
+          "operation": "unmount",
+          "scheme": "rom:"
+        },
+        {
+          "operation": "release",
+          "kind": 0,
+          "logicalBytes": 8608
+        }
+      ]
+    }
+  },
+  "null-equal": {
+    "start": {
+      "managerAllocation": null,
+      "filesystemAllocationIds": [
+        0,
+        1
+      ],
+      "allocationRecords": [
+        {
+          "bytes": 8608,
+          "live": true
+        },
+        {
+          "bytes": 4320,
+          "live": true
+        }
+      ],
+      "namespaceDevices": [
+        0,
+        1
+      ],
+      "namespaceFlags": [
+        0,
+        0
+      ],
+      "mounted": [
+        true,
+        true
+      ],
+      "platform": {
+        "creates": 0,
+        "joins": 0,
+        "closes": 0,
+        "sleeps": 0,
+        "exited": 0
+      },
+      "sdkLive": [
+        2,
+        2
+      ],
+      "serviceTrace": [
+        {
+          "operation": "initialize"
+        },
+        {
+          "operation": "requirements",
+          "kind": 0,
+          "entries": 256,
+          "entryBytes": 16,
+          "option": 1
+        },
+        {
+          "operation": "allocate",
+          "kind": 0,
+          "logicalBytes": 8608
+        },
+        {
+          "operation": "mount",
+          "kind": 0,
+          "scheme": "rom:",
+          "entries": 256,
+          "entryBytes": 16,
+          "logicalBytes": 8608,
+          "option": 1
+        },
+        {
+          "operation": "requirements",
+          "kind": 5,
+          "entries": 128,
+          "entryBytes": 8,
+          "option": 1
+        },
+        {
+          "operation": "allocate",
+          "kind": 5,
+          "logicalBytes": 4320
+        },
+        {
+          "operation": "mount",
+          "kind": 5,
+          "scheme": "patch:",
+          "entries": 128,
+          "entryBytes": 8,
+          "logicalBytes": 4320,
+          "option": 1
+        }
+      ]
+    },
+    "final": {
+      "managerAllocation": null,
+      "filesystemAllocationIds": [
+        null,
+        null
+      ],
+      "allocationRecords": [
+        {
+          "bytes": 8608,
+          "live": false
+        },
+        {
+          "bytes": 4320,
+          "live": false
+        }
+      ],
+      "namespaceDevices": [
+        null,
+        null
+      ],
+      "namespaceFlags": [
+        0,
+        0
+      ],
+      "mounted": [
+        false,
+        false
+      ],
+      "platform": {
+        "creates": 0,
+        "joins": 0,
+        "closes": 0,
+        "sleeps": 0,
+        "exited": 0
+      },
+      "sdkLive": [
+        0,
+        0
+      ],
+      "serviceTrace": [
+        {
+          "operation": "initialize"
+        },
+        {
+          "operation": "requirements",
+          "kind": 0,
+          "entries": 256,
+          "entryBytes": 16,
+          "option": 1
+        },
+        {
+          "operation": "allocate",
+          "kind": 0,
+          "logicalBytes": 8608
+        },
+        {
+          "operation": "mount",
+          "kind": 0,
+          "scheme": "rom:",
+          "entries": 256,
+          "entryBytes": 16,
+          "logicalBytes": 8608,
+          "option": 1
+        },
+        {
+          "operation": "requirements",
+          "kind": 5,
+          "entries": 128,
+          "entryBytes": 8,
+          "option": 1
+        },
+        {
+          "operation": "allocate",
+          "kind": 5,
+          "logicalBytes": 4320
+        },
+        {
+          "operation": "mount",
+          "kind": 5,
+          "scheme": "patch:",
+          "entries": 128,
+          "entryBytes": 8,
+          "logicalBytes": 4320,
+          "option": 1
+        },
+        {
+          "operation": "unmount",
+          "scheme": "patch:"
+        },
+        {
+          "operation": "release",
+          "kind": 5,
+          "logicalBytes": 4320
+        },
+        {
+          "operation": "unmount",
+          "scheme": "rom:"
+        },
+        {
+          "operation": "release",
+          "kind": 0,
+          "logicalBytes": 8608
+        }
+      ]
+    }
+  },
+  "warm": {
+    "start": {
+      "managerAllocation": 2,
+      "filesystemAllocationIds": [
+        0,
+        1
+      ],
+      "allocationRecords": [
+        {
+          "bytes": 8608,
+          "live": true
+        },
+        {
+          "bytes": 4320,
+          "live": true
+        },
+        {
+          "bytes": 8,
+          "live": true
+        },
+        {
+          "bytes": 4136,
+          "live": true
+        }
+      ],
+      "namespaceDevices": [
+        0,
+        1
+      ],
+      "namespaceFlags": [
+        0,
+        0
+      ],
+      "mounted": [
+        true,
+        true
+      ],
+      "platform": {
+        "creates": 1,
+        "joins": 0,
+        "closes": 0,
+        "sleeps": 0,
+        "exited": 0
+      },
+      "sdkLive": [
+        2,
+        2
+      ],
+      "serviceTrace": [
+        {
+          "operation": "initialize"
+        },
+        {
+          "operation": "requirements",
+          "kind": 0,
+          "entries": 256,
+          "entryBytes": 16,
+          "option": 1
+        },
+        {
+          "operation": "allocate",
+          "kind": 0,
+          "logicalBytes": 8608
+        },
+        {
+          "operation": "mount",
+          "kind": 0,
+          "scheme": "rom:",
+          "entries": 256,
+          "entryBytes": 16,
+          "logicalBytes": 8608,
+          "option": 1
+        },
+        {
+          "operation": "requirements",
+          "kind": 5,
+          "entries": 128,
+          "entryBytes": 8,
+          "option": 1
+        },
+        {
+          "operation": "allocate",
+          "kind": 5,
+          "logicalBytes": 4320
+        },
+        {
+          "operation": "mount",
+          "kind": 5,
+          "scheme": "patch:",
+          "entries": 128,
+          "entryBytes": 8,
+          "logicalBytes": 4320,
+          "option": 1
+        }
+      ]
+    },
+    "warm": {
+      "managerAllocation": 6,
+      "filesystemAllocationIds": [
+        4,
+        5
+      ],
+      "allocationRecords": [
+        {
+          "bytes": 8608,
+          "live": false
+        },
+        {
+          "bytes": 4320,
+          "live": false
+        },
+        {
+          "bytes": 8,
+          "live": false
+        },
+        {
+          "bytes": 4136,
+          "live": false
+        },
+        {
+          "bytes": 8608,
+          "live": true
+        },
+        {
+          "bytes": 4320,
+          "live": true
+        },
+        {
+          "bytes": 8,
+          "live": true
+        },
+        {
+          "bytes": 4136,
+          "live": true
+        }
+      ],
+      "namespaceDevices": [
+        0,
+        1
+      ],
+      "namespaceFlags": [
+        0,
+        0
+      ],
+      "mounted": [
+        true,
+        true
+      ],
+      "platform": {
+        "creates": 2,
+        "joins": 1,
+        "closes": 1,
+        "sleeps": 1,
+        "exited": 1
+      },
+      "sdkLive": [
+        2,
+        2
+      ],
+      "serviceTrace": [
+        {
+          "operation": "initialize"
+        },
+        {
+          "operation": "requirements",
+          "kind": 0,
+          "entries": 256,
+          "entryBytes": 16,
+          "option": 1
+        },
+        {
+          "operation": "allocate",
+          "kind": 0,
+          "logicalBytes": 8608
+        },
+        {
+          "operation": "mount",
+          "kind": 0,
+          "scheme": "rom:",
+          "entries": 256,
+          "entryBytes": 16,
+          "logicalBytes": 8608,
+          "option": 1
+        },
+        {
+          "operation": "requirements",
+          "kind": 5,
+          "entries": 128,
+          "entryBytes": 8,
+          "option": 1
+        },
+        {
+          "operation": "allocate",
+          "kind": 5,
+          "logicalBytes": 4320
+        },
+        {
+          "operation": "mount",
+          "kind": 5,
+          "scheme": "patch:",
+          "entries": 128,
+          "entryBytes": 8,
+          "logicalBytes": 4320,
+          "option": 1
+        },
+        {
+          "operation": "unmount",
+          "scheme": "patch:"
+        },
+        {
+          "operation": "release",
+          "kind": 5,
+          "logicalBytes": 4320
+        },
+        {
+          "operation": "unmount",
+          "scheme": "rom:"
+        },
+        {
+          "operation": "release",
+          "kind": 0,
+          "logicalBytes": 8608
+        },
+        {
+          "operation": "initialize"
+        },
+        {
+          "operation": "requirements",
+          "kind": 0,
+          "entries": 256,
+          "entryBytes": 16,
+          "option": 1
+        },
+        {
+          "operation": "allocate",
+          "kind": 0,
+          "logicalBytes": 8608
+        },
+        {
+          "operation": "mount",
+          "kind": 0,
+          "scheme": "rom:",
+          "entries": 256,
+          "entryBytes": 16,
+          "logicalBytes": 8608,
+          "option": 1
+        },
+        {
+          "operation": "requirements",
+          "kind": 5,
+          "entries": 128,
+          "entryBytes": 8,
+          "option": 1
+        },
+        {
+          "operation": "allocate",
+          "kind": 5,
+          "logicalBytes": 4320
+        },
+        {
+          "operation": "mount",
+          "kind": 5,
+          "scheme": "patch:",
+          "entries": 128,
+          "entryBytes": 8,
+          "logicalBytes": 4320,
+          "option": 1
+        }
+      ]
+    },
+    "final": {
+      "managerAllocation": null,
+      "filesystemAllocationIds": [
+        null,
+        null
+      ],
+      "allocationRecords": [
+        {
+          "bytes": 8608,
+          "live": false
+        },
+        {
+          "bytes": 4320,
+          "live": false
+        },
+        {
+          "bytes": 8,
+          "live": false
+        },
+        {
+          "bytes": 4136,
+          "live": false
+        },
+        {
+          "bytes": 8608,
+          "live": false
+        },
+        {
+          "bytes": 4320,
+          "live": false
+        },
+        {
+          "bytes": 8,
+          "live": false
+        },
+        {
+          "bytes": 4136,
+          "live": false
+        }
+      ],
+      "namespaceDevices": [
+        null,
+        null
+      ],
+      "namespaceFlags": [
+        0,
+        0
+      ],
+      "mounted": [
+        false,
+        false
+      ],
+      "platform": {
+        "creates": 2,
+        "joins": 2,
+        "closes": 2,
+        "sleeps": 2,
+        "exited": 2
+      },
+      "sdkLive": [
+        0,
+        0
+      ],
+      "serviceTrace": [
+        {
+          "operation": "initialize"
+        },
+        {
+          "operation": "requirements",
+          "kind": 0,
+          "entries": 256,
+          "entryBytes": 16,
+          "option": 1
+        },
+        {
+          "operation": "allocate",
+          "kind": 0,
+          "logicalBytes": 8608
+        },
+        {
+          "operation": "mount",
+          "kind": 0,
+          "scheme": "rom:",
+          "entries": 256,
+          "entryBytes": 16,
+          "logicalBytes": 8608,
+          "option": 1
+        },
+        {
+          "operation": "requirements",
+          "kind": 5,
+          "entries": 128,
+          "entryBytes": 8,
+          "option": 1
+        },
+        {
+          "operation": "allocate",
+          "kind": 5,
+          "logicalBytes": 4320
+        },
+        {
+          "operation": "mount",
+          "kind": 5,
+          "scheme": "patch:",
+          "entries": 128,
+          "entryBytes": 8,
+          "logicalBytes": 4320,
+          "option": 1
+        },
+        {
+          "operation": "unmount",
+          "scheme": "patch:"
+        },
+        {
+          "operation": "release",
+          "kind": 5,
+          "logicalBytes": 4320
+        },
+        {
+          "operation": "unmount",
+          "scheme": "rom:"
+        },
+        {
+          "operation": "release",
+          "kind": 0,
+          "logicalBytes": 8608
+        },
+        {
+          "operation": "initialize"
+        },
+        {
+          "operation": "requirements",
+          "kind": 0,
+          "entries": 256,
+          "entryBytes": 16,
+          "option": 1
+        },
+        {
+          "operation": "allocate",
+          "kind": 0,
+          "logicalBytes": 8608
+        },
+        {
+          "operation": "mount",
+          "kind": 0,
+          "scheme": "rom:",
+          "entries": 256,
+          "entryBytes": 16,
+          "logicalBytes": 8608,
+          "option": 1
+        },
+        {
+          "operation": "requirements",
+          "kind": 5,
+          "entries": 128,
+          "entryBytes": 8,
+          "option": 1
+        },
+        {
+          "operation": "allocate",
+          "kind": 5,
+          "logicalBytes": 4320
+        },
+        {
+          "operation": "mount",
+          "kind": 5,
+          "scheme": "patch:",
+          "entries": 128,
+          "entryBytes": 8,
+          "logicalBytes": 4320,
+          "option": 1
+        },
+        {
+          "operation": "unmount",
+          "scheme": "patch:"
+        },
+        {
+          "operation": "release",
+          "kind": 5,
+          "logicalBytes": 4320
+        },
+        {
+          "operation": "unmount",
+          "scheme": "rom:"
+        },
+        {
+          "operation": "release",
+          "kind": 0,
+          "logicalBytes": 8608
+        }
+      ]
+    }
+  }
+}
