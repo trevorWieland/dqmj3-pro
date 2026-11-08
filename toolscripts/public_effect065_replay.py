@@ -49,9 +49,9 @@ def contract():
 
 def proof():
     before = contract()
-    producer = common.pin(Path(__file__))
     if OUTPUT.exists() or GUARD.exists():
         raise ValueError('Effect public replay refuses existing proof/output')
+    producer = common.pin(Path(__file__))
     import native_effect065_stage as stage
     stage.run(OUTPUT)
     if before != contract() or common.pin(Path(__file__)) != producer:
@@ -61,6 +61,7 @@ def proof():
             or value['originalInstructionBytes'] != 1144 or value['fullEffectFamilyQualified']
             or value['GPUExecutionQualified'] or value['sourceCreditGranted'] != 0):
         raise ValueError('Effect bounded foundation scope changed')
+    GUARD.parent.mkdir(parents=True, exist_ok=False)
     common.write(GUARD, dict(status='unchanged-exact-public-effect-foundation-inputs',
         files=before, producer=producer, capturedToolFiles=19, sourceCreditGranted=0,
         originalArchivesAssetsOrToolTreesCopied=False, fullGameClaim=False))

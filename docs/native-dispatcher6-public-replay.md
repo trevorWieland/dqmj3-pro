@@ -1,5 +1,7 @@
 # Complete graphics dispatcher
 
+Read hook-derived historical instruction counts as visited addresses, not predicate-satisfied statement coverage. The [ARM measurement clarification](arm-coverage-measurements.md) preserves the raw receipts and explains this distinction; it adds no source admission or overall coverage claim.
+
 Independent replay of committed candidate `97197d7` passed all 112 pipeline tests and twelve producer tests. Coordinator review checked all 261 frozen input pins, the 46,206,071-byte execution envelope against both worker/source copies, all three main artifacts and 24 control artifact pairs. Five malformed scope/source proof cases were rejected. One complete canonical function is admitted to the separate medium-confidence working-C registry; exact matching and overall confirmed coverage remain unchanged. The reviewed replay was compacted into a hash-verified proof archive before its redundant build tree was removed.
 
 This candidate preserves the full 18,296-byte canonical dispatcher at `0x73b7a4`, including its 4,574 instruction PCs. Its ten new production C files and quoted-header dependencies are byte-identical to the frozen worker inputs. Small header snapshots preserve the original relative include topology; qualification fixtures remain separate from production units. Publishing/compiling these files grants no source or exact-match credit.

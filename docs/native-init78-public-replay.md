@@ -1,5 +1,7 @@
 # Graphics construction candidates
 
+The [ARM measurement clarification](arm-coverage-measurements.md) applies to historical hook-derived counts: visited addresses and predicate-satisfied execution are separate. Raw frozen receipts remain unchanged.
+
 Independent replay of committed `173c9fd` passed 113 pipeline tests and all seventeen core7 plus eleven corrected8 producer tests. Coordinator review admits only the complete 1,136-byte context constructor and 2,008-byte cache constructor to the medium-confidence working-C registry. Resource helpers retain the exclusions below. This adds no exact matching bytes or overall confirmed source coverage.
 
 All context and native-resource comparison envelopes are byte-identical to the frozen worker results. The regenerated ARM resource reference retains different callback build-envelope hashes because seven compiler/linker argument paths name the independent replay root; all other build fields and actual original observations match. Cache evidence retains both actual loaded DLL paths and all raw pointer words, with only the declared typed name-field comparisons performed after execution.
@@ -12,7 +14,7 @@ The combined `init78` replay stages 56 distinct inputs totaling 532,440 bytes, w
 
 Core7 reproduces context construction, independently rebuilt source copies, returning controls and resource observations across source ARM, actual Windows and high-address A64. Nine context PCs are invariant-only. Resource live-list invalidation and nonzero-kind release paths remain unqualified. The third allocation failure has different original and authored terminal mechanisms; it is recorded separately from returning agreement. Earlier failure paths retain physical backing through release requests and do not establish actual SDK deallocation semantics.
 
-Corrected8 reproduces the complete 2,008-byte cache constructor and its 502 executed original PCs. It constructs readable parameter names and derives register/default metadata rather than embedding original executable or table blobs. Its rejected physical-row-order attempt remains a small historical test seed. The data audit compares logical register indices; raw pointer values and hashes remain in the evidence. The additional A64 relink checks code and name globals above 4 GiB. Post-execution typed name comparisons never alter executed storage.
+Corrected8 reproduces the complete 2,008-byte cache constructor and its 502 visited original PCs. It constructs readable parameter names and derives register/default metadata rather than embedding original executable or table blobs. Its rejected physical-row-order attempt remains a small historical test seed. The data audit compares logical register indices; raw pointer values and hashes remain in the evidence. The additional A64 relink checks code and name globals above 4 GiB. Post-execution typed name comparisons never alter executed storage.
 
 The replay runs seventeen core7 tests and eleven corrected8 tests. Its separate guard suite checks source identities, frozen membership, path topology and refusal to overwrite existing private work. Full owner construction, graphics service startup, GPU execution, physical Android execution and a native game remain separate requirements.
 

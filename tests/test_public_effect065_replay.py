@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 import sys
 import tempfile
+from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
@@ -60,6 +61,20 @@ class PublicEffectReplayTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             replay.proof()
         self.assertEqual(sentinel.read_bytes(), b'preserve')
+
+    def test_completed_proof_creates_missing_guard_parent(self):
+        producer = self.root / 'toolscripts/public_effect065_replay.py'
+        producer.write_bytes(b'producer')
+        def run(output):
+            output.mkdir(parents=True)
+            packet = dict(ownedInputsUnchanged=True, authoredOriginalBodies=6, originalInstructionBytes=1144,
+                fullEffectFamilyQualified=False, GPUExecutionQualified=False, sourceCreditGranted=0)
+            (output / 'packet.json').write_text(json.dumps(packet))
+        guard = self.root / 'work/new-parent/v1/input-guard.json'
+        with patch.object(replay, '__file__', str(producer)), patch.object(replay, 'GUARD', guard), patch.dict(
+                sys.modules, {'native_effect065_stage': SimpleNamespace(run=run)}):
+            replay.proof()
+        self.assertEqual(len(json.loads(guard.read_bytes())['files']), 46)
 
     def test_source_mutation_rejected(self):
         (self.root / self.value['files'][0]['path']).write_bytes(b'changed')

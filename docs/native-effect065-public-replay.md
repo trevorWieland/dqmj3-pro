@@ -10,6 +10,8 @@ The selected corpus includes 16,544 shader sets, 93 release cases and 21 preview
 
 The candidate passed six source-only compilations across ARM, native Windows and Android ARM64, plus nine public-input guard tests. A fresh committed-source replay and coordinator review are required before any working-C admission.
 
+The first independent run completed the behavioral producers and their tests, then failed while writing the final guard receipt because its parent directory was missing. That failed attempt remains retained. The wrapper now creates its owned receipt directory and a regression test covers that final write; all ten guard tests pass. A new committed replay must pass before admission. The original six production C files and frozen producers were not changed.
+
 ```text
 tools/python/Scripts/python.exe toolscripts/isolated_component_replay.py --plan config/replays/effect065.json --revision COMMITTED_SOURCE_REVISION
 ```
