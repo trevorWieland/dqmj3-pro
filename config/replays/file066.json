@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "name": "file066",
+  "producerSteps": [
+    {
+      "name": "file066-proof",
+      "args": [
+        "toolscripts/effect_file066_intake.py",
+        "--root",
+        ".",
+        "--intake",
+        "evidence/lanes/native-effect-request066/public-inputs-v1",
+        "--output",
+        "work/public066-replay-v1"
+      ],
+      "inputKinds": ["code", "exheader"]
+    }
+  ],
+  "tests": [
+    "effect_file066_public",
+    "native_file_inventory",
+    "native_binding_inventory",
+    "native_sdk_inventory",
+    "compile_source_include_dirs",
+    "c_function_definitions"
+  ],
+  "packets": [
+    "work/public066-replay-v1/intake-replay.json",
+    "work/public066-replay-v1/execution/ready.json",
+    "work/public066-replay-v1/execution/seed-binding.json",
+    "work/public066-replay-v1/execution/receipt-build.json",
+    "work/public066-replay-v1/execution/receipt-original.json",
+    "work/public066-replay-v1/execution/receipt-source.json",
+    "work/public066-replay-v1/execution/receipt-historical-caught.json",
+    "work/public066-replay-v1/execution/receipt-stat-caught.json",
+    "work/public066-replay-v1/execution/receipt-original-caught.json",
+    "work/public066-replay-v1/execution/receipt-image-read-caught.json",
+    "work/public066-replay-v1/execution/receipt-metadata-write-caught.json",
+    "work/public066-replay-v1/execution/receipt-library-caught.json",
+    "work/public066-replay-v1/execution/build/build.json",
+    "work/public066-replay-v1/execution/negative/report.json"
+  ],
+  "intakeCleanup": {
+    "mode": "code-exheader-only",
+    "producerInputs": ["code", "exheader"]
+  }
+}

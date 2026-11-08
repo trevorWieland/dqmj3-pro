@@ -35,7 +35,10 @@
       "wave065",
       "wave062-sdk",
       "wave065-resource",
-      "wave062-runtime"
+      "wave062-runtime",
+      "wave065-cached",
+      "wave065-owner",
+      "wave066-request"
     ]
   },
   "units": [
@@ -10935,6 +10938,205 @@
       "includeDirectories": [
         "src/native/wave062-runtime/include",
         "src/native/wave062-sdk/include"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065-cached/effect_cached_fetch.c",
+      "headers": [
+        "src/native/wave032/archive.h",
+        "src/native/wave065-cached/effect_cached.h",
+        "src/native/wave065-owner/effect_owner.h",
+        "src/native/wave065-resource/effect_commands.h",
+        "src/native/wave065-resource/effect_resource.h",
+        "src/native/wave065-resource/effect_resource_internal.h",
+        "src/native/wave065-resource/effect_resource_memory.h",
+        "src/native/wave065-resource/effect_serialized.h",
+        "src/native/wave065-resource/effect_vertex.h",
+        "src/native/wave065/effect_preview.h",
+        "src/native/wave065/effect_services.h",
+        "src/native/wave065/effect_shader.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave032",
+        "src/native/wave065",
+        "src/native/wave065-cached",
+        "src/native/wave065-owner",
+        "src/native/wave065-resource"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065-cached/effect_cached_format.c",
+      "headers": [
+        "src/native/wave065-cached/effect_cached.h",
+        "src/native/wave065-owner/effect_owner.h",
+        "src/native/wave065-resource/effect_commands.h",
+        "src/native/wave065-resource/effect_resource.h",
+        "src/native/wave065-resource/effect_resource_internal.h",
+        "src/native/wave065-resource/effect_resource_memory.h",
+        "src/native/wave065-resource/effect_serialized.h",
+        "src/native/wave065-resource/effect_vertex.h",
+        "src/native/wave065/effect_preview.h",
+        "src/native/wave065/effect_services.h",
+        "src/native/wave065/effect_shader.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave065",
+        "src/native/wave065-cached",
+        "src/native/wave065-owner",
+        "src/native/wave065-resource"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065-cached/effect_cached_request.c",
+      "headers": [
+        "src/native/wave065-cached/effect_cached.h",
+        "src/native/wave065-owner/effect_owner.h",
+        "src/native/wave065-resource/effect_commands.h",
+        "src/native/wave065-resource/effect_resource.h",
+        "src/native/wave065-resource/effect_resource_internal.h",
+        "src/native/wave065-resource/effect_resource_memory.h",
+        "src/native/wave065-resource/effect_serialized.h",
+        "src/native/wave065-resource/effect_vertex.h",
+        "src/native/wave065/effect_preview.h",
+        "src/native/wave065/effect_services.h",
+        "src/native/wave065/effect_shader.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave065",
+        "src/native/wave065-cached",
+        "src/native/wave065-owner",
+        "src/native/wave065-resource"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065-cached/effect_cached_services.c",
+      "headers": [
+        "src/native/wave065-cached/effect_cached.h",
+        "src/native/wave065-owner/effect_owner.h",
+        "src/native/wave065-resource/effect_commands.h",
+        "src/native/wave065-resource/effect_resource.h",
+        "src/native/wave065-resource/effect_resource_internal.h",
+        "src/native/wave065-resource/effect_resource_memory.h",
+        "src/native/wave065-resource/effect_serialized.h",
+        "src/native/wave065-resource/effect_vertex.h",
+        "src/native/wave065/effect_preview.h",
+        "src/native/wave065/effect_services.h",
+        "src/native/wave065/effect_shader.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave065",
+        "src/native/wave065-cached",
+        "src/native/wave065-owner",
+        "src/native/wave065-resource"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave065-owner/effect_registration.c",
+      "headers": [
+        "src/native/wave065-owner/effect_owner.h",
+        "src/native/wave065-resource/effect_commands.h",
+        "src/native/wave065-resource/effect_resource.h",
+        "src/native/wave065-resource/effect_resource_internal.h",
+        "src/native/wave065-resource/effect_resource_memory.h",
+        "src/native/wave065-resource/effect_serialized.h",
+        "src/native/wave065-resource/effect_vertex.h",
+        "src/native/wave065/effect_services.h",
+        "src/native/wave065/effect_shader.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave065",
+        "src/native/wave065-owner",
+        "src/native/wave065-resource"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave066-request/request_control.c",
+      "headers": [
+        "src/native/wave066-request/request.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave066-request"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave066-request/request_factory.c",
+      "headers": [
+        "src/native/wave066-request/request.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave066-request"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave066-request/request_lower.c",
+      "headers": [
+        "src/native/wave065-cached/effect_cached.h",
+        "src/native/wave065-owner/effect_owner.h",
+        "src/native/wave065-resource/effect_commands.h",
+        "src/native/wave065-resource/effect_resource.h",
+        "src/native/wave065-resource/effect_resource_internal.h",
+        "src/native/wave065-resource/effect_resource_memory.h",
+        "src/native/wave065-resource/effect_serialized.h",
+        "src/native/wave065-resource/effect_vertex.h",
+        "src/native/wave065/effect_preview.h",
+        "src/native/wave065/effect_services.h",
+        "src/native/wave065/effect_shader.h",
+        "src/native/wave066-request/request_lower.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave065",
+        "src/native/wave065-cached",
+        "src/native/wave065-owner",
+        "src/native/wave065-resource",
+        "src/native/wave066-request"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave066-request/request_memory.c",
+      "headers": [
+        "src/native/wave066-request/request.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave066-request"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave066-request/request_provider.c",
+      "headers": [
+        "src/native/wave066-request/request.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave066-request"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave066-request/request_strings.c",
+      "headers": [
+        "src/native/wave066-request/request.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave066-request"
+      ],
+      "role": "bounded-component"
+    },
+    {
+      "source": "src/native/wave066-request/request_task.c",
+      "headers": [
+        "src/native/wave066-request/request.h"
+      ],
+      "includeDirectories": [
+        "src/native/wave066-request"
       ],
       "role": "bounded-component"
     }

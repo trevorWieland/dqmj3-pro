@@ -1,0 +1,78 @@
+{
+  "status": "bounded-file-task-game-cache-miss-candidate-for-independent-review",
+  "stageReady": {
+    "path": "work/native-effect065/request066/sealing-v1/ready.json",
+    "bytes": 309,
+    "sha256": "c5d59e7694440acc7c55d4046c6fabf8ec5e4e69d8559694e1bc83c1d6662084"
+  },
+  "boundaries": {
+    "path": "evidence/lanes/native-effect-request066/stage-v1/boundaries-and-coverage.json",
+    "bytes": 32847,
+    "sha256": "55a06c60560b5302b580d41e20023086d6c35a4ca325f40e1e347745ce51733f"
+  },
+  "sourceObjects": {
+    "path": "evidence/lanes/native-effect-request066/stage-v1/source-objects.json",
+    "bytes": 512760,
+    "sha256": "20ccd4cc3df984833adb2fd187b4ee0d47cd49b3cfc7caf3d0e523c9fce04ba8"
+  },
+  "scopeDocument": {
+    "path": "docs/native-effect-request066.md",
+    "bytes": 5079,
+    "sha256": "452ecc3990be5439f9e382819203f2a78e47ad7554b15c861756d244904d177b"
+  },
+  "replayArgv": [
+    "tools/python/Scripts/python.exe",
+    "toolscripts/effect_request066_stage.py",
+    "work/native-effect065/request066/coordinator-stage-v1"
+  ],
+  "replayPrivateInputs": [
+    {
+      "path": "generated/update-content0/code.bin",
+      "bytes": 8159232,
+      "sha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126"
+    },
+    {
+      "path": "generated/update-content0/exheader.bin",
+      "bytes": 2048,
+      "sha256": "32fcbe9adf7ea39c01c825af0d41c5ecb933549917ccc903a102eb83fb21f435"
+    },
+    {
+      "path": "work/native-effect065/request-frontier-v1/measurement.json",
+      "bytes": 7347,
+      "sha256": "a64bb3c9ccf05f3045c946c661fe7692b05499c3c0745b5fa79f94c5b3ebc08b"
+    },
+    {
+      "path": "work/native-effect065/request066/getter-supplements-v1.json",
+      "bytes": 1016,
+      "sha256": "6957e6cb84b9ddf620fbfd18533f5715c236f534fe44667b4a8db2b092fc3a50"
+    },
+    {
+      "path": "work/native-effect065/runtime-closure-during-stage-v1.json",
+      "bytes": 23959,
+      "sha256": "c9d9f4428093da2515b50679987cbc3fd9f6a9fbc050151e3f41e0ab45bc196b"
+    },
+    {
+      "path": "work/native-effect065/loaded-runtime-closure-v1.json",
+      "bytes": 61070,
+      "sha256": "4c399b6de0889005a4c16ffb34d697fdce48210630d9a738fe2247048894917b"
+    }
+  ],
+  "smallMetadataReplayPlacement": {
+    "source": {
+      "path": "evidence/lanes/native-effect-request066/stage-v1/dependency-selection-seed.json",
+      "bytes": 165099,
+      "sha256": "8866502b230e6380e6641b43c5469961bf74a9ffb06c780dcacf564a130b3224"
+    },
+    "destination": "work/native-effect065/request066/errors-build-v3/build.json",
+    "purpose": "Quoted-include dependency closure seed only; actual artifacts are rebuilt from selected source."
+  },
+  "sourceCreditGranted": 0,
+  "matchingCreditGranted": 0,
+  "wholeGameOrDeviceQualified": false,
+  "limits": [
+    "Path-source selector5 only; other resolver source paths and async worker queue unqualified.",
+    "Stateful memory filesystem provider, not Nintendo FS/OS/application-manager startup.",
+    "Nonfatal read-error buffer leak preserved; no allocation-safety claim.",
+    "ROM/PATCH fatal reporter, populated lower graphs, full cache teardown and native GPU/game remain unqualified."
+  ]
+}

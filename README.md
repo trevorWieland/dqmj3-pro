@@ -16,6 +16,8 @@ The [resource CPU replay](docs/native-resource065-public-replay.md) independentl
 
 The [SDK runtime replay](docs/native-sdk-runtime062-public-replay.md) independently qualifies nineteen additional bounded functions in eighteen production C units. The committed replay passed 137 pipeline tests, 69 predecessor tests, six guard tests, 165 returning controls and all 2,809 raw artifact comparisons. Two already credited bodies receive no duplicate credit; complete SDK owners and native game builds remain unqualified.
 
+The [synchronous file-request candidate](docs/native-effect-request066-public.md) adds twelve production C units and a public fresh-process replay. Its public-path preflight reproduces 97 artifacts and checks real original/source constructor, file, error, U64 and cache observations. It retains explicit memory-filesystem/allocator services and path/async/renderer limits; independent committed replay is pending and it grants no automatic source credit.
+
 The owner archive `dqmj3pro.7z` has SHA-256 `8af8156afc1c69c3c3ad90cdd57a204417e27cef07b6b6958270b3c1c128bd7d` and contains a base CIA plus update CIA. All four NCCH contents match their TMD content hashes. Their ExeFS files also match recorded hashes. Independent CTRTool extraction reproduces both decompressed code images and extended headers exactly. These checks establish internal integrity and extraction agreement; signature authenticity and unmodified retail provenance have not been established.
 
 | Input | Title ID | Raw title version | Decompressed code SHA-256 |
