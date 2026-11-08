@@ -46,6 +46,16 @@ class PublicResourceInputTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'unique membership'):
             self.check()
 
+    def test_shared_and_successor_folder_inputs_have_stable_string_order(self):
+        header = self.root / 'src/native/wave065/shared.h'
+        header.parent.mkdir()
+        header.write_bytes(b'typedef unsigned Word;\n')
+        raw = header.read_bytes()
+        row = dict(path=header.relative_to(self.root).as_posix(), bytes=len(raw), sha256=hashlib.sha256(raw).hexdigest())
+        self.value['files'].append(row)
+        self.value['files'].sort(key=lambda item: item['path'])
+        self.assertEqual(self.check(), self.value)
+
     def test_escaped_input_is_rejected_before_reading(self):
         self.row['path'] = '../outside.c'
         with self.assertRaisesRegex(ValueError, 'input changed'):
