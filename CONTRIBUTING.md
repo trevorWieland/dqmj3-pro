@@ -18,9 +18,17 @@ Use explicit source lists. Historical void setters, nonmatching drafts, fixtures
 
 ## Checks
 
-The source-only CI compiles every active native C unit for the original ARM32 target and Windows/Android host targets without receiving original game inputs. This checks source consistency and warnings; it does not prove matching or a complete game.
+Run the gate locally exactly as CI runs it, before every push:
 
-The private-input verification pipeline is run with the pinned local tools and original CIA copies. run_checks.py performs intake, independent extraction, source packet production, genuine module linking, component execution, diagnostics, research checks and tests. validate_clean_checkout.py repeats a committed snapshot in a new owned work directory with separately materialized inputs and dependencies. Preserve failed receipts, effective tool identities and domains. Never report a skipped module or missing artifact as complete.
+```powershell
+& .\tools\python\Scripts\python.exe -I run_checks.py --quick
+```
+
+That is the same six checks the pull request sees. Skipping it because the change "only touches a source file" is how a two-minute landing becomes four cycles — the contract tests that reject a new source unit live in the test suite, not in the compiler.
+
+CI compiles every active native unit for the original ARM32 target and the Windows and Android host targets without receiving original game inputs. That proves source consistency and warnings, not matching and not a complete game.
+
+`python build.py --image <your own image>` is the measurement. It validates the image against the pinned identity, extracts it, compiles `src`, builds the per-function targets, runs the report and links the whole image, then prints compiled-from-source bytes against retained bytes. A trusted job runs the same command with the owner's inputs and uploads the report. Keep every failure and every tool identity; never report a skipped module or a missing artefact as complete.
 
 ## Understanding and names
 
