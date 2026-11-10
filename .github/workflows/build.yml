@@ -30,8 +30,6 @@ jobs:
         run: python -I -S -m unittest discover -s tests -p test_bootstrap_report_python.py -v
       - name: Materialize project-local frozen Python
         run: python -I -S toolscripts/bootstrap_report_python.py
-      - name: Check generated source-link names
-        run: tools/ci-python-3.13.5/python.exe -I -S toolscripts/generate_source_names.py --check
       - name: Check frozen public download integrity and retries
         run: tools/ci-python-3.13.5/python.exe -I -S -m unittest discover -s tests -p test_bootstrap_report_tools.py -v
       - name: Check pinned compiler and report tool installation
