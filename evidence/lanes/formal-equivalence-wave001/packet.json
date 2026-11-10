@@ -99,7 +99,7 @@
     "unresolvedSymbols": [],
     "ast": {
       "path": "work/formal-equivalence-wave001/normal.ast.json",
-      "sha256": "08acb307b50ba26bcefbcf3434a6a586214ee4f2c9fbc0617f23d2cc02d142f8",
+      "sha256": "8e9fdf798aa6fb97d67f95655f6a3e03aadb4dc9e596ce5fb1b9861b2a130496",
       "bytes": 157704
     },
     "scope": "Complete target text symbol only; other object functions/unwind metadata are not proved; linked ELF has no remaining relocations"
@@ -129,7 +129,7 @@
     "unresolvedSymbols": [],
     "ast": {
       "path": "work/formal-equivalence-wave001/wrong.ast.json",
-      "sha256": "0c53edf472496dbc28bb2c9924a09202a7ec725e51a675508477de3527c015dd",
+      "sha256": "b9681e1af655644954d4ce8ffcfbed88f45586f4a78777df3d6e0883a6dca5ef",
       "bytes": 14914
     },
     "scope": "Complete target text symbol only; other object functions/unwind metadata are not proved; linked ELF has no remaining relocations"
@@ -185,11 +185,11 @@
       "status": "sat",
       "query": {
         "path": "work/formal-equivalence-wave001/domain-arm-witness.smt2",
-        "sha256": "976430ca8242c18bcd5272213643337f209c5de37f7ad8050144f216d80b9387",
+        "sha256": "77a1e8acd4929fc723a2bb1be2a49a18483b09db7a6f5674b131e56d1505ac63",
         "bytes": 746
       },
       "timeoutMs": 10000,
-      "statistics": "(:added-eqs           56\n :bv-bit2core         28\n :final-checks        2\n :max-memory          17.99\n :memory              17.59\n :mk-bool-var         84\n :num-allocs          69685\n :num-checks          2\n :rlimit-count        1192\n :solve-eqs-elim-vars 2\n :solve-eqs-steps     2\n :time                0.01)",
+      "statistics": "(:added-eqs           56\n :bv-bit2core         28\n :final-checks        2\n :max-memory          25.90\n :memory              17.72\n :mk-bool-var         70\n :num-allocs          346373985\n :num-checks          2\n :rlimit-count        373774\n :solve-eqs-elim-vars 2\n :solve-eqs-steps     2\n :time                0.00)",
       "universalInterpretation": "Counterexample found",
       "counterexample": {
         "x": 0,
@@ -206,11 +206,11 @@
       "status": "sat",
       "query": {
         "path": "work/formal-equivalence-wave001/domain-thumb-witness.smt2",
-        "sha256": "1a85bf67706fa60654be6518d14ed7b27d7ee652780cfe494bf7b8e0f1ab13fc",
+        "sha256": "21239f034b2194fe9d818a49289218a82e13a8344237db6b869918063af60712",
         "bytes": 746
       },
       "timeoutMs": 10000,
-      "statistics": "(:added-eqs           56\n :bv-bit2core         28\n :final-checks        2\n :max-memory          17.99\n :memory              17.59\n :mk-bool-var         84\n :num-allocs          256528\n :num-checks          2\n :rlimit-count        2394\n :solve-eqs-elim-vars 2\n :solve-eqs-steps     2\n :time                0.00)",
+      "statistics": "(:added-eqs           56\n :bv-bit2core         28\n :final-checks        2\n :max-memory          25.90\n :memory              17.72\n :mk-bool-var         60\n :num-allocs          419888889\n :num-checks          2\n :rlimit-count        374965\n :solve-eqs-elim-vars 2\n :solve-eqs-steps     2\n :time                0.00)",
       "universalInterpretation": "Counterexample found",
       "counterexample": {
         "x": 0,
@@ -230,11 +230,11 @@
       "status": "unsat",
       "query": {
         "path": "work/formal-equivalence-wave001/original-vs-c-ast.smt2",
-        "sha256": "19a793610e5e6548576a61b3371f782fd22cbe5a0cd7d4de0820c063bc9e6ed9",
-        "bytes": 2819
+        "sha256": "fbc5a6848b44e9b071c5cb2c7bf6ea606029b1d7921ee3468c86c3ddbbb0a246",
+        "bytes": 2840
       },
       "timeoutMs": 10000,
-      "statistics": "(:elim-unconstrained    2\n :max-memory            25.84\n :memory                17.62\n :num-allocs            495931\n :rlimit-count          5857\n :sat-backjumps         5\n :sat-conflicts         6\n :sat-decisions         10\n :sat-del-clause        1\n :sat-elim-literals     2\n :sat-mk-clause-2ary    137\n :sat-mk-clause-nary    31\n :sat-mk-var            94\n :sat-propagations-2ary 100\n :sat-propagations-nary 11\n :sat-units             31\n :solve-eqs-elim-vars   15\n :solve-eqs-steps       15\n :time                  0.01)",
+      "statistics": "(:elim-unconstrained    2\n :max-memory            25.91\n :memory                17.69\n :num-allocs            479490213\n :rlimit-count          378428\n :sat-backjumps         5\n :sat-conflicts         6\n :sat-decisions         10\n :sat-del-clause        1\n :sat-elim-literals     2\n :sat-mk-clause-2ary    137\n :sat-mk-clause-nary    31\n :sat-mk-var            94\n :sat-propagations-2ary 100\n :sat-propagations-nary 11\n :sat-units             31\n :solve-eqs-elim-vars   15\n :solve-eqs-steps       15\n :time                  0.01)",
       "universalInterpretation": "No satisfying counterexample over declared domain"
     },
     {
@@ -242,11 +242,11 @@
       "status": "unsat",
       "query": {
         "path": "work/formal-equivalence-wave001/compiled-vs-c-ast.smt2",
-        "sha256": "870cf46443f1cbf84075a6f2288c7d05e60a868202a90c6e510abc0e4d2f49a4",
-        "bytes": 2695
+        "sha256": "0035d3f19e3e419f845ca295cad0c25164e602938491bdb7b2130c6f3bdb8a93",
+        "bytes": 2713
       },
       "timeoutMs": 10000,
-      "statistics": "(:elim-unconstrained    2\n :max-memory            25.84\n :memory                17.61\n :num-allocs            855777\n :rlimit-count          8997\n :sat-backjumps         2\n :sat-conflicts         3\n :sat-decisions         3\n :sat-mk-clause-2ary    126\n :sat-mk-clause-nary    27\n :sat-mk-var            91\n :sat-propagations-2ary 85\n :sat-propagations-nary 1\n :solve-eqs-elim-vars   15\n :solve-eqs-steps       15\n :time                  0.01)",
+      "statistics": "(:elim-unconstrained  2\n :max-memory          25.91\n :memory              17.65\n :num-allocs          528640667\n :rlimit-count        381207\n :solve-eqs-elim-vars 15\n :solve-eqs-steps     15\n :time                0.00)",
       "universalInterpretation": "No satisfying counterexample over declared domain"
     },
     {
@@ -254,11 +254,11 @@
       "status": "unsat",
       "query": {
         "path": "work/formal-equivalence-wave001/compiled-wrong-vs-wrong-c-ast.smt2",
-        "sha256": "f95ad5f2d89b04ba83093d3d53b1d0802f0eff5e7266b136ed716bac98eb4929",
-        "bytes": 2701
+        "sha256": "81fa8f0cc12eb5b6067da57f23212b1cdf83b5c3be778c259ecf209959930cd2",
+        "bytes": 2706
       },
       "timeoutMs": 10000,
-      "statistics": "(:elim-unconstrained    2\n :max-memory            25.84\n :memory                17.61\n :num-allocs            1317586\n :rlimit-count          12024\n :sat-backjumps         1\n :sat-conflicts         2\n :sat-decisions         3\n :sat-mk-clause-2ary    96\n :sat-mk-clause-nary    24\n :sat-mk-var            88\n :sat-propagations-2ary 20\n :solve-eqs-elim-vars   15\n :solve-eqs-steps       15\n :time                  0.01)",
+      "statistics": "(:elim-unconstrained    2\n :max-memory            25.91\n :memory                17.68\n :num-allocs            591944716\n :rlimit-count          384294\n :sat-backjumps         2\n :sat-conflicts         3\n :sat-decisions         3\n :sat-mk-clause-2ary    122\n :sat-mk-clause-nary    25\n :sat-mk-var            89\n :sat-propagations-2ary 83\n :solve-eqs-elim-vars   15\n :solve-eqs-steps       15\n :time                  0.01)",
       "universalInterpretation": "No satisfying counterexample over declared domain"
     },
     {
@@ -266,11 +266,11 @@
       "status": "unsat",
       "query": {
         "path": "work/formal-equivalence-wave001/c-ast-vs-manual-value-spec.smt2",
-        "sha256": "13f72b5505fdacdbb6d078a78a58fcb0a883340087d89de61390828afd6454e8",
+        "sha256": "4c835f783b5859c6c4f63f5eb99fedf1b85432a795a4607a0df03148f2fb2003",
         "bytes": 856
       },
       "timeoutMs": 10000,
-      "statistics": "(:max-memory   25.84\n :memory       17.39\n :num-allocs   1676723\n :rlimit-count 12681)",
+      "statistics": "(:max-memory   25.91\n :memory       17.45\n :num-allocs   634199525\n :rlimit-count 384951)",
       "universalInterpretation": "No satisfying counterexample over declared domain"
     },
     {
@@ -278,11 +278,11 @@
       "status": "unsat",
       "query": {
         "path": "work/formal-equivalence-wave001/original-vs-linked-contract.smt2",
-        "sha256": "1b0ab1b23d5ecd53be13c00ec71335d4d3735ba50cb1c71263f21954e4d7e6f3",
-        "bytes": 3931
+        "sha256": "b88a0bf1f1242de1f94b8cb660c69c01cd3c529507720ad32c5bcc050da33cc2",
+        "bytes": 3938
       },
       "timeoutMs": 10000,
-      "statistics": "(:elim-unconstrained    2\n :max-memory            25.85\n :memory                17.63\n :num-allocs            2215705\n :rlimit-count          16477\n :sat-backjumps         4\n :sat-conflicts         5\n :sat-decisions         4\n :sat-elim-literals     3\n :sat-mk-clause-2ary    104\n :sat-mk-clause-nary    28\n :sat-mk-var            92\n :sat-propagations-2ary 149\n :sat-propagations-nary 14\n :sat-units             4\n :solve-eqs-elim-vars   15\n :solve-eqs-steps       15\n :time                  0.01)",
+      "statistics": "(:elim-unconstrained    2\n :max-memory            25.92\n :memory                17.69\n :num-allocs            690599738\n :rlimit-count          388744\n :sat-backjumps         3\n :sat-conflicts         4\n :sat-decisions         3\n :sat-elim-literals     3\n :sat-mk-clause-2ary    103\n :sat-mk-clause-nary    28\n :sat-mk-var            92\n :sat-propagations-2ary 151\n :sat-propagations-nary 10\n :sat-units             2\n :solve-eqs-elim-vars   15\n :solve-eqs-steps       15\n :time                  0.01)",
       "universalInterpretation": "No satisfying counterexample over declared domain"
     }
   ],
@@ -291,15 +291,15 @@
     "status": "sat",
     "query": {
       "path": "work/formal-equivalence-wave001/wrong-source-counterexample.smt2",
-      "sha256": "04ae60c8f55c2d54fe27dbdd1b53a203304360dddb4aa3f8c6bc2d6e73f4e29e",
-      "bytes": 1472
+      "sha256": "1d8590907aa3a8e3f272377a73de2d95a237e8eb1d7fa780deff809fcb4fd69b",
+      "bytes": 1490
     },
     "timeoutMs": 10000,
-    "statistics": "(:elim-unconstrained    2\n :max-memory            25.85\n :memory                17.72\n :num-allocs            2880852\n :rlimit-count          19661\n :sat-backjumps         4\n :sat-conflicts         4\n :sat-decisions         32\n :sat-del-clause        4\n :sat-elim-clauses      3\n :sat-elim-literals     5\n :sat-mk-clause-2ary    104\n :sat-mk-clause-nary    29\n :sat-mk-var            92\n :sat-propagations-2ary 168\n :sat-propagations-nary 14\n :sat-units             4\n :solve-eqs-elim-vars   15\n :solve-eqs-steps       15\n :time                  0.01)",
+    "statistics": "(:elim-unconstrained    2\n :max-memory            25.92\n :memory                17.68\n :num-allocs            754153781\n :rlimit-count          391818\n :sat-decisions         27\n :sat-mk-clause-2ary    103\n :sat-mk-clause-nary    28\n :sat-mk-var            92\n :sat-propagations-2ary 60\n :sat-propagations-nary 5\n :solve-eqs-elim-vars   15\n :solve-eqs-steps       15\n :time                  0.01)",
     "universalInterpretation": "Counterexample found",
     "counterexample": {
       "x": 11,
-      "lr": 98304,
+      "lr": 0,
       "sp": 0,
       "N": false,
       "Z": false,
@@ -312,15 +312,15 @@
     "status": "sat",
     "query": {
       "path": "work/formal-equivalence-wave001/overstrict-final-flags-contract.smt2",
-      "sha256": "7ddbc9102a5daeef0431cc4ccc6b0ccbe3d5c110126404297ffb17257c6552d3",
-      "bytes": 2006
+      "sha256": "fff08ea8ff9e48dd357aa3e3f6aec0f4f40e135c3059e2ddd906429ea320fd4e",
+      "bytes": 2048
     },
     "timeoutMs": 10000,
-    "statistics": "(:elim-unconstrained      2\n :max-memory              25.89\n :memory                  17.67\n :num-allocs              3750567\n :rlimit-count            25244\n :sat-backjumps           9\n :sat-conflicts           9\n :sat-decisions           43\n :sat-elim-literals       2\n :sat-minimized-lits      3\n :sat-mk-clause-2ary      114\n :sat-mk-clause-nary      59\n :sat-mk-var              102\n :sat-propagations-2ary   195\n :sat-propagations-nary   59\n :sat-subs-resolution-dyn 1\n :sat-units               32\n :solve-eqs-elim-vars     15\n :solve-eqs-steps         15\n :time                    0.01)",
+    "statistics": "(:elim-unconstrained    2\n :max-memory            25.94\n :memory                17.72\n :num-allocs            817827001\n :rlimit-count          397390\n :sat-backjumps         7\n :sat-conflicts         7\n :sat-decisions         36\n :sat-elim-literals     2\n :sat-mk-clause-2ary    123\n :sat-mk-clause-nary    58\n :sat-mk-var            104\n :sat-propagations-2ary 195\n :sat-propagations-nary 48\n :sat-units             4\n :solve-eqs-elim-vars   15\n :solve-eqs-steps       15\n :time                  0.01)",
     "universalInterpretation": "Counterexample found",
     "counterexample": {
-      "x": 10,
-      "lr": 3162112,
+      "x": 2147483658,
+      "lr": 6156,
       "sp": 0,
       "N": false,
       "Z": false,
@@ -438,7 +438,7 @@
       "exitCode": 0,
       "log": {
         "path": "work/formal-equivalence-wave001/normal-ast.log",
-        "sha256": "08acb307b50ba26bcefbcf3434a6a586214ee4f2c9fbc0617f23d2cc02d142f8",
+        "sha256": "8e9fdf798aa6fb97d67f95655f6a3e03aadb4dc9e596ce5fb1b9861b2a130496",
         "bytes": 157704
       }
     },
@@ -506,7 +506,7 @@
       "exitCode": 0,
       "log": {
         "path": "work/formal-equivalence-wave001/wrong-ast.log",
-        "sha256": "0c53edf472496dbc28bb2c9924a09202a7ec725e51a675508477de3527c015dd",
+        "sha256": "b9681e1af655644954d4ce8ffcfbed88f45586f4a78777df3d6e0883a6dca5ef",
         "bytes": 14914
       }
     },

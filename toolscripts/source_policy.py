@@ -8,6 +8,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 EXTENSIONS = {'.py', '.c', '.cpp', '.cc', '.cxx', '.h', '.hpp', '.java', '.def', '.ld'}
+THIRD_PARTY_SEGMENTS = ('third_party', 'upstream')
+
+
+def third_party(path):
+    return any(part in THIRD_PARTY_SEGMENTS for part in path.parts)
 
 
 def has_c_comment(text):
@@ -47,5 +52,6 @@ def policy():
     files.extend(ROOT.glob('*.py'))
     result = {path.relative_to(ROOT).as_posix(): value for path, value in imported.items()}
     result.update({path.relative_to(ROOT).as_posix(): validate_source(path)
-                   for path in sorted(files) if path.resolve() not in imported})
+                   for path in sorted(files)
+                   if path.resolve() not in imported and not third_party(path)})
     return result
