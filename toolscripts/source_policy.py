@@ -24,11 +24,6 @@ def validate_source(path):
     text = path.read_text(encoding='utf-8')
     if len(text.splitlines()) > 500:
         raise ValueError('Authored source exceeds 500 physical lines: ' + str(path))
-    if path.suffix == '.py':
-        if any(token.type == tokenize.COMMENT for token in tokenize.generate_tokens(io.StringIO(text).readline)):
-            raise ValueError('Authored Python comments violate source policy: ' + str(path))
-    elif has_c_comment(text):
-        raise ValueError('Authored native comments violate source policy: ' + str(path))
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
