@@ -1,14 +1,21 @@
 """Build the objdiff project and its original/source objects from the split.
 
-Every configured source file under ``src/native`` is compiled with the pinned
-profile. A file that defines a function the split places becomes one objdiff
-unit: its target object holds the original function bytes carved out of the
-user's code image, and its base object holds the same functions compiled from
-that file. Every original text byte source does not implement stays in one
-extra unit, ``src/native``, with the original rodata, data and BSS.
+Every configured source file under ``src/native`` is compiled with the compiler
+profile its unit names. A unit that names nothing uses the default profile from
+``config/compiler-profiles.json``: the best-evidenced original compiler, armcc
+4.1 build 1454, unless configuration says otherwise. A file that defines a
+function the split places becomes one objdiff unit: its target object holds the
+original function bytes carved out of the user's code image, and its base object
+holds the same functions compiled from that file.
 
-No ledger decides what counts. A function is measured because the source
-defines it and the split gives it an address, a mode and a size.
+Every original text byte source does not implement stays in one extra unit,
+``src/native``, with the original rodata, data and BSS.
+
+No ledger decides what counts. A function is measured because the source defines
+it and the split gives it an address, a mode and a size. The profile's declared
+configuration is checked against the unit: a unit may only ask for a layout or
+header profile the profile implements, so naming a profile never silently
+changes what the unit declared.
 """
 
 import argparse
@@ -21,6 +28,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import armcc_object
 import elf_objects
 import exheader
 import split as split_module
@@ -31,10 +39,10 @@ VERSION = 'update-content0'
 SOURCE_ROOT = 'src/native'
 CLANG = 'tools/clang-21/clang.exe'
 LLD = 'tools/clang-21/ld.lld.exe'
-PROFILE = ('--target=arm-none-eabi', '-mcpu=mpcore', '-marm', '-O2', '-ffreestanding',
-           '-ffunction-sections', '-fno-unwind-tables', '-fno-asynchronous-unwind-tables',
-           '-fomit-frame-pointer', '-fno-optimize-sibling-calls')
-ASSEMBLE = PROFILE[:3]
+PROFILE_CONFIG = 'config/compiler-profiles.json'
+# The assembler that carves original bytes out of the user's image is always
+# the pinned Clang: it assembles bytes, it does not compile source.
+ASSEMBLE = ('--target=arm-none-eabi', '-mcpu=mpcore', '-marm')
 TIMEOUT = 300
 CANONICAL = re.compile(r'fn_[0-9a-f]{8}')
 
@@ -64,22 +72,101 @@ def run(argv, log):
     return {'argv': argv, 'log': log.as_posix(), 'logSha256': digest(log)}
 
 
-def compiler_argv(root, unit, source, target):
-    """The pinned profile plus the unit's declared layout and header scope."""
-    argv = [root / CLANG, *PROFILE, '-I', source.parent]
-    profile = unit.get('layoutProfile')
-    if profile == 'packed-4':
-        argv.append('-fpack-struct=4')
-    elif profile not in (None, 'natural'):
-        raise ValueError('Unknown layout profile for ' + unit['source'])
+def profiles(root):
+    """The declared compiler profiles, keyed by id, plus the default id."""
+    config = read_json(Path(root) / PROFILE_CONFIG)
+    if config.get('schemaVersion') != 1:
+        raise ValueError('Unsupported compiler profile schema')
+    table = {}
+    for profile in config['profiles']:
+        if profile['id'] in table:
+            raise ValueError('Duplicate compiler profile: ' + profile['id'])
+        table[profile['id']] = profile
+    if config['defaultProfile'] not in table:
+        raise ValueError('Default compiler profile is not declared')
+    return {'default': config['defaultProfile'], 'profiles': table}
+
+
+def profile_id(root, unit, forced=None):
+    """The profile a unit names, a forced override, or the configured default."""
+    return forced or unit.get('compilerProfile') or profiles(root)['default']
+
+
+def profile_for(root, unit, forced=None):
+    table = profiles(root)
+    wanted = profile_id(root, unit, forced)
+    if wanted not in table['profiles']:
+        raise ValueError('Unknown compiler profile for %s: %s' % (unit['source'], wanted))
+    return table['profiles'][wanted]
+
+
+def declared_scopes(unit, profile):
+    """Check a unit's declared layout/header scopes against the profile.
+
+    The unit's declaration is the contract; the profile may implement it, and
+    may not be given a different one implicitly. An unknown or unsupported
+    declaration fails here instead of producing objects the report cannot
+    compare with what the unit asked for.
+    """
+    layout = unit.get('layoutProfile')
+    if layout is not None and layout not in profile['layouts']:
+        raise ValueError('Unknown layout profile for %s: %s' % (unit['source'], layout))
     headers = unit.get('publicHeaderProfile')
-    if headers == 'zlib-solo':
-        argv.append('-DZ_SOLO')
-    elif headers is not None:
-        raise ValueError('Unknown public header profile for ' + unit['source'])
+    if headers is not None and headers not in profile['publicHeaders']:
+        raise ValueError('Unknown public header profile for %s: %s' % (unit['source'], headers))
+    return layout, headers
+
+
+def preinclude_for(root, unit, target, profile):
+    """The preinclude header this unit compiles with, if the profile has one.
+
+    A profile may need two preincludes: its compatibility header and a pragma
+    that implements a declared layout scope. armcc accepts one ``--preinclude``,
+    so a small generated header composes them.
+    """
+    base = profile.get('preinclude')
+    layout, _ = declared_scopes(unit, profile)
+    pragmas = profile['layouts'].get(layout or 'natural', [])
+    if not base and not pragmas:
+        return None
+    if base and not pragmas:
+        return Path(root) / base
+    generated = Path(target).with_name(Path(target).name + '.preinclude.h')
+    lines = []
+    if base:
+        lines.append('#include "%s"' % (Path(root) / base).as_posix())
+    lines += ['#pragma pack(%s)' % item.split('-')[-1] for item in pragmas if item.startswith('pragma-pack-')]
+    generated.parent.mkdir(parents=True, exist_ok=True)
+    generated.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    return generated
+
+
+def compiler_argv(root, unit, source, target, forced_profile=None, compat=True):
+    """The profile's compiler, the unit's declared scopes and its include scope."""
+    root, source, target = Path(root), Path(source), Path(target)
+    profile = profile_for(root, unit, forced_profile)
+    layout, headers = declared_scopes(unit, profile)
+    extra = profile['layouts'].get(layout or 'natural', []) + profile['publicHeaders'].get(headers, [])
+    argv = [root / profile['executable'], *profile['arguments']]
+    if profile['id'] == 'clang-21':
+        # Keep the historical Clang command line byte for byte: the baseline
+        # report must be reproducible from this same code path.
+        argv += ['-I', source.parent]
+        argv += [item for item in extra if item.startswith('-')]
+        for directory in unit.get('includeDirectories') or []:
+            argv += ['-I', root / directory]
+        argv += ['-c', source, '-o', target]
+        return argv
+    preinclude = preinclude_for(root, unit, target, profile) if compat else None
+    for directory in profile.get('includeDirectories') or []:
+        argv += ['-I', root / directory]
+    argv += ['-I', source.parent]
+    if preinclude:
+        argv += ['--preinclude', preinclude]
+    argv += [item for item in extra if item.startswith('-')]
     for directory in unit.get('includeDirectories') or []:
         argv += ['-I', root / directory]
-    argv += ['-c', source, '-o', target]
+    argv += [source, '-o', target]
     return argv
 
 
@@ -92,27 +179,36 @@ def configured_sources(root):
             and unit['source'] not in excluded]
 
 
-def compile_sources(root, output):
+def compile_sources(root, output, forced_profile=None):
     """Compile the configured source tree and return every function it defines."""
-    return compile_units(root, output, configured_sources(root))
+    return compile_units(root, output, configured_sources(root), forced_profile)
 
 
-def compile_units(root, output, units):
+def compile_units(root, output, units, forced_profile=None):
     """Compile these units and return every canonical function they define."""
     definitions, commands = {}, []
     for unit in units:
         source = root / unit['source']
         target = output / (unit['source'].replace('/', '--') + '.o')
         target.parent.mkdir(parents=True, exist_ok=True)
-        commands.append(run(compiler_argv(root, unit, source, target),
-                            output / (unit['source'].replace('/', '--') + '.log')))
+        profile = profile_for(root, unit, forced_profile)
+        log = output / (unit['source'].replace('/', '--') + '.log')
+        if profile.get('postprocess') == 'armcc-split':
+            # armcc emits one .text per translation unit. Compile it unchanged
+            # and rewrite the object into one section per function before the
+            # measurement sees it, so the compiler's own pool placement stays.
+            raw = target.with_name(target.name + '.armcc.o')
+            commands.append(run(compiler_argv(root, unit, source, raw, forced_profile), log))
+            armcc_object.split(raw, target)
+        else:
+            commands.append(run(compiler_argv(root, unit, source, target, forced_profile), log))
         for name, function in elf_objects.read(target)['functions'].items():
             if not CANONICAL.fullmatch(name):
                 continue
             if name in definitions:
                 raise ValueError('%s and %s both define %s'
                                  % (definitions[name]['source'], unit['source'], name))
-            function.update(source=unit['source'], object=target)
+            function.update(source=unit['source'], object=target, profile=profile['id'])
             definitions[name] = function
     return definitions, commands
 
@@ -201,7 +297,26 @@ def empty_base(root, output, label):
     return base
 
 
-def build(root, output, project_path, split_path):
+def tool_identity(root, profile):
+    """Compiler executable digest and, when it answers, its own version line."""
+    path = root / profile['executable']
+    if not path.is_file():
+        raise ValueError('Missing compiler executable: %s; run python setup_tools.py' % path)
+    identity = {'id': profile['id'], 'executable': profile['executable'],
+                'sha256': digest(path), 'identity': profile['identity'],
+                'arguments': list(profile['arguments']),
+                'measuredOriginal': bool(profile.get('measuredOriginal'))}
+    flags = ['--vsn'] if profile['id'].startswith('armcc') else ['--version']
+    try:
+        done = subprocess.run([str(path), *flags], capture_output=True, timeout=60)
+        banner = (done.stdout or done.stderr).decode('utf-8', 'replace').strip().splitlines()
+        identity['banner'] = banner[0] if banner else None
+    except (OSError, subprocess.SubprocessError):
+        identity['banner'] = None
+    return identity
+
+
+def build(root, output, project_path, split_path, forced_profile=None):
     """Produce the objdiff project and the objects it points at."""
     root, output = Path(root).resolve(), Path(output).resolve()
     output.mkdir(parents=True, exist_ok=True)
@@ -214,7 +329,7 @@ def build(root, output, project_path, split_path):
     if image.stat().st_size != layout['pageAlignedCodeBytes']:
         raise ValueError('Code image size disagrees with the ExHeader page extent')
     functions = split_module.load(split_path, text['address'], text['initializedBytes'])
-    definitions, commands = compile_sources(root, output / 'compiled')
+    definitions, commands = compile_sources(root, output / 'compiled', forced_profile)
     measured = {name: value for name, value in definitions.items() if name in functions.by_name}
     units, by_source = [], {}
     for name in measured:
@@ -232,6 +347,8 @@ def build(root, output, project_path, split_path):
                   for unit in units]})
     unmeasured = [{'source': value['source'], 'symbol': name, 'bytes': value['size']}
                   for name, value in sorted(definitions.items()) if name not in functions.by_name]
+    used = sorted({profile_id(root, unit, forced_profile) for unit in configured_sources(root)})
+    profiles_used = profiles(root)['profiles']
     return {'schemaVersion': 2, 'version': VERSION,
             'image': {'path': image.relative_to(root).as_posix(), 'sha256': digest(image)},
             'exheader': {'path': header.relative_to(root).as_posix(), 'sha256': digest(header)},
@@ -240,6 +357,10 @@ def build(root, output, project_path, split_path):
                       'primaryBytes': sum(size for _, size in functions.primary_ranges()),
                       'extraBytes': sum(size for _, size in functions.extra_ranges())},
             'layout': layout, 'text': text, 'units': units, 'commands': commands,
+            'compilers': [tool_identity(root, profiles_used[pid]) for pid in used],
+            'sourceFilesByProfile': {pid: sum(1 for unit in configured_sources(root)
+                                              if profile_id(root, unit, forced_profile) == pid)
+                                     for pid in used},
             'sourceFiles': len(configured_sources(root)),
             'measuredFunctions': len(measured), 'retainedFunctionCount': len(functions) - len(measured),
             'unmeasuredSourceFunctions': unmeasured}
@@ -259,6 +380,7 @@ def source_unit(root, output, source, names, functions, measured, text, commands
     base, dropped, command = select_base(root, measured[names[0]]['object'], names, output, label)
     commands.append(command)
     return {'name': source[:-2], 'source_path': source,
+            'compilerProfile': measured[names[0]]['profile'],
             'target': target.relative_to(root).as_posix(), 'targetSha256': digest(target),
             'base': base.relative_to(root).as_posix(), 'baseSha256': digest(base),
             'targetCodeBytes': sum(functions.by_name[name].size for name in names),

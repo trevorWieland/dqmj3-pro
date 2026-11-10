@@ -190,9 +190,14 @@ class CompileSourcesTests(unittest.TestCase):
                         ("fixture_run", "fixture_services", "fixture_state"))
         fixtures.update("source/squirrel-wave021/" + name + ".c" for name in
                         ("native_table_helpers", "table_helpers_fixture", "table_helpers_services"))
-        self.assertEqual({unit["source"] for unit in restricted},
-                         {folder + "/host_runner.c" for folder in expected} | fixtures)
-        self.assertTrue(all(unit["targets"] == ["windows-x64"] for unit in restricted))
+        windows_only = {folder + "/host_runner.c" for folder in expected} | fixtures
+        # The record initialiser unit casts 32-bit address words, so it is deliberately arm32-only.
+        arm32_only = {"src/native/credit001/record_updates.c"}
+        self.assertEqual({unit["source"] for unit in restricted}, windows_only | arm32_only)
+        self.assertEqual(
+            {unit["source"]: unit["targets"] for unit in restricted},
+            {source: ["windows-x64"] for source in windows_only}
+            | {source: ["arm32-mpcore"] for source in arm32_only})
 
     def test_duplicate_or_historical_active_conflicts_fail(self):
         root = self.temporary()

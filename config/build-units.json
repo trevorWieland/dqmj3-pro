@@ -611,7 +611,9 @@
         "src/native/wave012/fixed_arena.h",
         "src/native/wave013/pattern_tokens.h"
       ],
-      "role": "bounded-control-tokenizer-component"
+      "role": "bounded-control-tokenizer-component",
+      "compilerProfile": "clang-21",
+      "profileReason": "The 132-entry property table spells its UTF-16 names with C11 u\"...\" literals. armcc 4.1 has no C11 character-literal prefix and no preprocessing spelling reproduces a 16-bit string literal, so this one unit keeps the Clang profile until the table is respelled as a recorded reconstruction change. It contributes no byte-identical functions under either compiler today."
     },
     {
       "source": "src/native/wave013/token_repeat.c",
@@ -11655,6 +11657,82 @@
         "src/native/md5-stream062/sdk_md5062ag.h"
       ],
       "role": "bounded-component"
+    },
+    {
+      "source": "src/native/credit001/record_updates.c",
+      "headers": [
+        "src/native/credit001/record_types.h"
+      ],
+      "role": "recovered-and-candidate-native",
+      "allowedUnusedParameters": [
+        {
+          "function": "fn_001b3538",
+          "parameter": "record"
+        },
+        {
+          "function": "fn_002f1d30",
+          "parameter": "record"
+        },
+        {
+          "function": "fn_002f215c",
+          "parameter": "record"
+        },
+        {
+          "function": "fn_0065c464",
+          "parameter": "record"
+        },
+        {
+          "function": "fn_0065c46c",
+          "parameter": "record"
+        },
+        {
+          "function": "fn_0065c4c0",
+          "parameter": "record"
+        },
+        {
+          "function": "fn_0065c520",
+          "parameter": "record"
+        },
+        {
+          "function": "fn_0065c528",
+          "parameter": "record"
+        },
+        {
+          "function": "fn_0065c5bc",
+          "parameter": "record"
+        },
+        {
+          "function": "fn_0065c660",
+          "parameter": "record"
+        },
+        {
+          "function": "fn_006b547c",
+          "parameter": "record"
+        },
+        {
+          "function": "fn_0072946c",
+          "parameter": "record"
+        },
+        {
+          "function": "fn_00729474",
+          "parameter": "record"
+        },
+        {
+          "function": "fn_0072947c",
+          "parameter": "record"
+        },
+        {
+          "function": "fn_00729484",
+          "parameter": "record"
+        },
+        {
+          "function": "fn_00780890",
+          "parameter": "record"
+        }
+      ],
+      "targets": [
+        "arm32-mpcore"
+      ]
     }
   ],
   "excludedSources": [
@@ -11710,6 +11788,7 @@
   ],
   "nativeComponentRoots": [
     "src/native/particle019-velocity",
-    "src/native/md5-stream062"
+    "src/native/md5-stream062",
+    "src/native/credit001"
   ]
 }
