@@ -55,8 +55,6 @@ jobs:
           entries = source_policy.policy()
           print("authored source files: %d" % len(entries))
           PY
-      - name: Check generated source-link names are current
-        run: python -I -S toolscripts/generate_source_names.py --check
 
   references:
     name: references

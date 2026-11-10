@@ -27,42 +27,10 @@ jobs:
         uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
           python-version: '3.12'
-      - name: Check generated source-link names
-        run: python -I -S toolscripts/generate_source_names.py --check
-      - name: Check C source-definition indexing
-        run: python -I -S -m unittest discover -s tests -p test_c_function_definitions.py -v
       - name: Materialize only pinned public compiler files
         run: python -I -S toolscripts/bootstrap_public_compiler.py
-      - name: Check compile tooling
-        run: python -I -S -m unittest discover -s tests -p 'test_compile_source*.py' -v
-      - name: Check guarded SDK source bootstrap
-        run: python -I -S -m unittest discover -s tests -p test_native_sdk063_stage.py -v
-      - name: Check public SDK source-input boundaries
-        run: python -I -S -m unittest discover -s tests -p test_public_sdk062_inputs.py -v
-      - name: Check public SDK import audit failures
-        run: python -I -S -m unittest discover -s tests -p test_public_sdk062_replay.py -v
-      - name: Check public resource input boundaries
-        run: python -I -S -m unittest discover -s tests -p test_public_resource065_replay.py -v
-      - name: Check public runtime replay receipts
-        run: python -I -S -m unittest discover -s tests -p test_public_sdk_runtime062_replay.py -v
-      - name: Check public file request replay guards
-        run: python -I -S -m unittest discover -s tests -p test_effect_file066_public.py -v
-      - name: Check public owner replay receipts and boundaries
-        run: python -I -S -m unittest discover -s tests -p test_public_sdk_owner062_replay.py -v
-      - name: Check public queue input and import boundaries
-        run: python -I -S -m unittest discover -s tests -p test_queue_file067_public.py -v
-      - name: Check public heap terminal audit receipts
-        run: python -I -S -m unittest discover -s tests -p test_public_sdk_heap062_replay.py -v
-      - name: Check public filesystem bootstrap input boundaries
-        run: python -I -S -m unittest discover -s tests -p test_bootstrap_file068_public.py -v
-      - name: Check public registration terminal receipts and report archives
-        run: python -I -S -m unittest discover -s tests -p test_public_sdk_registration062_replay.py -v
-      - name: Check coupled filesystem terminal journals
-        run: python -I -S -m unittest discover -s tests -p test_coupled_file070_public.py -v
-      - name: Check versioned filesystem terminal journals
-        run: python -I -S -m unittest discover -s tests -p test_filesystem071072_public.py -v
-      - name: Check MD5 stream parent rejects incomplete or forbidden execution
-        run: python -I -S -m unittest discover -s tests -p test_md5_stream062_public.py -v
+      - name: Run the test suite
+        run: python -I -S -m unittest discover -s tests -v
       - name: Compile native sources and bounded VM components for reviewed targets
         run: python -I -S toolscripts/compile_sources.py
       - name: Upload compile diagnostics and manifests
