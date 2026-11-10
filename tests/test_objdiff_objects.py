@@ -1,113 +1,112 @@
-import io
-import json
+import importlib.util
 import sys
 import tempfile
 import unittest
 from pathlib import Path
 
-from elftools.elf.elffile import ELFFile
-
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "toolscripts"))
-import objdiff_objects as objects
+sys.path.insert(0, str(ROOT / 'toolscripts'))
+import elf_objects
+import objdiff_objects
 
 
-class IntervalTests(unittest.TestCase):
-    def test_complement_retains_every_unaccepted_byte(self):
-        entries = [{"address": 0x100004, "instructionBytes": 4}, {"address": 0x100010, "instructionBytes": 8}]
-        self.assertEqual(objects.complement(entries, 0x100000, 32), [(0x100000, 0x100004), (0x100008, 0x100010), (0x100018, 0x100020)])
+CLANG = ROOT / 'tools/clang-21/clang.exe'
 
-    def test_overlapping_source_cannot_earn_double_credit(self):
-        entries = [{"address": 0x100000, "instructionBytes": 8}, {"address": 0x100004, "instructionBytes": 8}]
-        with self.assertRaisesRegex(ValueError, "overlap"):
-            objects.complement(entries, 0x100000, 32)
+SOURCE = '''
+unsigned fn_00100000(unsigned x) { return x + 1; }
+unsigned fn_00100004(unsigned x) { return x * 3; }
+unsigned helper(unsigned x) { return x - 2; }
+unsigned fn_00100020(unsigned x) { return helper(x) + 4; }
+'''
 
-    def test_discontiguous_census_body_does_not_invent_a_stitched_function(self):
-        census = {"functionCount": 1, "functions": [{"address": 0x100000, "mode": "ARM", "ranges": [
-            {"start": 0x100000, "endExclusive": 0x100008}, {"start": 0x100020, "endExclusive": 0x100028}]}]}
-        rows, skipped = objects.census_symbols(census, [(0x100000, 0x100040)], [])
-        self.assertEqual(rows[0]["size"], 8)
-        self.assertEqual(rows[0]["symbol"], "fn_00100000")
-        self.assertFalse(skipped)
-
-    def test_census_entry_inside_admitted_source_is_not_duplicated(self):
-        census = {"functionCount": 1, "functions": [{"address": 0x100004, "mode": "ARM", "ranges": [
-            {"start": 0x100004, "endExclusive": 0x100008}]}]}
-        rows, skipped = objects.census_symbols(census, [(0x100008, 0x100020)], [{"address": 0x100000}])
-        self.assertFalse(rows)
-        self.assertEqual(len(skipped), 1)
+RELOCATED = '''
+static unsigned table[4] = {1, 2, 3, 4};
+unsigned fn_00100000(unsigned x) { return table[x]; }
+unsigned fn_00100004(unsigned x) { return x + 1; }
+'''
 
 
-class GenuineObjectTests(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        if not (ROOT / "tools/clang-21/clang.exe").is_file():
-            raise unittest.SkipTest("Pinned project Clang is unavailable; genuine-object checks were not run")
-
+@unittest.skipUnless(CLANG.is_file(), 'the pinned compiler is not installed')
+class ObjectConstructionTests(unittest.TestCase):
     def setUp(self):
-        (ROOT / "work/objdiff-object-tests").mkdir(parents=True, exist_ok=True)
-        self.temporary = tempfile.TemporaryDirectory(dir=ROOT / "work/objdiff-object-tests")
-        self.addCleanup(self.temporary.cleanup)
-        self.output = Path(self.temporary.name)
-        source = self.output / "fixture.c"
-        source.write_text("unsigned fn_00100000(unsigned x) { return x + 1; }\nunsigned fn_00100010(unsigned x) { return x + 2; }\n")
-        self.raw = self.output / "raw.o"
-        objects.run([ROOT / "tools/clang-21/clang.exe", "--target=arm-none-eabi", "-mcpu=mpcore", "-marm", "-O2",
-                     "-ffunction-sections", "-c", source, "-o", self.raw], self.output / "compile.log")
-        summary = objects.elf_summary(self.raw)
-        self.admitted = next(row for row in summary["functions"] if row["symbol"] == "fn_00100000")
-        self.rows = [{"symbol": self.admitted["symbol"], "instructionBytes": self.admitted["size"],
-                      "originalSpanSha256": self.admitted["sha256"]}]
-        elf = ELFFile(io.BytesIO(self.raw.read_bytes()))
-        self.original = elf.get_section_by_name(self.admitted["section"]).data()
-        self.image = self.output / "synthetic-original.bin"
-        self.image.write_bytes(self.original + b"synthetic-data")
+        directory = tempfile.TemporaryDirectory(dir=ROOT / 'work')
+        self.addCleanup(directory.cleanup)
+        self.output = Path(directory.name)
 
-    def test_linker_selects_only_genuine_admitted_source(self):
-        base, summary, command = objects.select_compiled(ROOT, self.raw, self.rows, self.output, "selected")
-        self.assertEqual([row["symbol"] for row in summary["functions"]], ["fn_00100000"])
-        self.assertEqual(summary["codeBytes"], self.admitted["size"])
-        self.assertEqual(summary["functions"][0]["sha256"], self.admitted["sha256"])
-        self.assertIn("-r", command["argv"])
-        self.assertTrue(base.is_file())
+    def compile(self, text=SOURCE):
+        source = self.output / 'unit.c'
+        source.write_text(text, encoding='utf-8')
+        unit = {'source': source.relative_to(ROOT).as_posix()}
+        definitions, commands = objdiff_objects.compile_units(ROOT, self.output / 'compiled', [unit])
+        self.assertTrue(commands)
+        return definitions
 
-    def test_changed_acceptance_extent_fails_instead_of_padding_source(self):
-        self.rows[0]["instructionBytes"] += 4
-        with self.assertRaisesRegex(ValueError, "unaccepted executable bytes"):
-            objects.select_compiled(ROOT, self.raw, self.rows, self.output, "bad-size")
+    def test_compiler_argv_follows_the_declared_unit_profile(self):
+        source = self.output / 'unit.c'
+        unit = {'source': 'src/native/wave001/x.c', 'layoutProfile': 'packed-4',
+                'publicHeaderProfile': 'zlib-solo', 'includeDirectories': ['src/native/wave001']}
+        argv = [str(item) for item in objdiff_objects.compiler_argv(ROOT, unit, source, self.output / 'x.o')]
+        self.assertIn('-fpack-struct=4', argv)
+        self.assertIn('-DZ_SOLO', argv)
+        self.assertIn(str(source.parent), argv)
+        self.assertIn(str(ROOT / 'src/native/wave001'), argv)
+        self.assertEqual(argv[-1], str(self.output / 'x.o'))
+        with self.assertRaisesRegex(ValueError, 'layout profile'):
+            objdiff_objects.compiler_argv(ROOT, {'source': 'x', 'layoutProfile': 'wide'}, source,
+                                          self.output / 'x.o')
 
-    def test_reference_preserves_original_code_data_and_bss(self):
-        size = len(self.original)
-        symbols = {0: [{"symbol": "fn_00100000", "address": 0x100000, "size": size, "mode": "ARM"}]}
-        data = [(".rodata.original", 0x200000, len(b"synthetic-data"), size, "data"),
-                (".bss.original", 0x300000, 48, None, "bss")]
-        target, summary, command = objects.assemble_reference(ROOT, self.image, [(0x100000, size, 0)], symbols, self.output, "reference", data)
-        self.assertEqual(summary["codeBytes"], size)
-        self.assertEqual(summary["dataBytes"], len(b"synthetic-data"))
-        self.assertEqual(summary["bssBytes"], 48)
-        self.assertEqual(summary["functions"][0]["sha256"], self.admitted["sha256"])
+    def test_compiling_reports_only_canonical_function_names(self):
+        definitions = self.compile()
+        self.assertEqual(set(definitions), {'fn_00100000', 'fn_00100004', 'fn_00100020'})
 
-    def test_out_of_bounds_reference_symbol_fails(self):
-        symbols = {0: [{"symbol": "fn_00100000", "address": 0x100000, "size": len(self.original) + 4, "mode": "ARM"}]}
-        with self.assertRaisesRegex(ValueError, "exceeds owned original span"):
-            objects.assemble_reference(ROOT, self.image, [(0x100000, len(self.original), 0)], symbols, self.output, "bad-reference")
+    def test_carve_reproduces_the_original_bytes_and_symbols(self):
+        image = bytearray(0x100)
+        image[0x00:0x04] = b'\x01\x00\xa0\xe3'
+        image[0x40:0x44] = b'\x02\x00\xa0\xe3'
+        path = self.output / 'code.bin'
+        path.write_bytes(bytes(image))
+        spans = [(0x100000, 4, 0x00), (0x100040, 4, 0x40)]
+        target, _ = objdiff_objects.carve(ROOT, self.output, 'unit', path, spans,
+                                          {0: [('fn_00100000', 0, 4, 'arm')],
+                                           1: [('fn_00100040', 0, 4, 'thumb')]})
+        read = elf_objects.read(target)
+        self.assertEqual(read['sections']['.text.original_00100000']['data'], bytes(image[0:4]))
+        self.assertEqual(read['sections']['.text.original_00100040']['data'], bytes(image[0x40:0x44]))
+        self.assertEqual(read['functions']['fn_00100000']['offset'], 0)
+        self.assertEqual(read['functions']['fn_00100040']['mode'], 'thumb')
 
-    def test_stock_report_credits_exact_admitted_source(self):
-        cli = ROOT / "tools/objdiff-3.8.3/objdiff-cli.exe"
-        if not cli.is_file():
-            self.skipTest("Pinned objdiff-cli unavailable")
-        size = len(self.original)
-        symbols = {0: [{"symbol": "fn_00100000", "address": 0x100000, "size": size, "mode": "ARM"}]}
-        target, target_summary, command = objects.assemble_reference(ROOT, self.image, [(0x100000, size, 0)], symbols, self.output, "fixture")
-        base, base_summary, command = objects.select_compiled(ROOT, self.raw, self.rows, self.output, "fixture")
-        objects.save(self.output / "objdiff.json", {"units": [{"name": "fixture", "target_path": str(target), "base_path": str(base), "metadata": {"complete": False}}]})
-        report = self.output / "report.json"
-        objects.run([cli, "report", "generate", "-p", self.output, "-o", report], self.output / "report.log")
-        data = json.loads(report.read_text())
-        self.assertEqual(int(data["measures"]["matched_code"]), size)
-        self.assertEqual(data["measures"]["matched_functions"], 1)
-        self.assertEqual([row["name"] for row in data["units"][0]["functions"]], ["fn_00100000"])
+    def test_select_base_keeps_only_measured_functions(self):
+        definitions = self.compile()
+        raw = definitions['fn_00100000']['object']
+        base, dropped, _ = objdiff_objects.select_base(ROOT, raw, ['fn_00100000'], self.output, 'unit')
+        self.assertEqual(set(elf_objects.read(base)['functions']), {'fn_00100000'})
+        self.assertEqual(dropped, [])
+
+    def test_functions_whose_relocations_cannot_be_represented_are_dropped(self):
+        definitions = self.compile(RELOCATED)
+        raw = definitions['fn_00100000']['object']
+        base, dropped, _ = objdiff_objects.select_base(ROOT, raw, ['fn_00100000', 'fn_00100004'],
+                                                       self.output, 'unit')
+        self.assertEqual(dropped, ['fn_00100000'])
+        self.assertEqual(set(elf_objects.read(base)['functions']), {'fn_00100004'})
+
+    def test_a_unit_with_no_representable_function_gets_an_empty_base(self):
+        definitions = self.compile(RELOCATED)
+        raw = definitions['fn_00100000']['object']
+        base, dropped, _ = objdiff_objects.select_base(ROOT, raw, ['fn_00100000'], self.output, 'only')
+        self.assertEqual(dropped, ['fn_00100000'])
+        self.assertEqual(elf_objects.read(base)['functions'], {})
+
+    def test_duplicate_definitions_are_refused(self):
+        second = self.output / 'second.c'
+        second.write_text('unsigned fn_00100000(unsigned x) { return x; }\n', encoding='utf-8')
+        source = self.output / 'unit.c'
+        source.write_text('unsigned fn_00100000(unsigned x) { return x; }\n', encoding='utf-8')
+        units = [{'source': source.relative_to(ROOT).as_posix()},
+                 {'source': second.relative_to(ROOT).as_posix()}]
+        with self.assertRaisesRegex(ValueError, 'both define'):
+            objdiff_objects.compile_units(ROOT, self.output / 'compiled', units)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()

@@ -3,12 +3,16 @@ import collections
 import hashlib
 import json
 import struct
+import sys
 from pathlib import Path
 
 from pyctr.fileio import SubsectionIO
 from pyctr.type.exefs import ExeFSReader, decompress_code
 from pyctr.type.romfs import RomFSReader
 from pyctr.type.tmd import TitleMetadataReader
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from exheader import layout as code_layout
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -43,22 +47,6 @@ def align(value, unit=64):
     return (value + unit - 1) // unit * unit
 
 
-def code_layout(exheader):
-    result = {'name': exheader[:8].rstrip(b'\0').decode('ascii', errors='replace'),
-              'compressed': bool(exheader[13] & 1), 'segments': []}
-    physical = 0
-    for name, pos in [('text', 0x10), ('rodata', 0x20), ('data', 0x30)]:
-        address, pages, initialized = struct.unpack_from('<III', exheader, pos)
-        result['segments'].append({'name': name, 'address': address,
-                                   'pages': pages, 'initializedBytes': initialized,
-                                   'codeBinOffset': physical})
-        physical += pages * 4096
-    result['bssBytes'] = struct.unpack_from('<I', exheader, 0x3c)[0]
-    result['stackBytes'] = struct.unpack_from('<I', exheader, 0x1c)[0]
-    result['pageAlignedCodeBytes'] = physical
-    return result
-
-
 def romfs_files(reader, directory='/'):
     info = reader.get_info_from_path(directory)
     for name in sorted(info.contents):
@@ -70,7 +58,7 @@ def romfs_files(reader, directory='/'):
             yield path, child
 
 
-def inspect_ncch(f, offset, size, out, label):
+def inspect_ncch(f, offset, size, out, label, romfs=True):
     f.seek(offset)
     header = f.read(512)
     if len(header) != 512 or header[256:260] != b'NCCH':
@@ -118,7 +106,7 @@ def inspect_ncch(f, offset, size, out, label):
                     data['codeBytes'] = len(code)
                     if len(code) != data['layout']['pageAlignedCodeBytes']:
                         raise ValueError('Code size disagrees with mapped page extent')
-        else:
+        elif romfs:
             reader = RomFSReader(stream, case_insensitive=False, closefd=False)
             for path, info in romfs_files(reader):
                 with reader.open(path) as entry:
@@ -142,8 +130,8 @@ def inspect_ncch(f, offset, size, out, label):
     return data
 
 
-def inspect_cia(path, label):
-    out = ROOT / 'evidence' / 'inventory'
+def inspect_cia(path, label, out=None, romfs=True):
+    out = Path(out) if out is not None else ROOT / 'evidence' / 'inventory'
     with path.open('rb') as f:
         header = f.read(32)
         hs, kind, version, cert, ticket, tmd_size, meta, total = struct.unpack('<IHHIIIIQ', header)
@@ -175,7 +163,7 @@ def inspect_cia(path, label):
                 raise ValueError('CIA content hash disagrees with TMD')
             item['ncch'] = inspect_ncch(f, cursor, record.size,
                                       out / f'{label}-content{record.cindex}.json',
-                                      f'{label}-content{record.cindex}')
+                                      f'{label}-content{record.cindex}', romfs=romfs)
             data['contents'].append(item)
             cursor += record.size
         if sum(x['size'] for x in data['contents']) != total:

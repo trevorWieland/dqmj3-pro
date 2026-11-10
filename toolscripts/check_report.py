@@ -1,55 +1,66 @@
+"""Build the progress report and check it against independent measurements.
+
+The report is only worth publishing if its numbers agree with documents that
+were produced independently: the ExHeader denominator, the image link's byte
+comparison, and the split's function count. This is the check CI and a local
+``run_checks.py`` run use; it needs the user's original image, like build.py.
+"""
+
 import json
-import shutil
-import subprocess
 import sys
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-BUILD = ROOT / 'build/update-content0'
 VERSION = 'update-content0'
+BUILD = ROOT / 'build' / VERSION
 
 
-def run(command):
-    completed = subprocess.run(command, cwd=ROOT, capture_output=True)
-    output = (completed.stdout + completed.stderr).decode('utf-8', 'replace')
-    if completed.returncode:
-        raise SystemExit('failed: %s\n%s' % (' '.join(map(str, command)), output))
-    return output
+def read(path):
+    return json.loads(Path(path).read_text(encoding='utf-8'))
 
 
 def main():
-    python = sys.executable
-    objdiff = ROOT / 'tools/objdiff-3.8.3/objdiff-cli.exe'
-    run([python, '-I', 'toolscripts/configure_objdiff.py', '--version', VERSION,
-         '--output', 'objdiff.json'])
-    report = BUILD / 'report.json'
-    run([str(objdiff), 'report', 'generate', '-o', str(report)])
-    shutil.copyfile(report, BUILD / 'report.raw.json')
-    run([python, '-I', 'toolscripts/finalize_objdiff_report.py',
-         '--input', 'build/update-content0/report.raw.json'])
+    sys.path.insert(0, str(ROOT))
+    sys.path.insert(0, str(ROOT / 'toolscripts'))
+    import build
+    import exheader
 
-    measures = json.loads(report.read_text(encoding='utf-8'))['measures']
-    recovery = json.loads((ROOT / 'recovery.json').read_text(encoding='utf-8'))
-    expected_bytes = recovery['acceptedRecoveredBytes']
-    expected_functions = recovery['acceptedRecoveredFunctions']
+    if build.main() not in (0, 2):
+        return 1
+    report = read(BUILD / 'report.json')
+    link = read(BUILD / 'link.json')
+    mapping = read(BUILD / 'objects/object-map.json')
+    project = read(ROOT / 'objdiff.json')
+    layout = exheader.layout((ROOT / 'generated' / VERSION / 'exheader.bin').read_bytes())
+    text = exheader.segment(layout, 'text')
+    measures = report['measures']
 
     problems = []
-    if int(measures['total_code']) != 7051280:
-        problems.append('total_code %s != 7051280' % measures['total_code'])
-    if int(measures['matched_code']) != expected_bytes:
-        problems.append('matched_code %s != recovery %s' % (measures['matched_code'], expected_bytes))
-    if int(measures['matched_functions']) != expected_functions:
-        problems.append('matched_functions %s != recovery %s'
-                        % (measures['matched_functions'], expected_functions))
+    if int(measures['total_code']) != text['initializedBytes']:
+        problems.append('total_code %s != initialized text %d' % (measures['total_code'], text['initializedBytes']))
+    if int(measures['matched_code']) != link['matchingBytes']:
+        problems.append('matched_code %s != image link matching bytes %d'
+                        % (measures['matched_code'], link['matchingBytes']))
+    if int(measures['matched_functions']) != link['matchingFunctions']:
+        problems.append('matched_functions %s != image link matching functions %d'
+                        % (measures['matched_functions'], link['matchingFunctions']))
+    if int(measures['total_functions']) != mapping['split']['functionCount']:
+        problems.append('total_functions %s != split functions %d'
+                        % (measures['total_functions'], mapping['split']['functionCount']))
+    if int(measures['total_units']) != len(project['units']) or len(report['units']) != len(project['units']):
+        problems.append('unit counts disagree between the report and the objdiff project')
+    if link['sourceFunctions'] + link['retainedFunctions'] != mapping['split']['functionCount']:
+        problems.append('the image link does not account for every split function exactly once')
     for problem in problems:
         print(problem)
-    print('report: total_code=%s matched=%s functions=%s units=%s percent=%.6f'
+    print('report: total_code=%s matched_code=%s matched_functions=%s units=%s'
           % (measures['total_code'], measures['matched_code'], measures['matched_functions'],
-             measures['total_units'], measures['matched_code_percent']))
-    if problems:
-        return 1
-    return 0
+             measures['total_units']))
+    print('link:   source=%d matched=%d retained=%d identical=%s complete=%s'
+          % (link['sourceFunctions'], link['matchingFunctions'], link['retainedFunctions'],
+             link['imageIdentical'], link['complete']))
+    return 1 if problems else 0
 
 
 if __name__ == '__main__':

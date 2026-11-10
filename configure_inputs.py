@@ -56,7 +56,7 @@ def main():
                           'size': target.stat().st_size, 'sha256': digest(target)}
                          for label, target in targets],
               'status': 'verified', 'originalArchiveModified': False}
-    target = ROOT / 'evidence/inventory/archive.json'
+    target = ROOT / 'work/intake/archive.json'
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
     print(json.dumps({'status': 'verified', 'archiveSha256': actual, 'inputCount': 2}))

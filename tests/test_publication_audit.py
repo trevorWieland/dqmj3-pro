@@ -78,35 +78,17 @@ class PublicationAuditTests(unittest.TestCase):
         for encoded in (image.hex().encode(), base64.b64encode(image)):
             self.assertIn("encoded-restricted-payload", self.rules(AUDIT.content_rules(b'{"data":"' + encoded + b'"}', set())))
 
-    def test_main_public_allowlist_includes_the_verified_fixture(self):
+    def test_main_public_allowlist_is_exactly_the_public_resources(self):
         allowed = AUDIT.public_allowlist(ROOT)
-        path = "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json"
-        self.assertEqual(allowed[path]["origin"], "independently-regenerated-authored-synthetic-xbb")
-        self.assertEqual(AUDIT.inspect(path, (ROOT / path).read_bytes(), allowed, set()), [])
+        for path in allowed:
+            self.assertTrue(path.startswith(AUDIT.UPSTREAM + "upstream/") or path == AUDIT.HEADER_PATH)
+        self.assertEqual(allowed[AUDIT.HEADER_PATH]["origin"], "verified-public-aosp-llvm-headers-with-notices")
 
-    def test_exact_authored_xbb_fixtures_are_independently_regenerated(self):
-        allowed = AUDIT.authored_xbb_fixture(ROOT)
-        path = "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json"
-        data = (ROOT / path).read_bytes()
-        self.assertEqual(AUDIT.inspect(path, data, allowed, set()), [])
-        self.assertIn("encoded-restricted-payload", self.rules(AUDIT.inspect("docs/other.json", data, allowed, set())))
-
-    def test_known_private_hash_still_blocks_an_allowed_synthetic_payload(self):
-        allowed = AUDIT.authored_xbb_fixture(ROOT)
-        path = next(iter(allowed))
-        hashes = allowed[path]["encodedSyntheticPayloadSha256"]
-        data = (ROOT / path).read_bytes()
-        denied = next(value for value in hashes if len(json.loads(data)["images"][value]["hex"]) >= 2048)
-        self.assertIn("encoded-restricted-payload", self.rules(AUDIT.inspect(path, data, allowed, {denied})))
-
-    def test_authored_fixture_and_generator_changes_fail_identity_check(self):
-        root = self.repo()
-        paths = ["toolscripts/native_archive032_fixtures.py", "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json"]
-        for changed in paths:
-            for path in paths:
-                self.write(root, path, (ROOT / path).read_bytes() + (b" " if path == changed else b""))
-            with self.assertRaises(ValueError):
-                AUDIT.authored_xbb_fixture(root)
+    def test_known_private_hash_blocks_a_non_public_file(self):
+        original = b"private original game text"
+        rules = self.rules(AUDIT.inspect("docs/notes.txt", original, {}, {AUDIT.sha(original)}))
+        self.assertIn("known-private-game-payload", rules)
+        self.assertEqual(AUDIT.inspect("docs/notes.txt", original, {}, set()), [])
 
     def test_long_encoded_original_text_hash_is_blocked(self):
         payload = (b"original game text\n" * 120)
@@ -171,7 +153,7 @@ class PublicationAuditTests(unittest.TestCase):
 
     def test_actual_public_resources_have_exact_manifest_identities(self):
         allowed = AUDIT.public_allowlist(ROOT)
-        self.assertEqual(len(allowed), 83)
+        self.assertEqual(len(allowed), 81)
         for path in ("source/squirrel-wave001/upstream/doc/squirrel2.pdf",
                      "source/squirrel-wave001/upstream/etc/test.nut", AUDIT.HEADER_PATH):
             self.assertEqual(AUDIT.inspect(path, (ROOT / path).read_bytes(), allowed, set()), [])
@@ -185,15 +167,16 @@ class PublicationAuditTests(unittest.TestCase):
 
     def test_report_provenance_hash_is_not_an_original_payload(self):
         root = self.repo()
-        source = b'{"metadata":true}\n'
-        self.write(root, "evidence/inventory/base.json", source)
         original = b"private original game text"
-        metadata = {"inventoryInput": {"path": "evidence/inventory/base.json", "bytes": len(source), "sha256": AUDIT.sha(source)},
-                    "occurrences": [{"path": "/data/original.nut", "size": len(original), "sha256": AUDIT.sha(original)}]}
-        self.write(root, "evidence/lanes/container-inventory-wave003/base.json", json.dumps(metadata).encode())
-        hashes, _ = AUDIT.private_hashes(root)
+        project = {"archiveSha256": AUDIT.sha(original), "updateCiaSha256": AUDIT.sha(b"another original")}
+        self.write(root, "project.json", json.dumps(project).encode())
+        intake = {"inventoryInput": {"path": "project.json"},
+                  "occurrences": [{"path": "/data/original.nut", "size": len(original),
+                                   "sha256": AUDIT.sha(original)}]}
+        self.write(root, "work/intake/update.json", json.dumps(intake).encode())
+        hashes, sources = AUDIT.private_hashes(root)
         self.assertIn(AUDIT.sha(original), hashes)
-        self.assertNotIn(AUDIT.sha(source), hashes)
+        self.assertIn("project.json", [row["path"] for row in sources])
 
     def test_deleted_private_file_remains_a_history_finding(self):
         root = self.repo()
