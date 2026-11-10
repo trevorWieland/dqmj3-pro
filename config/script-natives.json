@@ -1,0 +1,5789 @@
+{
+ "schemaVersion": 1,
+ "version": "update-content0",
+ "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+ "registrar": "0x00143de8",
+ "method": "Registration blocks in the script init functions build the native name pc-relatively and the native address from a literal pool, then call one shared registrar. Form codes: A=bl registrar, B=b registrar (tail), C=hoisted ldr + b to the block, D=branch to a shared continuation. Evidence is <form>@<block address>.",
+ "bindings": [
+  {
+   "identifier": "Wait_",
+   "address": "0x0012e46c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d1c8",
+   "callSites": 5657,
+   "scriptCount": 440
+  },
+  {
+   "identifier": "IsWaitEnd_",
+   "address": "0x0012d96c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d1d4"
+  },
+  {
+   "identifier": "End_",
+   "address": "0x0012e450",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x0011d1e4",
+   "callSites": 25,
+   "scriptCount": 24
+  },
+  {
+   "identifier": "PlaySE_",
+   "address": "0x0012e4f4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d1f4",
+   "callSites": 1231,
+   "scriptCount": 302
+  },
+  {
+   "identifier": "StopSE_",
+   "address": "0x0012e554",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d204"
+  },
+  {
+   "identifier": "ReplaySE_",
+   "address": "0x0012e768",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d214",
+   "callSites": 45,
+   "scriptCount": 10
+  },
+  {
+   "identifier": "PlayLoopSE_",
+   "address": "0x0012da98",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d224",
+   "callSites": 54,
+   "scriptCount": 21
+  },
+  {
+   "identifier": "StopLoopSE_",
+   "address": "0x0012dbdc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d234",
+   "callSites": 39,
+   "scriptCount": 21
+  },
+  {
+   "identifier": "SetSEVolume_",
+   "address": "0x0012dc54",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d244",
+   "callSites": 5,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "Task_PlaySe_",
+   "address": "0x0012dce4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d254",
+   "callSites": 89,
+   "scriptCount": 54
+  },
+  {
+   "identifier": "WaitSe_",
+   "address": "0x0012e5d4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d264"
+  },
+  {
+   "identifier": "PlayMe_",
+   "address": "0x0012e4a0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d274",
+   "callSites": 94,
+   "scriptCount": 40
+  },
+  {
+   "identifier": "WaitMe_",
+   "address": "0x0012e5a8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d284",
+   "callSites": 94,
+   "scriptCount": 39
+  },
+  {
+   "identifier": "PlayBgm_",
+   "address": "0x0012e628",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d294",
+   "callSites": 61,
+   "scriptCount": 50
+  },
+  {
+   "identifier": "PlayBgmStartHead_",
+   "address": "0x0012e174",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x0011d2a4",
+   "callSites": 4,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "StopBgm_",
+   "address": "0x0012e714",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d2b4",
+   "callSites": 74,
+   "scriptCount": 61
+  },
+  {
+   "identifier": "SetBgmVolume_",
+   "address": "0x0012ddd8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d2c4",
+   "callSites": 9,
+   "scriptCount": 7
+  },
+  {
+   "identifier": "PlayBgmSub_",
+   "address": "0x0012da44",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d2d4"
+  },
+  {
+   "identifier": "StopBgmSub_",
+   "address": "0x0012db88",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d2e4",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetBgmSubVolume_",
+   "address": "0x0012e05c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d2f4"
+  },
+  {
+   "identifier": "DeleteTask_",
+   "address": "0x0012d998",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d304",
+   "callSites": 1460,
+   "scriptCount": 265
+  },
+  {
+   "identifier": "DeleteAllTask_",
+   "address": "0x0012df24",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d314",
+   "callSites": 57,
+   "scriptCount": 44
+  },
+  {
+   "identifier": "GetRandom_",
+   "address": "0x0012d8bc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d324",
+   "callSites": 16,
+   "scriptCount": 8
+  },
+  {
+   "identifier": "IsTaskEnd_",
+   "address": "0x0012d914",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d334",
+   "callSites": 7,
+   "scriptCount": 6
+  },
+  {
+   "identifier": "IsScriptLog_",
+   "address": "0x0012dc28",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d344",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "LoadEffect_",
+   "address": "0x0012d9e4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d354",
+   "callSites": 1071,
+   "scriptCount": 350
+  },
+  {
+   "identifier": "SetPosWorldEffect_",
+   "address": "0x0012e254",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d364",
+   "callSites": 16,
+   "scriptCount": 10
+  },
+  {
+   "identifier": "SetEffectScale_",
+   "address": "0x0012dfe4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d374",
+   "callSites": 1003,
+   "scriptCount": 167
+  },
+  {
+   "identifier": "SetEffectRotateY_",
+   "address": "0x0012e190",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d384",
+   "callSites": 6,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetCameraEffect_",
+   "address": "0x0012e0d0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d394",
+   "callSites": 217,
+   "scriptCount": 113
+  },
+  {
+   "identifier": "DeleteEffect_",
+   "address": "0x0012dd84",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d3a4",
+   "callSites": 384,
+   "scriptCount": 107
+  },
+  {
+   "identifier": "DeleteEffectEmitter_",
+   "address": "0x0012e2d4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d3b4",
+   "callSites": 414,
+   "scriptCount": 103
+  },
+  {
+   "identifier": "SetEffectFrame_",
+   "address": "0x0012df6c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d3c4",
+   "callSites": 8,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "SetEffectSoundEnable_",
+   "address": "0x0012e378",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d3d4",
+   "callSites": 5,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetFadePlane_",
+   "address": "0x0012de54",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d3e4",
+   "callSites": 98,
+   "scriptCount": 47
+  },
+  {
+   "identifier": "SetFade_",
+   "address": "0x0012e67c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d3f4",
+   "callSites": 1144,
+   "scriptCount": 234
+  },
+  {
+   "identifier": "WaitFade_",
+   "address": "0x0012e7c8",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x0011d404",
+   "callSites": 900,
+   "scriptCount": 193
+  },
+  {
+   "identifier": "SetFadeSub_",
+   "address": "0x0012daf0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d414",
+   "callSites": 368,
+   "scriptCount": 77
+  },
+  {
+   "identifier": "StartBlurEffect_",
+   "address": "0x0012e158",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001efb2c",
+   "callSites": 70,
+   "scriptCount": 43
+  },
+  {
+   "identifier": "EndBlurEffect_",
+   "address": "0x0012df50",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001efb3c",
+   "callSites": 68,
+   "scriptCount": 42
+  },
+  {
+   "identifier": "WaitFadeSub_",
+   "address": "0x0012dd60",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x0011d444",
+   "callSites": 8,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "SetExchangeNumber_",
+   "address": "0x0012e208",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d454",
+   "callSites": 120,
+   "scriptCount": 16
+  },
+  {
+   "identifier": "SetExchangeMonsterKindName_",
+   "address": "0x0012e400",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d464",
+   "callSites": 96,
+   "scriptCount": 17
+  },
+  {
+   "identifier": "SetExchangeItemName_",
+   "address": "0x0012e328",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011d474",
+   "callSites": 311,
+   "scriptCount": 19
+  },
+  {
+   "identifier": "AssertMessage_",
+   "address": "0x0012dea4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "B@0x0011d48c",
+   "callSites": 3,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "AssertMsg_",
+   "address": "0x0012f7b8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e6f0"
+  },
+  {
+   "identifier": "AssertCheckNumMsg_",
+   "address": "0x00134790",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e6fc",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "CheckDefineEfficacyNum_",
+   "address": "0x001374b0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e70c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "CheckDefineCategoryNum_",
+   "address": "0x00137420",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e71c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "CheckDefineExecMissTypeNum_",
+   "address": "0x0013819c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e72c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "CheckDefineAffectParamNum_",
+   "address": "0x0013810c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e73c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "CheckDefineTargetNum_",
+   "address": "0x00136084",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e74c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "CheckDefineMasterNum_",
+   "address": "0x00135f64",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e75c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "CheckDefineStatusNum_",
+   "address": "0x00135ff4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e76c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "CheckDefineEnvTypeNum_",
+   "address": "0x00136a78",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e77c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetCameraEye_",
+   "address": "0x0027c654",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ed5d4",
+   "alsoRegistered": [
+    {
+     "address": "0x00131cac",
+     "evidence": "A@0x0011e78c"
+    }
+   ],
+   "callSites": 13,
+   "scriptCount": 8
+  },
+  {
+   "identifier": "SetCameraTarget_",
+   "address": "0x0027ef3c",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ed5e4",
+   "alsoRegistered": [
+    {
+     "address": "0x0013389c",
+     "evidence": "A@0x0011e79c"
+    }
+   ],
+   "callSites": 20,
+   "scriptCount": 10
+  },
+  {
+   "identifier": "SetPointCameraEye_",
+   "address": "0x00280da4",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ed5f4",
+   "alsoRegistered": [
+    {
+     "address": "0x00134bcc",
+     "evidence": "A@0x0011e7ac"
+    }
+   ],
+   "callSites": 809,
+   "scriptCount": 270
+  },
+  {
+   "identifier": "SetPointCameraTarget_",
+   "address": "0x002833b0",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ed604",
+   "alsoRegistered": [
+    {
+     "address": "0x0013665c",
+     "evidence": "A@0x0011e7bc"
+    }
+   ],
+   "callSites": 809,
+   "scriptCount": 270
+  },
+  {
+   "identifier": "SetVisible_",
+   "address": "0x0013070c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e7cc",
+   "callSites": 256,
+   "scriptCount": 38
+  },
+  {
+   "identifier": "SetMonsterMeshVisible_",
+   "address": "0x00136f94",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e7dc",
+   "callSites": 4,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "SetMonsterPlayMoveSE_",
+   "address": "0x00136554",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e7ec",
+   "callSites": 61,
+   "scriptCount": 6
+  },
+  {
+   "identifier": "SetPos_",
+   "address": "0x00288188",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ec8e8",
+   "alsoRegistered": [
+    {
+     "address": "0x001399d8",
+     "evidence": "A@0x0011e7fc"
+    }
+   ],
+   "callSites": 92,
+   "scriptCount": 44
+  },
+  {
+   "identifier": "GetPos_",
+   "address": "0x00287f1c",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ec928",
+   "alsoRegistered": [
+    {
+     "address": "0x001392a4",
+     "evidence": "A@0x0011e80c"
+    }
+   ],
+   "callSites": 202,
+   "scriptCount": 90
+  },
+  {
+   "identifier": "SetPointPos_",
+   "address": "0x0027bad8",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ec908",
+   "alsoRegistered": [
+    {
+     "address": "0x00131028",
+     "evidence": "A@0x0011e81c"
+    }
+   ],
+   "callSites": 830,
+   "scriptCount": 287
+  },
+  {
+   "identifier": "SetDir_",
+   "address": "0x00288150",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ecd94",
+   "alsoRegistered": [
+    {
+     "address": "0x001396fc",
+     "evidence": "A@0x0011e82c"
+    }
+   ],
+   "callSites": 575,
+   "scriptCount": 174
+  },
+  {
+   "identifier": "GetDir_",
+   "address": "0x00287e84",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ecda4",
+   "alsoRegistered": [
+    {
+     "address": "0x001391d4",
+     "evidence": "A@0x0011e83c"
+    }
+   ],
+   "callSites": 46,
+   "scriptCount": 32
+  },
+  {
+   "identifier": "SetPitch_",
+   "address": "0x0013a5ac",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e84c",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetPitch_",
+   "address": "0x00139f38",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e85c"
+  },
+  {
+   "identifier": "ReadMonsterAddMotion_",
+   "address": "0x0013644c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e86c",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "SetMotion_",
+   "address": "0x0027a778",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ece44",
+   "alsoRegistered": [
+    {
+     "address": "0x0012ff80",
+     "evidence": "A@0x0011e87c"
+    }
+   ],
+   "callSites": 5322,
+   "scriptCount": 404
+  },
+  {
+   "identifier": "SetMasterRideMotion_",
+   "address": "0x00135af4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e88c",
+   "callSites": 4,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "SetMotionFrame_",
+   "address": "0x001331f0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e89c",
+   "callSites": 46,
+   "scriptCount": 11
+  },
+  {
+   "identifier": "GetMotion_",
+   "address": "0x0027a510",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ece54",
+   "alsoRegistered": [
+    {
+     "address": "0x0012f970",
+     "evidence": "A@0x0011e8ac"
+    }
+   ],
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetMotionStepFrame_",
+   "address": "0x001354c4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e8bc",
+   "callSites": 77,
+   "scriptCount": 7
+  },
+  {
+   "identifier": "StartEarthQuake_",
+   "address": "0x0027f4f4",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eda5c",
+   "alsoRegistered": [
+    {
+     "address": "0x001339c8",
+     "evidence": "A@0x0011e8cc"
+    }
+   ],
+   "callSites": 211,
+   "scriptCount": 69
+  },
+  {
+   "identifier": "GetMonsterSize_",
+   "address": "0x001329b4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e8dc",
+   "callSites": 71,
+   "scriptCount": 28
+  },
+  {
+   "identifier": "SetAlpha_",
+   "address": "0x0028895c",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ecd64",
+   "alsoRegistered": [
+    {
+     "address": "0x0013a388",
+     "evidence": "A@0x0011e8ec"
+    }
+   ],
+   "callSites": 708,
+   "scriptCount": 135
+  },
+  {
+   "identifier": "SetScale_",
+   "address": "0x00288994",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eceb4",
+   "alsoRegistered": [
+    {
+     "address": "0x0013a5e8",
+     "evidence": "A@0x0011e8fc"
+    }
+   ],
+   "callSites": 49,
+   "scriptCount": 28
+  },
+  {
+   "identifier": "ChangeIndexPointData_",
+   "address": "0x00135ed0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e90c",
+   "callSites": 147,
+   "scriptCount": 58
+  },
+  {
+   "identifier": "GetAllyMaster_",
+   "address": "0x00131f24",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e91c",
+   "callSites": 15,
+   "scriptCount": 10
+  },
+  {
+   "identifier": "GetEnemyMaster_",
+   "address": "0x001328e8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e92c",
+   "callSites": 18,
+   "scriptCount": 11
+  },
+  {
+   "identifier": "GetAllyPartner_",
+   "address": "0x00132774",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e93c",
+   "callSites": 5,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "GetEnemyPartner_",
+   "address": "0x001335bc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e94c",
+   "callSites": 5,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "GetMonsterLinage_",
+   "address": "0x001342a0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e95c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetMasterKind_",
+   "address": "0x00132118",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e96c",
+   "callSites": 4,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "IsMasterFall_",
+   "address": "0x00131980",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e97c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetPartnerKind_",
+   "address": "0x00132a5c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e98c",
+   "callSites": 3,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "IsPartnerFall_",
+   "address": "0x00132394",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011e99c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetPointWorldEffect_",
+   "address": "0x00282950",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eeea4",
+   "alsoRegistered": [
+    {
+     "address": "0x00135c2c",
+     "evidence": "A@0x0011e9ac"
+    }
+   ],
+   "callSites": 499,
+   "scriptCount": 147
+  },
+  {
+   "identifier": "SetBoneEffect_",
+   "address": "0x0027cd0c",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eeeb4",
+   "alsoRegistered": [
+    {
+     "address": "0x00132574",
+     "evidence": "C@0x0011eda4"
+    }
+   ],
+   "callSites": 138,
+   "scriptCount": 51
+  },
+  {
+   "identifier": "SetFreeSelectBoneEffect_",
+   "address": "0x00137d38",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011edb4",
+   "callSites": 4,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "GetActionEfficacy_",
+   "address": "0x00134994",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011edc4",
+   "callSites": 6,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "GetActionCategory_",
+   "address": "0x001348f8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011edd4",
+   "callSites": 3,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "RideOffMaster_",
+   "address": "0x001324dc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ede4",
+   "callSites": 5,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "DeleteAllEffect_",
+   "address": "0x00133590",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011edf4",
+   "callSites": 7,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "GetSingleEffectName_",
+   "address": "0x001359cc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ee04",
+   "callSites": 6,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetSingleEffectFrame_",
+   "address": "0x00136114",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ee14",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetAllEffectName_",
+   "address": "0x00134100",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ee24",
+   "callSites": 6,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetAllEffectFrame_",
+   "address": "0x00134a34",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ee34",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsStatusChangeVisible_",
+   "address": "0x00136d74",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ee44",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "StopEarthQuake_",
+   "address": "0x0027e50c",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eda7c",
+   "alsoRegistered": [
+    {
+     "address": "0x00133564",
+     "evidence": "A@0x0011ee54"
+    }
+   ],
+   "callSites": 65,
+   "scriptCount": 33
+  },
+  {
+   "identifier": "RideMaster_",
+   "address": "0x001305e4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ee64",
+   "callSites": 3,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "GetMap_",
+   "address": "0x00139278",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ee74"
+  },
+  {
+   "identifier": "SetVisibleNeedModel_",
+   "address": "0x00135e0c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ee84",
+   "callSites": 10,
+   "scriptCount": 10
+  },
+  {
+   "identifier": "SetSceneOffsetFromMove_",
+   "address": "0x00137724",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ee94",
+   "callSites": 144,
+   "scriptCount": 12
+  },
+  {
+   "identifier": "SetSceneOffsetFromPoint_",
+   "address": "0x00137eb0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011eea4"
+  },
+  {
+   "identifier": "GetSceneOffset_",
+   "address": "0x00132b2c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011eeb4"
+  },
+  {
+   "identifier": "DeleteSceneOffset_",
+   "address": "0x001348cc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011eec4"
+  },
+  {
+   "identifier": "GetInitExistType_",
+   "address": "0x001341f8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011eed4",
+   "callSites": 22,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "GetAllyIndex_",
+   "address": "0x001312dc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011eee4",
+   "callSites": 60,
+   "scriptCount": 13
+  },
+  {
+   "identifier": "GetEnemyIndex_",
+   "address": "0x00132048",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011eef4",
+   "callSites": 55,
+   "scriptCount": 14
+  },
+  {
+   "identifier": "GetFbxPointPos_",
+   "address": "0x00132918",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ef04",
+   "callSites": 3,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "GetFbxPos_",
+   "address": "0x0012f8d4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ef14",
+   "callSites": 5,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "SetPop_",
+   "address": "0x00139738",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ef24",
+   "callSites": 6,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetBonePos_",
+   "address": "0x001301a8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ef34",
+   "callSites": 4,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "GetRidePos_",
+   "address": "0x001302f4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ef44",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsAlly_",
+   "address": "0x00139358",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ef54",
+   "callSites": 90,
+   "scriptCount": 27
+  },
+  {
+   "identifier": "IsMonster_",
+   "address": "0x0012fba8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ef64",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsMaster_",
+   "address": "0x0013a1a0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ef74"
+  },
+  {
+   "identifier": "IsPartner_",
+   "address": "0x0012fcf0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ef84",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "IsHighRankSpell_",
+   "address": "0x00133800",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011ef94",
+   "callSites": 4,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "OpenMessageWindow_",
+   "address": "0x00134ba0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011efa4",
+   "callSites": 3,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "SetMessage_",
+   "address": "0x00130678",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011efb4",
+   "callSites": 3,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "SetTalkName_",
+   "address": "0x0027be10",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ed464",
+   "alsoRegistered": [
+    {
+     "address": "0x00131128",
+     "evidence": "A@0x0011efc4"
+    }
+   ],
+   "callSites": 1859,
+   "scriptCount": 324
+  },
+  {
+   "identifier": "CloseMessageWindow_",
+   "address": "0x00135110",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011efd4"
+  },
+  {
+   "identifier": "IsOpenMessageWindow_",
+   "address": "0x00135ac8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011efe4",
+   "callSites": 3,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "ShowActionName_",
+   "address": "0x001334d0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011eff4",
+   "callSites": 14,
+   "scriptCount": 14
+  },
+  {
+   "identifier": "ShowBattleEventMessage_",
+   "address": "0x0013782c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f004",
+   "callSites": 20,
+   "scriptCount": 16
+  },
+  {
+   "identifier": "ShowBattleFeatMessage_",
+   "address": "0x00137100",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f014",
+   "callSites": 4,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "ShowBattleOtherMessage_",
+   "address": "0x00137934",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f024"
+  },
+  {
+   "identifier": "ShowFeatName_",
+   "address": "0x00131ce4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f034",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "StartCombo_",
+   "address": "0x00130814",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f044",
+   "callSites": 9,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "StartComboBattleEventMessage_",
+   "address": "0x00138cbc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f054",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "AddActionName_",
+   "address": "0x00131dec",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f064",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "AddBattleEventMessage_",
+   "address": "0x00136948",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f454",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "AddBattleFeatMessage_",
+   "address": "0x00135e38",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f464",
+   "callSites": 10,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "AddBattleOtherMessage_",
+   "address": "0x001369e0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f474",
+   "callSites": 12,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "DeleteAllActionName_",
+   "address": "0x00135884",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f484",
+   "callSites": 30,
+   "scriptCount": 12
+  },
+  {
+   "identifier": "GetStatusValue_",
+   "address": "0x00132b58",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f494",
+   "callSites": 9,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "GetStatusFlag_",
+   "address": "0x001321bc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f4a4",
+   "callSites": 8,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "GetStatusEndFlag_",
+   "address": "0x00134344",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f4b4",
+   "callSites": 10,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "GetMonsterStatusValue_",
+   "address": "0x00136ba8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f4c4",
+   "callSites": 6,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "GetMonsterHp_",
+   "address": "0x00131380",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f4d4"
+  },
+  {
+   "identifier": "GetFeatTensionBurnFeatId_",
+   "address": "0x001380e0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f4e4",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetActionNo_",
+   "address": "0x0013096c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f4f4",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "GetDamageType_",
+   "address": "0x00131f54",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f504",
+   "callSites": 7,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "GetTargetType_",
+   "address": "0x001322f8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f514",
+   "callSites": 7,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetActorIndex_",
+   "address": "0x00131e80",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f524",
+   "callSites": 131,
+   "scriptCount": 59
+  },
+  {
+   "identifier": "GetTargetIndex_",
+   "address": "0x00132cb4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f534",
+   "callSites": 86,
+   "scriptCount": 30
+  },
+  {
+   "identifier": "GetDamageValue_",
+   "address": "0x001327a4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f544",
+   "callSites": 8,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetTeraDamageValue_",
+   "address": "0x00135254",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f554"
+  },
+  {
+   "identifier": "GetRevivalValue_",
+   "address": "0x00133618",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f564",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetTargetNum_",
+   "address": "0x0013160c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f574",
+   "callSites": 19,
+   "scriptCount": 6
+  },
+  {
+   "identifier": "GetActionNum_",
+   "address": "0x001312b0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f584",
+   "callSites": 21,
+   "scriptCount": 6
+  },
+  {
+   "identifier": "GetActHitNum_",
+   "address": "0x001311bc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f594",
+   "callSites": 41,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "GetUseMp_",
+   "address": "0x0013a00c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f5a4",
+   "callSites": 4,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "GetExecMissType_",
+   "address": "0x001335ec",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f5b4",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetFallMaster_",
+   "address": "0x001320ec",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f5c4",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetPreemptSide_",
+   "address": "0x00132b00",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f5d4",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetAllyAppealPoint_",
+   "address": "0x00135134",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f5e4",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetEnemyAppealPoint_",
+   "address": "0x001358b0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f5f4",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetStoleGold_",
+   "address": "0x00131424",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f604",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetStoleItem_",
+   "address": "0x00131518",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f614",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetEnvType_",
+   "address": "0x001302c8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f624",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsTargetSingle_",
+   "address": "0x00132ed4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f634",
+   "callSites": 7,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "IsCritical_",
+   "address": "0x001303ac",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f644",
+   "callSites": 6,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsMiss_",
+   "address": "0x00139518",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f654",
+   "callSites": 5,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsDead_",
+   "address": "0x001393fc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f664",
+   "callSites": 39,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "IsGuard_",
+   "address": "0x00139b84",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f674",
+   "callSites": 4,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsAbsorb_",
+   "address": "0x0013a0ac",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f684",
+   "callSites": 4,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsReflect_",
+   "address": "0x0012fd98",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f694",
+   "callSites": 8,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsFull_",
+   "address": "0x001394ec",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f6a4",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsRevival_",
+   "address": "0x0012fe8c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f6b4",
+   "callSites": 5,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "IsRezaoral_",
+   "address": "0x001304f0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f6c4",
+   "callSites": 6,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "IsAngel_",
+   "address": "0x00139a90",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f6d4",
+   "callSites": 5,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsGodTear_",
+   "address": "0x0012fab4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f6e4"
+  },
+  {
+   "identifier": "IsLivingDead_",
+   "address": "0x00131890",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f6f4",
+   "callSites": 5,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsBraveHart_",
+   "address": "0x00130aac",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f704",
+   "callSites": 3,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsLastStand_",
+   "address": "0x00130ba0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f714",
+   "callSites": 3,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsGambleBody_",
+   "address": "0x00131750",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f724",
+   "callSites": 3,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsCriticalGuard_",
+   "address": "0x0013370c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f734",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsPoisonDamage_",
+   "address": "0x00132db4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011f744",
+   "callSites": 3,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsRide_",
+   "address": "0x0013965c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "C@0x0011fb30",
+   "callSites": 7,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "IsPartnerRide_",
+   "address": "0x00132438",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fb40",
+   "callSites": 4,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsSwapTarget_",
+   "address": "0x00131b18",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fb50",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsPasser_",
+   "address": "0x0013a248",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fb60",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsPalpnte_",
+   "address": "0x0012fc50",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fb70",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsLightWave_",
+   "address": "0x00130c94",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fb80"
+  },
+  {
+   "identifier": "IsFreezeWave_",
+   "address": "0x001316b0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fb90"
+  },
+  {
+   "identifier": "IsTokugi_",
+   "address": "0x0013a2e8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fba0",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsTeraAttack_",
+   "address": "0x00131c0c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fbb0",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetHpDamage_",
+   "address": "0x00130e40",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fbc0",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetMpDamage_",
+   "address": "0x00130f34",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fbd0",
+   "callSites": 5,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "SetHpMaxDamage_",
+   "address": "0x00133064",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fbe0",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetMpMaxDamage_",
+   "address": "0x001332f4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fbf0",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetHpMax_",
+   "address": "0x0013a3c4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fc00"
+  },
+  {
+   "identifier": "SetMpMax_",
+   "address": "0x0013a4b8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fc10"
+  },
+  {
+   "identifier": "SetStatusChange_",
+   "address": "0x001338d4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fc20",
+   "callSites": 13,
+   "scriptCount": 10
+  },
+  {
+   "identifier": "SetFall_",
+   "address": "0x00139ca4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fc30",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetMonsterDead_",
+   "address": "0x00133158",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fc40",
+   "callSites": 3,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "MonsterRevival_",
+   "address": "0x00132f74",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fc50",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetParamChange_",
+   "address": "0x001333e8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fc60",
+   "callSites": 3,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "SetTolerChainRate_",
+   "address": "0x00134c5c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fc70",
+   "callSites": 4,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "UnDispTolerChainRate_",
+   "address": "0x00136894",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x0011fc80",
+   "callSites": 4,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "UnSettingAllowTarget_",
+   "address": "0x001368b0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fc90",
+   "callSites": 3,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "ItemIconInvisible_",
+   "address": "0x00134b84",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x0011fca0",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "PlayIconAttackAnim_",
+   "address": "0x0013542c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fcb0",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "PlayIconHealAndSupportAnim_",
+   "address": "0x0013822c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fcc0",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "AddAppealPoint_",
+   "address": "0x0013268c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fcd0",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "StartAppealPointAnim_",
+   "address": "0x00136784",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x0011fce0",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsEndAppealPointAnim_",
+   "address": "0x001362c0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fcf0",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsScout_",
+   "address": "0x00139c78",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fd00",
+   "callSites": 18,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "GetScoutItemValue_",
+   "address": "0x00134b58",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fd10",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetScoutDamageValue_",
+   "address": "0x001359a0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fd20"
+  },
+  {
+   "identifier": "GetScoutFeatValue_",
+   "address": "0x00134b2c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fd30",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsScoutFirstAttack_",
+   "address": "0x00135400",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fd40",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsScoutSuccess_",
+   "address": "0x00132ea8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fd50",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsScoutTargetSideAngry_",
+   "address": "0x00137540",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fd60",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "CreateScoutGauge_",
+   "address": "0x001340b8",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x0011fd70",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "DeleteScoutGauge_",
+   "address": "0x001340d4",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x0011fd80",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetVisibleScoutGauge_",
+   "address": "0x001366ec",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fd90",
+   "callSites": 4,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "UpdateScoutGauge_",
+   "address": "0x00134774",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x0011fda0",
+   "callSites": 4,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "GetScoutGaugeValue_",
+   "address": "0x00135228",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fdb0",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetScoutGaugeValue_",
+   "address": "0x001355c8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fdc0",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "AddScoutGaugeValue_",
+   "address": "0x0013506c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x0011fdd0",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "ScoutGaugePlayAnimMax_",
+   "address": "0x00136f78",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x0011fde0",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "ScoutGaugePlayAnimPulsation_",
+   "address": "0x00138424",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x0011fdf0",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsFinishScoutGaugeAnime_",
+   "address": "0x00137d0c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001201f0",
+   "callSites": 4,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "UnSettingArrowTargetAll_",
+   "address": "0x001380d0",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x00120200",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BeginTryScoutScene_",
+   "address": "0x00135100",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x00120210",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "EndTryScoutScene_",
+   "address": "0x001340f0",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x00120220",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "Task_PathMoveChar_",
+   "address": "0x00134f64",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120230"
+  },
+  {
+   "identifier": "Task_PathMoveCharNoDir_",
+   "address": "0x00137a3c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120240",
+   "callSites": 3,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "Task_PathMoveEye_",
+   "address": "0x0013463c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120250"
+  },
+  {
+   "identifier": "Task_PathMoveTgt_",
+   "address": "0x001346d8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120260"
+  },
+  {
+   "identifier": "Task_PathPointMoveChar_",
+   "address": "0x00137b44",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120270"
+  },
+  {
+   "identifier": "Task_PathPointMoveCharNoDir_",
+   "address": "0x001384e0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120280"
+  },
+  {
+   "identifier": "Task_PathPointMoveEye_",
+   "address": "0x00137208",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120290"
+  },
+  {
+   "identifier": "Task_PathPointMoveTgt_",
+   "address": "0x00137314",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001202a0"
+  },
+  {
+   "identifier": "Task_PathPointMoveEyeSetFrm_",
+   "address": "0x00138538",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001202b0"
+  },
+  {
+   "identifier": "Task_PathPointMoveTgtSetFrm_",
+   "address": "0x00138740",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001202c0"
+  },
+  {
+   "identifier": "Task_RideChange_",
+   "address": "0x00133af4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001202d0",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "Task_Chain_",
+   "address": "0x001308a4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001202e0",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "Task_ObjectFadeOut_",
+   "address": "0x00281ba4",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ed424",
+   "alsoRegistered": [
+    {
+     "address": "0x00135770",
+     "evidence": "A@0x001202f0"
+    }
+   ],
+   "callSites": 70,
+   "scriptCount": 38
+  },
+  {
+   "identifier": "Task_ObjectFadeIn_",
+   "address": "0x002812c4",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ed414",
+   "alsoRegistered": [
+    {
+     "address": "0x00134e50",
+     "evidence": "A@0x00120300"
+    }
+   ],
+   "callSites": 20,
+   "scriptCount": 10
+  },
+  {
+   "identifier": "Task_ChangeMotion_",
+   "address": "0x00281170",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ed404",
+   "alsoRegistered": [
+    {
+     "address": "0x00134cf0",
+     "evidence": "A@0x00120310"
+    }
+   ],
+   "callSites": 118,
+   "scriptCount": 55
+  },
+  {
+   "identifier": "Task_SetFrameAnimeMoveChar_",
+   "address": "0x001382c4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120320",
+   "callSites": 120,
+   "scriptCount": 8
+  },
+  {
+   "identifier": "Task_AnimeMoveChar_",
+   "address": "0x0013565c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120330",
+   "callSites": 49,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "Task_SetFrameAnimeMoveCharNoDir_",
+   "address": "0x00139074",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120340",
+   "callSites": 125,
+   "scriptCount": 9
+  },
+  {
+   "identifier": "Task_AnimeMoveCharNoDir_",
+   "address": "0x00137fb8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120350",
+   "callSites": 115,
+   "scriptCount": 16
+  },
+  {
+   "identifier": "Task_AnimeMoveCamera_",
+   "address": "0x00283614",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eda8c",
+   "alsoRegistered": [
+    {
+     "address": "0x001367a0",
+     "evidence": "A@0x00120360"
+    }
+   ],
+   "callSites": 1305,
+   "scriptCount": 336
+  },
+  {
+   "identifier": "Task_SetFrameAnimeMoveCamera_",
+   "address": "0x00138dc8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120370",
+   "callSites": 76,
+   "scriptCount": 13
+  },
+  {
+   "identifier": "FilterOn_",
+   "address": "0x00139da0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120380",
+   "callSites": 3,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "FilterOff_",
+   "address": "0x0012f8b8",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x00120390",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetRound_",
+   "address": "0x00139fe0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001203a0",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "SetEventFlg_",
+   "address": "0x0027b940",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eee24",
+   "alsoRegistered": [
+    {
+     "address": "0x00130d34",
+     "evidence": "A@0x001203b0"
+    }
+   ],
+   "callSites": 1884,
+   "scriptCount": 126
+  },
+  {
+   "identifier": "GetEventFlg_",
+   "address": "0x0027b50c",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eee34",
+   "alsoRegistered": [
+    {
+     "address": "0x00130a0c",
+     "evidence": "A@0x001203c0"
+    }
+   ],
+   "callSites": 1560,
+   "scriptCount": 119
+  },
+  {
+   "identifier": "SetNumFlg_",
+   "address": "0x0027a8b8",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eee44",
+   "alsoRegistered": [
+    {
+     "address": "0x001300b8",
+     "evidence": "A@0x001203d0"
+    }
+   ],
+   "callSites": 709,
+   "scriptCount": 54
+  },
+  {
+   "identifier": "GetNumFlg_",
+   "address": "0x0027a5ac",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eee54",
+   "alsoRegistered": [
+    {
+     "address": "0x0012fa14",
+     "evidence": "A@0x001203e0"
+    }
+   ],
+   "callSites": 1355,
+   "scriptCount": 101
+  },
+  {
+   "identifier": "SetDamageMotion_ScoutAttack_",
+   "address": "0x00138440",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001203f0",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetDamageMotion_NormalDamage_",
+   "address": "0x00138b08",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120400",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "LineEffect_AllDamage_OneSide_",
+   "address": "0x0013894c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120410",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "LineEffect_BAKURETSU_",
+   "address": "0x001362ec",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120420",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "LineEffect_SingleStage_",
+   "address": "0x0013756c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120430",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "LineEffect_Substitute_",
+   "address": "0x00136e18",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "C@0x00120828",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "LineEffect_Field_",
+   "address": "0x00134480",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120838",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetUpCameraEyeName_",
+   "address": "0x00135348",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120848",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetUpCameraTargetName_",
+   "address": "0x00136cbc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120858",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetStandbyCutRunnerName_",
+   "address": "0x00137b9c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120868",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetStandbyCutEyeName_",
+   "address": "0x00136208",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120878",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetStandbyCutTargetName_",
+   "address": "0x00137c54",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120888",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsSelfTarget_",
+   "address": "0x00131a24",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x00120898",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetHighRankEffectSize_",
+   "address": "0x00136b08",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001208a8",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetStateEffect_Init_",
+   "address": "0x00135d1c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001208b8",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "SetDamageEffect_ExceptionEffect_",
+   "address": "0x00138f18",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "B@0x001208d0",
+   "callSites": 3,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "EventEnd_",
+   "address": "0x002888a8",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ec6a8",
+   "callSites": 1428,
+   "scriptCount": 171
+  },
+  {
+   "identifier": "EndDemoBgmFade_",
+   "address": "0x0027d7d4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec6b8",
+   "callSites": 12,
+   "scriptCount": 11
+  },
+  {
+   "identifier": "GetTargetId_",
+   "address": "0x0027b5d4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec6c8",
+   "callSites": 147,
+   "scriptCount": 106
+  },
+  {
+   "identifier": "GetPlayerId_",
+   "address": "0x0027b5a8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec6d8",
+   "callSites": 653,
+   "scriptCount": 396
+  },
+  {
+   "identifier": "CheckFieldRideMonster_",
+   "address": "0x002839f8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec6e8",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsPlayerRide_",
+   "address": "0x0027c494",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec6f8",
+   "callSites": 11,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "GetRideMonsterType_",
+   "address": "0x0028165c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec708",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetRideMonsterSize_",
+   "address": "0x00281630",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec718",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "PlayerForcePause_",
+   "address": "0x0027faa8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec728",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "CreatePartner_",
+   "address": "0x0027cafc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec738",
+   "callSites": 12,
+   "scriptCount": 6
+  },
+  {
+   "identifier": "SetPartnerActive_",
+   "address": "0x0027fcd8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec748",
+   "callSites": 113,
+   "scriptCount": 50
+  },
+  {
+   "identifier": "SetPartnerNaviMapActive_",
+   "address": "0x0028588c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec758",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "InitPartnerPos_",
+   "address": "0x0027d904",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ec768",
+   "callSites": 12,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "SetPartnerPosInfo_",
+   "address": "0x00280cfc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec778",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetPartnerStepSe_",
+   "address": "0x0027fd68",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec788",
+   "callSites": 11,
+   "scriptCount": 6
+  },
+  {
+   "identifier": "ResetPartnerStepSe_",
+   "address": "0x002816b4",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ec798",
+   "callSites": 9,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "Task_PartnerFormChange_",
+   "address": "0x002850ac",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec7a8",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "ReadNpc_",
+   "address": "0x002884fc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec7b8",
+   "callSites": 965,
+   "scriptCount": 294
+  },
+  {
+   "identifier": "ArrangeNpc_",
+   "address": "0x0027aae4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec7c8",
+   "callSites": 7,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "ArrangePointNpc_",
+   "address": "0x0027e740",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec7d8",
+   "callSites": 1196,
+   "scriptCount": 293
+  },
+  {
+   "identifier": "SetComMode_",
+   "address": "0x0027b0cc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec7e8",
+   "callSites": 17,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "SetWalkRadius_",
+   "address": "0x0027d468",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec7f8",
+   "callSites": 17,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "SetTalkEnable_",
+   "address": "0x0027d368",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec808",
+   "callSites": 132,
+   "scriptCount": 32
+  },
+  {
+   "identifier": "SetSearchableAngle_",
+   "address": "0x00281a10",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec818",
+   "callSites": 64,
+   "scriptCount": 14
+  },
+  {
+   "identifier": "AddNearPlayerStopEffect_",
+   "address": "0x00285148",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec828",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetRaSearchTarget_",
+   "address": "0x00280e34",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec838",
+   "callSites": 10,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "ReadGimmick_",
+   "address": "0x0027b764",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec848",
+   "callSites": 979,
+   "scriptCount": 336
+  },
+  {
+   "identifier": "ArrangeGimmick_",
+   "address": "0x0027d5f4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec858",
+   "callSites": 44,
+   "scriptCount": 28
+  },
+  {
+   "identifier": "ArrangePointGimmick_",
+   "address": "0x00281c94",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec868",
+   "callSites": 1540,
+   "scriptCount": 330
+  },
+  {
+   "identifier": "SetGimmickMapHitEnable_",
+   "address": "0x00284a8c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec878",
+   "callSites": 52,
+   "scriptCount": 10
+  },
+  {
+   "identifier": "ArrangeReactorPoint_",
+   "address": "0x00281de0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec888",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "ArrangePointReactorPoint_",
+   "address": "0x00285bd4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec898",
+   "callSites": 20,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "SetGimmickAdditionalSetting_",
+   "address": "0x00287040",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec8a8",
+   "callSites": 19,
+   "scriptCount": 12
+  },
+  {
+   "identifier": "GetGimmickBarrierState_",
+   "address": "0x00284650",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ec8b8",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetGimmickBarrierScale_",
+   "address": "0x002849fc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec8c8",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetGimmickBarrierDistance_",
+   "address": "0x00286384",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec8d8",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetPosNoFit_",
+   "address": "0x0027bbd4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec8f8",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetPointPosNoFit_",
+   "address": "0x0027fdf4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec918",
+   "callSites": 210,
+   "scriptCount": 83
+  },
+  {
+   "identifier": "SetActive_",
+   "address": "0x0027a674",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ec938",
+   "callSites": 113,
+   "scriptCount": 37
+  },
+  {
+   "identifier": "GetActive_",
+   "address": "0x0027a3d8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "D@0x001ec948"
+  },
+  {
+   "identifier": "SetHideIfFar_",
+   "address": "0x0027c720",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecd34",
+   "callSites": 50,
+   "scriptCount": 24
+  },
+  {
+   "identifier": "SetReactorMarkerTypeHide_",
+   "address": "0x00285d34",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecd44",
+   "callSites": 4,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsReactorMarkerTypeHide_",
+   "address": "0x002857f0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecd54"
+  },
+  {
+   "identifier": "GetAlpha_",
+   "address": "0x002888c4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecd74",
+   "callSites": 7,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "SetManualCalcAlpha_",
+   "address": "0x00281908",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecd84",
+   "callSites": 274,
+   "scriptCount": 80
+  },
+  {
+   "identifier": "SetDirToPos_",
+   "address": "0x0027b890",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecdb4",
+   "callSites": 20,
+   "scriptCount": 14
+  },
+  {
+   "identifier": "SetDirToPoint_",
+   "address": "0x0027cea8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecdc4",
+   "callSites": 4,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "SetDirToPlayer_",
+   "address": "0x0027deec",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecdd4",
+   "callSites": 36,
+   "scriptCount": 15
+  },
+  {
+   "identifier": "SetDirToObject_",
+   "address": "0x0027de08",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecde4",
+   "callSites": 48,
+   "scriptCount": 26
+  },
+  {
+   "identifier": "Task_RotateToPos_",
+   "address": "0x00280340",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecdf4",
+   "callSites": 128,
+   "scriptCount": 52
+  },
+  {
+   "identifier": "Task_RotateToPosSetMotion_",
+   "address": "0x002869c8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ece04",
+   "callSites": 8,
+   "scriptCount": 7
+  },
+  {
+   "identifier": "Task_RotateToPlayerSetMotion_",
+   "address": "0x002875f0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ece14",
+   "callSites": 9,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "Task_RotateToDir_",
+   "address": "0x002801f0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ece24",
+   "callSites": 138,
+   "scriptCount": 74
+  },
+  {
+   "identifier": "Task_RotateToDirSetMotion_",
+   "address": "0x002867cc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ece34",
+   "callSites": 124,
+   "scriptCount": 25
+  },
+  {
+   "identifier": "ReadMotion_",
+   "address": "0x0027af14",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ece64",
+   "callSites": 2286,
+   "scriptCount": 279
+  },
+  {
+   "identifier": "IsMotionEnd_",
+   "address": "0x0027b6cc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ece74",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetMotionSpeed_",
+   "address": "0x0027e380",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ece84",
+   "callSites": 450,
+   "scriptCount": 105
+  },
+  {
+   "identifier": "SetFace_",
+   "address": "0x00288674",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ece94",
+   "callSites": 225,
+   "scriptCount": 79
+  },
+  {
+   "identifier": "SetMeshVisible_",
+   "address": "0x0027e114",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecea4",
+   "callSites": 51,
+   "scriptCount": 11
+  },
+  {
+   "identifier": "SetScaleXYZ_",
+   "address": "0x0027bc84",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecec4",
+   "callSites": 7,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "InitSilhouetteWidth_",
+   "address": "0x00282614",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eced4",
+   "callSites": 44,
+   "scriptCount": 15
+  },
+  {
+   "identifier": "SetSilhouetteHideIfFar_",
+   "address": "0x00284d38",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecee4",
+   "callSites": 12,
+   "scriptCount": 10
+  },
+  {
+   "identifier": "RideOn_",
+   "address": "0x00287fd0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecef4",
+   "callSites": 5,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "RideOff_",
+   "address": "0x00288594",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecf04",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "FlightRideSettingGodBirdRetisu_",
+   "address": "0x00287900",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ecf14",
+   "callSites": 3,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "SetTalkAction_",
+   "address": "0x0027d2d8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecf24",
+   "callSites": 25,
+   "scriptCount": 8
+  },
+  {
+   "identifier": "SetTalkTurn_",
+   "address": "0x0027bea0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecf34",
+   "callSites": 30,
+   "scriptCount": 14
+  },
+  {
+   "identifier": "GetPlayerNearObj_",
+   "address": "0x0027f874",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecf44",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "AttachObject_",
+   "address": "0x0027c124",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecf54",
+   "callSites": 25,
+   "scriptCount": 16
+  },
+  {
+   "identifier": "DetachObject_",
+   "address": "0x0027c278",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecf64",
+   "callSites": 11,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "SetStepSe_",
+   "address": "0x0027a9bc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecf74",
+   "callSites": 282,
+   "scriptCount": 103
+  },
+  {
+   "identifier": "ResetStepSe_",
+   "address": "0x0027b800",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecf84",
+   "callSites": 15,
+   "scriptCount": 14
+  },
+  {
+   "identifier": "SetStepSePan_",
+   "address": "0x0027c828",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecf94",
+   "callSites": 24,
+   "scriptCount": 16
+  },
+  {
+   "identifier": "Task_MoveForward_",
+   "address": "0x0028007c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecfa4",
+   "callSites": 170,
+   "scriptCount": 80
+  },
+  {
+   "identifier": "Task_MoveToPointSetSpeed_",
+   "address": "0x00285f40",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecfb4",
+   "callSites": 31,
+   "scriptCount": 16
+  },
+  {
+   "identifier": "Task_AnimeMoveNoDir_",
+   "address": "0x00282d74",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecfc4",
+   "callSites": 60,
+   "scriptCount": 29
+  },
+  {
+   "identifier": "Task_AnimeMoveNoDirNoFit_",
+   "address": "0x00285e3c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecfd4",
+   "callSites": 74,
+   "scriptCount": 31
+  },
+  {
+   "identifier": "Task_AnimeMove_",
+   "address": "0x0027e63c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecfe4",
+   "callSites": 184,
+   "scriptCount": 65
+  },
+  {
+   "identifier": "Task_AnimeMoveNoFit_",
+   "address": "0x00282e7c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ecff4",
+   "callSites": 214,
+   "scriptCount": 68
+  },
+  {
+   "identifier": "Task_AnimeMoveSetMotion_",
+   "address": "0x00285a34",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "C@0x001ed3e4",
+   "callSites": 60,
+   "scriptCount": 27
+  },
+  {
+   "identifier": "Task_AnimeMoveNoFitSetMotion_",
+   "address": "0x00287450",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed3f4",
+   "callSites": 6,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "OpenMsgWnd_",
+   "address": "0x0027aee8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed434",
+   "callSites": 2994,
+   "scriptCount": 388
+  },
+  {
+   "identifier": "CloseMsgWnd_",
+   "address": "0x0027b4cc",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ed444",
+   "callSites": 3295,
+   "scriptCount": 388
+  },
+  {
+   "identifier": "ShowMsg_",
+   "address": "0x002887fc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed454",
+   "callSites": 4426,
+   "scriptCount": 388
+  },
+  {
+   "identifier": "SetMsgSpeed_",
+   "address": "0x0027ba48",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed474"
+  },
+  {
+   "identifier": "OpenDialog_",
+   "address": "0x0027ad88",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed484",
+   "callSites": 5,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "CloseDialog_",
+   "address": "0x0027b4b0",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ed494",
+   "callSites": 4,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "SetExchangeMsg_",
+   "address": "0x0027df7c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed4a4",
+   "callSites": 15,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "SetExchangePartyMonsterName_",
+   "address": "0x00286f5c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed4b4",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetExchangeRegistrationNumber_",
+   "address": "0x002877cc",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ed4c4",
+   "callSites": 3,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "GetQueryResult_",
+   "address": "0x0027d8b8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed4d4",
+   "callSites": 327,
+   "scriptCount": 92
+  },
+  {
+   "identifier": "KeyInputWait_",
+   "address": "0x0027c4c0",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ed4e4",
+   "callSites": 4245,
+   "scriptCount": 388
+  },
+  {
+   "identifier": "SetQueryDefault_",
+   "address": "0x0027f318",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed4f4",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "ShowScreenMessage_",
+   "address": "0x00281060",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed504",
+   "callSites": 22,
+   "scriptCount": 9
+  },
+  {
+   "identifier": "ShowScreenMessagePosY_",
+   "address": "0x002841ec",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed514"
+  },
+  {
+   "identifier": "ResetFieldState_",
+   "address": "0x0027ef20",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ed524"
+  },
+  {
+   "identifier": "SetReactorMsg_",
+   "address": "0x0027d148",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed534",
+   "callSites": 475,
+   "scriptCount": 59
+  },
+  {
+   "identifier": "SetReactorEvent_",
+   "address": "0x0027f3a8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed544",
+   "callSites": 50,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "SetTargetNameKey_",
+   "address": "0x0027ff80",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed554",
+   "callSites": 14,
+   "scriptCount": 9
+  },
+  {
+   "identifier": "SetTargetNameVisible_",
+   "address": "0x00283440",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed564",
+   "callSites": 10,
+   "scriptCount": 7
+  },
+  {
+   "identifier": "GetCameraDir_",
+   "address": "0x0027c398",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ed574",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "GetCameraEye_",
+   "address": "0x0027c3c0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed584",
+   "callSites": 16,
+   "scriptCount": 11
+  },
+  {
+   "identifier": "GetCameraTarget_",
+   "address": "0x0027ed08",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed594",
+   "callSites": 14,
+   "scriptCount": 10
+  },
+  {
+   "identifier": "GetFirstPersonCameraEye_",
+   "address": "0x00285500",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed5a4",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetFirstPersonCameraTarget_",
+   "address": "0x00286d1c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed5b4",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetCameraDir_",
+   "address": "0x0027c5c8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed5c4",
+   "callSites": 52,
+   "scriptCount": 29
+  },
+  {
+   "identifier": "SetLinearCameraEye_",
+   "address": "0x00281858",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed614",
+   "callSites": 7,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "SetLinearCameraTarget_",
+   "address": "0x00284034",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed624",
+   "callSites": 7,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "SetTalkCameraType_",
+   "address": "0x00280f80",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed634",
+   "callSites": 213,
+   "scriptCount": 36
+  },
+  {
+   "identifier": "SetTalkCameraEyeOffset_",
+   "address": "0x00284e40",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed644",
+   "callSites": 11,
+   "scriptCount": 6
+  },
+  {
+   "identifier": "SetTalkCameraTargetOffset_",
+   "address": "0x00286674",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ed654"
+  },
+  {
+   "identifier": "SetPlayableCamera_",
+   "address": "0x00280d88",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "D@0x001ed664",
+   "callSites": 64,
+   "scriptCount": 32
+  },
+  {
+   "identifier": "StartDecayEarthQuake_",
+   "address": "0x002834d4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eda6c",
+   "callSites": 58,
+   "scriptCount": 37
+  },
+  {
+   "identifier": "SetCameraType_",
+   "address": "0x0027ce14",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eda9c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "InitCameraType_",
+   "address": "0x0027d8e4",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001edaac",
+   "callSites": 11,
+   "scriptCount": 11
+  },
+  {
+   "identifier": "ReactorPowerOff_",
+   "address": "0x0027ef04",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001edabc",
+   "callSites": 7,
+   "scriptCount": 7
+  },
+  {
+   "identifier": "SetNavimapVisible_",
+   "address": "0x00280c68",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edacc",
+   "callSites": 19,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "ArrangePointNaviMapIcon_",
+   "address": "0x002852dc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edadc",
+   "callSites": 146,
+   "scriptCount": 44
+  },
+  {
+   "identifier": "SetNaviMapIconVisible_",
+   "address": "0x002840e4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edaec",
+   "callSites": 189,
+   "scriptCount": 31
+  },
+  {
+   "identifier": "SetNaviMapIconDir_",
+   "address": "0x00280b6c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edafc",
+   "callSites": 74,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "OpenNaviMapRideFilter_",
+   "address": "0x00283e10",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edb0c",
+   "callSites": 3,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "IsOpenNaviMapRideFilter_",
+   "address": "0x002856b4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edb1c",
+   "callSites": 3,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "OpenNaviMapBlind_",
+   "address": "0x0027f988",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edb2c",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "SetDispFlightMap_",
+   "address": "0x0027fb3c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edb3c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetTouchEventMineId_",
+   "address": "0x002825e8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edb4c",
+   "callSites": 151,
+   "scriptCount": 134
+  },
+  {
+   "identifier": "SetPointCircleEventMine_",
+   "address": "0x00285920",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edb5c",
+   "callSites": 358,
+   "scriptCount": 81
+  },
+  {
+   "identifier": "SetPointCircleEventMineNoFallWait_",
+   "address": "0x00287bdc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edb6c",
+   "callSites": 52,
+   "scriptCount": 14
+  },
+  {
+   "identifier": "SetPointBoxEventMine_",
+   "address": "0x0028329c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edb7c",
+   "callSites": 249,
+   "scriptCount": 80
+  },
+  {
+   "identifier": "SetPointBoxEventMineNoFallWait_",
+   "address": "0x0028791c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edb8c",
+   "callSites": 79,
+   "scriptCount": 30
+  },
+  {
+   "identifier": "SetPointBoxEncountMine_",
+   "address": "0x00284c9c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edb9c",
+   "callSites": 34,
+   "scriptCount": 11
+  },
+  {
+   "identifier": "DeleteEventMine_",
+   "address": "0x0027eb28",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edbac",
+   "callSites": 430,
+   "scriptCount": 108
+  },
+  {
+   "identifier": "SetMinePlayerStop_",
+   "address": "0x00280a64",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edbbc",
+   "callSites": 73,
+   "scriptCount": 18
+  },
+  {
+   "identifier": "SetChangeWaitMotion_",
+   "address": "0x002827b8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edbcc",
+   "callSites": 11,
+   "scriptCount": 7
+  },
+  {
+   "identifier": "SetMineRejectSNM_",
+   "address": "0x0027fbd0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edbdc",
+   "callSites": 5,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetMineRejectSN_",
+   "address": "0x0027f210",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edbec",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetMineRejectGT_",
+   "address": "0x0027f10c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edbfc",
+   "callSites": 5,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "SetMineLanding_",
+   "address": "0x0027e278",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edc0c",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetMineHitDrone_",
+   "address": "0x0027f004",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edc1c",
+   "callSites": 26,
+   "scriptCount": 20
+  },
+  {
+   "identifier": "ChangeBattleMonsterId_",
+   "address": "0x00283858",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edc2c"
+  },
+  {
+   "identifier": "ChangeBattleParty_",
+   "address": "0x0028067c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edc3c",
+   "callSites": 173,
+   "scriptCount": 42
+  },
+  {
+   "identifier": "ChangeBattlePartyUseHitMap_",
+   "address": "0x00286bc0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edc4c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "ChangeBattlePartyFromReactor_",
+   "address": "0x002871b4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edc5c",
+   "callSites": 7,
+   "scriptCount": 7
+  },
+  {
+   "identifier": "ChangeBattleDarkLoadRevengeFromARG_",
+   "address": "0x00287cf0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edc6c"
+  },
+  {
+   "identifier": "ChangeBattleDarkLoadRevenge_",
+   "address": "0x00286e48",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001edc7c",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetCrackNPCKind_",
+   "address": "0x0027ed44",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001edc8c",
+   "callSites": 6,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetCrackNPCSubKind_",
+   "address": "0x00281440",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "C@0x001ee07c",
+   "callSites": 3,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetCrackNPCModelResName_",
+   "address": "0x002854c8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee08c",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "GetCrackNPCPartyID_",
+   "address": "0x00281414",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee09c",
+   "callSites": 13,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "LotteryCrackNPCItemNum_",
+   "address": "0x002849e0",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ee0ac",
+   "callSites": 3,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "ExecuteCrackNPCPresent_",
+   "address": "0x00284594",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee0bc",
+   "callSites": 4,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetCrackNPCItemNum_",
+   "address": "0x002813e8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee0cc",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "PushCrackNPCItemNameAndNumMessage_",
+   "address": "0x00287b4c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee0dc",
+   "callSites": 4,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetBattleEndType_",
+   "address": "0x0027f7f4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee0ec",
+   "callSites": 111,
+   "scriptCount": 35
+  },
+  {
+   "identifier": "GetBattleRound_",
+   "address": "0x0027d860",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee0fc",
+   "callSites": 4,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "ChangeDemo_",
+   "address": "0x0027ab9c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee10c",
+   "callSites": 184,
+   "scriptCount": 31
+  },
+  {
+   "identifier": "SetReturnDemoMap_",
+   "address": "0x0027fef0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee11c",
+   "callSites": 45,
+   "scriptCount": 21
+  },
+  {
+   "identifier": "SetReturnDemoPosDir_",
+   "address": "0x00282a40",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee12c",
+   "callSites": 219,
+   "scriptCount": 48
+  },
+  {
+   "identifier": "InhibitMonsterGenerate_",
+   "address": "0x00284954",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee13c",
+   "callSites": 7,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "ClearMasterId_",
+   "address": "0x0027cae0",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ee14c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsHolyRailActive_",
+   "address": "0x0027f8a0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee15c",
+   "callSites": 6,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "IsHolyRailCleared_",
+   "address": "0x00280894",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee16c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "ActivateHolyRail_",
+   "address": "0x0027f638",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee17c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetClearedHolyRail_",
+   "address": "0x002816d0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee18c"
+  },
+  {
+   "identifier": "GetHolyRailActiveNo_",
+   "address": "0x00281f38",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ee19c",
+   "callSites": 10,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "GetHolyRailStartPos_",
+   "address": "0x00282030",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee1ac",
+   "callSites": 5,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "GetHolyRailStartVector_",
+   "address": "0x00284670",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee1bc"
+  },
+  {
+   "identifier": "GetHolyRailStartDeg_",
+   "address": "0x00281f58",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee1cc",
+   "callSites": 5,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "BeginHolyRailMode_",
+   "address": "0x0028057c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee1dc",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "EndHolyRailMode_",
+   "address": "0x0027ebb8",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ee1ec",
+   "callSites": 3,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetHolyRail_Result_",
+   "address": "0x00281498",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee1fc",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "PushHolyRailKeyHolePosDir_",
+   "address": "0x002862e4",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ee20c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetHolyRailKeyHolePos_",
+   "address": "0x00283d3c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee21c",
+   "callSites": 3,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetHolyRailKeyHoleDeg_",
+   "address": "0x00283d20",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ee22c",
+   "callSites": 3,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetHolyRailLayoutAnim_",
+   "address": "0x00283f98",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee23c",
+   "callSites": 5,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsHolyRailLayoutAnimEnd_",
+   "address": "0x00285674",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee24c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetVisbleHolyRailUI_",
+   "address": "0x00282cd0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee25c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "ChangeHolyRailResult_",
+   "address": "0x00283034",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ee26c"
+  },
+  {
+   "identifier": "GetHolyRailCrystalNum_",
+   "address": "0x00283cf4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee27c"
+  },
+  {
+   "identifier": "SetHolyRailDemoTreated_",
+   "address": "0x00284b90",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee28c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsHolyRailDemoTreated_",
+   "address": "0x00283d6c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee29c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "LoadOnlyHolyRailStartPosDeg_",
+   "address": "0x00286ec4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee2ac",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetCrystalNum_",
+   "address": "0x0027cbe0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee2bc",
+   "callSites": 7,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "ClearCrystalNum_",
+   "address": "0x0027eb0c",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "C@0x001ee6a8",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetPlayerSmell_",
+   "address": "0x0027d88c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee6b8"
+  },
+  {
+   "identifier": "SetPlayerSmell_",
+   "address": "0x0027e47c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee6c8",
+   "callSites": 18,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "BossRegistTasks_",
+   "address": "0x0027e840",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee6d8",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossUnRegistTasks_",
+   "address": "0x0028064c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee6e8",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossNPCRegistFlow_",
+   "address": "0x002805b4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee708",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossNPCRegistFlowResponse_",
+   "address": "0x00286128",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee718",
+   "callSites": 7,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossNPCRegistFlowGetKind_",
+   "address": "0x00285cdc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee728",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossNPCRegistFlowGetParam_",
+   "address": "0x002860fc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee738",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossArrangeStealthBox_",
+   "address": "0x00283704",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee748",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossLoadNewStealthBoxData_",
+   "address": "0x002860d0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee758",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossGetStealthBoxKind_",
+   "address": "0x00283794",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee768"
+  },
+  {
+   "identifier": "BossSetReadFlagToStealthBox_",
+   "address": "0x00286de4",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ee778",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossLoadNewSkyMapMonsterData_",
+   "address": "0x00287188",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee788",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossGetSkyMapMonsterResName_",
+   "address": "0x00286dac",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee798",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossGetSkyMapMonsterScale_",
+   "address": "0x002860a8",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ee7a8"
+  },
+  {
+   "identifier": "BossSetReadFlagToSkyMapMonster_",
+   "address": "0x002877e8",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ee7b8",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossGetSkyMapMonsterPartyID_",
+   "address": "0x00286d80",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee7c8",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossSetupSkyMapMonsterParty_",
+   "address": "0x00286e00",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ee7d8",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossTaskGuideFlowMenu_",
+   "address": "0x002837c0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee7e8",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossTaskGuideFlowMenuResult_",
+   "address": "0x00286e1c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee7f8",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "Task_BossSkyMapMonsterAddFellow_",
+   "address": "0x00287b20",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee808",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossSetupSkyMapMonsterNPC_",
+   "address": "0x002861b8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee818",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossGetTalkCameraEye_",
+   "address": "0x00282f84",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee828",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossGetTalkCameraTarget_",
+   "address": "0x002853ec",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee838",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "BossGetSkyMapMonsterKindId_",
+   "address": "0x00286b94",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee848",
+   "callSites": 4,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsMasterCrackMap_",
+   "address": "0x0027f95c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee858",
+   "callSites": 3,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsDarkLordCrackMap_",
+   "address": "0x00281688",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee868",
+   "callSites": 3,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetCrackNPCDarkLordNo_",
+   "address": "0x00283c1c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee878",
+   "callSites": 9,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetCrackNPCDarkLordScoutRound_",
+   "address": "0x002877a0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee888",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetCrackNPCMessageNameTag_",
+   "address": "0x00286280",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee898",
+   "callSites": 3,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "GetCrackNPCMessageTag_",
+   "address": "0x00283c48",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee8a8",
+   "callSites": 5,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetCrackNPCMessageNameTag_",
+   "address": "0x002862f4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ee8b8",
+   "callSites": 11,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "SetCrackNPCMessageTag_",
+   "address": "0x00283e9c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "C@0x001eecb4",
+   "callSites": 73,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetDiscQuestEnd_",
+   "address": "0x0027ef74",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eecc4",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetDiscQuestUIStop_",
+   "address": "0x002817cc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eecd4",
+   "callSites": 3,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "AddDiscQuestValue_",
+   "address": "0x0028045c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eece4",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsHaveSpecialDisc_",
+   "address": "0x002807f4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eecf4",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetCrackNPCScale_",
+   "address": "0x0027f84c",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eed04",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "ChangeFromCrackMap_",
+   "address": "0x002813b0",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eed14"
+  },
+  {
+   "identifier": "SetClearFlagCrackMap_",
+   "address": "0x00283208",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eed24",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "ChangeRaceTutorial_",
+   "address": "0x002813cc",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eed34",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "ChangeMap_",
+   "address": "0x0027a2b4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eed44",
+   "callSites": 12,
+   "scriptCount": 9
+  },
+  {
+   "identifier": "ChangeMapPosDir_",
+   "address": "0x0027e9fc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eed54",
+   "callSites": 171,
+   "scriptCount": 52
+  },
+  {
+   "identifier": "ChangeMapToFlight_",
+   "address": "0x0028070c",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eed64",
+   "callSites": 32,
+   "scriptCount": 32
+  },
+  {
+   "identifier": "ChangeMapPosDirWater_",
+   "address": "0x00283050",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eed74",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "ChangeVerticalCaveMap_",
+   "address": "0x002838e8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eed84",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "ChangeNetworkLobbyToTitle_",
+   "address": "0x00286264",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eed94",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "ChangeNetworkLobbyToField_",
+   "address": "0x00286248",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eeda4",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "DisconnectNetwork_",
+   "address": "0x00280780",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eedb4"
+  },
+  {
+   "identifier": "ChangeTitle_",
+   "address": "0x0027b3f4",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eedc4",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "ChangeEndRoll_",
+   "address": "0x0027cac4",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eedd4",
+   "callSites": 7,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "GotoMenuScene_",
+   "address": "0x0027cc5c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eede4",
+   "callSites": 15,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "GotoMenuOpen_",
+   "address": "0x0027c3fc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eedf4",
+   "callSites": 5,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "AddFieldMenu_",
+   "address": "0x0027c090",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eee04",
+   "callSites": 12,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "AddPlayerAbility_",
+   "address": "0x0027f734",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eee14",
+   "callSites": 6,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "GetFlagID_",
+   "address": "0x0027a474",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eee64",
+   "callSites": 4460,
+   "scriptCount": 87
+  },
+  {
+   "identifier": "WaitLod_",
+   "address": "0x0028888c",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001eee74",
+   "callSites": 24,
+   "scriptCount": 16
+  },
+  {
+   "identifier": "IsWaitLod_",
+   "address": "0x0027a648",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eee84",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetStopLod_",
+   "address": "0x0027b238",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eee94",
+   "callSites": 3,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "SetSelectBoneEffect_",
+   "address": "0x00282af0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eeec4",
+   "callSites": 449,
+   "scriptCount": 165
+  },
+  {
+   "identifier": "SetSelectBoneEffectSetOffset_",
+   "address": "0x002872e4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eeed4",
+   "callSites": 237,
+   "scriptCount": 92
+  },
+  {
+   "identifier": "SetSelectBoneEffectPlayer_",
+   "address": "0x0028651c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eeee4",
+   "callSites": 5,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "SetSelectBoneEffectSetBoneName_",
+   "address": "0x002879b8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eeef4",
+   "callSites": 121,
+   "scriptCount": 20
+  },
+  {
+   "identifier": "GetPartyMonsterNum_",
+   "address": "0x00281590",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eef04",
+   "callSites": 41,
+   "scriptCount": 7
+  },
+  {
+   "identifier": "GetOwnerMonsterNum_",
+   "address": "0x00281564",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eef14",
+   "callSites": 5,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "GetPartyMonsterKind_",
+   "address": "0x0028221c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eef24",
+   "callSites": 30,
+   "scriptCount": 7
+  },
+  {
+   "identifier": "GetOwnerMonsterKind_",
+   "address": "0x00282180",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001eef34",
+   "callSites": 3,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "GetPartyMonsterRank_",
+   "address": "0x00282404",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "D@0x001eef44"
+  },
+  {
+   "identifier": "GetPartyMonsterPlus_",
+   "address": "0x00282310",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef340",
+   "callSites": 6,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetPartyMonsterSize_",
+   "address": "0x002824f8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef350"
+  },
+  {
+   "identifier": "GetPartyMonsterLineAge_",
+   "address": "0x002847c8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef360",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsPartyMonsterHpMax_",
+   "address": "0x00282678",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef370"
+  },
+  {
+   "identifier": "IsPartyMonsterMpMax_",
+   "address": "0x00282718",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef380"
+  },
+  {
+   "identifier": "CheckPartyMonsterSkill_",
+   "address": "0x00284458",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef390",
+   "callSites": 6,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetFieldRideTypeNum_",
+   "address": "0x00281e98",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef3a0"
+  },
+  {
+   "identifier": "RecoverAll_",
+   "address": "0x0027b020",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ef3b0",
+   "callSites": 32,
+   "scriptCount": 8
+  },
+  {
+   "identifier": "GetFreeMonsterNum_",
+   "address": "0x0028079c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef3c0",
+   "callSites": 16,
+   "scriptCount": 8
+  },
+  {
+   "identifier": "GetNakamaMonsterNum_",
+   "address": "0x00282154",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef3d0"
+  },
+  {
+   "identifier": "GetNakamaMonsterRankNum_",
+   "address": "0x00285538",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef3e0",
+   "callSites": 10,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "IsRideTypeMonster_",
+   "address": "0x00280924",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef3f0"
+  },
+  {
+   "identifier": "IsFlightRideSetting_",
+   "address": "0x0028264c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef400",
+   "callSites": 32,
+   "scriptCount": 32
+  },
+  {
+   "identifier": "CheckPartyMonsterChangeColor_",
+   "address": "0x00287244",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef410",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "CheckPartyMonsterLimitOver_",
+   "address": "0x00286c50",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef420"
+  },
+  {
+   "identifier": "CheckPartyMonsterLimitOverKind_",
+   "address": "0x00287804",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef430",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "CheckPartyMonsterName_",
+   "address": "0x00283a94",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef440",
+   "callSites": 16,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetItemFoundRecord_",
+   "address": "0x002814c8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef450",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetNakamaRecord_",
+   "address": "0x0027ed9c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef460",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "GetDaytimeState_",
+   "address": "0x0027ed70",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef470",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetTime_",
+   "address": "0x00288770",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef480",
+   "callSites": 83,
+   "scriptCount": 69
+  },
+  {
+   "identifier": "GetWeather_",
+   "address": "0x0027accc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef490"
+  },
+  {
+   "identifier": "SetWeather_",
+   "address": "0x0027b2cc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef4a0",
+   "callSites": 23,
+   "scriptCount": 23
+  },
+  {
+   "identifier": "SetMonsterGenPlayerInvasionAreaMin_",
+   "address": "0x00287ddc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef4b0",
+   "callSites": 10,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "SetMonsterGenPlayerInvasionAreaMax_",
+   "address": "0x00287dd4",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ef4c0"
+  },
+  {
+   "identifier": "PlacementMonster_",
+   "address": "0x0027fa18",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef4d0",
+   "callSites": 12,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "DeleteItemAll_",
+   "address": "0x0027cb8c",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ef4e0",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "Task_AddFellow_",
+   "address": "0x0027e528",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef4f0",
+   "callSites": 28,
+   "scriptCount": 14
+  },
+  {
+   "identifier": "Task_Save_",
+   "address": "0x0027aab8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef500",
+   "callSites": 7,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "Task_EncountEffect_",
+   "address": "0x00281b04",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef510",
+   "callSites": 7,
+   "scriptCount": 7
+  },
+  {
+   "identifier": "FocusIcon_",
+   "address": "0x0027a344",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef520",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "FocusIconFromId_",
+   "address": "0x0027ebd8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef530"
+  },
+  {
+   "identifier": "FocusFieldPos_",
+   "address": "0x0027cba8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef540"
+  },
+  {
+   "identifier": "FocusCancel_",
+   "address": "0x0027b4f0",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001ef550",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsScrollNaviMap_",
+   "address": "0x0027eed8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef560",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "AddGold_",
+   "address": "0x00288324",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef570",
+   "callSites": 4,
+   "scriptCount": 4
+  },
+  {
+   "identifier": "GetGold_",
+   "address": "0x002884a4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef580",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "AddItem_",
+   "address": "0x002883b4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef590",
+   "callSites": 146,
+   "scriptCount": 25
+  },
+  {
+   "identifier": "GetItemNum_",
+   "address": "0x0027ac2c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef5a0",
+   "callSites": 113,
+   "scriptCount": 13
+  },
+  {
+   "identifier": "AddSendMedalCount_",
+   "address": "0x002804ec",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef5b0",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetSendMedalCount_",
+   "address": "0x002807c8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "D@0x001ef5c0",
+   "callSites": 3,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "AddAccessory_",
+   "address": "0x0027bfa8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef9bc",
+   "callSites": 6,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "GetAccessoryNum_",
+   "address": "0x0027ec68",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef9cc",
+   "callSites": 15,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "CheckAccessory_",
+   "address": "0x0027d70c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef9dc"
+  },
+  {
+   "identifier": "CheckAccessoryMax_",
+   "address": "0x00280728",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef9ec",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "CheckHaveGradeAccessory_",
+   "address": "0x0028549c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001ef9fc"
+  },
+  {
+   "identifier": "GetCreatedAccessoryCounts_",
+   "address": "0x002862b8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efa0c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "Task_AddAccessoryFlow_",
+   "address": "0x00284368",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efa1c",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "AddOrnament_",
+   "address": "0x0027b360",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efa2c",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "CheckOrnamentMax_",
+   "address": "0x0027f7c8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efa3c",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetRideOffStart_",
+   "address": "0x0027f438",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001efa4c",
+   "callSites": 35,
+   "scriptCount": 20
+  },
+  {
+   "identifier": "LoadLayout_",
+   "address": "0x0027acf8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efa5c",
+   "callSites": 38,
+   "scriptCount": 36
+  },
+  {
+   "identifier": "LoadLayoutEx_",
+   "address": "0x0027c4e4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efa6c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetLayoutAnime_",
+   "address": "0x0027e00c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efa7c",
+   "callSites": 125,
+   "scriptCount": 36
+  },
+  {
+   "identifier": "IsLayoutAnimeEnd_",
+   "address": "0x0027f930",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efa8c",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "LoadScreenShot_",
+   "address": "0x0027d920",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efa9c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "Task_ChangeLayoutAnime_",
+   "address": "0x00284f98",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efaac",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "ReleaseLayout_",
+   "address": "0x0027ccf0",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001efabc",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetHitEnableMapChangeNull_",
+   "address": "0x00286414",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efacc",
+   "callSites": 174,
+   "scriptCount": 40
+  },
+  {
+   "identifier": "GetEnteredMapChangeNullName_",
+   "address": "0x00286e94",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efadc",
+   "callSites": 19,
+   "scriptCount": 17
+  },
+  {
+   "identifier": "GetCouplingCount_",
+   "address": "0x0027f820",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efaec",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetMonsterAnalyzeCount_",
+   "address": "0x0028479c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efafc"
+  },
+  {
+   "identifier": "GetFoundCrackCount_",
+   "address": "0x0028146c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efb0c"
+  },
+  {
+   "identifier": "GetOpenedStealthBoxCount_",
+   "address": "0x00285d08",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efb1c"
+  },
+  {
+   "identifier": "SetSepiaColor_",
+   "address": "0x0027d244",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efb4c",
+   "callSites": 19,
+   "scriptCount": 14
+  },
+  {
+   "identifier": "SetBgBlack_",
+   "address": "0x0027b03c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efb5c",
+   "callSites": 3,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "ChangeColorTone_",
+   "address": "0x0027e870",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efb6c",
+   "callSites": 52,
+   "scriptCount": 20
+  },
+  {
+   "identifier": "SetFogDensity_",
+   "address": "0x0027cfa4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efb7c",
+   "callSites": 36,
+   "scriptCount": 29
+  },
+  {
+   "identifier": "GetFogDensity_",
+   "address": "0x0027cc0c",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001efb8c",
+   "callSites": 6,
+   "scriptCount": 6
+  },
+  {
+   "identifier": "SetFogDistMax_",
+   "address": "0x0027d030",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efb9c",
+   "callSites": 32,
+   "scriptCount": 25
+  },
+  {
+   "identifier": "GetFogDistMax_",
+   "address": "0x0027cc34",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001efbac",
+   "callSites": 5,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "SetFogDistMin_",
+   "address": "0x0027d0bc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efbbc",
+   "callSites": 6,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "SetFogType_",
+   "address": "0x0027b1a8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efbcc",
+   "callSites": 6,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "SetAnalyzeInfo_",
+   "address": "0x0027d9b0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efbdc",
+   "callSites": 3,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "AddCustomDisc_",
+   "address": "0x0027c930",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efbec",
+   "callSites": 2,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "AddSpecialDisc_",
+   "address": "0x0027d560",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efbfc",
+   "callSites": 3,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "CheckDiscMax_",
+   "address": "0x0027c24c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efc0c",
+   "callSites": 3,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "SetEventDate_",
+   "address": "0x0027c68c",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efc1c",
+   "callSites": 7,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "CheckEventDate_",
+   "address": "0x0027d738",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efc2c",
+   "callSites": 7,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "CheckTrophy_",
+   "address": "0x0027b410",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efc3c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "CheckPlayerNameNgWord_",
+   "address": "0x00283bf0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efc4c",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "CheckNetworkLogin_",
+   "address": "0x00280754",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001efc5c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "UpdateLibraryMonsterByUnlockChousei_",
+   "address": "0x00287e68",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "C@0x001f004c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "FieldBgmStop_",
+   "address": "0x0027c308",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001f005c",
+   "callSites": 7,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "AddCoin_",
+   "address": "0x00288238",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001f006c",
+   "callSites": 6,
+   "scriptCount": 2
+  },
+  {
+   "identifier": "IsUsedCoinOverNum_",
+   "address": "0x002809c4",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001f007c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetShortcutEventFlg_",
+   "address": "0x00282c40",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001f008c",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsGetShortCutPlayerAbility_",
+   "address": "0x00286d54",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001f009c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsDroneMode_",
+   "address": "0x0027b6a0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001f00ac",
+   "callSites": 7,
+   "scriptCount": 5
+  },
+  {
+   "identifier": "GetWeek_",
+   "address": "0x002884d0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001f00bc",
+   "callSites": 3,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsDanWinNum_",
+   "address": "0x0027b600",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001f00cc",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsPassingWinNum_",
+   "address": "0x0027ee38",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001f00dc",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "IsRankingBattleEntryNum_",
+   "address": "0x00285750",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001f00ec",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetDarkLoadRevengeWinCount_",
+   "address": "0x00286cf0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001f00fc",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetDarkLoadBattleCount_",
+   "address": "0x00284624",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001f010c",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "AddBattleCount_",
+   "address": "0x0027d544",
+   "mode": "ARM",
+   "confidence": "medium",
+   "evidence": "A@0x001f011c",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetPartnerIconBlink_",
+   "address": "0x002828c0",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001f012c",
+   "callSites": 2,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "SetShadowEnable_",
+   "address": "0x0027f454",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001f013c",
+   "callSites": 17,
+   "scriptCount": 8
+  },
+  {
+   "identifier": "GetEmptyAccessoryNum_",
+   "address": "0x002831dc",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001f014c",
+   "callSites": 1,
+   "scriptCount": 1
+  },
+  {
+   "identifier": "GetRandomDonMoguraHole_",
+   "address": "0x002848b8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "A@0x001f015c",
+   "callSites": 3,
+   "scriptCount": 3
+  },
+  {
+   "identifier": "GetRandomDonMoguraEvent_",
+   "address": "0x002855d8",
+   "mode": "ARM",
+   "confidence": "high",
+   "evidence": "B@0x001f0174",
+   "callSites": 1,
+   "scriptCount": 1
+  }
+ ],
+ "unbound": [
+  {
+   "identifier": "GetRideAttackMemberMonster_",
+   "callSites": 1,
+   "reason": "name occurs in no string of either image"
+  },
+  {
+   "identifier": "RePlaySE_",
+   "callSites": 1,
+   "reason": "name occurs in no string of either image; the scripts call ReplaySE_"
+  },
+  {
+   "identifier": "Vec3",
+   "callSites": 935,
+   "reason": "native class instance (sq_createinstance) with only x/y/z data members; no root-table function"
+  },
+  {
+   "identifier": "append",
+   "callSites": 36,
+   "reason": "Squirrel base-library function (sqstdlib), not registered by the game"
+  },
+  {
+   "identifier": "array",
+   "callSites": 63,
+   "reason": "Squirrel base-library function (sqstdlib), not registered by the game"
+  },
+  {
+   "identifier": "cActionInfo",
+   "callSites": 17,
+   "reason": "script class defined in BattleCommon.nut"
+  },
+  {
+   "identifier": "cAllyFlagPartyInfo",
+   "callSites": 1,
+   "reason": "script class defined in BattleCommon.nut"
+  },
+  {
+   "identifier": "cEmptyInfo",
+   "callSites": 2,
+   "reason": "script class defined in BattleCommon.nut"
+  },
+  {
+   "identifier": "cFullPartyInfo",
+   "callSites": 21,
+   "reason": "script class defined in BattleCommon.nut"
+  },
+  {
+   "identifier": "cMonsterInfo",
+   "callSites": 20,
+   "reason": "script class defined in BattleCommon.nut"
+  },
+  {
+   "identifier": "cTargetMonsterInfo",
+   "callSites": 6,
+   "reason": "script class defined in BattleCommon.nut"
+  },
+  {
+   "identifier": "len",
+   "callSites": 29,
+   "reason": "Squirrel base-library function (sqstdlib), not registered by the game"
+  },
+  {
+   "identifier": "print",
+   "callSites": 118,
+   "reason": "Squirrel base-library function (sqstdlib), not registered by the game"
+  },
+  {
+   "sha256": "70bb468cafc2fd1c3ee5d79d8816f40606c652436675e69b60417562a7eb2c97",
+   "callSites": 4,
+   "reason": "identifier not nameable: occurs in no string of either image"
+  },
+  {
+   "sha256": "a13f88d9c13564990467ad9bb5f25d1a673626abb39e9378811a61a088e41479",
+   "callSites": 3,
+   "reason": "identifier not nameable: occurs in no string of either image"
+  },
+  {
+   "sha256": "cc3cb0e30f2df5b66d7eec39c0cad1c576c49f34918efe030ecfd6e035264bf1",
+   "callSites": 2,
+   "reason": "identifier not nameable: occurs in no string of either image"
+  },
+  {
+   "sha256": "17ec90266d448489b66371730ec99698ef40ffcb97d7129480abd4553c53fac3",
+   "callSites": 1,
+   "reason": "identifier not nameable: occurs in no string of either image"
+  },
+  {
+   "sha256": "7e2131ab7c5075b12aa74cafd5f0710ef489835c2d6dae0b00e7cbc4611a01b3",
+   "callSites": 1,
+   "reason": "identifier not nameable: occurs in no string of either image"
+  },
+  {
+   "sha256": "9ec0147fd9cefaface825356cc8468419e6953a45ddc7909bbd416a896bd9a52",
+   "callSites": 1,
+   "reason": "identifier not nameable: occurs in no string of either image"
+  },
+  {
+   "sha256": "f5b93939212fb35d1918a3709610a403010662d0dc7044cd6b7d149fcfe6fa3f",
+   "callSites": 1,
+   "reason": "identifier not nameable: occurs in no string of either image"
+  }
+ ]
+}
