@@ -52,11 +52,26 @@ def main():
         problems.append('unit counts disagree between the report and the objdiff project')
     if link['sourceFunctions'] + link['retainedFunctions'] != mapping['split']['functionCount']:
         problems.append('the image link does not account for every split function exactly once')
+    recorded = {(row['id'], row['sha256']) for row in report.get('compilers', [])}
+    produced = {(row['id'], row['sha256']) for row in mapping.get('compilers', [])}
+    if not recorded:
+        problems.append('the report records no compiler identity')
+    if recorded != produced:
+        problems.append('the report compiler identity differs from the objects it measured')
+    expected_units = {unit['name']: unit for unit in mapping['units']}
+    for unit in report['units']:
+        expected = expected_units.get(unit['name'])
+        if expected is None:
+            problems.append('the report names a unit the objects do not: ' + unit['name'])
+        elif unit['metadata'].get('compilerProfile') != expected.get('compilerProfile'):
+            problems.append('unit %s records a different compiler profile' % unit['name'])
     for problem in problems:
         print(problem)
     print('report: total_code=%s matched_code=%s matched_functions=%s units=%s'
           % (measures['total_code'], measures['matched_code'], measures['matched_functions'],
              measures['total_units']))
+    print('compiler: ' + ', '.join('%s %s' % (row['id'], row['sha256'][:12])
+                                   for row in report.get('compilers', [])))
     print('link:   source=%d matched=%d retained=%d identical=%s complete=%s'
           % (link['sourceFunctions'], link['matchingFunctions'], link['retainedFunctions'],
              link['imageIdentical'], link['complete']))

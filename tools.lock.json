@@ -27494,6 +27494,28 @@
     "url": "https://github.com/encounter/objdiff/releases/download/v3.8.3/objdiff-cli-windows-x86_64.exe",
     "sha256": "dd12dfb5e9e94a7f6c949a37e1815963cf2cffe4c87b4999b7ebc8c15b398a1f"
   },
+  "armccDistribution": {
+    "url": "https://github.com/decompme/compilers/releases/download/compilers/armcc.zip",
+    "bytes": 73315488,
+    "sha256": "bda0cea5b13a9c3f08322fa76f9f9dcda59bda290f57f1a06e05cd80044fafdb",
+    "archivePrefix": "4.1/b1454/",
+    "targetRoot": "tools/armcc-4.1-b1454",
+    "members": {
+      "bin/armcc.exe": {
+        "path": "bin/armcc.exe",
+        "bytes": 12531736,
+        "sha256": "ce4b6e8f0a12dc9372351d2b559b4f89dc3250c825f0c9c2bb9865c88bff97db"
+      },
+      "include": {
+        "path": "include",
+        "files": 167,
+        "bytes": 3148798,
+        "manifestSha256": "6cd55781a8416c7a7a7475365ddbe24a725f88733b1994875120099ef1a28931"
+      }
+    },
+    "license": "Proprietary ARM software. Not committed to this repository and not redistributed by it; the archive is fetched from the public decomp.me compilers release and used only where the operator is entitled to use ARM Compiler.",
+    "provenance": "ARM Compiler 4.1 (build 1454), RVCT for ARM, as published in the decomp.me compilers collection. Pinned as a measurement input because it is the best-evidenced original compiler for this image, not because its licence permits general redistribution."
+  },
   "clangProvenance": {
     "distribution": "Android NDK r30, minimal local copy",
     "matchingCompilerEstablished": false,
@@ -27501,9 +27523,11 @@
     "source": "https://android.googlesource.com/toolchain/llvm-project/+/9f872551d3c681d06fd303b36f16ed5c274735eb"
   },
   "compilerProfile": {
-    "originalCompilerFamily": null,
-    "originalCompilerVersion": null,
-    "status": "unidentified; clang is an infrastructure/behavior compiler"
+    "originalCompilerFamily": "ARM Compiler (armcc, RVCT)",
+    "originalCompilerVersion": "4.1 build 1454",
+    "status": "best-evidenced, not proven; clang remains the infrastructure/behaviour compiler",
+    "measuredProfile": "armcc-4.1-b1454",
+    "decision": "docs/2026-11-10-armcc-compiler-profile.md"
   },
   "androidMinimalProvenance": "tools/android-r30-minimal/provenance.json",
   "formalAuditRuntime": {

@@ -4,7 +4,7 @@
 
 Reconstruction of the owner's measured Dragon Quest Monsters Joker 3 Professional base and update. The project begins on 6 November 2026. The owner permits publishing reconstructed source, tooling and derived progress reports. Original game archives, executable images, shipped scripts/assets, keys, saves and hybrid builds containing retained original bytes remain outside publication.
 
-**The reconstruction compiles 732 native C functions; 415 of them (5,176 instruction bytes) reproduce the original bytes exactly.** ByteMatch measures them against all **7,051,280 initialized ARM text bytes** in the measured update image: **0.0734%**. That number is a floor: the denominator includes literal pools, internal alignment and unclassified text, and every byte the source does not reproduce stays unmatched. A further 497 functions are placed in the linked image from compiled source; 26,076 functions and 8,357,276 image bytes are still retained from the original, so the reconstruction is not complete. 
+**The reconstruction compiles 732 native C functions; 514 of them (7,352 instruction bytes) reproduce the original bytes exactly.** ByteMatch measures them against all **7,051,280 initialized ARM text bytes** in the measured update image: **0.1043%**. That number is a floor: the denominator includes literal pools, internal alignment and unclassified text, and every byte the source does not reproduce stays unmatched. A further 559 functions are placed in the linked image from compiled source; 26,014 functions and 8,355,520 image bytes are still retained from the original, so the reconstruction is not complete.
 
 ## Build the game from your own image
 
@@ -13,6 +13,7 @@ The target end state is a complete, byte-identical rebuild that an end user prod
 ```powershell
 python setup_tools.py                             # pinned public tools
 python toolscripts/bootstrap_public_compiler.py   # pinned Clang 21 and ld.lld
+python toolscripts/armcc_bootstrap.py             # pinned original compiler (proprietary; not committed)
 tools/python/Scripts/python.exe -I build.py --image "C:\path\to\DQMJ3P_Update.cia"
 ```
 
@@ -65,7 +66,7 @@ The update image is the initial native investigation target. Keep the base execu
 
 ## Run locally
 
-Use Python 3.13.5 on Windows. Tools and dependencies are repository-local. `tools.lock.json` pins wheel URLs and upstream hashes, native-library identities, CTRTool, objdiff and the minimal Clang distribution. The measured Clang/LLVM profiles build recovered sources and behavior candidates; the game's original compiler is unidentified.
+Use Python 3.13.5 on Windows. Tools and dependencies are repository-local. `tools.lock.json` pins wheel URLs and upstream hashes, native-library identities, CTRTool, objdiff, the minimal Clang distribution and the best-evidenced original compiler (ARM Compiler 4.1 build 1454). The default build profile is armcc 4.1 b1454; `--compiler-profile clang-21` reproduces the former Clang build without the proprietary tool. See [the compiler-profile decision](docs/2026-11-10-armcc-compiler-profile.md).
 
 ```powershell
 & .\tools\python\Scripts\python.exe setup_tools.py --verify
@@ -80,7 +81,7 @@ Bounded C components for Squirrel array lifecycle and native/generic calls are d
 
 Native Windows and Android scene components, including reconstructed material construction, are described in [native scene components](docs/native-scene-components.md). They render measured owner resources and preserve explicit device, renderer and game limits.
 
-The owner selected an independent public/open-toolchain route. Proprietary compiler or Nintendo SDK availability is not a prerequisite. Historical compiler identification remains separate from the exact measured Clang configurations that establish accepted source. The full objective is 95 percent confirmed validated source coverage and working native Windows and Android games; source-function runners and diagnostic application shells do not satisfy that full objective.
+The owner selected an independent public/open-toolchain route. Proprietary compiler or Nintendo SDK availability is not a prerequisite: armcc is an optional pinned measurement input, public CI stays Clang-only, and `--compiler-profile clang-21` builds without it. The original compiler is identified as best-evidenced (ARM Compiler 4.1 build 1454), not proven. The full objective is 95 percent confirmed validated source coverage and working native Windows and Android games; source-function runners and diagnostic application shells do not satisfy that full objective.
 
 For a fresh full verification checkout, provide the pinned minimal Clang and Ghidra distributions with `python setup_tools.py --clang-source PATH_TO_PINNED_MINIMAL_CLANG_DIRECTORY --ghidra-source PATH_TO_PINNED_GHIDRA_DIRECTORY`, then place verified private input copies at `inputs/archive/dqmj3pro/DQMJ3P.cia` and `DQMJ3P_Update.cia`. The Clang directory must contain every pinned Clang/LLD/DLL file. The original owner archive remains external and immutable. Installation verifies downloads before use and leaves global PATH and Java settings unchanged. See [tooling](docs/2026-11-06-tooling.md) and [formal replay inputs](docs/formal-audit-reproducibility.md).
 
