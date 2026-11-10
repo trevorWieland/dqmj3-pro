@@ -611,7 +611,9 @@
         "src/native/wave012/fixed_arena.h",
         "src/native/wave013/pattern_tokens.h"
       ],
-      "role": "bounded-control-tokenizer-component"
+      "role": "bounded-control-tokenizer-component",
+      "compilerProfile": "clang-21",
+      "profileReason": "The 132-entry property table spells its UTF-16 names with C11 u\"...\" literals. armcc 4.1 has no C11 character-literal prefix and no preprocessing spelling reproduces a 16-bit string literal, so this one unit keeps the Clang profile until the table is respelled as a recorded reconstruction change. It contributes no byte-identical functions under either compiler today."
     },
     {
       "source": "src/native/wave013/token_repeat.c",

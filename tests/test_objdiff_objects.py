@@ -36,14 +36,28 @@ class ObjectConstructionTests(unittest.TestCase):
     def compile(self, text=SOURCE):
         source = self.output / 'unit.c'
         source.write_text(text, encoding='utf-8')
-        unit = {'source': source.relative_to(ROOT).as_posix()}
+        unit = {'source': source.relative_to(ROOT).as_posix(), 'compilerProfile': 'clang-21'}
         definitions, commands = objdiff_objects.compile_units(ROOT, self.output / 'compiled', [unit])
         self.assertTrue(commands)
         return definitions
 
+    def test_default_profile_is_the_best_evidenced_original_compiler(self):
+        table = objdiff_objects.profiles(ROOT)
+        self.assertEqual(table['default'], 'armcc-4.1-b1454')
+        self.assertTrue(table['profiles']['armcc-4.1-b1454']['measuredOriginal'])
+        self.assertFalse(table['profiles']['clang-21']['measuredOriginal'])
+
+    def test_unknown_compiler_profile_is_refused(self):
+        source = self.output / 'unit.c'
+        source.write_text('unsigned fn_00100000(unsigned x) { return x; }\n', encoding='utf-8')
+        with self.assertRaisesRegex(ValueError, 'Unknown compiler profile'):
+            objdiff_objects.compiler_argv(ROOT, {'source': 'x', 'compilerProfile': 'guess'}, source,
+                                          self.output / 'x.o')
+
     def test_compiler_argv_follows_the_declared_unit_profile(self):
         source = self.output / 'unit.c'
-        unit = {'source': 'src/native/wave001/x.c', 'layoutProfile': 'packed-4',
+        unit = {'source': 'src/native/wave001/x.c', 'compilerProfile': 'clang-21',
+                'layoutProfile': 'packed-4',
                 'publicHeaderProfile': 'zlib-solo', 'includeDirectories': ['src/native/wave001']}
         argv = [str(item) for item in objdiff_objects.compiler_argv(ROOT, unit, source, self.output / 'x.o')]
         self.assertIn('-fpack-struct=4', argv)
@@ -102,8 +116,8 @@ class ObjectConstructionTests(unittest.TestCase):
         second.write_text('unsigned fn_00100000(unsigned x) { return x; }\n', encoding='utf-8')
         source = self.output / 'unit.c'
         source.write_text('unsigned fn_00100000(unsigned x) { return x; }\n', encoding='utf-8')
-        units = [{'source': source.relative_to(ROOT).as_posix()},
-                 {'source': second.relative_to(ROOT).as_posix()}]
+        units = [{'source': source.relative_to(ROOT).as_posix(), 'compilerProfile': 'clang-21'},
+                 {'source': second.relative_to(ROOT).as_posix(), 'compilerProfile': 'clang-21'}]
         with self.assertRaisesRegex(ValueError, 'both define'):
             objdiff_objects.compile_units(ROOT, self.output / 'compiled', units)
 

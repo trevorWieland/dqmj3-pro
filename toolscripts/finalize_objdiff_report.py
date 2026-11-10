@@ -146,6 +146,7 @@ def source_unit(unit, functions, image, text):
         elif implementation['data'] == found['data']:
             matched.add(symbol.name)
     return {'name': unit['name'], 'source_path': unit['source_path'],
+            'compilerProfile': unit.get('compilerProfile'),
             'code': sum(row['size'] for row in sections), 'data': 0,
             'functions': {function['name']: {'size': function['size']} for function in unit['functions']},
             'matched': matched, 'relocated': relocated, 'sections': sections,
@@ -262,11 +263,13 @@ def verify(root, mapping):
     return units, matched_symbols, matched_bytes
 
 
-def normalize(report, units, matched, matched_bytes):
+def normalize(report, units, matched, matched_bytes, compilers=None):
     """Replace the stock denominator with the verified original bytes."""
     if report.get('version') != 2 or report.get('categories'):
         raise ValueError('Expected objdiff schema 2 without invented progress categories')
     result = {'version': 2, 'units': []}
+    if compilers is not None:
+        result['compilers'] = compilers
     raw_units = report['units']
     if len(raw_units) != len(units) or {unit['name'] for unit in raw_units} != set(units):
         raise ValueError('Raw CLI report omits or duplicates configured units')
@@ -333,7 +336,9 @@ def normalize(report, units, matched, matched_bytes):
         result['units'].append({'name': unit['name'],
                                 'measures': measures(values, fuzzy_weight / values['total_code'] if values['total_code'] else 100.0),
                                 'sections': public_sections, 'functions': public_functions,
-                                'metadata': {'source_path': expected['source_path'], 'complete': False}})
+                                'metadata': {'source_path': expected['source_path'],
+                                             'compilerProfile': expected.get('compilerProfile'),
+                                             'complete': False}})
         for key, value in values.items():
             totals[key] += value
         fuzzy_sum += fuzzy_weight
