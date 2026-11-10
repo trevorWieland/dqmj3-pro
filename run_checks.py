@@ -16,12 +16,11 @@ CHECKS = [
     ('tool-pins', ['setup_tools.py', '--verify'], 900),
     ('references', ['toolscripts/verify_references.py'], 300),
     ('compile', ['toolscripts/compile_sources.py'], 3600),
-    ('native-build', ['toolscripts/ci_native_build.py'], 1800),
-    ('report', ['toolscripts/check_report.py'], 1800),
+    ('report', ['toolscripts/check_report.py'], 3600),
     ('tests', ['-m', 'unittest', 'discover', '-s', str(ROOT / 'tests')], 7200),
 ]
 
-QUICK = {'tests', 'native-build', 'report'}
+QUICK = {'report'}
 
 
 def digest(path):
@@ -39,7 +38,7 @@ def command_for(args):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--quick', action='store_true',
-                        help='run only the checks that need no private original inputs')
+                        help='skip the checks that need the original image')
     parser.add_argument('--only', nargs='*', default=None)
     args = parser.parse_args()
 
@@ -52,11 +51,12 @@ def main():
                 and not (args.quick and name in QUICK)]
 
     receipt = {
-        'schemaVersion': 2,
+        'schemaVersion': 3,
         'startedUtc': datetime.now(timezone.utc).isoformat(),
         'sourceHashes': authored_policy(),
         'toolLockSha256': digest(ROOT / 'tools.lock.json'),
         'projectConfigSha256': digest(ROOT / 'project.json'),
+        'splitSha256': digest(ROOT / 'config/symbols.txt'),
         'quick': args.quick,
         'checks': [],
         'status': 'running',

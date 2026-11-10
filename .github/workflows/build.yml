@@ -1,4 +1,4 @@
-name: Verify native sources with private originals
+name: Build the reconstructed game from private originals
 
 on:
   push:
@@ -9,14 +9,14 @@ permissions:
   contents: read
 
 concurrency:
-  group: native-verification-${{ github.ref }}
+  group: native-build-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   build:
     if: github.repository == 'trevorWieland/dqmj3-pro' && github.ref == 'refs/heads/main'
     runs-on: windows-2025
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - name: Checkout reconstruction source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
@@ -32,16 +32,12 @@ jobs:
         run: python -I -S toolscripts/bootstrap_report_python.py
       - name: Check generated source-link names
         run: tools/ci-python-3.13.5/python.exe -I -S toolscripts/generate_source_names.py --check
-      - name: Check source-name output preserves existing proof bytes
-        run: tools/ci-python-3.13.5/python.exe -I -S -m unittest discover -s tests -p test_generate_source_names_output.py -v
       - name: Check frozen public download integrity and retries
         run: tools/ci-python-3.13.5/python.exe -I -S -m unittest discover -s tests -p test_bootstrap_report_tools.py -v
-      - name: Materialize frozen public report tools
+      - name: Check pinned compiler and report tool installation
         run: tools/ci-python-3.13.5/python.exe -I -S toolscripts/bootstrap_report_tools.py
-      - name: Test private intake and build guards
-        run: tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_ci_native_build.py -v
-      - name: Check read-only original archive extraction
-        run: tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_readonly_original_intake.py -v
+      - name: Materialize the pinned public compiler
+        run: tools/ci-python-3.13.5/python.exe -I -S toolscripts/bootstrap_public_compiler.py
       - name: Checkout owner-controlled private input parts
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -49,84 +45,13 @@ jobs:
           ssh-key: ${{ secrets.INPUTS_DEPLOY_KEY }}
           persist-credentials: false
           path: work/private-inputs
-      - name: Verify measured inputs and accepted native source integration
-        run: tools/report-python/Scripts/python.exe -I toolscripts/ci_native_build.py --private-inputs work/private-inputs
-      - name: Check reviewed progress inventory gate
-        id: progress
-        shell: pwsh
-        run: |
-          $config = Get-Content -LiteralPath config/objdiff-units.json -Raw | ConvertFrom-Json
-          if ($config.readyForProgress -isnot [bool]) { throw 'Missing explicit progress inventory readiness' }
-          "ready=$($config.readyForProgress.ToString().ToLowerInvariant())" >> $env:GITHUB_OUTPUT
-          if (-not $config.readyForProgress) {
-            'Verified accepted native sources and exact hybrid integration. ByteMatch reporting is pending the reviewed executable inventory; no whole-game report was uploaded.' >> $env:GITHUB_STEP_SUMMARY
-          }
-      - name: Build original and genuine source objdiff objects
-        if: steps.progress.outputs.ready == 'true'
-        shell: pwsh
-        run: |
-          $config = Get-Content -LiteralPath config/objdiff-units.json -Raw | ConvertFrom-Json
-          & tools/report-python/Scripts/python.exe -I toolscripts/objdiff_objects.py --census $config.census
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-      - name: Test reporting objects and denominator controls
-        if: steps.progress.outputs.ready == 'true'
-        shell: pwsh
-        run: |
-          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_objdiff_objects.py -v
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_finalize_objdiff_report.py -v
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_static_report_configuration.py -v
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_native_census_overlay.py -v
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_native_callback_inventory.py -v
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_native_provider_inventory.py -v
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_native_sdk_inventory.py -v
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_native_binding_inventory.py -v
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_native_file_inventory.py -v
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_native_shader_inventory.py -v
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_native_heap_inventory.py -v
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_native_teardown_inventory.py -v
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_native_particle_inventory.py -v
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_native_namespace_inventory.py -v
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_functional_report.py -v
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          & tools/report-python/Scripts/python.exe -I -m unittest discover -s tests -p test_report_source_units.py -v
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-      - name: Configure reviewed objdiff project
-        if: steps.progress.outputs.ready == 'true'
-        run: tools/report-python/Scripts/python.exe -I toolscripts/configure_objdiff.py --version update-content0 --output objdiff.json
-      - name: Generate progress report
-        if: steps.progress.outputs.ready == 'true'
-        run: tools/objdiff-3.8.3/objdiff-cli.exe report generate -o build/update-content0/report.json
-      - name: Account for every initialized native text byte
-        if: steps.progress.outputs.ready == 'true'
-        shell: pwsh
-        run: |
-          Copy-Item -LiteralPath build/update-content0/report.json -Destination build/update-content0/report.raw.json
-          & tools/report-python/Scripts/python.exe -I toolscripts/finalize_objdiff_report.py --input build/update-content0/report.raw.json
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          'ByteMatch code coverage uses every initialized main ARM text byte, including pools and unclassified regions. Function totals count discovered canonical entries. Only accepted exact source spans receive credit. See docs/bytematch.md.' >> $env:GITHUB_STEP_SUMMARY
-      - name: Generate reviewed functional companion
-        if: steps.progress.outputs.ready == 'true'
-        run: tools/report-python/Scripts/python.exe -I toolscripts/functional_report.py
-      - name: Upload progress report
-        if: steps.progress.outputs.ready == 'true'
+      - name: Build the game and its progress report
+        run: tools/report-python/Scripts/python.exe -I build.py --private-inputs work/private-inputs
+      - name: Check the report against the ExHeader, the link and the split
+        run: tools/report-python/Scripts/python.exe -I toolscripts/check_report.py
+      - name: Upload the progress report
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: update-content0_report
-          path: |
-            build/update-content0/report.json
-            build/update-content0/functional.json
+          path: build/update-content0/report.json
           if-no-files-found: error

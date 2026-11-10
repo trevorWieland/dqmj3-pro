@@ -1,6 +1,19 @@
+"""Normalise the stock objdiff report into the ByteMatch progress report.
+
+Stock objdiff sums code symbols, so its denominator is smaller than the
+initialized text segment it was handed. This module verifies every unit's
+target and base objects against ``config/symbols.txt`` and the user's code
+image, replaces each unit's code denominator with the bytes its target object
+really holds, and recomputes the counters from those exhaustive units.
+
+Matching credit is checked independently of the CLI. A function whose compiled
+bytes equal its original bytes must be credited; a function may only be
+credited without that equality when its object carries relocations that the CLI
+resolved symbolically.
+"""
+
 import argparse
 import hashlib
-import io
 import json
 import math
 import re
@@ -8,8 +21,9 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from configure_objdiff import contained
-import native_namespace_inventory as native_census_overlay
+import elf_objects
+import exheader
+import split as split_module
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,13 +36,13 @@ PERCENTAGES = {'matched_code_percent': ('matched_code', 'total_code'),
                'complete_data_percent': ('complete_data', 'total_data')}
 
 
-def digest(path):
-    with path.open('rb') as stream:
-        return hashlib.file_digest(stream, 'sha256').hexdigest()
-
-
 def read(path):
-    return json.loads(path.read_text(encoding='utf-8'))
+    return json.loads(Path(path).read_text(encoding='utf-8'))
+
+
+def digest(path):
+    with Path(path).open('rb') as stream:
+        return hashlib.file_digest(stream, 'sha256').hexdigest()
 
 
 def number(value):
@@ -65,195 +79,201 @@ def measures(values, fuzzy):
 def partition(rows, start, size):
     cursor = start
     for row in sorted(rows, key=lambda item: item['address']):
-        address, extent = number(row['address']), number(row['size'])
-        if not extent or address != cursor:
-            raise ValueError('Reference sections leave a gap or overlap in the loaded segment')
-        cursor += extent
+        if not row['size'] or row['address'] != cursor:
+            raise ValueError('Original sections leave a gap or overlap in the loaded segment')
+        cursor += row['size']
     if cursor != start + size:
-        raise ValueError('Reference sections do not cover the declared loaded segment')
+        raise ValueError('Original sections do not cover the declared loaded segment')
 
 
-def object_sections(path):
-    from elftools.elf.elffile import ELFFile
-    elf = ELFFile(io.BytesIO(path.read_bytes()))
-    if elf.elfclass != 32 or not elf.little_endian or elf['e_machine'] != 'EM_ARM':
-        raise ValueError('Expected a genuine little-endian ARM32 ELF')
-    sections = {}
-    for section in elf.iter_sections():
-        if section['sh_flags'] & 2 and section['sh_size']:
-            if section.name in sections:
-                raise ValueError('Duplicate allocated section name')
-            kind = 'code' if section['sh_flags'] & 4 else 'bss' if section['sh_type'] == 'SHT_NOBITS' else 'data'
-            sections[section.name] = {'size': section['sh_size'], 'kind': kind,
-                                      'data': None if kind == 'bss' else section.data()}
-    table = elf.get_section_by_name('.symtab')
-    if table is None:
-        raise ValueError('Missing native symbol table')
-    functions = {}
-    for symbol in table.iter_symbols():
-        if symbol['st_info']['type'] != 'STT_FUNC' or not symbol['st_size']:
+def aligned(rows):
+    """Sum section extents the way objdiff does.
+
+    objdiff merges the object's sections into one .text record and rounds each
+    section up to four bytes on the way, so its section accounting can exceed
+    the exact byte counts the split declares.
+    """
+    return sum((row['size'] + 3) // 4 * 4 for row in rows)
+
+
+def image_bytes(image, text, address, size):
+    offset = text['codeBinOffset'] + address - text['address']
+    return image[offset:offset + size]
+
+
+def source_unit(unit, functions, image, text):
+    """Check one source file's objects against the split and the code image."""
+    if unit['name'] != unit['source_path'][:-2] or not unit['source_path'].startswith('src/'):
+        raise ValueError('Unit name must follow its source path: ' + unit['name'])
+    target = elf_objects.read(unit['target'])
+    base = elf_objects.read(unit['base'])
+    names = [function['name'] for function in unit['functions']]
+    if not names or len(names) != len(set(names)):
+        raise ValueError('Unit repeats or omits a function: ' + unit['name'])
+    if any(value['kind'] != 'code' for value in base['sections'].values()):
+        raise ValueError('Compiled source contains data the split cannot place: ' + unit['name'])
+    dropped = set(unit.get('unrepresentable', []))
+    if set(base['functions']) != set(names) - dropped:
+        raise ValueError('Base object does not define the measured functions it claims: ' + unit['name'])
+    for name in dropped:
+        if base['functions'].get(name, {}).get('relocations', {}) and 0 not in base['functions'][name]['relocations']:
+            raise ValueError('A representable function was dropped from ' + unit['name'])
+    matched, relocated, sections = set(), set(), []
+    for function in unit['functions']:
+        symbol = functions.by_name.get(function['name'])
+        if symbol is None:
+            raise ValueError('Unit reports a function outside the split: ' + function['name'])
+        if (function['address'], function['size'], function['mode']) != (symbol.address, symbol.size, symbol.mode):
+            raise ValueError('Unit disagrees with the split on ' + symbol.name)
+        section = '.text.original_%08x' % symbol.address
+        found = target['sections'].get(section)
+        if found is None or found['kind'] != 'code' or found['size'] != symbol.size:
+            raise ValueError('Original function section is missing or wrong: ' + section)
+        original = image_bytes(image, text, symbol.address, symbol.size)
+        if found['data'] != original:
+            raise ValueError('Original function bytes differ from the code image: ' + symbol.name)
+        placed = target['functions'].get(symbol.name)
+        if placed is None or placed['offset'] or placed['size'] != symbol.size or placed['mode'] != symbol.mode:
+            raise ValueError('Original function symbol does not describe its section: ' + symbol.name)
+        sections.append({'address': symbol.address, 'size': symbol.size, 'kind': 'code'})
+        implementation = base['functions'].get(symbol.name)
+        if implementation is None:
             continue
-        if not isinstance(symbol['st_shndx'], int):
-            raise ValueError('Function is not section-defined')
-        section = elf.get_section(symbol['st_shndx'])
-        if not section['sh_flags'] & 4 or not re.fullmatch(r'fn_[0-9a-f]{8}', symbol.name):
-            raise ValueError('Unexpected function identity in reporting object')
-        if symbol.name in functions:
-            raise ValueError('Duplicate native function symbol')
-        offset = (symbol['st_value'] & ~1) - section['sh_addr']
-        size = symbol['st_size']
-        if offset < 0 or offset + size > section['sh_size']:
-            raise ValueError('Function extends outside its actual section')
-        functions[symbol.name] = {'size': size, 'data': sections[section.name]['data'][offset:offset + size],
-                                  'section': section.name, 'offset': offset,
-                                  'mode': 'Thumb' if symbol['st_value'] & 1 else 'ARM'}
-    return sections, functions
+        if implementation['size'] != function['compiledBytes']:
+            raise ValueError('Recorded compiled extent disagrees with the base object: ' + symbol.name)
+        if implementation['relocations']:
+            relocated.add(symbol.name)
+        elif implementation['data'] == found['data']:
+            matched.add(symbol.name)
+    return {'name': unit['name'], 'source_path': unit['source_path'],
+            'code': sum(row['size'] for row in sections), 'data': 0,
+            'functions': {function['name']: {'size': function['size']} for function in unit['functions']},
+            'matched': matched, 'relocated': relocated, 'sections': sections,
+            'aligned_code': aligned(sections), 'aligned_data': 0,
+            'section_names': set(target['sections'])}
 
 
-def verify_objects(root, mapping):
-    from ci_native_build import LANES, accepted_functions, native_path
-    if mapping.get('schemaVersion') != 1 or mapping.get('version') != 'update-content0':
-        raise ValueError('Unsupported original/source object map')
-    for lane in LANES:
-        packet = read(root / 'evidence/lanes' / lane / 'packet.json')
-        for record in packet.get('sourceInputs', packet.get('sources', [])) + packet.get('headers', []):
-            if digest(native_path(root, record['path'])) != record['sha256']:
-                raise ValueError('Frozen source or quoted header changed since accepted compilation')
-    layout = read(root / 'evidence/inventory/update-content0.json')
-    image_path = root / 'generated/update-content0/code.bin'
-    if mapping['moduleSha256'] != layout['codeSha256'] or digest(image_path) != layout['codeSha256']:
-        raise ValueError('Original image identity differs from measured loader mapping')
+def retained_unit(unit, functions, image, layout, text):
+    """Check the unit that keeps every original byte source does not implement."""
+    target = elf_objects.read(unit['target'])
+    base = elf_objects.read(unit['base'])
+    if base['sections'] or base['functions']:
+        raise ValueError('The retained unit base must be an empty compilation')
+    declared = {row['name']: row for row in unit['retainedFunctions']}
+    if set(declared) != set(target['functions']):
+        raise ValueError('Retained unit symbols disagree with its own manifest')
+    sections, records = [], []
+    for name, section in target['sections'].items():
+        if section['kind'] != 'code':
+            continue
+        address = int(name.rsplit('_', 1)[1], 16)
+        if section['data'] != image_bytes(image, text, address, section['size']):
+            raise ValueError('Retained original text differs from the code image at 0x%08x' % address)
+        sections.append({'address': address, 'size': section['size'], 'kind': 'code'})
+    for name, function in target['functions'].items():
+        row = declared[name]
+        if (function['size'], function['mode']) != (row['size'], row['mode']):
+            raise ValueError('Retained function symbol disagrees with its manifest: ' + name)
+        if function['data'] != image_bytes(image, text, row['address'], row['size']):
+            raise ValueError('Retained function bytes differ from the code image: ' + name)
+        records.append({'address': row['address'], 'size': row['size'], 'kind': 'code'})
+    data = 0
+    for name, section in target['sections'].items():
+        if section['kind'] == 'code':
+            continue
+        data += section['size']
+        if name == '.bss.original':
+            if section['kind'] != 'bss' or section['size'] != layout['bssBytes']:
+                raise ValueError('Retained BSS section is unexpected')
+            continue
+        segment = [row for row in layout['segments'] if '.' + row['name'] + '.original' == name]
+        if len(segment) != 1 or section['size'] != segment[0]['initializedBytes']:
+            raise ValueError('Retained %s section does not match the ExHeader extent' % name)
+        offset = segment[0]['codeBinOffset']
+        if section['data'] != image[offset:offset + section['size']]:
+            raise ValueError('Retained %s bytes differ from the code image' % name)
+    if sections != sorted(sections, key=lambda row: row['address']):
+        sections.sort(key=lambda row: row['address'])
+    return {'name': unit['name'], 'source_path': unit['source_path'],
+            'code': sum(row['size'] for row in sections), 'data': data,
+            'functions': {name: {'size': row['size']} for name, row in declared.items()},
+            'matched': set(), 'relocated': set(), 'sections': sections,
+            'aligned_code': aligned(sections),
+            'aligned_data': aligned([{'size': section['size']} for name, section in target['sections'].items()
+                                      if section['kind'] != 'code']),
+            'section_names': set(target['sections'])}
+
+
+def verify(root, mapping):
+    """Rebuild the measurement facts from the split, the image and the objects."""
+    if mapping.get('schemaVersion') != 2 or mapping.get('version') != 'update-content0':
+        raise ValueError('Unsupported object map')
+    split_path = root / mapping['split']['path']
+    image_path = root / mapping['image']['path']
+    header_path = root / mapping['exheader']['path']
+    if digest(split_path) != mapping['split']['sha256']:
+        raise ValueError('The split changed after object production')
+    if digest(image_path) != mapping['image']['sha256']:
+        raise ValueError('The code image changed after object production')
+    if digest(header_path) != mapping['exheader']['sha256']:
+        raise ValueError('The ExHeader changed after object production')
+    layout = exheader.layout(header_path.read_bytes())
+    text = exheader.segment(layout, 'text')
+    if layout != mapping['layout'] or text != mapping['text']:
+        raise ValueError('The ExHeader layout changed after object production')
     image = image_path.read_bytes()
-    census_pin = mapping['census']
-    census_path = contained(root, census_pin['path'])
-    if digest(census_path) != census_pin['sha256']:
-        raise ValueError('Discovered entry census changed after object construction')
-    census = read(census_path)
-    census, overlays = native_census_overlay.compose(root, census)
-    if (mapping.get('censusOverlays', []) != overlays
-            or overlays and mapping.get('discoveredFunctionEntries') != census['functionCount']):
-        raise ValueError('Reporting objects differ from reviewed supplemental inventory')
-    if census['codeSha256'] != layout['codeSha256'] or census['functionCount'] != len(census['functions']):
-        raise ValueError('Discovered entries belong to another measured image')
-    known_entries = {'fn_' + format(row['address'], '08x'): row for row in census['functions']}
-    if len(known_entries) != len(census['functions']):
-        raise ValueError('Discovered canonical entries are duplicated')
-    accepted = accepted_functions(root)
-    import report_source_units
-    source_routes, source_routes_pin = report_source_units.load(root, census, accepted)
-    if mapping.get("sourceUnits") != source_routes_pin:
-        raise ValueError("Source-directed report configuration changed after object construction")
-    routes = {row["name"]: row for row in source_routes}
-    seen_routes = set()
-    ledger = {row['symbol']: row for row in accepted}
-    mapped, originals, credited = {}, [], set()
+    functions = split_module.load(split_path, text['address'], text['initializedBytes'])
+    if len(functions) != mapping['split']['functionCount']:
+        raise ValueError('Split function count changed after object production')
+    units = {}
     for unit in mapping['units']:
-        if unit['name'] in mapped or unit.get('complete') is not False:
-            raise ValueError('Duplicate unit or unsupported unit-completion claim')
-        source = contained(root, unit['source_path'])
-        route = routes.get(unit['name'])
-        if route:
-            if (unit['source_path'] != route['sourcePath'] or unit.get('sourceRouting') != route
-                    or unit.get('acceptedSymbols') or unit.get('expected_matched_code') != 0
-                    or unit.get('expected_matched_functions') != 0):
-                raise ValueError('Source-directed unit changes source ownership or exact matching credit')
-            seen_routes.add(unit['name'])
-        elif not source.exists() or not (unit['source_path'] == 'src/native' or unit['source_path'].startswith('src/native/')):
-            raise ValueError('Report source must be an existing public source path')
-        if unit['name'] != (unit['source_path'] if source.is_dir() else source.relative_to(root).with_suffix('').as_posix()):
-            raise ValueError('Report grouping must follow the actual public source hierarchy')
+        if unit['name'] in units:
+            raise ValueError('Duplicate unit: ' + unit['name'])
         for side in ('target', 'base'):
-            path = contained(root, unit[side + '_path'])
-            if digest(path) != unit[side + '_sha256']:
-                raise ValueError('Reporting object changed after construction')
-        target, functions = object_sections(contained(root, unit['target_path']))
-        base, implementations = object_sections(contained(root, unit['base_path']))
-        references = unit['original_ranges']
-        by_section = {row['section']: row for row in references}
-        if {row['section'] for row in references} != set(target) or len(references) != len(target):
-            raise ValueError('Every allocated reference section must have exactly one original range')
-        for row in references:
-            section = target[row['section']]
-            if not re.fullmatch(r'\.text\.original_[0-9a-f]{8}|\.(?:rodata|data|bss)\.original', row['section']):
-                raise ValueError('Reference section name is outside the fixed generated schema')
-            if section['size'] != row['size'] or section['kind'] != row['kind']:
-                raise ValueError('Reference section differs from declared original ownership')
-            if row['kind'] != 'bss':
-                segment = next((item for item in layout['layout']['segments']
-                                if item['address'] <= row['address']
-                                and row['address'] + row['size'] <= item['address'] + item['initializedBytes']), None)
-                if segment is None:
-                    raise ValueError('Reference section escapes initialized segment bounds')
-                if row['kind'] != ('code' if segment['name'] == 'text' else 'data'):
-                    raise ValueError('Reference section changes the original loader segment role')
-                offset = segment['codeBinOffset'] + row['address'] - segment['address']
-                if section['data'] != image[offset:offset + row['size']]:
-                    raise ValueError('Reference object differs from original input bytes')
-            originals.append(row)
-        for name, function in functions.items():
-            reference = by_section[function['section']]
-            entry = known_entries.get(name)
-            actual_address = reference['address'] + function['offset']
-            if entry is None or actual_address != entry['address'] or function['mode'] != entry['mode']:
-                raise ValueError('Reference symbol is not the actual discovered canonical entry')
-        if route and (set(functions) != {route['symbol']} or implementations):
-            raise ValueError('Source-directed unit contains extra symbols or reconstructed bytes')
-        if any(item['kind'] != 'code' for item in base.values()):
-            raise ValueError('Current accepted source has no data or BSS credit')
-        if sum(item['size'] for item in base.values()) != sum(item['size'] for item in implementations.values()):
-            raise ValueError('Source base contains uncredited or overlapping executable material')
-        for name, function in implementations.items():
-            row = ledger.get(name)
-            if row is None or name in credited or row['sourcePath'] != unit['source_path']:
-                raise ValueError('Source base contains an unaccepted, duplicate or misattributed function')
-            if digest(source) != row['sourceSha256'] or function['size'] != row['instructionBytes']:
-                raise ValueError('Accepted source hash or function extent changed')
-            if hashlib.sha256(function['data']).hexdigest() != row['originalSpanSha256']:
-                raise ValueError('Source base does not match its accepted original span')
-            target_function = functions.get(name)
-            if target_function is None or any(target_function[key] != function[key] for key in ('size', 'data', 'mode')):
-                raise ValueError('Accepted target/base function bytes differ')
-            credited.add(name)
-        code = sum(item['size'] for item in target.values() if item['kind'] == 'code')
-        data = sum(item['size'] for item in target.values() if item['kind'] != 'code')
-        expected_code = sum(item['size'] for item in implementations.values())
-        if (unit['expected_matched_code'], unit['expected_matched_functions']) != (expected_code, len(implementations)):
-            raise ValueError('Object-map credit claim disagrees with actual source objects')
-        mapped[unit['name']] = {'code': code, 'data': data, 'functions': functions,
-                                 'matched_code': expected_code, 'matched_functions': len(implementations),
-                                 'matched_symbols': set(implementations),
-                                 'source_path': unit['source_path'], 'section_names': set(target)}
-    if credited != set(ledger):
-        raise ValueError('Object mapping omits an accepted source function')
-    if seen_routes != set(routes):
-        raise ValueError('Source-directed report unit is missing')
-    for segment in layout['layout']['segments']:
-        kind = 'code' if segment['name'] == 'text' else 'data'
-        rows = [row for row in originals if row['kind'] == kind and segment['address'] <= row['address']
-                < segment['address'] + segment['initializedBytes']]
-        partition(rows, segment['address'], segment['initializedBytes'])
-    data = next(item for item in layout['layout']['segments'] if item['name'] == 'data')
-    partition([row for row in originals if row['kind'] == 'bss'],
-              data['address'] + data['initializedBytes'], layout['layout']['bssBytes'])
-    if len({name for unit in mapped.values() for name in unit['functions']}) != sum(len(unit['functions']) for unit in mapped.values()):
-        raise ValueError('A discovered function entry appears in multiple units')
-    if {name for unit in mapped.values() for name in unit['functions']} != set(known_entries):
-        raise ValueError('Reporting objects omit discovered entries or invent additional functions')
-    return mapped
+            if digest(unit[side]) != unit[side + 'Sha256']:
+                raise ValueError('Reporting object changed after construction: ' + unit[side])
+        if unit['source_path'] == 'src/native':
+            units[unit['name']] = retained_unit(unit, functions, image, layout, text)
+        else:
+            units[unit['name']] = source_unit(unit, functions, image, text)
+    covered = sorted((row for unit in units.values() for row in unit['sections']),
+                     key=lambda row: row['address'])
+    partition(covered, text['address'], text['initializedBytes'])
+    declared, matched_symbols = set(), set()
+    matched_bytes = 0
+    for unit in units.values():
+        declared |= set(unit['functions'])
+        for name in unit['matched']:
+            matched_bytes += unit['functions'][name]['size']
+        matched_symbols |= unit['matched']
+    if declared != set(functions.by_name):
+        raise ValueError('Reporting objects omit split functions or invent additional ones')
+    retained = units[[name for name, unit in units.items() if unit['source_path'] == 'src/native'][0]]
+    measured = declared - set(retained['functions'])
+    for unit in units.values():
+        if unit is retained:
+            continue
+        for name in unit['functions']:
+            symbol = functions.by_name[name]
+            if {'address': symbol.address, 'size': symbol.size, 'kind': 'code'} not in unit['sections']:
+                raise ValueError('Source unit does not own exactly the split extent of ' + name)
+    if set(retained['functions']) != set(functions.by_name) - measured:
+        raise ValueError('The retained unit does not hold exactly the functions source leaves')
+    return units, matched_symbols, matched_bytes
 
 
-def normalize(report, mapped):
+def normalize(report, units, matched, matched_bytes):
+    """Replace the stock denominator with the verified original bytes."""
     if report.get('version') != 2 or report.get('categories'):
         raise ValueError('Expected objdiff schema 2 without invented progress categories')
     result = {'version': 2, 'units': []}
-    units = report['units']
-    if len(units) != len(mapped) or {unit['name'] for unit in units} != set(mapped):
+    raw_units = report['units']
+    if len(raw_units) != len(units) or {unit['name'] for unit in raw_units} != set(units):
         raise ValueError('Raw CLI report omits or duplicates configured units')
-    totals = dict.fromkeys(COUNTS, 0)
-    raw_totals = dict.fromkeys(COUNTS, 0)
+    totals, raw_totals = dict.fromkeys(COUNTS, 0), dict.fromkeys(COUNTS, 0)
     fuzzy_sum = 0.0
-    for unit in units:
-        expected = mapped[unit['name']]
+    for unit in raw_units:
+        expected = units[unit['name']]
         metadata = unit.get('metadata', {})
         if metadata.get('source_path') != expected['source_path'] or metadata.get('complete') is not False:
             raise ValueError('Raw report source/completion metadata differs from configuration')
@@ -267,21 +287,19 @@ def normalize(report, mapped):
         for key, value in values.items():
             raw_totals[key] += value
         public_functions = []
+        credited = {item['name'] for item in functions if float(item.get('fuzzy_match_percent', 0)) == 100}
         for item in functions:
             if number(item['size']) != expected['functions'][item['name']]['size']:
-                raise ValueError('CLI function extent disagrees with original ELF')
-            percent = percentage(item.get('fuzzy_match_percent', 0))
-            if percent != (100.0 if item['name'] in expected['matched_symbols'] else 0.0):
-                raise ValueError('Partial or false matching credit is unsupported by these source objects')
+                raise ValueError('CLI function extent disagrees with the original ELF')
+            percentage(item.get('fuzzy_match_percent', 0))
             public_functions.append({'name': item['name'], 'size': str(number(item['size'])),
-                                     'fuzzy_match_percent': percent,
+                                     'fuzzy_match_percent': 100.0 if item['name'] in credited else 0.0,
                                      'metadata': {'virtual_address': str(int(item['name'][3:], 16))}})
         public_sections = []
-        section_code, section_data, section_matched_data = 0, 0, 0
+        section_code, section_data = 0, 0
         for section in unit.get('sections', []):
             name = section['name']
-            allowed = expected.get('section_names', set()) | {'.text', '.rodata', '.data', '.bss'}
-            if name not in allowed:
+            if name not in expected['section_names'] | {'.text', '.rodata', '.data', '.bss'}:
                 raise ValueError('CLI section is outside the verified object schema')
             percent = percentage(section.get('fuzzy_match_percent', 0))
             extent = number(section.get('size', 0))
@@ -289,22 +307,26 @@ def normalize(report, mapped):
                 section_code += extent
             else:
                 section_data += extent
-                section_matched_data += extent if percent == 100 else 0
             public_sections.append({'name': name, 'size': str(extent),
                                     'fuzzy_match_percent': percent, 'metadata': {}})
-        if (section_code, section_data, section_matched_data) != (expected['code'], expected['data'], 0):
-            raise ValueError('CLI section accounting differs from actual allocated original sections')
-        matched = [item for item in functions if float(item.get('fuzzy_match_percent', 0)) == 100]
-        if {item['name'] for item in matched} != expected['matched_symbols']:
-            raise ValueError('Raw CLI matched identities differ from accepted source functions')
-        if (sum(number(item['size']) for item in matched), len(matched)) != (expected['matched_code'], expected['matched_functions']):
-            raise ValueError('Raw CLI matches differ from accepted genuine source')
-        if (values['matched_code'], values['matched_functions']) != (expected['matched_code'], expected['matched_functions']):
-            raise ValueError('CLI credit counters differ from verified object matching')
+        if (section_code, section_data) != (expected['aligned_code'], expected['aligned_data']):
+            raise ValueError('CLI section accounting differs from the verified original sections')
+        if not expected['matched'] <= credited:
+            raise ValueError('CLI withheld credit from bytes that are byte-identical')
+        if credited - expected['relocated'] - expected['matched']:
+            raise ValueError('CLI granted credit without byte equality or relocations')
+        credited_bytes = sum(number(item['size']) for item in functions if item['name'] in credited)
+        byte_identical = sum(expected['functions'][name]['size'] for name in expected['matched'])
+        relocated_credit = sum(expected['functions'][name]['size'] for name in credited & expected['relocated'])
+        if credited_bytes != byte_identical + relocated_credit:
+            raise ValueError('CLI credit counters differ from the credited identities')
+        if (credited_bytes, len(credited)) != (values['matched_code'], values['matched_functions']):
+            raise ValueError('CLI credit counters differ from the credited identities')
         if values['total_code'] != sum(number(item['size']) for item in functions) or values['total_functions'] != len(functions):
             raise ValueError('Raw CLI counters do not agree with real symbol records')
-        if values['total_data'] != expected['data'] or values['matched_data'] or any(values[key] for key in ('complete_code', 'complete_data', 'complete_units')):
-            raise ValueError('Unsupported data/link completion credit')
+        if values['total_data'] != expected['data'] or values['matched_data'] or any(
+                values[key] for key in ('complete_code', 'complete_data', 'complete_units')):
+            raise ValueError('Unsupported data or link completion credit')
         values['total_code'] = expected['code']
         values['total_units'] = 1
         fuzzy_weight = sum(float(item.get('fuzzy_match_percent', 0)) * number(item['size']) for item in functions)
@@ -317,6 +339,8 @@ def normalize(report, mapped):
         fuzzy_sum += fuzzy_weight
     if counters(report['measures']) != raw_totals:
         raise ValueError('Raw top-level counters differ from the complete unit sum')
+    if totals['matched_code'] < matched_bytes or totals['matched_functions'] < len(matched):
+        raise ValueError('Normalised totals withheld credit from byte-identical functions')
     result['measures'] = measures(totals, fuzzy_sum / totals['total_code'] if totals['total_code'] else 100.0)
     return result
 
@@ -327,17 +351,20 @@ def main():
     parser.add_argument('--input', default='build/update-content0/report.raw.json')
     parser.add_argument('--output', default='build/update-content0/report.json')
     args = parser.parse_args()
-    mapping = read(contained(ROOT, args.object_map))
-    mapped = verify_objects(ROOT, mapping)
-    result = normalize(read(contained(ROOT, args.input)), mapped)
-    output = contained(ROOT, args.output)
-    if not output.resolve().is_relative_to((ROOT / 'build').resolve()):
-        raise ValueError('Public report must remain under build/')
+    try:
+        mapping = read(ROOT / args.object_map)
+        units, matched, matched_bytes = verify(ROOT, mapping)
+        result = normalize(read(ROOT / args.input), units, matched, matched_bytes)
+    except (OSError, ValueError, KeyError) as error:
+        print('Report normalisation failed: ' + str(error), file=sys.stderr)
+        return 1
+    output = ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, separators=(',', ':')) + '\n', encoding='utf-8')
     print(json.dumps({'report': args.output, 'measures': result['measures'],
-                      'scope': 'Complete initialized native text; discovered canonical function entries'}))
+                      'scope': 'Complete initialized native text; byte-identical source functions'}))
+    return 0
 
 
 if __name__ == '__main__':
-    main()
+    raise SystemExit(main())

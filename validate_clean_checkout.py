@@ -97,10 +97,11 @@ def main():
               'acceptedRecoveredFunctions': 0, 'acceptedRecoveredBytes': 0,
               'wholeGameExecution': False, 'sourceOnlyExecutableProof': False}
     if passed:
-        report = destination / 'evidence/verification/checks.json'
+        report = destination / 'work/checks/receipt.json'
         record['checksReceiptSha256'] = digest(report)
         record['checksReceipt'] = json.loads(report.read_text())
-    output = ROOT / 'evidence/verification/clean-checkout.json'
+    output = ROOT / 'work/verification/clean-checkout.json'
+    output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(record, indent=2) + '\n', encoding='utf-8')
     raise SystemExit(0 if passed else 1)
 

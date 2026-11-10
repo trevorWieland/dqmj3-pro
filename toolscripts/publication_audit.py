@@ -154,82 +154,6 @@ def read_owned(root, relative):
         raise ValueError("Uninspected metadata or public-resource link")
     return path.read_bytes()
 
-def authored_xbb_fixture(root):
-    source_path = "toolscripts/native_archive032_fixtures.py"
-    fixture_path = "evidence/lanes/native-archive032/xbb/synthetic-fixtures.json"
-    if not (root / fixture_path).exists():
-        return {}
-    source = read_owned(root, source_path)
-    data = read_owned(root, fixture_path)
-    source_sha = "738f08949ae658eb3eaa580b7dfd872613d3f53e12c5feb41fca94cdc72c2402"
-    fixture_sha = "1acba07c1d27452f6cc82ff5aa35d620876922a18cd336abc8e1d9f91d459de2"
-    if sha(source) != source_sha or len(source) != 3220 or sha(data) != fixture_sha or len(data) != 113672:
-        raise ValueError("Authored XBB generator or fixture identity changed")
-    regenerate = """import hashlib,json,sys
-scope={"__name__":"verified_authored_xbb_generator"}
-exec(compile(sys.stdin.buffer.read(),"verified-fixture-generator","exec"),scope)
-images,rows={},[]
-for item in scope["cases"]():
-    spec=item["specification"];image=spec["image"];identity=hashlib.sha256(image).hexdigest()
-    images[identity]={"bytes":len(image),"hex":image.hex()}
-    rows.append({"name":item["name"],"imageSha256":identity,
-        "fields":{key:value.hex() if isinstance(value,bytes) else value for key,value in spec.items() if key!="image"}})
-print(json.dumps({"images":images,"cases":rows}))
-"""
-    child = subprocess.run([sys.executable, "-I", "-S", "-c", regenerate], input=source,
-        capture_output=True, timeout=30, check=True)
-    if len(child.stdout) > 1024 * 1024 or child.stderr:
-        raise ValueError("Unexpected authored fixture regeneration output")
-    regenerated = json.loads(child.stdout)
-    images, rows = regenerated["images"], regenerated["cases"]
-    expected = {"generator": {"path": source_path, "sha256": source_sha, "bytes": len(source)},
-        "images": images, "cases": rows, "originalAssetBytesIncluded": False}
-    if json.loads(data) != expected:
-        raise ValueError("Authored XBB fixtures do not reproduce from the reviewed generator")
-    return {fixture_path: {"sha256": fixture_sha, "size": len(data),
-        "origin": "independently-regenerated-authored-synthetic-xbb",
-        "sourceGeneratorSha256": source_sha, "encodedSyntheticPayloadSha256": sorted(images)}}
-
-
-def authored_gzip_fixture(root):
-    fixture_path = "evidence/lanes/native-archive032/gzip/synthetic-fixtures.json"
-    if not (root / fixture_path).exists():
-        return {}
-    pins = {
-        "toolscripts/native_archive032_gzip_cases.py": (3947, "a7c6c899358933e89f417cc4fbfcf83e3d77cec427bbe578a23e6cefd4536b7e"),
-        "toolscripts/native_archive032_gzip_packet.py": (14239, "01d7a33ca6d2c0eec54eaef5b39308b43b8974ee4f290b22067168523e05b59d"),
-        fixture_path: (66236, "ad3628c151315c8d893ebc51234b996c14f5e2696e1d93f777fe2683875cc0f2"),
-    }
-    values = {}
-    for path, (size, expected) in pins.items():
-        data = read_owned(root, path)
-        if len(data) != size or sha(data) != expected:
-            raise ValueError("Authored gzip generator or fixture identity changed")
-        values[path] = data
-    case_path, packet_path = list(pins)[:2]
-    generator = {"path": case_path, "bytes": pins[case_path][0], "sha256": pins[case_path][1]}
-    program = """import ast,hashlib,json,sys
-from pathlib import Path
-value=json.load(sys.stdin);scope={}
-exec(compile(value['cases'],'reviewed-gzip-cases','exec'),scope)
-scope.update(ROOT=Path('.'),record=lambda path:value['generator'],sha=lambda data:hashlib.sha256(data).hexdigest())
-node=next(item for item in ast.parse(value['packet']).body if isinstance(item,ast.FunctionDef) and item.name=='synthetic')
-exec(compile(ast.Module(body=[node],type_ignores=[]),'reviewed-gzip-fixture','exec'),scope)
-print(json.dumps(scope['synthetic']()))
-"""
-    child = subprocess.run([sys.executable, "-I", "-S", "-c", program],
-        input=json.dumps({"cases": values[case_path].decode("utf-8"), "packet": values[packet_path].decode("utf-8"),
-                          "generator": generator}), capture_output=True, text=True, timeout=30, check=True)
-    if len(child.stdout) > 1024 * 1024 or child.stderr:
-        raise ValueError("Unexpected authored gzip regeneration output")
-    expected = json.loads(child.stdout)
-    if json.loads(values[fixture_path]) != expected:
-        raise ValueError("Authored gzip fixtures do not reproduce from the reviewed generator")
-    return {fixture_path: {"sha256": pins[fixture_path][1], "size": pins[fixture_path][0],
-        "origin": "independently-regenerated-authored-synthetic-gzip", "sourceGeneratorSha256": pins[case_path][1],
-        "encodedSyntheticPayloadSha256": sorted(expected["images"])}}
-
-
 def public_allowlist(root):
     raw = read_owned(root, MANIFEST)
     if sha(raw) != MANIFEST_SHA:
@@ -264,14 +188,9 @@ def public_allowlist(root):
             if not archive.read("native-includes/" + name):
                 raise ValueError("Missing public header license notice")
     allowed[HEADER_PATH] = {"sha256": HEADER_SHA, "size": 151286, "origin": "verified-public-aosp-llvm-headers-with-notices"}
-    allowed.update(authored_xbb_fixture(root))
-    allowed.update(authored_gzip_fixture(root))
     return allowed
 
 def private_hashes(root):
-    paths = set((root / "evidence/inventory").glob("*.json"))
-    paths.update(root / x for x in ("evidence/assets/base.json", "evidence/assets/update.json",
-                 "evidence/lanes/container-inventory-wave003/base.json", "evidence/lanes/container-inventory-wave003/update.json"))
     result, sources = set(), []
     keys = {"archiveSha256", "ciaSha256", "ncchSha256", "codeSha256", "decompressedCodeSha256", "exheaderSha256"}
     def walk(value):
@@ -285,13 +204,15 @@ def private_hashes(root):
         elif isinstance(value, list):
             for item in value:
                 walk(item)
-    for path in sorted(paths):
+    paths = [root / "project.json", *sorted((root / "work" / "intake").glob("*.json"))]
+    for path in paths:
         if path.is_file():
             data = read_owned(root, path.relative_to(root))
             walk(json.loads(data))
             sources.append({"path": path.relative_to(root).as_posix(), "sha256": sha(data)})
     result.discard(sha(b""))
     return result, sources
+
 
 def snapshot(root):
     return {"head": git(root, "rev-parse", "HEAD").decode().strip(),
