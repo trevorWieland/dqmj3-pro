@@ -35,7 +35,7 @@ jobs:
       - name: Materialize only pinned public compiler files
         run: python -I -S toolscripts/bootstrap_public_compiler.py
       - name: Run the test suite
-        run: python -I -S -m unittest discover -s tests -v
+        run: python -I -m unittest discover -s tests -v
       - name: Compile native sources and bounded VM components for reviewed targets
         run: python -I -S toolscripts/compile_sources.py
       - name: Upload compile diagnostics and manifests
