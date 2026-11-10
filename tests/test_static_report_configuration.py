@@ -139,8 +139,9 @@ class ReviewedStaticReportingTests(unittest.TestCase):
         self.reject()
 
     def test_census_reference_cannot_change_after_object_construction(self):
-        self.accounting["seededCensus"] = {"path": "evidence/lanes/inventory-wave002/ghidra-functions.json",
-                                            "sha256": hashlib.sha256((ROOT / "evidence/lanes/inventory-wave002/ghidra-functions.json").read_bytes()).hexdigest()}
+        substitute = "evidence/inventory/update-content0.json"
+        self.accounting["seededCensus"] = {"path": substitute,
+                                            "sha256": hashlib.sha256((ROOT / substitute).read_bytes()).hexdigest()}
         self.reject()
 
     def test_failed_or_interrupted_seeded_run_cannot_qualify_report(self):
