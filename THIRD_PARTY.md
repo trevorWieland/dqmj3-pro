@@ -5,7 +5,7 @@ Project-authored reconstruction code, tooling and documentation use GPL-3.0-only
 | Material | Location | Provenance and notices |
 | --- | --- | --- |
 | Public Squirrel2.2.5 release | source/squirrel-wave001/upstream | The 80-file import is pinned by upstream-manifest.json. Its historical zlib-style COPYRIGHT notice is preserved; modern Squirrel's license is not substituted. |
-| ARM Compiler 4.1 build 1454 (armcc) | fetched at build time to tools/armcc-4.1-b1454, never committed | Proprietary ARM software, redistributed by the decomp.me compilers project at the pinned archive URL in tools.lock.json. The repository stores only the URL, size, SHA256 and member digests; no compiler file is tracked. Operators may use it only where entitled to use ARM Compiler. The report job materializes it; `python build.py --compiler-profile clang-21` builds without it. |
+| ARM Compiler 4.1 build 1454 (armcc) | fetched at build time to tools/armcc-4.1-b1454, never committed | Proprietary ARM software, redistributed by the decomp.me compilers project at the pinned archive URL in tools.lock.json. The repository stores only the URL, size, SHA256 and member digests; no compiler file is tracked. Operators may use it only where entitled to use ARM Compiler. The report job and the public compile job materialize it; `python build.py --compiler-profile clang-21` builds without it. |
 | Public JNI/LLVM headers and NDK notices | platform/app-shell/third-party-native-includes.zip | Unchanged public tooling headers, pinned by the app-shell tool manifest. The bundle includes the original notices. |
 | GNU General Public License text | LICENSE | Unmodified standard GNU GPL version3 license text. |
 
