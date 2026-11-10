@@ -36,6 +36,8 @@ jobs:
         run: tools/ci-python-3.13.5/python.exe -I -S toolscripts/bootstrap_report_tools.py
       - name: Materialize the pinned public compiler
         run: tools/ci-python-3.13.5/python.exe -I -S toolscripts/bootstrap_public_compiler.py
+      - name: Materialize the pinned original compiler (proprietary, not committed)
+        run: tools/ci-python-3.13.5/python.exe -I -S toolscripts/armcc_bootstrap.py
       - name: Checkout owner-controlled private input parts
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:

@@ -11,6 +11,7 @@ import venv
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import armcc_bootstrap
 import bootstrap_public_compiler as compiler
 
 
@@ -68,6 +69,10 @@ def bootstrap(root, verify_only=False):
     if {row["name"] for row in wheels} != PACKAGES or len(wheels) != len(PACKAGES):
         raise RuntimeError("Missing or duplicated frozen report dependency")
     compiler.bootstrap(root, verify_only)
+    # The report's default profile is the best-evidenced original compiler.
+    # It is proprietary ARM software and is not committed: the pinned public
+    # archive is fetched and verified here, like the other public tool inputs.
+    armcc = armcc_bootstrap.ensure(root, allow_download=not verify_only)
     paths = []
     for row in wheels:
         path = compiler.contained(root, "tools/wheels/" + row["filename"])
@@ -100,7 +105,8 @@ def bootstrap(root, verify_only=False):
     if installed.stat().st_size != library["size"] or compiler.digest(installed) != library["sha256"]:
         raise RuntimeError("Installed Capstone native library differs from frozen identity")
     return {"status": "verified", "python": platform.python_version(), "dependencies": versions,
-            "objdiffSha256": compiler.digest(objdiff), "originalInputsRead": False}
+            "objdiffSha256": compiler.digest(objdiff), "armcc": armcc,
+            "originalInputsRead": False}
 
 
 def main():

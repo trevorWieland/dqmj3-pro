@@ -19,7 +19,7 @@ The code denominator is every ExHeader-declared initialized main ARM text byte: 
 
 ## Units and credit
 
-`src/native` is compiled with the pinned profile. Each source file that defines at least one function in the split becomes one unit, with a target object holding that function's original bytes carved out of the code image and a base object holding what the compiler emitted for the same file. One further unit, `src/native`, holds every original text byte source does not implement plus all original rodata, data and BSS.
+`src/native` is compiled with the compiler profile each unit names, defaulting to the best-evidenced original compiler (armcc 4.1 build 1454; `--compiler-profile clang-21` forces the former Clang profile). Each source file that defines at least one function in the split becomes one unit, with a target object holding that function's original bytes carved out of the code image and a base object holding what the compiler emitted for the same file. One further unit, `src/native`, holds every original text byte source does not implement plus all original rodata, data and BSS.
 
 A function earns credit only when its compiled bytes equal its original bytes. Stock objdiff sums code symbols, so `toolscripts/finalize_objdiff_report.py` verifies every object against the split and the image, replaces each unit's code denominator with the bytes its target object really holds, and recomputes the counters. It also checks credit independently: a byte-identical function must be credited, and credit without byte equality is only allowed where the base object still carries relocations that objdiff resolved symbolically. Partial similarity earns nothing and is reported as zero.
 

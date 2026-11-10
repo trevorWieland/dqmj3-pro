@@ -15,7 +15,10 @@ The build then does what the project measures:
      text, rodata, data and BSS extents;
   3. read ``config/symbols.txt`` and carve each original function out of the
      code image;
-  4. compile ``src/native`` with the pinned compiler profile;
+  4. compile ``src/native`` with the compiler profile each unit names, defaulting
+     to the best-evidenced original compiler (armcc 4.1 build 1454, fetched and
+     verified from its pinned public archive); ``--compiler-profile clang-21``
+     forces the former Clang baseline and needs no proprietary tool;
   5. link the complete image at the original addresses, taking compiled bytes
      wherever source implements a function and original bytes everywhere else;
   6. report, per function, whether the compiled bytes equal the original, and
@@ -74,6 +77,13 @@ def describe_report(report):
                measures['total_units'])]
 
 
+def describe_compilers(mapping):
+    lines = []
+    for row in mapping.get('compilers', []):
+        lines.append('compiler:  %s%s' % (row['id'], (' - ' + row['banner']) if row.get('banner') else ''))
+    return lines
+
+
 def describe_link(result):
     lines = ['compiled:  %s functions from source (%s bytes), %s byte-identical'
              % (number(result['sourceFunctions']), number(result['sourceBytes']),
@@ -108,9 +118,14 @@ def main():
     parser.add_argument('--private-inputs', help='owner-controlled directory of pinned input parts')
     parser.add_argument('--output', default='build/' + VERSION)
     parser.add_argument('--strict', action='store_true', help='fail unless the image is complete')
+    parser.add_argument('--compiler-profile', help='force one declared profile for every unit; '
+                        'clang-21 reproduces the former Clang baseline and needs no armcc')
+    parser.add_argument('--no-download', action='store_true',
+                        help='fail when a pinned compiler is missing instead of fetching it')
     args = parser.parse_args()
 
     sys.path.insert(0, str(ROOT / 'toolscripts'))
+    import armcc_bootstrap
     import finalize_objdiff_report as finalize
     import image_link
     import inputs
@@ -122,16 +137,26 @@ def main():
         print('Missing pinned report tools; run: python setup_tools.py', file=sys.stderr)
         return 1
     try:
+        # A build only fetches the compiler its configuration actually needs;
+        # the Clang fallback stays usable where ARM's compiler may not be run.
+        table = objdiff_objects.profiles(ROOT)
+        active = args.compiler_profile or table['default']
+        if active not in table['profiles']:
+            raise ValueError('Unknown --compiler-profile: ' + active)
+        if table['profiles'][active]['executable'].startswith('tools/armcc-'):
+            armcc_bootstrap.ensure(ROOT, allow_download=not args.no_download)
         acquired = inputs.acquire(ROOT, image=args.image, private=args.private_inputs)
         mapping = objdiff_objects.build(ROOT, output / 'objects', ROOT / 'objdiff.json',
-                                        ROOT / 'config/symbols.txt')
+                                        ROOT / 'config/symbols.txt',
+                                        forced_profile=args.compiler_profile)
         object_map = output / 'objects' / 'object-map.json'
         object_map.write_text(json.dumps(mapping, indent=2) + '\n', encoding='utf-8')
         raw = output / 'report.raw.json'
         objdiff_objects.run([objdiff, 'report', 'generate', '-p', ROOT, '-o', raw],
                             output / 'objdiff.log')
         units, matched, matched_bytes = finalize.verify(ROOT, mapping)
-        report = finalize.normalize(finalize.read(raw), units, matched, matched_bytes)
+        report = finalize.normalize(finalize.read(raw), units, matched, matched_bytes,
+                                    mapping.get('compilers'))
         (output / 'report.json').write_text(json.dumps(report, separators=(',', ':')) + '\n',
                                             encoding='utf-8')
         link = image_link.link(ROOT, mapping, output)
@@ -142,7 +167,8 @@ def main():
 
     print('\n'.join(['DQMJ3 Professional - ' + VERSION]
                     + describe_inputs(acquired) + describe_objects(mapping)
-                    + [''] + describe_report(report) + [''] + describe_link(link)
+                    + describe_compilers(mapping) + [''] + describe_report(report) + ['']
+                    + describe_link(link)
                     + ['', 'report:    ' + (output / 'report.json').relative_to(ROOT).as_posix()]))
     if args.strict and not link['complete']:
         return 1

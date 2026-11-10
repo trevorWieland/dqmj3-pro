@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "defaultProfile": "armcc-4.1-b1454",
+  "profiles": [
+    {
+      "id": "clang-21",
+      "identity": "Android (16134705, based on r574158c) clang version 21.0.0 (https://android.googlesource.com/toolchain/llvm-project 9f872551d3c681d06fd303b36f16ed5c274735eb)",
+      "executable": "tools/clang-21/clang.exe",
+      "arguments": [
+        "--target=arm-none-eabi",
+        "-mcpu=mpcore",
+        "-marm",
+        "-O2",
+        "-ffreestanding",
+        "-ffunction-sections",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fno-optimize-sibling-calls"
+      ],
+      "preinclude": null,
+      "includeDirectories": [],
+      "layouts": {
+        "natural": [],
+        "packed-4": ["-fpack-struct=4"]
+      },
+      "publicHeaders": {
+        "zlib-solo": ["-DZ_SOLO"]
+      },
+      "postprocess": null,
+      "measuredOriginal": false,
+      "role": "Infrastructure and behaviour compiler. It reproduces the control spans, but it is not the measured original compiler."
+    },
+    {
+      "id": "armcc-4.1-b1454",
+      "identity": "ARM Compiler 4.1 (build 1454), RVCT for ARM",
+      "executable": "tools/armcc-4.1-b1454/bin/armcc.exe",
+      "arguments": [
+        "--cpu=MPCore",
+        "--apcs=/interwork",
+        "--c99",
+        "-Otime",
+        "-c",
+        "--gnu"
+      ],
+      "preinclude": "config/armcc-4.1-b1454-preinclude.h",
+      "includeDirectories": [
+        "tools/armcc-4.1-b1454/include"
+      ],
+      "layouts": {
+        "natural": [],
+        "packed-4": ["pragma-pack-4"]
+      },
+      "publicHeaders": {
+        "zlib-solo": ["-DZ_SOLO"]
+      },
+      "postprocess": "armcc-split",
+      "measuredOriginal": true,
+      "role": "Best-evidenced original compiler: on a 537-function corpus selected because Clang does not reproduce it, this profile reproduces 63 strictly and 75 modulo fixups where Clang reproduces 0 strictly; it reproduces 411 of 412 accepted control spans, the twelfth being one reconstructed constant spelling. The verdict is best-evidenced, not proven.",
+      "evidence": "work/compiler-sweep/REPORT.md (bounded 2026-11-10 sweep, 13 candidate builds, 27 profiles)"
+    }
+  ]
+}
