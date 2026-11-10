@@ -1,0 +1,117 @@
+{
+  "status": "pre-C-coupled-whole-constructor-state-API-claim",
+  "moduleSha256": "d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126",
+  "functions": [
+    {
+      "address": 4927556,
+      "endExclusive": 4927656,
+      "instructionBytes": 100,
+      "role": "base task constructor",
+      "sha256": "51dbf16fec2325e75f8fbbf12834bed62e01513c380c8b87c69a36c1370bfd1a"
+    },
+    {
+      "address": 4693208,
+      "endExclusive": 4693284,
+      "instructionBytes": 76,
+      "role": "extended task constructor",
+      "sha256": "16aa400dc598f46a37d56fb08abb3faceac12e1d997cf2f6b384b1ef7bc5fe47"
+    },
+    {
+      "address": 4927516,
+      "endExclusive": 4927552,
+      "instructionBytes": 36,
+      "role": "raw-state store and completion callback",
+      "sha256": "2bc46f7901cfb3d168ed7773310b475edaf2cd01ba9718bc69a7ff5d38382a15"
+    },
+    {
+      "address": 4927452,
+      "endExclusive": 4927460,
+      "instructionBytes": 8,
+      "role": "completion state5 entry",
+      "sha256": "1e92122b94da268fed933116d2d740ba893af1ee928efb0ed3e72101a9461efa"
+    },
+    {
+      "address": 4927252,
+      "endExclusive": 4927264,
+      "instructionBytes": 12,
+      "role": "virtual work dispatch",
+      "sha256": "0ecd0f344b7d32676842b33e0bc1a5c9211ec4f61054a8511993990a8411d5b8"
+    },
+    {
+      "address": 4927072,
+      "endExclusive": 4927080,
+      "instructionBytes": 8,
+      "role": "state4 entry",
+      "sha256": "d3aedcf25678887d57835f677fe22cfcfbe7d35eaaf421172286f3054edfdec7"
+    },
+    {
+      "address": 4927244,
+      "endExclusive": 4927252,
+      "instructionBytes": 8,
+      "role": "state2 entry",
+      "sha256": "204f84c6884409898c7e6e71d02d6aee28b719fbff747f07c7ef3309f71f0cbf"
+    },
+    {
+      "address": 4927460,
+      "endExclusive": 4927468,
+      "instructionBytes": 8,
+      "role": "state3 entry",
+      "sha256": "83695ffbc91708e892770508a508a8bf530a0ef792882af3ff552c72fb6b71c0"
+    },
+    {
+      "address": 4927080,
+      "endExclusive": 4927108,
+      "instructionBytes": 28,
+      "role": "state1 then signed-delay store",
+      "sha256": "cf3877c64e5217d96f857a5bc32bc3b579246b67d3a4658d1634cfda9998d4dd"
+    }
+  ],
+  "instructionBytes": 284,
+  "literals": [
+    {
+      "address": 4927656,
+      "value": 8738956,
+      "sha256": "af35ea35e13f59475b905831b04473b2e600dc1eae6a3296ad60fc58b3a446a5"
+    },
+    {
+      "address": 4693284,
+      "value": 8729872,
+      "sha256": "306c143a29d64fc877a1f4ebebcf00a4b18c7b319eced504a5c622fa8e36d542"
+    },
+    {
+      "address": 4693288,
+      "value": 8729856,
+      "sha256": "b7d0886a8664fa6327e9c882b4d253a87c6f9198d2955926ca3d3625987ab454"
+    },
+    {
+      "address": 4693292,
+      "value": 8232544,
+      "sha256": "7f01f5d743167d8cdb21a9970b9844e8592a9a80c54ee1bc144c675929b5b506"
+    }
+  ],
+  "zeroInitialMemberPair": {
+    "address": 8232544,
+    "words": [
+      0,
+      0
+    ],
+    "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+  },
+  "fieldConsumerEvidence": {
+    "next": 4972172,
+    "previous": 4972232,
+    "state": 4972092,
+    "signedDelay": 4972444,
+    "iterations": 4965332,
+    "clockPair": 4965284,
+    "completionCaptureAddress": 4927540,
+    "completionCallback": 4927544
+  },
+  "limits": [
+    "No full484660 task constructor/caller or startup claim.",
+    "Raw task+21 byte copied from explicit standalone constructor parameter; full484660 passes an unwritten local byte, separately measured but not yet portable.",
+    "No task/ref finalizer, scheduling/wait/kernel, C++ PMF invocation, delay progression or clock initialization claim.",
+    "Native types must retain true pointers and distinguish signed delay, U32 iteration count, raw64-bit clock pairs and member-function descriptors."
+  ],
+  "sourceCreditGranted": 0
+}

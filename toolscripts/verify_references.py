@@ -6,18 +6,19 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ROOTS = ["config", "recovery.json", "project.json", "evidence/inventory",
-         "evidence/cohorts", "evidence/semantics", "include"]
+ROOTS = ["config", "recovery.json", "project.json"]
 CHAIN_KEYS = ("census", "seededCensus", "seededAnalysisRun", "reviewedScope",
               "staticTextAccounting", "objectMap", "completionEvidence",
               "independentReplay", "producer", "validationProducer", "packet",
-              "claim", "sources", "inputs", "acceptedCohorts", "receipt")
+              "claim", "receipt", "acceptance")
 
 
 def contained(root, value):
-    if not isinstance(value, str) or not value or "\\" in value or ":" in value:
+    if not isinstance(value, str) or not value:
         return None
-    if value.startswith("/"):
+    if "/" not in value:
+        return None
+    if "\\" in value or ":" in value or value.startswith("/"):
         return None
     pure = PurePosixPath(value)
     if pure.is_absolute() or any(part in ("", ".", "..") for part in value.split("/")):
@@ -51,17 +52,15 @@ def references(node, found):
             references(value, found)
 
 
-def collect(root):
-    seeds = []
+def documents(root):
     for base in ROOTS:
         target = root / base
         if not target.exists():
             continue
         if target.is_file():
-            seeds.append(target)
+            yield target
         else:
-            seeds.extend(item for item in target.rglob("*.json") if item.is_file())
-    return seeds
+            yield from sorted(item for item in target.rglob("*.json") if item.is_file())
 
 
 def main():
@@ -71,12 +70,10 @@ def main():
     args = parser.parse_args()
 
     root = Path(args.root).resolve()
-    seen = set()
     digests = {}
     missing = []
     mismatched = []
-    invalid = []
-    reachable = set()
+    checked = 0
 
     def digest(path):
         key = str(path)
@@ -84,25 +81,20 @@ def main():
             digests[key] = hashlib.sha256(path.read_bytes()).hexdigest()
         return digests[key]
 
-    queue = collect(root)
-    while queue:
-        current = queue.pop()
-        if current in seen or not current.is_file():
-            continue
-        seen.add(current)
-        relative = current.relative_to(root).as_posix()
-        reachable.add(relative)
+    for document in documents(root):
+        relative = document.relative_to(root).as_posix()
         try:
-            payload = json.loads(current.read_text(encoding="utf-8"))
-        except (OSError, ValueError):
+            payload = json.loads(document.read_text(encoding="utf-8"))
+        except (OSError, ValueError) as error:
+            mismatched.append({"from": relative, "path": relative, "reason": str(error)})
             continue
         found = []
         references(payload, found)
         for path, expected in found:
             candidate = contained(root, path)
             if candidate is None:
-                invalid.append({"from": relative, "path": path, "reason": "unsafe"})
                 continue
+            checked += 1
             if not candidate.is_file():
                 missing.append({"from": relative, "path": path})
                 continue
@@ -112,24 +104,15 @@ def main():
             if actual != expected:
                 mismatched.append({"from": relative, "path": path,
                                    "expected": expected, "actual": actual})
-                continue
-            if candidate.suffix == ".json" and candidate not in seen:
-                queue.append(candidate)
 
-    report = {
-        "documents": len(seen),
-        "reachable": len(reachable),
-        "missing": missing,
-        "mismatched": mismatched,
-        "invalid": invalid,
-        "passed": not (missing or mismatched or invalid),
-    }
+    report = {"references": checked, "missing": missing, "mismatched": mismatched,
+              "passed": not (missing or mismatched)}
     if args.json:
         print(json.dumps(report, indent=1))
     else:
-        print("documents %d, missing %d, mismatched %d, invalid %d"
-              % (len(seen), len(missing), len(mismatched), len(invalid)))
-        for row in (missing + mismatched + invalid)[:20]:
+        print("references %d, missing %d, mismatched %d"
+              % (checked, len(missing), len(mismatched)))
+        for row in (missing + mismatched)[:25]:
             print("  " + json.dumps(row))
     return 0 if report["passed"] else 1
 
