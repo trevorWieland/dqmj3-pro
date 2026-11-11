@@ -1,26 +1,31 @@
 """Turn an armcc object into one section per function, keeping its relocations.
 
-armcc 4.1 emits a translation unit as a single ``.text`` section: function
-symbols carry their code size, and literal pools or alignment padding sit in the
-gaps between them. The project's measurement, selection and image link all work
-per function, so they need one section named ``.text.<symbol>`` per function --
-that is what Clang's ``-ffunction-sections`` provides and what armcc does not.
+armcc 4.1 has two object layouts this module must accept:
 
-This module rewrites an armcc ET_REL object without touching its code bytes: a
-function's output section spans from its symbol address to the next function
-symbol (or the end of ``.text``), so a trailing literal pool or the inline data
-armcc emits for a function stays inside the section of the function it belongs
-to. The symbol keeps the *code* size, not the section extent: armcc marks the
-first byte after the instructions with a ``$d`` mapping symbol, and the bytes
-from there to the end of the section are data the code addresses -- a literal
-pool, a switch table, or the string literals armcc embeds for one function.
+* by default it emits a translation unit as a single ``.text`` section: function
+  symbols carry their code size, and literal pools or alignment padding sit in
+  the gaps between them;
+* with ``--split_sections`` it emits one ``i.<symbol>`` section per function,
+  with that function's literal pool already in its own section.
 
-That distinction is what makes a pooled function measurable. If the symbol size
-covered the section extent, every function that loads a pool would compare its
-instructions plus its data against the original instruction extent and be
-rejected before a byte was looked at. With the symbol at the code size the
-measurement compares instructions with instructions, and the section tail is
-compared separately as the function's own data.
+The project's measurement, selection and image link all work per function, so
+both layouts are rewritten to one section named ``.text.<symbol>`` per function
+-- that is what Clang's ``-ffunction-sections`` provides and what armcc does not.
+The single-``.text`` path still works for a unit that does not request the flag.
+This module rewrites an armcc ET_REL object without touching its code bytes: in
+the single-layout case a function's output section spans from its symbol address
+to the next function symbol (or the end of ``.text``); in the split-layout case
+it is exactly the ``i.<symbol>`` section. Either way a trailing literal pool or
+the inline data armcc emits for a function stays inside the section of the
+function it belongs to. The symbol keeps the *code* size, not the section extent:
+armcc marks the first byte after the instructions with a ``$d`` mapping symbol,
+and the bytes from there to the end of the section are data the code addresses --
+a literal pool, a switch table, or the string literals armcc embeds for one
+function. The split layout is read with the same mapping-symbol rule, within the
+function's own section.
+
+The symbol keeps the code size so a pooled function is measured as
+instructions plus its own data, not as one oversized extent.
 
 Relocations are re-based into the new sections, data sections are kept so
 ``ld.lld -r`` can still resolve or discard their references, and only symbols a
@@ -144,6 +149,60 @@ def _function_ranges(symbols, text_index, text_size):
     return ranges
 
 
+def _split_ranges(sections, symbols, texts):
+    """Function ranges for armcc ``--split_sections`` output.
+
+    Each executable section is named ``i.<symbol>`` and holds exactly that
+    function at offset zero, followed by the function's literal pool when it has
+    one. The section extent is therefore the function's extent, and the ``$d``
+    mapping symbol inside the section marks where its instructions end.
+    """
+    ranges, by_section, covered = [], {}, set()
+    for text_index in texts:
+        section = sections[text_index]
+        name = section.name
+        if not name.startswith('i.') or len(name) == 2:
+            raise SplitError('Unexpected executable section in a split object: ' + name)
+        expected = name[2:]
+        functions = [(index, symbol) for index, symbol in enumerate(symbols)
+                     if _type(symbol) == STT_FUNC and symbol['st_size']
+                     and symbol['st_shndx'] == text_index]
+        if len(functions) != 1:
+            raise SplitError('Section %s must hold exactly one function, found %d'
+                             % (name, len(functions)))
+        index, symbol = functions[0]
+        if symbol.name != expected:
+            raise SplitError('Section %s holds function %s' % (name, symbol.name))
+        start = symbol['st_value'] & ~1
+        if start != 0:
+            raise SplitError('Function %s does not start its own section' % symbol.name)
+        end = section['sh_size']
+        if not end:
+            raise SplitError('Function %s has an empty section' % symbol.name)
+        marks = sorted({mark['st_value'] for mark in symbols
+                        if _type(mark) == STT_NOTYPE and mark.name == MAPPING_DATA
+                        and mark['st_shndx'] == text_index and not mark['st_size']})
+        first_data = next((mark for mark in marks if 0 < mark < end), end)
+        if first_data < end:
+            code_size = first_data - start
+        else:
+            # No $d mark: the function's symbol size is its code size, and any
+            # remaining section bytes are alignment padding, not code.
+            code_size = symbol['st_size']
+        if code_size <= start or code_size > end:
+            raise SplitError('Function %s has no representable code extent' % symbol.name)
+        row = {'name': symbol.name, 'symbolIndex': index, 'start': start, 'end': end,
+               'codeSize': code_size, 'symbol': symbol, 'oldSection': text_index}
+        ranges.append(row)
+        by_section[text_index] = row
+        covered.add(index)
+    for index, symbol in enumerate(symbols):
+        if (_type(symbol) == STT_FUNC and symbol['st_size'] and isinstance(symbol['st_shndx'], int)
+                and index not in covered):
+            raise SplitError('Function %s is not in an executable section' % symbol.name)
+    return ranges, by_section
+
+
 def _relocations(sections):
     grouped = {}
     for section in sections:
@@ -169,21 +228,34 @@ def _layout(path):
     """Parse the object and plan every output section and symbol."""
     elf, sections, symbols = _parse(path)
     texts = _text_sections(sections)
-    if len(texts) > 1:
+    split_layout = bool(texts) and sections[texts[0]].name.startswith('i.')
+    if split_layout and len(texts) != sum(1 for index in texts
+                                          if sections[index].name.startswith('i.')):
+        raise SplitError('Executable sections mix i.<symbol> and non-split names')
+    if not split_layout and len(texts) > 1:
         raise SplitError('Expected one executable section, found %d' % len(texts))
-    text_index = texts[0] if texts else None
+    text_index = None if split_layout else (texts[0] if texts else None)
     text_size = sections[text_index]['sh_size'] if text_index is not None else 0
-    ranges = _function_ranges(symbols, text_index, text_size) if text_index is not None else []
+    if split_layout:
+        ranges, by_section = _split_ranges(sections, symbols, texts)
+    else:
+        ranges = _function_ranges(symbols, text_index, text_size) if text_index is not None else []
+        by_section = {}
+    function_sections = set(texts) if split_layout else ({text_index} if text_index is not None else set())
+
     # A switch table is inline code followed by data words, and armcc anchors it
     # with a zero-size STT_FUNC symbol (__switch) that the table relocations
     # name. Such anchors are not function extents of their own: keep them inside
     # the enclosing function with their offset rebased.
     anchors = []
     for index, symbol in enumerate(symbols):
-        if (_type(symbol) == STT_FUNC and not symbol['st_size']
-                and symbol['st_shndx'] == text_index):
-            owner = next((item for item in ranges
-                          if item['start'] <= symbol['st_value'] < item['end']), None)
+        if _type(symbol) == STT_FUNC and not symbol['st_size'] \
+                and symbol['st_shndx'] in function_sections:
+            if split_layout:
+                owner = by_section.get(symbol['st_shndx'])
+            else:
+                owner = next((item for item in ranges
+                              if item['start'] <= symbol['st_value'] < item['end']), None)
             if owner is None:
                 raise SplitError('Code anchor %s is outside every function' % symbol.name)
             anchors.append((index, symbol, owner))
@@ -191,13 +263,14 @@ def _layout(path):
 
     output, section_of_old, skipped = [], {}, set()
     for row in ranges:
+        old = row.get('oldSection', text_index)
         output.append({'name': '.text.' + row['name'], 'flags': SHF_ALLOC | SHF_EXECINSTR,
                        'type': SHT_PROGBITS, 'align': 4,
-                       'data': sections[text_index].data()[row['start']:row['end']],
-                       'relocations': [], 'oldSection': text_index, 'function': row})
+                       'data': sections[old].data()[row['start']:row['end']],
+                       'relocations': [], 'oldSection': old, 'function': row})
         section_of_old[('function', row['symbolIndex'])] = len(output) - 1
     for index, section in enumerate(sections):
-        if index == text_index or not section['sh_flags'] & SHF_ALLOC or not section['sh_size']:
+        if index in function_sections or not section['sh_flags'] & SHF_ALLOC or not section['sh_size']:
             continue
         if section['sh_type'] not in SECTION_TYPES:
             # Unwind indexes and other note-like allocated sections are not
@@ -218,13 +291,26 @@ def _layout(path):
                        'data': None if kind == SHT_NOBITS else section.data(),
                        'relocations': [], 'oldSection': index})
         section_of_old[('section', index)] = len(output) - 1
-    if text_index is not None:
-        section_of_old[('section', text_index)] = None
+    # A relocation may name the section itself. In the split layout each
+    # i.<symbol> section symbol now names the rebuilt .text.<symbol> section; in
+    # the single-.text layout the per-function sections replace it, so there is
+    # no one section to point at.
+    for index in function_sections:
+        section_of_old[('section', index)] = None
+    if split_layout:
+        for index, row in by_section.items():
+            section_of_old[('section', index)] = section_of_old[('function', row['symbolIndex'])]
 
     # Distribute relocations. A relocation outside every function extent would
     # not be carried, so refuse rather than silently dropping a reference.
     for old_index, rows in relocations.items():
-        if old_index == text_index:
+        if old_index in by_section:
+            # A split section is one function: its relocations are already
+            # relative to the section start.
+            row = by_section[old_index]
+            target = output[section_of_old[('function', row['symbolIndex'])]]
+            target['relocations'].extend(dict(item) for item in rows)
+        elif old_index == text_index:
             for row in rows:
                 owner = next((item for item in ranges
                               if item['start'] <= row['offset'] < item['end']), None)
@@ -259,7 +345,7 @@ def _layout(path):
     for old_index, symbol in enumerate(symbols):
         if old_index == 0 or _type(symbol) in (STT_FILE, STT_SECTION):
             continue
-        if symbol['st_shndx'] == text_index:
+        if symbol['st_shndx'] in function_sections:
             continue  # mapping symbols and function symbols are rebuilt below
         if isinstance(symbol['st_shndx'], int) and ('section', symbol['st_shndx']) in section_of_old \
                 and section_of_old[('section', symbol['st_shndx'])] is not None:
@@ -286,6 +372,12 @@ def _layout(path):
         entries.append({'name': MAPPING_CODE, 'value': 0, 'size': 0,
                         'info': STB_LOCAL << 4 | STT_NOTYPE, 'other': 0,
                         'section': section_index + 1})
+        if row['codeSize'] < row['end'] - row['start']:
+            # Keep the data boundary visible in the rebuilt object: the bytes
+            # after the instructions are the function's own data, not code.
+            entries.append({'name': MAPPING_DATA, 'value': row['codeSize'], 'size': 0,
+                            'info': STB_LOCAL << 4 | STT_NOTYPE, 'other': 0,
+                            'section': section_index + 1})
     for index, symbol, owner in anchors:
         section_index = section_of_old[('function', owner['symbolIndex'])]
         entry = _copy_symbol(symbol)
@@ -301,6 +393,7 @@ def _layout(path):
                                                      symbol['st_shndx'])) if symbol else 'null'
                 raise SplitError('Relocation references a symbol that is not carried: ' + detail)
     return elf, output, entries, old_to_entry, ranges
+
 
 
 class _Writer:

@@ -1,0 +1,135 @@
+/* Script-facing native API: shared declarations.
+ *
+ * Every script in DQMJ3 Professional calls the C functions declared here through
+ * Squirrel.  The binding table is config/script-natives.json (628 identifiers,
+ * recovered from the registration blocks).  The bodies in this directory are
+ * behaviour drafts: they reproduce the observed data flow and the engine calls,
+ * but the measurement cannot credit them yet.  See docs/script-api.md for the
+ * two reasons (per-unit relocation isolation in objdiff, and the literal-pool
+ * extent that both compiler profiles add to a function symbol).
+ *
+ * The script natives all reach the engine through one global:
+ *
+ *     0x00898898      a pointer to the script context
+ *
+ * The context's first word is a pointer to a C++ vtable.  The natives call
+ * virtual engine methods through that table, so the offsets below are the
+ * discovered script-facing engine interface.  Slots are named for the script
+ * binding that demonstrates them (SetFade_, PlaySE_, ...), and an unnamed slot
+ * stays reserved rather than being given a guess.
+ *
+ * Argument marshalling uses the VM's own helpers.  The game's Squirrel build
+ * takes an out pointer and returns a status (negative on failure), unlike the
+ * public Squirrel 2.2.5 signatures:
+ *
+ *      fn_00157f58(vm, index, s32 *out)    sq_getinteger
+ *      fn_00157fb0(vm, index, char **out)  sq_getstring
+ *      fn_00157eb4(vm, index, int *out)    sq_getbool
+ *      fn_00157f00(vm, index, f32 *out)    sq_getfloat
+ *      fn_001580cc(vm, value)              sq_pushinteger
+ *      fn_00158004(vm, value)              sq_pushbool
+ *      fn_00158128(vm, text, len)          sq_pushstring
+ *      fn_001581d0(vm, message)            sq_throwerror
+ *      fn_001638b0(vm)                     sq_suspendvm
+ *
+ * Index -1 is the top of the Squirrel stack, -2 one below it.  A native returns
+ * the number of values it pushed, which is why the setters return 0 and the
+ * getters return 1.
+ */
+#ifndef DQMJ3_SCRIPT_API_H
+#define DQMJ3_SCRIPT_API_H
+
+typedef signed int s32;
+typedef unsigned int u32;
+typedef unsigned char u8;
+typedef float f32;
+
+typedef struct SqVM SqVM;
+typedef struct ScriptContext ScriptContext;
+typedef struct ScriptHostVtable ScriptHostVtable;
+
+/* Offsets are byte offsets in the original image, not struct offsets that this
+ * build controls; the layout is stated as words so a change is visible. */
+struct ScriptHostVtable {
+    void *reserved_000[3];                                        /* 0x00 */
+    int (*play_se)(ScriptContext *self, const char *se_name);     /* 0x0c PlaySE_ */
+    void (*stop_se)(ScriptContext *self, const char *se_name);    /* 0x10 StopSE_ */
+    void *reserved_014[1];                                        /* 0x14 */
+    void (*play_me)(ScriptContext *self, const char *me_name);    /* 0x18 PlayMe_ */
+    void (*wait_me)(ScriptContext *self);                         /* 0x1c WaitMe_ */
+    void (*play_bgm)(ScriptContext *self, const char *bgm_name);  /* 0x20 PlayBgm_ */
+    void *reserved_024[7];                                        /* 0x24 */
+    int (*load_effect)(ScriptContext *self, const char *name);    /* 0x40 LoadEffect_ */
+    void *reserved_044[4];                                        /* 0x44 */
+    void (*set_effect_scale)(ScriptContext *self, s32 id, f32 s); /* 0x54 SetEffectScale_ */
+    void *reserved_058[1];                                        /* 0x58 */
+    void (*delete_effect)(ScriptContext *self, s32 id);           /* 0x5c DeleteEffect_ */
+    void (*delete_effect_emitter)(ScriptContext *self, s32 id);   /* 0x60 DeleteEffectEmitter_ */
+    void *reserved_064[3];                                        /* 0x64 */
+    s32 (*is_busy)(ScriptContext *self);                          /* 0x70 IsWaitEnd_ */
+};
+
+/* The script context.  Only the two fields the natives touch are named. */
+struct ScriptContext {
+    ScriptHostVtable *host;   /* +0x00: the engine interface above */
+    void *unknown_004[4];     /* +0x04 */
+    s32 wait_frames;          /* +0x14: Wait_ countdown, 0 means not waiting */
+    void *unknown_018[20];    /* +0x18 */
+    u8 unknown_068;           /* +0x68 */
+    u8 fade_wait_armed;       /* +0x69: WaitFade_ latch */
+};
+
+/* The one global the script natives dereference.  The address is an original
+ * image address, so it is a constant, never a relocation.  A constant address
+ * is also why the compiler emits a literal pool for it. */
+#define SCRIPT_CONTEXT() (*(ScriptContext *volatile *)(__UINTPTR_TYPE__)0x00898898u)
+
+/* The empty message every release-build script error throws.  It is the four
+ * zero bytes at 0x00148920, and fn_00148918 returns its address. */
+#define SCRIPT_EMPTY_MESSAGE ((const char *)(__UINTPTR_TYPE__)0x00148920u)
+
+/* VM helpers, named as the public Squirrel API names them and spelled with the
+ * canonical image symbol so a later exact reconstruction keeps its address. */
+extern int fn_00157f58(SqVM *vm, int index, s32 *out);
+extern int fn_00157fb0(SqVM *vm, int index, const char **out);
+extern int fn_00157eb4(SqVM *vm, int index, int *out);
+extern int fn_00157f00(SqVM *vm, int index, f32 *out);
+extern int fn_001580cc(SqVM *vm, s32 value);
+extern int fn_00158004(SqVM *vm, int value);
+extern int fn_00158128(SqVM *vm, const char *text, s32 length);
+extern int fn_001581d0(SqVM *vm, const char *message);
+extern int fn_001638b0(SqVM *vm);
+
+#define sq_getinteger fn_00157f58
+#define sq_getstring fn_00157fb0
+#define sq_getbool fn_00157eb4
+#define sq_getfloat fn_00157f00
+#define sq_pushinteger fn_001580cc
+#define sq_pushbool fn_00158004
+#define sq_pushstring fn_00158128
+#define sq_throwerror fn_001581d0
+#define sq_suspendvm fn_001638b0
+
+/* The release-build error formatter.  armcc builds the four assertion operands
+ * at every call site: source file, failed-operation text, binding name and line.
+ * The formatter itself returns the empty message above. */
+extern const char *fn_00148918(const char *file, const char *message,
+                               const char *native_name, int line);
+
+/* Script-context operations that are not virtual methods. */
+extern void fn_0014887c(ScriptContext *context, s32 frames);  /* arm the Wait_ counter */
+extern int fn_00148894(ScriptContext *context);               /* wait finished? */
+extern void fn_00148888(ScriptContext *context);              /* arm the fade latch */
+extern int fn_001488c4(SqVM *vm, s32 *id, f32 *value);        /* id at -1, float at 0 */
+
+/* The argument check every validation site performs.  The line numbers in the
+ * bodies are the original FieldScriptFunc.cpp lines, read from the literal the
+ * error path passes in r3. */
+#define SCRIPT_CHECK(vm, call, operation, native_name, source_line)                    \
+    do {                                                                               \
+        if ((call) < 0)                                                                \
+            return sq_throwerror((vm), fn_00148918("FieldScriptFunc.cpp", (operation),  \
+                                                   (native_name), (source_line)));     \
+    } while (0)
+
+#endif

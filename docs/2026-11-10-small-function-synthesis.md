@@ -7,18 +7,26 @@ they are the batch where source can be produced without knowing the engine.
 
 The synthesiser treats a function's **complete instruction extent** as the
 claim. A shape is proved only when every instruction from the entry to the
-`bx lr` matches one pattern: no literal-pool load, no call, no branch, no stack
-frame, no system or floating-point instruction, and no partial match. The record
-offsets, access widths, strides and constants the emitted C uses are read from
-those instructions, never guessed. A candidate then has to compile to the
-original bytes with the measured compiler profile; a candidate that does not is
-deleted from the source, not kept as a draft.
+`bx lr` matches one pattern: no call, no branch, no stack frame, no system or
+floating-point instruction, and no partial match. A literal-pool load is
+allowed only when the shape can reproduce the word it loads; the classifier
+reads that word from the original image and the emitted C spells it as a
+constant. The record offsets, access widths, strides and constants the emitted
+C uses are read from those instructions, never guessed. A candidate then has to
+compile to the original bytes with the measured compiler profile; a candidate
+that does not is deleted from the source, not kept as a draft.
+
+The build now compiles armcc with `--split_sections`, so each function carries
+its own literal pool. That is what makes the constant and fixed-address shapes
+measurable: the pool word follows the function instead of every unit's pools
+collecting at the end of one `.text`.
 
 ## Tooling
 
 | file | role |
 | --- | --- |
 | `toolscripts/native_synth_shapes.py` | instruction-pattern classifier for the fixed-size families |
+| `toolscripts/native_synth_pools.py` | proven literal-pool shapes (constant return, fixed-address read/write/zero) |
 | `toolscripts/native_synth_arithmetic.py` | linear-form evaluator for address arithmetic (index, stride, offset, pointer chains) |
 | `toolscripts/native_synth_emit.py` | canonical C, one file per family, sharded under the line limit |
 | `toolscripts/native_synth_run.py` | `census` / `emit` / `oracle` / `manifest` steps |
@@ -32,18 +40,20 @@ Byte equality is the only acceptance test; there is no similarity threshold.
 | step | functions |
 | --- | --- |
 | retained functions under 128 bytes | 14,939 |
-| classified into a proved shape | 263 |
-| emitted candidates | 263 |
-| matched byte-for-byte and kept | **227** |
-| matched bytes | 4,084 |
+| classified into a proved shape | 395 |
+| emitted candidates | 395 |
+| matched byte-for-byte and kept | **359** |
+| matched bytes | 5,764 |
 
-The build reports the change directly:
+The first pass kept 227 of 263; the pool-loading extension adds **132**
+functions and 1,680 bytes with a 100% oracle rate. The build reports the
+combined change directly:
 
 | measure | before | after |
 | --- | --- | --- |
-| `matched_functions` | 673 | **900** |
-| `matched_code` | 9,556 | **13,640** |
-| retained functions | 25,855 | 25,628 |
+| `matched_functions` | 901 | **1,046** |
+| `matched_code` | 13,712 | **16,208** |
+| retained functions | 25,628 | 25,484 |
 
 ## Families and success rate
 
@@ -66,12 +76,19 @@ The build reports the change directly:
 | two-word copy (`ldm`/`stm` from a source argument) | 3 | 0 | 0% |
 | constant store run | 1 | 1 | 100% |
 | indexed store | 1 | 0 | 0% |
+| pool zero store (fixed global zeroed through a pool) | 48 | 48 | 100% |
+| pool global read (fixed address field read) | 38 | 38 | 100% |
+| pool constant return (constant held in the pool) | 24 | 24 | 100% |
+| pool global write (fixed address field write) | 22 | 22 | 100% |
 
-What the table says about extending further: fixed-shape record access and
-address arithmetic pay; anything that depends on armcc's register allocation
-(pointer fields, pointer stores) does not, because the source cannot spell the
-register choice the original made. The two 0% families need a structure
-assignment or a different base form than the emitted expressions used.
+What the table says about extending further: fixed-shape record access,
+address arithmetic and fixed-address pool access pay; anything that depends on
+armcc's register allocation (pointer fields, pointer stores) does not, because
+the source cannot spell the register choice the original made. The two 0%
+families need a structure assignment or a different base form than the emitted
+expressions used. The pool families are 100% because their C keeps the address
+in a local pointer: armcc then emits the address as one pool word instead of
+splitting it into an aligned base plus a displacement.
 
 ## Why the well is shallower than "under 128 bytes" suggests
 
@@ -80,14 +97,21 @@ Of the 14,939 retained functions under 128 bytes:
 | shape | functions |
 | --- | --- |
 | not a leaf (ends in `pop`, or a tail call) | 10,129 |
-| loads from the literal pool (needs a global this tree does not own) | 2,336 |
+| loads from the literal pool | 2,336 |
 | leaf, but no proved pattern | 1,112 |
-| classified | 263 |
+| classified (first pass) | 263 |
 | uses a system or floating-point instruction | 311 |
 | contains a call or branch | 306 |
 | Thumb mode (not modelled) | 205 |
 | uses a stack frame | 187 |
 | operand form the fixed matchers reject | 90 |
+
+Of the pool-loading functions, **132** reduce to one fixed offset-zero global
+access or a constant return and are now classified. The rest load a base and
+then address it with a displacement, or call out; armcc folds a constant base
+into the pool word, so a constant-address spelling cannot reproduce both the
+instruction and the pool. They stay unclassified rather than emitted as bytes
+that cannot equal the original.
 
 Only 1,333 of the population are position-independent straight-line leaves at
 all, and most of those compute an address rather than reading a plain field.
@@ -102,9 +126,10 @@ classifier proved **zero** candidates there, so the band was left alone.
 
 ## Rejections
 
-36 of the 263 candidates failed the oracle: 27 compiled to a different extent
-than the original and 9 to the same extent with different bytes. Both are
-compiler choices the source cannot force:
+36 of the 395 candidates failed the oracle: 27 compiled to a different extent
+than the original and 9 to the same extent with different bytes. All 36 are in
+the older non-pool families; every pool-loading candidate matched. The failures
+are compiler choices the source cannot force:
 
 * armcc reorders and coalesces stores, so a mixed-width zero-store run in an
   order the original used cannot always be reproduced;

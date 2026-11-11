@@ -1,10 +1,12 @@
-"""The armcc object splitter, tested with a pinned-Clang single-.text object.
+"""The armcc object splitter, tested with pinned-Clang objects.
 
-armcc emits one executable section per translation unit; the splitter rewrites
-it into one ``.text.<symbol>`` section per function without touching code bytes
-or losing relocations. Clang without ``-ffunction-sections`` produces the same
-shape, so the splitter can be tested on a public tool in CI and the armcc path
-only needs the compiler itself.
+armcc emits one executable section per translation unit by default and one
+``i.<symbol>`` section per function with ``--split_sections``. The splitter
+rewrites either layout into one ``.text.<symbol>`` section per function without
+touching code bytes or losing relocations. Clang can produce the single-``.text``
+shape (omit ``-ffunction-sections``) and, from assembly, the split shape, so both
+paths are tested on a public tool in CI and the armcc run only needs the compiler
+itself.
 """
 
 import sys
@@ -25,6 +27,31 @@ extern int external(int);
 static const int table[3] = {1, 2, 3};
 int fn_00100000(int x) { return table[x & 1] + external(x); }
 int fn_00100020(int x) { return x + 1; }
+'''
+
+# The shape armcc --split_sections emits: one i.<symbol> section per function,
+# the function at offset zero, and its literal pool after a $d mapping symbol.
+SPLIT_SOURCE = '''
+	.syntax unified
+	.arm
+	.section i.fn_00100000,"ax",%progbits
+	.global fn_00100000
+	.type fn_00100000,%function
+fn_00100000:
+	bl external
+	ldr r0, .Lpool
+	bx lr
+$d:
+.Lpool:
+	.word 0x12345678
+	.size fn_00100000, 12
+	.section i.fn_00100020,"ax",%progbits
+	.global fn_00100020
+	.type fn_00100020,%function
+fn_00100020:
+	add r0, r0, #1
+	bx lr
+	.size fn_00100020, 8
 '''
 
 
@@ -83,6 +110,48 @@ class SplitterTests(unittest.TestCase):
         self.assertEqual(dropped, ['fn_00100000'])
         self.assertIn('data the split does not place', reasons['fn_00100000'])
         self.assertEqual(set(elf_objects.read(base)['functions']), set(names))
+
+
+@unittest.skipUnless(CLANG.is_file(), 'the pinned compiler is not installed')
+class SplitSectionTests(unittest.TestCase):
+    """The i.<symbol> layout armcc --split_sections emits."""
+
+    def setUp(self):
+        directory = tempfile.TemporaryDirectory(dir=ROOT / 'work')
+        self.addCleanup(directory.cleanup)
+        self.output = Path(directory.name)
+        source = self.output / 'unit.s'
+        source.write_text(SPLIT_SOURCE, encoding='utf-8')
+        self.raw = self.output / 'unit.raw.o'
+        objdiff_objects.run([CLANG, '--target=arm-none-eabi', '-mcpu=mpcore', '-marm',
+                             '-c', source, '-o', self.raw], self.output / 'clang.log')
+        self.split = self.output / 'unit.o'
+        self.report = armcc_object.split(self.raw, self.split)
+
+    def test_each_function_section_keeps_its_own_pool(self):
+        read = elf_objects.read(self.split)
+        self.assertEqual(set(read['functions']), {'fn_00100000', 'fn_00100020'})
+        pooled = read['functions']['fn_00100000']
+        self.assertEqual((pooled['size'], pooled['extent']), (12, 16))
+        self.assertEqual(pooled['tail'], b'\x78\x56\x34\x12')
+        self.assertEqual(read['functions']['fn_00100020']['tail'], b'')
+        self.assertEqual(read['sections']['.text.fn_00100000']['size'], 16)
+
+    def test_relocations_stay_in_the_function_section_they_name(self):
+        read = elf_objects.read(self.split)
+        self.assertIn(28, read['functions']['fn_00100000']['relocations'])
+        self.assertIn('external', read['functions']['fn_00100000']['references'])
+        self.assertEqual(read['functions']['fn_00100020']['relocations'], {})
+
+    def test_selection_can_take_the_pooled_function_and_its_data(self):
+        names = ['fn_00100000', 'fn_00100020']
+        known = dict.fromkeys(names + ['external'])
+        base, dropped, _, _ = objdiff_objects.select_base(ROOT, self.split, names,
+                                                          self.output, 'unit', known)
+        self.assertEqual(dropped, [])
+        read = elf_objects.read(base)
+        self.assertEqual(set(read['functions']), set(names))
+        self.assertEqual(read['functions']['fn_00100000']['extent'], 16)
 
 
 if __name__ == '__main__':
