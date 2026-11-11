@@ -26,6 +26,7 @@ from capstone import Cs, CS_ARCH_ARM, CS_MODE_ARM
 from capstone.arm import ARM_OP_IMM, ARM_OP_MEM, ARM_OP_REG
 
 import native_synth_arithmetic as arithmetic
+import native_synth_calls as calls
 import native_synth_pool_access as pool_access
 import native_synth_pools as pools
 
@@ -154,16 +155,25 @@ def _reject_unless_leaf(instructions):
     return None
 
 
-def classify(symbol, code, word=None):
+def classify(symbol, code, word=None, by_address=None):
     """Classify one function's complete extent into a Shape or give a reason.
 
     ``word`` reads a 32-bit word from the original image; it is required for a
     function that loads a literal pool, because the shape's emitted C has to
-    spell the loaded constant.
+    spell the loaded constant. ``by_address`` maps split addresses to symbols so
+    a call can be named; without it no call shape is attempted.
     """
     instructions = disassemble(code, symbol.address)
     if instructions is None:
         return Rejected(symbol.name, 'extent does not disassemble as ARM')
+    if by_address is not None and any(item.mnemonic in ('bl', 'blx')
+                                      for item in instructions):
+        proved = calls.classify(symbol, instructions, word, by_address)
+        if proved is not None:
+            detail = dict(proved.detail)
+            detail['callees'] = proved.callees
+            return Shape(proved.family, symbol.name, symbol.size, proved.params,
+                         proved.returns, proved.statements, detail)
     reason = _reject_unless_leaf(instructions)
     if reason:
         return Rejected(symbol.name, reason, ' '.join(item.mnemonic for item in instructions))

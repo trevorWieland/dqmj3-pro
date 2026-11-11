@@ -37,6 +37,16 @@ STORE_WIDTH = {'str': 4, 'strh': 2, 'strb': 1}
 C_TYPE = {1: 'u8', 2: 'u16', 4: 'u32'}
 SIGNED_C_TYPE = {1: 's8', 2: 's16', 4: 's32'}
 ARGUMENTS = ('r0', 'r1', 'r2', 'r3')
+# The measured image's address space: text begins at 0x00100000 and the
+# initialized data ends below 0x00900000. A pool word in that range is a data
+# address the linker can define; any other word is a plain constant and stays
+# one in the emitted C.
+IMAGE_LOW = 0x00100000
+IMAGE_HIGH = 0x00900000
+
+
+def _is_image_address(value):
+    return IMAGE_LOW <= value < IMAGE_HIGH
 
 
 class Unsupported(ValueError):
@@ -87,7 +97,7 @@ def _mem(insn, index):
     operand = insn.operands[index]
     base = insn.reg_name(operand.mem.base) if operand.mem.base else None
     index_register = insn.reg_name(operand.mem.index) if operand.mem.index else None
-    return base, operand.mem.disp, index_register
+    return base, operand.mem.disp, index_register, operand.mem.lshift
 
 
 def _shift_of(insn):
@@ -133,9 +143,11 @@ class Model:
                           'r2': ('lin', 'r2', 1, 0),
                           'r3': ('lin', 'r3', 1, 0)}
         self.stores = []
+        self.store_registers = []
         self.loads = []
         self.pool_words = {}
         self.data_bases = {}
+        self.value_addresses = {}
 
     def get(self, name):
         value = self.registers.get(name)
@@ -149,7 +161,7 @@ class Model:
         self.registers[name] = value
 
     def address_of(self, insn):
-        base, displacement, index_register = _mem(insn, 1)
+        base, displacement, index_register, shift = _mem(insn, 1)
         value = self.get(base)
         if value[0] == 'addr':
             address = value[1]
@@ -158,11 +170,11 @@ class Model:
         if displacement:
             address = address.add_offset(displacement)
         if index_register is not None:
-            address = address.add_index(_scale(self.get(index_register), 1))
+            address = address.add_index(_scale(self.get(index_register), 1 << shift))
         return address
 
     def pool_word(self, insn):
-        base, displacement, index_register = _mem(insn, 1)
+        base, displacement, index_register, _ = _mem(insn, 1)
         if base != 'pc' or index_register is not None:
             return None
         if self.word is None:
@@ -198,7 +210,14 @@ class Model:
         if name in STORE_WIDTH:
             address = self.address_of(insn)
             self.record_address(address)
-            self.stores.append((STORE_WIDTH[name], address, self.get(_reg(insn, 0))))
+            value = self.get(_reg(insn, 0))
+            self.stores.append((STORE_WIDTH[name], address, value))
+            self.store_registers.append((_reg(insn, 0), _mem(insn, 1)[0]))
+            if (address.base[0] == 'data' and value[0] == 'addr'
+                    and value[1].base[0] == 'data'
+                    and _is_image_address(value[1].base[1])):
+                self.value_addresses.setdefault(value[1].base[1],
+                                                self.pool_words[value[1].base[1]])
             return
         if name == 'stm':
             base = self.get(_reg(insn, 0))
@@ -208,7 +227,14 @@ class Model:
             for position, register in enumerate(registers):
                 address = base[1].add_offset(position * 4)
                 self.record_address(address)
-                self.stores.append((4, address, self.get(register)))
+                value = self.get(register)
+                self.stores.append((4, address, value))
+                self.store_registers.append((register, _reg(insn, 0)))
+                if (address.base[0] == 'data' and value[0] == 'addr'
+                        and value[1].base[0] == 'data'
+                        and _is_image_address(value[1].base[1])):
+                    self.value_addresses.setdefault(value[1].base[1],
+                                                    self.pool_words[value[1].base[1]])
             return
         if name == 'mov':
             if insn.operands[1].type == ARM_OP_IMM:
@@ -336,6 +362,8 @@ def _value(value, style, names, record_name):
     if value[0] == 'addr':
         address = value[1]
         if address.base[0] == 'data':
+            if address.base[1] in names:
+                return '(u32)%s' % names[address.base[1]]
             return '0x%xu' % address.base[1]
         if address.base == 'record':
             return record_name
@@ -431,9 +459,11 @@ def _arguments(address, value):
 def _shape(symbol, model):
     if not model.pool_words:
         return None
-    names = {address: 'g_%08x' % address for address in model.data_bases}
-    externs = [(names[address], address, model.data_bases[address])
-               for address in sorted(model.data_bases)]
+    addresses = dict(model.data_bases)
+    addresses.update(model.value_addresses)
+    names = {address: 'g_%08x' % address for address in addresses}
+    externs = [(names[address], address, addresses[address])
+               for address in sorted(addresses)]
     parameters = _parameters(model)
     record_name = 'record' if _record_is_pointer(model) else 'value'
     context = (model, names, externs, parameters, record_name)
@@ -481,11 +511,21 @@ def _stores(symbol, model, names, externs, parameters, record_name):
         return PoolAccess(family, parameters, 'void', statements,
                           {'stores': len(records),
                            'document': 'Writes pool constants into a caller-supplied record.'},
-                          [])
+                          externs)
     if any(store[2][0] == 'mem' for store in globals_):
         return None
     if len(globals_) == 1:
         width, address, value = globals_[0]
+        position = stores.index(globals_[0])
+        value_register, base_register = model.store_registers[position]
+        if _is_zero(value) and (base_register, value_register) == ('r1', 'r0'):
+            statements = ['*(volatile %s *)(%s + 0x%x) = 0;'
+                          % (_type(width), names[address.base[1]], address.offset)
+                          if address.offset else
+                          '*(volatile %s *)(%s) = 0;' % (_type(width), names[address.base[1]])]
+            return PoolAccess('pool_global_zero', parameters, 'void', statements,
+                              {'pool': list(names.values())[0], 'width': width,
+                               'document': 'Sets one fixed-address global to zero.'}, externs)
         statements = ['volatile %s *p = (volatile %s *)0x%xu;'
                       % (_type(width), _type(width), address.base[1]),
                       '%s = %s;' % (_access(address, width, False, 'local', names),
@@ -498,7 +538,7 @@ def _stores(symbol, model, names, externs, parameters, record_name):
         return PoolAccess(family, parameters, 'void', statements,
                           {'pool': list(names.values())[0], 'width': width,
                            'document': 'Writes one fixed-address global through its literal pool.'},
-                          [])
+                          externs)
     statements = []
     for width, address, value in globals_:
         target = _access(address, width, False, 'extern', names)

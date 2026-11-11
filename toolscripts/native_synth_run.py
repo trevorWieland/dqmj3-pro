@@ -124,7 +124,8 @@ def census(root, limit, below=None):
         if symbol.mode != 'arm':
             refused.append(shapes.Rejected(symbol.name, 'thumb mode'))
             continue
-        result = shapes.classify(symbol, original(image, symbol), read_word)
+        result = shapes.classify(symbol, original(image, symbol), read_word,
+                                  image['functions'].by_address)
         if isinstance(result, shapes.Rejected):
             refused.append(result)
         else:

@@ -250,6 +250,27 @@ _add('pool_global_from_record', 'pool_global_from_records',
 _add('pool_global_copy', 'pool_global_copies',
      'Fixed-address global word copies',
      'Each function below copies one fixed-address global word into another.')
+_add('call_store_constant', 'call_store_constants',
+     'Calls whose result is an object the caller initialises',
+     'Each function below calls another split function with its first argument,\n'
+     ' stores one literal-pool constant in the returned pointer and returns that\n'
+     ' pointer. The callee is named by the address its call instruction targets;\n'
+     ' the constant is the word the function\'s own literal pool holds.')
+_add('call_chain', 'call_chains',
+     'A call followed by a tail call',
+     'Each function below calls one split function and then tail-calls a second,\n'
+     ' with no other work between them. Both callees are named by the addresses\n'
+     ' the original call and branch instructions target.')
+_add('call_store_constant_zero', 'call_store_constant_zeroes',
+     'Calls with a zero second argument whose result is initialised',
+     'Each function below passes a zero in the second argument register, calls a\n'
+     ' split function, stores one literal-pool constant in the pointer it returns\n'
+     ' and returns that pointer.')
+_add('call_return_argument', 'call_return_arguments',
+     'Calls that return their own argument',
+     'Each function below saves its first argument, calls a split function for its\n'
+     ' effect and returns the saved argument. The save is the register the original\n'
+     ' push protects.')
 
 
 def _signature(shape):
@@ -277,7 +298,30 @@ def _externs(shapes):
     return [found[name] for name in sorted(found, key=lambda name: found[name]['address'])]
 
 
-def render_file(family, shapes, shard, shards):
+def _callees(shapes, defined):
+    """The split functions these shapes call, with a usable prototype.
+
+    A callee that is itself synthesised in this component is declared with its
+    real signature, because its definition appears in one of these files. A
+    callee that stays original has no known signature; the unspecified-argument
+    declaration lets the call be written without inventing one.
+    """
+    found = set()
+    for shape in shapes:
+        found.update(shape.detail.get('callees') or ())
+    lines = []
+    for name in sorted(found):
+        shape = defined.get(name)
+        if shape is not None:
+            lines.append('%s %s(%s);' % (shape.returns, name,
+                                         ', '.join('%s %s' % (kind, item)
+                                                   for _, kind, item in shape.params) or 'void'))
+        else:
+            lines.append('u32 %s();' % name)
+    return lines
+
+
+def render_file(family, shapes, shard, shards, defined=None):
     """One source file: family documentation, externs, then the functions."""
     description = FAMILIES[family]
     title = description['title']
@@ -303,6 +347,13 @@ def render_file(family, shapes, shard, shards):
         lines.append(' * defines each at the address its literal pool word holds. */')
         for row in externs:
             lines.append('extern u8 %s[];' % row['name'])
+        lines.append('')
+    callees = sorted({name for shape in shapes for name in (shape.detail.get('callees') or ())})
+    if callees:
+        lines.append('/* This unit calls these split functions; each resolves to the address')
+        lines.append(' * its original call instruction targets:')
+        lines.append(' * ' + ', '.join(callees))
+        lines.append(' */')
         lines.append('')
     for shape in shapes:
         lines += render_function(shape)
@@ -348,6 +399,7 @@ def group(shapes):
 def files(root, shapes):
     """The complete emitted tree: [(relative path, text)] including the header."""
     grouped = group(shapes)
+    defined = {shape.name: shape for shape in shapes}
     result = [(COMPONENT + '/' + TYPES_HEADER, render_types())]
     for family in FAMILY_ORDER:
         members = grouped.get(family)
@@ -359,7 +411,7 @@ def files(root, shapes):
             if len(shards) > 1:
                 name += '_%02d' % index
             result.append((COMPONENT + '/' + name + '.c',
-                           render_file(family, shard, index, len(shards))))
+                           render_file(family, shard, index, len(shards), defined)))
     return result
 
 
@@ -378,13 +430,25 @@ def _shards(shapes):
 
 
 def write(root, shapes):
-    """Write the emitted tree under the repository root; return its paths."""
+    """Write the emitted tree under the repository root; return its paths.
+
+    Files that this run does not produce are removed: a family can be sharded
+    differently as its membership changes, and a stale shard would define the
+    same function twice.
+    """
+    root = Path(root)
+    tree = files(root, shapes)
     written = []
-    for relative, text in files(root, shapes):
-        path = Path(root) / relative
+    for relative, text in tree:
+        path = root / relative
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(text, encoding='utf-8')
         written.append(relative)
+    keep = set(written)
+    for path in (root / COMPONENT).glob('*'):
+        if path.is_file() and path.suffix in ('.c', '.h') \
+                and path.relative_to(root).as_posix() not in keep:
+            path.unlink()
     symbols = {}
     for shape in shapes:
         for row in shape.detail.get('externs') or ():

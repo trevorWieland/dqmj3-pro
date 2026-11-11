@@ -45,9 +45,6 @@ def _load_rows(path, table):
         if not name or name in table:
             raise ValueError('Absolute symbol name is empty or duplicated: ' + name)
         address = int(row['address'], 16)
-        if row.get('text') is None and address % 4:
-            raise ValueError('%s: data address 0x%08x is not four-byte aligned'
-                             % (name, address))
         table[name] = {'name': name, 'address': address,
                        'text': row.get('text'),
                        'site': int(row['site'], 16) if row.get('site') else None}
