@@ -34,14 +34,24 @@ It writes `build/update-content0/report.json` (the progress report), `link.json`
 ## Reading the result
 
 ```
-compiled:  559 functions from source (9,036 bytes), 514 byte-identical
-retained:  26,014 functions, 7,042,244 text bytes, 1,313,276 data and bss bytes
+compiled:  718 functions from source (11,240 bytes), 673 byte-identical
+retained:  25,855 functions, 7,040,040 text bytes, 1,313,276 data and bss bytes
 image:     differs from the original in 45 functions
-complete:  NO, 8,355,520 bytes are still retained from the original
+complete:  NO, 8,353,316 bytes are still retained from the original
 ```
+
+Those are the armcc numbers: what the build measures with the best-evidenced
+original compiler. The same tree measured with `--compiler-profile clang-21`
+reports `matched_code=7396` and `matched_functions=575`. Both are real
+measurements of the same source with different compilers, and neither is a
+fallback for the other: the armcc figure is what the original compiler
+produces, the Clang figure is what someone can verify without fetching
+proprietary software.
 
 `complete: YES` requires zero retained bytes and a byte-identical linked image. Nothing weaker counts. `--strict` turns an incomplete result into a non-zero exit status, which is what CI would use to gate a release.
 
 ## CI
 
-`.github/workflows/build.yml` runs the same commands: it materializes the pinned tools (including armcc from its pinned public archive), checks out the owner's private input parts, and runs `build.py --private-inputs work/private-inputs`. It then verifies the report against the ExHeader, the linked image, the split and the recorded compiler identity with `toolscripts/check_report.py`, and uploads `build/update-content0/report.json` as the `update-content0_report` artifact for ByteMatch. There is no separate CI measurement path. The public `compile.yml` and `pr-gate.yml` jobs do not fetch or run armcc.
+`.github/workflows/build.yml` runs the same commands: it materializes the pinned tools (including armcc from its pinned public archive), checks out the owner's private input parts, and runs `build.py --private-inputs work/private-inputs`. It then verifies the report against the ExHeader, the linked image, the split and the recorded compiler identity with `toolscripts/check_report.py`, and uploads `build/update-content0/report.json` as the `update-content0_report` artifact for ByteMatch. There is no separate CI measurement path.
+
+The public `.github/workflows/compile.yml` job fetches and verifies the same pinned armcc archive and compiles the native units with the build's own compile stage (`toolscripts/compile_measured_units.py`, the same per-unit profiles and arguments `build.py` uses), so the checked-in workflow exercises the compiler the measurement actually uses instead of a different one. The extracted compiler files are cached between runs, keyed on the archive SHA-256, and re-verified after restore; on a cache miss the job downloads 73 MB once. `pr-gate.yml` does not compile anything, so it never needs a compiler.

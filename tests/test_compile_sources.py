@@ -345,7 +345,9 @@ class CompileSourcesTests(unittest.TestCase):
         self.assertIn("persist-credentials: false", workflow)
         self.assertIn("work/source-compile-ci/diagnostics/*.txt", workflow)
         self.assertIn("work/source-compile-ci/manifests/*.json", workflow)
-        self.assertEqual(len(__import__("re").findall(r"uses: actions/[a-z-]+@[0-9a-f]{40}\b", workflow)), 3)
+        actions = set(__import__("re").findall(r"uses: (actions/[a-z-]+)@[0-9a-f]{40}\b", workflow))
+        self.assertEqual(actions, {"actions/checkout", "actions/setup-python",
+                                   "actions/upload-artifact", "actions/cache"})
         for prohibited in ["inputs/", "generated/", "objects/", "downloads/", "pull-requests: write", "id-token: write"]:
             self.assertNotIn(prohibited, workflow)
 

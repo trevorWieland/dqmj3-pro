@@ -31,8 +31,11 @@ file is missing; `--no-download` turns the fetch into a failure, and
 The compiler is proprietary ARM software hosted publicly by the decomp.me
 compilers project. The repository stores URL, size, hashes and provenance and
 commits no compiler file. An operator may use it only where entitled to use ARM
-Compiler; `THIRD_PARTY.md` records the same limit. The trusted report job
-materializes it from the pinned public URL; the public compile jobs do not.
+Compiler; `THIRD_PARTY.md` records the same limit. Both the trusted report job
+and the public compile job materialize it from the pinned public URL with the
+same bootstrap, so the public check compiles with the compiler the measurement
+uses. A contributor who declines to fetch it can still compile, test and
+measure with `--compiler-profile clang-21`.
 
 ## How a unit selects a compiler
 
@@ -155,14 +158,40 @@ the 2 are explained by a known constant spelling and a trailing-pool extent.
   archive and records both compiler identities in `report.json` and
   `object-map.json`: profile id, executable SHA-256, declared identity and the
   compiler's own banner line.
-* `compile.yml` and `pr-gate.yml` remain public, source-only, pinned-Clang jobs.
-  They neither fetch nor execute armcc, so a fork without the proprietary
-  compiler still builds and tests.
-* `python build.py --compiler-profile clang-21` reproduces the former Clang
-  report and requires no proprietary tool. `--no-download` refuses to fetch a
-  missing compiler.
-* `toolscripts/check_report.py` now refuses a report that records no compiler
+* `compile.yml` (public) fetches and verifies the same pinned archive with the
+  same `armcc_bootstrap.py`, then compiles the native units with the build's own
+  compile stage (`toolscripts/compile_measured_units.py`). The extracted
+  compiler files are cached between runs, keyed on the archive SHA-256 and
+  re-verified after restore; a cache miss downloads 73 MB once. Before
+  this, the public check compiled with Clang while the build compiled with
+  armcc, so the check could pass while the build failed.
+* `pr-gate.yml` does not compile, so it needs no compiler and fetches none.
+* `python build.py --compiler-profile clang-21` reproduces the Clang report and
+  requires no proprietary tool. `--no-download` refuses to fetch a missing
+  compiler.
+* `toolscripts/check_report.py` refuses a report that records no compiler
   identity or whose identity differs from the objects it measured.
+
+## Two numbers, both real
+
+On the tree that added the restored record initialisers (commit `4e8e053`,
+unchanged source since), the two profiles measure:
+
+| profile | matched_code | matched_functions | verified |
+| --- | --- | --- | --- |
+| armcc 4.1 b1454 | **9,556** | **673** | the build's own number; what the original compiler produces |
+| clang-21 | 7,396 | 575 | reproducible without fetching proprietary software |
+
+Neither is a fallback for the other. The armcc figure is the measurement, and
+the Clang figure is the no-proprietary-tool route; both are byte-equality
+measurements of the same source against the same original bytes.
+
+One restored function is Clang-only. `fn_002e40c8` (16 bytes,
+`src/native/credit001/record_updates.c`) stores a byte through a pointer read
+from the record and returns the same byte. The original image loads that byte
+once; Clang reproduces it, while armcc re-loads it after the store because it
+will not prove the store does not alias `record + 0x25`. So of the 160 record
+initialisers credited under Clang, 159 are credited under armcc.
 
 ## Limits
 
