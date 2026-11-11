@@ -35,8 +35,11 @@ Anyone who declines to fetch a proprietary compiler can select the open toolchai
 python setup_tools.py                             # pinned public tools
 python toolscripts/bootstrap_public_compiler.py   # pinned Clang 21 and ld.lld
 python toolscripts/armcc_bootstrap.py             # pinned original compiler (proprietary, not committed)
+tools/python/Scripts/python.exe setup_tools.py --verify          # confirm the build toolchain
 tools/python/Scripts/python.exe -I build.py --image "C:\path\to\DQMJ3P_Update.cia"
 ```
+
+`--verify` checks the toolchain the game build needs. Two optional groups are skipped by default because no build requires them: the Android host-target toolchain (`--host`, needed only for `run_checks.py`) and Ghidra (`--research`, needed only for re-deriving the split from scratch).
 
 `build.py` refuses any image whose SHA-256 does not match the pinned identity, extracts it, compiles `src`, carves each function out of the original, compares bytes, links the complete image at the original addresses and prints compiled-from-source bytes against retained bytes. `complete: YES` requires zero retained bytes and a byte-identical image, and nothing weaker will produce it.
 
