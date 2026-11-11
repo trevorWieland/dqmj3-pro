@@ -14,6 +14,19 @@
  */
 #include "small_types.h"
 
+/* Data addresses the functions below use as a base; the linker
+ * defines each at the address its literal pool word holds. */
+extern u8 g_00891250[];
+extern u8 g_008914bc[];
+extern u8 g_00893194[];
+extern u8 g_00896cbc[];
+extern u8 g_008972cc[];
+extern u8 g_00897798[];
+extern u8 g_0089a568[];
+extern u8 g_008bfb24[];
+extern u8 g_008bfb3c[];
+extern u8 g_008c0788[];
+
 void fn_0010ba64(u32 value) { volatile u32 *p = (volatile u32 *)0x89a568u; p[6] = value; }
 
 void fn_0010be00(u32 value) { volatile u32 *p = (volatile u32 *)0x89a568u; p[5] = value; }

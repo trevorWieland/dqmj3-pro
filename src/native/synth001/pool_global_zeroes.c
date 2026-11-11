@@ -1,13 +1,12 @@
 /*
- * Runs of writes to fixed-address globals.
+ * Fixed-address globals zeroed once.
  *
  * Recovered by pattern from the original image. Every instruction of each
  * function's original extent matches one shape and only one; the offsets,
  * widths and constants below are the ones those instructions encode.
  *
- * Each function below writes several words at one fixed data address. The
- *  address is reached through an extern byte array the linker defines at the
- *  measured address; the offsets and values are the ones the stores encode.
+ * Each function below sets one fixed-address global word to zero. The address
+ *  is the word its literal pool holds.
  *
  * A function is present only because compiling this exact source with the
  * measured compiler profile reproduced its original instructions byte for
@@ -17,12 +16,14 @@
 
 /* Data addresses the functions below use as a base; the linker
  * defines each at the address its literal pool word holds. */
-extern u8 g_008e96d0[];
+extern u8 g_0089a568[];
 
-void fn_00713740(void)
-{
-    *(volatile u8 *)(g_008e96d0 + 0x4) = 0x0u;
-    *(volatile u32 *)(g_008e96d0 + 0x8) = 0x0u;
-    *(volatile u32 *)(g_008e96d0) = 0x856d08u;
-    *(volatile u32 *)(g_008e96d0 + 0xc) = 0x0u;
-}
+void fn_0011509c(void) { *(volatile u8 *)(g_0089a568 + 0x1) = 0; }
+
+void fn_0012520c(void) { *(volatile u8 *)(g_0089a568 + 0x8) = 0; }
+
+void fn_00125254(void) { *(volatile u8 *)(g_0089a568 + 0x7) = 0; }
+
+void fn_00125770(void) { *(volatile u8 *)(g_0089a568 + 0x3) = 0; }
+
+void fn_00125930(void) { *(volatile u8 *)(g_0089a568 + 0x2) = 0; }
