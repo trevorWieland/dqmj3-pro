@@ -49,14 +49,18 @@ def fetch(url, path, expected, verify_only=False, headers=None):
 
 def fetch_objdiff(root, distribution, path, expected_size, verify_only=False):
     endpoint = json.loads((root / "config/report-objdiff-asset.json").read_text(encoding="utf-8"))
-    prefix = "https://api.github.com/repos/encounter/objdiff/releases/assets/"
-    if (set(endpoint) != {"schemaVersion", "canonicalUrl", "apiUrl", "sha256", "size"}
+    # The release file is fetched from its canonical URL, not the GitHub API
+    # asset endpoint: the API answers on a shared unauthenticated quota that the
+    # hosted runners exhaust, and it adds nothing we do not already have because
+    # the SHA-256 below is the identity check. A 403 is therefore a real failure
+    # and is not retried; only transient network and 5xx errors are.
+    if (set(endpoint) != {"schemaVersion", "canonicalUrl", "sha256", "size"}
             or endpoint["schemaVersion"] != 1 or endpoint["canonicalUrl"] != distribution["url"]
-            or endpoint["sha256"] != distribution["sha256"] or endpoint["size"] != expected_size
-            or not endpoint["apiUrl"].startswith(prefix) or not endpoint["apiUrl"][len(prefix):].isdigit()):
-        raise RuntimeError("Official objdiff API asset disagrees with frozen distribution")
-    fetch(endpoint["apiUrl"], path, distribution["sha256"], verify_only,
-          {"Accept": "application/octet-stream", "X-GitHub-Api-Version": "2022-11-28"})
+            or not endpoint["canonicalUrl"].startswith("https://github.com/")
+            or "api.github.com" in endpoint["canonicalUrl"]
+            or endpoint["sha256"] != distribution["sha256"] or endpoint["size"] != expected_size):
+        raise RuntimeError("Official objdiff release asset disagrees with frozen distribution")
+    fetch(endpoint["canonicalUrl"], path, distribution["sha256"], verify_only)
 
 
 def bootstrap(root, verify_only=False):
