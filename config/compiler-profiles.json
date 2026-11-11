@@ -66,8 +66,8 @@
       },
       "postprocess": "armcc-split",
       "measuredOriginal": true,
-      "role": "Best-evidenced original compiler. -O3 is part of the measured profile: the scheduler that emits the original image's cmp/nop/bge sequence runs only at -O3 -Otime, and the pinned -Otime alone was -O2 -Otime. On a 537-function corpus selected because Clang does not reproduce it, this build at -O3 -Otime reproduces 59 strictly and 72 modulo fixups with --split_sections (49 and 62 without it); Clang 21, on the same corpus and harness, reproduces 12 at its best level. At -O3 -Otime all eight 4.1 builds (b713, b791, b844, b894, b921, b1049, b1440, b1454) reproduce the same 49-function exact set, so b1454 is the representative of the 4.1 line, not a pinned build number; 5.04 b82 reproduces 48 and the 4.0 lineage 36. It reproduces 411 of 412 accepted control spans, the twelfth being one reconstructed constant spelling. The verdict is best-evidenced, not proven.",
-      "evidence": "work/compiler-sweep/REPORT.md (2026-11-10 sweep, 13 candidate builds, 27 profiles at -Otime) and work/profile-o3/ranking (2026-11-11 re-run of all 14 builds at -O3 -Otime)"
+      "role": "Best-evidenced original compiler: on a 537-function corpus selected because Clang does not reproduce it, this profile reproduces 63 strictly and 75 modulo fixups where Clang reproduces 0 strictly; it reproduces 411 of 412 accepted control spans, the twelfth being one reconstructed constant spelling. The verdict is best-evidenced, not proven.",
+      "evidence": "work/compiler-sweep/REPORT.md (bounded 2026-11-10 sweep, 13 candidate builds, 27 profiles)"
     }
   ]
 }
