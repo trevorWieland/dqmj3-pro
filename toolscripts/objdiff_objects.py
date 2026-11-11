@@ -46,6 +46,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import armcc_object
+import absolute_symbols
 import elf_objects
 import exheader
 import split as split_module
@@ -279,9 +280,13 @@ def build(root, output, project_path, split_path, forced_profile=None):
     text = exheader.segment(layout, 'text')
     if image.stat().st_size != layout['pageAlignedCodeBytes']:
         raise ValueError('Code image size disagrees with the ExHeader page extent')
+    constants = absolute_symbols.load(root)
+    absolute_symbols.verify(constants, image.read_bytes(), text)
     functions = split_module.load(split_path, text['address'], text['initializedBytes'])
     definitions, commands = compile_sources(root, output / 'compiled', forced_profile)
     measured = {name: value for name, value in definitions.items() if name in functions.by_name}
+    known = dict(functions.by_name)
+    known.update({name: None for name in constants})
     by_source, screens = {}, {}
     for name in measured:
         by_source.setdefault(measured[name]['source'], []).append(name)
@@ -290,7 +295,7 @@ def build(root, output, project_path, split_path, forced_profile=None):
         names = sorted(by_source[source], key=lambda name: functions.by_name[name].address)
         label = source.replace('/', '--')[:-2]
         base, dropped, reasons, command = select_base(root, measured[names[0]]['object'], names,
-                                                     output, label, functions.by_name)
+                                                     output, label, known)
         commands.append(command)
         sections, selected = elf_objects.read(base)['sections'], elf_objects.read(base)['functions']
         extents = {name: sections['.text.' + name]['size'] for name in names}
@@ -305,7 +310,7 @@ def build(root, output, project_path, split_path, forced_profile=None):
                            'code': {name: selected[name]['size'] for name in names}}
     placed = sorted(name for screen in screens.values() for name in screen['placed'])
     placed_image, command = place(root, output, [screens[source]['object'] for source in sorted(screens)],
-                                  placed, functions)
+                                  placed, functions, absolute_symbols.definitions(constants))
     commands.append(command)
     placement = elf_objects.placed_sections(placed_image)
     placement['image'] = placed_image.relative_to(root).as_posix()

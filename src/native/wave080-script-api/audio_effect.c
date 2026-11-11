@@ -6,7 +6,15 @@
  *
  * The engine service is reached either through the script context's vtable
  * (play/stop sound, load/scale/delete effects) or through a direct helper
- * (the wait counter, the fade driver).  Behaviour drafts: see script_api.h.
+ * (the wait counter, the fade driver).  Argument indexes follow the VM
+ * convention: a binding with N arguments reads them at -N through -1.
+ *
+ * Status: 11 of these 13 measured bindings are byte-identical to the original.
+ * fn_0012e46c (Wait_) and fn_0012dfe4 (SetEffectScale_) are drafts, differing
+ * only in instruction selection: the original keeps the context address in r2
+ * and &scale in r5 across the first read, this compiler uses r0 and r4/r5 the
+ * other way round.  fn_0012e7c8 (WaitFade_) has a registration entry but no
+ * split function, so it cannot be measured.
  */
 #include "script_api.h"
 
@@ -106,10 +114,10 @@ int fn_0012e628(SqVM *vm)
  * "and r1, r0, #0xff" comes from. */
 int fn_0012e67c(SqVM *vm)
 {
-    s32 first, second;
     f32 frames;
-    if (sq_getinteger(vm, -2, &first) < 0 || sq_getinteger(vm, -1, &second) < 0
-        || sq_getfloat(vm, 0, &frames) < 0)
+    s32 first, second;
+    if (sq_getinteger(vm, -3, &first) < 0 || sq_getinteger(vm, -2, &second) < 0
+        || sq_getfloat(vm, -1, &frames) < 0)
         SCRIPT_FAIL_EMPTY(vm);
     fn_0014872c(SCRIPT_CONTEXT(), (u8)(first & 0xff), (u8)(second & 0xff), frames);
     return 0;
@@ -120,10 +128,10 @@ int fn_0012e67c(SqVM *vm)
  * the layered fades (for example a colour flash over a scene transition). */
 int fn_0012daf0(SqVM *vm)
 {
-    s32 first, second;
     f32 frames;
-    if (sq_getinteger(vm, -2, &first) < 0 || sq_getinteger(vm, -1, &second) < 0
-        || sq_getfloat(vm, 0, &frames) < 0)
+    s32 first, second;
+    if (sq_getinteger(vm, -3, &first) < 0 || sq_getinteger(vm, -2, &second) < 0
+        || sq_getfloat(vm, -1, &frames) < 0)
         SCRIPT_FAIL_EMPTY(vm);
     fn_00148418(SCRIPT_CONTEXT(), (u8)(first & 0xff), (u8)(second & 0xff), frames);
     return 0;
@@ -150,16 +158,22 @@ int fn_0012d9e4(SqVM *vm)
     return 1;
 }
 
-/* SetEffectScale_(int id, float scale) - 0x0012dfe4, 112 bytes. */
+/* SetEffectScale_(int id, float scale) - 0x0012dfe4, 112 bytes.
+ * Sets the scale of one effect instance.  The original throws the empty
+ * message on a failed argument read but still calls the engine afterwards, so
+ * the throw is a statement, not a return.  It also keeps &scale in r5 across
+ * the first read; this source keeps it in r4 and the vm in r5, so the register
+ * allocation is swapped.  Draft for that reason only. */
 int fn_0012dfe4(SqVM *vm)
 {
     s32 id;
     f32 scale;
+    f32 *scale_out = &scale;
     ScriptContext *context;
-    if (sq_getinteger(vm, -1, &id) < 0 || sq_getfloat(vm, 0, &scale) < 0)
-        SCRIPT_FAIL_EMPTY(vm);
+    if (sq_getinteger(vm, -2, &id) < 0 || sq_getfloat(vm, -1, scale_out) < 0)
+        sq_throwerror(vm, SCRIPT_EMPTY_MESSAGE);
     context = SCRIPT_CONTEXT();
-    context->host->set_effect_scale(context, id, scale);
+    context->host->set_effect_scale(context, id, *scale_out);
     return 0;
 }
 
