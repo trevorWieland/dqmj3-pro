@@ -26,6 +26,7 @@ from capstone import Cs, CS_ARCH_ARM, CS_MODE_ARM
 from capstone.arm import ARM_OP_IMM, ARM_OP_MEM, ARM_OP_REG
 
 import native_synth_arithmetic as arithmetic
+import native_synth_pool_access as pool_access
 import native_synth_pools as pools
 
 LOAD_WIDTH = {'ldr': 4, 'ldrh': 2, 'ldrsb': 1, 'ldrsh': 2, 'ldrb': 1}
@@ -177,6 +178,9 @@ def classify(symbol, code, word=None):
         shape = _pool_shape(symbol, body, word)
         if shape is not None:
             return shape
+        shape = _pool_access_shape(symbol, body, word)
+        if shape is not None:
+            return shape
         # The store-run family has no fixed instruction count, so it is tried
         # first; the rest are keyed by the number of instructions before bx lr.
         shape = _store_run(symbol, body)
@@ -208,6 +212,19 @@ def _pool_shape(symbol, body, word):
         return None
     family, params, returns, statements, detail = proved
     return Shape(family, symbol.name, symbol.size, params, returns, statements, detail)
+
+
+def _pool_access_shape(symbol, body, word):
+    """A pool word as a data base, rendered by the pool-access model."""
+    proved = pool_access.classify(symbol, body, word)
+    if proved is None:
+        return None
+    detail = dict(proved.detail)
+    if proved.externs:
+        detail['externs'] = [{'name': name, 'address': address, 'site': site}
+                             for name, address, site in proved.externs]
+    return Shape(proved.family, symbol.name, symbol.size, proved.params, proved.returns,
+                 proved.statements, detail)
 
 
 def _store_run(symbol, body):

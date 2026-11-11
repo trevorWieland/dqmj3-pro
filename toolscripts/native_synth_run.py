@@ -27,6 +27,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'toolscripts'))
 import armcc_object
+import absolute_symbols
 import elf_objects
 import exheader
 import native_synth_emit as emitter
@@ -166,6 +167,62 @@ def compile_unit(root, source, output):
     return target
 
 
+def resolve(function, symbol, functions, constants):
+    """The compiler's bytes as the placement link would write them.
+
+    A function that calls another function, or whose literal pool holds a data
+    address, carries relocations rather than final values. The placement link
+    resolves each against the split's function addresses and the declared
+    absolute data symbols, so the oracle applies the same arithmetic here and
+    compares the bytes the linked image would contain. An unknown symbol is not
+    guessed: the function is rejected with that reason.
+    """
+    code = bytearray(function['data'])
+    tail = bytearray(function['tail'])
+    for row in function['relocationRows']:
+        offset = row['offset']
+        place = symbol.address + offset
+        name, kind = row['symbol'], row['type']
+        if name in functions.by_name:
+            target = functions.by_name[name]
+            if target.mode != 'arm':
+                return None, None, 'call target is thumb: ' + name
+            value = target.address
+        elif name in constants:
+            value = constants[name]['address']
+        else:
+            return None, None, 'unresolved relocation symbol: ' + name
+        if kind == 2:                       # R_ARM_ABS32
+            if offset + 4 > len(code) + len(tail):
+                return None, None, 'ABS32 relocation outside the extent'
+            if offset < len(code):
+                code[offset:offset + 4] = value.to_bytes(4, 'little')
+            else:
+                start = offset - len(code)
+                tail[start:start + 4] = value.to_bytes(4, 'little')
+            continue
+        if kind in (28, 29):                # R_ARM_CALL / R_ARM_JUMP24
+            if offset + 4 > len(code):
+                return None, None, 'branch relocation outside the instructions'
+            word = int.from_bytes(code[offset:offset + 4], 'little')
+            immediate = (value - (place + 8)) >> 2
+            if not -0x800000 <= immediate < 0x800000:
+                return None, None, 'call target out of branch range'
+            word = (word & 0xff000000) | (immediate & 0x00ffffff)
+            code[offset:offset + 4] = word.to_bytes(4, 'little')
+            continue
+        if kind in (43, 44):                # R_ARM_MOVW_ABS_NC / R_ARM_MOVT_ABS
+            if offset + 4 > len(code):
+                return None, None, 'movw/movt relocation outside the instructions'
+            word = int.from_bytes(code[offset:offset + 4], 'little')
+            half = value & 0xffff if kind == 43 else (value >> 16) & 0xffff
+            word = (word & ~0x000f0fff) | ((half & 0xf000) << 4) | (half & 0x0fff)
+            code[offset:offset + 4] = word.to_bytes(4, 'little')
+            continue
+        return None, None, 'unsupported relocation type %d' % kind
+    return bytes(code), bytes(tail), None
+
+
 def verdicts(root, result, output):
     """Compile every emitted file and compare each function with its original.
 
@@ -178,6 +235,7 @@ def verdicts(root, result, output):
     by_name = {shape.name: shape for shape in result['classified']}
     order = {symbol.name: index for index, symbol in enumerate(image['functions'].symbols)}
     symbols = image['functions'].symbols
+    constants = absolute_symbols.load(root)
     compiled, rows = {}, []
     for source in sorted((root / emitter.COMPONENT).glob('*.c')):
         target = compile_unit(root, source, output)
@@ -191,15 +249,16 @@ def verdicts(root, result, output):
                 continue
             after = symbols[order[name] + 1].address if order[name] + 1 < len(symbols) else None
             expected_tail = tail(image, symbol, function['extent'] - function['size'])
-            if function['relocations']:
-                verdict = 'relocations'
+            code, data, reason = resolve(function, symbol, image['functions'], constants)
+            if reason is not None:
+                verdict = reason
             elif function['size'] != symbol.size:
                 verdict = 'size %d != %d' % (function['size'], symbol.size)
             elif after is not None and symbol.address + function['extent'] > after:
                 verdict = 'extent runs past the original range'
-            elif function['data'] != original(image, symbol):
+            elif code != original(image, symbol):
                 verdict = 'instructions differ'
-            elif function['tail'] != expected_tail:
+            elif data != expected_tail:
                 verdict = 'data after the instructions differs'
             else:
                 verdict = 'match'

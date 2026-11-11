@@ -42,6 +42,7 @@ def read(path):
         kind = 'code' if code else 'bss' if section['sh_type'] == 'SHT_NOBITS' else 'data'
         sections[section.name] = {'size': section['sh_size'], 'kind': kind, 'index': index,
                                   'relocations': {}, 'references': set(),
+                                  'relocationRows': [],
                                   'data': None if kind == 'bss' else section.data()}
     apply_relocations(elf, sections)
     table = elf.get_section_by_name('.symtab')
@@ -77,6 +78,7 @@ def read(path):
                                   'data': section.data()[offset:offset + symbol['st_size']],
                                   'tail': section.data()[offset + symbol['st_size']:offset + extent],
                                   'relocations': sections[section.name]['relocations'],
+                                  'relocationRows': sections[section.name]['relocationRows'],
                                   'references': sections[section.name]['references']}
     return {'sections': sections, 'functions': functions, 'defined': defined}
 
@@ -112,7 +114,14 @@ def placed_sections(path):
 
 
 def apply_relocations(elf, sections):
-    """Record, once per section, the relocation types and referenced symbol names."""
+    """Record, once per section, the relocation types and referenced symbol names.
+
+    The per-kind counts and the reference set are what the build's screening
+    needs. ``relocationRows`` keeps the exact offset, kind, symbol and addend so a
+    caller can resolve a relocation to the value a link would write: the synthesis
+    oracle has to compare a function whose call or pool word is a relocation, and
+    only the row says where and against what.
+    """
     table = elf.get_section_by_name('.symtab')
     by_index = {section['index']: section for section in sections.values()}
     for candidate in elf.iter_sections():
@@ -121,11 +130,15 @@ def apply_relocations(elf, sections):
         target = by_index.get(candidate['sh_info'])
         if target is None:
             continue
+        rela = candidate['sh_type'] == 'SHT_RELA'
         for relocation in candidate.iter_relocations():
             kind = relocation['r_info_type']
             target['relocations'][kind] = target['relocations'].get(kind, 0) + 1
             if table is None:
                 continue
             symbol = table.get_symbol(relocation['r_info_sym'])
+            row = {'offset': relocation['r_offset'], 'type': kind,
+                   'symbol': symbol.name, 'addend': relocation['r_addend'] if rela else None}
+            target['relocationRows'].append(row)
             if symbol.name and symbol['st_info']['type'] != 'STT_SECTION':
                 target['references'].add(symbol.name)
