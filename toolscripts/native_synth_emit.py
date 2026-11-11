@@ -6,14 +6,22 @@ family, sharded so no file approaches the project's line limit. A shape's body
 is a list of statements in the order the original instructions execute them, so
 the emitted C keeps the original's store order instead of sorting it.
 
+A family whose shapes use a fixed data address as a base asks for an ``extern``
+byte array named after that address. The emitter declares the arrays in the
+file that uses them and writes their names, addresses and the literal-pool site
+that proves each address to ``config/data-symbols.json``, which the build turns
+into absolute linker symbols.
+
 The files claim nothing on their own: the oracle compiles them and keeps only
 the functions whose bytes equal the original. Every file says so in place.
 """
 
+import json
 from pathlib import Path
 
 COMPONENT = 'src/native/synth001'
 TYPES_HEADER = 'small_types.h'
+DATA_SYMBOLS = 'config/data-symbols.json'
 SHARD_LINES = 380
 
 FAMILIES = {
@@ -191,6 +199,57 @@ _add('conditional_field_store', 'conditional_stores', 'Field stores guarded by a
 _add('field_equality', 'field_equalities', 'Field equality tests',
      'Each function below compares one 32-bit record field with its argument and\n'
      ' returns 1 or 0. The original computes both arms with conditional moves.')
+_add('pool_global_read', 'pool_global_reads_02', 'Fixed-address global reads with a displacement',
+     'Each function below loads a fixed data address from its literal pool into a\n'
+     ' local typed pointer and reads one field at a fixed displacement. The address\n'
+     ' is the pool word and the displacement is the one the load instruction\n'
+     ' encodes; a typed pointer lets armcc fold that displacement into the access.')
+_add('pool_indexed_read', 'pool_indexed_reads', 'Indexed reads through a fixed-address base',
+     'Each function below loads a fixed data address from its literal pool and\n'
+     ' reads an entry selected by an argument register. The stride is the shift the\n'
+     ' original address arithmetic encodes.')
+_add('pool_global_zero', 'pool_global_zeroes', 'Fixed-address globals zeroed once',
+     'Each function below sets one fixed-address global word to zero. The address\n'
+     ' is the word its literal pool holds.')
+_add('pool_global_store_constant', 'pool_global_constant_stores',
+     'Fixed-address globals set to a constant',
+     'Each function below writes a constant into one fixed-address global. Both the\n'
+     ' address and the constant are words the original literal pool holds.')
+_add('pool_global_store_argument', 'pool_global_argument_stores',
+     'Arguments stored into a fixed-address global',
+     'Each function below writes its argument into one fixed-address global. The\n'
+     ' store width is the one the original instruction encodes.')
+_add('pool_global_zero_run', 'pool_global_zero_runs',
+     'Runs of fixed-address global words zeroed',
+     'Each function below sets a run of words at one fixed data address to zero.\n'
+     ' The address is reached through an extern byte array the linker defines at\n'
+     ' the measured address, so the compiler keeps the pool word as a relocation\n'
+     ' instead of folding a number; the offsets are the ones the stores encode.')
+_add('pool_global_store_run', 'pool_global_store_runs',
+     'Runs of writes to fixed-address globals',
+     'Each function below writes several words at one fixed data address. The\n'
+     ' address is reached through an extern byte array the linker defines at the\n'
+     ' measured address; the offsets and values are the ones the stores encode.')
+_add('pool_record_store', 'pool_record_stores',
+     'Pool constants written into a record',
+     'Each function below writes one constant held in its literal pool into a\n'
+     ' record supplied by the caller.')
+_add('pool_record_store_run', 'pool_record_store_runs',
+     'Pool constants written into a run of record fields',
+     'Each function below writes several constants held in its literal pool into\n'
+     ' fields of a record supplied by the caller, in the order the original stores\n'
+     ' execute.')
+_add('pool_record_from_global', 'pool_record_from_globals',
+     'Record fields loaded from a fixed-address global',
+     'Each function below reads one field of a fixed-address global and writes it\n'
+     ' into the record supplied by the caller.')
+_add('pool_global_from_record', 'pool_global_from_records',
+     'Fixed-address globals written from a record field',
+     'Each function below reads one field of the record supplied by the caller and\n'
+     ' writes it into a fixed-address global.')
+_add('pool_global_copy', 'pool_global_copies',
+     'Fixed-address global word copies',
+     'Each function below copies one fixed-address global word into another.')
 
 
 def _signature(shape):
@@ -209,8 +268,17 @@ def render_function(shape):
     return [head, '{'] + ['    ' + statement for statement in shape.body] + ['}']
 
 
+def _externs(shapes):
+    """The data symbols these shapes name, in address order, deduplicated."""
+    found = {}
+    for shape in shapes:
+        for row in shape.detail.get('externs') or ():
+            found[row['name']] = row
+    return [found[name] for name in sorted(found, key=lambda name: found[name]['address'])]
+
+
 def render_file(family, shapes, shard, shards):
-    """One source file: family documentation, then the functions."""
+    """One source file: family documentation, externs, then the functions."""
     description = FAMILIES[family]
     title = description['title']
     if shards > 1:
@@ -229,6 +297,13 @@ def render_file(family, shapes, shard, shards):
               ' */',
               '#include "%s"' % TYPES_HEADER,
               '']
+    externs = _externs(shapes)
+    if externs:
+        lines.append('/* Data addresses the functions below use as a base; the linker')
+        lines.append(' * defines each at the address its literal pool word holds. */')
+        for row in externs:
+            lines.append('extern u8 %s[];' % row['name'])
+        lines.append('')
     for shape in shapes:
         lines += render_function(shape)
         lines.append('')
@@ -310,4 +385,18 @@ def write(root, shapes):
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(text, encoding='utf-8')
         written.append(relative)
+    symbols = {}
+    for shape in shapes:
+        for row in shape.detail.get('externs') or ():
+            symbols.setdefault(row['name'], {'name': row['name'],
+                                             'address': '0x%08x' % row['address'],
+                                             'site': '0x%08x' % row['site']})
+    document = {'schemaVersion': 1,
+                'comment': ('Fixed data addresses a synthesised function uses as a base. '
+                            'The build defines each name at address, and site is the '
+                            'literal-pool word that proves the address.'),
+                'symbols': [symbols[name] for name in sorted(symbols)]}
+    config = Path(root) / DATA_SYMBOLS
+    config.parent.mkdir(parents=True, exist_ok=True)
+    config.write_text(json.dumps(document, indent=2) + '\n', encoding='utf-8')
     return written

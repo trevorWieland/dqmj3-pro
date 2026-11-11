@@ -29,8 +29,6 @@ void fn_0055a370(u8 * record, u32 value) { *(u8 *)(record + 0xf4) = value; }
 
 void fn_0055a558(u8 * record, u32 value) { *(u8 *)(record + 0xf0) = value; }
 
-void fn_005db394(u8 * record) { *(u32 *)(record + 0x11c0) = 0x0u; }
-
 void fn_0069377c(u8 * record, u32 value) { *(u16 *)(record + 0x16e) = value; }
 
 void fn_00693ef4(u8 * record, u32 value) { *(u16 *)(record + 0x16e) = value; }
