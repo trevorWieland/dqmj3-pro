@@ -58,8 +58,17 @@ class SplitterTests(unittest.TestCase):
         for name in ('.text.fn_00100000', '.text.fn_00100020'):
             rebuilt.extend(read['sections'][name]['data'])
         self.assertEqual(bytes(rebuilt), original)
-        self.assertEqual(sum(value['size'] for value in read['functions'].values()),
-                         len(original))
+        self.assertEqual(sum(value['size'] for value in read['sections'].values()
+                             if value['kind'] == 'code'), len(original))
+        for name, function in read['functions'].items():
+            self.assertLessEqual(function['size'], read['sections'][function['section']]['size'])
+
+    def test_a_literal_pool_is_the_section_tail_not_the_symbol_size(self):
+        read = elf_objects.read(self.split)
+        function = read['functions']['fn_00100000']
+        self.assertLess(function['size'], read['sections'][function['section']]['size'])
+        self.assertEqual(len(function['tail']), function['extent'] - function['size'])
+        self.assertIn(2, function['relocations'])
 
     def test_relocations_survive_the_rewrite(self):
         read = elf_objects.read(self.split)
@@ -68,11 +77,12 @@ class SplitterTests(unittest.TestCase):
         self.assertNotIn(0, relocations)
         self.assertIn('external', read['functions']['fn_00100000']['references'])
 
-    def test_selection_can_discard_data_and_drop_only_its_referencing_function(self):
+    def test_selection_can_discard_data_and_name_the_referencing_function(self):
         names = ['fn_00100000', 'fn_00100020']
-        base, dropped, _ = objdiff_objects.select_base(ROOT, self.split, names, self.output, 'unit')
+        base, dropped, reasons, _ = objdiff_objects.select_base(ROOT, self.split, names, self.output, 'unit')
         self.assertEqual(dropped, ['fn_00100000'])
-        self.assertEqual(set(elf_objects.read(base)['functions']), {'fn_00100020'})
+        self.assertIn('data the split does not place', reasons['fn_00100000'])
+        self.assertEqual(set(elf_objects.read(base)['functions']), set(names))
 
 
 if __name__ == '__main__':

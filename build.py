@@ -85,9 +85,10 @@ def describe_compilers(mapping):
 
 
 def describe_link(result):
-    lines = ['compiled:  %s functions from source (%s bytes), %s byte-identical'
-             % (number(result['sourceFunctions']), number(result['sourceBytes']),
-                number(result['matchingFunctions'])),
+    lines = ['compiled:  %s functions from source (%s instruction bytes, %s data bytes), '
+             '%s byte-identical'
+             % (number(result['sourceFunctions']), number(result['sourceCodeBytes']),
+                number(result['sourceDataBytes']), number(result['matchingFunctions'])),
              'retained:  %s functions, %s text bytes, %s data and bss bytes'
              % (number(result['retainedFunctions']), number(result['retainedTextBytes']),
                 number(result['retainedDataBytes'] + result['retainedBssBytes'])),

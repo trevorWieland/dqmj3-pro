@@ -11,6 +11,24 @@ holds the same functions compiled from that file.
 Every original text byte source does not implement stays in one extra unit,
 ``src/native``, with the original rodata, data and BSS.
 
+The base object is not a relocatable object: a relocatable object cannot say
+what a ``bl`` encodes, because the callee has no address yet. A function with a
+call would then be scored against bytes that are wrong by construction and could
+never be credited, whatever the source said. So the measurement places every
+measured function at the address the split gives it -- the same placement the
+whole-image link in ``image_link`` performs -- and carves the base object out of
+that image. A call to a function the split lists resolves to the address the
+original image gives that function; a call to anything else makes the reference
+unrepresentable and the function is reported as such instead of being compared
+against unresolved bytes.
+
+A function's instructions and the data a compiler places after them (a literal
+pool, a switch table, embedded string literals) are carved as one section but
+named separately: the instruction extent is the split's extent, and the bytes
+after it are the function's own data. Instructions are compared with
+instructions; the data is compared with the original bytes at the same address,
+and a pool that differs disqualifies the function instead of being ignored.
+
 No ledger decides what counts. A function is measured because the source defines
 it and the split gives it an address, a mode and a size. The profile's declared
 configuration is checked against the unit: a unit may only ask for a layout or
@@ -20,7 +38,6 @@ changes what the unit declared.
 
 import argparse
 import bisect
-import hashlib
 import json
 import re
 import subprocess
@@ -32,44 +49,15 @@ import armcc_object
 import elf_objects
 import exheader
 import split as split_module
+from placement import (ASSEMBLE, CLANG, LLD, TIMEOUT, carve, check_original, digest,  # noqa: F401
+                       empty_base, place, read_json, run, slots, write_json)
 
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = 'update-content0'
 SOURCE_ROOT = 'src/native'
-CLANG = 'tools/clang-21/clang.exe'
-LLD = 'tools/clang-21/ld.lld.exe'
 PROFILE_CONFIG = 'config/compiler-profiles.json'
-# The assembler that carves original bytes out of the user's image is always
-# the pinned Clang: it assembles bytes, it does not compile source.
-ASSEMBLE = ('--target=arm-none-eabi', '-mcpu=mpcore', '-marm')
-TIMEOUT = 300
 CANONICAL = re.compile(r'fn_[0-9a-f]{8}')
-
-
-def digest(path):
-    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
-
-
-def read_json(path):
-    return json.loads(Path(path).read_text(encoding='utf-8'))
-
-
-def write_json(path, value):
-    path = Path(path)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, indent=2) + '\n', encoding='utf-8')
-
-
-def run(argv, log):
-    argv = [str(item) for item in argv]
-    result = subprocess.run(argv, capture_output=True, timeout=TIMEOUT)
-    log = Path(log)
-    log.parent.mkdir(parents=True, exist_ok=True)
-    log.write_bytes(result.stdout + result.stderr)
-    if result.returncode:
-        raise ValueError('Command failed, diagnostics in %s: %s' % (log, ' '.join(argv)))
-    return {'argv': argv, 'log': log.as_posix(), 'logSha256': digest(log)}
 
 
 def profiles(root):
@@ -213,88 +201,51 @@ def compile_units(root, output, units, forced_profile=None):
     return definitions, commands
 
 
-def carve(root, output, label, image, spans, symbols, data_spans=()):
-    """Assemble original byte ranges into one target object and check them back."""
-    source = output / (label + '.target.s')
-    lines = []
-    for index, (address, size, image_offset) in enumerate(spans):
-        lines.extend(['.section .text.original_%08x,"ax",%%progbits' % address,
-                      '.Loriginal_%d:' % index,
-                      '.incbin "%s", %d, %d' % (Path(image).as_posix(), image_offset, size)])
-        for name, offset, symbol_size, mode in symbols.get(index, []):
-            lines.extend(['.global ' + name, '.type ' + name + ',%function',
-                          '.set %s,.Loriginal_%d+%d' % (name, index, offset + (mode == 'thumb')),
-                          '.size %s,%d' % (name, symbol_size)])
-    for section, address, size, image_offset, kind in data_spans:
-        if kind == 'bss':
-            lines.extend(['.section %s,"aw",%%nobits' % section, '.space %d' % size])
-        else:
-            flags = 'a' if section.startswith('.rodata') else 'aw'
-            lines.extend(['.section %s,"%s",%%progbits' % (section, flags),
-                          '.incbin "%s", %d, %d' % (Path(image).as_posix(), image_offset, size)])
-    source.write_text('\n'.join(lines) + '\n', encoding='utf-8')
-    target = output / (label + '.target.o')
-    command = run([root / CLANG, *ASSEMBLE, '-c', source, '-o', target],
-                  output / (label + '.assemble.log'))
-    check_original(root, target, spans, data_spans, image)
-    return target, command
+def select_base(root, raw, names, output, label, known=None):
+    """Keep only the measured functions a linker can resolve, and say why not.
 
+    The screen links one ``-r`` object that keeps every measured section of the
+    unit and discards everything else, so a reference to another measured
+    function survives as a relocation the placement link can resolve. A function
+    is then reported instead of scored when a reference could not be carried:
 
-def check_original(root, target, spans, data_spans, image):
-    content = Path(image).read_bytes()
-    read = elf_objects.read(target)
-    for address, size, image_offset in spans:
-        section = read['sections']['.text.original_%08x' % address]
-        if section['data'] != content[image_offset:image_offset + size]:
-            raise ValueError('Assembler changed original text bytes at 0x%08x' % address)
-    for section, address, size, image_offset, kind in data_spans:
-        found = read['sections'][section]
-        if found['size'] != size or found['kind'] != kind:
-            raise ValueError('Original %s section changed size or kind' % section)
-        if kind != 'bss' and found['data'] != content[image_offset:image_offset + size]:
-            raise ValueError('Assembler changed original data in ' + section)
+    * ``R_ARM_NONE`` -- the reference named material the split does not place
+      (a data section, an unmeasured helper), which no address can satisfy;
+    * a live reference to a symbol neither the split nor this object defines,
+      so its call sites would be compared against zeros.
 
-
-def select_base(root, raw, names, output, label):
-    """Keep only the measured function sections a linker can still represent.
-
-    A function whose relocations point at discarded material comes back with an
-    R_ARM_NONE relocation, which is not a comparison of instruction bytes. Such
-    functions keep their original target bytes but no base object, so they are
-    reported as unmatched instead of being scored against an unresolved object.
+    ``known`` is the split's own symbol table. Without it no reference is treated
+    as foreign, which is what a test of the relocation mechanics wants.
     """
-    kept, dropped, command = list(names), [], None
-    while kept:
-        script = output / (label + '.source.ld')
-        body = ['.text.%s : { KEEP(*(.text.%s)) }' % (name, name) for name in kept]
-        measured = {'.text.' + name for name in kept}
-        discard = sorted(set(elf_objects.read(raw)['sections']) - measured)
-        script.write_text('SECTIONS {\n' + '\n'.join(body) + '\n/DISCARD/ : { '
-                          + ' '.join('*(%s)' % section for section in discard) + ' }\n}\n',
-                          encoding='utf-8')
-        base = output / (label + '.base.o')
-        command = run([root / LLD, '-r', '-m', 'armelf', '--build-id=none', '-T', script, raw, '-o', base],
-                      output / (label + '.select.log'))
-        defined = elf_objects.read(base)['functions']
-        unresolved = [name for name, function in defined.items() if 0 in function['relocations']]
-        if not unresolved:
-            break
-        kept = [name for name in kept if name not in unresolved]
-        dropped.extend(unresolved)
-    if not kept:
-        return empty_base(root, output, label), sorted(dropped), command
-    if set(defined) != set(kept):
-        raise ValueError('Selected source object does not define exactly the measured functions')
-    return base, sorted(dropped), command
-
-
-def empty_base(root, output, label):
-    """A genuinely compiled empty translation unit: no representable source bytes."""
-    source = output / (label + '.empty.c')
-    source.write_text('typedef unsigned ObjdiffNoRepresentableSource;\n', encoding='utf-8')
+    read = elf_objects.read(raw)
+    measured = {'.text.' + name for name in names}
+    body = ['.text.%s : { KEEP(*(.text.%s)) }' % (name, name) for name in names]
+    discard = sorted(set(read['sections']) - measured)
+    script = output / (label + '.source.ld')
+    script.write_text('SECTIONS {\n' + '\n'.join(body) + '\n/DISCARD/ : { '
+                      + ' '.join('*(%s)' % section for section in discard) + ' }\n}\n',
+                      encoding='utf-8')
     base = output / (label + '.base.o')
-    run([root / CLANG, *ASSEMBLE, '-c', source, '-o', base], output / (label + '.empty.log'))
-    return base
+    command = run([root / LLD, '-r', '-m', 'armelf', '--build-id=none', '-T', script, raw, '-o', base],
+                  output / (label + '.select.log'))
+    selected = elf_objects.read(base)
+    local = selected['defined'] | set(names)
+    dropped, reasons = [], {}
+    for name in names:
+        function = selected['functions'].get(name)
+        if function is None:
+            raise ValueError('The selection link lost a measured function: ' + name)
+        if 0 in function['relocations']:
+            reasons[name] = 'references original data the split does not place'
+            dropped.append(name)
+            continue
+        outside = sorted(reference for reference in function['references']
+                         if reference not in local
+                         and (known is None or reference not in known))
+        if outside:
+            reasons[name] = 'references symbols outside the split: ' + ', '.join(outside)
+            dropped.append(name)
+    return base, sorted(dropped), reasons, command
 
 
 def tool_identity(root, profile):
@@ -331,12 +282,36 @@ def build(root, output, project_path, split_path, forced_profile=None):
     functions = split_module.load(split_path, text['address'], text['initializedBytes'])
     definitions, commands = compile_sources(root, output / 'compiled', forced_profile)
     measured = {name: value for name, value in definitions.items() if name in functions.by_name}
-    units, by_source = [], {}
+    by_source, screens = {}, {}
     for name in measured:
         by_source.setdefault(measured[name]['source'], []).append(name)
+    room = slots(functions, text)
     for source in sorted(by_source):
-        units.append(source_unit(root, output, source, by_source[source], functions, measured, text, commands))
-    units.append(retained_unit(root, output, image, functions, measured, definitions, layout, text, commands))
+        names = sorted(by_source[source], key=lambda name: functions.by_name[name].address)
+        label = source.replace('/', '--')[:-2]
+        base, dropped, reasons, command = select_base(root, measured[names[0]]['object'], names,
+                                                     output, label, functions.by_name)
+        commands.append(command)
+        sections, selected = elf_objects.read(base)['sections'], elf_objects.read(base)['functions']
+        extents = {name: sections['.text.' + name]['size'] for name in names}
+        # A function is placed when everything the compiler emitted for it fits
+        # the original range the split leaves for it. Whether the instruction
+        # extent agrees with the split is a reconstruction fact the measurement
+        # reports; whether the data fits is a placement fact the link needs.
+        placed = [name for name in names
+                  if name not in set(dropped) and extents[name] <= room[name]]
+        screens[source] = {'names': names, 'label': label, 'object': base, 'dropped': dropped,
+                           'reasons': reasons, 'extents': extents, 'placed': placed,
+                           'code': {name: selected[name]['size'] for name in names}}
+    placed = sorted(name for screen in screens.values() for name in screen['placed'])
+    placed_image, command = place(root, output, [screens[source]['object'] for source in sorted(screens)],
+                                  placed, functions)
+    commands.append(command)
+    placement = elf_objects.placed_sections(placed_image)
+    placement['image'] = placed_image.relative_to(root).as_posix()
+    units = [source_unit(root, output, image, source, functions.by_name, measured, text,
+                         screens[source], placement, commands, room) for source in sorted(screens)]
+    units.append(retained_unit(root, output, image, functions, measured, layout, text, commands))
     if sum(unit['targetCodeBytes'] for unit in units) != text['initializedBytes']:
         raise ValueError('Target objects do not account for every initialized text byte exactly once')
     write_json(project_path, {
@@ -356,6 +331,10 @@ def build(root, output, project_path, split_path, forced_profile=None):
                       'sha256': functions.digest, 'functionCount': len(functions),
                       'primaryBytes': sum(size for _, size in functions.primary_ranges()),
                       'extraBytes': sum(size for _, size in functions.extra_ranges())},
+            'placement': {'image': placed_image.relative_to(root).as_posix(),
+                          'sha256': digest(placed_image), 'functions': len(placed),
+                          'inputs': [screens[source]['object'].relative_to(root).as_posix()
+                                     for source in sorted(screens)]},
             'layout': layout, 'text': text, 'units': units, 'commands': commands,
             'compilers': [tool_identity(root, profiles_used[pid]) for pid in used],
             'sourceFilesByProfile': {pid: sum(1 for unit in configured_sources(root)
@@ -366,36 +345,75 @@ def build(root, output, project_path, split_path, forced_profile=None):
             'unmeasuredSourceFunctions': unmeasured}
 
 
-def source_unit(root, output, source, names, functions, measured, text, commands):
-    """One source file: original bytes for its functions, compiled bytes for its base."""
-    names.sort(key=lambda name: functions.by_name[name].address)
+def source_unit(root, output, image, source, known, measured, text, screen, placement, commands, room):
+    """One source file: original instructions for its functions, placed bytes for its base.
+
+    The target section holds the instructions the split gives the function. The
+    base section holds the whole extent the placement link produced for it --
+    instructions plus whatever data the compiler put after them -- with the
+    function symbol at the instruction size. The instruction extent therefore
+    decides whether the two can be compared at all, and the function's data is
+    compared with the original bytes at the same address before it may count.
+    """
     label = source.replace('/', '--')[:-2]
-    spans, symbols = [], {}
-    for index, name in enumerate(names):
-        symbol = functions.by_name[name]
-        spans.append((symbol.address, symbol.size, text['codeBinOffset'] + symbol.address - text['address']))
+    content = Path(image).read_bytes()
+    origin = text['codeBinOffset'] - text['address']
+    spans, symbols, records = [], {}, []
+    base_spans, base_symbols, base_labels = [], {}, []
+    reasons = dict(screen['reasons'])
+    for index, name in enumerate(screen['names']):
+        symbol = known[name]
+        spans.append((symbol.address, symbol.size, origin + symbol.address))
         symbols[index] = [(name, 0, symbol.size, symbol.mode)]
-    target, command = carve(root, output, label, root / 'generated' / VERSION / 'code.bin', spans, symbols)
+        code = screen['code'][name]
+        extent = screen['extents'][name]
+        if name not in set(screen['placed']) and name not in reasons:
+            reasons[name] = 'the compiled extent runs past the original range the split leaves'
+        records.append({'name': name, 'address': symbol.address, 'size': symbol.size,
+                        'mode': symbol.mode, 'compiledBytes': code, 'extent': extent})
+    for name in screen['placed']:
+        symbol = known[name]
+        section, function = placement['sections'].get(name), placement['functions'].get(name)
+        if section is None or function is None:
+            raise ValueError('The placement link did not place a measured function: ' + name)
+        data, extent = section['data'], len(section['data'])
+        code = function['size']
+        if extent != screen['extents'][name] or code != screen['code'][name]:
+            raise ValueError('Placing %s changed the size the compiler emitted' % name)
+        original = content[origin + symbol.address:origin + symbol.address + extent]
+        if code == symbol.size and data[:code] == original[:code]:
+            if data[code:] != original[code:]:
+                reasons[name] = ('the data the compiler placed after the instructions '
+                                 'differs from the original bytes')
+                continue
+        base_index = len(base_spans)
+        base_spans.append((symbol.address, extent, section['offset']))
+        base_labels.append('.text.' + name)
+        base_symbols[base_index] = [(name, 0, code, symbol.mode)]
+    target, command = carve(root, output, label, image, spans, symbols)
     commands.append(command)
-    base, dropped, command = select_base(root, measured[names[0]]['object'], names, output, label)
-    commands.append(command)
+    if base_spans:
+        base, command = carve(root, output, label, root / placement['image'], base_spans, base_symbols,
+                              suffix='placed', labels=base_labels)
+        commands.append(command)
+    else:
+        base = empty_base(root, output, label)
     return {'name': source[:-2], 'source_path': source,
-            'compilerProfile': measured[names[0]]['profile'],
+            'compilerProfile': measured[screen['names'][0]]['profile'],
             'target': target.relative_to(root).as_posix(), 'targetSha256': digest(target),
             'base': base.relative_to(root).as_posix(), 'baseSha256': digest(base),
-            'targetCodeBytes': sum(functions.by_name[name].size for name in names),
-            'unrepresentable': dropped,
-            'functions': [{'name': name, 'address': functions.by_name[name].address,
-                           'size': functions.by_name[name].size, 'mode': functions.by_name[name].mode,
-                           'compiledBytes': measured[name]['size']} for name in names]}
+            'targetCodeBytes': sum(known[name].size for name in screen['names']),
+            'unrepresentable': sorted(reasons), 'rejected': reasons,
+            'placed': list(screen['placed']),
+            'linkObject': screen['object'].relative_to(root).as_posix(),
+            'functions': records}
 
 
-def retained_unit(root, output, image, functions, measured, definitions, layout, text, commands):
+def retained_unit(root, output, image, functions, measured, layout, text, commands):
     """Every original text byte source does not implement, plus all original data."""
-    spans_ranges = split_module.complement([(functions.by_name[name].address, functions.by_name[name].size)
-                                            for name in measured],
-                                           text['address'], text['initializedBytes'])
-    gaps = spans_ranges
+    gaps = split_module.complement([(functions.by_name[name].address, functions.by_name[name].size)
+                                    for name in measured],
+                                   text['address'], text['initializedBytes'])
     starts = [address for address, _ in gaps]
     retained = [symbol for symbol in functions.symbols if symbol.name not in measured]
     symbols = {}

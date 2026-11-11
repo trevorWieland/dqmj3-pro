@@ -6,10 +6,16 @@ target and base objects against ``config/symbols.txt`` and the user's code
 image, replaces each unit's code denominator with the bytes its target object
 really holds, and recomputes the counters from those exhaustive units.
 
-Matching credit is checked independently of the CLI. A function whose compiled
-bytes equal its original bytes must be credited; a function may only be
-credited without that equality when its object carries relocations that the CLI
-resolved symbolically.
+Matching credit is checked independently of the CLI. A function is credited only
+when the placed instruction bytes equal the original instruction bytes and the
+data the compiler placed after them -- a literal pool, a switch table, embedded
+string literals -- equals the original bytes at the same address. A function
+whose instructions match but whose data does not is reported as measured and
+unmatched, never as credited, and the CLI is refused if it credited one.
+
+The measured objects carry no relocations: the placement link resolved every
+call to the address the split gives its target. Credit therefore means byte
+equality, and nothing else.
 """
 
 import argparse
@@ -101,7 +107,7 @@ def image_bytes(image, text, address, size):
     return image[offset:offset + size]
 
 
-def source_unit(unit, functions, image, text):
+def source_unit(unit, functions, image, text, placement):
     """Check one source file's objects against the split and the code image."""
     if unit['name'] != unit['source_path'][:-2] or not unit['source_path'].startswith('src/'):
         raise ValueError('Unit name must follow its source path: ' + unit['name'])
@@ -112,12 +118,12 @@ def source_unit(unit, functions, image, text):
         raise ValueError('Unit repeats or omits a function: ' + unit['name'])
     if any(value['kind'] != 'code' for value in base['sections'].values()):
         raise ValueError('Compiled source contains data the split cannot place: ' + unit['name'])
+    rejected = unit.get('rejected') or {}
     dropped = set(unit.get('unrepresentable', []))
+    if set(rejected) != dropped:
+        raise ValueError('A reported rejection is not the function it explains: ' + unit['name'])
     if set(base['functions']) != set(names) - dropped:
         raise ValueError('Base object does not define the measured functions it claims: ' + unit['name'])
-    for name in dropped:
-        if base['functions'].get(name, {}).get('relocations', {}) and 0 not in base['functions'][name]['relocations']:
-            raise ValueError('A representable function was dropped from ' + unit['name'])
     matched, relocated, sections = set(), set(), []
     for function in unit['functions']:
         symbol = functions.by_name.get(function['name'])
@@ -138,13 +144,28 @@ def source_unit(unit, functions, image, text):
         sections.append({'address': symbol.address, 'size': symbol.size, 'kind': 'code'})
         implementation = base['functions'].get(symbol.name)
         if implementation is None:
+            if function['name'] not in dropped:
+                raise ValueError('A measured function has no base function: ' + symbol.name)
+            check_rejection(function, base, image, text, functions, rejected[symbol.name], placement)
             continue
+        if function['name'] in dropped:
+            raise ValueError('A rejected function still has a base function: ' + symbol.name)
+        if implementation['relocations']:
+            raise ValueError('A measured function kept a relocation: ' + symbol.name)
         if implementation['size'] != function['compiledBytes']:
             raise ValueError('Recorded compiled extent disagrees with the base object: ' + symbol.name)
-        if implementation['relocations']:
-            relocated.add(symbol.name)
-        elif implementation['data'] == found['data']:
+        if implementation['extent'] != function['extent']:
+            raise ValueError('Recorded section extent disagrees with the base object: ' + symbol.name)
+        if implementation['size'] != symbol.size:
+            # The instruction extents differ, so there is nothing to compare and
+            # the CLI cannot credit it; that is a reconstruction difference.
+            continue
+        instructions = image_bytes(image, text, symbol.address, symbol.size)
+        data = image_bytes(image, text, symbol.address + symbol.size, implementation['extent'] - symbol.size)
+        if implementation['data'] == instructions and implementation['tail'] == data:
             matched.add(symbol.name)
+        elif implementation['data'] == instructions:
+            raise ValueError('Instructions match but the data after them does not: ' + symbol.name)
     return {'name': unit['name'], 'source_path': unit['source_path'],
             'compilerProfile': unit.get('compilerProfile'),
             'code': sum(row['size'] for row in sections), 'data': 0,
@@ -152,6 +173,41 @@ def source_unit(unit, functions, image, text):
             'matched': matched, 'relocated': relocated, 'sections': sections,
             'aligned_code': aligned(sections), 'aligned_data': 0,
             'section_names': set(target['sections'])}
+
+
+def check_rejection(function, base, image, text, functions, reason, placement):
+    """Check a reported rejection against what the objects and the split say.
+
+    The reasons a measured function cannot be compared are: a reference the
+    split gives no address to, an extent the link could not place, and data after
+    the instructions that differs from the original. The first is checked against
+    the split, the second against the split's own room, and the third against the
+    placement image, so an unreported loss of measurement shows up here.
+    """
+    symbol = functions.by_name[function['name']]
+    if reason.startswith('references symbols outside the split:'):
+        names = [name.strip() for name in reason.split(':', 1)[1].split(',')]
+        if any(name in functions.by_name for name in names):
+            raise ValueError('A function was rejected for naming a split symbol: ' + function['name'])
+        return
+    if reason == 'references original data the split does not place':
+        return
+    if reason.startswith('the compiled extent runs past the original range'):
+        if function['extent'] <= function['size']:
+            raise ValueError('A function fits its own range and was still refused: ' + function['name'])
+        return
+    if reason.startswith('the data the compiler placed after the instructions'):
+        section = placement['sections'].get(function['name'])
+        if section is None:
+            raise ValueError('A rejected function was never placed: ' + function['name'])
+        instructions = image_bytes(image, text, symbol.address, symbol.size)
+        data = image_bytes(image, text, symbol.address + symbol.size,
+                           function['extent'] - symbol.size)
+        if section['data'] != instructions + data:
+            raise ValueError('Data was called different although the placed bytes match: '
+                             + function['name'])
+        return
+    raise ValueError('Unknown rejection reason for %s: %s' % (function['name'], reason))
 
 
 def retained_unit(unit, functions, image, layout, text):
@@ -226,6 +282,9 @@ def verify(root, mapping):
     functions = split_module.load(split_path, text['address'], text['initializedBytes'])
     if len(functions) != mapping['split']['functionCount']:
         raise ValueError('Split function count changed after object production')
+    placement = elf_objects.placed_sections(root / mapping['placement']['image'])
+    if digest(root / mapping['placement']['image']) != mapping['placement']['sha256']:
+        raise ValueError('The placement image changed after object production')
     units = {}
     for unit in mapping['units']:
         if unit['name'] in units:
@@ -236,7 +295,7 @@ def verify(root, mapping):
         if unit['source_path'] == 'src/native':
             units[unit['name']] = retained_unit(unit, functions, image, layout, text)
         else:
-            units[unit['name']] = source_unit(unit, functions, image, text)
+            units[unit['name']] = source_unit(unit, functions, image, text, placement)
     covered = sorted((row for unit in units.values() for row in unit['sections']),
                      key=lambda row: row['address'])
     partition(covered, text['address'], text['initializedBytes'])

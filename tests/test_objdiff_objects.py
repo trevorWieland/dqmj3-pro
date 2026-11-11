@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'toolscripts'))
 import elf_objects
 import objdiff_objects
+import split as split_module
 
 
 CLANG = ROOT / 'tools/clang-21/clang.exe'
@@ -25,6 +26,30 @@ unsigned fn_00100000(unsigned x) { return table[x]; }
 unsigned fn_00100004(unsigned x) { return x + 1; }
 '''
 
+CALLS = '''
+__attribute__((noinline)) unsigned fn_00100000(unsigned x) { return x + 1; }
+unsigned fn_00100020(unsigned x) { return fn_00100000(x) * 3; }
+'''
+
+FOREIGN = '''
+extern int other_translation_unit(int);
+unsigned fn_00100000(unsigned x) { return other_translation_unit(x); }
+'''
+
+
+def branch_targets(data, address):
+    """Every ARM BL this byte string encodes, as an absolute target address."""
+    targets = []
+    for offset in range(0, len(data) - 3, 4):
+        word = int.from_bytes(data[offset:offset + 4], 'little')
+        if word >> 24 != 0xEB:
+            continue
+        immediate = word & 0xFFFFFF
+        if immediate & 0x800000:
+            immediate -= 1 << 24
+        targets.append(address + offset + 8 + (immediate << 2))
+    return targets
+
 
 @unittest.skipUnless(CLANG.is_file(), 'the pinned compiler is not installed')
 class ObjectConstructionTests(unittest.TestCase):
@@ -40,6 +65,13 @@ class ObjectConstructionTests(unittest.TestCase):
         definitions, commands = objdiff_objects.compile_units(ROOT, self.output / 'compiled', [unit])
         self.assertTrue(commands)
         return definitions
+
+    def split_of(self, definitions, addresses):
+        """A split that places these compiled functions at the given addresses."""
+        read = elf_objects.read(next(iter(definitions.values()))['object'])
+        symbols = [split_module.Symbol(name, address, 'arm', read['functions'][name]['size'])
+                   for name, address in addresses.items()]
+        return split_module.Split(symbols, 'test')
 
     def test_default_profile_is_the_best_evidenced_original_compiler(self):
         table = objdiff_objects.profiles(ROOT)
@@ -92,24 +124,58 @@ class ObjectConstructionTests(unittest.TestCase):
     def test_select_base_keeps_only_measured_functions(self):
         definitions = self.compile()
         raw = definitions['fn_00100000']['object']
-        base, dropped, _ = objdiff_objects.select_base(ROOT, raw, ['fn_00100000'], self.output, 'unit')
+        base, dropped, reasons, _ = objdiff_objects.select_base(ROOT, raw, ['fn_00100000'], self.output, 'unit')
         self.assertEqual(set(elf_objects.read(base)['functions']), {'fn_00100000'})
         self.assertEqual(dropped, [])
+        self.assertEqual(reasons, {})
 
     def test_functions_whose_relocations_cannot_be_represented_are_dropped(self):
         definitions = self.compile(RELOCATED)
         raw = definitions['fn_00100000']['object']
-        base, dropped, _ = objdiff_objects.select_base(ROOT, raw, ['fn_00100000', 'fn_00100004'],
-                                                       self.output, 'unit')
+        base, dropped, reasons, _ = objdiff_objects.select_base(ROOT, raw, ['fn_00100000', 'fn_00100004'],
+                                                               self.output, 'unit')
         self.assertEqual(dropped, ['fn_00100000'])
-        self.assertEqual(set(elf_objects.read(base)['functions']), {'fn_00100004'})
+        self.assertIn('data the split does not place', reasons['fn_00100000'])
+        self.assertEqual(set(elf_objects.read(base)['functions']), {'fn_00100000', 'fn_00100004'})
 
-    def test_a_unit_with_no_representable_function_gets_an_empty_base(self):
-        definitions = self.compile(RELOCATED)
+    def test_a_call_to_a_function_outside_the_split_is_rejected_with_its_name(self):
+        definitions = self.compile(FOREIGN)
         raw = definitions['fn_00100000']['object']
-        base, dropped, _ = objdiff_objects.select_base(ROOT, raw, ['fn_00100000'], self.output, 'only')
+        size = elf_objects.read(raw)['functions']['fn_00100000']['size']
+        known = self.split_of(definitions, {'fn_00100000': 0x100000})
+        base, dropped, reasons, _ = objdiff_objects.select_base(ROOT, raw, ['fn_00100000'], self.output,
+                                                               'unit', known.by_name)
         self.assertEqual(dropped, ['fn_00100000'])
-        self.assertEqual(elf_objects.read(base)['functions'], {})
+        self.assertIn('other_translation_unit', reasons['fn_00100000'])
+        self.assertEqual(elf_objects.read(base)['functions']['fn_00100000']['size'], size)
+
+    def test_a_call_to_a_split_function_is_resolved_to_its_split_address(self):
+        definitions = self.compile(CALLS)
+        raw = definitions['fn_00100020']['object']
+        known = self.split_of(definitions, {'fn_00100000': 0x100000, 'fn_00100020': 0x100020})
+        names = ['fn_00100000', 'fn_00100020']
+        base, dropped, reasons, _ = objdiff_objects.select_base(ROOT, raw, names, self.output, 'unit',
+                                                               known.by_name)
+        self.assertEqual((dropped, reasons), ([], {}))
+        unresolved = elf_objects.read(base)
+        self.assertIn('fn_00100000', unresolved['functions']['fn_00100020']['references'])
+        self.assertNotIn(0x100000, branch_targets(unresolved['functions']['fn_00100020']['data'], 0x100020))
+        placed, _ = objdiff_objects.place(ROOT, self.output, [base], names, known)
+        sections = elf_objects.placed_sections(placed)['sections']
+        self.assertEqual(branch_targets(sections['fn_00100020']['data'], 0x100020), [0x100000])
+        self.assertEqual(sections['fn_00100000']['data'],
+                         unresolved['functions']['fn_00100000']['data'])
+
+    def test_a_function_left_out_of_the_link_still_resolves_its_callers(self):
+        definitions = self.compile(CALLS)
+        raw = definitions['fn_00100020']['object']
+        known = self.split_of(definitions, {'fn_00100000': 0x100000, 'fn_00100020': 0x100020})
+        names = ['fn_00100000', 'fn_00100020']
+        base, _, _, _ = objdiff_objects.select_base(ROOT, raw, names, self.output, 'unit', known.by_name)
+        placed, _ = objdiff_objects.place(ROOT, self.output, [base], ['fn_00100020'], known)
+        sections = elf_objects.placed_sections(placed)['sections']
+        self.assertNotIn('fn_00100000', sections)
+        self.assertEqual(branch_targets(sections['fn_00100020']['data'], 0x100020), [0x100000])
 
     def test_duplicate_definitions_are_refused(self):
         second = self.output / 'second.c'
