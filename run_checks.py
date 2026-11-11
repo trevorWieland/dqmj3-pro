@@ -13,7 +13,7 @@ from source_policy import policy as authored_policy
 
 
 CHECKS = [
-    ('tool-pins', ['setup_tools.py', '--verify'], 900),
+    ('tool-pins', ['setup_tools.py', '--verify', '--host'], 900),
     ('references', ['toolscripts/verify_references.py'], 300),
     ('compile', ['toolscripts/compile_sources.py'], 3600),
     ('report', ['toolscripts/check_report.py'], 3600),
