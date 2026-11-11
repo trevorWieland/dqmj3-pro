@@ -34,10 +34,10 @@ jobs:
           unicorn==2.1.4 z3-solver==5.3.3.0 cvc5==1.4.2
       - name: Materialize only pinned public compiler files
         run: python -I -S toolscripts/bootstrap_public_compiler.py
-      - name: Cache the pinned original compiler archive
+      - name: Cache the pinned original compiler files
         uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
         with:
-          path: tools/downloads/armcc.zip
+          path: tools/armcc-4.1-b1454
           key: armcc-4.1-b1454-bda0cea5b13a9c3f
       - name: Materialize the pinned original compiler
         run: python -I -S toolscripts/armcc_bootstrap.py

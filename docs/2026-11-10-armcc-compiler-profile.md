@@ -160,8 +160,9 @@ the 2 are explained by a known constant spelling and a trailing-pool extent.
   compiler's own banner line.
 * `compile.yml` (public) fetches and verifies the same pinned archive with the
   same `armcc_bootstrap.py`, then compiles the native units with the build's own
-  compile stage (`toolscripts/compile_measured_units.py`). The archive is cached
-  between runs, keyed on its SHA-256; a cache miss downloads 73 MB once. Before
+  compile stage (`toolscripts/compile_measured_units.py`). The extracted
+  compiler files are cached between runs, keyed on the archive SHA-256 and
+  re-verified after restore; a cache miss downloads 73 MB once. Before
   this, the public check compiled with Clang while the build compiled with
   armcc, so the check could pass while the build failed.
 * `pr-gate.yml` does not compile, so it needs no compiler and fetches none.
