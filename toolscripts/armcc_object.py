@@ -8,11 +8,24 @@ that is what Clang's ``-ffunction-sections`` provides and what armcc does not.
 
 This module rewrites an armcc ET_REL object without touching its code bytes: a
 function's output section spans from its symbol address to the next function
-symbol (or the end of ``.text``), so trailing literal pools stay inside the
-function they belong to. Relocations are re-based into the new sections, data
-sections are kept so ``ld.lld -r`` can still resolve or discard their
-references, and only symbols a kept relocation uses survive. The result is the
-same compiler output, addressed per function.
+symbol (or the end of ``.text``), so a trailing literal pool or the inline data
+armcc emits for a function stays inside the section of the function it belongs
+to. The symbol keeps the *code* size, not the section extent: armcc marks the
+first byte after the instructions with a ``$d`` mapping symbol, and the bytes
+from there to the end of the section are data the code addresses -- a literal
+pool, a switch table, or the string literals armcc embeds for one function.
+
+That distinction is what makes a pooled function measurable. If the symbol size
+covered the section extent, every function that loads a pool would compare its
+instructions plus its data against the original instruction extent and be
+rejected before a byte was looked at. With the symbol at the code size the
+measurement compares instructions with instructions, and the section tail is
+compared separately as the function's own data.
+
+Relocations are re-based into the new sections, data sections are kept so
+``ld.lld -r`` can still resolve or discard their references, and only symbols a
+kept relocation uses survive. The result is the same compiler output, addressed
+per function.
 
 Nothing here decides whether compiled bytes match the original; that stays with
 ``objdiff_objects`` and ``image_link``.
@@ -50,6 +63,7 @@ STT_FUNC = 2
 STT_SECTION = 3
 STT_FILE = 4
 MAPPING_CODE = '$a'
+MAPPING_DATA = '$d'
 
 SECTION_TYPES = {'SHT_PROGBITS': SHT_PROGBITS, 'SHT_NOBITS': SHT_NOBITS}
 BINDS = {'STB_LOCAL': 0, 'STB_GLOBAL': 1, 'STB_WEAK': 2, 'STB_GNU_UNIQUE': 10}
@@ -87,13 +101,26 @@ def _text_sections(sections):
             and section['sh_size']]
 
 
-def _function_ranges(symbols, text_index, text_size):
-    """Function symbols in address order, with the extent each one occupies.
+def _data_marks(symbols, text_index):
+    """Instruction addresses where armcc switches to data inside ``.text``.
 
-    A function's extent runs to the next function symbol, so literal pools and
-    inter-function alignment stay with the function armcc placed them after.
-    armcc reports only the code size in ``st_size``; the extent is what a linker
-    would place.
+    armcc anchors the transition with a zero-size ``$d`` mapping symbol, the ARM
+    ELF convention for "the bytes from here are not instructions". A function's
+    code ends at the first such mark inside its extent.
+    """
+    return sorted({symbol['st_value'] for symbol in symbols
+                   if _type(symbol) == STT_NOTYPE and symbol.name == MAPPING_DATA
+                   and symbol['st_shndx'] == text_index and not symbol['st_size']})
+
+
+def _function_ranges(symbols, text_index, text_size):
+    """Function symbols in address order, with the extent and code size each one has.
+
+    A function's extent runs to the next function symbol, so literal pools,
+    inline string literals and inter-function alignment stay with the function
+    armcc placed them after. The code size runs only to the first ``$d`` mapping
+    symbol inside that extent, so a pool is measured as data rather than being
+    mistaken for instructions.
     """
     functions = []
     for index, symbol in enumerate(symbols):
@@ -101,6 +128,7 @@ def _function_ranges(symbols, text_index, text_size):
                 and symbol['st_shndx'] == text_index):
             functions.append((symbol['st_value'], index, symbol))
     functions.sort(key=lambda row: (row[0], row[1]))
+    marks = _data_marks(symbols, text_index)
     ranges = []
     for position, (start, index, symbol) in enumerate(functions):
         if start & 3:
@@ -110,8 +138,9 @@ def _function_ranges(symbols, text_index, text_size):
             raise SplitError('Function %s has no representable extent' % symbol.name)
         if ranges and ranges[-1]['end'] > start:
             raise SplitError('Function extents overlap at %s' % symbol.name)
+        first_data = next((mark for mark in marks if start < mark < end), end)
         ranges.append({'name': symbol.name, 'symbolIndex': index, 'start': start, 'end': end,
-                       'codeSize': symbol['st_size'], 'symbol': symbol})
+                       'codeSize': first_data - start, 'symbol': symbol})
     return ranges
 
 
@@ -251,7 +280,7 @@ def _layout(path):
     for row in ranges:
         section_index = section_of_old[('function', row['symbolIndex'])]
         entry = _copy_symbol(row['symbol'])
-        entry.update(value=0, size=row['end'] - row['start'], section=section_index + 1)
+        entry.update(value=0, size=row['codeSize'], section=section_index + 1)
         entries.append(entry)
         old_to_entry[row['symbolIndex']] = entry
         entries.append({'name': MAPPING_CODE, 'value': 0, 'size': 0,

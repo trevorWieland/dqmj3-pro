@@ -6,6 +6,12 @@ That mix is the reconstruction: a linked image that equals the original while no
 byte is retained is what "complete" means, and the retained counts in the result
 are the distance from it.
 
+What is placed is the *extent* a function occupies, not only its instructions: a
+function that loads a literal pool brings that pool with it, and the link puts
+the compiler's own data at the address the original put it. A function whose
+compiled instruction extent disagrees with the split is not placed, because its
+code does not describe the original function; it is reported with the reason.
+
 Original bytes stay private. The linked image and the linker script are written
 under ``build/``, which is gitignored and never uploaded.
 """
@@ -69,20 +75,21 @@ def linked_sections(path):
                 if section['sh_flags'] & ALLOCATED and section['sh_size'] and section['sh_type'] != 'SHT_NOBITS'}
 
 
-def compare(placed, sections, original, text):
+def compare(placed, extents, sections, original, text):
     """Overlay the linked functions on the original image and count the differences."""
     assembled = bytearray(original)
     differences, matched = [], 0
     for symbol in placed:
         offset = symbol.address - text['address'] + text['codeBinOffset']
+        extent = extents[symbol.name]
         data = sections.get(symbol.name)
-        if data is None or len(data) != symbol.size:
+        if data is None or len(data) != extent:
             raise ValueError('Linked function is missing or the wrong size: ' + symbol.name)
-        assembled[offset:offset + symbol.size] = data
-        if data == original[offset:offset + symbol.size]:
+        assembled[offset:offset + extent] = data
+        if data == original[offset:offset + extent]:
             matched += 1
         else:
-            differences.append({'name': symbol.name, 'address': symbol.address, 'size': symbol.size})
+            differences.append({'name': symbol.name, 'address': symbol.address, 'size': extent})
     return bytes(assembled), matched, differences
 
 
@@ -120,31 +127,37 @@ def link(root, mapping, output):
     if digest(image_path) != mapping['image']['sha256']:
         raise ValueError('The code image changed after object production')
     original = image_path.read_bytes()
-    compiled, sources, definitions = {}, [], {}
+    compiled, extents, sources, definitions, rejected = {}, {}, [], {}, {}
     for unit in mapping['units']:
         if unit['source_path'] == 'src/native':
             continue
-        base = root / unit['base']
+        base = root / unit['linkObject']
         sources.append(base)
-        definitions.update(elf_objects.read(base)['functions'])
+        link_input = elf_objects.read(base)
+        definitions.update(link_input['functions'])
+        rejected.update(unit.get('rejected') or {})
+        placing = set(unit.get('placed') or [])
         for function in unit['functions']:
-            compiled[function['name']] = function
+            if function['name'] in placing:
+                compiled[function['name']] = function
     for name in compiled:
         if name not in functions.by_name:
             raise ValueError('A compiled function is missing from the split: ' + name)
     placed, skipped = [], []
     for name, function in compiled.items():
         symbol = functions.by_name[name]
-        if name not in definitions:
-            skipped.append((symbol, 'the compiler output for this function carries unresolved relocations', []))
+        implementation = definitions.get(name)
+        if implementation is None:
+            skipped.append((symbol, 'the compiler output for this function is not in the link input', []))
             continue
-        unresolved = sorted(definitions[name]['references'] - set(functions.by_name))
+        unresolved = sorted(implementation['references'] - set(functions.by_name))
         if function['compiledBytes'] != symbol.size:
             skipped.append((symbol, 'compiled size differs from the split extent', unresolved))
         elif unresolved:
             skipped.append((symbol, 'references source symbols that have no address in the split', unresolved))
         else:
             placed.append(symbol)
+            extents[name] = implementation['extent']
     script = output / 'image.ld'
     script.write_text(script_for(functions.symbols, {symbol.name for symbol in placed}), encoding='utf-8')
     image = output / 'image.elf'
@@ -154,20 +167,31 @@ def link(root, mapping, output):
     (output / 'link.log').write_bytes(result.stdout + result.stderr)
     if result.returncode:
         raise ValueError('The complete image did not link; see %s' % (output / 'link.log'))
-    assembled, matched, differences = compare(placed, linked_sections(image), original, mapping['text'])
+    assembled, matched, differences = compare(placed, extents, linked_sections(image), original, mapping['text'])
     retained = [symbol for symbol in functions.symbols if symbol.name not in {row.name for row in placed}]
     queue = output / 'retained.txt'
     write_queue(queue, retained, placed, differences)
-    source_bytes = sum(symbol.size for symbol in placed)
+    source_code = sum(symbol.size for symbol in placed)
+    source_bytes = sum(extents[symbol.name] for symbol in placed)
     text_bytes = mapping['text']['initializedBytes']
     retained_text = text_bytes - source_bytes
     retained_data = sum(row['initializedBytes'] for row in mapping['layout']['segments'] if row['name'] != 'text')
     retained_bytes = retained_text + retained_data + mapping['layout']['bssBytes']
+    for symbol in functions.symbols:
+        if symbol.name not in compiled and symbol.name in rejected:
+            skipped.append((symbol, rejected[symbol.name], []))
+    # matched_code counts credited instruction bytes, which is what the report
+    # records. A placed function may carry a literal pool after its instructions;
+    # that data is placed and counted in retained text, but it is not code credit,
+    # so the matched extent is not the matched code size.
+    differing_names = {row['name'] for row in differences}
     return {'version': mapping['version'], 'textAddress': mapping['text']['address'],
             'textBytes': text_bytes, 'imageBytes': len(original),
             'sourceFunctions': len(placed), 'sourceBytes': source_bytes,
+            'sourceCodeBytes': source_code, 'sourceDataBytes': source_bytes - source_code,
             'matchingFunctions': matched,
-            'matchingBytes': source_bytes - sum(row['size'] for row in differences),
+            'matchingBytes': sum(symbol.size for symbol in placed
+                                 if symbol.name not in differing_names),
             'retainedFunctions': len(functions) - len(placed),
             'retainedTextBytes': retained_text, 'retainedDataBytes': retained_data,
             'retainedBssBytes': mapping['layout']['bssBytes'], 'retainedBytes': retained_bytes,
@@ -176,7 +200,7 @@ def link(root, mapping, output):
             'queuePath': queue.relative_to(root).as_posix(),
             'unplaceableSourceFunctions': [{'name': symbol.name, 'address': symbol.address,
                                             'splitBytes': symbol.size,
-                                            'compiledBytes': compiled[symbol.name]['compiledBytes'],
+                                            'compiledBytes': compiled.get(symbol.name, {}).get('compiledBytes'),
                                             'reason': reason, 'unresolved': unresolved}
                                            for symbol, reason, unresolved in skipped],
             'unmeasuredSourceFunctions': mapping['unmeasuredSourceFunctions'],

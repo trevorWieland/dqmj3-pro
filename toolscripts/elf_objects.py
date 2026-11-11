@@ -2,12 +2,18 @@
 
 Both sides of the measurement are real ELF objects. A target object holds
 original bytes carved out of the user's code image; a base object holds what the
-pinned compiler emitted for the same source file. This module reads those
-objects and nothing else, so a claim about bytes is always a claim about an ELF.
+pinned compiler emitted for the same source file, placed by the linker at the
+original addresses. This module reads those objects and nothing else, so a claim
+about bytes is always a claim about an ELF.
 
 Relocation types and referenced symbols are reported per section and per
 function because they decide whether a comparison of raw bytes is meaningful and
 whether a function can be placed in a linked image at all.
+
+A function symbol covers its instructions. The bytes a compiler places after
+those instructions -- a literal pool, a switch table, embedded string literals --
+are the section's tail, reported separately so a reader can compare code with
+code and the function's own data as data.
 """
 
 import io
@@ -42,7 +48,15 @@ def read(path):
     if table is None:
         raise ValueError('Missing ELF symbol table: ' + str(path))
     functions = {}
+    defined = set()
     for symbol in table.iter_symbols():
+        if not symbol.name or not isinstance(symbol['st_shndx'], int):
+            continue
+        home = elf.get_section(symbol['st_shndx'])
+        if home is not None and home['sh_flags'] & ALLOCATED:
+            # Every name this object gives an address to, including the
+            # zero-size mapping and switch anchors a relocation may name.
+            defined.add(symbol.name)
         if symbol['st_info']['type'] != 'STT_FUNC' or not symbol['st_size']:
             continue
         if not isinstance(symbol['st_shndx'], int):
@@ -55,13 +69,46 @@ def read(path):
             raise ValueError('Function symbol exceeds its section: ' + symbol.name)
         if symbol.name in functions:
             raise ValueError('Duplicate function symbol: ' + symbol.name)
+        extent = section['sh_size'] - section['sh_addr'] - offset
         functions[symbol.name] = {'size': symbol['st_size'],
                                   'mode': 'thumb' if symbol['st_value'] & 1 else 'arm',
                                   'section': section.name, 'offset': offset,
+                                  'extent': extent,
                                   'data': section.data()[offset:offset + symbol['st_size']],
+                                  'tail': section.data()[offset + symbol['st_size']:offset + extent],
                                   'relocations': sections[section.name]['relocations'],
                                   'references': sections[section.name]['references']}
-    return {'sections': sections, 'functions': functions}
+    return {'sections': sections, 'functions': functions, 'defined': defined}
+
+
+def placed_sections(path):
+    """The allocated sections of a linked image, keyed by name.
+
+    A placement link writes each measured function at the address the split gives
+    it, so its sections are the linker's own bytes for those functions. The file
+    offset is reported with the bytes because the measurement carves the image
+    with ``.incbin`` rather than rewriting sections by hand.
+    """
+    elf = ELFFile(io.BytesIO(Path(path).read_bytes()))
+    if elf.elfclass != 32 or not elf.little_endian or elf['e_machine'] != 'EM_ARM':
+        raise ValueError('Expected a little-endian ARM32 image: ' + str(path))
+    result = {}
+    for section in elf.iter_sections():
+        if not section['sh_flags'] & ALLOCATED or not section['sh_size']:
+            continue
+        if section['sh_type'] == 'SHT_NOBITS':
+            continue
+        result[section.name] = {'address': section['sh_addr'], 'size': section['sh_size'],
+                                'offset': section['sh_offset'], 'data': section.data()}
+    table = elf.get_section_by_name('.symtab')
+    symbols = {}
+    if table is not None:
+        for symbol in table.iter_symbols():
+            if symbol['st_info']['type'] == 'STT_FUNC' and symbol['st_size']:
+                symbols[symbol.name] = {'address': symbol['st_value'] & ~1,
+                                        'size': symbol['st_size'],
+                                        'mode': 'thumb' if symbol['st_value'] & 1 else 'arm'}
+    return {'sections': result, 'functions': symbols}
 
 
 def apply_relocations(elf, sections):
