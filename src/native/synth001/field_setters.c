@@ -29,7 +29,18 @@ void fn_0055a370(u8 * record, u32 value) { *(u8 *)(record + 0xf4) = value; }
 
 void fn_0055a558(u8 * record, u32 value) { *(u8 *)(record + 0xf0) = value; }
 
-void fn_005db394(u8 * record) { *(u32 *)(record + 0x11c0) = 0x0u; }
+/*
+ * fn_005db394 clears a word at +0x1c0 of the region that starts at +0x1000.
+ * The original computes the region base in r0 and keeps 0x1c0 as the store's
+ * displacement, so the two offsets are separate in the source as well: naming
+ * the region base keeps the addend in the add, where the original has it.
+ */
+void fn_005db394(u8 * record)
+{
+    u8 * region = record + 0x1000;
+
+    *(u32 *)(region + 0x1c0) = 0x0u;
+}
 
 void fn_0069377c(u8 * record, u32 value) { *(u16 *)(record + 0x16e) = value; }
 

@@ -9,12 +9,15 @@
  * (the wait counter, the fade driver).  Argument indexes follow the VM
  * convention: a binding with N arguments reads them at -N through -1.
  *
- * Status: 11 of these 13 measured bindings are byte-identical to the original.
- * fn_0012e46c (Wait_) and fn_0012dfe4 (SetEffectScale_) are drafts, differing
- * only in instruction selection: the original keeps the context address in r2
- * and &scale in r5 across the first read, this compiler uses r0 and r4/r5 the
- * other way round.  fn_0012e7c8 (WaitFade_) has a registration entry but no
- * split function, so it cannot be measured.
+ * Status: 9 of these 13 measured bindings are byte-identical to the original
+ * at the measured -O3 -Otime profile.  fn_0012daf0 and fn_0012e67c (two fade
+ * drivers) differ only in the register that materialises the context address
+ * and where that load is scheduled.  fn_0012e46c (Wait_) and fn_0012dfe4
+ * (SetEffectScale_) are drafts, differing only in instruction selection: the
+ * original keeps the context address in r2 and &scale in r5 across the first
+ * read, this compiler uses r0 and r4/r5 the other way round.  fn_0012e7c8
+ * (WaitFade_) has a registration entry but no split function, so it cannot be
+ * measured.
  */
 #include "script_api.h"
 

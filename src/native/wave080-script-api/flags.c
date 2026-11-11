@@ -16,12 +16,14 @@
  * -N (first) through -1 (last).  Each of these flag bindings is a setter and
  * returns 0, or a getter that pushes one value and returns 1.
  *
- * Status: 3 of these 6 bindings are byte-identical to the original
- * (instructions and data tail).  fn_0027a8b8 (SetNumFlg_) and fn_0027b940
- * (SetEventFlg_) differ only by the compiler NOP the original emits after its
- * second argument check.  fn_0027b5a8 (GetPlayerId_) is a draft: the original
- * reads the context pointer and discards it, and no non-volatile expression of
- * this source keeps that load.
+ * Status: 4 of these 6 bindings are byte-identical to the original
+ * (instructions and data tail) at the measured -O3 -Otime profile: the three
+ * getters and SetNumFlg_ (fn_0027a8b8), whose second argument check is the one
+ * the original follows with a compiler NOP.  fn_0027b940 (SetEventFlg_) now
+ * emits that NOP too and still differs in the tail's register allocation.
+ * fn_0027b5a8 (GetPlayerId_) is a draft: the original reads the context pointer
+ * and discards it, and no non-volatile expression of this source keeps that
+ * load.
  */
 #include "script_api.h"
 

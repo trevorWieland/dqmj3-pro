@@ -21,12 +21,11 @@
  * throws by itself, so those two bindings have no check of their own and no
  * FieldScriptFunc.cpp cursor.
  *
- * Status: 4 of these 12 bindings are byte-identical to the original
- * (DeleteTask_, GetActive_, GetMotion_, IsMotionEnd_).  The other eight are
- * drafts: SetMotion_, ReadMotion_, SetMotionSpeed_, SetPointPos_,
- * SetReactorMsg_ and ArrangePointGimmick_ differ only by the compiler NOP the
- * original emits after a non-first argument check, and SetAlpha_/SetDir_ differ
- * by the order of the two argument-address setups.
+ * Status: 8 of these 12 bindings are byte-identical to the original at the
+ * measured -O3 -Otime profile.  Of the other four, fn_0027a778 and fn_00281c94
+ * place four more bytes of literal pool than the original slot holds, and
+ * fn_00288150 (SetDir_) and fn_0028895c (SetAlpha_) differ only by the order of
+ * the two argument-address setups.
  */
 #include "script_api.h"
 

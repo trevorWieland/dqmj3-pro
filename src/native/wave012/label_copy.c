@@ -42,9 +42,3 @@ int fn_007555f0(IntervalSet *destination, const IntervalSet *source, void *const
         return 1;
     }
 }
-
-int fn_00755720(IntervalSet *destination, const IntervalSet *source, FixedArena *arena)
-{
-    void *target = source->destination;
-    return fn_007555f0(destination, source, &target, arena);
-}
