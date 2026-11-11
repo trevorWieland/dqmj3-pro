@@ -22,10 +22,14 @@
       "includeDirectories": [],
       "layouts": {
         "natural": [],
-        "packed-4": ["-fpack-struct=4"]
+        "packed-4": [
+          "-fpack-struct=4"
+        ]
       },
       "publicHeaders": {
-        "zlib-solo": ["-DZ_SOLO"]
+        "zlib-solo": [
+          "-DZ_SOLO"
+        ]
       },
       "postprocess": null,
       "measuredOriginal": false,
@@ -39,6 +43,7 @@
         "--cpu=MPCore",
         "--apcs=/interwork",
         "--c99",
+        "-O3",
         "-Otime",
         "-c",
         "--gnu",
@@ -50,10 +55,14 @@
       ],
       "layouts": {
         "natural": [],
-        "packed-4": ["pragma-pack-4"]
+        "packed-4": [
+          "pragma-pack-4"
+        ]
       },
       "publicHeaders": {
-        "zlib-solo": ["-DZ_SOLO"]
+        "zlib-solo": [
+          "-DZ_SOLO"
+        ]
       },
       "postprocess": "armcc-split",
       "measuredOriginal": true,
