@@ -63,10 +63,30 @@ def image_and_split(root):
 
 
 def original(image, symbol):
-    """The original bytes of one function's complete extent."""
+    """The original bytes of one function's complete instruction extent."""
     text = image['text']
     offset = text['codeBinOffset'] + symbol.address - text['address']
     return image['bytes'][offset:offset + symbol.size]
+
+
+def tail(image, symbol, length):
+    """The original bytes a compiler may place after one function's instructions."""
+    text = image['text']
+    offset = text['codeBinOffset'] + symbol.address + symbol.size - text['address']
+    return image['bytes'][offset:offset + length]
+
+
+def word_reader(image):
+    """Read a 32-bit word of the original image at an absolute address."""
+    text = image['text']
+    origin = text['codeBinOffset'] - text['address']
+
+    def read(address):
+        offset = origin + address
+        if offset < 0 or offset + 4 > len(image['bytes']):
+            return None
+        return int.from_bytes(image['bytes'][offset:offset + 4], 'little')
+    return read
 
 
 def retained(root, image):
@@ -98,11 +118,12 @@ def census(root, limit, below=None):
                if symbol.name in names and symbol.size < limit
                and (below is None or symbol.size >= below)]
     classified, refused = [], []
+    read_word = word_reader(image)
     for symbol in targets:
         if symbol.mode != 'arm':
             refused.append(shapes.Rejected(symbol.name, 'thumb mode'))
             continue
-        result = shapes.classify(symbol, original(image, symbol))
+        result = shapes.classify(symbol, original(image, symbol), read_word)
         if isinstance(result, shapes.Rejected):
             refused.append(result)
         else:
@@ -146,9 +167,17 @@ def compile_unit(root, source, output):
 
 
 def verdicts(root, result, output):
-    """Compile every emitted file and compare each function with its original."""
+    """Compile every emitted file and compare each function with its original.
+
+    Both halves of the compiler output are compared: the instructions must equal
+    the split's code extent and the data the compiler placed after them must
+    equal the bytes at the same address in the original image. A pool that
+    differs disqualifies the function even when every instruction matches.
+    """
     image = result['image']
     by_name = {shape.name: shape for shape in result['classified']}
+    order = {symbol.name: index for index, symbol in enumerate(image['functions'].symbols)}
+    symbols = image['functions'].symbols
     compiled, rows = {}, []
     for source in sorted((root / emitter.COMPONENT).glob('*.c')):
         target = compile_unit(root, source, output)
@@ -160,17 +189,23 @@ def verdicts(root, result, output):
                 rows.append({'name': name, 'file': source.name, 'family': None,
                              'verdict': 'not a classified function'})
                 continue
+            after = symbols[order[name] + 1].address if order[name] + 1 < len(symbols) else None
+            expected_tail = tail(image, symbol, function['extent'] - function['size'])
             if function['relocations']:
                 verdict = 'relocations'
             elif function['size'] != symbol.size:
                 verdict = 'size %d != %d' % (function['size'], symbol.size)
+            elif after is not None and symbol.address + function['extent'] > after:
+                verdict = 'extent runs past the original range'
             elif function['data'] != original(image, symbol):
-                verdict = 'bytes differ'
+                verdict = 'instructions differ'
+            elif function['tail'] != expected_tail:
+                verdict = 'data after the instructions differs'
             else:
                 verdict = 'match'
             compiled[name] = verdict == 'match'
             rows.append({'name': name, 'file': source.name, 'family': shape.family,
-                         'size': symbol.size, 'verdict': verdict})
+                         'size': symbol.size, 'extent': function['extent'], 'verdict': verdict})
     missing = sorted(set(by_name) - set(compiled))
     for name in missing:
         rows.append({'name': name, 'file': None, 'family': by_name[name].family,

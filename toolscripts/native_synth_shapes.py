@@ -2,10 +2,15 @@
 
 A shape is a claim about a function's complete instruction extent: every
 instruction from its entry to its ``bx lr``, read with Capstone from the
-original image, matches one pattern and only one. Anything else -- a
-literal-pool load, a call, a conditional branch, a stack frame, an instruction
-the patterns do not model -- is unclassified, and a function is never emitted
-from a partial match.
+original image, matches one pattern and only one. Anything else -- a call, a
+conditional branch, a stack frame, an instruction the patterns do not model --
+is unclassified, and a function is never emitted from a partial match.
+
+A literal-pool load is allowed only when the shape knows how to reproduce the
+pool word. The word is read from the original image at the address the ``ldr``
+encodes, and the emitted C spells that word as the constant the instruction
+loads. That covers functions that return a constant or touch one fixed global
+address; it does not cover a call or a computed address.
 
 The shapes are deliberately narrow. Each carries the record offsets and access
 widths the instructions actually encode, so the emitter never guesses a layout.
@@ -21,6 +26,7 @@ from capstone import Cs, CS_ARCH_ARM, CS_MODE_ARM
 from capstone.arm import ARM_OP_IMM, ARM_OP_MEM, ARM_OP_REG
 
 import native_synth_arithmetic as arithmetic
+import native_synth_pools as pools
 
 LOAD_WIDTH = {'ldr': 4, 'ldrh': 2, 'ldrsb': 1, 'ldrsh': 2, 'ldrb': 1}
 LOAD_SIGNED = {'ldrsb', 'ldrsh'}
@@ -144,13 +150,16 @@ def _reject_unless_leaf(instructions):
             return 'uses a stack frame'
         if insn.mnemonic.startswith('v') or insn.mnemonic in ('svc', 'mrc', 'mcr'):
             return 'uses a system or floating-point instruction'
-        if '[pc' in insn.op_str or insn.op_str.startswith('pc'):
-            return 'loads from the literal pool'
     return None
 
 
-def classify(symbol, code):
-    """Classify one function's complete extent into a Shape or give a reason."""
+def classify(symbol, code, word=None):
+    """Classify one function's complete extent into a Shape or give a reason.
+
+    ``word`` reads a 32-bit word from the original image; it is required for a
+    function that loads a literal pool, because the shape's emitted C has to
+    spell the loaded constant.
+    """
     instructions = disassemble(code, symbol.address)
     if instructions is None:
         return Rejected(symbol.name, 'extent does not disassemble as ARM')
@@ -161,7 +170,13 @@ def classify(symbol, code):
     if not body:
         return Shape('empty_function', symbol.name, symbol.size, [], 'void', [],
                      {'document': 'Does nothing: the original body is a bare return.'})
+    if any('[pc' in item.op_str for item in body) and word is None:
+        return Rejected(symbol.name, 'loads a literal pool without a readable original word',
+                        ' '.join(item.mnemonic for item in instructions))
     try:
+        shape = _pool_shape(symbol, body, word)
+        if shape is not None:
+            return shape
         # The store-run family has no fixed instruction count, so it is tried
         # first; the rest are keyed by the number of instructions before bx lr.
         shape = _store_run(symbol, body)
@@ -184,6 +199,15 @@ def classify(symbol, code):
                         ' '.join(item.mnemonic for item in instructions))
     return Rejected(symbol.name, 'no pattern for this instruction sequence',
                     '; '.join('%s %s' % (item.mnemonic, item.op_str) for item in instructions))
+
+
+def _pool_shape(symbol, body, word):
+    """Turn the proved pool data into a Shape, or leave the function unclassified."""
+    proved = pools.classify(symbol, body, word)
+    if proved is None:
+        return None
+    family, params, returns, statements, detail = proved
+    return Shape(family, symbol.name, symbol.size, params, returns, statements, detail)
 
 
 def _store_run(symbol, body):

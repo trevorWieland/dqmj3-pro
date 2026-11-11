@@ -113,6 +113,40 @@ FAMILIES = {
             'Each function below loads a pointer from the record and stores a\n'
             ' constant into its subobject.'),
     },
+    'pool_constant_return': {
+        'file': 'pool_constant_returns',
+        'title': 'Constants returned through a literal pool',
+        'document': (
+            'Each function below returns one constant. The original emits the\n'
+            ' constant in its own literal pool and loads it with a pc-relative\n'
+            ' word; the constant below is the word that instruction reads.'),
+    },
+    'pool_global_getter': {
+        'file': 'pool_global_reads',
+        'title': 'Fixed-address global reads through a literal pool',
+        'document': (
+            'Each function below loads one fixed global address from its own\n'
+            ' literal pool and reads a field there. The address is the word the\n'
+            ' original load instruction reads, and the access width is the one\n'
+            ' that instruction encodes.'),
+    },
+    'pool_global_setter': {
+        'file': 'pool_global_writes',
+        'title': 'Fixed-address global writes through a literal pool',
+        'document': (
+            'Each function below writes its argument to one fixed global address\n'
+            ' held in its own literal pool. The store width is the width the\n'
+            ' original instruction uses.'),
+    },
+    'pool_zero_store': {
+        'file': 'pool_zero_stores',
+        'title': 'Fixed-address globals zeroed through a literal pool',
+        'document': (
+            'Each function below sets one fixed global to zero. The original\n'
+            ' loads the address from its own literal pool and materialises the\n'
+            ' zero with a move; the local pointer below keeps that register\n'
+            ' choice.'),
+    },
 }
 
 FAMILY_ORDER = list(FAMILIES)

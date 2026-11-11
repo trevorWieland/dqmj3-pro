@@ -47,7 +47,8 @@
       "wave068-teardown",
       "wave069-device",
       "wave071-namespace",
-      "wave072-construction"
+      "wave072-construction",
+      "wave080-script-api"
     ]
   },
   "units": [
@@ -11735,6 +11736,34 @@
       ]
     },
     {
+      "source": "src/native/wave080-script-api/audio_effect.c",
+      "headers": [
+        "src/native/wave080-script-api/script_api.h"
+      ],
+      "role": "functional-nonmatching"
+    },
+    {
+      "source": "src/native/wave080-script-api/message.c",
+      "headers": [
+        "src/native/wave080-script-api/script_api.h"
+      ],
+      "role": "functional-nonmatching"
+    },
+    {
+      "source": "src/native/wave080-script-api/flags.c",
+      "headers": [
+        "src/native/wave080-script-api/script_api.h"
+      ],
+      "role": "functional-nonmatching"
+    },
+    {
+      "source": "src/native/wave080-script-api/motion_world.c",
+      "headers": [
+        "src/native/wave080-script-api/script_api.h"
+      ],
+      "role": "functional-nonmatching"
+    },
+    {
       "source": "src/native/synth001/conditional_stores.c",
       "headers": [
         "src/native/synth001/small_types.h"
@@ -11820,6 +11849,34 @@
     },
     {
       "source": "src/native/synth001/pointer_stores.c",
+      "headers": [
+        "src/native/synth001/small_types.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/synth001/pool_constant_returns.c",
+      "headers": [
+        "src/native/synth001/small_types.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/synth001/pool_global_reads.c",
+      "headers": [
+        "src/native/synth001/small_types.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/synth001/pool_global_writes.c",
+      "headers": [
+        "src/native/synth001/small_types.h"
+      ],
+      "role": "recovered-and-candidate-native"
+    },
+    {
+      "source": "src/native/synth001/pool_zero_stores.c",
       "headers": [
         "src/native/synth001/small_types.h"
       ],
