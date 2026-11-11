@@ -4,7 +4,11 @@
 
 Reconstruction of the owner's measured Dragon Quest Monsters Joker 3 Professional base and update. The project begins on 6 November 2026. The owner permits publishing reconstructed source, tooling and derived progress reports. Original game archives, executable images, shipped scripts/assets, keys, saves and hybrid builds containing retained original bytes remain outside publication.
 
-**The reconstruction compiles 732 native C functions; 514 of them (7,352 instruction bytes) reproduce the original bytes exactly.** ByteMatch measures them against all **7,051,280 initialized ARM text bytes** in the measured update image: **0.1043%**. That number is a floor: the denominator includes literal pools, internal alignment and unclassified text, and every byte the source does not reproduce stays unmatched. A further 559 functions are placed in the linked image from compiled source; 26,014 functions and 8,355,520 image bytes are still retained from the original, so the reconstruction is not complete.
+**The reconstruction compiles 718 native C functions; 673 of them (9,556 instruction bytes) reproduce the original bytes exactly**, built with the measured original compiler, ARM Compiler 4.1 build 1454. ByteMatch measures them against all **7,051,280 initialized ARM text bytes** in the measured update image: **0.1355%**. That number is a floor: the denominator includes literal pools, internal alignment and unclassified text, and every byte the source does not reproduce stays unmatched. **25,855 functions and 7,040,040 text bytes are still retained from the original**, so the reconstruction is not complete.
+
+Anyone who declines to fetch a proprietary compiler can reproduce a smaller figure with the open toolchain instead: **575 functions and 7,396 bytes** under pinned Clang 21, selected with `--compiler-profile clang-21`.
+
+These numbers come from `build.py`, not from a document. Run it against your own image to reproduce them; the summary it prints is authoritative.
 
 ## Build the game from your own image
 
