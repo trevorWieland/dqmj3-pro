@@ -196,8 +196,9 @@ initialisers credited under Clang, 159 are credited under armcc.
 ## Falsifier-adjacent observations
 
 The verdict is best-evidenced, not proven, and these are the concrete
-observations that argue the other way. They are recorded rather than smoothed
-over.
+observations that argue the other way: four independent classes now, recorded
+rather than smoothed over. Each was reproduced against every available armcc 4.1
+build (b561 through b1454).
 
 `fn_002e40c8` (16 bytes, `src/native/credit001/record_updates.c`) stores a byte
 through a pointer read from the record and returns that same byte. The original
@@ -262,17 +263,62 @@ ceiling as argument-setup order (`SetAlpha_`, `SetDir_`), register allocation
 attempts and the per-binding detail are in
 `docs/script-api-native-reconstruction.md`.
 
-What it implies:
+### The NOP in the float call sequence
 
-* Like `fn_002e40c8`, it shows the original producing an instruction the measured
-  compiler does not reproduce from any source shape tried, so "armcc 4.1 b1454 is
-  byte-identical to whatever built this image" is now argued against twice, from
-  two unrelated directions.
-* It does not overturn the identification: the differences are instruction
-  selection, not semantics, and the drafts already reproduce what the scripts
-  observe.
-* Two independent counter-observations are harder to dismiss as one lucky
-  reconstruction. The verdict stays best-evidenced, not proven.
+The argument-check NOP above is not the only NOP the original emits. Six more
+bindings in the one-argument wave are one instruction from exact, with the NOP in
+a different position — between the last argument load and the final call:
+`GetDir_`, `GetPitch_`, `GetHighRankEffectSize_`, `GetAlpha_` (all four
+float-answer bindings), `IsHolyRailDemoTreated_` and `GotoMenuOpen_`. All four
+float bindings show
+
+    mov r0, r4
+    nop
+    bl sq_pushfloat
+
+so the artefact is attached to the float call sequence, not to a particular
+argument shape. The pinned compiler emits the two calls back to back for every
+source shape tried: plain `if`, `if/else`, `else if`, the status kept in a
+variable, a `do/while` macro, extra braces, empty blocks, nested scopes,
+`__schedule_barrier()`, a float temporary, a two-statement call, and all nine
+installed 4.1 builds. `__nop()` does emit the exact instruction, but inserting it
+would be fitting an unexplained compiler artefact rather than reconstructing
+source, so these six stay drafts.
+
+### The context register the original loads into r2
+
+Six bindings are one scheduling step from exact: `GetMonsterSize_`,
+`GetInitExistType_`, `IsAlly_`, `IsMonster_`, `IsMaster_`, `IsPartner_`, and
+`GetPitch_` again. The original does
+
+    ldr r1, [pc, ...]      context address
+    ldr r0, [sp, ...]      the argument
+    ldr r2, [r1]           the context
+    and r1, r0, #0xff      narrow the argument into the argument register
+    mov r0, r2             move the context into the first-argument register
+    bl ...
+
+The pinned compiler instead masks into the argument register first and loads the
+context into `r0` directly: the same registers at the call, one instruction and
+one schedule earlier. Every statement order, byte or word temporary, engine
+parameter type and cast spelling tried produces that cleaner sequence; the
+original's `mov r0, r2` is a scheduling artefact of the original build.
+
+What the four imply:
+
+* Each class shows the original producing instruction selection the pinned
+  compiler does not reproduce from any source shape tried. That is four
+  independent classes — an alias re-load, a NOP after an argument check, a NOP in
+  a float call sequence, and a context-register schedule — not one anomaly.
+* None of them overturns the identification on its own: the differences are
+  instruction selection, not semantics, the drafts already reproduce what the
+  scripts observe, and armcc still reproduces 101 functions Clang cannot.
+* Taken together this is a material fact about the verdict. "armcc 4.1 b1454 is
+  byte-identical to whatever built this image" is now argued against from four
+  unrelated directions; either the original build is not exactly this build, or
+  these shapes come from source not yet found. The verdict stays best-evidenced,
+  not proven, and it is further from "proven" than the compiler sweep alone
+  suggested.
 
 ## Limits
 
