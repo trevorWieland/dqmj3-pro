@@ -193,6 +193,48 @@ once; Clang reproduces it, while armcc re-loads it after the store because it
 will not prove the store does not alias `record + 0x25`. So of the 160 record
 initialisers credited under Clang, 159 are credited under armcc.
 
+## A falsifier-adjacent observation
+
+The verdict is best-evidenced, not proven, and this is the first concrete
+observation that argues the other way. It is recorded rather than smoothed over.
+
+`fn_002e40c8` (16 bytes, `src/native/credit001/record_updates.c`) stores a byte
+through a pointer read from the record and returns that same byte. The original
+image, Clang 21 and armcc 4.1 b1454 produce:
+
+    original   ldr r1, [r0, #0x10]   ldrb r0, [r0, #0x25]   strb r0, [r1, #0xd4]   bx lr
+    clang-21   ldr r1, [r0, #0x10]   ldrb r0, [r0, #0x25]   strb r0, [r1, #0xd4]   bx lr
+    armcc      ldr r2, [r0, #0x10]   ldrb r1, [r0, #0x25]   strb r1, [r2, #0xd4]
+               ldrb r0, [r0, #0x25]   bx lr
+
+As bytes:
+
+| build | bytes |
+| --- | --- |
+| original | `10 10 90 e5  25 00 d0 e5  d4 00 c1 e5  1e ff 2f e1` |
+| clang-21 | `10 10 90 e5  25 00 d0 e5  d4 00 c1 e5  1e ff 2f e1` |
+| armcc 4.1 b1454 | `10 20 90 e5  25 10 d0 e5  d4 10 c2 e5  25 00 d0 e5  1e ff 2f e1` |
+
+armcc re-loads `[r0, #0x25]` after the store because it cannot prove the store
+through the loaded pointer does not alias that byte; Clang keeps the value in a
+register and reproduces the original exactly.
+
+What this does and does not imply:
+
+* It does **not** overturn the identification. It is one function out of the 673
+  credited under armcc, and it is a reconstruction that happens to be
+  alias-sensitive, not a control-flow shape armcc would normally get wrong.
+* It does argue against "armcc 4.1 b1454 is byte-identical to whatever built
+  this image". For this function the original compiler behaved like Clang, not
+  like armcc. Either the original build was not exactly this armcc build, or
+  this reconstruction is a lucky match under Clang rather than the original
+  source. The compiler sweep had no way to see it because the function was
+  recovered later.
+* It has a count consequence: 159 of the 160 record initialisers recovered in
+  the credit001 change are credited under armcc. This one is credited only under
+  `--compiler-profile clang-21`, which is why the two totals differ by one
+  function.
+
 ## Limits
 
 * The verdict is **best-evidenced, not proven**. The evidence is the bounded

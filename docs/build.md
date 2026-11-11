@@ -14,6 +14,8 @@ python toolscripts/armcc_bootstrap.py             # pinned original compiler (pr
 
 `setup_tools.py` verifies every download against `tools.lock.json`; each compiler bootstrap verifies every extracted member against the same lock and refuses anything else. All are idempotent and offline-safe once the files exist. The armcc step is optional: `build.py` never touches armcc under `--compiler-profile clang-21`, and `--no-download` makes a missing compiler an error instead of a fetch.
 
+The pinned objdiff executable is fetched from its canonical release URL and checked against the SHA-256 in `config/report-objdiff-asset.json`. It does not use the GitHub API asset endpoint, whose shared unauthenticated quota the hosted runners exhaust, so a 403 is a real failure and is not retried; only transient network and 5xx failures are, and the hash is verified before the file is published.
+
 ## Build
 
 ```powershell
