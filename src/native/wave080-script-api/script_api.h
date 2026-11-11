@@ -2,11 +2,12 @@
  *
  * Every script in DQMJ3 Professional calls the C functions declared here through
  * Squirrel.  The binding table is config/script-natives.json (628 identifiers,
- * recovered from the registration blocks).  The bodies in this directory are
- * behaviour drafts: they reproduce the observed data flow and the engine calls,
- * but the measurement cannot credit them yet.  See docs/script-api.md for the
- * two reasons (per-unit relocation isolation in objdiff, and the literal-pool
- * extent that both compiler profiles add to a function symbol).
+ * recovered from the registration blocks).  The bodies in this directory are the
+ * most-called functions in the game; 98 of the 111 measured definitions are
+ * byte-identical to the original and the rest are drafts, each one identified
+ * instruction-selection difference away.  See
+ * docs/script-api-native-reconstruction.md for the engine facts, the shared
+ * constant access and the compiler ceiling.
  *
  * The script natives all reach the engine through one global:
  *
@@ -80,9 +81,44 @@ struct ScriptContext {
 };
 
 /* The one global the script natives dereference.  The address is an original
- * image address, so it is a constant, never a relocation.  A constant address
- * is also why the compiler emits a literal pool for it. */
-#define SCRIPT_CONTEXT() (*(ScriptContext *volatile *)(__UINTPTR_TYPE__)0x00898898u)
+ * image address, so it is a constant, never a relocation.  It is a plain
+ * pointer, not a volatile one: the original's argument setup reorders this load
+ * freely against the other arguments (SetEventFlg_ loads the name and the value
+ * before the context), which a volatile qualifier would forbid. */
+#define SCRIPT_CONTEXT() (*(ScriptContext **)(__UINTPTR_TYPE__)0x00898898u)
+
+/* A script binding's own name, as the original data tail refers to it.
+ *
+ * The engine stores each binding name exactly once, in the initialized rodata
+ * pool, and the binding passes that one address to the error formatter.  The
+ * compiler therefore loads a four-byte address from its literal pool; it does
+ * not embed the characters.  Writing the name as a string literal instead makes
+ * armcc inline the characters, which grows the data tail past the extent the
+ * original gives the function.
+ *
+ * These are extern arrays, not integer constants: the original refers to a
+ * relocatable symbol, and that is why armcc reloads the pool word at every use
+ * instead of hoisting one copy into a callee-saved register.  The build defines
+ * each symbol at its original image address from config/script-constants.json
+ * and checks the bytes there before linking; the characters themselves stay in
+ * the retained rodata gap until that table is reconstructed. */
+extern const char kName_ArrangePointGimmick_[];
+extern const char kName_GetActive_[];
+extern const char kName_GetEventFlg_[];
+extern const char kName_GetFlagID_[];
+extern const char kName_GetMotion_[];
+extern const char kName_GetNumFlg_[];
+extern const char kName_IsMotionEnd_[];
+extern const char kName_ReadGimmick_[];
+extern const char kName_ReadMotion_[];
+extern const char kName_SetEventFlg_[];
+extern const char kName_SetMotion_[];
+extern const char kName_SetMotionSpeed_[];
+extern const char kName_SetNumFlg_[];
+extern const char kName_SetPointPos_[];
+extern const char kName_SetReactorMsg_[];
+extern const char kName_SetTalkName_[];
+extern const char kName_ShowMsg_[];
 
 /* The empty message every release-build script error throws.  It is the four
  * zero bytes at 0x00148920, and fn_00148918 returns its address. */
@@ -111,16 +147,18 @@ extern int fn_001638b0(SqVM *vm);
 #define sq_suspendvm fn_001638b0
 
 /* The release-build error formatter.  armcc builds the four assertion operands
- * at every call site: source file, failed-operation text, binding name and line.
+ * at every call site: the failed-operation text, the source file, the binding
+ * name and the line.  The instruction evidence fixes that order: r0 receives
+ * "failed: sq_get..." and r1 receives "FieldScriptFunc.cpp" before the call.
  * The formatter itself returns the empty message above. */
-extern const char *fn_00148918(const char *file, const char *message,
+extern const char *fn_00148918(const char *message, const char *file,
                                const char *native_name, int line);
 
 /* Script-context operations that are not virtual methods. */
 extern void fn_0014887c(ScriptContext *context, s32 frames);  /* arm the Wait_ counter */
 extern int fn_00148894(ScriptContext *context);               /* wait finished? */
 extern void fn_00148888(ScriptContext *context);              /* arm the fade latch */
-extern int fn_001488c4(SqVM *vm, s32 *id, f32 *value);        /* id at -1, float at 0 */
+extern int fn_001488c4(SqVM *vm, s32 *id, f32 *value);        /* id at -2, float at -1 */
 
 /* The argument check every validation site performs.  The line numbers in the
  * bodies are the original FieldScriptFunc.cpp lines, read from the literal the
@@ -128,7 +166,7 @@ extern int fn_001488c4(SqVM *vm, s32 *id, f32 *value);        /* id at -1, float
 #define SCRIPT_CHECK(vm, call, operation, native_name, source_line)                    \
     do {                                                                               \
         if ((call) < 0)                                                                \
-            return sq_throwerror((vm), fn_00148918("FieldScriptFunc.cpp", (operation),  \
+            return sq_throwerror((vm), fn_00148918((operation), "FieldScriptFunc.cpp", \
                                                    (native_name), (source_line)));     \
     } while (0)
 

@@ -193,10 +193,11 @@ once; Clang reproduces it, while armcc re-loads it after the store because it
 will not prove the store does not alias `record + 0x25`. So of the 160 record
 initialisers credited under Clang, 159 are credited under armcc.
 
-## A falsifier-adjacent observation
+## Falsifier-adjacent observations
 
-The verdict is best-evidenced, not proven, and this is the first concrete
-observation that argues the other way. It is recorded rather than smoothed over.
+The verdict is best-evidenced, not proven, and these are the concrete
+observations that argue the other way. They are recorded rather than smoothed
+over.
 
 `fn_002e40c8` (16 bytes, `src/native/credit001/record_updates.c`) stores a byte
 through a pointer read from the record and returns that same byte. The original
@@ -234,6 +235,44 @@ What this does and does not imply:
   the credit001 change are credited under armcc. This one is credited only under
   `--compiler-profile clang-21`, which is why the two totals differ by one
   function.
+
+### The NOP the original emits after an argument check
+
+Eight script-API bindings — `SetMotion_`, `ReadMotion_`, `SetMotionSpeed_`,
+`SetPointPos_`, `SetReactorMsg_`, `ArrangePointGimmick_`, `SetEventFlg_` and
+`SetNumFlg_` — are one instruction from exact. After every argument check except
+the first, the original emits:
+
+    cmp r0, #0
+    nop
+    bge ...
+
+The pinned compiler emits `cmp; bge` and never the `nop`, for every source shape
+tried: plain `if`, `if/else`, `else if`, the status kept in a variable, a
+`do/while` macro, extra braces, empty blocks, nested scopes,
+`__schedule_barrier()`, and all nine installed 4.1 builds from b561 to b1454.
+`__nop()` does emit the exact instruction, but inserting it would be fitting an
+unexplained compiler artefact rather than reconstructing source, so the eight
+stay uncredited drafts.
+
+The pattern is not rare: `cmp r0,#0; nop` occurs 7,775 times in the image, and no
+credited function in the tree contains one. The same family shows the same
+ceiling as argument-setup order (`SetAlpha_`, `SetDir_`), register allocation
+(`Wait_`, `SetEffectScale_`) and a dead load (`GetPlayerId_`). The reproduction
+attempts and the per-binding detail are in
+`docs/script-api-native-reconstruction.md`.
+
+What it implies:
+
+* Like `fn_002e40c8`, it shows the original producing an instruction the measured
+  compiler does not reproduce from any source shape tried, so "armcc 4.1 b1454 is
+  byte-identical to whatever built this image" is now argued against twice, from
+  two unrelated directions.
+* It does not overturn the identification: the differences are instruction
+  selection, not semantics, and the drafts already reproduce what the scripts
+  observe.
+* Two independent counter-observations are harder to dismiss as one lucky
+  reconstruction. The verdict stays best-evidenced, not proven.
 
 ## Limits
 

@@ -27,6 +27,7 @@ from elftools.elf.elffile import ELFFile
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import elf_objects
+import absolute_symbols
 import split as split_module
 
 
@@ -45,12 +46,15 @@ def digest(path):
         return hashlib.file_digest(stream, 'sha256').hexdigest()
 
 
-def script_for(symbols, placed):
+def script_for(symbols, placed, constants=()):
     """Place every placeable function at its original address.
 
     Functions that stay original still need an address for every relocation that
     points at them, so they become absolute symbols with the Thumb bit set when
-    that is their mode.
+    that is their mode.  ``constants`` are shared data symbols -- a binding name
+    string, for instance -- that source refers to by name and the original refers
+    to by address; they are defined at that address so the reference resolves to
+    the value the original's literal pool holds.
     """
     lines = ['SECTIONS {']
     for symbol in symbols:
@@ -59,6 +63,8 @@ def script_for(symbols, placed):
     for symbol in symbols:
         if symbol.name not in placed:
             lines.append('  %s = 0x%08x;' % (symbol.name, symbol.address + (1 if symbol.mode == 'thumb' else 0)))
+    for name, address in constants:
+        lines.append('  %s = 0x%08x;' % (name, address))
     lines.append('  /DISCARD/ : { *(.text*) *(.ARM.exidx*) *(.ARM.extab*) *(.data*) *(.rodata*) '
                  '*(.bss*) *(.comment) *(.note*) *(.llvm_addrsig) }')
     lines.append('}')
@@ -127,6 +133,8 @@ def link(root, mapping, output):
     if digest(image_path) != mapping['image']['sha256']:
         raise ValueError('The code image changed after object production')
     original = image_path.read_bytes()
+    constants = absolute_symbols.load(root)
+    constant_names = set(constants)
     compiled, extents, sources, definitions, rejected = {}, {}, [], {}, {}
     for unit in mapping['units']:
         if unit['source_path'] == 'src/native':
@@ -150,7 +158,7 @@ def link(root, mapping, output):
         if implementation is None:
             skipped.append((symbol, 'the compiler output for this function is not in the link input', []))
             continue
-        unresolved = sorted(implementation['references'] - set(functions.by_name))
+        unresolved = sorted(implementation['references'] - set(functions.by_name) - constant_names)
         if function['compiledBytes'] != symbol.size:
             skipped.append((symbol, 'compiled size differs from the split extent', unresolved))
         elif unresolved:
@@ -159,7 +167,8 @@ def link(root, mapping, output):
             placed.append(symbol)
             extents[name] = implementation['extent']
     script = output / 'image.ld'
-    script.write_text(script_for(functions.symbols, {symbol.name for symbol in placed}), encoding='utf-8')
+    script.write_text(script_for(functions.symbols, {symbol.name for symbol in placed},
+                                 absolute_symbols.definitions(constants)), encoding='utf-8')
     image = output / 'image.elf'
     argv = [str(root / LLD), '-static', '-m', 'armelf', '--build-id=none', '-e', '0',
             '-T', str(script), *[str(source) for source in sources], '-o', str(image)]

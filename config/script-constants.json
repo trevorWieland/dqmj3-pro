@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "comment": "Initialized rodata constants the reconstructed source addresses by name. Each entry is a shared string the original binding loads through a literal-pool word instead of embedding: the build defines the symbol at this address and checks the bytes against the original code image before linking. Addresses are image addresses (see config/symbols.txt for the text split).",
+  "symbols": [
+    {"name": "kName_ArrangePointGimmick_", "address": "0x007c20d5", "text": "ArrangePointGimmick_"},
+    {"name": "kName_GetActive_", "address": "0x007c21b8", "text": "GetActive_"},
+    {"name": "kName_GetEventFlg_", "address": "0x007c2c85", "text": "GetEventFlg_"},
+    {"name": "kName_GetFlagID_", "address": "0x007c2ca8", "text": "GetFlagID_"},
+    {"name": "kName_GetMotion_", "address": "0x007c22e1", "text": "GetMotion_"},
+    {"name": "kName_GetNumFlg_", "address": "0x007c2c9d", "text": "GetNumFlg_"},
+    {"name": "kName_IsMotionEnd_", "address": "0x007c22f8", "text": "IsMotionEnd_"},
+    {"name": "kName_ReadGimmick_", "address": "0x007c20b8", "text": "ReadGimmick_"},
+    {"name": "kName_ReadMotion_", "address": "0x007c22ec", "text": "ReadMotion_"},
+    {"name": "kName_SetEventFlg_", "address": "0x007c2c78", "text": "SetEventFlg_"},
+    {"name": "kName_SetMotion_", "address": "0x007c22d6", "text": "SetMotion_"},
+    {"name": "kName_SetMotionSpeed_", "address": "0x007c2305", "text": "SetMotionSpeed_"},
+    {"name": "kName_SetNumFlg_", "address": "0x007c2c92", "text": "SetNumFlg_"},
+    {"name": "kName_SetPointPos_", "address": "0x007c218e", "text": "SetPointPos_"},
+    {"name": "kName_SetReactorMsg_", "address": "0x007c2542", "text": "SetReactorMsg_"},
+    {"name": "kName_SetTalkName_", "address": "0x007c24b4", "text": "SetTalkName_"},
+    {"name": "kName_ShowMsg_", "address": "0x007c24ab", "text": "ShowMsg_"}
+  ]
+}

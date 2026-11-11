@@ -124,16 +124,18 @@ def empty_base(root, output, label):
     return base
 
 
-def place(root, output, objects, placed, functions):
+def place(root, output, objects, placed, functions, constants=()):
     """Link the measured functions of every unit at the addresses the split gives.
 
     This is the whole-image placement, and it is the only step that can turn a
     ``bl`` into bytes: the callee's address is known here. A function the split
     does not place stays an absolute symbol so a call to it still resolves, and
-    every section no unit measured is discarded.
+    every section no unit measured is discarded. ``constants`` defines shared
+    data symbols at their original addresses for the same reason.
     """
     script = output / 'source.placed.ld'
-    script.write_text(image_link.script_for(functions.symbols, set(placed)), encoding='utf-8')
+    script.write_text(image_link.script_for(functions.symbols, set(placed), constants),
+                      encoding='utf-8')
     image = output / 'source.placed.elf'
     command = run([root / LLD, '-static', '-m', 'armelf', '--build-id=none', '-e', '0',
                    '-T', script, *objects, '-o', image], output / 'source.placed.log')
