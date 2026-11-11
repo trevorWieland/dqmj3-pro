@@ -1,108 +1,80 @@
-# DQMJ3 Professional decompilation
+# DQMJ3 Professional reconstruction
 
 [![Progress](https://bytematch.dev/trevorWieland/dqmj3-pro.svg)](https://bytematch.dev/trevorWieland/dqmj3-pro)
 
-Reconstruction of the owner's measured Dragon Quest Monsters Joker 3 Professional base and update. The project begins on 6 November 2026. The owner permits publishing reconstructed source, tooling and derived progress reports. Original game archives, executable images, shipped scripts/assets, keys, saves and hybrid builds containing retained original bytes remain outside publication.
+A reconstruction of Dragon Quest Monsters Joker 3 Professional for the Nintendo 3DS, from the owner's measured base and update images. Started 6 November 2026.
 
-**The reconstruction compiles 718 native C functions; 673 of them (9,556 instruction bytes) reproduce the original bytes exactly**, built with the measured original compiler, ARM Compiler 4.1 build 1454. ByteMatch measures them against all **7,051,280 initialized ARM text bytes** in the measured update image: **0.1355%**. That number is a floor: the denominator includes literal pools, internal alignment and unclassified text, and every byte the source does not reproduce stays unmatched. **25,855 functions and 7,040,040 text bytes are still retained from the original**, so the reconstruction is not complete.
+## The objective
 
-Anyone who declines to fetch a proprietary compiler can reproduce a smaller figure with the open toolchain instead: **575 functions and 7,396 bytes** under pinned Clang 21, selected with `--compiler-profile clang-21`.
+Turn this repository into a complete re-creation of the game: all 26,573 functions present as ordinary readable C, compiled with the identified original toolchain and linked into an image byte-identical to the original, with **zero bytes retained from the original executable**, buildable end to end by anyone who owns a copy of the game by running one command.
 
-These numbers come from `build.py`, not from a document. Run it against your own image to reproduce them; the summary it prints is authoritative.
+Byte-identity is not a score to chase. It is the test that proves the reconstruction is the game rather than a plausible imitation, so it is the sole arbiter of credit and nothing else is permitted to move a number.
 
-## Build the game from your own image
+A function that reproduces its bytes but is named `fn_004c0388` with unnamed parameters is half done, and the missing half is the half people need. Every function carries a name describing what it does, parameters named for what they are, and documentation in place — not in a document beside it that goes stale the moment the code moves. The same standard applies upward: the scripting ABI, the engine's public surface, the parameter-table schemas and the game's mechanics are documented where the code lives, so reading the repository teaches the game rather than merely exhibiting it.
 
-The target end state is a complete, byte-identical rebuild that an end user produces from their own original ROM: not a progress report and not a hybrid image.
+The work is shaped so four different people can each get what they came for. A **modder** needs the parameter tables and message archives to round-trip byte-identically, and a way to prove an edit was surgical. A **romhacker** needs the engine and the event, flag, script and save systems legible enough to rewrite. A **porter** needs every platform service to arrive through a named boundary rather than scattered across twenty-six thousand functions, because that decision cannot be retrofitted. Someone **rebuilding the game on another engine** needs the behaviour and the content, not this C, which is why mechanics documentation is generated from reconstructed code rather than imagined. None of these is a byproduct of finishing the decompilation; each changes what gets reconstructed first.
+
+## Current state
+
+`build.py` is the measurement and the only source of these figures. Run it against your own image to reproduce them.
+
+| | |
+|---|---|
+| Byte-identical functions | **1,134 of 26,573** |
+| Byte-identical instructions | **20,480 of 7,051,280** (0.29%) |
+| Retained from the original | **25,398 functions, 7,027,752 text bytes** |
+| Linked image | byte-identical for the functions it places; 41 functions differ |
+
+The reconstruction is not complete. Every retained byte is a visible debt.
+
+Anyone who declines to fetch a proprietary compiler can select the open toolchain with `--compiler-profile clang-21` and reproduce a smaller figure.
+
+## Build it from your own image
 
 ```powershell
 python setup_tools.py                             # pinned public tools
 python toolscripts/bootstrap_public_compiler.py   # pinned Clang 21 and ld.lld
-python toolscripts/armcc_bootstrap.py             # pinned original compiler (proprietary; not committed)
+python toolscripts/armcc_bootstrap.py             # pinned original compiler (proprietary, not committed)
 tools/python/Scripts/python.exe -I build.py --image "C:\path\to\DQMJ3P_Update.cia"
 ```
 
-It refuses any image whose SHA-256 does not match the pinned identity, then reports per function whether the compiled bytes equal the original and whether the linked image is byte-identical. `complete: YES` requires zero retained bytes and a byte-identical image. See [docs/build.md](docs/build.md) and the [measurement contract](docs/bytematch.md).
+`build.py` refuses any image whose SHA-256 does not match the pinned identity, extracts it, compiles `src`, carves each function out of the original, compares bytes, links the complete image at the original addresses and prints compiled-from-source bytes against retained bytes. `complete: YES` requires zero retained bytes and a byte-identical image, and nothing weaker will produce it.
 
-The separate working-C registry contains **537 functions** (523 medium confidence, 14 low), qualified under the domains recorded in their proofs. These bounded behavior results do not increase the exact source-linked byte total or establish overall confirmed coverage. The [SDK context, arbitration, object and task/clock replay](docs/native-sdk062-public-replay.md) independently qualifies 43 bounded functions; 128 pipeline tests, 99 returning wrong-source controls and all 1,761 raw rebuilt artifacts passed, with no forbidden work accesses. The [effect foundation](docs/native-effect065-public-replay.md) passed independent committed-source replay and 124 pipeline tests for six bounded functions; the complete effect graph remains open. The [context and cache constructors](docs/native-init78-public-replay.md) passed independent replay and 113 pipeline tests; resource helpers retain separate limits. The [complete graphics dispatcher](docs/native-dispatcher6-public-replay.md) passed independent committed-source replay and 112 pipeline tests, with all 18,296 canonical instruction bytes accounted for and five instruction PCs explicitly invariant-only. Its source-only Android component builds reproducibly; Android execution remains separate. The [resource-provider replay](docs/native-asset062-public-replay.md) has passed independent coordinator review for 20 bounded helper functions; the complete resource caller remains unqualified. The [standalone SDK word provider](docs/native-sdk063-public-replay.md) separately checks the Thumb entry and its preserved global state. The [asset-decoder replay](docs/native-stream061-public-replay.md) preserves complete canonical instruction extents, including two newly reviewed callback entries. Source-only component execution on the physical Thor is recorded for the [VM composition](evidence/verification/thor-compose057-physical.json), [inflater](evidence/verification/thor-inflater059-physical.json), and [controller](evidence/verification/thor-controller055-physical.json); complete native game builds remain unproved.
+## What is usable today
 
-The [public SDK sources](docs/native-sdk062-public-replay.md) contain 19 production C units; their committed independent replay and 43-function bounded admission are complete. The [binding inventory](docs/native-binding-inventory.md) adds seven measured entries while preserving the initialized-text denominator and source-credit totals. The [file callable inventory](docs/native-file-inventory.md) adds nine further entries, separating 224 instruction bytes from a 20-byte indexed table without granting source credit.
+- **Parameter tables and messages.** `toolscripts/game_data.py` decodes, edits and re-encodes 26 table families and all 84 message archives with a byte-identical round trip, and reports what references any given row. The tables are loose files under `data/Parameter/`, so a rebuilt table is already the format the loader reads.
+- **The scripting layer.** 628 native bindings are named and mapped to their addresses in `config/script-natives.json`, with the ABI, stack indexing and error protocol documented in [docs/script-api-native-reconstruction.md](docs/script-api-native-reconstruction.md).
+- **The engine's public surface.** Shared constants, the message window, motion, event flags, audio, effects and input services are documented where their code lives.
 
-The [shader callback inventory](docs/native-shader-inventory.md) adds one observed ARM array-constructor callback, bringing discovered canonical entries to 26,659. Its 112 instruction bytes and excluded 8-byte literal pool grant no source credit; historical inventory completeness remains unproved.
+## How work happens
 
-The [public queue transport](docs/native-file-queue067-public.md) independently qualifies seven bounded functions in four production C units with separate qualification fixtures. The committed replay passed 120 pipeline tests, all 990 raw native artifact comparisons and all 63 original/source/copied case files. [Admission scope](docs/native-queue067-admission.md) preserves event-synchronized or joined observations, explicit missing/error paths and the original read-error leak. Five physical Thor pthread captures were independently rechecked; complete native games remain unqualified.
+Work proceeds as parallel lanes, each in its own isolated worktree owning a disjoint family of functions, with the build as the only oracle: a lane may claim nothing it cannot show compiling to the exact original bytes, so throughput rises without the bar moving. Scope is set by measured capacity rather than an arbitrary cap — batches grow while the first-pass green rate holds and shrink when repair rounds multiply.
 
-The [public SDK heap candidate](docs/native-sdk-heap062-public.md) adds ten production C units and a source-only/copied-input replay with persistent terminal audit controls. Local preflight passed 117 source-only profiles and 284 copied native artifact comparisons. Independent committed replay passed 116 pipeline tests and 1,222 native artifact checks; [bounded admission](docs/native-sdk-heap062-admission.md) adds 21 functions while preserving the prior policy-setter credit.
+Every change lands through a pull request that a verifier reproduces independently: compile, link the whole image, and diff the per-function credit set so nothing is silently gained or lost. Published progress is emitted by the build from the user's own inputs, never from a hand-maintained artifact.
 
-The [heap initializer inventory split](docs/native-heap-inventory.md) separates 160 existing instruction bytes from a startup candidate without changing byte totals or granting source credit. Discovered canonical entries become 26,660; historical inventory completeness remains unproved.
+Failures are diagnosed at instruction level and turned into general rules, because those rules are the real product of a hard day and the next lane inherits them instead of rediscovering them. So far: literal pools belong to functions rather than translation units; a constant the original loaded from a shared address must be declared as an extern at that address, never inlined; a call must resolve to an absolute address before it can be compared.
 
-The [filesystem teardown inventory repair](docs/native-file-teardown-inventory.md) adds three independently witnessed entries and separates the application wrapper from its filesystem shutdown callee. The composed census now contains **26,663 discovered entries**. Its gross text denominator and source-credit totals stay unchanged; the complete coupled replay passed 98 pipeline tests and rechecked all 5,586 native artifacts across three scopes. Ten [filesystem lifecycle and SDK teardown operations](docs/native-file-coupled070-public-replay.md) now have medium-confidence working-C proofs covering 812 instruction bytes in their measured domains. The embedded intrusive-list destructor remains excluded.
+## Inputs
 
-The [versioned filesystem target](docs/native-filesystem071072-header-variants.md) adds four C translation units for namespace, device construction, pools and IPC. Its separate header model preserves all earlier public headers and proofs. The source is published without new progress credit while committed replay and three discovered-entry ownership repairs are reviewed. Complete native game builds remain unfinished.
-
-The [filesystem ownership repair](docs/native-filesystem071072-inventory.md) separates three original-backed entries, producing **26,676 discovered entries**. It preserves the initialized-text denominator, reassigns a 204-byte alias body from its former owner and adds 84 bytes of previously unowned instructions. Independent ARM11 caller replays, literal/CFG validation and classification accounting support the repair; it grants no source credit.
-
-The [particle velocity source and callable inventory](docs/native-particle019-velocity.md) publishes the closed scalar callback and ten independently reached entries, bringing the composed census to **26,673 discovered entries**. Its C compiles for all three public targets; full, source-only and public-only replays pass. Independent committed replay passed 95 tests, all 90 raw native artifact checks, and 20 post-exit boundary programs per mode. The velocity leaf adds one medium-confidence working-C function; existing byte classifications, the initialized-text denominator and exact source-credit totals stay unchanged.
-
-The [physical Thor heap replay](docs/native-sdk-heap062-thor.md) passes 39 source profiles, 3,090 native calls and 3,015 whole-arena checks. It runs unchanged heap C directly on ARM64; OS contention, physical 16 KiB kernels and complete games remain unqualified.
-
-The [cold filesystem bootstrap candidate](docs/native-file-bootstrap068-public.md) adds three production C units with explicit SDK qualification ports. Full/source-only/copied input runs pass; independent committed replay and function admission remain pending.
-
-## Established inputs
-
-The [resource CPU replay](docs/native-resource065-public-replay.md) independently qualifies nine bounded kernels with complete canonical extents, including discontiguous cold fragments. It passed 141 pipeline tests, 39 returning controls and byte-identical reproduction of all 461 native artifacts; the main resource constructor/finalizer and complete effect graph remain open.
-
-The [SDK runtime replay](docs/native-sdk-runtime062-public-replay.md) independently qualifies nineteen additional bounded functions in eighteen production C units. The committed replay passed 137 pipeline tests, 69 predecessor tests, six guard tests, 165 returning controls and all 2,809 raw artifact comparisons. Two already credited bodies receive no duplicate credit; complete SDK owners and native game builds remain unqualified.
-
-The [synchronous file-request replay](docs/native-effect-request066-public.md) adds twelve production C units. Its committed clean replay passed 125 pipeline tests, 97 baseline artifact comparisons and 686 total native artifact comparisons including controls. Six complete dispatcher/provider/getter bodies receive bounded medium-confidence admission; partial factory/resolver/queue/renderer paths remain unqualified.
-
-The [public owner source replay](docs/native-sdk-owner062-public.md) independently qualifies six bounded functions in seven production C units, with four separate qualification fixtures. Its committed replay passed 122 pipeline tests and all 3,708 raw native artifact comparisons. Primary insertion and supplemental rotation coverage remain distinct; default allocator/free paths, active 52/56-byte record producers and full factory/startup behavior remain unqualified.
-
-The owner archive `dqmj3pro.7z` has SHA-256 `8af8156afc1c69c3c3ad90cdd57a204417e27cef07b6b6958270b3c1c128bd7d` and contains a base CIA plus update CIA. All four NCCH contents match their TMD content hashes. Their ExeFS files also match recorded hashes. Independent CTRTool extraction reproduces both decompressed code images and extended headers exactly. These checks establish internal integrity and extraction agreement; signature authenticity and unmodified retail provenance have not been established.
+The owner archive `dqmj3pro.7z` has SHA-256 `8af8156afc1c69c3c3ad90cdd57a204417e27cef07b6b6958270b3c1c128bd7d` and contains a base CIA plus update CIA.
 
 | Input | Title ID | Raw title version | Decompressed code SHA-256 |
 |---|---|---:|---|
 | Base | `00040000001acb00` | 0 | `a9cbe1be5e860d6a3d72ceb7f2fba680169276ebf6d50f30586d589af3a89554` |
 | Update | `0004000e001acb00` | 3136 | `d4e29300297a42e248f904736675da3de958f84e918953a381dada1cce411126` |
 
-The base executable content has 13,560 RomFS files; the update has 125. An update-first path view has 753 original `.nut` script paths, of which 752 are clean decodable text and one contains embedded controls. Native strings identify Squirrel 2.2.5 stable, subject to native-binding and loader confirmation. Finding shipped script source is useful engine evidence and is not newly decompiled source. See [asset evidence](evidence/assets/README.md).
+The update image is the native target; the base executable remains a separate reference. Original archives, executable images, shipped assets, keys and saves are not published. You supply your own copy; the repository supplies the source and the build.
 
-The update image is the initial native investigation target. Keep the base executable independent; addresses and layouts differ. A derived update-first asset view still needs runtime precedence verification. Previous Monster Fieldnotes container hashes differ from these inputs, so its parsers and fixtures supply leads only.
+## Repository layout
 
-## Run locally
+| | |
+|---|---|
+| `src/native/` | recovered native C, compiled and measured |
+| `config/symbols.txt` | the split: address, mode and size of every function |
+| `config/script-natives.json` | script identifier to native address bindings |
+| `config/script-constants.json` | shared constants declared at their image addresses |
+| `build.py` | the build and the measurement |
+| `toolscripts/` | build, splitting, comparison and data tooling |
+| `docs/` | engine, scripting ABI, data formats and build documentation |
 
-Use Python 3.13.5 on Windows. Tools and dependencies are repository-local. `tools.lock.json` pins wheel URLs and upstream hashes, native-library identities, CTRTool, objdiff, the minimal Clang distribution and the best-evidenced original compiler (ARM Compiler 4.1 build 1454). The default build profile is armcc 4.1 b1454; `--compiler-profile clang-21` reproduces the former Clang build without the proprietary tool. See [the compiler-profile decision](docs/2026-11-10-armcc-compiler-profile.md).
-
-```powershell
-& .\tools\python\Scripts\python.exe setup_tools.py --verify
-& .\tools\python\Scripts\python.exe run_checks.py
-```
-
-`run_checks.py` refreshes intake, compares independent extraction, inventories assets and native candidates, runs bounded behavior diagnostics and malformed-input controls, and records a source/tool/input-bound receipt. It does not assert a source-only build, complete decompilation, whole-game behavior or independent clean replay.
-
-The latest accepted native batch passed from immutable snapshot `eb8e1b6` with separately copied tools, a new environment and private CIA inputs. It adds 56 functions and 964 instruction bytes after original/source fixtures, returning semantic controls and genuine full-image linking. The full suite passed 267 tests; the two production-report classes omitted before object construction were separately covered by all 45 reporting tests in successful GitHub CI on the same commit. The prior failed replay is retained. See `evidence/cohorts/bundle003/acceptance.json`, `evidence/verification/clean-checkout-bundle003.json` and `bundle003-reporting-ci.json`. Historical cohort receipts remain unchanged. The seeded whole-image Ghidra census remains frozen; the separate formal research audit reran raw P-code export from the copied local runtime.
-
-Bounded C components for Squirrel array lifecycle and native/generic calls are documented in [Squirrel source components](docs/squirrel-source-components.md). They pass original/source and native Windows checks; Android builds, modeled services, inactive-frame limits and pending committed replay are recorded separately. They add no exact matching bytes.
-
-Native Windows and Android scene components, including reconstructed material construction, are described in [native scene components](docs/native-scene-components.md). They render measured owner resources and preserve explicit device, renderer and game limits.
-
-The owner selected an independent public/open-toolchain route. Proprietary compiler or Nintendo SDK availability is not a prerequisite: armcc is an optional pinned measurement input, public CI stays Clang-only, and `--compiler-profile clang-21` builds without it. The original compiler is identified as best-evidenced (ARM Compiler 4.1 build 1454), not proven. The full objective is 95 percent confirmed validated source coverage and working native Windows and Android games; source-function runners and diagnostic application shells do not satisfy that full objective.
-
-For a fresh full verification checkout, provide the pinned minimal Clang and Ghidra distributions with `python setup_tools.py --clang-source PATH_TO_PINNED_MINIMAL_CLANG_DIRECTORY --ghidra-source PATH_TO_PINNED_GHIDRA_DIRECTORY`, then place verified private input copies at `inputs/archive/dqmj3pro/DQMJ3P.cia` and `DQMJ3P_Update.cia`. The Clang directory must contain every pinned Clang/LLD/DLL file. The original owner archive remains external and immutable. Installation verifies downloads before use and leaves global PATH and Java settings unchanged. See [tooling](docs/2026-11-06-tooling.md) and [formal replay inputs](docs/formal-audit-reproducibility.md).
-
-`configure_inputs.py --archive PATH_TO_OWNER_7Z` verifies the pinned archive and materializes only missing expected CIA files, without overwriting existing inputs. `validate_clean_checkout.py --destination work/clean-replay/NEW_NAME` replays a committed source snapshot with explicit private input/tool copies. It requires a new path and sufficient free space.
-
-## Continue reconstruction
-
-Read [AGENTS.md](AGENTS.md), the [project charter](docs/2026-11-06-project-charter.md), [roadmap](docs/2026-11-06-roadmap.md) and [validation design](docs/research/validation.md). Workers prepare disjoint frozen packets; one coordinator publishes acceptance after all gates pass. Preserve exact matching, linked source, bounded behavior, full replay and platform execution as distinct states.
-
-Windows source components execute against original ARM fixtures. The recovered scene component also runs on Windows and in the Android007 APK. Its [Android OS qualification](evidence/verification/android-os007-coordinator.json) covers dual-display lifecycle and sampled surface pixels on the API36 emulator, including ARM64 execution through its translation bridge. CPU-model checks, Android OS execution and physical handheld validation are distinct. These remain partial engine components: playable Windows/Android games, complete-game validation on the physical AYN Thor, a complete source engine and a complete Joker 1 remake remain unproved.
-
-## Contributing and progress
-
-Read [CONTRIBUTING.md](CONTRIBUTING.md) before starting, claim a bounded task in the [issue queue](https://github.com/trevorWieland/dqmj3-pro/issues), and follow the [naming evidence rules](docs/semantic-understanding.md). [Public source compilation](docs/ci-source-builds.md) runs without game inputs. Trusted CI verifies the originals and accepted source integration, then publishes only the [ByteMatch report](docs/bytematch.md). [Executable scope](docs/executable-scope.md) and [inventory accounting](docs/native-inventory-completion.md) explain what is measured and what remains unknown.
-
-The [versioned filesystem operations](docs/native-filesystem071072-functional.md) add twelve medium-confidence working-C entries after independent committed replay, complete raw artifact review and duplicate SDK exclusion. Their finite typed service profiles cover 2,220 instruction bytes; exact source credit and overall confirmed coverage remain unchanged.
-
-The [MD5 stream source](docs/native-md5-stream062.md) publishes typed SDK digest operations and a block adapter using the existing public compression source. Original-corroborated, public-data-only and minimal-copy replays agree across all 136 compiled artifacts. Its four candidates retain six explicitly unvisited alignment-bound instruction positions; independent committed replay and working-C admission remain separate. [Read-only replay intake](docs/independent-replay-inputs.md) preserves fresh extraction while avoiding redundant CIA copies.
-
-The [bounded SDK MD5 operations](docs/native-md5-stream062-functional.md) add four medium-confidence working-C entries after 19 independent replay stages and 120 unit tests. All 136 native artifacts passed complete comparison; six finalizer instruction positions retain an explicit alignment-only invariant. The replay performed fresh extraction with zero CIA copies.
+See [CONTRIBUTING.md](CONTRIBUTING.md) before changing anything.
