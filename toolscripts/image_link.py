@@ -180,13 +180,18 @@ def link(root, mapping, output):
     for symbol in functions.symbols:
         if symbol.name not in compiled and symbol.name in rejected:
             skipped.append((symbol, rejected[symbol.name], []))
+    # matched_code counts credited instruction bytes, which is what the report
+    # records. A placed function may carry a literal pool after its instructions;
+    # that data is placed and counted in retained text, but it is not code credit,
+    # so the matched extent is not the matched code size.
+    differing_names = {row['name'] for row in differences}
     return {'version': mapping['version'], 'textAddress': mapping['text']['address'],
             'textBytes': text_bytes, 'imageBytes': len(original),
             'sourceFunctions': len(placed), 'sourceBytes': source_bytes,
             'sourceCodeBytes': source_code, 'sourceDataBytes': source_bytes - source_code,
             'matchingFunctions': matched,
-            'matchingBytes': sum(extents[symbol.name] for symbol in placed
-                                 if symbol.name not in {row['name'] for row in differences}),
+            'matchingBytes': sum(symbol.size for symbol in placed
+                                 if symbol.name not in differing_names),
             'retainedFunctions': len(functions) - len(placed),
             'retainedTextBytes': retained_text, 'retainedDataBytes': retained_data,
             'retainedBssBytes': mapping['layout']['bssBytes'], 'retainedBytes': retained_bytes,
