@@ -97,9 +97,75 @@ def _classify(symbol, instructions, word, by_address):
         if instructions[1].mnemonic == 'mov':
             return _return_argument(symbol, instructions, by_address)
         return _store_constant(symbol, instructions, word, by_address)
-    if len(instructions) == 6 and instructions[0].mnemonic == 'mov':
-        return _store_constant_with_argument(symbol, instructions, word, by_address)
+    if len(instructions) == 6:
+        if instructions[0].mnemonic == 'mov':
+            return _store_constant_with_argument(symbol, instructions, word, by_address)
+        if instructions[1].mnemonic == 'mov' and instructions[2].mnemonic == 'bl':
+            return _clear_saved_record_field(symbol, instructions, by_address)
+    if len(instructions) == 7 and instructions[-1].mnemonic == 'pop':
+        return _initialise_returned_record(symbol, instructions, word, by_address)
     return None
+
+
+def _clear_saved_record_field(symbol, instructions, by_address):
+    """Call a function on the record argument, then zero one of its fields."""
+    push, save, call, zero, store, pop = instructions
+    if _push_set(push) != {'r4', 'lr'} or _pop_set(pop) != {'r4', 'pc'}:
+        return None
+    if save.mnemonic != 'mov' or _reg(save, 0) != 'r4' or _reg(save, 1) != 'r0':
+        return None
+    callee = _callee(call, by_address)
+    value, _ = _immediate(zero)
+    if zero.mnemonic != 'mov' or value != 0:
+        return None
+    if store.mnemonic not in ('str', 'strb', 'strh') or _reg(store, 0) != _reg(zero, 0):
+        return None
+    address, offset = _mem(store, 1)
+    if address != 'r4':
+        return None
+    width = {'str': 4, 'strh': 2, 'strb': 1}[store.mnemonic]
+    statements = ['%s((u32)(uptr)r);' % callee.name,
+                  '*(volatile u%d *)((u8 *)r + 0x%x) = 0;' % (width * 8, offset)]
+    return CallShape('call_clear_record_field', [(0, 'u32 *', 'r')], 'void', statements,
+                     {'callee': callee.name, 'offset': offset, 'width': width,
+                      'document': 'Calls a function on the record, then zeroes one field.'},
+                     [callee.name])
+
+
+def _initialise_returned_record(symbol, instructions, word, by_address):
+    """Call a function, then set one field zero and one field to a constant."""
+    push, call, load, zero, first, second, pop = instructions
+    if _push_set(push) != {'r4', 'lr'} or _pop_set(pop) != {'r4', 'pc'}:
+        return None
+    callee = _callee(call, by_address)
+    if load.mnemonic != 'ldr' or '[pc' not in load.op_str or word is None:
+        return None
+    base, displacement = _mem(load, 1)
+    if base != 'pc':
+        return None
+    constant = word(load.address + 8 + displacement)
+    if constant is None:
+        return None
+    value, _ = _immediate(zero)
+    if zero.mnemonic != 'mov' or value != 0 or _reg(zero, 0) != 'r1':
+        return None
+    if first.mnemonic != 'str' or second.mnemonic != 'str':
+        return None
+    first_base, first_offset = _mem(first, 1)
+    second_base, second_offset = _mem(second, 1)
+    if first_base != 'r0' or second_base != 'r0':
+        return None
+    if _reg(first, 0) != 'r1' or _reg(second, 0) != _reg(load, 0):
+        return None
+    statements = ['u32 *p = (u32 *)(uptr)%s(a);' % callee.name,
+                  'u32 zero = 0u;',
+                  '*(volatile u32 *)((u8 *)p + 0x%x) = zero;' % first_offset,
+                  '*(volatile u32 *)((u8 *)p + 0x%x) = 0x%xu;' % (second_offset, constant),
+                  'return p;']
+    return CallShape('call_initialise_record', [(0, 'u32', 'a')], 'u32 *', statements,
+                     {'callee': callee.name, 'constant': constant,
+                      'document': 'Calls a function, then initialises two returned record fields.'},
+                     [callee.name])
 
 
 def _chain(symbol, instructions, by_address):

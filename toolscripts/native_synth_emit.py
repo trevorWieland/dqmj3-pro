@@ -271,6 +271,16 @@ _add('call_return_argument', 'call_return_arguments',
      'Each function below saves its first argument, calls a split function for its\n'
      ' effect and returns the saved argument. The save is the register the original\n'
      ' push protects.')
+_add('call_clear_record_field', 'call_clear_record_fields',
+     'Calls that clear one field of their record',
+     'Each function below passes its record argument to a split function and then\n'
+     ' sets one field of that record to zero. The offset and width are the ones the\n'
+     ' original store encodes.')
+_add('call_initialise_record', 'call_initialise_records',
+     'Calls that initialise two fields of the returned record',
+     'Each function below calls a split function with its argument, sets one field\n'
+     ' of the returned record to zero and another to a literal-pool constant, then\n'
+     ' returns the record. The local zero keeps the register the original move uses.')
 
 
 def _signature(shape):
