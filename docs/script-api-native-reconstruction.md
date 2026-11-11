@@ -144,8 +144,20 @@ one local player.
 
 ## The compiler ceiling
 
+**Resolved 2026-11-11: the ceiling in cause 1 was a missing flag, not a compiler
+the image cannot be reproduced with.** The NOP after an argument check is
+armcc's pipeline-interlock scheduling NOP, emitted only at `-O3 -Otime` with
+`--cpu=MPCore`. The project compiled with `-Otime` (level 2 plus time emphasis),
+which never runs the scheduler that inserts it. With `-O3 -Otime`, five of the
+eight bindings below become byte-identical in the linked image; all eight
+contain the original's NOPs, five at the original size. The three that still
+differ do so in register allocation, a source-shape difference. The full measurement
+is in `docs/2026-11-11-mpcore-scheduling-nop.md`. Everything below is the
+`-Otime` observation this resolved.
+
 The remaining drafts group into three causes, all reproduced against every
-available armcc 4.1 build (b561 through b1454):
+available armcc 4.1 build (b561 through b1454) at the then-pinned `-Otime`
+profile:
 
 1. **A NOP after every argument check but the first** (8 bindings:
    `SetMotion_`, `ReadMotion_`, `SetMotionSpeed_`, `SetPointPos_`,
@@ -155,10 +167,9 @@ available armcc 4.1 build (b561 through b1454):
    status in a variable, do/while macro, braces, empty blocks, nested scopes,
    `__schedule_barrier()`, and all nine installed 4.1 builds. The same NOP
    pattern occurs 7,775 times in the image (`cmp r0,#0; nop`), and no credited
-   function in the tree contains one, so it is a real compiler behaviour this
-   build does not reproduce from C. `__nop()` does emit the exact instruction,
-   but inserting it would be fitting an unexplained compiler artefact rather
-   than reconstructing source, so these eight stay drafts.
+   function in the tree contained one. **Cause: the missing `-O3`; see above.**
+   `__nop()` also emits the exact instruction, but inserting it is fitting an
+   artefact, not reproducing the compiler, and it is no longer needed.
 2. **Argument setup order** (`SetAlpha_`, `SetDir_`): the original materialises
    `r2 = sp+4` before `r1 = sp`; every declaration order, struct, pointer
    temporary and helper tried emits the opposite order. Same size, same

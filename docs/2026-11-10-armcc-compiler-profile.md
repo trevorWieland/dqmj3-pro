@@ -236,43 +236,64 @@ What this does and does not imply:
   `--compiler-profile clang-21`, which is why the two totals differ by one
   function.
 
-### The NOP the original emits after an argument check
+### The NOP the original emits after an argument check — resolved
 
 Eight script-API bindings — `SetMotion_`, `ReadMotion_`, `SetMotionSpeed_`,
 `SetPointPos_`, `SetReactorMsg_`, `ArrangePointGimmick_`, `SetEventFlg_` and
-`SetNumFlg_` — are one instruction from exact. After every argument check except
+`SetNumFlg_` — were one instruction from exact. After every argument check except
 the first, the original emits:
 
     cmp r0, #0
     nop
     bge ...
 
-The pinned compiler emits `cmp; bge` and never the `nop`, for every source shape
-tried: plain `if`, `if/else`, `else if`, the status kept in a variable, a
+The pinned compiler emitted `cmp; bge` and never the `nop`, for every source
+shape tried: plain `if`, `if/else`, `else if`, the status kept in a variable, a
 `do/while` macro, extra braces, empty blocks, nested scopes,
-`__schedule_barrier()`, and all nine installed 4.1 builds from b561 to b1454.
-`__nop()` does emit the exact instruction, but inserting it would be fitting an
-unexplained compiler artefact rather than reconstructing source, so the eight
-stay uncredited drafts.
+`__schedule_barrier()`, and all nine installed builds in the 4.1 directory
+(b561 through b1454).
+`__nop()` did emit the exact instruction, but inserting it would have been
+fitting an unexplained compiler artefact rather than reconstructing source.
 
-The pattern is not rare: `cmp r0,#0; nop` occurs 7,775 times in the image, and no
-credited function in the tree contains one. The same family shows the same
-ceiling as argument-setup order (`SetAlpha_`, `SetDir_`), register allocation
-(`Wait_`, `SetEffectScale_`) and a dead load (`GetPlayerId_`). The reproduction
-attempts and the per-binding detail are in
-`docs/script-api-native-reconstruction.md`.
+**The cause was the optimisation level, not the compiler build.** The sequence is
+armcc's pipeline-interlock scheduling NOP, and the scheduler that inserts it
+runs only at `-O3 -Otime` with `--cpu=MPCore`. Every one of the fourteen build
+directories (thirteen distinct compiler binaries) emits it at that profile and
+none emits it at `-Otime`, at
+`-O2`, `-O3` alone, or with any other tested flag. The pinned profile is
+`-Otime`, i.e. level 2 with time emphasis; it is missing `-O3`. The NOP is not
+alignment, not a linker artefact, and not a branch that optimised away: no
+`cmp r0,#0; nop` NOP is a branch target, the NOPs are uniformly distributed over
+alignment classes, and they are present in the relocatable object before linking.
+
+Measured consequences of adding `-O3` to the pinned profile:
+
+* Five of the eight bindings (`ReadMotion_`, `SetMotionSpeed_`, `SetPointPos_`,
+  `SetReactorMsg_`, `SetNumFlg_`) become byte-identical in the linked image; the
+  other three differ only in register allocation, a source-shape difference,
+  not a compiler one.
+* `fn_00139738` (SetPop_, 556 bytes) reaches 556 bytes with all six sequences;
+  its remaining difference is the argument marshalling of one call site.
+* The full build moves from `matched_code=20480, matched_functions=1134` to
+  `matched_code=20820, matched_functions=1124`: five functions gained, fifteen
+  lost. The fifteen are 16–144-byte leaf functions whose existing spellings were
+  fitted to `-Otime`; nine of them recover exactly under `-O3` from a mechanical
+  source respelling (extracting the loaded pointer into a local), and the rest
+  are the same class of register-allocation work.
+
+The full measurement, the CPU matrix, the per-function table and the public
+project comparison are in `docs/2026-11-11-mpcore-scheduling-nop.md`. Until the
+profile changes, a unit may name a profile that carries `-O3 -Otime`; the pinned
+default still lacks it.
 
 What it implies:
 
-* Like `fn_002e40c8`, it shows the original producing an instruction the measured
-  compiler does not reproduce from any source shape tried, so "armcc 4.1 b1454 is
-  byte-identical to whatever built this image" is now argued against twice, from
-  two unrelated directions.
-* It does not overturn the identification: the differences are instruction
-  selection, not semantics, and the drafts already reproduce what the scripts
-  observe.
-* Two independent counter-observations are harder to dismiss as one lucky
-  reconstruction. The verdict stays best-evidenced, not proven.
+* Like `fn_002e40c8`, it shows the original producing an instruction that the
+  *pinned profile* does not reproduce — but here the compiler is not at fault,
+  the flags are. "armcc 4.1 b1454 is byte-identical to whatever built this
+  image" survives, with the corrected command line.
+* The identification of the compiler stands; the identification of the *flags*
+  was incomplete, and that is now measured.
 
 ## Limits
 
@@ -283,6 +304,13 @@ What it implies:
   being the `~0x1u` spelling above. No armcc build reproduces a corpus function
   of 128 bytes or more, and the build number within the 4.1 line cannot be
   separated by the corpus.
+* **The flag set was incomplete until 2026-11-11.** The measured original
+  command line carries `-O3` as well as `-Otime`
+  (`docs/2026-11-11-mpcore-scheduling-nop.md`). The pinned profile still omits
+  it, so the numbers in this document are `-Otime` numbers and every function
+  whose original contains the MPCore scheduling NOP is unreachable until the
+  profile or the unit changes. The 2026-11-10 corpus ranking compared profiles
+  whose sources were all fitted to `-Otime`, so it cannot rank them.
 * Profile coverage is a compile-coverage measure, not a byte-match measure. A
   file that compiles under armcc may still be an inexact reconstruction.
 * The splitter defines a function's compiled extent as running to the next
