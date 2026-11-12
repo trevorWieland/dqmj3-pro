@@ -2,7 +2,7 @@
 
 static IntervalNode *insert_before(IntervalRing *ring, IntrusiveLink *position)
 {
-    IntervalNode *node = fn_004c39c8(ring->owner, 1);
+    IntervalNode *node = fixed_arena_allocate(ring->owner, 1);
     if (node != (void *)0) {
         node->link.previous = position->previous;
         node->link.next = position;
@@ -16,7 +16,7 @@ static void remove_node(IntervalRing *ring, IntervalNode *node)
 {
     node->link.previous->next = node->link.next;
     node->link.next->previous = node->link.previous;
-    fn_004c3994(ring->owner, node, 1);
+    fixed_arena_release(ring->owner, node, 1);
 }
 
 int fn_004c2e84(IntervalRing *ring, unsigned int first, unsigned int last)

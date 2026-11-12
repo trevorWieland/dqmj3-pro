@@ -4,7 +4,7 @@ void fn_00665f20(SqClass009 *klass)
 {
     const SqObject null = {0x01000001u, {.reference = 0}};
     SqClassMember009 fill = {null, null};
-    fn_0019e864(&klass->attributes, &null);
+    vm_object_assign(&klass->attributes, &null);
     fn_001a51e0(&klass->members32, 0, &fill);
     release_member(&fill);
     fill = (SqClassMember009){null, null};

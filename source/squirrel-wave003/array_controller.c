@@ -7,13 +7,13 @@ static SqI32 requested_array_size(const SqObject *value)
 
 SqI32 fn_001b33dc(SqControllerVM *vm)
 {
-    SqObject *length = fn_00173d40(&vm->frame, vm->frame.base + 1);
+    SqObject *length = vm_stack_at(&vm->frame, vm->frame.base + 1);
     SqArray *array;
-    if (fn_00157ff4(&vm->frame) <= 2) {
+    if (vm_stack_count(&vm->frame) <= 2) {
         array = fn_00665a44(vm->shared, (SqU32)requested_array_size(length));
     } else {
         array = fn_00665a44(vm->shared, 0);
-        SqObject *fill = fn_00173d40(&vm->frame, vm->frame.base + 2);
+        SqObject *fill = vm_stack_at(&vm->frame, vm->frame.base + 2);
         fn_0019d320(&array->vector, (SqU32)requested_array_size(length), fill);
         if (array->vector.size <= (array->vector.capacity >> 2) && array->vector.size > 4) {
             array->vector.values = sq_reallocate(array->vector.values,
@@ -29,7 +29,7 @@ SqI32 fn_001b33dc(SqControllerVM *vm)
         sq_assert_array(0, &result);
     }
     array->reference.references++;
-    fn_00173d1c(&vm->frame, &result);
+    vm_stack_push(&vm->frame, &result);
     if ((result.type & 0x08000000u) && --result.value.reference->references == 0) {
         result.value.reference->vtable->release(result.value.reference);
     }

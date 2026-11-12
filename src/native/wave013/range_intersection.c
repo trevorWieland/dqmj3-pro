@@ -4,13 +4,13 @@ static void remove_node(IntervalRing *ring, IntervalNode *node)
 {
     node->link.previous->next = node->link.next;
     node->link.next->previous = node->link.previous;
-    fn_004c3994(ring->owner, node, 1);
+    fixed_arena_release(ring->owner, node, 1);
 }
 
 static IntervalNode *split_after(IntervalRing *ring, IntervalNode *node, unsigned int first, unsigned int last)
 {
     IntrusiveLink *following = node->link.next;
-    IntervalNode *right = fn_004c39c8(ring->owner, 1);
+    IntervalNode *right = fixed_arena_allocate(ring->owner, 1);
     if (right != (void *)0) {
         right->link.previous = following->previous;
         right->link.next = following;

@@ -1,7 +1,7 @@
 #include "effect_preview.h"
 
-void *fn_00301a9c(void *destination, const void *source, unsigned int bytes);
-void *fn_00301f50(void *destination, unsigned int bytes);
+void *memory_copy_unaligned(void *destination, const void *source, unsigned int bytes);
+void *memory_zero_aligned(void *destination, unsigned int bytes);
 
 static const EffectCacheMemory065 *active_effect_cache_memory065;
 
@@ -19,7 +19,7 @@ static unsigned int preview_word065(const unsigned char *bytes)
 
 void fn_005e6a68(const unsigned char *source, EffectPreview065 *destination, unsigned int index)
 {
-    fn_00301a9c(destination, source + 8 + (__SIZE_TYPE__)index * sizeof(*destination), sizeof(*destination));
+    memory_copy_unaligned(destination, source + 8 + (__SIZE_TYPE__)index * sizeof(*destination), sizeof(*destination));
 }
 
 void fn_005e7318(const unsigned char *source, EffectPreviewHeader065 *header)
@@ -80,7 +80,7 @@ EFFECT_FLOAT_ABI065 void fn_002a41c4(EffectCacheView065 *cache, unsigned int ind
     entry->primary_preview = memory->allocate(memory->context, EFFECT_CACHE_PREVIEW065,
                                                320, sizeof(EffectPreview065), 4);
     if (entry->primary_preview != 0) {
-        fn_00301f50(entry->primary_preview, sizeof(EffectPreview065));
+        memory_zero_aligned(entry->primary_preview, sizeof(EffectPreview065));
         entry->primary_preview->default_128[0] = 0.0f;
         entry->primary_preview->default_128[1] = 0.0f;
         entry->primary_preview->default_128[2] = 0.0f;

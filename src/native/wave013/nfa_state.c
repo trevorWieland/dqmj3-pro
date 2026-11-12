@@ -14,7 +14,7 @@ PatternNfaBuilder *fn_004c1dc0(PatternNfaBuilder *builder)
 
 void fn_004c0488(NfaState **result, PatternNfaBuilder *builder)
 {
-    NfaState *state = fn_004c39c8(builder->states.owner, 2);
+    NfaState *state = fixed_arena_allocate(builder->states.owner, 2);
     if (state == (void *)0) {
         *result = (void *)0;
         return;

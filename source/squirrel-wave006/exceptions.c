@@ -40,7 +40,7 @@ _Bool sq_execute_unwind(SqExecuteVM *vm, SqU32 raise_error, SqI32 *traps)
                     frame->instruction = (void *)record->instruction;
                     base->frame.top = record->stack_top;
                     base->frame.base = record->stack_base;
-                    fn_0019e864(base->frame.stack + record->stack_base + record->target, &error);
+                    vm_object_assign(base->frame.stack + record->stack_base + record->target, &error);
                     base->traps.size--;
                     (*traps)--;
                     frame->traps--;
@@ -67,7 +67,7 @@ _Bool sq_execute_unwind(SqExecuteVM *vm, SqU32 raise_error, SqI32 *traps)
         }
         sq_execute_clear_stack(vm, old_top);
     }
-    fn_0019e864(&base->last_error, &error);
+    vm_object_assign(&base->last_error, &error);
     sq_execute_release(error.type, error.value);
     return 0;
 }

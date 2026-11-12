@@ -14,7 +14,7 @@ PatternLexer *fn_004bfeb8(PatternLexer *lexer)
 
 static PatternToken *append_token(PatternLexer *lexer)
 {
-    PatternToken *token = fn_004c39c8(lexer->arena, 1);
+    PatternToken *token = fixed_arena_allocate(lexer->arena, 1);
     if (token == (void *)0)
         return token;
     token->link.previous = lexer->tokens.previous;

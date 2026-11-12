@@ -33,7 +33,7 @@ void fn_0010797c(int param_1)
   int iVar1;
   
   iVar1 = *(int *)(param_1 + 4);
-  fn_00158f6c(*(undefined4 *)(iVar1 + 0x664),*(undefined4 *)(iVar1 + 0x668));
+  memory_zero_unaligned(*(undefined4 *)(iVar1 + 0x664),*(undefined4 *)(iVar1 + 0x668));
   *(undefined4 *)(iVar1 + 0x66c) = *(undefined4 *)(iVar1 + 0x664);
   return;
 }

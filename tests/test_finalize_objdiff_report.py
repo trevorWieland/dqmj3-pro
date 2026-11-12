@@ -9,12 +9,14 @@ SPEC.loader.exec_module(FINALIZE)
 
 
 def unit(name='src/native/wave001/leaves', source='src/native/wave001/leaves.c', code=12, data=0,
-         functions=None, matched=(), relocated=(), sections=None):
+         functions=None, addresses=None, matched=(), relocated=(), sections=None):
     functions = functions or {'fn_00100000': 8, 'fn_00100004': 4}
+    addresses = addresses or {key: int(key[3:], 16) for key in functions}
     sections = sections or [{'address': address, 'size': size, 'kind': 'code'}
                             for address, size in ((0x100000, 8), (0x100004, 4))]
     return {'name': name, 'source_path': source, 'code': code, 'data': data,
-            'functions': {key: {'size': size} for key, size in functions.items()},
+            'functions': {key: {'size': size, 'address': addresses[key]}
+                          for key, size in functions.items()},
             'matched': set(matched), 'relocated': set(relocated), 'sections': sections,
             'aligned_code': FINALIZE.aligned(sections), 'aligned_data': data,
             'section_names': {'.text.original_%08x' % row['address'] for row in sections}}
@@ -49,6 +51,16 @@ class NormalisationTests(unittest.TestCase):
         self.assertEqual(result['measures']['matched_code_percent'], 8 * 100 / 12)
         self.assertEqual([row['fuzzy_match_percent'] for row in result['units'][0]['functions']], [100.0, 0.0])
         self.assertEqual(result['units'][0]['functions'][0]['metadata']['virtual_address'], str(0x100000))
+
+    def test_virtual_address_comes_from_the_record_not_the_name(self):
+        sections = [{'address': 0x100000, 'size': 8, 'kind': 'code'}]
+        units = {'src/native/wave001/leaves': unit(
+            functions={'memory_copy': 8}, addresses={'memory_copy': 0x100000}, code=8,
+            matched={'memory_copy'}, sections=sections)}
+        report = self.report([('memory_copy', 8, 100.0)], [('.text.original_00100000', 8)])
+        result = FINALIZE.normalize(report, units, {'memory_copy'}, 8)
+        self.assertEqual(result['units'][0]['functions'][0]['metadata']['virtual_address'],
+                         str(0x100000))
 
     def test_withheld_credit_for_byte_identical_bytes_is_refused(self):
         units = {'src/native/wave001/leaves': unit(matched={'fn_00100000'})}

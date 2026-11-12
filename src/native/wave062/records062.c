@@ -1,11 +1,11 @@
 #include "records062.h"
 
-void *fn_0017821c(void *, const void *, unsigned int);
+void *memory_copy(void *, const void *, unsigned int);
 
 static void record_copy062(ResourceRecord062 *destination,
     const ResourceRecord062 *source)
 {
-    fn_0017821c(destination->record, source->record, 240);
+    memory_copy(destination->record, source->record, 240);
     destination->valid = source->valid;
 }
 

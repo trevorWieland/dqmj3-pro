@@ -354,7 +354,7 @@ undefined4 fn_0019bbc0(int param_1,undefined4 param_2)
   undefined4 uVar1;
   
   uVar1 = fn_001a2150(*(undefined4 *)(param_1 + 4));
-  fn_0017821c(param_2,uVar1,0x4c);
+  memory_copy(param_2,uVar1,0x4c);
   return 1;
 }
 

@@ -51,7 +51,7 @@ _Bool fn_00196f6c(SqCallVM *vm, SqNativeClosure *closure, SqI32 arguments,
     SqCallInfo local = {0};
     local.closure.type = 0x01000001u;
     SqObject owner = {0x08000200u, {.reference = &closure->reference}};
-    fn_0019e864(&local.closure, &owner);
+    vm_object_assign(&local.closure, &owner);
     local.previous_base = base - old_base;
     local.previous_top = old_top - old_base;
     local.calls = 1;
@@ -66,7 +66,7 @@ _Bool fn_00196f6c(SqCallVM *vm, SqNativeClosure *closure, SqI32 arguments,
     vm->current = vm->call_stack + vm->call_count;
     vm->current->instruction = local.instruction;
     vm->current->literals = local.literals;
-    fn_0019e864(&vm->current->closure, &local.closure);
+    vm_object_assign(&vm->current->closure, &local.closure);
     vm->current->generator = local.generator;
     vm->current->traps = local.traps;
     vm->current->previous_base = local.previous_base;
@@ -79,12 +79,12 @@ _Bool fn_00196f6c(SqCallVM *vm, SqNativeClosure *closure, SqI32 arguments,
     vm->call_count++;
     vm->frame.base = base;
     for (SqU32 index = 0; index < closure->outers.size; index++) {
-        fn_00173d1c(&vm->frame, closure->outers.values + index);
+        vm_stack_push(&vm->frame, closure->outers.values + index);
     }
     if (closure->environment.type == 0x08010000u) {
         SqObject environment;
         __builtin_memcpy(&environment, (unsigned char *)closure->environment.value.reference + sizeof(SqWeakPrefix), sizeof(environment));
-        fn_0019e864(vm->frame.stack + base, &environment);
+        vm_object_assign(vm->frame.stack + base, &environment);
     }
     SqI32 returned = closure->function(vm);
     vm->native_calls--;
@@ -99,11 +99,11 @@ _Bool fn_00196f6c(SqCallVM *vm, SqNativeClosure *closure, SqI32 arguments,
     }
     if (returned) {
         SqObject *top = vm->frame.stack + vm->frame.top - 1;
-        fn_0019e864(result, top);
+        vm_object_assign(result, top);
         clear_object(top);
     } else {
         SqObject null = {0x01000001u, {.bits = 0}};
-        fn_0019e864(result, &null);
+        vm_object_assign(result, &null);
     }
     vm->frame.base = old_base;
     vm->frame.top = old_top;

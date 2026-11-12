@@ -9,7 +9,7 @@ typedef struct PatternGameFilterOwner {
 
 void fn_00246e68(PatternGameFilterOwner *filter);
 int fn_00246e00(PatternGameFilterOwner *filter);
-void fn_00246e74(PatternGameFilterOwner *filter);
+void pattern_game_filter_owner_destroy(PatternGameFilterOwner *filter);
 int fn_004c3b1c(const unsigned short *text);
 int fn_006b5424(PatternGameFilterOwner *filter, const unsigned short *text);
 int pattern_game_filter_check(FixedArena *arena, PatternGameFilterOwner *filter, const unsigned short *text);

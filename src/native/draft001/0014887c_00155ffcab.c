@@ -63,7 +63,7 @@ void fn_0014f85c(char *param_1)
 void fn_00150cb4(int *param_1,undefined4 param_2,int param_3)
 
 {
-  fn_00301a9c(*param_1 + param_1[1],param_2,param_3);
+  memory_copy_unaligned(*param_1 + param_1[1],param_2,param_3);
   param_1[1] = param_1[1] + param_3;
   return;
 }

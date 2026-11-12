@@ -2,9 +2,12 @@
 
 A unit is a source file, and the functions it implements are the symbols it
 defines. The split gives every function of the measured image an address, an
-instruction mode and a size, so a symbol name such as ``fn_00196b08`` places
-itself. Nothing here is accepted, admitted or reviewed: a function is measured
-because the split lists it and the source defines it.
+instruction mode, a size and a name. The address is the identity: it is where the
+original bytes are and where the compiled function is placed, and the measurement
+compares the two there. The name is a label for people -- it may be
+``fn_00196b08`` or ``memory_copy`` -- and this file is the one table that binds a
+name to an address, so a definition is measured because the table places its
+name, not because the spelling of the symbol carries an address.
 
 The split is a partition of the initialized text segment. Primary extents never
 overlap and never overlap each other's owners; bytes no function owns (literal
@@ -17,8 +20,8 @@ import re
 from pathlib import Path
 
 
-PRIMARY = re.compile(r'^([0-9a-f]{8}) (arm|thumb) ([1-9][0-9]*) (fn_[0-9a-f]{8})$')
-EXTRA = re.compile(r'^\+([0-9a-f]{8}) (arm|thumb) ([1-9][0-9]*) (fn_[0-9a-f]{8})$')
+PRIMARY = re.compile(r'^([0-9a-f]{8}) (arm|thumb) ([1-9][0-9]*) ([A-Za-z_][A-Za-z0-9_]*)$')
+EXTRA = re.compile(r'^\+([0-9a-f]{8}) (arm|thumb) ([1-9][0-9]*) ([A-Za-z_][A-Za-z0-9_]*)$')
 ALIGNMENT = {'arm': 4, 'thumb': 2}
 
 
@@ -107,8 +110,6 @@ def load(path, start, extent):
         if not match:
             raise ValueError('%s:%d: unsupported split line: %s' % (path.name, number, line))
         address, mode, size, name = int(match[1], 16), match[2], int(match[3]), match[4]
-        if name != 'fn_%08x' % address:
-            raise ValueError('%s:%d: symbol name disagrees with its address' % (path.name, number))
         if not _aligned(address, mode):
             raise ValueError('%s:%d: %s entry is not %d-aligned' % (path.name, number, mode, ALIGNMENT[mode]))
         if not _contained(address, size, start, extent):
@@ -117,6 +118,8 @@ def load(path, start, extent):
     order = [symbol.address for symbol in symbols]
     if order != sorted(order) or len(order) != len(set(order)):
         raise ValueError('%s: functions must be unique and address-sorted' % path.name)
+    if len({symbol.name for symbol in symbols}) != len(symbols):
+        raise ValueError('%s: function names must be unique' % path.name)
     for previous, current in zip(symbols, symbols[1:]):
         if previous.end() > current.address:
             raise ValueError('%s: overlapping functions at 0x%08x and 0x%08x'
@@ -141,3 +144,32 @@ def _check_extra_ranges(path, split):
             if address < low + extent and low < address + size:
                 raise ValueError('%s: extra range 0x%08x overlaps function bytes' % (path.name, address))
         owned.append((address, size))
+
+
+def match(definitions, functions):
+    """Resolve compiled definitions to split functions, keyed by the address.
+
+    ``definitions`` is keyed by the symbol a compiler emitted; ``functions`` is
+    the split. A definition names a function, and the split is the one table that
+    binds that name to an original address, so the match is a table lookup and
+    its result is keyed by the address -- the identity the measurement carries
+    from here on. The split's declared size and mode travel with the address.
+    Whether the compiled size agrees is what the measurement reports, so it is
+    not a condition of the match.
+
+    Two definitions that resolve to one address are ambiguous: one original
+    function would be measured twice and neither record would be its own. That
+    is refused here instead of being resolved by order. ``load`` already refuses
+    a split that binds two names to one address; this is the second gate, where
+    compiled definitions meet the table.
+    """
+    matched = {}
+    for name in definitions:
+        symbol = functions.by_name.get(name)
+        if symbol is None:
+            continue
+        if symbol.address in matched:
+            raise ValueError('Two definitions resolve to 0x%08x: %s and %s'
+                             % (symbol.address, matched[symbol.address][0], name))
+        matched[symbol.address] = (name, symbol)
+    return matched

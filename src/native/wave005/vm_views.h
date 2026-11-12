@@ -51,10 +51,10 @@ _Static_assert(__builtin_offsetof(VmStackView, base) == 52, "measured base offse
 _Static_assert(sizeof(void *) != 4 || __builtin_offsetof(VmRefNode, next) == 12, "original next offset");
 _Static_assert(sizeof(void *) != 4 || __builtin_offsetof(VmRefNode, previous) == 16, "original previous offset");
 
-VmI32 fn_00157ff4(const VmStackView *vm);
-VmObject *fn_00173d40(const VmStackView *vm, VmI32 index);
-void fn_00173d1c(VmStackView *vm, const VmObject *value);
-VmObject *fn_0019e864(VmObject *destination, const VmObject *source);
+VmI32 vm_stack_count(const VmStackView *vm);
+VmObject *vm_stack_at(const VmStackView *vm, VmI32 index);
+void vm_stack_push(VmStackView *vm, const VmObject *value);
+VmObject *vm_object_assign(VmObject *destination, const VmObject *source);
 void fn_0019e8c4(VmRefNode **head, VmRefNode *node);
 
 #endif

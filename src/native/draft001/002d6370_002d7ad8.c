@@ -119,7 +119,7 @@ void fn_002d63ec(int param_1,undefined4 param_2)
 
 {
   *(undefined1 *)(param_1 + 4) = 8;
-  fn_0017821c(param_1 + 8,param_2,0x58);
+  memory_copy(param_1 + 8,param_2,0x58);
   return;
 }
 
@@ -162,7 +162,7 @@ void fn_002d6478(int param_1,undefined4 param_2)
 
 {
   *(undefined1 *)(param_1 + 4) = 1;
-  fn_0017821c(param_1 + 8,param_2,0x48);
+  memory_copy(param_1 + 8,param_2,0x48);
   return;
 }
 
@@ -209,7 +209,7 @@ void fn_002d64c8(int param_1,undefined4 param_2)
 
 {
   *(undefined1 *)(param_1 + 4) = 9;
-  fn_0017821c(param_1 + 8,param_2,0x58);
+  memory_copy(param_1 + 8,param_2,0x58);
   return;
 }
 
@@ -245,7 +245,7 @@ void fn_002d64f4(int param_1,undefined4 param_2)
 
 {
   *(undefined1 *)(param_1 + 4) = 10;
-  fn_0017821c(param_1 + 8,param_2,0x58);
+  memory_copy(param_1 + 8,param_2,0x58);
   return;
 }
 
@@ -334,7 +334,7 @@ void fn_002d656c(int param_1,undefined4 param_2)
 
 {
   *(undefined1 *)(param_1 + 4) = 0x15;
-  fn_0017821c(param_1 + 8,param_2,0x4c);
+  memory_copy(param_1 + 8,param_2,0x4c);
   return;
 }
 

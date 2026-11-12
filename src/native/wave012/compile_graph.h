@@ -26,9 +26,9 @@ void fn_004c1edc(CompileContext *context, unsigned char *members);
 int fn_004c2744(CompileContext *context, MatchState **state);
 void fn_004c1de8(MatchState **result, CompileContext *context, const unsigned char *members);
 int fn_004c2494(CompileContext *context, MatchState **state);
-int fn_001010c8(const void *left, const void *right, unsigned int bytes);
-void *fn_00301a9c(void *destination, const void *source, unsigned int bytes);
-void *fn_0017821c(void *destination, const void *source, unsigned int bytes);
+int memory_compare(const void *left, const void *right, unsigned int bytes);
+void *memory_copy_unaligned(void *destination, const void *source, unsigned int bytes);
+void *memory_copy(void *destination, const void *source, unsigned int bytes);
 
 _Static_assert(__builtin_offsetof(NfaState, identifier) == 5 * sizeof(void *), "NFA identifier layout");
 _Static_assert(__builtin_offsetof(CompileContext, sources) == (sizeof(void *) == 4 ? 20 : 40), "Source table layout");

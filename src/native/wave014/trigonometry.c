@@ -2,6 +2,7 @@
 
 const SineCosineEntry derived_sine_cosine[256] = {
 #include "sine_table.inc"
+
 };
 
 static float normalized_angle(float value)
@@ -24,7 +25,16 @@ static float normalized_angle(float value)
     return angle.value;
 }
 
-DQM_VFP void fn_0052534c(float *sine, float *cosine, float indexed_angle)
+/* sine_cosine -- 0x0052534c, 136 bytes, ARM, 20 call sites, draft.
+ *
+ * Table-driven sine and cosine of a 256-unit angle: normalizes the angle to
+ * [0, 256), interpolates the 256-entry table by the fractional part, and negates
+ * the sine for a negative input.
+ *
+ * Evidence: the reconstructed body and the derived_sine_cosine table in this
+ * unit; 20 call sites, several in the projection path.
+ */
+DQM_VFP void sine_cosine(float *sine, float *cosine, float indexed_angle)
 {
     float magnitude = normalized_angle(indexed_angle);
     unsigned int whole = (unsigned int)magnitude;
@@ -42,7 +52,7 @@ void fn_0055492c(float output[6], const MaterialTransform *transform, const Mate
 {
     float sine, cosine;
     (void)texture;
-    fn_0052534c(&sine, &cosine, transform->rotation * (256.0f / 360.0f));
+    sine_cosine(&sine, &cosine, transform->rotation * (256.0f / 360.0f));
     float xx = transform->scaleX * cosine;
     float xy = -(sine * transform->scaleY);
     output[0] = xx;

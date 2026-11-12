@@ -27,12 +27,12 @@ _Bool fn_00199cb8(SqExecuteVM *vm, SqScriptClosure *closure, SqI32 target, SqI32
         SqI32 difference = parameters - count;
         if (defaults && count < parameters && difference <= defaults) {
             for (SqI32 index = defaults - difference; index < defaults; index++)
-                fn_0019e864(base->frame.stack + stack_base + count++, closure->defaults.values + index);
+                vm_object_assign(base->frame.stack + stack_base + count++, closure->defaults.values + index);
         } else if (function->variable_parameters && count >= parameters) {
             for (SqI32 index = 0; index < count - parameters; index++) {
                 SqObject *object = base->frame.stack + stack_base + parameters + index;
                 push_vararg(vm, object);
-                fn_0019e864(object, &null);
+                vm_object_assign(object, &null);
             }
         } else {
             sq_call_error(base, "wrong number of parameters");
@@ -42,7 +42,7 @@ _Bool fn_00199cb8(SqExecuteVM *vm, SqScriptClosure *closure, SqI32 target, SqI32
     if (closure->environment.type == 0x08010000u) {
         SqObject environment;
         __builtin_memcpy(&environment, (unsigned char *)closure->environment.value.reference + sizeof(SqWeakPrefix), sizeof(environment));
-        fn_0019e864(base->frame.stack + stack_base, &environment);
+        vm_object_assign(base->frame.stack + stack_base, &environment);
     }
     if (!tail) {
         SqCallInfo empty = {0};
@@ -56,7 +56,7 @@ _Bool fn_00199cb8(SqExecuteVM *vm, SqScriptClosure *closure, SqI32 target, SqI32
         SqCallInfo *frame = base->call_stack + base->call_count;
         frame->instruction = 0;
         frame->literals = 0;
-        fn_0019e864(&frame->closure, &empty.closure);
+        vm_object_assign(&frame->closure, &empty.closure);
         frame->generator = 0;
         frame->traps = 0;
         frame->previous_base = stack_base - base->frame.base;
@@ -75,7 +75,7 @@ _Bool fn_00199cb8(SqExecuteVM *vm, SqScriptClosure *closure, SqI32 target, SqI32
     base->current->varargs_size = (unsigned short)(count - parameters);
     base->current->varargs_base = (unsigned short)(varargs.size - base->current->varargs_size);
     SqObject object = {0x08000100u, {.reference = &closure->reference}};
-    fn_0019e864(&base->current->closure, &object);
+    vm_object_assign(&base->current->closure, &object);
     base->current->literals = function->literals;
     base->current->instruction = function->instructions;
     SqVector stack = sq_call_stack_vector(base);

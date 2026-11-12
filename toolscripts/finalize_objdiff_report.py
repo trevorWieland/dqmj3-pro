@@ -13,6 +13,11 @@ string literals -- equals the original bytes at the same address. A function
 whose instructions match but whose data does not is reported as measured and
 unmatched, never as credited, and the CLI is refused if it credited one.
 
+A function's identity is the address the split gives it, not the spelling of its
+symbol: the source may name a definition what it does. Every unit record is
+therefore checked against the split by address, and the report's virtual address
+comes from that record, never from the name.
+
 The measured objects carry no relocations: the placement link resolved every
 call to the address the split gives its target. Credit therefore means byte
 equality, and nothing else.
@@ -126,9 +131,10 @@ def source_unit(unit, functions, image, text, placement):
         raise ValueError('Base object does not define the measured functions it claims: ' + unit['name'])
     matched, relocated, sections = set(), set(), []
     for function in unit['functions']:
-        symbol = functions.by_name.get(function['name'])
-        if symbol is None:
-            raise ValueError('Unit reports a function outside the split: ' + function['name'])
+        symbol = functions.by_address.get(function['address'])
+        if symbol is None or symbol.name != function['name']:
+            raise ValueError('Unit reports a name and address the split does not bind: '
+                             + function['name'])
         if (function['address'], function['size'], function['mode']) != (symbol.address, symbol.size, symbol.mode):
             raise ValueError('Unit disagrees with the split on ' + symbol.name)
         section = '.text.original_%08x' % symbol.address
@@ -169,7 +175,9 @@ def source_unit(unit, functions, image, text, placement):
     return {'name': unit['name'], 'source_path': unit['source_path'],
             'compilerProfile': unit.get('compilerProfile'),
             'code': sum(row['size'] for row in sections), 'data': 0,
-            'functions': {function['name']: {'size': function['size']} for function in unit['functions']},
+            'functions': {function['name']: {'size': function['size'],
+                                             'address': function['address']}
+                          for function in unit['functions']},
             'matched': matched, 'relocated': relocated, 'sections': sections,
             'aligned_code': aligned(sections), 'aligned_data': 0,
             'section_names': set(target['sections'])}
@@ -253,7 +261,8 @@ def retained_unit(unit, functions, image, layout, text):
         sections.sort(key=lambda row: row['address'])
     return {'name': unit['name'], 'source_path': unit['source_path'],
             'code': sum(row['size'] for row in sections), 'data': data,
-            'functions': {name: {'size': row['size']} for name, row in declared.items()},
+            'functions': {name: {'size': row['size'], 'address': row['address']}
+                          for name, row in declared.items()},
             'matched': set(), 'relocated': set(), 'sections': sections,
             'aligned_code': aligned(sections),
             'aligned_data': aligned([{'size': section['size']} for name, section in target['sections'].items()
@@ -356,7 +365,8 @@ def normalize(report, units, matched, matched_bytes, compilers=None):
             percentage(item.get('fuzzy_match_percent', 0))
             public_functions.append({'name': item['name'], 'size': str(number(item['size'])),
                                      'fuzzy_match_percent': 100.0 if item['name'] in credited else 0.0,
-                                     'metadata': {'virtual_address': str(int(item['name'][3:], 16))}})
+                                     'metadata': {'virtual_address':
+                                                  str(expected['functions'][item['name']]['address'])}})
         public_sections = []
         section_code, section_data = 0, 0
         for section in unit.get('sections', []):

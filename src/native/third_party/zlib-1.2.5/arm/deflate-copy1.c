@@ -23,15 +23,40 @@
  * memcpy is mapped at the source name, not at the compiler's __aeabi_memcpy:
  * armcc lowers memcpy to that helper after preprocessing, so the helper name is
  * not a macro target, while the three-argument call itself keeps its ABI. The
- * image's helper is fn_00301a9c.
+ * image's helper is memory_copy_unaligned.
  */
 #ifndef DQMJ3_ZLIB_RENAME_DEFLATE_COPY1
 #define DQMJ3_ZLIB_RENAME_DEFLATE_COPY1
 
 #define deflateEnd fn_00731cf0
 #define flush_pending fn_0072e014
+#define deflate_fast zlib_copy1_deflate_fast
+#define deflate_huff zlib_copy1_deflate_huff
+#define deflate_rle zlib_copy1_deflate_rle
+#define deflate_slow zlib_copy1_deflate_slow
+#define deflate_stored zlib_copy1_deflate_stored
+#define fill_window zlib_copy1_fill_window
+#define lm_init zlib_copy1_lm_init
+#define longest_match zlib_copy1_longest_match
+#define putShortMSB zlib_copy1_putShortMSB
+#define read_buf zlib_copy1_read_buf
 
-#define memcpy fn_00301a9c
+/* The image links two zlib copies and both include this same upstream
+ * file, so every symbol this adapter does not place would be defined
+ * twice. This copy owns its own symbols; only the mapped ones are placed. */
+#define deflate zlib_copy1_deflate
+#define deflateBound zlib_copy1_deflateBound
+#define deflateCopy zlib_copy1_deflateCopy
+#define deflateInit2_ zlib_copy1_deflateInit2_
+#define deflateInit_ zlib_copy1_deflateInit_
+#define deflateParams zlib_copy1_deflateParams
+#define deflatePrime zlib_copy1_deflatePrime
+#define deflateReset zlib_copy1_deflateReset
+#define deflateSetDictionary zlib_copy1_deflateSetDictionary
+#define deflateSetHeader zlib_copy1_deflateSetHeader
+#define deflateTune zlib_copy1_deflateTune
+
+#define memcpy memory_copy_unaligned
 
 /* Clang 21 diagnoses zlib 1.2.5's K&R function definitions and one negative
  * shift as errors under the public-compile census's -Werror, while armcc 4.1 --

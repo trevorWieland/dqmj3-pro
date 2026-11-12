@@ -22,9 +22,9 @@ undefined4 fn_001b4114(int param_1)
   int iVar1;
   undefined4 uVar2;
   
-  iVar1 = fn_00173d40(param_1,*(int *)(param_1 + 0x34) + 1);
+  iVar1 = vm_stack_at(param_1,*(int *)(param_1 + 0x34) + 1);
   uVar2 = *(undefined4 *)(iVar1 + 4);
-  iVar1 = fn_00173d40(param_1,*(undefined4 *)(param_1 + 0x34));
+  iVar1 = vm_stack_at(param_1,*(undefined4 *)(param_1 + 0x34));
   fn_00665b00(*(undefined4 *)(iVar1 + 4),uVar2);
   return 0;
 }
@@ -37,7 +37,7 @@ undefined4 fn_001b5300(int param_1)
   int iVar1;
   undefined4 uVar2;
   
-  iVar1 = fn_00173d40(param_1,*(int *)(param_1 + 0x34) + 1);
+  iVar1 = vm_stack_at(param_1,*(int *)(param_1 + 0x34) + 1);
   iVar1 = *(int *)(*(int *)(*(int *)(iVar1 + 4) + 0x24) + 0x1c) * 2 + 2;
   if (iVar1 < 0xc) {
     iVar1 = 0xc;
@@ -70,7 +70,7 @@ undefined4 fn_001b831c(undefined4 param_1)
 undefined4 fn_001ba40c(int param_1)
 
 {
-  fn_00173d1c(param_1,param_1 + 0x38);
+  vm_stack_push(param_1,param_1 + 0x38);
   return 1;
 }
 
@@ -91,13 +91,13 @@ undefined4 fn_001ba430(int param_1)
   undefined4 uVar1;
   int iVar2;
   
-  uVar1 = fn_00173d40(param_1,*(int *)(param_1 + 0x34) + 1);
+  uVar1 = vm_stack_at(param_1,*(int *)(param_1 + 0x34) + 1);
   iVar2 = fn_007432e4(param_1);
   if (iVar2 < 0) {
     uVar1 = 0xffffffff;
   }
   else {
-    fn_00173d1c(param_1,uVar1);
+    vm_stack_push(param_1,uVar1);
     uVar1 = 1;
   }
   return uVar1;
@@ -108,7 +108,7 @@ undefined4 fn_001ba430(int param_1)
 undefined4 fn_001bafc4(int param_1)
 
 {
-  fn_00173d1c(param_1,*(int *)(param_1 + 0x8c) + 0x34);
+  vm_stack_push(param_1,*(int *)(param_1 + 0x8c) + 0x34);
   return 1;
 }
 
@@ -120,13 +120,13 @@ undefined4 fn_001bb180(int param_1)
   undefined4 uVar1;
   int iVar2;
   
-  uVar1 = fn_00173d40(param_1,*(int *)(param_1 + 0x34) + 1);
+  uVar1 = vm_stack_at(param_1,*(int *)(param_1 + 0x34) + 1);
   iVar2 = fn_00743124(param_1);
   if (iVar2 < 0) {
     uVar1 = 0xffffffff;
   }
   else {
-    fn_00173d1c(param_1,uVar1);
+    vm_stack_push(param_1,uVar1);
     uVar1 = 1;
   }
   return uVar1;
@@ -151,7 +151,7 @@ undefined4 fn_001bd58c(int param_1)
 {
   int *piVar1;
   
-  piVar1 = (int *)fn_00173d40(param_1,*(int *)(param_1 + 0x34) + 1);
+  piVar1 = (int *)vm_stack_at(param_1,*(int *)(param_1 + 0x34) + 1);
   fn_00742020(param_1,*piVar1 != 0x1000001);
   return 0;
 }

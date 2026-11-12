@@ -16,6 +16,7 @@
 #include "symbols.h"
 
 
+
 int fn_006ca394(int param_1)
 
 {
@@ -134,7 +135,7 @@ undefined4 fn_006d000c(int param_1,undefined4 param_2,uint param_3)
     param_3 = *(uint *)(param_1 + 0x134);
   }
   if (*(int *)(param_1 + 0x138) != 0) {
-    fn_00301a9c(param_2,*(int *)(param_1 + 0x138),param_3);
+    memory_copy_unaligned(param_2,*(int *)(param_1 + 0x138),param_3);
   }
   return *(undefined4 *)(param_1 + 0x134);
 }
@@ -144,7 +145,7 @@ undefined4 fn_006d000c(int param_1,undefined4 param_2,uint param_3)
 void fn_006d00f4(undefined4 param_1,undefined4 param_2)
 
 {
-  fn_00301a9c(param_2,param_1,0x70);
+  memory_copy_unaligned(param_2,param_1,0x70);
   return;
 }
 
@@ -153,7 +154,7 @@ void fn_006d00f4(undefined4 param_1,undefined4 param_2)
 void fn_006d0170(undefined4 param_1,undefined4 param_2)
 
 {
-  fn_00166824(param_2,param_1);
+  material_word_pair_assign(param_2,param_1);
   return;
 }
 
@@ -306,10 +307,14 @@ undefined8 fn_006d3e5c(undefined8 *param_1)
 
 
 
-bool fn_006d3ef4(int param_1,uint param_2)
+/* flag_mask_includes -- 0x006d3ef4, 20 bytes, ARM, 50 call sites, byte-identical.
+ *
+ * True when every bit set in `flags` is set in the mask word at self+0x2c.
+ */
+bool flag_mask_includes(int self,uint flags)
 
 {
-  return (param_2 & ~*(uint *)(param_1 + 0x2c)) == 0;
+  return (flags & ~*(uint *)(self + 0x2c)) == 0;
 }
 
 

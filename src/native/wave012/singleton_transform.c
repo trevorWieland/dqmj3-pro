@@ -27,7 +27,7 @@ int fn_004c2494(CompileContext *context, MatchState **state_pointer)
         }
         unsigned int count = context->source_count;
         unsigned short character = selected->label.value.character;
-        unsigned char *members = fn_004c39c8(context->data_arena, (count + 15u) >> 4);
+        unsigned char *members = fixed_arena_allocate(context->data_arena, (count + 15u) >> 4);
         if (members == (void *)0)
             return 0;
         for (unsigned int index = 0; index < context->source_count; ++index)
@@ -54,7 +54,7 @@ int fn_004c2494(CompileContext *context, MatchState **state_pointer)
                 if (remove) {
                     remove_link(other_link);
                     fn_007557bc(&other->label);
-                    fn_004c3994(state->data.pending_arena, other, TRANSITION_BLOCKS);
+                    fixed_arena_release(state->data.pending_arena, other, TRANSITION_BLOCKS);
                 }
             }
             other_link = next;
@@ -64,8 +64,8 @@ int fn_004c2494(CompileContext *context, MatchState **state_pointer)
         fn_004c1de8(&target, context, members);
         if (target == (void *)0)
             return 0;
-        fn_004c3994(context->data_arena, members, (count + 15u) >> 4);
-        MatchEdge *edge = fn_004c39c8((*state_pointer)->data.transition_arena, TRANSITION_BLOCKS);
+        fixed_arena_release(context->data_arena, members, (count + 15u) >> 4);
+        MatchEdge *edge = fixed_arena_allocate((*state_pointer)->data.transition_arena, TRANSITION_BLOCKS);
         if (edge == (void *)0)
             return 0;
         fn_007555cc(&edge->label);
@@ -75,7 +75,7 @@ int fn_004c2494(CompileContext *context, MatchState **state_pointer)
         link = selected->link.next;
         remove_link(&selected->link);
         fn_007557bc(&selected->label);
-        fn_004c3994(state->data.pending_arena, selected, TRANSITION_BLOCKS);
+        fixed_arena_release(state->data.pending_arena, selected, TRANSITION_BLOCKS);
     }
     return 1;
 }

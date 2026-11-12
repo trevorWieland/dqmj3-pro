@@ -100,7 +100,7 @@ void fn_0028b908(int param_1,undefined4 *param_2)
 void fn_0028b928(int param_1)
 
 {
-  fn_00166824(*(int *)(param_1 + 4) + 0x14);
+  material_word_pair_assign(*(int *)(param_1 + 4) + 0x14);
   return;
 }
 
@@ -109,7 +109,7 @@ void fn_0028b928(int param_1)
 void fn_0028b934(int param_1)
 
 {
-  fn_00166824(*(int *)(param_1 + 4) + 0xc);
+  material_word_pair_assign(*(int *)(param_1 + 4) + 0xc);
   return;
 }
 
@@ -118,7 +118,7 @@ void fn_0028b934(int param_1)
 void fn_0028b954(int param_1)
 
 {
-  fn_00166824(*(int *)(param_1 + 4) + 0x1c);
+  material_word_pair_assign(*(int *)(param_1 + 4) + 0x1c);
   return;
 }
 
@@ -296,8 +296,8 @@ undefined4 * fn_00299cf8(undefined4 *param_1)
 {
   *param_1 = 0;
   *(undefined2 *)(param_1 + 0x61) = 0;
-  fn_00301f50(param_1 + 1,0x80);
-  fn_00301f50(param_1 + 0x21,0x80);
+  memory_zero_aligned(param_1 + 1,0x80);
+  memory_zero_aligned(param_1 + 0x21,0x80);
   param_1[0x41] = 0;
   param_1[0x42] = 0;
   param_1[0x43] = 0;

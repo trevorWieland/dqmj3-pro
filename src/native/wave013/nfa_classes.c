@@ -13,7 +13,7 @@ static void release(IntervalRing *ring)
         IntrusiveLink *link = ring->head.next;
         while (link != &ring->head) {
             IntrusiveLink *following = link->next;
-            fn_004c3994(ring->owner, link, 1);
+            fixed_arena_release(ring->owner, link, 1);
             link = following;
         }
     }

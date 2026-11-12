@@ -23,8 +23,8 @@ struct MaterialHeap { const MaterialHeapVtable *vtable; };
 extern MaterialHeap *material_heap;
 void material_set_heap(MaterialHeap *heap);
 MaterialWord material_abi(MaterialWord field);
-void *fn_00194ee4(MaterialWord bytes, MaterialWord alignment);
-void fn_0019fb94(void *allocation);
+void *material_allocate(MaterialWord bytes, MaterialWord alignment);
+void material_release(void *allocation);
 void fn_0019fbd8(MaterialTexture *texture);
 MaterialWord material_storage_bytes(MaterialWord textures, MaterialWord transforms, MaterialWord generators,
     MaterialWord stages, MaterialWord alpha, MaterialWord blends, MaterialWord projections,

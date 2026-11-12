@@ -57,7 +57,7 @@ _Bool sq_legacy_table_get006(SqTable *table, const SqObject *key, SqObject *dest
     if (!node) return 0;
     const SqObject *value = &node->value;
     if (value->type == 0x08010000u) value = &((SqWeakObject *)value->value.reference)->object;
-    fn_0019e864(destination, value);
+    vm_object_assign(destination, value);
     return 1;
 }
 
@@ -65,7 +65,7 @@ _Bool sq_legacy_table_set006(SqTable *table, const SqObject *key, const SqObject
 {
     SqHashNode *node = find(table, key, hash(key) & (SqU32)(table->node_count - 1));
     if (!node) return 0;
-    fn_0019e864(&node->value, value);
+    vm_object_assign(&node->value, value);
     return 1;
 }
 
@@ -74,8 +74,8 @@ void fn_0019b650(SqTable *table, const SqObject *key)
     SqHashNode *node = find(table, key, hash(key) & (SqU32)(table->node_count - 1));
     if (!node) return;
     SqObject null = {0x01000001u, {.reference = 0}};
-    fn_0019e864(&node->key, &null);
-    fn_0019e864(&node->value, &node->key);
+    vm_object_assign(&node->key, &null);
+    vm_object_assign(&node->value, &node->key);
     table->used--;
     fn_0019b4ec(table, 0);
 }
@@ -103,7 +103,7 @@ _Bool sq_legacy_table_new_slot006(SqTable *table, const SqObject *key, const SqO
     if (key->type == 0x01000001u) sq_execute_table_stop(-301);
     SqU32 position = hash(key) & (SqU32)(table->node_count - 1);
     SqHashNode *present = find(table, key, position);
-    if (present) { fn_0019e864(&present->value, value); return 0; }
+    if (present) { vm_object_assign(&present->value, value); return 0; }
     SqHashNode *main = table->nodes + position;
     if (main->key.type != 0x01000001u) {
         SqHashNode *free = table->first_free;
@@ -111,12 +111,12 @@ _Bool sq_legacy_table_new_slot006(SqTable *table, const SqObject *key, const SqO
         if (main > free && other != main) {
             while (other->next != main) { other = other->next; if (!other) sq_execute_table_stop(-302); }
             other->next = free;
-            fn_0019e864(&free->key, &main->key);
-            fn_0019e864(&free->value, &main->value);
+            vm_object_assign(&free->key, &main->key);
+            vm_object_assign(&free->value, &main->value);
             free->next = main->next;
             SqObject null = {0x01000001u, {.reference = 0}};
-            fn_0019e864(&main->key, &null);
-            fn_0019e864(&main->value, &null);
+            vm_object_assign(&main->key, &null);
+            vm_object_assign(&main->value, &null);
             main->next = 0;
         } else {
             free->next = main->next;
@@ -124,10 +124,10 @@ _Bool sq_legacy_table_new_slot006(SqTable *table, const SqObject *key, const SqO
             main = free;
         }
     }
-    fn_0019e864(&main->key, key);
+    vm_object_assign(&main->key, key);
     for (;;) {
         if (table->first_free->key.type == 0x01000001u && !table->first_free->next) {
-            fn_0019e864(&main->value, value);
+            vm_object_assign(&main->value, value);
             table->used++;
             return 1;
         }

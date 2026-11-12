@@ -211,9 +211,9 @@ void fn_005260cc(undefined4 *param_1)
   *(undefined2 *)(param_1 + 8) = 65000;
   *(undefined2 *)((int)param_1 + 0x22) = 0;
   *(undefined2 *)(param_1 + 9) = 0;
-  fn_00158f6c((int)param_1 + 0x26,0x66);
+  memory_zero_unaligned((int)param_1 + 0x26,0x66);
   param_1[0x23] = 0;
-  fn_00301f50(param_1 + 0x24,0x82);
+  memory_zero_aligned(param_1 + 0x24,0x82);
   *(undefined1 *)((int)param_1 + 0x112) = 0;
   *(undefined1 *)((int)param_1 + 0x113) = 1;
   *(undefined1 *)(param_1 + 0x45) = 0;
@@ -239,7 +239,7 @@ void fn_005260cc(undefined4 *param_1)
   param_1[0x51] = 0xffffffff;
   *(undefined2 *)(param_1 + 0x52) = 0;
   param_1[0x53] = 0;
-  fn_00301f50(param_1 + 0x54,0x202);
+  memory_zero_aligned(param_1 + 0x54,0x202);
   return;
 }
 int * fn_0054a9e0(int *param_1,undefined4 param_2)
@@ -256,14 +256,14 @@ int * fn_0054a9e0(int *param_1,undefined4 param_2)
   if (iVar1 != 0) {
     iVar2 = local_10;
   }
-  if (((iVar1 != 0 && iVar2 != 0) && (iVar2 = fn_00194ee4(0x48,4), iVar2 != 0)) &&
+  if (((iVar1 != 0 && iVar2 != 0) && (iVar2 = material_allocate(0x48,4), iVar2 != 0)) &&
      (piVar3 = (int *)fn_00127ab0(), piVar3 != (int *)0x0)) {
     iVar2 = fn_001422a0(piVar3,iVar1);
     if (iVar2 != 0) {
       return piVar3;
     }
     (**(code **)(*piVar3 + 4))(piVar3);
-    fn_0019fb94(piVar3);
+    material_release(piVar3);
   }
   return (int *)0x0;
 }

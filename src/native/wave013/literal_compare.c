@@ -1,6 +1,7 @@
 #include "pattern_outer.h"
 #include "pattern_unicode.h"
 
+
 PatternLiteralMatcher *fn_004c0380(PatternLiteralMatcher *matcher)
 {
     matcher->text = (void *)0;
@@ -8,7 +9,14 @@ PatternLiteralMatcher *fn_004c0380(PatternLiteralMatcher *matcher)
     return matcher;
 }
 
-unsigned int fn_00100b58(const unsigned short *text)
+/* wide_string_length -- 0x00100b58, 18 bytes, Thumb, 244 call sites, draft.
+ *
+ * Returns the number of 16-bit units before the NUL terminator. The pattern
+ * matcher calls it on its own u16 text; the prototype lives in pattern_outer.h.
+ *
+ * Evidence: the loop body in the original bytes and 244 call sites.
+ */
+unsigned int wide_string_length(const unsigned short *text)
 {
     unsigned int length = 0;
     while (*text++ != 0)

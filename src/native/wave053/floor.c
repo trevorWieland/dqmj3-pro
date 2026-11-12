@@ -1,6 +1,15 @@
 #include "sampled_key.h"
 
-float SAMPLED_KEY_ABI053 fn_006fa358(float value)
+
+/* floor_float -- 0x006fa358, 140 bytes, ARM, 23 call sites, draft.
+ *
+ * Rounds toward negative infinity: values whose exponent is at least 23 are
+ * already integral, sub-unit values collapse to -1.0 or 0.0 by sign, and the
+ * remaining fraction bits are cleared with a sign-aware step.
+ *
+ * Evidence: the reconstructed body, which is the floorf algorithm; 23 call sites.
+ */
+float SAMPLED_KEY_ABI053 floor_float(float value)
 {
     union {
         SampledKeyU32_053 bits;

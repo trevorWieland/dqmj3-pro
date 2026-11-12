@@ -11,8 +11,12 @@ One line per function of the measured update main ARM image, `update-content0`.
   function's entry and the start of its contiguous symbol extent.
 - `mode`: `arm` or `thumb`. ARM entries are four-byte aligned, Thumb two-byte.
 - `size`: decimal bytes of the extent.
-- `name`: `fn_<address>`. The address is in the name, so a symbol places itself
-  and no separate name table is needed to measure it.
+- `name`: the function's name, a C identifier. It may be `fn_<address>` for a
+  function nobody has named yet, or a name describing what the function does.
+  The name is a label; the address is the identity, and this file is the one
+  table that binds the name to it. A definition is measured because the table
+  places its name, not because the symbol is spelled like an address. Names are
+  unique, every name has exactly one address, and every address one name.
 - `+` lines list extra original ranges the same function owns outside its
   contiguous extent (split bodies, cold tails). They record ownership; they are
   not part of the symbol's ELF size and never earn source credit.
@@ -24,6 +28,20 @@ declares, primary extents never overlap, and each size stops at the next entry s
 every byte has at most one owning function. Bytes no function owns (literal
 pools, alignment, unclassified text) stay in the denominator and are retained
 from the original image.
+
+## Names
+
+A name is free text. Renaming a function is editing its line here and its
+definition and declaration in the source; the address, size and mode do not move,
+so the measurement does not move either. The measurement keys every step on the
+address: the original bytes are carved there, the compiled function is placed
+there, and credit is byte equality at that address. The symbol spelling is only
+how the compiled object finds its line in this table.
+
+Two ambiguities fail the build instead of being resolved by order: two names on
+one address (or two addresses on one name) are refused when the split is read,
+and two definitions resolving to one address are refused when the compiled
+objects meet the table.
 
 The file was generated once from the seeded Ghidra census entry addresses, modes
 and primary ranges, with 107 overlapping pairs resolved in favour of the later

@@ -248,7 +248,7 @@ undefined4 fn_0025a258(void)
 void fn_0025b20c(int param_1,undefined4 param_2)
 
 {
-  fn_0017821c(*(int *)(param_1 + 4) + 100,param_2,0x60);
+  memory_copy(*(int *)(param_1 + 4) + 100,param_2,0x60);
   return;
 }
 

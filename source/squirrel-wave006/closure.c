@@ -56,7 +56,7 @@ _Bool fn_00196b08(SqExecuteVM *vm, SqObject *destination, SqFunction *function)
     }
     SqObject object = {0x08000100u, {.reference = &closure->reference}};
     closure->reference.references++;
-    fn_0019e864(destination, &object);
+    vm_object_assign(destination, &object);
     sq_execute_release(object.type, object.value);
     return 1;
 }

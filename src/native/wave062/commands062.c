@@ -1,7 +1,7 @@
 #include "record_provider062.h"
 
-void *fn_0017821c(void *, const void *, unsigned int);
-void *fn_00301a9c(void *, const void *, unsigned int);
+void *memory_copy(void *, const void *, unsigned int);
+void *memory_copy_unaligned(void *, const void *, unsigned int);
 
 Word062 resource_manager_matches062(ResourceManager062 *manager,
     Word062 request, Word062 slot)
@@ -23,13 +23,13 @@ void resource_manager_post_word062(ResourceManager062 *manager,
     Word062 word = *value;
     manager->pending.request = request;
     manager->pending.kind = 2;
-    fn_0017821c(manager->pending.block.bytes, &word, 4);
+    memory_copy(manager->pending.block.bytes, &word, 4);
 }
 
 void resource_manager_post_block062(ResourceManager062 *manager,
     const ResourceBlock062 *block, Word062 request, Word062 kind)
 {
-    fn_00301a9c(manager->pending.block.bytes, block->bytes, 128);
+    memory_copy_unaligned(manager->pending.block.bytes, block->bytes, 128);
     manager->pending.request = request;
     manager->pending.kind = kind;
 }
@@ -38,7 +38,7 @@ void resource_queue_header062(ResourceSink062 *sink, ResourcePayloadRecord062 pa
     Word062 valid, Word062 outbound, const ResourceHeapServices062 *heap)
 {
     ResourceRecord062 record = {0};
-    fn_0017821c(record.record, payload.bytes, 240);
+    memory_copy(record.record, payload.bytes, 240);
     record.valid = (Byte062)valid;
     resource_record_append062(outbound != 0 ? &sink->second : &sink->first,
         &record, heap);

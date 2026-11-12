@@ -8,7 +8,7 @@ static SqObject *slot(SqExecuteVM *vm, SqI32 index)
 static SqI32 dispatch_call(SqExecuteVM *vm, const SqInstruction *instruction, SqObject *result, SqI32 traps)
 {
     SqCallVM *base = &vm->base;
-    fn_0019e864(&base->temporary, slot(vm, instruction->argument1));
+    vm_object_assign(&base->temporary, slot(vm, instruction->argument1));
     SqI32 target = instruction->argument0;
     SqI32 stack_base = base->frame.base + instruction->argument2;
     _Bool tail = instruction->opcode == SQ_TAILCALL && base->temporary.type == 0x08000100u
@@ -16,7 +16,7 @@ static SqI32 dispatch_call(SqExecuteVM *vm, const SqInstruction *instruction, Sq
     if (tail) {
         if (base->current->varargs_size) fn_001a0cc0(vm, &base->current->varargs_size);
         for (SqI32 index = 0; index < instruction->argument3; index++)
-            fn_0019e864(slot(vm, index), slot(vm, instruction->argument2 + index));
+            vm_object_assign(slot(vm, index), slot(vm, instruction->argument2 + index));
         stack_base = base->frame.base;
         target = base->current->target;
     }
@@ -33,7 +33,7 @@ static SqI32 dispatch_call(SqExecuteVM *vm, const SqInstruction *instruction, Sq
             fn_001994c0(vm, 1, target, &callable);
             SqObject object = {0x08000400u, {.reference = &generator->reference}};
             generator->reference.references++;
-            fn_0019e864(slot(vm, target), &object);
+            vm_object_assign(slot(vm, target), &object);
             sq_execute_release(object.type, object.value);
             sq_execute_clear_stack(vm, previous_top);
         }
@@ -55,9 +55,9 @@ static SqI32 dispatch_call(SqExecuteVM *vm, const SqInstruction *instruction, Sq
         vm->suspended_traps = traps;
         vm->suspended_varargs_size = base->current->varargs_size;
         vm->suspended_varargs_base = base->current->varargs_base;
-        fn_0019e864(result, &callable);
+        vm_object_assign(result, &callable);
     } else if (target != -1) {
-        fn_0019e864(slot(vm, target), &callable);
+        vm_object_assign(slot(vm, target), &callable);
     }
     sq_execute_release(callable.type, callable.value);
     return suspend;
@@ -76,7 +76,7 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
     SqI32 traps = 0;
     if (execution_type == 0) {
         SqI32 previous_top = base->frame.top;
-        fn_0019e864(&base->temporary, closure);
+        vm_object_assign(&base->temporary, closure);
         SqScriptClosure *script = (SqScriptClosure *)base->temporary.value.reference;
         if (!fn_00199cb8(vm, script, base->frame.top - arguments, arguments, stack_base, 0)) {
             if (!base->current) sq_execute_error_handler(vm, &base->last_error);
@@ -89,7 +89,7 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
             fn_001994c0(vm, 1, base->current->target, &base->temporary);
             SqObject object = {0x08000400u, {.reference = &generator->reference}};
             generator->reference.references++;
-            fn_0019e864(result, &object);
+            vm_object_assign(result, &object);
             sq_execute_release(object.type, object.value);
             sq_execute_clear_stack(vm, previous_top);
             base->native_calls--;
@@ -115,14 +115,14 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
             if (base->debug_hook.type != 0x01000001u && base->debug_hook.value.reference != base->current->closure.value.reference)
                 sq_execute_debug(vm, 'l', argument);
             break;
-        case SQ_LOAD: fn_0019e864(slot(vm, instruction->argument0), base->current->literals + argument); break;
+        case SQ_LOAD: vm_object_assign(slot(vm, instruction->argument0), base->current->literals + argument); break;
         case SQ_LOADINT: sq_execute_scalar(slot(vm, instruction->argument0), 0x05000002u, (SqU32)argument); break;
         case SQ_LOADFLOAT: sq_execute_scalar(slot(vm, instruction->argument0), 0x05000004u, (SqU32)argument); break;
         case SQ_DLOAD:
-            fn_0019e864(slot(vm, instruction->argument0), base->current->literals + argument);
-            fn_0019e864(slot(vm, instruction->argument2), base->current->literals + instruction->argument3);
+            vm_object_assign(slot(vm, instruction->argument0), base->current->literals + argument);
+            vm_object_assign(slot(vm, instruction->argument2), base->current->literals + instruction->argument3);
             break;
-        case SQ_MOVE: fn_0019e864(slot(vm, instruction->argument0), slot(vm, argument)); break;
+        case SQ_MOVE: vm_object_assign(slot(vm, instruction->argument0), slot(vm, argument)); break;
         case SQ_GET: case SQ_GETK: case SQ_PREPCALL: case SQ_PREPCALLK: {
             _Bool preparing = instruction->opcode == SQ_PREPCALL || instruction->opcode == SQ_PREPCALLK;
             _Bool literal = instruction->opcode == SQ_GETK || instruction->opcode == SQ_PREPCALLK;
@@ -130,8 +130,8 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
                 : slot(vm, preparing ? argument : instruction->argument2);
             const SqObject *self = slot(vm, preparing || literal ? instruction->argument2 : argument);
             if (!fn_00198578(vm, self, key, &base->temporary, 0, 1)) sq_execute_unsupported(vm, -141);
-            if (preparing) fn_0019e864(slot(vm, instruction->argument3), self);
-            fn_0019e864(slot(vm, instruction->argument0), &base->temporary);
+            if (preparing) vm_object_assign(slot(vm, instruction->argument3), self);
+            vm_object_assign(slot(vm, instruction->argument0), &base->temporary);
             break;
         }
         case SQ_NEWSLOT: {
@@ -142,27 +142,27 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
             SqTable *table = (SqTable *)self->value.reference;
             if (table->delegate) sq_execute_unsupported(vm, -111);
             fn_0019b728(table, key, value);
-            if (instruction->argument0 != instruction->argument3) fn_0019e864(slot(vm, instruction->argument0), value);
+            if (instruction->argument0 != instruction->argument3) vm_object_assign(slot(vm, instruction->argument0), value);
             break;
         }
         case SQ_DMOVE:
-            fn_0019e864(slot(vm, instruction->argument0), slot(vm, argument));
-            fn_0019e864(slot(vm, instruction->argument2), slot(vm, instruction->argument3));
+            vm_object_assign(slot(vm, instruction->argument0), slot(vm, argument));
+            vm_object_assign(slot(vm, instruction->argument2), slot(vm, instruction->argument3));
             break;
         case SQ_LOADNULLS: {
             SqObject null = {0x01000001u, {.reference = 0}};
-            for (SqI32 index = 0; index < argument; index++) fn_0019e864(slot(vm, instruction->argument0) + index, &null);
+            for (SqI32 index = 0; index < argument; index++) vm_object_assign(slot(vm, instruction->argument0) + index, &null);
             break;
         }
-        case SQ_LOADROOT: fn_0019e864(slot(vm, instruction->argument0), &base->root_table); break;
+        case SQ_LOADROOT: vm_object_assign(slot(vm, instruction->argument0), &base->root_table); break;
         case SQ_LOADBOOL: {
             SqObject boolean = {0x01000008u, {.bits = argument != 0}};
-            fn_0019e864(slot(vm, instruction->argument0), &boolean);
+            vm_object_assign(slot(vm, instruction->argument0), &boolean);
             break;
         }
         case SQ_LOADFREE: {
             SqScriptClosure *script = (SqScriptClosure *)base->current->closure.value.reference;
-            fn_0019e864(slot(vm, instruction->argument0), script->outers.values + argument);
+            vm_object_assign(slot(vm, instruction->argument0), script->outers.values + argument);
             break;
         }
         case SQ_VARGC: sq_execute_scalar(slot(vm, instruction->argument0), 0x05000002u, base->current->varargs_size); break;
@@ -182,7 +182,7 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
             fn_0019b998(table, base->shared, argument);
             SqObject object = {0x0a000020u, {.reference = &table->reference}};
             table->reference.references++;
-            fn_0019e864(slot(vm, instruction->argument0), &object);
+            vm_object_assign(slot(vm, instruction->argument0), &object);
             sq_execute_release(object.type, object.value);
             break;
         }
@@ -210,13 +210,13 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
             break;
         case SQ_AND: case SQ_OR:
             if (sq_execute_false(slot(vm, instruction->argument2)) == (instruction->opcode == SQ_AND)) {
-                fn_0019e864(slot(vm, instruction->argument0), slot(vm, instruction->argument2));
+                vm_object_assign(slot(vm, instruction->argument0), slot(vm, instruction->argument2));
                 base->current->instruction = (SqInstruction *)base->current->instruction + argument;
             }
             break;
         case SQ_NOT: {
             SqObject boolean = {0x01000008u, {.bits = sq_execute_false(slot(vm, argument))}};
-            fn_0019e864(slot(vm, instruction->argument0), &boolean);
+            vm_object_assign(slot(vm, instruction->argument0), &boolean);
             break;
         }
         case SQ_EQ: case SQ_NE: case SQ_CMP: {
@@ -243,7 +243,7 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
                 if (instruction->opcode == SQ_NE) value = !value;
             }
             SqObject boolean = {0x01000008u, {.bits = value}};
-            fn_0019e864(slot(vm, instruction->argument0), &boolean);
+            vm_object_assign(slot(vm, instruction->argument0), &boolean);
             break;
         }
         case SQ_BITW: case SQ_NEG: case SQ_BWNOT: {
@@ -275,7 +275,7 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
             break;
         case SQ_YIELD:
             if (!base->current->generator) sq_execute_unsupported(vm, -149);
-            if (argument != 255) fn_0019e864(&base->temporary, slot(vm, argument));
+            if (argument != 255) vm_object_assign(&base->temporary, slot(vm, argument));
             if (!fn_0019289c((SqGenerator *)base->current->generator, vm)) {
                 fn_00198230(base, &base->last_error);
                 if (sq_execute_unwind(vm, raise_error, &traps)) break;
@@ -283,10 +283,10 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
                 return 0;
             }
             traps -= base->current->traps;
-            if (argument != 255) fn_0019e864(slot(vm, argument), &base->temporary);
+            if (argument != 255) vm_object_assign(slot(vm, argument), &base->temporary);
             if (fn_001994c0(vm, instruction->argument0, argument, &base->temporary)) {
                 if (traps) sq_execute_unsupported(vm, -20);
-                fn_0019e864(result, &base->temporary);
+                vm_object_assign(result, &base->temporary);
                 base->native_calls--;
                 return 1;
             }
@@ -328,12 +328,12 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
                 return 0;
             }
             if (instruction->argument0 != instruction->argument3)
-                fn_0019e864(slot(vm, instruction->argument0), slot(vm, instruction->argument3));
+                vm_object_assign(slot(vm, instruction->argument0), slot(vm, instruction->argument3));
             break;
         case SQ_EXISTS: {
             _Bool found = fn_00198578(vm, slot(vm, argument), slot(vm, instruction->argument2), &base->temporary, 1, 0);
             SqObject boolean = {0x01000008u, {.bits = found}};
-            fn_0019e864(slot(vm, instruction->argument0), &boolean);
+            vm_object_assign(slot(vm, instruction->argument0), &boolean);
             break;
         }
         case SQ_COMPARITHL: case SQ_INCL: case SQ_PINCL:
@@ -351,7 +351,7 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
                 base->native_calls--;
                 return 0;
             }
-            fn_0019e864(slot(vm, instruction->argument0), &base->temporary);
+            vm_object_assign(slot(vm, instruction->argument0), &base->temporary);
             break;
         case SQ_CALL: case SQ_TAILCALL: {
             SqI32 returned = dispatch_call(vm, instruction, result, traps);
@@ -389,11 +389,11 @@ _Bool fn_0018d65c(SqExecuteVM *vm, const SqObject *closure, SqI32 target, SqI32 
                 SqObject empty = {0x01000001u, {.bits = 0}};
                 generator->state = 2;
                 fn_0019d320(&generator->stack, 0, &empty);
-                fn_0019e864(&generator->closure, &empty);
+                vm_object_assign(&generator->closure, &empty);
             }
             if (fn_001994c0(vm, instruction->argument0, argument, &base->temporary)) {
                 if (traps) sq_execute_unsupported(vm, -20);
-                fn_0019e864(result, &base->temporary);
+                vm_object_assign(result, &base->temporary);
                 base->native_calls--;
                 return 1;
             }

@@ -26,7 +26,7 @@ int fn_007555f0(IntervalSet *destination, const IntervalSet *source, void *const
         for (const IntrusiveLink *link = source->intervals.head.next;
              link != &source->intervals.head; link = link->next) {
             const IntervalNode *old = (const IntervalNode *)link;
-            IntervalNode *node = fn_004c39c8(destination->intervals.owner, RANGE_NODE_BLOCKS);
+            IntervalNode *node = fixed_arena_allocate(destination->intervals.owner, RANGE_NODE_BLOCKS);
             if (node == (void *)0)
                 return 0;
             IntrusiveLink *head = &destination->intervals.head;

@@ -81,7 +81,7 @@ int fn_006c3ab0(int *param_1,int param_2)
 void fn_006c3acc(int *param_1,int param_2,undefined4 param_3)
 
 {
-  fn_0017821c(param_3,param_2 * 0x3d8 + 0x50 + *param_1,0x3d8);
+  memory_copy(param_3,param_2 * 0x3d8 + 0x50 + *param_1,0x3d8);
   return;
 }
 

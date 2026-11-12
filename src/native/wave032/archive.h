@@ -29,7 +29,7 @@ ArchiveWord archive_word(const unsigned char *bytes);
 ArchiveView *fn_00118624(ArchiveView *view, const unsigned char *bytes);
 ArchiveView *fn_005f5cd8(ArchiveView *view);
 int fn_005f5cac(ArchiveView *view, const unsigned char *bytes);
-ArchiveView *fn_005f5d3c(ArchiveView *view);
+ArchiveView *archive_view_destroy(ArchiveView *view);
 void fn_005f5d14(ArchiveView *view);
 ArchiveWord fn_00183688(const ArchiveView *view, const char *name);
 const unsigned char *fn_00176d74(const ArchiveView *view, const char *name);

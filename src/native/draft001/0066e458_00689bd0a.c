@@ -213,7 +213,7 @@ void fn_0067aa80(int param_1,undefined4 *param_2)
 void fn_0067b540(int param_1)
 
 {
-  fn_00158f6c(param_1 + 100,0xff);
+  memory_zero_unaligned(param_1 + 100,0xff);
   return;
 }
 

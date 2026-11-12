@@ -103,6 +103,6 @@ typedef struct {
 } FlagRecord_0063b148;
 _Static_assert(__builtin_offsetof(FlagRecord_0063b148, flags_0004) == 4, "measured flag offset");
 
-FlagRecord_0063b148 * fn_0063b148(FlagRecord_0063b148 *self, u32 value);
+FlagRecord_0063b148 * flag_record_clear(FlagRecord_0063b148 *self, u32 value);
 
 #endif

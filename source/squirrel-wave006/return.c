@@ -31,9 +31,9 @@ _Bool fn_001994c0(SqExecuteVM *vm, SqI32 argument0, SqI32 argument1, SqObject *r
     SqObject null = {0x01000001u, {.reference = 0}};
     const SqObject *value = argument0 != 255 ? base->frame.stack + old_base + argument1 : &null;
     if (root) {
-        fn_0019e864(result, value);
+        vm_object_assign(result, value);
     } else if (target != -1) {
-        fn_0019e864(base->frame.stack + base->frame.base + target, value);
+        vm_object_assign(base->frame.stack + base->frame.base + target, value);
     }
     sq_execute_clear_stack(vm, old_top);
     if (old_base < base->frame.base) sq_execute_unsupported(vm, -2);

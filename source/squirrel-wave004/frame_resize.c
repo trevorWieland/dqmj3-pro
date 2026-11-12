@@ -27,5 +27,5 @@ void fn_0019d408(SqCallVector *vector, SqU32 requested, const SqCallInfo *fill)
 
 void fn_00198230(SqCallVM *vm, const SqObject *error)
 {
-    fn_0019e864(&vm->last_error, error);
+    vm_object_assign(&vm->last_error, error);
 }

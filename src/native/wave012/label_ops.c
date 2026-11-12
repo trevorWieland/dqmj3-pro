@@ -32,7 +32,7 @@ IntervalSet *fn_007557bc(IntervalSet *set)
         IntrusiveLink *link = head->next;
         while (link != head) {
             IntrusiveLink *next = link->next;
-            fn_004c3994(set->intervals.owner, link, RANGE_NODE_BLOCKS);
+            fixed_arena_release(set->intervals.owner, link, RANGE_NODE_BLOCKS);
             link = next;
         }
         set->intervals.owner = (void *)0;

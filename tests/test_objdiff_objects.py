@@ -101,9 +101,36 @@ class ObjectConstructionTests(unittest.TestCase):
             objdiff_objects.compiler_argv(ROOT, {'source': 'x', 'layoutProfile': 'wide'}, source,
                                           self.output / 'x.o')
 
-    def test_compiling_reports_only_canonical_function_names(self):
+    def test_compiling_reports_every_defined_function(self):
         definitions = self.compile()
-        self.assertEqual(set(definitions), {'fn_00100000', 'fn_00100004', 'fn_00100020'})
+        self.assertEqual(set(definitions),
+                         {'fn_00100000', 'fn_00100004', 'fn_00100020', 'helper'})
+
+    def test_a_free_name_is_measured_through_the_split_table(self):
+        source = self.output / 'unit.c'
+        source.write_text('unsigned memory_copy(unsigned x) { return x + 1; }\n', encoding='utf-8')
+        unit = {'source': source.relative_to(ROOT).as_posix(), 'compilerProfile': 'clang-21'}
+        definitions, _ = objdiff_objects.compile_units(
+            ROOT, self.output / 'compiled', [unit], None, {'memory_copy'})
+        self.assertEqual(set(definitions), {'memory_copy'})
+        read = elf_objects.read(definitions['memory_copy']['object'])
+        split = split_module.Split(
+            [split_module.Symbol('memory_copy', 0x100000, 'arm',
+                                 read['functions']['memory_copy']['size'])], 'test')
+        matched = split_module.match(definitions, split)
+        self.assertEqual(list(matched), [0x100000])
+        self.assertEqual(matched[0x100000][0], 'memory_copy')
+
+    def test_two_units_defining_a_split_name_are_refused(self):
+        second = self.output / 'second.c'
+        second.write_text('unsigned memory_copy(unsigned x) { return x; }\n', encoding='utf-8')
+        source = self.output / 'unit.c'
+        source.write_text('unsigned memory_copy(unsigned x) { return x; }\n', encoding='utf-8')
+        units = [{'source': source.relative_to(ROOT).as_posix(), 'compilerProfile': 'clang-21'},
+                 {'source': second.relative_to(ROOT).as_posix(), 'compilerProfile': 'clang-21'}]
+        with self.assertRaisesRegex(ValueError, 'both define memory_copy'):
+            objdiff_objects.compile_units(ROOT, self.output / 'compiled', units, None,
+                                          {'memory_copy'})
 
     def test_carve_reproduces_the_original_bytes_and_symbols(self):
         image = bytearray(0x100)

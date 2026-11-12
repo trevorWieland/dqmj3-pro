@@ -7,19 +7,19 @@ void pattern_process_candidates(FixedArena *arena, const PatternRulePrefix *rule
 {
     fn_004c3b08(arena);
     fn_004c3974(arena, rule->scratch);
-    PatternLexer *lexer = fn_004c39c8(arena, 2);
+    PatternLexer *lexer = fixed_arena_allocate(arena, 2);
     if (lexer != (void *)0)
         fn_004bfeb8(lexer);
-    PatternLiteralMatcher *literal = fn_004c39c8(arena, 1);
+    PatternLiteralMatcher *literal = fixed_arena_allocate(arena, 1);
     if (literal != (void *)0)
         fn_004c0380(literal);
-    PatternNfaBuilder *builder = fn_004c39c8(arena, 2);
+    PatternNfaBuilder *builder = fixed_arena_allocate(arena, 2);
     if (builder != (void *)0)
         fn_004c1dc0(builder);
-    CompileContext *compiled = fn_004c39c8(arena, 2);
+    CompileContext *compiled = fixed_arena_allocate(arena, 2);
     if (compiled != (void *)0)
         fn_004c2c5c(compiled);
-    MatchCursor *cursor = fn_004c39c8(arena, 1);
+    MatchCursor *cursor = fixed_arena_allocate(arena, 1);
     if (cursor != (void *)0)
         cursor->state = (void *)0;
     if (fn_004befe0(lexer, arena, pattern, length) != 0)

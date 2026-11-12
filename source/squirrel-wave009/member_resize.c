@@ -14,8 +14,8 @@ void fn_001a51e0(SqClassMemberVector009 *vector, SqU32 requested, const SqClassM
             if (member) {
                 const SqObject null = {0x01000001u, {.reference = 0}};
                 *member = (SqClassMember009){null, null};
-                fn_0019e864(&member->primary, &fill->primary);
-                fn_0019e864(&member->secondary, &fill->secondary);
+                vm_object_assign(&member->primary, &fill->primary);
+                vm_object_assign(&member->secondary, &fill->secondary);
             }
             vector->size += 1;
         }

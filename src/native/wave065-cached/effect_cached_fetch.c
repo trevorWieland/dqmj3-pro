@@ -40,7 +40,7 @@ EFFECT_FLOAT_ABI065 void *fn_002a47cc(EffectOwningCacheFields065 *cache, int key
             const unsigned char *preview = fn_00176d74(&archive, name);
             cached_preview065(cache, (unsigned int)index, preview, translation);
             entry->resource_slot = fn_005f0974(cache->registration, (unsigned char *)resource, kind);
-            fn_005f5d3c(&archive);
+            archive_view_destroy(&archive);
         }
         entry->resource_references = (int)((unsigned int)entry->resource_references + 1u);
     }
