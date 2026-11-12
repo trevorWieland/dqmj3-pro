@@ -2,7 +2,11 @@
 
 import json
 import os
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from placement import read_json  # noqa: E402
 
 PROFILE_CONFIG = "config/compiler-profiles.json"
 ROOT = Path(__file__).resolve().parents[1]
