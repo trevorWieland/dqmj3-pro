@@ -10,5 +10,11 @@
 
 #define adler32 fn_00730208
 
+/* The image links two zlib copies and both include this same upstream
+ * file, so every symbol this adapter does not place would be defined
+ * twice. This copy owns its own symbols; only the mapped ones are placed. */
+#define adler32_combine zlib_copy1_adler32_combine
+#define adler32_combine64 zlib_copy1_adler32_combine64
+
 #include "../adler32.c"
 #endif
