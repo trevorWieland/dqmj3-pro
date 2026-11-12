@@ -91,8 +91,10 @@ def roundtrip_table(data, schema):
     except records.CodecError as error:
         result["error"] = str(error)
         return result
-    result.update({"stride": document["stride"], "count": document["count"],
-                   "witnesses": document["witnesses"]})
+    result.update({"layout": schema.layout,
+                   "stride": document.get("stride", 0),
+                   "count": document.get("count", 0),
+                   "witnesses": document.get("witnesses", [])})
     if rebuilt != data:
         result["error"] = "re-encoded bytes differ at offset %s" % _first_index(rebuilt, data)
         return result
@@ -153,12 +155,15 @@ def verify(root, schemas):
         schema = by_magic.get(data[:records.MAGIC_SIZE])
         if schema is None:
             report["uncharacterised"].append(
-                {"path": relative, "reason": "no characterised table carries this magic"})
+                {"path": relative, "magic": _magic_text(data),
+                 "reason": "no characterised table carries this magic"})
             continue
         result = roundtrip_table(data, schema)
         result["path"] = relative
         if not result["resolved"]:
-            report["uncharacterised"].append({"path": relative, "reason": result["error"]})
+            report["uncharacterised"].append({"path": relative,
+                                              "magic": _magic_text(data),
+                                              "reason": result["error"]})
             continue
         report["tables"].append(result)
         if not result["ok"]:
@@ -171,8 +176,22 @@ def verify(root, schemas):
             report["failures"].append(result)
     report["tablesIdentical"] = sum(1 for item in report["tables"] if item["ok"])
     report["messagesIdentical"] = sum(1 for item in report["messages"] if item["ok"])
+    report["families"] = len({item["table"] for item in report["tables"]})
+    report["certainTables"] = sum(1 for item in report["tables"] if item["certain"])
+    report["layouts"] = {}
+    for item in report["tables"]:
+        layout = item.get("layout", "flat")
+        report["layouts"][layout] = report["layouts"].get(layout, 0) + 1
     report["ok"] = not report["failures"]
     return report
+
+
+def _magic_text(data):
+    """Return the four-byte magic as printable ASCII and hex for a report."""
+    magic = data[:records.MAGIC_SIZE]
+    printable = "".join(chr(byte) if 0x20 <= byte < 0x7F else "?"
+                        for byte in magic)
+    return "%s (%s)" % (printable, magic.hex())
 
 
 def load_tables(root, schemas):
