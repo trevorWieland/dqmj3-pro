@@ -70,6 +70,41 @@
       "measuredOriginal": true,
       "role": "Best-evidenced original compiler: on a 537-function corpus selected because Clang does not reproduce it, this profile reproduces 63 strictly and 75 modulo fixups where Clang reproduces 0 strictly; it reproduces 411 of 412 accepted control spans, the twelfth being one reconstructed constant spelling. The verdict is best-evidenced, not proven.",
       "evidence": "work/compiler-sweep/REPORT.md (bounded 2026-11-10 sweep, 13 candidate builds, 27 profiles)"
+    },
+    {
+      "id": "armcc-4.1-b1454-time-no-o3",
+      "identity": "ARM Compiler 4.1 (build 1454), RVCT for ARM",
+      "executable": "tools/armcc-4.1-b1454/bin/armcc.exe",
+      "arguments": [
+        "--cpu=MPCore",
+        "--apcs=/interwork",
+        "--c99",
+        "-O2",
+        "-Otime",
+        "-c",
+        "--gnu",
+        "--split_sections"
+      ],
+      "preinclude": "config/armcc-4.1-b1454-preinclude.h",
+      "includeDirectories": [
+        "tools/armcc-4.1-b1454/include"
+      ],
+      "layouts": {
+        "natural": [],
+        "packed-4": [
+          "pragma-pack-4"
+        ]
+      },
+      "publicHeaders": {
+        "zlib-solo": [
+          "-DZ_SOLO"
+        ],
+        "zlib-1.2.5": []
+      },
+      "postprocess": "armcc-split",
+      "measuredOriginal": false,
+      "role": "Per-unit optimisation profile: the same pinned armcc 4.1 build 1454 and target, without -O3. Used only by source units whose functions the pinned -O3 profile cannot match and this profile reproduces exactly; the global default is unchanged.",
+      "evidence": "work/compiler-sweep/REPORT.md (bounded 2026-11-10 sweep, 13 candidate builds, 27 profiles)"
     }
   ]
 }
