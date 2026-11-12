@@ -24,6 +24,9 @@
 #define crc32_combine64_ zlib_copy1_crc32_combine64_
 #define crc32_combine_gen64_ zlib_copy1_crc32_combine_gen64_
 #define crc32_combine_op zlib_copy1_crc32_combine_op
+#define get_crc_table zlib_copy1_get_crc_table
+#define crc32_combine zlib_copy1_crc32_combine
+#define crc32_combine64 zlib_copy1_crc32_combine64
 
 /* Clang 21 diagnoses zlib 1.2.5's K&R function definitions and one negative
  * shift as errors under the public-compile census's -Werror, while armcc 4.1 --
