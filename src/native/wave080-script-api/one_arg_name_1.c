@@ -167,16 +167,6 @@ int fn_00283704(SqVM *vm)
     return 0;
 }
 
-/* SetPointBoxEncountMine_(const char * value) - 0x00284c9c, 100 bytes: forwards const char * to fn_001f3530. */
-int fn_00284c9c(SqVM *vm)
-{
-    const char * value;
-    SCRIPT_CHECK_FILE(vm, sq_getstring(vm, -1, &value), "failed: sq_getstring",
-                      "FieldScriptFunc.cpp", kName_SetPointBoxEncountMine_, 0x06fb);
-    sq_pushinteger(vm, fn_001f3530(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
 /* SetCrackNPCMessageNameTag_(const char * value) - 0x002862f4, 88 bytes: forwards const char * to fn_002dbd60. */
 int fn_002862f4(SqVM *vm)
 {
@@ -187,22 +177,3 @@ int fn_002862f4(SqVM *vm)
     return 0;
 }
 
-/* SetPointBoxEventMineNoFallWait_(const char * value) - 0x0028791c, 100 bytes: forwards const char * to fn_001f497c. */
-int fn_0028791c(SqVM *vm)
-{
-    const char * value;
-    SCRIPT_CHECK_FILE(vm, sq_getstring(vm, -1, &value), "failed: sq_getstring",
-                      "FieldScriptFunc.cpp", kName_SetPointBoxEventMineNoFallWait_, 0x06f1);
-    sq_pushinteger(vm, fn_001f497c(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
-/* ReadNpc_(const char * value) - 0x002884fc, 100 bytes: forwards const char * to fn_001f5458. */
-int fn_002884fc(SqVM *vm)
-{
-    const char * value;
-    SCRIPT_CHECK_FILE(vm, sq_getstring(vm, -1, &value), "failed: sq_getstring",
-                      "FieldScriptFunc.cpp", kName_ReadNpc_, 0x00b2);
-    sq_pushinteger(vm, fn_001f5458(SCRIPT_CONTEXT(), value));
-    return 1;
-}

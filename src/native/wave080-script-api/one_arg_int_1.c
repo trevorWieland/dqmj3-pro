@@ -154,16 +154,6 @@ int fn_0027b360(SqVM *vm)
     return 0;
 }
 
-/* CheckTrophy_(s32 value) - 0x0027b410, 104 bytes: forwards s32 to fn_006abc00. */
-int fn_0027b410(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_CheckTrophy_, 0x0ee8);
-    sq_pushbool(vm, fn_006abc00(SCRIPT_CONTEXT(), (u8)(value & 0xff)));
-    return 1;
-}
-
 /* AddFieldMenu_(s32 value) - 0x0027c090, 92 bytes: forwards s32 to fn_001ec3dc. */
 int fn_0027c090(SqVM *vm)
 {
@@ -192,16 +182,6 @@ int fn_0027d560(SqVM *vm)
                       "FieldScriptFunc.cpp", kName_AddSpecialDisc_, 0x0ebb);
     fn_001f08e4(SCRIPT_CONTEXT(), (u8)(value & 0xff));
     return 0;
-}
-
-/* CheckEventDate_(s32 value) - 0x0027d738, 100 bytes: forwards s32 to fn_006abec0. */
-int fn_0027d738(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_CheckEventDate_, 0x0ede);
-    sq_pushbool(vm, fn_006abec0(SCRIPT_CONTEXT(), value));
-    return 1;
 }
 
 /* EndDemoBgmFade_(s32 value) - 0x0027d7d4, 88 bytes: forwards s32 to fn_001f091c. */
@@ -264,16 +244,6 @@ int fn_0028067c(SqVM *vm)
     return 0;
 }
 
-/* BossTaskGuideFlowMenu_(s32 value) - 0x002837c0, 100 bytes: forwards s32 to fn_001f30d4. */
-int fn_002837c0(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_BossTaskGuideFlowMenu_, 0x09d0);
-    sq_pushinteger(vm, fn_001f30d4(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
 /* ChangeBattleMonsterId_(s32 value) - 0x00283858, 88 bytes: forwards s32 to fn_001f311c. */
 int fn_00283858(SqVM *vm)
 {
@@ -282,16 +252,6 @@ int fn_00283858(SqVM *vm)
                       "FieldScriptFunc.cpp", kName_ChangeBattleMonsterId_, 0x0761);
     fn_001f311c(SCRIPT_CONTEXT(), value);
     return 0;
-}
-
-/* CheckFieldRideMonster_(s32 value) - 0x002839f8, 104 bytes: forwards s32 to fn_006accd4. */
-int fn_002839f8(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_CheckFieldRideMonster_, 0x0045);
-    sq_pushbool(vm, fn_006accd4(SCRIPT_CONTEXT(), value));
-    return 1;
 }
 
 /* ExecuteCrackNPCPresent_(s32 value) - 0x00284594, 88 bytes: forwards s32 to fn_001f3494. */
@@ -334,16 +294,6 @@ int fn_00286bc0(SqVM *vm)
     return 0;
 }
 
-/* CheckPartyMonsterLimitOver_(s32 value) - 0x00286c50, 104 bytes: forwards s32 to fn_006ad270. */
-int fn_00286c50(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_CheckPartyMonsterLimitOver_, 0x0ca2);
-    sq_pushbool(vm, fn_006ad270(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
 /* ChangeBattlePartyFromReactor_(s32 value) - 0x002871b4, 88 bytes: forwards s32 to fn_001f448c. */
 int fn_002871b4(SqVM *vm)
 {
@@ -352,16 +302,6 @@ int fn_002871b4(SqVM *vm)
                       "FieldScriptFunc.cpp", kName_ChangeBattlePartyFromReactor_, 0x077b);
     fn_001f448c(SCRIPT_CONTEXT(), value);
     return 0;
-}
-
-/* CheckPartyMonsterChangeColor_(s32 value) - 0x00287244, 104 bytes: forwards s32 to fn_006ad428. */
-int fn_00287244(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_CheckPartyMonsterChangeColor_, 0x0c98);
-    sq_pushbool(vm, fn_006ad428(SCRIPT_CONTEXT(), value));
-    return 1;
 }
 
 /* AddGold_(s32 value) - 0x00288324, 88 bytes: forwards s32 to fn_001f5418. */

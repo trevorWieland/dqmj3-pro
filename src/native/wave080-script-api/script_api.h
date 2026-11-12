@@ -2,13 +2,12 @@
  *
  * Every script in DQMJ3 Professional calls the C functions declared here through
  * Squirrel.  The binding table is config/script-natives.json (628 identifiers,
- * recovered from the registration blocks).  The directory now holds 364 measured
- * definitions: 359 byte-identical to the original and five drafts, each one
- * identified instruction-selection difference away (the reasons are in the
- * per-unit headers).  The bodies cover the no-argument queries, the one-, two-
- * and three-argument marshalling families, and the engine services the field
- * scripts drive.  See docs/script-api-native-reconstruction.md for the engine
- * facts, the shared constant access and the compiler rules.
+ * recovered from the registration blocks).  The bodies in this directory are the
+ * most-called functions in the game; 162 of the 187 measured definitions are
+ * byte-identical to the original and the rest are drafts, each one identified
+ * instruction-selection difference away.  See
+ * docs/script-api-native-reconstruction.md for the engine facts, the shared
+ * constant access and the compiler ceiling.
  *
  * The script natives all reach the engine through one global:
  *
@@ -44,13 +43,10 @@
 typedef signed int s32;
 typedef unsigned int u32;
 typedef signed short s16;
-typedef unsigned short u16;
 typedef signed char s8;
+typedef unsigned short u16;
 typedef unsigned char u8;
 typedef float f32;
-/* The engine prototypes in the C++ original take `bool`; C99's _Bool has the
- * same one-byte size and the same call-site normalisation. */
-typedef _Bool bool;
 
 typedef struct SqVM SqVM;
 typedef struct ScriptContext ScriptContext;
@@ -59,7 +55,8 @@ typedef struct ScriptHostVtable ScriptHostVtable;
 /* Offsets are byte offsets in the original image, not struct offsets that this
  * build controls; the layout is stated as words so a change is visible. */
 struct ScriptHostVtable {
-    void *reserved_000[3];                                        /* 0x00 */
+    void *reserved_000[2];                                        /* 0x00 */
+    void (*set_shadow)(ScriptContext *self, int enable);          /* 0x08 SetShadowEnable_ */
     int (*play_se)(ScriptContext *self, const char *se_name);     /* 0x0c PlaySE_ */
     void (*stop_se)(ScriptContext *self, const char *se_name);    /* 0x10 StopSE_ */
     void *reserved_014[1];                                        /* 0x14 */
@@ -96,36 +93,108 @@ struct ScriptContext {
 
 /* A script binding's own name, as the original data tail refers to it.
  *
- * The engine stores each binding name exactly once, in the initialized rodata
- * pool, and the binding passes that one address to the error formatter.  The
- * compiler therefore loads a four-byte address from its literal pool; it does
- * not embed the characters.  Writing the name as a string literal instead makes
- * armcc inline the characters, which grows the data tail past the extent the
- * original gives the function.
- *
- * These are extern arrays, not integer constants: the original refers to a
- * relocatable symbol, and that is why armcc reloads the pool word at every use
- * instead of hoisting one copy into a callee-saved register.  The build defines
- * each symbol at its original image address from config/script-constants.json
- * and checks the bytes there before linking; the characters themselves stay in
- * the retained rodata gap until that table is reconstructed. */
+ * The engine stores each binding name exactly once in the initialized rodata pool and
+ * the binding passes that one address to the error formatter, so the compiler loads a
+ * four-byte address from its literal pool instead of embedding the characters. These
+ * are extern arrays, not integer constants: the original refers to a relocatable
+ * symbol, which is why armcc reloads the pool word at every use instead of hoisting
+ * one copy into a callee-saved register. The build defines each symbol at its original
+ * image address from config/script-constants.json and checks the bytes there before
+ * linking; the characters stay in the retained rodata gap until that table is
+ * reconstructed. */
 extern const char kName_ArrangePointGimmick_[];
+extern const char kName_BossTaskGuideFlowMenu_[];
+extern const char kName_CheckEventDate_[];
+extern const char kName_CheckFieldRideMonster_[];
+extern const char kName_CheckPartyMonsterChangeColor_[];
+extern const char kName_CheckPartyMonsterLimitOver_[];
+extern const char kName_CheckTrophy_[];
+extern const char kName_GetAccessoryNum_[];
+extern const char kName_GetActionCategory_[];
+extern const char kName_GetActionEfficacy_[];
+extern const char kName_GetActionNo_[];
 extern const char kName_GetActive_[];
+extern const char kName_GetActorIndex_[];
+extern const char kName_GetAllyIndex_[];
+extern const char kName_GetAlpha_[];
+extern const char kName_GetDir_[];
+extern const char kName_GetEnemyIndex_[];
 extern const char kName_GetEventFlg_[];
+extern const char kName_GetFbxPointPos_[];
+extern const char kName_GetFbxPos_[];
+extern const char kName_GetFieldRideTypeNum_[];
 extern const char kName_GetFlagID_[];
+extern const char kName_GetHighRankEffectSize_[];
+extern const char kName_GetInitExistType_[];
+extern const char kName_GetItemFoundRecord_[];
+extern const char kName_GetItemNum_[];
+extern const char kName_GetMasterKind_[];
+extern const char kName_GetMonsterHp_[];
+extern const char kName_GetMonsterLinage_[];
+extern const char kName_GetMonsterSize_[];
 extern const char kName_GetMotion_[];
+extern const char kName_GetNakamaMonsterRankNum_[];
+extern const char kName_GetNakamaRecord_[];
 extern const char kName_GetNumFlg_[];
+extern const char kName_GetOwnerMonsterKind_[];
+extern const char kName_GetPartnerKind_[];
+extern const char kName_GetPartyMonsterNum_[];
+extern const char kName_GetPitch_[];
+extern const char kName_GetRandomDonMoguraEvent_[];
+extern const char kName_GetRandomDonMoguraHole_[];
+extern const char kName_GetTargetNum_[];
+extern const char kName_GetTargetType_[];
+extern const char kName_GetUseMp_[];
+extern const char kName_GotoMenuOpen_[];
+extern const char kName_IsAlly_[];
+extern const char kName_IsDanWinNum_[];
+extern const char kName_IsFreezeWave_[];
+extern const char kName_IsHaveSpecialDisc_[];
+extern const char kName_IsHighRankSpell_[];
+extern const char kName_IsHolyRailDemoTreated_[];
+extern const char kName_IsLightWave_[];
+extern const char kName_IsMasterFall_[];
+extern const char kName_IsMaster_[];
+extern const char kName_IsMonster_[];
 extern const char kName_IsMotionEnd_[];
+extern const char kName_IsOpenNaviMapRideFilter_[];
+extern const char kName_IsPalpnte_[];
+extern const char kName_IsPartnerFall_[];
+extern const char kName_IsPartnerRide_[];
+extern const char kName_IsPartner_[];
+extern const char kName_IsPartyMonsterHpMax_[];
+extern const char kName_IsPartyMonsterMpMax_[];
+extern const char kName_IsPasser_[];
+extern const char kName_IsPassingWinNum_[];
+extern const char kName_IsRankingBattleEntryNum_[];
+extern const char kName_IsReactorMarkerTypeHide_[];
+extern const char kName_IsRideTypeMonster_[];
+extern const char kName_IsRide_[];
+extern const char kName_IsStatusChangeVisible_[];
+extern const char kName_IsTargetSingle_[];
+extern const char kName_IsTeraAttack_[];
+extern const char kName_IsTokugi_[];
+extern const char kName_IsUsedCoinOverNum_[];
+extern const char kName_PlayerForcePause_[];
 extern const char kName_ReadGimmick_[];
 extern const char kName_ReadMotion_[];
+extern const char kName_ReadNpc_[];
+extern const char kName_SetDamageMotion_ScoutAttack_[];
 extern const char kName_SetEventFlg_[];
-extern const char kName_SetMotion_[];
+extern const char kName_SetHolyRailLayoutAnim_[];
 extern const char kName_SetMotionSpeed_[];
+extern const char kName_SetMotion_[];
 extern const char kName_SetNumFlg_[];
+extern const char kName_SetPartnerNaviMapActive_[];
+extern const char kName_SetPointBoxEncountMine_[];
+extern const char kName_SetPointBoxEventMineNoFallWait_[];
 extern const char kName_SetPointPos_[];
 extern const char kName_SetReactorMsg_[];
+extern const char kName_SetShadowEnable_[];
 extern const char kName_SetTalkName_[];
 extern const char kName_ShowMsg_[];
+extern const char kName_Task_EncountEffect_[];
+extern const char kName_Task_PartnerFormChange_[];
 
 /* The empty message every release-build script error throws.  It is the four
  * zero bytes at 0x00148920, and fn_00148918 returns its address. */
@@ -138,6 +207,7 @@ extern int fn_00157fb0(SqVM *vm, int index, const char **out);
 extern int fn_00157eb4(SqVM *vm, int index, int *out);
 extern int fn_00157f00(SqVM *vm, int index, f32 *out);
 extern int fn_001580cc(SqVM *vm, s32 value);
+extern int fn_00158070(SqVM *vm, f32 value);
 extern int fn_00158004(SqVM *vm, int value);
 extern int fn_00158128(SqVM *vm, const char *text, s32 length);
 extern int fn_001581d0(SqVM *vm, const char *message);
@@ -148,6 +218,7 @@ extern int fn_001638b0(SqVM *vm);
 #define sq_getbool fn_00157eb4
 #define sq_getfloat fn_00157f00
 #define sq_pushinteger fn_001580cc
+#define sq_pushfloat fn_00158070
 #define sq_pushbool fn_00158004
 #define sq_pushstring fn_00158128
 #define sq_throwerror fn_001581d0
@@ -168,23 +239,23 @@ extern void fn_00148888(ScriptContext *context);              /* arm the fade la
 extern int fn_001488c4(SqVM *vm, s32 *id, f32 *value);        /* id at -2, float at -1 */
 
 /* The argument check every validation site performs.  The line numbers in the
- * bodies are the original FieldScriptFunc.cpp lines, read from the literal the
- * error path passes in r3. */
-#define SCRIPT_CHECK(vm, call, operation, native_name, source_line)                    \
+ * bodies are the original FieldScriptFunc.cpp and BattleScriptFunc.cpp lines,
+ * read from the literal the error path passes in r3.  The source file is part of
+ * the check because it is one of the four operands, and the two script modules
+ * this directory reconstructs come from different files. */
+#define SCRIPT_CHECK_IN(vm, call, operation, source_file, native_name, source_line)    \
     do {                                                                               \
         if ((call) < 0)                                                                \
-            return sq_throwerror((vm), fn_00148918((operation), "FieldScriptFunc.cpp", \
+            return sq_throwerror((vm), fn_00148918((operation), (source_file),         \
                                                    (native_name), (source_line)));     \
     } while (0)
 
-/* The same check for a binding whose assertion text names a different original
- * translation unit: the script API spans FieldScriptFunc.cpp and
- * BattleScriptFunc.cpp, and the file operand is part of the original bytes. */
-#define SCRIPT_CHECK_FILE(vm, call, operation, file, native_name, source_line)         \
-    do {                                                                               \
-        if ((call) < 0)                                                                \
-            return sq_throwerror((vm), fn_00148918((operation), (file),                \
-                                                   (native_name), (source_line)));     \
-    } while (0)
+#define SCRIPT_CHECK(vm, call, operation, native_name, source_line)                    \
+    SCRIPT_CHECK_IN(vm, call, operation, "FieldScriptFunc.cpp", native_name, source_line)
+
+#include <stdbool.h>
+/* Some bindings name the assertion file explicitly; the operands are the
+ * same six, so this is the same check under the original's spelling. */
+#define SCRIPT_CHECK_FILE SCRIPT_CHECK_IN
 
 #endif

@@ -222,22 +222,3 @@ int fn_00280cfc(SqVM *vm)
     return 0;
 }
 
-/* Task_EncountEffect_(s32 value) - 0x00281b04, 104 bytes: forwards s32 to fn_001f2280. */
-int fn_00281b04(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_Task_EncountEffect_, 0x0d17);
-    sq_pushinteger(vm, fn_001f2280(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
-/* Task_PartnerFormChange_(s32 value) - 0x002850ac, 104 bytes: forwards s32 to fn_001f37f0. */
-int fn_002850ac(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_Task_PartnerFormChange_, 0x00a8);
-    sq_pushinteger(vm, fn_001f37f0(SCRIPT_CONTEXT(), (u8)(value & 0xff)));
-    return 1;
-}

@@ -58,20 +58,3 @@ int fn_00136e18(SqVM *vm)
     return 1;
 }
 
-/* SetDamageEffect_ExceptionEffect_(s32 first, s32 second, int third) - 0x00138f18, 264 bytes: forwards s32 and s32 and int to fn_0014a45c. */
-int fn_00138f18(SqVM *vm)
-{
-    ScriptContext *context;
-    s32 first;
-    s32 second;
-    int third;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -3, &first), "failed: sq_getinteger",
-                      "BattleScriptFunc.cpp", kName_SetDamageEffect_ExceptionEffect_, 0x0b0a);
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -2, &second), "failed: sq_getinteger",
-                      "BattleScriptFunc.cpp", kName_SetDamageEffect_ExceptionEffect_, 0x0b0d);
-    SCRIPT_CHECK_FILE(vm, sq_getbool(vm, -1, &third), "failed: sq_getbool",
-                      "BattleScriptFunc.cpp", kName_SetDamageEffect_ExceptionEffect_, 0x0b10);
-    context = SCRIPT_CONTEXT();
-    sq_pushinteger(vm, fn_0014a45c(context, first, second, third));
-    return 1;
-}

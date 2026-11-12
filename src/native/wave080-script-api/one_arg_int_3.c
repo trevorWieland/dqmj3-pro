@@ -85,16 +85,6 @@ int fn_0012d914(SqVM *vm)
     return 1;
 }
 
-/* IsPalpnte_(s32 value) - 0x0012fc50, 100 bytes: forwards s32 to fn_00155f80. */
-int fn_0012fc50(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "BattleScriptFunc.cpp", kName_IsPalpnte_, 0x0599);
-    sq_pushbool(vm, fn_00155f80(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
 /* RideMaster_(s32 value) - 0x001305e4, 92 bytes: forwards s32 to fn_001491a0. */
 int fn_001305e4(SqVM *vm)
 {
@@ -103,36 +93,6 @@ int fn_001305e4(SqVM *vm)
                       "BattleScriptFunc.cpp", kName_RideMaster_, 0x02b8);
     fn_001491a0(SCRIPT_CONTEXT(), (u8)(value & 0xff));
     return 0;
-}
-
-/* IsLightWave_(s32 value) - 0x00130c94, 100 bytes: forwards s32 to fn_00164258. */
-int fn_00130c94(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "BattleScriptFunc.cpp", kName_IsLightWave_, 0x05a4);
-    sq_pushbool(vm, fn_00164258(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
-/* IsTeraAttack_(s32 value) - 0x00131c0c, 100 bytes: forwards s32 to fn_00154f50. */
-int fn_00131c0c(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "BattleScriptFunc.cpp", kName_IsTeraAttack_, 0x05c5);
-    sq_pushbool(vm, fn_00154f50(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
-/* IsPartnerRide_(s32 value) - 0x00132438, 104 bytes: forwards s32 to fn_00174b78. */
-int fn_00132438(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "BattleScriptFunc.cpp", kName_IsPartnerRide_, 0x06db);
-    sq_pushbool(vm, fn_00174b78(SCRIPT_CONTEXT(), value));
-    return 1;
 }
 
 /* RideOffMaster_(s32 value) - 0x001324dc, 92 bytes: forwards s32 to fn_0016a51c. */
@@ -145,16 +105,6 @@ int fn_001324dc(SqVM *vm)
     return 0;
 }
 
-/* IsTargetSingle_(s32 value) - 0x00132ed4, 100 bytes: forwards s32 to fn_001648dc. */
-int fn_00132ed4(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "BattleScriptFunc.cpp", kName_IsTargetSingle_, 0x0582);
-    sq_pushbool(vm, fn_001648dc(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
 /* PlayIconAttackAnim_(s32 value) - 0x0013542c, 92 bytes: forwards s32 to fn_00159c8c. */
 int fn_0013542c(SqVM *vm)
 {
@@ -165,16 +115,6 @@ int fn_0013542c(SqVM *vm)
     return 0;
 }
 
-/* IsStatusChangeVisible_(s32 value) - 0x00136d74, 104 bytes: forwards s32 to fn_00175324. */
-int fn_00136d74(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "BattleScriptFunc.cpp", kName_IsStatusChangeVisible_, 0x02fe);
-    sq_pushbool(vm, fn_00175324(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
 /* PlayIconHealAndSupportAnim_(s32 value) - 0x0013822c, 92 bytes: forwards s32 to fn_00159dc4. */
 int fn_0013822c(SqVM *vm)
 {
@@ -183,46 +123,6 @@ int fn_0013822c(SqVM *vm)
                       "BattleScriptFunc.cpp", kName_PlayIconHealAndSupportAnim_, 0x078e);
     fn_00159dc4(SCRIPT_CONTEXT(), (u8)(value & 0xff));
     return 0;
-}
-
-/* SetDamageMotion_ScoutAttack_(s32 value) - 0x00138440, 100 bytes: forwards s32 to fn_0014a35c. */
-int fn_00138440(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "BattleScriptFunc.cpp", kName_SetDamageMotion_ScoutAttack_, 0x0a29);
-    sq_pushinteger(vm, fn_0014a35c(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
-/* IsRide_(s32 value) - 0x0013965c, 104 bytes: forwards s32 to fn_00175518. */
-int fn_0013965c(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "BattleScriptFunc.cpp", kName_IsRide_, 0x06d0);
-    sq_pushbool(vm, fn_00175518(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
-/* IsPasser_(s32 value) - 0x0013a248, 100 bytes: forwards s32 to fn_00175724. */
-int fn_0013a248(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "BattleScriptFunc.cpp", kName_IsPasser_, 0x058e);
-    sq_pushbool(vm, fn_00175724(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
-/* IsTokugi_(s32 value) - 0x0013a2e8, 100 bytes: forwards s32 to fn_00175778. */
-int fn_0013a2e8(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "BattleScriptFunc.cpp", kName_IsTokugi_, 0x05ba);
-    sq_pushbool(vm, fn_00175778(SCRIPT_CONTEXT(), value));
-    return 1;
 }
 
 /* ResetStepSe_(s32 value) - 0x0027b800, 88 bytes: forwards s32 to fn_001ec1c4. */
@@ -243,16 +143,6 @@ int fn_0027deec(SqVM *vm)
                       "FieldScriptFunc.cpp", kName_SetDirToPlayer_, 0x028e);
     fn_001f0d74(SCRIPT_CONTEXT(), value);
     return 0;
-}
-
-/* IsPassingWinNum_(s32 value) - 0x0027ee38, 104 bytes: forwards s32 to fn_001f14d8. */
-int fn_0027ee38(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_IsPassingWinNum_, 0x0f3a);
-    sq_pushbool(vm, fn_001f14d8(SCRIPT_CONTEXT(), value));
-    return 1;
 }
 
 /* SetDiscQuestEnd_(s32 value) - 0x0027ef74, 88 bytes: forwards s32 to fn_001f15d4. */
@@ -285,46 +175,6 @@ int fn_0027fa18(SqVM *vm)
     return 0;
 }
 
-/* IsRideTypeMonster_(s32 value) - 0x00280924, 104 bytes: forwards s32 to fn_006ac3f4. */
-int fn_00280924(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_IsRideTypeMonster_, 0x0c87);
-    sq_pushbool(vm, fn_006ac3f4(SCRIPT_CONTEXT(), (u8)(value & 0xff)));
-    return 1;
-}
-
-/* IsUsedCoinOverNum_(s32 value) - 0x002809c4, 104 bytes: forwards s32 to fn_001f1ac4. */
-int fn_002809c4(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_IsUsedCoinOverNum_, 0x0f1b);
-    sq_pushbool(vm, fn_001f1ac4(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
-/* IsPartyMonsterHpMax_(s32 value) - 0x00282678, 104 bytes: forwards s32 to fn_006aca70. */
-int fn_00282678(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_IsPartyMonsterHpMax_, 0x0c3a);
-    sq_pushbool(vm, fn_006aca70(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
-/* IsPartyMonsterMpMax_(s32 value) - 0x00282718, 104 bytes: forwards s32 to fn_006acb24. */
-int fn_00282718(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_IsPartyMonsterMpMax_, 0x0c44);
-    sq_pushbool(vm, fn_006acb24(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
 /* OpenNaviMapRideFilter_(s32 value) - 0x00283e10, 88 bytes: forwards s32 to fn_001f32d0. */
 int fn_00283e10(SqVM *vm)
 {
@@ -333,36 +183,6 @@ int fn_00283e10(SqVM *vm)
                       "FieldScriptFunc.cpp", kName_OpenNaviMapRideFilter_, 0x06a0);
     fn_001f32d0(SCRIPT_CONTEXT(), value);
     return 0;
-}
-
-/* IsOpenNaviMapRideFilter_(s32 value) - 0x002856b4, 100 bytes: forwards s32 to fn_006ad1b8. */
-int fn_002856b4(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_IsOpenNaviMapRideFilter_, 0x06a9);
-    sq_pushbool(vm, fn_006ad1b8(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
-/* IsRankingBattleEntryNum_(s32 value) - 0x00285750, 104 bytes: forwards s32 to fn_001f3a6c. */
-int fn_00285750(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_IsRankingBattleEntryNum_, 0x0f43);
-    sq_pushbool(vm, fn_001f3a6c(SCRIPT_CONTEXT(), value));
-    return 1;
-}
-
-/* IsReactorMarkerTypeHide_(s32 value) - 0x002857f0, 100 bytes: forwards s32 to fn_001f3ab4. */
-int fn_002857f0(SqVM *vm)
-{
-    s32 value;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &value), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_IsReactorMarkerTypeHide_, 0x0237);
-    sq_pushbool(vm, fn_001f3ab4(SCRIPT_CONTEXT(), value));
-    return 1;
 }
 
 /* PushCrackNPCItemNameAndNumMessage_(s32 value) - 0x00287b4c, 88 bytes: forwards s32 to fn_001f4a98. */

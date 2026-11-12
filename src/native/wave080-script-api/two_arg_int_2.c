@@ -23,18 +23,6 @@ extern const char kName_SetWalkRadius_[];
 extern const char kName_Task_ObjectFadeIn_[];
 extern const char kName_Task_ObjectFadeOut_[];
 
-/* SetWalkRadius_(s32 first, s32 second) - 0x0027d468, 168 bytes: forwards two s32 arguments to fn_006abe60. */
-int fn_0027d468(SqVM *vm)
-{
-    struct { s32 first; s32 second; } args;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -2, &args.first), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_SetWalkRadius_, 0x00e2);
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &args.second), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_SetWalkRadius_, 0x00e5);
-    fn_006abe60(SCRIPT_CONTEXT(), args.first, args.second);
-    return 0;
-}
-
 /* SetTalkCameraType_(s32 first, s32 second) - 0x00280f80, 168 bytes: forwards two s32 arguments to fn_001f1c1c. */
 int fn_00280f80(SqVM *vm)
 {
@@ -59,14 +47,3 @@ int fn_002812c4(SqVM *vm)
     return 1;
 }
 
-/* Task_ObjectFadeOut_(s32 first, s32 second) - 0x00281ba4, 180 bytes: forwards two s32 arguments to fn_001f22c8. */
-int fn_00281ba4(SqVM *vm)
-{
-    struct { s32 first; s32 second; } args;
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -2, &args.first), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_Task_ObjectFadeOut_, 0x049a);
-    SCRIPT_CHECK_FILE(vm, sq_getinteger(vm, -1, &args.second), "failed: sq_getinteger",
-                      "FieldScriptFunc.cpp", kName_Task_ObjectFadeOut_, 0x049d);
-    sq_pushinteger(vm, fn_001f22c8(SCRIPT_CONTEXT(), args.first, args.second));
-    return 1;
-}
