@@ -35,39 +35,6 @@
 #pragma clang diagnostic ignored "-Wunused-variable"
 #pragma clang diagnostic ignored "-Wunused-but-set-variable"
 #pragma clang diagnostic ignored "-Wimplicit-function-declaration"
-#pragma clang diagnostic ignored "-Wpointer-sign"
-#pragma clang diagnostic ignored "-Wnon-literal-null-conversion"
-#pragma clang diagnostic ignored "-Wincompatible-pointer-types"
-#pragma clang diagnostic ignored "-Wincompatible-function-pointer-types"
-#pragma clang diagnostic ignored "-Wcompare-distinct-pointer-types"
-#pragma clang diagnostic ignored "-Wpointer-integer-compare"
-#pragma clang diagnostic ignored "-Wtautological-pointer-compare"
-#pragma clang diagnostic ignored "-Wpointer-compare"
-#pragma clang diagnostic ignored "-Wreturn-stack-address"
-#pragma clang diagnostic ignored "-Wstring-plus-int"
-#pragma clang diagnostic ignored "-Wreturn-type"
-#pragma clang diagnostic ignored "-Wchar-subscripts"
-#pragma clang diagnostic ignored "-Wc23-extensions"
-#pragma clang diagnostic ignored "-Wdivision-by-zero"
-#pragma clang diagnostic ignored "-Wshift-count-overflow"
-#pragma clang diagnostic ignored "-Wshift-negative-value"
-#pragma clang diagnostic ignored "-Wnull-pointer-arithmetic"
-#pragma clang diagnostic ignored "-Wnull-dereference"
-#pragma clang diagnostic ignored "-Wformat"
-#pragma clang diagnostic ignored "-Wformat-security"
-#pragma clang diagnostic ignored "-Wunused-label"
-#pragma clang diagnostic ignored "-Wunused-const-variable"
-#pragma clang diagnostic ignored "-Wmissing-braces"
-#pragma clang diagnostic ignored "-Wmissing-field-initializers"
-#pragma clang diagnostic ignored "-Warray-parameter"
-#pragma clang diagnostic ignored "-Wdangling-else"
-#pragma clang diagnostic ignored "-Wlogical-not-parentheses"
-#pragma clang diagnostic ignored "-Wbool-operation"
-#pragma clang diagnostic ignored "-Wtautological-constant-compare"
-#pragma clang diagnostic ignored "-Wtautological-compare"
-#pragma clang diagnostic ignored "-Warray-compare"
-#pragma clang diagnostic ignored "-Wpointer-bool-conversion"
-#pragma clang diagnostic ignored "-Wliteral-range"
 #endif
 
 #ifndef DQMJ3_DRAFT_DECOMPILED_H
@@ -88,7 +55,6 @@ typedef unsigned long long undefined8;
  * register, where the width is already four bytes, so it is spelled as the
  * signed or unsigned integer of that signedness. */
 typedef unsigned int       uint3;
-typedef unsigned short     ushort3;
 typedef int                int3;
 typedef unsigned char      uchar;
 typedef unsigned short     ushort;
@@ -108,36 +74,6 @@ typedef _Bool bool;
 /* The decompiler emits these when it cannot follow control flow. */
 extern void halt_baddata(void);
 extern void halt_badinst(void);
-
-/* Names Ghidra gives to hardware operations and unnamed locations. A
- * coprocessor or exclusive-access instruction has no C expression, so each is
- * an ordinary function with the same linkage: it compiles, and the bytes it
- * produces are measured like every other function's. `_Reset` and `NotUsed` are
- * addresses the decompiler could not name; an object of their own gives the
- * expressions that use them a value. */
-static int hasExclusiveAccess(unsigned int address) { (void)address; return 0; }
-static unsigned int coproc_movefrom_User_R_Thread_and_Process_ID(void) { return 0; }
-static void coproc_moveto_Data_Synchronization(unsigned int value) { (void)value; }
-static void coproc_moveto_Data_Memory_Barrier(unsigned int value) { (void)value; }
-/* The decompiler passes the coprocessor number and its register operands; a
- * macro accepts any argument list, which is the shape the corpus uses. */
-#define coprocessor_load(...) ((undefined4)0)
-#define coprocessor_store(...) ((undefined4)0)
-#define coprocessor_store2(...) ((undefined4)0)
-#define coprocessor_loadlong(...) ((undefined4)0)
-#define coprocessor_storelong2(...) ((undefined4)0)
-#define coprocessor_function(...) ((undefined4)0)
-static char *builtin_strncpy(char *target, const char *source, unsigned int count)
-{
-    char *start = target;
-    while (count--) {
-        *target++ = *source ? *source++ : 0;
-    }
-    return start;
-}
-static undefined4 NotUsed;
-static undefined4 _Reset;
-static undefined4 _UndefinedInstruction;
 
 /* Bit-field extraction, concatenation and carry helpers the decompiler emits
  * for sub-word and 64-bit operations. Each is a pure spelling of an operation

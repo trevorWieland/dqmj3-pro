@@ -46,8 +46,7 @@ def main():
             raise SystemExit('missing unit header: ' + str(header))
         units.append({
             'source': source.relative_to(ROOT).as_posix(),
-            'headers': ['src/native/decompiled/decompiled.h',
-                        header.relative_to(ROOT).as_posix()],
+            'headers': [header.relative_to(ROOT).as_posix()],
             'role': ROLE,
         })
     units.sort(key=lambda unit: unit['source'])

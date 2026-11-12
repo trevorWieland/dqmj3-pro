@@ -39,7 +39,7 @@ void fn_002d64f4(int param_1,undefined4 param_2)
 
 {
   *(undefined1 *)(param_1 + 4) = 10;
-  memory_copy(param_1 + 8,param_2,0x58);
+  fn_0017821c(param_1 + 8,param_2,0x58);
   return;
 }
 
@@ -75,7 +75,7 @@ void fn_002d64c8(int param_1,undefined4 param_2)
 
 {
   *(undefined1 *)(param_1 + 4) = 9;
-  memory_copy(param_1 + 8,param_2,0x58);
+  fn_0017821c(param_1 + 8,param_2,0x58);
   return;
 }
 
@@ -108,7 +108,7 @@ void fn_002d6478(int param_1,undefined4 param_2)
 
 {
   *(undefined1 *)(param_1 + 4) = 1;
-  memory_copy(param_1 + 8,param_2,0x48);
+  fn_0017821c(param_1 + 8,param_2,0x48);
   return;
 }
 
@@ -137,30 +137,6 @@ void fn_002d6460(int param_1,undefined4 *param_2)
 
 
 
-<<<<<<< ours — function `fn_002d6530` (S+F, confidence: low)
-// refused_by: merge_ladder_exhausted · collision: none (both sides edited, nowhere the same lines)
-void fn_002d6530(int param_1,undefined4 *param_2)
-
-{
-  undefined4 uVar1;
-  undefined4 uVar2;
-  undefined4 uVar3;
-  undefined4 uVar4;
-  undefined4 uVar5;
-  
-  *(undefined1 *)(param_1 + 4) = 0x17;
-  uVar1 = param_2[1];
-  uVar2 = param_2[2];
-  uVar3 = param_2[3];
-  uVar4 = param_2[4];
-  uVar5 = param_2[5];
-  *(undefined4 *)(param_1 + 8) = *param_2;
-  *(undefined4 *)(param_1 + 0xc) = uVar1;
-  *(undefined4 *)(param_1 + 0x10) = uVar2;
-  *(undefined4 *)(param_1 + 0x14) = uVar3;
-  *(undefined4 *)(param_1 + 0x18) = uVar4;
-  *(undefined4 *)(param_1 + 0x1c) = uVar5;
-=======
 void fn_002d6440(int param_1,undefined4 *param_2)
 
 {
@@ -189,7 +165,6 @@ void fn_002d6440(int param_1,undefined4 *param_2)
   *(undefined4 *)(param_1 + 0x20) = uVar6;
   *(undefined4 *)(param_1 + 0x24) = uVar7;
   *(undefined4 *)(param_1 + 0x28) = param_2[8];
->>>>>>> theirs — function `fn_002d6530` (S+F, confidence: low) · weave: run 'weave explain src/native/decompiled/002d6360_002d6518.c' for per-hunk detail, 'weave check' to verify your resolution
   return;
 }
 
@@ -237,7 +212,7 @@ void fn_002d63ec(int param_1,undefined4 param_2)
 
 {
   *(undefined1 *)(param_1 + 4) = 8;
-  memory_copy(param_1 + 8,param_2,0x58);
+  fn_0017821c(param_1 + 8,param_2,0x58);
   return;
 }
 
@@ -349,16 +324,5 @@ void fn_002d6360(int param_1,undefined4 param_2)
   *(undefined1 *)(param_1 + 4) = 0x18;
   return;
 }
-<<<<<<< ours — function `fn_002d656c` (S+F, confidence: low)
-// refused_by: modify_delete_guard · collision: none (no common ancestor text)
-void fn_002d656c(int param_1,undefined4 param_2)
-
-{
-  *(undefined1 *)(param_1 + 4) = 0x15;
-  memory_copy(param_1 + 8,param_2,0x4c);
-  return;
-}
-=======
->>>>>>> theirs — function `fn_002d656c` (S+F, confidence: low)
 
 
