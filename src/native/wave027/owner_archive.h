@@ -1,6 +1,10 @@
 #ifndef DQMJ3_WAVE027_OWNER_ARCHIVE_H
 #define DQMJ3_WAVE027_OWNER_ARCHIVE_H
 
+/* The system services this unit consumes; see platform/port/README.md. */
+#include "../../../platform/port/file.h"
+#include "../../../platform/port/memory.h"
+
 #include "../wave013/pattern_file_owner_stream.h"
 
 _Static_assert(sizeof(unsigned int) == 4, "Archive fields require32-bit words");

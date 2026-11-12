@@ -1,6 +1,10 @@
 #ifndef DQMJ3_WAVE013_FILE_OWNER_SERVICES_H
 #define DQMJ3_WAVE013_FILE_OWNER_SERVICES_H
 
+/* The system services this unit consumes; see platform/port/README.md. */
+#include "../../../platform/port/file.h"
+#include "../../../platform/port/memory.h"
+
 #include "pattern_file_owner_view.h"
 
 typedef struct PatternOwnerOpenedFile {

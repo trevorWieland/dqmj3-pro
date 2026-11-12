@@ -1,6 +1,10 @@
 #ifndef DQMJ3_WAVE032_ARCHIVE_H
 #define DQMJ3_WAVE032_ARCHIVE_H
 
+/* The system services this unit consumes; see platform/port/README.md. */
+#include "../../../platform/port/file.h"
+#include "../../../platform/port/memory.h"
+
 typedef unsigned int ArchiveWord;
 typedef struct ArchiveImage { const unsigned char *bytes; } ArchiveImage;
 typedef struct ArchiveView ArchiveView;

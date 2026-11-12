@@ -1,5 +1,8 @@
 #ifndef THREAD_MAP062Y_H
 #define THREAD_MAP062Y_H
+
+/* The system services this unit consumes; see platform/port/README.md. */
+#include "../../../../platform/port/thread.h"
 #include "sdk062s.h"
 
 typedef struct SdkMapInsertion062y {

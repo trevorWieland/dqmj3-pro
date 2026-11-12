@@ -1,6 +1,12 @@
 #ifndef DQMJ3_FILE_QUEUE067_H
 #define DQMJ3_FILE_QUEUE067_H
 
+/* The system services this unit consumes; see platform/port/README.md. */
+#include "../../../platform/port/memory.h"
+#include "../../../platform/port/thread.h"
+#include "../../../platform/port/time.h"
+#include "../../../platform/port/system.h"
+
 #include "../wave066-request/request.h"
 
 typedef struct EffectQueueNode067 EffectQueueNode067;

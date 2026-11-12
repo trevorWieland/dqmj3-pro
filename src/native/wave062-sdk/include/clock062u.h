@@ -1,5 +1,8 @@
 #ifndef CLOCK062U_H
 #define CLOCK062U_H
+
+/* The system services this unit consumes; see platform/port/README.md. */
+#include "../../../../platform/port/time.h"
 #include "sdk062s.h"
 
 typedef unsigned long long SdkWide062u;

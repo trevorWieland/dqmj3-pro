@@ -1,5 +1,8 @@
 #ifndef TIMER062AA_H
 #define TIMER062AA_H
+
+/* The system services this unit consumes; see platform/port/README.md. */
+#include "../../../../platform/port/time.h"
 #include "clock062u.h"
 
 typedef struct SdkEndpoint062aa {

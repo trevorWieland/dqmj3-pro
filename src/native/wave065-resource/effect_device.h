@@ -1,6 +1,11 @@
 #ifndef DQMJ3_EFFECT_DEVICE_RESOURCE065_H
 #define DQMJ3_EFFECT_DEVICE_RESOURCE065_H
 
+/* The system services this unit consumes; see platform/port/README.md. */
+#include "../../../platform/port/graphics.h"
+#include "../../../platform/port/memory.h"
+#include "../../../platform/port/thread.h"
+
 #include "../wave065/effect_shader.h"
 
 typedef struct EffectDeviceServices065 {

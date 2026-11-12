@@ -1,6 +1,10 @@
 #ifndef SDK062S_H
 #define SDK062S_H
 
+/* The system services this unit consumes; see platform/port/README.md. */
+#include "../../../../platform/port/memory.h"
+#include "../../../../platform/port/thread.h"
+
 typedef unsigned char SdkByte062s;
 typedef unsigned int SdkWord062s;
 typedef int SdkSigned062s;
