@@ -98,6 +98,12 @@ def select(state, shape, limit, minimum, maximum, order):
         if shape == 'string':
             return (record['hasStrings'] and not record['data'] and not record['warned']
                     and not record['indirect'])
+        if shape == 'svc':
+            # The whole reopened class: every function whose decompiled body
+            # contains a supervisor call, whatever else it also carries. The
+            # other shapes filter out data, literals and control flow, and doing
+            # that here would hide exactly the failure classes this run measures.
+            return record.get('svc', False)
         if shape == 'all':
             return not record['warned']
         raise SystemExit('unknown shape ' + shape)

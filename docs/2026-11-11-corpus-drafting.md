@@ -228,6 +228,14 @@ What will not work: the matched fraction above 128 bytes is not a flag problem
 and not a type problem. A decompiler that emits a correct but differently
 scheduled body cannot be nudged into byte equality by more declarations.
 
+**Supervisor calls are measured and closed.** The 504 corpus functions that
+contain an SVC site were drafted with the per-number helper on 2026-11-12: 0
+new functions are byte-exact. The helper emits the instruction, but the corpus
+does not carry the registers the call reads and preserves, so the compiler
+frames the call and allocates around it differently. `--shape svc` reproduces
+the run; the failure classes and evidence are in
+`docs/2026-11-12-svc-class.md`.
+
 ## Reproduce
 
 ```

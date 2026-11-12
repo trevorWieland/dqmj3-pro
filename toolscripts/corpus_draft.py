@@ -287,6 +287,7 @@ def prep():
             'switch': 'switch (' in text or 'switch(' in text,
             'goto': bool(re.search(r'\bgoto\b', text)),
             'hasStrings': '"' in text,
+            'svc': bool(SVC.search(text)),
             'callees': callees, 'data': data,
             'strings': strings, 'stringData': string_data,
             'lines': text.count('\n'),
