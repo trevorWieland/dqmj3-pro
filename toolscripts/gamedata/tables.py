@@ -1,310 +1,135 @@
 """The registry of characterised parameter tables.
 
-Every entry states the magic, the record stride or strides, the fields that have
-been established, the witnesses that make the stride a measurement, and the
-evidence behind it in words.  Tables that are not listed here are reported by
-``game_data.py verify`` as uncharacterised rather than decoded at a guessed
-record size; the comment block at the end of this file records why each family
-is missing.
+The registry is split so no one file has to carry every schema:
+``tables_core`` holds the first 26 families, ``tables_new`` the families that
+were characterised after the candidate set was widened to every divisor.  This
+module combines them, marks the ``.tb`` container families, and records the
+families that are still deliberately not decoded.
 
-No table in this list is described by semantics that the bytes do not show: a
-field is either an identifier space the file itself proves (a unique, ascending
-or contiguous key column), a text field that decodes in every record, a numeric
-column with a measured range, or it stays unknown and is preserved verbatim.
+A schema is never added here just because a divisor exists.  Each new entry
+states the witness that left exactly one candidate, and the families below stay
+in ``UNCHARACTERISED`` with the measurement that stopped them, so `verify`
+reports an honest gap rather than a guessed record boundary.
 """
 
-from .fields import Field
-from .schema import (TableSchema, at_least_rows, columns_nondecreasing, fixed_text,
-                     index_at_zero, keys_contiguous, keys_unique, keys_unique_sorted,
-                     text_names,
-                     zero_tail)
-
-
-def text_field(name, offset, kind, width, note=""):
-    """SJIS or ASCII text field helper."""
-    return Field(name, offset, kind, width=width, note=note)
-
-
-def number_field(name, offset, kind, note="", refers_to=None):
-    """Integer or float field helper."""
-    return Field(name, offset, kind, note=note, refers_to=refers_to)
+from .tables_core import TABLES as _CORE
+from .tables_new import NEW_TABLES as _NEW
 
 
 #: Every table the toolchain can decode, encode and verify.
-TABLES = (
-    TableSchema(
-        "MonsterParam", b"MONP", (72,),
-        fields=(number_field("key", 0, "u16", "unique record key, sparse in 1..4414",
-                             refers_to="monster"),
-                number_field("kind", 2, "u16", "species number; values 1..990",
-                             refers_to="kind")),
-        witnesses=(keys_unique_sorted(),),
-        identifier="monster", certain=True,
-        basis="72 is the only divisor of 220824 whose u16 at +0 is unique and ascending "
-              "across all 3067 records; the update file (222480 bytes) gives the same "
-              "stride with 3090 records.",
-        note="every other byte of the record is unknown and preserved verbatim"),
-    TableSchema(
-        "KindParam", b"KINP", (120,),
-        fields=(text_field("name", 0, "sjis", 32, "species name"),
-                *(number_field("base_stat_%d" % index, 36 + index * 2, "u16",
-                               "one of six u16 stat columns at +36..47")
-                  for index in range(6)),),
-        witnesses=(text_names("sjis", 32), at_least_rows(1024)),
-        identifier="kind", certain=True,
-        basis="every one of the 1024 records starts with a NUL-terminated cp932 name at "
-              "stride 120 and no other divisor keeps a name field decodable; the row "
-              "count must exceed the 990 that MonsterParam.kind reaches.",
-        note="the six u16 columns at +36..47 are named positionally; which in-game stat "
-             "each one drives is not established"),
-    TableSchema(
-        "ItemParam", b"ITPC", (64,),
-        fields=(text_field("name", 0, "sjis", 16, "item name"),
-                number_field("item_id", 60, "u16", "item number, 0..998")),
-        witnesses=(text_names("sjis", 16), at_least_rows(1024)),
-        identifier="item", certain=True,
-        basis="the base file (65536 bytes, 1024 records) and the update file (73536 "
-              "bytes, 1149 records) are both whole numbers of 64-byte records; 128 "
-              "divides the base but not the update.  A 16-byte cp932 name decodes in "
-              "every record at +0 and the u16 at +60 stays below the record count.",
-        note="the descriptive name field is 16 bytes, not the 32 the earlier survey "
-             "assumed"),
-    TableSchema(
-        "SkillParam", b"SKLP", (80,),
-        witnesses=(),
-        identifier="skill", certain=False,
-        basis="declared: 40960 = 512 x 80 in the base content and 49680 = 621 x 80 in "
-              "the update content, and no other divisor in the plausible range is "
-              "common to both.  No structural witness pins the record boundary.",
-        note="records are preserved verbatim; no field is established"),
-    TableSchema(
-        "FeatParam", b"FEAP", (80,),
-        fields=(number_field("index", 0, "u16", "row number", refers_to="feat"),),
-        witnesses=(index_at_zero(),),
-        identifier="feat", certain=True,
-        basis="80 is the only divisor of the base body (40960 bytes) whose u16 at +0 "
-              "equals the row number in all 512 records; the update body (38304 bytes) "
-              "resolves the same way to 76 bytes and 504 records.",
-        note="the record layout beyond the row number is not established"),
-    TableSchema(
-        "ShopItemParam", b"SHPP", (82,),
-        fields=(number_field("index", 0, "u16", "row number"),),
-        witnesses=(index_at_zero(),),
-        certain=True,
-        basis="82 is the only divisor of 90200 whose u16 at +0 equals the row number in "
-              "all 1100 records.",
-        note="82-byte records are not four-byte aligned, which is why no power-of-two "
-             "stride fits"),
-    TableSchema(
-        "MonsterGrowthTable", b"MGTC", (68,),
-        fields=(*(number_field("value_%02d" % index, 4 + index * 4, "u32",
-                               "one of sixteen u32 columns at +4..67")
-                  for index in range(16)),),
-        witnesses=(columns_nondecreasing(tuple(4 + index * 4 for index in range(16)),
-                                         "growth"), zero_tail(2)),
-        certain=True,
-        basis="68 bytes holds the sixteen u32 columns that never decrease down the "
-              "table and the two zero bytes that end every record; 34 cannot hold the "
-              "columns and 136 would pack two independent rows into one record.",
-        note="the u32 at +0 is zero in every record and is left unknown"),
-    TableSchema(
-        "AccessoryParam", b"ACCP", (32,),
-        fields=(number_field("key", 0, "u16", "accessory key, 200..376",
-                             refers_to="accessory"),),
-        witnesses=(keys_contiguous(),),
-        identifier="accessory", certain=True,
-        basis="32 is the only divisor of 5664 whose u16 at +0 runs contiguously from "
-              "200 to 376 across all 177 records.",
-        note="no field beyond the key is established"),
-    TableSchema(
-        "EffectParam", b"EFPM", (72,),
-        fields=(number_field("effect_id", 0, "u16", "effect number", refers_to="effect"),),
-        witnesses=(keys_unique(),),
-        identifier="effect", certain=True,
-        basis="72 is the only divisor of 66600 whose u16 at +0 runs over a contiguous "
-              "ascending range across all 925 records; the update body (66672 bytes) "
-              "gives the same stride with 926 records.",
-        note="no field beyond the effect number is established"),
-    TableSchema(
-        "ActionParam", b"ACTP", (96,),
-        fields=(number_field("index", 0, "u16", "row number", refers_to="action"),),
-        witnesses=(index_at_zero(),),
-        identifier="action", certain=True,
-        basis="96 is the only divisor of 66432 whose u16 at +0 equals the row number in "
-              "all 692 records.",
-        note="no field beyond the row number is established"),
-    TableSchema(
-        "KindConfigParam", b"KCOP", (84, 88),
-        fields=(text_field("model_name", 2, "ascii", 8, "model file stem, e.g. m000_00"),),
-        witnesses=(text_names("ascii", 8, offset=2),),
-        certain=True,
-        basis="the base body (86016 bytes) is 1024 records of 84 and the update body "
-              "(90112 bytes) is 1024 records of 88; an eight-character ASCII model name "
-              "decodes at +2 in every record of both.",
-        note="the four extra bytes of the update record are unknown; the leading u16 "
-             "and everything after the name are unknown"),
-    TableSchema(
-        "StateBasicParam", b"STBP", (60,),
-        fields=(number_field("index", 0, "u16", "row number"),),
-        witnesses=(index_at_zero(),),
-        certain=True,
-        basis="60 is the only divisor of 6060 whose u16 at +0 equals the row number in "
-              "all 101 records.",
-        note="no field beyond the row number is established"),
-    TableSchema(
-        "MonsterPartyTable", b"PTYT", (44,),
-        fields=(number_field("monster_key", 0, "u16", "MonsterParam key, 1..4410",
-                             refers_to="monster"),),
-        witnesses=(),
-        certain=False,
-        basis="declared: the base body (11528 bytes) is 262 records of 44 and the update "
-              "body (11664 bytes) is 265; 88 divides the base but not the update.  The "
-              "u16 at +0 stays inside the MonsterParam key range measured in this same "
-              "tree, which corroborates the split but does not discriminate it.",
-        note="no field beyond the monster key is established"),
-    TableSchema(
-        "SpecialSkillParam", b"SSKP", (26,),
-        witnesses=(),
-        identifier="special_skill", certain=False,
-        basis="declared: both the base and the update body are 13286 bytes, which is "
-              "511 records of 26; no structural witness pins the boundary.",
-        note="records are preserved verbatim; no field is established"),
-    TableSchema(
-        "FieldMapParam", b"MAPP", (180,),
-        fields=(text_field("map_name", 0, "ascii", 6, "map file stem, e.g. T00_00"),),
-        witnesses=(fixed_text(6),),
-        certain=False,
-        basis="180 and 90 both put a decodable eight-character ASCII map name at +0 in "
-              "every one of the 160 or 320 candidate records; 180 is declared as the "
-              "record size that matches the catalogue's 160 maps.",
-        note="the stride is not discriminated by the bytes, so treat record boundaries "
-             "as provisional even though the round-trip is exact"),
-    TableSchema(
-        "FusionMonsterParam", b"FMPC", (6,),
-        fields=(number_field("index", 0, "u16", "row number"),),
-        witnesses=(index_at_zero(),),
-        certain=True,
-        basis="6 is the only divisor of 6144 whose u16 at +0 equals the row number in "
-              "all 1024 records.",
-        note="no field beyond the row number is established"),
-    TableSchema(
-        "AIActionBase", b"AIAB", (28,),
-        witnesses=(),
-        certain=False,
-        basis="declared: both the base and the update body are 28672 bytes, which is "
-              "1024 records of 28; no structural witness pins the boundary.",
-        note="records are preserved verbatim; no field is established"),
-    TableSchema(
-        "RaceKindConfigParam", b"RKPM", (32,),
-        witnesses=(),
-        certain=False,
-        basis="declared: both the base and the update body are 32768 bytes, which is "
-              "1024 records of 32; no structural witness pins the boundary.",
-        note="records are preserved verbatim; no field is established"),
-    TableSchema(
-        "GimmickTypeTable", b"GTTC", (9,),
-        fields=(text_field("gimmick_name", 0, "ascii", 8, "gimmick file stem"),
-                number_field("value", 8, "u8", "single byte following the name")),
-        witnesses=(fixed_text(8),),
-        certain=True,
-        basis="every one of the 75 records is an eight-character printable ASCII name "
-              "followed by one byte, which only a nine-byte stride produces.",
-        note="the meaning of the trailing byte is not established"),
-    TableSchema(
-        "StealthBoxTable", b"SBTC", (4,),
-        fields=(number_field("key", 0, "u16", "1..5"), number_field("value", 2, "u16")),
-        witnesses=(keys_contiguous(),),
-        certain=True,
-        basis="four is the only stride at which the u16 at +0 runs contiguously from 1 "
-              "to 5 across all five records.",
-        note="the second u16 is 0x0516..0x051a and its meaning is not established"),
-    TableSchema(
-        "RaSearchParam", b"RSPC", (18,),
-        fields=(text_field("map_name", 0, "ascii", 6, "map file stem, e.g. H00_00"),),
-        witnesses=(fixed_text(6),),
-        certain=True,
-        basis="eighteen is the only stride at which all 27 records start with six "
-              "printable ASCII bytes.",
-        note="the rest of the record is unknown"),
-    TableSchema(
-        "ArrangeItemTable", b"FIRP", (316,),
-        fields=(text_field("row_name", 0, "ascii", 16, "printable prefix of the row"),),
-        witnesses=(text_names("ascii", 16),),
-        certain=True,
-        basis="316 is the only divisor of 56880 at which a NUL-terminated printable "
-              "ASCII name decodes at +0 in all 180 records; the next best candidates "
-              "leave a quarter of the rows undecodable.",
-        note="the name field is declared as 16 bytes; longer names would be truncated"),
-    TableSchema(
-        "CustomArrangeItemTable", b"CAIT", (294,),
-        fields=(number_field("index", 0, "u16", "row number"),),
-        witnesses=(index_at_zero(),),
-        certain=True,
-        basis="294 is the only divisor of 29694 whose u16 at +0 equals the row number in "
-              "all 101 records.",
-        note="no field beyond the row number is established"),
-    TableSchema(
-        "DiscCodeParameter", b"DCPC", (18,),
-        fields=(number_field("index", 0, "u16", "row number"),),
-        witnesses=(index_at_zero(),),
-        certain=True,
-        basis="18 is the only divisor of 4608 whose u16 at +0 equals the row number in "
-              "all 256 records.",
-        note="no field beyond the row number is established"),
-    TableSchema(
-        "FixationArrangeItemTable", b"FAIP", (28,),
-        fields=(text_field("row_name", 0, "ascii", 16, "printable prefix of the row"),),
-        witnesses=(text_names("ascii", 16),),
-        certain=False,
-        basis="14, 28, 42, 84, 182 and 364 all put a decodable ASCII name at +0; 28 is "
-              "declared because it is the smallest stride that holds the catalogue's "
-              "507 records.",
-        note="the stride is not discriminated by the bytes"),
-    TableSchema(
-        "DiscMonsterParameter", b"DPMT", (64,),
-        witnesses=(),
-        certain=False,
-        basis="declared: both base and update bodies are 65472 bytes, which is 1023 "
-              "records of 64; 192 divides the body as well.",
-        note="records are preserved verbatim; no field is established"),
-)
+TABLES = _CORE + _NEW
 
 
 #: The tables that live in ``.tb`` container files rather than ``.tp`` ones.
 TB_CONTAINER = frozenset({
     "GimmickTypeTable", "StealthBoxTable", "RaSearchParam", "ArrangeItemTable",
     "CustomArrangeItemTable", "DiscCodeParameter", "FixationArrangeItemTable",
-    "DiscMonsterParameter",
+    "DiscMonsterParameter", "DiscAreaParameter", "DiscTrophyParameter",
 })
 
 for _schema in TABLES:
     if _schema.name in TB_CONTAINER:
         _schema.container = "tb"
+    # A table with an established ``index`` column numbers its own records, so
+    # the reference query may treat row n of two such tables as the same slot.
+    # Tables whose only boundary evidence is a count keep row_numbered false.
+    if not _schema.row_numbered and any(field.name == "index"
+                                       for field in _schema.fields):
+        _schema.row_numbered = True
 
 
 #: Tables this toolchain deliberately does not decode, with the measured reason.
+#:
+#: Each entry states what was tested and why the bytes still do not justify a
+#: boundary.  "Several divisors pass" means the candidate set really was every
+#: divisor of the body (see ``candidate_strides``), not merely the one the
+#: earlier survey happened to try.
 UNCHARACTERISED = {
-    "AIAction": "the body is 23960 bytes, which no stride in the plausible range splits "
-                "into records that satisfy any structural witness; the file appears to "
-                "carry a per-table preamble (a u32 pair 636 / 2552 precedes the data)",
-    "BattleScriptActionParam": "77064 bytes of packed 32-byte name slots; no stride was "
-                               "found that yields a decodable name in every record",
-    "BattleScriptFeatParam": "22632 bytes; every candidate stride leaves name fields "
-                             "that do not decode",
-    "BattleScriptItemParam": "21384 bytes; every candidate stride leaves name fields "
-                             "that do not decode",
-    "AITarget": "16384 bytes with no key, index or name column to witness a boundary",
-    "AITargetCondition": "3072 bytes with no structural witness",
-    "AIActionCondition": "512 bytes with no structural witness",
-    "CouplingKindParam": "1368 bytes; several divisors pass the weak key witness",
-    "Coupling4Param": "540 bytes; divisors 15..270 all pass the weak key witness",
-    "StateHappenParam": "1212 bytes with no structural witness",
-    "StateReleaseParam": "1212 bytes; no dominant divisor",
-    "LibrarySkillParam": "3726 bytes, an odd body that only factors into small "
-                               "strides inconsistent with a fixed record",
-    "LibraryMonsterParam": "9216 bytes; name-validity is identical for many "
-                                  "divisors",
-    "DiscAreaParameter": "4080 bytes; several divisors pass",
-    "DiscItemMonsterParameter": "126 bytes; too small to corroborate",
-    "DiscTrophyParameter": "2040 bytes; several divisors pass",
+    # -- small AI tables: a byte stream, not a record array ------------------
+    "AITarget": "16384 bytes split evenly by 8, 16, 32 and larger; the u16 at +0 "
+                "is zero in the first record and 36 in the second at every "
+                "candidate, so no witness selects a boundary",
+    "AITargetCondition": "3072 bytes; 31, 0, 0 repeats three times and then the "
+                         "bytes change, but 12, 16, 24 and larger strides all "
+                         "reproduce a plausible repeat and no column numbers "
+                         "itself",
+    "AIActionCondition": "512 one-byte values in 0x38..0x3f; a byte array has no "
+                         "internal boundary to measure",
+    "AIChange": "52 bytes of (u16, u16) command pairs; the pair vocabulary does "
+                "not overlap AIAction's pools (0/13 pairs occur in either pool), "
+                "so the 4-byte unit is a declaration, not a measurement",
+    "AIFusion": "48 bytes of (u16, u16) pairs with no vocabulary link to "
+                "AIAction's pools; 4, 8 and 16-byte units all fit",
+    "AIRide": "36 bytes of (u16, u16) pairs with no vocabulary link to AIAction's "
+              "pools; 4, 6, 12 and 18-byte units all fit",
+    # -- coupling tables: many divisors satisfy every weak column check ------
+    "Coupling4Param": "540/860 bytes; ten-byte records put a key and four "
+                      "similar u16 columns first, but 23 of 54 base records have "
+                      "four different values, so equality is not a witness and "
+                      "15, 20, 27 and 30 all pass uniqueness",
+    "CouplingKindParam": "1368/1614 bytes; the body is two differently-sized "
+                         "sections and 19, 24, 36, 38, 57 and 72 all satisfy the "
+                         "weak key checks",
+    "CouplingKindLineageParam": "84 bytes; 6, 7, 12, 14 and 21-byte strides all "
+                                "pass uniqueness, and the table is too small to "
+                                "corroborate one",
+    "CouplingCourtRankParam": "2192/2904 bytes; 16-byte records fit the base but "
+                              "the update body splits at 12 or 24, so the two "
+                              "contents do not agree on a record shape",
+    # -- crack-place tables: no column that numbers itself -------------------
+    "CrackPlaceTable": "624 bytes; 12, 24, 26, 48 and 52-byte strides all "
+                       "reproduce the repeated sub-record pattern, but no column "
+                       "is an index or key",
+    "CrackPlaceEffectTable": "72 bytes; eight-byte records give a plausible "
+                             "(u32, u32) pair, yet 4, 6, 8, 9, 12 and 18 all do, "
+                             "and nine records cannot discriminate",
+    "CrackPlaceMasterPartyTable": "336 bytes; a nondecreasing u16 at +0 passes at "
+                                  "8, 16, 24 and 48 bytes, so it does not pin the "
+                                  "record boundary",
+    # -- disc tables ---------------------------------------------------------
+    "DiscItemMonsterParameter": "126 bytes; 2, 3, 6, 7 and 9-byte strides all see "
+                                "ascending u16 values, and 63 two-byte items are "
+                                "not corroborated by a count",
+    # -- library tables ------------------------------------------------------
+    "LibraryActParam": "1024 bytes that are zero except for a small tail; 16, 32, "
+                       "64 and larger strides all treat the zero run as empty "
+                       "records, so nothing dates the boundary",
+    # -- model/colour tables -------------------------------------------------
+    "ColorChangePatternColorTbl": "360 bytes of small signed u16 colour "
+                                  "components; 5, 6, 8, 9, 10, 12 and 15-byte "
+                                  "strides all fit a 9-record reading",
+    "ColorChangeSelectColorTbl": "144 bytes of u16 components in 0..255; 8, 9, "
+                                 "12, 16 and 18-byte strides all fit",
+    "MonsterColorChange": "558 bytes; 9, 18, 31, 62 and 93-byte strides all look "
+                          "plausible and the nonzero data is concentrated in a "
+                          "few records, so no boundary is measured",
+    "MonsterSkillPointTable": "480 bytes; 4, 6, 8, 12, 16, 20 and 24-byte strides "
+                              "all produce unique u32 keys, and no count "
+                              "corroborates one",
+    # -- race and misc tables ------------------------------------------------
+    "FusionCandidateParam": "486 bytes; the body repeats a three-u16 group every "
+                            "six bytes, so 6, 18, 54 and larger strides all fit "
+                            "and even the row count is ambiguous",
+    "HorizontalCaveTbl": "56 bytes with two 28-byte slots; two records are too "
+                         "few to corroborate a boundary (7, 14 and 28 all fit)",
+    "RaceAIBase": "504 bytes of runs of 0x0a separated by zero bytes; 7, 8, 9, "
+                  "12 and 14-byte strides all fit a byte-array reading",
+    "RaceGatherTargetParam": "252 bytes; 12-byte records hold a plausible id and "
+                             "eight zero bytes, but 36 and 84-byte strides group "
+                             "three or seven of them without contradiction",
+    "RaceMapParam": "400 bytes; 20, 25, 40, 50, 80 and 100-byte strides all start "
+                    "each group with a map name, and the record count is not "
+                    "measured anywhere else",
+    "RaceRankParam": "840 bytes; 7, 8, 10, 12, 14, 15, 20 and 24-byte strides all "
+                     "produce a cp932 name or a plausible column, so the name "
+                     "field does not discriminate",
+    "ReplaceActSkillParam": "8192 bytes that are zero except for one 16-byte "
+                            "value; 16, 32, 64 and larger strides all treat the "
+                            "zero run as empty records",
+    "RideParamTbl": "80 bytes of five f32 rows; 4, 8, 10, 16, 20 and 40-byte "
+                    "strides all hold finite floats, and five rows cannot "
+                    "corroborate one",
+    "TolerParam": "800 bytes; 80-byte records hold a cp932 name at +18, but 160, "
+                  "200 and 400-byte strides also start every group with a name, "
+                  "and ten records do not select one",
 }

@@ -10,7 +10,7 @@ a worked example with its exact bytes.
 Nothing here is game data. Inputs come from the user's extraction; outputs go
 where the user points them. `generated/`, `work/` and `inputs/` stay untracked.
 
-## 1. The two data containers
+## 1. The data containers
 
 ### `.tp` and `.tb` — a magic and a record array
 
@@ -20,16 +20,63 @@ offset 4   N * S     N records of S bytes each, no padding, no per-record header
 ```
 
 Records are fixed-stride structs with fields at constant offsets. There is no
-count field: the record count is `(filesize - 4) / stride` and the toolchain
-accepts a stride only when that division is exact **and** a structural witness
-holds (section 2). The 4-byte magic is the only container header; the same magic
-appears in the base and update contents, sometimes with a different record count
-and occasionally a different stride (`KindConfigParam` is 84 bytes in the base
-content and 88 in the update).
+count field: the record count is `(filesize - 4) / stride`. For a schema that
+declares `candidates="divisors"` the resolver tries **every divisor of the body
+from the largest field end up to 1024 bytes**, not only a hand-written list, and
+accepts a stride only when the witnesses leave exactly one survivor. That is what
+turned "several divisors satisfy the structural witness" from a blocker into a
+closed question: an ambiguity now raises instead of silently choosing.
 
-Two tables do not fit this shape and are deliberately not decoded:
-`AIAction.tp` has a per-table preamble (`636` and `2552` appear as a u32 pair
-before the data) and `BattleScriptActionParam.tp` is packed 32-byte name slots.
+The 4-byte magic is the only container header. The same magic appears in the
+base and update contents, sometimes with a different record count and
+occasionally a different stride (`FeatParam` is 80 bytes / 512 rows in the base
+content and 72 bytes / 532 rows in the update).
+
+Two families do not use the flat shape and have their own codecs in
+`toolscripts/gamedata/containers.py`.
+
+### The indexed AI container — `AIAction.tp`, `RaceAIAction.tp`
+
+```
+offset 0        u32 entryCount
+offset 4        u32 dataOffset        == 8 + 4 * entryCount
+offset 8        entryCount * (u16 offset, u16 length)   -- in u16 words
+dataOffset      u16 poolA[poolWords]
+                u16 poolB[poolWords]
+```
+
+The entries name one range in each of two equal-length pools of u16 words. Ranges
+may be shared: many entries point at the same script. In every measured file the
+positive ranges tile the pool exactly and `poolWords` is the maximum
+`offset + length`; that equality is the witness that makes the header a
+measurement rather than a coincidence. The words are operation data whose meaning
+is not established, so the document exposes them as u16 values and never calls
+them opcodes or operands.
+
+Measured: `AIAction` has 636 entries and 5352 words per pool in the base content,
+642 and 5516 in the update; `RaceAIAction` has 18 entries and 201 words.
+
+### The named battle-script container — the three `BattleScript*` tables
+
+```
+offset 0        u32 slotCount
+offset 4        u32 dataOffset        == 8 + 32 * slotCount
+offset 8        slotCount * char[32]  -- zero-padded ASCII name slots
+dataOffset      fixed-stride records
+```
+
+The slot count is independent of the record count. The record stride is the one
+declared candidate that makes the u16 at +0 equal the row number in every record:
+
+| table | slots base/update | stride | records base/update |
+| --- | --- | --- | --- |
+| `BattleScriptActionParam` | 360 / 361 | 64 | 1024 / 1024 |
+| `BattleScriptFeatParam` | 42 / 42 | 40 | 532 / 532 |
+| `BattleScriptItemParam` | 28 / 28 | 40 | 512 / 512 |
+
+The name slots are effect identifiers (`EF030_10_TENSION01`, `EF120_01_HOIMI`).
+They are not decoration: the battle scripts use the same strings verbatim, so the
+cross-reference is reproducible (section 3).
 
 ### `.mes` — an entry table and a payload
 
@@ -54,43 +101,50 @@ offset is carried through untouched and its bytes live inside a recorded gap.
 
 Entry order is arbitrary. Strings are stored in ascending offset order and every
 offset is recomputed on encode, so editing one string only moves the bytes after
-it. When a string changes length, opaque entry offsets are translated through
-the gap they live in; if an opaque offset cannot be placed the encode refuses.
+it. When a string changes length, opaque entry offsets are translated through the
+gap they live in; if an opaque offset cannot be placed the encode refuses.
+
+This is also why the evidence command scans the payload as a byte stream rather
+than pretending it can name the owning entry: the mixed archives place a four-byte
+control word before some strings, so the entry offset is not always the string
+offset.
 
 ## 2. Which tables round-trip, and how firmly
 
 A stride is accepted only when exactly one candidate satisfies every declared
-witness. Witnesses are structural facts that the true record size must satisfy:
+witness. Witnesses are structural or cross-file facts that the true record size
+must satisfy:
 
 | witness | meaning |
 | --- | --- |
-| `index_at_zero` | the u16 at +0 equals the row number in every record |
-| `keys_unique_sorted` | the u16 at +0 is unique and never decreases |
-| `keys_unique` | the u16 at +0 is unique in any order |
-| `keys_contiguous` | the keys run over an unbroken ascending range |
+| `index_at` | the integer at a fixed offset equals the row number (u8/u16/u32) |
+| `keys_unique_sorted` / `keys_unique` | the u16 at +0 is unique, optionally ascending |
+| `keys_contiguous_at` | a key column at a fixed offset runs over an unbroken range |
 | `text_names` | every record's name field is empty, full width, or terminated text |
 | `fixed_text` | every record's fixed-width field is printable ASCII |
 | `zero_tail` | the last bytes of every record are zero |
-| `columns_nondecreasing` | each declared u32 column never decreases down the table |
-| `at_least_rows` | the candidate stride yields at least this many records |
+| `columns_nondecreasing` | each declared column never decreases down the table |
+| `row_count_in` | the candidate yields a row count measured in another table |
+| `column_constant` / `value_domain` | a column is constant, or stays in a small measured set |
+| `at_least_rows` | the candidate yields at least this many records |
 
-`certain` means at least one witness corroborates the boundary. `declared` means
-the stride rests on exact divisibility (and, where noted, on the same stride
-being shared by the base and update files) with no discriminating witness; the
-records are still preserved verbatim and the round trip is still exact, but the
-record boundary should be treated as provisional.
+`certain` means a witness corroborates the boundary. `declared` means the stride
+rests on exact divisibility (and, where noted, on the same stride being shared by
+the base and update files) with no discriminating witness; the records are still
+preserved verbatim and the round trip is still exact, but the boundary should be
+treated as provisional.
 
-### Characterised tables — every one round-trips byte-identically
-
-Measured on the owner's extraction: **42 table files covering 26 distinct
-tables, 42/42 byte-identical**, plus **84/84 message archives byte-identical**.
+Measured on the owner's extraction: **80 table files covering 53 distinct tables,
+80/80 byte-identical**, plus **84/84 message archives byte-identical**. The
+registry has 53 schemas; `verify --explain` is the authoritative per-file list
+because it prints the actual stride, row count and confidence.
 
 | table | stride | rows (base/update) | confidence | witness |
 | --- | --- | --- | --- | --- |
 | MonsterParam | 72 | 3067/3090 | certain | 3067 distinct keys, ascending |
 | KindParam | 120 | 1024 | certain | 1024/1024 name fields decode |
 | ItemParam | 64 | 1024/1149 | certain | names decode; 128 divides the base but not the update |
-| FeatParam | 80 | 512 | certain | 512/512 rows numbered 0..n-1 |
+| FeatParam | 80 / 72 | 512/532 | certain | index at +0 equals row in both contents |
 | ShopItemParam | 82 | 1100 | certain | 1100/1100 rows numbered 0..n-1 |
 | MonsterGrowthTable | 68 | 120 | certain | 16 columns never decrease, tails zero |
 | AccessoryParam | 32 | 177 | certain | 177 keys spanning 177 values |
@@ -113,6 +167,33 @@ tables, 42/42 byte-identical**, plus **84/84 message archives byte-identical**.
 | DiscCodeParameter | 18 | 256 | certain | 256/256 rows numbered 0..n-1 |
 | FixationArrangeItemTable | 28 | 507 | declared | 14, 28, 42, 84, 182, 364 all fit |
 | DiscMonsterParameter | 64 | 1023 | declared | 192 also divides the body |
+| AIAction | indexed | 636/642 | certain | entry ranges tile two equal pools |
+| RaceAIAction | indexed | 18 | certain | same header, 201 words per pool |
+| BattleScriptActionParam | 64 | 1024 | certain | u16@0 equals row; 360/361 name slots |
+| BattleScriptFeatParam | 40 | 532 | certain | u16@0 equals row; 42 name slots |
+| BattleScriptItemParam | 40 | 512 | certain | u16@0 equals row; 28 name slots |
+| DarkLoadRevengeParty | 20 | 10 | certain | u32@0 equals row |
+| DarkLoadRevengeSkill | 8 | 149 | certain | u32@0 equals row |
+| Partner | 8 | 6 | certain | u32@0 equals row |
+| PartnerFeat | 32 | 7 | certain | u32@0 equals row |
+| PartnerRoundEndFeat | 8 | 14 | certain | u16@0 equals row |
+| PartnerAfterActionFeat | 4 | 2 | certain | u16@0 equals row |
+| LocationParam | 4 | 243 | certain | u8 at +3 equals row |
+| DiscTrophyParameter | 8 | 255 | certain | u8@0 equals row+1 |
+| TakeOverDataKind | 4 | 1023 | certain | u16@0 equals row+1 |
+| TakeOverDataSkill | 4 | 512 | certain | u16@0 equals row |
+| GrandprixCpu | 44 | 7 | certain | cp932 name at +0 in every record |
+| LibraryMonsterParam | 9 | 1024 | certain | 7-byte map name + two flags; 1024 rows |
+| DiscAreaParameter | 16 | 255 | certain | 6-byte map name at +4; 0xffff at +2 |
+| LibrarySkillParam | 6 | 621 | certain | 621 rows = SkillParam's update count |
+| BattlePowerParam | 4 | 636/642 | certain | row count = AIAction's entry count |
+| StateHappenParam | 12/16 | 101 | certain | 101 rows = StateBasicParam's count |
+| StateReleaseParam | 12/16 | 101 | certain | 101 rows = StateBasicParam's count |
+| LibraryFeatParam | 1 | 512/532 | certain | one byte per feat, 0..4 |
+| EvolutionSkillParam | 2 | 512/621 | certain | one u16 per skill |
+| CrackPlaceDarkLordTable | 8 | 11 | certain | keys contiguous 133..143 at +2 |
+| ExchangeItemTbl | 12 | 40 | certain | three zero padding words; 40 rows |
+| MonsterExpTable | 68 | 100 | declared | 68, 136, 272, 340, 680 all fit |
 
 ### Named fields per table
 
@@ -120,70 +201,66 @@ Everything a field does not cover is emitted as `unknown` ranges and preserved
 verbatim, so a table with no fields still round-trips exactly. Fields that are
 established:
 
-| table | fields |
-| --- | --- |
-| MonsterParam | `key` u16@0, `kind` u16@2 |
-| KindParam | `name` sjis[32]@0, `base_stat_0`..`base_stat_5` u16@36,38,40,42,44,46 |
-| ItemParam | `name` sjis[16]@0, `item_id` u16@60 |
-| FeatParam, ShopItemParam, ActionParam, StateBasicParam, FusionMonsterParam, CustomArrangeItemTable, DiscCodeParameter | `index` u16@0 |
-| AccessoryParam | `key` u16@0 |
-| EffectParam | `effect_id` u16@0 |
-| MonsterGrowthTable | `value_00`..`value_15` u32@4..64 |
-| KindConfigParam | `model_name` ascii[8]@2 |
-| MonsterPartyTable | `monster_key` u16@0 |
-| FieldMapParam | `map_name` ascii[6]@0 |
-| GimmickTypeTable | `gimmick_name` ascii[8]@0, `value` u8@8 |
-| StealthBoxTable | `key` u16@0, `value` u16@2 |
-| RaSearchParam | `map_name` ascii[6]@0 |
-| ArrangeItemTable, FixationArrangeItemTable | `row_name` ascii[16]@0 |
-
-Two corrections to the earlier survey came out of measuring rather than
-trusting it: `ItemParam`'s name field is 16 bytes, not 32, and
-`KindConfigParam` is 84 bytes in the base content and 88 in the update.
+* `MonsterParam`: `key` u16@0, `kind` u16@2.
+* `KindParam`: `name` sjis[32]@0, `base_stat_0..5` u16@36..46.
+* `ItemParam`: `name` sjis[16]@0, `item_id` u16@60.
+* Row-numbered tables: `index`/`key` at the measured offset; the rest are
+  `value_00`, `value_01`, ... positional columns or `unknown` bytes.
+* `KindConfigParam`: `model_name` ascii[8]@2. `FieldMapParam`: `map_name`
+  ascii[6]@0. `GimmickTypeTable`: `gimmick_name` ascii[8]@0, `value` u8@8.
+* `DiscAreaParameter`: `area` u16@0, `map_name` ascii[6]@4, `variant` u16@10.
+* `LibraryMonsterParam`: `name` ascii[7]@0, two unnamed flag bytes.
+* `GrandprixCpu`: `name` sjis[16]@0 plus fourteen positional u16 columns.
+* `BattleScript*`: `names` (32-byte slots) plus records whose u16@0 is the row.
 
 Naming is positional and deliberately silent about meaning. The six u16 columns
 at KindParam +36..47 are `base_stat_0..5` because they are six small stats in
 fixed positions, not because it is known which one is attack. `value_00..15` in
 MonsterGrowthTable is likewise positional.
 
-### Not characterised — 56 distinct families, 79 files
+### Not characterised — 28 distinct families, 41 files
 
 These are reported by `verify` as uncharacterised rather than decoded at a
-guessed record size. The reasons fall into four groups:
+guessed record size. The registry (`tables.UNCHARACTERISED`) carries the full
+measured reason; the groups are:
 
-* **No discriminating stride.** Several divisors of the body satisfy every
-  available witness, so any split would be a guess: `Break/Coupling4Param`,
-  `Break/CouplingKindParam`, `Break/CouplingKindLineageParam`,
-  `Break/CouplingCourtRankParam`, `Break/StateHappenParam`,
-  `Break/StateReleaseParam`, `Break/TakeOverDataKind`, `Break/TakeOverDataSkill`,
-  `Break/GrandprixCpu`, `Break/TolerParam`, `Break/MonsterExpTable`,
-  `Break/ColorChangePatternColorTbl`, `DarkLoadRevengeParty`,
-  `DarkLoadRevengeSkill`, `ExchangeItemTbl`, `FusionCandidateParam`,
-  `HorizontalCaveTbl`, `LibraryActParam`, `LibraryMonsterParam`,
-  `LibrarySkillParam`, `LibraryFeatParam`, `LocationParam`, `MonsterColorChange`,
-  `MonsterSkillPointTable`, `Partner`, `PartnerFeat`, `PartnerRoundEndFeat`,
-  `PartnerAfterActionFeat`, `RaceAIAction`, `RaceAIBase`, `RaceGatherTargetParam`,
-  `RaceMapParam`, `RaceRankParam`, `RideParamTbl`, `CrackPlaceTable`,
-  `CrackPlaceDarkLordTable`, `CrackPlaceEffectTable`,
-  `CrackPlaceMasterPartyTable`, `ColorChangeSelectColorTbl`,
-  `Break/DiscAreaParameter`, `Break/DiscItemMonsterParameter`,
-  `Break/DiscTrophyParameter`, `Break/EvolutionSkillParam`,
-  `Break/ReplaceActSkillParam`.
-* **No structural witness at all.** Many small tables fill completely with
-  plausible-looking bytes whatever boundary is tried: `AITarget`,
-  `AITargetCondition`, `AIActionCondition`, `AIChange`, `AIFusion`, `AIRide`,
-  `BattlePowerParam`, `Break/LibraryFeatParam`.
-* **Header not decoded.** `AIAction.tp` starts with a per-table preamble.
-* **Name slots are packed, not records.** `BattleScriptActionParam`,
-  `BattleScriptFeatParam`, `BattleScriptItemParam` hold 32-byte ASCII name slots
-  and no stride yields a decodable name in every record.
+* **Every divisor still fits.** `AITarget`, `AITargetCondition`, `AIChange`,
+  `AIFusion`, `AIRide`, `Coupling4Param`, `CouplingKindParam`,
+  `CouplingKindLineageParam`, `CouplingCourtRankParam`, `MonsterColorChange`,
+  `MonsterSkillPointTable`, `RaceMapParam`, `RaceRankParam`, `RaceGatherTargetParam`,
+  `RaceAIBase`, `TolerParam`.
+* **Byte array with no internal boundary.** `AIActionCondition`,
+  `LibraryActParam`, `ReplaceActSkillParam`.
+* **Too small to corroborate a boundary.** `HorizontalCaveTbl`,
+  `RideParamTbl`, `CrackPlaceEffectTable`, `DiscItemMonsterParameter`.
+* **Repeated sub-records, no key or index column.** `CrackPlaceTable`,
+  `CrackPlaceMasterPartyTable`, `FusionCandidateParam`,
+  `ColorChangePatternColorTbl`, `ColorChangeSelectColorTbl`.
 
-One file is a genuine format difference rather than a toolchain gap: the update
-content's `FeatParam.tp` has a 38304-byte body, which is not a whole number of
-80-byte records, so it does not match the base layout. `verify` reports it as
-uncharacterised with that measurement instead of coercing it.
+## 3. Cross-reference evidence
 
-## 3. The reference query
+`game_data.py evidence` scans two independent corpora and reports, per text
+field, how many distinct values occur there:
+
+* every message archive payload, decoded as UTF-16LE and split on NUL;
+* every Squirrel `.nut` script, decoded as cp932.
+
+Measured on the owner's extraction:
+
+| table | field | non-empty | unique | in messages | in scripts |
+| --- | --- | --- | --- | --- | --- |
+| KindParam | name | 619 | 619 | 557 | 140 |
+| BattleScriptActionParam | names | 359 | 359 | 0 | 48 |
+| BattleScriptFeatParam | names | 41 | 41 | 0 | 9 |
+| BattleScriptItemParam | names | 27 | 27 | 0 | 9 |
+| DiscAreaParameter | map_name | 24 | 12 | 0 | 12 |
+
+This is corroboration, not a naming oracle: a name absent from both corpora may
+simply be stored only in its table. The point is that 557 of the 619 KindParam
+species names occur verbatim in the message data and every battle-script name
+set overlaps the scripts, so the text fields are not a decoder artefact.
+
+## 4. The reference query
 
 `game_data.py refs --table NAME --row N` answers "what else points at this row,
 and what does this row point at". It reports only edges the schemas declare: a
@@ -192,24 +269,26 @@ the table that owns that space (`identifier`). There is no fingerprinting and no
 guesswork, so an edge that is missing from the output is an edge nobody has
 proven yet, not an edge that does not exist.
 
-Declared edges today:
-
-| from | field | to |
-| --- | --- | --- |
-| MonsterParam | `kind` | KindParam row number |
-| MonsterPartyTable | `monster_key` | MonsterParam `key` |
-| MonsterParam, KindParam, ItemParam, AccessoryParam, EffectParam, ActionParam, FeatParam | own key/index | own space |
-
 Output sections:
 
 * `identifiers` — the values this row is addressed by.
 * `references` — rows in other tables whose reference field equals one of them.
 * `outbound` — rows this row points at through its own reference fields.
-* `sharedIndex` — tables with the same row count whose first field is the row
-  number, i.e. row *n* of that file describes the same slot. Reported separately
-  because it is an alignment of numbering, not a pointer.
+* `sharedIndex` — tables with the same row count whose records are **proven** to
+  number themselves. Row *n* of such a table describes the same slot as row *n*.
+* `countPeers` — every table with the same record count, with `rowNumbered`
+  saying whether the alignment is proven or merely equal. It is a checklist, not
+  a declared pointer.
+* `identifierSpaces` — every identifier space the registry declares and the table
+  that owns it, so a modder can see what `refs` is able to answer.
 * `skippedTables` — tables the toolchain declined to decode, so the answer is
   known to be incomplete for those.
+
+Declared edges today include `MonsterParam.kind -> KindParam row`,
+`MonsterPartyTable.monster_key -> MonsterParam key`, and the identifier spaces
+for monsters, kinds, items, accessories, effects, actions, feats, AI actions,
+battle-script entries, partners, revenge parties/skills, take-over kinds/skills,
+locations, disc areas/trophies and library slots.
 
 Example: row 1 of KindParam is the monster named スライム (Slime).
 
@@ -226,16 +305,22 @@ $ python toolscripts/game_data.py refs --table KindParam --row 1
      "rowCount": 33, "rows": [0, 1, 2, 947, 1003, ...], "truncated": false}
   ],
   "outbound": [],
-  "sharedIndex": [{"table": "FusionMonsterParam", "row": 1, ...}],
+  "sharedIndex": [
+    {"table": "BattleScriptActionParam", "row": 1, "note": "..."},
+    {"table": "FusionMonsterParam", "row": 1, "note": "..."}
+  ],
+  "countPeers": [{"table": "AIActionBase", "rowCount": 1024, "rowNumbered": true, ...}],
+  "identifierSpaces": [{"space": "accessory", "owner": "AccessoryParam"}, ...],
   "notes": []
 }
 ```
 
 So adding or renumbering a species means updating the 33 MonsterParam rows that
-carry `kind = 1`, and re-checking the index-aligned tables. This is the query
-that makes that visible instead of leaving a modder to diff every table.
+carry `kind = 1`, and re-checking the row-aligned 1024-slot tables that
+`sharedIndex` lists. That is the checklist the earlier toolchain could not
+produce.
 
-## 4. Command sequence
+## 5. Command sequence
 
 ```
 # what can be decoded
@@ -243,6 +328,9 @@ python toolscripts/game_data.py list
 
 # prove the toolchain against your own extraction (exit 1 on any mismatch)
 python toolscripts/game_data.py verify --explain --json work/verify.json
+
+# show where table names occur in the game's messages and scripts
+python toolscripts/game_data.py evidence --out work/evidence.json
 
 # decode one table to JSON
 python toolscripts/game_data.py decode <root>/data/Parameter/KindParam.tp \
@@ -259,11 +347,11 @@ python toolscripts/game_data.py refs --table KindParam --row 1
 ```
 
 `--root` defaults to `generated/asset-samples` and is searched upwards from the
-current directory. `verify` prints one line per table with `--explain`, and
-`--json` writes the full per-file report (stride, rows, witnesses, byte
-identity) for a machine to check.
+current directory. `verify` prints one line per file with `--explain`, including
+one line per opaque file with its magic and the measured reason, and `--json`
+writes the full per-file report for a machine to check.
 
-## 5. Worked example: one stat on one monster
+## 6. Worked example: one stat on one monster
 
 Change スライム's first base stat from 1700 to 1800 and prove nothing else moves.
 
@@ -294,7 +382,7 @@ For a file with more rows, the untouched records are byte-identical because the
 encoder writes each record from its own values and refuses to finish unless
 every byte of every record is accounted for.
 
-## 6. Repack: what is achievable here and what is not
+## 7. Repack: what is achievable here and what is not
 
 **Verdict: a bootable image cannot be produced in this environment, and does not
 need to be for content edits.**
@@ -350,33 +438,35 @@ it: the tables are loose files.
 +36, +40, two 8-byte hashes and a name such as `A00_00_crack.bin`). They carry
 field tables and effects, not the parameter data, and are not decoded.
 
-## 7. What a modder can and cannot do today
+## 8. What a modder can and cannot do today
 
 Can:
 
-* Re-balance every characterised table by editing named JSON fields: monster
-  indices and species links, the six KindParam stat columns, item names and
-  numbers, shop and feat row numbers, accessories, effects, actions, growth
-  curves, model names, map names, arrange-item names.
+* Decode and edit **80 of the 121 parameter files**, covering 53 content
+  families, including the AI action container and all three battle-script
+  tables. Every named field is editable, and anything unnamed is editable through
+  the `unknown` hex ranges without the encoder losing a byte.
+* Inspect an AI action's entry ranges and both u16 command pools, and inspect the
+  32-byte effect-name slots that the battle scripts also use.
+* Add a row to a flat table by appending a record object; the encoder validates
+  its fields and unknown bytes before writing.
 * Edit any message string in all 84 archives, including archives that mix text
   with opaque records.
-* Edit anything at all in the characterised tables by hand through the `unknown`
-  hex ranges, with the encoder still refusing to lose a byte.
-* Ask what references a row before changing it, and see which tables the answer
-  could not cover.
-* Prove every change: `verify` for the whole tree, `diff` for one file.
+* Ask what references a row, what it points at, which tables share its row count,
+  and which of those are proven row-aligned, before changing it.
+* Prove every change: `verify` for the whole tree, `diff` for one file, and
+  `evidence` to see the cross-reference support for names.
 
 Cannot yet:
 
-* Decode the 56 uncharacterised families listed above, in particular the
-  AI-action family, the battle-script families and the disk (post-game) tables.
-  They are preserved verbatim, not editable through fields.
+* Decode the 28 uncharacterised families listed above, in particular the small
+  AI target/condition/change tables, the coupling tables, the crack-place tables
+  and the colour/ride tables. They are preserved verbatim, not editable through
+  fields.
 * Claim semantics for fields that are only positional: which KindParam stat is
-  which, what MonsterGrowthTable's sixteen columns mean, what
-  KindConfigParam's leading u16 means.
-* Add a monster end to end. The chain is MonsterParam, KindParam,
-  KindConfigParam, MonsterGrowthTable and the message archives; the toolchain
-  can edit all but the growth table's semantics, and `refs` shows the link from
-  species to MonsterParam rows, but nobody has established where a new species
-  number must be declared so that every consumer sees it.
+  which, what MonsterGrowthTable's sixteen columns mean, what KindConfigParam's
+  leading u16 means.
+* Add a monster end to end. `refs` now lists the 1024-slot row-aligned peers and
+  the MonsterParam rows carrying a species number, but nobody has established
+  where a new species number must be declared so every consumer sees it.
 * Build a bootable image, or write SARC archives.

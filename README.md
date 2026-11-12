@@ -45,7 +45,7 @@ tools/python/Scripts/python.exe -I build.py --image "C:\path\to\DQMJ3P_Update.ci
 
 ## What is usable today
 
-- **Parameter tables and messages.** `toolscripts/game_data.py` decodes, edits and re-encodes 26 table families and all 84 message archives with a byte-identical round trip, and reports what references any given row. The tables are loose files under `data/Parameter/`, so a rebuilt table is already the format the loader reads.
+- **Parameter tables and messages.** `toolscripts/game_data.py` decodes, edits and re-encodes 80 parameter files covering 53 table families and all 84 message archives with a byte-identical round trip, including the indexed AI-action container and the battle-script name-slot tables, and reports what references any given row. The tables are loose files under `data/Parameter/`, so a rebuilt table is already the format the loader reads.
 - **The scripting layer.** 628 native bindings are named and mapped to their addresses in `config/script-natives.json`, with the ABI, stack indexing and error protocol documented in [docs/script-api-native-reconstruction.md](docs/script-api-native-reconstruction.md).
 - **The engine's public surface.** Shared constants, the message window, motion, event flags, audio, effects and input services are documented where their code lives.
 

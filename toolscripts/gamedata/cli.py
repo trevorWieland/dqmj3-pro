@@ -11,7 +11,7 @@ import argparse
 import json
 import sys
 
-from . import messages, records, references, tables, workspace
+from . import containers, crossref, messages, records, references, tables, workspace
 
 
 def _schema_by_name(name):
@@ -35,6 +35,8 @@ def _emit(document, destination):
     """Write a decoded document as JSON to a path or to standard output."""
     if document["kind"] == records.RECORD_KIND:
         text = records.dump_json(document)
+    elif document["kind"] in (containers.INDEXED_KIND, containers.NAMED_KIND):
+        text = containers.dump_json(document)
     else:
         text = json.dumps(document, indent=2, ensure_ascii=False) + "\n"
     if destination:
@@ -49,8 +51,9 @@ def command_list(args):
     """Print the registry: what is decoded, how, and how firmly."""
     for schema in tables.TABLES:
         stride = "/".join(str(item) for item in schema.strides)
-        print("%-26s stride %-6s %-2s %-8s %s"
-              % (schema.name, stride, schema.container,
+        layout = "" if schema.layout == "flat" else schema.layout + " "
+        print("%-26s %sstride %-6s %-2s %-8s %s"
+              % (schema.name, layout, stride, schema.container,
                  "certain" if schema.certain else "declared",
                  ", ".join(field.name for field in schema.fields) or "(no fields)"))
     print("\nUncharacterised families: %d (see docs/game-data-toolchain.md)"
@@ -73,6 +76,8 @@ def command_encode(args):
     kind = document.get("kind")
     if kind == records.RECORD_KIND:
         data = records.encode(document, _schema_by_name(document["table"]))
+    elif kind in (containers.INDEXED_KIND, containers.NAMED_KIND):
+        data = records.encode(document, _schema_by_name(document["table"]))
     elif kind == messages.MESSAGE_KIND:
         data = messages.encode(document)
     else:
@@ -90,20 +95,31 @@ def command_verify(args):
     report = workspace.verify(root, tables.TABLES)
     if args.explain:
         for item in report["tables"]:
-            print("%-28s %-8s stride %-5s rows %-6s %s"
+            shape = ("stride %s" % item.get("stride") if item.get("stride")
+                     else item.get("layout", "flat"))
+            print("%-52s %-10s %-14s rows %-6s %s"
                   % (item["path"], "identical" if item["ok"] else "FAILED",
-                     item.get("stride", "?"), item.get("count", "?"),
+                     shape, item.get("count", "?"),
                      "certain" if item.get("certain") else "declared"))
             if not item["ok"]:
                 print("    %s" % item.get("error", ""))
+        for item in report["uncharacterised"]:
+            print("%-52s %-10s %-14s %s"
+                  % (item["path"], "opaque", item["magic"], item["reason"]))
         for item in report["messages"]:
-            print("%-28s %-8s rows %s"
-                  % (item["path"], "identical" if item["ok"] else "FAILED",
+            print("%-52s %-10s %-14s rows %s"
+                  % (item["path"], "identical" if item["ok"] else "FAILED", "messages",
                      item.get("count", "?")))
     print("root            %s" % report["root"])
-    print("tables          %d checked, %d byte-identical, %d failed"
-          % (len(report["tables"]), report["tablesIdentical"],
+    print("tables          %d files, %d families, %d byte-identical, %d failed"
+          % (len(report["tables"]), report["families"], report["tablesIdentical"],
              len(report["tables"]) - report["tablesIdentical"]))
+    print("confidence      %d certain, %d declared"
+          % (report["certainTables"],
+             len(report["tables"]) - report["certainTables"]))
+    print("layouts         %s"
+          % ", ".join("%s %d" % (name, count)
+                      for name, count in sorted(report["layouts"].items())))
     print("messages        %d checked, %d byte-identical, %d failed"
           % (len(report["messages"]), report["messagesIdentical"],
              len(report["messages"]) - report["messagesIdentical"]))
@@ -148,6 +164,12 @@ def command_diff(args):
     return 0
 
 
+def command_evidence(args):
+    """Cross-reference decoded names against scripts and message archives."""
+    root = args.root or workspace.find_root()
+    return crossref.main(root, tables.TABLES, args.out)
+
+
 def build_parser():
     """Assemble the argument parser."""
     parser = argparse.ArgumentParser(
@@ -185,6 +207,11 @@ def build_parser():
     diff.add_argument("before")
     diff.add_argument("after")
     diff.set_defaults(handler=command_diff)
+
+    evidence = commands.add_parser(
+        "evidence", help="cross-reference table names against scripts and messages")
+    evidence.add_argument("--out", default=None, help="write the report here")
+    evidence.set_defaults(handler=command_evidence)
     return parser
 
 
