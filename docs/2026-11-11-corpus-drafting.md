@@ -64,9 +64,9 @@ cannot create one.
 | multi-range | 1,710 | the split gives the function two or more original ranges; a relocatable object emits one contiguous body, so it cannot match |
 | already measured | 1,362 | `src/native` defines them; a draft would be a duplicate definition |
 | warned | 1,610 | the decompiler truncated control flow; the C is not the whole function |
-| string literal | 505 | the literal has to live at its original address; the reference map exists but is not wired in yet |
+| string literal | 505 | the literal is rewritten to its original address; measured in the second pass, and never exact |
 | indirect call | 202 | calls through `code *` computed from data |
-| data reference | 11,440 | measured, and almost never exact: see below |
+| data reference | 11,440 | measured at scale in the second pass: 0 exact |
 | clean | 9,035 | no data, no literal, no label: the best-evidence shape |
 | control flow | 708 | labels, `goto` and switch state machines |
 
@@ -106,6 +106,83 @@ compiled   push {r4,lr}; bl …; ldr r2,[pc,#0x18]; mov r1,#0
 
 Same operations, different register allocation and store order. That is what
 limits the data shape, not the declaration or the address.
+
+## Second pass (2026-11-12): the three open levers, measured
+
+The first harvest left three bands unmeasured. All three were measured on the
+same profile and image, and two of them are now closed with a number rather than
+a hope.
+
+| lever | processed | compiled | exact | bytes | rate |
+|---|---|---|---|---|---|
+| data reference, < 32 B | 1,328 | 1,291 | **0** | 0 | **0.00 %** |
+| string literal | 505 | 501 | **0** | 0 | **0.00 %** |
+| no-data census (clean + control) | 8,368 | 8,051 | **50** | 1,792 | 0.60 % |
+
+**Data references under 32 bytes are zero, and structurally so.** 1,353
+functions are in the class and 1,328 reach the shape filter (25 carry a
+`switch`). In the run where 837 compiled and differed, 560 compiled to exactly
+four bytes more than the original -- one extra literal-pool word -- and 233 more
+ran past the range the split leaves; only 61 had the original length. The clean
+shape's 41.9 % does not transfer: the pool word a data reference needs lands
+differently from the original's, and no declaration changes that.
+
+**String literals are zero too.** The rewrite is now wired in:
+`string_addresses()` reads the image address Ghidra recorded for each literal,
+the draft references `DAT_<address>` instead of embedding a second copy, and
+`data_symbols.py` places it there. 501 of 505 compile, and none is byte-exact:
+260 compile longer and 49 to the same length with different bytes. A
+representative case, `fn_0045a5b0`:
+
+```
+placed   08009fe5 0020a0e3 eb10a0e3 8811f4ea 38100000
+original 0030a0e3 08009fe5 0320a0e1 eb10a0e1 8711f4ea
+```
+
+The original loads the string address into `r0` and moves it to the argument
+register `r2`; armcc loads it into `r0` as the first argument and moves the other
+two. That is scheduling, not the address. Wide literals (`L"…"`) are not in the
+reference map at all; 533 corpus functions carry one, and they embed a copy.
+
+**The no-data census yields 50 more exact functions** (1,792 bytes) in
+`src/native/draft002/`; `build.py` credits 45 of them (1,616 bytes), because
+regrouping into shipped units recompiles and loses five.
+
+**Compile failures: 470 → 158 on the same population.** A controlled A/B over
+the same 8,368 selected functions, with only the declaration and rewrite rules
+changed, reports 470 rejections under main's rules and 158 under this branch's.
+What was wrong:
+
+* `prep()` called an undefined `draftlib` and never wrote the documented text
+  cache; it now writes that cache and a return-type table.
+* The failure-isolation loop re-queued single-function failures forever, and
+  `pending = following` sat outside the `while`, so a run recompiled the same
+  units until it was killed. This is why a drafting run appeared to hang.
+* Placement linked ~45,000 split and constant symbols on every attempt and
+  bisected one giant link. It now links chunks of 192 functions carrying only the
+  symbols that chunk's code refers to, and reading back every placed function
+  again costs seconds rather than minutes.
+* `CONCAT31` carried `CONCAT13`'s formula, so every corpus function that uses it
+  (285) computed the wrong value. Both are now spelled by half-width, high half
+  first.
+* `._N_M_` byte-field reads and writes are spelled as the shift, mask and
+  read-modify-write they are (1,177 sites).
+* `&DAT_x` on a name declared as an array is rewritten to the array itself; the
+  pointer-to-array it used to make was accepted by nothing and caused 974 "must
+  be a pointer" errors in the data band alone.
+* A callee that is also defined in the same unit is now declared with the return
+  type the corpus spells for it, and stays `undefined4` otherwise, so a caller
+  that uses a `void`-decompiled result still compiles.
+* `software_interrupt(0x..)` becomes a call to a per-number static helper whose
+  body is `__asm { svc #0x.. }`; at -O3 armcc inlines it to the one instruction
+  the original has. `__svc` is a function qualifier in armcc 4.1, and the
+  embedded assembler does not substitute a macro argument, so a literal helper is
+  the only route that puts the operand in the instruction.
+
+The 158 remaining failures are decompiler shapes no declaration repairs: `LAB_`
+labels whose target it truncated, `in_r0`/`in_s0` register inputs that name no C
+object, and struct-member accesses on an `undefined4`. Inventing those would
+change what the function computes, so they stay reported as failures.
 
 ## What limits the yield
 

@@ -38,6 +38,7 @@ import split as split_module             # noqa: E402
 from placement import place, slots       # noqa: E402
 
 import corpus_draft as draftlib                          # noqa: E402
+from corpus_draft_emit import emit_unit                  # noqa: E402
 
 WORK = ROOT / 'work/drafter'
 CACHE = WORK / 'features.json'
@@ -94,6 +95,9 @@ def select(state, shape, limit, minimum, maximum, order):
         if shape == 'data':
             return (record['data'] and not record['warned'] and not record['indirect']
                     and not record['switch'] and not record['hasStrings'])
+        if shape == 'string':
+            return (record['hasStrings'] and not record['data'] and not record['warned']
+                    and not record['indirect'])
         if shape == 'all':
             return not record['warned']
         raise SystemExit('unknown shape ' + shape)
@@ -104,47 +108,6 @@ def select(state, shape, limit, minimum, maximum, order):
     else:
         chosen.sort(key=lambda record: record['address'])
     return chosen[:limit] if limit else chosen
-
-
-SHIM = None
-
-
-def header_text(data_types, records):
-    lines = ['#include "decompiled.h"', '',
-             '/* Declarations for what these functions call and address. A callee is',
-             ' * declared with an empty parameter list: the decompiler\'s per-function',
-             ' * signature is its own hypothesis and frequently disagrees with the',
-             ' * argument count at a call site, and an empty list states exactly the',
-             ' * contract the split provides -- a name with an address. */']
-    callees = sorted({name for record in records for name in record['callees']})
-    for index in range(0, len(callees), 6):
-        lines.append(' '.join('extern undefined4 fn_%s();' % name for name in callees[index:index + 6]))
-    data = sorted({name for record in records for name in record['data']})
-    if data:
-        lines += ['', '/* Data the functions address. A name carries the image address it',
-                  ' * must have, so the link defines it there and the bytes the compiler',
-                  ' * emits for the reference are the original bytes. */']
-        for index in range(0, len(data), 5):
-            group = []
-            for name in data[index:index + 5]:
-                kind = data_types.get(name, 'undefined4')
-                if kind.endswith('[]'):
-                    group.append('extern unsigned char %s[];' % name)
-                elif kind.endswith('*'):
-                    group.append('extern unsigned char *%s;' % name)
-                else:
-                    group.append('extern undefined4 %s;' % name)
-            lines.append(' '.join(group))
-    return '\n'.join(lines) + '\n'
-
-
-def emit_unit(directory, label, records, data_types):
-    body = [header_text(data_types, records)]
-    for record in records:
-        body.append(draftlib.rewrite(draftlib.corpus_text(record['address'])))
-    path = directory / (label + '.c')
-    path.write_text('\n'.join(body), encoding='utf-8')
-    return path
 
 
 def order_group(records):
@@ -158,6 +121,7 @@ def order_group(records):
     cannot be ordered; those units are isolated by bisection instead.
     """
     by_name = {record['name']: record for record in records}
+    by_address = {record['address']: record for record in records}
     depth = {}
 
     def visit(name, stack):
@@ -171,7 +135,7 @@ def order_group(records):
         stack.add(name)
         best = 0
         for callee in record['callees']:
-            if callee in by_name and callee != name[3:]:
+            if callee in by_address and callee != name[3:]:
                 best = max(best, 1 + visit('fn_' + callee, stack))
         stack.discard(name)
         depth[name] = best
@@ -179,7 +143,10 @@ def order_group(records):
 
     for record in records:
         visit(record['name'], set())
-    return sorted(records, key=lambda record: (depth.get(record['name'], 0), record['address']))
+    # Deepest first: a function that calls another has the greater depth, and it
+    # has to be compiled before the callee's definition appears, so its call is
+    # checked against the permissive declaration rather than the definition.
+    return sorted(records, key=lambda record: (-depth.get(record['name'], 0), record['address']))
 
 
 def compile_one(args):
@@ -203,24 +170,57 @@ def compile_one(args):
         return source.stem, None, detail or str(error)[:160]
 
 
-def place_all(combined, placed, functions, constants, out):
+PLACEMENT_CHUNK = 192
+
+
+class _Referenced:
+    """The split seen through one chunk's relocations, for the linker script.
+
+    The script needs a definition for every symbol a chunk's code can refer to,
+    and nothing else: a placed function's address comes from the section the
+    script places, and every other reference resolves through an absolute
+    symbol. Narrowing it to those references keeps a link over thousands of
+    functions as small as the chunk it places.
+    """
+
+    def __init__(self, symbols):
+        self.symbols = symbols
+
+
+def place_all(combined, placed, functions, constants, out, references=None):
     """Place the measured functions and read back their bytes.
 
-    One link of nine thousand functions at fixed addresses can trip over a
-    section whose compiled extent overlaps the next function's; the offending
-    function is then a placement fact, not a measurement. Halving the set until
-    the link succeeds isolates such a function instead of losing the whole run.
+    Functions are placed at absolute addresses that do not depend on each other,
+    so the set can be linked in chunks: a function left out of one link is an
+    absolute symbol defined at its original address, which is the address a call
+    in another chunk resolves to anyway. Chunking bounds the work a single
+    overlapping extent can cause -- one bad function would otherwise re-link
+    thousands of sections on every bisection step -- and it keeps the failure
+    local to the function that caused it.
     """
     sections, refused = {}, set()
+    references = references or {}
+    by_name = {symbol.name: symbol for symbol in functions.symbols}
+    constants = dict(constants)
 
     def attempt(names):
         if not names:
             return
+        # The script places a section for every name it is given, so the chunk's
+        # own functions come first and the names their code refers to follow: a
+        # placed function that nothing calls would otherwise get no section at
+        # all, and its bytes could not be read back.
+        wanted = set(names) | {name for placed_name in names
+                              for name in references.get(placed_name, ())}
+        symbols = [by_name[name] for name in sorted(wanted) if name in by_name]
+        subset = [(name, constants[name]) for name in sorted(wanted) if name in constants]
         try:
-            image, _ = place(ROOT, out, [combined], sorted(names), functions, constants)
-        except ValueError:
+            image, _ = place(ROOT, out, [combined], sorted(names), _Referenced(symbols), subset)
+        except ValueError as error:
             if len(names) == 1:
                 refused.add(names[0])
+                (out / 'placement-failures.txt').open('a', encoding='utf-8').write(
+                    '%s %s\n' % (names[0], str(error)[:160]))
                 return
             half = len(names) // 2
             attempt(names[:half])
@@ -228,7 +228,10 @@ def place_all(combined, placed, functions, constants, out):
             return
         sections.update(elf_objects.placed_sections(image)['sections'])
 
-    attempt(list(placed))
+    ordered = sorted(placed)
+    (out / 'placement-failures.txt').unlink(missing_ok=True)
+    for start in range(0, len(ordered), PLACEMENT_CHUNK):
+        attempt(ordered[start:start + PLACEMENT_CHUNK])
     return sections, refused
 
 
@@ -240,6 +243,7 @@ def measure(args):
     out = ROOT / args.out
     tus = out / 'tus'
     data_types = state['dataTypes']
+    return_types = state.get('returnTypes', {})
     groups, current, budget = [], [], 0
     for record in chosen:
         current.append(record)
@@ -279,21 +283,26 @@ def measure(args):
                    for index, group in enumerate(groups)]
         with ThreadPoolExecutor(max_workers=args.jobs) as pool:
             while pending:
-                paths = [emit_unit(tus, label, group, data_types) for label, group in pending]
+                paths = [emit_unit(tus, label, group, data_types, return_types)
+                         for label, group in pending]
                 compiled = list(pool.map(compile_one, [(ROOT, path, None) for path in paths]))
                 following = []
                 for (label, group), (_, table, error) in zip(pending, compiled):
                     if error is None:
                         results.update(table)
                         kept[label] = group
-                    elif len(group) > 1:
-                        half = len(group) // 2
+                        continue
+                    if len(group) == 1:
+                        # A unit of one function that does not compile is a fact
+                        # about the decompiled text. Splitting it further would
+                        # only re-queue it, so it is reported instead.
+                        errors[group[0]['name']] = error
+                        continue
+                    half = len(group) // 2
                     counter[0] += 1
                     following.append(('%s_%d' % (label, counter[0]), group[:half]))
                     following.append(('%s_%d' % (label, counter[0] + 1), group[half:]))
-                else:
-                    errors[group[0]['name']] = error
-            pending = following
+                pending = following
         compact = {name: {'size': value['size'], 'extent': value['extent'],
                           'relocations': {str(key): kind
                                           for key, kind in value['relocations'].items()},
@@ -368,7 +377,8 @@ def measure(args):
         combined = out / 'placement.combined.o'
         oo.run([ROOT / oo.LLD, '-r', '-m', 'armelf', '--build-id=none', '@' + response.as_posix(),
                 '-o', combined], out / 'placement.combine.log')
-        sections, refused = place_all(combined, placed_all, functions, constants, out)
+        sections, refused = place_all(combined, placed_all, functions, constants, out,
+                                      {name: results[name]['references'] for name in placed_all})
         for name in refused:
             reasons[name] = 'the placement link cannot place this extent'
     else:

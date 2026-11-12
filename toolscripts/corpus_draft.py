@@ -31,6 +31,7 @@ sys.path.insert(0, str(ROOT / 'toolscripts'))
 
 import elf_objects                      # noqa: E402
 import split as split_module            # noqa: E402
+from corpus_draft_shim import SHIM       # noqa: E402,F401  every unit includes it
 
 FUNCTION = re.compile(r'\bFUN_([0-9a-f]{8})\b')
 THUNK = re.compile(r'\bthunk_FUN_([0-9a-f]{8})\b')
@@ -40,77 +41,6 @@ DAT_ADDRESS = re.compile(r'^_?DAT_([0-9a-f]{8})$')
 STRING = re.compile(r'"(?:[^"\\\n]|\\.)*"')
 
 # Types are declared once, in this header, so every draft unit agrees on them.
-SHIM = r'''/* Ghidra decompiler types, spelled so the measured compiler accepts them.
- *
- * The decompiler names a value by its width when it cannot recover a type:
- * undefined1 is one byte, undefined4 is four. They are aliases for the C types
- * of that width, so declaring them changes spelling only, never layout or
- * arithmetic. `code` is a callable with unspecified arguments, which is what
- * Ghidra's `code *` means at every indirect call site in this corpus.
- */
-#ifndef DQMJ3_DRAFT_DECOMPILED_H
-#define DQMJ3_DRAFT_DECOMPILED_H
-
-typedef unsigned char      undefined;
-typedef unsigned char      undefined1;
-typedef unsigned short     undefined2;
-typedef unsigned int       undefined3;
-typedef unsigned int       undefined4;
-typedef unsigned int       undefined5;
-typedef unsigned int       undefined6;
-typedef unsigned int       undefined7;
-typedef unsigned long long undefined8;
-typedef unsigned char      uchar;
-typedef unsigned short     ushort;
-typedef unsigned int       uint;
-typedef unsigned char      byte;
-typedef unsigned long long ulonglong;
-typedef long long          longlong;
-typedef unsigned short     wchar16;
-typedef unsigned int       wchar32;
-typedef int                code();
-
-/* The decompiler uses `bool` for a value it proved to be 0 or 1. */
-typedef _Bool bool;
-#define true 1
-#define false 0
-
-/* The decompiler emits these when it cannot follow control flow. */
-extern void halt_baddata(void);
-extern void halt_badinst(void);
-
-/* Bit-field extraction, concatenation and carry helpers the decompiler emits
- * for sub-word and 64-bit operations. Each is a pure spelling of an operation
- * the compiler already performs; none changes a value. */
-#define CONCAT44(hi, lo) (((unsigned long long)(unsigned int)(hi) << 32) | (unsigned int)(lo))
-#define CONCAT31(a, b)   (((unsigned int)(unsigned char)(a) << 24) | ((unsigned int)(b) & 0xffffff))
-#define CONCAT22(a, b)   (((unsigned int)(unsigned short)(a) << 16) | (unsigned int)(unsigned short)(b))
-#define CONCAT13(a, b)   (((unsigned int)(unsigned char)(a) << 24) | ((unsigned int)(b) & 0xffffff))
-#define CONCAT11(a, b)   (((unsigned int)(unsigned char)(a) << 8) | (unsigned int)(unsigned char)(b))
-#define SUB41(v, n)      ((unsigned char)((unsigned int)(v) >> (8 * (n))))
-#define SUB42(v, n)      ((unsigned short)((unsigned int)(v) >> (8 * (n))))
-#define SUB81(v, n)      ((unsigned char)((unsigned long long)(v) >> (8 * (n))))
-#define ZEXT14(v)        ((unsigned short)(unsigned char)(v))
-#define ZEXT24(v)        ((unsigned int)(unsigned short)(v))
-#define ZEXT12(v)        ((unsigned short)(unsigned char)(v))
-#define SEXT14(v)        ((short)(signed char)(v))
-#define SEXT24(v)        ((int)(short)(v))
-#define SEXT12(v)        ((short)(signed char)(v))
-#define SEXT34(v)        ((long long)(int)(v))
-#define CARRY4(a, b)     ((unsigned int)((unsigned long long)(a) + (unsigned long long)(b) > 0xffffffffULL))
-#define SBORROW4(a, b)   ((int)((long long)(a) - (long long)(b) < -2147483648LL))
-
-/* A software interrupt: Ghidra prints the ARM `swi` as a call, and names the
- * supervisor-call form the same way. Both are the one instruction. */
-#if defined(__CC_ARM) || defined(__ARMCC_VERSION)
-#define software_interrupt(n) __svc(n)
-#define SupervisorCall(n)     __svc(n)
-#else
-static void software_interrupt(int number) { (void)number; }
-#endif
-
-#endif
-'''
 
 
 def load_split():
@@ -184,7 +114,81 @@ def data_usage(text):
     }
 
 
-def rewrite(text, strings=None):
+FIELD = re.compile(r'\b([A-Za-z_]\w*)\._(\d+)_(\d+)_\b')
+FIELD_ASSIGN = re.compile(r'^([ \t]*)([A-Za-z_]\w*)\._(\d+)_(\d+)_[ \t]*=[ \t]*(.+);[ \t]*$', re.M)
+ADDRESS = re.compile(r'&(_?DAT_[0-9a-f]{8})\b')
+SVC = re.compile(r'\b(?:software_interrupt|SupervisorCall)\(\s*(0x[0-9a-fA-F]+|[0-9]+)\s*\)')
+SVC_NAME = re.compile(r'\bsvc_0x[0-9a-f]+\b')
+
+
+def svc_helpers(text):
+    """Static helpers that stand in for the ARM ``svc`` instruction.
+
+    Ghidra prints the supervisor call as a function call. armcc 4.1 has no
+    intrinsic for it -- ``__svc`` is a function qualifier, not a call, and the
+    embedded assembler does not substitute a macro argument -- but the embedded
+    assembler does take a literal, and a static function holding only that
+    instruction is inlined away at -O3. Each distinct number in a unit therefore
+    gets one helper, and the call site becomes a call that compiles to the one
+    instruction the original has.
+
+    The assembler is guarded because the same header is compiled by clang for the
+    source census, where the body is simply empty; the census checks that the
+    source compiles, not what it computes.
+    """
+    lines = []
+    for name in sorted(set(SVC_NAME.findall(text))):
+        lines += ['static void %s(void)' % name, '{',
+                  '#if defined(__CC_ARM) || defined(__ARMCC_VERSION)',
+                  '  __asm { svc #%s }' % name[len('svc_'):], '#endif', '}', '']
+    return '\n'.join(lines)
+
+
+def field_shape(offset, size):
+    """The cast, shift, mask and full width of one decompiler byte-field."""
+    wide = offset + size > 4
+    cast = 'unsigned long long' if wide else 'unsigned int'
+    mask = (1 << (8 * size)) - 1
+    return cast, 8 * offset, mask, 8 if wide else 4
+
+
+def field_value(name, offset, size):
+    """One decompiler byte-field read, spelled as the shift and mask it is.
+
+    Ghidra prints ``x._1_3_`` for the three bytes of ``x`` starting at byte one.
+    It is a bit-field read of a scalar the decompiler could not type; the
+    spelling below shifts and masks exactly those bytes, so the value is the
+    same and the compiler sees an ordinary integer expression.
+    """
+    cast, shift, mask, width = field_shape(offset, size)
+    value = '((%s)(%s)' % (cast, name)
+    if shift:
+        value += ' >> %d' % shift
+    value += ')'
+    if size < width:
+        value += ' & 0x%x' % mask
+    return value
+
+
+def field_assignment(match):
+    """One decompiler byte-field write, spelled as the read-modify-write it is.
+
+    ``x._1_3_ = v`` sets the three bytes of ``x`` that start at byte one and
+    leaves the rest alone, which is a mask and an or in C. Writing the same
+    operation out keeps the store width out of the draft's hands: the compiler
+    emits the same bytes whichever way it chooses to reach the field.
+    """
+    indent, name, offset, size, value = match.group(1), match.group(2), \
+        int(match.group(3)), int(match.group(4)), match.group(5)
+    cast, shift, mask, width = field_shape(offset, size)
+    cleared = '~((%s)0x%x << %d)' % (cast, mask, shift)
+    placed = '((%s)(%s) & 0x%x)' % (cast, value, mask)
+    if shift:
+        placed = '(%s << %d)' % (placed, shift)
+    return '%s%s = (%s & %s) | %s;' % (indent, name, name, cleared, placed)
+
+
+def rewrite(text, strings=None, data_types=None):
     """Rename and de-literal one decompiled function so it can be compiled."""
     text = THUNK.sub(lambda m: 'thunk_fn_' + m.group(1), text)
     text = FUNCTION.sub(lambda m: 'fn_' + m.group(1), text)
@@ -200,6 +204,18 @@ def rewrite(text, strings=None):
                 return literal
             return '(char *)&DAT_%08x' % addresses[0]
         text = STRING.sub(replace, text)
+    # The decompiler writes `&DAT_x` for the address of a data object. Declared
+    # as an array -- which is how a name used for its address is declared -- the
+    # same address is the array itself, and `&` would make it a pointer to the
+    # array, a type nothing here accepts.
+    if data_types:
+        def dereference(match):
+            name = match.group(1)
+            return name if data_types.get(name, '').endswith('[]') else match.group(0)
+        text = ADDRESS.sub(dereference, text)
+    text = FIELD_ASSIGN.sub(field_assignment, text)
+    text = FIELD.sub(lambda m: field_value(m.group(1), int(m.group(2)), int(m.group(3))), text)
+    text = SVC.sub(lambda m: 'svc_%#x()' % int(m.group(1), 0), text)
     return text
 
 
@@ -227,22 +243,41 @@ def measured_names():
     return names
 
 
+def data_names(record):
+    """Every data symbol a draft of this function will mention.
+
+    The corpus's own ``DAT_`` references, plus one symbol per string literal when
+    the rewrite is given the literal's original address. Both are declared the
+    same way and both must resolve for the draft to be measurable.
+    """
+    return sorted(set(record.get('data', [])) | set(record.get('stringData', [])))
+
+
 def prep():
     """One pass over the corpus: the facts that decide whether a draft can match."""
     split = load_split()
     measured = measured_names()
-    records, usage = {}, {}
-    for path in sorted((draftlib.CORPUS / 'c').glob('*.c')):
+    records, usage, texts, returns = {}, {}, {}, {}
+    for path in sorted((CORPUS / 'c').glob('*.c')):
         address = path.stem
+        text = path.read_text(encoding='utf-8', errors='replace')
+        texts[address] = text
+        returns[address] = return_type(text)
         symbol = split.by_name.get('fn_' + address)
         if symbol is None or symbol.name in measured or symbol.extras:
             continue
-        text = path.read_text(encoding='utf-8', errors='replace')
-        callees, data = draftlib.dependencies(text, address)
-        for name, kinds in draftlib.usage_kinds(text).items():
+        callees, data = dependencies(text, address)
+        for name, kinds in usage_kinds(text).items():
             row = usage.setdefault(name, {'pointer': 0, 'lvalue': 0, 'address': 0})
             for key in row:
                 row[key] += kinds[key]
+        # A literal is only rewritable to its original address when the function
+        # carries no other reason to be excluded, but the map costs nothing here
+        # and keeps the rewrite decision in one place.
+        strings = string_addresses(corpus_json(address) or {}) if '"' in text else {}
+        string_data = sorted({'DAT_%08x' % addresses[0] for addresses in strings.values()})
+        for name in string_data:
+            usage.setdefault(name, {'pointer': 0, 'lvalue': 0, 'address': 1})
         records[address] = {
             'address': address, 'name': symbol.name, 'size': symbol.size,
             'band': band(symbol.size), 'mode': symbol.mode,
@@ -253,8 +288,16 @@ def prep():
             'goto': bool(re.search(r'\bgoto\b', text)),
             'hasStrings': '"' in text,
             'callees': callees, 'data': data,
+            'strings': strings, 'stringData': string_data,
             'lines': text.count('\n'),
         }
+    # One file of corpus text. The corpus is 26,572 small files and reading them
+    # one at a time costs more than the rest of a drafting run put together, so
+    # the pass that is already reading them writes the cache every later stage
+    # reads. It holds decompiler output only, and lives under the gitignored
+    # work/ tree.
+    TEXT_CACHE.parent.mkdir(parents=True, exist_ok=True)
+    TEXT_CACHE.write_text(json.dumps(texts), encoding='utf-8')
     # A declaration type per data symbol, decided by how the corpus uses it.
     types = {}
     for name, kinds in usage.items():
@@ -264,7 +307,8 @@ def prep():
             types[name] = 'undefined4'
         else:
             types[name] = 'unsigned char[]'
-    CACHE.write_text(json.dumps({'functions': records, 'dataTypes': types}, indent=0) + '\n',
+    CACHE.write_text(json.dumps({'functions': records, 'dataTypes': types,
+                                 'returnTypes': returns}, indent=0) + '\n',
                      encoding='utf-8')
     shapes = {}
     for record in records.values():
@@ -291,6 +335,24 @@ def dependencies(text, address):
                if name != address}
     data = sorted(set(DATA.findall(text)))
     return sorted(callees), data
+
+
+DEFINITION = re.compile(r'^([A-Za-z_][A-Za-z0-9_ \t\*]*?)\b(?:thunk_)?FUN_([0-9a-f]{8})\s*\(', re.M)
+
+
+def return_type(text):
+    """The return type the decompiler spelled for a function.
+
+    A declaration of a callee must agree with the callee's own definition on the
+    return type, or the compiler rejects the defining unit: ``extern
+    undefined4 fn_x();`` followed by ``void fn_x(int p)`` is a conflicting
+    declaration, which armcc reports as error #147. The parameter list stays
+    empty, which is compatible with every definition and accepts the argument
+    count each call site uses; only the return type has to be recovered, and the
+    corpus states it on the definition's own first line.
+    """
+    match = DEFINITION.search(text)
+    return ' '.join(match.group(1).split()) if match else 'undefined4'
 
 
 def usage_kinds(text):
@@ -325,6 +387,14 @@ def usage_kinds(text):
             row['pointer'] += 1
             continue
         if re.match(r'(?:[+\-*/%&|^]?=|[-+]{2})', after):
+            row['lvalue'] += 1
+            continue
+        # A name on the right of a binary operator is read as an integer: the
+        # decompiler writes binary operators with spaces and the unary address-of
+        # without one, so a trailing operator in the prefix is the only case that
+        # needs a value type rather than an address.
+        if text[:match.start()].rstrip().endswith(('&', '|', '^', '*', '/', '%',
+                                                   '==', '!=', '<=', '>=')):
             row['lvalue'] += 1
         else:
             row['address'] += 1
