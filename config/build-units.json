@@ -13991,6 +13991,14 @@
       "targets": [
         "arm32-mpcore"
       ]
+    },
+    {
+      "source": "src/native/wave084-repair/repair_00.c",
+      "headers": [
+        "src/native/wave084-repair/decompiled.h",
+        "src/native/wave084-repair/repair_00.h"
+      ],
+      "role": "repair-loop-byte-exact"
     }
   ],
   "excludedSources": [
@@ -14050,6 +14058,7 @@
     "src/native/credit001",
     "src/native/synth001",
     "src/native/draft001",
-    "src/native/draft002"
+    "src/native/draft002",
+    "src/native/wave084-repair"
   ]
 }
