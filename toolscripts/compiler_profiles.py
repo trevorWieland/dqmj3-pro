@@ -1,6 +1,7 @@
 """Compiler profile resolution for the object comparison."""
 
 import json
+import os
 from pathlib import Path
 
 PROFILE_CONFIG = "config/compiler-profiles.json"

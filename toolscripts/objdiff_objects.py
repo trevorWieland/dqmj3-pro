@@ -30,6 +30,7 @@ scopes are checked against the profile that implements them.
 import argparse
 import bisect
 import json
+import os
 import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor
@@ -46,7 +47,7 @@ import unit_objects
 import unit_scope
 from placement import (ASSEMBLE, CLANG, LLD, TIMEOUT, carve, check_original, digest,  # noqa: F401
                        empty_base, place, read_json, run, slots, write_json)
-import compiler_profiles  # noqa: E402
+from compiler_profiles import profile_for, profile_id, profiles  # noqa: F401, E402
 
 
 ROOT = Path(__file__).resolve().parents[1]
