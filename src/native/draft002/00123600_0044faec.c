@@ -7,7 +7,7 @@
  * equal the original extent byte for byte. Nothing here is fitted: a single
  * differing byte would have kept the function out of this file.
  *
- * Address range of this file's functions: 001a46b0 .. 0044faec.
+ * Address range of this file's functions: 00123600 .. 0044faec.
  * Decompiler pseudo-types are explained in decompiled.h; every name these
  * functions call or address is declared in this unit's own header, because the
  * declaration a draft needs depends on what the unit itself defines.
@@ -397,3 +397,25 @@ int * fn_0044faec(int *param_1)
   return param_1;
 }
 
+/*
+ * The comparison first read `(param_2 & 0xffffff) < *puVar1`, which makes armcc
+ * compare the operand registers the other way round from the original. Swapping
+ * the two sides to `*puVar1 > (param_2 & 0xffffff)` reproduces the original
+ * `cmp r2,r1`; that swap is the only change the source-permutation search made.
+ * See docs/2026-11-12-source-permutation-search.md.
+ */
+int fn_00176b18(int param_1,uint param_2)
+
+{
+  uint *puVar1;
+  int iVar2;
+  
+  puVar1 = (uint *)(param_1 + *(int *)(param_1 + 0x34));
+  if (*puVar1 > (param_2 & 0xffffff)) {
+    iVar2 = (int)puVar1 + puVar1[(param_2 & 0xffffff) * 2 + 2];
+  }
+  else {
+    iVar2 = 0;
+  }
+  return iVar2;
+}

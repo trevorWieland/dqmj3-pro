@@ -1,18 +1,44 @@
+/* Record predicates recovered by source permutation.
+ *
+ * Every function here is byte-exact against its original extent under the
+ * measured armcc 4.1 build 1454 profile. The bit tests read the mask before the
+ * shift because the original's `and`/`lsr` pair comes from that order, and the
+ * two conditional returns below keep the guarded assignment in its own block
+ * because armcc allocates the result register differently without it. The
+ * wording is the shape armcc was measured to compile, not a paraphrase.
+ */
+
 #include "views.h"
 
 u32 fn_00108514(const P7_Handle_4 *handle) { u32 value = ((const P7_W_c *)handle->record)->value; return value != 0x0u; }
 u32 fn_001296d0(const P7_W_18 *record) { u32 value = record->value; return value == 0x1u || value == 0x2u; }
 u32 fn_0012a004(const P7_W_4 *record) { u32 value = record->value; return value != 0x0u; }
-u32 fn_0012a1c8(const P7_B_19 *record) { u32 value = record->value; return value == 0x1u ? 0x20u : 0x8u; }
+u32 fn_0012a1c8(const P7_B_19 *record)
+{
+    u32 value = record->value;
+    {
+        u32 result_value = 0x8u;
+        if (value == 0x1u) result_value = 0x20u;
+        return result_value;
+    }
+}
 u32 fn_0017f170(const P7_B_4 *record) { u32 value = record->value; return value == 0x0u; }
 u32 fn_0019bc24(const P7_Handle_0 *handle) { u32 value = ((const P7_B_28 *)handle->record)->value; return (value >> 3) & 0x1u; }
-u32 fn_001aff30(const P7_B_0 *record) { u32 value = record->value; return (value >> 7) & 0x1u; }
-u32 fn_001b00bc(const P7_B_0 *record) { u32 value = record->value; return (value >> 5) & 0x1u; }
+u32 fn_001aff30(const P7_B_0 *record) { u32 value = record->value; return (value & 0x80u) >> 7; }
+u32 fn_001b00bc(const P7_B_0 *record) { u32 value = record->value; return (value & 0x20u) >> 5; }
 u32 fn_001c8384(const P7_W_10 *record) { u32 value = record->value; return value == 0x0u; }
 u32 fn_00204610(const P7_W_28 *record) { u32 value = record->value; return value != 0x0u; }
 u32 fn_00251a3c(const P7_B_0 *record) { u32 value = record->value; return value == 0x7u; }
 u32 fn_00251dd8(const P7_B_0 *record) { u32 value = record->value; return value != 0x7u && value != 0x0u; }
-u32 fn_0025dbb0(const P7_W_7c *record) { u32 value = record->value; return value == 0x0u ? 0x0u : 0x1u; }
+u32 fn_0025dbb0(const P7_W_7c *record)
+{
+    u32 value = record->value;
+    {
+        u32 result_value = 0x1u;
+        if (value == 0x0u) result_value = 0x0u;
+        return result_value;
+    }
+}
 u32 fn_00267e98(const P7_Handle_0 *handle) { u32 value = ((const P7_B_70 *)handle->record)->value; return value == 0xbu; }
 u32 fn_00269864(const P7_Handle_0 *handle) { u32 value = ((const P7_B_8 *)handle->record)->value; return value == 0x4u; }
 u32 fn_0026a37c(const P7_Handle_0 *handle) { u32 value = ((const P7_B_8 *)handle->record)->value; return value == 0x1u || value == 0x6u; }
@@ -39,7 +65,7 @@ u32 fn_0041c6d0(const P7_Handle_0 *handle) { u32 value = ((const P7_W_84 *)handl
 u32 fn_004d4ed0(const P7_B_25 *record) { u32 value = record->value; return value & 0x1u; }
 u32 fn_004d4edc(const P7_B_23 *record) { u32 value = record->value; return value == 0x2u; }
 u32 fn_004d4ef0(const P7_B_23 *record) { u32 value = record->value; return value == 0x1u; }
-u32 fn_004d5ad0(const P7_B_25 *record) { u32 value = record->value; return (value >> 1) & 0x1u; }
+u32 fn_004d5ad0(const P7_B_25 *record) { u32 value = record->value; return (value & 0x2u) >> 1; }
 u32 fn_00557f44(const P7_W_8 *record) { u32 value = record->value; return value != 0x0u; }
 u32 fn_00670ef8(const P7_Handle_6c *handle) { u32 value = ((const P7_B_19 *)handle->record)->value; return value == 0x0u; }
 u32 fn_006a7be0(const P7_Handle_170 *handle) { u32 value = ((const P7_W_10 *)handle->record)->value; return value == 0x2u; }
