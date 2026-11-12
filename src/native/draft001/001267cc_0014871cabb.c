@@ -40,15 +40,6 @@ undefined4 fn_0013e650(undefined4 param_1,undefined4 param_2)
 
 
 
-undefined4 fn_0013f624(undefined4 param_1)
-
-{
-  fn_00150be0();
-  return param_1;
-}
-
-
-
 void fn_0013f7ec(undefined4 *param_1)
 
 {

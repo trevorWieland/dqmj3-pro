@@ -293,28 +293,10 @@ int fn_004539a8(int param_1)
 
 
 
-undefined4 fn_00453ab4(undefined4 param_1)
-
-{
-  fn_0012a2d8();
-  return param_1;
-}
-
-
-
 undefined4 fn_00455cd8(undefined4 param_1,int param_2)
 
 {
   fn_0015e9d8(param_1,*(undefined4 *)(param_2 + 4));
-  return param_1;
-}
-
-
-
-undefined4 fn_00455cf0(undefined4 param_1)
-
-{
-  fn_0014e7cc();
   return param_1;
 }
 

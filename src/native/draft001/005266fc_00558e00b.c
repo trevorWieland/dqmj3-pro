@@ -155,15 +155,6 @@ void fn_00557e4c(int param_1)
 
 
 
-undefined4 fn_00558844(undefined4 param_1)
-
-{
-  fn_00126800();
-  return param_1;
-}
-
-
-
 void fn_00558a78(int param_1)
 
 {
