@@ -171,7 +171,18 @@ def link(root, mapping, output):
                                  absolute_symbols.definitions(constants)), encoding='utf-8')
     image = output / 'image.elf'
     argv = [str(root / LLD), '-static', '-m', 'armelf', '--build-id=none', '-e', '0',
-            '-T', str(script), *[str(source) for source in sources], '-o', str(image)]
+            '-T', str(script)]
+    # A reconstruction with hundreds of units puts more object paths on one
+    # command line than Windows accepts, so the object list goes through a
+    # response file, one path per line.
+    if len(sources) > 48:
+        response = output / 'image.rsp'
+        response.write_text('\n'.join(Path(source).as_posix() for source in sources) + '\n',
+                            encoding='utf-8')
+        argv.append('@' + response.as_posix())
+    else:
+        argv.extend(str(source) for source in sources)
+    argv += ['-o', str(image)]
     result = subprocess.run(argv, capture_output=True, timeout=TIMEOUT)
     (output / 'link.log').write_bytes(result.stdout + result.stderr)
     if result.returncode:

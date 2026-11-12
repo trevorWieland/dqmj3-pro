@@ -132,13 +132,26 @@ def place(root, output, objects, placed, functions, constants=()):
     does not place stays an absolute symbol so a call to it still resolves, and
     every section no unit measured is discarded. ``constants`` defines shared
     data symbols at their original addresses for the same reason.
+
+    A reconstruction with several hundred units puts more object paths on the
+    command line than Windows accepts, so the object list goes through a
+    response file: one path per line, which the linker expands as arguments.
     """
     script = output / 'source.placed.ld'
     script.write_text(image_link.script_for(functions.symbols, set(placed), constants),
                       encoding='utf-8')
     image = output / 'source.placed.elf'
-    command = run([root / LLD, '-static', '-m', 'armelf', '--build-id=none', '-e', '0',
-                   '-T', script, *objects, '-o', image], output / 'source.placed.log')
+    arguments = [root / LLD, '-static', '-m', 'armelf', '--build-id=none', '-e', '0',
+                 '-T', script]
+    if len(objects) > 48:
+        response = output / 'source.placed.rsp'
+        response.write_text('\n'.join(Path(item).as_posix() for item in objects) + '\n',
+                            encoding='utf-8')
+        arguments.append('@' + response.as_posix())
+    else:
+        arguments.extend(objects)
+    arguments += ['-o', image]
+    command = run(arguments, output / 'source.placed.log')
     return image, command
 
 
