@@ -1,47 +1,33 @@
 """Build the objdiff project and its original/source objects from the split.
 
 Every configured source file under ``src/native`` is compiled with the compiler
-profile its unit names. A unit that names nothing uses the default profile from
-``config/compiler-profiles.json``: the best-evidenced original compiler, armcc
-4.1 build 1454, unless configuration says otherwise. A file that defines a
-function the split places becomes one objdiff unit: its target object holds the
-original function bytes carved out of the user's code image, and its base object
-holds the same functions compiled from that file.
-
-Every original text byte source does not implement stays in one extra unit,
+profile its unit names, defaulting to the measured original compiler. A file
+that defines a function the split places becomes one objdiff unit: its target
+object holds the original function bytes carved out of the user's code image,
+and its base object holds the same functions compiled from that file. Every
+original text byte source does not implement stays in one extra unit,
 ``src/native``, with the original rodata, data and BSS.
 
-The base object is not a relocatable object: a relocatable object cannot say
-what a ``bl`` encodes, because the callee has no address yet. A function with a
-call would then be scored against bytes that are wrong by construction and could
-never be credited, whatever the source said. So the measurement places every
-measured function at the address the split gives it -- the same placement the
-whole-image link in ``image_link`` performs -- and carves the base object out of
-that image. A call to a function the split lists resolves to the address the
-original image gives that function; a call to anything else makes the reference
-unrepresentable and the function is reported as such instead of being compared
-against unresolved bytes.
-
-A function's instructions and the data a compiler places after them (a literal
-pool, a switch table, embedded string literals) are carved as one section but
-named separately: the instruction extent is the split's extent, and the bytes
-after it are the function's own data. Instructions are compared with
-instructions; the data is compared with the original bytes at the same address,
-and a pool that differs disqualifies the function instead of being ignored.
+The base object is placed, not relocatable: a relocatable object cannot say what
+a ``bl`` encodes. Every measured function is placed at the address the split
+gives it, the base is carved out of that image, and a call to a split function
+resolves to the original address. Instruction bytes and the data the compiler
+places after them are compared with the original bytes at the same address.
 
 No ledger decides what counts. A function is measured because the source defines
-it and the split gives it an address, a mode and a size. The profile's declared
-configuration is checked against the unit: a unit may only ask for a layout or
-header profile the profile implements, so naming a profile never silently
-changes what the unit declared.
+it and the split gives it an address, a mode and a size. Units are independent,
+so both compilation and per-unit screening run concurrently; the report order
+stays manifest order.
 """
 
 import argparse
 import bisect
 import json
+import os
 import re
 import subprocess
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -51,6 +37,7 @@ import data_symbols
 import elf_objects
 import exheader
 import split as split_module
+import unit_objects
 import unit_scope
 from placement import (ASSEMBLE, CLANG, LLD, TIMEOUT, carve, check_original, digest,  # noqa: F401
                        empty_base, place, read_json, run, slots, write_json)
@@ -177,24 +164,38 @@ def compile_sources(root, output, forced_profile=None):
 
 
 def compile_units(root, output, units, forced_profile=None):
-    """Compile these units and return every canonical function they define."""
+    """Compile these units and return every canonical function they define.
+
+    Units are independent translation units, so they are compiled concurrently:
+    the full decompilation is thousands of files and a serial compile would put
+    the measurement out of reach of an ordinary CI job. The order of the
+    returned commands and of the reported definitions stays the order of the
+    manifest, so the report does not depend on scheduling.
+    """
     definitions, commands = {}, []
-    for unit in units:
+
+    def compile_one(unit):
         source = root / unit['source']
         target = output / (unit['source'].replace('/', '--') + '.o')
         target.parent.mkdir(parents=True, exist_ok=True)
         profile = profile_for(root, unit, forced_profile)
         log = output / (unit['source'].replace('/', '--') + '.log')
         if profile.get('postprocess') == 'armcc-split':
-            # armcc emits one .text per translation unit. Compile it unchanged
-            # and rewrite the object into one section per function before the
-            # measurement sees it, so the compiler's own pool placement stays.
+            # armcc emits one .text per translation unit; split it into sections
+            # so the measurement sees each function, pool placement unchanged.
             raw = target.with_name(target.name + '.armcc.o')
-            commands.append(run(compiler_argv(root, unit, source, raw, forced_profile), log))
+            command = run(compiler_argv(root, unit, source, raw, forced_profile), log)
             armcc_object.split(raw, target)
         else:
-            commands.append(run(compiler_argv(root, unit, source, target, forced_profile), log))
-        for name, function in elf_objects.read(target)['functions'].items():
+            command = run(compiler_argv(root, unit, source, target, forced_profile), log)
+        return command, target, profile, elf_objects.read(target)['functions']
+
+    workers = max(1, min(16, (os.cpu_count() or 4)))
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        results = list(pool.map(compile_one, units))
+    for unit, (command, target, profile, functions) in zip(units, results):
+        commands.append(command)
+        for name, function in functions.items():
             if not CANONICAL.fullmatch(name):
                 continue
             if name in definitions:
@@ -309,16 +310,17 @@ def build(root, output, project_path, split_path, forced_profile=None):
     for name in measured:
         by_source.setdefault(measured[name]['source'], []).append(name)
     room, owned_room = slots(functions, text), slots(functions, text, absorb_owned=True)
-    for source in sorted(by_source):
+
+    def screen_source(source):
         names = sorted(by_source[source], key=lambda name: functions.by_name[name].address)
         label = source.replace('/', '--')[:-2]
         unit = unit_by_source[source]
         plan = unit_scope.plan_for(unit, root / measured[names[0]]['object'], names,
                                    functions, layout, content, label)
-        data_arg = unit_scope.data_argument(plan); limit = unit_scope.room_for(unit, room, owned_room)
+        data_arg = unit_scope.data_argument(plan)
+        limit = unit_scope.room_for(unit, room, owned_room)
         base, dropped, reasons, command = select_base(root, measured[names[0]]['object'], names,
                                                       output, label, known, data_arg)
-        commands.append(command)
         sections, selected = elf_objects.read(base)['sections'], elf_objects.read(base)['functions']
         extents = {name: sections['.text.' + name]['size'] for name in names}
         # A function is placed when everything the compiler emitted for it fits
@@ -331,10 +333,19 @@ def build(root, output, project_path, split_path, forced_profile=None):
             for name in plan['hopeless']:
                 reasons.setdefault(name, 'references original data the split does not place')
             placed = [name for name in placed if name not in plan['hopeless']]
-        screens[source] = {'names': names, 'label': label, 'object': base, 'dropped': dropped,
-                           'reasons': reasons, 'extents': extents, 'placed': placed,
-                           'code': {name: selected[name]['size'] for name in names},
-                           'data': unit_scope.data_records(plan, placed)}
+        return command, {'names': names, 'label': label, 'object': base, 'dropped': dropped,
+                         'reasons': reasons, 'extents': extents, 'placed': placed,
+                         'code': {name: selected[name]['size'] for name in names},
+                         'data': unit_scope.data_records(plan, placed)}
+
+    # Each unit's screen is an independent link, so the screens run concurrently;
+    # the screens dictionary is rebuilt in manifest order afterwards.
+    workers = max(1, min(16, (os.cpu_count() or 4)))
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        screened = list(pool.map(screen_source, sorted(by_source)))
+    for source, (command, screen) in zip(sorted(by_source), screened):
+        commands.append(command)
+        screens[source] = screen
     placed = sorted(name for screen in screens.values() for name in screen['placed'])
     data_placements = [row for source in sorted(screens) for row in screens[source]['data']]
     placed_image, command = place(root, output, [screens[source]['object'] for source in sorted(screens)],
@@ -343,9 +354,22 @@ def build(root, output, project_path, split_path, forced_profile=None):
     commands.append(command)
     placement = elf_objects.placed_sections(placed_image)
     placement['image'] = placed_image.relative_to(root).as_posix()
-    units = [source_unit(root, output, image, source, functions.by_name, measured, text,
-                         screens[source], placement, commands, room) for source in sorted(screens)]
-    units.append(retained_unit(root, output, image, functions, measured, layout, text, commands))
+
+    def make_unit(source):
+        return unit_objects.source_unit(root, output, image, source, functions.by_name,
+                                        measured, text, screens[source], placement, room)
+
+    # Each unit carves its own target and base objects from files it only reads,
+    # so the whole source tree is carved concurrently; the units list is rebuilt
+    # in manifest order afterwards.
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        created = list(pool.map(make_unit, sorted(screens)))
+    units = []
+    for unit, unit_commands in created:
+        units.append(unit)
+        commands.extend(unit_commands)
+    units.append(unit_objects.retained_unit(root, output, image, functions, measured,
+                                             layout, text, commands))
     if sum(unit['targetCodeBytes'] for unit in units) != text['initializedBytes']:
         raise ValueError('Target objects do not account for every initialized text byte exactly once')
     write_json(project_path, {
@@ -377,106 +401,6 @@ def build(root, output, project_path, split_path, forced_profile=None):
             'sourceFiles': len(configured_sources(root)),
             'measuredFunctions': len(measured), 'retainedFunctionCount': len(functions) - len(measured),
             'unmeasuredSourceFunctions': unmeasured}
-
-
-def source_unit(root, output, image, source, known, measured, text, screen, placement, commands, room):
-    """One source file: original instructions for its functions, placed bytes for its base.
-
-    The target section holds the instructions the split gives the function. The
-    base section holds the whole extent the placement link produced for it --
-    instructions plus whatever data the compiler put after them -- with the
-    function symbol at the instruction size. The instruction extent therefore
-    decides whether the two can be compared at all, and the function's data is
-    compared with the original bytes at the same address before it may count.
-    """
-    label = source.replace('/', '--')[:-2]
-    content = Path(image).read_bytes()
-    origin = text['codeBinOffset'] - text['address']
-    spans, symbols, records = [], {}, []
-    base_spans, base_symbols, base_labels = [], {}, []
-    reasons = dict(screen['reasons'])
-    for index, name in enumerate(screen['names']):
-        symbol = known[name]
-        spans.append((symbol.address, symbol.size, origin + symbol.address))
-        symbols[index] = [(name, 0, symbol.size, symbol.mode)]
-        code = screen['code'][name]
-        extent = screen['extents'][name]
-        if name not in set(screen['placed']) and name not in reasons:
-            reasons[name] = 'the compiled extent runs past the original range the split leaves'
-        records.append({'name': name, 'address': symbol.address, 'size': symbol.size,
-                        'mode': symbol.mode, 'compiledBytes': code, 'extent': extent})
-    for name in screen['placed']:
-        symbol = known[name]
-        section, function = placement['sections'].get(name), placement['functions'].get(name)
-        if section is None or function is None:
-            raise ValueError('The placement link did not place a measured function: ' + name)
-        data, extent = section['data'], len(section['data'])
-        code = function['size']
-        if extent != screen['extents'][name] or code != screen['code'][name]:
-            raise ValueError('Placing %s changed the size the compiler emitted' % name)
-        original = content[origin + symbol.address:origin + symbol.address + extent]
-        if code == symbol.size and data[:code] == original[:code]:
-            if data[code:] != original[code:]:
-                reasons[name] = ('the data the compiler placed after the instructions '
-                                 'differs from the original bytes')
-                continue
-        base_index = len(base_spans)
-        base_spans.append((symbol.address, extent, section['offset']))
-        base_labels.append('.text.' + name)
-        base_symbols[base_index] = [(name, 0, code, symbol.mode)]
-    target, command = carve(root, output, label, image, spans, symbols)
-    commands.append(command)
-    if base_spans:
-        base, command = carve(root, output, label, root / placement['image'], base_spans, base_symbols,
-                              suffix='placed', labels=base_labels)
-        commands.append(command)
-    else:
-        base = empty_base(root, output, label)
-    return {'name': source[:-2], 'source_path': source,
-            'compilerProfile': measured[screen['names'][0]]['profile'],
-            'target': target.relative_to(root).as_posix(), 'targetSha256': digest(target),
-            'base': base.relative_to(root).as_posix(), 'baseSha256': digest(base),
-            'targetCodeBytes': sum(known[name].size for name in screen['names']),
-            'unrepresentable': sorted(reasons), 'rejected': reasons,
-            'placed': list(screen['placed']),
-            'linkObject': screen['object'].relative_to(root).as_posix(),
-            'dataSections': screen['data'],
-            'functions': records}
-
-
-def retained_unit(root, output, image, functions, measured, layout, text, commands):
-    """Every original text byte source does not implement, plus all original data."""
-    gaps = split_module.complement([(functions.by_name[name].address, functions.by_name[name].size)
-                                    for name in measured],
-                                   text['address'], text['initializedBytes'])
-    starts = [address for address, _ in gaps]
-    retained = [symbol for symbol in functions.symbols if symbol.name not in measured]
-    symbols = {}
-    for symbol in retained:
-        index = bisect.bisect_right(starts, symbol.address) - 1
-        if index < 0 or symbol.end() > gaps[index][0] + gaps[index][1]:
-            raise ValueError('Retained function %s does not fit one original range' % symbol.name)
-        symbols.setdefault(index, []).append((symbol.name, symbol.address - gaps[index][0],
-                                             symbol.size, symbol.mode))
-    spans = [(address, size, text['codeBinOffset'] + address - text['address']) for address, size in gaps]
-    data = exheader.segment(layout, 'data')
-    data_spans = [('.' + row['name'] + '.original', row['address'], row['initializedBytes'],
-                   row['codeBinOffset'], 'data') for row in layout['segments'] if row['name'] != 'text']
-    data_spans.append(('.bss.original', data['address'] + data['initializedBytes'],
-                       layout['bssBytes'], None, 'bss'))
-    target, command = carve(root, output, 'unreconstructed', image, spans, symbols, data_spans)
-    commands.append(command)
-    empty = output / 'no_reconstructed_source.c'
-    empty.write_text('typedef unsigned ObjdiffNoReconstructedSource;\n', encoding='utf-8')
-    base = output / 'unreconstructed.base.o'
-    commands.append(run([root / CLANG, *ASSEMBLE, '-c', empty, '-o', base],
-                        output / 'unreconstructed.empty.log'))
-    return {'name': SOURCE_ROOT, 'source_path': SOURCE_ROOT,
-            'target': target.relative_to(root).as_posix(), 'targetSha256': digest(target),
-            'base': base.relative_to(root).as_posix(), 'baseSha256': digest(base),
-            'targetCodeBytes': sum(size for _, size in gaps), 'functions': [],
-            'retainedFunctions': [{'name': function.name, 'address': function.address,
-                                   'size': function.size, 'mode': function.mode} for function in retained]}
 
 
 def main():

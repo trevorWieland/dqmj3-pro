@@ -65,7 +65,19 @@ def script_for(symbols, placed, constants=(), data=()):
     lines = ['SECTIONS {']
     for symbol in symbols:
         if symbol.name in placed:
-            lines.append('  %s 0x%08x : { KEEP(*(.text.%s)) }' % (symbol.name, symbol.address, symbol.name))
+            # A Thumb function may start at an address that is only halfword
+            # aligned. Compiler objects give their sections word alignment, so
+            # the output section has to lower the input alignment or the linker
+            # inserts padding before the function's first byte.
+            align = 4 if symbol.address % 4 == 0 else 2
+            lines.append('  %s 0x%08x : SUBALIGN(%d) { KEEP(*(.text.%s)) }'
+                         % (symbol.name, symbol.address, align, symbol.name))
+            # A compiler may emit a function as a local symbol (a source-level
+            # ``static`` helper the split still records). The section then holds
+            # the bytes but the name is not visible to another object. PROVIDE
+            # gives the name an address only when no global definition exists.
+            lines.append('  PROVIDE(%s = 0x%08x);'
+                         % (symbol.name, symbol.address + (1 if symbol.mode == 'thumb' else 0)))
     for symbol in symbols:
         if symbol.name not in placed:
             lines.append('  %s = 0x%08x;' % (symbol.name, symbol.address + (1 if symbol.mode == 'thumb' else 0)))
