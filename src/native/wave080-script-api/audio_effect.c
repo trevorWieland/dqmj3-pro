@@ -9,12 +9,15 @@
  * (the wait counter, the fade driver).  Argument indexes follow the VM
  * convention: a binding with N arguments reads them at -N through -1.
  *
- * Status: 11 of these 13 measured bindings are byte-identical to the original.
- * fn_0012e46c (Wait_) and fn_0012dfe4 (SetEffectScale_) are drafts, differing
- * only in instruction selection: the original keeps the context address in r2
- * and &scale in r5 across the first read, this compiler uses r0 and r4/r5 the
- * other way round.  fn_0012e7c8 (WaitFade_) has a registration entry but no
- * split function, so it cannot be measured.
+ * Status: 9 of these 13 measured bindings are byte-identical to the original.
+ * fn_0012e46c (Wait_) and fn_0012dfe4 (SetEffectScale_) are drafts that differ
+ * only in register allocation: the original keeps the context address in r2
+ * (Wait_) and &scale in r5 with the vm in r4 (SetEffectScale_), while this
+ * compiler uses r0 and swaps r4/r5.  fn_0012e67c and fn_0012daf0 (SetFade_ and
+ * SetFadeSub_) are -O3 scheduling drafts: the original loads the fade arguments
+ * and converts them before materialising the context address, and the -O3
+ * scheduler hoists that context load.  fn_0012e7c8 (WaitFade_) has a
+ * registration entry but no split function, so it cannot be measured.
  */
 #include "script_api.h"
 
@@ -32,9 +35,11 @@ extern void fn_00148418(ScriptContext *context, u8 first, u8 second, f32 frames)
  * original ignores sq_getinteger's status and reads the stack slot anyway. */
 int fn_0012e46c(SqVM *vm)
 {
+    ScriptContext *context;
     s32 frames;
     (void)sq_getinteger(vm, -1, &frames);
-    fn_0014887c(SCRIPT_CONTEXT(), frames);
+    context = SCRIPT_CONTEXT();
+    fn_0014887c(context, frames);
     return sq_suspendvm(vm);
 }
 

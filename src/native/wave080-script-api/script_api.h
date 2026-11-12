@@ -2,12 +2,13 @@
  *
  * Every script in DQMJ3 Professional calls the C functions declared here through
  * Squirrel.  The binding table is config/script-natives.json (628 identifiers,
- * recovered from the registration blocks).  The bodies in this directory are the
- * most-called functions in the game; 98 of the 111 measured definitions are
- * byte-identical to the original and the rest are drafts, each one identified
- * instruction-selection difference away.  See
- * docs/script-api-native-reconstruction.md for the engine facts, the shared
- * constant access and the compiler ceiling.
+ * recovered from the registration blocks).  The directory now holds 364 measured
+ * definitions: 359 byte-identical to the original and five drafts, each one
+ * identified instruction-selection difference away (the reasons are in the
+ * per-unit headers).  The bodies cover the no-argument queries, the one-, two-
+ * and three-argument marshalling families, and the engine services the field
+ * scripts drive.  See docs/script-api-native-reconstruction.md for the engine
+ * facts, the shared constant access and the compiler rules.
  *
  * The script natives all reach the engine through one global:
  *
@@ -42,8 +43,14 @@
 
 typedef signed int s32;
 typedef unsigned int u32;
+typedef signed short s16;
+typedef unsigned short u16;
+typedef signed char s8;
 typedef unsigned char u8;
 typedef float f32;
+/* The engine prototypes in the C++ original take `bool`; C99's _Bool has the
+ * same one-byte size and the same call-site normalisation. */
+typedef _Bool bool;
 
 typedef struct SqVM SqVM;
 typedef struct ScriptContext ScriptContext;
@@ -167,6 +174,16 @@ extern int fn_001488c4(SqVM *vm, s32 *id, f32 *value);        /* id at -2, float
     do {                                                                               \
         if ((call) < 0)                                                                \
             return sq_throwerror((vm), fn_00148918((operation), "FieldScriptFunc.cpp", \
+                                                   (native_name), (source_line)));     \
+    } while (0)
+
+/* The same check for a binding whose assertion text names a different original
+ * translation unit: the script API spans FieldScriptFunc.cpp and
+ * BattleScriptFunc.cpp, and the file operand is part of the original bytes. */
+#define SCRIPT_CHECK_FILE(vm, call, operation, file, native_name, source_line)         \
+    do {                                                                               \
+        if ((call) < 0)                                                                \
+            return sq_throwerror((vm), fn_00148918((operation), (file),                \
                                                    (native_name), (source_line)));     \
     } while (0)
 

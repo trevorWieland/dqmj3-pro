@@ -7,21 +7,22 @@ credits.
 
 ## Result
 
-The directory holds 111 measured definitions. Before this wave, 10 of the 32
-definitions then present were byte-identical to the original; after it, 98 of
-111 are. The measured totals move from `matched_code=16208
-matched_functions=1046` to `matched_code=20480 matched_functions=1134` and
-`units=124`, with no unit losing credit. The 13 drafts are each one identified
-difference away, and the reasons are recorded per function in the file headers.
+The directory holds 364 measured definitions. 359 are byte-identical to the
+original and the five drafts are each one identified instruction-selection
+difference away, with the reason recorded in the file headers.  The measured
+totals for the whole image are `matched_code=54864` and
+`matched_functions=1382`, against `matched_code=20820 matched_functions=1124`
+when this branch started from the corrected `-O3 -Otime` profile.  This wave
+alone credits 258 script bindings; the sections below describe both the first
+batch and the second one.
 
-| file | measured | credited | drafts |
-| --- | --- | --- | --- |
-| `audio_effect.c` | 13 | 11 | 2 |
-| `flags.c` | 6 | 3 | 3 |
-| `message.c` | 4 | 4 | 0 |
-| `motion_world.c` | 12 | 4 | 8 |
-| `context_queries_early.c` | 22 | 22 | 0 |
-| `context_queries_field.c` | 54 | 54 | 0 |
+The first batch (before the profile fix) reconstructed 111 definitions, of which
+98 were exact, and moved the totals from `matched_code=16208
+matched_functions=1046` to `matched_code=20480 matched_functions=1134`; the
+sections after "What generalises" record that work and remain accurate for the
+files it describes.  The "Second wave" section at the end records what the
+corrected profile changed and how the rest of the two-argument frontier was
+carried to exactness.
 
 The two `context_queries` units are the generalisation step described at the
 end: 76 no-argument bindings whose original is a ten-instruction
@@ -202,3 +203,123 @@ operation text is already implemented in this wave's tooling.
 Beyond that the family stops being uniform: each binding's engine service,
 argument roles and line numbers must be read from its own bytes. That is why
 this wave reconstructed 111 definitions and not the full 628.
+
+## Second wave: the corrected profile and the argument frontier
+
+`fix/profile-o3` added `-O3` to the armcc profile; `-Otime` alone means level 2
+with time emphasis.  The scheduler that inserts `cmp r0,#0; nop; bge` after the
+second and later argument checks only runs at `-O3 -Otime`, and with the profile
+corrected the NOP appears in exactly the places the original has it.  The wave
+that followed reconstructed every clean one- and two-argument shape it could
+reach, and the totals moved from `matched_code=20820 matched_functions=1124`
+(101 of the 109 measured script definitions exact) to `matched_code=54864
+matched_functions=1382` (359 of 364 exact).  258 bindings are newly credited and
+five remain drafts.
+
+### The three register-allocation cases
+
+The cases named in the task were genuine register-allocation differences, but
+the answer was a source shape rather than a compiler artefact.
+
+* `SetMotion_` and `ArrangePointGimmick_` keep their argument locals as **three
+  separate variables**, not one struct.  With a struct, armcc hoists `sp` into
+  `r5` to hold the aggregate base (`push {r4, r5, lr}`, `mov r5, sp`), which
+  makes the compiled extent four bytes longer than the original range.  Separate
+  locals let every `&arg` be `sp`-relative directly, and the original's
+  `ldm sp, {r1, r2, r3}` argument load comes back unchanged.
+* `SetEventFlg_` materialises the context in a local **before** the call:
+  `ScriptContext *context = SCRIPT_CONTEXT(); fn_006abc8c(context, name, value != 0);`.
+  Without it armcc loads the value and the name before the context address; a
+  named context local makes it load `&context` first and the name after the
+  compare, exactly as the original does.
+* `SetAlpha_` / `SetDir_` (the two argument-address setups) need the same
+  separate-locals treatment: the struct form emits `mov r1, sp` before
+  `add r2, sp, #4`, while separate locals keep the original order.
+
+The same three rules then carried the family: separate locals for three or more
+arguments, a context local wherever the original's first instruction in the call
+setup is the context-address load, and a struct for the plain two-argument
+readers (where it reproduces the original `ldm sp, {r1, r2}`).
+
+### The compiler rules this wave established
+
+1. **Struct for two argument locals, separate variables for three or more.**  A
+   two-field struct reproduces `ldm sp, {r1, r2}`; a three-field struct triggers
+   the `r5` stack-pointer hoist described above.
+2. **A context local controls argument-load order.**  Declaring
+   `ScriptContext *context;` and assigning `SCRIPT_CONTEXT()` immediately before
+   the engine call makes the compiler load the context address before the
+   argument registers.  This is what the original does in every family whose
+   first setup instruction is `ldr r0, [pc, #...]`.
+3. **Narrow engine parameter types are part of the interface.**  Declaring the
+   engine service with `u8`, `s8`, `s16` parameters and passing the local
+   unchanged emits the original `and rX, rX, #0xff` / `sxtb` / `sxth`
+   conversions.  Writing the casts at the call site instead produces a different
+   load/conversion schedule and loses the function.
+4. **Two boolean conversion forms exist and are distinguishable.**  The
+   `int, bool` two-argument family converts with `cmp r1, #0; movne r2, #1;
+   moveq r2, #0`, which is the C `value != 0` expression with an `int`
+   parameter.  The one-argument boolean setters convert in place with
+   `cmp r1, #0; movne r1, #1` (or the C++ `cmp r1, #1; movne r1, #0`), which is
+   a `bool` parameter with the local passed unchanged.
+5. **The assertion file operand is not always `FieldScriptFunc.cpp`.**  The
+   one-argument readers live in two original translation units; the prompt in
+   each error path names `BattleScriptFunc.cpp` or `FieldScriptFunc.cpp`.  The
+   body carries the file string the original uses, which is why `script_api.h`
+   gained `SCRIPT_CHECK_FILE`.
+
+### Coverage
+
+The wave added twenty-four units, each a shape family measured as a whole and
+then cut down to the bodies that are byte-identical.  Per unit:
+
+| unit | credited | measured |
+| --- | --- | --- |
+| `zero_arg_1.c` | 5 | 5 |
+| `one_arg_int_1..4.c` | 109 | 109 |
+| `one_arg_name_1.c` | 16 | 16 |
+| `one_arg_float_1.c` | 7 | 7 |
+| `one_arg_bool_1.c`, `one_arg_bool3_1.c` | 12 | 12 |
+| `two_arg_int_1..3.c`, `two_arg_int2_1.c` | 43 | 43 |
+| `two_arg_bool_1.c` | 18 | 18 |
+| `two_arg_name_1.c`, `two_arg_name2_1.c` | 15 | 15 |
+| `two_arg_namebool_1.c` | 6 | 6 |
+| `two_arg_namefloat_1.c`, `two_arg_namename_1.c` | 6 | 6 |
+| `two_arg_intfloat_1.c` | 4 | 4 |
+| `two_arg_nameint_1.c` | 1 | 1 |
+| `three_arg_int2_1.c` | 8 | 8 |
+| `three_arg_intbool2_1.c` | 3 | 3 |
+| `audio_effect.c` (changed) | 9 | 13 |
+| `flags.c` (changed) | 5 | 6 |
+| `motion_world.c` (changed) | 12 | 12 |
+| `context_queries_early.c`, `context_queries_field.c`, `message.c` | 80 | 80 |
+
+The engine services are named per function in each generated unit, and the
+binding name constants are registered in `config/script-constants.json` from the
+address the original's own pool word pointed at.  The bodies are ordinary C:
+VM readers, the assertion macro, one engine call with the recovered parameter
+types, and the push the original performs.  Nothing is patched or synthesised;
+the build still decides which bodies are exact, and only exact ones are kept.
+
+### What is still open
+
+* Four-argument families (`integer,integer,bool,bool` and the four-integer
+  group): the frame and argument setup differ from the two- and three-argument
+  templates; they need per-family bytes read before another batch.
+* The `bool, integer` family (`ShowBattleEventMessage_` and siblings): the
+  original relies on C++ range information for its in-place boolean
+  normalisation; the C spellings tried produce either the two-instruction
+  conversion or a different load order.
+* `SetFade_` and `SetFadeSub_`: under `-O3` the scheduler hoists the context
+  address before the argument conversions; under the previous profile they were
+  exact.  Their argument order and byte truncations are already right.
+* `Wait_` and `SetEffectScale_`: the original keeps the context address in `r2`
+  and `&scale` in `r5`; the C compiler chooses `r0` and swaps `r4`/`r5`.
+* `GetPlayerId_`: the original reads the context pointer and discards it.  No
+  non-volatile expression keeps that load, and making the global volatile would
+  change the load order in the functions that now credit.
+* Bindings whose engine service is called indirectly through the context vtable
+  (`SetEffectFrame_`, `SetEffectRotateY_`) or whose body returns a constant
+  after an unused context read (the `CheckDefine*` group) need their own shape
+  analysis.
+
