@@ -1,3 +1,6 @@
+#pragma clang diagnostic ignored "-Wdeprecated-non-prototype"
+#pragma clang diagnostic ignored "-Wunused-parameter"
+#pragma clang diagnostic ignored "-Wunused-function"
 /* Ghidra decompiler types, spelled so the measured compiler accepts them.
  *
  * The decompiler names a value by its width when it cannot recover a type:

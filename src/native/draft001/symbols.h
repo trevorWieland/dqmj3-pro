@@ -1,3 +1,11 @@
+#pragma clang diagnostic ignored "-Wdeprecated-non-prototype"
+#pragma clang diagnostic ignored "-Wunused-parameter"
+#pragma clang diagnostic ignored "-Wunused-function"
+/* The corpus records each symbol by address, not by signature; calls are
+ * transcribed with the argument count the original used, so these two
+ * diagnostics are expected here and are scoped to this header. */
+#pragma clang diagnostic ignored "-Wdeprecated-non-prototype"
+#pragma clang diagnostic ignored "-Wunused-parameter"
 /* Declarations for the names the functions in this directory use.
  *
  * A callee is declared with an empty parameter list. The split gives every
