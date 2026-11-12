@@ -51,7 +51,8 @@
       "wave080-script-api",
       "wave081-large",
       "wave082-init",
-      "wave083-compare"
+      "wave083-compare",
+      "wave085-clones"
     ]
   },
   "units": [
@@ -13883,6 +13884,16 @@
         "src/native/draft002/0044fbb0_00742020.h"
       ],
       "role": "corpus-draft-byte-exact"
+    },
+    {
+      "source": "src/native/wave085-clones/owned_object_release.c",
+      "headers": [],
+      "role": "byte-exact-clone-instantiation"
+    },
+    {
+      "source": "src/native/wave085-clones/owned_ranges_destroy.c",
+      "headers": [],
+      "role": "byte-exact-clone-instantiation"
     }
   ],
   "excludedSources": [
