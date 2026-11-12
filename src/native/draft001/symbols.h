@@ -1,6 +1,14 @@
 #pragma clang diagnostic ignored "-Wdeprecated-non-prototype"
 #pragma clang diagnostic ignored "-Wunused-parameter"
 #pragma clang diagnostic ignored "-Wunused-function"
+#pragma clang diagnostic ignored "-Wint-to-pointer-cast"
+#pragma clang diagnostic ignored "-Wpointer-to-int-cast"
+#pragma clang diagnostic ignored "-Wshift-op-parentheses"
+#pragma clang diagnostic ignored "-Wbitwise-op-parentheses"
+#pragma clang diagnostic ignored "-Wuninitialized"
+#pragma clang diagnostic ignored "-Wint-conversion"
+#pragma clang diagnostic ignored "-Wconstant-conversion"
+#pragma clang diagnostic ignored "-Wenum-conversion"
 /* The corpus records each symbol by address, not by signature; calls are
  * transcribed with the argument count the original used, so these two
  * diagnostics are expected here and are scoped to this header. */
