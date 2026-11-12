@@ -8,7 +8,6 @@ and its base object holds the same functions compiled from that file. Every
 original text byte source does not implement stays in one extra unit,
 ``src/native``, with the original rodata, data and BSS.
 
-<<<<<<< ours — interstitial `file_header` (S+F, confidence: low)
 # refused_by: merge_ladder_exhausted · collision: `The base object is not a relocatable object: a relocatable obje…` +18 more
 The base object is not relocatable: a relocatable object cannot say what a
 ``bl`` encodes, because the callee has no address yet, so a function with a call
@@ -31,25 +30,6 @@ scopes are checked against the profile that implements them.
 import argparse
 import bisect
 import json
-=======
-The base object is placed, not relocatable: a relocatable object cannot say what
-a ``bl`` encodes. Every measured function is placed at the address the split
-gives it, the base is carved out of that image, and a call to a split function
-resolves to the original address. Instruction bytes and the data the compiler
-places after them are compared with the original bytes at the same address.
-
-No ledger decides what counts. A function is measured because the source defines
-it and the split gives it an address, a mode and a size. Units are independent,
-so both compilation and per-unit screening run concurrently; the report order
-stays manifest order.
-"""
-
-import argparse
-import bisect
-import json
-import os
-import re
->>>>>>> theirs — interstitial `file_header` (S+F, confidence: low) · weave: run 'weave explain toolscripts/objdiff_objects.py' for per-hunk detail, 'weave check' to verify your resolution
 import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor
@@ -66,40 +46,13 @@ import unit_objects
 import unit_scope
 from placement import (ASSEMBLE, CLANG, LLD, TIMEOUT, carve, check_original, digest,  # noqa: F401
                        empty_base, place, read_json, run, slots, write_json)
+import compiler_profiles  # noqa: E402
 
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = 'update-content0'
 SOURCE_ROOT = 'src/native'
 PROFILE_CONFIG = 'config/compiler-profiles.json'
-
-
-def profiles(root):
-    """The declared compiler profiles, keyed by id, plus the default id."""
-    config = read_json(Path(root) / PROFILE_CONFIG)
-    if config.get('schemaVersion') != 1:
-        raise ValueError('Unsupported compiler profile schema')
-    table = {}
-    for profile in config['profiles']:
-        if profile['id'] in table:
-            raise ValueError('Duplicate compiler profile: ' + profile['id'])
-        table[profile['id']] = profile
-    if config['defaultProfile'] not in table:
-        raise ValueError('Default compiler profile is not declared')
-    return {'default': config['defaultProfile'], 'profiles': table}
-
-
-def profile_id(root, unit, forced=None):
-    """The profile a unit names, a forced override, or the configured default."""
-    return forced or unit.get('compilerProfile') or profiles(root)['default']
-
-
-def profile_for(root, unit, forced=None):
-    table = profiles(root)
-    wanted = profile_id(root, unit, forced)
-    if wanted not in table['profiles']:
-        raise ValueError('Unknown compiler profile for %s: %s' % (unit['source'], wanted))
-    return table['profiles'][wanted]
 
 
 def declared_scopes(unit, profile):
@@ -188,26 +141,14 @@ def compile_sources(root, output, forced_profile=None, known=None):
 
 
 def compile_units(root, output, units, forced_profile=None, known=None):
-<<<<<<< ours — scope `"""Compile these units and return every canon...` in function `compile_units` (T, confidence: high)
 # refused_by: statement_fold · collision: `"""Compile these units and return every canonical function they…`
     """Compile these units and return the functions they define.
-=======
-    """Compile these units and return every canonical function they define.
->>>>>>> theirs — scope `"""Compile these units and return every canon...`
 
-<<<<<<< ours — scope `inserted statements` in function `compile_units` (S+F, confidence: low)
 # refused_by: statement_fold · collision: none (no common ancestor text)
     ``known`` is the split's name table. A definition whose name the table does
     not place has no original address: it is reported but not measured, and local
     helpers may repeat, so it is kept once. A name the table does place is one
     original function, and two definitions of it are refused.
-=======
-    Units are independent translation units, so they are compiled concurrently:
-    the full decompilation is thousands of files and a serial compile would put
-    the measurement out of reach of an ordinary CI job. The order of the
-    returned commands and of the reported definitions stays the order of the
-    manifest, so the report does not depend on scheduling.
->>>>>>> theirs — scope `inserted statements`
     """
     definitions, commands = {}, []
 
@@ -224,7 +165,6 @@ def compile_units(root, output, units, forced_profile=None, known=None):
             command = run(compiler_argv(root, unit, source, raw, forced_profile), log)
             armcc_object.split(raw, target)
         else:
-<<<<<<< ours — scope `for unit in units:` in function `compile_units` (S+F, confidence: low)
 # refused_by: statement_fold · collision: `if not CANONICAL.fullmatch(name):` +3 more
             commands.append(run(compiler_argv(root, unit, source, target, forced_profile), log))
         for name, function in elf_objects.read(target)['functions'].items():
@@ -235,10 +175,6 @@ def compile_units(root, output, units, forced_profile=None, known=None):
                 continue
             function.update(source=unit['source'], object=target, profile=profile['id'])
             definitions[name] = function
-=======
-            command = run(compiler_argv(root, unit, source, target, forced_profile), log)
-        return command, target, profile, elf_objects.read(target)['functions']
->>>>>>> theirs — scope `for unit in units:`
 
     workers = max(1, min(16, (os.cpu_count() or 4)))
     with ThreadPoolExecutor(max_workers=workers) as pool:
@@ -455,7 +391,6 @@ def build(root, output, project_path, split_path, forced_profile=None):
             'sourceFiles': len(configured_sources(root)),
             'measuredFunctions': len(measured), 'retainedFunctionCount': len(functions) - len(measured),
             'unmeasuredSourceFunctions': unmeasured}
-<<<<<<< ours — function `source_unit` (S+F, confidence: low)
 # refused_by: modify_delete_guard · collision: none (no common ancestor text)
 def source_unit(root, output, image, source, known, measured, text, screen, placement, commands, room):
     """One source file: original instructions for its functions, placed bytes for its base.
@@ -519,8 +454,6 @@ def source_unit(root, output, image, source, known, measured, text, screen, plac
             'linkObject': screen['object'].relative_to(root).as_posix(),
             'dataSections': screen['data'],
             'functions': records}
-=======
->>>>>>> theirs — function `source_unit` (S+F, confidence: low)
 
 
 def main():
