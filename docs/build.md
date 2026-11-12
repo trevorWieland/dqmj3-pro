@@ -31,6 +31,19 @@ The build:
 5. links the complete image at the original addresses, taking compiled bytes wherever source implements a function and original bytes everywhere else;
 6. reports per function whether the compiled bytes equal the original, and whether the whole linked image is byte-identical.
 
+A function is not only its instructions: it may load a table the compiler placed
+in a separate section. A unit that declares `dataProfile: original-address`
+places those sections too. The address is not configured;
+`toolscripts/translation_data.py` proves it from the original image: an
+`R_ARM_ABS32` relocation in the compiled function names the table, and the word
+the original image holds at the same offset, minus the object's addend and
+symbol value, is the address the table had. Every reference must agree and the
+section must land where it was proven; a section that cannot be proven is not
+placed and the functions that load it are reported instead of being linked
+against an invented address. A unit may also declare `extentProfile: owned`
+when its compiled function reproduces an extra range the split attributes to
+the same function, as a tail-called helper folded into its caller.
+
 It writes `build/update-content0/report.json` (the progress report), `link.json`, `image.elf`, `image.ld` and `retained.txt` (the work queue). Everything under `build/` and `generated/` is gitignored and contains original bytes; never publish it. The report records the compiler identity (profile id, executable SHA-256, declared identity and version banner) next to the measurement.
 
 ## Reading the result
