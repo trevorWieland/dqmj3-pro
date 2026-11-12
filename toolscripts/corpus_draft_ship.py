@@ -19,6 +19,7 @@ use.
 import argparse
 import json
 import re
+import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -30,19 +31,21 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import corpus_draft as draftlib                          # noqa: E402
 import objdiff_objects as oo             # noqa: E402
 import corpus_draft_measure as drafter                    # noqa: E402
+from corpus_draft_emit import header_text                 # noqa: E402
 
 HEADER_COMMENT = '''/* Byte-exact functions drafted from the Ghidra decompilation corpus.
  *
  * Each function below was decompiled from the original image, mechanically
- * rewritten to compile (see work/drafter/README.md), compiled with the measured
- * original compiler profile (armcc 4.1 build 1454, --cpu=MPCore --apcs=/interwork
- * --c99 -O3 -Otime) and kept only because its placed bytes equal the original
- * extent byte for byte. Nothing here is fitted: a single differing byte would
- * have kept the function out of this file.
+ * rewritten to compile (see docs/2026-11-11-corpus-drafting.md), compiled with
+ * the measured original compiler profile (armcc 4.1 build 1454, --cpu=MPCore
+ * --apcs=/interwork --c99 -O3 -Otime) and kept only because its placed bytes
+ * equal the original extent byte for byte. Nothing here is fitted: a single
+ * differing byte would have kept the function out of this file.
  *
  * Address range of this file's functions: %s .. %s.
- * Decompiler pseudo-types are explained in decompiled.h; every name the
- * functions call or address is declared in symbols.h.
+ * Decompiler pseudo-types are explained in decompiled.h; every name these
+ * functions call or address is declared in this unit's own header, because the
+ * declaration a draft needs depends on what the unit itself defines.
  */
 '''
 
@@ -55,7 +58,7 @@ def load(run):
 
 def resolvable(record, data_types):
     """A shipped function may only address data the build can place by name."""
-    for name in record['data']:
+    for name in draftlib.data_names(record):
         if drafter.re.fullmatch(r'_?DAT_[0-9a-f]{8}', name) is None:
             return False
         if name not in data_types:
@@ -76,63 +79,78 @@ def group(records, limit_lines, limit_functions):
     return groups
 
 
-def symbols_header(records, data_types):
-    lines = ['/* Declarations for the names the functions in this directory use.',
-             ' *',
-             ' * A callee is declared with an empty parameter list. The split gives every',
-             ' * function an address and the decompiler inferred each signature from the',
-             ' * callee\'s own body; an empty list states the only contract that holds at a',
-             ' * call site. A data object is declared with the type the corpus uses it as;',
-             ' * its name carries the image address the build defines it at.',
-             ' */',
-             '#ifndef DQMJ3_DRAFT_SYMBOLS_H',
-             '#define DQMJ3_DRAFT_SYMBOLS_H', '']
-    callees = sorted({name for record in records for name in record['callees']})
-    data = sorted({name for record in records for name in record['data']})
-    for index in range(0, len(callees), 6):
-        lines.append(' '.join('extern undefined4 fn_%s();' % name for name in callees[index:index + 6]))
-    if data:
-        lines += ['', '/* Data objects the functions address. */']
-        for index in range(0, len(data), 5):
-            group = []
-            for name in data[index:index + 5]:
-                if data_types.get(name, '').endswith('[]'):
-                    group.append('extern unsigned char %s[];' % name)
-                else:
-                    group.append('extern undefined4 %s;' % name)
-            lines.append(' '.join(group))
-    lines += ['', '#endif']
-    return '\n'.join(lines) + '\n'
+def write_unit(directory, label, records, data_types, return_types=None):
+    """Write one unit and the declarations only this unit needs.
 
-
-def write_unit(directory, label, records, data_types):
+    Each unit gets its own declaration header rather than one shared by the
+    component. The contract a draft needs is per translation unit: a callee that
+    is defined here is declared with the return type its definition states, while
+    the same function called from another unit is declared permissively. One
+    shared header cannot say both, and armcc rejects the unit where they meet.
+    """
+    header = directory / (label + '.h')
+    header.write_text(header_text(data_types, records, return_types), encoding='utf-8')
     first, last = records[0]['address'], records[-1]['address']
+    bodies = [draftlib.rewrite(draftlib.corpus_text(record['address']),
+                               record.get('strings'), data_types) for record in records]
     body = [HEADER_COMMENT % (first, last),
-            '#include "decompiled.h"', '#include "symbols.h"', '']
-    for record in records:
-        body.append(draftlib.rewrite(draftlib.corpus_text(record['address'])))
+            '#include "decompiled.h"', '#include "%s.h"' % label,
+            draftlib.svc_helpers('\n'.join(bodies)), '']
+    body.extend(bodies)
     path = directory / (label + '.c')
     path.write_text('\n'.join(body), encoding='utf-8')
     return path
 
 
-def compiles(path):
+# The three targets whose source build the census check performs, with the flags
+# ``toolscripts/compile_sources.py`` uses. A shipped unit is only declared when it
+# also compiles there: the build is judged by that check as much as by armcc.
+CLANG_TARGETS = [
+    ['--target=arm-none-eabi', '-mcpu=mpcore', '-marm', '-mfloat-abi=soft'],
+    ['--target=x86_64-pc-windows-msvc'],
+    ['--target=aarch64-linux-android29', '-fPIC'],
+]
+CLANG_FLAGS = ['-std=c11', '-O2', '-ffreestanding', '-fno-builtin', '-ffunction-sections',
+               '-fdata-sections', '-Wall', '-Wextra', '-Werror', '-fno-color-diagnostics',
+               '-fno-caret-diagnostics']
+
+
+def clang_compiles(path, work):
+    """Whether the census compiler accepts this unit, on every target it builds."""
+    for index, target in enumerate(CLANG_TARGETS):
+        object_path = work / ('%s.clang%d.o' % (path.stem, index))
+        argv = [str(ROOT / 'tools/clang-21/clang.exe'), *target, *CLANG_FLAGS,
+                '-c', str(path), '-o', str(object_path)]
+        done = subprocess.run(argv, cwd=ROOT, capture_output=True, text=True,
+                              encoding='utf-8', errors='replace', timeout=120)
+        if done.returncode:
+            return False, done.stderr.strip().splitlines()[:3]
+    return True, []
+
+
+def compiles(path, work=None):
     """Compile one shipped unit exactly as the build will."""
     _, functions, error = drafter.compile_one((ROOT, path, None))
-    return bool(functions) and error is None
+    if not functions or error is not None:
+        return False, [error]
+    if work is not None:
+        return clang_compiles(path, work)
+    return True, []
 
 
-def verify(directory, label, records, data_types, depth=0):
-    """Write a unit and split it until every file compiles."""
-    path = write_unit(directory, label, records, data_types)
-    if compiles(path):
+def verify(directory, label, records, data_types, return_types=None, work=None, depth=0):
+    """Write a unit and split it until every file compiles and is accepted."""
+    path = write_unit(directory, label, records, data_types, return_types)
+    accepted, detail = compiles(path, work)
+    if accepted:
         return [(path, records)]
     path.unlink(missing_ok=True)
-    if len(records) == 1 or depth > 8:
+    (directory / (label + '.h')).unlink(missing_ok=True)
+    if len(records) == 1 or depth > 10:
         return []
     half = len(records) // 2
-    return (verify(directory, label + 'a', records[:half], data_types, depth + 1)
-            + verify(directory, label + 'b', records[half:], data_types, depth + 1))
+    return (verify(directory, label + 'a', records[:half], data_types, return_types, work, depth + 1)
+            + verify(directory, label + 'b', records[half:], data_types, return_types, work, depth + 1))
 
 
 def unit_block(source, headers):
@@ -144,12 +162,20 @@ def unit_block(source, headers):
             '    }' % (source, quoted))
 
 
-def update_manifest(component, sources, headers):
+def unit_headers(component, source):
+    """The transitive header closure of one written unit."""
+    stem = Path(source).stem
+    return ['src/native/%s/decompiled.h' % component,
+            'src/native/%s/%s.h' % (component, stem)]
+
+
+def update_manifest(component, units):
     """Declare the emitted units without rewriting the rest of the manifest."""
     manifest = ROOT / 'config/build-units.json'
     text = manifest.read_bytes().decode('utf-8')
     prefix = 'src/native/' + component + '/'
-    blocks = [unit_block(source, headers) for source in sources]
+    sources = [source for source, _ in units]
+    blocks = [unit_block(source, headers) for source, headers in units]
     start = text.index('"units": [')
     body_start = text.index('\n', start) + 1
     close = re.search(r'\n  \],', text[body_start:])
@@ -171,9 +197,12 @@ def update_manifest(component, sources, headers):
         root_start = updated.index('"nativeComponentRoots": [')
         root_close = re.search(r'\n  \]', updated[root_start:])
         position = root_start + root_close.start()
-        if '"%s"' % component not in updated[root_start:position]:
-            updated = (updated[:position] + ',\n    "' + component + '"'
-                       + updated[position:])
+        roots = json.loads(updated).get('nativeComponentRoots', [])
+        entry = 'src/native/' + component
+        roots = [root for root in roots if root not in (component, entry)] + [entry]
+        replacement = ('"nativeComponentRoots": [\n'
+                       + ',\n'.join('    "%s"' % root for root in roots))
+        updated = updated[:root_start] + replacement + updated[position:]
     manifest.write_bytes(updated.encode('utf-8'))
     return sources
 
@@ -189,6 +218,7 @@ def main(argv):
     args = parser.parse_args(argv[1:])
     verdicts, state = load(args.run)
     data_types = state['dataTypes']
+    return_types = state.get('returnTypes', {})
     records = {record['address']: record for record in state['functions'].values()}
     exact = []
     for row in verdicts:
@@ -203,21 +233,27 @@ def main(argv):
     if args.declare_only:
         sources = sorted(path.relative_to(ROOT).as_posix()
                          for path in directory.glob('*.c'))
-        headers = ['src/native/%s/decompiled.h' % args.component,
-                   'src/native/%s/symbols.h' % args.component]
-        update_manifest(args.component, sources, headers)
+        units = [(source, unit_headers(args.component, source)) for source in sources]
+        update_manifest(args.component, units)
         print('declared %d units in config/build-units.json' % len(sources))
         return 0
     directory.mkdir(parents=True, exist_ok=True)
     (directory / 'decompiled.h').write_text(draftlib.SHIM, encoding='utf-8')
-    (directory / 'symbols.h').write_text(symbols_header(exact, data_types), encoding='utf-8')
+    work = ROOT / 'work/drafter/ship-tus'
+    work.mkdir(parents=True, exist_ok=True)
     kept, files = [], []
     for index, chunk in enumerate(group(exact, args.lines, args.functions)):
         label = '%08x_%08x' % (int(chunk[0]['address'], 16), int(chunk[-1]['address'], 16))
-        for path, records_in_file in verify(directory, label,
-                                            drafter.order_group(chunk), data_types):
+        for path, records_in_file in verify(directory, label, drafter.order_group(chunk),
+                                            data_types, return_types, work):
             kept.extend(records_in_file)
             files.append(path)
+    # The verification compile writes its objects and logs beside the source.
+    # They are measurement outputs, not source: the source tree keeps only the
+    # unit and its header.
+    for pattern in ('*.o', '*.o.armcc.o', '*.log'):
+        for artifact in directory.glob(pattern):
+            artifact.unlink(missing_ok=True)
     sources = sorted(path.relative_to(ROOT).as_posix() for path in files)
     result = {'component': args.component, 'files': len(sources),
               'functions': len(kept),
@@ -226,9 +262,8 @@ def main(argv):
                                                         encoding='utf-8')
     print(json.dumps(result, indent=2))
     if args.declare:
-        headers = ['src/native/%s/decompiled.h' % args.component,
-                   'src/native/%s/symbols.h' % args.component]
-        update_manifest(args.component, sources, headers)
+        units = [(source, unit_headers(args.component, source)) for source in sources]
+        update_manifest(args.component, units)
         print('declared %d units in config/build-units.json' % len(sources))
     return 0
 
