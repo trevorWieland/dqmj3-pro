@@ -81,16 +81,6 @@ int fn_004a1a28(int param_1,int param_2)
 
 
 
-void fn_004a2148(void)
-
-{
-  fn_004a2158();
-  fn_00455018();
-  return;
-}
-
-
-
 int fn_004a2190(int param_1,int param_2)
 
 {

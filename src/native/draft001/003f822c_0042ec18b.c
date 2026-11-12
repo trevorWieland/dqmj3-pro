@@ -16,16 +16,6 @@
 #include "symbols.h"
 
 
-void fn_0041dde0(int param_1)
-
-{
-  fn_003979d0();
-  *(undefined4 *)(param_1 + 0xe4) = 0;
-  return;
-}
-
-
-
 void fn_0041fe38(int param_1,undefined4 param_2)
 
 {

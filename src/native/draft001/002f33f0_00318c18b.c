@@ -102,16 +102,6 @@ void fn_00309b70(undefined4 param_1,char *param_2,int param_3,int param_4,int pa
 
 
 
-void fn_0030bf18(void)
-
-{
-  fn_0030bf28();
-  fn_002feef8();
-  return;
-}
-
-
-
 undefined4 fn_0030de48(int param_1,int param_2)
 
 {

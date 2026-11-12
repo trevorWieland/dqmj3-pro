@@ -175,16 +175,6 @@ void fn_0050d090(int param_1,int param_2)
 
 
 
-void fn_0050eee8(int param_1)
-
-{
-  fn_00518378();
-  *(undefined4 *)(param_1 + 0x80) = 0;
-  return;
-}
-
-
-
 void fn_00512f30(undefined4 *param_1)
 
 {
@@ -234,16 +224,6 @@ void fn_005147b4(int *param_1)
     fn_00656b7c();
     param_1[5] = 0;
   }
-  return;
-}
-
-
-
-void fn_00514c1c(int param_1)
-
-{
-  fn_00518378();
-  *(undefined4 *)(param_1 + 0x80) = 0;
   return;
 }
 

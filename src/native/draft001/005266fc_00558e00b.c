@@ -33,16 +33,6 @@ void fn_00551300(int *param_1,undefined4 param_2,int param_3,uint param_4)
 
 
 
-void fn_00551350(void)
-
-{
-  fn_0010c3ec();
-  fn_002feef8();
-  return;
-}
-
-
-
 void fn_00551540(int param_1,undefined4 param_2,undefined4 param_3)
 
 {

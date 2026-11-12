@@ -194,16 +194,6 @@ void fn_003b8220(int param_1)
 
 
 
-void fn_003b8274(void)
-
-{
-  fn_003b8284();
-  fn_002feef8();
-  return;
-}
-
-
-
 void fn_003c2090(undefined4 param_1)
 
 {

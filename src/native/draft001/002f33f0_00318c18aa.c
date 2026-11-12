@@ -27,16 +27,6 @@ bool fn_002f33f0(int param_1)
 
 
 
-void fn_002f38c0(void)
-
-{
-  fn_002f1c5c();
-  fn_002feef8();
-  return;
-}
-
-
-
 int fn_002f7124(undefined4 param_1)
 
 {

@@ -367,21 +367,3 @@ bool fn_002d6e84(int param_1)
 
 
 
-void fn_002d7ac8(void)
-
-{
-  fn_006c4288();
-  fn_0022f750();
-  return;
-}
-
-
-
-void fn_002d7ad8(void)
-
-{
-  fn_006c4304();
-  fn_0022f750();
-  return;
-}
-

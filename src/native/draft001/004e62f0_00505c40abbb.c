@@ -26,11 +26,3 @@ void fn_004ed950(int param_1)
 
 
 
-void fn_004edddc(int param_1)
-
-{
-  fn_004efd64();
-  *(undefined1 *)(param_1 + 0x30) = 0;
-  return;
-}
-

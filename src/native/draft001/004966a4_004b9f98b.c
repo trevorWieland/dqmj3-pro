@@ -171,16 +171,6 @@ void fn_004b9cb4(int param_1,int param_2)
 
 
 
-void fn_004b9ef8(void)
-
-{
-  fn_004b9f08();
-  fn_00455018();
-  return;
-}
-
-
-
 undefined4 fn_004b9f98(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4)
 
 {

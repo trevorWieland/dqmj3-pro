@@ -81,15 +81,6 @@ void fn_00242858(int param_1,char param_2)
 
 
 
-void fn_0024286c(int param_1)
-
-{
-  *(undefined1 *)(*(int *)(param_1 + 4) + 0x510) = 0;
-  return;
-}
-
-
-
 void fn_00243e04(int param_1)
 
 {

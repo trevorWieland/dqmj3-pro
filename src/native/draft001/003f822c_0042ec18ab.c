@@ -53,16 +53,6 @@ void fn_0040ffb8(int param_1)
 
 
 
-void fn_00411994(int param_1)
-
-{
-  fn_003b9cc0();
-  *(undefined4 *)(param_1 + 0xc) = 0;
-  return;
-}
-
-
-
 void fn_004153a8(int *param_1)
 
 {

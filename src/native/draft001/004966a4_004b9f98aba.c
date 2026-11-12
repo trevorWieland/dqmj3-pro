@@ -16,16 +16,6 @@
 #include "symbols.h"
 
 
-void fn_004aaf3c(void)
-
-{
-  fn_004aaf4c();
-  fn_00455018();
-  return;
-}
-
-
-
 void fn_004ab0c0(int param_1,undefined1 param_2)
 
 {

@@ -42,11 +42,3 @@ void fn_00388f38(int *param_1)
 
 
 
-void fn_0038e2b4(void)
-
-{
-  fn_00339ae4();
-  fn_002feef8();
-  return;
-}
-

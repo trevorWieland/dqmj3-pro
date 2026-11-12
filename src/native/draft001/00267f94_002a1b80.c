@@ -16,16 +16,6 @@
 #include "symbols.h"
 
 
-void fn_00267f94(void)
-
-{
-  fn_005e6a40();
-  fn_002feef8();
-  return;
-}
-
-
-
 int fn_0026a574(int param_1,uint param_2)
 
 {
@@ -61,24 +51,6 @@ undefined4 * fn_00289ca8(undefined4 *param_1)
 {
   fn_002feef8(*param_1);
   return param_1;
-}
-
-
-
-void fn_0028ad24(int param_1)
-
-{
-  *(undefined4 *)(*(int *)(param_1 + 4) + 0x24) = 0;
-  return;
-}
-
-
-
-void fn_0028b680(int param_1)
-
-{
-  *(undefined4 *)(*(int *)(param_1 + 4) + 0x28) = 0;
-  return;
 }
 
 

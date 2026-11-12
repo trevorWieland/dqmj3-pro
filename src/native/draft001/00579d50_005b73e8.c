@@ -145,16 +145,6 @@ void fn_0058453c(int param_1)
 
 
 
-void fn_005849d4(int param_1)
-
-{
-  fn_005848d4();
-  *(undefined4 *)(param_1 + 0x20) = 0;
-  return;
-}
-
-
-
 void fn_00587ad4(int param_1)
 
 {
@@ -235,26 +225,6 @@ void fn_005a7090(int param_1)
 {
   *(byte *)(*(int *)(param_1 + 0x88) + 0x44) = *(byte *)(*(int *)(param_1 + 0x88) + 0x44) & 0xfe;
   *(byte *)(*(int *)(param_1 + 0x8c) + 0x44) = *(byte *)(*(int *)(param_1 + 0x8c) + 0x44) & 0xfe;
-  return;
-}
-
-
-
-void fn_005a9ce0(void)
-
-{
-  fn_005aa084();
-  fn_002feef8();
-  return;
-}
-
-
-
-void fn_005aa074(void)
-
-{
-  fn_005aa084();
-  fn_002feef8();
   return;
 }
 

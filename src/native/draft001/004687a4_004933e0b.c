@@ -95,16 +95,6 @@ void fn_0048c740(int param_1,uint param_2,undefined4 param_3)
 
 
 
-void fn_0048d5c0(void)
-
-{
-  fn_0048d5d0();
-  fn_00455018();
-  return;
-}
-
-
-
 bool fn_0048f590(int *param_1)
 
 {
@@ -162,16 +152,6 @@ void fn_00492e08(int param_1,int param_2)
     fn_0047faf0(param_2,param_1 + 0x34);
     return;
   }
-  return;
-}
-
-
-
-void fn_0049338c(void)
-
-{
-  fn_0049339c();
-  fn_00455018();
   return;
 }
 

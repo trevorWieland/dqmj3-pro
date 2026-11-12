@@ -48,16 +48,6 @@ int fn_004eea84(int param_1,uint param_2)
 
 
 
-void fn_004eee38(int param_1)
-
-{
-  fn_00733bac();
-  *(undefined4 *)(param_1 + 0x44) = 0;
-  return;
-}
-
-
-
 int fn_004ef7ac(int param_1)
 
 {

@@ -49,11 +49,3 @@ void fn_00400fc0(int param_1)
 
 
 
-void fn_00404274(int param_1)
-
-{
-  fn_0036bfcc();
-  *(undefined1 *)(param_1 + 0x69) = 0;
-  return;
-}
-

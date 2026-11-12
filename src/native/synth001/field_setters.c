@@ -23,12 +23,6 @@ void fn_0017b9a8(u8 * record, u32 value) { *(u16 *)(record + 0x200) = value; }
 
 void fn_004e12f0(u8 * record, u32 value) { *(u32 *)(record + 0x1240) = value; }
 
-void fn_0055a368(u8 * record, u32 value) { *(u8 *)(record + 0x83) = value; }
-
-void fn_0055a370(u8 * record, u32 value) { *(u8 *)(record + 0xf4) = value; }
-
-void fn_0055a558(u8 * record, u32 value) { *(u8 *)(record + 0xf0) = value; }
-
 void fn_0069377c(u8 * record, u32 value) { *(u16 *)(record + 0x16e) = value; }
 
 void fn_00693ef4(u8 * record, u32 value) { *(u16 *)(record + 0x16e) = value; }

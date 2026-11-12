@@ -16,36 +16,6 @@
 #include "symbols.h"
 
 
-void fn_002d7ae8(void)
-
-{
-  fn_006c4628();
-  fn_0022f750();
-  return;
-}
-
-
-
-void fn_002d7b30(void)
-
-{
-  fn_006c4410();
-  fn_0022f750();
-  return;
-}
-
-
-
-void fn_002d7b40(void)
-
-{
-  fn_006c4568();
-  fn_0022f750();
-  return;
-}
-
-
-
 undefined4 fn_002d805c(int param_1)
 
 {
@@ -179,36 +149,6 @@ void fn_002e6978(int param_1)
 
 
 
-void fn_002ea9b8(void)
-
-{
-  fn_002ea9c8();
-  fn_002feef8();
-  return;
-}
-
-
-
-void fn_002f1d48(void)
-
-{
-  fn_002f1c5c();
-  fn_002feef8();
-  return;
-}
-
-
-
-void fn_002f2584(void)
-
-{
-  fn_002f1c5c();
-  fn_002feef8();
-  return;
-}
-
-
-
 undefined4 fn_002f26a4(int param_1)
 
 {
@@ -276,16 +216,6 @@ undefined4 fn_002f2954(int param_1)
 
 
 
-void fn_002f2d7c(void)
-
-{
-  fn_002f1c5c();
-  fn_002feef8();
-  return;
-}
-
-
-
 bool fn_002f2dac(int param_1)
 
 {
@@ -311,16 +241,6 @@ undefined4 fn_002f2fc8(int param_1)
     uVar2 = 0;
   }
   return uVar2;
-}
-
-
-
-void fn_002f3064(void)
-
-{
-  fn_002f1c5c();
-  fn_002feef8();
-  return;
 }
 
 
