@@ -60,6 +60,11 @@ def read(path):
             defined.add(symbol.name)
         if symbol['st_info']['type'] != 'STT_FUNC' or not symbol['st_size']:
             continue
+        if symbol['st_info']['bind'] == 'STB_LOCAL':
+            # A file-local function cannot be the same function as one another
+            # object defines, so it is never a measured game function and can
+            # never be a duplicate definition.
+            continue
         if not isinstance(symbol['st_shndx'], int):
             raise ValueError('Function symbol is not section-defined: ' + symbol.name)
         section = elf.get_section(symbol['st_shndx'])
