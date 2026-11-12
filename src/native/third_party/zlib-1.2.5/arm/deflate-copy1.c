@@ -30,7 +30,6 @@
 
 #define deflateEnd fn_00731cf0
 #define flush_pending fn_0072e014
-#define check_match zlib_copy1_check_match
 #define deflate_fast zlib_copy1_deflate_fast
 #define deflate_huff zlib_copy1_deflate_huff
 #define deflate_rle zlib_copy1_deflate_rle
