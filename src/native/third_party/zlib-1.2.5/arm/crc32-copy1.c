@@ -15,6 +15,15 @@
 
 #define crc32 fn_007305b8
 #define crc32_big fn_0072ae0c
+/* The image links two zlib copies, and both include the same upstream file, so
+ * every symbol the adapter does not rename would be defined twice. The second
+ * copy keeps the remaining upstream names; this one prefixes them so the
+ * first link has its own symbols. Only crc32 and crc32_big are placed. */
+#define crc32_combine_ zlib_copy1_crc32_combine_
+#define crc32_combine_gen_ zlib_copy1_crc32_combine_gen_
+#define crc32_combine64_ zlib_copy1_crc32_combine64_
+#define crc32_combine_gen64_ zlib_copy1_crc32_combine_gen64_
+#define crc32_combine_op zlib_copy1_crc32_combine_op
 
 /* Clang 21 diagnoses zlib 1.2.5's K&R function definitions and one negative
  * shift as errors under the public-compile census's -Werror, while armcc 4.1 --
