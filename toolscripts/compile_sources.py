@@ -1,9 +1,11 @@
 import argparse
 import json
+import os
 import re
 import struct
 import subprocess
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 
@@ -214,8 +216,14 @@ def compile_all(root, targets, output):
         if done.returncode:
             raise RuntimeError("Cannot execute pinned public compiler: " + tool)
         versions[tool] = done.stdout.strip()
-    rows = [run_unit(root, unit, target, output) for target in targets for unit in config["units"]
+    jobs = [(root, unit, target, output) for target in targets for unit in config["units"]
             if target in unit.get("targets", TARGETS)]
+    # Every compilation is independent and writes its own object and diagnostic
+    # file. The full source tree is thousands of units, so the census runs them
+    # concurrently; rows stay in manifest order, not completion order.
+    workers = max(1, min(16, os.cpu_count() or 4))
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        rows = list(pool.map(lambda job: run_unit(*job), jobs))
     return {"schemaVersion": 1, "status": "compiled" if all(row["status"] == "compiled" for row in rows) else "failed",
             "purpose": "source-only target compilation; no linking, original comparison or game execution",
             "originalInputsRead": False, "sourceCredit": 0, "config": {"path": CONFIG, "sha256": public_compiler.digest(root / CONFIG)},
