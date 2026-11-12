@@ -40,9 +40,33 @@ class SplitTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'overlap or leave'):
             SPLIT.complement([(0x100000, 16), (0x100008, 16)], START, 0x200)
 
-    def test_symbol_name_must_carry_its_address(self):
-        with self.assertRaisesRegex(ValueError, 'name disagrees'):
-            self.load('00100000 arm 16 fn_00100010\n')
+    def test_names_are_free_text_and_identity_is_the_address(self):
+        split = self.load('# a name describes the function; the address is its identity\n'
+                          '00100000 arm 16 memory_copy\n'
+                          '00100100 thumb 6 fn_00100100\n')
+        self.assertEqual(split.by_name['memory_copy'].address, 0x100000)
+        self.assertEqual(split.by_address[0x100100].name, 'fn_00100100')
+        self.assertEqual(split.primary_ranges(), [(0x100000, 16), (0x100100, 6)])
+
+    def test_each_name_must_be_unique(self):
+        with self.assertRaisesRegex(ValueError, 'names must be unique'):
+            self.load('00100000 arm 16 memory_copy\n00100010 arm 4 memory_copy\n')
+
+    def test_match_keys_definitions_by_the_split_address(self):
+        split = self.load('00100000 arm 16 memory_copy\n00100010 arm 4 fn_00100010\n')
+        matched = SPLIT.match({'memory_copy': object(), 'fn_00100010': object(),
+                               'helper': object()}, split)
+        self.assertEqual(list(matched), [0x100000, 0x100010])
+        self.assertEqual(matched[0x100000][0], 'memory_copy')
+        self.assertEqual(matched[0x100010][1].size, 4)
+
+    def test_two_definitions_at_one_address_are_refused(self):
+        # A Split constructed directly can bind two names to one address even
+        # though load() refuses such a file; the match must refuse it too.
+        split = SPLIT.Split([SPLIT.Symbol('one', 0x100000, 'arm', 4),
+                             SPLIT.Symbol('two', 0x100000, 'arm', 4)], 'test')
+        with self.assertRaisesRegex(ValueError, 'Two definitions resolve to 0x00100000'):
+            SPLIT.match({'one': object(), 'two': object()}, split)
 
     def test_arm_entry_must_be_word_aligned(self):
         with self.assertRaisesRegex(ValueError, 'not 4-aligned'):

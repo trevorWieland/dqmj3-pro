@@ -11,35 +11,27 @@ holds the same functions compiled from that file.
 Every original text byte source does not implement stays in one extra unit,
 ``src/native``, with the original rodata, data and BSS.
 
-The base object is not a relocatable object: a relocatable object cannot say
-what a ``bl`` encodes, because the callee has no address yet. A function with a
-call would then be scored against bytes that are wrong by construction and could
-never be credited, whatever the source said. So the measurement places every
-measured function at the address the split gives it -- the same placement the
-whole-image link in ``image_link`` performs -- and carves the base object out of
-that image. A call to a function the split lists resolves to the address the
-original image gives that function; a call to anything else makes the reference
-unrepresentable and the function is reported as such instead of being compared
-against unresolved bytes.
+The base object is not relocatable: a relocatable object cannot say what a
+``bl`` encodes, because the callee has no address yet, so a function with a call
+would be scored against bytes that are wrong by construction. The measurement
+therefore places every measured function at the address the split gives it --
+the same placement the whole-image link performs -- and carves the base object
+out of that image. A call to a function the split lists resolves to the original
+address; a call to anything else is reported unrepresentable instead of compared.
 
 A function's instructions and the data a compiler places after them (a literal
-pool, a switch table, embedded string literals) are carved as one section but
-named separately: the instruction extent is the split's extent, and the bytes
-after it are the function's own data. Instructions are compared with
-instructions; the data is compared with the original bytes at the same address,
-and a pool that differs disqualifies the function instead of being ignored.
+pool, a switch table, embedded string literals) are carved together but compared
+by their own extents; a pool that differs disqualifies the function.
 
 No ledger decides what counts. A function is measured because the source defines
-it and the split gives it an address, a mode and a size. The profile's declared
-configuration is checked against the unit: a unit may only ask for a layout or
-header profile the profile implements, so naming a profile never silently
-changes what the unit declared.
+it and the split gives its name an address, a mode and a size; the address is the
+identity, so the name is free text a person chooses. The unit's declared profile
+scopes are checked against the profile that implements them.
 """
 
 import argparse
 import bisect
 import json
-import re
 import subprocess
 import sys
 from pathlib import Path
@@ -60,7 +52,6 @@ ROOT = Path(__file__).resolve().parents[1]
 VERSION = 'update-content0'
 SOURCE_ROOT = 'src/native'
 PROFILE_CONFIG = 'config/compiler-profiles.json'
-CANONICAL = re.compile(r'fn_[0-9a-f]{8}')
 
 
 def profiles(root):
@@ -171,13 +162,19 @@ def configured_sources(root):
             and unit['source'] not in excluded]
 
 
-def compile_sources(root, output, forced_profile=None):
+def compile_sources(root, output, forced_profile=None, known=None):
     """Compile the configured source tree and return every function it defines."""
-    return compile_units(root, output, configured_sources(root), forced_profile)
+    return compile_units(root, output, configured_sources(root), forced_profile, known)
 
 
-def compile_units(root, output, units, forced_profile=None):
-    """Compile these units and return every canonical function they define."""
+def compile_units(root, output, units, forced_profile=None, known=None):
+    """Compile these units and return the functions they define.
+
+    ``known`` is the split's name table. A definition whose name the table does
+    not place has no original address: it is reported but not measured, and local
+    helpers may repeat, so it is kept once. A name the table does place is one
+    original function, and two definitions of it are refused.
+    """
     definitions, commands = {}, []
     for unit in units:
         source = root / unit['source']
@@ -195,11 +192,11 @@ def compile_units(root, output, units, forced_profile=None):
         else:
             commands.append(run(compiler_argv(root, unit, source, target, forced_profile), log))
         for name, function in elf_objects.read(target)['functions'].items():
-            if not CANONICAL.fullmatch(name):
-                continue
             if name in definitions:
-                raise ValueError('%s and %s both define %s'
-                                 % (definitions[name]['source'], unit['source'], name))
+                if known is None or name in known:
+                    raise ValueError('%s and %s both define %s'
+                                     % (definitions[name]['source'], unit['source'], name))
+                continue
             function.update(source=unit['source'], object=target, profile=profile['id'])
             definitions[name] = function
     return definitions, commands
@@ -293,8 +290,12 @@ def build(root, output, project_path, split_path, forced_profile=None):
     functions = split_module.load(split_path, text['address'], text['initializedBytes'])
     configured = configured_sources(root)
     unit_by_source = {unit['source']: unit for unit in configured}
-    definitions, commands = compile_sources(root, output / 'compiled', forced_profile)
-    measured = {name: value for name, value in definitions.items() if name in functions.by_name}
+    definitions, commands = compile_sources(root, output / 'compiled', forced_profile,
+                                            set(functions.by_name))
+    # The match is keyed by the split's address: the name is only the label that
+    # reaches the table, and two definitions reaching one address fail here.
+    matched = split_module.match(definitions, functions)
+    measured = {name: definitions[name] for name, _ in matched.values()}
     # A reference to a data object the source addresses by name, where the name
     # carries the address the original image gives it, is defined there rather
     # than left unresolved: the compiler's literal-pool word is then compared
@@ -383,11 +384,10 @@ def source_unit(root, output, image, source, known, measured, text, screen, plac
     """One source file: original instructions for its functions, placed bytes for its base.
 
     The target section holds the instructions the split gives the function. The
-    base section holds the whole extent the placement link produced for it --
-    instructions plus whatever data the compiler put after them -- with the
-    function symbol at the instruction size. The instruction extent therefore
-    decides whether the two can be compared at all, and the function's data is
-    compared with the original bytes at the same address before it may count.
+    base section holds the whole extent the placement link produced -- instructions
+    plus whatever data the compiler put after them. The instruction extent decides
+    whether the two can be compared, and the tail is compared with the original
+    bytes at the same address before it may count.
     """
     label = source.replace('/', '--')[:-2]
     content = Path(image).read_bytes()
