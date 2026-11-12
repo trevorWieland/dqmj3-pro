@@ -203,6 +203,84 @@ def rewrite(text, strings=None):
     return text
 
 
+CACHE = ROOT / 'work/drafter/features.json'
+HARD_INDIRECT = re.compile(r'\(\s*\*\s*(?:\(\s*)?code\s*\*\*?')
+LABEL = re.compile(r'\bLAB_[0-9a-f]{4,8}\b')
+
+
+def band(size):
+    return '<32' if size < 32 else '32-127' if size < 128 else '128-511' if size < 512 else '>=512'
+
+
+def measured_names():
+    """Functions the current source already defines, so drafts never duplicate."""
+    report = ROOT / 'build/update-content0/report.json'
+    if not report.is_file():
+        raise SystemExit('run build.py first: ' + str(report))
+    document = json.loads(report.read_text(encoding='utf-8'))
+    names = set()
+    for unit in document['units']:
+        if unit['name'] == 'src/native':
+            continue  # the retained unit lists every unimplemented original function
+        for function in unit.get('functions', []):
+            names.add(function['name'])
+    return names
+
+
+def prep():
+    """One pass over the corpus: the facts that decide whether a draft can match."""
+    split = load_split()
+    measured = measured_names()
+    records, usage = {}, {}
+    for path in sorted((draftlib.CORPUS / 'c').glob('*.c')):
+        address = path.stem
+        symbol = split.by_name.get('fn_' + address)
+        if symbol is None or symbol.name in measured or symbol.extras:
+            continue
+        text = path.read_text(encoding='utf-8', errors='replace')
+        callees, data = draftlib.dependencies(text, address)
+        for name, kinds in draftlib.usage_kinds(text).items():
+            row = usage.setdefault(name, {'pointer': 0, 'lvalue': 0, 'address': 0})
+            for key in row:
+                row[key] += kinds[key]
+        records[address] = {
+            'address': address, 'name': symbol.name, 'size': symbol.size,
+            'band': band(symbol.size), 'mode': symbol.mode,
+            'warned': '/* WARNING' in text,
+            'indirect': bool(HARD_INDIRECT.search(text)),
+            'labels': len(LABEL.findall(text)),
+            'switch': 'switch (' in text or 'switch(' in text,
+            'goto': bool(re.search(r'\bgoto\b', text)),
+            'hasStrings': '"' in text,
+            'callees': callees, 'data': data,
+            'lines': text.count('\n'),
+        }
+    # A declaration type per data symbol, decided by how the corpus uses it.
+    types = {}
+    for name, kinds in usage.items():
+        if kinds['pointer']:
+            types[name] = 'unsigned char *'
+        elif kinds['lvalue']:
+            types[name] = 'undefined4'
+        else:
+            types[name] = 'unsigned char[]'
+    CACHE.write_text(json.dumps({'functions': records, 'dataTypes': types}, indent=0) + '\n',
+                     encoding='utf-8')
+    shapes = {}
+    for record in records.values():
+        key = ('warned' if record['warned'] else 'indirect' if record['indirect']
+               else 'data' if record['data'] else 'string' if record['hasStrings']
+               else 'control' if record['labels'] or record['switch'] or record['goto']
+               else 'clean')
+        row = shapes.setdefault(key, {'count': 0, 'bytes': 0})
+        row['count'] += 1
+        row['bytes'] += record['size']
+        row[record['band']] = row.get(record['band'], 0) + 1
+    print(json.dumps({'functions': len(records), 'dataSymbols': len(types),
+                      'shapes': shapes}, indent=2))
+    return 0
+
+
 def dependencies(text, address):
     """What a function mentions: callees and data it does not define.
 
@@ -251,5 +329,6 @@ def usage_kinds(text):
         else:
             row['address'] += 1
     return kinds
+
 
 
