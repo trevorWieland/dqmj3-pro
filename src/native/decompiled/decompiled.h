@@ -111,4 +111,9 @@ extern void halt_badinst(void);
 static void software_interrupt(int number) { (void)number; }
 #endif
 
+
+/* The decompiler writes this identifier for a path that ends in an undefined
+ * instruction. It is not a symbol in the image, so it is given a value rather
+ * than an address. */
+#define _UndefinedInstruction 0
 #endif
