@@ -56,3 +56,34 @@ and the owned-byte total did not move. The header counts record the result:
 owned bytes before and after. The remaining 1,926 extras are continuations,
 compiler islands or unreferenced ranges and stay ownership-only; they never earn
 source credit.
+
+## The 2026-11-12 crc32_big additions
+
+Two functions the census had left unowned are now primaries. `crc32_big` is the
+static big-endian CRC body each of the image's two zlib links tail-calls; the
+addresses are `0x0072ae0c` and `0x0072b3c4`, and the two 1,464-byte ranges tile
+the previously unowned gap `0x0072adf4..0x0072b97c` exactly.
+
+Adding them also corrected four extents. The census recorded `crc32` as 1,240
+bytes and `crc32_big` as 1,464, each including the function's four-byte literal
+pool. The measurement credits a function when the compiler's instruction size
+equals the split extent, and every other credited pool is outside its primary
+(adler32 is 932 code + 12 pool; inftrees is 1,548 + 8). So `fn_007305b8` and
+`fn_00736734` are corrected to 1,236, the new entries record 1,460, and each
+pool stays unowned text the image link retains.
+
+The arithmetic is explicit because the additions are newly owned and the
+corrections shrink existing primaries:
+
+| | before | after |
+|---|---|---|
+| functions | 26,990 | 26,992 |
+| primary bytes | 5,127,402 | 5,130,314 |
+| extra bytes | 734,180 | 734,180 |
+| owned bytes | 5,861,582 | 5,864,494 |
+| uncovered text bytes | 1,923,878 | 1,920,966 |
+
+No address changed, so nothing already placed moved.
+`config/promoted-extras.json` carries the additions and corrections under
+`laterAdditions`, and `tests/test_promoted_extras.py` recomputes the table.
+

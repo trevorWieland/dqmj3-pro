@@ -55,9 +55,13 @@ class CompileSourcesTests(unittest.TestCase):
     def test_actual_source_census_and_historical_abi_exclusion(self):
         config = BUILD.read_config(ROOT)
         excluded = config["excludedSources"]
-        self.assertEqual([item["source"] for item in excluded], ["src/native/wave003/setters.c"])
+        self.assertEqual([item["source"] for item in excluded],
+                         ["src/native/wave003/setters.c", "src/native/wave054/crc.c"])
         self.assertIs(excluded[0]["activeLinking"], False)
         self.assertEqual(excluded[0]["replacement"], "src/native/wave003/abi-qualified/setters.c")
+        self.assertIs(excluded[1]["activeLinking"], False)
+        self.assertEqual(excluded[1]["replacement"],
+                         "src/native/third_party/zlib-1.2.5/arm/crc32-copy2.c")
         self.assertEqual(sum(unit["role"] == "fixture-support" for unit in config["units"]), 1)
 
     def test_new_source_cannot_be_silently_skipped(self):
@@ -235,9 +239,13 @@ class CompileSourcesTests(unittest.TestCase):
         # The zlib 1.2.5 vendor units are measured with armcc and the reviewed shim
         # is a 32-bit ARM environment, so they declare that target only.
         arm32_only = {"src/native/credit001/record_updates.c",
+                      "src/native/third_party/zlib-1.2.5/arm/crc32-copy1.c",
+                      "src/native/third_party/zlib-1.2.5/arm/crc32-copy2.c",
+                      "src/native/third_party/zlib-1.2.5/arm/deflate-copy1.c",
+                      "src/native/third_party/zlib-1.2.5/arm/deflate-copy2.c",
                       "src/native/third_party/zlib-1.2.5/arm/inffast.c",
-                      "src/native/third_party/zlib-1.2.5/arm/inflate-copy1.c",
-                      "src/native/third_party/zlib-1.2.5/arm/inflate-copy2.c",
+                      "src/native/third_party/zlib-1.2.5/arm/inflate.c",
+                      "src/native/third_party/zlib-1.2.5/arm/inftrees.c",
                       "src/native/third_party/zlib-1.2.5/arm/trees.c"}
         self.assertEqual({unit["source"] for unit in restricted}, windows_only | arm32_only)
         self.assertEqual(

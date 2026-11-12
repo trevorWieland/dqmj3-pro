@@ -63,8 +63,21 @@ def data_argument(plan):
     return tuple((name, plan['sections'][name]['name']) for name in plan['keep'])
 
 
-def data_records(plan):
-    """The records the object map carries for the image link."""
+def data_records(plan, placed=None):
+    """The records the object map carries for the image link.
+
+    ``placed`` are the functions that survived the screen. A data section is
+    placed only when a function that is actually placed reaches it: the plan is
+    computed for every measured function before the screen, so a section that
+    only a dropped function needed would otherwise be linked at an address the
+    screen never justified.
+    """
     if not plan:
         return []
-    return [plan['sections'][name] for name in plan['keep']]
+    names = list(plan['keep'])
+    if placed is not None:
+        needed = set()
+        for name in placed:
+            needed.update(plan['needed'].get(name, []))
+        names = [name for name in names if name in needed]
+    return [plan['sections'][name] for name in names]

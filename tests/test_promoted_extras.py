@@ -5,7 +5,9 @@ promotion of verified extra ranges to functions is checked as an arithmetic
 invariant rather than trusted.  The manifest states the counts and bytes before
 and after the change; this test recomputes them from the committed split and
 checks that every promoted entry is now a primary of the same address, mode and
-size.
+size.  Later, newly owned ranges are recorded separately under
+``laterAdditions`` with the same before/after accounting, so the promotion's own
+arithmetic is not rewritten by them.
 
 The ExHeader is not a test input, so the split is loaded with a covering extent
 instead of the measured one.  The header's ``uncovered text bytes`` field is
@@ -57,14 +59,16 @@ class PromotionTests(unittest.TestCase):
 
     def test_split_is_the_after_state(self):
         manifest = self.manifest
+        expected = manifest.get('laterAdditions', {}).get('after', manifest['after'])
         primary = sum(symbol.size for symbol in self.split.symbols)
         extra = sum(size for _, size in self.split.extra_ranges())
-        self.assertEqual(len(self.split), manifest['after']['functions'])
-        self.assertEqual(primary, manifest['after']['primaryBytes'])
-        self.assertEqual(extra, manifest['after']['extraBytes'])
-        self.assertEqual(primary + extra, manifest['after']['ownedBytes'])
+        self.assertEqual(len(self.split), expected['functions'])
+        self.assertEqual(primary, expected['primaryBytes'])
+        self.assertEqual(extra, expected['extraBytes'])
+        self.assertEqual(primary + extra, expected['ownedBytes'])
 
     def test_header_counts_match_the_split(self):
+        expected = self.manifest.get('laterAdditions', {}).get('after', self.manifest['after'])
         counts = [int(value) for value in HEADER.match(
             SYMBOLS.read_text(encoding='utf-8').splitlines()[5]).groups()]
         primary = sum(symbol.size for symbol in self.split.symbols)
@@ -72,7 +76,32 @@ class PromotionTests(unittest.TestCase):
         self.assertEqual(counts[0], len(self.split))
         self.assertEqual(counts[1], primary)
         self.assertEqual(counts[2], extra)
-        self.assertEqual(counts[1] + counts[2], self.manifest['after']['ownedBytes'])
+        self.assertEqual(counts[1] + counts[2], expected['ownedBytes'])
+
+    def test_later_additions_are_owned_and_accounted(self):
+        later = self.manifest.get('laterAdditions')
+        if later is None:
+            self.skipTest('no later additions are recorded')
+        before, after = self.manifest['after'], later['after']
+        shrunk = sum(row['from'] - row['to'] for row in later.get('shrunk', []))
+        self.assertEqual(later['count'], len(later['additions']))
+        self.assertEqual(later['bytes'], sum(row['size'] for row in later['additions']))
+        self.assertEqual(later['shrunkBytes'], shrunk)
+        self.assertEqual(later['netBytes'], later['bytes'] - shrunk)
+        self.assertEqual(after['functions'] - before['functions'], later['count'])
+        self.assertEqual(after['primaryBytes'] - before['primaryBytes'], later['netBytes'])
+        self.assertEqual(after['extraBytes'], before['extraBytes'])
+        self.assertEqual(after['ownedBytes'] - before['ownedBytes'], later['netBytes'])
+        for row in later['additions']:
+            symbol = self.split.by_name.get('fn_%08x' % row['address'])
+            self.assertIsNotNone(symbol, 'added range has no primary: %r' % row)
+            self.assertEqual((symbol.address, symbol.size, symbol.mode),
+                             (row['address'], row['size'], row['mode']))
+        for row in later.get('shrunk', []):
+            symbol = self.split.by_name.get(row['name'])
+            self.assertIsNotNone(symbol, 'corrected entry has no primary: %r' % row)
+            self.assertEqual(symbol.size, row['to'])
+            self.assertLess(row['to'], row['from'])
 
     def test_every_promoted_entry_is_now_a_primary(self):
         for row in self.manifest['extras']:

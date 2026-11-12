@@ -55,8 +55,13 @@ HEADERS = {
     "src/native/third_party/zlib-1.2.5/inflate.c":
         (52623, "0564169c9fefb4825493cb60b065b3b978c356ec2672a8150b7b73057f5d5215",
          ["zutil.h", "inftrees.h", "inflate.h", "inffast.h", "inffixed.h"], ZLIB_125),
+    "src/native/third_party/zlib-1.2.5/crc32.c":
+        (13681, "29e0ca6e01be744d1c6ac019cf2845bea5e1198c23d7082b1e1de0f76d7f2e12",
+         ["zutil.h", "crc32.h", "limits.h"], ZLIB_125),
     # The reviewed build shims are pinned like the upstream files whose
     # includes they satisfy, so a change to one is a review event too.
+    "src/native/third_party/zlib-1.2.5/shim/limits.h":
+        (1093, "3113e4b209f7387fdcf2abcd2bb5945e129747b96ac958df5ca56c02e14a4e59", [], ZLIB_125),
     "src/native/third_party/zlib-1.2.5/shim/stddef.h":
         (562, "43fc258618385df59c674ba8841ab57d5650c9515ccdb9b57dd0a0bc384eccd4", [], ZLIB_125),
     "src/native/third_party/zlib-1.2.5/shim/string.h":

@@ -13,7 +13,13 @@ an ``R_ARM_ABS32`` relocation whose addend is the word in the object. In the
 original image the same word holds the address the linker resolved. The
 difference is the section address::
 
-    section address = original word - object addend - symbol value
+    section address = original word - object addend - symbol value  (mod 2**32)
+
+The subtraction is a 32-bit one: armcc encodes a table reference that indexes
+before the section start as a two's-complement addend (zlib's inftrees pools
+hold ``lbase - 514``), so the plain difference is negative and the address is
+its low 32 bits. Segment and alignment checks still decide whether that address
+is usable.
 
 The same rule applies one level up: a descriptor in ``.data`` that points at a
 table in ``.constdata`` is itself referenced by a function, so the descriptor's
@@ -119,7 +125,8 @@ def observations(read, section_name, base_address, layout, image):
             addend = row['addend']
         else:
             addend = _word(section['data'] or b'', row['offset'], section_name)
-        proven.setdefault(target, set()).add(original - addend - row['value'])
+        proven.setdefault(target, set()).add(
+            (original - addend - row['value']) & 0xffffffff)
     return proven, unprovable
 
 
