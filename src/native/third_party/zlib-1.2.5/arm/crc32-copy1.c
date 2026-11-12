@@ -15,6 +15,11 @@
 
 #define crc32 fn_007305b8
 #define crc32_big fn_0072ae0c
+#define crc32_little zlib_copy1_crc32_little
+#define gf2_matrix_square zlib_copy1_gf2_matrix_square
+#define gf2_matrix_times zlib_copy1_gf2_matrix_times
+#define make_crc_table zlib_copy1_make_crc_table
+#define write_table zlib_copy1_write_table
 /* The image links two zlib copies, and both include the same upstream file, so
  * every symbol the adapter does not rename would be defined twice. The second
  * copy keeps the remaining upstream names; this one prefixes them so the

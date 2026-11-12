@@ -30,6 +30,17 @@
 
 #define deflateEnd fn_00731cf0
 #define flush_pending fn_0072e014
+#define check_match zlib_copy1_check_match
+#define deflate_fast zlib_copy1_deflate_fast
+#define deflate_huff zlib_copy1_deflate_huff
+#define deflate_rle zlib_copy1_deflate_rle
+#define deflate_slow zlib_copy1_deflate_slow
+#define deflate_stored zlib_copy1_deflate_stored
+#define fill_window zlib_copy1_fill_window
+#define lm_init zlib_copy1_lm_init
+#define longest_match zlib_copy1_longest_match
+#define putShortMSB zlib_copy1_putShortMSB
+#define read_buf zlib_copy1_read_buf
 
 /* The image links two zlib copies and both include this same upstream
  * file, so every symbol this adapter does not place would be defined
