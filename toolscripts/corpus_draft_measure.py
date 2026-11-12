@@ -39,6 +39,7 @@ from placement import place, slots       # noqa: E402
 
 import corpus_draft as draftlib                          # noqa: E402
 from corpus_draft_emit import emit_unit                  # noqa: E402
+from corpus_draft_refs import _Referenced
 
 WORK = ROOT / 'work/drafter'
 CACHE = WORK / 'features.json'
@@ -188,20 +189,6 @@ def compile_one(args):
 
 
 PLACEMENT_CHUNK = 192
-
-
-class _Referenced:
-    """The split seen through one chunk's relocations, for the linker script.
-
-    The script needs a definition for every symbol a chunk's code can refer to,
-    and nothing else: a placed function's address comes from the section the
-    script places, and every other reference resolves through an absolute
-    symbol. Narrowing it to those references keeps a link over thousands of
-    functions as small as the chunk it places.
-    """
-
-    def __init__(self, symbols):
-        self.symbols = symbols
 
 
 def place_all(combined, placed, functions, constants, out, references=None):
