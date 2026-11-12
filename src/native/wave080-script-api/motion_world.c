@@ -21,12 +21,12 @@
  * throws by itself, so those two bindings have no check of their own and no
  * FieldScriptFunc.cpp cursor.
  *
- * Status: 4 of these 12 bindings are byte-identical to the original
- * (DeleteTask_, GetActive_, GetMotion_, IsMotionEnd_).  The other eight are
- * drafts: SetMotion_, ReadMotion_, SetMotionSpeed_, SetPointPos_,
- * SetReactorMsg_ and ArrangePointGimmick_ differ only by the compiler NOP the
- * original emits after a non-first argument check, and SetAlpha_/SetDir_ differ
- * by the order of the two argument-address setups.
+ * Status: all 12 of these bindings are byte-identical to the original
+ * (instructions and data tail) under the -O3 profile.  The three-argument and
+ * two-argument shapes keep their argument locals as separate variables rather
+ * than one struct: that is what stops armcc hoisting the stack pointer into a
+ * callee-saved register for the third address, and it restores the original's
+ * evaluation order for the id/scalar reader.
  */
 #include "script_api.h"
 
@@ -84,14 +84,16 @@ int fn_0027b6cc(SqVM *vm)
  * one-shot); the engine receives object, motion name and mode in that order. */
 int fn_0027a778(SqVM *vm)
 {
-    struct { s32 object; const char *motion; s32 mode; } args;
-    SCRIPT_CHECK(vm, sq_getinteger(vm, -3, &args.object), "failed: sq_getinteger",
+    s32 object;
+    const char *motion;
+    s32 mode;
+    SCRIPT_CHECK(vm, sq_getinteger(vm, -3, &object), "failed: sq_getinteger",
                  kName_SetMotion_, 0x0302);
-    SCRIPT_CHECK(vm, sq_getstring(vm, -2, &args.motion), "failed: sq_getstring",
+    SCRIPT_CHECK(vm, sq_getstring(vm, -2, &motion), "failed: sq_getstring",
                  kName_SetMotion_, 0x0305);
-    SCRIPT_CHECK(vm, sq_getinteger(vm, -1, &args.mode), "failed: sq_getinteger",
+    SCRIPT_CHECK(vm, sq_getinteger(vm, -1, &mode), "failed: sq_getinteger",
                  kName_SetMotion_, 0x0308);
-    fn_001f5bac(SCRIPT_CONTEXT(), args.object, args.motion, args.mode);
+    fn_001f5bac(SCRIPT_CONTEXT(), object, motion, mode);
     return 0;
 }
 
@@ -126,9 +128,10 @@ int fn_0027e380(SqVM *vm)
  * failure, so the binding ignores its status and always calls the engine. */
 int fn_0028895c(SqVM *vm)
 {
-    struct { s32 object; f32 alpha; } args;
-    fn_001488c4(vm, &args.object, &args.alpha);
-    fn_001f59d0(SCRIPT_CONTEXT(), args.object, args.alpha);
+    s32 object;
+    f32 alpha;
+    fn_001488c4(vm, &object, &alpha);
+    fn_001f59d0(SCRIPT_CONTEXT(), object, alpha);
     return 0;
 }
 
@@ -136,9 +139,10 @@ int fn_0028895c(SqVM *vm)
  * Sets the object's facing angle in the same id/scalar form as SetAlpha_. */
 int fn_00288150(SqVM *vm)
 {
-    struct { s32 object; f32 direction; } args;
-    fn_001488c4(vm, &args.object, &args.direction);
-    fn_001f52b8(SCRIPT_CONTEXT(), args.object, args.direction);
+    s32 object;
+    f32 direction;
+    fn_001488c4(vm, &object, &direction);
+    fn_001f52b8(SCRIPT_CONTEXT(), object, direction);
     return 0;
 }
 
@@ -147,14 +151,16 @@ int fn_00288150(SqVM *vm)
  * returns the engine's placement handle as an integer. */
 int fn_00281c94(SqVM *vm)
 {
-    struct { const char *point; s32 gimmick; const char *name; } args;
-    SCRIPT_CHECK(vm, sq_getstring(vm, -3, &args.point), "failed: sq_getstring",
+    const char *point;
+    s32 gimmick;
+    const char *name;
+    SCRIPT_CHECK(vm, sq_getstring(vm, -3, &point), "failed: sq_getstring",
                  kName_ArrangePointGimmick_, 0x0141);
-    SCRIPT_CHECK(vm, sq_getinteger(vm, -2, &args.gimmick), "failed: sq_getinteger",
+    SCRIPT_CHECK(vm, sq_getinteger(vm, -2, &gimmick), "failed: sq_getinteger",
                  kName_ArrangePointGimmick_, 0x0144);
-    SCRIPT_CHECK(vm, sq_getstring(vm, -1, &args.name), "failed: sq_getstring",
+    SCRIPT_CHECK(vm, sq_getstring(vm, -1, &name), "failed: sq_getstring",
                  kName_ArrangePointGimmick_, 0x0147);
-    sq_pushinteger(vm, fn_001f2340(SCRIPT_CONTEXT(), args.point, args.gimmick, args.name));
+    sq_pushinteger(vm, fn_001f2340(SCRIPT_CONTEXT(), point, gimmick, name));
     return 1;
 }
 
