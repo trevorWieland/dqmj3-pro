@@ -125,7 +125,6 @@ void fn_00733e28(Stream056 *stream, StreamWord056 start)
     decode(stream, start);
 }
 
-void fn_00739d08(Stream056 *stream, StreamWord056 start)
-{
-    decode(stream, start);
-}
+/* 0x00739d08 is zlib 1.2.5's inflate_fast (1,304 bytes), reproduced from the
+ * pinned vendor drop in src/native/third_party/zlib-1.2.5/arm/inffast.c. The
+ * four-byte wrapper that used to sit here was never that function. */

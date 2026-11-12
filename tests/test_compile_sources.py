@@ -141,12 +141,52 @@ class CompileSourcesTests(unittest.TestCase):
                 with self.assertRaisesRegex(RuntimeError, "unit targets"):
                     BUILD.read_config(root)
 
-    def test_unknown_layout_profile_fails_before_compilation(self):
+    def test_unknown_layout_and_data_profiles_fail_before_compilation(self):
         root = self.temporary()
         config = self.minimal(root)
         config["units"][0]["layoutProfile"] = "guess"
         self.save(root, config)
         with self.assertRaisesRegex(RuntimeError, "layout profile"):
+            BUILD.read_config(root)
+        config["units"][0]["layoutProfile"] = "natural"
+        config["units"][0]["dataProfile"] = "guess"
+        self.save(root, config)
+        with self.assertRaisesRegex(RuntimeError, "data profile"):
+            BUILD.read_config(root)
+        config["units"][0]["dataProfile"] = "original-address"
+        config["units"][0]["extentProfile"] = "guess"
+        self.save(root, config)
+        with self.assertRaisesRegex(RuntimeError, "extent profile"):
+            BUILD.read_config(root)
+        config["units"][0]["extentProfile"] = "owned"
+        self.save(root, config)
+        self.assertEqual(len(BUILD.read_config(root)["units"]), 1)
+
+    def test_unknown_public_header_profile_fails_before_compilation(self):
+        root = self.temporary()
+        config = self.minimal(root)
+        config["units"][0]["publicHeaderProfile"] = "zlib-9"
+        self.save(root, config)
+        with self.assertRaisesRegex(RuntimeError, "public header profile"):
+            BUILD.read_config(root)
+
+    def test_third_party_tree_is_not_censused_but_a_declared_unit_is_reviewed(self):
+        root = self.temporary()
+        config = self.minimal(root)
+        third = root / "src/native/third_party/zlib-1.2.5/unit.c"
+        third.parent.mkdir(parents=True)
+        third.write_text("unsigned int third(void) { return 1u; }\n")
+        # The tree is an upstream import: an undeclared file in it is not a
+        # census difference, unlike a new file in an authored wave.
+        self.assertEqual(len(BUILD.read_config(root)["units"]), 1)
+        config["units"].append({"source": third.relative_to(root).as_posix(), "headers": [],
+                                "role": "third-party-byte-exact"})
+        self.save(root, config)
+        self.assertEqual(len(BUILD.read_config(root)["units"]), 2)
+        # A declared unit there is still validated like any other.
+        config["units"][-1]["headers"] = ["src/native/third_party/zlib-1.2.5/missing.h"]
+        self.save(root, config)
+        with self.assertRaisesRegex(RuntimeError, "Explicit header dependency"):
             BUILD.read_config(root)
 
     def test_reviewed_packing_is_applied_to_actual_compiler(self):
@@ -192,7 +232,13 @@ class CompileSourcesTests(unittest.TestCase):
                         ("native_table_helpers", "table_helpers_fixture", "table_helpers_services"))
         windows_only = {folder + "/host_runner.c" for folder in expected} | fixtures
         # The record initialiser unit casts 32-bit address words, so it is deliberately arm32-only.
-        arm32_only = {"src/native/credit001/record_updates.c"}
+        # The zlib 1.2.5 vendor units are measured with armcc and the reviewed shim
+        # is a 32-bit ARM environment, so they declare that target only.
+        arm32_only = {"src/native/credit001/record_updates.c",
+                      "src/native/third_party/zlib-1.2.5/arm/inffast.c",
+                      "src/native/third_party/zlib-1.2.5/arm/inflate-copy1.c",
+                      "src/native/third_party/zlib-1.2.5/arm/inflate-copy2.c",
+                      "src/native/third_party/zlib-1.2.5/arm/trees.c"}
         self.assertEqual({unit["source"] for unit in restricted}, windows_only | arm32_only)
         self.assertEqual(
             {unit["source"]: unit["targets"] for unit in restricted},
