@@ -1,3 +1,11 @@
+/* Flag write helpers recovered by source permutation.
+ *
+ * Every function here is byte-exact against its original extent under the
+ * measured armcc 4.1 build 1454 profile. The byte mask is spelled `0xfe`, not
+ * `~0x1u`, because that is the constant the original `and` encodes; the
+ * complement makes armcc emit `bic` instead.
+ */
+
 #include "views_00.h"
 
 u32 fn_0013d538(FlagRecord_0013d538 *self, u32 value)
@@ -20,7 +28,7 @@ u32 fn_0013d554(FlagRecord_0013d554 *self, u32 value)
 FlagRecord_0016ac3c * fn_0016ac3c(FlagOwner_0016ac3c *self, u32 value)
 {
     FlagRecord_0016ac3c *record = self->record;
-    record->flags_0044 = value | (record->flags_0044 & ~0x1u);
+    record->flags_0044 = value | (record->flags_0044 & 0xfeu);
     return record;
 }
 
