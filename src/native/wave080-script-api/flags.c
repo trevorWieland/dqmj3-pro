@@ -16,12 +16,13 @@
  * -N (first) through -1 (last).  Each of these flag bindings is a setter and
  * returns 0, or a getter that pushes one value and returns 1.
  *
- * Status: 3 of these 6 bindings are byte-identical to the original
- * (instructions and data tail).  fn_0027a8b8 (SetNumFlg_) and fn_0027b940
- * (SetEventFlg_) differ only by the compiler NOP the original emits after its
- * second argument check.  fn_0027b5a8 (GetPlayerId_) is a draft: the original
- * reads the context pointer and discards it, and no non-volatile expression of
- * this source keeps that load.
+ * Status: 5 of these 6 bindings are byte-identical to the original
+ * (instructions and data tail).  fn_0027b5a8 (GetPlayerId_) is the one draft:
+ * the original reads the context pointer and discards it, and no non-volatile
+ * expression of this source keeps that load.  The event-flag binding only
+ * became exact at -O3 once the context was materialised in a local before the
+ * call, which is what makes armcc load the context address before the value
+ * (see docs/script-api-native-reconstruction.md).
  */
 #include "script_api.h"
 
@@ -48,13 +49,15 @@ int fn_0027a474(SqVM *vm)
  * the VM reader converts to 0/1 before the engine sees it. */
 int fn_0027b940(SqVM *vm)
 {
+    ScriptContext *context;
     const char *name;
     int value;
     SCRIPT_CHECK(vm, sq_getstring(vm, -2, &name), "failed: sq_getstring",
                  kName_SetEventFlg_, 0x0b1b);
     SCRIPT_CHECK(vm, sq_getbool(vm, -1, &value), "failed: sq_getbool",
                  kName_SetEventFlg_, 0x0b1e);
-    fn_006abc8c(SCRIPT_CONTEXT(), name, value != 0);
+    context = SCRIPT_CONTEXT();
+    fn_006abc8c(context, name, value != 0);
     return 0;
 }
 
