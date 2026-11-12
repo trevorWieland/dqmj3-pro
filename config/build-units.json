@@ -48,7 +48,10 @@
       "wave069-device",
       "wave071-namespace",
       "wave072-construction",
-      "wave080-script-api"
+      "wave080-script-api",
+      "wave081-large",
+      "wave082-init",
+      "wave083-compare"
     ]
   },
   "units": [
@@ -11955,8 +11958,7 @@
     {
       "source": "src/native/wave081-large/stat_record.c",
       "headers": [
-        "src/native/wave080-script-api/script_api.h",
-        "src/native/wave081-large/battle_script_api.h"
+        "src/native/wave080-script-api/script_api.h"
       ],
       "role": "recovered-and-candidate-native"
     },
@@ -11984,7 +11986,9 @@
     },
     {
       "source": "src/native/wave081-large/model_tint.c",
-      "headers": [],
+      "headers": [
+        "src/native/wave080-script-api/script_api.h"
+      ],
       "role": "functional-nonmatching"
     }
   ],
