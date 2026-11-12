@@ -13999,6 +13999,18 @@
         "src/native/wave084-repair/repair_00.h"
       ],
       "role": "repair-loop-byte-exact"
+    },
+    {
+      "source": "src/native/wave085-clones/owned_object_release.c",
+      "headers": [
+      ],
+      "role": "byte-exact-clone-instantiation"
+    },
+    {
+      "source": "src/native/wave085-clones/owned_ranges_destroy.c",
+      "headers": [
+      ],
+      "role": "byte-exact-clone-instantiation"
     }
   ],
   "excludedSources": [
@@ -14059,6 +14071,7 @@
     "src/native/synth001",
     "src/native/draft001",
     "src/native/draft002",
-    "src/native/wave084-repair"
+    "src/native/wave084-repair",
+    "src/native/wave085-clones"
   ]
 }
