@@ -11,14 +11,20 @@ Public surface:
     the registry of characterised tables with their schemas and evidence
 ``records``
     the fixed-stride ``.tp``/``.tb`` codec
+``containers``
+    the indexed AI-action and named battle-script codecs
 ``messages``
     the ``.mes`` message-archive codec
 ``workspace``
     discovery, verification and byte diffing against a real extraction
 ``references``
     the referential-integrity query used when adding content
+``crossref``
+    name corroboration against the game's scripts and message payloads
 """
 
-from . import fields, messages, records, references, schema, tables, workspace
+from . import (containers, crossref, fields, messages, records, references, schema,
+               tables, workspace)
 
-__all__ = ["fields", "messages", "records", "references", "schema", "tables", "workspace"]
+__all__ = ["containers", "crossref", "fields", "messages", "records", "references",
+           "schema", "tables", "workspace"]

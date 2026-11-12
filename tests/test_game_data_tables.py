@@ -6,9 +6,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'toolscripts'))
-from gamedata import records, references, tables, workspace   # noqa: E402
+from gamedata import crossref, records, references, tables, workspace   # noqa: E402
 from gamedata.fields import Field                               # noqa: E402
-from gamedata.schema import TableSchema                         # noqa: E402
+from gamedata.schema import TableSchema, at_least_rows, index_at_zero  # noqa: E402
 
 
 SAMPLE_ROOT = ROOT / 'generated/asset-samples'
@@ -36,8 +36,19 @@ class RegistryTests(unittest.TestCase):
     def test_a_certain_table_states_a_witness_and_a_basis(self):
         for schema in tables.TABLES:
             self.assertTrue(schema.basis, schema.name)
-            if schema.certain:
+            if schema.certain and schema.layout == 'flat':
                 self.assertTrue(schema.witnesses, schema.name)
+
+    def test_non_flat_layouts_declare_their_own_container(self):
+        for schema in tables.TABLES:
+            if schema.layout != 'flat':
+                self.assertIn(schema.layout, ('indexed', 'named'), schema.name)
+                self.assertTrue(schema.certain, schema.name)
+
+    def test_every_uncharacterised_family_states_a_measurement(self):
+        for name, reason in tables.UNCHARACTERISED.items():
+            self.assertGreater(len(reason), 40, name)
+            self.assertNotIn(name, {schema.name for schema in tables.TABLES})
 
     def test_container_families_match_the_declared_set(self):
         for schema in tables.TABLES:
@@ -54,6 +65,24 @@ class RegistryTests(unittest.TestCase):
     def test_characterised_families_are_not_also_listed_as_uncharacterised(self):
         for schema in tables.TABLES:
             self.assertNotIn(schema.name, tables.UNCHARACTERISED)
+
+    def test_divisor_mode_refuses_a_stride_two_witnesses_accept(self):
+        body = (0).to_bytes(2, 'little') + b'\0\0' + (1).to_bytes(2, 'little') + b'\0\0'
+        ambiguous = TableSchema('Ambiguous', b'AMBI', (4,), candidates='divisors',
+                                fields=(Field('index', 0, 'u16'),),
+                                witnesses=(index_at_zero(),),
+                                basis='synthetic ambiguity')
+        with self.assertRaises(Exception) as caught:
+            ambiguous.resolve(body)
+        self.assertIn('candidate strides', str(caught.exception))
+
+    def test_divisor_mode_accepts_the_one_witnessed_stride(self):
+        body = (0).to_bytes(2, 'little') + b'\0\0' + (1).to_bytes(2, 'little') + b'\0\0'
+        resolved = TableSchema('Resolved', b'RESO', (4,), candidates='divisors',
+                               fields=(Field('index', 0, 'u16'),),
+                               witnesses=(index_at_zero(), at_least_rows(2)),
+                               basis='synthetic resolution')
+        self.assertEqual(resolved.resolve(body)[0], 4)
 
 
 class ReferenceQueryTests(unittest.TestCase):
@@ -84,6 +113,17 @@ class ReferenceQueryTests(unittest.TestCase):
         self.assertEqual(answer['references'], [])
         self.assertTrue(any('no declared reference' in note for note in answer['notes']))
 
+    def test_count_peers_report_equal_row_counts_without_claiming_an_edge(self):
+        answer = references.query(self.loaded, self.schemas, 'Owner', 0)
+        self.assertEqual(answer['countPeers'], [])
+        self.assertIn({'space': 'thing', 'owner': 'Owner'}, answer['identifierSpaces'])
+
+    def test_indexed_documents_are_rows_for_the_reference_query(self):
+        document = {'entries': [{'offset': 0, 'length': 2},
+                                {'offset': 2, 'length': 2}]}
+        self.assertEqual(references.rows_of(document), document['entries'])
+        self.assertEqual(references.rows_of({'records': [1, 2]}), [1, 2])
+
     def test_rows_outside_the_table_are_rejected(self):
         with self.assertRaises(references.ReferenceError):
             references.query(self.loaded, self.schemas, 'Owner', 9)
@@ -101,13 +141,59 @@ class ExtractedContentTests(unittest.TestCase):
     def test_every_characterised_table_round_trips_byte_identically(self):
         report = workspace.verify(SAMPLE_ROOT, tables.TABLES)
         self.assertEqual(report['failures'], [])
-        self.assertGreaterEqual(report['tablesIdentical'], 40)
+        self.assertGreaterEqual(report['tablesIdentical'], 75)
+        self.assertGreaterEqual(report['families'], 50)
         self.assertEqual(report['messagesIdentical'], len(report['messages']))
 
     def test_stride_is_corroborated_for_most_files(self):
         report = workspace.verify(SAMPLE_ROOT, tables.TABLES)
         certain = [item for item in report['tables'] if item['certain']]
         self.assertGreater(len(certain), len(report['tables']) // 2)
+
+    def test_the_update_feat_table_resolves_to_seventy_two_bytes(self):
+        path = SAMPLE_ROOT / 'update/0/data/Parameter/FeatParam.tp'
+        schema = records.load_schema(tables.TABLES, 'FeatParam')
+        document = records.decode(path.read_bytes(), schema)
+        self.assertEqual((document['stride'], document['count']), (72, 532))
+
+    def test_the_ai_action_container_round_trips_and_exposes_its_entries(self):
+        path = SAMPLE_ROOT / 'base/0/data/Parameter/AIAction.tp'
+        original = path.read_bytes()
+        schema = records.load_schema(tables.TABLES, 'AIAction')
+        document = records.decode(original, schema)
+        self.assertEqual(document['count'], 636)
+        self.assertEqual(document['entries'][1], {'offset': 0, 'length': 18})
+        self.assertEqual(len(document['pools']), 2)
+        self.assertEqual(len(document['pools'][0]), len(document['pools'][1]))
+        self.assertEqual(records.encode(document, schema), original)
+
+    def test_the_battle_script_container_names_and_records_round_trip(self):
+        path = SAMPLE_ROOT / 'base/0/data/Parameter/BattleScriptActionParam.tp'
+        original = path.read_bytes()
+        schema = records.load_schema(tables.TABLES, 'BattleScriptActionParam')
+        document = records.decode(original, schema)
+        self.assertEqual((document['nameCount'], document['stride'], document['count']),
+                         (360, 64, 1024))
+        self.assertEqual(document['names'][0], '')
+        self.assertEqual(document['names'][1], 'EF030_10_TENSION01')
+        self.assertEqual(records.encode(document, schema), original)
+
+    def test_kind_names_are_corroborated_by_message_payloads(self):
+        runs = crossref.message_runs(SAMPLE_ROOT)
+        schema = records.load_schema(tables.TABLES, 'KindParam')
+        source = SAMPLE_ROOT / 'base/0/data/Parameter/Break/KindParam.tp'
+        document = records.decode(source.read_bytes(), schema)
+        names = [row['name'] for row in document['records'] if row['name']]
+        found = sum(1 for name in names if name in runs)
+        self.assertGreater(found / len(names), 0.8)
+
+    def test_battle_script_names_occur_in_battle_scripts(self):
+        schema = records.load_schema(tables.TABLES, 'BattleScriptActionParam')
+        source = SAMPLE_ROOT / 'base/0/data/Parameter/BattleScriptActionParam.tp'
+        document = records.decode(source.read_bytes(), schema)
+        scripts = crossref.script_text(SAMPLE_ROOT)
+        found = sum(1 for name in set(document['names']) if name and name in scripts)
+        self.assertGreater(found, 10)
 
     def test_the_worked_example_changes_exactly_two_bytes(self):
         source = SAMPLE_ROOT / 'base/0/data/Parameter/Break/KindParam.tp'

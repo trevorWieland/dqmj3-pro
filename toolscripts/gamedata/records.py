@@ -10,8 +10,9 @@ completely covered, so a document can never silently drop or invent bytes.
 
 import json
 
+from . import containers
 from .fields import FieldError
-from .schema import unknown_segments
+from .schema import LayoutError, unknown_segments
 
 
 DOCUMENT_FORMAT = "dqm-game-data/1"
@@ -40,6 +41,16 @@ def decode(data, schema, source=""):
     if data[:MAGIC_SIZE] != schema.magic:
         raise CodecError("%s: expected magic %r, found %r"
                          % (schema.name, schema.magic, data[:MAGIC_SIZE]))
+    if schema.layout == "indexed":
+        document = containers.decode_indexed(data, schema)
+        if source:
+            document["source"] = source
+        return document
+    if schema.layout == "named":
+        document = containers.decode_named(data, schema)
+        if source:
+            document["source"] = source
+        return document
     body = data[MAGIC_SIZE:]
     stride, count, details = schema.resolve(body)
     gaps = unknown_segments(schema.fields, stride)
@@ -67,15 +78,25 @@ def decode(data, schema, source=""):
 
 def encode(document, schema):
     """Encode a document back into the bytes of one parameter file."""
-    if document.get("format") != DOCUMENT_FORMAT or document.get("kind") != RECORD_KIND:
-        raise CodecError("document is not a %s %s document"
-                         % (DOCUMENT_FORMAT, RECORD_KIND))
     if document.get("table") != schema.name:
         raise CodecError("document is for table %r, not %r"
                          % (document.get("table"), schema.name))
+    if schema.layout == "indexed":
+        try:
+            return containers.encode_indexed(document, schema)
+        except LayoutError as error:
+            raise CodecError(str(error)) from None
+    if schema.layout == "named":
+        try:
+            return containers.encode_named(document, schema)
+        except LayoutError as error:
+            raise CodecError(str(error)) from None
+    if document.get("format") != DOCUMENT_FORMAT or document.get("kind") != RECORD_KIND:
+        raise CodecError("document is not a %s %s document"
+                         % (DOCUMENT_FORMAT, RECORD_KIND))
     stride = document["stride"]
-    if stride not in schema.strides:
-        raise CodecError("%s: stride %r is not one of %r"
+    if not schema.accepts_stride(stride):
+        raise CodecError("%s: stride %r is not one of the accepted candidates %r"
                          % (schema.name, stride, list(schema.strides)))
     if schema.magic.decode("ascii") != document.get("magic"):
         raise CodecError("%s: document magic %r does not match the schema"

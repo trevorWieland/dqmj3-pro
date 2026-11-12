@@ -31,6 +31,19 @@ class ReferenceError(ValueError):
     """Raised when a reference query cannot be answered."""
 
 
+def rows_of(document):
+    """Return the row list of any decoded document.
+
+    Flat and named tables carry ``records``; the indexed AI container carries
+    ``entries`` as its rows.  The reference query treats both as "one row per
+    numbered slot" and never assumes a field layout.
+    """
+    rows = document.get("records")
+    if rows is None:
+        rows = document.get("entries", [])
+    return rows
+
+
 def identifiers(schema, entry, row_index):
     """Collect (space, value, origin) for the identities this row carries.
 
@@ -67,7 +80,7 @@ def inbound(loaded, schemas, spaces, wanted, skip=None):
         for field in schema.fields:
             if field.refers_to not in spaces:
                 continue
-            matches = [index for index, item in enumerate(document["records"])
+            matches = [index for index, item in enumerate(rows_of(document))
                        if item.get(field.name) == wanted.get(field.refers_to)
                        and (name, index) != skip]
             if matches:
@@ -87,7 +100,7 @@ def targets(loaded, schemas, schema, entry):
         owner = by_space.get(field.refers_to)
         if owner is None or owner.name not in loaded:
             continue
-        matches = [index for index, item in enumerate(loaded[owner.name]["records"])
+        matches = [index for index, item in enumerate(rows_of(loaded[owner.name]))
                    if identity(owner, item, index) == entry[field.name]]
         if matches:
             edges.append({"table": owner.name, "field": field.name,
@@ -104,13 +117,45 @@ def shared_index(loaded, schemas, target, row_index):
         if name == target:
             continue
         schema = by_name.get(name)
-        if schema is None or len(document["records"]) != len(loaded[target]["records"]):
+        if schema is None or len(rows_of(document)) != len(rows_of(loaded[target])):
             continue
-        if any(field.name == "index" for field in schema.fields):
+        if schema.row_numbered:
             aligned.append({"table": name, "row": row_index,
-                            "note": "row %d of a file that numbers its own records"
-                                    % row_index})
+                            "note": "row %d of a table whose records number "
+                                    "themselves" % row_index})
     return aligned
+
+
+def count_peers(loaded, schemas, target):
+    """List tables with the same record count as the target.
+
+    Equal counts are a measurement, not a declared pointer: two files can have
+    the same number of rows because they describe the same slots, or by
+    coincidence.  The query therefore reports the equality and whether each
+    peer proves its records number themselves; a modder decides with that in
+    front of them instead of being told an edge exists.
+    """
+    by_name = {schema.name: schema for schema in schemas}
+    target_rows = len(rows_of(loaded[target]))
+    peers = []
+    for name, document in sorted(loaded.items()):
+        if name == target or len(rows_of(document)) != target_rows:
+            continue
+        schema = by_name.get(name)
+        peers.append({"table": name, "rowCount": target_rows,
+                      "rowNumbered": bool(schema and schema.row_numbered),
+                      "certain": bool(schema and schema.certain)})
+    return peers
+
+
+def identifier_spaces(schemas):
+    """Return the declared identifier spaces and the table that owns each."""
+    spaces = {}
+    for schema in schemas:
+        if schema.identifier:
+            spaces.setdefault(schema.identifier, schema.name)
+    return [{"space": space, "owner": owner}
+            for space, owner in sorted(spaces.items())]
 
 
 def query(loaded, schemas, table_name, row_index):
@@ -120,7 +165,7 @@ def query(loaded, schemas, table_name, row_index):
         raise ReferenceError("table %r is not characterised or not present under the root; "
                              "known tables: %s" % (table_name, ", ".join(sorted(loaded))))
     document = loaded[table_name]
-    rows = document["records"]
+    rows = rows_of(document)
     if not 0 <= row_index < len(rows):
         raise ReferenceError("%s has %d rows; row %d does not exist"
                              % (table_name, len(rows), row_index))
@@ -135,13 +180,19 @@ def query(loaded, schemas, table_name, row_index):
                                     skip=(table_name, row_index)),
               "outbound": targets(loaded, schemas, schema, entry),
               "sharedIndex": shared_index(loaded, schemas, table_name, row_index),
+              "countPeers": count_peers(loaded, schemas, table_name),
+              "identifierSpaces": identifier_spaces(schemas),
               "notes": []}
     if schema.certain is False:
         answer["notes"].append("%s: %s" % (table_name, schema.basis))
     if not answer["references"]:
         answer["notes"].append("no declared reference field points at this row")
+    if answer["countPeers"]:
+        answer["notes"].append("countPeers lists equal record counts, not declared "
+                               "pointers; only rows with rowNumbered true are proven "
+                               "to describe the same slot")
     return answer
 
 
-__all__ = ["ReferenceError", "identifiers", "identity", "inbound", "shared_index",
-           "query", "targets"]
+__all__ = ["ReferenceError", "count_peers", "identifier_spaces", "identifiers",
+           "identity", "inbound", "rows_of", "shared_index", "query", "targets"]

@@ -26,11 +26,65 @@ def _u16(body, offset):
     return struct.unpack_from("<H", body, offset)[0]
 
 
+INTEGER_KINDS = {"u8": ("<B", 1), "u16": ("<H", 2), "u32": ("<I", 4),
+                 "s8": ("<b", 1), "s16": ("<h", 2), "s32": ("<i", 4)}
+
+
+def _row_value(body, row, stride, offset, kind):
+    """Return (value, width) for one column of one record, or (None, width)."""
+    fmt, size = INTEGER_KINDS[kind]
+    if offset < 0 or offset + size > stride:
+        return None, size
+    return struct.unpack_from(fmt, body, row * stride + offset)[0], size
+
+
+def index_at(offset=0, kind="u16", plus=0):
+    """Witness: the integer at ``offset`` equals the row number (plus ``plus``).
+
+    Returns false for every record when the field does not fit the candidate
+    stride, so a stride that splits the field is rejected rather than skipped.
+    """
+    def check(body, stride, count):
+        hits = 0
+        for row in range(count):
+            value, _size = _row_value(body, row, stride, offset, kind)
+            if value is None:
+                return False, "%s at +%d does not fit stride %d" % (kind, offset, stride)
+            if value == row + plus:
+                hits += 1
+        return hits == count, "%d/%d rows numbered %d..n" % (hits, count, plus)
+    return check
+
+
 def index_at_zero():
     """Witness: the u16 at offset 0 equals the row number in every record."""
+    return index_at(0, "u16")
+
+
+def u32_index_at_zero():
+    """Witness: the u32 at offset 0 equals the row number in every record."""
+    return index_at(0, "u32")
+
+
+def u8_index_at_zero(plus=0):
+    """Witness: the u8 at offset 0 equals the row number plus ``plus``."""
+    return index_at(0, "u8", plus)
+
+
+def keys_contiguous_at(offset=0, kind="u16", plus=0):
+    """Witness: a key column runs over an unbroken ascending range."""
     def check(body, stride, count):
-        hits = sum(1 for row in range(count) if _u16(body, row * stride) == row)
-        return hits == count, "%d/%d rows numbered 0..n-1" % (hits, count)
+        keys = []
+        for row in range(count):
+            value, _size = _row_value(body, row, stride, offset, kind)
+            if value is None:
+                return False, "%s at +%d does not fit stride %d" % (kind, offset, stride)
+            keys.append(value)
+        unbroken = (len(set(keys)) == count
+                    and all(a <= b for a, b in zip(keys, keys[1:]))
+                    and max(keys) - min(keys) + 1 == count
+                    and min(keys) == plus)
+        return unbroken, "%d keys spanning %d values" % (count, max(keys) - min(keys) + 1)
     return check
 
 
@@ -133,18 +187,76 @@ def at_least_rows(minimum):
     return check
 
 
+def row_count_in(counts):
+    """Witness: the candidate stride yields a row count measured elsewhere.
+
+    This is the cross-table count witness: a different file in the same content
+    partition declares how many entries the shared identifier space has, so the
+    stride is the one that reproduces that count here.  It only says how many
+    records there are; it never says what any field means.
+    """
+    allowed = frozenset(counts)
+
+    def check(body, stride, count):
+        return count in allowed, "%d rows (measured counts: %s)" % (
+            count, ", ".join(str(item) for item in sorted(allowed)))
+    return check
+
+
+def column_constant(offset, kind, expected):
+    """Witness: one integer column holds the same value in every record."""
+    def check(body, stride, count):
+        for row in range(count):
+            value, _size = _row_value(body, row, stride, offset, kind)
+            if value is None:
+                return False, "%s at +%d does not fit stride %d" % (kind, offset, stride)
+            if value != expected:
+                return False, "row %d has 0x%x at +%d, expected 0x%x" % (
+                    row, value, offset, expected)
+        return True, "every row holds 0x%x at +%d" % (expected, offset)
+    return check
+
+
+def value_domain(offset, kind, allowed):
+    """Witness: every value of one integer column belongs to a small set."""
+    allowed = frozenset(allowed)
+
+    def check(body, stride, count):
+        for row in range(count):
+            value, _size = _row_value(body, row, stride, offset, kind)
+            if value is None:
+                return False, "%s at +%d does not fit stride %d" % (kind, offset, stride)
+            if value not in allowed:
+                return False, "row %d holds 0x%x at +%d, outside the measured set" % (
+                    row, value, offset)
+        return True, "every row's value at +%d is in {%s}" % (
+            offset, ", ".join(str(item) for item in sorted(allowed)))
+    return check
+
+
 class TableSchema:
     """Everything the codecs need to know about one parameter table."""
 
     def __init__(self, name, magic, strides, fields=(), witnesses=(), basis="", note="",
-                 identifier=None, certain=False, container="tp"):
+                 identifier=None, certain=False, container="tp", layout="flat",
+                 candidates="declared", row_numbered=False):
         """Build a schema.
 
         ``identifier`` names the identifier space this table defines, so that a
         field elsewhere can declare ``refers_to`` it.  ``certain`` records
         whether the record boundary is corroborated by a structural witness
         rather than resting on exact divisibility alone.  ``container`` is the
-        file family the table lives in: ``tp`` or ``tb``.
+        file family the table lives in: ``tp`` or ``tb``.  ``layout`` selects
+        the codec: ``flat`` for a body of equal records, ``indexed`` for the AI
+        action container, ``named`` for the battle-script container.
+
+        ``candidates="divisors"`` makes resolution try every divisor of the
+        body in the plausible range instead of only the declared ``strides``.
+        That turns "no other divisor fits" from a claim into a check: a witness
+        that several divisors satisfy now makes ``resolve`` fail instead of
+        silently choosing one.  ``row_numbered`` says a witness proves the
+        records number themselves, which the reference query uses to report
+        row-aligned tables.
         """
         self.name = name
         self.magic = magic
@@ -156,6 +268,9 @@ class TableSchema:
         self.identifier = identifier
         self.certain = certain
         self.container = container
+        self.layout = layout
+        self.candidates = candidates
+        self.row_numbered = row_numbered
         self._check_fields()
 
     def _check_fields(self):
@@ -173,11 +288,31 @@ class TableSchema:
         if len(set(names)) != len(names):
             raise LayoutError("%s: duplicate field names" % self.name)
 
+    def candidate_strides(self, size):
+        """Return the strides this schema will test for a body of ``size`` bytes.
+
+        A field that does not fit a stride rules it out before any witness runs,
+        because a record boundary smaller than a measured field cannot be right.
+        In ``divisors`` mode every divisor from that floor up to 1024 bytes is a
+        candidate, so a witness has to reject all of them but one.
+        """
+        floor = max([field.end for field in self.fields] or [1])
+        if self.candidates != "divisors":
+            return [stride for stride in self.strides if stride >= floor]
+        return [stride for stride in range(floor, min(size, 1024) + 1) if size % stride == 0]
+
+    def accepts_stride(self, stride):
+        """Return whether an encoded document may use ``stride``."""
+        floor = max([field.end for field in self.fields] or [1])
+        if self.candidates == "divisors":
+            return stride >= floor and stride <= 1024
+        return stride in self.strides
+
     def resolve(self, body):
         """Return (stride, count) for this body, or raise when it is ambiguous."""
         survivors = []
         rejected = []
-        for stride in self.strides:
+        for stride in self.candidate_strides(len(body)):
             if len(body) % stride:
                 rejected.append("stride %d does not divide %d bytes" % (stride, len(body)))
                 continue
@@ -207,9 +342,11 @@ class TableSchema:
     def describe(self):
         """JSON-friendly description of this table for a decoded document."""
         return {"table": self.name, "magic": self.magic.decode("ascii"),
-                "container": self.container, "strides": list(self.strides),
+                "container": self.container, "layout": self.layout,
+                "strides": list(self.strides), "candidates": self.candidates,
                 "basis": self.basis, "note": self.note,
                 "identifier": self.identifier, "certain": self.certain,
+                "rowNumbered": self.row_numbered,
                 "fields": describe_fields(self.fields)}
 
 
@@ -227,6 +364,7 @@ def unknown_segments(fields, stride):
 
 
 __all__ = ["Field", "LayoutError", "TableSchema", "unknown_segments", "at_least_rows",
-           "columns_nondecreasing", "fixed_text", "index_at_zero", "keys_contiguous",
-           "keys_unique",
-           "keys_unique_sorted", "text_names", "zero_tail"]
+           "column_constant", "columns_nondecreasing", "fixed_text", "index_at",
+           "index_at_zero", "keys_contiguous", "keys_contiguous_at", "keys_unique",
+           "keys_unique_sorted", "row_count_in", "text_names", "u32_index_at_zero",
+           "u8_index_at_zero", "value_domain", "zero_tail"]
