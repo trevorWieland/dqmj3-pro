@@ -253,7 +253,9 @@ extern int fn_001488c4(SqVM *vm, s32 *id, f32 *value);        /* id at -2, float
 #define SCRIPT_CHECK(vm, call, operation, native_name, source_line)                    \
     SCRIPT_CHECK_IN(vm, call, operation, "FieldScriptFunc.cpp", native_name, source_line)
 
-#include <stdbool.h>
+/* The tree is freestanding: no system headers.  `_Bool` is the C99 keyword
+ * that <stdbool.h> would name, which is all these bindings need. */
+typedef _Bool bool;
 /* Some bindings name the assertion file explicitly; the operands are the
  * same six, so this is the same check under the original's spelling. */
 #define SCRIPT_CHECK_FILE SCRIPT_CHECK_IN
