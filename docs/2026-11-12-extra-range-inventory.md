@@ -140,3 +140,34 @@ python toolscripts/extras_inventory.py --seed-from-manifest config/promoted-extr
 python -m unittest tests.test_promoted_extras
 python build.py --image <your update CIA>
 ```
+
+## Is the inventory now complete?
+
+The promotion raised the function count from 26,573 to 26,990. A natural next
+question is whether *that* number is right, or whether the census is missing
+entries the same way it missed 417 tail-called helpers. Three scans answer it.
+
+**Every call target is accounted for.** Disassembling all 26,990 primary extents
+and collecting every `bl`/`blx` operand gives 89,396 call sites with 14,945
+distinct targets. **Two** targets are absent from the split, covering four call
+sites. A census that misses two callable entries out of 14,945 is complete for
+practical purposes.
+
+**Branch targets outside every owned extent: 204.** These are not all call
+targets — the scan collects `b`, `bl` and `blx` — and most are not function
+entries. Classifying each by its first instruction and whether it returns within
+16 instructions: **82 look like function entries**, and 122 are mid-function code
+(`add`, `cmp`, `ldrb`), which means some owned extents are clipped short rather
+than that functions are missing.
+
+**The gaps between owned ranges are 1,189,670 bytes** across 19,926 gaps, the
+largest 8,260 bytes. This is *not* missing code — the text region is interleaved
+with data, string pools and tables that the split deliberately does not own as
+functions. The gap total is therefore not a useful measure of incompleteness; the
+branch-target scan is.
+
+**Conclusion.** The split is nearly complete: two missing call targets and ~82
+candidate entries, against 26,990 known functions. Recovering them is worth a few
+kilobytes, not another inventory correction. The honest statement is that the
+denominator is now right to within about 0.3%, and the remaining work is
+reconstruction rather than bookkeeping.
