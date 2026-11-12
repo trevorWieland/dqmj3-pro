@@ -42,13 +42,13 @@ void fn_0054befc(TextureMatrix *output, const ProjectionDraw *draw, const Projec
     if (coordinate_source == 4 && (flags & 4)) {
         Matrix3x4 inverse;
         fn_001ad184(&inverse, &pane->world);
-        fn_001ad06c(&projection, &projection, &inverse);
+        matrix_multiply(&projection, &projection, &inverse);
     }
-    fn_001ad06c(&projection, &projection, &draw->view);
+    matrix_multiply(&projection, &projection, &draw->view);
     float srt[6];
     fn_0055492c(srt, transforms + texture_index, textures + texture_index);
     Matrix3x4 transform = {{{srt[0], srt[1], 0, srt[2]}, {srt[3], srt[4], 0, srt[5]}, {0, 0, 1, 0}}};
-    fn_001ad06c(&projection, &transform, &projection);
+    matrix_multiply(&projection, &transform, &projection);
     for (unsigned int row = 0; row < 2; ++row)
         for (unsigned int column = 0; column < 4; ++column)
             output->m[row][column] = projection.m[row][column];

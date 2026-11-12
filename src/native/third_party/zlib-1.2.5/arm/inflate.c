@@ -29,8 +29,8 @@
 
 /* armcc lowers memcpy to __aeabi_memcpy after preprocessing, so the helper
  * name is not a macro target; the three-argument call itself keeps its ABI and
- * the image's helper is fn_00301a9c. */
-#define memcpy fn_00301a9c
+ * the image's helper is memory_copy_unaligned. */
+#define memcpy memory_copy_unaligned
 
 /* Clang 21 diagnoses zlib 1.2.5's K&R function definitions and one negative
  * shift as errors under the public-compile census's -Werror, while armcc 4.1 --

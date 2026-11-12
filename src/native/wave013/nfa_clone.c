@@ -29,7 +29,7 @@ void pattern_nfa_release_map(PatternNfaCloneMap *map)
         IntrusiveLink *link = map->entries.next;
         while (link != &map->entries) {
             IntrusiveLink *following = link->next;
-            fn_004c3994(map->entry_arena, link, 1);
+            fixed_arena_release(map->entry_arena, link, 1);
             link = following;
         }
     }
@@ -37,7 +37,7 @@ void pattern_nfa_release_map(PatternNfaCloneMap *map)
 
 int fn_004c360c(PatternNfaCloneMap *map, NfaState **result, NfaState *const *start, NfaState *const *stop)
 {
-    NfaState *state = fn_004c39c8(map->states->owner, 2);
+    NfaState *state = fixed_arena_allocate(map->states->owner, 2);
     if (state == (void *)0)
         return 0;
     state->transitions.previous = &state->transitions;
@@ -49,7 +49,7 @@ int fn_004c360c(PatternNfaCloneMap *map, NfaState **result, NfaState *const *sta
     map->states->head.previous = &state->collection;
     state->collection.previous->next = &state->collection;
     state->transition_arena = map->transition_arena;
-    PatternNfaCloneEntry *entry = fn_004c39c8(map->entry_arena, 1);
+    PatternNfaCloneEntry *entry = fixed_arena_allocate(map->entry_arena, 1);
     if (entry == (void *)0)
         return 0;
     entry->original = (void *)0;

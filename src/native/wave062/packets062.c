@@ -1,8 +1,8 @@
 #include "packets062.h"
 
-void *fn_00301a9c(void *, const void *, unsigned int);
-void *fn_00158f6c(void *, unsigned int);
-void *fn_00301f50(void *, unsigned int);
+void *memory_copy_unaligned(void *, const void *, unsigned int);
+void *memory_zero_unaligned(void *, unsigned int);
+void *memory_zero_aligned(void *, unsigned int);
 
 void resource_metadata_slice062(ResourceBlock062 *block,
     const ResourceMetadata062 *metadata, const Signed062 *position)
@@ -16,8 +16,8 @@ void resource_metadata_slice062(ResourceBlock062 *block,
     bytes = 248 - offset;
     if (bytes > 128)
         bytes = 128;
-    fn_00158f6c(block->bytes, 128);
-    fn_00301a9c(block->bytes, (const Byte062 *)metadata + offset, bytes);
+    memory_zero_unaligned(block->bytes, 128);
+    memory_copy_unaligned(block->bytes, (const Byte062 *)metadata + offset, bytes);
 }
 
 void resource_metadata_receive062(const ResourceBlock062 *block,
@@ -31,7 +31,7 @@ void resource_metadata_receive062(const ResourceBlock062 *block,
     bytes = 248 - offset;
     if (bytes > 128)
         bytes = 128;
-    fn_00301a9c((Byte062 *)metadata + offset, block->bytes, bytes);
+    memory_copy_unaligned((Byte062 *)metadata + offset, block->bytes, bytes);
     ++*cursor;
 }
 
@@ -51,11 +51,11 @@ Word062 resource_packet_slice062(ResourceBlock062 *block,
         return 1;
     bytes = total - offset;
     if (bytes >= 128) {
-        fn_00301a9c(block->bytes, (const Byte062 *)packet + offset, 128);
+        memory_copy_unaligned(block->bytes, (const Byte062 *)packet + offset, 128);
         return 0;
     }
-    fn_00158f6c(block->bytes, 128);
-    fn_00301a9c(block->bytes, (const Byte062 *)packet + offset, bytes);
+    memory_zero_unaligned(block->bytes, 128);
+    memory_copy_unaligned(block->bytes, (const Byte062 *)packet + offset, bytes);
     return 1;
 }
 
@@ -68,9 +68,9 @@ Word062 resource_packet_receive062(const ResourceBlock062 *block,
     Word062 bytes;
     if (*cursor == 0) {
         Signed062 compressed_bytes;
-        fn_00301a9c(&compressed_bytes, block->bytes, 4);
+        memory_copy_unaligned(&compressed_bytes, block->bytes, 4);
         total = packet_bytes062(compressed_bytes);
-        fn_00301f50(packet->bytes, 7656);
+        memory_zero_aligned(packet->bytes, 7656);
     } else {
         total = packet_bytes062(packet->compressed_bytes);
     }
@@ -82,7 +82,7 @@ Word062 resource_packet_receive062(const ResourceBlock062 *block,
             bytes = 128;
         else if (bytes < 128)
             finished = 1;
-        fn_00301a9c((Byte062 *)packet + offset, block->bytes, bytes);
+        memory_copy_unaligned((Byte062 *)packet + offset, block->bytes, bytes);
     }
     ++*cursor;
     return finished;

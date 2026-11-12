@@ -20,7 +20,7 @@ void fn_005b73f8(int param_1)
 
 {
   *(undefined4 *)(param_1 + 0x100) = 0;
-  fn_00301f50(param_1 + 0x10,0xf0);
+  memory_zero_aligned(param_1 + 0x10,0xf0);
   *(undefined1 *)(param_1 + 0x104) = 0;
   return;
 }

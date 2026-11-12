@@ -117,7 +117,7 @@ void sampled_key_prepare053(const SampledKeys053 *input, SampledSegment053 *outp
             hold_value(input, output, last, position < 0.0f, format);
             return;
         }
-        output->period = (int)fn_006fa358(input->inverse_duration * position);
+        output->period = (int)floor_float(input->inverse_duration * position);
         reverse = repeat == 2 && (output->period & 1);
         shift = (input->range_end - input->range_start) *
             (float)(output->period + (reverse ? 1 : 0));

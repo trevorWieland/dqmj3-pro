@@ -18,7 +18,7 @@ int fn_004bfedc(MatchStateData *data, FixedArena *arena, unsigned int members, i
 {
     data->data_arena = arena;
     data->member_count = members;
-    data->members = fn_004c39c8(arena, (members + 15u) >> 4);
+    data->members = fixed_arena_allocate(arena, (members + 15u) >> 4);
     if (data->members == (void *)0)
         return 0;
     if (clear) {

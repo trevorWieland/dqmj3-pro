@@ -69,7 +69,7 @@ typedef struct Material {
 
 extern const MaterialVtable material_vtable;
 MaterialColor *fn_0017d8f8(MaterialColor *color);
-void *fn_00101a1c(void *first, MaterialColor *(*construct)(MaterialColor *), MaterialWord stride, MaterialWord count);
+void *material_construct_elements(void *first, MaterialColor *(*construct)(MaterialColor *), MaterialWord stride, MaterialWord count);
 void fn_005549f0(Material *material);
 MaterialWord fn_0019fdf4(Material *material, MaterialWord textures, MaterialWord transforms,
     MaterialWord generators, MaterialWord stages, MaterialWord alphaCompare, MaterialWord blendWords,
@@ -78,7 +78,7 @@ MaterialTexture *fn_005525ac(MaterialTexture *texture);
 void fn_0019501c(MaterialTexture *texture, const MaterialTextureResource *resource);
 void fn_0019fbb0(MaterialTexture *texture, MaterialWord s, MaterialWord t);
 void fn_005524ec(MaterialTexture *texture, MaterialWord minification, MaterialWord magnification);
-void fn_00166824(MaterialWord *destination, const MaterialWord *source);
+void material_word_pair_assign(MaterialWord *destination, const MaterialWord *source);
 Material *fn_00554a30(Material *material, const MaterialWire *wire, const MaterialWire *replacement,
     const MaterialContext *context);
 

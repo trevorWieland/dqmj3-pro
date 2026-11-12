@@ -22,13 +22,13 @@ typedef struct PatternRulePrefix {
 } PatternRulePrefix;
 
 PatternLiteralMatcher *fn_004c0380(PatternLiteralMatcher *matcher);
-unsigned int fn_00100b58(const unsigned short *text);
+unsigned int wide_string_length(const unsigned short *text);
 int fn_004bffa8(const PatternLiteralMatcher *matcher, PatternToken **cursor, unsigned int offset, unsigned int count);
 int fn_004c0060(PatternLiteralMatcher *matcher, const PatternLexer *lexer, const unsigned short *text);
 void fn_004c3b08(FixedArena *arena);
 void fn_004c3974(FixedArena *arena, void *scratch);
-void *fn_00158f6c(void *destination, unsigned int bytes);
-void *fn_00301f50(void *destination, unsigned int bytes);
+void *memory_zero_unaligned(void *destination, unsigned int bytes);
+void *memory_zero_aligned(void *destination, unsigned int bytes);
 void fn_004c3c20(const PatternRulePrefix *rule, unsigned int *flags, const unsigned short *pattern,
                  unsigned int length, const unsigned short *const *candidates, unsigned int count);
 

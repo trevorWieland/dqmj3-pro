@@ -16,23 +16,32 @@
 #include "symbols.h"
 
 
-void fn_004ed504(undefined1 *param_1,undefined4 param_2)
+
+/* store_big_endian_16 -- 0x004ed504, 16 bytes, ARM, 49 call sites, byte-identical.
+ *
+ * Writes a 16-bit value to two bytes most significant first.
+ */
+void store_big_endian_16(undefined1 *destination,undefined4 value)
 
 {
-  *param_1 = (char)((uint)param_2 >> 8);
-  param_1[1] = (char)param_2;
+  *destination = (char)((uint)value >> 8);
+  destination[1] = (char)value;
   return;
 }
 
 
 
-void fn_004ed514(undefined1 *param_1,undefined4 param_2)
+/* store_big_endian_32 -- 0x004ed514, 32 bytes, ARM, 117 call sites, byte-identical.
+ *
+ * Writes a 32-bit value to four bytes most significant first.
+ */
+void store_big_endian_32(undefined1 *destination,undefined4 value)
 
 {
-  *param_1 = (char)((uint)param_2 >> 0x18);
-  param_1[1] = (char)((uint)param_2 >> 0x10);
-  param_1[2] = (char)((uint)param_2 >> 8);
-  param_1[3] = (char)param_2;
+  *destination = (char)((uint)value >> 0x18);
+  destination[1] = (char)((uint)value >> 0x10);
+  destination[2] = (char)((uint)value >> 8);
+  destination[3] = (char)value;
   return;
 }
 

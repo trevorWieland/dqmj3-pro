@@ -38,7 +38,7 @@ int fn_004c16dc(PatternNfaBuilder *builder, NfaState **result, NfaState **start,
             edge->link.previous->next = edge->link.next;
             edge->link.next->previous = edge->link.previous;
             fn_007557bc(&edge->label);
-            fn_004c3994(state->transition_arena, edge, 2);
+            fixed_arena_release(state->transition_arena, edge, 2);
         }
         if (!pattern_nfa_epsilon(state, *end))
             return 2;

@@ -99,7 +99,7 @@ void fn_0065fd88(int param_1)
 
 {
   *(undefined1 *)(param_1 + 0xf8) = 0xff;
-  fn_00301f50(param_1 + 4,0xf4);
+  memory_zero_aligned(param_1 + 4,0xf4);
   return;
 }
 

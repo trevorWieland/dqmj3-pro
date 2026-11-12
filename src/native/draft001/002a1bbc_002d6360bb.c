@@ -19,7 +19,7 @@
 void fn_002ccba8(int param_1)
 
 {
-  fn_00158f6c(param_1 + 0x1e,0x40);
+  memory_zero_unaligned(param_1 + 0x1e,0x40);
   return;
 }
 

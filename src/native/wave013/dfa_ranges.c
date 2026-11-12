@@ -25,7 +25,7 @@ static IntrusiveLink *remove_range(IntervalRing *ring, IntervalNode *node)
     IntrusiveLink *next = node->link.next;
     node->link.previous->next = next;
     next->previous = node->link.previous;
-    fn_004c3994(ring->owner, node, 1);
+    fixed_arena_release(ring->owner, node, 1);
     return next;
 }
 
@@ -63,7 +63,7 @@ int fn_004c2c80(IntervalRing *destination, const IntervalRing *source)
                 continue;
             }
             IntrusiveLink *following = link->next;
-            IntervalNode *right = fn_004c39c8(destination->owner, 1);
+            IntervalNode *right = fixed_arena_allocate(destination->owner, 1);
             if (right == (void *)0)
                 return 0;
             right->link.previous = following->previous;

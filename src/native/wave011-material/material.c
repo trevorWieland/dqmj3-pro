@@ -57,7 +57,7 @@ Material *fn_00554a30(Material *material, const MaterialWire *wire, const Materi
     const MaterialContext *context)
 {
     material->vtable = &material_vtable;
-    void *(*volatile initialize_colors)(void *, MaterialColor *(*)(MaterialColor *), MaterialWord, MaterialWord) = fn_00101a1c;
+    void *(*volatile initialize_colors)(void *, MaterialColor *(*)(MaterialColor *), MaterialWord, MaterialWord) = material_construct_elements;
     initialize_colors(material->colors, fn_0017d8f8, sizeof(MaterialColor), 2);
     fn_005549f0(material);
     MaterialResolver *resolver = context->primary;
@@ -173,6 +173,6 @@ Material *fn_00554a30(Material *material, const MaterialWire *wire, const Materi
             projections(material)[index] = wire_projection[index];
     }
     if (has_shadow)
-        fn_00166824(font_shadow(material), wire_shadow);
+        material_word_pair_assign(font_shadow(material), wire_shadow);
     return material;
 }

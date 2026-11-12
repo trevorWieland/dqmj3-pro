@@ -79,7 +79,7 @@ _Bool fn_00196f6c(SqCallVM *vm, SqNativeClosure *closure, SqI32 arguments,
     vm->call_count++;
     vm->frame.base = base;
     for (SqU32 index = 0; index < closure->outers.size; index++) {
-        fn_00173d1c(&vm->frame, closure->outers.values + index);
+        vm_stack_push(&vm->frame, closure->outers.values + index);
     }
     if (closure->environment.type == 0x08010000u) {
         SqObject environment;

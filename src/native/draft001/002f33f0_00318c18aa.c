@@ -58,7 +58,7 @@ int fn_002fa328(int param_1)
   *(undefined1 *)(param_1 + 0x110) = 0;
   *(undefined1 *)(param_1 + 0x111) = 0;
   *(undefined1 *)(param_1 + 0x112) = 0;
-  fn_00301f50(param_1,0xf0);
+  memory_zero_aligned(param_1,0xf0);
   *(undefined4 *)(param_1 + 0xf4) = 0;
   *(undefined4 *)(param_1 + 0xf8) = 0;
   *(undefined4 *)(param_1 + 0xfc) = 0;
@@ -73,7 +73,7 @@ int fn_002fa328(int param_1)
 void fn_002fa40c(int param_1)
 
 {
-  fn_00301f50(param_1 + 0x18,0x3c0);
+  memory_zero_aligned(param_1 + 0x18,0x3c0);
   return;
 }
 
@@ -82,7 +82,7 @@ void fn_002fa40c(int param_1)
 void fn_002fa490(int param_1)
 
 {
-  fn_00301f50(param_1 + 0x3d8,0x3c0);
+  memory_zero_aligned(param_1 + 0x3d8,0x3c0);
   return;
 }
 

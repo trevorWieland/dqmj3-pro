@@ -26,6 +26,6 @@ SampledKeyU32_053 sampled_key_floor_bits053(SampledKeyU32_053 bits)
         float value;
     } converted;
     converted.bits = bits;
-    converted.value = fn_006fa358(converted.value);
+    converted.value = floor_float(converted.value);
     return converted.bits;
 }

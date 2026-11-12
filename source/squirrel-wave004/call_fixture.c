@@ -15,7 +15,7 @@ SqI32 sq_wave004_native(SqCallVM *vm)
     fixture->receiver = vm->frame.stack[vm->frame.base];
     fixture->outer = vm->frame.stack[vm->frame.top - 1];
     if (fixture->return_code > 0 || fixture->return_code == -666) {
-        fn_00173d1c(&vm->frame, &fixture->returned);
+        vm_stack_push(&vm->frame, &fixture->returned);
     }
     return fixture->return_code;
 }

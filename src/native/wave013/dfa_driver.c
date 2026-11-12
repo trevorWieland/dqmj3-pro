@@ -19,14 +19,14 @@ int fn_004c2a00(CompileContext *context, FixedArena *arena, const IntrusiveLink 
     for (const IntrusiveLink *link = sources->next; link != sources; link = link->next)
         ++count;
     context->source_count = count;
-    context->sources = fn_004c39c8(arena, (count * 4u + 15u) >> 4);
+    context->sources = fixed_arena_allocate(arena, (count * 4u + 15u) >> 4);
     if (context->sources == (void *)0)
         return 0;
     unsigned int index = 0;
     for (const IntrusiveLink *link = sources->next; link != sources; link = link->next)
         context->sources[index++] = (NfaState *)link;
     context->state_arena = context->data_arena;
-    MatchState *initial = fn_004c39c8(context->state_arena, COMPILED_STATE_BLOCKS);
+    MatchState *initial = fixed_arena_allocate(context->state_arena, COMPILED_STATE_BLOCKS);
     if (initial == (void *)0)
         return 0;
     fn_004bff74(&initial->data);

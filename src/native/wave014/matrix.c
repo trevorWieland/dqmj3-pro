@@ -1,6 +1,15 @@
 #include "projection.h"
 
-void fn_001ad06c(Matrix3x4 *output, const Matrix3x4 *left, const Matrix3x4 *right)
+
+/* matrix_multiply -- 0x001ad06c, 228 bytes, ARM, 29 call sites, draft.
+ *
+ * Multiplies two 3x4 affine matrices: the 3x3 linear part by left-multiply, and
+ * the translation column as left * right-translation + left-translation.
+ *
+ * Evidence: the reconstructed body against Matrix3x4; 29 call sites in the
+ * projection and scene code.
+ */
+void matrix_multiply(Matrix3x4 *output, const Matrix3x4 *left, const Matrix3x4 *right)
 {
     Matrix3x4 result;
     for (unsigned int row = 0; row < 3; ++row) {

@@ -224,7 +224,7 @@ void fn_0036a800(int param_1,undefined4 *param_2)
 void fn_0036a810(int *param_1,int param_2,undefined4 param_3)
 
 {
-  fn_0017821c(*param_1 + param_2 * 0x3d8 + 0x50,param_3,0x3d8);
+  memory_copy(*param_1 + param_2 * 0x3d8 + 0x50,param_3,0x3d8);
   return;
 }
 

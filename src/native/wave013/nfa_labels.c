@@ -29,7 +29,7 @@ void fn_00755780(IntervalSet *set, void *const *destination, unsigned short char
 
 MatchEdge *pattern_nfa_new_transition(NfaState *state)
 {
-    MatchEdge *edge = fn_004c39c8(state->transition_arena, 2);
+    MatchEdge *edge = fixed_arena_allocate(state->transition_arena, 2);
     if (edge == (void *)0)
         return edge;
     fn_00755798(&edge->label);
@@ -52,7 +52,7 @@ int pattern_nfa_epsilon(NfaState *state, NfaState *destination)
 
 void fn_00755818(MatchEdge **result, IntervalRing *ring)
 {
-    MatchEdge *edge = fn_004c39c8(ring->owner, 2);
+    MatchEdge *edge = fixed_arena_allocate(ring->owner, 2);
     if (edge == (void *)0) {
         *result = (void *)0;
         return;

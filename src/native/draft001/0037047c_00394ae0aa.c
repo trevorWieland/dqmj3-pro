@@ -19,7 +19,7 @@
 void fn_0037047c(undefined4 param_1,int param_2,int param_3)
 
 {
-  fn_0017821c(param_1,*(int *)(param_2 + 0x30) + param_3 * 0xf4,0xf0);
+  memory_copy(param_1,*(int *)(param_2 + 0x30) + param_3 * 0xf4,0xf0);
   return;
 }
 
@@ -28,7 +28,7 @@ void fn_0037047c(undefined4 param_1,int param_2,int param_3)
 void fn_003704e8(undefined4 param_1,int param_2,int param_3)
 
 {
-  fn_0017821c(param_1,*(int *)(param_2 + 0x3c) + param_3 * 0xf4,0xf0);
+  memory_copy(param_1,*(int *)(param_2 + 0x3c) + param_3 * 0xf4,0xf0);
   return;
 }
 

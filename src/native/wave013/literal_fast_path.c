@@ -29,7 +29,7 @@ int fn_004c0060(PatternLiteralMatcher *matcher, const PatternLexer *lexer, const
     unsigned int count;
     unsigned int offset = 0;
     matcher->text = text;
-    matcher->length = fn_00100b58(text);
+    matcher->length = wide_string_length(text);
     if (start->kind == PATTERN_TOKEN_LITERAL) {
         count = literal_run(start, &end);
         if (end->kind == PATTERN_TOKEN_WILDCARD) {

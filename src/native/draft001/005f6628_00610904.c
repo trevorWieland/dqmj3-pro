@@ -113,7 +113,7 @@ void fn_0060165c(int param_1,undefined4 param_2)
 
 {
   *(undefined1 *)(param_1 + 8) = 0;
-  fn_0017821c(param_1 + 0xc,param_2,0x104);
+  memory_copy(param_1 + 0xc,param_2,0x104);
   return;
 }
 
@@ -142,7 +142,7 @@ void fn_00604740(int param_1,undefined4 param_2,undefined4 param_3)
 
 {
   *(undefined1 *)(param_1 + 8) = 0;
-  fn_0017821c(param_1 + 0xc,param_2,0x104);
+  memory_copy(param_1 + 0xc,param_2,0x104);
   *(undefined4 *)(param_1 + 0x128) = param_3;
   return;
 }

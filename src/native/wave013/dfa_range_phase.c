@@ -13,7 +13,7 @@ static void remove_edge(MatchState *state, MatchEdge *edge)
     edge->link.previous->next = edge->link.next;
     edge->link.next->previous = edge->link.previous;
     fn_007557bc(&edge->label);
-    fn_004c3994(state->data.pending_arena, edge, TRANSITION_BLOCKS);
+    fixed_arena_release(state->data.pending_arena, edge, TRANSITION_BLOCKS);
 }
 
 static int release_ranges(IntervalRing *ring)
@@ -22,7 +22,7 @@ static int release_ranges(IntervalRing *ring)
         IntrusiveLink *link = ring->head.next;
         while (link != &ring->head) {
             IntrusiveLink *next = link->next;
-            fn_004c3994(ring->owner, link, 1);
+            fixed_arena_release(ring->owner, link, 1);
             link = next;
         }
     }
@@ -33,7 +33,7 @@ static int copy_ranges(IntervalRing *destination, const IntervalRing *source)
 {
     for (const IntrusiveLink *link = source->head.next; link != &source->head; link = link->next) {
         const IntervalNode *old = (const IntervalNode *)link;
-        IntervalNode *node = fn_004c39c8(destination->owner, 1);
+        IntervalNode *node = fixed_arena_allocate(destination->owner, 1);
         if (node == (void *)0)
             return 0;
         insert_before(&destination->head, &node->link);
@@ -55,7 +55,7 @@ int fn_004c1f60(CompileContext *context, MatchState **state_pointer)
             continue;
         }
         unsigned int blocks = (context->source_count + 15u) >> 4;
-        unsigned char *members = fn_004c39c8(context->data_arena, blocks);
+        unsigned char *members = fixed_arena_allocate(context->data_arena, blocks);
         if (members == (void *)0)
             return 0;
         for (unsigned int index = 0; index < context->source_count; ++index)
@@ -94,8 +94,8 @@ int fn_004c1f60(CompileContext *context, MatchState **state_pointer)
         fn_004c1de8(&target, context, members);
         if (target == (void *)0)
             return release_ranges(&ranges);
-        fn_004c3994(context->data_arena, members, blocks);
-        MatchEdge *edge = fn_004c39c8((*state_pointer)->data.transition_arena, TRANSITION_BLOCKS);
+        fixed_arena_release(context->data_arena, members, blocks);
+        MatchEdge *edge = fixed_arena_allocate((*state_pointer)->data.transition_arena, TRANSITION_BLOCKS);
         if (edge == (void *)0)
             return release_ranges(&ranges);
         fn_007555cc(&edge->label);

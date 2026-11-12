@@ -23,7 +23,7 @@
  * memcpy is mapped at the source name, not at the compiler's __aeabi_memcpy:
  * armcc lowers memcpy to that helper after preprocessing, so the helper name is
  * not a macro target, while the three-argument call itself keeps its ABI. The
- * image's helper is fn_00301a9c.
+ * image's helper is memory_copy_unaligned.
  */
 #ifndef DQMJ3_ZLIB_RENAME_DEFLATE_COPY1
 #define DQMJ3_ZLIB_RENAME_DEFLATE_COPY1
@@ -31,7 +31,7 @@
 #define deflateEnd fn_00731cf0
 #define flush_pending fn_0072e014
 
-#define memcpy fn_00301a9c
+#define memcpy memory_copy_unaligned
 
 /* Clang 21 diagnoses zlib 1.2.5's K&R function definitions and one negative
  * shift as errors under the public-compile census's -Werror, while armcc 4.1 --

@@ -59,7 +59,7 @@ typedef enum SampledFormat053 {
     SAMPLED_FLOAT_QUADRUPLE053
 } SampledFormat053;
 
-float SAMPLED_KEY_ABI053 fn_006fa358(float value);
+float SAMPLED_KEY_ABI053 floor_float(float value);
 unsigned int sampled_key_stride053(SampledFormat053 format);
 SampledRecord053 sampled_key_read053(const SampledKeys053 *input,
     const unsigned char *key, SampledFormat053 format);

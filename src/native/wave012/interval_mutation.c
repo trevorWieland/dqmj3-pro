@@ -11,7 +11,7 @@ int fn_004c2d98(IntervalRing *ring, unsigned int point)
             if (last == point) {
                 link->previous->next = link->next;
                 link->next->previous = link->previous;
-                fn_004c3994(ring->owner, node, RANGE_NODE_BLOCKS);
+                fixed_arena_release(ring->owner, node, RANGE_NODE_BLOCKS);
             } else {
                 ++node->first;
             }
@@ -24,7 +24,7 @@ int fn_004c2d98(IntervalRing *ring, unsigned int point)
         if (first <= point && point <= last) {
             node->last = (unsigned short)(point - 1);
             IntrusiveLink *following = link->next;
-            IntervalNode *right = fn_004c39c8(ring->owner, RANGE_NODE_BLOCKS);
+            IntervalNode *right = fixed_arena_allocate(ring->owner, RANGE_NODE_BLOCKS);
             if (right == (void *)0)
                 return 0;
             right->link.previous = following->previous;

@@ -2,7 +2,7 @@
 
 static IntervalNode *append(IntervalRing *ring, unsigned short first, unsigned short last)
 {
-    IntervalNode *node = fn_004c39c8(ring->owner, 1);
+    IntervalNode *node = fixed_arena_allocate(ring->owner, 1);
     if (node != (void *)0) {
         node->link.previous = ring->head.previous;
         node->link.next = &ring->head;
@@ -20,7 +20,7 @@ static void release(IntervalRing *ring)
         IntrusiveLink *link = ring->head.next;
         while (link != &ring->head) {
             IntrusiveLink *following = link->next;
-            fn_004c3994(ring->owner, link, 1);
+            fixed_arena_release(ring->owner, link, 1);
             link = following;
         }
     }
@@ -35,7 +35,7 @@ int fn_004c3070(IntervalRing *ring)
     if (first->link.next == head && first->first == 0 && first->last == 0) {
         first->link.previous->next = first->link.next;
         first->link.next->previous = first->link.previous;
-        fn_004c3994(ring->owner, first, 1);
+        fixed_arena_release(ring->owner, first, 1);
         return 1;
     }
     IntervalRing replacement;

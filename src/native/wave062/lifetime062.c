@@ -1,10 +1,10 @@
 #include "resource062.h"
 
-void *fn_00301f50(void *, unsigned int);
+void *memory_zero_aligned(void *, unsigned int);
 
 static Byte062 *resource_snapshot_member_initialize062(Byte062 *memory)
 {
-    fn_00301f50(memory, 2696);
+    memory_zero_aligned(memory, 2696);
     return memory;
 }
 
@@ -26,7 +26,7 @@ Resource062 *resource_initialize062(Resource062 *resource,
     resource->sink = sink;
     resource_snapshot_initialize062(resource->prepared + 2264);
     resource->scratch = (void *)0;
-    fn_00301f50(resource->prepared, 7656);
+    memory_zero_aligned(resource->prepared, 7656);
     return resource;
 }
 

@@ -137,7 +137,7 @@ void fn_003db960(int param_1,int param_2)
     iVar1 = param_1 + param_2 * 4;
     *(undefined4 *)(iVar1 + 0xd0) = 0;
     *(undefined4 *)(iVar1 + 0xd8) = 0;
-    fn_00301f50(param_1 + param_2 * 0x60 + 0xc,0x60);
+    memory_zero_aligned(param_1 + param_2 * 0x60 + 0xc,0x60);
     return;
   }
   iVar1 = 0;
@@ -153,8 +153,8 @@ void fn_003db960(int param_1,int param_2)
 void fn_003dcc90(int param_1)
 
 {
-  fn_00301f50(param_1 + 0x10,0x8c);
-  fn_00301f50(param_1 + 0x9c,0x460);
+  memory_zero_aligned(param_1 + 0x10,0x8c);
+  memory_zero_aligned(param_1 + 0x9c,0x460);
   return;
 }
 
@@ -351,7 +351,7 @@ void fn_003f7120(undefined1 *param_1)
   *(undefined4 *)(param_1 + 4) = 0;
   param_1[8] = 0;
   param_1[9] = 0;
-  fn_00301f50(param_1 + 0xc,100);
+  memory_zero_aligned(param_1 + 0xc,100);
   *(undefined4 *)(param_1 + 0x70) = 0;
   *(undefined4 *)(param_1 + 0x74) = 0;
   *(undefined4 *)(param_1 + 0x78) = 0;

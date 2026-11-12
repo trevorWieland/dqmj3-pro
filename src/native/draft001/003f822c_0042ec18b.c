@@ -29,7 +29,7 @@ void fn_0041dde0(int param_1)
 void fn_0041fe38(int param_1,undefined4 param_2)
 
 {
-  fn_0017821c(param_1 + 0x41200,param_2,0xc4);
+  memory_copy(param_1 + 0x41200,param_2,0xc4);
   return;
 }
 
@@ -52,7 +52,7 @@ int fn_0041fe48(int param_1,int param_2)
 void fn_0041fe58(int param_1,undefined4 param_2)
 
 {
-  fn_0017821c(param_1 + 0x412c4,param_2,0x540);
+  memory_copy(param_1 + 0x412c4,param_2,0x540);
   return;
 }
 
@@ -142,7 +142,7 @@ void fn_0042b8d4(int param_1,int *param_2)
 void fn_0042bbec(undefined4 param_1)
 
 {
-  fn_00301f50(param_1,0x3c0);
+  memory_zero_aligned(param_1,0x3c0);
   return;
 }
 
@@ -154,7 +154,7 @@ void fn_0042e8d0(int param_1,int param_2)
   if (param_2 == 0) {
     return;
   }
-  fn_00301a9c(param_1 + 0xbe,param_2,0xc2);
+  memory_copy_unaligned(param_1 + 0xbe,param_2,0xc2);
   return;
 }
 
@@ -180,7 +180,7 @@ void fn_0042e938(int param_1,int param_2)
   if (param_2 == 0) {
     return;
   }
-  fn_00301a9c(param_1 + 0x33a,param_2,0x120);
+  memory_copy_unaligned(param_1 + 0x33a,param_2,0x120);
   return;
 }
 
@@ -192,7 +192,7 @@ void fn_0042e9bc(int param_1,int param_2)
   if (param_2 == 0) {
     return;
   }
-  fn_00301a9c(param_1 + 0x180,param_2,0x120);
+  memory_copy_unaligned(param_1 + 0x180,param_2,0x120);
   return;
 }
 

@@ -88,7 +88,7 @@ void fn_00688880(undefined4 *param_1)
     return;
   }
   (**(code **)*param_1)(param_1);
-  fn_0019fb94(param_1);
+  material_release(param_1);
   return;
 }
 

@@ -23,7 +23,7 @@ int fn_004d9c98(int param_1)
   *(undefined4 *)(param_1 + 0x44) = 6;
   *(undefined1 *)(param_1 + 0x4c) = 0;
   *(undefined4 *)(param_1 + 0x50) = 0;
-  fn_00301f50(param_1,0x44);
+  memory_zero_aligned(param_1,0x44);
   return param_1;
 }
 

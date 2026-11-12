@@ -45,13 +45,13 @@ MaterialWord fn_0019fdf4(Material *material, MaterialWord texture_count, Materia
         ((capacity >> 15) & 1) >= shadow)
         return 1;
     if (material->storage) {
-        fn_0019fb94(material->storage);
+        material_release(material->storage);
         material->storage = 0;
         material->capacity = material->used = 0;
     }
     MaterialWord bytes = material_storage_bytes(texture_count, transform_count, generator_count, stage_count,
         alpha, blends, projection_count, shadow, detailed);
-    material->storage = fn_00194ee4(bytes, 4);
+    material->storage = material_allocate(bytes, 4);
     if (!material->storage)
         return 0;
     material->capacity = (MaterialHalf)((texture_count & 3) | (transform_count & 3) << 2 |

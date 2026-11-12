@@ -32,7 +32,7 @@ undefined1 * fn_00740a4c(void)
   
   puVar1 = (undefined1 *)fn_00741220(0x78);
   if (puVar1 != (undefined1 *)0x0) {
-    fn_00301f50(puVar1,0x78);
+    memory_zero_aligned(puVar1,0x78);
     *puVar1 = 0;
     *(undefined4 *)(puVar1 + 8) = 0;
     *(undefined4 *)(puVar1 + 4) = 0xfffffc7b;

@@ -22,7 +22,7 @@ void fn_0042ec28(int param_1,int param_2)
   if (param_2 == 0) {
     return;
   }
-  fn_00301a9c(param_1 + 0x2a0,param_2,0x34);
+  memory_copy_unaligned(param_1 + 0x2a0,param_2,0x34);
   return;
 }
 
@@ -158,7 +158,7 @@ void fn_00442598(int param_1)
 void fn_0044409c(undefined4 param_1)
 
 {
-  fn_00158f6c(param_1,0x80);
+  memory_zero_unaligned(param_1,0x80);
   return;
 }
 

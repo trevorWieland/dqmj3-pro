@@ -80,13 +80,13 @@ void fn_00553754(int param_1)
   
   if (*(int *)(param_1 + 0xf8) != 0) {
     if (*(int *)(*(int *)(param_1 + 0xf8) + 0xc) != 0) {
-      fn_0019fb94();
+      material_release();
     }
-    fn_0019fb94(*(undefined4 *)(param_1 + 0xf8));
+    material_release(*(undefined4 *)(param_1 + 0xf8));
     *(undefined4 *)(param_1 + 0xf8) = 0;
   }
   if (*(int *)(param_1 + 0xa4) != 0) {
-    fn_0019fb94();
+    material_release();
     *(undefined4 *)(param_1 + 0xa4) = 0;
     *(undefined2 *)(param_1 + 0xcc) = 0;
     *(undefined2 *)(param_1 + 0xce) = 0;
@@ -97,7 +97,7 @@ void fn_00553754(int param_1)
     iVar2 = *(int *)(iVar1 + 8);
   }
   if (iVar1 != 0 && iVar2 != 0) {
-    fn_0019fb94();
+    material_release();
     *(undefined4 *)(*(int *)(param_1 + 0xfc) + 8) = 0;
   }
   return;
@@ -109,7 +109,7 @@ void fn_00555718(undefined1 *param_1)
 
 {
   if (*(int *)(param_1 + 4) != 0) {
-    fn_0019fb94();
+    material_release();
     *(undefined4 *)(param_1 + 4) = 0;
     *param_1 = 0;
     param_1[1] = 0;

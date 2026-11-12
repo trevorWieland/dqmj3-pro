@@ -1,5 +1,6 @@
 #include "views_02.h"
 
+
 FlagRecord_004bab84 * fn_004bab84(FlagRecord_004bab84 *self, u32 value)
 {
     FlagRecord_004bab84 *record = self;
@@ -73,7 +74,15 @@ FlagRecord_0063b0d8 * fn_0063b0d8(FlagOwner_0063b0d8 *self, u32 value, u32 enabl
     return record;
 }
 
-FlagRecord_0063b148 * fn_0063b148(FlagRecord_0063b148 *self, u32 value)
+/* flag_record_clear -- 0x0063b148, 28 bytes, ARM, 32 call sites, draft.
+ *
+ * Clears bit (value - base_bit) in the record's 16-bit flag word at +4, where
+ * base_bit is the byte at +6. The paired setters in this unit set their bit the
+ * same way.
+ *
+ * Evidence: the reconstructed body against FlagRecord_0063b148; 32 call sites.
+ */
+FlagRecord_0063b148 * flag_record_clear(FlagRecord_0063b148 *self, u32 value)
 {
     FlagRecord_0063b148 *record = self;
     u32 index = value - record->base_bit;

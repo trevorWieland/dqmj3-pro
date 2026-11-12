@@ -1,7 +1,8 @@
 #include "archive.h"
 
+
 static const ArchiveServices *active_archive_services;
-const ArchiveOperations archive_operations = {fn_005f5d3c, fn_005f5d14};
+const ArchiveOperations archive_operations = {archive_view_destroy, fn_005f5d14};
 
 int archive_bind_services(const ArchiveServices *services)
 {
@@ -43,7 +44,16 @@ ArchiveView *fn_00118624(ArchiveView *view, const unsigned char *bytes)
     return view;
 }
 
-ArchiveView *fn_005f5d3c(ArchiveView *view)
+/* archive_view_destroy -- 0x005f5d3c, 32 bytes, ARM, 19 call sites, draft.
+ *
+ * Releases the archive image and resets the view's operation table. It is the
+ * destroy entry installed in archive_operations, and the paired create path
+ * fn_005f5cd8 above allocates the image it releases.
+ *
+ * Evidence: archive_operations in this unit names it, and all 19 call sites are
+ * teardown paths.
+ */
+ArchiveView *archive_view_destroy(ArchiveView *view)
 {
     view->operations = &archive_operations;
     active_archive_services->release(active_archive_services->context, view->image);
@@ -52,6 +62,6 @@ ArchiveView *fn_005f5d3c(ArchiveView *view)
 
 void fn_005f5d14(ArchiveView *view)
 {
-    fn_005f5d3c(view);
+    archive_view_destroy(view);
     active_archive_services->release(active_archive_services->context, view);
 }
