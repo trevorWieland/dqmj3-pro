@@ -165,6 +165,7 @@ def link(root, mapping, output):
     constants = absolute_symbols.load(root)
     constant_names = set(constants)
     compiled, extents, sources, definitions, rejected = {}, {}, [], {}, {}
+    internal_references = {}
     data_placements = {}
     for unit in mapping['units']:
         if unit['source_path'] == 'src/native':
@@ -173,6 +174,14 @@ def link(root, mapping, output):
         sources.append(base)
         link_input = elf_objects.read(base)
         definitions.update(link_input['functions'])
+        for name, implementation in link_input['functions'].items():
+            # A switch table names its case labels by a local symbol in the
+            # function's own section. The placement link resolves those words
+            # inside the section it places, so they are not a reference the split
+            # has to give an address to; a cross-section reference still is.
+            internal_references[name] = {
+                row['symbol'] for row in link_input['sections'][implementation['section']]['rows']
+                if row['target'] == implementation['section']}
         rejected.update(unit.get('rejected') or {})
         placing = set(unit.get('placed') or [])
         for function in unit['functions']:
@@ -206,7 +215,8 @@ def link(root, mapping, output):
         if implementation is None:
             skipped.append((symbol, 'the compiler output for this function is not in the link input', []))
             continue
-        unresolved = sorted(implementation['references'] - set(functions.by_name) - constant_names)
+        unresolved = sorted(implementation['references'] - set(functions.by_name)
+                            - constant_names - internal_references.get(name, set()))
         if function['compiledBytes'] != symbol.size:
             skipped.append((symbol, 'compiled size differs from the split extent', unresolved))
         elif unresolved:

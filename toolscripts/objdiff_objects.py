@@ -334,7 +334,7 @@ def build(root, output, project_path, split_path, forced_profile=None):
         screens[source] = {'names': names, 'label': label, 'object': base, 'dropped': dropped,
                            'reasons': reasons, 'extents': extents, 'placed': placed,
                            'code': {name: selected[name]['size'] for name in names},
-                           'data': unit_scope.data_records(plan)}
+                           'data': unit_scope.data_records(plan, placed)}
     placed = sorted(name for screen in screens.values() for name in screen['placed'])
     data_placements = [row for source in sorted(screens) for row in screens[source]['data']]
     placed_image, command = place(root, output, [screens[source]['object'] for source in sorted(screens)],

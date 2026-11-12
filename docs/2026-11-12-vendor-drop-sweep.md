@@ -129,12 +129,14 @@ questions:
   exactly this. Defining the helper as an absolute symbol (the
   `config/script-constants.json` mechanism, extended to functions) would close
   it.
-* **Near misses.** `compress_block` (`fn_0072a9b0`, 1,092 bytes) differs in six
-  words from 1.2.5 and has a 24-byte larger extent; `inflate_table`
-  (`fn_0073a470`, 1,548) differs in two words and eight bytes. Both are
-  consistent with a patched vendor fork rather than a source-shape problem, and
-  neither was searched because the permuter operates on a function definition,
-  and these live inside an unmodified upstream file.
+* **Near misses that were a measurement artefact.** `compress_block`
+  (`fn_0072a9b0`, 1,092 bytes) and `inflate_table` (`fn_0073a470`, 1,548) were
+  first read as differing from 1.2.5, by six words and by two words plus eight
+  bytes. They do not differ: the "different" words are relocation words, and the
+  extra bytes are the function's own literal pool. Once the relocation words are
+  wildcarded and the tables they name are placed at the addresses the image
+  proves, both are byte-identical and both are registered (see the second
+  registration pass below). They were never a vendor fork.
 
 ## Registering the drop
 
@@ -174,6 +176,145 @@ supplies the first three, and the pinned `shim/` directory supplies
 three C library headers. The adapters carry `#if defined(__clang__)` pragmas
 that silence Clang 21's K&R-definition and negative-shift diagnostics under
 the census's `-Werror`; they do not affect the armcc object.
+
+## Second registration pass: the rest of the drop
+
+The first pass credited the functions that needed no translation-unit data. The
+second pass registers the rest of what the same unmodified 1.2.5 sources
+reproduce. Fourteen more functions credit, **11,436 instruction bytes**, and
+**21,518 bytes** of the drop's tables are now placed from the compiled unit
+instead of retained from the original.
+
+### The missing split entries, and the extent correction
+
+`crc32` tail-branches to its static big-endian body, which the census had left
+unowned. The image holds two byte-identical copies, each `0x5B8` (1,464) bytes
+back to back in the gap `0x0072ADF4..0x0072B97C`:
+
+| entry | address | decoded entry | raw extent |
+|---|---|---|---|
+| `fn_0072ae0c` | `0x0072ae0c` | `push {r4,r5,r6,r7,r8,sb}` | 1,460 instructions + 4-byte pool |
+| `fn_0072b3c4` | `0x0072b3c4` | same body | 1,460 instructions + 4-byte pool |
+
+Both are functions, not continuations: each starts at a four-byte-aligned ARM
+entry after a zero-filled alignment pad, saves its callee-saved registers,
+ends in `bx lr`, and its last word is the literal pool that names the unit's
+CRC table. The two copies tile the gap exactly -- `0x0072AE0C..0x0072B3C4`,
+then `0x0072B3C4..0x0072B97C`, where the next split entry begins.
+
+Adding them exposed a second bookkeeping error. The census gave `crc32`
+1,240 bytes and crc32_big 1,464, each including its four-byte literal pool;
+the build credits a function only when the compiler's *instruction* size equals
+the split extent, so all four entries were unplaceable as recorded. Every other
+credited function of the drop records instructions in the primary and leaves the
+pool in the gap (adler32 is 932 + 12, inftrees 1,548 + 8). The four extents are
+corrected the same way: the two existing entries shrink by four bytes and the
+two new entries record 1,460.
+
+**The byte invariant.** The two additions are newly owned; the two corrections
+move four pool bytes per function from `primary` to unowned. Nothing else moves:
+
+| | before | after |
+|---|---|---|
+| functions | 26,990 | 26,992 |
+| primary bytes | 5,127,402 | 5,130,314 |
+| extra bytes | 734,180 | 734,180 |
+| owned bytes | 5,861,582 | 5,864,494 |
+| uncovered text bytes | 1,923,878 | 1,920,966 |
+
+`5,127,402 + 2,920 (additions) - 8 (corrections) = 5,130,314`. No split address
+changed, so no placed function moved; the two corrected entries were never
+placed before this pass. `config/promoted-extras.json` records the additions and
+corrections under `laterAdditions` with this arithmetic, and
+`tests/test_promoted_extras.py` recomputes it from the split.
+
+### The adapters
+
+Each unit includes one unmodified upstream `.c` and supplies only names. A unit
+whose compiled section reproduces the extra ranges the split attributes to the
+same function declares `extentProfile: owned` (`inflate` does: its 156-byte
+instruction extent is followed by the 6,408-byte switch table the split records
+as the function's own extra ranges).
+
+| unit | split functions | instruction bytes | tables placed |
+|---|---|---|---|
+| `arm/crc32-copy1.c` | `fn_007305b8`, `fn_0072ae0c` | 2,696 | `.constdata` 8,192 at `0x007f0b58` |
+| `arm/crc32-copy2.c` | `fn_00736734`, `fn_0072b3c4` | 2,696 | `.constdata` 8,192 at `0x0080a878` |
+| `arm/deflate-copy1.c` | `fn_00731cf0`, `fn_0072e014` | 360 | none |
+| `arm/deflate-copy2.c` | `fn_00737c8c` | 224 | none |
+| `arm/inflate.c` | `fn_00738130`, `fn_00739ad4`, `fn_00739c74`, `fn_007457cc` | 676 | `.constdata` 2,214 at `0x007eac74` |
+| `arm/inftrees.c` | `fn_0073a470` | 1,548 | `.constdata.1` 252 at `0x0080c878` |
+| `arm/trees.c` (extended) | `fn_00729cd8`, `fn_0072a9b0`, `fn_00735650`, `fn_00735950`, `fn_00736060`, `fn_007361b0`, `fn_0073abac`, `fn_0073b23c` | 8,200 | `.constdata` 2,532, `.constdata.1` 76, `.data` 60 |
+
+`arm/inflate.c` replaces the first pass's `inflate-copy1.c` and
+`inflate-copy2.c`: `inflate` tail-calls `inflateReset`, and a unit that includes
+the file must map that definition to place the call, so one unit now measures
+both copies' functions together. `src/native/wave054/crc.c`, a bitwise CRC draft
+that measured 0 percent, is excluded from active linking and kept as evidence;
+its `crc.h` declarations stay in use.
+
+`crc32.c` also includes `<limits.h>` to pick its four-byte integer type. armcc
+4.1 supplies that header and its include directory comes first in the measured
+build, so the object is unchanged; the freestanding Clang census has no libc, so
+a reviewed `shim/limits.h` with the ARM32 EABI constants is pinned alongside the
+other shims.
+
+Two build capabilities were corrected while registering, each proved by this
+drop:
+
+* `translation_data` now takes the section address modulo 2^32. `inftrees`'
+  pools hold `lbase - 514` as a two's-complement addend, so the plain difference
+  is negative even though both observations agree on `0x0080c878`.
+* A data section is placed only when a function that survives the screen needs
+  it. The plan is computed before functions are screened, and a section that
+  only a dropped function named would otherwise be linked with its relocations
+  to discarded code resolved to zero.
+* `image_link` no longer treats a switch table's local case labels as
+  references the split must name. The labels are defined in the function's own
+  section and the placement link resolves them there; cross-section references
+  are still refused.
+
+### What the second pass measured
+
+```
+report:    matched_code=135,872  matched_functions=2,904  units=339
+compiled:  2,945 functions from source (138,544 instruction bytes,
+           26,856 data bytes), 2,904 byte-identical
+retained:  24,047 functions, 6,885,880 text bytes, 1,291,758 data and bss bytes
+image:     differs from the original in 41 functions
+```
+
+Against the first pass's 124,436 bytes and 2,890 functions, that is **+11,436
+instruction bytes and +14 functions**, and 21,518 fewer retained data bytes.
+Every placed table was compared with the original after the link: no data
+section differs.
+
+### What still cannot be registered, and why
+
+* **`__aeabi_memclr`.** `memset(p, 0, n)` is lowered to this two-argument AEABI
+  helper after preprocessing; the name is not visible to the preprocessor and
+  the split has no symbol for it. `deflate` (3,968 + 256), `deflateReset` (308)
+  and `fill_window` (824) cannot be placed for this reason, and with them
+  `deflate_fast` (1,520, whose call to `fill_window` then has no target) and
+  `deflateInit2_` (624, which tail-calls `deflateReset`). A source-level
+  rename cannot reach the generated call, and rewriting the call in the vendor
+  text would be adapting the source to the compiler, not measuring it. The
+  clean fix is the recorded one: define the helper as an absolute symbol, the
+  `config/script-constants.json` mechanism extended to functions.
+* **No split entry.** `deflate_slow` (1,856 at `0x0072cd88`) and
+  `deflate_stored` (404 at `0x0072d6b8`) are real and byte-exact, but the split
+  names neither, so there is no address to place them at and no name to map.
+* **A duplicate copy with no second unit.** The second `scan_tree` copy at
+  `0x0073aa9c` (272) does have an entry, but one unit can map the upstream
+  `scan_tree` to one address only; the copy at `0x0073abac` is the one
+  `_tr_flush_block` calls. A second adapter would credit the other 272 bytes and
+  is left for a later pass rather than adding a unit for one small function.
+* **Wrong split boundary.** `deflateBound` (252 at `0x00731bf0`) starts four
+  bytes after `fn_00731bec`; `inflateInit_` (16) and `inflateInit2_` (312) are
+  merged into the single `fn_00739b20` entry, and the first link's
+  `inflateInit_` at `0x00733d68` starts four bytes into `fn_00733d64`. Each is
+  a re-partition of an existing primary and needs its own extent proof; they are
+  reported here rather than silently re-cut.
 
 ## Cost
 

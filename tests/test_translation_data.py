@@ -18,6 +18,7 @@ import elf_objects
 import objdiff_objects
 import split as split_module
 import translation_data
+import unit_scope
 
 
 CLANG = ROOT / 'tools/clang-21/clang.exe'
@@ -147,6 +148,28 @@ class TranslationDataTests(unittest.TestCase):
         self.assertEqual(plan['sections']['.rodata.table']['address'], RODATA + 0x10)
         self.assertEqual(plan['needed']['fn_00100000'], ['.data.desc', '.rodata.table'])
 
+    def test_a_negative_addend_proves_the_same_address_modulo_32_bits(self):
+        # armcc's inftrees pools hold ``lbase - 514``: the addend is a
+        # two's-complement offset, and the section address is the low 32 bits of
+        # the difference, not a negative number.
+        addend = 0xfffffdfe
+        read = {
+            'sections': {
+                '.text.fn_00100000': {
+                    'kind': 'code', 'size': 8, 'align': 4,
+                    'data': addend.to_bytes(4, 'little') + bytes(4),
+                    'rows': [row(0, '.rodata.table')]},
+                '.rodata.table': {'kind': 'data', 'size': 16, 'align': 4,
+                                  'data': bytes(16), 'rows': []},
+            },
+            'functions': {'fn_00100000': {'offset': 0}},
+        }
+        image = bytearray(image_size())
+        put(image, TEXT, (RODATA + addend) & 0xffffffff)
+        plan = translation_data.plan(read, ['fn_00100000'], self.split, layout(),
+                                     bytes(image), 'unit')
+        self.assertEqual(plan['sections']['.rodata.table']['address'], RODATA)
+
     def test_two_references_that_disagree_are_an_error(self):
         read = {
             'sections': {
@@ -162,6 +185,18 @@ class TranslationDataTests(unittest.TestCase):
         put(image, TEXT + 4, RODATA + 0x10)
         with self.assertRaisesRegex(ValueError, 'disagree'):
             translation_data.plan(read, ['fn_00100000'], self.split, layout(), bytes(image), 'unit')
+
+
+class DataRecordTests(unittest.TestCase):
+    def test_a_section_needed_only_by_a_dropped_function_is_not_placed(self):
+        plan = {'sections': {'.constdata': {'name': 'x'},
+                             '.constdata.1': {'name': 'y'}},
+                'keep': ['.constdata', '.constdata.1'],
+                'needed': {'fn_1': ['.constdata'], 'fn_2': ['.constdata.1']}}
+        self.assertEqual([record['name'] for record in unit_scope.data_records(plan)],
+                         ['x', 'y'])
+        self.assertEqual([record['name'] for record in unit_scope.data_records(plan, ['fn_1'])],
+                         ['x'])
 
 
 if __name__ == '__main__':

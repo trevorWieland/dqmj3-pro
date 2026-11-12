@@ -2518,5 +2518,44 @@
    "mode": "arm",
    "size": 20
   }
+ ],
+ "laterAdditions": {
+ "reason": "crc32_big: two unowned byte-exact zlib 1.2.5 functions the image proves at the tail branch targets of the two crc32 copies; the four crc32 extents are corrected to their instruction sizes, with the four-byte literal pool of each left unowned the way every other credited pool is recorded",
+ "count": 2,
+ "bytes": 2920,
+ "shrunk": [
+  {
+   "name": "fn_007305b8",
+   "from": 1240,
+   "to": 1236
+  },
+  {
+   "name": "fn_00736734",
+   "from": 1240,
+   "to": 1236
+  }
+ ],
+ "shrunkBytes": 8,
+ "netBytes": 2912,
+ "after": {
+  "functions": 26992,
+  "primaryBytes": 5130314,
+  "extraBytes": 734180,
+  "ownedBytes": 5864494
+ },
+ "additions": [
+  {
+   "address": 7515660,
+   "mode": "arm",
+   "size": 1460,
+   "name": "fn_0072ae0c"
+  },
+  {
+   "address": 7517124,
+   "mode": "arm",
+   "size": 1460,
+   "name": "fn_0072b3c4"
+  }
  ]
+}
 }

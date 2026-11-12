@@ -8568,13 +8568,6 @@
       "role": "bounded-component"
     },
     {
-      "source": "src/native/wave054/crc.c",
-      "headers": [
-        "src/native/wave054/crc.h"
-      ],
-      "role": "bounded-component"
-    },
-    {
       "source": "src/native/wave053/entries.c",
       "headers": [
         "src/native/wave053/sampled_key.h"
@@ -13917,58 +13910,6 @@
       ]
     },
     {
-      "source": "src/native/third_party/zlib-1.2.5/arm/inflate-copy1.c",
-      "headers": [
-        "src/native/third_party/zlib-1.2.5/inffast.h",
-        "src/native/third_party/zlib-1.2.5/inffixed.h",
-        "src/native/third_party/zlib-1.2.5/inflate.c",
-        "src/native/third_party/zlib-1.2.5/inflate.h",
-        "src/native/third_party/zlib-1.2.5/inftrees.h",
-        "src/native/third_party/zlib-1.2.5/shim/stddef.h",
-        "src/native/third_party/zlib-1.2.5/shim/stdlib.h",
-        "src/native/third_party/zlib-1.2.5/shim/string.h",
-        "src/native/third_party/zlib-1.2.5/shim/sys/types.h",
-        "src/native/third_party/zlib-1.2.5/zconf.h",
-        "src/native/third_party/zlib-1.2.5/zlib.h",
-        "src/native/third_party/zlib-1.2.5/zutil.h"
-      ],
-      "role": "third-party-byte-exact",
-      "publicHeaderProfile": "zlib-1.2.5",
-      "dataProfile": "original-address",
-      "includeDirectories": [
-        "src/native/third_party/zlib-1.2.5/shim"
-      ],
-      "targets": [
-        "arm32-mpcore"
-      ]
-    },
-    {
-      "source": "src/native/third_party/zlib-1.2.5/arm/inflate-copy2.c",
-      "headers": [
-        "src/native/third_party/zlib-1.2.5/inffast.h",
-        "src/native/third_party/zlib-1.2.5/inffixed.h",
-        "src/native/third_party/zlib-1.2.5/inflate.c",
-        "src/native/third_party/zlib-1.2.5/inflate.h",
-        "src/native/third_party/zlib-1.2.5/inftrees.h",
-        "src/native/third_party/zlib-1.2.5/shim/stddef.h",
-        "src/native/third_party/zlib-1.2.5/shim/stdlib.h",
-        "src/native/third_party/zlib-1.2.5/shim/string.h",
-        "src/native/third_party/zlib-1.2.5/shim/sys/types.h",
-        "src/native/third_party/zlib-1.2.5/zconf.h",
-        "src/native/third_party/zlib-1.2.5/zlib.h",
-        "src/native/third_party/zlib-1.2.5/zutil.h"
-      ],
-      "role": "third-party-byte-exact",
-      "publicHeaderProfile": "zlib-1.2.5",
-      "dataProfile": "original-address",
-      "includeDirectories": [
-        "src/native/third_party/zlib-1.2.5/shim"
-      ],
-      "targets": [
-        "arm32-mpcore"
-      ]
-    },
-    {
       "source": "src/native/third_party/zlib-1.2.5/arm/trees.c",
       "headers": [
         "src/native/third_party/zlib-1.2.5/deflate.h",
@@ -14011,6 +13952,150 @@
       "headers": [
       ],
       "role": "byte-exact-clone-instantiation"
+    },
+    {
+      "source": "src/native/third_party/zlib-1.2.5/arm/crc32-copy1.c",
+      "headers": [
+        "src/native/third_party/zlib-1.2.5/crc32.c",
+        "src/native/third_party/zlib-1.2.5/crc32.h",
+        "src/native/third_party/zlib-1.2.5/shim/limits.h",
+        "src/native/third_party/zlib-1.2.5/shim/stddef.h",
+        "src/native/third_party/zlib-1.2.5/shim/stdlib.h",
+        "src/native/third_party/zlib-1.2.5/shim/string.h",
+        "src/native/third_party/zlib-1.2.5/shim/sys/types.h",
+        "src/native/third_party/zlib-1.2.5/zconf.h",
+        "src/native/third_party/zlib-1.2.5/zlib.h",
+        "src/native/third_party/zlib-1.2.5/zutil.h"
+      ],
+      "role": "third-party-byte-exact",
+      "publicHeaderProfile": "zlib-1.2.5",
+      "dataProfile": "original-address",
+      "includeDirectories": [
+        "src/native/third_party/zlib-1.2.5/shim"
+      ],
+      "targets": [
+        "arm32-mpcore"
+      ]
+    },
+    {
+      "source": "src/native/third_party/zlib-1.2.5/arm/crc32-copy2.c",
+      "headers": [
+        "src/native/third_party/zlib-1.2.5/crc32.c",
+        "src/native/third_party/zlib-1.2.5/crc32.h",
+        "src/native/third_party/zlib-1.2.5/shim/limits.h",
+        "src/native/third_party/zlib-1.2.5/shim/stddef.h",
+        "src/native/third_party/zlib-1.2.5/shim/stdlib.h",
+        "src/native/third_party/zlib-1.2.5/shim/string.h",
+        "src/native/third_party/zlib-1.2.5/shim/sys/types.h",
+        "src/native/third_party/zlib-1.2.5/zconf.h",
+        "src/native/third_party/zlib-1.2.5/zlib.h",
+        "src/native/third_party/zlib-1.2.5/zutil.h"
+      ],
+      "role": "third-party-byte-exact",
+      "publicHeaderProfile": "zlib-1.2.5",
+      "dataProfile": "original-address",
+      "includeDirectories": [
+        "src/native/third_party/zlib-1.2.5/shim"
+      ],
+      "targets": [
+        "arm32-mpcore"
+      ]
+    },
+    {
+      "source": "src/native/third_party/zlib-1.2.5/arm/deflate-copy1.c",
+      "headers": [
+        "src/native/third_party/zlib-1.2.5/deflate.c",
+        "src/native/third_party/zlib-1.2.5/deflate.h",
+        "src/native/third_party/zlib-1.2.5/shim/stddef.h",
+        "src/native/third_party/zlib-1.2.5/shim/stdlib.h",
+        "src/native/third_party/zlib-1.2.5/shim/string.h",
+        "src/native/third_party/zlib-1.2.5/shim/sys/types.h",
+        "src/native/third_party/zlib-1.2.5/zconf.h",
+        "src/native/third_party/zlib-1.2.5/zlib.h",
+        "src/native/third_party/zlib-1.2.5/zutil.h"
+      ],
+      "role": "third-party-byte-exact",
+      "publicHeaderProfile": "zlib-1.2.5",
+      "dataProfile": "original-address",
+      "includeDirectories": [
+        "src/native/third_party/zlib-1.2.5/shim"
+      ],
+      "targets": [
+        "arm32-mpcore"
+      ]
+    },
+    {
+      "source": "src/native/third_party/zlib-1.2.5/arm/deflate-copy2.c",
+      "headers": [
+        "src/native/third_party/zlib-1.2.5/deflate.c",
+        "src/native/third_party/zlib-1.2.5/deflate.h",
+        "src/native/third_party/zlib-1.2.5/shim/stddef.h",
+        "src/native/third_party/zlib-1.2.5/shim/stdlib.h",
+        "src/native/third_party/zlib-1.2.5/shim/string.h",
+        "src/native/third_party/zlib-1.2.5/shim/sys/types.h",
+        "src/native/third_party/zlib-1.2.5/zconf.h",
+        "src/native/third_party/zlib-1.2.5/zlib.h",
+        "src/native/third_party/zlib-1.2.5/zutil.h"
+      ],
+      "role": "third-party-byte-exact",
+      "publicHeaderProfile": "zlib-1.2.5",
+      "dataProfile": "original-address",
+      "includeDirectories": [
+        "src/native/third_party/zlib-1.2.5/shim"
+      ],
+      "targets": [
+        "arm32-mpcore"
+      ]
+    },
+    {
+      "source": "src/native/third_party/zlib-1.2.5/arm/inflate.c",
+      "headers": [
+        "src/native/third_party/zlib-1.2.5/inffast.h",
+        "src/native/third_party/zlib-1.2.5/inffixed.h",
+        "src/native/third_party/zlib-1.2.5/inflate.c",
+        "src/native/third_party/zlib-1.2.5/inflate.h",
+        "src/native/third_party/zlib-1.2.5/inftrees.h",
+        "src/native/third_party/zlib-1.2.5/shim/stddef.h",
+        "src/native/third_party/zlib-1.2.5/shim/stdlib.h",
+        "src/native/third_party/zlib-1.2.5/shim/string.h",
+        "src/native/third_party/zlib-1.2.5/shim/sys/types.h",
+        "src/native/third_party/zlib-1.2.5/zconf.h",
+        "src/native/third_party/zlib-1.2.5/zlib.h",
+        "src/native/third_party/zlib-1.2.5/zutil.h"
+      ],
+      "role": "third-party-byte-exact",
+      "publicHeaderProfile": "zlib-1.2.5",
+      "dataProfile": "original-address",
+      "extentProfile": "owned",
+      "includeDirectories": [
+        "src/native/third_party/zlib-1.2.5/shim"
+      ],
+      "targets": [
+        "arm32-mpcore"
+      ]
+    },
+    {
+      "source": "src/native/third_party/zlib-1.2.5/arm/inftrees.c",
+      "headers": [
+        "src/native/third_party/zlib-1.2.5/inftrees.c",
+        "src/native/third_party/zlib-1.2.5/inftrees.h",
+        "src/native/third_party/zlib-1.2.5/shim/stddef.h",
+        "src/native/third_party/zlib-1.2.5/shim/stdlib.h",
+        "src/native/third_party/zlib-1.2.5/shim/string.h",
+        "src/native/third_party/zlib-1.2.5/shim/sys/types.h",
+        "src/native/third_party/zlib-1.2.5/zconf.h",
+        "src/native/third_party/zlib-1.2.5/zlib.h",
+        "src/native/third_party/zlib-1.2.5/zutil.h"
+      ],
+      "role": "third-party-byte-exact",
+      "publicHeaderProfile": "zlib-1.2.5",
+      "dataProfile": "original-address",
+      "includeDirectories": [
+        "src/native/third_party/zlib-1.2.5/shim"
+      ],
+      "targets": [
+        "arm32-mpcore"
+      ]
     }
   ],
   "excludedSources": [
@@ -14018,6 +14103,13 @@
       "source": "src/native/wave003/setters.c",
       "reason": "Historical void-return setter packet retained as evidence; superseded by abi-qualified/setters.c and excluded from active linking.",
       "replacement": "src/native/wave003/abi-qualified/setters.c",
+      "activeLinking": false
+    }
+,
+    {
+      "source": "src/native/wave054/crc.c",
+      "reason": "Draft bitwise CRC superseded by the byte-exact zlib 1.2.5 vendor adapters; retained as evidence and excluded from active linking.",
+      "replacement": "src/native/third_party/zlib-1.2.5/arm/crc32-copy2.c",
       "activeLinking": false
     }
   ],
