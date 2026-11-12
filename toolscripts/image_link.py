@@ -29,6 +29,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import elf_objects
 import absolute_symbols
 import split as split_module
+import translation_data
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -46,7 +47,7 @@ def digest(path):
         return hashlib.file_digest(stream, 'sha256').hexdigest()
 
 
-def script_for(symbols, placed, constants=()):
+def script_for(symbols, placed, constants=(), data=()):
     """Place every placeable function at its original address.
 
     Functions that stay original still need an address for every relocation that
@@ -55,6 +56,11 @@ def script_for(symbols, placed, constants=()):
     string, for instance -- that source refers to by name and the original refers
     to by address; they are defined at that address so the reference resolves to
     the value the original's literal pool holds.
+
+    ``data`` places a unit's translation-unit sections at the addresses proven
+    from the original image. Each is an output section named after the one
+    section, so the placement link can prove afterwards that the section landed
+    where it was planned; a data section nobody planned is discarded.
     """
     lines = ['SECTIONS {']
     for symbol in symbols:
@@ -65,8 +71,12 @@ def script_for(symbols, placed, constants=()):
             lines.append('  %s = 0x%08x;' % (symbol.name, symbol.address + (1 if symbol.mode == 'thumb' else 0)))
     for name, address in constants:
         lines.append('  %s = 0x%08x;' % (name, address))
+    for row in data:
+        load = ' (NOLOAD)' if row['kind'] == 'bss' else ''
+        lines.append('  %s%s 0x%08x : { KEEP(*(%s)) }'
+                     % (row['name'], load, row['address'], row['name']))
     lines.append('  /DISCARD/ : { *(.text*) *(.ARM.exidx*) *(.ARM.extab*) *(.data*) *(.rodata*) '
-                 '*(.bss*) *(.comment) *(.note*) *(.llvm_addrsig) }')
+                 '*(.bss*) *(.unitdata*) *(.comment) *(.note*) *(.llvm_addrsig) }')
     lines.append('}')
     return '\n'.join(lines) + '\n'
 
@@ -81,22 +91,41 @@ def linked_sections(path):
                 if section['sh_flags'] & ALLOCATED and section['sh_size'] and section['sh_type'] != 'SHT_NOBITS'}
 
 
-def compare(placed, extents, sections, original, text):
-    """Overlay the linked functions on the original image and count the differences."""
+def compare(placed, extents, sections, original, text, layout, data=()):
+    """Overlay the linked functions and data on the original image.
+
+    A placed function is instructions plus the data the compiler put after it,
+    and it is compared with the original bytes at its address. A placed
+    translation-unit section is compared at the address the build proved for
+    it; its bytes are the linked bytes, so a relocation inside it (a descriptor
+    pointing at a table) is compared after the link resolved it, not before.
+    """
     assembled = bytearray(original)
     differences, matched = [], 0
     for symbol in placed:
         offset = symbol.address - text['address'] + text['codeBinOffset']
         extent = extents[symbol.name]
-        data = sections.get(symbol.name)
-        if data is None or len(data) != extent:
+        content = sections.get(symbol.name)
+        if content is None or len(content) != extent:
             raise ValueError('Linked function is missing or the wrong size: ' + symbol.name)
-        assembled[offset:offset + extent] = data
-        if data == original[offset:offset + extent]:
+        assembled[offset:offset + extent] = content
+        if content == original[offset:offset + extent]:
             matched += 1
         else:
             differences.append({'name': symbol.name, 'address': symbol.address, 'size': extent})
-    return bytes(assembled), matched, differences
+    differing_data = []
+    for row in data:
+        found = sections.get(row['name'])
+        if found is None or len(found) != row['size']:
+            raise ValueError('Linked data section is missing or the wrong size: ' + row['name'])
+        if row['kind'] == 'bss':
+            continue
+        offset = translation_data.image_offset(layout, row['address'], row['size'])
+        assembled[offset:offset + row['size']] = found
+        if found != original[offset:offset + row['size']]:
+            differing_data.append({'name': row['name'], 'address': row['address'],
+                                   'size': row['size']})
+    return bytes(assembled), matched, differences, differing_data
 
 
 def priority(symbol):
@@ -136,6 +165,7 @@ def link(root, mapping, output):
     constants = absolute_symbols.load(root)
     constant_names = set(constants)
     compiled, extents, sources, definitions, rejected = {}, {}, [], {}, {}
+    data_placements = {}
     for unit in mapping['units']:
         if unit['source_path'] == 'src/native':
             continue
@@ -148,6 +178,24 @@ def link(root, mapping, output):
         for function in unit['functions']:
             if function['name'] in placing:
                 compiled[function['name']] = function
+        # Translation-unit data is placed only where the unit recorded a proven
+        # address. The link object must carry no data section without one: an
+        # unrecorded section would land wherever the linker chose, which is the
+        # one thing this build must never do.
+        recorded = set()
+        for record in unit.get('dataSections') or []:
+            section = link_input['sections'].get(record['name'])
+            if section is None or section['size'] != record['size'] or section['kind'] != record['kind']:
+                raise ValueError('A recorded data section is missing from its link object: '
+                                 + record['name'])
+            if record['name'] in data_placements:
+                raise ValueError('Two units record the same data section: ' + record['name'])
+            translation_data.check_record(record, mapping['layout'])
+            data_placements[record['name']] = record
+            recorded.add(record['name'])
+        for name, section in link_input['sections'].items():
+            if section['kind'] != 'code' and name not in recorded:
+                raise ValueError('The link object carries unplaced translation-unit data: ' + name)
     for name in compiled:
         if name not in functions.by_name:
             raise ValueError('A compiled function is missing from the split: ' + name)
@@ -166,9 +214,10 @@ def link(root, mapping, output):
         else:
             placed.append(symbol)
             extents[name] = implementation['extent']
+    data = [data_placements[name] for name in sorted(data_placements)]
     script = output / 'image.ld'
     script.write_text(script_for(functions.symbols, {symbol.name for symbol in placed},
-                                 absolute_symbols.definitions(constants)), encoding='utf-8')
+                                 absolute_symbols.definitions(constants), data), encoding='utf-8')
     image = output / 'image.elf'
     argv = [str(root / LLD), '-static', '-m', 'armelf', '--build-id=none', '-e', '0',
             '-T', str(script)]
@@ -187,7 +236,8 @@ def link(root, mapping, output):
     (output / 'link.log').write_bytes(result.stdout + result.stderr)
     if result.returncode:
         raise ValueError('The complete image did not link; see %s' % (output / 'link.log'))
-    assembled, matched, differences = compare(placed, extents, linked_sections(image), original, mapping['text'])
+    assembled, matched, differences, differing_data = compare(
+        placed, extents, linked_sections(image), original, mapping['text'], mapping['layout'], data)
     retained = [symbol for symbol in functions.symbols if symbol.name not in {row.name for row in placed}]
     queue = output / 'retained.txt'
     write_queue(queue, retained, placed, differences)
@@ -195,7 +245,12 @@ def link(root, mapping, output):
     source_bytes = sum(extents[symbol.name] for symbol in placed)
     text_bytes = mapping['text']['initializedBytes']
     retained_text = text_bytes - source_bytes
-    retained_data = sum(row['initializedBytes'] for row in mapping['layout']['segments'] if row['name'] != 'text')
+    # Data a unit places from source reduces the original data that is still
+    # retained; a section whose linked bytes differ from the original is still
+    # placed (the image comparison reports it) and is still source bytes.
+    placed_data = sum(row['size'] for row in data if row['kind'] == 'data')
+    retained_data = sum(row['initializedBytes'] for row in mapping['layout']['segments']
+                        if row['name'] != 'text') - placed_data
     retained_bytes = retained_text + retained_data + mapping['layout']['bssBytes']
     for symbol in functions.symbols:
         if symbol.name not in compiled and symbol.name in rejected:
@@ -225,6 +280,10 @@ def link(root, mapping, output):
                                            for symbol, reason, unresolved in skipped],
             'unmeasuredSourceFunctions': mapping['unmeasuredSourceFunctions'],
             'differingFunctions': differences,
+            'differingDataSections': differing_data,
+            'placedDataSections': [{'name': row['name'], 'address': row['address'],
+                                    'size': row['size'], 'kind': row['kind']} for row in data],
+            'sourcePlacedDataBytes': placed_data,
             'imageIdentical': assembled == original,
             'complete': assembled == original and retained_bytes == 0,
             'linkedImage': image.relative_to(root).as_posix(),

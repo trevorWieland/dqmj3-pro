@@ -41,7 +41,8 @@ def read(path):
         code = bool(section['sh_flags'] & EXECUTABLE)
         kind = 'code' if code else 'bss' if section['sh_type'] == 'SHT_NOBITS' else 'data'
         sections[section.name] = {'size': section['sh_size'], 'kind': kind, 'index': index,
-                                  'relocations': {}, 'references': set(),
+                                  'align': section['sh_addralign'], 'relocations': {},
+                                  'references': set(), 'rows': [],
                                   'data': None if kind == 'bss' else section.data()}
     apply_relocations(elf, sections)
     table = elf.get_section_by_name('.symtab')
@@ -112,20 +113,43 @@ def placed_sections(path):
 
 
 def apply_relocations(elf, sections):
-    """Record, once per section, the relocation types and referenced symbol names."""
+    """Record, once per section, the relocation types and referenced symbol names.
+
+    Every relocation also keeps its own row: the offset in the section, the
+    type, the symbol name and value, and the allocated section the symbol is
+    defined in. The image is what resolves a relocation, so a reader that only
+    knew the type counts could not tell what a reference points at; the rows
+    are how the placement proves a data section's address from the original
+    word the same reference holds there.
+    """
     table = elf.get_section_by_name('.symtab')
-    by_index = {section['index']: section for section in sections.values()}
+    by_index = {section['index']: (name, section) for name, section in sections.items()}
     for candidate in elf.iter_sections():
         if candidate['sh_type'] not in RELOCATION_TYPES:
             continue
-        target = by_index.get(candidate['sh_info'])
-        if target is None:
+        found = by_index.get(candidate['sh_info'])
+        if found is None:
             continue
+        _, target = found
+        rela = candidate['sh_type'] == 'SHT_RELA'
         for relocation in candidate.iter_relocations():
             kind = relocation['r_info_type']
             target['relocations'][kind] = target['relocations'].get(kind, 0) + 1
-            if table is None:
-                continue
-            symbol = table.get_symbol(relocation['r_info_sym'])
-            if symbol.name and symbol['st_info']['type'] != 'STT_SECTION':
-                target['references'].add(symbol.name)
+            row = {'offset': relocation['r_offset'], 'type': kind, 'symbol': '',
+                   'target': None, 'value': 0, 'abs': False, 'rela': rela,
+                   'addend': relocation['r_addend'] if rela else None}
+            symbol = table.get_symbol(relocation['r_info_sym']) if table is not None else None
+            if symbol is not None:
+                row['symbol'] = symbol.name
+                row['value'] = symbol['st_value']
+                if isinstance(symbol['st_shndx'], int):
+                    home = by_index.get(symbol['st_shndx'])
+                    if home is not None:
+                        row['target'] = home[0]
+                elif symbol['st_shndx'] == 'SHN_ABS':
+                    row['abs'] = True
+                if symbol.name and symbol['st_info']['type'] != 'STT_SECTION':
+                    target['references'].add(symbol.name)
+            target['rows'].append(row)
+    for section in sections.values():
+        section['rows'].sort(key=lambda row: (row['offset'], row['type']))

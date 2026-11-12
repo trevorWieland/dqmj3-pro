@@ -64,13 +64,23 @@ def read_config(root):
     excluded = [unit["source"] for unit in data["excludedSources"]]
     if len(active) != len(set(active)) or len(excluded) != len(set(excluded)) or set(active) & set(excluded):
         raise RuntimeError("Duplicated or conflicting active/historical source entry")
-    if actual != set(active) | set(excluded):
-        raise RuntimeError("Source census differs from explicit build units: " + str(sorted(actual ^ (set(active) | set(excluded)))))
+    # A third-party tree is an unmodified upstream import, not an authored wave:
+    # the census does not require every file in it to be a build unit, and the
+    # tree may hold source that is compiled by an adapter rather than alone.
+    # A unit declared there is still validated below like every other unit, and
+    # the census still accounts for every file outside such a tree.
+    censused = {source for source in active if "third_party" not in source.split("/")}
+    if actual != censused | set(excluded):
+        raise RuntimeError("Source census differs from explicit build units: " + str(sorted(actual ^ (censused | set(excluded)))))
     for unit in data["units"]:
         path = public_compiler.contained(root, unit["source"])
         include_directories = public_source_headers.directories(root, unit, allowed)
         if unit.get("layoutProfile", "natural") not in ("natural", "packed-4"):
             raise RuntimeError("Unknown reviewed layout profile")
+        if unit.get("dataProfile") not in (None, "original-address"):
+            raise RuntimeError("Unknown unit data profile")
+        if unit.get("extentProfile") not in (None, "owned"):
+            raise RuntimeError("Unknown unit extent profile")
         supported = unit.get("targets", list(TARGETS))
         if (not isinstance(supported, list) or not supported or len(set(supported)) != len(supported)
                 or not set(supported).issubset(TARGETS)):
@@ -78,7 +88,7 @@ def read_config(root):
         if not any(path.is_relative_to(folder) for folder in allowed):
             raise RuntimeError("Source unit escapes reviewed source trees")
         profile = unit.get("publicHeaderProfile")
-        if profile not in (None, "zlib-solo"):
+        if profile not in (None, "zlib-solo", "zlib-1.2.5"):
             raise RuntimeError("Unknown public header profile")
         dependencies = set()
         pending = [path]

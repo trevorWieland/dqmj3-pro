@@ -4,17 +4,17 @@
 (2,089,620 bytes) were scanned for structural families and for known vendor
 drops. Ten functions, **8,208 instruction bytes** (8,836 original bytes
 including pools and data tails), are byte-identical to **unmodified zlib
-1.2.5** compiled with the measured `armcc-4.1-b1454 -O3 -Otime` profile. Two of them, the same 932-byte Adler-32 function linked twice, are registered
-in the configured build through `src/native/wave084-zlib/adler32.c` and earn
-the `third-party-byte-exact` label. The other eight -- `inflate_fast`,
-`inflateEnd` and `inflateReset` (both copies) and four `trees.c` functions up
-to 2,124 bytes -- are measured byte-exact by the six adapters under
-`src/native/third_party/zlib-1.2.5/arm/`. They are not build units yet: the
-public-compile census scans unit text for system headers and rejects an
-unmodified upstream `.c` included by an adapter, because zlib 1.2.5 has no
-reviewed public header profile. The measured bytes are reported here, and the
-adapter packet is retained for the registration change rather than claimed as
-configured-build credit.
+1.2.5** compiled with the measured `armcc-4.1-b1454 -O3 -Otime` profile. All
+ten are registered in the configured build. The two 932-byte Adler-32 copies
+are `src/native/wave084-zlib/adler32.c` and earn the
+`third-party-byte-exact` label. One of the other eight, `inflateEnd` at
+`0x00733bb0`, was already reproduced byte-exact by
+`src/native/wave058/initialize058.c`; the remaining seven are configured build
+units through the four adapters under
+`src/native/third_party/zlib-1.2.5/arm/`, also labelled
+`third-party-byte-exact`. Registering them needed two build capabilities that
+did not exist: a reviewed public header profile for the 1.2.5 tree, and a
+placement path that can carry translation-unit data. Both are described below.
 
 That changes the plan for the remaining class: the pool contains statically
 linked public libraries, and a pinned vendor drop is the cheapest credit in the
@@ -100,20 +100,29 @@ The rename is what makes a vendor drop measurable without editing it. The
 adapter is ordinary C, the function body is upstream's, and a wrong mapping can
 only lose a match.
 
-## What matched, and what the build cannot place yet
+## What matched, and what the build still cannot place
 
-Ten functions match. The boundaries are build capabilities, not source
+Ten functions match. The boundaries were build capabilities, not source
 questions:
 
 * **Translation-unit data sections.** armcc places `configuration_table`,
-  the CRC tables and the fixed-code tables in `.constdata` sections, and
-  `toolscripts/image_link.py` discards `*(.data*) *(.rodata*)` because it only
-  places function sections. `deflate`, `crc32`, `inflate` and `inftrees`
-  compile to code the locator finds byte-for-byte, but a function that loads a
-  discarded table cannot be linked at its original address. Placing a unit's
-  non-text sections at the addresses the original pool words name would convert
-  another ~15 KB immediately; that is the next tooling change, not a
-  reconstruction project.
+  the CRC tables and the fixed-code tables in `.constdata`/`.data`, and
+  `toolscripts/image_link.py` used to discard every non-function section.
+  `toolscripts/translation_data.py` now proves a unit's data section address
+  from the original image instead of assuming it: an `R_ARM_ABS32` relocation
+  names the table, and the word the original image holds at that relocation
+  minus the object's own addend and symbol value is the address the table had.
+  A descriptor that points at a table is proven one level up by the same rule.
+  Every observation of a section must agree; a section whose address cannot be
+  proven is not placed, and a function that loads it is reported instead of
+  being linked against an invented address. The placement link refuses a plan
+  that did not land where it was proven, and the image link compares the
+  placed table's bytes with the original at that address. The registered
+  `trees.c` functions happen not to need this (armcc folds the two tree
+  lookups and inlines the copy), but the same drop's `deflate`, `crc32`,
+  `inflate` and `inftrees` do: that is the ~15 KB this boundary was holding,
+  and `tests/test_translation_data.py` exercises the mechanism on a real
+  compiled table.
 * **Compiler-generated helpers.** `memset(p, 0, n)` becomes a
   `__aeabi_memclr` call after preprocessing, so a source-level rename cannot
   reach it and the split has no name for it. One `deflateReset` is blocked by
@@ -126,6 +135,45 @@ questions:
   consistent with a patched vendor fork rather than a source-shape problem, and
   neither was searched because the permuter operates on a function definition,
   and these live inside an unmodified upstream file.
+
+## Registering the drop
+
+Seven functions are configured units. Each adapter includes one unmodified
+upstream `.c` and supplies the split names the original linker resolved:
+
+| unit | functions | instruction bytes |
+|---|---|---|
+| `arm/inffast.c` | `fn_00739d08` (`inflate_fast`) | 1,304 |
+| `arm/inflate-copy1.c` | `fn_00739c74` (`inflateReset`) | 148 |
+| `arm/inflate-copy2.c` | `fn_00739ad4` (`inflateEnd`) | 76 |
+| `arm/trees.c` | `fn_00729cd8`, `fn_00735650`, `fn_007361b0`, `fn_0073b23c` | 4,740 |
+
+The eighth, `fn_00733bb0` (`inflateEnd` of the first link), is not a vendor
+unit: `src/native/wave058/initialize058.c` already reproduces it byte-exact,
+and defining the same split function twice is refused. The adapter at
+`arm/inflate-copy1.c` therefore measures only this copy's `inflateReset`. The
+old four-byte `fn_00739d08` placeholder in `src/native/wave056/stream056.c`
+was removed: the split gives that address 1,304 bytes, and the vendor drop is
+what the address actually holds.
+
+The units declare `publicHeaderProfile: zlib-1.2.5` and
+`dataProfile: original-address`; `arm/inffast.c` additionally declares
+`extentProfile: owned`, because the split attributes a 500-byte extra range at
+`0x0073a244` to `fn_00739d08` (a tail-called helper the census folded into its
+caller) and armcc emits the function's data tail as one section that
+reproduces the whole owned range. The declaration lets the placement reach a
+range the function itself owns; the bytes are still compared with the original
+before any credit, and no function may reach into another function's range. The header profile is described in
+`toolscripts/public_zlib_headers.py`: it pins each reviewed upstream file's
+size and SHA-256 and the quoted includes it may have, so the public-compile
+census accepts the upstream text instead of refusing its system headers.
+zlib 1.2.5 predates `Z_SOLO`, so it includes `<stddef.h>`, `<string.h>`,
+`<stdlib.h>` and `<sys/types.h>` even in a freestanding build; armcc 4.1
+supplies the first three, and the pinned `shim/` directory supplies
+`<sys/types.h>` and, for the Clang census compile, minimal declarations of the
+three C library headers. The adapters carry `#if defined(__clang__)` pragmas
+that silence Clang 21's K&R-definition and negative-shift diagnostics under
+the census's `-Werror`; they do not affect the armcc object.
 
 ## Cost
 

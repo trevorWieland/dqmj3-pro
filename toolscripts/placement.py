@@ -27,6 +27,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import elf_objects
 import image_link
+import translation_data
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -124,7 +125,7 @@ def empty_base(root, output, label):
     return base
 
 
-def place(root, output, objects, placed, functions, constants=()):
+def place(root, output, objects, placed, functions, constants=(), data=()):
     """Link the measured functions of every unit at the addresses the split gives.
 
     This is the whole-image placement, and it is the only step that can turn a
@@ -133,12 +134,18 @@ def place(root, output, objects, placed, functions, constants=()):
     every section no unit measured is discarded. ``constants`` defines shared
     data symbols at their original addresses for the same reason.
 
+    ``data`` places a unit's translation-unit sections -- a constant table, a
+    descriptor that points at one -- at the addresses derived from the original
+    image. The link is checked afterwards: a planned section must be present at
+    its address with its size, so a section the script could not place fails
+    instead of being reported as placed.
+
     A reconstruction with several hundred units puts more object paths on the
     command line than Windows accepts, so the object list goes through a
     response file: one path per line, which the linker expands as arguments.
     """
     script = output / 'source.placed.ld'
-    script.write_text(image_link.script_for(functions.symbols, set(placed), constants),
+    script.write_text(image_link.script_for(functions.symbols, set(placed), constants, data),
                       encoding='utf-8')
     image = output / 'source.placed.elf'
     arguments = [root / LLD, '-static', '-m', 'armelf', '--build-id=none', '-e', '0',
@@ -152,21 +159,30 @@ def place(root, output, objects, placed, functions, constants=()):
         arguments.extend(objects)
     arguments += ['-o', image]
     command = run(arguments, output / 'source.placed.log')
+    if data:
+        translation_data.check_placed(elf_objects.placed_sections(image)['sections'],
+                                      {row['name']: row for row in data})
     return image, command
 
 
-def slots(functions, text):
+def slots(functions, text, absorb_owned=False):
     """The bytes each split function owns before the next owned original range.
 
     A function's compiled data may follow it only as far as the next range the
     split already assigns, whether that is another function or an extra range
-    belonging to one.
+    belonging to one. ``absorb_owned`` skips the extra ranges the function owns
+    itself, which is the declaration a unit makes when its compiled extent
+    reproduces a tail-called helper the census folded into the caller: the bytes
+    are still compared with the original before any credit.
     """
+    limit = text['address'] + text['initializedBytes']
     starts = sorted({symbol.address for symbol in functions.symbols}
                     | {address for address, _ in functions.extra_ranges()})
-    limit = text['address'] + text['initializedBytes']
     result = {}
     for symbol in functions.symbols:
+        skip = {address for address, _ in symbol.extras} if absorb_owned else set()
         index = bisect.bisect_right(starts, symbol.address)
+        while index < len(starts) and starts[index] in skip:
+            index += 1
         result[symbol.name] = (starts[index] if index < len(starts) else limit) - symbol.address
     return result

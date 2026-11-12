@@ -51,6 +51,7 @@ import data_symbols
 import elf_objects
 import exheader
 import split as split_module
+import unit_scope
 from placement import (ASSEMBLE, CLANG, LLD, TIMEOUT, carve, check_original, digest,  # noqa: F401
                        empty_base, place, read_json, run, slots, write_json)
 
@@ -134,6 +135,7 @@ def preinclude_for(root, unit, target, profile):
 def compiler_argv(root, unit, source, target, forced_profile=None, compat=True):
     """The profile's compiler, the unit's declared scopes and its include scope."""
     root, source, target = Path(root), Path(source), Path(target)
+    unit_scope.data_profile(unit); unit_scope.extent_profile(unit)
     profile = profile_for(root, unit, forced_profile)
     layout, headers = declared_scopes(unit, profile)
     extra = profile['layouts'].get(layout or 'natural', []) + profile['publicHeaders'].get(headers, [])
@@ -203,7 +205,7 @@ def compile_units(root, output, units, forced_profile=None):
     return definitions, commands
 
 
-def select_base(root, raw, names, output, label, known=None):
+def select_base(root, raw, names, output, label, known=None, data=()):
     """Keep only the measured functions a linker can resolve, and say why not.
 
     The screen links one ``-r`` object that keeps every measured section of the
@@ -216,13 +218,17 @@ def select_base(root, raw, names, output, label, known=None):
     * a live reference to a symbol neither the split nor this object defines,
       so its call sites would be compared against zeros.
 
+    ``data`` is the unit's proved translation-unit sections as ``(input
+    section, output name)``; the renames keep two units' ``.constdata`` apart.
+
     ``known`` is the split's own symbol table. Without it no reference is treated
     as foreign, which is what a test of the relocation mechanics wants.
     """
     read = elf_objects.read(raw)
     measured = {'.text.' + name for name in names}
     body = ['.text.%s : { KEEP(*(.text.%s)) }' % (name, name) for name in names]
-    discard = sorted(set(read['sections']) - measured)
+    body += ['%s : { KEEP(*(%s)) }' % (new, old) for old, new in data]
+    discard = sorted(set(read['sections']) - measured - {old for old, _ in data})
     script = output / (label + '.source.ld')
     script.write_text('SECTIONS {\n' + '\n'.join(body) + '\n/DISCARD/ : { '
                       + ' '.join('*(%s)' % section for section in discard) + ' }\n}\n',
@@ -282,8 +288,11 @@ def build(root, output, project_path, split_path, forced_profile=None):
     if image.stat().st_size != layout['pageAlignedCodeBytes']:
         raise ValueError('Code image size disagrees with the ExHeader page extent')
     constants = absolute_symbols.load(root)
-    absolute_symbols.verify(constants, image.read_bytes(), text)
+    content = image.read_bytes()
+    absolute_symbols.verify(constants, content, text)
     functions = split_module.load(split_path, text['address'], text['initializedBytes'])
+    configured = configured_sources(root)
+    unit_by_source = {unit['source']: unit for unit in configured}
     definitions, commands = compile_sources(root, output / 'compiled', forced_profile)
     measured = {name: value for name, value in definitions.items() if name in functions.by_name}
     # A reference to a data object the source addresses by name, where the name
@@ -299,12 +308,16 @@ def build(root, output, project_path, split_path, forced_profile=None):
     by_source, screens = {}, {}
     for name in measured:
         by_source.setdefault(measured[name]['source'], []).append(name)
-    room = slots(functions, text)
+    room, owned_room = slots(functions, text), slots(functions, text, absorb_owned=True)
     for source in sorted(by_source):
         names = sorted(by_source[source], key=lambda name: functions.by_name[name].address)
         label = source.replace('/', '--')[:-2]
+        unit = unit_by_source[source]
+        plan = unit_scope.plan_for(unit, root / measured[names[0]]['object'], names,
+                                   functions, layout, content, label)
+        data_arg = unit_scope.data_argument(plan); limit = unit_scope.room_for(unit, room, owned_room)
         base, dropped, reasons, command = select_base(root, measured[names[0]]['object'], names,
-                                                     output, label, known)
+                                                      output, label, known, data_arg)
         commands.append(command)
         sections, selected = elf_objects.read(base)['sections'], elf_objects.read(base)['functions']
         extents = {name: sections['.text.' + name]['size'] for name in names}
@@ -313,14 +326,20 @@ def build(root, output, project_path, split_path, forced_profile=None):
         # extent agrees with the split is a reconstruction fact the measurement
         # reports; whether the data fits is a placement fact the link needs.
         placed = [name for name in names
-                  if name not in set(dropped) and extents[name] <= room[name]]
+                  if name not in set(dropped) and extents[name] <= limit[name]]
+        if plan is not None and plan['hopeless']:
+            for name in plan['hopeless']:
+                reasons.setdefault(name, 'references original data the split does not place')
+            placed = [name for name in placed if name not in plan['hopeless']]
         screens[source] = {'names': names, 'label': label, 'object': base, 'dropped': dropped,
                            'reasons': reasons, 'extents': extents, 'placed': placed,
-                           'code': {name: selected[name]['size'] for name in names}}
+                           'code': {name: selected[name]['size'] for name in names},
+                           'data': unit_scope.data_records(plan)}
     placed = sorted(name for screen in screens.values() for name in screen['placed'])
+    data_placements = [row for source in sorted(screens) for row in screens[source]['data']]
     placed_image, command = place(root, output, [screens[source]['object'] for source in sorted(screens)],
                                   placed, functions,
-                                  absolute_symbols.definitions(constants) + data)
+                                  absolute_symbols.definitions(constants) + data, data_placements)
     commands.append(command)
     placement = elf_objects.placed_sections(placed_image)
     placement['image'] = placed_image.relative_to(root).as_posix()
@@ -421,6 +440,7 @@ def source_unit(root, output, image, source, known, measured, text, screen, plac
             'unrepresentable': sorted(reasons), 'rejected': reasons,
             'placed': list(screen['placed']),
             'linkObject': screen['object'].relative_to(root).as_posix(),
+            'dataSections': screen['data'],
             'functions': records}
 
 

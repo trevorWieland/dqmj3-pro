@@ -13,5 +13,15 @@
 #define build_tree fn_00729cd8
 #define send_tree fn_0073b23c
 
+/* Clang 21 diagnoses zlib 1.2.5's K&R function definitions and one negative
+ * shift as errors under the public-compile census's -Werror, while armcc 4.1 --
+ * the compiler this drop is measured against -- accepts them. These pragmas
+ * silence only the diagnostics, and only under Clang: no body changes, and the
+ * armcc object stays exactly what the measured profile produces. */
+#if defined(__clang__)
+#pragma clang diagnostic ignored "-Wdeprecated-non-prototype"
+#pragma clang diagnostic ignored "-Wshift-negative-value"
+#endif
+
 #include "../trees.c"
 #endif
