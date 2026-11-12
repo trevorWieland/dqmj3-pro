@@ -1,6 +1,12 @@
 #ifndef DQMJ3_DEVICE072_H
 #define DQMJ3_DEVICE072_H
 
+/* The system services this unit consumes; see platform/port/README.md. */
+#include "../../../platform/port/file.h"
+#include "../../../platform/port/memory.h"
+#include "../../../platform/port/thread.h"
+#include "../../../platform/port/system.h"
+
 #include "device_pool_types072.h"
 
 typedef struct EffectFileMessage072 {

@@ -50,7 +50,13 @@ def read_config(root):
         path = root / item
         if path.is_symlink() or path.is_junction() or not path.is_dir() or not path.resolve().is_relative_to(native_base):
             raise RuntimeError("Missing or linked native component scope")
-    allowed = [(root / "src/native").resolve(), *folders]
+    platform = root / "platform"
+    if platform.exists() and (platform.is_symlink() or platform.is_junction() or not platform.is_dir()):
+        raise RuntimeError("Missing or linked platform interface root")
+    # The platform interface is a reviewed header tree outside src/native. A
+    # reconstructed unit may include it, but a platform file is never a build
+    # unit: the census below still covers only the native source roots.
+    allowed = [(root / "src/native").resolve(), platform.resolve(), *folders]
     actual = {p.relative_to(root).as_posix() for wave in waves for p in (root / "src/native" / wave).rglob("*.c")}
     actual.update(p.relative_to(root).as_posix() for item in components for p in (root / item).rglob("*.c"))
     actual.update(p.relative_to(root).as_posix() for item in native_components for p in (root / item).rglob("*.c"))

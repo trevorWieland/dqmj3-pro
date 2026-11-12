@@ -1,6 +1,9 @@
 #ifndef ARBITER062A_H
 #define ARBITER062A_H
 
+/* The system services this unit consumes; see platform/port/README.md. */
+#include "../../../../platform/port/thread.h"
+
 #include "sdk062s.h"
 
 typedef int (*ArbiterWait062a)(volatile void *, void *, __UINTPTR_TYPE__, SdkWord062s);

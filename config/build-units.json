@@ -2141,6 +2141,8 @@
     {
       "source": "src/native/wave013/pattern_file_owner_sync.c",
       "headers": [
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave013/pattern_file_owner_heap.h",
         "src/native/wave013/pattern_file_owner_sync.h"
       ],
@@ -2149,6 +2151,8 @@
     {
       "source": "src/native/wave013/pattern_file_owner_locale.c",
       "headers": [
+        "platform/port/platform.h",
+        "platform/port/system.h",
         "src/native/wave013/pattern_file_owner_locale.h"
       ],
       "role": "bounded-owner-locale-selection"
@@ -2804,6 +2808,9 @@
     {
       "source": "src/native/wave013/pattern_file_owner_services.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
         "src/native/wave009/interval_set.h",
         "src/native/wave010/match_state.h",
         "src/native/wave012/compile_graph.h",
@@ -2828,6 +2835,9 @@
     {
       "source": "src/native/wave013/pattern_file_owner_memory.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
         "src/native/wave009/interval_set.h",
         "src/native/wave010/match_state.h",
         "src/native/wave012/compile_graph.h",
@@ -2852,6 +2862,9 @@
     {
       "source": "src/native/wave013/pattern_file_owner_resource.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
         "src/native/wave009/interval_set.h",
         "src/native/wave010/match_state.h",
         "src/native/wave012/compile_graph.h",
@@ -2876,6 +2889,9 @@
     {
       "source": "src/native/wave013/pattern_file_owner_lifecycle.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
         "src/native/wave009/interval_set.h",
         "src/native/wave010/match_state.h",
         "src/native/wave012/compile_graph.h",
@@ -2900,6 +2916,10 @@
     {
       "source": "src/native/wave013/pattern_file_owner_apply.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/system.h",
         "src/native/wave009/interval_set.h",
         "src/native/wave010/match_state.h",
         "src/native/wave012/compile_graph.h",
@@ -2925,6 +2945,9 @@
     {
       "source": "src/native/wave013/pattern_file_owner_stream.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
         "src/native/wave009/interval_set.h",
         "src/native/wave010/match_state.h",
         "src/native/wave012/compile_graph.h",
@@ -3769,6 +3792,9 @@
     {
       "source": "src/native/wave013/pattern_file_owner_game_check.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
         "src/native/wave009/interval_set.h",
         "src/native/wave010/match_state.h",
         "src/native/wave012/compile_graph.h",
@@ -4408,6 +4434,9 @@
     {
       "source": "src/native/wave027/owner_archive_file.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
         "src/native/wave009/interval_set.h",
         "src/native/wave010/match_state.h",
         "src/native/wave012/compile_graph.h",
@@ -4434,6 +4463,9 @@
     {
       "source": "src/native/wave027/owner_archive_lookup.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
         "src/native/wave009/interval_set.h",
         "src/native/wave010/match_state.h",
         "src/native/wave012/compile_graph.h",
@@ -4460,6 +4492,9 @@
     {
       "source": "src/native/wave027/owner_archive_services.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
         "src/native/wave009/interval_set.h",
         "src/native/wave010/match_state.h",
         "src/native/wave012/compile_graph.h",
@@ -5095,6 +5130,9 @@
     {
       "source": "src/native/wave032/archive_lookup.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
         "src/native/wave032/archive.h"
       ],
       "role": "frozen-resource-xbb-candidate"
@@ -5102,6 +5140,9 @@
     {
       "source": "src/native/wave032/archive_members.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
         "src/native/wave032/archive.h"
       ],
       "role": "frozen-resource-xbb-candidate"
@@ -5109,6 +5150,9 @@
     {
       "source": "src/native/wave032/archive_owner.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
         "src/native/wave032/archive.h"
       ],
       "role": "frozen-resource-xbb-candidate"
@@ -6085,6 +6129,9 @@
     {
       "source": "src/native/wave036/gzip_inflate.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
         "src/native/wave032/archive.h",
         "src/native/wave032/third_party/zlib-1.2.7/zconf.h",
         "src/native/wave032/third_party/zlib-1.2.7/zlib.h",
@@ -6098,6 +6145,9 @@
     {
       "source": "src/native/wave036/gzip_owner.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
         "src/native/wave032/archive.h",
         "src/native/wave032/third_party/zlib-1.2.7/zconf.h",
         "src/native/wave032/third_party/zlib-1.2.7/zlib.h",
@@ -8575,9 +8625,9 @@
     {
       "source": "src/native/wave055/selector055.c",
       "headers": [
+        "src/native/wave055/address055.h",
         "src/native/wave055/selector055.h",
-        "src/native/wave055/state055.h",
-        "src/native/wave055/address055.h"
+        "src/native/wave055/state055.h"
       ],
       "role": "bounded-component"
     },
@@ -10388,6 +10438,9 @@
     {
       "source": "src/native/wave062-sdk/context/allocate062s.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
       "includeDirectories": [
@@ -10398,6 +10451,9 @@
     {
       "source": "src/native/wave062-sdk/context/context062s.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
       "includeDirectories": [
@@ -10408,6 +10464,9 @@
     {
       "source": "src/native/wave062-sdk/context/map062s.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
       "includeDirectories": [
@@ -10418,6 +10477,9 @@
     {
       "source": "src/native/wave062-sdk/context/map_initialize062s.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
       "includeDirectories": [
@@ -10428,6 +10490,9 @@
     {
       "source": "src/native/wave062-sdk/context/mutex062s.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
       "includeDirectories": [
@@ -10438,6 +10503,9 @@
     {
       "source": "src/native/wave062-sdk/arbiter/arbiter062a.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-sdk/include/arbiter062a.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -10449,6 +10517,9 @@
     {
       "source": "src/native/wave062-sdk/object/connection062t.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-sdk/include/object062t.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -10460,6 +10531,9 @@
     {
       "source": "src/native/wave062-sdk/object/methods062t.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-sdk/include/object062t.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -10471,6 +10545,9 @@
     {
       "source": "src/native/wave062-sdk/object/reference062t.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-sdk/include/object062t.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -10482,6 +10559,9 @@
     {
       "source": "src/native/wave062-sdk/object/result062t.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-sdk/include/object062t.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -10493,6 +10573,9 @@
     {
       "source": "src/native/wave062-sdk/object/wrapper062t.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-sdk/include/object062t.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -10504,6 +10587,10 @@
     {
       "source": "src/native/wave062-sdk/startup/clock_math062u.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-sdk/include/clock062u.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -10515,6 +10602,10 @@
     {
       "source": "src/native/wave062-sdk/startup/clock_monotonic062u.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-sdk/include/clock062u.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -10526,6 +10617,10 @@
     {
       "source": "src/native/wave062-sdk/startup/clock_read062u.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-sdk/include/clock062u.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -10537,6 +10632,10 @@
     {
       "source": "src/native/wave062-sdk/startup/clock_windows062u.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-sdk/include/clock062u.h",
         "src/native/wave062-sdk/include/clock_windows062u.h",
         "src/native/wave062-sdk/include/sdk062s.h"
@@ -10549,6 +10648,10 @@
     {
       "source": "src/native/wave062-sdk/startup/mutex_initialize062u.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-sdk/include/clock062u.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -10560,6 +10663,9 @@
     {
       "source": "src/native/wave062-sdk/startup/task_default_work062u.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-sdk/include/object062t.h",
         "src/native/wave062-sdk/include/sdk062s.h",
         "src/native/wave062-sdk/include/task062u.h"
@@ -10572,6 +10678,9 @@
     {
       "source": "src/native/wave062-sdk/startup/task_initialize062u.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-sdk/include/object062t.h",
         "src/native/wave062-sdk/include/sdk062s.h",
         "src/native/wave062-sdk/include/task062u.h"
@@ -10584,6 +10693,9 @@
     {
       "source": "src/native/wave062-sdk/startup/task_state062u.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-sdk/include/object062t.h",
         "src/native/wave062-sdk/include/sdk062s.h",
         "src/native/wave062-sdk/include/task062u.h"
@@ -10606,6 +10718,10 @@
     {
       "source": "src/native/wave065-resource/effect_device.c",
       "headers": [
+        "platform/port/graphics.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave065-resource/effect_device.h",
         "src/native/wave065-resource/effect_texture.h",
         "src/native/wave065/effect_services.h",
@@ -10643,6 +10759,10 @@
     {
       "source": "src/native/wave065-resource/effect_resource_primitives.c",
       "headers": [
+        "platform/port/graphics.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave065-resource/effect_commands.h",
         "src/native/wave065-resource/effect_device.h",
         "src/native/wave065-resource/effect_resource.h",
@@ -10658,6 +10778,10 @@
     {
       "source": "src/native/wave065-resource/effect_resource_release.c",
       "headers": [
+        "platform/port/graphics.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave065-resource/effect_commands.h",
         "src/native/wave065-resource/effect_device.h",
         "src/native/wave065-resource/effect_resource.h",
@@ -10673,6 +10797,10 @@
     {
       "source": "src/native/wave065-resource/effect_resource_sets.c",
       "headers": [
+        "platform/port/graphics.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave065-resource/effect_commands.h",
         "src/native/wave065-resource/effect_device.h",
         "src/native/wave065-resource/effect_resource.h",
@@ -10703,6 +10831,9 @@
     {
       "source": "src/native/wave065-resource/effect_texture.c",
       "headers": [
+        "platform/port/graphics.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
         "src/native/wave065-resource/effect_texture.h"
       ],
       "role": "bounded-component"
@@ -10719,6 +10850,9 @@
     {
       "source": "src/native/wave062-runtime/binding/binding_active062v.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-runtime/include/binding062v.h",
         "src/native/wave062-sdk/include/object062t.h",
         "src/native/wave062-sdk/include/sdk062s.h"
@@ -10732,6 +10866,9 @@
     {
       "source": "src/native/wave062-runtime/binding/binding_policy062v.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-runtime/include/binding062v.h",
         "src/native/wave062-sdk/include/object062t.h",
         "src/native/wave062-sdk/include/sdk062s.h"
@@ -10745,6 +10882,9 @@
     {
       "source": "src/native/wave062-runtime/binding-start/binding_providers062w.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-runtime/include/binding062v.h",
         "src/native/wave062-runtime/include/binding_start062w.h",
         "src/native/wave062-sdk/include/object062t.h",
@@ -10759,6 +10899,9 @@
     {
       "source": "src/native/wave062-runtime/binding-start/binding_start062w.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-runtime/include/binding062v.h",
         "src/native/wave062-runtime/include/binding_start062w.h",
         "src/native/wave062-sdk/include/object062t.h",
@@ -10773,6 +10916,9 @@
     {
       "source": "src/native/wave062-runtime/construction/binding_initialize062x.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-runtime/include/binding062v.h",
         "src/native/wave062-runtime/include/binding_start062w.h",
         "src/native/wave062-runtime/include/construction062x.h",
@@ -10788,6 +10934,9 @@
     {
       "source": "src/native/wave062-runtime/construction/list_initialize062x.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-runtime/include/binding062v.h",
         "src/native/wave062-runtime/include/binding_start062w.h",
         "src/native/wave062-runtime/include/construction062x.h",
@@ -10803,6 +10952,9 @@
     {
       "source": "src/native/wave062-runtime/construction/wide_owner062x.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-runtime/include/binding062v.h",
         "src/native/wave062-runtime/include/binding_start062w.h",
         "src/native/wave062-runtime/include/construction062x.h",
@@ -10818,6 +10970,9 @@
     {
       "source": "src/native/wave062-runtime/construction/wide_units062x.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-runtime/include/binding062v.h",
         "src/native/wave062-runtime/include/binding_start062w.h",
         "src/native/wave062-runtime/include/construction062x.h",
@@ -10833,6 +10988,9 @@
     {
       "source": "src/native/wave062-runtime/erase/tree_access062z.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-runtime/include/tree_erase062z.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -10845,6 +11003,9 @@
     {
       "source": "src/native/wave062-runtime/erase/tree_erase062z.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-runtime/include/tree_erase062z.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -10857,6 +11018,9 @@
     {
       "source": "src/native/wave062-runtime/erase/tree_rebalance062z.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-runtime/include/tree_erase062z.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -10869,6 +11033,9 @@
     {
       "source": "src/native/wave062-runtime/manager/map_select062y.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-runtime/include/thread_map062y.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -10881,6 +11048,9 @@
     {
       "source": "src/native/wave062-runtime/manager/thread_index062y.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-runtime/include/thread_map062y.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -10893,6 +11063,10 @@
     {
       "source": "src/native/wave062-runtime/timer/endpoint062aa.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-runtime/include/timer062aa.h",
         "src/native/wave062-sdk/include/clock062u.h",
         "src/native/wave062-sdk/include/sdk062s.h"
@@ -10906,6 +11080,10 @@
     {
       "source": "src/native/wave062-runtime/timer/timer_initialize062aa.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-runtime/include/timer062aa.h",
         "src/native/wave062-sdk/include/clock062u.h",
         "src/native/wave062-sdk/include/sdk062s.h"
@@ -10919,6 +11097,10 @@
     {
       "source": "src/native/wave062-runtime/timer/timer_insert062aa.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-runtime/include/timer062aa.h",
         "src/native/wave062-sdk/include/clock062u.h",
         "src/native/wave062-sdk/include/sdk062s.h"
@@ -10932,6 +11114,10 @@
     {
       "source": "src/native/wave062-runtime/timer/timer_set062aa.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-runtime/include/timer062aa.h",
         "src/native/wave062-sdk/include/clock062u.h",
         "src/native/wave062-sdk/include/sdk062s.h"
@@ -10945,6 +11131,10 @@
     {
       "source": "src/native/wave062-runtime/timer/timer_update062aa.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-runtime/include/timer062aa.h",
         "src/native/wave062-runtime/include/tree_erase062z.h",
         "src/native/wave062-sdk/include/clock062u.h",
@@ -10959,6 +11149,9 @@
     {
       "source": "src/native/wave065-cached/effect_cached_fetch.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
         "src/native/wave032/archive.h",
         "src/native/wave065-cached/effect_cached.h",
         "src/native/wave065-owner/effect_owner.h",
@@ -11158,6 +11351,10 @@
     {
       "source": "src/native/wave062-owner/config_initialize062ab.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-owner/include/config062ab.h",
         "src/native/wave062-sdk/include/clock062u.h",
         "src/native/wave062-sdk/include/sdk062s.h"
@@ -11172,6 +11369,10 @@
     {
       "source": "src/native/wave062-owner/config_select062ab.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-owner/include/config062ab.h",
         "src/native/wave062-runtime/include/thread_map062y.h",
         "src/native/wave062-sdk/include/clock062u.h",
@@ -11187,6 +11388,10 @@
     {
       "source": "src/native/wave062-owner/owner_clear062ab.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-owner/include/config062ab.h",
         "src/native/wave062-owner/include/owner062ab.h",
         "src/native/wave062-runtime/include/timer062aa.h",
@@ -11204,6 +11409,10 @@
     {
       "source": "src/native/wave062-owner/owner_destroy062ab.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-owner/include/config062ab.h",
         "src/native/wave062-owner/include/owner062ab.h",
         "src/native/wave062-runtime/include/timer062aa.h",
@@ -11221,6 +11430,10 @@
     {
       "source": "src/native/wave062-owner/owner_dispose062ab.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-owner/include/config062ab.h",
         "src/native/wave062-owner/include/owner062ab.h",
         "src/native/wave062-runtime/include/timer062aa.h",
@@ -11237,6 +11450,10 @@
     {
       "source": "src/native/wave062-owner/owner_initialize062ab.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-owner/include/config062ab.h",
         "src/native/wave062-owner/include/owner062ab.h",
         "src/native/wave062-runtime/include/timer062aa.h",
@@ -11253,6 +11470,10 @@
     {
       "source": "src/native/wave062-owner/owner_insert88062ab.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-owner/include/config062ab.h",
         "src/native/wave062-owner/include/owner062ab.h",
         "src/native/wave062-runtime/include/timer062aa.h",
@@ -11269,6 +11490,11 @@
     {
       "source": "src/native/wave067-queue/queue_manager.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/system.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave066-request/request.h",
         "src/native/wave067-queue/file_queue.h"
       ],
@@ -11281,6 +11507,11 @@
     {
       "source": "src/native/wave067-queue/queue_memory.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/system.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave066-request/request.h",
         "src/native/wave067-queue/file_queue.h"
       ],
@@ -11293,6 +11524,11 @@
     {
       "source": "src/native/wave067-queue/queue_store.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/system.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave066-request/request.h",
         "src/native/wave067-queue/file_queue.h"
       ],
@@ -11305,6 +11541,11 @@
     {
       "source": "src/native/wave067-queue/queue_worker.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/system.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave066-request/request.h",
         "src/native/wave067-queue/file_queue.h"
       ],
@@ -11317,6 +11558,9 @@
     {
       "source": "src/native/wave062-heap/heap_allocate062ac.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-heap/heap062ac.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -11329,6 +11573,9 @@
     {
       "source": "src/native/wave062-heap/heap_default062ac.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-heap/heap062ac.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -11341,6 +11588,9 @@
     {
       "source": "src/native/wave062-heap/heap_free062ac.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-heap/heap062ac.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -11353,6 +11603,9 @@
     {
       "source": "src/native/wave062-heap/heap_initialize062ac.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-heap/heap062ac.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -11365,6 +11618,9 @@
     {
       "source": "src/native/wave062-heap/heap_object062ac.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-heap/heap062ac.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -11377,6 +11633,9 @@
     {
       "source": "src/native/wave062-heap/heap_proxy062ac.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-heap/heap062ac.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -11389,6 +11648,9 @@
     {
       "source": "src/native/wave062-heap/heap_registry062ac.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-heap/heap062ac.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -11401,6 +11663,9 @@
     {
       "source": "src/native/wave062-heap/heap_sdk062ac.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-heap/heap062ac.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -11413,6 +11678,9 @@
     {
       "source": "src/native/wave062-heap/heap_size062ac.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-heap/heap062ac.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -11425,6 +11693,9 @@
     {
       "source": "src/native/wave062-heap/heap_split062ac.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
         "src/native/wave062-heap/heap062ac.h",
         "src/native/wave062-sdk/include/sdk062s.h"
       ],
@@ -11437,33 +11708,55 @@
     {
       "source": "src/native/wave068-bootstrap/filesystem.c",
       "headers": [
-        "src/native/wave068-bootstrap/bootstrap.h",
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/system.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
+        "src/native/wave066-request/request.h",
         "src/native/wave067-queue/file_queue.h",
-        "src/native/wave066-request/request.h"
+        "src/native/wave068-bootstrap/bootstrap.h"
       ],
       "role": "bounded-component"
     },
     {
       "source": "src/native/wave068-bootstrap/requests.c",
       "headers": [
-        "src/native/wave068-bootstrap/bootstrap.h",
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/system.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
+        "src/native/wave066-request/request.h",
         "src/native/wave067-queue/file_queue.h",
-        "src/native/wave066-request/request.h"
+        "src/native/wave068-bootstrap/bootstrap.h"
       ],
       "role": "bounded-component"
     },
     {
       "source": "src/native/wave068-bootstrap/singleton.c",
       "headers": [
-        "src/native/wave068-bootstrap/bootstrap.h",
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/system.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
+        "src/native/wave066-request/request.h",
         "src/native/wave067-queue/file_queue.h",
-        "src/native/wave066-request/request.h"
+        "src/native/wave068-bootstrap/bootstrap.h"
       ],
       "role": "bounded-component"
     },
     {
       "source": "src/native/wave062-registration/bindings062ad.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-heap/heap062ac.h",
         "src/native/wave062-owner/include/config062ab.h",
         "src/native/wave062-owner/include/owner062ab.h",
@@ -11483,6 +11776,10 @@
     {
       "source": "src/native/wave062-registration/lifetime062ad.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-owner/include/config062ab.h",
         "src/native/wave062-owner/include/owner062ab.h",
         "src/native/wave062-registration/registry062ad.h",
@@ -11500,6 +11797,10 @@
     {
       "source": "src/native/wave062-registration/lookup062ad.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-owner/include/config062ab.h",
         "src/native/wave062-owner/include/owner062ab.h",
         "src/native/wave062-registration/registry062ad.h",
@@ -11517,6 +11818,10 @@
     {
       "source": "src/native/wave062-registration/register062ad.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-owner/include/config062ab.h",
         "src/native/wave062-owner/include/owner062ab.h",
         "src/native/wave062-registration/registry062ad.h",
@@ -11534,6 +11839,10 @@
     {
       "source": "src/native/wave062-registration/remove062ad.c",
       "headers": [
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave062-owner/include/config062ab.h",
         "src/native/wave062-owner/include/owner062ab.h",
         "src/native/wave062-registration/registry062ad.h",
@@ -11551,6 +11860,12 @@
     {
       "source": "src/native/wave068-teardown/device_pool.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/system.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave066-request/request.h",
         "src/native/wave067-queue/file_queue.h",
         "src/native/wave068-teardown/device_pool.h",
@@ -11561,6 +11876,12 @@
     {
       "source": "src/native/wave069-device/device_destroy069.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/system.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave066-request/request.h",
         "src/native/wave067-queue/file_queue.h",
         "src/native/wave069-device/device069.h"
@@ -11570,6 +11891,12 @@
     {
       "source": "src/native/wave069-device/embedded069.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/system.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave066-request/request.h",
         "src/native/wave067-queue/file_queue.h",
         "src/native/wave069-device/device069.h"
@@ -11579,6 +11906,12 @@
     {
       "source": "src/native/wave069-device/ipc069.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/system.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave066-request/request.h",
         "src/native/wave067-queue/file_queue.h",
         "src/native/wave069-device/device069.h"
@@ -11588,6 +11921,12 @@
     {
       "source": "src/native/wave069-device/stream_destroy069.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/system.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave066-request/request.h",
         "src/native/wave067-queue/file_queue.h",
         "src/native/wave069-device/device069.h"
@@ -11604,6 +11943,12 @@
     {
       "source": "src/native/wave071-namespace/namespace071.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/system.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave066-request/request.h",
         "src/native/wave067-queue/file_queue.h",
         "src/native/wave071-namespace/namespace071.h",
@@ -11614,6 +11959,12 @@
     {
       "source": "src/native/wave072-construction/device072.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/system.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave066-request/request.h",
         "src/native/wave067-queue/file_queue.h",
         "src/native/wave072-construction/device072.h",
@@ -11625,6 +11976,12 @@
     {
       "source": "src/native/wave072-construction/ipc072.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/system.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave066-request/request.h",
         "src/native/wave067-queue/file_queue.h",
         "src/native/wave072-construction/device072.h",
@@ -11636,6 +11993,12 @@
     {
       "source": "src/native/wave072-construction/pool072.c",
       "headers": [
+        "platform/port/file.h",
+        "platform/port/memory.h",
+        "platform/port/platform.h",
+        "platform/port/system.h",
+        "platform/port/thread.h",
+        "platform/port/time.h",
         "src/native/wave066-request/request.h",
         "src/native/wave067-queue/file_queue.h",
         "src/native/wave072-construction/device072.h",

@@ -1,6 +1,10 @@
 #ifndef DQMJ3_FILE_BOOTSTRAP068_H
 #define DQMJ3_FILE_BOOTSTRAP068_H
 
+/* The system services this unit consumes; see platform/port/README.md. */
+#include "../../../platform/port/file.h"
+#include "../../../platform/port/memory.h"
+
 #include "../wave067-queue/file_queue.h"
 
 typedef enum EffectFileSystemKind068 {

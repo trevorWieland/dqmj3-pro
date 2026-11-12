@@ -1,5 +1,9 @@
 #ifndef HEAP062AC_H
 #define HEAP062AC_H
+
+/* The system services this unit consumes; see platform/port/README.md. */
+#include "../../../platform/port/memory.h"
+#include "../../../platform/port/thread.h"
 #include "sdk062s.h"
 typedef unsigned short HeapHalf062ac;
 typedef __UINTPTR_TYPE__ HeapAddress062ac;

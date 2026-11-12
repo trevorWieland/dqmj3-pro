@@ -1,6 +1,12 @@
 #ifndef DQMJ3_FILE_DEVICE072_TYPES_H
 #define DQMJ3_FILE_DEVICE072_TYPES_H
 
+/* The system services this unit consumes; see platform/port/README.md. */
+#include "../../../platform/port/file.h"
+#include "../../../platform/port/memory.h"
+#include "../../../platform/port/thread.h"
+#include "../../../platform/port/system.h"
+
 #ifdef DQMJ3_FILE_DEVICE069_H
 #error incompatible_device_models
 #endif

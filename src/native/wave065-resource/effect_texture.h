@@ -1,6 +1,10 @@
 #ifndef DQMJ3_EFFECT_TEXTURE_RESOURCE065_H
 #define DQMJ3_EFFECT_TEXTURE_RESOURCE065_H
 
+/* The system services this unit consumes; see platform/port/README.md. */
+#include "../../../platform/port/graphics.h"
+#include "../../../platform/port/memory.h"
+
 typedef struct EffectTextureServices065 {
     void *(*allocate)(void *context, unsigned int region, unsigned int option,
                        unsigned int selector, unsigned int bytes);
