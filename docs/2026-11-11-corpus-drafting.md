@@ -231,12 +231,19 @@ scheduled body cannot be nudged into byte equality by more declarations.
 ## Reproduce
 
 ```
-python toolscripts/corpus_draft_measure.py --prep            # feature cache
-python toolscripts/corpus_draft_measure.py --shape clean+control --order bytes
-python toolscripts/corpus_draft_ship.py --run work/drafter/runs/nodata --declare
+python toolscripts/corpus_draft_measure.py --prep                 # feature cache
+python toolscripts/corpus_draft_measure.py --shape clean+control --order address
+python toolscripts/corpus_draft_measure.py --shape data --maximum 31 --order address
+python toolscripts/corpus_draft_measure.py --shape string --order bytes
+python toolscripts/corpus_draft_ab.py                             # 470 -> 158 A/B
+python toolscripts/corpus_draft_ship.py --run work/drafter/runs/nodata \
+       --component draft002 --declare
 python build.py --image <your update CIA>
 ```
 
 `work/drafter/corpus-text.json` is a one-file cache of the corpus C: reading
 26,572 small files once costs more than the rest of the pipeline together on
-Windows.
+Windows. The A/B in the second pass is `toolscripts/corpus_draft_ab.py`: it
+compiles the same 8,368 functions twice, once with main's declaration rules and
+once with this branch's, and writes the two failure lists to
+`work/drafter/ab-legacy.json` and `ab-branch.json`.
