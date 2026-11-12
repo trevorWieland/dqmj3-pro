@@ -6,9 +6,3 @@ void *memset(void *memory, int value, __SIZE_TYPE__ bytes)
     return memory;
 }
 
-#if defined(__arm__)
-void __aeabi_memclr8(void *memory, __SIZE_TYPE__ bytes)
-{
-    memset(memory, 0, bytes);
-}
-#endif
