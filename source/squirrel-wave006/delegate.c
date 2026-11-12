@@ -31,6 +31,6 @@ _Bool sq_execute_delegate(SqExecuteVM *vm, SqObject *destination, const SqObject
         sq_execute_error(&vm->base, "using '%s' as delegate", fn_00191f20(delegate));
         return 0;
     }
-    fn_0019e864(destination, self);
+    vm_object_assign(destination, self);
     return 1;
 }

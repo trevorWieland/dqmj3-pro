@@ -12,7 +12,7 @@ _Bool sq_execute_delete(SqExecuteVM *vm, SqObject *destination, const SqObject *
     SqObject temporary = {0x01000001u, {.reference = 0}};
     if (!fn_001a1dc8(table, key, &temporary)) sq_execute_unsupported(vm, -158);
     fn_0019b650(table, key);
-    fn_0019e864(destination, &temporary);
+    vm_object_assign(destination, &temporary);
     sq_execute_release(temporary.type, temporary.value);
     return 1;
 }

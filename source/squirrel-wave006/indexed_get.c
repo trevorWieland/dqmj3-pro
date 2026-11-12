@@ -31,7 +31,7 @@ _Bool sq_legacy_indexed_get006(SqExecuteVM *vm, const SqObject *self, const SqOb
     if (index < 0 || (SqU32)index >= array->vector.size) return 0;
     SqObject value = array->vector.values[index];
     if (value.type == 0x08010000u) value = ((SqWeakObject *)value.value.reference)->object;
-    fn_0019e864(destination, &value);
+    vm_object_assign(destination, &value);
     return 1;
 }
 
@@ -61,6 +61,6 @@ _Bool fn_001987e4(SqExecuteVM *vm, const SqObject *self, const SqObject *key, co
     } else index = key->value.integer;
     SqArray *array = (SqArray *)self->value.reference;
     if (index < 0 || (SqU32)index >= array->vector.size) return 0;
-    fn_0019e864(array->vector.values + index, value);
+    vm_object_assign(array->vector.values + index, value);
     return 1;
 }

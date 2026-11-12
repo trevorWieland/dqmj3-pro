@@ -4,7 +4,7 @@ static void restore_generator_frame(SqCallInfo *destination, const SqCallInfo *s
 {
     destination->instruction = saved->instruction;
     destination->literals = saved->literals;
-    fn_0019e864(&destination->closure, &saved->closure);
+    vm_object_assign(&destination->closure, &saved->closure);
     destination->generator = saved->generator;
     destination->traps = saved->traps;
     destination->previous_base = saved->previous_base;
@@ -54,8 +54,8 @@ _Bool fn_0019e378(SqGenerator *generator, SqExecuteVM *vm, SqI32 target)
     }
     SqObject null = {0x01000001u, {.reference = 0}};
     for (SqU32 index = 0; index < size; index++) {
-        fn_0019e864(base->frame.stack + base->frame.base + index, generator->stack.values + index);
-        fn_0019e864(generator->stack.values, &null);
+        vm_object_assign(base->frame.stack + base->frame.base + index, generator->stack.values + index);
+        vm_object_assign(generator->stack.values, &null);
     }
     while (generator->varargs.size) {
         SqVector vector = sq_execute_varargs(vm);

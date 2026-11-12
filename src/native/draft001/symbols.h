@@ -46,7 +46,7 @@ extern undefined4 fn_00163d44(); extern undefined4 fn_00163d68(); extern undefin
 extern undefined4 fn_001663a0(); extern undefined4 fn_001663c4(); extern undefined4 fn_00166420(); extern undefined4 fn_00166444(); extern undefined4 fn_0016647c(); extern undefined4 fn_0016678c();
 extern undefined4 fn_001667b8(); extern undefined4 fn_001667e0(); extern undefined4 fn_00166824(); extern undefined4 fn_001694e4(); extern undefined4 fn_0016a43c(); extern undefined4 fn_0016b5f0();
 extern undefined4 fn_0016ddf0(); extern undefined4 fn_00170704(); extern undefined4 fn_001707b4(); extern undefined4 fn_00170bb4(); extern undefined4 fn_00170f54(); extern undefined4 fn_00170fa4();
-extern undefined4 fn_00172fc4(); extern undefined4 fn_00173a34(); extern undefined4 fn_00173d1c(); extern undefined4 fn_00173d40(); extern undefined4 fn_001759d0(); extern undefined4 fn_00176b44();
+extern undefined4 fn_00172fc4(); extern undefined4 fn_00173a34(); extern undefined4 fn_00173d1c(); extern undefined4 vm_stack_at(); extern undefined4 fn_001759d0(); extern undefined4 fn_00176b44();
 extern undefined4 fn_00176b8c(); extern undefined4 fn_00176d68(); extern undefined4 fn_00176d74(); extern undefined4 fn_00176dc0(); extern undefined4 fn_00176e70(); extern undefined4 fn_00176fb0();
 extern undefined4 fn_0017821c(); extern undefined4 fn_001782b8(); extern undefined4 fn_00178eec(); extern undefined4 fn_00178f9c(); extern undefined4 fn_001793c4(); extern undefined4 fn_0017d8f8();
 extern undefined4 fn_0017d904(); extern undefined4 fn_0017d90c(); extern undefined4 fn_0017f464(); extern undefined4 fn_0017fbdc(); extern undefined4 fn_0017fc28(); extern undefined4 fn_0017fcfc();

@@ -52,9 +52,9 @@ _Static_assert(sizeof(void *) != 4 || __builtin_offsetof(VmRefNode, next) == 12,
 _Static_assert(sizeof(void *) != 4 || __builtin_offsetof(VmRefNode, previous) == 16, "original previous offset");
 
 VmI32 fn_00157ff4(const VmStackView *vm);
-VmObject *fn_00173d40(const VmStackView *vm, VmI32 index);
+VmObject *vm_stack_at(const VmStackView *vm, VmI32 index);
 void fn_00173d1c(VmStackView *vm, const VmObject *value);
-VmObject *fn_0019e864(VmObject *destination, const VmObject *source);
+VmObject *vm_object_assign(VmObject *destination, const VmObject *source);
 void fn_0019e8c4(VmRefNode **head, VmRefNode *node);
 
 #endif

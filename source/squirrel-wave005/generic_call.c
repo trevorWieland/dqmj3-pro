@@ -25,7 +25,7 @@ _Bool fn_0017ffac(SqCallVM *vm, const SqObject *callable, SqI32 arguments,
         sq_class_service(vm, callable->value.reference, result, &constructor);
         _Bool returned = 1;
         if (constructor.type != 0x01000001u) {
-            fn_0019e864(vm->frame.stack + base, result);
+            vm_object_assign(vm->frame.stack + base, result);
             returned = fn_0017ffac(vm, &constructor, arguments, base, &discarded, raise_error);
         }
         release_temporary(&discarded);

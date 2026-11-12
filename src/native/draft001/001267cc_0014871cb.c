@@ -152,7 +152,7 @@ bool fn_00143e20(int param_1)
 
 
 
-void fn_00145b00(undefined4 param_1)
+void engine_allocate(undefined4 param_1)
 
 {
   fn_001287dc(param_1,4);

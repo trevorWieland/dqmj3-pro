@@ -23,7 +23,7 @@ _Bool sq_execute_vararg_get(SqExecuteVM *vm, SqObject *destination, const SqObje
         return 0;
     }
     SqVector vector = sq_execute_varargs(vm);
-    fn_0019e864(destination, vector.values + vm->base.current->varargs_base + index);
+    vm_object_assign(destination, vector.values + vm->base.current->varargs_base + index);
     return 1;
 }
 
@@ -33,7 +33,7 @@ void sq_execute_array_new(SqExecuteVM *vm, SqObject *destination, SqU32 capacity
     SqObject object = {0x08000040u, {.reference = (SqRef *)array}};
     if (!array) sq_assert_array(0, &object);
     array->reference.references++;
-    fn_0019e864(destination, &object);
+    vm_object_assign(destination, &object);
     sq_execute_release(object.type, object.value);
     if (!capacity) capacity = 4;
     array->vector.values = sq_reallocate(array->vector.values, array->vector.capacity * sizeof(SqObject), capacity * sizeof(SqObject));

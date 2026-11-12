@@ -25,7 +25,7 @@ SqGenerator *fn_00192b9c(SqState *shared, SqScriptClosure *closure)
     generator->traps = (SqOpaqueVector){0};
     SqObject object = {0x08000100u, {.reference = &closure->reference}};
     object.value.reference->references++;
-    fn_0019e864(&generator->closure, &object);
+    vm_object_assign(&generator->closure, &object);
     sq_execute_release(object.type, object.value);
     generator->shared = shared;
     generator->state = 0;
@@ -44,7 +44,7 @@ _Bool fn_0019289c(SqGenerator *generator, SqExecuteVM *vm)
     SqCallInfo *frame = base->current;
     generator->saved.instruction = frame->instruction;
     generator->saved.literals = frame->literals;
-    fn_0019e864(&generator->saved.closure, &frame->closure);
+    vm_object_assign(&generator->saved.closure, &frame->closure);
     generator->saved.generator = frame->generator;
     generator->saved.traps = frame->traps;
     generator->saved.previous_base = frame->previous_base;
@@ -58,8 +58,8 @@ _Bool fn_0019289c(SqGenerator *generator, SqExecuteVM *vm)
     fn_0019d320(&generator->stack, (SqU32)size, &null);
     for (SqI32 index = 0; index < size; index++) {
         SqObject *slot = base->frame.stack + base->frame.base + index;
-        fn_0019e864(generator->stack.values + index, slot);
-        fn_0019e864(slot, &null);
+        vm_object_assign(generator->stack.values + index, slot);
+        vm_object_assign(slot, &null);
     }
     SqVector varargs = sq_execute_varargs(vm);
     for (SqI32 index = (SqI32)frame->varargs_size - 1; index >= 0; index--)
