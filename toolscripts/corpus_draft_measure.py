@@ -168,12 +168,13 @@ def order_group(records):
 
 
 def compile_one(args):
-    root, source, header = args
+    root, source, header, forced = args
     target = source.with_suffix('.o')
-    profile = oo.profile_for(root, {'source': source.name})
+    profile = oo.profile_for(root, {'source': source.name}, forced)
     raw = target.with_name(target.name + '.armcc.o')
     try:
-        oo.run(oo.compiler_argv(root, {'source': source.name}, source, raw), source.with_suffix('.log'))
+        oo.run(oo.compiler_argv(root, {'source': source.name}, source, raw,
+                                forced_profile=forced), source.with_suffix('.log'))
         armcc_object.split(raw, target)
         functions = elf_objects.read(target)['functions']
         return source.stem, {name: value for name, value in functions.items()}, None
@@ -290,7 +291,8 @@ def measure(args):
             while pending:
                 paths = [emit_unit(tus, label, group, data_types, return_types)
                          for label, group in pending]
-                compiled = list(pool.map(compile_one, [(ROOT, path, None) for path in paths]))
+                compiled = list(pool.map(compile_one, [(ROOT, path, None, args.profile)
+                                                       for path in paths]))
                 following = []
                 for (label, group), (_, table, error) in zip(pending, compiled):
                     if error is None:
@@ -341,7 +343,8 @@ def measure(args):
             continue
         for name in names:
             definitions[name] = dict(results[name], source=str(source.relative_to(ROOT)),
-                                     object=tus / (label + '.o'), profile='armcc-4.1-b1454')
+                                     object=tus / (label + '.o'),
+                                     profile=args.profile or oo.profiles(ROOT)['default'])
             by_source.setdefault(label, []).append(name)
     room = slots(functions, context['text'])
     placed_all, screen, reasons = [], {}, {}
@@ -473,8 +476,11 @@ def main(argv):
     parser.add_argument('--batch', type=int, default=60)
     parser.add_argument('--lines', type=int, default=4000)
     parser.add_argument('--jobs', type=int, default=12)
+    parser.add_argument('--profile', default=None, help='force one declared compiler profile')
+    parser.add_argument('--profiles-config', default='config/compiler-profiles.json')
     parser.add_argument('--out', default='work/drafter/run')
     args = parser.parse_args(argv[1:])
+    oo.PROFILE_CONFIG = args.profiles_config
     return draftlib.prep() if args.prep else measure(args)
 
 
