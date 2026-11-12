@@ -47,6 +47,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import armcc_object
 import absolute_symbols
+import data_symbols
 import elf_objects
 import exheader
 import split as split_module
@@ -285,8 +286,16 @@ def build(root, output, project_path, split_path, forced_profile=None):
     functions = split_module.load(split_path, text['address'], text['initializedBytes'])
     definitions, commands = compile_sources(root, output / 'compiled', forced_profile)
     measured = {name: value for name, value in definitions.items() if name in functions.by_name}
+    # A reference to a data object the source addresses by name, where the name
+    # carries the address the original image gives it, is defined there rather
+    # than left unresolved: the compiler's literal-pool word is then compared
+    # against the original word like every other byte.
+    data = data_symbols.definitions(
+        data_symbols.undefined(sorted({value['object'] for value in definitions.values()})),
+        layout)
     known = dict(functions.by_name)
     known.update({name: None for name in constants})
+    known.update({name: None for name, _ in data})
     by_source, screens = {}, {}
     for name in measured:
         by_source.setdefault(measured[name]['source'], []).append(name)
@@ -310,7 +319,8 @@ def build(root, output, project_path, split_path, forced_profile=None):
                            'code': {name: selected[name]['size'] for name in names}}
     placed = sorted(name for screen in screens.values() for name in screen['placed'])
     placed_image, command = place(root, output, [screens[source]['object'] for source in sorted(screens)],
-                                  placed, functions, absolute_symbols.definitions(constants))
+                                  placed, functions,
+                                  absolute_symbols.definitions(constants) + data)
     commands.append(command)
     placement = elf_objects.placed_sections(placed_image)
     placement['image'] = placed_image.relative_to(root).as_posix()
