@@ -15,4 +15,13 @@ typedef short s16;
 typedef unsigned long long uptr;
 #else
 typedef unsigned long uptr;
+/* These units transcribe the original instruction shapes, which cast image
+ * addresses to and from pointers; on the 64-bit host targets that is an error
+ * under -Werror and is expected here. */
+#ifdef __clang__
+#pragma clang diagnostic ignored "-Wint-to-pointer-cast"
+#pragma clang diagnostic ignored "-Wpointer-to-int-cast"
+#pragma clang diagnostic ignored "-Wint-conversion"
+#pragma clang diagnostic ignored "-Wconstant-conversion"
+#endif
 #endif
