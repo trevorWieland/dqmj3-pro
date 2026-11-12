@@ -264,7 +264,7 @@ def prep():
         texts[address] = text
         returns[address] = return_type(text)
         symbol = split.by_name.get('fn_' + address)
-        if symbol is None or symbol.name in measured or symbol.extras:
+        if symbol is None or symbol.name in measured:
             continue
         callees, data = dependencies(text, address)
         for name, kinds in usage_kinds(text).items():
@@ -291,6 +291,13 @@ def prep():
             'callees': callees, 'data': data,
             'strings': strings, 'stringData': string_data,
             'lines': text.count('\n'),
+            # A function may own original ranges beyond its contiguous extent.
+            # They are recorded so the measurement can report how much of the
+            # function the primary extent is, and so a sample can select exactly
+            # this class. Their bytes are not part of the symbol, and a draft
+            # that emits one contiguous body can only ever fill the primary.
+            'extras': [[extra, size] for extra, size in symbol.extras],
+            'ownedBytes': symbol.size + sum(size for _, size in symbol.extras),
         }
     # One file of corpus text. The corpus is 26,572 small files and reading them
     # one at a time costs more than the rest of a drafting run put together, so

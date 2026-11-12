@@ -61,7 +61,7 @@ cannot create one.
 
 | class | functions | why it is excluded or kept |
 |---|---|---|
-| multi-range | 1,710 | the split gives the function two or more original ranges; a relocatable object emits one contiguous body, so it cannot match |
+| multi-range | 1,731 (1,331 after the 2026-11-12 promotion) | the split gives the function more than one original range; measured since 2026-11-12, and 0 of 30 sample drafts are exact because the decompilation merges the tail-called helper into the caller (see `docs/2026-11-12-extra-range-inventory.md`) |
 | already measured | 1,362 | `src/native` defines them; a draft would be a duplicate definition |
 | warned | 1,610 | the decompiler truncated control flow; the C is not the whole function |
 | string literal | 505 | the literal is rewritten to its original address; measured in the second pass, and never exact |
@@ -199,9 +199,13 @@ change what the function computes, so they stay reported as failures.
    `goto` targets and struct member accesses on an `undefined4`. Those are
    properties of the decompiled text, and a compile failure is reported as a
    failure rather than repaired by inventing a type.
-4. **Multi-range functions** (1,710) can never be byte-exact under this
-   measurement, because a relocatable object emits one contiguous body while the
-   original splits the function.
+4. **Multi-range functions** (1,731 before the 2026-11-12 promotion of 417 verified
+   function entries, 1,331 after) were measured for the first time on a
+   30-function sample: 25 compiled, 0 exact. The extra ranges are mostly
+   tail-called helpers that the decompiler merges into the caller, so a
+   single-body draft cannot fit the primary extent. The class is an inventory
+   issue, not a drafting one; the correction and the armcc experiment are in
+   `docs/2026-11-12-extra-range-inventory.md`.
 5. **The `armcc` command line.** With 294 units the placement and whole-image
    links exceed the Windows command-line limit; both now pass their object lists
    through a response file.
