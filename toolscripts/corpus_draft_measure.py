@@ -39,6 +39,7 @@ from placement import place, slots       # noqa: E402
 
 import corpus_draft as draftlib                          # noqa: E402
 from corpus_draft_emit import emit_unit                  # noqa: E402
+from corpus_draft_refs import _Referenced
 
 WORK = ROOT / 'work/drafter'
 CACHE = WORK / 'features.json'
@@ -80,8 +81,16 @@ HARD_INDIRECT = re.compile(r'\(\s*\*\s*(?:\(\s*)?code\s*\*\*?')
 LABEL = re.compile(r'\bLAB_[0-9a-f]{4,8}\b')
 
 
-def select(state, shape, limit, minimum, maximum, order):
+def select(state, shape, limit, minimum, maximum, order, sample=None):
     records = state['functions']
+    if sample is not None:
+        # A sample run names the functions to measure, so the population is exact.
+        wanted = set(json.loads(Path(sample).read_text(encoding='utf-8')))
+        chosen = [record for record in records.values() if record['name'] in wanted]
+        missing = wanted - {record['name'] for record in chosen}
+        if missing:
+            raise SystemExit('sample names missing from the cache: ' + ', '.join(sorted(missing)))
+        return sorted(chosen, key=lambda record: record['address'])
     def keep(record):
         if shape == 'clean':
             return (not record['warned'] and not record['indirect'] and not record['data']
@@ -106,6 +115,9 @@ def select(state, shape, limit, minimum, maximum, order):
             return record.get('svc', False)
         if shape == 'all':
             return not record['warned']
+        if shape == 'multirange':
+            # A function that owns a range outside its contiguous extent.
+            return bool(record.get('extras'))
         raise SystemExit('unknown shape ' + shape)
     chosen = [record for record in records.values()
               if keep(record) and minimum <= record['size'] <= maximum]
@@ -179,20 +191,6 @@ def compile_one(args):
 PLACEMENT_CHUNK = 192
 
 
-class _Referenced:
-    """The split seen through one chunk's relocations, for the linker script.
-
-    The script needs a definition for every symbol a chunk's code can refer to,
-    and nothing else: a placed function's address comes from the section the
-    script places, and every other reference resolves through an absolute
-    symbol. Narrowing it to those references keeps a link over thousands of
-    functions as small as the chunk it places.
-    """
-
-    def __init__(self, symbols):
-        self.symbols = symbols
-
-
 def place_all(combined, placed, functions, constants, out, references=None):
     """Place the measured functions and read back their bytes.
 
@@ -245,7 +243,8 @@ def measure(args):
     state = json.loads(CACHE.read_text(encoding='utf-8'))
     context = load_context()
     functions, content, origin = context['functions'], context['content'], context['origin']
-    chosen = select(state, args.shape, args.limit, args.minimum, args.maximum, args.order)
+    chosen = select(state, args.shape, args.limit, args.minimum, args.maximum, args.order,
+                    args.sample)
     out = ROOT / args.out
     tus = out / 'tus'
     data_types = state['dataTypes']
@@ -394,6 +393,8 @@ def measure(args):
         name = record['name']
         symbol = functions.by_name[name]
         row = {'name': name, 'address': record['address'], 'size': symbol.size,
+               'ownedBytes': record.get('ownedBytes', symbol.size),
+               'extras': len(record.get('extras') or []),
                'band': record['band'], 'shape': ('data' if record['data'] else 'string'
                                                 if record['hasStrings'] else 'control'
                                                 if record['labels'] or record['switch']
@@ -408,11 +409,17 @@ def measure(args):
             row['reason'] = reasons.get(name, 'not placed')
         else:
             data = table['data']
+            original = content[origin + symbol.address:origin + symbol.address + len(data)]
+            differing = [index for index in range(min(len(data), len(original)))
+                         if data[index] != original[index]]
             row['verdict'] = ('exact' if len(data) == symbol.size
                               and data == content[origin + symbol.address:
                                                   origin + symbol.address + len(data)]
                               else 'differs')
             row['compiled'] = len(data)
+            # The remaining difference, as a fact: first offset and count.
+            row['firstDifference'] = differing[0] if differing else None
+            row['differingBytes'] = len(differing)
         verdicts.append(row)
     out.mkdir(parents=True, exist_ok=True)
     (out / 'results.json').write_text(json.dumps(verdicts, indent=0) + '\n', encoding='utf-8')
@@ -462,6 +469,7 @@ def main(argv):
     parser.add_argument('--minimum', type=int, default=4)
     parser.add_argument('--maximum', type=int, default=4096)
     parser.add_argument('--order', default='bytes', choices=('bytes', 'address'))
+    parser.add_argument('--sample', help='JSON list of function names to measure exactly')
     parser.add_argument('--batch', type=int, default=60)
     parser.add_argument('--lines', type=int, default=4000)
     parser.add_argument('--jobs', type=int, default=12)

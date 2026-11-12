@@ -29,3 +29,30 @@ The file was generated once from the seeded Ghidra census entry addresses, modes
 and primary ranges, with 107 overlapping pairs resolved in favour of the later
 entry. It is now source: edit it directly, and never regenerate it from a tool
 whose output is not in the repository.
+
+## Extra ranges, and the 2026-11-12 promotion
+
+An extra range is a range the census attributed to a function that has no entry
+of its own. The extras are not all the same thing, and the difference matters:
+
+- a range that a function body branches to at its first byte, that saves the
+  callee-saved registers it uses and returns to its caller is a **tail-called
+  helper**. The original source had it as a separate function; the census folded
+  it into the caller because a tail call is a `b`, not a `bl`, so nothing in the
+  image calls it by name;
+- a range that starts mid-body -- it uses the caller's frame or returns into the
+  caller's code -- is the owner's own code placed elsewhere, and it is not a
+  function entry;
+- an interworking veneer (`add ip, pc, #n` / `bx ip`), an absolute jump slot
+  (`ldr pc, [pc, #-4]`) and a bare return shared by several functions are
+  compiler islands, not functions.
+
+`toolscripts/extras_inventory.py` tests every extra against that distinction and
+reports each one's category and the reason it was not promoted. On 2026-11-12,
+417 of the 2,343 extra ranges were verified as function entries and promoted to
+primary lines: each kept its address, mode and size, its owner lost one `+` line,
+and the owned-byte total did not move. The header counts record the result:
+26,990 functions, 5,127,402 primary bytes and 734,180 extra bytes, 5,861,582
+owned bytes before and after. The remaining 1,926 extras are continuations,
+compiler islands or unreferenced ranges and stay ownership-only; they never earn
+source credit.
