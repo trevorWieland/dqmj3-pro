@@ -26,8 +26,9 @@ measured byte (proof below).
 
 Measured from the pinned update image (`generated/update-content0/code.bin`,
 8,159,232 bytes, 7,051,280 initialized text bytes) and the native census
-(`config/symbols.txt`, 26,573 functions). The analysis is reproducible with the
-scripts described at the end.
+(`config/symbols.txt`, 26,990 functions after the 2026-11-12 extra-range
+promotion; see `docs/2026-11-12-extra-range-inventory.md`). The analysis is
+reproducible with the scripts described at the end.
 
 ### Raw system calls
 

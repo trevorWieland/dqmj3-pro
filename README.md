@@ -6,7 +6,7 @@ A reconstruction of Dragon Quest Monsters Joker 3 Professional for the Nintendo 
 
 ## The objective
 
-Turn this repository into a complete re-creation of the game: all 26,573 functions present as ordinary readable C, compiled with the identified original toolchain and linked into an image byte-identical to the original, with **zero bytes retained from the original executable**, buildable end to end by anyone who owns a copy of the game by running one command.
+Turn this repository into a complete re-creation of the game: all 26,990 functions present as ordinary readable C, compiled with the identified original toolchain and linked into an image byte-identical to the original, with **zero bytes retained from the original executable**, buildable end to end by anyone who owns a copy of the game by running one command.
 
 Byte-identity is not a score to chase. It is the test that proves the reconstruction is the game rather than a plausible imitation, so it is the sole arbiter of credit and nothing else is permitted to move a number.
 
@@ -20,10 +20,10 @@ The work is shaped so four different people can each get what they came for. A *
 
 | | |
 |---|---|
-| Byte-identical functions | **1,134 of 26,573** |
-| Byte-identical instructions | **20,480 of 7,051,280** (0.29%) |
-| Retained from the original | **25,398 functions, 7,027,752 text bytes** |
-| Linked image | byte-identical for the functions it places; 41 functions differ |
+| Byte-identical functions | **2,832 of 26,990** |
+| Byte-identical instructions | **112,572 of 7,051,280** (1.60%) |
+| Retained from the original | **24,099 functions, 6,915,916 text bytes** (8,229,192 bytes including data and BSS) |
+| Linked image | byte-identical for the functions it places; 59 functions differ |
 
 The reconstruction is not complete. Every retained byte is a visible debt.
 
