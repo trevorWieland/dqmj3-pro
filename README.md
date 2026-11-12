@@ -20,10 +20,12 @@ The work is shaped so four different people can each get what they came for. A *
 
 | | |
 |---|---|
-| Byte-identical functions | **2,832 of 26,990** |
-| Byte-identical instructions | **112,572 of 7,051,280** (1.60%) |
-| Retained from the original | **24,099 functions, 6,915,916 text bytes** (8,229,192 bytes including data and BSS) |
-| Linked image | byte-identical for the functions it places; 59 functions differ |
+| Byte-identical functions | **2,852 of 26,990** |
+| Byte-identical instructions | **113,056 of 7,051,280** (1.60%) |
+| Retained from the original | **24,138 functions, 6,938,224 text bytes** |
+| Linked image | byte-identical for the functions it places |
+
+These figures move with every merge. The badge above is the live value; the table is the build's output at the last commit that changed it, and `build.py` reproduces both.
 
 The reconstruction is not complete. Every retained byte is a visible debt.
 
@@ -55,7 +57,16 @@ Work proceeds as parallel lanes, each in its own isolated worktree owning a disj
 
 Every change lands through a pull request that a verifier reproduces independently: compile, link the whole image, and diff the per-function credit set so nothing is silently gained or lost. Published progress is emitted by the build from the user's own inputs, never from a hand-maintained artifact.
 
-Failures are diagnosed at instruction level and turned into general rules, because those rules are the real product of a hard day and the next lane inherits them instead of rediscovering them. So far: literal pools belong to functions rather than translation units; a constant the original loaded from a shared address must be declared as an extern at that address, never inlined; a call must resolve to an absolute address before it can be compared.
+Failures are diagnosed at instruction level and turned into general rules, because those rules are the real product of a hard day and the next lane inherits them instead of rediscovering them. So far:
+
+- **Literal pools belong to functions, not translation units** — the original scatters a function's pool with it, so the split must too.
+- **A constant the original loaded from a shared address must be declared as an extern at that address** — a string literal inflates the data tail, and an integer address lets the compiler fold it into a register.
+- **A call must resolve to an absolute address** before it can be compared, or every function containing one is unmeasurable.
+- **armcc inlines only within a translation unit** — when the original emits a small `bl` forwarder immediately before its callee, the two were compiled separately, and reproducing the translation-unit boundary is part of reproducing the bytes.
+- **`-O3 -Otime` with `--cpu=MPCore`**, not `-Otime` alone: the scheduler that inserts the interlock NOP after argument checks only runs at that level, and that NOP appears 8,318 times in this image.
+- **A sub-record compared through several members needs its base taken once as a local pointer**, or the compiler keeps immediate offsets and never needs the extra register.
+
+Where a difference is one or two instructions, `toolscripts/permute.py` searches ordinary C rewrites automatically and succeeds on about 40% of near misses; it is scored by an independent implementation of the same byte test, verified to agree with `objdiff` on every configured function.
 
 ## Inputs
 
