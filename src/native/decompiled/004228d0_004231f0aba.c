@@ -1,0 +1,18 @@
+#include "004228d0_004231f0aba.h"
+
+
+
+void fn_00422d68(undefined4 param_1)
+
+{
+  int iVar1;
+  
+  iVar1 = fn_00145b00(0x6c,&DAT_00812c8c);
+  if (iVar1 == 0) {
+    return;
+  }
+  fn_00422dcc(iVar1,param_1);
+  return;
+}
+
+

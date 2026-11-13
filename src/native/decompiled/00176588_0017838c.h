@@ -1,0 +1,9 @@
+#include "decompiled.h"
+
+/* Names these functions call and address, declared with the type this
+ * unit gives them. A callee keeps an empty parameter list: the split
+ * gives every function an address and the decompiler inferred each
+ * signature from the callee body, so an empty list is the only contract
+ * that holds at every call site. */
+extern undefined4 fn_00101d5c(); extern undefined4 * fn_0015ece0(); extern undefined4 * fn_00182f2c(); extern ulonglong fn_00184464(); extern undefined8 fn_001847ac(); extern ulonglong fn_001848e4();
+extern int fn_002febd8();

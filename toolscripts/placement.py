@@ -101,19 +101,22 @@ def carve(root, output, label, image, spans, symbols, data_spans=(), suffix='tar
 
 def check_original(root, target, spans, data_spans, image, labels=None):
     """Read every carved section back and refuse a byte the assembler changed."""
-    content = Path(image).read_bytes()
     read = elf_objects.read(target)
     names = labels or ['.text.original_%08x' % address for address, _, _ in spans]
-    for index, (address, size, image_offset) in enumerate(spans):
-        section = read['sections'][names[index]]
-        if section['data'] != content[image_offset:image_offset + size]:
-            raise ValueError('Assembler changed original text bytes at 0x%08x' % address)
-    for section, address, size, image_offset, kind in data_spans:
-        found = read['sections'][section]
-        if found['size'] != size or found['kind'] != kind:
-            raise ValueError('Original %s section changed size or kind' % section)
-        if kind != 'bss' and found['data'] != content[image_offset:image_offset + size]:
-            raise ValueError('Assembler changed original data in ' + section)
+    with Path(image).open('rb') as stream:
+        for index, (address, size, image_offset) in enumerate(spans):
+            section = read['sections'][names[index]]
+            stream.seek(image_offset)
+            if section['data'] != stream.read(size):
+                raise ValueError('Assembler changed original text bytes at 0x%08x' % address)
+        for section, address, size, image_offset, kind in data_spans:
+            found = read['sections'][section]
+            if found['size'] != size or found['kind'] != kind:
+                raise ValueError('Original %s section changed size or kind' % section)
+            if kind != 'bss':
+                stream.seek(image_offset)
+                if found['data'] != stream.read(size):
+                    raise ValueError('Assembler changed original data in ' + section)
 
 
 def empty_base(root, output, label):

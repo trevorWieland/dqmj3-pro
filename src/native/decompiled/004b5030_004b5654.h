@@ -1,0 +1,14 @@
+#include "decompiled.h"
+
+/* Names these functions call and address, declared with the type this
+ * unit gives them. A callee keeps an empty parameter list: the split
+ * gives every function an address and the decompiler inferred each
+ * signature from the callee body, so an empty list is the only contract
+ * that holds at every call site. */
+extern undefined4 fn_0013d0fc(); extern undefined4 fn_0014f1bc(); extern undefined4 fn_0014f1e0(); extern undefined4 fn_0014f440(); extern undefined4 fn_0014f470(); extern undefined4 * fn_0014f480();
+extern undefined4 * fn_0015ece0(); extern undefined4 fn_0015ef58(); extern uint fn_0015efdc(); extern undefined4 fn_0015f0f4(); extern undefined4 fn_00170e68(); extern undefined8 fn_00301a9c();
+extern undefined4 fn_0030233c(); extern undefined4 fn_0048c758(); extern int fn_004b5540(); extern undefined4 fn_00786da0();
+
+/* Data these functions address. A name carries the image address
+ * it must have, so a reference resolves to the original object. */
+extern undefined4 DAT_00855a18;
