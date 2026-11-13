@@ -29,6 +29,31 @@
 #pragma clang diagnostic ignored "-Wsometimes-uninitialized"
 #pragma clang diagnostic ignored "-Wsign-compare"
 #pragma clang diagnostic ignored "-Wswitch"
+#ifdef __clang__
+#pragma clang diagnostic ignored "-Wpointer-integer-compare"
+#pragma clang diagnostic ignored "-Wliteral-range"
+#pragma clang diagnostic ignored "-Wchar-subscripts"
+#pragma clang diagnostic ignored "-Wtautological-pointer-compare"
+#pragma clang diagnostic ignored "-Wtautological-constant-out-of-range-compare"
+#pragma clang diagnostic ignored "-Warray-bounds"
+#pragma clang diagnostic ignored "-Wstring-plus-int"
+#pragma clang diagnostic ignored "-Wnull-pointer-arithmetic"
+#pragma clang diagnostic ignored "-Wdivision-by-zero"
+#pragma clang diagnostic ignored "-Wformat"
+#pragma clang diagnostic ignored "-Wenum-conversion"
+#pragma clang diagnostic ignored "-Wconstant-conversion"
+#pragma clang diagnostic ignored "-Wshift-count-overflow"
+#pragma clang diagnostic ignored "-Wunsequenced"
+#pragma clang diagnostic ignored "-Wreturn-type"
+#pragma clang diagnostic ignored "-Wmain"
+#ifdef __clang__
+#pragma clang diagnostic ignored "-Wcompare-distinct-pointer-types"
+#pragma clang diagnostic ignored "-Wreturn-stack-address"
+#pragma clang diagnostic ignored "-Wbool-operation"
+#pragma clang diagnostic ignored "-Wtautological-compare"
+#pragma clang diagnostic ignored "-Wpointer-compare"
+#endif
+#endif
 #pragma clang diagnostic ignored "-Wdeprecated-non-prototype"
 #pragma clang diagnostic ignored "-Wunused-parameter"
 #pragma clang diagnostic ignored "-Wunused-function"
@@ -121,4 +146,30 @@ static undefined4 _UndefinedInstruction;
  * pseudo-operands that are not symbols in the image. */
 static undefined4 _Reset;
 static undefined4 NotUsed;
+
+/* The decompiler names values by width, so its pointer types disagree with
+ * each other at nearly every assignment. These are the diagnostics the census
+ * compiler raises on that spelling; armcc accepts the same code. Scoped to this
+ * header, which every corpus unit includes first. */
+#ifdef __clang__
+#pragma clang diagnostic ignored "-Wincompatible-pointer-types"
+#pragma clang diagnostic ignored "-Wincompatible-pointer-types-discards-qualifiers"
+#pragma clang diagnostic ignored "-Wincompatible-function-pointer-types"
+#pragma clang diagnostic ignored "-Wint-conversion"
+#pragma clang diagnostic ignored "-Wpointer-sign"
+#pragma clang diagnostic ignored "-Wpointer-to-int-cast"
+#pragma clang diagnostic ignored "-Wint-to-pointer-cast"
+#pragma clang diagnostic ignored "-Wc23-extensions"
+#pragma clang diagnostic ignored "-Wparentheses"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#pragma clang diagnostic ignored "-Wunused-parameter"
+#pragma clang diagnostic ignored "-Wunused-function"
+#pragma clang diagnostic ignored "-Wdeprecated-non-prototype"
+#pragma clang diagnostic ignored "-Wshift-op-parentheses"
+#pragma clang diagnostic ignored "-Wbitwise-op-parentheses"
+#pragma clang diagnostic ignored "-Wuninitialized"
+#pragma clang diagnostic ignored "-Wsometimes-uninitialized"
+#pragma clang diagnostic ignored "-Wsign-compare"
+#pragma clang diagnostic ignored "-Wswitch"
+#endif
 #endif
