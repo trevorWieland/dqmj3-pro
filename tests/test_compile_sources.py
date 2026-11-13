@@ -247,6 +247,10 @@ class CompileSourcesTests(unittest.TestCase):
                       "src/native/third_party/zlib-1.2.5/arm/inflate.c",
                       "src/native/third_party/zlib-1.2.5/arm/inftrees.c",
                       "src/native/third_party/zlib-1.2.5/arm/trees.c"}
+        # The decompiled corpus is 32-bit ARM by nature: its units carry image
+        # addresses and are measured with armcc, so they declare that target only.
+        arm32_only |= {unit["source"] for unit in restricted
+                       if unit["source"].startswith("src/native/decompiled/")}
         self.assertEqual({unit["source"] for unit in restricted}, windows_only | arm32_only)
         self.assertEqual(
             {unit["source"]: unit["targets"] for unit in restricted},
