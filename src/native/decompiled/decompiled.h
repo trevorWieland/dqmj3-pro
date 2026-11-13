@@ -115,5 +115,10 @@ static void software_interrupt(int number) { (void)number; }
 /* The decompiler writes this identifier for a path that ends in an undefined
  * instruction. It is not a symbol in the image, so it is given a value rather
  * than an address. */
-#define _UndefinedInstruction 0
+static undefined4 _UndefinedInstruction;
+
+/* The decompiler writes these for ARM runtime entry points and assembler
+ * pseudo-operands that are not symbols in the image. */
+static undefined4 _Reset;
+static undefined4 NotUsed;
 #endif
